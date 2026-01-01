@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/changelog/feed/"
 date: 2025-11-04 00:47:20 +00:00
-permalink: "/news/2025-11-04-Require-Team-Approvals-for-Protected-Branches-in-GitHub-Rulesets.html"
+permalink: "/2025-11-04-Require-Team-Approvals-for-Protected-Branches-in-GitHub-Rulesets.html"
 categories: ["DevOps"]
 tags: ["Branch Protection", "Code Review", "CODEOWNERS", "Collaboration Tools", "DevOps", "Enterprise Collaboration", "GitHub", "Improvement", "News", "Platform Governance", "Policy Enforcement", "Release Management", "Repository Governance", "Rulesets", "Team Approvals", "Version Control", "Workflow Automation"]
 tags_normalized: ["branch protection", "code review", "codeowners", "collaboration tools", "devops", "enterprise collaboration", "github", "improvement", "news", "platform governance", "policy enforcement", "release management", "repository governance", "rulesets", "team approvals", "version control", "workflow automation"]

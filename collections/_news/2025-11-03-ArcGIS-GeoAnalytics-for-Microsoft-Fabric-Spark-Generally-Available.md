@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Fabric Blog"
 feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
 date: 2025-11-03 08:30:00 +00:00
-permalink: "/news/2025-11-03-ArcGIS-GeoAnalytics-for-Microsoft-Fabric-Spark-Generally-Available.html"
+permalink: "/2025-11-03-ArcGIS-GeoAnalytics-for-Microsoft-Fabric-Spark-Generally-Available.html"
 categories: ["Azure", "ML"]
 tags: ["ArcGIS GeoAnalytics", "Azure", "Clustering Analysis", "Data Engineering", "Data Science", "Data Transformation", "Esri", "Fabric Notebook", "Geospatial Analytics", "Location Intelligence", "Microsoft Fabric", "ML", "News", "Power BI", "Spark", "Spatial Data", "Spatial Joins", "Tracking Analysis"]
 tags_normalized: ["arcgis geoanalytics", "azure", "clustering analysis", "data engineering", "data science", "data transformation", "esri", "fabric notebook", "geospatial analytics", "location intelligence", "microsoft fabric", "ml", "news", "power bi", "spark", "spatial data", "spatial joins", "tracking analysis"]

@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Fabric Blog"
 feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
 date: 2025-07-29 11:30:00 +00:00
-permalink: "/news/2025-07-29-JSON-Lines-Support-in-OPENROWSET-for-Fabric-Data-Warehouse-and-Lakehouse-SQL-Endpoints-Preview.html"
+permalink: "/2025-07-29-JSON-Lines-Support-in-OPENROWSET-for-Fabric-Data-Warehouse-and-Lakehouse-SQL-Endpoints-Preview.html"
 categories: ["Azure", "ML"]
 tags: ["Azure", "Data Analytics", "Data Lake", "Data Warehouse", "External Data", "JSON Lines", "JSONL", "Lakehouse", "Microsoft Fabric", "ML", "News", "OPENROWSET", "Semi Structured Data", "SQL Endpoints", "T SQL"]
 tags_normalized: ["azure", "data analytics", "data lake", "data warehouse", "external data", "json lines", "jsonl", "lakehouse", "microsoft fabric", "ml", "news", "openrowset", "semi structured data", "sql endpoints", "t sql"]

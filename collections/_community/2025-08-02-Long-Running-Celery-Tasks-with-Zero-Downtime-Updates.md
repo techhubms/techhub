@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Reddit DevOps"
 feed_url: "https://www.reddit.com/r/devops/.rss"
 date: 2025-08-02 13:13:29 +00:00
-permalink: "/community/2025-08-02-Long-Running-Celery-Tasks-with-Zero-Downtime-Updates.html"
+permalink: "/2025-08-02-Long-Running-Celery-Tasks-with-Zero-Downtime-Updates.html"
 categories: ["DevOps"]
 tags: ["Background Jobs", "Blue Green Deployment", "Celery", "Community", "Coolify", "Deployment Strategies", "DevOps", "Docker", "Mysql", "Redis", "Task Management", "Zero Downtime"]
 tags_normalized: ["background jobs", "blue green deployment", "celery", "community", "coolify", "deployment strategies", "devops", "docker", "mysql", "redis", "task management", "zero downtime"]

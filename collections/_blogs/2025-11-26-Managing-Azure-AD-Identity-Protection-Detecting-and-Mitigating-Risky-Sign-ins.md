@@ -9,10 +9,10 @@ viewing_mode: "external"
 feed_name: "Dellenny's Blog"
 feed_url: "https://dellenny.com/feed/"
 date: 2025-11-26 11:26:47 +00:00
-permalink: "/blogs/2025-11-26-Managing-Azure-AD-Identity-Protection-Detecting-and-Mitigating-Risky-Sign-ins.html"
+permalink: "/2025-11-26-Managing-Azure-AD-Identity-Protection-Detecting-and-Mitigating-Risky-Sign-ins.html"
 categories: ["Azure", "Security"]
-tags: ["Automation", "Azure", "Azure AD Identity Protection", "Cloud Security", "Conditional Access", "Identity Protection", "Incident Response", "Microsoft Defender", "Microsoft Entra ID", "Multi Factor Authentication", "Blogs", "Risky Sign Ins", "Security", "SIEM Integration", "Threat Detection", "User Education"]
-tags_normalized: ["automation", "azure", "azure ad identity protection", "cloud security", "conditional access", "identity protection", "incident response", "microsoft defender", "microsoft entra id", "multi factor authentication", "blogs", "risky sign ins", "security", "siem integration", "threat detection", "user education"]
+tags: ["Automation", "Azure", "Azure AD Identity Protection", "Blogs", "Cloud Security", "Conditional Access", "Identity Protection", "Incident Response", "Microsoft Defender", "Microsoft Entra ID", "Multi Factor Authentication", "Risky Sign Ins", "Security", "SIEM Integration", "Threat Detection", "User Education"]
+tags_normalized: ["automation", "azure", "azure ad identity protection", "blogs", "cloud security", "conditional access", "identity protection", "incident response", "microsoft defender", "microsoft entra id", "multi factor authentication", "risky sign ins", "security", "siem integration", "threat detection", "user education"]
 ---
 
 John Edward explains how Azure AD Identity Protection helps organizations detect and remediate risky sign-ins, focusing on security strategies and actionable workflows.<!--excerpt_end-->

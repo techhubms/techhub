@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "DotNet YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw"
 date: 2025-10-22 16:30:04 +00:00
-permalink: "/videos/2025-10-22-Prototyping-Game-Environments-in-Godot-C-with-CSG-Nodes.html"
+permalink: "/2025-10-22-Prototyping-Game-Environments-in-Godot-C-with-CSG-Nodes.html"
 categories: ["Coding"]
 tags: [".NET", "C#", "Coding", "Collision Detection", "CSG Nodes", "CSG Operations", "Environment Design", "Game Development", "Godot", "Indie Game Dev", "Level Design", "Microsoft Developer", "Prototyping", "Rapid Prototyping", "Scene Management", "Videos", "VS Code"]
 tags_normalized: ["dotnet", "csharp", "coding", "collision detection", "csg nodes", "csg operations", "environment design", "game development", "godot", "indie game dev", "level design", "microsoft developer", "prototyping", "rapid prototyping", "scene management", "videos", "vs code"]

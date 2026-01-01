@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "John Savill's Technical Training"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCpIn7ox7j7bH_OFj7tYouOQ"
 date: 2025-12-19 15:51:48 +00:00
-permalink: "/videos/2025-12-19-Azure-Update-19th-December-2025-Service-Improvements-AI-and-Security-News.html"
+permalink: "/2025-12-19-Azure-Update-19th-December-2025-Service-Improvements-AI-and-Security-News.html"
 categories: ["AI", "Azure", "Security"]
 tags: ["AI", "ASM Blob Storage", "Azure", "Azure AI", "Azure Cloud", "Azure NetApp Files", "Azure SQL Database", "Azure Updates", "Cloud", "Cloud Security", "Cosmos DB", "Foundry", "GPT 4 Vision", "Microsoft", "Microsoft Azure", "Ransomware Protection", "Security", "Serverless", "Service Bus Trigger", "SRE", "Videos", "Voice Models"]
 tags_normalized: ["ai", "asm blob storage", "azure", "azure ai", "azure cloud", "azure netapp files", "azure sql database", "azure updates", "cloud", "cloud security", "cosmos db", "foundry", "gpt 4 vision", "microsoft", "microsoft azure", "ransomware protection", "security", "serverless", "service bus trigger", "sre", "videos", "voice models"]

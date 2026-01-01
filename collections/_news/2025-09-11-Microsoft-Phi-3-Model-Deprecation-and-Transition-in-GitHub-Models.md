@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/changelog/feed/"
 date: 2025-09-11 20:06:02 +00:00
-permalink: "/news/2025-09-11-Microsoft-Phi-3-Model-Deprecation-and-Transition-in-GitHub-Models.html"
+permalink: "/2025-09-11-Microsoft-Phi-3-Model-Deprecation-and-Transition-in-GitHub-Models.html"
 categories: ["AI"]
 tags: ["AI", "AI Models", "Cloud AI", "Ecosystem & Accessibility", "GitHub Models", "Microsoft Phi", "Model Deprecation", "Model Migration", "Model Transition", "News", "Open Source AI", "Phi 3", "Phi 4", "Retired"]
 tags_normalized: ["ai", "ai models", "cloud ai", "ecosystem and accessibility", "github models", "microsoft phi", "model deprecation", "model migration", "model transition", "news", "open source ai", "phi 3", "phi 4", "retired"]

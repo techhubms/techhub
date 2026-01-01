@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-09-23 10:12:56 +00:00
-permalink: "/community/2025-09-23-Azure-Automation-User-Requests-Feature-Suggestions-and-Bug-Reports.html"
+permalink: "/2025-09-23-Azure-Automation-User-Requests-Feature-Suggestions-and-Bug-Reports.html"
 categories: ["Azure", "Coding", "DevOps"]
 tags: ["Automation Account", "Azure", "Azure Automation", "Bug Reports", "Coding", "Community", "Community Feedback", "DevOps", "Feature Requests", "GitHub Integration", "Hybrid Workers", "Job Scheduling", "Logging", "PowerShell", "RBAC", "Runbooks", "Source Control", "UI Improvements", "Webhooks"]
 tags_normalized: ["automation account", "azure", "azure automation", "bug reports", "coding", "community", "community feedback", "devops", "feature requests", "github integration", "hybrid workers", "job scheduling", "logging", "powershell", "rbac", "runbooks", "source control", "ui improvements", "webhooks"]

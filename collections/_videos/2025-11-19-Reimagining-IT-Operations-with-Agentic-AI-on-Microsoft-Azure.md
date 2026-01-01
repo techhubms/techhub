@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Events YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
 date: 2025-11-19 14:53:29 +00:00
-permalink: "/videos/2025-11-19-Reimagining-IT-Operations-with-Agentic-AI-on-Microsoft-Azure.html"
+permalink: "/2025-11-19-Reimagining-IT-Operations-with-Agentic-AI-on-Microsoft-Azure.html"
 categories: ["AI", "Azure"]
 tags: ["Agentic AI", "AI", "AI Agents", "Autonomous Operations", "Azure", "Digital Operations", "Incident Management", "Infrastructure Management", "InnovatewithAzureAIappsandagents", "ITSM", "Microsoft Azure", "Microsoft Foundry", "Microsoft Ignite", "MSIgnite", "MTTR", "Operational Automation", "Operational Efficiency", "Service Request", "TAO", "TCS", "Videos"]
 tags_normalized: ["agentic ai", "ai", "ai agents", "autonomous operations", "azure", "digital operations", "incident management", "infrastructure management", "innovatewithazureaiappsandagents", "itsm", "microsoft azure", "microsoft foundry", "microsoft ignite", "msignite", "mttr", "operational automation", "operational efficiency", "service request", "tao", "tcs", "videos"]

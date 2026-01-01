@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Developer YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
 date: 2025-12-10 23:42:25 +00:00
-permalink: "/videos/2025-12-10-Supercharge-Your-Apps-with-OpenAI-Secure-Authentication-Azure-Integration-and-MCP-Agents.html"
+permalink: "/2025-12-10-Supercharge-Your-Apps-with-OpenAI-Secure-Authentication-Azure-Integration-and-MCP-Agents.html"
 categories: ["AI", "Azure", "Coding", "Security"]
 tags: [".NET", "Agentic Apps", "AI", "AI Integration", "Azure", "Azure AI Foundry", "Azure OpenAI", "Cloud Computing", "Cloud Development", "Coding", "Dev", "Developer", "Development", "Enterprise AI", "Go", "Java", "JavaScript", "MCP", "Microsoft", "Microsoft Entra ID", "OpenAI", "Python", "Secure Authentication", "Security", "Tech", "Technology", "Token Based Authentication", "Videos"]
 tags_normalized: ["dotnet", "agentic apps", "ai", "ai integration", "azure", "azure ai foundry", "azure openai", "cloud computing", "cloud development", "coding", "dev", "developer", "development", "enterprise ai", "go", "java", "javascript", "mcp", "microsoft", "microsoft entra id", "openai", "python", "secure authentication", "security", "tech", "technology", "token based authentication", "videos"]

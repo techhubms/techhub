@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Developer YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
 date: 2025-10-30 16:01:35 +00:00
-permalink: "/videos/2025-10-30-Building-Event-Driven-Apps-with-Fabric-Real-Time-Intelligence-and-SQL.html"
+permalink: "/2025-10-30-Building-Event-Driven-Apps-with-Fabric-Real-Time-Intelligence-and-SQL.html"
 categories: ["AI", "Azure", "Coding", "ML"]
 tags: ["AI", "Azure", "Azure SQL", "Cloud Computing", "Coding", "Copilot", "Dashboarding", "Data Agent", "Data Engineering", "Dev", "Development", "Event Driven Architecture", "Event Streams", "Fabric Real Time Intelligence", "KQL", "Microsoft", "Microsoft Fabric", "ML", "Real Time Analytics", "SQL", "Streaming Data", "Tech", "Technology", "Videos", "Windowing Functions"]
 tags_normalized: ["ai", "azure", "azure sql", "cloud computing", "coding", "copilot", "dashboarding", "data agent", "data engineering", "dev", "development", "event driven architecture", "event streams", "fabric real time intelligence", "kql", "microsoft", "microsoft fabric", "ml", "real time analytics", "sql", "streaming data", "tech", "technology", "videos", "windowing functions"]

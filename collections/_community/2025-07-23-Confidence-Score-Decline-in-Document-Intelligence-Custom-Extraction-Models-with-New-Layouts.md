@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=AI"
 date: 2025-07-23 15:35:47 +00:00
-permalink: "/community/2025-07-23-Confidence-Score-Decline-in-Document-Intelligence-Custom-Extraction-Models-with-New-Layouts.html"
+permalink: "/2025-07-23-Confidence-Score-Decline-in-Document-Intelligence-Custom-Extraction-Models-with-New-Layouts.html"
 categories: ["AI", "Azure", "ML"]
 tags: ["AI", "Azure", "Azure AI", "Azure Document Intelligence", "Community", "Confidence Score", "Custom Extraction", "Data Annotation", "Document Layout", "Field Extraction", "Format Variability", "Holdout Set", "Machine Learning Training", "Microsoft Cognitive Services", "ML", "Model Evaluation", "Model Generalization"]
 tags_normalized: ["ai", "azure", "azure ai", "azure document intelligence", "community", "confidence score", "custom extraction", "data annotation", "document layout", "field extraction", "format variability", "holdout set", "machine learning training", "microsoft cognitive services", "ml", "model evaluation", "model generalization"]

@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft VisualStudio Blog"
 feed_url: "https://devblogs.microsoft.com/visualstudio/feed/"
 date: 2025-08-26 18:22:28 +00:00
-permalink: "/news/2025-08-26-Visual-Studio-2022-August-2025-Update-GPT-5-MCP-Integration-Copilot-Enhancements-and-Improved-Debugging.html"
+permalink: "/2025-08-26-Visual-Studio-2022-August-2025-Update-GPT-5-MCP-Integration-Copilot-Enhancements-and-Improved-Debugging.html"
 categories: ["AI", "Coding", "GitHub Copilot"]
 tags: ["AI", "AI Integration", "C++", "Code Completion", "Code Suggestions", "Coding", "Copilot", "Copilot Chat", "Debug", "Developer Tools", "Git", "Git Integration", "GitHub Copilot", "GPT 5", "MCP", "Models", "News", "Next Edits Suggestion", "OAuth", "OpenAI", "Productivity", "Productivity Tools", "Semantic Search", "Sign in", "Unreal Engine Debugging", "VS"]
 tags_normalized: ["ai", "ai integration", "cplusplus", "code completion", "code suggestions", "coding", "copilot", "copilot chat", "debug", "developer tools", "git", "git integration", "github copilot", "gpt 5", "mcp", "models", "news", "next edits suggestion", "oauth", "openai", "productivity", "productivity tools", "semantic search", "sign in", "unreal engine debugging", "vs"]

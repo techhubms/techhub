@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft All Things Azure Blog"
 feed_url: "https://devblogs.microsoft.com/all-things-azure/feed/"
 date: 2025-11-20 11:03:44 +00:00
-permalink: "/news/2025-11-20-Azure-DevOps-to-GitHub-Migration-Playbook-A-Step-by-Step-Guide-for-Agentic-DevOps.html"
+permalink: "/2025-11-20-Azure-DevOps-to-GitHub-Migration-Playbook-A-Step-by-Step-Guide-for-Agentic-DevOps.html"
 categories: ["AI", "Azure", "Coding", "DevOps", "GitHub Copilot"]
 tags: ["Agentic DevOps", "AI", "AI Developer Tools", "All Things Azure", "Automation", "Azure", "Azure Boards", "Azure DevOps", "Azure Pipelines", "CI/CD", "Coding", "Developer Productivity", "DevOps", "DevOps Integration", "GHE", "GitHub", "GitHub CLI", "GitHub Copilot", "GitHub Enterprise", "Hybrid Cloud", "Migration", "News", "Personal Access Token", "Repository Management", "Source Code Migration"]
 tags_normalized: ["agentic devops", "ai", "ai developer tools", "all things azure", "automation", "azure", "azure boards", "azure devops", "azure pipelines", "cislashcd", "coding", "developer productivity", "devops", "devops integration", "ghe", "github", "github cli", "github copilot", "github enterprise", "hybrid cloud", "migration", "news", "personal access token", "repository management", "source code migration"]

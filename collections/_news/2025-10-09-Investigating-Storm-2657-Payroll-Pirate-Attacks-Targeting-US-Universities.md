@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Security Blog"
 feed_url: "https://www.microsoft.com/en-us/security/blog/feed/"
 date: 2025-10-09 15:00:00 +00:00
-permalink: "/news/2025-10-09-Investigating-Storm-2657-Payroll-Pirate-Attacks-Targeting-US-Universities.html"
+permalink: "/2025-10-09-Investigating-Storm-2657-Payroll-Pirate-Attacks-Targeting-US-Universities.html"
 categories: ["Azure", "Security"]
 tags: ["Audit Logs", "Azure", "CloudAppEvents", "Defender XDR", "Duo MFA", "Entra ID", "Exchange Online", "Identity Protection", "Inbox Rules", "Incident Response", "MFA", "Microsoft Defender For Cloud Apps", "Microsoft Sentinel", "Microsoft Threat Intelligence", "News", "Passwordless Authentication", "Payroll Pirate", "Phishing", "SaaS Security", "Security", "Security Copilot", "Storm 2657", "Threat Hunting", "University Security", "Workday"]
 tags_normalized: ["audit logs", "azure", "cloudappevents", "defender xdr", "duo mfa", "entra id", "exchange online", "identity protection", "inbox rules", "incident response", "mfa", "microsoft defender for cloud apps", "microsoft sentinel", "microsoft threat intelligence", "news", "passwordless authentication", "payroll pirate", "phishing", "saas security", "security", "security copilot", "storm 2657", "threat hunting", "university security", "workday"]

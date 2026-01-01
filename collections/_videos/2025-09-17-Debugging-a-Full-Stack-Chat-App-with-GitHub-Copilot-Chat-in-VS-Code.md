@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Visual Studio Code YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SLNwkd3w"
 date: 2025-09-17 14:00:51 +00:00
-permalink: "/videos/2025-09-17-Debugging-a-Full-Stack-Chat-App-with-GitHub-Copilot-Chat-in-VS-Code.html"
+permalink: "/2025-09-17-Debugging-a-Full-Stack-Chat-App-with-GitHub-Copilot-Chat-in-VS-Code.html"
 categories: ["AI", "Coding", "GitHub Copilot"]
 tags: ["Agent Mode", "AI", "AI Pair Programming", "AI Search", "Ask Mode", "Azure OpenAI", "Chatapp", "Coding", "Copilot", "Copilot Chat", "Custom Chat Modes", "Debugging", "Developer", "Developer Tools", "Full Stack Development", "GitHub Copilot", "MCP Servers", "Microsoft", "Prompt Driven Development", "Promptdrivendevelopment", "Software Developer", "Videos", "VS Code", "Web Applications"]
 tags_normalized: ["agent mode", "ai", "ai pair programming", "ai search", "ask mode", "azure openai", "chatapp", "coding", "copilot", "copilot chat", "custom chat modes", "debugging", "developer", "developer tools", "full stack development", "github copilot", "mcp servers", "microsoft", "prompt driven development", "promptdrivendevelopment", "software developer", "videos", "vs code", "web applications"]

@@ -9,7 +9,7 @@ categories: ["AI"]
 feed_name: "dotnet"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw"
 date: 2025-07-23 15:35:24 +00:00
-permalink: "/videos/2025-07-23-Should-I-add-a-chatbot-to-my-app.html"
+permalink: "/2025-07-23-Should-I-add-a-chatbot-to-my-app.html"
 viewing_mode: "internal"
 page: "videos"
 tags: ["AI", "AI Learning Hub", "AI Strategy", "App Development", "Business Automation", "Chatbots", "Microsoft", "OneDevQuestion", "Process Automation", "Steve Sanderson", "Videos"]

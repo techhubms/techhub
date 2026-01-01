@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft All Things Azure Blog"
 feed_url: "https://devblogs.microsoft.com/all-things-azure/feed/"
 date: 2025-09-04 22:09:45 +00:00
-permalink: "/news/2025-09-04-Deploying-a-Self-Hosted-Microsoft-Docs-AI-Assistant-with-Azure-OpenAI-and-MCP.html"
+permalink: "/2025-09-04-Deploying-a-Self-Hosted-Microsoft-Docs-AI-Assistant-with-Azure-OpenAI-and-MCP.html"
 categories: ["AI", "Azure", "Coding", "DevOps"]
 tags: ["AI", "AI Apps", "All Things Azure", "Azure", "Azure AI Foundry", "Azure CLI", "Azure Container Apps", "Azure Container Registry", "Azure OpenAI Service", "Cloud Architecture", "Coding", "Developer Tools", "DevOps", "Docker", "GPT 35 Turbo", "GPT 4", "GPT 4.1", "MCP", "Microsoft Learn", "Mslearn Mcp Chat", "News", "Next.js", "Node.js", "RAG Pipeline", "Secure Deployment", "Serverless Hosting"]
 tags_normalized: ["ai", "ai apps", "all things azure", "azure", "azure ai foundry", "azure cli", "azure container apps", "azure container registry", "azure openai service", "cloud architecture", "coding", "developer tools", "devops", "docker", "gpt 35 turbo", "gpt 4", "gpt 4dot1", "mcp", "microsoft learn", "mslearn mcp chat", "news", "nextdotjs", "nodedotjs", "rag pipeline", "secure deployment", "serverless hosting"]

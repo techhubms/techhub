@@ -9,10 +9,10 @@ viewing_mode: "external"
 feed_name: "Dellenny's Blog"
 feed_url: "https://dellenny.com/feed/"
 date: 2025-09-30 08:30:48 +00:00
-permalink: "/blogs/2025-09-30-AIOps-Bringing-Intelligence-to-IT-Operations.html"
+permalink: "/2025-09-30-AIOps-Bringing-Intelligence-to-IT-Operations.html"
 categories: ["AI", "DevOps"]
-tags: ["AI", "AIOps", "Anomaly Detection", "Automation", "Continuous Delivery", "Data Pipeline", "DevOps", "ELK Stack", "Incident Response", "IT Operations", "Kubernetes", "Machine Learning", "Monitoring", "Observability", "Blogs", "Predictive Analytics", "Root Cause Analysis"]
-tags_normalized: ["ai", "aiops", "anomaly detection", "automation", "continuous delivery", "data pipeline", "devops", "elk stack", "incident response", "it operations", "kubernetes", "machine learning", "monitoring", "observability", "blogs", "predictive analytics", "root cause analysis"]
+tags: ["AI", "AIOps", "Anomaly Detection", "Automation", "Blogs", "Continuous Delivery", "Data Pipeline", "DevOps", "ELK Stack", "Incident Response", "IT Operations", "Kubernetes", "Machine Learning", "Monitoring", "Observability", "Predictive Analytics", "Root Cause Analysis"]
+tags_normalized: ["ai", "aiops", "anomaly detection", "automation", "blogs", "continuous delivery", "data pipeline", "devops", "elk stack", "incident response", "it operations", "kubernetes", "machine learning", "monitoring", "observability", "predictive analytics", "root cause analysis"]
 ---
 
 Dellenny explores how AIOps leverages AI and automation to transform IT operations, focusing on actionable strategies for implementing intelligent, proactive systems management.<!--excerpt_end-->

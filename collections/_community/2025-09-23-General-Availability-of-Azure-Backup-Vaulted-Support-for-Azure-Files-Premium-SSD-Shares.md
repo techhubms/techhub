@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-09-23 06:42:32 +00:00
-permalink: "/community/2025-09-23-General-Availability-of-Azure-Backup-Vaulted-Support-for-Azure-Files-Premium-SSD-Shares.html"
+permalink: "/2025-09-23-General-Availability-of-Azure-Backup-Vaulted-Support-for-Azure-Files-Premium-SSD-Shares.html"
 categories: ["Azure", "Security"]
 tags: ["3 2 1 Rule", "AKS", "Azure", "Azure Backup", "Azure File Sync", "Azure Files Premium", "Azure Virtual Desktop", "Backup Policy", "Cloud Native Storage", "Community", "Compliance", "Cross Region Recovery", "Disaster Recovery", "Enterprise Data Protection", "Geo Redundant Storage", "Hybrid Cloud", "Immutable Backup", "Ransomware Protection", "Recovery Services Vault", "Security", "SMB File Shares", "SSD", "Windows Workloads"]
 tags_normalized: ["3 2 1 rule", "aks", "azure", "azure backup", "azure file sync", "azure files premium", "azure virtual desktop", "backup policy", "cloud native storage", "community", "compliance", "cross region recovery", "disaster recovery", "enterprise data protection", "geo redundant storage", "hybrid cloud", "immutable backup", "ransomware protection", "recovery services vault", "security", "smb file shares", "ssd", "windows workloads"]

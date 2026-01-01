@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-11-28 09:48:39 +00:00
-permalink: "/community/2025-11-28-Building-AI-Agents-with-Microsoft-AI-Toolkit-and-Foundry-Live-Stream-Walkthrough.html"
+permalink: "/2025-11-28-Building-AI-Agents-with-Microsoft-AI-Toolkit-and-Foundry-Live-Stream-Walkthrough.html"
 categories: ["AI", "Azure"]
 tags: ["Agent Development", "AI", "AI Agents", "AI Toolkit", "Azure", "Community", "Debugging Tools", "Developer Tools", "Function Definitions", "Live Coding", "Machine Learning", "Microsoft Foundry", "Model Integration", "Multimodal AI", "Prototype Workflow", "System Prompts", "VS Code"]
 tags_normalized: ["agent development", "ai", "ai agents", "ai toolkit", "azure", "community", "debugging tools", "developer tools", "function definitions", "live coding", "machine learning", "microsoft foundry", "model integration", "multimodal ai", "prototype workflow", "system prompts", "vs code"]

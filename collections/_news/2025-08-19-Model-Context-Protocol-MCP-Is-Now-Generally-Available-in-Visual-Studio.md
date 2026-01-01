@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft DevBlog"
 feed_url: "https://devblogs.microsoft.com/visualstudio/tag/copilot/feed/"
 date: 2025-08-19 18:23:21 +00:00
-permalink: "/news/2025-08-19-Model-Context-Protocol-MCP-Is-Now-Generally-Available-in-Visual-Studio.html"
+permalink: "/2025-08-19-Model-Context-Protocol-MCP-Is-Now-Generally-Available-in-Visual-Studio.html"
 categories: ["AI", "Coding", "DevOps", "GitHub Copilot", "Security"]
 tags: ["Agent Mode", "Agents", "AI", "AI Agents", "Authentication", "Code", "Coding", "Copilot", "Copilot Chat", "Developer Workflow Automation", "DevOps", "Enterprise Integration", "External Tools", "GitHub", "GitHub Copilot", "GitHub Policy", "IDE", "LLM", "MCP", "Microsoft", "News", "Secure Endpoints", "Security", "Server Integration", "Servers", "VS"]
 tags_normalized: ["agent mode", "agents", "ai", "ai agents", "authentication", "code", "coding", "copilot", "copilot chat", "developer workflow automation", "devops", "enterprise integration", "external tools", "github", "github copilot", "github policy", "ide", "llm", "mcp", "microsoft", "news", "secure endpoints", "security", "server integration", "servers", "vs"]

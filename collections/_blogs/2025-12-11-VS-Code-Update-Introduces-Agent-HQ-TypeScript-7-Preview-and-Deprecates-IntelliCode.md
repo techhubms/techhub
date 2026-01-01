@@ -9,10 +9,10 @@ viewing_mode: "external"
 feed_name: "DevClass"
 feed_url: "https://devclass.com/feed/"
 date: 2025-12-11 15:20:03 +00:00
-permalink: "/blogs/2025-12-11-VS-Code-Update-Introduces-Agent-HQ-TypeScript-7-Preview-and-Deprecates-IntelliCode.html"
+permalink: "/2025-12-11-VS-Code-Update-Introduces-Agent-HQ-TypeScript-7-Preview-and-Deprecates-IntelliCode.html"
 categories: ["AI", "Coding", "GitHub Copilot"]
-tags: ["Agent HQ", "Agentci AI Foundation", "Agentic AI Foundation", "AI", "AI Agents", "AI Assisted Development", "AI/ML", "Code Completion", "Coding", "Development", "GitHub Copilot", "Go Language Service", "IntelliCode", "JavaScript", "Microsoft", "Blogs", "Prompt Injection", "TypeScript", "TypeScript 7", "VS Code", "VS Code Extensions"]
-tags_normalized: ["agent hq", "agentci ai foundation", "agentic ai foundation", "ai", "ai agents", "ai assisted development", "aislashml", "code completion", "coding", "development", "github copilot", "go language service", "intellicode", "javascript", "microsoft", "blogs", "prompt injection", "typescript", "typescript 7", "vs code", "vs code extensions"]
+tags: ["Agent HQ", "Agentci AI Foundation", "Agentic AI Foundation", "AI", "AI Agents", "AI Assisted Development", "AI/ML", "Blogs", "Code Completion", "Coding", "Development", "GitHub Copilot", "Go Language Service", "IntelliCode", "JavaScript", "Microsoft", "Prompt Injection", "TypeScript", "TypeScript 7", "VS Code", "VS Code Extensions"]
+tags_normalized: ["agent hq", "agentci ai foundation", "agentic ai foundation", "ai", "ai agents", "ai assisted development", "aislashml", "blogs", "code completion", "coding", "development", "github copilot", "go language service", "intellicode", "javascript", "microsoft", "prompt injection", "typescript", "typescript 7", "vs code", "vs code extensions"]
 ---
 
 Tim Anderson reports on the latest VS Code update, highlighting Agent HQ for agentic AI integration, TypeScript 7 support, and the move from IntelliCode to GitHub Copilot for AI-driven code completion.<!--excerpt_end-->

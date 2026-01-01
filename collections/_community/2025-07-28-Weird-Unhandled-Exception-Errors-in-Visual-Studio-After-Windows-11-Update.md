@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Reddit Visual Studio"
 feed_url: "https://www.reddit.com/r/VisualStudio/.rss"
 date: 2025-07-28 03:59:23 +00:00
-permalink: "/community/2025-07-28-Weird-Unhandled-Exception-Errors-in-Visual-Studio-After-Windows-11-Update.html"
+permalink: "/2025-07-28-Weird-Unhandled-Exception-Errors-in-Visual-Studio-After-Windows-11-Update.html"
 categories: ["Coding"]
 tags: [".NET", "Build Error", "Coding", "Community", "Debugging", "Development Environment", "Framework", "Project Upgrade", "SDK", "Unhandled Exception", "VS", "Windows 11"]
 tags_normalized: ["dotnet", "build error", "coding", "community", "debugging", "development environment", "framework", "project upgrade", "sdk", "unhandled exception", "vs", "windows 11"]

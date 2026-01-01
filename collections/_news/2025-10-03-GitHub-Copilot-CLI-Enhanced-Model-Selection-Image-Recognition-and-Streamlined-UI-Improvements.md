@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/changelog/feed/"
 date: 2025-10-03 16:23:18 +00:00
-permalink: "/news/2025-10-03-GitHub-Copilot-CLI-Enhanced-Model-Selection-Image-Recognition-and-Streamlined-UI-Improvements.html"
+permalink: "/2025-10-03-GitHub-Copilot-CLI-Enhanced-Model-Selection-Image-Recognition-and-Streamlined-UI-Improvements.html"
 categories: ["AI", "Coding", "GitHub Copilot"]
 tags: ["AI", "AI Coding Assistant", "Anthropic Claude Sonnet", "Client Apps", "Coding", "Command Line Interface", "Copilot", "Developer Tools", "Enterprise Authentication", "GitHub Copilot", "GitHub Copilot CLI", "Image Recognition", "Improvement", "Markdown Rendering", "Model Selection", "News", "npm", "PowerShell", "Security Permissions", "Session Management", "Shell Commands", "Usage Statistics"]
 tags_normalized: ["ai", "ai coding assistant", "anthropic claude sonnet", "client apps", "coding", "command line interface", "copilot", "developer tools", "enterprise authentication", "github copilot", "github copilot cli", "image recognition", "improvement", "markdown rendering", "model selection", "news", "npm", "powershell", "security permissions", "session management", "shell commands", "usage statistics"]

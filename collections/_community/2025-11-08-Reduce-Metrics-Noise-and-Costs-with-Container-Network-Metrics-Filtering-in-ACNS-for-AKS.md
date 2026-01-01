@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-11-08 04:16:56 +00:00
-permalink: "/community/2025-11-08-Reduce-Metrics-Noise-and-Costs-with-Container-Network-Metrics-Filtering-in-ACNS-for-AKS.html"
+permalink: "/2025-11-08-Reduce-Metrics-Noise-and-Costs-with-Container-Network-Metrics-Filtering-in-ACNS-for-AKS.html"
 categories: ["Azure", "DevOps"]
 tags: ["ACNS", "AKS", "Azure", "Azure Container Networking Services", "Cilium", "Community", "ContainerNetworking", "Cost Optimization", "CRD", "Custom Resource Definitions", "DevOps", "Ebpf", "Grafana", "Kubernetes", "Metrics Filtering", "Network Observability", "Prometheus"]
 tags_normalized: ["acns", "aks", "azure", "azure container networking services", "cilium", "community", "containernetworking", "cost optimization", "crd", "custom resource definitions", "devops", "ebpf", "grafana", "kubernetes", "metrics filtering", "network observability", "prometheus"]

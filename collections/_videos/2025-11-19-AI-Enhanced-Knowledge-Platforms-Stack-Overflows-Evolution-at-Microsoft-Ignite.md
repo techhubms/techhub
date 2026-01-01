@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Events YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
 date: 2025-11-19 15:19:07 +00:00
-permalink: "/videos/2025-11-19-AI-Enhanced-Knowledge-Platforms-Stack-Overflows-Evolution-at-Microsoft-Ignite.html"
+permalink: "/2025-11-19-AI-Enhanced-Knowledge-Platforms-Stack-Overflows-Evolution-at-Microsoft-Ignite.html"
 categories: ["AI"]
 tags: ["AI", "AI Assisted Curation", "Content Scoring", "Copilotandagentsatwork", "Document Intelligence", "Enterprise AI", "Enterprise Knowledge Platform", "Human in The Loop", "Intelligence Layer", "Knowledge Sharing", "MCP Integration", "Microsoft Cloud Platform", "Microsoft Ignite", "MSIgnite", "Q&A Generation", "Stack Overflow For Teams", "Stack Overflow Internal", "Trusted Solutions", "Videos"]
 tags_normalized: ["ai", "ai assisted curation", "content scoring", "copilotandagentsatwork", "document intelligence", "enterprise ai", "enterprise knowledge platform", "human in the loop", "intelligence layer", "knowledge sharing", "mcp integration", "microsoft cloud platform", "microsoft ignite", "msignite", "qanda generation", "stack overflow for teams", "stack overflow internal", "trusted solutions", "videos"]

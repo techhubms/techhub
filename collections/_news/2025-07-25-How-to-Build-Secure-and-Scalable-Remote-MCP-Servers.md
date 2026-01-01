@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/feed/"
 date: 2025-07-25 17:12:02 +00:00
-permalink: "/news/2025-07-25-How-to-Build-Secure-and-Scalable-Remote-MCP-Servers.html"
+permalink: "/2025-07-25-How-to-Build-Secure-and-Scalable-Remote-MCP-Servers.html"
 categories: ["AI", "Security", "Azure"]
 tags: ["AI", "AI & ML", "AI Agents", "AI Gateway", "APIs", "Authorization", "Azure", "Azure Key Vault", "Distributed Tracing", "Generative AI", "MCP", "Multi Tenancy", "News", "OAuth 2.1", "OpenTelemetry", "Secrets Management", "Security", "Security Best Practices", "Token Validation"]
 tags_normalized: ["ai", "ai and ml", "ai agents", "ai gateway", "apis", "authorization", "azure", "azure key vault", "distributed tracing", "generative ai", "mcp", "multi tenancy", "news", "oauth 2dot1", "opentelemetry", "secrets management", "security", "security best practices", "token validation"]

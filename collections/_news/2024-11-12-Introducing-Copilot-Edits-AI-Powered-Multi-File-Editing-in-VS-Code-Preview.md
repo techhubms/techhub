@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Visual Studio Code Releases"
 feed_url: "https://code.visualstudio.com/feed.xml"
 date: 2024-11-12 00:00:00 +00:00
-permalink: "/news/2024-11-12-Introducing-Copilot-Edits-AI-Powered-Multi-File-Editing-in-VS-Code-Preview.html"
+permalink: "/2024-11-12-Introducing-Copilot-Edits-AI-Powered-Multi-File-Editing-in-VS-Code-Preview.html"
 categories: ["AI", "Coding", "GitHub Copilot"]
 tags: ["AI", "AI in Code Review", "AI Powered Editing", "Claude 3.5 Sonnet", "Code Refactoring", "Coding", "Copilot Edits", "Developer Tools", "Extension Preview", "GitHub Copilot", "GPT 4o", "Natural Language Programming", "News", "O1 Preview", "Programming Productivity", "Speculative Decoding", "VS Code", "Working Set"]
 tags_normalized: ["ai", "ai in code review", "ai powered editing", "claude 3dot5 sonnet", "code refactoring", "coding", "copilot edits", "developer tools", "extension preview", "github copilot", "gpt 4o", "natural language programming", "news", "o1 preview", "programming productivity", "speculative decoding", "vs code", "working set"]

@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/changelog/label/copilot/feed/"
 date: 2025-07-31 20:38:46 +00:00
-permalink: "/news/2025-07-31-Copilot-Chat-Unlocks-Powerful-Repository-Management-Skills-in-GitHub.html"
+permalink: "/2025-07-31-Copilot-Chat-Unlocks-Powerful-Repository-Management-Skills-in-GitHub.html"
 categories: ["AI", "DevOps", "GitHub Copilot"]
 tags: ["AI", "Automation", "Branching", "Chat Driven Development", "Copilot Chat", "Developer Productivity", "DevOps", "File Creation", "File Updates", "GitHub", "GitHub Copilot", "News", "Pull Requests", "Repository Workflows"]
 tags_normalized: ["ai", "automation", "branching", "chat driven development", "copilot chat", "developer productivity", "devops", "file creation", "file updates", "github", "github copilot", "news", "pull requests", "repository workflows"]

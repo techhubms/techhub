@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/changelog/feed/"
 date: 2025-11-18 17:30:05 +00:00
-permalink: "/news/2025-11-18-Plan-Mode-in-GitHub-Copilot-Now-Available-in-Public-Preview-for-JetBrains-Eclipse-and-Xcode.html"
+permalink: "/2025-11-18-Plan-Mode-in-GitHub-Copilot-Now-Available-in-Public-Preview-for-JetBrains-Eclipse-and-Xcode.html"
 categories: ["AI", "GitHub Copilot"]
 tags: ["AI", "Code Review", "Copilot", "Copilot Agent", "Development Workflow", "Eclipse", "GitHub Copilot", "IDE Integration", "Implementation Strategy", "Improvement", "JetBrains IDEs", "News", "Plan Mode", "Plugin Update", "Productivity Tools", "Public Preview", "Software Development", "Step By Step Planning", "Xcode"]
 tags_normalized: ["ai", "code review", "copilot", "copilot agent", "development workflow", "eclipse", "github copilot", "ide integration", "implementation strategy", "improvement", "jetbrains ides", "news", "plan mode", "plugin update", "productivity tools", "public preview", "software development", "step by step planning", "xcode"]

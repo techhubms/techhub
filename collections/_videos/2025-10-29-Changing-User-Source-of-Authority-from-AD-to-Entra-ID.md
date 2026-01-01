@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "John Savill's Technical Training"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCpIn7ox7j7bH_OFj7tYouOQ"
 date: 2025-10-29 12:47:36 +00:00
-permalink: "/videos/2025-10-29-Changing-User-Source-of-Authority-from-AD-to-Entra-ID.html"
+permalink: "/2025-10-29-Changing-User-Source-of-Authority-from-AD-to-Entra-ID.html"
 categories: ["Azure", "Security"]
 tags: ["Access Management", "Active Directory", "Azure", "Azure AD", "Cloud", "Cloud Identity", "Cloud Security", "Entra Id", "Governance", "Identity", "Identity Management", "Identity Provider", "Idp", "Microsoft", "Microsoft Documentation", "Migration", "Security", "Technical Training", "User Source Of Authority", "Videos"]
 tags_normalized: ["access management", "active directory", "azure", "azure ad", "cloud", "cloud identity", "cloud security", "entra id", "governance", "identity", "identity management", "identity provider", "idp", "microsoft", "microsoft documentation", "migration", "security", "technical training", "user source of authority", "videos"]

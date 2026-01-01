@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Azure SDK Blog"
 feed_url: "https://devblogs.microsoft.com/azure-sdk/feed/"
 date: 2025-10-02 15:00:17 +00:00
-permalink: "/news/2025-10-02-Azure-SDK-Release-Highlights-September-2025.html"
+permalink: "/2025-10-02-Azure-SDK-Release-Highlights-September-2025.html"
 categories: ["Azure", "Coding"]
 tags: [".NET", "API Changes", "Azure", "Azure Batch", "Azure Developer Tools", "Azure Identity", "Azure Playwright", "Azure SDK", "Beta Release", "Client Libraries", "Coding", "Go", "Java", "JavaScript", "Long Running Operations", "Management Libraries", "News", "Python", "Resource Management", "Rust", "SDK", "SDK Release", "Stable Release"]
 tags_normalized: ["dotnet", "api changes", "azure", "azure batch", "azure developer tools", "azure identity", "azure playwright", "azure sdk", "beta release", "client libraries", "coding", "go", "java", "javascript", "long running operations", "management libraries", "news", "python", "resource management", "rust", "sdk", "sdk release", "stable release"]

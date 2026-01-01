@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Events YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
 date: 2025-02-25 14:00:41 +00:00
-permalink: "/videos/2025-02-25-Transforming-Customer-Interactions-with-Blip-AI-and-Microsoft-Solutions-at-Microsoft-Ignite-2024.html"
+permalink: "/2025-02-25-Transforming-Customer-Interactions-with-Blip-AI-and-Microsoft-Solutions-at-Microsoft-Ignite-2024.html"
 categories: ["AI", "Azure", "Coding"]
 tags: [".NET 8", "AI", "AI Powered Customer Experience", "Azure", "Azure OpenAI Service", "Blip", "Cloud Innovation", "Coding", "Conversational AI", "Data Streams", "Messaging Platforms", "Microsoft", "Microsoft Ignite", "Microsoft Technologies", "Multimodal Interfaces", "Videos"]
 tags_normalized: ["dotnet 8", "ai", "ai powered customer experience", "azure", "azure openai service", "blip", "cloud innovation", "coding", "conversational ai", "data streams", "messaging platforms", "microsoft", "microsoft ignite", "microsoft technologies", "multimodal interfaces", "videos"]

@@ -10,7 +10,7 @@ categories: ["AI", "Azure"]
 feed_name: "Microsoft DevBlog"
 feed_url: "https://devblogs.microsoft.com/foundry/feed/"
 date: 2025-05-27 23:00:00 +00:00
-permalink: "/news/2025-05-27-Azure-AI-Foundry-MCP-Server-May-2025-Update-Adding-Models-Knowledge-Evaluation.html"
+permalink: "/2025-05-27-Azure-AI-Foundry-MCP-Server-May-2025-Update-Adding-Models-Knowledge-Evaluation.html"
 tags: ["AI", "AI Development", "AI Models", "Azure", "Azure AI", "Azure AI Foundry", "Azure AI Foundry Labs", "Azure OpenAI", "Developer Tools", "Generative AI", "Knowledge Management", "MCP Server", "Natural Language Interactions", "News"]
 tags_normalized: ["ai", "ai development", "ai models", "azure", "azure ai", "azure ai foundry", "azure ai foundry labs", "azure openai", "developer tools", "generative ai", "knowledge management", "mcp server", "natural language interactions", "news"]
 ---

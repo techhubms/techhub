@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-09-03 22:50:03 +00:00
-permalink: "/community/2025-09-03-Azure-Local-Training-Program-Self-Paced-Cloud-Management-Skills.html"
+permalink: "/2025-09-03-Azure-Local-Training-Program-Self-Paced-Cloud-Management-Skills.html"
 categories: ["Azure", "Security"]
 tags: ["Arc Registration", "Azure", "Azure Local", "Azure Migrate", "Azure Monitoring", "Azure Security", "Azure Training", "Azure VM Management", "Billing", "Cloud Management", "Community", "Configurator App", "Environment Checker", "Networking", "Security", "Self Paced Learning"]
 tags_normalized: ["arc registration", "azure", "azure local", "azure migrate", "azure monitoring", "azure security", "azure training", "azure vm management", "billing", "cloud management", "community", "configurator app", "environment checker", "networking", "security", "self paced learning"]

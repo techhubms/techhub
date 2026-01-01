@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "GitHub YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ"
 date: 2025-09-22 17:00:35 +00:00
-permalink: "/videos/2025-09-22-The-Ultimate-Beginners-Guide-to-GitHub-in-2025.html"
+permalink: "/2025-09-22-The-Ultimate-Beginners-Guide-to-GitHub-in-2025.html"
 categories: ["DevOps"]
 tags: ["Beginner Tutorial", "Collaboration", "Continuous Integration", "Developer Profile", "Developer Tools", "DevOps", "Git", "GitHub", "Merge", "Open Source Contribution", "Pull Requests", "Repositories", "Repository Management", "Source Control", "Tutorial", "Version Control", "Videos"]
 tags_normalized: ["beginner tutorial", "collaboration", "continuous integration", "developer profile", "developer tools", "devops", "git", "github", "merge", "open source contribution", "pull requests", "repositories", "repository management", "source control", "tutorial", "version control", "videos"]

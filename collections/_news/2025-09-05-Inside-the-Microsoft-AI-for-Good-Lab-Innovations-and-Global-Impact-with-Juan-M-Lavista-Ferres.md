@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft News"
 feed_url: "https://news.microsoft.com/source/feed/"
 date: 2025-09-05 13:53:45 +00:00
-permalink: "/news/2025-09-05-Inside-the-Microsoft-AI-for-Good-Lab-Innovations-and-Global-Impact-with-Juan-M-Lavista-Ferres.html"
+permalink: "/2025-09-05-Inside-the-Microsoft-AI-for-Good-Lab-Innovations-and-Global-Impact-with-Juan-M-Lavista-Ferres.html"
 categories: ["AI"]
 tags: ["AI", "AI Ethics", "AI For Good Lab", "AI Research", "Applied AI", "Biodiversity", "Company News", "Disaster Response", "Edge Computing", "Global Partnerships", "Healthcare AI", "Impact Measurement", "Juan M. Lavista Ferres", "Machine Learning", "Microsoft", "News", "Project SPARROW", "Synthetic Aperture Radar"]
 tags_normalized: ["ai", "ai ethics", "ai for good lab", "ai research", "applied ai", "biodiversity", "company news", "disaster response", "edge computing", "global partnerships", "healthcare ai", "impact measurement", "juan mdot lavista ferres", "machine learning", "microsoft", "news", "project sparrow", "synthetic aperture radar"]

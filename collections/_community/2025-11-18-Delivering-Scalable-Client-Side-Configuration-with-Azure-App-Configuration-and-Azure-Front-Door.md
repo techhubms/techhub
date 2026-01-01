@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-11-18 23:02:36 +00:00
-permalink: "/community/2025-11-18-Delivering-Scalable-Client-Side-Configuration-with-Azure-App-Configuration-and-Azure-Front-Door.html"
+permalink: "/2025-11-18-Delivering-Scalable-Client-Side-Configuration-with-Azure-App-Configuration-and-Azure-Front-Door.html"
 categories: ["AI", "Azure", "Coding", "DevOps"]
 tags: ["A/B Testing", "Agentic Applications", "AI", "AI Driven UI", "AppConfig Provider", "Azure", "Azure App Configuration", "Azure Front Door", "CDN", "Client Side Configuration", "Cloud Architecture", "Coding", "Community", "Configuration Management", "DevOps", "Dynamic Configuration", "Edge Caching", "Feature Flags", "JavaScript", "Managed Identity", "MAUI"]
 tags_normalized: ["aslashb testing", "agentic applications", "ai", "ai driven ui", "appconfig provider", "azure", "azure app configuration", "azure front door", "cdn", "client side configuration", "cloud architecture", "coding", "community", "configuration management", "devops", "dynamic configuration", "edge caching", "feature flags", "javascript", "managed identity", "maui"]

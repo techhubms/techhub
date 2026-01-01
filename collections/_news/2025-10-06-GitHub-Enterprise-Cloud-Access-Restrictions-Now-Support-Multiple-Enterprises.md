@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/changelog/feed/"
 date: 2025-10-06 23:52:41 +00:00
-permalink: "/news/2025-10-06-GitHub-Enterprise-Cloud-Access-Restrictions-Now-Support-Multiple-Enterprises.html"
+permalink: "/2025-10-06-GitHub-Enterprise-Cloud-Access-Restrictions-Now-Support-Multiple-Enterprises.html"
 categories: ["DevOps", "Security"]
 tags: ["Access Restrictions", "Authentication Security", "Copilot Access", "Corporate Proxy", "DevOps", "Enterprise ID", "Enterprise Managed Users", "Enterprise Management Tools", "Firewall Configuration", "GitHub Enterprise Cloud", "Improvement", "Network Security", "News", "Platform Governance", "Proxy Header", "Security"]
 tags_normalized: ["access restrictions", "authentication security", "copilot access", "corporate proxy", "devops", "enterprise id", "enterprise managed users", "enterprise management tools", "firewall configuration", "github enterprise cloud", "improvement", "network security", "news", "platform governance", "proxy header", "security"]

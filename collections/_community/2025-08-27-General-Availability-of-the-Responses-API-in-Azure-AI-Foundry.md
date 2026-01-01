@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=AI"
 date: 2025-08-27 19:00:00 +00:00
-permalink: "/community/2025-08-27-General-Availability-of-the-Responses-API-in-Azure-AI-Foundry.html"
+permalink: "/2025-08-27-General-Availability-of-the-Responses-API-in-Azure-AI-Foundry.html"
 categories: ["AI", "Azure"]
 tags: ["Agent Development", "AgentOps", "AI", "API Orchestration", "AutoGen", "Azure", "Azure AI Foundry", "Azure OpenAI Service", "Code Interpreter", "Community", "Enterprise Automation", "Function Calling", "GPT 5", "Microsoft Azure", "Multi Turn Conversations", "OpenAI", "Production Ready API", "Responses API", "Semantic Kernel", "Stateful Agents", "Tool Integration"]
 tags_normalized: ["agent development", "agentops", "ai", "api orchestration", "autogen", "azure", "azure ai foundry", "azure openai service", "code interpreter", "community", "enterprise automation", "function calling", "gpt 5", "microsoft azure", "multi turn conversations", "openai", "production ready api", "responses api", "semantic kernel", "stateful agents", "tool integration"]

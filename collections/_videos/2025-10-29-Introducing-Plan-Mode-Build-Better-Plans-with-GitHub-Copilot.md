@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "GitHub YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ"
 date: 2025-10-29 18:40:44 +00:00
-permalink: "/videos/2025-10-29-Introducing-Plan-Mode-Build-Better-Plans-with-GitHub-Copilot.html"
+permalink: "/2025-10-29-Introducing-Plan-Mode-Build-Better-Plans-with-GitHub-Copilot.html"
 categories: ["AI", "GitHub Copilot"]
 tags: ["AI", "AI Assistant", "Clarifying Questions", "Code Quality", "Coding Productivity", "Developer Tools", "GitHub", "GitHub Copilot", "Plan Mode", "PlanMode", "Software Development", "Step By Step Planning", "Videos", "VS Code"]
 tags_normalized: ["ai", "ai assistant", "clarifying questions", "code quality", "coding productivity", "developer tools", "github", "github copilot", "plan mode", "planmode", "software development", "step by step planning", "videos", "vs code"]

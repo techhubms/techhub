@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/changelog/feed/"
 date: 2025-12-08 08:56:18 +00:00
-permalink: "/news/2025-12-08-Model-Picker-Now-Available-for-Copilot-Coding-Agent-Pro-and-Pro-Subscribers.html"
+permalink: "/2025-12-08-Model-Picker-Now-Available-for-Copilot-Coding-Agent-Pro-and-Pro-Subscribers.html"
 categories: ["AI", "GitHub Copilot"]
 tags: ["AI", "AI Development", "AI Models", "Anthropic Claude Opus", "Anthropic Claude Sonnet", "Copilot", "Copilot Coding Agent", "Copilot Pro", "Copilot Pro+", "Developer Tools", "GitHub Copilot", "GitHub Mobile", "Model Selection", "News", "OpenAI GPT 5.1 Codex Max", "Product Update", "Visual Studio Code Integration"]
 tags_normalized: ["ai", "ai development", "ai models", "anthropic claude opus", "anthropic claude sonnet", "copilot", "copilot coding agent", "copilot pro", "copilot proplus", "developer tools", "github copilot", "github mobile", "model selection", "news", "openai gpt 5dot1 codex max", "product update", "visual studio code integration"]

@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-09-30 08:04:55 +00:00
-permalink: "/community/2025-09-30-Resolving-AuthorizationPermissionMismatch-for-Set-AzStorageBlobContent-in-PowerShell.html"
+permalink: "/2025-09-30-Resolving-AuthorizationPermissionMismatch-for-Set-AzStorageBlobContent-in-PowerShell.html"
 categories: ["Azure"]
 tags: ["Access Control", "AuthorizationPermissionMismatch", "Azure", "Azure CLI", "Azure Data Access", "Azure Portal", "Azure Roles", "Azure Storage", "Azure Storage Account", "Blob Upload", "Community", "HTTP 403", "PowerShell", "RBAC", "Role Assignments", "Set AzStorageBlobContent", "Storage Permissions"]
 tags_normalized: ["access control", "authorizationpermissionmismatch", "azure", "azure cli", "azure data access", "azure portal", "azure roles", "azure storage", "azure storage account", "blob upload", "community", "http 403", "powershell", "rbac", "role assignments", "set azstorageblobcontent", "storage permissions"]

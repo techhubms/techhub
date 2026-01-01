@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Visual Studio Code YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SLNwkd3w"
 date: 2025-10-03 19:55:25 +00:00
-permalink: "/videos/2025-10-03-Enhancements-to-BYOK-in-Visual-Studio-Code-Model-Provider-Integration.html"
+permalink: "/2025-10-03-Enhancements-to-BYOK-in-Visual-Studio-Code-Model-Provider-Integration.html"
 categories: ["AI", "Coding"]
 tags: ["AI", "AI Integration", "API", "BYOK", "Coding", "Custom Language Models", "Developer Tools", "Extension API", "Extension Development", "Language Model Chat Provider API", "Model Providers", "Open Source", "Videos", "VS Code"]
 tags_normalized: ["ai", "ai integration", "api", "byok", "coding", "custom language models", "developer tools", "extension api", "extension development", "language model chat provider api", "model providers", "open source", "videos", "vs code"]

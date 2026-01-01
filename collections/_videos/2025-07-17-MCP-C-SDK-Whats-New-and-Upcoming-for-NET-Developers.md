@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "DotNet YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw"
 date: 2025-07-17 06:05:33 +00:00
-permalink: "/videos/2025-07-17-MCP-C-SDK-Whats-New-and-Upcoming-for-NET-Developers.html"
+permalink: "/2025-07-17-MCP-C-SDK-Whats-New-and-Upcoming-for-NET-Developers.html"
 categories: ["AI", "Coding"]
 tags: [".NET", "AI", "AI Integration", "Azure App Service", "C#", "Coding", "Development Tips", "DNX", "MCP", "MCP SDK", "MCP Spec", "Microsoft", "SDK Updates", "Versions", "Videos"]
 tags_normalized: ["dotnet", "ai", "ai integration", "azure app service", "csharp", "coding", "development tips", "dnx", "mcp", "mcp sdk", "mcp spec", "microsoft", "sdk updates", "versions", "videos"]

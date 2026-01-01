@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Cloud YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCSgzRJMqIiCNtoM6Q7Q9Lqw"
 date: 2025-06-27 14:00:32 +00:00
-permalink: "/videos/2025-06-27-Nestles-AI-Powered-Digital-Twins-Transform-Content-Creation-with-Microsoft-Azure.html"
+permalink: "/2025-06-27-Nestles-AI-Powered-Digital-Twins-Transform-Content-Creation-with-Microsoft-Azure.html"
 categories: ["AI", "Azure"]
 tags: ["AI", "AI Powered Digital Twins", "Azure", "Consumer Goods", "Digital Content Creation", "Digital Media", "Digital Twins", "Ecommerce", "Enterprise AI", "Gen AI", "Generative AI", "Marketing Technology", "Microsoft Azure", "Microsoft Cloud", "Nestle", "Nestlé", "NVIDIA Omniverse", "Product Visualization", "Videos"]
 tags_normalized: ["ai", "ai powered digital twins", "azure", "consumer goods", "digital content creation", "digital media", "digital twins", "ecommerce", "enterprise ai", "gen ai", "generative ai", "marketing technology", "microsoft azure", "microsoft cloud", "nestle", "nestl", "nvidia omniverse", "product visualization", "videos"]

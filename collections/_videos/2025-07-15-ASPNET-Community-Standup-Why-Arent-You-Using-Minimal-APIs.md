@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Dotnet's Youtube channel"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw"
 date: 2025-07-15 17:09:35 +00:00
-permalink: "/videos/2025-07-15-ASPNET-Community-Standup-Why-arent-you-using-Minimal-APIs.html"
+permalink: "/2025-07-15-ASPNET-Community-Standup-Why-Arent-You-Using-Minimal-APIs.html"
 categories: ["Coding"]
 tags: [".NET", "API Architecture", "ASP.NET", "ASP.NET Core", "Coding", "Controller Based Apps", "Daniel Roth", "Developer Community", "Mike Kistler", "Minimal APIs", "Minimalapis", "Safia Abdalla", "Videos", "Web APIs", "Web Development"]
 tags_normalized: ["dotnet", "api architecture", "aspdotnet", "aspdotnet core", "coding", "controller based apps", "daniel roth", "developer community", "mike kistler", "minimal apis", "minimalapis", "safia abdalla", "videos", "web apis", "web development"]

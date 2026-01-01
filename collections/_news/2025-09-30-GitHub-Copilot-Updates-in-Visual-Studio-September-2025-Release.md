@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/changelog/feed/"
 date: 2025-09-30 17:34:58 +00:00
-permalink: "/news/2025-09-30-GitHub-Copilot-Updates-in-Visual-Studio-September-2025-Release.html"
+permalink: "/2025-09-30-GitHub-Copilot-Updates-in-Visual-Studio-September-2025-Release.html"
 categories: ["AI", "Coding", "GitHub Copilot"]
 tags: [".NET", ".NET Modernization Agent", "Agent Mode", "AI", "AI Development", "Azure Migration", "Code Review", "Coding", "Copilot", "Copilot Chat", "GitHub Copilot", "MCP Prompts", "Mermaid Diagrams", "News", "Performance Optimization", "Profiler Agent", "VS"]
 tags_normalized: ["dotnet", "dotnet modernization agent", "agent mode", "ai", "ai development", "azure migration", "code review", "coding", "copilot", "copilot chat", "github copilot", "mcp prompts", "mermaid diagrams", "news", "performance optimization", "profiler agent", "vs"]

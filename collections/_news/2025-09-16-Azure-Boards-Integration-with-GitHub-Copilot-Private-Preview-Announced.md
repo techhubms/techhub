@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft DevOps Blog"
 feed_url: "https://devblogs.microsoft.com/devops/feed/"
 date: 2025-09-16 11:45:27 +00:00
-permalink: "/news/2025-09-16-Azure-Boards-Integration-with-GitHub-Copilot-Private-Preview-Announced.html"
+permalink: "/2025-09-16-Azure-Boards-Integration-with-GitHub-Copilot-Private-Preview-Announced.html"
 categories: ["AI", "Azure", "DevOps", "GitHub Copilot"]
 tags: ["Agile", "AI", "Azure", "Azure Boards", "Azure Boards App", "Azure DevOps", "Code Review", "Copilot Coding Agent", "DevOps", "DevOps Workflow", "Feature Preview", "GitHub Copilot", "GitHub Integration", "Integration", "News", "Private Preview", "Pull Request Automation", "Requirements Management", "Task Automation", "Work Item Automation"]
 tags_normalized: ["agile", "ai", "azure", "azure boards", "azure boards app", "azure devops", "code review", "copilot coding agent", "devops", "devops workflow", "feature preview", "github copilot", "github integration", "integration", "news", "private preview", "pull request automation", "requirements management", "task automation", "work item automation"]

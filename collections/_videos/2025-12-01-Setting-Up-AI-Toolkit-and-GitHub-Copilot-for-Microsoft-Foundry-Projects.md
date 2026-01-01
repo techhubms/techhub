@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Developer YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
 date: 2025-12-01 21:00:12 +00:00
-permalink: "/videos/2025-12-01-Setting-Up-AI-Toolkit-and-GitHub-Copilot-for-Microsoft-Foundry-Projects.html"
+permalink: "/2025-12-01-Setting-Up-AI-Toolkit-and-GitHub-Copilot-for-Microsoft-Foundry-Projects.html"
 categories: ["AI", "Azure", "Coding", "GitHub Copilot"]
 tags: ["Agent Development", "AI", "AI Toolkit", "Azure", "Cloud Computing", "Cloud Development", "Coding", "Dev", "Developer Tools", "Development", "Environment Setup", "GitHub Copilot", "Microsoft", "Microsoft Azure", "Microsoft Foundry", "Model Management", "Tech", "Technology", "Videos", "VS Code", "VS Code Extensions"]
 tags_normalized: ["agent development", "ai", "ai toolkit", "azure", "cloud computing", "cloud development", "coding", "dev", "developer tools", "development", "environment setup", "github copilot", "microsoft", "microsoft azure", "microsoft foundry", "model management", "tech", "technology", "videos", "vs code", "vs code extensions"]

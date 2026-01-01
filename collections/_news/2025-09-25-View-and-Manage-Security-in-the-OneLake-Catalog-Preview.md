@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Fabric Blog"
 feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
 date: 2025-09-25 15:00:00 +00:00
-permalink: "/news/2025-09-25-View-and-Manage-Security-in-the-OneLake-Catalog-Preview.html"
+permalink: "/2025-09-25-View-and-Manage-Security-in-the-OneLake-Catalog-Preview.html"
 categories: ["Azure", "Security"]
 tags: ["Access Control", "Azure", "Azure Data Platform", "Column Level Security", "Data Governance", "Fabric Governance", "Least Privilege", "Microsoft Fabric", "News", "OneLake Catalog", "Permissions Management", "Role Management", "Row Level Security", "Secure Tab", "Security", "Security Roles", "Workspace Roles"]
 tags_normalized: ["access control", "azure", "azure data platform", "column level security", "data governance", "fabric governance", "least privilege", "microsoft fabric", "news", "onelake catalog", "permissions management", "role management", "row level security", "secure tab", "security", "security roles", "workspace roles"]

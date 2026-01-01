@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/changelog/feed/"
 date: 2025-11-18 16:39:20 +00:00
-permalink: "/news/2025-11-18-Internal-MCP-Registry-and-Allowlist-Controls-for-Copilot-in-VS-Code-and-Visual-Studio.html"
+permalink: "/2025-11-18-Internal-MCP-Registry-and-Allowlist-Controls-for-Copilot-in-VS-Code-and-Visual-Studio.html"
 categories: ["AI", "DevOps", "GitHub Copilot"]
 tags: ["AI", "Allowlist Policy", "Azure API Center", "Configuration", "Copilot", "Copilot Business", "Copilot Enterprise", "Developer Tools", "DevOps", "Enforcement", "Enterprise Governance", "GitHub Copilot", "Improvement", "Internal Registry", "MCP Registry", "MCP Server", "MCP Specification", "News", "Platform Governance", "Policy Management", "Remote Server", "Security Policy", "VS", "VS Code"]
 tags_normalized: ["ai", "allowlist policy", "azure api center", "configuration", "copilot", "copilot business", "copilot enterprise", "developer tools", "devops", "enforcement", "enterprise governance", "github copilot", "improvement", "internal registry", "mcp registry", "mcp server", "mcp specification", "news", "platform governance", "policy management", "remote server", "security policy", "vs", "vs code"]

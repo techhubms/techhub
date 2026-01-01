@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Developer YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
 date: 2025-12-01 21:00:21 +00:00
-permalink: "/videos/2025-12-01-AI-Toolkit-and-GitHub-Copilot-Model-Recommendations-Workshop.html"
+permalink: "/2025-12-01-AI-Toolkit-and-GitHub-Copilot-Model-Recommendations-Workshop.html"
 categories: ["AI", "Azure", "GitHub Copilot"]
 tags: ["Agent Mode", "AI", "AI Development", "AI Toolkit", "Azure", "Cloud Computing", "Dev", "Developer Tools", "Development", "GitHub Copilot", "Language Models", "Microsoft", "Microsoft Foundry", "Model Catalog", "Model Playground", "Model Recommendations", "Tech", "Technology", "Videos", "Workshop"]
 tags_normalized: ["agent mode", "ai", "ai development", "ai toolkit", "azure", "cloud computing", "dev", "developer tools", "development", "github copilot", "language models", "microsoft", "microsoft foundry", "model catalog", "model playground", "model recommendations", "tech", "technology", "videos", "workshop"]

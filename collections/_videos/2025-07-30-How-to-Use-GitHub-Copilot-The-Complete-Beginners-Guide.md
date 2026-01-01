@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "GitHub YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ"
 date: 2025-07-30 17:00:40 +00:00
-permalink: "/videos/2025-07-30-How-to-Use-GitHub-Copilot-The-Complete-Beginners-Guide.html"
+permalink: "/2025-07-30-How-to-Use-GitHub-Copilot-The-Complete-Beginners-Guide.html"
 categories: ["AI", "Coding", "GitHub Copilot"]
 tags: ["AI", "AI Pair Programming", "Beginner Tutorial", "Code Refactoring", "Code Review", "Coding", "Development Workflow", "GitHub", "GitHub Copilot", "Integration", "LLMs", "Prompt Engineering", "React", "REST API", "Security Best Practices", "Test Driven Development", "Tutorial", "Videos", "VS Code"]
 tags_normalized: ["ai", "ai pair programming", "beginner tutorial", "code refactoring", "code review", "coding", "development workflow", "github", "github copilot", "integration", "llms", "prompt engineering", "react", "rest api", "security best practices", "test driven development", "tutorial", "videos", "vs code"]

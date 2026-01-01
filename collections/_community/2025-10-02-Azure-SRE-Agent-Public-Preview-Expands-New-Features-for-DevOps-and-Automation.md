@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-10-02 02:24:40 +00:00
-permalink: "/community/2025-10-02-Azure-SRE-Agent-Public-Preview-Expands-New-Features-for-DevOps-and-Automation.html"
+permalink: "/2025-10-02-Azure-SRE-Agent-Public-Preview-Expands-New-Features-for-DevOps-and-Automation.html"
 categories: ["Azure", "DevOps", "Security"]
 tags: ["AKS", "AZ CLI", "Azure", "Azure App Service", "Azure DevOps", "Azure Functions", "Azure Monitor", "Azure Portal", "Azure SRE Agent", "Community", "DevOps", "DevOps Automation", "Diagnostics", "Enterprise Governance", "GitHub Integration", "Incident Management", "Kubectl", "PagerDuty", "RBAC", "Root Cause Analysis", "Runbooks", "Security", "ServiceNow", "Site Reliability Engineering"]
 tags_normalized: ["aks", "az cli", "azure", "azure app service", "azure devops", "azure functions", "azure monitor", "azure portal", "azure sre agent", "community", "devops", "devops automation", "diagnostics", "enterprise governance", "github integration", "incident management", "kubectl", "pagerduty", "rbac", "root cause analysis", "runbooks", "security", "servicenow", "site reliability engineering"]

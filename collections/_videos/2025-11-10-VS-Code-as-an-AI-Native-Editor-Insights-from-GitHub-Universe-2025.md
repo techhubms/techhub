@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Visual Studio Code YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SLNwkd3w"
 date: 2025-11-10 08:00:41 +00:00
-permalink: "/videos/2025-11-10-VS-Code-as-an-AI-Native-Editor-Insights-from-GitHub-Universe-2025.html"
+permalink: "/2025-11-10-VS-Code-as-an-AI-Native-Editor-Insights-from-GitHub-Universe-2025.html"
 categories: ["AI", "Coding", "GitHub Copilot"]
 tags: ["Agent Sessions", "AI", "AI Agents", "AI Native Editor", "Cloud Development", "Coding", "Coding Workflow", "Copilot Upgrades", "Developer Tooling", "Editor Extensions", "GitHub Copilot", "GitHub Universe", "Mission Control", "Open Platform", "Videos", "VS Code"]
 tags_normalized: ["agent sessions", "ai", "ai agents", "ai native editor", "cloud development", "coding", "coding workflow", "copilot upgrades", "developer tooling", "editor extensions", "github copilot", "github universe", "mission control", "open platform", "videos", "vs code"]

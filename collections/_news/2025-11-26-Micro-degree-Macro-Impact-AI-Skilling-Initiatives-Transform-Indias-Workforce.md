@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft News"
 feed_url: "https://news.microsoft.com/source/feed/"
 date: 2025-11-26 13:58:08 +00:00
-permalink: "/news/2025-11-26-Micro-degree-Macro-Impact-AI-Skilling-Initiatives-Transform-Indias-Workforce.html"
+permalink: "/2025-11-26-Micro-degree-Macro-Impact-AI-Skilling-Initiatives-Transform-Indias-Workforce.html"
 categories: ["AI"]
 tags: ["AI", "AI Micro Degree", "AI Powered Education", "AI Skilling", "AI Talent Pipeline", "Cloud Computing", "Company News", "Data Science", "Gen AI", "India", "Job Creation", "Microsoft", "Microsoft Elevate", "National Skill Training Institutes", "News", "Python", "Vocational Education", "Work Trend Index"]
 tags_normalized: ["ai", "ai micro degree", "ai powered education", "ai skilling", "ai talent pipeline", "cloud computing", "company news", "data science", "gen ai", "india", "job creation", "microsoft", "microsoft elevate", "national skill training institutes", "news", "python", "vocational education", "work trend index"]

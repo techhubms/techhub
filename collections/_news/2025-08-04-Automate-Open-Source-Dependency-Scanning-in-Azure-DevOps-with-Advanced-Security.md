@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft DevBlog"
 feed_url: "https://devblogs.microsoft.com/devops/feed/"
 date: 2025-08-04 17:17:37 +00:00
-permalink: "/news/2025-08-04-Automate-Open-Source-Dependency-Scanning-in-Azure-DevOps-with-Advanced-Security.html"
+permalink: "/2025-08-04-Automate-Open-Source-Dependency-Scanning-in-Azure-DevOps-with-Advanced-Security.html"
 categories: ["Azure", "DevOps", "Security"]
 tags: ["Advanced Security", "Azure", "Azure DevOps", "Build Validation", "CI/CD", "Dependency Scanning", "DevOps", "DevOps Pipelines", "GitHub Advanced Security", "News", "Open Source", "Open Source Vulnerabilities", "Pipeline Automation", "Pull Request Annotations", "Repository Settings", "Security", "Security Alerts"]
 tags_normalized: ["advanced security", "azure", "azure devops", "build validation", "cislashcd", "dependency scanning", "devops", "devops pipelines", "github advanced security", "news", "open source", "open source vulnerabilities", "pipeline automation", "pull request annotations", "repository settings", "security", "security alerts"]

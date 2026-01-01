@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Developer YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
 date: 2025-11-14 16:35:46 +00:00
-permalink: "/videos/2025-11-14-Why-Server-Side-Request-Forgery-SSRF-Is-a-Top-Cloud-Security-Concern.html"
+permalink: "/2025-11-14-Why-Server-Side-Request-Forgery-SSRF-Is-a-Top-Cloud-Security-Concern.html"
 categories: ["Security"]
 tags: ["Cloud Security", "Development Security", "Michael Howard", "Microsoft", "Security", "Security Best Practices", "Security Bug", "Security Risks", "Server Side Request Forgery", "SSRF", "Videos", "Vulnerability", "Web Application Security"]
 tags_normalized: ["cloud security", "development security", "michael howard", "microsoft", "security", "security best practices", "security bug", "security risks", "server side request forgery", "ssrf", "videos", "vulnerability", "web application security"]

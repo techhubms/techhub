@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Events YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
 date: 2025-11-24 06:30:30 +00:00
-permalink: "/videos/2025-11-24-Building-Microsoft-Agent-Framework-Solutions-for-Microsoft-365-with-AI-Integration.html"
+permalink: "/2025-11-24-Building-Microsoft-Agent-Framework-Solutions-for-Microsoft-365-with-AI-Integration.html"
 categories: ["AI", "Azure", "Security"]
 tags: ["Agent 365 SDK", "Agent Registration", "AI", "AI Agents", "Azure", "Collaborative Workflows", "Compliance", "Defender Integration", "Governance", "Innovatewithlow", "Low Code", "MCP Servers", "Microsoft 365", "Microsoft Agent Framework", "MSIgnite", "Observability", "Onboarding Automation", "Security", "Security Monitoring", "Tenant Environment", "Videos"]
 tags_normalized: ["agent 365 sdk", "agent registration", "ai", "ai agents", "azure", "collaborative workflows", "compliance", "defender integration", "governance", "innovatewithlow", "low code", "mcp servers", "microsoft 365", "microsoft agent framework", "msignite", "observability", "onboarding automation", "security", "security monitoring", "tenant environment", "videos"]

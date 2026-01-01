@@ -6,7 +6,7 @@ author: "Tech Hub Team"
 excerpt_separator: <!--excerpt_end-->
 viewing_mode: "internal"
 date: 2025-12-22 09:00:00 +00:00
-permalink: "/roundups/2025-12-22-Weekly-AI-and-Tech-News-Roundup.html"
+permalink: "/2025-12-22-Weekly-AI-and-Tech-News-Roundup.html"
 categories: ["AI", "GitHub Copilot", "ML", "Azure", "Coding", "DevOps", "Security"]
 tags: ["AI", "Automation", "Azure", "Cloud Computing", "Code Review", "Coding", "Data Engineering", "Dependabot", "DevOps", "GitHub Copilot", "Machine Learning", "Microsoft Fabric", "ML", "Orchestration", "Prompt Engineering", "Roundups", "Security", "VS Code"]
 tags_normalized: ["ai", "automation", "azure", "cloud computing", "code review", "coding", "data engineering", "dependabot", "devops", "github copilot", "machine learning", "microsoft fabric", "ml", "orchestration", "prompt engineering", "roundups", "security", "vs code"]

@@ -6,7 +6,7 @@ categories: ["AI", "Azure", "Coding", "DevOps", "GitHub Copilot", "Security"]
 date: 2025-05-01 00:00:00 +00:00
 author: "Xebia"
 viewing_mode: "external"
-permalink: "/community/2025-05-01-XPRT-Magazine-18.html"
+permalink: "/2025-05-01-XPRT-Magazine-18.html"
 excerpt_separator: <!--excerpt_end-->
 tags: [".NET Aspire", "Accessibility", "AI", "AI Agents", "Azure", "Cloud Native", "Coding", "Community", "DevOps", "Engagement Management", "Entra ID", "Generative AI", "GitHub Copilot", "Infrastructure From Code", "JWT", "Knowledge Sharing", "Magazines", "Octopus Deploy", "Prompt Engineering", "Security", "Semantic Kernel"]
 tags_normalized: ["dotnet aspire", "accessibility", "ai", "ai agents", "azure", "cloud native", "coding", "community", "devops", "engagement management", "entra id", "generative ai", "github copilot", "infrastructure from code", "jwt", "knowledge sharing", "magazines", "octopus deploy", "prompt engineering", "security", "semantic kernel"]

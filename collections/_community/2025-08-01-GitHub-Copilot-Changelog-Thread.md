@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Reddit Github Copilot"
 feed_url: "https://www.reddit.com/r/GithubCopilot.rss"
 date: 2025-08-01 15:37:50 +00:00
-permalink: "/community/2025-08-01-GitHub-Copilot-Changelog-Thread.html"
+permalink: "/2025-08-01-GitHub-Copilot-Changelog-Thread.html"
 categories: ["AI", "GitHub Copilot"]
 tags: ["AI", "AI Powered Coding", "Automation", "Bug Fixes", "Community", "Developer Tools", "Enhancements", "GitHub Copilot", "Release Notes"]
 tags_normalized: ["ai", "ai powered coding", "automation", "bug fixes", "community", "developer tools", "enhancements", "github copilot", "release notes"]

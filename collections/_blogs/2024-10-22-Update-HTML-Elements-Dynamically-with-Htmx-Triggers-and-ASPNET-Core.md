@@ -9,10 +9,10 @@ viewing_mode: "external"
 feed_name: "Khalid Abuhakmeh's Blog"
 feed_url: "https://khalidabuhakmeh.com/feed.xml"
 date: 2024-10-22 00:00:00 +00:00
-permalink: "/blogs/2024-10-22-Update-HTML-Elements-Dynamically-with-Htmx-Triggers-and-ASPNET-Core.html"
+permalink: "/2024-10-22-Update-HTML-Elements-Dynamically-with-Htmx-Triggers-and-ASPNET-Core.html"
 categories: ["Coding"]
-tags: [".NET", "ASP.NET", "ASP.NET Core", "Avatar Update", "C#", "Coding", "Dynamic UI", "Htmx", "HX Trigger", "Partial Views", "Blogs", "Razor Pages", "User Profile", "Web Development"]
-tags_normalized: ["dotnet", "aspdotnet", "aspdotnet core", "avatar update", "csharp", "coding", "dynamic ui", "htmx", "hx trigger", "partial views", "blogs", "razor pages", "user profile", "web development"]
+tags: [".NET", "ASP.NET", "ASP.NET Core", "Avatar Update", "Blogs", "C#", "Coding", "Dynamic UI", "Htmx", "HX Trigger", "Partial Views", "Razor Pages", "User Profile", "Web Development"]
+tags_normalized: ["dotnet", "aspdotnet", "aspdotnet core", "avatar update", "blogs", "csharp", "coding", "dynamic ui", "htmx", "hx trigger", "partial views", "razor pages", "user profile", "web development"]
 ---
 
 In this post, Khalid Abuhakmeh walks through using Htmx's HX-Trigger headers with ASP.NET Core Razor Pages to seamlessly update UI elements like avatars upon profile changes, backed by practical code examples and integration tips.<!--excerpt_end-->

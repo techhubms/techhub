@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "GitHub YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ"
 date: 2025-08-03 14:01:06 +00:00
-permalink: "/videos/2025-08-03-Are-You-Using-All-3-GitHub-Copilot-Modes.html"
+permalink: "/2025-08-03-Are-you-using-all-3-GitHub-Copilot-modes.html"
 categories: ["AI", "GitHub Copilot"]
 tags: ["AI", "AI Code Assistant", "AI Programming", "Code Completion", "Copilot Agent Mode", "Copilot Ask Mode", "Copilot Edit Mode", "Developer Productivity", "GitHub", "GitHub Copilot", "Programming", "Programming Tools", "Videos"]
 tags_normalized: ["ai", "ai code assistant", "ai programming", "code completion", "copilot agent mode", "copilot ask mode", "copilot edit mode", "developer productivity", "github", "github copilot", "programming", "programming tools", "videos"]

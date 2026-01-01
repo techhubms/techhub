@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-12-08 19:59:25 +00:00
-permalink: "/community/2025-12-08-Modernizing-Microsoft-Access-Migrating-to-Nodejs-OpenAPI-SQL-Server-and-MongoDB-with-GitHub-Copilot.html"
+permalink: "/2025-12-08-Modernizing-Microsoft-Access-Migrating-to-Nodejs-OpenAPI-SQL-Server-and-MongoDB-with-GitHub-Copilot.html"
 categories: ["AI", "Azure", "Coding", "DevOps", "GitHub Copilot"]
 tags: ["Accessibility", "AI", "API First", "Azure", "Business Logic Migration", "Coding", "Community", "Constraint Refactoring", "Database Modernization", "DevOps", "GitHub Copilot", "Liquibase", "Microsoft Access", "MongoDB", "N Tier Architecture", "Node.js", "OpenAPI", "Repository Pattern", "REST API", "SQL Server", "SQL Server Migration Assistant", "Synthetic Data", "Test Automation", "VBA", "VS Code", "WCAG"]
 tags_normalized: ["accessibility", "ai", "api first", "azure", "business logic migration", "coding", "community", "constraint refactoring", "database modernization", "devops", "github copilot", "liquibase", "microsoft access", "mongodb", "n tier architecture", "nodedotjs", "openapi", "repository pattern", "rest api", "sql server", "sql server migration assistant", "synthetic data", "test automation", "vba", "vs code", "wcag"]

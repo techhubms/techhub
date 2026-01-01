@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Nick Chapsas YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrkPsvLGln62OMZRO6K-llg"
 date: 2025-11-24 12:01:57 +00:00
-permalink: "/videos/2025-11-24-Every-Class-Should-Be-Sealed-in-C.html"
+permalink: "/2025-11-24-Every-Class-Should-Be-Sealed-in-C.html"
 categories: ["Coding"]
 tags: [".NET", "C#", "Class Design", "Code Safety", "Coding", "Development Practices", "Maintainability", "Object Oriented Programming", "OOP Principles", "Performance", "Sealed Classes", "Software Engineering", "Videos"]
 tags_normalized: ["dotnet", "csharp", "class design", "code safety", "coding", "development practices", "maintainability", "object oriented programming", "oop principles", "performance", "sealed classes", "software engineering", "videos"]

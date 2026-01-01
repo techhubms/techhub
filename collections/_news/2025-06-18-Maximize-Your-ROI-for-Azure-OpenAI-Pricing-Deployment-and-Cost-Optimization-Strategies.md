@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The Azure Blog"
 feed_url: "https://azure.microsoft.com/en-us/blog/feed/"
 date: 2025-06-18 15:00:00 +00:00
-permalink: "/news/2025-06-18-Maximize-Your-ROI-for-Azure-OpenAI-Pricing-Deployment-and-Cost-Optimization-Strategies.html"
+permalink: "/2025-06-18-Maximize-Your-ROI-for-Azure-OpenAI-Pricing-Deployment-and-Cost-Optimization-Strategies.html"
 categories: ["AI", "Azure", "ML", "Security"]
 tags: ["AI", "AI + Machine Learning", "AI Deployment", "Analytics", "Azure", "Azure AI Foundry", "Azure OpenAI", "Batch Processing", "Compliance", "Cost Management", "Databases", "Deployment Types", "Enterprise AI", "Gen AI Applications", "Internet Of Things", "Management And Governance", "Microsoft Cost Management", "Migration", "ML", "Model Router", "News", "Pricing Models", "Prompt Caching", "Provisioned Throughput", "Security"]
 tags_normalized: ["ai", "ai plus machine learning", "ai deployment", "analytics", "azure", "azure ai foundry", "azure openai", "batch processing", "compliance", "cost management", "databases", "deployment types", "enterprise ai", "gen ai applications", "internet of things", "management and governance", "microsoft cost management", "migration", "ml", "model router", "news", "pricing models", "prompt caching", "provisioned throughput", "security"]

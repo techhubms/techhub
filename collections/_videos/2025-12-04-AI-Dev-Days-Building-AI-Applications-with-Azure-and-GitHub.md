@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Developer YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
 date: 2025-12-04 01:05:19 +00:00
-permalink: "/videos/2025-12-04-AI-Dev-Days-Building-AI-Applications-with-Azure-and-GitHub.html"
+permalink: "/2025-12-04-AI-Dev-Days-Building-AI-Applications-with-Azure-and-GitHub.html"
 categories: ["AI", "Azure", "DevOps"]
 tags: ["Agentic DevOps", "AI", "AI Applications", "AI Models", "Automation", "Azure", "Azure SRE Agent", "Demo", "Developer", "Developer Community", "Developer Tools", "DevOps", "GitHub", "GitHub Universe", "GPT", "GPT 5", "GPT5", "Hands On Lab", "MCP", "Microsoft", "Microsoft Foundry", "Microsoft Ignite", "Python", "Software Engineering", "Softwaredevelopers", "Videos"]
 tags_normalized: ["agentic devops", "ai", "ai applications", "ai models", "automation", "azure", "azure sre agent", "demo", "developer", "developer community", "developer tools", "devops", "github", "github universe", "gpt", "gpt 5", "gpt5", "hands on lab", "mcp", "microsoft", "microsoft foundry", "microsoft ignite", "python", "software engineering", "softwaredevelopers", "videos"]

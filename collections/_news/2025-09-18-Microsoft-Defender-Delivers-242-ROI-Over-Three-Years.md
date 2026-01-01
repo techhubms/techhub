@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Security Blog"
 feed_url: "https://www.microsoft.com/en-us/security/blog/feed/"
 date: 2025-09-18 17:00:00 +00:00
-permalink: "/news/2025-09-18-Microsoft-Defender-Delivers-242-ROI-Over-Three-Years.html"
+permalink: "/2025-09-18-Microsoft-Defender-Delivers-242-ROI-Over-Three-Years.html"
 categories: ["AI", "Azure", "Security"]
 tags: ["AI", "AI Automation", "Azure", "Cybersecurity", "Forrester TEI", "Hybrid Cloud Security", "Incident Response", "Kusto Query Language", "Microsoft Defender", "Microsoft Sentinel", "News", "Operational Efficiency", "ROI", "SecOps", "Security", "Security Operations", "SIEM", "Threat Detection", "Tool Consolidation"]
 tags_normalized: ["ai", "ai automation", "azure", "cybersecurity", "forrester tei", "hybrid cloud security", "incident response", "kusto query language", "microsoft defender", "microsoft sentinel", "news", "operational efficiency", "roi", "secops", "security", "security operations", "siem", "threat detection", "tool consolidation"]

@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft .NET Blog"
 feed_url: "https://devblogs.microsoft.com/dotnet/feed/"
 date: 2025-10-14 17:05:00 +00:00
-permalink: "/news/2025-10-14-Announcing-the-NET-Security-Group.html"
+permalink: "/2025-10-14-Announcing-the-NET-Security-Group.html"
 categories: ["Coding", "Security"]
 tags: [".NET", "Application Security", "Canonical", "Coding", "CVE", "Ecosystem", "IBM", "Lifecycle", "Linux Distributions", "Maintenance & Updates", "Microsoft", "News", "Open Source", "Partners", "Patch Tuesday", "Patching", "Red Hat", "Security", "Security Group", "Security Lifecycle", "Security Patching", "Support", "Upstream Projects", "Vulnerability Disclosure"]
 tags_normalized: ["dotnet", "application security", "canonical", "coding", "cve", "ecosystem", "ibm", "lifecycle", "linux distributions", "maintenance and updates", "microsoft", "news", "open source", "partners", "patch tuesday", "patching", "red hat", "security", "security group", "security lifecycle", "security patching", "support", "upstream projects", "vulnerability disclosure"]

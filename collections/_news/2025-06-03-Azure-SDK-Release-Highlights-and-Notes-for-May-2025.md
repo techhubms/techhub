@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft DevBlog"
 feed_url: "https://devblogs.microsoft.com/azure-sdk/feed/"
 date: 2025-06-03 16:59:15 +00:00
-permalink: "/news/2025-06-03-Azure-SDK-Release-Highlights-and-Notes-for-May-2025.html"
+permalink: "/2025-06-03-Azure-SDK-Release-Highlights-and-Notes-for-May-2025.html"
 categories: ["Azure", "Coding", "AI", "Security"]
 tags: ["AI", "AI Agents", "Azure", "Azure SDK", "Beta Release", "Carbon Optimization", "Client Libraries", "Coding", "Dependency Map", "Health Deidentification", "Key Vault", "Management Libraries", "Neon Postgres", "News", "Release Notes", "Resource Management", "SAP Virtual Instance", "SDK", "Security", "Stable Release", "Storage Blob"]
 tags_normalized: ["ai", "ai agents", "azure", "azure sdk", "beta release", "carbon optimization", "client libraries", "coding", "dependency map", "health deidentification", "key vault", "management libraries", "neon postgres", "news", "release notes", "resource management", "sap virtual instance", "sdk", "security", "stable release", "storage blob"]

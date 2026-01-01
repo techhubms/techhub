@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Events YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
 date: 2025-11-20 14:35:23 +00:00
-permalink: "/videos/2025-11-20-End-to-End-Security-for-AI-Platforms-Apps-and-Agents.html"
+permalink: "/2025-11-20-End-to-End-Security-for-AI-Platforms-Apps-and-Agents.html"
 categories: ["AI", "Security"]
 tags: ["Agent Monitoring", "AI", "AI Management", "AI Platform", "AI Security", "Compliance", "Data Governance", "Digital Workers", "EU AI Act", "Microsoft Defender", "Microsoft Entra", "Microsoft Ignite", "Microsoft Purview", "MSIgnite", "Observability", "ProtectcloudAIplatformandapps", "Risk Management", "Security", "Security Dashboard", "Threat Protection", "Videos"]
 tags_normalized: ["agent monitoring", "ai", "ai management", "ai platform", "ai security", "compliance", "data governance", "digital workers", "eu ai act", "microsoft defender", "microsoft entra", "microsoft ignite", "microsoft purview", "msignite", "observability", "protectcloudaiplatformandapps", "risk management", "security", "security dashboard", "threat protection", "videos"]

@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Visual Studio Code YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SLNwkd3w"
 date: 2025-07-30 21:09:28 +00:00
-permalink: "/videos/2025-07-30-Boost-Your-SQL-Development-in-VS-Code-GitHub-Copilot-Containers-and-More.html"
+permalink: "/2025-07-30-Boost-Your-SQL-Development-in-VS-Code-GitHub-Copilot-Containers-and-More.html"
 categories: ["AI", "GitHub Copilot", "Coding", "Azure"]
 tags: ["Agent Mode", "Agentmode", "AI", "Azure", "Code", "Coding", "Compare", "Connection Management", "Containers", "Demo", "Designer", "Developer", "Developer Community", "Developer Productivity", "Developer Tools", "GitHub Copilot", "Local Containers", "Microsoft Azure", "Mssql", "MSSQL Extension", "Productivity", "Schema Tools", "Software Developer", "SQL", "SQL Development", "SQL Server", "Videos", "VS Code"]
 tags_normalized: ["agent mode", "agentmode", "ai", "azure", "code", "coding", "compare", "connection management", "containers", "demo", "designer", "developer", "developer community", "developer productivity", "developer tools", "github copilot", "local containers", "microsoft azure", "mssql", "mssql extension", "productivity", "schema tools", "software developer", "sql", "sql development", "sql server", "videos", "vs code"]

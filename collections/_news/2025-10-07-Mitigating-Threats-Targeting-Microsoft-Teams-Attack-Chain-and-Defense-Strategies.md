@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Security Blog"
 feed_url: "https://www.microsoft.com/en-us/security/blog/feed/"
 date: 2025-10-07 17:00:00 +00:00
-permalink: "/news/2025-10-07-Mitigating-Threats-Targeting-Microsoft-Teams-Attack-Chain-and-Defense-Strategies.html"
+permalink: "/2025-10-07-Mitigating-Threats-Targeting-Microsoft-Teams-Attack-Chain-and-Defense-Strategies.html"
 categories: ["Azure", "Security"]
 tags: ["Attack Chain", "Attack Surface Reduction", "Azure", "Azure Security", "Conditional Access", "Defender For Cloud Apps", "Defender For Endpoint", "Defender For Office 365", "Incident Response", "Malware", "MFA Bypass", "Microsoft Entra ID", "Microsoft Purview", "Microsoft Sentinel", "Microsoft Teams", "News", "Phishing", "Ransomware", "Security", "Security Controls", "TeamsPhisher", "Threat Intelligence", "Zero Trust"]
 tags_normalized: ["attack chain", "attack surface reduction", "azure", "azure security", "conditional access", "defender for cloud apps", "defender for endpoint", "defender for office 365", "incident response", "malware", "mfa bypass", "microsoft entra id", "microsoft purview", "microsoft sentinel", "microsoft teams", "news", "phishing", "ransomware", "security", "security controls", "teamsphisher", "threat intelligence", "zero trust"]

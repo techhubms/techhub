@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Reddit DotNet"
 feed_url: "https://www.reddit.com/r/dotnet/.rss"
 date: 2025-08-04 08:30:19 +00:00
-permalink: "/community/2025-08-04-Facet-v2-C-Source-Generator-for-Lightweight-Projections-and-Mappings.html"
+permalink: "/2025-08-04-Facet-v2-C-Source-Generator-for-Lightweight-Projections-and-Mappings.html"
 categories: ["Coding"]
 tags: [".NET", "API Models", "C#", "Coding", "Community", "Compile Time", "Custom Mappings", "DTOs", "Facet", "LINQ", "Partial Classes", "Projections", "Source Generator"]
 tags_normalized: ["dotnet", "api models", "csharp", "coding", "community", "compile time", "custom mappings", "dtos", "facet", "linq", "partial classes", "projections", "source generator"]

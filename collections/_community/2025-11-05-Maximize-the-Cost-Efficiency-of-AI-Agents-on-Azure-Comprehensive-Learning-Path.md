@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-11-05 14:46:02 +00:00
-permalink: "/community/2025-11-05-Maximize-the-Cost-Efficiency-of-AI-Agents-on-Azure-Comprehensive-Learning-Path.html"
+permalink: "/2025-11-05-Maximize-the-Cost-Efficiency-of-AI-Agents-on-Azure-Comprehensive-Learning-Path.html"
 categories: ["AI", "Azure"]
 tags: ["AI", "AI Agents", "AI Center Of Excellence", "AI Development", "Application Insights", "Azure", "Azure AI Foundry", "Cloud Architecture", "Community", "Cost Management", "Cost Optimization", "FinOps", "Governance", "Microsoft Copilot Studio", "Operational Efficiency", "Reference Architectures", "ROI Forecasting"]
 tags_normalized: ["ai", "ai agents", "ai center of excellence", "ai development", "application insights", "azure", "azure ai foundry", "cloud architecture", "community", "cost management", "cost optimization", "finops", "governance", "microsoft copilot studio", "operational efficiency", "reference architectures", "roi forecasting"]

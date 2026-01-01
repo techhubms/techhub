@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Fabric Blog"
 feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
 date: 2025-09-15 08:58:36 +00:00
-permalink: "/news/2025-09-15-Hack-the-Future-of-Data-with-Microsoft-Fabric-Global-AI-and-Data-Hackathon.html"
+permalink: "/2025-09-15-Hack-the-Future-of-Data-with-Microsoft-Fabric-Global-AI-and-Data-Hackathon.html"
 categories: ["AI", "Azure", "ML"]
 tags: ["AI", "Analytics", "AutoML", "Azure", "Azure Databases", "Copilot Studio", "Cosmos DB", "Data Agents", "Data Engineering", "Data Integration", "Event Hubs", "Hackathon", "Livestream Learning", "Microsoft Fabric", "ML", "News", "Open Mirroring", "Power BI", "Real Time Intelligence", "SynapseML"]
 tags_normalized: ["ai", "analytics", "automl", "azure", "azure databases", "copilot studio", "cosmos db", "data agents", "data engineering", "data integration", "event hubs", "hackathon", "livestream learning", "microsoft fabric", "ml", "news", "open mirroring", "power bi", "real time intelligence", "synapseml"]

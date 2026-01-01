@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "GitHub YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ"
 date: 2025-07-28 19:14:13 +00:00
-permalink: "/videos/2025-07-28-GitHub-Copilot-Helps-One-Acre-Fund-Scale-Farming-Impact.html"
+permalink: "/2025-07-28-GitHub-Copilot-Helps-One-Acre-Fund-Scale-Farming-Impact.html"
 categories: ["AI", "GitHub Copilot"]
 tags: ["Agricultural Innovation", "AI", "AI in Development", "AI Productivity", "Code Collaboration", "Developer Tools", "Engineering Impact", "GitHub", "GitHub Copilot", "Nonprofit Technology", "One Acre Fund", "OneAcreFund", "Open Source", "OpenSource", "Software Acceleration", "Videos"]
 tags_normalized: ["agricultural innovation", "ai", "ai in development", "ai productivity", "code collaboration", "developer tools", "engineering impact", "github", "github copilot", "nonprofit technology", "one acre fund", "oneacrefund", "open source", "opensource", "software acceleration", "videos"]

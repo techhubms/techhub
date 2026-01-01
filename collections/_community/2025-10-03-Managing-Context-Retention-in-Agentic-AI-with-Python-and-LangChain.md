@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-10-03 05:09:48 +00:00
-permalink: "/community/2025-10-03-Managing-Context-Retention-in-Agentic-AI-with-Python-and-LangChain.html"
+permalink: "/2025-10-03-Managing-Context-Retention-in-Agentic-AI-with-Python-and-LangChain.html"
 categories: ["AI"]
 tags: ["Agentic AI", "AI", "AI Development", "Community", "Context Retention", "Conversation Memory", "Conversational AI", "CrewAI", "LangChain", "Memory Management", "Multi Agent Systems", "OpenAI API", "Python", "Python Scripting", "SQLite", "State Persistence"]
 tags_normalized: ["agentic ai", "ai", "ai development", "community", "context retention", "conversation memory", "conversational ai", "crewai", "langchain", "memory management", "multi agent systems", "openai api", "python", "python scripting", "sqlite", "state persistence"]

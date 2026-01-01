@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Community"
 date: 2025-08-13 15:45:03 +00:00
-permalink: "/community/2025-08-13-Analyzing-Images-with-Python-in-Excel-Now-Natively-Supported.html"
+permalink: "/2025-08-13-Analyzing-Images-with-Python-in-Excel-Now-Natively-Supported.html"
 categories: ["Coding"]
 tags: ["Coding", "Community", "Computer Vision", "Data Science", "Excel Data Analysis", "Excel For Mac", "Excel For The Web", "Excel For Windows", "Image Analysis", "Image Manipulation", "Microsoft 365", "Microsoft Excel", "NumPy", "Pillow", "Python in Excel", "SciPy", "Xl() Function"]
 tags_normalized: ["coding", "community", "computer vision", "data science", "excel data analysis", "excel for mac", "excel for the web", "excel for windows", "image analysis", "image manipulation", "microsoft 365", "microsoft excel", "numpy", "pillow", "python in excel", "scipy", "xl function"]

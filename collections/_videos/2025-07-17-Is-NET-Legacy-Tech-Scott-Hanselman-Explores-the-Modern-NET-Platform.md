@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "DotNet YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw"
 date: 2025-07-17 15:53:10 +00:00
-permalink: "/videos/2025-07-17-Is-NET-Legacy-Tech-Scott-Hanselman-Explores-the-Modern-NET-Platform.html"
+permalink: "/2025-07-17-Is-NET-Legacy-Tech-Scott-Hanselman-Explores-the-Modern-NET-Platform.html"
 categories: ["Coding"]
 tags: [".NET", ".NET 9", "C#", "Coding", "Cross Platform", "Legacy Technology", "Modern Development", "OneDevQuestion", "Open Source", "Raspberry Pi", "Scott Hanselman", "Videos", "Xbox"]
 tags_normalized: ["dotnet", "dotnet 9", "csharp", "coding", "cross platform", "legacy technology", "modern development", "onedevquestion", "open source", "raspberry pi", "scott hanselman", "videos", "xbox"]

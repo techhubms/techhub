@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "DotNet YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw"
 date: 2025-12-10 00:00:42 +00:00
-permalink: "/videos/2025-12-10-No-code-Modernization-for-ASPNET-with-Managed-Instance-on-Azure-App-Service.html"
+permalink: "/2025-12-10-No-code-Modernization-for-ASPNET-with-Managed-Instance-on-Azure-App-Service.html"
 categories: ["Azure", "Coding"]
 tags: [".NET", "Agentic Workflows", "ASP.NET", "Azure", "Azure App Service", "Cloud Modernization", "Coding", "Custom Installers", "Enterprise Innovation", "Integration", "Managed Instance", "Migration", "PaaS", "Performance Optimization", "Scalability", "System Commands", "Total Cost Of Ownership", "Videos", "Web API"]
 tags_normalized: ["dotnet", "agentic workflows", "aspdotnet", "azure", "azure app service", "cloud modernization", "coding", "custom installers", "enterprise innovation", "integration", "managed instance", "migration", "paas", "performance optimization", "scalability", "system commands", "total cost of ownership", "videos", "web api"]

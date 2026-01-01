@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Events YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
 date: 2025-11-20 10:43:53 +00:00
-permalink: "/videos/2025-11-20-Modernizing-Windows-Server-Workloads-with-Azure-Administration-AI-and-Security-Tools.html"
+permalink: "/2025-11-20-Modernizing-Windows-Server-Workloads-with-Azure-Administration-AI-and-Security-Tools.html"
 categories: ["AI", "Azure", "Security"]
 tags: ["AI", "AI Shell", "Azure", "Azure Administration", "Azure Arc", "Azure Copilot", "Azure Infrastructure", "Azure Migrate", "Cloud Migration", "Compliance", "Dependency Mapping", "Disaster Recovery", "Entra Domain Services", "Migrateandmodernizeyourestate", "Monitoring", "MSIgnite", "Performance Insights", "Security", "Software Updates", "Videos", "Virtualization", "Windows Admin Center", "Windows Server", "Workload Modernization"]
 tags_normalized: ["ai", "ai shell", "azure", "azure administration", "azure arc", "azure copilot", "azure infrastructure", "azure migrate", "cloud migration", "compliance", "dependency mapping", "disaster recovery", "entra domain services", "migrateandmodernizeyourestate", "monitoring", "msignite", "performance insights", "security", "software updates", "videos", "virtualization", "windows admin center", "windows server", "workload modernization"]

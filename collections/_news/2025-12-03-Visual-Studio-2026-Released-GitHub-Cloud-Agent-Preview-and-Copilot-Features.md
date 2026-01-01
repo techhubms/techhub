@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft VisualStudio Blog"
 feed_url: "https://devblogs.microsoft.com/visualstudio/feed/"
 date: 2025-12-03 16:00:24 +00:00
-permalink: "/news/2025-12-03-Visual-Studio-2026-Released-GitHub-Cloud-Agent-Preview-and-Copilot-Features.html"
+permalink: "/2025-12-03-Visual-Studio-2026-Released-GitHub-Cloud-Agent-Preview-and-Copilot-Features.html"
 categories: ["AI", "Coding", "GitHub Copilot"]
 tags: ["AI", "AI Powered Development", "C#", "Cloud Agent", "Code Automation", "Coding", "Context Menu", "Copilot Actions", "Developer Productivity", "GitHub Copilot", "GitHub Integration", "IDE Enhancement", "Intent Detection", "News", "Performance Improvements", "User Experience", "VS"]
 tags_normalized: ["ai", "ai powered development", "csharp", "cloud agent", "code automation", "coding", "context menu", "copilot actions", "developer productivity", "github copilot", "github integration", "ide enhancement", "intent detection", "news", "performance improvements", "user experience", "vs"]

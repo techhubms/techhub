@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Developer YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
 date: 2025-07-30 22:35:15 +00:00
-permalink: "/videos/2025-07-30-Unlocking-Your-Agents-Potential-with-Model-Context-Protocol-in-Azure-AI-Foundry.html"
+permalink: "/2025-07-30-Unlocking-Your-Agents-Potential-with-Model-Context-Protocol-in-Azure-AI-Foundry.html"
 categories: ["AI", "Azure"]
 tags: ["AI", "AI Agent", "Azure", "Azure AI Foundry", "Cloud Computing", "Data Analytics", "Dev", "Development", "Foundry Agents Service", "MCP", "MCP Tools Integration", "Microsoft", "Tech", "Technology", "Videos", "VS Code"]
 tags_normalized: ["ai", "ai agent", "azure", "azure ai foundry", "cloud computing", "data analytics", "dev", "development", "foundry agents service", "mcp", "mcp tools integration", "microsoft", "tech", "technology", "videos", "vs code"]

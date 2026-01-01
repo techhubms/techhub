@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/changelog/feed/"
 date: 2025-12-11 16:45:28 +00:00
-permalink: "/news/2025-12-11-Post-as-Admin-Feature-in-GitHub-Discussions.html"
+permalink: "/2025-12-11-Post-as-Admin-Feature-in-GitHub-Discussions.html"
 categories: ["DevOps"]
 tags: ["Access Management", "Admin Badge", "Collaboration", "Community Engagement", "Community Management", "DevOps", "GitHub", "GitHub Discussions", "News", "Official Responses", "Open Source", "Repository Administration"]
 tags_normalized: ["access management", "admin badge", "collaboration", "community engagement", "community management", "devops", "github", "github discussions", "news", "official responses", "open source", "repository administration"]

@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-11-14 08:00:00 +00:00
-permalink: "/community/2025-11-14-Mission-Agent-Possible-Developer-AI-Agent-Competition-at-Microsoft-Ignite-2025.html"
+permalink: "/2025-11-14-Mission-Agent-Possible-Developer-AI-Agent-Competition-at-Microsoft-Ignite-2025.html"
 categories: ["AI"]
 tags: ["AI", "AI Agent", "AI Innovation", "Azure AI Foundry", "Community", "Contest", "Developer Challenge", "Developer Skills", "Event", "GitHub Models Playground", "Intelligent Solutions", "Machine Learning", "Microsoft Azure", "Microsoft Ignite", "Model Selection", "Prizes", "Problem Solving"]
 tags_normalized: ["ai", "ai agent", "ai innovation", "azure ai foundry", "community", "contest", "developer challenge", "developer skills", "event", "github models playground", "intelligent solutions", "machine learning", "microsoft azure", "microsoft ignite", "model selection", "prizes", "problem solving"]

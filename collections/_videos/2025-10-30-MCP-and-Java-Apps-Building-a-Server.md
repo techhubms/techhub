@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Developer YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
 date: 2025-10-30 16:00:31 +00:00
-permalink: "/videos/2025-10-30-MCP-and-Java-Apps-Building-a-Server.html"
+permalink: "/2025-10-30-MCP-and-Java-Apps-Building-a-Server.html"
 categories: ["AI", "Coding", "GitHub Copilot"]
 tags: ["Agent Mode", "AI", "AI Applications", "AIServers", "API Integration", "API Server", "APIIntegration", "Automated Scaffolding", "CloudDevelopment", "Coding", "Developer Tools", "Endpoint Configuration", "GitHub Copilot", "Java", "Java Development", "JavaApps", "JavaDevelopment", "MCP", "MCP Inspector", "Quarkus", "QuarkusJav", "Server Sent Events", "ServerDevelopment", "Videos"]
 tags_normalized: ["agent mode", "ai", "ai applications", "aiservers", "api integration", "api server", "apiintegration", "automated scaffolding", "clouddevelopment", "coding", "developer tools", "endpoint configuration", "github copilot", "java", "java development", "javaapps", "javadevelopment", "mcp", "mcp inspector", "quarkus", "quarkusjav", "server sent events", "serverdevelopment", "videos"]

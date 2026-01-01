@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-11-18 16:00:40 +00:00
-permalink: "/community/2025-11-18-Azure-Resiliency-Proactive-Continuity-with-Agentic-Experiences-and-Frontier-Innovation.html"
+permalink: "/2025-11-18-Azure-Resiliency-Proactive-Continuity-with-Agentic-Experiences-and-Frontier-Innovation.html"
 categories: ["AI", "Azure", "Security"]
 tags: ["Agentic Experiences", "AI", "AI Driven Automation", "Azure", "Azure Backup", "Azure Copilot", "Azure Monitor", "Business Continuity", "Chaos Studio", "Cloud Architecture", "Community", "Compliance", "Cyber Recovery", "Data Recovery", "Disaster Recovery", "High Availability", "Infrastructure Resiliency", "Microsoft Ignite", "Operational Continuity", "Policy Management", "Posture Assessment", "Ransomware Protection", "Resiliency Agent", "Security", "Site Recovery"]
 tags_normalized: ["agentic experiences", "ai", "ai driven automation", "azure", "azure backup", "azure copilot", "azure monitor", "business continuity", "chaos studio", "cloud architecture", "community", "compliance", "cyber recovery", "data recovery", "disaster recovery", "high availability", "infrastructure resiliency", "microsoft ignite", "operational continuity", "policy management", "posture assessment", "ransomware protection", "resiliency agent", "security", "site recovery"]

@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-10-14 00:03:37 +00:00
-permalink: "/community/2025-10-14-Operational-Excellence-in-AI-Infrastructure-Standardized-Node-Lifecycle-Management.html"
+permalink: "/2025-10-14-Operational-Excellence-in-AI-Infrastructure-Standardized-Node-Lifecycle-Management.html"
 categories: ["AI", "Azure"]
 tags: ["AI", "AI Infrastructure", "Azure", "Community", "Compliance Tools", "CPACT", "CPU Architecture", "CTAM", "Data Center Operations", "Diagnostics", "Firmware Updates", "GPU Management", "Microsoft Azure", "Node Lifecycle Management", "Open Compute Project", "PLDM", "Redfish API", "Reliability"]
 tags_normalized: ["ai", "ai infrastructure", "azure", "community", "compliance tools", "cpact", "cpu architecture", "ctam", "data center operations", "diagnostics", "firmware updates", "gpu management", "microsoft azure", "node lifecycle management", "open compute project", "pldm", "redfish api", "reliability"]

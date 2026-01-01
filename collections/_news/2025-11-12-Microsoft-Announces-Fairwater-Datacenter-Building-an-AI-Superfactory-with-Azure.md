@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft News"
 feed_url: "https://news.microsoft.com/source/feed/"
 date: 2025-11-12 17:41:13 +00:00
-permalink: "/news/2025-11-12-Microsoft-Announces-Fairwater-Datacenter-Building-an-AI-Superfactory-with-Azure.html"
+permalink: "/2025-11-12-Microsoft-Announces-Fairwater-Datacenter-Building-an-AI-Superfactory-with-Azure.html"
 categories: ["AI", "Azure"]
 tags: ["AI", "AI Infrastructure", "AI Superfactory", "AI Workloads", "Azure", "Cloud Computing", "Company News", "Data Center Networking", "Datacenter Design", "Elastic Scaling", "Fairwater Datacenter", "GPUs", "Inference", "LinkedIn Post", "Liquid Cooling", "Microsoft", "News", "Performance Optimization", "Planet Scale AI", "Sustainability", "Training"]
 tags_normalized: ["ai", "ai infrastructure", "ai superfactory", "ai workloads", "azure", "cloud computing", "company news", "data center networking", "datacenter design", "elastic scaling", "fairwater datacenter", "gpus", "inference", "linkedin post", "liquid cooling", "microsoft", "news", "performance optimization", "planet scale ai", "sustainability", "training"]

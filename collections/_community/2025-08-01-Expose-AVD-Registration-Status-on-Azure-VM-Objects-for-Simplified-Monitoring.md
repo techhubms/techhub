@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-08-01 18:00:09 +00:00
-permalink: "/community/2025-08-01-Expose-AVD-Registration-Status-on-Azure-VM-Objects-for-Simplified-Monitoring.html"
+permalink: "/2025-08-01-Expose-AVD-Registration-Status-on-Azure-VM-Objects-for-Simplified-Monitoring.html"
 categories: ["Azure"]
 tags: ["Automation", "AVD", "Azure", "Azure Portal", "Azure Resource Graph", "Azure Virtual Desktop", "Azure VM", "CLI", "Community", "Monitoring", "PowerShell", "Registration Status", "REST API"]
 tags_normalized: ["automation", "avd", "azure", "azure portal", "azure resource graph", "azure virtual desktop", "azure vm", "cli", "community", "monitoring", "powershell", "registration status", "rest api"]

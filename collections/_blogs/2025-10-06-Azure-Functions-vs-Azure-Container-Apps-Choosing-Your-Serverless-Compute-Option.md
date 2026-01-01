@@ -9,10 +9,10 @@ viewing_mode: "external"
 feed_name: "Dellenny's Blog"
 feed_url: "https://dellenny.com/feed/"
 date: 2025-10-06 09:52:01 +00:00
-permalink: "/blogs/2025-10-06-Azure-Functions-vs-Azure-Container-Apps-Choosing-Your-Serverless-Compute-Option.html"
+permalink: "/2025-10-06-Azure-Functions-vs-Azure-Container-Apps-Choosing-Your-Serverless-Compute-Option.html"
 categories: ["Azure", "Coding"]
-tags: ["AKS", "Architecture", "Azure", "Azure Container Apps", "Azure Functions", "Cloud Architecture", "Coding", "Containers", "Cost Optimization", "Event Driven", "Function as A Service", "KEDA", "Kubernetes", "Microservices", "Blogs", "Scaling", "Serverless Computing", "Solution Architecture", "Stateful Workloads"]
-tags_normalized: ["aks", "architecture", "azure", "azure container apps", "azure functions", "cloud architecture", "coding", "containers", "cost optimization", "event driven", "function as a service", "keda", "kubernetes", "microservices", "blogs", "scaling", "serverless computing", "solution architecture", "stateful workloads"]
+tags: ["AKS", "Architecture", "Azure", "Azure Container Apps", "Azure Functions", "Blogs", "Cloud Architecture", "Coding", "Containers", "Cost Optimization", "Event Driven", "Function as A Service", "KEDA", "Kubernetes", "Microservices", "Scaling", "Serverless Computing", "Solution Architecture", "Stateful Workloads"]
+tags_normalized: ["aks", "architecture", "azure", "azure container apps", "azure functions", "blogs", "cloud architecture", "coding", "containers", "cost optimization", "event driven", "function as a service", "keda", "kubernetes", "microservices", "scaling", "serverless computing", "solution architecture", "stateful workloads"]
 ---
 
 Dellenny presents a detailed comparison of Azure Functions and Azure Container Apps, guiding architects and developers on choosing the right serverless compute platform in Microsoft Azure.<!--excerpt_end-->

@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/changelog/feed/"
 date: 2025-11-18 17:30:05 +00:00
-permalink: "/news/2025-11-18-GitHub-Copilot-Coding-Agent-for-Eclipse-Now-in-Public-Preview.html"
+permalink: "/2025-11-18-GitHub-Copilot-Coding-Agent-for-Eclipse-Now-in-Public-Preview.html"
 categories: ["AI", "GitHub Copilot"]
 tags: ["AI", "AI Code Assistant", "Copilot", "Copilot Chat", "Copilot Coding Agent", "Developer Tools", "Eclipse IDE", "GitHub", "GitHub Copilot", "IDE Integration", "Job Tracking", "News", "Public Preview", "Pull Request Automation", "Task Delegation"]
 tags_normalized: ["ai", "ai code assistant", "copilot", "copilot chat", "copilot coding agent", "developer tools", "eclipse ide", "github", "github copilot", "ide integration", "job tracking", "news", "public preview", "pull request automation", "task delegation"]

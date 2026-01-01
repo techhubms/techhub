@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Developer YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
 date: 2025-11-11 08:00:07 +00:00
-permalink: "/videos/2025-11-11-Deploying-AI-Solutions-with-Azure-AI-Landing-Zones.html"
+permalink: "/2025-11-11-Deploying-AI-Solutions-with-Azure-AI-Landing-Zones.html"
 categories: ["AI", "Azure", "DevOps", "Security"]
 tags: ["AI", "AI Deployment", "AI Solutions", "Azure", "Azure AI Landing Zones", "Azure Essentials", "Azure Governance", "Azure Well Architected Framework", "Cloud Adoption Framework", "Cloud Architecture", "Deployment Best Practices", "DevOps", "Establish", "IaC", "IT Governance", "Landing Zone Automation", "Microsoft Azure", "Security", "Videos"]
 tags_normalized: ["ai", "ai deployment", "ai solutions", "azure", "azure ai landing zones", "azure essentials", "azure governance", "azure well architected framework", "cloud adoption framework", "cloud architecture", "deployment best practices", "devops", "establish", "iac", "it governance", "landing zone automation", "microsoft azure", "security", "videos"]

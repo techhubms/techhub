@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft DevOps Blog"
 feed_url: "https://devblogs.microsoft.com/devops/feed/"
 date: 2025-11-18 17:21:58 +00:00
-permalink: "/news/2025-11-18-Azure-DevOps-and-GitHub-Repositories-Unlocking-Agentic-AI-for-Developer-Teams.html"
+permalink: "/2025-11-18-Azure-DevOps-and-GitHub-Repositories-Unlocking-Agentic-AI-for-Developer-Teams.html"
 categories: ["AI", "Azure", "Coding", "DevOps", "GitHub Copilot", "Security"]
 tags: ["Agent HQ", "Agentic AI", "AI", "Automation", "Azure", "Azure & Cloud", "Azure Boards", "Azure DevOps", "Azure Pipelines", "Code Quality", "Coding", "Continuous Integration", "DevOps", "Enterprise Cloud", "GitHub Copilot", "GitHub Enterprise Importer", "Governance", "IDE Integration", "MCP Server", "Migration", "News", "Security", "VS"]
 tags_normalized: ["agent hq", "agentic ai", "ai", "automation", "azure", "azure and cloud", "azure boards", "azure devops", "azure pipelines", "code quality", "coding", "continuous integration", "devops", "enterprise cloud", "github copilot", "github enterprise importer", "governance", "ide integration", "mcp server", "migration", "news", "security", "vs"]

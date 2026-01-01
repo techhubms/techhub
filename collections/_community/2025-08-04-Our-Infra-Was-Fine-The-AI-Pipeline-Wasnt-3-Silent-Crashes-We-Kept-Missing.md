@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Reddit DevOps"
 feed_url: "https://www.reddit.com/r/devops/.rss"
 date: 2025-08-04 04:16:15 +00:00
-permalink: "/community/2025-08-04-Our-Infra-Was-Fine-The-AI-Pipeline-Wasnt-3-Silent-Crashes-We-Kept-Missing.html"
+permalink: "/2025-08-04-Our-Infra-Was-Fine-The-AI-Pipeline-Wasnt-3-Silent-Crashes-We-Kept-Missing.html"
 categories: ["DevOps", "AI", "Security"]
 tags: ["AI", "Bootstrap Ordering", "Canary Prompt", "CI/CD", "Community", "Deployment Deadlock", "DevOps", "Incident Response", "LLM Pipeline", "Pre Deploy Collapse", "Problem Mapping", "Production Failures", "Security", "Semantic Health Checks", "Semantic Tree"]
 tags_normalized: ["ai", "bootstrap ordering", "canary prompt", "cislashcd", "community", "deployment deadlock", "devops", "incident response", "llm pipeline", "pre deploy collapse", "problem mapping", "production failures", "security", "semantic health checks", "semantic tree"]

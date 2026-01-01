@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft PowerShell Blog"
 feed_url: "https://devblogs.microsoft.com/powershell/feed/"
 date: 2025-03-12 18:00:43 +00:00
-permalink: "/news/2025-03-12-Authoring-Enhancements-in-Microsoft-Desired-State-Configuration-v300.html"
+permalink: "/2025-03-12-Authoring-Enhancements-in-Microsoft-Desired-State-Configuration-v300.html"
 categories: ["Azure", "Coding", "DevOps"]
 tags: ["Authoring", "Azure", "Azure Resource Manager", "Bicep", "Coding", "Configuration as Code", "Desired State Configuration", "DevOps", "DSC V3.0.0", "IaC", "News", "PowerShell", "PowerShell DSC", "Schema Validation", "Shell Completion", "VS Code"]
 tags_normalized: ["authoring", "azure", "azure resource manager", "bicep", "coding", "configuration as code", "desired state configuration", "devops", "dsc v3dot0dot0", "iac", "news", "powershell", "powershell dsc", "schema validation", "shell completion", "vs code"]

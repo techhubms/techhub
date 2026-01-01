@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/changelog/feed/"
 date: 2025-10-23 16:58:12 +00:00
-permalink: "/news/2025-10-23-Streamlining-Enterprise-Governance-with-GitHub-Organization-Custom-Properties.html"
+permalink: "/2025-10-23-Streamlining-Enterprise-Governance-with-GitHub-Organization-Custom-Properties.html"
 categories: ["DevOps"]
 tags: ["Configuration", "Custom Properties", "DevOps", "Enterprise Administration", "Enterprise Management Tools", "GitHub", "Governance", "Improvement", "Metadata", "News", "Organization Management", "Platform Governance", "Platform Management", "Policy Automation", "Public Preview", "Rulesets", "Security Compliance", "Targeting"]
 tags_normalized: ["configuration", "custom properties", "devops", "enterprise administration", "enterprise management tools", "github", "governance", "improvement", "metadata", "news", "organization management", "platform governance", "platform management", "policy automation", "public preview", "rulesets", "security compliance", "targeting"]

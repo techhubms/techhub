@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft News"
 feed_url: "https://news.microsoft.com/source/feed/"
 date: 2025-10-28 23:12:00 +00:00
-permalink: "/news/2025-10-28-GitHub-Octoverse-2025-AI-Copilot-and-the-Rise-of-TypeScript-in-Software-Development.html"
+permalink: "/2025-10-28-GitHub-Octoverse-2025-AI-Copilot-and-the-Rise-of-TypeScript-in-Software-Development.html"
 categories: ["AI", "Coding", "GitHub Copilot"]
 tags: ["Agent HQ", "AI", "AI Adoption", "AI Tools", "Coding", "Coding Agents", "Company News", "Copilot", "Developer Growth", "Developer Productivity", "GitHub Copilot", "GitHub Octoverse", "GitHub Statistics", "JavaScript", "LinkedIn Post", "Microsoft", "Multimodal AI", "News", "Open Source", "Podcast", "Programming Languages", "Python", "Software Development Trends", "TypeScript"]
 tags_normalized: ["agent hq", "ai", "ai adoption", "ai tools", "coding", "coding agents", "company news", "copilot", "developer growth", "developer productivity", "github copilot", "github octoverse", "github statistics", "javascript", "linkedin post", "microsoft", "multimodal ai", "news", "open source", "podcast", "programming languages", "python", "software development trends", "typescript"]

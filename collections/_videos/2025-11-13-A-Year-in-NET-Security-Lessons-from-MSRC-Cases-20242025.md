@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "DotNet YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw"
 date: 2025-11-13 17:40:46 +00:00
-permalink: "/videos/2025-11-13-A-Year-in-NET-Security-Lessons-from-MSRC-Cases-20242025.html"
+permalink: "/2025-11-13-A-Year-in-NET-Security-Lessons-from-MSRC-Cases-20242025.html"
 categories: ["Coding", "Security"]
 tags: [".NET", ".NET 10", ".NET Aspire", "API Security", "ASP.NET Core", "C# 14", "Cloud Native", "Coding", "Coding Pitfalls", "Design Oversights", "Developer Strategies", "F# 10", "MAUI", "Microsoft Security Response Center", "MSRC", "Secure Coding", "Security", "Security Best Practices", "Security Patterns", "Videos", "VS"]
 tags_normalized: ["dotnet", "dotnet 10", "dotnet aspire", "api security", "aspdotnet core", "csharp 14", "cloud native", "coding", "coding pitfalls", "design oversights", "developer strategies", "fsharp 10", "maui", "microsoft security response center", "msrc", "secure coding", "security", "security best practices", "security patterns", "videos", "vs"]

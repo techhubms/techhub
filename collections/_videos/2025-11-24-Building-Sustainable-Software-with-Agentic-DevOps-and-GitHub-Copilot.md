@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Events YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
 date: 2025-11-24 11:57:55 +00:00
-permalink: "/videos/2025-11-24-Building-Sustainable-Software-with-Agentic-DevOps-and-GitHub-Copilot.html"
+permalink: "/2025-11-24-Building-Sustainable-Software-with-Agentic-DevOps-and-GitHub-Copilot.html"
 categories: ["AI", "Coding", "DevOps", "GitHub Copilot"]
 tags: ["Agentic DevOps", "Agile Development", "AI", "AI Agents", "AI Tooling", "Code Performance", "Coding", "Continuous AI", "DevOps", "DevOps Practices", "Enterprise Build Optimization", "Environmental Impact", "GitHub Copilot", "GitHub Next", "Green Software", "InnovatewithAzureAIappsandagents", "MSIgnite", "Software Engineering", "Sustainable Software", "Usability Analysis", "Videos"]
 tags_normalized: ["agentic devops", "agile development", "ai", "ai agents", "ai tooling", "code performance", "coding", "continuous ai", "devops", "devops practices", "enterprise build optimization", "environmental impact", "github copilot", "github next", "green software", "innovatewithazureaiappsandagents", "msignite", "software engineering", "sustainable software", "usability analysis", "videos"]

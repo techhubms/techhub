@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Reddit Github Copilot"
 feed_url: "https://www.reddit.com/r/GithubCopilot.rss"
 date: 2025-08-04 16:49:00 +00:00
-permalink: "/community/2025-08-04-GitHub-Copilot-and-Handling-Context-Limitations-in-Large-Legacy-Codebases.html"
+permalink: "/2025-08-04-GitHub-Copilot-and-Handling-Context-Limitations-in-Large-Legacy-Codebases.html"
 categories: ["AI", "GitHub Copilot"]
 tags: ["AI", "AI Code Assistance", "Code Review", "Community", "Context Limit", "Copilot Limitations", "Developer Tools", "GitHub Copilot", "Large Codebase", "Legacy Code", "Project Adaptation", "Software Engineering"]
 tags_normalized: ["ai", "ai code assistance", "code review", "community", "context limit", "copilot limitations", "developer tools", "github copilot", "large codebase", "legacy code", "project adaptation", "software engineering"]

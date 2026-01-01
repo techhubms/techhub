@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-10-15 22:47:39 +00:00
-permalink: "/community/2025-10-15-Public-Preview-Sharing-Capacity-Reservation-Groups-Across-Azure-Subscriptions.html"
+permalink: "/2025-10-15-Public-Preview-Sharing-Capacity-Reservation-Groups-Across-Azure-Subscriptions.html"
 categories: ["Azure"]
 tags: ["Azure", "Azure API", "Azure Capacity Reservation Groups", "Azure Reserved Instances", "Azure Virtual Machines", "Centralized Capacity", "Cloud Scalability", "Community", "Cost Optimization", "CRG", "Disaster Recovery", "Public Preview", "Resource Management", "Subscription Management", "Virtual Machine Scale Sets"]
 tags_normalized: ["azure", "azure api", "azure capacity reservation groups", "azure reserved instances", "azure virtual machines", "centralized capacity", "cloud scalability", "community", "cost optimization", "crg", "disaster recovery", "public preview", "resource management", "subscription management", "virtual machine scale sets"]

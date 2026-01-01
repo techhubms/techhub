@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/changelog/feed/"
 date: 2025-09-24 17:49:12 +00:00
-permalink: "/news/2025-09-24-Copilot-Spaces-General-Availability-Announcement.html"
+permalink: "/2025-09-24-Copilot-Spaces-General-Availability-Announcement.html"
 categories: ["AI", "GitHub Copilot"]
 tags: ["AI", "Code Explanation", "Code Generation", "Context Management", "Copilot", "Copilot Spaces", "Dev Tooling", "GitHub", "GitHub Copilot", "IDE Integration", "Knowledge Sharing", "News", "Project Collaboration", "Project Onboarding", "Software Development", "Team Standards"]
 tags_normalized: ["ai", "code explanation", "code generation", "context management", "copilot", "copilot spaces", "dev tooling", "github", "github copilot", "ide integration", "knowledge sharing", "news", "project collaboration", "project onboarding", "software development", "team standards"]

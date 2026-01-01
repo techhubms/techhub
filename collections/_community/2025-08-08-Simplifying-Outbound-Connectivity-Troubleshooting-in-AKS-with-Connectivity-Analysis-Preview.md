@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Community"
 date: 2025-08-08 18:14:42 +00:00
-permalink: "/community/2025-08-08-Simplifying-Outbound-Connectivity-Troubleshooting-in-AKS-with-Connectivity-Analysis-Preview.html"
+permalink: "/2025-08-08-Simplifying-Outbound-Connectivity-Troubleshooting-in-AKS-with-Connectivity-Analysis-Preview.html"
 categories: ["Azure"]
 tags: ["ACR", "AKS", "Azure", "Azure Networking", "Azure Portal", "Azure Virtual Network Verifier", "Cloud Native", "Cluster Operations", "CNI Overlay", "Community", "Connectivity Analysis", "Container Registry", "Containers", "EgressBlocked", "Firewall", "Kubernetes Networking", "MCR", "Network Security Group", "Node Pool", "NSG", "Outbound Connectivity", "Public Preview", "Troubleshooting", "UDR", "User Defined Routes", "VMSS"]
 tags_normalized: ["acr", "aks", "azure", "azure networking", "azure portal", "azure virtual network verifier", "cloud native", "cluster operations", "cni overlay", "community", "connectivity analysis", "container registry", "containers", "egressblocked", "firewall", "kubernetes networking", "mcr", "network security group", "node pool", "nsg", "outbound connectivity", "public preview", "troubleshooting", "udr", "user defined routes", "vmss"]

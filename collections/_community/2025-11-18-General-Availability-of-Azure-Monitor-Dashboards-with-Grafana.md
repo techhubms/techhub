@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-11-18 16:56:24 +00:00
-permalink: "/community/2025-11-18-General-Availability-of-Azure-Monitor-Dashboards-with-Grafana.html"
+permalink: "/2025-11-18-General-Availability-of-Azure-Monitor-Dashboards-with-Grafana.html"
 categories: ["Azure", "DevOps"]
 tags: ["AKS", "Application Insights", "ARM Templates", "Azure", "Azure Container Apps", "Azure Data Explorer", "Azure Managed Grafana", "Azure Monitor", "Azure Portal", "Azure PostgreSQL", "Bicep", "Cloud Native Monitoring", "Community", "Cosmos DB", "Dashboard Automation", "DevOps", "Grafana", "Microsoft Foundry", "Monitoring Solutions", "OpenTelemetry", "RBAC"]
 tags_normalized: ["aks", "application insights", "arm templates", "azure", "azure container apps", "azure data explorer", "azure managed grafana", "azure monitor", "azure portal", "azure postgresql", "bicep", "cloud native monitoring", "community", "cosmos db", "dashboard automation", "devops", "grafana", "microsoft foundry", "monitoring solutions", "opentelemetry", "rbac"]

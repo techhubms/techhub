@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-11-08 03:12:57 +00:00
-permalink: "/community/2025-11-08-Layer-7-Network-Policies-for-AKS-General-Availability-for-Enterprise-Grade-Security.html"
+permalink: "/2025-11-08-Layer-7-Network-Policies-for-AKS-General-Availability-for-Enterprise-Grade-Security.html"
 categories: ["Azure", "Security"]
 tags: ["Advanced Container Networking", "AKS", "Azure", "CCNP", "Cilium", "Cluster Security", "Community", "Container Networking", "Egress Controls", "FQDN Filtering", "Grafana", "Kubernetes", "Layer 7 Network Policy", "Network Observability", "Policy Enforcement", "Security", "Zero Trust"]
 tags_normalized: ["advanced container networking", "aks", "azure", "ccnp", "cilium", "cluster security", "community", "container networking", "egress controls", "fqdn filtering", "grafana", "kubernetes", "layer 7 network policy", "network observability", "policy enforcement", "security", "zero trust"]

@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Reddit Azure DevOps"
 feed_url: "https://www.reddit.com/r/azuredevops/.rss"
 date: 2025-07-18 07:20:38 +00:00
-permalink: "/community/2025-07-18-Seeking-Advice-on-Deployment-Pipeline-Design-for-Multi-Environment-Role-Based-Server-Setups.html"
+permalink: "/2025-07-18-Seeking-Advice-on-Deployment-Pipeline-Design-for-Multi-Environment-Role-Based-Server-Setups.html"
 categories: ["Azure", "DevOps"]
 tags: ["Application Dependencies", "Automation", "Azure", "Azure DevOps", "Community", "Deployment Pipeline", "DevOps", "DevOps Patterns", "Environment Management", "Infrastructure Mapping", "Inventory Management", "Server Roles", "Variable Groups", "VM Tagging"]
 tags_normalized: ["application dependencies", "automation", "azure", "azure devops", "community", "deployment pipeline", "devops", "devops patterns", "environment management", "infrastructure mapping", "inventory management", "server roles", "variable groups", "vm tagging"]

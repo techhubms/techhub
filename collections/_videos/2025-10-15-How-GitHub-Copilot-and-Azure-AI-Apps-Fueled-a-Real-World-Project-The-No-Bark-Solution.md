@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Developer YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
 date: 2025-10-15 15:01:52 +00:00
-permalink: "/videos/2025-10-15-How-GitHub-Copilot-and-Azure-AI-Apps-Fueled-a-Real-World-Project-The-No-Bark-Solution.html"
+permalink: "/2025-10-15-How-GitHub-Copilot-and-Azure-AI-Apps-Fueled-a-Real-World-Project-The-No-Bark-Solution.html"
 categories: ["AI", "Azure", "GitHub Copilot", "ML"]
 tags: ["AI", "AI Apps", "AI Solutions", "Azure", "Azure AI", "Azure Machine Learning", "Cloud Computing", "Creativity", "Custom Model Training", "Damian Hasak", "Dev", "Development", "Dog Bark Detection", "GitHub Copilot", "GPU Training", "Machine Learning", "Microsoft", "Microsoft Developer", "ML", "Non Coder Development", "Open Source Project", "Tech", "Technology", "Ultrasonic Signals", "Videos"]
 tags_normalized: ["ai", "ai apps", "ai solutions", "azure", "azure ai", "azure machine learning", "cloud computing", "creativity", "custom model training", "damian hasak", "dev", "development", "dog bark detection", "github copilot", "gpu training", "machine learning", "microsoft", "microsoft developer", "ml", "non coder development", "open source project", "tech", "technology", "ultrasonic signals", "videos"]

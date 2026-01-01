@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/feed/"
 date: 2025-11-13 17:28:48 +00:00
-permalink: "/news/2025-11-13-GitHub-Availability-Report-October-2025-Analysis-of-Service-Incidents.html"
+permalink: "/2025-11-13-GitHub-Availability-Report-October-2025-Analysis-of-Service-Incidents.html"
 categories: ["DevOps"]
 tags: ["Availability", "CI/CD", "Cloud Infrastructure", "Codespaces", "Company News", "DevOps", "Enterprise Importer", "Error Rates", "GitHub", "GitHub Actions", "GitHub Availability Report", "Incident Report", "Mobile Push Notifications", "Monitoring", "Network Outage", "News", "News & Insights", "Resilience Engineering", "Service Degradation", "Site Reliability", "Third Party Dependencies"]
 tags_normalized: ["availability", "cislashcd", "cloud infrastructure", "codespaces", "company news", "devops", "enterprise importer", "error rates", "github", "github actions", "github availability report", "incident report", "mobile push notifications", "monitoring", "network outage", "news", "news and insights", "resilience engineering", "service degradation", "site reliability", "third party dependencies"]

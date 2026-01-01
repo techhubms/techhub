@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Visual Studio Code YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SLNwkd3w"
 date: 2025-12-18 13:01:34 +00:00
-permalink: "/videos/2025-12-18-Leveraging-the-Model-Context-Protocol-MCP-in-Visual-Studio-Code-for-Enhanced-Development.html"
+permalink: "/2025-12-18-Leveraging-the-Model-Context-Protocol-MCP-in-Visual-Studio-Code-for-Enhanced-Development.html"
 categories: ["AI", "Coding"]
 tags: ["AI", "AI Assisted Development", "AI Integration", "Coding", "Database Access", "Developer Tools", "External APIs", "File Operations", "MCP", "Microsoft Foundry", "Unified Interface", "Videos", "VS Code"]
 tags_normalized: ["ai", "ai assisted development", "ai integration", "coding", "database access", "developer tools", "external apis", "file operations", "mcp", "microsoft foundry", "unified interface", "videos", "vs code"]

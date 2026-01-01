@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The Azure Blog"
 feed_url: "https://azure.microsoft.com/en-us/blog/feed/"
 date: 2025-10-14 18:00:00 +00:00
-permalink: "/news/2025-10-14-New-Features-and-Global-Expansion-for-Oracle-DatabaseAzure-Unlocking-Hybrid-Data-and-AI-Innovation.html"
+permalink: "/2025-10-14-New-Features-and-Global-Expansion-for-Oracle-DatabaseAzure-Unlocking-Hybrid-Data-and-AI-Innovation.html"
 categories: ["AI", "Azure", "ML", "Security"]
 tags: ["AI", "AI + Machine Learning", "AI Integration", "Azure", "Azure Accelerate", "Azure AI Foundry", "Azure Arc", "Copilot Studio", "Data Replication", "Data Security", "Enterprise Cloud", "Hybrid + Multicloud", "Hybrid Cloud", "Identity", "Identity Management", "Microsoft Azure", "Microsoft Defender", "Microsoft Fabric", "Microsoft Sentinel", "Migration", "ML", "News", "OneLake", "Oracle Database@Azure", "Oracle GoldenGate", "Power BI", "Real Time Analytics", "Security", "Zero ETL"]
 tags_normalized: ["ai", "ai plus machine learning", "ai integration", "azure", "azure accelerate", "azure ai foundry", "azure arc", "copilot studio", "data replication", "data security", "enterprise cloud", "hybrid plus multicloud", "hybrid cloud", "identity", "identity management", "microsoft azure", "microsoft defender", "microsoft fabric", "microsoft sentinel", "migration", "ml", "news", "onelake", "oracle databaseatazure", "oracle goldengate", "power bi", "real time analytics", "security", "zero etl"]

@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "DotNet YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw"
 date: 2025-11-14 06:00:06 +00:00
-permalink: "/videos/2025-11-14-Carbon-Aware-Computing-with-NET-Open-Source-Libraries-for-Sustainable-Applications.html"
+permalink: "/2025-11-14-Carbon-Aware-Computing-with-NET-Open-Source-Libraries-for-Sustainable-Applications.html"
 categories: ["Azure", "Coding", "DevOps"]
 tags: [".NET", "Azure", "Azure PaaS", "CarbonAware SDK", "Cloud Computing", "CO2 Intensity Prediction", "Coding", "Demand Shaping", "DevOps", "Dynamic Scaling", "Green Software", "Hangfire", "Job Scheduling", "KEDA", "Kubernetes", "Open Source", "Powershell", "Prometheus", "Sustainability", "Time Shifting", "Videos"]
 tags_normalized: ["dotnet", "azure", "azure paas", "carbonaware sdk", "cloud computing", "co2 intensity prediction", "coding", "demand shaping", "devops", "dynamic scaling", "green software", "hangfire", "job scheduling", "keda", "kubernetes", "open source", "powershell", "prometheus", "sustainability", "time shifting", "videos"]

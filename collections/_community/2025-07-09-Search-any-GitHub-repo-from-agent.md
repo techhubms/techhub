@@ -9,7 +9,7 @@ categories: ["AI", "GitHub Copilot"]
 feed_name: "Reddit Github Copilot"
 feed_url: "https://www.reddit.com/r/GithubCopilot.rss"
 date: 2025-07-09 22:57:13 +00:00
-permalink: "/community/2025-07-09-Search-any-GitHub-repo-from-agent.html"
+permalink: "/2025-07-09-Search-any-GitHub-repo-from-agent.html"
 viewing_mode: "external"
 tags: ["AI", "API References", "Chat View", "Community", "Copilot Instructions.md", "Development Tools", "Embeddings", "GitHub Copilot", "GitHub Repositories", "Githubrepo", "Prompt Discovery", "Repo Search", "VS Code Agent"]
 tags_normalized: ["ai", "api references", "chat view", "community", "copilot instructionsdotmd", "development tools", "embeddings", "github copilot", "github repositories", "githubrepo", "prompt discovery", "repo search", "vs code agent"]

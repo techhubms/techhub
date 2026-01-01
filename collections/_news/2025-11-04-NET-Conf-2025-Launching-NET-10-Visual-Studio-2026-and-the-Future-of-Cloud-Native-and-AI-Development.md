@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft .NET Blog"
 feed_url: "https://devblogs.microsoft.com/dotnet/feed/"
 date: 2025-11-04 18:00:00 +00:00
-permalink: "/news/2025-11-04-NET-Conf-2025-Launching-NET-10-Visual-Studio-2026-and-the-Future-of-Cloud-Native-and-AI-Development.html"
+permalink: "/2025-11-04-NET-Conf-2025-Launching-NET-10-Visual-Studio-2026-and-the-Future-of-Cloud-Native-and-AI-Development.html"
 categories: ["AI", "Azure", "Coding", "DevOps", "GitHub Copilot", "ML", "Security"]
 tags: [".NET", ".NET 10", ".NET Aspire", ".NET Conf", "AI", "ASP.NET", "ASP.NET Core", "Aspire", "Azure", "Azure AI Foundry", "Azure Keynote", "Blazor", "C# 14", "Cloud", "Cloud Native", "Coding", "Community Sessions", "Containers", "DevOps", "Dotnetconf", "F#", "GitHub Copilot", "MAUI", "MCP", "Microsoft Agent Framework", "ML", "News", "NuGet", "Observability", "OpenTelemetry", "Passkeys", "Security", "Student Zone", "Testing", "VS"]
 tags_normalized: ["dotnet", "dotnet 10", "dotnet aspire", "dotnet conf", "ai", "aspdotnet", "aspdotnet core", "aspire", "azure", "azure ai foundry", "azure keynote", "blazor", "csharp 14", "cloud", "cloud native", "coding", "community sessions", "containers", "devops", "dotnetconf", "fsharp", "github copilot", "maui", "mcp", "microsoft agent framework", "ml", "news", "nuget", "observability", "opentelemetry", "passkeys", "security", "student zone", "testing", "vs"]

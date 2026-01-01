@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft News"
 feed_url: "https://news.microsoft.com/source/feed/"
 date: 2025-07-28 18:04:45 +00:00
-permalink: "/news/2025-07-28-How-Microsoft-and-its-partners-are-reenvisioning-energy-with-AI.html"
+permalink: "/2025-07-28-How-Microsoft-and-its-partners-are-reenvisioning-energy-with-AI.html"
 categories: ["AI"]
 tags: ["AI", "Company News", "Energy Infrastructure", "Energy Innovation", "Energy Sector", "Grid Modernization", "Microsoft", "News", "Partners", "Sustainability", "Technology Transformation"]
 tags_normalized: ["ai", "company news", "energy infrastructure", "energy innovation", "energy sector", "grid modernization", "microsoft", "news", "partners", "sustainability", "technology transformation"]

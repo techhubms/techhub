@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Events YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
 date: 2025-11-26 00:45:29 +00:00
-permalink: "/videos/2025-11-26-Safe-and-Scalable-DevOps-with-GitHub-Copilot-AI-Agents.html"
+permalink: "/2025-11-26-Safe-and-Scalable-DevOps-with-GitHub-Copilot-AI-Agents.html"
 categories: ["AI", "Coding", "DevOps", "GitHub Copilot"]
 tags: ["Agentic Tasks", "AI", "AI Agents", "Automation", "Chris Patterson", "CLI", "Cloud Environments", "Coding", "Custom Copilot Agents", "Demo", "Developer Workflows", "DevOps", "Enterprise Adoption", "GitHub", "GitHub Copilot", "Governance", "InnovatewithAzureAIappsandagents", "Luke Hoban", "Microsoft Ignite", "MSIgnite", "Scalable Agent Deployment", "Videos", "VS Code"]
 tags_normalized: ["agentic tasks", "ai", "ai agents", "automation", "chris patterson", "cli", "cloud environments", "coding", "custom copilot agents", "demo", "developer workflows", "devops", "enterprise adoption", "github", "github copilot", "governance", "innovatewithazureaiappsandagents", "luke hoban", "microsoft ignite", "msignite", "scalable agent deployment", "videos", "vs code"]

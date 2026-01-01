@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft News"
 feed_url: "https://news.microsoft.com/source/feed/"
 date: 2025-11-25 16:10:35 +00:00
-permalink: "/news/2025-11-25-Introducing-Anthropics-Claude-Opus-45-in-Microsoft-Foundry-for-Enterprise-AI-Development.html"
+permalink: "/2025-11-25-Introducing-Anthropics-Claude-Opus-45-in-Microsoft-Foundry-for-Enterprise-AI-Development.html"
 categories: ["AI", "Azure", "Coding", "GitHub Copilot", "Security"]
 tags: ["Agentic Coding", "AI", "AI Models", "Anthropic", "Azure", "Benchmarks", "Claude Opus 4.5", "Coding", "Compaction Control", "Company News", "Copilot Studio", "Cybersecurity", "Developer Tools", "Enterprise Workflows", "GitHub Copilot", "MCP Atlas", "Microsoft Foundry", "Multilingual Coding", "News", "Pricing", "Python Tool Calling", "SDK Helpers", "Security", "Software Engineering", "SWE Bench", "Visual Reasoning"]
 tags_normalized: ["agentic coding", "ai", "ai models", "anthropic", "azure", "benchmarks", "claude opus 4dot5", "coding", "compaction control", "company news", "copilot studio", "cybersecurity", "developer tools", "enterprise workflows", "github copilot", "mcp atlas", "microsoft foundry", "multilingual coding", "news", "pricing", "python tool calling", "sdk helpers", "security", "software engineering", "swe bench", "visual reasoning"]

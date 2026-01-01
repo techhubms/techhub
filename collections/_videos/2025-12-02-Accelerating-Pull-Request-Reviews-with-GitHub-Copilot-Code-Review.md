@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "GitHub YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ"
 date: 2025-12-02 15:00:17 +00:00
-permalink: "/videos/2025-12-02-Accelerating-Pull-Request-Reviews-with-GitHub-Copilot-Code-Review.html"
+permalink: "/2025-12-02-Accelerating-Pull-Request-Reviews-with-GitHub-Copilot-Code-Review.html"
 categories: ["AI", "Coding", "GitHub Copilot"]
 tags: ["AI", "AI Assistant", "Automatic Reviews", "Code Review", "CodeQL", "CodeReview", "Coding", "Dev Productivity", "Developer Tools", "GitHub", "GitHub Copilot", "Mission Control", "Natural Language", "PR Automation", "Pull Requests", "Review Customization", "Videos"]
 tags_normalized: ["ai", "ai assistant", "automatic reviews", "code review", "codeql", "codereview", "coding", "dev productivity", "developer tools", "github", "github copilot", "mission control", "natural language", "pr automation", "pull requests", "review customization", "videos"]

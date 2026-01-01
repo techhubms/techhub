@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Cloud YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCSgzRJMqIiCNtoM6Q7Q9Lqw"
 date: 2025-06-24 14:01:10 +00:00
-permalink: "/videos/2025-06-24-Turning-AI-Vision-into-Impact-in-UK-Financial-Services.html"
+permalink: "/2025-06-24-Turning-AI-Vision-into-Impact-in-UK-Financial-Services.html"
 categories: ["AI"]
 tags: ["AI", "AI Transformation", "Banking", "Bionic Bankers", "Change Management", "Compliance", "Culture", "Digital Banking", "Digital Transformation", "Financial Services", "Generative AI", "Innovation", "Investec", "Microsoft", "Microsoft Cloud", "Productivity", "Responsible AI", "Skilling", "UK Market", "Videos"]
 tags_normalized: ["ai", "ai transformation", "banking", "bionic bankers", "change management", "compliance", "culture", "digital banking", "digital transformation", "financial services", "generative ai", "innovation", "investec", "microsoft", "microsoft cloud", "productivity", "responsible ai", "skilling", "uk market", "videos"]

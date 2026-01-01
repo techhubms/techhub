@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-11-18 18:15:00 +00:00
-permalink: "/community/2025-11-18-How-to-Host-Remote-MCP-Servers-on-Azure-Functions-Extension-and-SDK-Approaches.html"
+permalink: "/2025-11-18-How-to-Host-Remote-MCP-Servers-on-Azure-Functions-Extension-and-SDK-Approaches.html"
 categories: ["AI", "Azure", "Coding", "Security"]
 tags: [".NET", "AI", "API Center", "Authentication", "Authorization", "Azure", "Azure Foundry", "Azure Functions", "C#", "Coding", "Community", "Custom Handler", "Flex Consumption", "Host.json", "Identity Providers", "Java", "JavaScript", "Maven Build Plugin", "MCP", "MCP Extension", "MCP Server", "MCP Tool Trigger", "Microsoft Entra ID", "OAuth", "OBO Auth", "Python", "SDK", "Security", "Server Sent Events", "Serverless", "Stateless Server", "Streamable HTTP", "TypeScript"]
 tags_normalized: ["dotnet", "ai", "api center", "authentication", "authorization", "azure", "azure foundry", "azure functions", "csharp", "coding", "community", "custom handler", "flex consumption", "hostdotjson", "identity providers", "java", "javascript", "maven build plugin", "mcp", "mcp extension", "mcp server", "mcp tool trigger", "microsoft entra id", "oauth", "obo auth", "python", "sdk", "security", "server sent events", "serverless", "stateless server", "streamable http", "typescript"]

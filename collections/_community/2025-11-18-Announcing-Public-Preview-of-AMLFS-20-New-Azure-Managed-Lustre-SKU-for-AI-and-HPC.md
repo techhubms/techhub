@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-11-18 17:00:00 +00:00
-permalink: "/community/2025-11-18-Announcing-Public-Preview-of-AMLFS-20-New-Azure-Managed-Lustre-SKU-for-AI-and-HPC.html"
+permalink: "/2025-11-18-Announcing-Public-Preview-of-AMLFS-20-New-Azure-Managed-Lustre-SKU-for-AI-and-HPC.html"
 categories: ["AI", "Azure", "ML"]
 tags: ["AI", "AI Workloads", "AMLFS 20", "Azure", "Azure Managed Lustre", "Cloud Storage", "Community", "Dataset Management", "Filesystem", "High Performance Computing", "HPC", "Large Scale Storage", "Machine Learning", "Metadata Performance", "Microsoft Azure", "ML", "Multi MDS Architecture", "PiB Scale", "Public Preview"]
 tags_normalized: ["ai", "ai workloads", "amlfs 20", "azure", "azure managed lustre", "cloud storage", "community", "dataset management", "filesystem", "high performance computing", "hpc", "large scale storage", "machine learning", "metadata performance", "microsoft azure", "ml", "multi mds architecture", "pib scale", "public preview"]

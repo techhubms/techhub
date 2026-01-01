@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/feed/"
 date: 2025-09-16 16:27:54 +00:00
-permalink: "/news/2025-09-16-Meet-the-GitHub-MCP-Registry-The-Fastest-Way-to-Discover-MCP-Servers.html"
+permalink: "/2025-09-16-Meet-the-GitHub-MCP-Registry-The-Fastest-Way-to-Discover-MCP-Servers.html"
 categories: ["AI", "DevOps", "GitHub Copilot"]
 tags: ["Agentic Workflows", "AI", "AI & ML", "AI Agents", "AI Development", "API Integration", "Automation", "Developer Tools", "DevOps", "Ecosystem", "GitHub Copilot", "GitHub MCP Registry", "Interoperability", "MCP", "MCP Servers", "News", "Open Source", "Registry Integration", "VS Code"]
 tags_normalized: ["agentic workflows", "ai", "ai and ml", "ai agents", "ai development", "api integration", "automation", "developer tools", "devops", "ecosystem", "github copilot", "github mcp registry", "interoperability", "mcp", "mcp servers", "news", "open source", "registry integration", "vs code"]

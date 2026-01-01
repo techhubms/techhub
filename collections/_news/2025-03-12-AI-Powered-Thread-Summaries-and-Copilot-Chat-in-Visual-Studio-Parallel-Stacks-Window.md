@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft DevBlog"
 feed_url: "https://devblogs.microsoft.com/visualstudio/tag/github-copilot/feed/"
 date: 2025-03-12 15:23:36 +00:00
-permalink: "/news/2025-03-12-AI-Powered-Thread-Summaries-and-Copilot-Chat-in-Visual-Studio-Parallel-Stacks-Window.html"
+permalink: "/2025-03-12-AI-Powered-Thread-Summaries-and-Copilot-Chat-in-Visual-Studio-Parallel-Stacks-Window.html"
 categories: ["AI", "Coding", "GitHub Copilot"]
 tags: ["AI", "AI Powered Debugging", "App Summarization", "Code Diagnostics", "Coding", "Copilot Chat", "Data And Analytics", "Deadlocks", "Debug", "Debugging And Diagnostics", "Debugging Tools", "Developer Productivity", "GitHub Copilot", "Interactive Assistance", "Microsoft", "Multithreaded Debugging", "News", "Parallel Stacks Window", "Productivity", "Race Conditions", "Thread Analysis", "Thread Summaries", "VS"]
 tags_normalized: ["ai", "ai powered debugging", "app summarization", "code diagnostics", "coding", "copilot chat", "data and analytics", "deadlocks", "debug", "debugging and diagnostics", "debugging tools", "developer productivity", "github copilot", "interactive assistance", "microsoft", "multithreaded debugging", "news", "parallel stacks window", "productivity", "race conditions", "thread analysis", "thread summaries", "vs"]

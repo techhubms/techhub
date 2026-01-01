@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Visual Studio Code YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SLNwkd3w"
 date: 2025-12-23 08:00:28 +00:00
-permalink: "/videos/2025-12-23-VS-Code-2025-Year-in-Review-with-Burke-Holland-and-Pierce-Boggan.html"
+permalink: "/2025-12-23-VS-Code-2025-Year-in-Review-with-Burke-Holland-and-Pierce-Boggan.html"
 categories: ["AI", "Coding", "GitHub Copilot"]
 tags: ["Agent Mode", "AI", "AI Integration", "Auto Mode", "Background Agents", "BYOK", "Codex Integration", "Coding", "Copilot Chat", "GitHub Copilot", "MCP", "Open Source", "Plan Mode", "PR Workflow", "Prompt Files", "Smart Routing", "Subagents", "Terminal Safety", "Videos", "VS Code"]
 tags_normalized: ["agent mode", "ai", "ai integration", "auto mode", "background agents", "byok", "codex integration", "coding", "copilot chat", "github copilot", "mcp", "open source", "plan mode", "pr workflow", "prompt files", "smart routing", "subagents", "terminal safety", "videos", "vs code"]

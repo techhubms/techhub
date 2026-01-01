@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft DevBlog"
 feed_url: "https://devblogs.microsoft.com/visualstudio/tag/github-copilot/feed/"
 date: 2025-05-13 17:26:51 +00:00
-permalink: "/news/2025-05-13-Agent-Mode-Public-Preview-Launches-for-Visual-Studio-1714.html"
+permalink: "/2025-05-13-Agent-Mode-Public-Preview-Launches-for-Visual-Studio-1714.html"
 categories: ["AI", "Coding", "GitHub Copilot"]
 tags: ["Agent Mode", "AI", "AI Agents", "Azure Storage", "Code Refactoring", "Coding", "Copilot", "Copilot Chat", "Cosmos DB", "Documentation Generation", "GitHub Copilot", "MCP", "MCP Servers", "News", "Productivity", "Testing", "Visual Studio 17.14", "VS"]
 tags_normalized: ["agent mode", "ai", "ai agents", "azure storage", "code refactoring", "coding", "copilot", "copilot chat", "cosmos db", "documentation generation", "github copilot", "mcp", "mcp servers", "news", "productivity", "testing", "visual studio 17dot14", "vs"]

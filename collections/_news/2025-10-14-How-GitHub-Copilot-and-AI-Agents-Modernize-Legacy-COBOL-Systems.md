@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/feed/"
 date: 2025-10-14 16:00:00 +00:00
-permalink: "/news/2025-10-14-How-GitHub-Copilot-and-AI-Agents-Modernize-Legacy-COBOL-Systems.html"
+permalink: "/2025-10-14-How-GitHub-Copilot-and-AI-Agents-Modernize-Legacy-COBOL-Systems.html"
 categories: ["AI", "Azure", "Coding", "GitHub Copilot"]
 tags: ["AI", "AI & ML", "AI Agents", "Azure", "Azure OpenAI", "Business Logic Extraction", "COBOL", "Code Analysis", "Coding", "Enterprise Development", "GitHub Copilot", "Java Migration", "Legacy Modernization", "Mainframe Migration", "Mainframe Modernization", "Markdown Documentation", "Mermaid Diagrams", "Microsoft Global Black Belt", "News", "Prompt Engineering", "Semantic Kernel", "Test Automation"]
 tags_normalized: ["ai", "ai and ml", "ai agents", "azure", "azure openai", "business logic extraction", "cobol", "code analysis", "coding", "enterprise development", "github copilot", "java migration", "legacy modernization", "mainframe migration", "mainframe modernization", "markdown documentation", "mermaid diagrams", "microsoft global black belt", "news", "prompt engineering", "semantic kernel", "test automation"]

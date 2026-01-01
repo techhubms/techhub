@@ -10,7 +10,7 @@ categories: ["AI", "GitHub Copilot"]
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/changelog/label/copilot/feed/"
 date: 2025-07-09 16:13:17 +00:00
-permalink: "/news/2025-07-09-Copilot-coding-agent-now-supports-remote-MCP-servers.html"
+permalink: "/2025-07-09-Copilot-coding-agent-now-supports-remote-MCP-servers.html"
 tags: ["AI", "Coding Agent", "Context Expansion", "External Systems", "GitHub Copilot", "MCP Server", "News"]
 tags_normalized: ["ai", "coding agent", "context expansion", "external systems", "github copilot", "mcp server", "news"]
 ---

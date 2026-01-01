@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Fabric Blog"
 feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
 date: 2025-08-26 16:00:00 +00:00
-permalink: "/news/2025-08-26-Mastering-Declarative-Data-Transformations-with-Materialized-Lake-Views.html"
+permalink: "/2025-08-26-Mastering-Declarative-Data-Transformations-with-Materialized-Lake-Views.html"
 categories: ["Azure", "ML"]
 tags: ["Analytics", "Azure", "Azure SQL Database", "Data Engineering", "Data Governance", "Data Monitoring", "Data Orchestration", "Data Pipeline", "Data Quality", "Declarative Transformation", "ETL", "Lakehouse", "Materialized Lake Views", "Medallion Architecture", "Microsoft Fabric", "ML", "News", "OneLake", "SQL Mirroring"]
 tags_normalized: ["analytics", "azure", "azure sql database", "data engineering", "data governance", "data monitoring", "data orchestration", "data pipeline", "data quality", "declarative transformation", "etl", "lakehouse", "materialized lake views", "medallion architecture", "microsoft fabric", "ml", "news", "onelake", "sql mirroring"]

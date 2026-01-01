@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Events YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
 date: 2025-11-19 12:23:59 +00:00
-permalink: "/videos/2025-11-19-Live-Platform-Cloud-Based-Unified-Communications-with-Microsoft-Teams-Integration.html"
+permalink: "/2025-11-19-Live-Platform-Cloud-Based-Unified-Communications-with-Microsoft-Teams-Integration.html"
 categories: ["AI", "Azure"]
 tags: ["AI", "AI Powered Voice Apps", "AudioCodes Live Platform", "Automated Onboarding", "Azure", "Azure AI", "Centralized Platform", "Cloud Services", "Compliance Management", "Contact Center Solutions", "Customer Experience", "Employee Experience", "InnovatewithAzureAIappsandagents", "Microsoft Ignite", "Microsoft Teams", "MSIgnite", "PSTN Connectivity", "Service Provisioning", "Unified Communications", "Videos"]
 tags_normalized: ["ai", "ai powered voice apps", "audiocodes live platform", "automated onboarding", "azure", "azure ai", "centralized platform", "cloud services", "compliance management", "contact center solutions", "customer experience", "employee experience", "innovatewithazureaiappsandagents", "microsoft ignite", "microsoft teams", "msignite", "pstn connectivity", "service provisioning", "unified communications", "videos"]

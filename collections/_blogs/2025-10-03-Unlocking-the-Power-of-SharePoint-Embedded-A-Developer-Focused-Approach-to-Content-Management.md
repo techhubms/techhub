@@ -9,10 +9,10 @@ viewing_mode: "external"
 feed_name: "Dellenny's Blog"
 feed_url: "https://dellenny.com/feed/"
 date: 2025-10-03 14:09:54 +00:00
-permalink: "/blogs/2025-10-03-Unlocking-the-Power-of-SharePoint-Embedded-A-Developer-Focused-Approach-to-Content-Management.html"
+permalink: "/2025-10-03-Unlocking-the-Power-of-SharePoint-Embedded-A-Developer-Focused-Approach-to-Content-Management.html"
 categories: ["Coding"]
-tags: ["API Integration", "Coding", "Compliance", "Content Management", "Developer Tools", "Document Storage", "Governance", "ISV Solutions", "Microsoft 365", "Microsoft Graph API", "Blogs", "SaaS", "SharePoint", "SharePoint Embedded", "SharePoint Online"]
-tags_normalized: ["api integration", "coding", "compliance", "content management", "developer tools", "document storage", "governance", "isv solutions", "microsoft 365", "microsoft graph api", "blogs", "saas", "sharepoint", "sharepoint embedded", "sharepoint online"]
+tags: ["API Integration", "Blogs", "Coding", "Compliance", "Content Management", "Developer Tools", "Document Storage", "Governance", "ISV Solutions", "Microsoft 365", "Microsoft Graph API", "SaaS", "SharePoint", "SharePoint Embedded", "SharePoint Online"]
+tags_normalized: ["api integration", "blogs", "coding", "compliance", "content management", "developer tools", "document storage", "governance", "isv solutions", "microsoft 365", "microsoft graph api", "saas", "sharepoint", "sharepoint embedded", "sharepoint online"]
 ---
 
 Dellenny explains SharePoint Embedded, focusing on its API-first architecture that enables developers to integrate enterprise-grade content management into custom apps with secure, compliant storage and flexible billing, using Microsoft 365 and Azure.<!--excerpt_end-->

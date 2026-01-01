@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-12-16 19:01:32 +00:00
-permalink: "/community/2025-12-16-Microsofts-Contributions-to-Fedora-Linux-Cloud-Delivery-Security-and-Azure-Integration.html"
+permalink: "/2025-12-16-Microsofts-Contributions-to-Fedora-Linux-Cloud-Delivery-Security-and-Azure-Integration.html"
 categories: ["Azure", "DevOps", "Security"]
 tags: ["ARM64", "Azure", "Azure Community Gallery", "Azure Linux Team", "Azure VM Utils", "Cloud Image Delivery", "Cloud Infrastructure", "Community", "DevOps", "Ebpf", "Fedora Linux", "Fedora SIGs", "Inspektor Gadget", "Kernel Instrumentation", "LISA Framework", "Microsoft Linux Engineering", "Observability", "OpenShift Automation", "Rust Client", "Secure Boot", "Security", "Sigul", "UEFI Signing", "WSL"]
 tags_normalized: ["arm64", "azure", "azure community gallery", "azure linux team", "azure vm utils", "cloud image delivery", "cloud infrastructure", "community", "devops", "ebpf", "fedora linux", "fedora sigs", "inspektor gadget", "kernel instrumentation", "lisa framework", "microsoft linux engineering", "observability", "openshift automation", "rust client", "secure boot", "security", "sigul", "uefi signing", "wsl"]

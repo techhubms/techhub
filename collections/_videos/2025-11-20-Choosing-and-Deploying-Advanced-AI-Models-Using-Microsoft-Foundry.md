@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Events YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
 date: 2025-11-20 10:26:01 +00:00
-permalink: "/videos/2025-11-20-Choosing-and-Deploying-Advanced-AI-Models-Using-Microsoft-Foundry.html"
+permalink: "/2025-11-20-Choosing-and-Deploying-Advanced-AI-Models-Using-Microsoft-Foundry.html"
 categories: ["AI", "Azure"]
 tags: ["Advanced AI", "AI", "AI Agents", "AI Deployment", "Anthropic Claude", "API Tools", "Azure", "Azure AI", "Cohere", "Enterprise Security", "Governance", "Ignite", "InnovatewithAzureAIappsandagents", "Meta AI", "Microsoft Foundry", "Mistral AI", "Model Routing", "MSIgnite", "Multimodal Models", "OpenAI", "Responsible AI", "RF3 Tool", "Scalable AI", "Videos", "Xai"]
 tags_normalized: ["advanced ai", "ai", "ai agents", "ai deployment", "anthropic claude", "api tools", "azure", "azure ai", "cohere", "enterprise security", "governance", "ignite", "innovatewithazureaiappsandagents", "meta ai", "microsoft foundry", "mistral ai", "model routing", "msignite", "multimodal models", "openai", "responsible ai", "rf3 tool", "scalable ai", "videos", "xai"]

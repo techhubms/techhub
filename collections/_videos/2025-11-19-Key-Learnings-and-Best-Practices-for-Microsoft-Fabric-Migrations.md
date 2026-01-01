@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Events YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
 date: 2025-11-19 11:53:10 +00:00
-permalink: "/videos/2025-11-19-Key-Learnings-and-Best-Practices-for-Microsoft-Fabric-Migrations.html"
+permalink: "/2025-11-19-Key-Learnings-and-Best-Practices-for-Microsoft-Fabric-Migrations.html"
 categories: ["AI", "Azure", "ML"]
 tags: ["AI", "AI Strategy", "Azure", "Best Practices", "Case Study", "Data Analytics", "Data Mesh", "Data Quality", "Generative AI", "Medallion Architecture", "Microsoft Fabric", "Migrateandmodernizeyourestate", "Migration", "ML", "MSIgnite", "Organizational Transformation", "Platform Modernization", "Retail Data", "Videos"]
 tags_normalized: ["ai", "ai strategy", "azure", "best practices", "case study", "data analytics", "data mesh", "data quality", "generative ai", "medallion architecture", "microsoft fabric", "migrateandmodernizeyourestate", "migration", "ml", "msignite", "organizational transformation", "platform modernization", "retail data", "videos"]

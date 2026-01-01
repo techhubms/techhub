@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/changelog/feed/"
 date: 2025-12-19 17:05:54 +00:00
-permalink: "/news/2025-12-19-Early-Access-Release-Copilot-Memory-for-GitHub-Copilot-Pro-and-Pro.html"
+permalink: "/2025-12-19-Early-Access-Release-Copilot-Memory-for-GitHub-Copilot-Pro-and-Pro.html"
 categories: ["AI", "GitHub Copilot"]
 tags: ["AI", "AI Assistant", "Code Review", "Copilot", "Copilot Coding Agent", "Copilot Memory", "Copilot Settings", "Developer Tools", "Early Access", "GitHub Copilot", "News", "Pro", "Pro Plus", "Programming Productivity", "Repository Context"]
 tags_normalized: ["ai", "ai assistant", "code review", "copilot", "copilot coding agent", "copilot memory", "copilot settings", "developer tools", "early access", "github copilot", "news", "pro", "pro plus", "programming productivity", "repository context"]

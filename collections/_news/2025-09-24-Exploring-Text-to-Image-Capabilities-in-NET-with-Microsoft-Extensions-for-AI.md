@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft .NET Blog"
 feed_url: "https://devblogs.microsoft.com/dotnet/feed/"
 date: 2025-09-24 23:30:00 +00:00
-permalink: "/news/2025-09-24-Exploring-Text-to-Image-Capabilities-in-NET-with-Microsoft-Extensions-for-AI.html"
+permalink: "/2025-09-24-Exploring-Text-to-Image-Capabilities-in-NET-with-Microsoft-Extensions-for-AI.html"
 categories: ["AI", "Coding"]
 tags: [".NET", "Abstractions", "Agent Framework", "AI", "API", "Azure AI Foundry", "C#", "Coding", "Copilot Studio", "Developer Tools", "Extensions", "IImageGenerator", "Image Editing", "Image Generation", "LLM", "MEAI", "Microsoft.Extensions.AI", "Multimodal AI", "News", "OpenAI", "SDK", "Text To Image"]
 tags_normalized: ["dotnet", "abstractions", "agent framework", "ai", "api", "azure ai foundry", "csharp", "coding", "copilot studio", "developer tools", "extensions", "iimagegenerator", "image editing", "image generation", "llm", "meai", "microsoftdotextensionsdotai", "multimodal ai", "news", "openai", "sdk", "text to image"]

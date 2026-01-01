@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "John Savill's Technical Training"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCpIn7ox7j7bH_OFj7tYouOQ"
 date: 2025-09-05 14:51:22 +00:00
-permalink: "/videos/2025-09-05-Azure-Update-5th-September-2025.html"
+permalink: "/2025-09-05-Azure-Update-5th-September-2025.html"
 categories: ["Azure"]
 tags: [".NET 8", "API Management V2", "App Service Premium V4", "App Testing", "Autoscaling", "AVNM", "Azure", "Azure CDN", "Azure Cloud", "Azure OpenAI Service", "Azure Ultra Disk", "Cloud", "Cloud News", "GPT 5o", "Hybrid Deployment", "Logic Apps Standard", "Microsoft", "Microsoft Azure", "Microsoft Basic", "MySQL Maintenance", "Videos"]
 tags_normalized: ["dotnet 8", "api management v2", "app service premium v4", "app testing", "autoscaling", "avnm", "azure", "azure cdn", "azure cloud", "azure openai service", "azure ultra disk", "cloud", "cloud news", "gpt 5o", "hybrid deployment", "logic apps standard", "microsoft", "microsoft azure", "microsoft basic", "mysql maintenance", "videos"]

@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Developer YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
 date: 2025-10-24 17:48:26 +00:00
-permalink: "/videos/2025-10-24-Agents-for-Developers-Latest-Advancements-in-Developer-Productivity.html"
+permalink: "/2025-10-24-Agents-for-Developers-Latest-Advancements-in-Developer-Productivity.html"
 categories: ["AI"]
 tags: ["AI", "AI Developer Tools", "Developer Agents", "Developer Productivity", "Developer Tools", "Issue Resolution", "Microsoft AI", "Open Source Extensions", "Software Engineering", "SRE Agent", "Task Automation", "Videos"]
 tags_normalized: ["ai", "ai developer tools", "developer agents", "developer productivity", "developer tools", "issue resolution", "microsoft ai", "open source extensions", "software engineering", "sre agent", "task automation", "videos"]

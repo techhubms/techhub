@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Reddit Azure DevOps"
 feed_url: "https://www.reddit.com/r/azuredevops/.rss"
 date: 2025-07-18 11:55:43 +00:00
-permalink: "/community/2025-07-18-Workaround-for-Azure-ARM-800-Resource-Limit-When-Deploying-Data-Factory.html"
+permalink: "/2025-07-18-Workaround-for-Azure-ARM-800-Resource-Limit-When-Deploying-Data-Factory.html"
 categories: ["Azure", "DevOps", "ML"]
 tags: ["ARM Deployment", "ARM Template", "Azure", "Azure Data Factory", "Azure DevOps", "Ci/cd", "Community", "Continuous Delivery", "Data Factory Pipeline", "Deployment", "DevOps", "IaC", "ML", "Resource Limits"]
 tags_normalized: ["arm deployment", "arm template", "azure", "azure data factory", "azure devops", "cislashcd", "community", "continuous delivery", "data factory pipeline", "deployment", "devops", "iac", "ml", "resource limits"]

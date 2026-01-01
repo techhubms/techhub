@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft News"
 feed_url: "https://news.microsoft.com/source/feed/"
 date: 2025-10-17 15:17:46 +00:00
-permalink: "/news/2025-10-17-CX-Observe-Product-Feedback-Copilot-AI-Powered-Insights-for-Azure-Product-Leaders.html"
+permalink: "/2025-10-17-CX-Observe-Product-Feedback-Copilot-AI-Powered-Insights-for-Azure-Product-Leaders.html"
 categories: ["AI", "Azure"]
 tags: ["AI", "AI Copilot", "AI Innovation", "Azure", "Azure Infrastructure", "Company News", "Customer Feedback", "CX Observe Product Feedback", "Feedback Analytics", "Hackathon", "K Means Algorithm", "Microsoft Garage", "News", "Product Management", "Roadmap Prioritization", "Semantic Clustering", "Strategic Planning", "Technology", "User Stories"]
 tags_normalized: ["ai", "ai copilot", "ai innovation", "azure", "azure infrastructure", "company news", "customer feedback", "cx observe product feedback", "feedback analytics", "hackathon", "k means algorithm", "microsoft garage", "news", "product management", "roadmap prioritization", "semantic clustering", "strategic planning", "technology", "user stories"]

@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Developer YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
 date: 2025-09-18 07:00:52 +00:00
-permalink: "/videos/2025-09-18-Build-Smarter-Agents-with-Azure-AI-Search.html"
+permalink: "/2025-09-18-Build-Smarter-Agents-with-Azure-AI-Search.html"
 categories: ["AI", "Azure"]
 tags: ["Agentic AI", "AI", "Azure", "Azure AI Foundry", "Azure AI Search", "ChatGPT", "Compliance", "Customer Experience", "Decision Making", "Enterprise AI", "Hybrid Search", "Microsoft Learn", "RAG", "Retrieval Augmented Generation", "Skilling", "Videos"]
 tags_normalized: ["agentic ai", "ai", "azure", "azure ai foundry", "azure ai search", "chatgpt", "compliance", "customer experience", "decision making", "enterprise ai", "hybrid search", "microsoft learn", "rag", "retrieval augmented generation", "skilling", "videos"]

@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Events YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
 date: 2025-11-24 12:00:15 +00:00
-permalink: "/videos/2025-11-24-Whats-New-in-Azure-Local-Portfolio-Enhancements-and-Edge-AI-Innovations.html"
+permalink: "/2025-11-24-Whats-New-in-Azure-Local-Portfolio-Enhancements-and-Edge-AI-Innovations.html"
 categories: ["AI", "Azure", "Security"]
 tags: ["AI", "AI Acceleration", "Azure", "Azure Local", "Compliance", "Data Sovereignty", "Edge AI", "Healthcare IT", "Identity Management", "Microsoft Ignite", "Migrateandmodernizeyourestate", "Migration", "MSIgnite", "Network Security", "NVIDIA RTX GPU", "Private Cloud", "Regulated Industries", "Security", "Videos"]
 tags_normalized: ["ai", "ai acceleration", "azure", "azure local", "compliance", "data sovereignty", "edge ai", "healthcare it", "identity management", "microsoft ignite", "migrateandmodernizeyourestate", "migration", "msignite", "network security", "nvidia rtx gpu", "private cloud", "regulated industries", "security", "videos"]

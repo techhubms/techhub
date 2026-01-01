@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Developer YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
 date: 2025-12-10 22:07:54 +00:00
-permalink: "/videos/2025-12-10-Aspire-for-AI-Applications.html"
+permalink: "/2025-12-10-Aspire-for-AI-Applications.html"
 categories: ["AI", "Azure"]
 tags: ["AI", "AI Application Development", "API Management", "App Orchestration", "Application Flow", "Application Insights", "Aspire", "Azure", "Azure Free Trial", "Cloud Computing", "Containers", "Database Integration", "Dev", "Developer", "Developer Tools", "Development", "MCP Lab", "Microsoft", "Tech", "Technology", "Token Usage Analysis", "Videos"]
 tags_normalized: ["ai", "ai application development", "api management", "app orchestration", "application flow", "application insights", "aspire", "azure", "azure free trial", "cloud computing", "containers", "database integration", "dev", "developer", "developer tools", "development", "mcp lab", "microsoft", "tech", "technology", "token usage analysis", "videos"]

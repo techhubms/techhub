@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Azure SDK Blog"
 feed_url: "https://devblogs.microsoft.com/azure-sdk/feed/"
 date: 2025-10-28 18:00:57 +00:00
-permalink: "/news/2025-10-28-Announcing-Azure-MCP-Server-100-Stable-Release-A-New-Era-for-Agentic-Workflows.html"
+permalink: "/2025-10-28-Announcing-Azure-MCP-Server-100-Stable-Release-A-New-Era-for-Agentic-Workflows.html"
 categories: ["AI", "Azure", "Coding", "DevOps"]
 tags: [".NET AOT", "Agentic Automation", "Agents", "AI", "AI Agents", "App Configuration", "Azure", "Azure AI Foundry", "Azure AI Search", "Azure Developer CLI", "Azure Functions", "Azure MCP Server", "Azure Postgres", "Azure SDK", "Cloud Workflows", "Coding", "DevOps", "Docker", "Event Hubs", "IntelliJ", "Kusto", "Log Analytics", "MCP", "News", "Open Source", "Resource Groups", "Service Bus", "VS", "VS Code"]
 tags_normalized: ["dotnet aot", "agentic automation", "agents", "ai", "ai agents", "app configuration", "azure", "azure ai foundry", "azure ai search", "azure developer cli", "azure functions", "azure mcp server", "azure postgres", "azure sdk", "cloud workflows", "coding", "devops", "docker", "event hubs", "intellij", "kusto", "log analytics", "mcp", "news", "open source", "resource groups", "service bus", "vs", "vs code"]

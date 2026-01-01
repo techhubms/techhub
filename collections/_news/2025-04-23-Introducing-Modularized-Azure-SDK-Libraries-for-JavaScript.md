@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft DevBlog"
 feed_url: "https://devblogs.microsoft.com/azure-sdk/feed/"
 date: 2025-04-23 16:25:10 +00:00
-permalink: "/news/2025-04-23-Introducing-Modularized-Azure-SDK-Libraries-for-JavaScript.html"
+permalink: "/2025-04-23-Introducing-Modularized-Azure-SDK-Libraries-for-JavaScript.html"
 categories: ["Azure", "Coding"]
 tags: ["Azure", "Azure SDK", "Bundle Size", "Client Libraries", "Coding", "CommonJS", "ESM", "JavaScript", "Long Running Operations", "Modular", "Modularization", "News", "Pagination", "REST Level Clients", "SDK", "Serialization", "Subpath Exports", "Tree Shaking", "TypeScript"]
 tags_normalized: ["azure", "azure sdk", "bundle size", "client libraries", "coding", "commonjs", "esm", "javascript", "long running operations", "modular", "modularization", "news", "pagination", "rest level clients", "sdk", "serialization", "subpath exports", "tree shaking", "typescript"]

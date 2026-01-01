@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-10-14 18:16:13 +00:00
-permalink: "/community/2025-10-14-Building-Agents-on-Azure-Container-Apps-with-Goose-AI-Agent-Ollama-and-gpt-oss.html"
+permalink: "/2025-10-14-Building-Agents-on-Azure-Container-Apps-with-Goose-AI-Agent-Ollama-and-gpt-oss.html"
 categories: ["AI", "Azure"]
 tags: ["Agentic Frameworks", "AI", "AI Agents", "Automation", "Azure", "Azure Container Apps", "Cloud Security", "Community", "Containerization", "Custom Models", "Data Governance", "Goose AI Agent", "Gpt Oss", "Microservices", "Model Inference", "Ollama", "Open Source", "RBAC", "Self Hosted AI", "Serverless GPU"]
 tags_normalized: ["agentic frameworks", "ai", "ai agents", "automation", "azure", "azure container apps", "cloud security", "community", "containerization", "custom models", "data governance", "goose ai agent", "gpt oss", "microservices", "model inference", "ollama", "open source", "rbac", "self hosted ai", "serverless gpu"]

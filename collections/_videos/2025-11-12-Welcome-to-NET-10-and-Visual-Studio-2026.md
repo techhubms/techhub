@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "DotNet YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw"
 date: 2025-11-12 19:18:28 +00:00
-permalink: "/videos/2025-11-12-Welcome-to-NET-10-and-Visual-Studio-2026.html"
+permalink: "/2025-11-12-Welcome-to-NET-10-and-Visual-Studio-2026.html"
 categories: ["Coding", "DevOps"]
 tags: [".NET", ".NET 10", ".NET Aspire 13", ".NET MAUI 10", "App Development", "ASP.NET Core 10", "C# 14", "Cloud Native", "Coding", "Cross Platform", "Developer Tools", "DevOps", "F# 10", "Language Enhancements", "Modern Web Development", "Orchestration", "Productivity", "Videos", "VS"]
 tags_normalized: ["dotnet", "dotnet 10", "dotnet aspire 13", "dotnet maui 10", "app development", "aspdotnet core 10", "csharp 14", "cloud native", "coding", "cross platform", "developer tools", "devops", "fsharp 10", "language enhancements", "modern web development", "orchestration", "productivity", "videos", "vs"]

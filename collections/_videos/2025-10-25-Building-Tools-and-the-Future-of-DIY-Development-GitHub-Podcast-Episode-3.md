@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "GitHub YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ"
 date: 2025-10-25 14:00:00 +00:00
-permalink: "/videos/2025-10-25-Building-Tools-and-the-Future-of-DIY-Development-GitHub-Podcast-Episode-3.html"
+permalink: "/2025-10-25-Building-Tools-and-the-Future-of-DIY-Development-GitHub-Podcast-Episode-3.html"
 categories: ["AI", "Coding", "DevOps"]
 tags: ["AI", "Browser Extensions", "Coding", "Command Line", "Community Projects", "Creative Coding", "Developer Tools", "DevOps", "GitHub", "Open Source", "Productivity", "Software Development", "Videos"]
 tags_normalized: ["ai", "browser extensions", "coding", "command line", "community projects", "creative coding", "developer tools", "devops", "github", "open source", "productivity", "software development", "videos"]

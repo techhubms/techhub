@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/changelog/feed/"
 date: 2025-09-25 16:49:31 +00:00
-permalink: "/news/2025-09-25-GitHub-Copilot-Coding-Agent-Now-Generally-Available.html"
+permalink: "/2025-09-25-GitHub-Copilot-Coding-Agent-Now-Generally-Available.html"
 categories: ["AI", "Coding", "DevOps", "GitHub Copilot"]
 tags: ["AI", "AI Agent", "Automation", "Autonomous Agents", "Bug Fixing", "Coding", "Copilot", "Copilot Coding Agent", "Developer Tools", "DevOps", "Feature Implementation", "GitHub Actions", "GitHub Copilot", "Improvement", "News", "Pull Requests", "Software Development", "Technical Debt", "Test Coverage", "VS Code", "Workflow Automation"]
 tags_normalized: ["ai", "ai agent", "automation", "autonomous agents", "bug fixing", "coding", "copilot", "copilot coding agent", "developer tools", "devops", "feature implementation", "github actions", "github copilot", "improvement", "news", "pull requests", "software development", "technical debt", "test coverage", "vs code", "workflow automation"]

@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Build 2025 YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
 date: 2025-07-28 16:01:14 +00:00
-permalink: "/videos/2025-07-28-Lessons-from-MCP-Early-Adopters.html"
+permalink: "/2025-07-28-Lessons-from-MCP-Early-Adopters.html"
 categories: ["AI"]
 tags: ["AI", "Browser Automation", "C#", "Dev Days", "Enterprise Support", "Finance", "Healthcare", "Java", "MCP", "MCP Servers", "Multi Model Orchestration", "Production Systems", "Prompt Management", "Python", "Videos"]
 tags_normalized: ["ai", "browser automation", "csharp", "dev days", "enterprise support", "finance", "healthcare", "java", "mcp", "mcp servers", "multi model orchestration", "production systems", "prompt management", "python", "videos"]

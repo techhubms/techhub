@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Cloud YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCSgzRJMqIiCNtoM6Q7Q9Lqw"
 date: 2025-10-16 14:01:36 +00:00
-permalink: "/videos/2025-10-16-Microsoft-GenAI-for-Energy-Permitting-Solution-Accelerator.html"
+permalink: "/2025-10-16-Microsoft-GenAI-for-Energy-Permitting-Solution-Accelerator.html"
 categories: ["AI", "Azure"]
 tags: ["Agentic AI", "AI", "AI Workflows", "Azure", "Compliance Checks", "Document Automation", "Energy", "Energy Permitting", "Energy Sector", "Energy Transition", "GenAI", "Generative AI", "Intelligent Automation", "Microsoft", "Microsoft Cloud", "MicrosoftCloud", "Permitting", "Regulatory Automation", "Solution Accelerator", "Videos"]
 tags_normalized: ["agentic ai", "ai", "ai workflows", "azure", "compliance checks", "document automation", "energy", "energy permitting", "energy sector", "energy transition", "genai", "generative ai", "intelligent automation", "microsoft", "microsoft cloud", "microsoftcloud", "permitting", "regulatory automation", "solution accelerator", "videos"]

@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "DotNet YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw"
 date: 2025-11-17 20:44:21 +00:00
-permalink: "/videos/2025-11-17-NET-AI-Community-Standup-Ignite-AI-Highlights-and-Custom-Avatar-Architecture-Deep-Dive.html"
+permalink: "/2025-11-17-NET-AI-Community-Standup-Ignite-AI-Highlights-and-Custom-Avatar-Architecture-Deep-Dive.html"
 categories: ["AI", "Azure", "Coding"]
 tags: [".NET", ".NET Aspire", ".NET Developer", "AI", "AI Application Architecture", "Avatar", "Azure", "Azure Agents", "Azure AI", "Azure AI Foundry", "Azure AI Services", "Blazor", "Chat Completion", "Coding", "Custom Avatar", "Demo", "Dotnet10", "Dotnetdeveloper", "Ignite", "Microsoft", "Microsoft Ignite", "Microsoftignite", "Multimodal AI", "Speech Services", "Technical Deep Dive", "Videos"]
 tags_normalized: ["dotnet", "dotnet aspire", "dotnet developer", "ai", "ai application architecture", "avatar", "azure", "azure agents", "azure ai", "azure ai foundry", "azure ai services", "blazor", "chat completion", "coding", "custom avatar", "demo", "dotnet10", "dotnetdeveloper", "ignite", "microsoft", "microsoft ignite", "microsoftignite", "multimodal ai", "speech services", "technical deep dive", "videos"]

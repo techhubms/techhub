@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The Azure Blog"
 feed_url: "https://azure.microsoft.com/en-us/blog/feed/"
 date: 2025-08-07 17:00:00 +00:00
-permalink: "/news/2025-08-07-GPT-5-Launches-in-Azure-AI-Foundry-New-Era-for-AI-Apps-Agents-and-Developers.html"
+permalink: "/2025-08-07-GPT-5-Launches-in-Azure-AI-Foundry-New-Era-for-AI-Apps-Agents-and-Developers.html"
 categories: ["AI", "Azure", "Coding", "GitHub Copilot", "Security"]
 tags: ["Agentic Workflows", "AI", "AI + Machine Learning", "AI Content Safety", "API Integration", "Azure", "Azure AI", "Azure AI Foundry", "Code Generation", "Coding", "Compliance", "GitHub Copilot", "GPT 5", "Hebbia", "Large Language Model", "MCP", "Microsoft Defender For Cloud", "Microsoft Purview", "Model Router", "News", "OpenAI", "Reasoning", "Relativity", "SAP", "Security", "SLM", "VS Code", "VS Code Extension"]
 tags_normalized: ["agentic workflows", "ai", "ai plus machine learning", "ai content safety", "api integration", "azure", "azure ai", "azure ai foundry", "code generation", "coding", "compliance", "github copilot", "gpt 5", "hebbia", "large language model", "mcp", "microsoft defender for cloud", "microsoft purview", "model router", "news", "openai", "reasoning", "relativity", "sap", "security", "slm", "vs code", "vs code extension"]

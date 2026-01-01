@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft News"
 feed_url: "https://news.microsoft.com/source/feed/"
 date: 2025-10-28 16:55:08 +00:00
-permalink: "/news/2025-10-28-Sprint-to-Imagine-Cup-Igniting-Innovation-on-Campus.html"
+permalink: "/2025-10-28-Sprint-to-Imagine-Cup-Igniting-Innovation-on-Campus.html"
 categories: ["AI", "Coding", "GitHub Copilot"]
 tags: ["AI", "AI Education", "AI Solutions", "Coding", "Community Events", "Company News", "Education", "GitHub Copilot", "Hands On Learning", "Imagine Cup", "MCP", "Microsoft AI", "Microsoft Learn", "Microsoft MVP", "News", "Prototyping", "Student Developers", "Technical Skills", "University Collaboration"]
 tags_normalized: ["ai", "ai education", "ai solutions", "coding", "community events", "company news", "education", "github copilot", "hands on learning", "imagine cup", "mcp", "microsoft ai", "microsoft learn", "microsoft mvp", "news", "prototyping", "student developers", "technical skills", "university collaboration"]

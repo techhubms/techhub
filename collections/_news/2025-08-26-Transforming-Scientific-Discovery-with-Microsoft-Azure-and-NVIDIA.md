@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The Azure Blog"
 feed_url: "https://azure.microsoft.com/en-us/blog/feed/"
 date: 2025-08-26 15:00:00 +00:00
-permalink: "/news/2025-08-26-Transforming-Scientific-Discovery-with-Microsoft-Azure-and-NVIDIA.html"
+permalink: "/2025-08-26-Transforming-Scientific-Discovery-with-Microsoft-Azure-and-NVIDIA.html"
 categories: ["AI", "Azure", "ML"]
 tags: ["3D Scanning", "AI", "AI + Machine Learning", "AI Infrastructure", "AI Models", "AKS", "Azure", "Basecamp Research", "Bioinformatics", "BioNeMo Framework", "Biotechnology", "Clinical Data", "Cloud Computing", "Compute", "Containers", "Data Science", "Digital Content Creation", "Digital Twins", "Global Objects", "GPU Computing", "Healthcare AI", "Kubernetes", "Microsoft Azure", "ML", "News", "NVIDIA", "Pangaea Data", "Research Innovation"]
 tags_normalized: ["3d scanning", "ai", "ai plus machine learning", "ai infrastructure", "ai models", "aks", "azure", "basecamp research", "bioinformatics", "bionemo framework", "biotechnology", "clinical data", "cloud computing", "compute", "containers", "data science", "digital content creation", "digital twins", "global objects", "gpu computing", "healthcare ai", "kubernetes", "microsoft azure", "ml", "news", "nvidia", "pangaea data", "research innovation"]

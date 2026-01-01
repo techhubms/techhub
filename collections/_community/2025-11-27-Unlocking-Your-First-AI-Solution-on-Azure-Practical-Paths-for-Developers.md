@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-11-27 08:00:00 +00:00
-permalink: "/community/2025-11-27-Unlocking-Your-First-AI-Solution-on-Azure-Practical-Paths-for-Developers.html"
+permalink: "/2025-11-27-Unlocking-Your-First-AI-Solution-on-Azure-Practical-Paths-for-Developers.html"
 categories: ["AI", "Azure"]
 tags: ["AI", "AI Chatbot", "AI Security", "AI Solution", "Azure", "Azure AI Foundry", "Azure Deployment", "Azure Marketplace", "Cloud Development", "Community", "Data Integration", "GitHub", "Microsoft Azure", "Production Ready", "Prompt Engineering", "Startup Technology", "UnifyCloud"]
 tags_normalized: ["ai", "ai chatbot", "ai security", "ai solution", "azure", "azure ai foundry", "azure deployment", "azure marketplace", "cloud development", "community", "data integration", "github", "microsoft azure", "production ready", "prompt engineering", "startup technology", "unifycloud"]

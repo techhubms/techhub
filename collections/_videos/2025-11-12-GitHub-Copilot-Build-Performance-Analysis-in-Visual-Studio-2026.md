@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Developer YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
 date: 2025-11-12 16:01:32 +00:00
-permalink: "/videos/2025-11-12-GitHub-Copilot-Build-Performance-Analysis-in-Visual-Studio-2026.html"
+permalink: "/2025-11-12-GitHub-Copilot-Build-Performance-Analysis-in-Visual-Studio-2026.html"
 categories: ["AI", "Coding", "GitHub Copilot"]
 tags: ["AI", "Build Bottlenecks", "Build Optimization", "C++ Development", "Cloud Computing", "Code Automation", "Coding", "Copilot", "Dev", "Development", "GitHub", "GitHub Copilot", "Header Files", "Microsoft", "MSVC", "Performance Analysis", "Private Preview", "Tech", "Technology", "Template Instantiation", "Trace Capture", "Videos", "VS", "Windows Development"]
 tags_normalized: ["ai", "build bottlenecks", "build optimization", "cplusplus development", "cloud computing", "code automation", "coding", "copilot", "dev", "development", "github", "github copilot", "header files", "microsoft", "msvc", "performance analysis", "private preview", "tech", "technology", "template instantiation", "trace capture", "videos", "vs", "windows development"]

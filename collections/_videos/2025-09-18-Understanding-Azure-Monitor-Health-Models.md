@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Developer YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
 date: 2025-09-18 15:35:24 +00:00
-permalink: "/videos/2025-09-18-Understanding-Azure-Monitor-Health-Models.html"
+permalink: "/2025-09-18-Understanding-Azure-Monitor-Health-Models.html"
 categories: ["Azure"]
 tags: ["Alerts Management", "Azure", "Azure Monitor", "Cloud Operations", "Health Models", "Incident Response", "Metrics", "Microsoft", "Monitoring", "Observability", "OneDevQuestion", "System Health", "Videos"]
 tags_normalized: ["alerts management", "azure", "azure monitor", "cloud operations", "health models", "incident response", "metrics", "microsoft", "monitoring", "observability", "onedevquestion", "system health", "videos"]

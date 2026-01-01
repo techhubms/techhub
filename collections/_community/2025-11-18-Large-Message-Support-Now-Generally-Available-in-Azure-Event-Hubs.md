@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-11-18 19:05:31 +00:00
-permalink: "/community/2025-11-18-Large-Message-Support-Now-Generally-Available-in-Azure-Event-Hubs.html"
+permalink: "/2025-11-18-Large-Message-Support-Now-Generally-Available-in-Azure-Event-Hubs.html"
 categories: ["Azure"]
 tags: ["AMQP", "Apache Kafka", "Azure", "Azure Event Hubs", "Azure Portal", "Client Configuration", "Cloud Messaging", "Cloud Native", "Community", "Data Streaming", "Dedicated Clusters", "Event Processing", "Large Message Support", "Message Size", "Microsoft Azure", "Reliability", "Streaming"]
 tags_normalized: ["amqp", "apache kafka", "azure", "azure event hubs", "azure portal", "client configuration", "cloud messaging", "cloud native", "community", "data streaming", "dedicated clusters", "event processing", "large message support", "message size", "microsoft azure", "reliability", "streaming"]

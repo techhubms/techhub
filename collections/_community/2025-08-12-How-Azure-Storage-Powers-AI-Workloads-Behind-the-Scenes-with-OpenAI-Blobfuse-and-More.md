@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Community"
 date: 2025-08-12 14:33:42 +00:00
-permalink: "/community/2025-08-12-How-Azure-Storage-Powers-AI-Workloads-Behind-the-Scenes-with-OpenAI-Blobfuse-and-More.html"
+permalink: "/2025-08-12-How-Azure-Storage-Powers-AI-Workloads-Behind-the-Scenes-with-OpenAI-Blobfuse-and-More.html"
 categories: ["AI", "Azure"]
 tags: ["AI", "AI Infrastructure", "AI Workloads", "Azure", "Azure Blob Storage", "Azure OpenAI Service", "Azure Scaled Accounts", "Azure Storage", "Blobfuse2", "Cloud Infrastructure", "Community", "Data Management", "Data Pipelines", "Enterprise AI", "Exabyte Scale", "LLM Training", "Microsoft AI", "OpenAI", "Role Based Access Control"]
 tags_normalized: ["ai", "ai infrastructure", "ai workloads", "azure", "azure blob storage", "azure openai service", "azure scaled accounts", "azure storage", "blobfuse2", "cloud infrastructure", "community", "data management", "data pipelines", "enterprise ai", "exabyte scale", "llm training", "microsoft ai", "openai", "role based access control"]

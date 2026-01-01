@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-11-18 06:14:52 +00:00
-permalink: "/community/2025-11-18-How-to-Integrate-MCP-Tools-with-Azure-AI-Foundry-Agents-Using-Dynamic-Sessions-on-Azure-Container-Apps.html"
+permalink: "/2025-11-18-How-to-Integrate-MCP-Tools-with-Azure-AI-Foundry-Agents-Using-Dynamic-Sessions-on-Azure-Container-Apps.html"
 categories: ["AI", "Azure"]
 tags: ["AI", "AI Agents", "API Authentication", "ARM Template", "Azure", "Azure Container Apps", "Azure Foundry", "Azure Portal", "Cloud Automation", "Community", "Dynamic Sessions", "EnvironmentId", "MCP", "Preview Features", "Python Containers", "Remote Execution", "Resource Group", "Session Pool Deployment", "Shell Session Pools"]
 tags_normalized: ["ai", "ai agents", "api authentication", "arm template", "azure", "azure container apps", "azure foundry", "azure portal", "cloud automation", "community", "dynamic sessions", "environmentid", "mcp", "preview features", "python containers", "remote execution", "resource group", "session pool deployment", "shell session pools"]

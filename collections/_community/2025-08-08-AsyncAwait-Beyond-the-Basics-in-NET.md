@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Reddit DotNet"
 feed_url: "https://www.reddit.com/r/dotnet/.rss"
 date: 2025-08-08 15:04:02 +00:00
-permalink: "/community/2025-08-08-AsyncAwait-Beyond-the-Basics-in-NET.html"
+permalink: "/2025-08-08-AsyncAwait-Beyond-the-Basics-in-NET.html"
 categories: ["Coding"]
 tags: [".NET", "Async/await", "Asynchronous Programming", "C#", "Code Refactoring", "Coding", "Community", "Event Handlers", "GetAwaiter().GetResult()", "GUI Frameworks", "I/O Operations", "Microsoft", "Performance", "Result", "State Machine", "Sync Over Async", "Task Based Programming", "ThreadPool"]
 tags_normalized: ["dotnet", "asyncslashawait", "asynchronous programming", "csharp", "code refactoring", "coding", "community", "event handlers", "getawaiterdotgetresult", "gui frameworks", "islasho operations", "microsoft", "performance", "result", "state machine", "sync over async", "task based programming", "threadpool"]

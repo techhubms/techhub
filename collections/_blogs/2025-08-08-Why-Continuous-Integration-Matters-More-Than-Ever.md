@@ -9,10 +9,10 @@ viewing_mode: "external"
 feed_name: "DevOps Blog"
 feed_url: "https://devops.com/feed/"
 date: 2025-08-08 11:02:25 +00:00
-permalink: "/blogs/2025-08-08-Why-Continuous-Integration-Matters-More-Than-Ever.html"
+permalink: "/2025-08-08-Why-Continuous-Integration-Matters-More-Than-Ever.html"
 categories: ["DevOps"]
-tags: ["Agile Development", "And CI/CD Pipeline", "Automation", "Business Of DevOps", "CI/CD", "CI/CD Pipelines", "Cloud Native", "Continuous Integration", "Contributed Content", "Deployment Automation", "DevOps", "DevOps Practices", "Blogs", "Release Engineering", "SDLC", "Security Testing", "Social Facebook", "Social LinkedIn", "Social X", "Software Development Lifecycle", "Software Quality", "Team Collaboration", "Testing Automation"]
-tags_normalized: ["agile development", "and cislashcd pipeline", "automation", "business of devops", "cislashcd", "cislashcd pipelines", "cloud native", "continuous integration", "contributed content", "deployment automation", "devops", "devops practices", "blogs", "release engineering", "sdlc", "security testing", "social facebook", "social linkedin", "social x", "software development lifecycle", "software quality", "team collaboration", "testing automation"]
+tags: ["Agile Development", "And CI/CD Pipeline", "Automation", "Blogs", "Business Of DevOps", "CI/CD", "CI/CD Pipelines", "Cloud Native", "Continuous Integration", "Contributed Content", "Deployment Automation", "DevOps", "DevOps Practices", "Release Engineering", "SDLC", "Security Testing", "Social Facebook", "Social LinkedIn", "Social X", "Software Development Lifecycle", "Software Quality", "Team Collaboration", "Testing Automation"]
+tags_normalized: ["agile development", "and cislashcd pipeline", "automation", "blogs", "business of devops", "cislashcd", "cislashcd pipelines", "cloud native", "continuous integration", "contributed content", "deployment automation", "devops", "devops practices", "release engineering", "sdlc", "security testing", "social facebook", "social linkedin", "social x", "software development lifecycle", "software quality", "team collaboration", "testing automation"]
 ---
 
 Michael Chukwube explains why Continuous Integration is now a cornerstone of DevOps, highlighting its impact on software quality, delivery speed, and team collaboration in today's tech landscape.<!--excerpt_end-->

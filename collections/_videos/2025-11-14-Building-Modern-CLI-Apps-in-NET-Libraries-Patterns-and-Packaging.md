@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "DotNet YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw"
 date: 2025-11-14 19:21:02 +00:00
-permalink: "/videos/2025-11-14-Building-Modern-CLI-Apps-in-NET-Libraries-Patterns-and-Packaging.html"
+permalink: "/2025-11-14-Building-Modern-CLI-Apps-in-NET-Libraries-Patterns-and-Packaging.html"
 categories: ["Coding"]
 tags: [".NET", ".NET 10", ".NET MAUI 10", "ASP.NET Core 10", "C# 14", "CLI", "Cloud Native", "Coding", "Command Line Interface", "Cross Platform", "Design Patterns", "F# 10", "Libraries", "Modern Development", "Software Packaging", "Videos", "VS"]
 tags_normalized: ["dotnet", "dotnet 10", "dotnet maui 10", "aspdotnet core 10", "csharp 14", "cli", "cloud native", "coding", "command line interface", "cross platform", "design patterns", "fsharp 10", "libraries", "modern development", "software packaging", "videos", "vs"]

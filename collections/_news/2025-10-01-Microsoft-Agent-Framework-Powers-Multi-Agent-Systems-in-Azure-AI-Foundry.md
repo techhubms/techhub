@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft News"
 feed_url: "https://news.microsoft.com/source/feed/"
 date: 2025-10-01 17:35:44 +00:00
-permalink: "/news/2025-10-01-Microsoft-Agent-Framework-Powers-Multi-Agent-Systems-in-Azure-AI-Foundry.html"
+permalink: "/2025-10-01-Microsoft-Agent-Framework-Powers-Multi-Agent-Systems-in-Azure-AI-Foundry.html"
 categories: ["AI", "Azure"]
 tags: ["Agent Framework", "AI", "AI Economics", "AI Orchestration", "AutoGen", "Azure", "Azure AI Foundry", "Azure Integration", "Company News", "Compliance", "Enterprise AI", "LinkedIn Post", "Microsoft Agent Framework", "Multi Agent Systems", "News", "Observability", "Scalable AI", "Semantic Kernel", "Token Factory"]
 tags_normalized: ["agent framework", "ai", "ai economics", "ai orchestration", "autogen", "azure", "azure ai foundry", "azure integration", "company news", "compliance", "enterprise ai", "linkedin post", "microsoft agent framework", "multi agent systems", "news", "observability", "scalable ai", "semantic kernel", "token factory"]

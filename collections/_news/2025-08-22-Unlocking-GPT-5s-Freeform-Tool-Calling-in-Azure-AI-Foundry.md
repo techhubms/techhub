@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft DevBlog"
 feed_url: "https://devblogs.microsoft.com/foundry/feed/"
 date: 2025-08-22 17:29:26 +00:00
-permalink: "/news/2025-08-22-Unlocking-GPT-5s-Freeform-Tool-Calling-in-Azure-AI-Foundry.html"
+permalink: "/2025-08-22-Unlocking-GPT-5s-Freeform-Tool-Calling-in-Azure-AI-Foundry.html"
 categories: ["AI", "Azure", "Coding"]
 tags: ["AI", "API Key", "Authentication", "Automation", "Azure", "Azure AI Foundry", "Azure OpenAI", "Code Integration", "Coding", "Developer Tools", "Entra ID", "Freeform Tool Calling", "Function Chaining", "GPT 5", "News", "Prompt Engineering", "Python", "SQL", "Tool Calling"]
 tags_normalized: ["ai", "api key", "authentication", "automation", "azure", "azure ai foundry", "azure openai", "code integration", "coding", "developer tools", "entra id", "freeform tool calling", "function chaining", "gpt 5", "news", "prompt engineering", "python", "sql", "tool calling"]

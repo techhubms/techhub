@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Visual Studio Code Releases"
 feed_url: "https://code.visualstudio.com/feed.xml"
 date: 2024-09-05 17:00:00 +00:00
-permalink: "/news/2024-09-05-Visual-Studio-Code-August-2024-v193-Release-Highlights.html"
+permalink: "/2024-09-05-Visual-Studio-Code-August-2024-v193-Release-Highlights.html"
 categories: ["AI", "Coding", "DevOps", "GitHub Copilot"]
 tags: ["Accessibility", "AI", "August Release", "Code Generation", "Coding", "Debugging", "DevOps", "Django", "ECMAScript Modules", "Extensions", "Git", "GitHub Copilot", "IntelliSense", "JavaScript", "News", "Python", "Remote Development", "Settings", "Source Control", "Terminal Integration", "TypeScript 5.6", "Unit Testing", "V1.93", "VS Code"]
 tags_normalized: ["accessibility", "ai", "august release", "code generation", "coding", "debugging", "devops", "django", "ecmascript modules", "extensions", "git", "github copilot", "intellisense", "javascript", "news", "python", "remote development", "settings", "source control", "terminal integration", "typescript 5dot6", "unit testing", "v1dot93", "vs code"]

@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft DevBlog"
 feed_url: "https://devblogs.microsoft.com/azure-sdk/feed/"
 date: 2025-02-11 22:10:32 +00:00
-permalink: "/news/2025-02-11-Azure-SDK-for-JavaScript-Ending-Support-for-Nodejs-18x-After-July-2025.html"
+permalink: "/2025-02-11-Azure-SDK-for-JavaScript-Ending-Support-for-Nodejs-18x-After-July-2025.html"
 categories: ["Azure", "Coding"]
 tags: ["Azure", "Azure SDK", "Coding", "JavaScript", "LTS", "News", "Node.js", "Node.js 18.x", "Node.js 20.x", "Nodejs", "npm Engines", "SDK Support Policy", "Typescript"]
 tags_normalized: ["azure", "azure sdk", "coding", "javascript", "lts", "news", "nodedotjs", "nodedotjs 18dotx", "nodedotjs 20dotx", "nodejs", "npm engines", "sdk support policy", "typescript"]

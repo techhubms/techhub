@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft DevBlog"
 feed_url: "https://devblogs.microsoft.com/semantic-kernel/feed/"
 date: 2025-05-16 08:32:47 +00:00
-permalink: "/news/2025-05-16-Semantic-Kernel-Package-Previews-Graduations-and-Deprecations.html"
+permalink: "/2025-05-16-Semantic-Kernel-Package-Previews-Graduations-and-Deprecations.html"
 categories: ["AI", "Coding"]
 tags: [".NET", "AI", "API Updates", "Azure Code Interpreter", "Coding", "HTTP Consistency", "Integration Tests", "Migration Guide", "News", "OpenAPI", "Package Deprecation", "Package Graduation", "Plugin Development", "Python Plugin", "Semantic Kernel"]
 tags_normalized: ["dotnet", "ai", "api updates", "azure code interpreter", "coding", "http consistency", "integration tests", "migration guide", "news", "openapi", "package deprecation", "package graduation", "plugin development", "python plugin", "semantic kernel"]

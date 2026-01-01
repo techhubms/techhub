@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Events YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
 date: 2025-11-24 14:27:24 +00:00
-permalink: "/videos/2025-11-24-Build-Secure-Agentic-AI-Apps-with-SQL-Server-2025.html"
+permalink: "/2025-11-24-Build-Secure-Agentic-AI-Apps-with-SQL-Server-2025.html"
 categories: ["AI", "Coding"]
 tags: ["Agentic AI", "AI", "AI Capabilities", "Alternative Vector Databases", "Availability", "ChromaDB", "Coding", "Developer Certification", "Embeddings", "Enterprise IT", "Microsoft Ignite", "MSIgnite", "Other", "Performance", "Pinecone", "Service Management", "SQL Server", "Vectorization", "Videos"]
 tags_normalized: ["agentic ai", "ai", "ai capabilities", "alternative vector databases", "availability", "chromadb", "coding", "developer certification", "embeddings", "enterprise it", "microsoft ignite", "msignite", "other", "performance", "pinecone", "service management", "sql server", "vectorization", "videos"]

@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Fabric Blog"
 feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
 date: 2025-09-29 09:00:00 +00:00
-permalink: "/news/2025-09-29-Cross-Cloud-Data-Movement-with-Best-in-Class-Connectivity-in-Fabric-Data-Factory.html"
+permalink: "/2025-09-29-Cross-Cloud-Data-Movement-with-Best-in-Class-Connectivity-in-Fabric-Data-Factory.html"
 categories: ["Azure", "ML"]
 tags: ["Azure", "Change Data Capture", "Cloud Data Migration", "Connectors", "Copy Job", "Cross Cloud Integration", "Data Governance", "Data Integration", "Data Lakehouse", "Data Movement", "Data Pipelines", "Enterprise Connectivity", "ETL", "Fabric Data Factory", "Incremental Copy", "Microsoft Fabric", "ML", "News", "On Premises Integration", "OneLake", "SQL Database", "VNet Gateway"]
 tags_normalized: ["azure", "change data capture", "cloud data migration", "connectors", "copy job", "cross cloud integration", "data governance", "data integration", "data lakehouse", "data movement", "data pipelines", "enterprise connectivity", "etl", "fabric data factory", "incremental copy", "microsoft fabric", "ml", "news", "on premises integration", "onelake", "sql database", "vnet gateway"]

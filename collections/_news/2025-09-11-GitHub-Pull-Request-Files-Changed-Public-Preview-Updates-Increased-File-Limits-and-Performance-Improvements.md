@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/changelog/feed/"
 date: 2025-09-11 22:53:29 +00:00
-permalink: "/news/2025-09-11-GitHub-Pull-Request-Files-Changed-Public-Preview-Updates-Increased-File-Limits-and-Performance-Improvements.html"
+permalink: "/2025-09-11-GitHub-Pull-Request-Files-Changed-Public-Preview-Updates-Increased-File-Limits-and-Performance-Improvements.html"
 categories: ["DevOps"]
 tags: ["Code Review", "Collaboration", "Collaboration Tools", "Developer Experience", "DevOps", "File Limit", "Files Changed", "GitHub", "Improvement", "Navigation Enhancement", "News", "Performance Improvement", "Public Preview", "Pull Requests", "Single File Mode", "UI Update"]
 tags_normalized: ["code review", "collaboration", "collaboration tools", "developer experience", "devops", "file limit", "files changed", "github", "improvement", "navigation enhancement", "news", "performance improvement", "public preview", "pull requests", "single file mode", "ui update"]

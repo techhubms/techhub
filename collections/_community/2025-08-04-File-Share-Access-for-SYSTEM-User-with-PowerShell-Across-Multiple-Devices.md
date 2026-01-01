@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Reddit Azure"
 feed_url: "https://www.reddit.com/r/azure/.rss"
 date: 2025-08-04 19:57:43 +00:00
-permalink: "/community/2025-08-04-File-Share-Access-for-SYSTEM-User-with-PowerShell-Across-Multiple-Devices.html"
+permalink: "/2025-08-04-File-Share-Access-for-SYSTEM-User-with-PowerShell-Across-Multiple-Devices.html"
 categories: ["Azure", "Security"]
 tags: ["Automation", "Azure", "Community", "Domain", "File Permissions", "File Share", "Network", "PowerShell", "Scheduled Tasks", "Security", "SYSTEM User", "Windows"]
 tags_normalized: ["automation", "azure", "community", "domain", "file permissions", "file share", "network", "powershell", "scheduled tasks", "security", "system user", "windows"]

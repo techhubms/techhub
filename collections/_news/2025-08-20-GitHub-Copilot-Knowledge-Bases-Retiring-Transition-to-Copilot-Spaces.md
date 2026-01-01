@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/changelog/feed/"
 date: 2025-08-20 21:43:40 +00:00
-permalink: "/news/2025-08-20-GitHub-Copilot-Knowledge-Bases-Retiring-Transition-to-Copilot-Spaces.html"
+permalink: "/2025-08-20-GitHub-Copilot-Knowledge-Bases-Retiring-Transition-to-Copilot-Spaces.html"
 categories: ["AI", "GitHub Copilot"]
 tags: ["AI", "AI Powered Development", "AI Tools", "Code Sharing", "Context Management", "Copilot Business", "Copilot Enterprise", "Copilot Spaces", "Developer Tools", "Documentation", "GitHub", "GitHub Copilot", "Knowledge Bases", "Markdown", "News", "Team Collaboration"]
 tags_normalized: ["ai", "ai powered development", "ai tools", "code sharing", "context management", "copilot business", "copilot enterprise", "copilot spaces", "developer tools", "documentation", "github", "github copilot", "knowledge bases", "markdown", "news", "team collaboration"]

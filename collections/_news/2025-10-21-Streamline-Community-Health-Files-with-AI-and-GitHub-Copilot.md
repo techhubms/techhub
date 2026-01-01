@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/feed/"
 date: 2025-10-21 16:00:00 +00:00
-permalink: "/news/2025-10-21-Streamline-Community-Health-Files-with-AI-and-GitHub-Copilot.html"
+permalink: "/2025-10-21-Streamline-Community-Health-Files-with-AI-and-GitHub-Copilot.html"
 categories: ["AI", "GitHub Copilot"]
 tags: ["AI", "AI & ML", "AI Documentation", "Automation", "Checklist", "Community Health Files", "CONTRIBUTING.md", "Copilot Chat", "Documentation Best Practices", "GitHub Copilot", "LICENSE", "Maintainers", "News", "Open Source", "Project Maintainers", "Prompt Engineering", "README", "Repository Management"]
 tags_normalized: ["ai", "ai and ml", "ai documentation", "automation", "checklist", "community health files", "contributingdotmd", "copilot chat", "documentation best practices", "github copilot", "license", "maintainers", "news", "open source", "project maintainers", "prompt engineering", "readme", "repository management"]

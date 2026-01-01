@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "DotNet YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw"
 date: 2025-11-14 07:00:07 +00:00
-permalink: "/videos/2025-11-14-Architecting-an-AI-Powered-Sales-Dashboard-with-NET-MAUI-and-Azure-OpenAI.html"
+permalink: "/2025-11-14-Architecting-an-AI-Powered-Sales-Dashboard-with-NET-MAUI-and-Azure-OpenAI.html"
 categories: ["AI", "Azure", "Coding"]
 tags: [".NET 9", "AI", "Android", "Azure", "Azure OpenAI", "Business Analytics", "Coding", "Cross Platform Development", "GPT 5", "Intelligent Apps", "Interactive Charts", "Ios", "Macos", "MAUI", "MVVM Architecture", "Natural Language Processing", "Predictive Analytics", "Real Time Forecasting", "Revenue Visualization", "Sales Dashboard", "Syncfusion", "UI Performance", "Videos", "Windows"]
 tags_normalized: ["dotnet 9", "ai", "android", "azure", "azure openai", "business analytics", "coding", "cross platform development", "gpt 5", "intelligent apps", "interactive charts", "ios", "macos", "maui", "mvvm architecture", "natural language processing", "predictive analytics", "real time forecasting", "revenue visualization", "sales dashboard", "syncfusion", "ui performance", "videos", "windows"]

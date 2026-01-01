@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-12-08 22:58:42 +00:00
-permalink: "/community/2025-12-08-Azure-Arc-Server-Forum-2026-Schedule-and-Participation-Updates.html"
+permalink: "/2025-12-08-Azure-Arc-Server-Forum-2026-Schedule-and-Participation-Updates.html"
 categories: ["Azure"]
 tags: ["Azure", "Azure Arc", "Cloud Operations", "Community", "Community Forum", "Edge Computing", "Hybrid Cloud", "Linux Server", "Live Demos", "Microsoft", "Multicloud", "Product Updates", "Server Management", "SQL Server", "Windows Server"]
 tags_normalized: ["azure", "azure arc", "cloud operations", "community", "community forum", "edge computing", "hybrid cloud", "linux server", "live demos", "microsoft", "multicloud", "product updates", "server management", "sql server", "windows server"]

@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Events YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
 date: 2025-11-24 08:07:35 +00:00
-permalink: "/videos/2025-11-24-Azure-IaaS-Best-Practices-to-Enhance-Performance-and-Scale.html"
+permalink: "/2025-11-24-Azure-IaaS-Best-Practices-to-Enhance-Performance-and-Scale.html"
 categories: ["Azure"]
 tags: ["AI", "AI Inferencing", "Application Gateway", "Automation", "Azure", "Azure Boost", "Azure IaaS", "Azure Ultra Disk", "Compute Fleet", "Cost Optimization", "Distributed Storage", "HTTP/3", "Hyper V", "Microsoft Ignite", "Migrateandmodernizeyourestate", "MSIgnite", "Networking", "Performance Optimization", "QUIC", "Scaling", "Storage Solutions", "Videos", "Virtual Machines"]
 tags_normalized: ["ai", "ai inferencing", "application gateway", "automation", "azure", "azure boost", "azure iaas", "azure ultra disk", "compute fleet", "cost optimization", "distributed storage", "httpslash3", "hyper v", "microsoft ignite", "migrateandmodernizeyourestate", "msignite", "networking", "performance optimization", "quic", "scaling", "storage solutions", "videos", "virtual machines"]

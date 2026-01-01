@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-10-24 07:00:00 +00:00
-permalink: "/community/2025-10-24-AI-Toolkit-for-VS-Code-October-Update-GitHub-Copilot-Tools-Integration.html"
+permalink: "/2025-10-24-AI-Toolkit-for-VS-Code-October-Update-GitHub-Copilot-Tools-Integration.html"
 categories: ["AI", "Coding", "GitHub Copilot"]
 tags: ["AI", "AI Agent Development", "AI Evaluation", "AI Frameworks", "AI Toolkit", "Azure AI Foundry", "Code Generation", "Coding", "Community", "Copilot Integration", "Developer Tools", "Evaluation Tools", "GitHub Copilot", "Microsoft Agent Framework", "Model Playground", "ONNX Models", "VS Code"]
 tags_normalized: ["ai", "ai agent development", "ai evaluation", "ai frameworks", "ai toolkit", "azure ai foundry", "code generation", "coding", "community", "copilot integration", "developer tools", "evaluation tools", "github copilot", "microsoft agent framework", "model playground", "onnx models", "vs code"]

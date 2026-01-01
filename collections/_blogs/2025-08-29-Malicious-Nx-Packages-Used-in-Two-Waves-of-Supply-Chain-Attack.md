@@ -9,10 +9,10 @@ viewing_mode: "external"
 feed_name: "DevOps Blog"
 feed_url: "https://devops.com/feed/"
 date: 2025-08-29 17:15:10 +00:00
-permalink: "/blogs/2025-08-29-Malicious-Nx-Packages-Used-in-Two-Waves-of-Supply-Chain-Attack.html"
+permalink: "/2025-08-29-Malicious-Nx-Packages-Used-in-Two-Waves-of-Supply-Chain-Attack.html"
 categories: ["AI", "DevOps", "Security"]
-tags: ["AI", "AI CLI Tools", "Automation", "Credential Theft", "DevOps", "DevOps And Open Technologies", "DevOps Security", "GitGuardian", "GitHub", "GitHub Workflow", "Malware", "npm Registry", "Nx", "Open Source Security", "Blogs", "Publish.yml", "Repository Permissions", "Security", "Social Facebook", "Social LinkedIn", "Social X", "StepSecurity", "Supply Chain Attack", "Supply Chain Attacks", "Token Leakage", "Trusted Publisher", "Wiz"]
-tags_normalized: ["ai", "ai cli tools", "automation", "credential theft", "devops", "devops and open technologies", "devops security", "gitguardian", "github", "github workflow", "malware", "npm registry", "nx", "open source security", "blogs", "publishdotyml", "repository permissions", "security", "social facebook", "social linkedin", "social x", "stepsecurity", "supply chain attack", "supply chain attacks", "token leakage", "trusted publisher", "wiz"]
+tags: ["AI", "AI CLI Tools", "Automation", "Blogs", "Credential Theft", "DevOps", "DevOps And Open Technologies", "DevOps Security", "GitGuardian", "GitHub", "GitHub Workflow", "Malware", "npm Registry", "Nx", "Open Source Security", "Publish.yml", "Repository Permissions", "Security", "Social Facebook", "Social LinkedIn", "Social X", "StepSecurity", "Supply Chain Attack", "Supply Chain Attacks", "Token Leakage", "Trusted Publisher", "Wiz"]
+tags_normalized: ["ai", "ai cli tools", "automation", "blogs", "credential theft", "devops", "devops and open technologies", "devops security", "gitguardian", "github", "github workflow", "malware", "npm registry", "nx", "open source security", "publishdotyml", "repository permissions", "security", "social facebook", "social linkedin", "social x", "stepsecurity", "supply chain attack", "supply chain attacks", "token leakage", "trusted publisher", "wiz"]
 ---
 
 Jeff Burt reports on a major supply chain attack against the Nx build system, highlighting credential theft, GitHub workflow abuse, and innovative use of AI CLI tools in a rapidly evolving DevOps security landscape.<!--excerpt_end-->

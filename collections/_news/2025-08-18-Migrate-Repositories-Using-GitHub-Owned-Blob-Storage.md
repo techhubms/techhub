@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/changelog/feed/"
 date: 2025-08-18 17:35:15 +00:00
-permalink: "/news/2025-08-18-Migrate-Repositories-Using-GitHub-Owned-Blob-Storage.html"
+permalink: "/2025-08-18-Migrate-Repositories-Using-GitHub-Owned-Blob-Storage.html"
 categories: ["DevOps"]
 tags: ["Bitbucket Migration", "Cloud Storage", "Command Line Tools", "DevOps", "Enterprise Migration", "GEI", "Gh Bbs2gh", "Gh Gei", "GitHub Enterprise Cloud", "GitHub Enterprise Importer", "GitHub Owned Blob Storage", "GitLab Migration", "News", "Public Preview", "Repository Migration"]
 tags_normalized: ["bitbucket migration", "cloud storage", "command line tools", "devops", "enterprise migration", "gei", "gh bbs2gh", "gh gei", "github enterprise cloud", "github enterprise importer", "github owned blob storage", "gitlab migration", "news", "public preview", "repository migration"]

@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Events YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
 date: 2025-11-24 05:10:08 +00:00
-permalink: "/videos/2025-11-24-AI-Powered-Data-Security-with-Security-Copilot-and-Microsoft-Purview.html"
+permalink: "/2025-11-24-AI-Powered-Data-Security-with-Security-Copilot-and-Microsoft-Purview.html"
 categories: ["AI", "Security"]
 tags: ["Advanced Security Solutions", "AI", "AI Agents", "Alert Triage", "Automation", "Data Leak Prevention", "Data Security", "Incident Response", "Microsoft Ignite", "Microsoft Purview", "MSIgnite", "Policy Comparison", "Risk Management", "Secureyourdata", "Security", "Security Copilot", "Security Operations", "Videos"]
 tags_normalized: ["advanced security solutions", "ai", "ai agents", "alert triage", "automation", "data leak prevention", "data security", "incident response", "microsoft ignite", "microsoft purview", "msignite", "policy comparison", "risk management", "secureyourdata", "security", "security copilot", "security operations", "videos"]

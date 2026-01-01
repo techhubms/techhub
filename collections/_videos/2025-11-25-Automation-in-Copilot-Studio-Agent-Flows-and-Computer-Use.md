@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Events YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
 date: 2025-11-25 12:09:28 +00:00
-permalink: "/videos/2025-11-25-Automation-in-Copilot-Studio-Agent-Flows-and-Computer-Use.html"
+permalink: "/2025-11-25-Automation-in-Copilot-Studio-Agent-Flows-and-Computer-Use.html"
 categories: ["AI"]
 tags: ["Agent Flows", "AI", "Automation", "Automation in Copilot Studio: Agent Flows And Computer Use | BRK320", "BRK320", "Cloud PC Pool", "Computer Use Agents", "Copilot And Agents At Work:copilot Agents", "Copilot And Agents At Work:copilot Studio", "Copilot Studio", "Credential Store", "Customer Success", "Demo", "Enterprise Automation", "F5n1", "Governance", "Ignite", "Innovate With Low Code AI And Agents", "Low Code", "Microsoft", "Microsoft Ignite", "Microsoft Security", "Ms Ignite", "Msft Ignite", "Nationwide Insurance", "Power Automate", "Uber", "Videos", "Virgin Money", "Windows 365"]
 tags_normalized: ["agent flows", "ai", "automation", "automation in copilot studio agent flows and computer use pipe brk320", "brk320", "cloud pc pool", "computer use agents", "copilot and agents at workcopilot agents", "copilot and agents at workcopilot studio", "copilot studio", "credential store", "customer success", "demo", "enterprise automation", "f5n1", "governance", "ignite", "innovate with low code ai and agents", "low code", "microsoft", "microsoft ignite", "microsoft security", "ms ignite", "msft ignite", "nationwide insurance", "power automate", "uber", "videos", "virgin money", "windows 365"]

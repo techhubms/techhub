@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/changelog/feed/"
 date: 2025-12-03 19:38:19 +00:00
-permalink: "/news/2025-12-03-Claude-Opus-45-Preview-Available-in-GitHub-Copilot-Chat-and-IDEs.html"
+permalink: "/2025-12-03-Claude-Opus-45-Preview-Available-in-GitHub-Copilot-Chat-and-IDEs.html"
 categories: ["AI", "GitHub Copilot"]
 tags: ["Agent Mode", "AI", "Ask Mode", "Claude Opus 4.5", "Coding Assistant", "Copilot", "Copilot Business", "Copilot Chat", "Copilot Enterprise", "Copilot Pro", "Eclipse", "Edit Mode", "GitHub Copilot", "IDE Integration", "JetBrains", "Model Management", "News", "VS", "Xcode"]
 tags_normalized: ["agent mode", "ai", "ask mode", "claude opus 4dot5", "coding assistant", "copilot", "copilot business", "copilot chat", "copilot enterprise", "copilot pro", "eclipse", "edit mode", "github copilot", "ide integration", "jetbrains", "model management", "news", "vs", "xcode"]

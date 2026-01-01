@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Developer YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
 date: 2025-09-24 16:01:28 +00:00
-permalink: "/videos/2025-09-24-Enhancing-SQL-Development-in-VS-Code-with-GitHub-Copilot-and-Microsoft-Fabric.html"
+permalink: "/2025-09-24-Enhancing-SQL-Development-in-VS-Code-with-GitHub-Copilot-and-Microsoft-Fabric.html"
 categories: ["AI", "Azure", "Coding", "GitHub Copilot"]
 tags: ["Agent Tools", "AI", "AI Assisted Coding", "Azure", "Azure SQL", "Cloud Computing", "Coding", "Data Exposed", "Dev", "Developer Tools", "Development", "GitHub Copilot", "Microsoft", "Microsoft Fabric", "MSSQL Extension", "Productivity", "Slash Commands", "SQL Automation", "SQL Development", "SQL Server Containers", "Tech", "Technology", "Videos", "VS Code"]
 tags_normalized: ["agent tools", "ai", "ai assisted coding", "azure", "azure sql", "cloud computing", "coding", "data exposed", "dev", "developer tools", "development", "github copilot", "microsoft", "microsoft fabric", "mssql extension", "productivity", "slash commands", "sql automation", "sql development", "sql server containers", "tech", "technology", "videos", "vs code"]

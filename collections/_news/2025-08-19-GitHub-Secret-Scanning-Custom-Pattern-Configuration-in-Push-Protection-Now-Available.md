@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/changelog/feed/"
 date: 2025-08-19 21:49:26 +00:00
-permalink: "/news/2025-08-19-GitHub-Secret-Scanning-Custom-Pattern-Configuration-in-Push-Protection-Now-Available.html"
+permalink: "/2025-08-19-GitHub-Secret-Scanning-Custom-Pattern-Configuration-in-Push-Protection-Now-Available.html"
 categories: ["DevOps", "Security"]
 tags: ["Advanced Security", "Configuration Management", "DevOps", "Enterprise Security", "False Positive Management", "GitHub", "News", "Organization Security", "Push Protection", "REST API", "Secret Protection", "Secret Scanning", "Security", "Security Policy"]
 tags_normalized: ["advanced security", "configuration management", "devops", "enterprise security", "false positive management", "github", "news", "organization security", "push protection", "rest api", "secret protection", "secret scanning", "security", "security policy"]

@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/changelog/feed/"
 date: 2025-11-10 17:04:15 +00:00
-permalink: "/news/2025-11-10-GitHub-Enterprise-Cloud-Data-Residency-Now-Available-for-Visual-Studio-Subscribers.html"
+permalink: "/2025-11-10-GitHub-Enterprise-Cloud-Data-Residency-Now-Available-for-Visual-Studio-Subscribers.html"
 categories: ["DevOps"]
 tags: ["Account Management", "Cloud Governance", "Cloud Services", "Data Residency", "DevOps", "Enterprise Compliance", "Enterprise Management Tools", "GitHub Enterprise Cloud", "News", "Regional Data Compliance", "Software Development", "Subscription Management", "Visual Studio Subscriptions"]
 tags_normalized: ["account management", "cloud governance", "cloud services", "data residency", "devops", "enterprise compliance", "enterprise management tools", "github enterprise cloud", "news", "regional data compliance", "software development", "subscription management", "visual studio subscriptions"]

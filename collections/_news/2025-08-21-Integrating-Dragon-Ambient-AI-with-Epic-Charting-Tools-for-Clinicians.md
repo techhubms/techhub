@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft News"
 feed_url: "https://news.microsoft.com/source/feed/"
 date: 2025-08-21 15:09:00 +00:00
-permalink: "/news/2025-08-21-Integrating-Dragon-Ambient-AI-with-Epic-Charting-Tools-for-Clinicians.html"
+permalink: "/2025-08-21-Integrating-Dragon-Ambient-AI-with-Epic-Charting-Tools-for-Clinicians.html"
 categories: ["AI"]
 tags: ["AI", "AI Assistant", "AI in Healthcare", "Ambient AI", "Charting Tools", "Clinical AI", "Company News", "Dragon Copilot", "Epic Systems", "Healthcare Innovation", "Healthcare Technology", "LinkedIn Post", "Medical Documentation", "Microsoft", "Microsoft AI", "News", "Patient Care", "Workflow Automation"]
 tags_normalized: ["ai", "ai assistant", "ai in healthcare", "ambient ai", "charting tools", "clinical ai", "company news", "dragon copilot", "epic systems", "healthcare innovation", "healthcare technology", "linkedin post", "medical documentation", "microsoft", "microsoft ai", "news", "patient care", "workflow automation"]

@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-12-15 20:24:10 +00:00
-permalink: "/community/2025-12-15-Evaluation-Frameworks-for-Document-Pipelines-Using-Azure-AI-and-Search.html"
+permalink: "/2025-12-15-Evaluation-Frameworks-for-Document-Pipelines-Using-Azure-AI-and-Search.html"
 categories: ["AI", "Azure", "ML"]
 tags: ["AI", "Azure", "Azure AI Search", "Azure Document Intelligence", "Best Practices", "Community", "Continuous Improvement", "Document Intelligence", "Domain Expert", "Evaluation Metrics", "Extraction Accuracy", "Ground Truth", "IDP", "Microsoft AI", "ML", "ML Labeling", "OCR", "OpenAI", "Pipeline Validation", "Precision@K", "Recall@K", "Sampling"]
 tags_normalized: ["ai", "azure", "azure ai search", "azure document intelligence", "best practices", "community", "continuous improvement", "document intelligence", "domain expert", "evaluation metrics", "extraction accuracy", "ground truth", "idp", "microsoft ai", "ml", "ml labeling", "ocr", "openai", "pipeline validation", "precisionatk", "recallatk", "sampling"]

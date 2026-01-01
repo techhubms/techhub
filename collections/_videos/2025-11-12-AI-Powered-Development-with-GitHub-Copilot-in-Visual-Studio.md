@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "DotNet YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw"
 date: 2025-11-12 19:18:28 +00:00
-permalink: "/videos/2025-11-12-AI-Powered-Development-with-GitHub-Copilot-in-Visual-Studio.html"
+permalink: "/2025-11-12-AI-Powered-Development-with-GitHub-Copilot-in-Visual-Studio.html"
 categories: ["AI", "Coding", "GitHub Copilot"]
 tags: [".NET", ".NET MAUI 10", "AI", "ASP.NET Core 10", "C#", "C# 14", "Code Suggestions", "Coding", "Documentation Assistance", "GitHub Copilot", "Inline Chat", "Productivity Tools", "Prompt Engineering", "Refactoring", "Slash Commands", "Test Generation", "Videos", "VS"]
 tags_normalized: ["dotnet", "dotnet maui 10", "ai", "aspdotnet core 10", "csharp", "csharp 14", "code suggestions", "coding", "documentation assistance", "github copilot", "inline chat", "productivity tools", "prompt engineering", "refactoring", "slash commands", "test generation", "videos", "vs"]

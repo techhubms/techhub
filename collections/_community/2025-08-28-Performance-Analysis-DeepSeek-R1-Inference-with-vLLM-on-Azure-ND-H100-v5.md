@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-08-28 22:13:32 +00:00
-permalink: "/community/2025-08-28-Performance-Analysis-DeepSeek-R1-Inference-with-vLLM-on-Azure-ND-H100-v5.html"
+permalink: "/2025-08-28-Performance-Analysis-DeepSeek-R1-Inference-with-vLLM-on-Azure-ND-H100-v5.html"
 categories: ["AI", "Azure"]
 tags: ["AI", "AI Infrastructure", "Azure", "Azure ND H100 V5", "Chain Of Thought", "Community", "Cost Analysis", "DeepSeek R1", "FP8 Precision", "GPU Utilization", "HPC", "Inference Benchmarking", "InfiniBand", "Latency Analysis", "Model Deployment", "NVIDIA H100", "NVLink", "Token Throughput", "Vllm"]
 tags_normalized: ["ai", "ai infrastructure", "azure", "azure nd h100 v5", "chain of thought", "community", "cost analysis", "deepseek r1", "fp8 precision", "gpu utilization", "hpc", "inference benchmarking", "infiniband", "latency analysis", "model deployment", "nvidia h100", "nvlink", "token throughput", "vllm"]

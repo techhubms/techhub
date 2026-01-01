@@ -9,10 +9,10 @@ viewing_mode: "external"
 feed_name: "DevOps Blog"
 feed_url: "https://devops.com/feed/"
 date: 2025-08-12 16:49:27 +00:00
-permalink: "/blogs/2025-08-12-Survey-Reveals-Major-Challenges-in-Mobile-Application-Release-Management.html"
+permalink: "/2025-08-12-Survey-Reveals-Major-Challenges-in-Mobile-Application-Release-Management.html"
 categories: ["DevOps"]
-tags: ["Asana", "Automation", "CI/CD", "DevOps", "Engineering Productivity", "Incident Management", "Jira", "Mobile Application", "Mobile Application Development", "Blogs", "Process Improvement", "Project Management Tools", "Release Management", "Runway", "SaaS", "Slack", "Social Facebook", "Social LinkedIn", "Social X", "Software Delivery", "Survey", "Team Coordination"]
-tags_normalized: ["asana", "automation", "cislashcd", "devops", "engineering productivity", "incident management", "jira", "mobile application", "mobile application development", "blogs", "process improvement", "project management tools", "release management", "runway", "saas", "slack", "social facebook", "social linkedin", "social x", "software delivery", "survey", "team coordination"]
+tags: ["Asana", "Automation", "Blogs", "CI/CD", "DevOps", "Engineering Productivity", "Incident Management", "Jira", "Mobile Application", "Mobile Application Development", "Process Improvement", "Project Management Tools", "Release Management", "Runway", "SaaS", "Slack", "Social Facebook", "Social LinkedIn", "Social X", "Software Delivery", "Survey", "Team Coordination"]
+tags_normalized: ["asana", "automation", "blogs", "cislashcd", "devops", "engineering productivity", "incident management", "jira", "mobile application", "mobile application development", "process improvement", "project management tools", "release management", "runway", "saas", "slack", "social facebook", "social linkedin", "social x", "software delivery", "survey", "team coordination"]
 ---
 
 Mike Vizard summarizes the results of a survey among mobile engineers, revealing key obstacles in release management processes and emphasizing the urgent need for DevOps-driven improvements.<!--excerpt_end-->

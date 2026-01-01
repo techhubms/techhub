@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The Azure Blog"
 feed_url: "https://azure.microsoft.com/en-us/blog/feed/"
 date: 2025-08-21 15:00:00 +00:00
-permalink: "/news/2025-08-21-Microsoft-Named-Leader-in-2025-Gartner-Magic-Quadrant-for-Cloud-Native-Application-Platforms.html"
+permalink: "/2025-08-21-Microsoft-Named-Leader-in-2025-Gartner-Magic-Quadrant-for-Cloud-Native-Application-Platforms.html"
 categories: ["AI", "Azure", "Coding", "DevOps"]
 tags: ["Agentic DevOps", "AI", "AI + Machine Learning", "AI Model Deployment", "App Lifecycle", "Azure", "Azure AI Foundry", "Azure App Service", "Azure Container Apps", "Azure Functions", "Azure Static Web Apps", "Cloud Native", "Coding", "Compute", "Containers", "Cost Optimization", "Developer Productivity", "DevOps", "Enterprise Scalability", "Event Driven Architectures", "Gartner® Magic Quadrant™", "Internet Of Things", "Microservices", "News", "PaaS", "Serverless", "SRE", "VS", "Web", "Web Applications"]
 tags_normalized: ["agentic devops", "ai", "ai plus machine learning", "ai model deployment", "app lifecycle", "azure", "azure ai foundry", "azure app service", "azure container apps", "azure functions", "azure static web apps", "cloud native", "coding", "compute", "containers", "cost optimization", "developer productivity", "devops", "enterprise scalability", "event driven architectures", "gartner magic quadrant", "internet of things", "microservices", "news", "paas", "serverless", "sre", "vs", "web", "web applications"]

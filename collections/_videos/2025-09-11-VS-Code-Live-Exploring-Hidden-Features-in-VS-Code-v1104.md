@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Visual Studio Code YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SLNwkd3w"
 date: 2025-09-11 21:17:09 +00:00
-permalink: "/videos/2025-09-11-VS-Code-Live-Exploring-Hidden-Features-in-VS-Code-v1104.html"
+permalink: "/2025-09-11-VS-Code-Live-Exploring-Hidden-Features-in-VS-Code-v1104.html"
 categories: ["Coding"]
 tags: ["Agentmode", "Best Practices", "BYOK", "Code", "Code Editing", "Coding", "Copilot", "Developer", "Developer Community", "Developer Productivity", "Developer Tools", "Hidden Features", "Live Stream", "Microsoft", "Release Highlights", "Software Developer", "Software Development", "Videos", "VS Code", "VS Code V1.104", "Vscoderelease"]
 tags_normalized: ["agentmode", "best practices", "byok", "code", "code editing", "coding", "copilot", "developer", "developer community", "developer productivity", "developer tools", "hidden features", "live stream", "microsoft", "release highlights", "software developer", "software development", "videos", "vs code", "vs code v1dot104", "vscoderelease"]

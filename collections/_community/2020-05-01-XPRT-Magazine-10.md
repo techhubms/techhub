@@ -6,7 +6,7 @@ categories: ["AI", "Azure", "Coding", "DevOps", "ML"]
 date: 2020-05-01 00:00:00 +00:00
 author: "Xebia"
 viewing_mode: "external"
-permalink: "/community/2020-05-01-XPRT-Magazine-10.html"
+permalink: "/2020-05-01-XPRT-Magazine-10.html"
 excerpt_separator: <!--excerpt_end-->
 tags: ["AI", "Automation", "Azure", "Azure Cosmos DB", "Cloud Migration", "Cloud Native", "Coding", "Community", "Dapr", "Data Modeling", "DevOps", "Digital Transformation", "Docker", "Feature Toggles", "Inner Source", "Knowledge Sharing", "Kubernetes", "Legacy Modernization", "Magazines", "Microservices", "ML", "Platform Engineering", "Remote Work", "SaaS", "Team Learning", "Virtual Machines", "Xpirit Belgium"]
 tags_normalized: ["ai", "automation", "azure", "azure cosmos db", "cloud migration", "cloud native", "coding", "community", "dapr", "data modeling", "devops", "digital transformation", "docker", "feature toggles", "inner source", "knowledge sharing", "kubernetes", "legacy modernization", "magazines", "microservices", "ml", "platform engineering", "remote work", "saas", "team learning", "virtual machines", "xpirit belgium"]

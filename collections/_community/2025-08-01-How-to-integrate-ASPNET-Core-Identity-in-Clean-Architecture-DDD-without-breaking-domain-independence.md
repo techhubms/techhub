@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Reddit DotNet"
 feed_url: "https://www.reddit.com/r/dotnet/.rss"
 date: 2025-08-01 12:05:09 +00:00
-permalink: "/community/2025-08-01-How-to-integrate-ASPNET-Core-Identity-in-Clean-Architecture-DDD-without-breaking-domain-independence.html"
+permalink: "/2025-08-01-How-to-integrate-ASPNET-Core-Identity-in-Clean-Architecture-DDD-without-breaking-domain-independence.html"
 categories: ["Coding", "Security"]
 tags: [".NET", "ASP.NET Core", "Authentication", "Best Practices", "Clean Architecture", "Coding", "Community", "Domain Driven Design", "Entity Separation", "Identity", "Infrastructure", "Roles", "Security", "User Management"]
 tags_normalized: ["dotnet", "aspdotnet core", "authentication", "best practices", "clean architecture", "coding", "community", "domain driven design", "entity separation", "identity", "infrastructure", "roles", "security", "user management"]

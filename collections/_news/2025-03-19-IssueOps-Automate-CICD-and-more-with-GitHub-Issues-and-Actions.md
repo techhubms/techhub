@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "GitHub Engineering Blog"
 feed_url: "https://github.blog/engineering/feed/"
 date: 2025-03-19 16:00:24 +00:00
-permalink: "/news/2025-03-19-IssueOps-Automate-CICD-and-more-with-GitHub-Issues-and-Actions.html"
+permalink: "/2025-03-19-IssueOps-Automate-CICD-and-more-with-GitHub-Issues-and-Actions.html"
 categories: ["DevOps"]
 tags: ["Approval Workflows", "Automation", "CI/CD", "DevOps", "Engineering", "Finite State Machine", "GitHub Actions", "GitHub Issues", "Issue Templates", "IssueOps", "News", "Pull Requests", "State Machines", "Team Management", "Workflow Automation"]
 tags_normalized: ["approval workflows", "automation", "cislashcd", "devops", "engineering", "finite state machine", "github actions", "github issues", "issue templates", "issueops", "news", "pull requests", "state machines", "team management", "workflow automation"]

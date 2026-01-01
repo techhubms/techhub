@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-08-14 07:04:16 +00:00
-permalink: "/community/2025-08-14-Troubleshooting-Azure-Stack-HCI-Local-Cluster-Deployment-Network-Configuration-Error.html"
+permalink: "/2025-08-14-Troubleshooting-Azure-Stack-HCI-Local-Cluster-Deployment-Network-Configuration-Error.html"
 categories: ["Azure"]
 tags: ["Azure", "Azure Stack HCI", "CloudDeployment", "Cluster Deployment", "Cluster.psm1", "Community", "Deployment Error", "Hybrid Cloud", "Microsoft Azure", "Network Configuration", "PowerShell", "SCPSModule"]
 tags_normalized: ["azure", "azure stack hci", "clouddeployment", "cluster deployment", "clusterdotpsm1", "community", "deployment error", "hybrid cloud", "microsoft azure", "network configuration", "powershell", "scpsmodule"]

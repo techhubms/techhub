@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Events YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
 date: 2025-11-21 07:23:30 +00:00
-permalink: "/videos/2025-11-21-Unlocking-Real-Time-Intelligence-with-Microsoft-Fabric-and-Advanced-AI-Insights-from-Ignite-2025.html"
+permalink: "/2025-11-21-Unlocking-Real-Time-Intelligence-with-Microsoft-Fabric-and-Advanced-AI-Insights-from-Ignite-2025.html"
 categories: ["AI", "Azure", "ML"]
 tags: ["Advanced Analytics", "AI", "Anomaly Detection", "Azure", "Copilot Data Exploration", "Customer Success", "Data Platform", "Graph Operations", "Healthcare Analytics", "Hospital Operations", "Industry Use Cases", "Live Data Processing", "Machine Learning", "Microsoft Fabric", "Microsoft Sentinel", "ML", "MSIgnite", "Natural Language Insights", "Operational Analytics", "Preview Features", "Real Time Intelligence", "Unifyyourdataplatform", "Videos"]
 tags_normalized: ["advanced analytics", "ai", "anomaly detection", "azure", "copilot data exploration", "customer success", "data platform", "graph operations", "healthcare analytics", "hospital operations", "industry use cases", "live data processing", "machine learning", "microsoft fabric", "microsoft sentinel", "ml", "msignite", "natural language insights", "operational analytics", "preview features", "real time intelligence", "unifyyourdataplatform", "videos"]

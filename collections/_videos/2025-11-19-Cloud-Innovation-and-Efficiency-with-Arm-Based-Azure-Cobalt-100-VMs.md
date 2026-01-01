@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Events YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
 date: 2025-11-19 15:00:33 +00:00
-permalink: "/videos/2025-11-19-Cloud-Innovation-and-Efficiency-with-Arm-Based-Azure-Cobalt-100-VMs.html"
+permalink: "/2025-11-19-Cloud-Innovation-and-Efficiency-with-Arm-Based-Azure-Cobalt-100-VMs.html"
 categories: ["AI", "Azure", "Coding"]
 tags: ["AI", "AI Workloads", "ARM Based VMs", "Azure", "Azure Cobalt 100", "Cloud Infrastructure", "Cloud Migration", "Coding", "Databricks", "GitHub Runners", "Machine Learning", "Microsoft Azure", "Microsoft Ignite", "MicrosoftAICloudPartnerProgram", "Modernization", "MSIgnite", "NGINX", "One Trust", "Performance Optimization", "Postgres", "Redis", "Scalability", "SPECjbb", "Tutorials", "Videos", "Windows Performance", "Workload Deployment"]
 tags_normalized: ["ai", "ai workloads", "arm based vms", "azure", "azure cobalt 100", "cloud infrastructure", "cloud migration", "coding", "databricks", "github runners", "machine learning", "microsoft azure", "microsoft ignite", "microsoftaicloudpartnerprogram", "modernization", "msignite", "nginx", "one trust", "performance optimization", "postgres", "redis", "scalability", "specjbb", "tutorials", "videos", "windows performance", "workload deployment"]

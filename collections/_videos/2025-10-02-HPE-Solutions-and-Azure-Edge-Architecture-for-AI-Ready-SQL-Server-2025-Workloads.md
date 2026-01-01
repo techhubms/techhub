@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Developer YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
 date: 2025-10-02 16:00:49 +00:00
-permalink: "/videos/2025-10-02-HPE-Solutions-and-Azure-Edge-Architecture-for-AI-Ready-SQL-Server-2025-Workloads.html"
+permalink: "/2025-10-02-HPE-Solutions-and-Azure-Edge-Architecture-for-AI-Ready-SQL-Server-2025-Workloads.html"
 categories: ["AI", "Azure", "ML"]
 tags: ["AI", "AI Applications", "Alletra Storage", "Azure", "Azure Arc", "Cloud Computing", "Cloud Infrastructure", "Data Platform", "Dev", "Development", "Edge Computing", "Enterprise Data", "HPE", "Hybrid Cloud", "Hybrid Workloads", "Microsoft", "Mission Critical Analytics", "ML", "Retrieval Augmented Generation", "SQL Server", "T SQL", "Tech", "Technology", "Videos"]
 tags_normalized: ["ai", "ai applications", "alletra storage", "azure", "azure arc", "cloud computing", "cloud infrastructure", "data platform", "dev", "development", "edge computing", "enterprise data", "hpe", "hybrid cloud", "hybrid workloads", "microsoft", "mission critical analytics", "ml", "retrieval augmented generation", "sql server", "t sql", "tech", "technology", "videos"]

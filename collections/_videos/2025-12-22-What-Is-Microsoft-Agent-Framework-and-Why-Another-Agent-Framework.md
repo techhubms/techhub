@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Learn Microsoft AI Youtube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCQf_yRJpsfyEiWWpt1MZ6vA"
 date: 2025-12-22 09:14:22 +00:00
-permalink: "/videos/2025-12-22-What-Is-Microsoft-Agent-Framework-and-Why-Another-Agent-Framework.html"
+permalink: "/2025-12-22-What-Is-Microsoft-Agent-Framework-and-Why-Another-Agent-Framework.html"
 categories: ["AI", "Coding"]
 tags: [".NET", "Agent Orchestration", "AI", "AI Agents", "AI Development Kit", "AutoGen", "Coding", "Enterprise AI", "Graph Based Workflows", "Human in The Loop", "LLM", "Microsoft Agent Framework", "Multi Agent Workflows", "Open Source", "Python", "Semantic Kernel", "State Management", "Videos"]
 tags_normalized: ["dotnet", "agent orchestration", "ai", "ai agents", "ai development kit", "autogen", "coding", "enterprise ai", "graph based workflows", "human in the loop", "llm", "microsoft agent framework", "multi agent workflows", "open source", "python", "semantic kernel", "state management", "videos"]

@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "GitHub YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ"
 date: 2025-10-13 14:00:12 +00:00
-permalink: "/videos/2025-10-13-Introducing-GitHub-Spec-Kit-A-New-Approach-to-Software-Development.html"
+permalink: "/2025-10-13-Introducing-GitHub-Spec-Kit-A-New-Approach-to-Software-Development.html"
 categories: ["DevOps"]
 tags: ["/implement", "/plan", "/specify", "AI", "AI Assisted Development", "AI Tools", "Command Automation", "Development Workflow", "DevOps", "Executable Specifications", "GitHub", "Open Source", "Project Management", "Software Development", "Software Engineering", "Software Planning", "Spec Kit", "SpecKit", "Videos"]
 tags_normalized: ["slashimplement", "slashplan", "slashspecify", "ai", "ai assisted development", "ai tools", "command automation", "development workflow", "devops", "executable specifications", "github", "open source", "project management", "software development", "software engineering", "software planning", "spec kit", "speckit", "videos"]

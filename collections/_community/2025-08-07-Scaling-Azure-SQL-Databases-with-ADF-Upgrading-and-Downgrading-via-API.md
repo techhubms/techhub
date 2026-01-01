@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Reddit Azure"
 feed_url: "https://www.reddit.com/r/azure/.rss"
 date: 2025-08-07 07:35:40 +00:00
-permalink: "/community/2025-08-07-Scaling-Azure-SQL-Databases-with-ADF-Upgrading-and-Downgrading-via-API.html"
+permalink: "/2025-08-07-Scaling-Azure-SQL-Databases-with-ADF-Upgrading-and-Downgrading-via-API.html"
 categories: ["Azure"]
 tags: ["ADF Pipelines", "API Versioning", "Automation", "Azure", "Azure Data Factory", "Azure REST API", "Azure SQL Database", "Cloud Cost Optimization", "Community", "Database SKU Scaling", "PaaS", "Resource Management", "SQL Serverless", "Transparent Data Encryption"]
 tags_normalized: ["adf pipelines", "api versioning", "automation", "azure", "azure data factory", "azure rest api", "azure sql database", "cloud cost optimization", "community", "database sku scaling", "paas", "resource management", "sql serverless", "transparent data encryption"]

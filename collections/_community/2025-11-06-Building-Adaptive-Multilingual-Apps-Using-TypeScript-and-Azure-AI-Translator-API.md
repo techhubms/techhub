@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-11-06 14:45:00 +00:00
-permalink: "/community/2025-11-06-Building-Adaptive-Multilingual-Apps-Using-TypeScript-and-Azure-AI-Translator-API.html"
+permalink: "/2025-11-06-Building-Adaptive-Multilingual-Apps-Using-TypeScript-and-Azure-AI-Translator-API.html"
 categories: ["AI", "Azure", "Coding"]
 tags: ["AI", "API Version 05 01 Preview", "Azure", "Azure AI Foundry", "Azure AI Translator", "Brand Voice", "Coding", "Community", "Compliance", "Gender Specificity", "GPT 4o", "GPT 4o Mini", "Hybrid Translation", "Large Language Model", "LLM", "Localization", "Migration", "Multilingual Apps", "Neural Machine Translation", "NMT", "REST API", "Tone Adaptation", "Translation API", "TypeScript"]
 tags_normalized: ["ai", "api version 05 01 preview", "azure", "azure ai foundry", "azure ai translator", "brand voice", "coding", "community", "compliance", "gender specificity", "gpt 4o", "gpt 4o mini", "hybrid translation", "large language model", "llm", "localization", "migration", "multilingual apps", "neural machine translation", "nmt", "rest api", "tone adaptation", "translation api", "typescript"]

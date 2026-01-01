@@ -10,7 +10,7 @@ categories: ["AI", "GitHub Copilot"]
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/feed/"
 date: 2025-06-25 16:00:00 +00:00
-permalink: "/news/2025-06-25-From-pair-to-peer-programmer-Our-vision-for-agentic-workflows-in-GitHub-Copilot.html"
+permalink: "/2025-06-25-From-pair-to-peer-programmer-Our-vision-for-agentic-workflows-in-GitHub-Copilot.html"
 tags: ["Agentic AI", "AI", "AI Agents", "Developer Tools", "Generative AI", "GitHub Copilot", "Multi Step Reasoning", "News", "News & Insights", "Problem Solving", "Product"]
 tags_normalized: ["agentic ai", "ai", "ai agents", "developer tools", "generative ai", "github copilot", "multi step reasoning", "news", "news and insights", "problem solving", "product"]
 ---

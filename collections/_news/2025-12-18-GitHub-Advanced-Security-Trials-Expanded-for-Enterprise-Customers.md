@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/changelog/feed/"
 date: 2025-12-18 17:36:42 +00:00
-permalink: "/news/2025-12-18-GitHub-Advanced-Security-Trials-Expanded-for-Enterprise-Customers.html"
+permalink: "/2025-12-18-GitHub-Advanced-Security-Trials-Expanded-for-Enterprise-Customers.html"
 categories: ["DevOps", "Security"]
 tags: ["Application Security", "Code Security", "DevOps", "Enterprise Security", "GitHub", "GitHub Advanced Security", "Improvement", "Licensing", "News", "Secret Protection", "Security", "Security Features", "Security Trial"]
 tags_normalized: ["application security", "code security", "devops", "enterprise security", "github", "github advanced security", "improvement", "licensing", "news", "secret protection", "security", "security features", "security trial"]

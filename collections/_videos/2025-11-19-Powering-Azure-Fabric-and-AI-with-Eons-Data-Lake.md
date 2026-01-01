@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Events YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
 date: 2025-11-19 15:01:51 +00:00
-permalink: "/videos/2025-11-19-Powering-Azure-Fabric-and-AI-with-Eons-Data-Lake.html"
+permalink: "/2025-11-19-Powering-Azure-Fabric-and-AI-with-Eons-Data-Lake.html"
 categories: ["AI", "Azure", "ML"]
 tags: ["AI", "Azure", "Azure OpenAI", "Backup Restoration", "Blob Storage", "Cloud Backups", "Cloud Security", "Data Classification", "Data Indexing", "Data Platform", "Eon Data Lake", "Iceberg Tables", "KQL", "Microsoft Fabric", "ML", "MSIgnite", "OneLake", "Spark", "SQL Analytics", "Unifyyourdataplatform", "Videos"]
 tags_normalized: ["ai", "azure", "azure openai", "backup restoration", "blob storage", "cloud backups", "cloud security", "data classification", "data indexing", "data platform", "eon data lake", "iceberg tables", "kql", "microsoft fabric", "ml", "msignite", "onelake", "spark", "sql analytics", "unifyyourdataplatform", "videos"]

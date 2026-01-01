@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft News"
 feed_url: "https://news.microsoft.com/source/feed/"
 date: 2025-11-06 18:12:32 +00:00
-permalink: "/news/2025-11-06-IDC-Research-Reveals-Cloud-Security-Trends-and-Microsofts-Unified-Approach.html"
+permalink: "/2025-11-06-IDC-Research-Reveals-Cloud-Security-Trends-and-Microsofts-Unified-Approach.html"
 categories: ["AI", "Azure", "Security"]
 tags: ["Agentic AI", "AI", "Azure", "CISO", "Cloud Native Applications", "Cloud Security", "CNAPP", "Company News", "Compliance", "EDR", "Generative AI", "Microsoft Defender For Cloud", "Microsoft Security", "News", "SecOps", "Security", "Security Operations", "Security Platform", "SIEM", "Threat Intelligence", "Tool Consolidation", "XDR"]
 tags_normalized: ["agentic ai", "ai", "azure", "ciso", "cloud native applications", "cloud security", "cnapp", "company news", "compliance", "edr", "generative ai", "microsoft defender for cloud", "microsoft security", "news", "secops", "security", "security operations", "security platform", "siem", "threat intelligence", "tool consolidation", "xdr"]

@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "John Savill's Technical Training"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCpIn7ox7j7bH_OFj7tYouOQ"
 date: 2025-08-26 18:55:48 +00:00
-permalink: "/videos/2025-08-26-Azure-Service-Groups-Quick-Overview.html"
+permalink: "/2025-08-26-Azure-Service-Groups-Quick-Overview.html"
 categories: ["Azure"]
 tags: ["Azure", "Azure Cloud", "Azure Resource Management", "Azure Service Groups", "Cloud", "Cloud Architecture", "Cloud Computing", "Cloud Management", "Microsoft", "Microsoft Azure", "Resource Organization", "Technical Training", "Videos"]
 tags_normalized: ["azure", "azure cloud", "azure resource management", "azure service groups", "cloud", "cloud architecture", "cloud computing", "cloud management", "microsoft", "microsoft azure", "resource organization", "technical training", "videos"]

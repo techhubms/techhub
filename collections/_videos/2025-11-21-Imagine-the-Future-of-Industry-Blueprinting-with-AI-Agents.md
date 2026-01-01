@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Events YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
 date: 2025-11-21 12:47:00 +00:00
-permalink: "/videos/2025-11-21-Imagine-the-Future-of-Industry-Blueprinting-with-AI-Agents.html"
+permalink: "/2025-11-21-Imagine-the-Future-of-Industry-Blueprinting-with-AI-Agents.html"
 categories: ["AI"]
 tags: ["Agentification", "AI", "AI Agents", "AI in Industry", "AI Transformation", "Automation", "Enterprise AI", "Industry Blueprinting", "Industry Practices", "Microsoft Ignite", "MSIgnite", "Operational Efficiency", "Videos"]
 tags_normalized: ["agentification", "ai", "ai agents", "ai in industry", "ai transformation", "automation", "enterprise ai", "industry blueprinting", "industry practices", "microsoft ignite", "msignite", "operational efficiency", "videos"]

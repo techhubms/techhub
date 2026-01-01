@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Fabric Blog"
 feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
 date: 2025-11-19 09:30:00 +00:00
-permalink: "/news/2025-11-19-Cosmos-DB-Mirroring-General-Availability-in-Microsoft-Fabric.html"
+permalink: "/2025-11-19-Cosmos-DB-Mirroring-General-Availability-in-Microsoft-Fabric.html"
 categories: ["AI", "Azure", "ML"]
 tags: ["AI", "Azure", "BM25", "Cosmos DB", "Data Analytics", "Data Engineering", "DiskANN", "Enterprise Security", "General Availability", "High Velocity Data", "Microsoft Fabric", "ML", "News", "NoSQL Database", "OneLake", "Power BI Integration", "Python", "Real Time Analytics", "Reciprocal Rank Fusion", "Reverse ETL", "Spark Notebooks", "T SQL", "User Data Functions", "Vector Indexing"]
 tags_normalized: ["ai", "azure", "bm25", "cosmos db", "data analytics", "data engineering", "diskann", "enterprise security", "general availability", "high velocity data", "microsoft fabric", "ml", "news", "nosql database", "onelake", "power bi integration", "python", "real time analytics", "reciprocal rank fusion", "reverse etl", "spark notebooks", "t sql", "user data functions", "vector indexing"]

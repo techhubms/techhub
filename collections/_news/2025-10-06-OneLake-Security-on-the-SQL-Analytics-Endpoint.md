@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Fabric Blog"
 feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
 date: 2025-10-06 12:00:00 +00:00
-permalink: "/news/2025-10-06-OneLake-Security-on-the-SQL-Analytics-Endpoint.html"
+permalink: "/2025-10-06-OneLake-Security-on-the-SQL-Analytics-Endpoint.html"
 categories: ["ML", "Security"]
 tags: ["Access Control", "Column Level Security", "Data Governance", "Data Lakehouse", "Data Protection", "Microsoft Fabric", "ML", "News", "OneLake Security", "Preview Feature", "RBAC", "Row Level Security", "Security", "Security Sync", "Shortcuts", "SQL Analytics Endpoint", "SQL Permissions", "Workspace Roles"]
 tags_normalized: ["access control", "column level security", "data governance", "data lakehouse", "data protection", "microsoft fabric", "ml", "news", "onelake security", "preview feature", "rbac", "row level security", "security", "security sync", "shortcuts", "sql analytics endpoint", "sql permissions", "workspace roles"]

@@ -9,10 +9,10 @@ viewing_mode: "external"
 feed_name: "DevOps Blog"
 feed_url: "https://devops.com/feed/"
 date: 2025-08-20 06:00:17 +00:00
-permalink: "/blogs/2025-08-20-Debugging-in-Production-Leveraging-Logs-Metrics-and-Traces.html"
+permalink: "/2025-08-20-Debugging-in-Production-Leveraging-Logs-Metrics-and-Traces.html"
 categories: ["DevOps"]
-tags: ["Alerting", "Automation", "Business Of DevOps", "Cloud Native", "Contributed Content", "Correlation IDs", "Debugging", "DevOps", "DevOps Best Practices", "Distributed Tracing", "ELK Stack", "Grafana", "Jaeger", "Logs", "Metrics", "Microservices", "Monitoring", "Observability", "OpenTelemetry", "Blogs", "Production Debugging", "Prometheus", "Root Cause Analysis", "Social Facebook", "Social LinkedIn", "Social X", "Structured Logging", "Traces", "Zipkin"]
-tags_normalized: ["alerting", "automation", "business of devops", "cloud native", "contributed content", "correlation ids", "debugging", "devops", "devops best practices", "distributed tracing", "elk stack", "grafana", "jaeger", "logs", "metrics", "microservices", "monitoring", "observability", "opentelemetry", "blogs", "production debugging", "prometheus", "root cause analysis", "social facebook", "social linkedin", "social x", "structured logging", "traces", "zipkin"]
+tags: ["Alerting", "Automation", "Blogs", "Business Of DevOps", "Cloud Native", "Contributed Content", "Correlation IDs", "Debugging", "DevOps", "DevOps Best Practices", "Distributed Tracing", "ELK Stack", "Grafana", "Jaeger", "Logs", "Metrics", "Microservices", "Monitoring", "Observability", "OpenTelemetry", "Production Debugging", "Prometheus", "Root Cause Analysis", "Social Facebook", "Social LinkedIn", "Social X", "Structured Logging", "Traces", "Zipkin"]
+tags_normalized: ["alerting", "automation", "blogs", "business of devops", "cloud native", "contributed content", "correlation ids", "debugging", "devops", "devops best practices", "distributed tracing", "elk stack", "grafana", "jaeger", "logs", "metrics", "microservices", "monitoring", "observability", "opentelemetry", "production debugging", "prometheus", "root cause analysis", "social facebook", "social linkedin", "social x", "structured logging", "traces", "zipkin"]
 ---
 
 Neel Shah examines the challenges of debugging in production and explains how DevOps teams can use logs, metrics, and traces—plus the right observability tools—to achieve rapid and reliable issue diagnosis.<!--excerpt_end-->

@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "DotNet YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw"
 date: 2025-11-14 02:00:06 +00:00
-permalink: "/videos/2025-11-14-Overcoming-the-limitations-when-using-AI.html"
+permalink: "/2025-11-14-Overcoming-the-limitations-when-using-AI.html"
 categories: ["AI"]
 tags: [".NET Conf", "AI", "AI Challenges", "AI Implementation", "AI Limitations", "AIStoryBuildeers.com", "BlazorData.net", "Mitigation Strategies", "Open Source", "Practical AI", "Real World Applications", "Session Speaker: Michael Washington", "Videos"]
 tags_normalized: ["dotnet conf", "ai", "ai challenges", "ai implementation", "ai limitations", "aistorybuildeersdotcom", "blazordatadotnet", "mitigation strategies", "open source", "practical ai", "real world applications", "session speaker michael washington", "videos"]

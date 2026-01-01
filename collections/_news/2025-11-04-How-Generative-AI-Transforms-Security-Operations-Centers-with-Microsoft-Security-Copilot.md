@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Security Blog"
 feed_url: "https://www.microsoft.com/en-us/security/blog/feed/"
 date: 2025-11-04 17:00:00 +00:00
-permalink: "/news/2025-11-04-How-Generative-AI-Transforms-Security-Operations-Centers-with-Microsoft-Security-Copilot.html"
+permalink: "/2025-11-04-How-Generative-AI-Transforms-Security-Operations-Centers-with-Microsoft-Security-Copilot.html"
 categories: ["AI", "Security"]
 tags: ["AI", "AI Powered Security", "Alert Triage", "Cybersecurity", "Generative AI", "Incident Management", "Incident Response", "Microsoft Security", "Microsoft Security Copilot", "News", "Operational Efficiency", "Security", "Security Automation", "Security Operations Center", "Security Reporting", "SOC", "Threat Hunting", "Threat Intelligence"]
 tags_normalized: ["ai", "ai powered security", "alert triage", "cybersecurity", "generative ai", "incident management", "incident response", "microsoft security", "microsoft security copilot", "news", "operational efficiency", "security", "security automation", "security operations center", "security reporting", "soc", "threat hunting", "threat intelligence"]

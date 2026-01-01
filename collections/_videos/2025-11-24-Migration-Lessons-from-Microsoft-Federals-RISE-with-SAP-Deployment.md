@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Events YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
 date: 2025-11-24 07:28:33 +00:00
-permalink: "/videos/2025-11-24-Migration-Lessons-from-Microsoft-Federals-RISE-with-SAP-Deployment.html"
+permalink: "/2025-11-24-Migration-Lessons-from-Microsoft-Federals-RISE-with-SAP-Deployment.html"
 categories: ["AI", "Azure", "Security"]
 tags: ["AI", "AI Powered Monitoring", "Azure", "Azure Government", "Business Continuity", "Compliance", "Cross Tenant Authentication", "High Availability", "Microsoft Cloud", "Microsoft Defender", "Microsoft Sentinel", "Migrateandmodernizeyourestate", "Migration Strategy", "MSIgnite", "Regulated Industries", "RISE With SAP", "SAP", "SAP BTP", "Security", "Sovereignty", "Threat Detection", "Videos"]
 tags_normalized: ["ai", "ai powered monitoring", "azure", "azure government", "business continuity", "compliance", "cross tenant authentication", "high availability", "microsoft cloud", "microsoft defender", "microsoft sentinel", "migrateandmodernizeyourestate", "migration strategy", "msignite", "regulated industries", "rise with sap", "sap", "sap btp", "security", "sovereignty", "threat detection", "videos"]

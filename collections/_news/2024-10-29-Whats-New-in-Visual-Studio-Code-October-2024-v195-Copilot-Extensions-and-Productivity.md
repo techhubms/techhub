@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Visual Studio Code Releases"
 feed_url: "https://code.visualstudio.com/feed.xml"
 date: 2024-10-29 17:00:00 +00:00
-permalink: "/news/2024-10-29-Whats-New-in-Visual-Studio-Code-October-2024-v195-Copilot-Extensions-and-Productivity.html"
+permalink: "/2024-10-29-Whats-New-in-Visual-Studio-Code-October-2024-v195-Copilot-Extensions-and-Productivity.html"
 categories: ["AI", "Coding", "DevOps", "GitHub Copilot"]
 tags: ["AI", "AI Development", "Coding", "Copilot Chat", "Copilot Edits", "Copilot Extensions", "Data Analysis", "DevOps", "Electron 32", "ESLint 9", "GitHub Copilot", "Mermaid Diagrams", "News", "Open Source", "Pull Requests", "Pylance", "Python", "Semantic Search", "TypeScript 5.7", "V1.95", "VS Code", "VS Code Extensions", "Workspace Indexing"]
 tags_normalized: ["ai", "ai development", "coding", "copilot chat", "copilot edits", "copilot extensions", "data analysis", "devops", "electron 32", "eslint 9", "github copilot", "mermaid diagrams", "news", "open source", "pull requests", "pylance", "python", "semantic search", "typescript 5dot7", "v1dot95", "vs code", "vs code extensions", "workspace indexing"]

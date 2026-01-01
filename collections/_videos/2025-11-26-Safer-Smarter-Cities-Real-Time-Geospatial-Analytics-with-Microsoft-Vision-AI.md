@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Events YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
 date: 2025-11-26 20:17:43 +00:00
-permalink: "/videos/2025-11-26-Safer-Smarter-Cities-Real-Time-Geospatial-Analytics-with-Microsoft-Vision-AI.html"
+permalink: "/2025-11-26-Safer-Smarter-Cities-Real-Time-Geospatial-Analytics-with-Microsoft-Vision-AI.html"
 categories: ["AI", "Azure"]
 tags: ["AI", "Andrew Hester", "Automated Alerts", "Azure", "City Of Raleigh", "Data Integration", "Emergency Response", "English (us)", "Esri", "Explore A Case Study in Building Safer Smarter Cities | STUDIOSP65", "F5n1", "Geospatial Analytics", "Ignite", "Microsoft", "Microsoft Ignite", "Ms Ignite", "Msft Ignite", "NVIDIA", "Real Time Analytics", "Simulation", "Smart Cities", "STUDIOSP65", "Technical", "Technical Session", "Urban Safety", "Videos", "Vision AI"]
 tags_normalized: ["ai", "andrew hester", "automated alerts", "azure", "city of raleigh", "data integration", "emergency response", "english us", "esri", "explore a case study in building safer smarter cities pipe studiosp65", "f5n1", "geospatial analytics", "ignite", "microsoft", "microsoft ignite", "ms ignite", "msft ignite", "nvidia", "real time analytics", "simulation", "smart cities", "studiosp65", "technical", "technical session", "urban safety", "videos", "vision ai"]

@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft VisualStudio Blog"
 feed_url: "https://devblogs.microsoft.com/visualstudio/feed/"
 date: 2025-11-12 17:38:43 +00:00
-permalink: "/news/2025-11-12-Introducing-Copilot-Auto-Model-Selection-Preview.html"
+permalink: "/2025-11-12-Introducing-Copilot-Auto-Model-Selection-Preview.html"
 categories: ["AI", "GitHub Copilot"]
 tags: ["AI", "AI Development", "AI Integration", "AI Models", "Auto", "Auto Model Selection", "Claude Sonnet 4.5", "Copilot", "Copilot Chat", "GitHub Copilot", "GPT 4.1", "GPT 5", "Model Multiplier", "Models", "News", "Premium Requests", "Software Engineering", "VS"]
 tags_normalized: ["ai", "ai development", "ai integration", "ai models", "auto", "auto model selection", "claude sonnet 4dot5", "copilot", "copilot chat", "github copilot", "gpt 4dot1", "gpt 5", "model multiplier", "models", "news", "premium requests", "software engineering", "vs"]

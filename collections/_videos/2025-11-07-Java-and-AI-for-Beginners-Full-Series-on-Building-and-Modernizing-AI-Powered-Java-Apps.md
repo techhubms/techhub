@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Developer YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
 date: 2025-11-07 05:01:19 +00:00
-permalink: "/videos/2025-11-07-Java-and-AI-for-Beginners-Full-Series-on-Building-and-Modernizing-AI-Powered-Java-Apps.html"
+permalink: "/2025-11-07-Java-and-AI-for-Beginners-Full-Series-on-Building-and-Modernizing-AI-Powered-Java-Apps.html"
 categories: ["AI", "Azure", "Coding"]
 tags: ["Agent", "AI", "AI Integration", "Application Migration", "Azure", "Azure Deployment", "Cloud Computing", "Coding", "Containers", "Context Engineering", "Dev", "Development", "Generative AI", "GPU", "Java", "Java Development", "MCP", "Microsoft", "Microsoft Azure", "Modernization", "Responsible AI", "Tech", "Technology", "Videos"]
 tags_normalized: ["agent", "ai", "ai integration", "application migration", "azure", "azure deployment", "cloud computing", "coding", "containers", "context engineering", "dev", "development", "generative ai", "gpu", "java", "java development", "mcp", "microsoft", "microsoft azure", "modernization", "responsible ai", "tech", "technology", "videos"]

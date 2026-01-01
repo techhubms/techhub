@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Developer YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
 date: 2025-11-12 17:00:34 +00:00
-permalink: "/videos/2025-11-12-Provisioning-SQL-Server-2025-Databases-to-Kubernetes-with-Pure-Storage-Snapshots.html"
+permalink: "/2025-11-12-Provisioning-SQL-Server-2025-Databases-to-Kubernetes-with-Pure-Storage-Snapshots.html"
 categories: ["Azure"]
 tags: ["Azure", "Cloud Computing", "Cloud Databases", "Containerized SQL", "Cross Platform Databases", "Data Lifecycle Management", "Database Cloning", "Database Deployment", "Dev", "Dev/Test Workflows", "Development", "Enterprise Storage", "Kubernetes", "Linux Containers", "Microsoft", "Microsoft Azure", "Pure Storage Snapshots", "SQL Server", "Tech", "Technology", "Videos"]
 tags_normalized: ["azure", "cloud computing", "cloud databases", "containerized sql", "cross platform databases", "data lifecycle management", "database cloning", "database deployment", "dev", "devslashtest workflows", "development", "enterprise storage", "kubernetes", "linux containers", "microsoft", "microsoft azure", "pure storage snapshots", "sql server", "tech", "technology", "videos"]

@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Visual Studio Code YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SLNwkd3w"
 date: 2025-12-10 21:01:49 +00:00
-permalink: "/videos/2025-12-10-Agent-HQ-for-VS-Code-Unified-Agent-Experience-with-GitHub-Copilot.html"
+permalink: "/2025-12-10-Agent-HQ-for-VS-Code-Unified-Agent-Experience-with-GitHub-Copilot.html"
 categories: ["AI", "Coding", "GitHub Copilot"]
 tags: ["Agent HQ", "Agent Sessions", "Agenthq", "Agentmode", "Agents", "AI", "Background Agents", "Chat View Integration", "Cloud Agents", "Code Review", "Coding", "Coding Productivity", "Demo", "Developer", "Developer Tools", "Development Workflow", "GitHub Copilot", "Local Agents", "Microsoft", "Task Delegation", "Videos", "VS Code"]
 tags_normalized: ["agent hq", "agent sessions", "agenthq", "agentmode", "agents", "ai", "background agents", "chat view integration", "cloud agents", "code review", "coding", "coding productivity", "demo", "developer", "developer tools", "development workflow", "github copilot", "local agents", "microsoft", "task delegation", "videos", "vs code"]

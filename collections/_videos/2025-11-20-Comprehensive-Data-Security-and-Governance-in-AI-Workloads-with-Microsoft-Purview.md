@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Events YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
 date: 2025-11-20 10:41:43 +00:00
-permalink: "/videos/2025-11-20-Comprehensive-Data-Security-and-Governance-in-AI-Workloads-with-Microsoft-Purview.html"
+permalink: "/2025-11-20-Comprehensive-Data-Security-and-Governance-in-AI-Workloads-with-Microsoft-Purview.html"
 categories: ["AI", "Azure", "Security"]
 tags: ["AI", "AI Risk Management", "Audit Logs", "Azure", "Azure AI Foundry", "Compliance Manager", "Copilot Studio", "Data Governance", "Data Security", "Microsoft Fabric", "Microsoft Purview", "Microsoft Security", "MSIgnite", "Power BI", "Regulatory Compliance", "Secureyourdata", "Security", "Security Dashboard", "Sensitive Data Protection", "Unified Security Ecosystem", "Videos"]
 tags_normalized: ["ai", "ai risk management", "audit logs", "azure", "azure ai foundry", "compliance manager", "copilot studio", "data governance", "data security", "microsoft fabric", "microsoft purview", "microsoft security", "msignite", "power bi", "regulatory compliance", "secureyourdata", "security", "security dashboard", "sensitive data protection", "unified security ecosystem", "videos"]

@@ -10,7 +10,7 @@ section: "github-copilot"
 feed_name: "Visual Studio Code YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SLNwkd3w"
 date: 2025-07-25 14:01:36 +00:00
-permalink: "/videos/2025-07-25-Coding-Agent-Integration-in-Visual-Studio-Code.html"
+permalink: "/2025-07-25-Coding-Agent-Integration-in-Visual-Studio-Code.html"
 categories: ["AI", "Coding", "GitHub Copilot"]
 tags: ["AI", "AI Coding Assistant", "AI Developer", "Coding", "Coding Agent", "Copilot Automation", "Developer Workflow", "Editor Integration", "GitHub Copilot", "GitHub Pull Requests Extension", "Issue Assignment", "Pull Request Management", "Software Development", "Videos", "VS Code"]
 tags_normalized: ["ai", "ai coding assistant", "ai developer", "coding", "coding agent", "copilot automation", "developer workflow", "editor integration", "github copilot", "github pull requests extension", "issue assignment", "pull request management", "software development", "videos", "vs code"]

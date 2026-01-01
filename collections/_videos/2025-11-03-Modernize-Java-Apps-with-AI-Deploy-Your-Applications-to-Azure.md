@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Developer YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
 date: 2025-11-03 17:00:34 +00:00
-permalink: "/videos/2025-11-03-Modernize-Java-Apps-with-AI-Deploy-Your-Applications-to-Azure.html"
+permalink: "/2025-11-03-Modernize-Java-Apps-with-AI-Deploy-Your-Applications-to-Azure.html"
 categories: ["AI", "Azure", "DevOps", "GitHub Copilot"]
 tags: ["AI", "AI Assisted Development", "AIAssisted", "App Modernization", "AppModernization", "Architecture Diagrams", "Azure", "Azure App Service", "Azure Deployment", "Azure Developer CLI", "Azure Portal", "Azure SQL", "AzureCLI", "AzureDeployment", "CI/CD", "Cloud Deployment", "Cloud Migration", "CloudDeployment", "CloudMigration", "Deployment Automation", "DevOps", "GitHub Copilot", "Java", "JavaAzure", "JavaCloud", "Videos", "YAML"]
 tags_normalized: ["ai", "ai assisted development", "aiassisted", "app modernization", "appmodernization", "architecture diagrams", "azure", "azure app service", "azure deployment", "azure developer cli", "azure portal", "azure sql", "azurecli", "azuredeployment", "cislashcd", "cloud deployment", "cloud migration", "clouddeployment", "cloudmigration", "deployment automation", "devops", "github copilot", "java", "javaazure", "javacloud", "videos", "yaml"]

@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Events YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
 date: 2025-11-20 16:16:49 +00:00
-permalink: "/videos/2025-11-20-AI-Agents-and-MCP-in-Production-Azure-App-Platform-at-Microsoft-Ignite.html"
+permalink: "/2025-11-20-AI-Agents-and-MCP-in-Production-Azure-App-Platform-at-Microsoft-Ignite.html"
 categories: ["AI", "Azure", "Coding", "GitHub Copilot", "Security"]
 tags: [".NET 10", "Agent Framework", "AI", "AI Agents", "App Modernization", "Authentication", "Azure", "Azure AI Foundry", "Azure App Platform", "Coding", "Content Moderation", "Easy Auth", "GitHub Copilot", "Governance", "InnovatewithAzureAIappsandagents", "MCP", "MSIgnite", "Observability", "Policy Enforcement", "Security", "Videos", "VS Code"]
 tags_normalized: ["dotnet 10", "agent framework", "ai", "ai agents", "app modernization", "authentication", "azure", "azure ai foundry", "azure app platform", "coding", "content moderation", "easy auth", "github copilot", "governance", "innovatewithazureaiappsandagents", "mcp", "msignite", "observability", "policy enforcement", "security", "videos", "vs code"]

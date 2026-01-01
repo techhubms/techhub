@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "GitHub YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ"
 date: 2025-10-02 14:01:01 +00:00
-permalink: "/videos/2025-10-02-Full-Demo-Mastering-GitHub-Copilot-CLI-for-Terminal-Based-Development.html"
+permalink: "/2025-10-02-Full-Demo-Mastering-GitHub-Copilot-CLI-for-Terminal-Based-Development.html"
 categories: ["AI", "Coding", "GitHub Copilot"]
 tags: ["AI", "AI Agent", "AI Collaboration", "Automation", "Codebase Exploration", "Coding", "Command Line", "Debugging", "Developer Tools", "GitHub Copilot", "GitHub Copilot CLI", "GitHub Integration", "GitHubCopilotCLI", "Installation", "Product Demo", "Productivity", "Ryan Hecht", "Terminal", "Videos"]
 tags_normalized: ["ai", "ai agent", "ai collaboration", "automation", "codebase exploration", "coding", "command line", "debugging", "developer tools", "github copilot", "github copilot cli", "github integration", "githubcopilotcli", "installation", "product demo", "productivity", "ryan hecht", "terminal", "videos"]

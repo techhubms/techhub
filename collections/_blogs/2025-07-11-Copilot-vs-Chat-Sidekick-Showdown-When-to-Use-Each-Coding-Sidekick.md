@@ -9,10 +9,10 @@ viewing_mode: "external"
 feed_name: "Randy Pagels's Blog"
 feed_url: "https://cooknwithcopilot.com/rss.xml"
 date: 2025-07-11 00:00:00 +00:00
-permalink: "/blogs/2025-07-11-Copilot-vs-Chat-Sidekick-Showdown-When-to-Use-Each-Coding-Sidekick.html"
+permalink: "/2025-07-11-Copilot-vs-Chat-Sidekick-Showdown-When-to-Use-Each-Coding-Sidekick.html"
 categories: ["AI", "GitHub Copilot"]
-tags: ["AI", "AI Coding Tools", "ChatGPT", "Code Assistant", "Coding Productivity", "Coding Workflow", "Copilot Chat", "Gemini", "GitHub Copilot", "Inline Code Suggestions", "Blogs", "Software Development"]
-tags_normalized: ["ai", "ai coding tools", "chatgpt", "code assistant", "coding productivity", "coding workflow", "copilot chat", "gemini", "github copilot", "inline code suggestions", "blogs", "software development"]
+tags: ["AI", "AI Coding Tools", "Blogs", "ChatGPT", "Code Assistant", "Coding Productivity", "Coding Workflow", "Copilot Chat", "Gemini", "GitHub Copilot", "Inline Code Suggestions", "Software Development"]
+tags_normalized: ["ai", "ai coding tools", "blogs", "chatgpt", "code assistant", "coding productivity", "coding workflow", "copilot chat", "gemini", "github copilot", "inline code suggestions", "software development"]
 ---
 
 Randy Pagels compares GitHub Copilot's inline code suggestions with chatbot-based tools like Copilot Chat and ChatGPT, providing practical guidance on how to get the most out of each for daily software development tasks.<!--excerpt_end-->

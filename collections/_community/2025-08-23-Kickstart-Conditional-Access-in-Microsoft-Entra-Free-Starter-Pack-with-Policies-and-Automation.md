@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-08-23 14:13:11 +00:00
-permalink: "/community/2025-08-23-Kickstart-Conditional-Access-in-Microsoft-Entra-Free-Starter-Pack-with-Policies-and-Automation.html"
+permalink: "/2025-08-23-Kickstart-Conditional-Access-in-Microsoft-Entra-Free-Starter-Pack-with-Policies-and-Automation.html"
 categories: ["Azure", "DevOps", "Security"]
 tags: ["Automation", "Azure", "Azure AD", "CI/CD", "Community", "Conditional Access", "DevOps", "GitHub Actions", "Identity Management", "Legacy Authentication", "MFA", "Microsoft Entra ID", "Microsoft Graph", "Policy Deployment", "PowerShell", "Report Only Mode", "Security", "Security Policy", "Sign in Logs", "Zero Trust"]
 tags_normalized: ["automation", "azure", "azure ad", "cislashcd", "community", "conditional access", "devops", "github actions", "identity management", "legacy authentication", "mfa", "microsoft entra id", "microsoft graph", "policy deployment", "powershell", "report only mode", "security", "security policy", "sign in logs", "zero trust"]

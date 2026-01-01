@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Reddit DotNet"
 feed_url: "https://www.reddit.com/r/dotnet/.rss"
 date: 2025-08-02 18:53:34 +00:00
-permalink: "/community/2025-08-02-Sanity-Check-On-NET-Framework-Mono-MacOS.html"
+permalink: "/2025-08-02-Sanity-Check-On-NET-Framework-Mono-MacOS.html"
 categories: ["Coding"]
 tags: [".NET", ".NET Framework", "Assembly Versioning", "Build Toolchain", "Coding", "Community", "Cross Platform Development", "Developer Workflow", "MacOS", "Mono", "Rider IDE", "System.Net.Http", "Unit Testing"]
 tags_normalized: ["dotnet", "dotnet framework", "assembly versioning", "build toolchain", "coding", "community", "cross platform development", "developer workflow", "macos", "mono", "rider ide", "systemdotnetdothttp", "unit testing"]

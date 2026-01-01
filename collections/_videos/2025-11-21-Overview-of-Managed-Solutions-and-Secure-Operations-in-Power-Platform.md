@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Events YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
 date: 2025-11-21 13:29:26 +00:00
-permalink: "/videos/2025-11-21-Overview-of-Managed-Solutions-and-Secure-Operations-in-Power-Platform.html"
+permalink: "/2025-11-21-Overview-of-Managed-Solutions-and-Secure-Operations-in-Power-Platform.html"
 categories: ["AI", "Security"]
 tags: ["AI", "AI Agents", "Alerting", "ALM", "Application Lifecycle Management", "Compliance", "Copilot Studio", "Dataverse", "Enterprise IT", "Governance", "Innovatewithlow", "Low Code", "Managed Solutions", "Microsoft Ignite", "Monitoring", "MSIgnite", "Operational Health", "Power Platform", "Security", "Source Control", "Videos"]
 tags_normalized: ["ai", "ai agents", "alerting", "alm", "application lifecycle management", "compliance", "copilot studio", "dataverse", "enterprise it", "governance", "innovatewithlow", "low code", "managed solutions", "microsoft ignite", "monitoring", "msignite", "operational health", "power platform", "security", "source control", "videos"]

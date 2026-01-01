@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "John Savill's Technical Training"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCpIn7ox7j7bH_OFj7tYouOQ"
 date: 2025-12-03 13:07:04 +00:00
-permalink: "/videos/2025-12-03-Entra-Synced-Passkeys-and-Passkey-Profiles.html"
+permalink: "/2025-12-03-Entra-Synced-Passkeys-and-Passkey-Profiles.html"
 categories: ["Azure", "Security"]
 tags: ["Apple Icloud Keychain", "Authentication", "Azure", "Azure Cloud", "Azure Identity", "Cloud", "Cloud Synced Passkey", "Device Bound Passkey", "Digital Identity", "Entra Id", "Google Password Manager", "Identity", "Identity Management", "Microsoft", "Microsoft Azure", "Passkey Policies", "Passkeys", "Policy Management", "Security", "Synced Credentials", "Videos"]
 tags_normalized: ["apple icloud keychain", "authentication", "azure", "azure cloud", "azure identity", "cloud", "cloud synced passkey", "device bound passkey", "digital identity", "entra id", "google password manager", "identity", "identity management", "microsoft", "microsoft azure", "passkey policies", "passkeys", "policy management", "security", "synced credentials", "videos"]

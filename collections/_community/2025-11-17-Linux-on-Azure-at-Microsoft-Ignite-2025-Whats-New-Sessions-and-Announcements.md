@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-11-17 18:55:08 +00:00
-permalink: "/community/2025-11-17-Linux-on-Azure-at-Microsoft-Ignite-2025-Whats-New-Sessions-and-Announcements.html"
+permalink: "/2025-11-17-Linux-on-Azure-at-Microsoft-Ignite-2025-Whats-New-Sessions-and-Announcements.html"
 categories: ["Azure", "DevOps", "Security"]
 tags: ["AKS", "Azure", "Azure Linux", "Azure Machine Configuration", "Azure Migrate", "Azure Red Hat OpenShift", "CIS Benchmarks", "Cloud Infrastructure", "Community", "Compliance", "DevOps", "FIPS", "Hybrid Cloud", "Immutable OS", "Kata Containers", "Linux Security", "Pod Sandboxing", "PostgreSQL", "Security", "Session Guide"]
 tags_normalized: ["aks", "azure", "azure linux", "azure machine configuration", "azure migrate", "azure red hat openshift", "cis benchmarks", "cloud infrastructure", "community", "compliance", "devops", "fips", "hybrid cloud", "immutable os", "kata containers", "linux security", "pod sandboxing", "postgresql", "security", "session guide"]

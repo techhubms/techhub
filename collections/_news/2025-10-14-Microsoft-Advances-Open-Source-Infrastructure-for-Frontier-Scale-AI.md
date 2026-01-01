@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The Azure Blog"
 feed_url: "https://azure.microsoft.com/en-us/blog/feed/"
 date: 2025-10-14 00:35:00 +00:00
-permalink: "/news/2025-10-14-Microsoft-Advances-Open-Source-Infrastructure-for-Frontier-Scale-AI.html"
+permalink: "/2025-10-14-Microsoft-Advances-Open-Source-Infrastructure-for-Frontier-Scale-AI.html"
 categories: ["AI", "Azure", "Security"]
 tags: ["AI", "AI + Machine Learning", "AI Infrastructure", "Azure", "Caliptra", "Cloud Computing", "Data Centers", "Datacenter", "Embodied Carbon", "Fleet Management", "Liquid Cooling", "Microsoft Azure", "Networking", "News", "OCP Global Summit", "Open Compute Project", "Power Stabilization", "Quantum Resilient Cryptography", "Resiliency", "Security", "Silicon Root Of Trust", "Sustainability"]
 tags_normalized: ["ai", "ai plus machine learning", "ai infrastructure", "azure", "caliptra", "cloud computing", "data centers", "datacenter", "embodied carbon", "fleet management", "liquid cooling", "microsoft azure", "networking", "news", "ocp global summit", "open compute project", "power stabilization", "quantum resilient cryptography", "resiliency", "security", "silicon root of trust", "sustainability"]

@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Reddit CSharp"
 feed_url: "https://www.reddit.com/r/csharp/.rss"
 date: 2025-08-07 20:46:56 +00:00
-permalink: "/community/2025-08-07-Is-goto-Ever-Cleaner-than-while-in-C-Loops.html"
+permalink: "/2025-08-07-Is-goto-Ever-Cleaner-than-while-in-C-Loops.html"
 categories: ["Coding"]
 tags: ["Best Practices", "C#", "Code Clarity", "Code Maintainability", "Code Review", "Coding", "Community", "Console Application", "Control Flow", "Function Extraction", "Goto Statement", "Language Features", "Looping", "Nested Statements", "Readability", "While Loop"]
 tags_normalized: ["best practices", "csharp", "code clarity", "code maintainability", "code review", "coding", "community", "console application", "control flow", "function extraction", "goto statement", "language features", "looping", "nested statements", "readability", "while loop"]

@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-10-06 21:02:48 +00:00
-permalink: "/community/2025-10-06-Enterprise-Scale-Data-Integration-with-Azure-Data-Factory-SQL-Managed-Instance-and-SSIS.html"
+permalink: "/2025-10-06-Enterprise-Scale-Data-Integration-with-Azure-Data-Factory-SQL-Managed-Instance-and-SSIS.html"
 categories: ["Azure", "ML"]
 tags: ["Azure", "Azure Data Factory", "Azure SQL Managed Instance", "Cloud Solution Architecture", "Community", "Data Engineering", "Data Integration", "Data Pipelines", "Enterprise Edition", "Microsoft Entra ID", "Microsoft Fabric", "ML", "Power BI", "Self Hosted Integration Runtime", "SQL Server Integration Services", "SSIS", "Virtual Network"]
 tags_normalized: ["azure", "azure data factory", "azure sql managed instance", "cloud solution architecture", "community", "data engineering", "data integration", "data pipelines", "enterprise edition", "microsoft entra id", "microsoft fabric", "ml", "power bi", "self hosted integration runtime", "sql server integration services", "ssis", "virtual network"]

@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Blog"
 feed_url: "https://devblogs.microsoft.com/feed"
 date: 2025-12-02 18:00:18 +00:00
-permalink: "/news/2025-12-02-Securing-Sensitive-Mobile-Operations-with-Device-Bound-Request-Signing.html"
+permalink: "/2025-12-02-Securing-Sensitive-Mobile-Operations-with-Device-Bound-Request-Signing.html"
 categories: ["Security"]
 tags: ["Android Keystore", "API Protection", "API Security", "Compliance", "Cryptographic Signatures", "Device Bound Request Signing", "ECDSA", "Ed25519", "Hardware Backed Keys", "Ios Secure Enclave", "Key Attestation", "Microsoft", "Mobile", "Mobile Apps", "Mobile Security", "MTLS", "News", "OAuth", "Post Quantum Cryptography", "Proof Of Possession", "RASP", "Security", "STRIDE", "Threat Modeling", "Zero Trust"]
 tags_normalized: ["android keystore", "api protection", "api security", "compliance", "cryptographic signatures", "device bound request signing", "ecdsa", "ed25519", "hardware backed keys", "ios secure enclave", "key attestation", "microsoft", "mobile", "mobile apps", "mobile security", "mtls", "news", "oauth", "post quantum cryptography", "proof of possession", "rasp", "security", "stride", "threat modeling", "zero trust"]

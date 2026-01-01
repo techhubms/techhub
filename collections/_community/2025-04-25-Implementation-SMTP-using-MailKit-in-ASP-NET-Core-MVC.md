@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=dotnet"
 date: 2025-04-25 20:17:18 +00:00
-permalink: "/community/2025-04-25-Implementation-SMTP-using-MailKit-in-ASP-NET-Core-MVC.html"
+permalink: "/2025-04-25-Implementation-SMTP-using-MailKit-in-ASP-NET-Core-MVC.html"
 categories: ["Coding"]
 tags: [".NET Core", "ASP.NET Core", "C#", "Coding", "Community", "Email Integration", "Email Trigger", "Form Handling", "MailKit", "MVC", "SMTP", "Web Development"]
 tags_normalized: ["dotnet core", "aspdotnet core", "csharp", "coding", "community", "email integration", "email trigger", "form handling", "mailkit", "mvc", "smtp", "web development"]

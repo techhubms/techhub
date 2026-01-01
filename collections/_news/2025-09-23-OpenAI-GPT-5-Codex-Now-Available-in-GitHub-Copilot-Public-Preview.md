@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/changelog/feed/"
 date: 2025-09-23 16:43:02 +00:00
-permalink: "/news/2025-09-23-OpenAI-GPT-5-Codex-Now-Available-in-GitHub-Copilot-Public-Preview.html"
+permalink: "/2025-09-23-OpenAI-GPT-5-Codex-Now-Available-in-GitHub-Copilot-Public-Preview.html"
 categories: ["AI", "GitHub Copilot"]
 tags: ["Agentic Coding", "AI", "AI Development", "Copilot", "Copilot Chat", "Copilot Enterprise", "Copilot Pro", "Developer Tools", "GitHub Copilot", "GPT 5 Codex", "Model Rollout", "News", "OpenAI", "Software Release", "VS Code"]
 tags_normalized: ["agentic coding", "ai", "ai development", "copilot", "copilot chat", "copilot enterprise", "copilot pro", "developer tools", "github copilot", "gpt 5 codex", "model rollout", "news", "openai", "software release", "vs code"]

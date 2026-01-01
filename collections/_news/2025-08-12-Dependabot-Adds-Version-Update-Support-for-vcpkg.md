@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/changelog/feed/"
 date: 2025-08-12 16:22:46 +00:00
-permalink: "/news/2025-08-12-Dependabot-Adds-Version-Update-Support-for-vcpkg.html"
+permalink: "/2025-08-12-Dependabot-Adds-Version-Update-Support-for-vcpkg.html"
 categories: ["Coding", "DevOps"]
 tags: ["C++", "Coding", "Continuous Integration", "Dependabot", "Dependency Updates", "DevOps", "DevOps Automation", "GitHub", "Manifest Mode", "Microsoft", "News", "Open Source Tools", "Package Management", "Vcpkg"]
 tags_normalized: ["cplusplus", "coding", "continuous integration", "dependabot", "dependency updates", "devops", "devops automation", "github", "manifest mode", "microsoft", "news", "open source tools", "package management", "vcpkg"]

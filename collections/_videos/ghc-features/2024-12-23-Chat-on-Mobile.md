@@ -7,7 +7,7 @@ excerpt_separator: <!--excerpt_end-->
 canonical_url: "https://youtu.be/EQH-V5jQ0aA"
 categories: ["AI", "GitHub Copilot"]
 date: 2024-12-23 23:00:10 +00:00
-permalink: "/videos/2024-12-23-Chat-on-Mobile.html"
+permalink: "/2024-12-23-Chat-on-Mobile.html"
 viewing_mode: "internal"
 section: "github-copilot"
 ghes_support: "false"

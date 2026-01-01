@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Fabric Blog"
 feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
 date: 2025-09-03 10:04:16 +00:00
-permalink: "/news/2025-09-03-Introducing-Workspace-Outbound-Access-Protection-for-Spark.html"
+permalink: "/2025-09-03-Introducing-Workspace-Outbound-Access-Protection-for-Spark.html"
 categories: ["Azure", "ML", "Security"]
 tags: ["Azure", "Compliance", "Data Engineering", "Data Exfiltration", "Managed Private Endpoints", "Microsoft Fabric", "ML", "Network Security", "News", "OAP", "Private Links", "Security", "Spark", "Trusted Workspace Access", "Workspace Outbound Access Protection"]
 tags_normalized: ["azure", "compliance", "data engineering", "data exfiltration", "managed private endpoints", "microsoft fabric", "ml", "network security", "news", "oap", "private links", "security", "spark", "trusted workspace access", "workspace outbound access protection"]

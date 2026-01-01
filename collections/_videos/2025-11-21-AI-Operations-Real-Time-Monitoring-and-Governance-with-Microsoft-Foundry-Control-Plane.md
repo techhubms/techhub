@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Events YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
 date: 2025-11-21 16:29:22 +00:00
-permalink: "/videos/2025-11-21-AI-Operations-Real-Time-Monitoring-and-Governance-with-Microsoft-Foundry-Control-Plane.html"
+permalink: "/2025-11-21-AI-Operations-Real-Time-Monitoring-and-Governance-with-Microsoft-Foundry-Control-Plane.html"
 categories: ["AI", "Azure", "Security"]
 tags: ["AI", "AI Agent Operations", "Azure", "Azure AI", "Case Study", "Compliance", "Continuous Evaluation", "Governance", "Human Oversight", "InnovatewithAzureAIappsandagents", "Microsoft Defender", "Microsoft Foundry", "MSIgnite", "Observability", "PII Protection", "Production Monitoring", "Prompt Injection Protection", "Security", "Threat Detection", "Trustworthy AI", "Videos"]
 tags_normalized: ["ai", "ai agent operations", "azure", "azure ai", "case study", "compliance", "continuous evaluation", "governance", "human oversight", "innovatewithazureaiappsandagents", "microsoft defender", "microsoft foundry", "msignite", "observability", "pii protection", "production monitoring", "prompt injection protection", "security", "threat detection", "trustworthy ai", "videos"]

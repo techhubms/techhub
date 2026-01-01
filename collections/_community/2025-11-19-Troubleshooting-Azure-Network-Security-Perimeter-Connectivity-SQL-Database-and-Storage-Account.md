@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-11-19 08:57:53 +00:00
-permalink: "/community/2025-11-19-Troubleshooting-Azure-Network-Security-Perimeter-Connectivity-SQL-Database-and-Storage-Account.html"
+permalink: "/2025-11-19-Troubleshooting-Azure-Network-Security-Perimeter-Connectivity-SQL-Database-and-Storage-Account.html"
 categories: ["Azure", "Security"]
 tags: ["Azure", "Azure Networking", "Azure Platform", "Azure SQL Database", "Azure Storage Account", "Bulk Insert", "Community", "Data Security", "Firewall Rules", "GA", "Key Vault", "Network Security Perimeter", "NSP", "Preview Features", "Resource Connectivity", "Security"]
 tags_normalized: ["azure", "azure networking", "azure platform", "azure sql database", "azure storage account", "bulk insert", "community", "data security", "firewall rules", "ga", "key vault", "network security perimeter", "nsp", "preview features", "resource connectivity", "security"]

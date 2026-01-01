@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "GitHub YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ"
 date: 2025-09-12 14:00:22 +00:00
-permalink: "/videos/2025-09-12-The-Download-npm-Supply-Chain-Attack-NVIDIA-Rubin-Platform-VS-Code-Dev-Days-and-More.html"
+permalink: "/2025-09-12-The-Download-npm-Supply-Chain-Attack-NVIDIA-Rubin-Platform-VS-Code-Dev-Days-and-More.html"
 categories: ["AI", "Coding", "DevOps", "Security"]
 tags: ["AI", "Coding", "DevNews", "DevOps", "GitHub", "GitHub MCP", "GitHub Universe", "Language Models", "Machine Learning", "npm", "NVIDIA Rubin", "Remote Servers", "Security", "Software Development", "Supply Chain Attack", "TheDownload", "Videos", "VS Code", "VS Code Dev Days"]
 tags_normalized: ["ai", "coding", "devnews", "devops", "github", "github mcp", "github universe", "language models", "machine learning", "npm", "nvidia rubin", "remote servers", "security", "software development", "supply chain attack", "thedownload", "videos", "vs code", "vs code dev days"]

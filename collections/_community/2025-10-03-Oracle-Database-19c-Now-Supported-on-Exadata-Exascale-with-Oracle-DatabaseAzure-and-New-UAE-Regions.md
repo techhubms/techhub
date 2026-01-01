@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-10-03 17:02:27 +00:00
-permalink: "/community/2025-10-03-Oracle-Database-19c-Now-Supported-on-Exadata-Exascale-with-Oracle-DatabaseAzure-and-New-UAE-Regions.html"
+permalink: "/2025-10-03-Oracle-Database-19c-Now-Supported-on-Exadata-Exascale-with-Oracle-DatabaseAzure-and-New-UAE-Regions.html"
 categories: ["Azure"]
 tags: ["AI", "Azure", "Azure AI Foundry", "Cloud Migration", "Community", "Compliance", "Copilot Studio", "Database Modernization", "Disaster Recovery", "Exadata Exascale Infrastructure", "Microsoft Fabric", "Multicloud", "Oracle Database 19c", "Oracle Database@Azure", "Regional Availability", "Sentinel", "UAE Central", "UAE North"]
 tags_normalized: ["ai", "azure", "azure ai foundry", "cloud migration", "community", "compliance", "copilot studio", "database modernization", "disaster recovery", "exadata exascale infrastructure", "microsoft fabric", "multicloud", "oracle database 19c", "oracle databaseatazure", "regional availability", "sentinel", "uae central", "uae north"]

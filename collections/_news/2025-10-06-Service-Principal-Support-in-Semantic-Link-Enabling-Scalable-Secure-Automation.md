@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Fabric Blog"
 feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
 date: 2025-10-06 10:00:00 +00:00
-permalink: "/news/2025-10-06-Service-Principal-Support-in-Semantic-Link-Enabling-Scalable-Secure-Automation.html"
+permalink: "/2025-10-06-Service-Principal-Support-in-Semantic-Link-Enabling-Scalable-Secure-Automation.html"
 categories: ["Azure", "ML", "Security"]
 tags: ["Automation", "Azure", "Azure Active Directory", "Data Pipelines", "Enterprise Data", "Key Vault", "Microsoft Fabric", "ML", "News", "Notebook Integration", "Python", "Scheduling", "Secure Authentication", "Security", "Sem.py", "Semantic Link", "Service Principal"]
 tags_normalized: ["automation", "azure", "azure active directory", "data pipelines", "enterprise data", "key vault", "microsoft fabric", "ml", "news", "notebook integration", "python", "scheduling", "secure authentication", "security", "semdotpy", "semantic link", "service principal"]

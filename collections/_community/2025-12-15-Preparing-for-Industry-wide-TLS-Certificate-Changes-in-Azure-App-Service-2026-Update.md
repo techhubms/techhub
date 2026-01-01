@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-12-15 10:23:57 +00:00
-permalink: "/community/2025-12-15-Preparing-for-Industry-wide-TLS-Certificate-Changes-in-Azure-App-Service-2026-Update.html"
+permalink: "/2025-12-15-Preparing-for-Industry-wide-TLS-Certificate-Changes-in-Azure-App-Service-2026-Update.html"
 categories: ["Azure", "Security"]
 tags: ["Azure", "Azure App Service", "Azure Security", "Browser Standards", "CA/B Forum", "Certificate Pinning", "Certificates", "Community", "DigiCert", "EKU", "GoDaddy", "Managed Certificates", "Mtls", "Security", "Security Compliance", "SSL", "TLS", "Trusted Root CA", "Validity Period"]
 tags_normalized: ["azure", "azure app service", "azure security", "browser standards", "caslashb forum", "certificate pinning", "certificates", "community", "digicert", "eku", "godaddy", "managed certificates", "mtls", "security", "security compliance", "ssl", "tls", "trusted root ca", "validity period"]

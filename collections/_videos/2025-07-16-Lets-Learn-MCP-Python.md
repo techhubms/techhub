@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Visual Studio Code YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SLNwkd3w"
 date: 2025-07-16 17:44:49 +00:00
-permalink: "/videos/2025-07-16-Lets-Learn-MCP-Python.html"
+permalink: "/2025-07-16-Lets-Learn-MCP-Python.html"
 categories: ["AI", "Coding"]
 tags: ["AI", "AI Models", "Client Applications", "Coding", "Demo", "Mcp", "MCP Server", "Python", "Standardization", "Videos", "VS Code", "Workshop"]
 tags_normalized: ["ai", "ai models", "client applications", "coding", "demo", "mcp", "mcp server", "python", "standardization", "videos", "vs code", "workshop"]

@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-09-08 20:32:11 +00:00
-permalink: "/community/2025-09-08-General-Availability-of-High-Scale-Mode-in-Azure-Monitor-Container-Insights.html"
+permalink: "/2025-09-08-General-Availability-of-High-Scale-Mode-in-Azure-Monitor-Container-Insights.html"
 categories: ["Azure", "DevOps"]
 tags: ["Agent Configuration", "AKS", "Azure", "Azure Monitor", "Cloud Infrastructure", "Cloud Operations", "Community", "Container Insights", "Data Collection", "DCR", "DevOps", "High Scale Mode", "Kubernetes", "Log Collection", "Monitoring", "Observability", "Scalability"]
 tags_normalized: ["agent configuration", "aks", "azure", "azure monitor", "cloud infrastructure", "cloud operations", "community", "container insights", "data collection", "dcr", "devops", "high scale mode", "kubernetes", "log collection", "monitoring", "observability", "scalability"]

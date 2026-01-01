@@ -6,7 +6,7 @@ author: "Tech Hub Team"
 excerpt_separator: <!--excerpt_end-->
 viewing_mode: "internal"
 date: 2025-10-20 09:00:00 +00:00
-permalink: "/roundups/2025-10-20-Weekly-AI-and-Tech-News-Roundup.html"
+permalink: "/2025-10-20-Weekly-AI-and-Tech-News-Roundup.html"
 categories: ["AI", "GitHub Copilot", "ML", "Azure", "Coding", "DevOps", "Security"]
 tags: ["Agentic AI", "AI", "Automation", "Azure", "Cloud Infrastructure", "Coding", "Developer Workflows", "DevOps", "GitHub Copilot", "Machine Learning", "MCP", "ML", "Open Source", "Quantum Resilient Hardware", "Roundups", "Security", "VS Code"]
 tags_normalized: ["agentic ai", "ai", "automation", "azure", "cloud infrastructure", "coding", "developer workflows", "devops", "github copilot", "machine learning", "mcp", "ml", "open source", "quantum resilient hardware", "roundups", "security", "vs code"]

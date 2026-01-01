@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "John Savill's Technical Training"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCpIn7ox7j7bH_OFj7tYouOQ"
 date: 2025-09-08 11:48:33 +00:00
-permalink: "/videos/2025-09-08-Application-Gateway-Network-Isolation-New-Architecture-Deep-Dive.html"
+permalink: "/2025-09-08-Application-Gateway-Network-Isolation-New-Architecture-Deep-Dive.html"
 categories: ["Azure", "Security"]
 tags: ["App Gateway", "App Gateway V2", "Application Gateway", "Azure", "Azure Application Gateway", "Azure Architecture", "Azure Cloud", "Azure Networking", "Azure Security", "Cloud", "Cloud Security", "Control Plane", "Deployment", "Firewall", "Load Balancing", "Microsoft", "Microsoft Azure", "Migration", "Network Isolation", "Private Endpoint", "Security", "Videos", "WAF"]
 tags_normalized: ["app gateway", "app gateway v2", "application gateway", "azure", "azure application gateway", "azure architecture", "azure cloud", "azure networking", "azure security", "cloud", "cloud security", "control plane", "deployment", "firewall", "load balancing", "microsoft", "microsoft azure", "migration", "network isolation", "private endpoint", "security", "videos", "waf"]

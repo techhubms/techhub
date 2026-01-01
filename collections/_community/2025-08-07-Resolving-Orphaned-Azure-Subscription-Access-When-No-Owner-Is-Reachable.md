@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Reddit Azure"
 feed_url: "https://www.reddit.com/r/azure/.rss"
 date: 2025-08-07 18:31:50 +00:00
-permalink: "/community/2025-08-07-Resolving-Orphaned-Azure-Subscription-Access-When-No-Owner-Is-Reachable.html"
+permalink: "/2025-08-07-Resolving-Orphaned-Azure-Subscription-Access-When-No-Owner-Is-Reachable.html"
 categories: ["Azure", "Security"]
 tags: ["Access Recovery", "Azure", "Azure Portal", "Azure Subscription", "Azure Support", "Community", "Entra ID", "Global Admin", "Identity Management", "Management Groups", "Microsoft Documentation", "Role Based Access Control", "Security", "Subscription Ownership", "Subscription Transfer"]
 tags_normalized: ["access recovery", "azure", "azure portal", "azure subscription", "azure support", "community", "entra id", "global admin", "identity management", "management groups", "microsoft documentation", "role based access control", "security", "subscription ownership", "subscription transfer"]

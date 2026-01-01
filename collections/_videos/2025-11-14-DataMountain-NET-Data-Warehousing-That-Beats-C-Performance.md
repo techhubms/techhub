@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "DotNet YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw"
 date: 2025-11-14 19:21:35 +00:00
-permalink: "/videos/2025-11-14-DataMountain-NET-Data-Warehousing-That-Beats-C-Performance.html"
+permalink: "/2025-11-14-DataMountain-NET-Data-Warehousing-That-Beats-C-Performance.html"
 categories: ["Coding", "ML"]
 tags: [".NET", ".NET 10", "C#", "ClickHouse", "Code Generation", "Coding", "Data Engineering", "Data Processing", "Data Warehousing", "High Performance Computing", "ML", "Optimization", "Performance Benchmarking", "Spans", "SQL Performance", "Vectors", "Videos"]
 tags_normalized: ["dotnet", "dotnet 10", "csharp", "clickhouse", "code generation", "coding", "data engineering", "data processing", "data warehousing", "high performance computing", "ml", "optimization", "performance benchmarking", "spans", "sql performance", "vectors", "videos"]

@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "DotNet YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw"
 date: 2025-11-12 19:18:19 +00:00
-permalink: "/videos/2025-11-12-Understanding-Agentic-Development-for-NET-Developers.html"
+permalink: "/2025-11-12-Understanding-Agentic-Development-for-NET-Developers.html"
 categories: ["AI", "Coding"]
 tags: [".NET", ".NET Aspire", "Agent Collaboration", "Agentic AI", "AI", "AI Agents", "AI Frameworks", "ASP.NET Core", "Autonomous Systems", "C#", "Coding", "F#", "Function Execution", "Machine Intelligence", "MAUI", "Planning And Reasoning", "Videos", "VS"]
 tags_normalized: ["dotnet", "dotnet aspire", "agent collaboration", "agentic ai", "ai", "ai agents", "ai frameworks", "aspdotnet core", "autonomous systems", "csharp", "coding", "fsharp", "function execution", "machine intelligence", "maui", "planning and reasoning", "videos", "vs"]

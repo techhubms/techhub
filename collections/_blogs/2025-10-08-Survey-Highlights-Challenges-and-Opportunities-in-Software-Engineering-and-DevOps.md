@@ -9,10 +9,10 @@ viewing_mode: "external"
 feed_name: "DevOps Blog"
 feed_url: "https://devops.com/feed/"
 date: 2025-10-08 16:46:37 +00:00
-permalink: "/blogs/2025-10-08-Survey-Highlights-Challenges-and-Opportunities-in-Software-Engineering-and-DevOps.html"
+permalink: "/2025-10-08-Survey-Highlights-Challenges-and-Opportunities-in-Software-Engineering-and-DevOps.html"
 categories: ["AI", "DevOps"]
-tags: ["AI", "AI Productivity", "Automation", "Chainguard", "Chainguard Survey", "Code Maintenance", "Context Switching", "Developer Experience", "DevOps", "DevOps Workflows", "Digital Transformation", "Engineering Burnout", "Blogs", "Social Facebook", "Social LinkedIn", "Social X", "Software Engineering", "Technical Debt", "Tool Integration"]
-tags_normalized: ["ai", "ai productivity", "automation", "chainguard", "chainguard survey", "code maintenance", "context switching", "developer experience", "devops", "devops workflows", "digital transformation", "engineering burnout", "blogs", "social facebook", "social linkedin", "social x", "software engineering", "technical debt", "tool integration"]
+tags: ["AI", "AI Productivity", "Automation", "Blogs", "Chainguard", "Chainguard Survey", "Code Maintenance", "Context Switching", "Developer Experience", "DevOps", "DevOps Workflows", "Digital Transformation", "Engineering Burnout", "Social Facebook", "Social LinkedIn", "Social X", "Software Engineering", "Technical Debt", "Tool Integration"]
+tags_normalized: ["ai", "ai productivity", "automation", "blogs", "chainguard", "chainguard survey", "code maintenance", "context switching", "developer experience", "devops", "devops workflows", "digital transformation", "engineering burnout", "social facebook", "social linkedin", "social x", "software engineering", "technical debt", "tool integration"]
 ---
 
 In this article, Mike Vizard analyzes a recent Chainguard survey uncovering persistent challenges in software engineering and DevOps, especially around workflow fragmentation, tool integration, and the realistic impact of AI on developer productivity.<!--excerpt_end-->

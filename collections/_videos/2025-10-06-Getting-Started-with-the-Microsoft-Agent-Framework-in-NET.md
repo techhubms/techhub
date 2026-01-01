@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "DotNet YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw"
 date: 2025-10-06 16:35:53 +00:00
-permalink: "/videos/2025-10-06-Getting-Started-with-the-Microsoft-Agent-Framework-in-NET.html"
+permalink: "/2025-10-06-Getting-Started-with-the-Microsoft-Agent-Framework-in-NET.html"
 categories: ["AI", "Coding"]
 tags: [".NET", ".NET Developer", "Agent", "Agent Design", "Agent Orchestration", "Agentmode", "AgetnFx", "AI", "AI Agents", "Application Intelligence", "Coding", "Copilot", "Demo", "Developer", "Developer Tools", "Dotnetdeveloper", "Microsoft", "Microsoft Agent Framework", "Microsoft AI", "Software Developer", "Software Development", "Videos"]
 tags_normalized: ["dotnet", "dotnet developer", "agent", "agent design", "agent orchestration", "agentmode", "agetnfx", "ai", "ai agents", "application intelligence", "coding", "copilot", "demo", "developer", "developer tools", "dotnetdeveloper", "microsoft", "microsoft agent framework", "microsoft ai", "software developer", "software development", "videos"]

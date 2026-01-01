@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "GitHub YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ"
 date: 2025-10-06 18:15:16 +00:00
-permalink: "/videos/2025-10-06-Using-GitHub-Copilot-to-Advance-Sustainable-City-Design-with-Open-Source.html"
+permalink: "/2025-10-06-Using-GitHub-Copilot-to-Advance-Sustainable-City-Design-with-Open-Source.html"
 categories: ["AI", "GitHub Copilot"]
 tags: ["AI", "City Energy Analyst", "Climate Change", "ClimateChange", "Collaboration", "Developer Tools", "Energy Efficiency", "Environmental Technology", "GitHub", "GitHub Copilot", "Open Source", "OpenSource", "Software Development", "Sustainable Cities", "Videos"]
 tags_normalized: ["ai", "city energy analyst", "climate change", "climatechange", "collaboration", "developer tools", "energy efficiency", "environmental technology", "github", "github copilot", "open source", "opensource", "software development", "sustainable cities", "videos"]

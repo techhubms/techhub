@@ -9,10 +9,10 @@ viewing_mode: "external"
 feed_name: "Dellenny's Blog"
 feed_url: "https://dellenny.com/feed/"
 date: 2025-11-18 15:40:33 +00:00
-permalink: "/blogs/2025-11-18-Continuous-Data-Quality-Optimization-for-Better-AI-Output.html"
+permalink: "/2025-11-18-Continuous-Data-Quality-Optimization-for-Better-AI-Output.html"
 categories: ["AI"]
-tags: ["AI", "AI Models", "Anomaly Detection", "Automated Cleansing", "Bias Prevention", "Business Intelligence", "Continuous Optimization", "Data Culture", "Data Drift", "Data KPIs", "Data Observability", "Data Pipeline", "Data Quality", "Data Validation", "Machine Learning", "Blogs"]
-tags_normalized: ["ai", "ai models", "anomaly detection", "automated cleansing", "bias prevention", "business intelligence", "continuous optimization", "data culture", "data drift", "data kpis", "data observability", "data pipeline", "data quality", "data validation", "machine learning", "blogs"]
+tags: ["AI", "AI Models", "Anomaly Detection", "Automated Cleansing", "Bias Prevention", "Blogs", "Business Intelligence", "Continuous Optimization", "Data Culture", "Data Drift", "Data KPIs", "Data Observability", "Data Pipeline", "Data Quality", "Data Validation", "Machine Learning"]
+tags_normalized: ["ai", "ai models", "anomaly detection", "automated cleansing", "bias prevention", "blogs", "business intelligence", "continuous optimization", "data culture", "data drift", "data kpis", "data observability", "data pipeline", "data quality", "data validation", "machine learning"]
 ---
 
 John Edward details why continuous data quality optimization is the backbone of effective AI. Learn how organizations can empower their AI models by refining data pipelines and building strong data quality culture.<!--excerpt_end-->

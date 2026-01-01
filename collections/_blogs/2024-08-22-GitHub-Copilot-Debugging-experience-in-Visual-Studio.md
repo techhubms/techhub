@@ -8,8 +8,8 @@ canonical_url: "https://devblogs.microsoft.com/visualstudio/simplified-code-refi
 viewing_mode: "external"
 categories: ["AI", "GitHub Copilot"]
 permalink: "/blogs/2024-08-22-GitHub-Copilot-Debugging-experience-in-Visual-Studio.html"
-tags: ["AI", "AI Assistance", "Debugging", "Development Tools", "GitHub Copilot", "Microsoft", "Blogs", "VS"]
-tags_normalized: ["ai", "ai assistance", "debugging", "development tools", "github copilot", "microsoft", "blogs", "vs"]
+tags: ["AI", "AI Assistance", "Blogs", "Debugging", "Development Tools", "GitHub Copilot", "Microsoft", "VS"]
+tags_normalized: ["ai", "ai assistance", "blogs", "debugging", "development tools", "github copilot", "microsoft", "vs"]
 ---
 
 Visual Studio's integration with GitHub Copilot Chat has been significantly enhanced to provide developers with powerful AI-assisted debugging capabilities. The new features move beyond code completions to offer in-depth analysis and explanations of how code works, directly within your debugging workflow.<!--excerpt_end-->

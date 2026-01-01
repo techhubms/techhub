@@ -9,10 +9,10 @@ viewing_mode: "external"
 feed_name: "Jesse Houwing's Blog"
 feed_url: "https://jessehouwing.net/rss/"
 date: 2025-04-25 09:24:19 +00:00
-permalink: "/blogs/2025-04-25-How-to-Choose-the-Best-GitHub-Copilot-Model-for-Your-Refactoring-Tasks.html"
+permalink: "/2025-04-25-How-to-Choose-the-Best-GitHub-Copilot-Model-for-Your-Refactoring-Tasks.html"
 categories: ["AI", "GitHub Copilot"]
-tags: ["AI", "AI Models", "Copilot Chat", "Developer Productivity", "GitHub", "GitHub Copilot", "GPT 4.5", "GPT 4o", "Model Selection", "Blogs", "Refactoring", "VS Code"]
-tags_normalized: ["ai", "ai models", "copilot chat", "developer productivity", "github", "github copilot", "gpt 4dot5", "gpt 4o", "model selection", "blogs", "refactoring", "vs code"]
+tags: ["AI", "AI Models", "Blogs", "Copilot Chat", "Developer Productivity", "GitHub", "GitHub Copilot", "GPT 4.5", "GPT 4o", "Model Selection", "Refactoring", "VS Code"]
+tags_normalized: ["ai", "ai models", "blogs", "copilot chat", "developer productivity", "github", "github copilot", "gpt 4dot5", "gpt 4o", "model selection", "refactoring", "vs code"]
 ---
 
 In this post, Jesse Houwing shares advice on choosing the most suitable GitHub Copilot model for large scale code refactoring, comparing GPT-4.5 and GPT-4o with practical recommendations.<!--excerpt_end-->

@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/feed/"
 date: 2025-12-12 20:43:37 +00:00
-permalink: "/news/2025-12-12-Continuous-Efficiency-AI-Driven-Software-Optimization-with-GitHub-Agentic-Workflows.html"
+permalink: "/2025-12-12-Continuous-Efficiency-AI-Driven-Software-Optimization-with-GitHub-Agentic-Workflows.html"
 categories: ["AI", "Coding", "DevOps"]
 tags: ["Agentic Workflows", "AI", "AI Automation", "CI/CD", "Code Optimization", "Code Quality", "Coding", "Continuous Efficiency", "DevOps", "DevOps Automation", "GitHub Actions", "GitHub Next", "Green Software", "LLM", "Natural Language Programming", "News", "News & Insights", "Open Source", "Performance Engineering", "Policy", "Proactive Engineering", "Software Sustainability", "Workflow Automation"]
 tags_normalized: ["agentic workflows", "ai", "ai automation", "cislashcd", "code optimization", "code quality", "coding", "continuous efficiency", "devops", "devops automation", "github actions", "github next", "green software", "llm", "natural language programming", "news", "news and insights", "open source", "performance engineering", "policy", "proactive engineering", "software sustainability", "workflow automation"]

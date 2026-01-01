@@ -9,7 +9,7 @@ categories: ["AI", "GitHub Copilot", "Security"]
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/changelog/label/copilot/feed/"
 date: 2025-07-16 12:00:38 +00:00
-permalink: "/news/2025-07-16-Configure-internet-access-for-Copilot-coding-agent.html"
+permalink: "/2025-07-16-Configure-internet-access-for-Copilot-coding-agent.html"
 viewing_mode: "external"
 tags: ["AI", "Coding Assistant", "Data Protection", "Developer Tools", "GitHub Copilot", "Internet Access", "News", "Privacy", "Public Preview", "Risk Mitigation", "Security", "Software Development"]
 tags_normalized: ["ai", "coding assistant", "data protection", "developer tools", "github copilot", "internet access", "news", "privacy", "public preview", "risk mitigation", "security", "software development"]

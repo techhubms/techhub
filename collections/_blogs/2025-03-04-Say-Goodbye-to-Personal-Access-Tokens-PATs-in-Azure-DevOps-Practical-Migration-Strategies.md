@@ -9,10 +9,10 @@ viewing_mode: "external"
 feed_name: "Jesse Houwing's Blog"
 feed_url: "https://jessehouwing.net/rss/"
 date: 2025-03-04 12:30:04 +00:00
-permalink: "/blogs/2025-03-04-Say-Goodbye-to-Personal-Access-Tokens-PATs-in-Azure-DevOps-Practical-Migration-Strategies.html"
+permalink: "/2025-03-04-Say-Goodbye-to-Personal-Access-Tokens-PATs-in-Azure-DevOps-Practical-Migration-Strategies.html"
 categories: ["Azure", "DevOps", "Security"]
-tags: ["App Registration", "Authentication", "Azure", "Azure DevOps", "Azure Functions", "Azure Resource Manager", "DevOps", "Integration Testing", "Jest", "Managed Identity", "NodeJS", "PATs", "Personal Access Tokens", "Pipeline Automation", "Blogs", "Renovate", "Security", "Security Best Practices", "Service Principal", "Workload Identity Federation"]
-tags_normalized: ["app registration", "authentication", "azure", "azure devops", "azure functions", "azure resource manager", "devops", "integration testing", "jest", "managed identity", "nodejs", "pats", "personal access tokens", "pipeline automation", "blogs", "renovate", "security", "security best practices", "service principal", "workload identity federation"]
+tags: ["App Registration", "Authentication", "Azure", "Azure DevOps", "Azure Functions", "Azure Resource Manager", "Blogs", "DevOps", "Integration Testing", "Jest", "Managed Identity", "NodeJS", "PATs", "Personal Access Tokens", "Pipeline Automation", "Renovate", "Security", "Security Best Practices", "Service Principal", "Workload Identity Federation"]
+tags_normalized: ["app registration", "authentication", "azure", "azure devops", "azure functions", "azure resource manager", "blogs", "devops", "integration testing", "jest", "managed identity", "nodejs", "pats", "personal access tokens", "pipeline automation", "renovate", "security", "security best practices", "service principal", "workload identity federation"]
 ---
 
 In this post, Michael Thomsen discusses how his team eliminated all Azure DevOps Personal Access Tokens (PATs). He details practical migration steps, leveraging service principals and workload identity federation, making it a must-read for DevOps professionals focused on secure automation.<!--excerpt_end-->

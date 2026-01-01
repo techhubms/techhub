@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Events YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
 date: 2025-11-21 10:16:24 +00:00
-permalink: "/videos/2025-11-21-Meet-the-Performance-Enhanced-Next-Gen-Azure-SQL-Managed-Instance.html"
+permalink: "/2025-11-21-Meet-the-Performance-Enhanced-Next-Gen-Azure-SQL-Managed-Instance.html"
 categories: ["AI", "Azure"]
 tags: ["AI", "AI Assisted Migration", "Azure", "Azure App Service", "Azure SQL Managed Instance", "Capacity Planning", "Cloud Database", "Copilot", "Database Modernization", "Enterprise Migration", "Managed Database", "Microsoft Ignite", "Migrateandmodernizeyourestate", "Migration Validation", "MSIgnite", "Performance Scaling", "SQL Migration", "SQL Server", "Videos"]
 tags_normalized: ["ai", "ai assisted migration", "azure", "azure app service", "azure sql managed instance", "capacity planning", "cloud database", "copilot", "database modernization", "enterprise migration", "managed database", "microsoft ignite", "migrateandmodernizeyourestate", "migration validation", "msignite", "performance scaling", "sql migration", "sql server", "videos"]

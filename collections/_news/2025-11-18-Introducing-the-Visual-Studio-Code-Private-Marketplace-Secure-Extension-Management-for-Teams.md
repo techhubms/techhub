@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Visual Studio Code Releases"
 feed_url: "https://code.visualstudio.com/feed.xml"
 date: 2025-11-18 00:00:00 +00:00
-permalink: "/news/2025-11-18-Introducing-the-Visual-Studio-Code-Private-Marketplace-Secure-Extension-Management-for-Teams.html"
+permalink: "/2025-11-18-Introducing-the-Visual-Studio-Code-Private-Marketplace-Secure-Extension-Management-for-Teams.html"
 categories: ["Coding", "DevOps"]
 tags: ["Code Security", "Coding", "Developer Experience", "DevOps", "Enterprise Software", "Extension Deployment", "Extension Management", "GitHub Enterprise", "Internal Extensions", "IT Security", "News", "Organization Tools", "Private Marketplace", "Secure Development", "VS Code", "VS Code Extensions"]
 tags_normalized: ["code security", "coding", "developer experience", "devops", "enterprise software", "extension deployment", "extension management", "github enterprise", "internal extensions", "it security", "news", "organization tools", "private marketplace", "secure development", "vs code", "vs code extensions"]

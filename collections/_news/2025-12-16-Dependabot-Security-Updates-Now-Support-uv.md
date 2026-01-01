@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/changelog/feed/"
 date: 2025-12-16 16:42:46 +00:00
-permalink: "/news/2025-12-16-Dependabot-Security-Updates-Now-Support-uv.html"
+permalink: "/2025-12-16-Dependabot-Security-Updates-Now-Support-uv.html"
 categories: ["DevOps", "Security"]
 tags: ["Automated Updates", "Code Security", "Dependabot", "Dependency Management", "DevOps", "DevOps Tools", "GitHub", "News", "Security", "Security Updates", "Supply Chain Security", "Uv", "Vulnerability Management"]
 tags_normalized: ["automated updates", "code security", "dependabot", "dependency management", "devops", "devops tools", "github", "news", "security", "security updates", "supply chain security", "uv", "vulnerability management"]

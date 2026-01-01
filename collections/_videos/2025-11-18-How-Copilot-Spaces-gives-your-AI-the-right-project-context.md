@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "GitHub YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ"
 date: 2025-11-18 15:01:39 +00:00
-permalink: "/videos/2025-11-18-How-Copilot-Spaces-gives-your-AI-the-right-project-context.html"
+permalink: "/2025-11-18-How-Copilot-Spaces-gives-your-AI-the-right-project-context.html"
 categories: ["AI", "GitHub Copilot"]
 tags: ["AI", "AI Assistant", "Bug Fixing", "Code Completion", "Collaboration", "Copilot Spaces", "CopilotSpaces", "Developer Tools", "GitHub", "GitHub Copilot", "IDE Integration", "Project Context", "Pull Requests", "Repository Management", "Vanessa Kalu", "Videos"]
 tags_normalized: ["ai", "ai assistant", "bug fixing", "code completion", "collaboration", "copilot spaces", "copilotspaces", "developer tools", "github", "github copilot", "ide integration", "project context", "pull requests", "repository management", "vanessa kalu", "videos"]

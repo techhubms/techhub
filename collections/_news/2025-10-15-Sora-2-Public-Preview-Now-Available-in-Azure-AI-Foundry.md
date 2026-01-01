@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The Azure Blog"
 feed_url: "https://azure.microsoft.com/en-us/blog/feed/"
 date: 2025-10-15 18:00:00 +00:00
-permalink: "/news/2025-10-15-Sora-2-Public-Preview-Now-Available-in-Azure-AI-Foundry.html"
+permalink: "/2025-10-15-Sora-2-Public-Preview-Now-Available-in-Azure-AI-Foundry.html"
 categories: ["AI", "Azure"]
 tags: ["AI", "AI + Machine Learning", "API", "Azure", "Azure AI Foundry", "Content Filtering", "Creative AI", "Enterprise Security", "Generative AI", "Microsoft Azure", "Multimodal Models", "News", "OpenAI", "Pricing", "Responsible AI", "Sora 2", "Video Generation"]
 tags_normalized: ["ai", "ai plus machine learning", "api", "azure", "azure ai foundry", "content filtering", "creative ai", "enterprise security", "generative ai", "microsoft azure", "multimodal models", "news", "openai", "pricing", "responsible ai", "sora 2", "video generation"]

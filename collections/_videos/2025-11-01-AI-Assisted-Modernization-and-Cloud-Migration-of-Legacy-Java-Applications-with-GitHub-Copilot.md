@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Developer YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
 date: 2025-11-01 00:00:14 +00:00
-permalink: "/videos/2025-11-01-AI-Assisted-Modernization-and-Cloud-Migration-of-Legacy-Java-Applications-with-GitHub-Copilot.html"
+permalink: "/2025-11-01-AI-Assisted-Modernization-and-Cloud-Migration-of-Legacy-Java-Applications-with-GitHub-Copilot.html"
 categories: ["AI", "Azure", "Coding", "DevOps", "GitHub Copilot"]
 tags: ["AI", "AI Assisted Modernization", "AIAssisted", "AppModernization", "Asset Manager", "AWS S3", "Azure", "Azure Migration", "AzureMigration", "Cloud Migration", "CloudMigration", "Coding", "CVE Scanning", "DevOps", "GitHub Copilot", "Java 21", "Java Migration", "Java Upgrade", "Java21", "JavaMigration", "JavaModernization", "JavaUpgrade", "Legacy Code", "LegacyCode", "OpenRewrite", "PostgreSQL", "RabbitMQ", "Security Vulnerabilities", "Spring Boot", "Videos"]
 tags_normalized: ["ai", "ai assisted modernization", "aiassisted", "appmodernization", "asset manager", "aws s3", "azure", "azure migration", "azuremigration", "cloud migration", "cloudmigration", "coding", "cve scanning", "devops", "github copilot", "java 21", "java migration", "java upgrade", "java21", "javamigration", "javamodernization", "javaupgrade", "legacy code", "legacycode", "openrewrite", "postgresql", "rabbitmq", "security vulnerabilities", "spring boot", "videos"]

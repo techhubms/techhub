@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-08-25 19:13:57 +00:00
-permalink: "/community/2025-08-25-Mine-Your-Azure-Backup-Data-to-Identify-Hidden-Costs.html"
+permalink: "/2025-08-25-Mine-Your-Azure-Backup-Data-to-Identify-Hidden-Costs.html"
 categories: ["Azure"]
 tags: ["Azure", "Azure Backup", "Backup Automation", "Business Continuity Center", "Cloud Cost Optimization", "Cloud Operations", "Community", "Data Analysis", "Power BI", "PowerShell", "Soft Delete", "Virtual Machines"]
 tags_normalized: ["azure", "azure backup", "backup automation", "business continuity center", "cloud cost optimization", "cloud operations", "community", "data analysis", "power bi", "powershell", "soft delete", "virtual machines"]

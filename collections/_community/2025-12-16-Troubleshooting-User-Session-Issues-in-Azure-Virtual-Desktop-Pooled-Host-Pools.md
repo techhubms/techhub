@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-12-16 22:47:32 +00:00
-permalink: "/community/2025-12-16-Troubleshooting-User-Session-Issues-in-Azure-Virtual-Desktop-Pooled-Host-Pools.html"
+permalink: "/2025-12-16-Troubleshooting-User-Session-Issues-in-Azure-Virtual-Desktop-Pooled-Host-Pools.html"
 categories: ["Azure"]
 tags: ["AVD", "Azure", "Azure Portal", "Azure Virtual Desktop", "Community", "Disconnection Issue", "FSLogix", "Pooled Host Pool", "PowerShell", "Profile Lock", "Remote Desktop", "Session Host", "Session Management", "Troubleshooting", "User Sessions", "Windows 10 Enterprise Multi Session", "Windows 11 Enterprise Multi Session"]
 tags_normalized: ["avd", "azure", "azure portal", "azure virtual desktop", "community", "disconnection issue", "fslogix", "pooled host pool", "powershell", "profile lock", "remote desktop", "session host", "session management", "troubleshooting", "user sessions", "windows 10 enterprise multi session", "windows 11 enterprise multi session"]

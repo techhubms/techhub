@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-11-19 02:44:20 +00:00
-permalink: "/community/2025-11-19-Introducing-Microsofts-Network-Operations-Agent-A-Telco-Framework-for-Autonomous-Networks.html"
+permalink: "/2025-11-19-Introducing-Microsofts-Network-Operations-Agent-A-Telco-Framework-for-Autonomous-Networks.html"
 categories: ["AI", "Azure", "ML", "Security"]
 tags: ["AI", "AI Agents", "AI Gateway", "AI Orchestration", "Azure", "Azure Agent Framework", "Azure API Management", "Azure Networking", "Community", "Copilot Integration", "Data Mesh", "Governance", "Hybrid Cloud", "Incident Response", "MCP", "Microsoft Fabric", "ML", "Multi Agent Systems", "Network Operations Agent", "NOA", "OSS/BSS", "Real Time Telemetry", "Security", "Security Compliance", "Telecom Automation"]
 tags_normalized: ["ai", "ai agents", "ai gateway", "ai orchestration", "azure", "azure agent framework", "azure api management", "azure networking", "community", "copilot integration", "data mesh", "governance", "hybrid cloud", "incident response", "mcp", "microsoft fabric", "ml", "multi agent systems", "network operations agent", "noa", "ossslashbss", "real time telemetry", "security", "security compliance", "telecom automation"]

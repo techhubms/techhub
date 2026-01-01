@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Visual Studio Code YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SLNwkd3w"
 date: 2025-11-24 08:00:01 +00:00
-permalink: "/videos/2025-11-24-Taming-AI-Assisted-Coding-Models-with-Eleanor-Berger.html"
+permalink: "/2025-11-24-Taming-AI-Assisted-Coding-Models-with-Eleanor-Berger.html"
 categories: ["AI", "Coding", "GitHub Copilot"]
 tags: ["Agentic Models", "Agents.md Standard", "AI", "AI Assisted Coding", "CLI Workflows", "Coding", "GitHub Actions", "GitHub Copilot", "LLM Personalities", "Model Guardrails", "Open Source Tools", "Prompt Engineering", "Ruler Project", "Sandboxed Evaluations", "Spec Writing", "Videos", "VS Code"]
 tags_normalized: ["agentic models", "agentsdotmd standard", "ai", "ai assisted coding", "cli workflows", "coding", "github actions", "github copilot", "llm personalities", "model guardrails", "open source tools", "prompt engineering", "ruler project", "sandboxed evaluations", "spec writing", "videos", "vs code"]

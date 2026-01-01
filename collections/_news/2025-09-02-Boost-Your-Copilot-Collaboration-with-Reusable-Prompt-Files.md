@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft VisualStudio Blog"
 feed_url: "https://devblogs.microsoft.com/visualstudio/feed/"
 date: 2025-09-02 12:00:42 +00:00
-permalink: "/news/2025-09-02-Boost-Your-Copilot-Collaboration-with-Reusable-Prompt-Files.html"
+permalink: "/2025-09-02-Boost-Your-Copilot-Collaboration-with-Reusable-Prompt-Files.html"
 categories: ["AI", "GitHub Copilot"]
 tags: [".github/prompts", "AI", "Collaboration", "Copilot Chat", "Custom Prompts", "Customization", "Developer Productivity", "GitHub Copilot", "GitHub Copilot Chat", "News", "Prompt Engineering", "Prompt Files", "Prompting", "Reusable Prompts", "Team Sharing", "VS", "Workflow Automation"]
 tags_normalized: ["dotgithubslashprompts", "ai", "collaboration", "copilot chat", "custom prompts", "customization", "developer productivity", "github copilot", "github copilot chat", "news", "prompt engineering", "prompt files", "prompting", "reusable prompts", "team sharing", "vs", "workflow automation"]

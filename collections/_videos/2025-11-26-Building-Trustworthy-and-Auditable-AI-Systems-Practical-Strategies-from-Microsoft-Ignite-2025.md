@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Events YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
 date: 2025-11-26 20:02:48 +00:00
-permalink: "/videos/2025-11-26-Building-Trustworthy-and-Auditable-AI-Systems-Practical-Strategies-from-Microsoft-Ignite-2025.html"
+permalink: "/2025-11-26-Building-Trustworthy-and-Auditable-AI-Systems-Practical-Strategies-from-Microsoft-Ignite-2025.html"
 categories: ["AI", "Azure"]
 tags: ["Accountability", "AI", "AI Adoption", "AI Auditing", "AI Governance", "AI Trust", "Azure", "Azure AI", "BRKSP480", "Client Stories", "English (us)", "Enterprise AI", "F5n1", "Go Beyond AI Hype To Build Systems You Can Trust And Track | BRKSP480", "Ignite", "Innovate With Azure AI Apps And Agents", "Microsoft", "Microsoft Events", "Microsoft Ignite", "Model Transparency", "Ms Ignite", "Msft Ignite", "Practical AI Solutions", "Technical", "Technical Strategy", "Videos", "Workflow Complexity"]
 tags_normalized: ["accountability", "ai", "ai adoption", "ai auditing", "ai governance", "ai trust", "azure", "azure ai", "brksp480", "client stories", "english us", "enterprise ai", "f5n1", "go beyond ai hype to build systems you can trust and track pipe brksp480", "ignite", "innovate with azure ai apps and agents", "microsoft", "microsoft events", "microsoft ignite", "model transparency", "ms ignite", "msft ignite", "practical ai solutions", "technical", "technical strategy", "videos", "workflow complexity"]

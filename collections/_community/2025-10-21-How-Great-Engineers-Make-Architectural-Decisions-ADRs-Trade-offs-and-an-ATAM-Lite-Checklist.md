@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-10-21 11:26:40 +00:00
-permalink: "/community/2025-10-21-How-Great-Engineers-Make-Architectural-Decisions-ADRs-Trade-offs-and-an-ATAM-Lite-Checklist.html"
+permalink: "/2025-10-21-How-Great-Engineers-Make-Architectural-Decisions-ADRs-Trade-offs-and-an-ATAM-Lite-Checklist.html"
 categories: ["Azure", "Coding", "DevOps", "Security"]
 tags: ["ADR", "Architecture Decision Records", "ATAM", "Azure", "Azure Well Architected Framework", "Caching", "Cloud Architecture", "Coding", "Community", "Cosmos DB", "Cost Optimization", "Decision Matrix", "DevOps", "DevOps Best Practices", "Engineering Documentation", "Infrastructure", "Microsoft Patterns", "Operational Excellence", "Performance", "Redis", "Reliability", "Security", "Team Guidelines", "Trade Offs"]
 tags_normalized: ["adr", "architecture decision records", "atam", "azure", "azure well architected framework", "caching", "cloud architecture", "coding", "community", "cosmos db", "cost optimization", "decision matrix", "devops", "devops best practices", "engineering documentation", "infrastructure", "microsoft patterns", "operational excellence", "performance", "redis", "reliability", "security", "team guidelines", "trade offs"]

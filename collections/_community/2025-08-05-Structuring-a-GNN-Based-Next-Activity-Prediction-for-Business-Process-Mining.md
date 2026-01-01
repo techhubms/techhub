@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Reddit Machine Learning"
 feed_url: "https://www.reddit.com/r/MachineLearning/.rss"
 date: 2025-08-05 17:05:11 +00:00
-permalink: "/community/2025-08-05-Structuring-a-GNN-Based-Next-Activity-Prediction-for-Business-Process-Mining.html"
+permalink: "/2025-08-05-Structuring-a-GNN-Based-Next-Activity-Prediction-for-Business-Process-Mining.html"
 categories: ["ML"]
 tags: ["Batch Processing", "Business Process Analysis", "Community", "CSV", "GCN", "GNN Training", "Graph Neural Networks", "Graph Representation", "Machine Learning", "MachineLearning", "ML", "Model Architecture", "Next Activity Prediction", "Node Classification", "Prefix Graph", "Process Instance", "Process Mining", "Python"]
 tags_normalized: ["batch processing", "business process analysis", "community", "csv", "gcn", "gnn training", "graph neural networks", "graph representation", "machine learning", "machinelearning", "ml", "model architecture", "next activity prediction", "node classification", "prefix graph", "process instance", "process mining", "python"]

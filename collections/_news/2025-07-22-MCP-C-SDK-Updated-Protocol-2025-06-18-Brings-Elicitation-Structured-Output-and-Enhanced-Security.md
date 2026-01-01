@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft .NET Blog"
 feed_url: "https://devblogs.microsoft.com/dotnet/feed/"
 date: 2025-07-22 17:00:00 +00:00
-permalink: "/news/2025-07-22-MCP-C-SDK-Updated-Protocol-2025-06-18-Brings-Elicitation-Structured-Output-and-Enhanced-Security.html"
+permalink: "/2025-07-22-MCP-C-SDK-Updated-Protocol-2025-06-18-Brings-Elicitation-Structured-Output-and-Enhanced-Security.html"
 categories: ["AI", "Coding", "Security"]
 tags: [".NET", "AI", "Authentication", "C#", "Coding", "Dependency Injection", "Elicitation", "MCP", "News", "OAuth2", "OpenID Connect", "Resource Links", "Schema", "SDK", "Security", "Structured Output", "Tool Metadata"]
 tags_normalized: ["dotnet", "ai", "authentication", "csharp", "coding", "dependency injection", "elicitation", "mcp", "news", "oauth2", "openid connect", "resource links", "schema", "sdk", "security", "structured output", "tool metadata"]

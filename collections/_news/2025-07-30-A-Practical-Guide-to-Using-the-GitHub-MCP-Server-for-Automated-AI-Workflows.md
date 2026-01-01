@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/feed/"
 date: 2025-07-30 16:00:00 +00:00
-permalink: "/news/2025-07-30-A-Practical-Guide-to-Using-the-GitHub-MCP-Server-for-Automated-AI-Workflows.html"
+permalink: "/2025-07-30-A-Practical-Guide-to-Using-the-GitHub-MCP-Server-for-Automated-AI-Workflows.html"
 categories: ["AI", "DevOps", "GitHub Copilot", "Security"]
 tags: ["Agent Collaboration", "AI", "AI & ML", "AI Agents", "AI Workflow", "CI/CD", "Cloud Automation", "Dependabot", "DevOps", "Generative AI", "GitHub Copilot", "MCP", "News", "OAuth", "Pull Requests", "Remote MCP Server", "Secret Scanning", "Security", "Security Alerts", "VS Code"]
 tags_normalized: ["agent collaboration", "ai", "ai and ml", "ai agents", "ai workflow", "cislashcd", "cloud automation", "dependabot", "devops", "generative ai", "github copilot", "mcp", "news", "oauth", "pull requests", "remote mcp server", "secret scanning", "security", "security alerts", "vs code"]

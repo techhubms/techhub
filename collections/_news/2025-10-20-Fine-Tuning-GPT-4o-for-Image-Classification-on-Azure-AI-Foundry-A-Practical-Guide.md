@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft AI Foundry Blog"
 feed_url: "https://devblogs.microsoft.com/foundry/feed/"
 date: 2025-10-20 07:11:50 +00:00
-permalink: "/news/2025-10-20-Fine-Tuning-GPT-4o-for-Image-Classification-on-Azure-AI-Foundry-A-Practical-Guide.html"
+permalink: "/2025-10-20-Fine-Tuning-GPT-4o-for-Image-Classification-on-Azure-AI-Foundry-A-Practical-Guide.html"
 categories: ["AI", "Azure", "ML"]
 tags: ["AI", "Azure", "Azure AI Foundry", "Azure Machine Learning", "Azure OpenAI", "Batch API", "CNN", "Cost Analysis", "Fine Tuning", "GPT 4o", "Image Classification", "Inference", "Latency", "ML", "Model Deployment", "Model Evaluation", "News", "Stanford Dogs Dataset", "Supervised Fine Tuning", "Vision Language Models"]
 tags_normalized: ["ai", "azure", "azure ai foundry", "azure machine learning", "azure openai", "batch api", "cnn", "cost analysis", "fine tuning", "gpt 4o", "image classification", "inference", "latency", "ml", "model deployment", "model evaluation", "news", "stanford dogs dataset", "supervised fine tuning", "vision language models"]

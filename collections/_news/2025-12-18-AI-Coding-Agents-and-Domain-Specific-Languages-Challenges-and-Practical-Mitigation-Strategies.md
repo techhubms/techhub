@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft All Things Azure Blog"
 feed_url: "https://devblogs.microsoft.com/all-things-azure/feed/"
 date: 2025-12-18 18:36:17 +00:00
-permalink: "/news/2025-12-18-AI-Coding-Agents-and-Domain-Specific-Languages-Challenges-and-Practical-Mitigation-Strategies.html"
+permalink: "/2025-12-18-AI-Coding-Agents-and-Domain-Specific-Languages-Challenges-and-Practical-Mitigation-Strategies.html"
 categories: ["AI", "Azure", "Coding", "GitHub Copilot"]
 tags: ["AI", "AI Coding Assistants", "Azure", "Azure Bicep", "Code Validation", "Coding", "Copilot Custom Agents", "Copilot Instructions.md", "Developer Productivity", "Developer Tools", "Domain Specific Languages", "DSL", "GitHub", "GitHub Copilot", "LLM", "LSP", "MCP", "MCP Server", "News", "Software Engineering", "VS Code Extensions"]
 tags_normalized: ["ai", "ai coding assistants", "azure", "azure bicep", "code validation", "coding", "copilot custom agents", "copilot instructionsdotmd", "developer productivity", "developer tools", "domain specific languages", "dsl", "github", "github copilot", "llm", "lsp", "mcp", "mcp server", "news", "software engineering", "vs code extensions"]

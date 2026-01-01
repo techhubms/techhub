@@ -9,10 +9,10 @@ viewing_mode: "external"
 feed_name: "DevOps Blog"
 feed_url: "https://devops.com/feed/"
 date: 2025-09-16 13:00:31 +00:00
-permalink: "/blogs/2025-09-16-Pulumi-Unveils-AI-Agents-for-Autonomous-Infrastructure-Automation.html"
+permalink: "/2025-09-16-Pulumi-Unveils-AI-Agents-for-Autonomous-Infrastructure-Automation.html"
 categories: ["AI", "DevOps"]
-tags: ["AI", "AI Agents", "Cloud Automation", "Compliance", "DevOps", "DevOps Automation", "DevSecOps", "Digital Agents", "IaC", "Infrastructure Automation", "IT Operations", "Platform Engineering", "Policy Enforcement", "Blogs", "Pulumi", "Pulumi Neo", "Social Facebook", "Social LinkedIn", "Social X", "Task Automation", "Workflow Automation"]
-tags_normalized: ["ai", "ai agents", "cloud automation", "compliance", "devops", "devops automation", "devsecops", "digital agents", "iac", "infrastructure automation", "it operations", "platform engineering", "policy enforcement", "blogs", "pulumi", "pulumi neo", "social facebook", "social linkedin", "social x", "task automation", "workflow automation"]
+tags: ["AI", "AI Agents", "Blogs", "Cloud Automation", "Compliance", "DevOps", "DevOps Automation", "DevSecOps", "Digital Agents", "IaC", "Infrastructure Automation", "IT Operations", "Platform Engineering", "Policy Enforcement", "Pulumi", "Pulumi Neo", "Social Facebook", "Social LinkedIn", "Social X", "Task Automation", "Workflow Automation"]
+tags_normalized: ["ai", "ai agents", "blogs", "cloud automation", "compliance", "devops", "devops automation", "devsecops", "digital agents", "iac", "infrastructure automation", "it operations", "platform engineering", "policy enforcement", "pulumi", "pulumi neo", "social facebook", "social linkedin", "social x", "task automation", "workflow automation"]
 ---
 
 Mike Vizard introduces Pulumi Neo, highlighting how these AI agents can autonomously manage and optimize IT infrastructure on the Pulumi IaC platform, boosting DevOps efficiency and compliance.<!--excerpt_end-->

@@ -9,10 +9,10 @@ viewing_mode: "external"
 feed_name: "Harald Binkle's blog"
 feed_url: "https://harrybin.de/rss.xml"
 date: 2025-07-04 17:00:00 +00:00
-permalink: "/blogs/2025-07-04-How-to-Improve-GitHub-Copilot-Results-with-Instruction-Files-and-Custom-Chat-Modes.html"
+permalink: "/2025-07-04-How-to-Improve-GitHub-Copilot-Results-with-Instruction-Files-and-Custom-Chat-Modes.html"
 categories: ["AI", "GitHub Copilot"]
-tags: ["AI", "Astro", "Coding Standards", "Contextual Code Assistance", "Custom Chat Modes", "Developer Productivity", "Developer Workflows", "GitHub Copilot", "Instruction Files", "Blogs", "Project Collaboration", "React", "TypeScript", "VS Code"]
-tags_normalized: ["ai", "astro", "coding standards", "contextual code assistance", "custom chat modes", "developer productivity", "developer workflows", "github copilot", "instruction files", "blogs", "project collaboration", "react", "typescript", "vs code"]
+tags: ["AI", "Astro", "Blogs", "Coding Standards", "Contextual Code Assistance", "Custom Chat Modes", "Developer Productivity", "Developer Workflows", "GitHub Copilot", "Instruction Files", "Project Collaboration", "React", "TypeScript", "VS Code"]
+tags_normalized: ["ai", "astro", "blogs", "coding standards", "contextual code assistance", "custom chat modes", "developer productivity", "developer workflows", "github copilot", "instruction files", "project collaboration", "react", "typescript", "vs code"]
 ---
 
 In this post, Harald Binkle explores practical methods for improving GitHub Copilot results in your projects, focusing on instruction files and advanced custom chat modes.<!--excerpt_end-->

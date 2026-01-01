@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Security Blog"
 feed_url: "https://www.microsoft.com/en-us/security/blog/feed/"
 date: 2025-09-16 16:00:00 +00:00
-permalink: "/news/2025-09-16-Microsoft-Purview-Innovations-for-Fabric-Unifying-Data-Security-and-Governance-for-AI.html"
+permalink: "/2025-09-16-Microsoft-Purview-Innovations-for-Fabric-Unifying-Data-Security-and-Governance-for-AI.html"
 categories: ["AI", "Azure", "ML", "Security"]
 tags: ["AI", "AI Transformation", "Azure", "Cloud Governance", "Compliance", "Data Governance", "Data Loss Prevention", "Data Quality", "Data Risk Assessment", "Data Security", "Data Security Posture Management", "Information Protection", "Insider Risk Management", "Microsoft Fabric", "Microsoft Purview", "ML", "News", "Power BI", "Security", "Unified Catalog"]
 tags_normalized: ["ai", "ai transformation", "azure", "cloud governance", "compliance", "data governance", "data loss prevention", "data quality", "data risk assessment", "data security", "data security posture management", "information protection", "insider risk management", "microsoft fabric", "microsoft purview", "ml", "news", "power bi", "security", "unified catalog"]

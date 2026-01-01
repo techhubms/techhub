@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-12-05 17:34:53 +00:00
-permalink: "/community/2025-12-05-Innovation-Challenge-Winning-Azure-AI-Projects-from-November-2025-Hackathon.html"
+permalink: "/2025-12-05-Innovation-Challenge-Winning-Azure-AI-Projects-from-November-2025-Hackathon.html"
 categories: ["AI", "Azure", "Coding"]
 tags: ["A/B Testing", "AI", "AI Agents", "AI Orchestration", "Automation", "Azure", "Azure AI", "Azure Cognitive Services", "Civic Engagement", "Coding", "Community", "Customer Personalization", "Developer Community", "Education Technology", "Hackathon", "Marketing Automation", "Microsoft Azure", "Multi Agent Systems", "Service Desk Automation"]
 tags_normalized: ["aslashb testing", "ai", "ai agents", "ai orchestration", "automation", "azure", "azure ai", "azure cognitive services", "civic engagement", "coding", "community", "customer personalization", "developer community", "education technology", "hackathon", "marketing automation", "microsoft azure", "multi agent systems", "service desk automation"]

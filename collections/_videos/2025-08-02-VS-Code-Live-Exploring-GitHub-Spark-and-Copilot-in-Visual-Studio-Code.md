@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Visual Studio Code YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SLNwkd3w"
 date: 2025-08-02 04:22:25 +00:00
-permalink: "/videos/2025-08-02-VS-Code-Live-Exploring-GitHub-Spark-and-Copilot-in-Visual-Studio-Code.html"
+permalink: "/2025-08-02-VS-Code-Live-Exploring-GitHub-Spark-and-Copilot-in-Visual-Studio-Code.html"
 categories: ["AI", "Coding", "GitHub Copilot"]
 tags: ["Agentmode", "AI", "AI Assistant", "AI in Development", "Code", "Code Demo", "Coding", "Demo", "Developer Community", "Developer Tools", "Extension Ecosystem", "GitHub Copilot", "GitHub Spark", "Githubspark", "Live Coding", "Productivity Tools", "Videos", "VS Code"]
 tags_normalized: ["agentmode", "ai", "ai assistant", "ai in development", "code", "code demo", "coding", "demo", "developer community", "developer tools", "extension ecosystem", "github copilot", "github spark", "githubspark", "live coding", "productivity tools", "videos", "vs code"]

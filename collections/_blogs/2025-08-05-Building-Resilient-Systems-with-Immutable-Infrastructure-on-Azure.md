@@ -9,10 +9,10 @@ viewing_mode: "external"
 feed_name: "Dellenny's Blog"
 feed_url: "https://dellenny.com/feed/"
 date: 2025-08-05 09:46:27 +00:00
-permalink: "/blogs/2025-08-05-Building-Resilient-Systems-with-Immutable-Infrastructure-on-Azure.html"
+permalink: "/2025-08-05-Building-Resilient-Systems-with-Immutable-Infrastructure-on-Azure.html"
 categories: ["Azure", "Coding", "DevOps"]
-tags: ["Architecture", "ARM Templates", "Automation", "Azure", "Azure Compute Gallery", "Azure DevOps", "Azure VM Scale Sets", "Bicep", "Blue Green Deployment", "CI/CD", "Coding", "Deployment Slots", "DevOps", "Image Builder", "Immutable Infrastructure", "Infra as Code", "Packer", "Blogs", "Rolling Upgrade", "Solution Architecture", "Terraform", "Virtual Machines"]
-tags_normalized: ["architecture", "arm templates", "automation", "azure", "azure compute gallery", "azure devops", "azure vm scale sets", "bicep", "blue green deployment", "cislashcd", "coding", "deployment slots", "devops", "image builder", "immutable infrastructure", "infra as code", "packer", "blogs", "rolling upgrade", "solution architecture", "terraform", "virtual machines"]
+tags: ["Architecture", "ARM Templates", "Automation", "Azure", "Azure Compute Gallery", "Azure DevOps", "Azure VM Scale Sets", "Bicep", "Blogs", "Blue Green Deployment", "CI/CD", "Coding", "Deployment Slots", "DevOps", "Image Builder", "Immutable Infrastructure", "Infra as Code", "Packer", "Rolling Upgrade", "Solution Architecture", "Terraform", "Virtual Machines"]
+tags_normalized: ["architecture", "arm templates", "automation", "azure", "azure compute gallery", "azure devops", "azure vm scale sets", "bicep", "blogs", "blue green deployment", "cislashcd", "coding", "deployment slots", "devops", "image builder", "immutable infrastructure", "infra as code", "packer", "rolling upgrade", "solution architecture", "terraform", "virtual machines"]
 ---
 
 Dellenny presents a practical guide to adopting immutable infrastructure on Azure, detailing the steps, best practices, and tooling for reliable cloud deployments with DevOps workflows.<!--excerpt_end-->

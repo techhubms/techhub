@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Fabric Blog"
 feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
 date: 2025-11-24 11:00:00 +00:00
-permalink: "/news/2025-11-24-Copy-Job-Activity-Now-Generally-Available-in-Microsoft-Fabric-Data-Factory-Pipelines.html"
+permalink: "/2025-11-24-Copy-Job-Activity-Now-Generally-Available-in-Microsoft-Fabric-Data-Factory-Pipelines.html"
 categories: ["Azure", "ML"]
 tags: ["Azure", "Bulk Data Transfer", "Change Data Capture", "Copy Job Activity", "Data Factory", "Data Integration", "Data Movement", "Data Orchestration", "Data Pipelines", "Email Notification", "ETL", "Incremental Copy", "Microsoft Fabric", "ML", "News", "No Code", "Pipeline Automation", "Pipeline Scheduling", "Telemetry"]
 tags_normalized: ["azure", "bulk data transfer", "change data capture", "copy job activity", "data factory", "data integration", "data movement", "data orchestration", "data pipelines", "email notification", "etl", "incremental copy", "microsoft fabric", "ml", "news", "no code", "pipeline automation", "pipeline scheduling", "telemetry"]

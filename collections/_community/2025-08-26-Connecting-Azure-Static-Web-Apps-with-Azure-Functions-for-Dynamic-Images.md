@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-08-26 21:18:41 +00:00
-permalink: "/community/2025-08-26-Connecting-Azure-Static-Web-Apps-with-Azure-Functions-for-Dynamic-Images.html"
+permalink: "/2025-08-26-Connecting-Azure-Static-Web-Apps-with-Azure-Functions-for-Dynamic-Images.html"
 categories: ["Azure", "Coding"]
 tags: [".NET", "API Integration", "Azure", "Azure Functions", "Azure Static Web Apps", "Backend Integration", "C#", "Coding", "Community", "CORS", "Function Apps", "HTTP Triggers", "Image Generation", "Local Development", "SkiaSharp", "Staticwebapp.config.json"]
 tags_normalized: ["dotnet", "api integration", "azure", "azure functions", "azure static web apps", "backend integration", "csharp", "coding", "community", "cors", "function apps", "http triggers", "image generation", "local development", "skiasharp", "staticwebappdotconfigdotjson"]

@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Events YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
 date: 2025-11-21 10:52:21 +00:00
-permalink: "/videos/2025-11-21-Preparing-Enterprise-Workflows-for-AI-Driven-Transformation.html"
+permalink: "/2025-11-21-Preparing-Enterprise-Workflows-for-AI-Driven-Transformation.html"
 categories: ["AI"]
 tags: ["Agent Orchestration", "AI", "AI Agents", "AI Demonstrations", "AI Transformation", "AI Workflow", "App Integration", "Business Applications", "Copilotandagentsatwork", "Enterprise AI", "Enterprise Strategy", "Microsoft Ignite", "MSIgnite", "PowerPoint Automation", "Videos", "Workplace Automation"]
 tags_normalized: ["agent orchestration", "ai", "ai agents", "ai demonstrations", "ai transformation", "ai workflow", "app integration", "business applications", "copilotandagentsatwork", "enterprise ai", "enterprise strategy", "microsoft ignite", "msignite", "powerpoint automation", "videos", "workplace automation"]

@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "DotNet YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw"
 date: 2025-11-17 20:39:34 +00:00
-permalink: "/videos/2025-11-17-Best-Practices-for-Coding-with-GitHub-Copilot-in-NET.html"
+permalink: "/2025-11-17-Best-Practices-for-Coding-with-GitHub-Copilot-in-NET.html"
 categories: ["AI", "Coding", "GitHub Copilot"]
 tags: [".NET", ".NET Conf", "AI", "AI Coding Assistant", "Best Practices", "Code Generation", "Coding", "Coding Tips", "Copilot Integration", "Developer Workflow", "GitHub Copilot", "Microsoft", "Sharda Kaur", "Simona Liao", "Student Zone", "Videos"]
 tags_normalized: ["dotnet", "dotnet conf", "ai", "ai coding assistant", "best practices", "code generation", "coding", "coding tips", "copilot integration", "developer workflow", "github copilot", "microsoft", "sharda kaur", "simona liao", "student zone", "videos"]

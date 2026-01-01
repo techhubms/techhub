@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-11-10 22:33:04 +00:00
-permalink: "/community/2025-11-10-Modernizing-WPF-Map-Functionality-with-Azure-Maps-A-Practical-Migration-Path.html"
+permalink: "/2025-11-10-Modernizing-WPF-Map-Functionality-with-Azure-Maps-A-Practical-Migration-Path.html"
 categories: ["Azure", "Coding"]
 tags: [".NET", "Azure", "Azure Maps", "Bing Maps", "C#", "Coding", "Community", "Desktop Applications", "Geospatial", "Map Control", "Migration", "MVVM", "NuGet", "OnTerra Systems", "SDK Integration", "WebView2", "Windows Development", "WPF", "XAML"]
 tags_normalized: ["dotnet", "azure", "azure maps", "bing maps", "csharp", "coding", "community", "desktop applications", "geospatial", "map control", "migration", "mvvm", "nuget", "onterra systems", "sdk integration", "webview2", "windows development", "wpf", "xaml"]

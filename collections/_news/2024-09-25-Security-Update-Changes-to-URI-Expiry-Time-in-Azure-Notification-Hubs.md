@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft DevBlog"
 feed_url: "https://devblogs.microsoft.com/azure-notification-hubs/feed/"
 date: 2024-09-25 09:35:26 +00:00
-permalink: "/news/2024-09-25-Security-Update-Changes-to-URI-Expiry-Time-in-Azure-Notification-Hubs.html"
+permalink: "/2024-09-25-Security-Update-Changes-to-URI-Expiry-Time-in-Azure-Notification-Hubs.html"
 categories: ["Azure", "Security"]
 tags: ["API Changes", "Azure", "Azure Notification Hubs", "Backward Compatibility", "Get Notification Message Telemetry API", "News", "Notification Hubs", "Platform Notification Services Feedback", "PnsErrorDetailsUri", "Push Notifications", "Security", "Security Update", "URI Expiry"]
 tags_normalized: ["api changes", "azure", "azure notification hubs", "backward compatibility", "get notification message telemetry api", "news", "notification hubs", "platform notification services feedback", "pnserrordetailsuri", "push notifications", "security", "security update", "uri expiry"]

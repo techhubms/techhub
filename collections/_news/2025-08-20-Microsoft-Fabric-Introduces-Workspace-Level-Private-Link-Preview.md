@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Fabric Blog"
 feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
 date: 2025-08-20 16:11:57 +00:00
-permalink: "/news/2025-08-20-Microsoft-Fabric-Introduces-Workspace-Level-Private-Link-Preview.html"
+permalink: "/2025-08-20-Microsoft-Fabric-Introduces-Workspace-Level-Private-Link-Preview.html"
 categories: ["Azure", "Security"]
 tags: ["Azure", "Azure Portal", "Azure Private Link", "Cloud Security", "Data Privacy", "Enterprise Security", "Fabric Administration", "Fabric Workspace", "Granular Access Control", "Microsoft Fabric", "Network Security", "News", "Private Endpoint", "Regulatory Compliance", "Security", "Virtual Networks"]
 tags_normalized: ["azure", "azure portal", "azure private link", "cloud security", "data privacy", "enterprise security", "fabric administration", "fabric workspace", "granular access control", "microsoft fabric", "network security", "news", "private endpoint", "regulatory compliance", "security", "virtual networks"]

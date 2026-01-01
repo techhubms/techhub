@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft DevBlog"
 feed_url: "https://devblogs.microsoft.com/feed"
 date: 2025-07-31 18:49:52 +00:00
-permalink: "/news/2025-07-31-Join-us-at-Azure-Dev-Summit-2025-Explore-AI-NET-and-Cloud-Innovation-in-Lisbon.html"
+permalink: "/2025-07-31-Join-us-at-Azure-Dev-Summit-2025-Explore-AI-NET-and-Cloud-Innovation-in-Lisbon.html"
 categories: ["AI", "Azure", "Coding", "DevOps"]
 tags: [".NET", "AI", "AI Powered Apps", "Architects", "Azure", "Azure Dev Summit", "Blazor", "C#", "Cloud Native", "Coding", "Community Event", "Developer Conference", "Developer Events", "Developer Productivity", "DevOps", "Generative AI", "Microsoft AI", "News", "VS Code"]
 tags_normalized: ["dotnet", "ai", "ai powered apps", "architects", "azure", "azure dev summit", "blazor", "csharp", "cloud native", "coding", "community event", "developer conference", "developer events", "developer productivity", "devops", "generative ai", "microsoft ai", "news", "vs code"]

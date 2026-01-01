@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-09-01 22:02:28 +00:00
-permalink: "/community/2025-09-01-Logic-Apps-Aviators-Newsletter-September-25-2025.html"
+permalink: "/2025-09-01-Logic-Apps-Aviators-Newsletter-September-25-2025.html"
 categories: ["AI", "Azure", "Coding", "DevOps"]
 tags: ["Agent Loop", "AI", "API Management", "Automation", "Azure", "Azure Functions", "Azure Integration Services", "Azure Logic Apps", "BizTalk Migration", "CI/CD", "Coding", "Community", "Data Mapper", "DevOps", "GitHub", "Hybrid Integration", "Integration", "Kubernetes", "Managed Identity", "Microsoft Fabric", "Microsoft Graph API", "REST API", "VS Code"]
 tags_normalized: ["agent loop", "ai", "api management", "automation", "azure", "azure functions", "azure integration services", "azure logic apps", "biztalk migration", "cislashcd", "coding", "community", "data mapper", "devops", "github", "hybrid integration", "integration", "kubernetes", "managed identity", "microsoft fabric", "microsoft graph api", "rest api", "vs code"]

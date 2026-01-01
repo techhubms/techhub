@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Fabric Blog"
 feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
 date: 2025-10-01 14:00:00 +00:00
-permalink: "/news/2025-10-01-Outbound-Access-Protection-for-Spark-Now-Generally-Available-in-Microsoft-Fabric.html"
+permalink: "/2025-10-01-Outbound-Access-Protection-for-Spark-Now-Generally-Available-in-Microsoft-Fabric.html"
 categories: ["Azure", "ML", "Security"]
 tags: ["Azure", "Cloud Security", "Connectivity Control", "Data Exfiltration", "Data Factory", "Fabric Workspaces", "General Availability", "Microsoft Fabric", "ML", "ML Workloads", "News", "Outbound Access Protection", "Security", "Spark", "Tenant Isolation", "Workspace Governance"]
 tags_normalized: ["azure", "cloud security", "connectivity control", "data exfiltration", "data factory", "fabric workspaces", "general availability", "microsoft fabric", "ml", "ml workloads", "news", "outbound access protection", "security", "spark", "tenant isolation", "workspace governance"]

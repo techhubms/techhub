@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/changelog/feed/"
 date: 2025-09-26 12:10:33 +00:00
-permalink: "/news/2025-09-26-Product-specific-Billing-APIs-for-GitHub-Actions-and-Packages-Are-Closing-Down.html"
+permalink: "/2025-09-26-Product-specific-Billing-APIs-for-GitHub-Actions-and-Packages-Are-Closing-Down.html"
 categories: ["DevOps"]
 tags: ["Account Management", "API Deprecation", "API Migration", "Billing API", "Change Management", "CI/CD", "Developer Workflows", "DevOps", "GitHub", "GitHub Actions", "News", "Package Management", "Retired", "Usage Reporting"]
 tags_normalized: ["account management", "api deprecation", "api migration", "billing api", "change management", "cislashcd", "developer workflows", "devops", "github", "github actions", "news", "package management", "retired", "usage reporting"]

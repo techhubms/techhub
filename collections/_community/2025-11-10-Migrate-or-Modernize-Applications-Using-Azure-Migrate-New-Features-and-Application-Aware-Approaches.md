@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-11-10 16:03:15 +00:00
-permalink: "/community/2025-11-10-Migrate-or-Modernize-Applications-Using-Azure-Migrate-New-Features-and-Application-Aware-Approaches.html"
+permalink: "/2025-11-10-Migrate-or-Modernize-Applications-Using-Azure-Migrate-New-Features-and-Application-Aware-Approaches.html"
 categories: ["AI", "Azure", "Coding", "DevOps", "GitHub Copilot", "Security"]
 tags: [".NET Migration", "AI", "AKS", "App Service", "Application Assessment", "Application Modernization", "Azure", "Azure Database Migration Service", "Azure Migrate", "Azure Security", "Azure SQL Database", "Azure VM", "CAST Highlight", "Cloud Migration", "Coding", "Community", "Dependency Mapping", "DevOps", "DevOps Tools", "GitHub Copilot", "GitHub Copilot Assessment", "Microsoft Defender For Cloud", "Refactor", "Rehost", "Replatform", "Security", "Wave Planning"]
 tags_normalized: ["dotnet migration", "ai", "aks", "app service", "application assessment", "application modernization", "azure", "azure database migration service", "azure migrate", "azure security", "azure sql database", "azure vm", "cast highlight", "cloud migration", "coding", "community", "dependency mapping", "devops", "devops tools", "github copilot", "github copilot assessment", "microsoft defender for cloud", "refactor", "rehost", "replatform", "security", "wave planning"]

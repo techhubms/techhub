@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Reddit DotNet"
 feed_url: "https://www.reddit.com/r/dotnet/.rss"
 date: 2025-08-04 08:44:34 +00:00
-permalink: "/community/2025-08-04-Learning-Real-World-Complexity-as-a-Jr-NET-Backend-Developer.html"
+permalink: "/2025-08-04-Learning-Real-World-Complexity-as-a-Jr-NET-Backend-Developer.html"
 categories: ["Coding", "ML"]
 tags: [".NET", "AutoMapper", "Backend Development", "Coding", "Community", "Complex Endpoints", "CRUD Operations", "Data Validation", "Design Patterns", "DTO", "EF Core", "Fullstack Development", "ML", "SQL Server"]
 tags_normalized: ["dotnet", "automapper", "backend development", "coding", "community", "complex endpoints", "crud operations", "data validation", "design patterns", "dto", "ef core", "fullstack development", "ml", "sql server"]

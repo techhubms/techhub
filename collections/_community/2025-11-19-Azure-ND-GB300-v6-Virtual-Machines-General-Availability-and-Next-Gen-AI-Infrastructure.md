@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-11-19 01:13:53 +00:00
-permalink: "/community/2025-11-19-Azure-ND-GB300-v6-Virtual-Machines-General-Availability-and-Next-Gen-AI-Infrastructure.html"
+permalink: "/2025-11-19-Azure-ND-GB300-v6-Virtual-Machines-General-Availability-and-Next-Gen-AI-Infrastructure.html"
 categories: ["AI", "Azure", "ML"]
 tags: ["Agentic AI", "AI", "AI Infrastructure", "AKS", "Azure", "Azure Batch", "Azure CycleCloud", "Azure ND GB300 V6", "Benchmarking", "Cloud AI", "Community", "FP4 Tensor Core", "GPU Virtual Machines", "High Bandwidth", "HPC", "InfiniBand", "Large Model Training", "Llama 2", "ML", "Multimodal AI", "NVIDIA GB300 NVL72", "NVLINK", "Slurm"]
 tags_normalized: ["agentic ai", "ai", "ai infrastructure", "aks", "azure", "azure batch", "azure cyclecloud", "azure nd gb300 v6", "benchmarking", "cloud ai", "community", "fp4 tensor core", "gpu virtual machines", "high bandwidth", "hpc", "infiniband", "large model training", "llama 2", "ml", "multimodal ai", "nvidia gb300 nvl72", "nvlink", "slurm"]

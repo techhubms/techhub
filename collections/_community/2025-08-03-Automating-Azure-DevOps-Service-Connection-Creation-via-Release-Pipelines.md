@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Reddit Azure DevOps"
 feed_url: "https://www.reddit.com/r/azuredevops/.rss"
 date: 2025-08-03 10:49:12 +00:00
-permalink: "/community/2025-08-03-Automating-Azure-DevOps-Service-Connection-Creation-via-Release-Pipelines.html"
+permalink: "/2025-08-03-Automating-Azure-DevOps-Service-Connection-Creation-via-Release-Pipelines.html"
 categories: ["Azure", "DevOps"]
 tags: ["Authentication", "Azure", "Azure DevOps", "Community", "Continuous Deployment", "DevOps", "GitHub", "JSON", "OIDC", "Pipeline Automation", "PowerShell", "Release Pipeline", "Service Connections", "Service Principal"]
 tags_normalized: ["authentication", "azure", "azure devops", "community", "continuous deployment", "devops", "github", "json", "oidc", "pipeline automation", "powershell", "release pipeline", "service connections", "service principal"]

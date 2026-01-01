@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "DotNet YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw"
 date: 2025-11-12 19:18:18 +00:00
-permalink: "/videos/2025-11-12-Build-Better-Web-Apps-with-Blazor-in-NET-10.html"
+permalink: "/2025-11-12-Build-Better-Web-Apps-with-Blazor-in-NET-10.html"
 categories: ["Coding", "Security"]
 tags: [".NET", ".NET 10", "ASP.NET Core", "Authentication", "Blazor", "C# 14", "Coding", "Component State", "Diagnostics", "Entra ID", "Hot Reload", "Integration Testing", "Microsoft", "Passkeys", "Performance Optimization", "QuickGrid", "Security", "Videos", "VS", "Web Development", "WebAuthN"]
 tags_normalized: ["dotnet", "dotnet 10", "aspdotnet core", "authentication", "blazor", "csharp 14", "coding", "component state", "diagnostics", "entra id", "hot reload", "integration testing", "microsoft", "passkeys", "performance optimization", "quickgrid", "security", "videos", "vs", "web development", "webauthn"]

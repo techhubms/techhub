@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Fabric Blog"
 feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
 date: 2025-11-10 08:00:00 +00:00
-permalink: "/news/2025-11-10-Warehouse-Snapshots-Now-Generally-Available-in-Microsoft-Fabric.html"
+permalink: "/2025-11-10-Warehouse-Snapshots-Now-Generally-Available-in-Microsoft-Fabric.html"
 categories: ["Azure", "ML"]
 tags: ["Analytics", "Audit", "Azure", "Compliance", "Data Consistency", "Data Science", "Data Warehousing", "ETL", "Financial Close", "General Availability", "Incident Recovery", "Machine Learning", "Microsoft Fabric", "ML", "News", "Reporting", "Reproducible Datasets", "Snapshot Management", "SSMS", "T SQL", "Warehouse Snapshots"]
 tags_normalized: ["analytics", "audit", "azure", "compliance", "data consistency", "data science", "data warehousing", "etl", "financial close", "general availability", "incident recovery", "machine learning", "microsoft fabric", "ml", "news", "reporting", "reproducible datasets", "snapshot management", "ssms", "t sql", "warehouse snapshots"]

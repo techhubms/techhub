@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Events YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
 date: 2025-11-19 15:13:35 +00:00
-permalink: "/videos/2025-11-19-Agentic-AI-SRE-on-Azure-for-Faster-Incident-Resolution-Microsoft-Ignite-2025.html"
+permalink: "/2025-11-19-Agentic-AI-SRE-on-Azure-for-Faster-Incident-Resolution-Microsoft-Ignite-2025.html"
 categories: ["AI", "Azure", "DevOps", "Security"]
 tags: ["AI", "AI SRE", "Automation", "Azure", "Azure Monitor", "Context Engineering", "Copilotandagentsatwork", "Data Processing", "DevOps", "Governance", "Hawkeye", "Incident Response", "Microsoft Ignite", "MSIgnite", "MTTR Reduction", "Multi Cloud", "NeuBird", "Observability", "Root Cause Analysis", "Security", "Site Reliability Engineering", "Videos"]
 tags_normalized: ["ai", "ai sre", "automation", "azure", "azure monitor", "context engineering", "copilotandagentsatwork", "data processing", "devops", "governance", "hawkeye", "incident response", "microsoft ignite", "msignite", "mttr reduction", "multi cloud", "neubird", "observability", "root cause analysis", "security", "site reliability engineering", "videos"]

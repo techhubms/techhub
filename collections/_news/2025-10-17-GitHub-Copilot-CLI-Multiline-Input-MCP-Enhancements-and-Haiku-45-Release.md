@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/changelog/feed/"
 date: 2025-10-17 18:29:47 +00:00
-permalink: "/news/2025-10-17-GitHub-Copilot-CLI-Multiline-Input-MCP-Enhancements-and-Haiku-45-Release.html"
+permalink: "/2025-10-17-GitHub-Copilot-CLI-Multiline-Input-MCP-Enhancements-and-Haiku-45-Release.html"
 categories: ["AI", "Coding", "GitHub Copilot"]
 tags: ["AI", "Anthropic Claude Haiku 4.5", "Authentication", "Client Apps", "Coding", "Copilot", "Debugging Tools", "Developer Tools", "Environment Variables", "GitHub Copilot", "GitHub Copilot CLI", "Improvement", "MCP Enhancements", "Multiline Input", "News", "Noninteractive Workflows", "PowerShell Support", "Session Management", "VS Code Terminal"]
 tags_normalized: ["ai", "anthropic claude haiku 4dot5", "authentication", "client apps", "coding", "copilot", "debugging tools", "developer tools", "environment variables", "github copilot", "github copilot cli", "improvement", "mcp enhancements", "multiline input", "news", "noninteractive workflows", "powershell support", "session management", "vs code terminal"]

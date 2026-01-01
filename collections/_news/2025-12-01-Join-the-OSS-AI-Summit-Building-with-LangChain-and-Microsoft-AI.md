@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Blog"
 feed_url: "https://devblogs.microsoft.com/feed"
 date: 2025-12-01 18:00:07 +00:00
-permalink: "/news/2025-12-01-Join-the-OSS-AI-Summit-Building-with-LangChain-and-Microsoft-AI.html"
+permalink: "/2025-12-01-Join-the-OSS-AI-Summit-Building-with-LangChain-and-Microsoft-AI.html"
 categories: ["AI", "Azure"]
 tags: ["Agent Orchestration", "AI", "AI Agents", "Azure", "Azure Container Apps", "Azure Functions", "Azure OpenAI", "Azure Static Web Apps", "Cloud Infrastructure", "Cosmos DB", "JavaScript", "Langchain", "LangChain V1", "LangChain.js", "MCP", "Microsoft Foundry", "News", "OpenTelemetry", "Oss", "OSS AI Summit", "Python"]
 tags_normalized: ["agent orchestration", "ai", "ai agents", "azure", "azure container apps", "azure functions", "azure openai", "azure static web apps", "cloud infrastructure", "cosmos db", "javascript", "langchain", "langchain v1", "langchaindotjs", "mcp", "microsoft foundry", "news", "opentelemetry", "oss", "oss ai summit", "python"]

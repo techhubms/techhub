@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft DevBlog"
 feed_url: "https://devblogs.microsoft.com/all-things-azure/feed/"
 date: 2025-06-19 21:19:28 +00:00
-permalink: "/news/2025-06-19-Announcing-General-Availability-of-GitHub-Copilot-for-AzureNow-with-Agent-Mode.html"
+permalink: "/2025-06-19-Announcing-General-Availability-of-GitHub-Copilot-for-AzureNow-with-Agent-Mode.html"
 categories: ["AI", "GitHub Copilot", "Azure", "DevOps", "Coding", "Security"]
 tags: ["Agent Mode", "AI", "AI Agent", "AI Powered Development", "All Things Azure", "App Development", "Appdev", "Application Deployment", "Azure", "Azure Bicep", "Azure Developer CLI", "Cloud Automation", "Coding", "Copilot Chat", "DevOps", "Enterprise Security", "GitHub Copilot", "IaC", "Infrastructure Management", "News", "Security", "VS", "VS Code"]
 tags_normalized: ["agent mode", "ai", "ai agent", "ai powered development", "all things azure", "app development", "appdev", "application deployment", "azure", "azure bicep", "azure developer cli", "cloud automation", "coding", "copilot chat", "devops", "enterprise security", "github copilot", "iac", "infrastructure management", "news", "security", "vs", "vs code"]

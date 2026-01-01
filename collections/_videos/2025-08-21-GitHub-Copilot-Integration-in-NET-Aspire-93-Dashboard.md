@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Developer YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
 date: 2025-08-21 20:04:17 +00:00
-permalink: "/videos/2025-08-21-GitHub-Copilot-Integration-in-NET-Aspire-93-Dashboard.html"
+permalink: "/2025-08-21-GitHub-Copilot-Integration-in-NET-Aspire-93-Dashboard.html"
 categories: ["AI", "Coding", "GitHub Copilot"]
 tags: [".NET Aspire", "AI", "Application Logs", "Coding", "Copilot Dashboard", "Developer Tools", "Error Tracing", "GitHub Copilot", "Integrated Development", "Microsoft .NET", "OneDevQuestion", "Programming Productivity", "Root Cause Analysis", "Videos"]
 tags_normalized: ["dotnet aspire", "ai", "application logs", "coding", "copilot dashboard", "developer tools", "error tracing", "github copilot", "integrated development", "microsoft dotnet", "onedevquestion", "programming productivity", "root cause analysis", "videos"]

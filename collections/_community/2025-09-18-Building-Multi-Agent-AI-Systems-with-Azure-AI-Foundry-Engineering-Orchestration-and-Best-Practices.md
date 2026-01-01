@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-09-18 07:00:00 +00:00
-permalink: "/community/2025-09-18-Building-Multi-Agent-AI-Systems-with-Azure-AI-Foundry-Engineering-Orchestration-and-Best-Practices.html"
+permalink: "/2025-09-18-Building-Multi-Agent-AI-Systems-with-Azure-AI-Foundry-Engineering-Orchestration-and-Best-Practices.html"
 categories: ["AI", "Azure"]
 tags: ["Agent Development", "Agent Workflows", "AI", "AI Agent Tools", "AI Orchestration", "AI Platform", "AI Safety", "AutoGen", "Azure", "Azure AI Foundry", "Azure Application Insights", "Community", "Connected Agents", "Enterprise AI", "LLM Agents", "MCP", "Microsoft Entra ID", "Multi Agent Systems", "Observability", "Prompt Engineering", "Vision AI", "Workflow Orchestration"]
 tags_normalized: ["agent development", "agent workflows", "ai", "ai agent tools", "ai orchestration", "ai platform", "ai safety", "autogen", "azure", "azure ai foundry", "azure application insights", "community", "connected agents", "enterprise ai", "llm agents", "mcp", "microsoft entra id", "multi agent systems", "observability", "prompt engineering", "vision ai", "workflow orchestration"]

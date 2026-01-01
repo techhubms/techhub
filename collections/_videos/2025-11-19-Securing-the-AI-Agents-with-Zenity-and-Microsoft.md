@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Events YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
 date: 2025-11-19 12:41:34 +00:00
-permalink: "/videos/2025-11-19-Securing-the-AI-Agents-with-Zenity-and-Microsoft.html"
+permalink: "/2025-11-19-Securing-the-AI-Agents-with-Zenity-and-Microsoft.html"
 categories: ["AI", "Security"]
 tags: ["Agent Vulnerabilities", "AI", "AI Agents", "AI Governance", "Compliance", "Copilot Studio", "Defense in Depth", "Detection And Response", "Innovatewithlow", "Microsoft 365 Copilot", "Microsoft Foundry", "MSIgnite", "Observability", "OWASP Agent Standard", "Posture Management", "Runtime Activity", "Security", "Security Solutions", "Threat Graph", "Videos", "Zenity"]
 tags_normalized: ["agent vulnerabilities", "ai", "ai agents", "ai governance", "compliance", "copilot studio", "defense in depth", "detection and response", "innovatewithlow", "microsoft 365 copilot", "microsoft foundry", "msignite", "observability", "owasp agent standard", "posture management", "runtime activity", "security", "security solutions", "threat graph", "videos", "zenity"]

@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-12-15 19:00:00 +00:00
-permalink: "/community/2025-12-15-Enterprise-Messaging-Patterns-for-Agentic-AI-Backends-with-Azure-Service-Bus.html"
+permalink: "/2025-12-15-Enterprise-Messaging-Patterns-for-Agentic-AI-Backends-with-Azure-Service-Bus.html"
 categories: ["AI", "Azure"]
 tags: ["Agentic AI", "AI", "Azure", "Azure Service Bus", "Backpressure", "Cloud Architecture", "Community", "Cost Optimization", "Dead Letter Queue", "Distributed Systems", "Enterprise Messaging", "Failure Isolation", "Load Shaping", "MCP Services", "Messaging Pattern", "Orchestration", "Ordered Delivery", "Queues And Topics", "Retry Logic", "Scalable AI", "Session State", "Token Management", "Workflow Automation"]
 tags_normalized: ["agentic ai", "ai", "azure", "azure service bus", "backpressure", "cloud architecture", "community", "cost optimization", "dead letter queue", "distributed systems", "enterprise messaging", "failure isolation", "load shaping", "mcp services", "messaging pattern", "orchestration", "ordered delivery", "queues and topics", "retry logic", "scalable ai", "session state", "token management", "workflow automation"]

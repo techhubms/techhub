@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Events YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
 date: 2025-11-25 12:05:54 +00:00
-permalink: "/videos/2025-11-25-Advancing-Confidential-Computing-Bosch-Microsoft-Azure-and-Intel-TDX.html"
+permalink: "/2025-11-25-Advancing-Confidential-Computing-Bosch-Microsoft-Azure-and-Intel-TDX.html"
 categories: ["AI", "Azure", "Security"]
 tags: ["AI", "Azure", "Cloud Security", "Confidential Computing", "Confidential VMs", "Cryptographic Isolation", "Data Protection", "Digital Sovereignty", "Enterprise Collaboration", "Intel TDX", "Kubernetes", "Microsoft Azure", "Microsoft Ignite", "MSIgnite", "Multi Party Analytics", "Secure AI", "Secure Enablement", "Secureyourdata", "Security", "Trusted Digital Ecosystems", "Videos"]
 tags_normalized: ["ai", "azure", "cloud security", "confidential computing", "confidential vms", "cryptographic isolation", "data protection", "digital sovereignty", "enterprise collaboration", "intel tdx", "kubernetes", "microsoft azure", "microsoft ignite", "msignite", "multi party analytics", "secure ai", "secure enablement", "secureyourdata", "security", "trusted digital ecosystems", "videos"]

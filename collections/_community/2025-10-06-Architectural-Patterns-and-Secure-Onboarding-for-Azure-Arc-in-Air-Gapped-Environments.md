@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-10-06 14:00:00 +00:00
-permalink: "/community/2025-10-06-Architectural-Patterns-and-Secure-Onboarding-for-Azure-Arc-in-Air-Gapped-Environments.html"
+permalink: "/2025-10-06-Architectural-Patterns-and-Secure-Onboarding-for-Azure-Arc-in-Air-Gapped-Environments.html"
 categories: ["Azure", "Security"]
 tags: ["Air Gapped Environments", "Arc Gateway", "Azure", "Azure Arc", "Azure Firewall", "Azure Monitor", "Community", "Compliance", "Control Plane", "Data Plane", "Firewall", "Hybrid Cloud", "Network Isolation", "Private Link", "Regulated Industries", "Security", "Security Architecture", "Zero Trust"]
 tags_normalized: ["air gapped environments", "arc gateway", "azure", "azure arc", "azure firewall", "azure monitor", "community", "compliance", "control plane", "data plane", "firewall", "hybrid cloud", "network isolation", "private link", "regulated industries", "security", "security architecture", "zero trust"]

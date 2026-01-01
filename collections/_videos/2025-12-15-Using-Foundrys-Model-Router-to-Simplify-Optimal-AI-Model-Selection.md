@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "John Savill's Technical Training"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCpIn7ox7j7bH_OFj7tYouOQ"
 date: 2025-12-15 12:57:07 +00:00
-permalink: "/videos/2025-12-15-Using-Foundrys-Model-Router-to-Simplify-Optimal-AI-Model-Selection.html"
+permalink: "/2025-12-15-Using-Foundrys-Model-Router-to-Simplify-Optimal-AI-Model-Selection.html"
 categories: ["AI", "Azure"]
 tags: ["Agents", "AI", "AI Agents", "AI Application Development", "AI Model Selection", "Azure", "Azure AI", "Azure Cloud", "Azure Foundry", "Backend Models", "Cloud", "Generative AI", "LLM", "Microsoft", "Microsoft Azure", "Model Deployment", "Model Router", "Model Routing", "SLM", "Solution Architecture", "Videos"]
 tags_normalized: ["agents", "ai", "ai agents", "ai application development", "ai model selection", "azure", "azure ai", "azure cloud", "azure foundry", "backend models", "cloud", "generative ai", "llm", "microsoft", "microsoft azure", "model deployment", "model router", "model routing", "slm", "solution architecture", "videos"]

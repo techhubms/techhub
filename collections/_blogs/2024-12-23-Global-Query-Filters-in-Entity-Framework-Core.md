@@ -9,10 +9,10 @@ viewing_mode: "external"
 feed_name: "Code Maze Blog"
 feed_url: "https://code-maze.com/feed/"
 date: 2024-12-23 04:47:32 +00:00
-permalink: "/blogs/2024-12-23-Global-Query-Filters-in-Entity-Framework-Core.html"
+permalink: "/2024-12-23-Global-Query-Filters-in-Entity-Framework-Core.html"
 categories: ["Coding"]
-tags: [".NET", "C#", "Coding", "Database Filtering", "DbContext", "Dependency Injection", "EF Core", "Filtering", "Global Query Filter", "Global Query Filters", "in Memory Database", "LINQ", "Model Configuration", "Multitenancy", "Navigation Properties", "Blogs", "Row Level Security", "Soft Delete"]
-tags_normalized: ["dotnet", "csharp", "coding", "database filtering", "dbcontext", "dependency injection", "ef core", "filtering", "global query filter", "global query filters", "in memory database", "linq", "model configuration", "multitenancy", "navigation properties", "blogs", "row level security", "soft delete"]
+tags: [".NET", "Blogs", "C#", "Coding", "Database Filtering", "DbContext", "Dependency Injection", "EF Core", "Filtering", "Global Query Filter", "Global Query Filters", "in Memory Database", "LINQ", "Model Configuration", "Multitenancy", "Navigation Properties", "Row Level Security", "Soft Delete"]
+tags_normalized: ["dotnet", "blogs", "csharp", "coding", "database filtering", "dbcontext", "dependency injection", "ef core", "filtering", "global query filter", "global query filters", "in memory database", "linq", "model configuration", "multitenancy", "navigation properties", "row level security", "soft delete"]
 ---
 
 Gergő Vándor presents a comprehensive guide to Entity Framework Core's global query filters, detailing their purpose, implementation, and key considerations for .NET developers.<!--excerpt_end-->

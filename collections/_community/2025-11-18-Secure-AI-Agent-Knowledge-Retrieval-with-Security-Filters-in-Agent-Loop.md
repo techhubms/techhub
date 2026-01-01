@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-11-18 17:25:53 +00:00
-permalink: "/community/2025-11-18-Secure-AI-Agent-Knowledge-Retrieval-with-Security-Filters-in-Agent-Loop.html"
+permalink: "/2025-11-18-Secure-AI-Agent-Knowledge-Retrieval-with-Security-Filters-in-Agent-Loop.html"
 categories: ["AI", "Azure", "Security"]
 tags: ["Access Control", "ACL Support", "ADLS Gen2", "Agent Loop", "AI", "AI Agent", "Azure", "Azure AI Search", "Azure Logic Apps", "Community", "Document Level Authorization", "Group Based Filtering", "Indexing", "Microsoft Entra", "RAG Workflows", "REST API", "Retrieval Augmented Generation", "Security", "Security Filters", "User Permissions", "Vector Search"]
 tags_normalized: ["access control", "acl support", "adls gen2", "agent loop", "ai", "ai agent", "azure", "azure ai search", "azure logic apps", "community", "document level authorization", "group based filtering", "indexing", "microsoft entra", "rag workflows", "rest api", "retrieval augmented generation", "security", "security filters", "user permissions", "vector search"]

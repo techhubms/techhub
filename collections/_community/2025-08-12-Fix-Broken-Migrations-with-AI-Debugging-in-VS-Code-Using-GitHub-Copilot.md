@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Community"
 date: 2025-08-12 07:00:00 +00:00
-permalink: "/community/2025-08-12-Fix-Broken-Migrations-with-AI-Debugging-in-VS-Code-Using-GitHub-Copilot.html"
+permalink: "/2025-08-12-Fix-Broken-Migrations-with-AI-Debugging-in-VS-Code-Using-GitHub-Copilot.html"
 categories: ["AI", "Coding", "GitHub Copilot"]
 tags: ["AI", "AI in Development", "Code Automation", "Coding", "Community", "Database Migration", "Dev Workflow", "Developer Productivity", "Foreign Key", "GibsonAI CLI", "GitHub Copilot", "Migration Debugging", "Natural Language Prompts", "Prompt Engineering", "Schema Validation", "SQL", "VS Code", "VS Code Extensions"]
 tags_normalized: ["ai", "ai in development", "code automation", "coding", "community", "database migration", "dev workflow", "developer productivity", "foreign key", "gibsonai cli", "github copilot", "migration debugging", "natural language prompts", "prompt engineering", "schema validation", "sql", "vs code", "vs code extensions"]

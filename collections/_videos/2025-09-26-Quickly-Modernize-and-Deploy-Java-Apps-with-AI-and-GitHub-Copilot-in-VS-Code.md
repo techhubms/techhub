@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Visual Studio Code YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SLNwkd3w"
 date: 2025-09-26 20:19:30 +00:00
-permalink: "/videos/2025-09-26-Quickly-Modernize-and-Deploy-Java-Apps-with-AI-and-GitHub-Copilot-in-VS-Code.html"
+permalink: "/2025-09-26-Quickly-Modernize-and-Deploy-Java-Apps-with-AI-and-GitHub-Copilot-in-VS-Code.html"
 categories: ["AI", "Coding", "GitHub Copilot"]
 tags: ["AI", "AI Integration", "App Modernization", "Cloud Deployment", "Code", "Code Migration", "Coding", "Demo", "Developer", "Developer Community", "Developer Tools", "GitHub Copilot", "Java", "Java Upgrade", "Livedemo", "Microsoft", "Videos", "VS Code", "VS Code Extensions"]
 tags_normalized: ["ai", "ai integration", "app modernization", "cloud deployment", "code", "code migration", "coding", "demo", "developer", "developer community", "developer tools", "github copilot", "java", "java upgrade", "livedemo", "microsoft", "videos", "vs code", "vs code extensions"]

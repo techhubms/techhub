@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Fabric Blog"
 feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
 date: 2025-10-21 09:00:00 +00:00
-permalink: "/news/2025-10-21-Implementing-Row-and-Column-Level-Security-for-Spark-in-OneLake.html"
+permalink: "/2025-10-21-Implementing-Row-and-Column-Level-Security-for-Spark-in-OneLake.html"
 categories: ["Azure", "ML", "Security"]
 tags: ["Access Control", "Azure", "Big Data", "Column Level Security", "Data Governance", "Data Security", "Lakehouse", "Microsoft Azure", "Microsoft Fabric", "ML", "News", "OneLake", "Row Level Security", "Schema Enabled Lakehouse", "Secure Cluster", "Security", "Spark", "SQL", "Workspace Security"]
 tags_normalized: ["access control", "azure", "big data", "column level security", "data governance", "data security", "lakehouse", "microsoft azure", "microsoft fabric", "ml", "news", "onelake", "row level security", "schema enabled lakehouse", "secure cluster", "security", "spark", "sql", "workspace security"]

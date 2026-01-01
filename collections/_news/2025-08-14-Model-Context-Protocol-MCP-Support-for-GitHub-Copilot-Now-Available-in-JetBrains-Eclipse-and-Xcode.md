@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/changelog/feed/"
 date: 2025-08-14 10:35:58 +00:00
-permalink: "/news/2025-08-14-Model-Context-Protocol-MCP-Support-for-GitHub-Copilot-Now-Available-in-JetBrains-Eclipse-and-Xcode.html"
+permalink: "/2025-08-14-Model-Context-Protocol-MCP-Support-for-GitHub-Copilot-Now-Available-in-JetBrains-Eclipse-and-Xcode.html"
 categories: ["AI", "GitHub Copilot"]
 tags: ["Agent Mode", "AI", "Contextual Coding", "Copilot Plugin", "Developer Tools", "Eclipse", "Enterprise Policy", "External Tool Integration", "GitHub Copilot", "IDE Integration", "JetBrains", "MCP", "News", "OAuth Authentication", "PAT Authentication", "Programming Productivity", "Remote MCP Server", "Xcode"]
 tags_normalized: ["agent mode", "ai", "contextual coding", "copilot plugin", "developer tools", "eclipse", "enterprise policy", "external tool integration", "github copilot", "ide integration", "jetbrains", "mcp", "news", "oauth authentication", "pat authentication", "programming productivity", "remote mcp server", "xcode"]

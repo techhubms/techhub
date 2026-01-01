@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft .NET Blog"
 feed_url: "https://devblogs.microsoft.com/dotnet/feed/"
 date: 2025-07-29 18:05:00 +00:00
-permalink: "/news/2025-07-29-Aspire-94-CLI-Interactive-Dashboard-AI-Integrations-and-New-Features.html"
+permalink: "/2025-07-29-Aspire-94-CLI-Interactive-Dashboard-AI-Integrations-and-New-Features.html"
 categories: ["AI", "Azure", "Coding"]
 tags: [".NET", ".NET Aspire", "AI", "AOT Compilation", "Apphost", "Aspire", "Aspire 9.4", "Azure", "Azure AI Foundry", "CLI", "Coding", "Custom Resource", "Dashboard", "Developer Productivity", "External Service", "Featured", "GitHub Models", "Interaction Service", "News", "OpenTelemetry", "YARP Integration"]
 tags_normalized: ["dotnet", "dotnet aspire", "ai", "aot compilation", "apphost", "aspire", "aspire 9dot4", "azure", "azure ai foundry", "cli", "coding", "custom resource", "dashboard", "developer productivity", "external service", "featured", "github models", "interaction service", "news", "opentelemetry", "yarp integration"]

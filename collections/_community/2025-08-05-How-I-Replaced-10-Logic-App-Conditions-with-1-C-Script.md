@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Reddit Azure"
 feed_url: "https://www.reddit.com/r/azure/.rss"
 date: 2025-08-05 07:56:10 +00:00
-permalink: "/community/2025-08-05-How-I-Replaced-10-Logic-App-Conditions-with-1-C-Script.html"
+permalink: "/2025-08-05-How-I-Replaced-10-Logic-App-Conditions-with-1-C-Script.html"
 categories: ["Azure", "Coding"]
 tags: ["Automation", "Azure", "Azure Functions", "Azure Logic Apps", "C#", "Coding", "Cold Start", "Community", "Conditional Logic", "HTTP Latency", "Inline Code", "Workflow Automation", "Workflow Optimization"]
 tags_normalized: ["automation", "azure", "azure functions", "azure logic apps", "csharp", "coding", "cold start", "community", "conditional logic", "http latency", "inline code", "workflow automation", "workflow optimization"]

@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Fabric Blog"
 feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
 date: 2025-10-06 10:12:54 +00:00
-permalink: "/news/2025-10-06-Fabric-Spark-Connector-for-SQL-Databases-Now-Available-Preview.html"
+permalink: "/2025-10-06-Fabric-Spark-Connector-for-SQL-Databases-Now-Available-Preview.html"
 categories: ["Azure", "ML"]
 tags: ["Authentication", "Azure", "Azure SQL Database", "Azure SQL Managed Instance", "Big Data", "Data Engineering", "Data Science", "Fabric Runtime", "Fabric SQL Database", "Microsoft Fabric", "ML", "News", "PySpark", "Scala", "Spark Connector", "SQL Security", "SQL Server On Azure VM"]
 tags_normalized: ["authentication", "azure", "azure sql database", "azure sql managed instance", "big data", "data engineering", "data science", "fabric runtime", "fabric sql database", "microsoft fabric", "ml", "news", "pyspark", "scala", "spark connector", "sql security", "sql server on azure vm"]

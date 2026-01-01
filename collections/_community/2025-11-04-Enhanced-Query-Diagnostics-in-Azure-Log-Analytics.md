@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-11-04 14:35:59 +00:00
-permalink: "/community/2025-11-04-Enhanced-Query-Diagnostics-in-Azure-Log-Analytics.html"
+permalink: "/2025-11-04-Enhanced-Query-Diagnostics-in-Azure-Log-Analytics.html"
 categories: ["Azure"]
 tags: ["Azure", "Azure Log Analytics", "Azure Monitor", "Azure Portal", "Community", "Error Handling", "Kusto Query Language", "Log Analytics Service", "Monitoring", "Performance Optimization", "Query Diagnostics", "Query Execution", "Query Performance", "Troubleshooting"]
 tags_normalized: ["azure", "azure log analytics", "azure monitor", "azure portal", "community", "error handling", "kusto query language", "log analytics service", "monitoring", "performance optimization", "query diagnostics", "query execution", "query performance", "troubleshooting"]

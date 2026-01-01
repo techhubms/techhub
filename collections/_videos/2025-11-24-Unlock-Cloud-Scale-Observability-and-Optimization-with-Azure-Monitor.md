@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Events YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
 date: 2025-11-24 07:42:13 +00:00
-permalink: "/videos/2025-11-24-Unlock-Cloud-Scale-Observability-and-Optimization-with-Azure-Monitor.html"
+permalink: "/2025-11-24-Unlock-Cloud-Scale-Observability-and-Optimization-with-Azure-Monitor.html"
 categories: ["AI", "Azure", "DevOps"]
 tags: ["Agentic AI", "AI", "AI Operations", "AKS", "Audit Logging", "Azure", "Azure Monitor", "Carbon Efficiency", "CLI Automation", "Cloud Monitoring", "Copilot in Azure", "Cost Optimization", "DevOps", "Grafana", "Hybrid Cloud", "Microsoft Ignite", "Migrateandmodernizeyourestate", "MSIgnite", "Observability", "OpenTelemetry", "Performance Troubleshooting", "Prompt QL", "Videos"]
 tags_normalized: ["agentic ai", "ai", "ai operations", "aks", "audit logging", "azure", "azure monitor", "carbon efficiency", "cli automation", "cloud monitoring", "copilot in azure", "cost optimization", "devops", "grafana", "hybrid cloud", "microsoft ignite", "migrateandmodernizeyourestate", "msignite", "observability", "opentelemetry", "performance troubleshooting", "prompt ql", "videos"]

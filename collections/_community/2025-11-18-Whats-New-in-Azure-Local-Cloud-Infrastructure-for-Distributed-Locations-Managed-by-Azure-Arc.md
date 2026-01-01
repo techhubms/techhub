@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-11-18 16:05:17 +00:00
-permalink: "/community/2025-11-18-Whats-New-in-Azure-Local-Cloud-Infrastructure-for-Distributed-Locations-Managed-by-Azure-Arc.html"
+permalink: "/2025-11-18-Whats-New-in-Azure-Local-Cloud-Infrastructure-for-Distributed-Locations-Managed-by-Azure-Arc.html"
 categories: ["Azure", "DevOps", "Security"]
 tags: ["AKS", "Azure", "Azure Arc", "Azure Key Vault", "Azure Local", "Cloud Managed Services", "Community", "Containers", "Data Sovereignty", "DevOps", "Distributed Infrastructure", "Edge Computing", "Hybrid Cloud", "Infrastructure Modernization", "Microsoft Defender For Cloud", "Network Security Groups", "NVIDIA RTX Pro 6000", "Rack Aware Clustering", "SAN Storage", "Security", "Sovereign Private Cloud", "Virtual Machines", "VM Migration", "VMware Migration"]
 tags_normalized: ["aks", "azure", "azure arc", "azure key vault", "azure local", "cloud managed services", "community", "containers", "data sovereignty", "devops", "distributed infrastructure", "edge computing", "hybrid cloud", "infrastructure modernization", "microsoft defender for cloud", "network security groups", "nvidia rtx pro 6000", "rack aware clustering", "san storage", "security", "sovereign private cloud", "virtual machines", "vm migration", "vmware migration"]

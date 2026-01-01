@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Developer YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
 date: 2025-10-23 07:00:39 +00:00
-permalink: "/videos/2025-10-23-Optimize-Complex-Workflows-with-Multi-Agent-AI-Patterns-in-Azure.html"
+permalink: "/2025-10-23-Optimize-Complex-Workflows-with-Multi-Agent-AI-Patterns-in-Azure.html"
 categories: ["AI", "Azure"]
 tags: ["Agent Orchestration", "AI", "AI Agent", "AI Patterns", "Automation", "Azure", "Azure AI Foundry", "Azure Essentials Show", "AzureEssentialsShow", "Enterprise Automation", "Governance", "LLM", "Microsoft Azure", "MicrosoftAzure", "Multi Agent AI", "Orchestration Patterns", "Scalability", "Semantic Kernel", "SLM", "Videos"]
 tags_normalized: ["agent orchestration", "ai", "ai agent", "ai patterns", "automation", "azure", "azure ai foundry", "azure essentials show", "azureessentialsshow", "enterprise automation", "governance", "llm", "microsoft azure", "microsoftazure", "multi agent ai", "orchestration patterns", "scalability", "semantic kernel", "slm", "videos"]

@@ -9,10 +9,10 @@ viewing_mode: "external"
 feed_name: "Dellenny's Blog"
 feed_url: "https://dellenny.com/feed/"
 date: 2025-09-25 08:31:29 +00:00
-permalink: "/blogs/2025-09-25-Getting-Started-with-Microsoft-Playwright-Testing-Features-and-How-to-Use-It.html"
+permalink: "/2025-09-25-Getting-Started-with-Microsoft-Playwright-Testing-Features-and-How-to-Use-It.html"
 categories: ["Azure", "Coding", "DevOps"]
-tags: [".NET", "Application Insights", "Automation", "Azure", "Azure DevOps", "Azure Playwright Testing Service", "CI/CD", "Cloud Testing", "Coding", "Continuous Integration", "Cross Browser Testing", "DevOps", "End To End Testing", "JavaScript", "Microsoft Playwright", "Node.js", "Parallel Testing", "Playwright Inspector", "Blogs", "Test Infrastructure", "Testing", "Testing Automation", "TypeScript"]
-tags_normalized: ["dotnet", "application insights", "automation", "azure", "azure devops", "azure playwright testing service", "cislashcd", "cloud testing", "coding", "continuous integration", "cross browser testing", "devops", "end to end testing", "javascript", "microsoft playwright", "nodedotjs", "parallel testing", "playwright inspector", "blogs", "test infrastructure", "testing", "testing automation", "typescript"]
+tags: [".NET", "Application Insights", "Automation", "Azure", "Azure DevOps", "Azure Playwright Testing Service", "Blogs", "CI/CD", "Cloud Testing", "Coding", "Continuous Integration", "Cross Browser Testing", "DevOps", "End To End Testing", "JavaScript", "Microsoft Playwright", "Node.js", "Parallel Testing", "Playwright Inspector", "Test Infrastructure", "Testing", "Testing Automation", "TypeScript"]
+tags_normalized: ["dotnet", "application insights", "automation", "azure", "azure devops", "azure playwright testing service", "blogs", "cislashcd", "cloud testing", "coding", "continuous integration", "cross browser testing", "devops", "end to end testing", "javascript", "microsoft playwright", "nodedotjs", "parallel testing", "playwright inspector", "test infrastructure", "testing", "testing automation", "typescript"]
 ---
 
 Dellenny provides a practical guide to Microsoft Playwright Testing, detailing its key features and how to use it for cross-browser testing, plus guidance on Azure and DevOps integrations.<!--excerpt_end-->

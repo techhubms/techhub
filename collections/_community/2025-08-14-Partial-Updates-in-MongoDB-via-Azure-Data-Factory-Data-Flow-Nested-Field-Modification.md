@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Community"
 date: 2025-08-14 16:29:48 +00:00
-permalink: "/community/2025-08-14-Partial-Updates-in-MongoDB-via-Azure-Data-Factory-Data-Flow-Nested-Field-Modification.html"
+permalink: "/2025-08-14-Partial-Updates-in-MongoDB-via-Azure-Data-Factory-Data-Flow-Nested-Field-Modification.html"
 categories: ["Azure"]
 tags: ["Array Manipulation", "Azure", "Azure Data Factory", "Community", "Data Flow", "Derived Column", "ETL", "Id Key", "JSON Processing", "MongoDB", "Nested Fields", "NoSQL", "Partial Update", "Sink Configuration"]
 tags_normalized: ["array manipulation", "azure", "azure data factory", "community", "data flow", "derived column", "etl", "id key", "json processing", "mongodb", "nested fields", "nosql", "partial update", "sink configuration"]

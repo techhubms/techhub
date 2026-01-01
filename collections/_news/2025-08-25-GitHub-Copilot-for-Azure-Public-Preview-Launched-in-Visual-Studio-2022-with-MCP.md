@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft VisualStudio Blog"
 feed_url: "https://devblogs.microsoft.com/visualstudio/feed/"
 date: 2025-08-25 18:36:28 +00:00
-permalink: "/news/2025-08-25-GitHub-Copilot-for-Azure-Public-Preview-Launched-in-Visual-Studio-2022-with-MCP.html"
+permalink: "/2025-08-25-GitHub-Copilot-for-Azure-Public-Preview-Launched-in-Visual-Studio-2022-with-MCP.html"
 categories: ["AI", "Azure", "Coding", "GitHub Copilot"]
 tags: ["Agent Mode", "Agents", "AI", "Azure", "Azure CLI", "Azure Container Registry", "Azure Cosmos DB", "Azure Dev CLI", "Azure Functions", "Azure Key Vault", "Azure MCP Server", "Azure SQL Database", "Cloud", "Cloud Development", "Coding", "Copilot", "Copilot Chat", "Developer Productivity", "GitHub Copilot", "LLM", "MCP", "Microsoft", "News", "Visual Studio Extensions", "VS"]
 tags_normalized: ["agent mode", "agents", "ai", "azure", "azure cli", "azure container registry", "azure cosmos db", "azure dev cli", "azure functions", "azure key vault", "azure mcp server", "azure sql database", "cloud", "cloud development", "coding", "copilot", "copilot chat", "developer productivity", "github copilot", "llm", "mcp", "microsoft", "news", "visual studio extensions", "vs"]

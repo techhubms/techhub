@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Community"
 date: 2025-08-15 12:49:40 +00:00
-permalink: "/community/2025-08-15-Higher-Log-Rate-Enhancement-in-Azure-SQL-Managed-Instances-Business-Critical-Tier.html"
+permalink: "/2025-08-15-Higher-Log-Rate-Enhancement-in-Azure-SQL-Managed-Instances-Business-Critical-Tier.html"
 categories: ["Azure"]
 tags: ["Azure", "Azure SQL", "Azure SQL Managed Instance", "Business Critical Tier", "Cloud Database", "Community", "Data Recovery", "Database Throughput", "Log Rate", "Managed Database", "Microsoft Azure", "Performance Optimization", "Premium Series Hardware", "Scalability", "Service Tier Improvement", "Transaction Processing", "Vcore Scaling"]
 tags_normalized: ["azure", "azure sql", "azure sql managed instance", "business critical tier", "cloud database", "community", "data recovery", "database throughput", "log rate", "managed database", "microsoft azure", "performance optimization", "premium series hardware", "scalability", "service tier improvement", "transaction processing", "vcore scaling"]

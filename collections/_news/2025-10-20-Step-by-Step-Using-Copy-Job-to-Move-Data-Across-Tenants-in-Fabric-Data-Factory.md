@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Fabric Blog"
 feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
 date: 2025-10-20 12:00:00 +00:00
-permalink: "/news/2025-10-20-Step-by-Step-Using-Copy-Job-to-Move-Data-Across-Tenants-in-Fabric-Data-Factory.html"
+permalink: "/2025-10-20-Step-by-Step-Using-Copy-Job-to-Move-Data-Across-Tenants-in-Fabric-Data-Factory.html"
 categories: ["Azure", "ML"]
 tags: ["Access Control", "Authentication", "Azure", "Azure Data Lake Gen2", "Bulk Copy", "Change Data Capture", "Cloud Data Movement", "Copy Job", "Data Factory", "Data Ingestion", "Data Warehouse", "ETL", "Incremental Copy", "Microsoft Entra ID", "Microsoft Fabric", "ML", "News", "Role Assignment", "Service Principal", "Table Mapping", "Tenant Transfer"]
 tags_normalized: ["access control", "authentication", "azure", "azure data lake gen2", "bulk copy", "change data capture", "cloud data movement", "copy job", "data factory", "data ingestion", "data warehouse", "etl", "incremental copy", "microsoft entra id", "microsoft fabric", "ml", "news", "role assignment", "service principal", "table mapping", "tenant transfer"]

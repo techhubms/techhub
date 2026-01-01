@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/changelog/feed/"
 date: 2025-09-12 19:01:40 +00:00
-permalink: "/news/2025-09-12-GitHub-Copilot-in-Visual-Studio-Code-August-2025-Update-v1104-New-Features-and-Security-Enhancements.html"
+permalink: "/2025-09-12-GitHub-Copilot-in-Visual-Studio-Code-August-2025-Update-v1104-New-Features-and-Security-Enhancements.html"
 categories: ["AI", "Coding", "DevOps", "GitHub Copilot", "Security"]
 tags: ["Agent Mode", "AGENTS.md", "AI", "AI Driven Development", "Auto Model Selection", "Coding", "Copilot", "Copilot Chat", "Copilot Enterprise", "Copilot Pro", "Developer Productivity", "DevOps", "GitHub Copilot", "News", "Secure Coding", "Security", "Security Confirmation", "Software Release", "Terminal Auto Approve", "VS Code", "VS Code Extensions"]
 tags_normalized: ["agent mode", "agentsdotmd", "ai", "ai driven development", "auto model selection", "coding", "copilot", "copilot chat", "copilot enterprise", "copilot pro", "developer productivity", "devops", "github copilot", "news", "secure coding", "security", "security confirmation", "software release", "terminal auto approve", "vs code", "vs code extensions"]

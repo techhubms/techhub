@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/changelog/feed/"
 date: 2025-12-04 16:47:03 +00:00
-permalink: "/news/2025-12-04-OpenAIs-GPT-51-Codex-Max-Public-Preview-Release-for-GitHub-Copilot.html"
+permalink: "/2025-12-04-OpenAIs-GPT-51-Codex-Max-Public-Preview-Release-for-GitHub-Copilot.html"
 categories: ["AI", "GitHub Copilot"]
 tags: ["AI", "AI Model Release", "API Key Management", "Copilot", "Copilot Chat", "Copilot CLI", "Copilot Pro", "Enterprise", "GitHub Copilot", "GPT 5.1 Codex Max", "Model Picker", "News", "OpenAI", "Pro Plan", "VS Code"]
 tags_normalized: ["ai", "ai model release", "api key management", "copilot", "copilot chat", "copilot cli", "copilot pro", "enterprise", "github copilot", "gpt 5dot1 codex max", "model picker", "news", "openai", "pro plan", "vs code"]

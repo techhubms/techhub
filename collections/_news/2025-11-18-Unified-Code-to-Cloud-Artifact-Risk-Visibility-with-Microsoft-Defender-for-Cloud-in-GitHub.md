@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/changelog/feed/"
 date: 2025-11-18 17:30:32 +00:00
-permalink: "/news/2025-11-18-Unified-Code-to-Cloud-Artifact-Risk-Visibility-with-Microsoft-Defender-for-Cloud-in-GitHub.html"
+permalink: "/2025-11-18-Unified-Code-to-Cloud-Artifact-Risk-Visibility-with-Microsoft-Defender-for-Cloud-in-GitHub.html"
 categories: ["Azure", "DevOps", "Security"]
 tags: ["Application Security", "AppSec", "Artifact Metadata API", "Azure", "Azure Container Registry", "CI/CD", "Code Scanning", "Dependabot", "DevOps", "DevSecOps", "GitHub Advanced Security", "Linked Artifacts", "Microsoft Defender For Cloud", "News", "Production Context", "Runtime Risk", "Security", "Security Campaigns", "Supply Chain Security"]
 tags_normalized: ["application security", "appsec", "artifact metadata api", "azure", "azure container registry", "cislashcd", "code scanning", "dependabot", "devops", "devsecops", "github advanced security", "linked artifacts", "microsoft defender for cloud", "news", "production context", "runtime risk", "security", "security campaigns", "supply chain security"]

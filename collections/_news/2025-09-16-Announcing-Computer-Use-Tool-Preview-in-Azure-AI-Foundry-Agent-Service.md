@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft AI Foundry Blog"
 feed_url: "https://devblogs.microsoft.com/foundry/feed/"
 date: 2025-09-16 15:00:45 +00:00
-permalink: "/news/2025-09-16-Announcing-Computer-Use-Tool-Preview-in-Azure-AI-Foundry-Agent-Service.html"
+permalink: "/2025-09-16-Announcing-Computer-Use-Tool-Preview-in-Azure-AI-Foundry-Agent-Service.html"
 categories: ["AI", "Azure"]
 tags: ["Agent Service", "AI", "Automation", "Azure", "Azure AI Foundry", "Browser Automation", "Computer Use Tool", "Desktop Automation", "Enterprise Security", "Human in The Loop", "Legacy Integration", "Microsoft", "Natural Language AI", "News", "Operational Copilots", "Pixel Based Reasoning", "Prompt Injection", "REST API", "SDK"]
 tags_normalized: ["agent service", "ai", "automation", "azure", "azure ai foundry", "browser automation", "computer use tool", "desktop automation", "enterprise security", "human in the loop", "legacy integration", "microsoft", "natural language ai", "news", "operational copilots", "pixel based reasoning", "prompt injection", "rest api", "sdk"]

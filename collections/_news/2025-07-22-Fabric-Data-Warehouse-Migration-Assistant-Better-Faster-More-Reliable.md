@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Fabric Blog"
 feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
 date: 2025-07-22 11:00:00 +00:00
-permalink: "/news/2025-07-22-Fabric-Data-Warehouse-Migration-Assistant-Better-Faster-More-Reliable.html"
+permalink: "/2025-07-22-Fabric-Data-Warehouse-Migration-Assistant-Better-Faster-More-Reliable.html"
 categories: ["Azure", "ML"]
 tags: ["Azure", "Cloud Data", "Data Migration", "Fabric Data Warehouse", "Microsoft", "Migration Assistant", "Migration Tools", "ML", "News", "Performance", "Public Preview", "Reliability", "Warehouse Migration"]
 tags_normalized: ["azure", "cloud data", "data migration", "fabric data warehouse", "microsoft", "migration assistant", "migration tools", "ml", "news", "performance", "public preview", "reliability", "warehouse migration"]

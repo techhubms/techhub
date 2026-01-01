@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Reddit Azure"
 feed_url: "https://www.reddit.com/r/azure/.rss"
 date: 2025-08-04 15:19:58 +00:00
-permalink: "/community/2025-08-04-ApiManagement-MCP-Server-Creation-Error-Error-converting-value-mcp.html"
+permalink: "/2025-08-04-ApiManagement-MCP-Server-Creation-Error-Error-converting-value-mcp.html"
 categories: ["Azure"]
 tags: ["API Exposure", "API Gateway", "Azure", "Azure API Management", "Community", "ControlPath", "Error Handling", "Input Parsing", "MCP Server", "Microsoft Documentation", "Microsoft.Azure.ApiManagement", "REST API"]
 tags_normalized: ["api exposure", "api gateway", "azure", "azure api management", "community", "controlpath", "error handling", "input parsing", "mcp server", "microsoft documentation", "microsoftdotazuredotapimanagement", "rest api"]

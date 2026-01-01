@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-09-25 18:32:35 +00:00
-permalink: "/community/2025-09-25-Azure-AI-Landing-Zone-Enterprise-Scale-Secure-and-Governed-AI-Deployment-Architecture.html"
+permalink: "/2025-09-25-Azure-AI-Landing-Zone-Enterprise-Scale-Secure-and-Governed-AI-Deployment-Architecture.html"
 categories: ["AI", "Azure", "Security"]
 tags: ["AI", "AI Landing Zone", "API Management", "App Service", "Application Gateway", "Application Insights", "Azure", "Azure AI Search", "Azure Architecture", "Azure Cognitive Services", "Azure Key Vault", "Azure OpenAI", "Community", "Container Apps", "Cosmos DB", "Defender For Cloud", "Event Hub", "Function Apps", "Governance", "Log Analytics", "Logic Apps", "Network Security Groups", "Power BI", "Private Endpoints", "Security", "Virtual Network Peering", "Web Application Firewall", "Zero Trust"]
 tags_normalized: ["ai", "ai landing zone", "api management", "app service", "application gateway", "application insights", "azure", "azure ai search", "azure architecture", "azure cognitive services", "azure key vault", "azure openai", "community", "container apps", "cosmos db", "defender for cloud", "event hub", "function apps", "governance", "log analytics", "logic apps", "network security groups", "power bi", "private endpoints", "security", "virtual network peering", "web application firewall", "zero trust"]

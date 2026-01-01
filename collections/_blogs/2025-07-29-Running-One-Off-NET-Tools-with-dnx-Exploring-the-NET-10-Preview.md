@@ -9,10 +9,10 @@ viewing_mode: "external"
 feed_name: "Andrew Lock's Blog"
 feed_url: "https://andrewlock.net/rss.xml"
 date: 2025-07-29 10:00:00 +00:00
-permalink: "/blogs/2025-07-29-Running-One-Off-NET-Tools-with-dnx-Exploring-the-NET-10-Preview.html"
+permalink: "/2025-07-29-Running-One-Off-NET-Tools-with-dnx-Exploring-the-NET-10-Preview.html"
 categories: ["Coding"]
-tags: [".NET 10", ".NET Core", ".NET SDK", ".NET Tool", "ASP.NET Core", "Coding", "Command Line", "Dnx", "Global Tools", "Local Tools", "NuGet", "Blogs", "Tool Execution"]
-tags_normalized: ["dotnet 10", "dotnet core", "dotnet sdk", "dotnet tool", "aspdotnet core", "coding", "command line", "dnx", "global tools", "local tools", "nuget", "blogs", "tool execution"]
+tags: [".NET 10", ".NET Core", ".NET SDK", ".NET Tool", "ASP.NET Core", "Blogs", "Coding", "Command Line", "Dnx", "Global Tools", "Local Tools", "NuGet", "Tool Execution"]
+tags_normalized: ["dotnet 10", "dotnet core", "dotnet sdk", "dotnet tool", "aspdotnet core", "blogs", "coding", "command line", "dnx", "global tools", "local tools", "nuget", "tool execution"]
 ---
 
 In this post, Andrew Lock explores the new 'dnx' command in .NET 10, demonstrating how developers can run .NET tools without installing them. He provides both practical usage examples and an under-the-hood look at the SDK implementation.<!--excerpt_end-->

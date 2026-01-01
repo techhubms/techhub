@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Developer YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
 date: 2025-11-13 08:01:10 +00:00
-permalink: "/videos/2025-11-13-Designing-Effective-AI-Agents-Insights-from-Armchair-Architects.html"
+permalink: "/2025-11-13-Designing-Effective-AI-Agents-Insights-from-Armchair-Architects.html"
 categories: ["AI", "Azure"]
 tags: ["Agent Autonomy", "AI", "AI Agent Architecture", "Armchair Architects", "Autogen", "Azure", "Azure Essentials", "Enterprise AI", "Governance", "LangChain", "Language Models", "Memory Management", "Microsoft AI", "Orchestration Frameworks", "RAG", "Retrieval Augmented Generation", "Semantic Kernel", "Vector Databases", "Videos"]
 tags_normalized: ["agent autonomy", "ai", "ai agent architecture", "armchair architects", "autogen", "azure", "azure essentials", "enterprise ai", "governance", "langchain", "language models", "memory management", "microsoft ai", "orchestration frameworks", "rag", "retrieval augmented generation", "semantic kernel", "vector databases", "videos"]

@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Events YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
 date: 2025-11-21 11:43:02 +00:00
-permalink: "/videos/2025-11-21-Deploying-Local-AI-Models-in-Enterprise-with-Windows-ML.html"
+permalink: "/2025-11-21-Deploying-Local-AI-Models-in-Enterprise-with-Windows-ML.html"
 categories: ["AI", "Coding"]
 tags: ["AI", "AI Framework", "App Development", "Coding", "CPU Inference", "Edge Computing", "Enterprise AI", "GPU Inference", "Local AI Deployment", "Microsoft Ignite", "Model Deployment", "MSIgnite", "NPU", "ONNX Runtime", "Privacy", "QNN Execution Provider", "ScalewithcloudandAIendpoints", "Videos", "Windows ML"]
 tags_normalized: ["ai", "ai framework", "app development", "coding", "cpu inference", "edge computing", "enterprise ai", "gpu inference", "local ai deployment", "microsoft ignite", "model deployment", "msignite", "npu", "onnx runtime", "privacy", "qnn execution provider", "scalewithcloudandaiendpoints", "videos", "windows ml"]

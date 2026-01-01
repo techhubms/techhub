@@ -9,10 +9,10 @@ viewing_mode: "external"
 feed_name: "Dellenny's Blog"
 feed_url: "https://dellenny.com/feed/"
 date: 2025-11-28 17:32:15 +00:00
-permalink: "/blogs/2025-11-28-Comparing-Copilot-Studio-Dialogflow-and-IBM-Watson-Assistant-2025-Conversational-AI-Platforms.html"
+permalink: "/2025-11-28-Comparing-Copilot-Studio-Dialogflow-and-IBM-Watson-Assistant-2025-Conversational-AI-Platforms.html"
 categories: ["AI"]
-tags: ["AI", "AI Platform Comparison", "Azure OpenAI Service", "Chatbots", "Conversational AI", "Copilot Studio", "Enterprise Automation", "Generative AI", "Google Dialogflow", "IBM Watson Assistant", "Integration", "Large Language Models", "LLM Integration", "Low Code Development", "M365 Copilot", "Microsoft 365", "Microsoft Copilot", "Microsoft Teams", "Blogs", "Power Platform", "Power Virtual Agents", "Virtual Agents"]
-tags_normalized: ["ai", "ai platform comparison", "azure openai service", "chatbots", "conversational ai", "copilot studio", "enterprise automation", "generative ai", "google dialogflow", "ibm watson assistant", "integration", "large language models", "llm integration", "low code development", "m365 copilot", "microsoft 365", "microsoft copilot", "microsoft teams", "blogs", "power platform", "power virtual agents", "virtual agents"]
+tags: ["AI", "AI Platform Comparison", "Azure OpenAI Service", "Blogs", "Chatbots", "Conversational AI", "Copilot Studio", "Enterprise Automation", "Generative AI", "Google Dialogflow", "IBM Watson Assistant", "Integration", "Large Language Models", "LLM Integration", "Low Code Development", "M365 Copilot", "Microsoft 365", "Microsoft Copilot", "Microsoft Teams", "Power Platform", "Power Virtual Agents", "Virtual Agents"]
+tags_normalized: ["ai", "ai platform comparison", "azure openai service", "blogs", "chatbots", "conversational ai", "copilot studio", "enterprise automation", "generative ai", "google dialogflow", "ibm watson assistant", "integration", "large language models", "llm integration", "low code development", "m365 copilot", "microsoft 365", "microsoft copilot", "microsoft teams", "power platform", "power virtual agents", "virtual agents"]
 ---
 
 John Edward offers a thorough, unbiased comparison of Copilot Studio, Dialogflow, and IBM Watson Assistant, explaining which conversational AI platform may be best suited to your organization's needs in 2025.<!--excerpt_end-->

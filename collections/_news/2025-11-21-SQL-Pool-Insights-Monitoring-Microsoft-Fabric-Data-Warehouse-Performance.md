@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Fabric Blog"
 feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
 date: 2025-11-21 08:45:00 +00:00
-permalink: "/news/2025-11-21-SQL-Pool-Insights-Monitoring-Microsoft-Fabric-Data-Warehouse-Performance.html"
+permalink: "/2025-11-21-SQL-Pool-Insights-Monitoring-Microsoft-Fabric-Data-Warehouse-Performance.html"
 categories: ["Azure", "ML"]
 tags: ["Analytics Workloads", "Azure", "Capacity Planning", "Data Engineering", "Data Warehouse", "Event Logging", "Fabric Data Warehousing", "Historical Data", "Microsoft Fabric", "ML", "News", "Performance Monitoring", "Pressure Events", "Query Insights", "Resource Utilization", "SELECT Pool", "SQL Pool Insights", "SQL Pools", "Telemetry"]
 tags_normalized: ["analytics workloads", "azure", "capacity planning", "data engineering", "data warehouse", "event logging", "fabric data warehousing", "historical data", "microsoft fabric", "ml", "news", "performance monitoring", "pressure events", "query insights", "resource utilization", "select pool", "sql pool insights", "sql pools", "telemetry"]

@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Developer YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
 date: 2025-07-30 22:30:19 +00:00
-permalink: "/videos/2025-07-30-Building-Agent-Ready-Tools-with-API-Center-and-API-Management.html"
+permalink: "/2025-07-30-Building-agent-ready-tools-with-API-Center-and-API-Management.html"
 categories: ["AI", "Azure", "DevOps"]
 tags: ["Agent Service", "AI", "API Discovery", "API Governance", "API Management", "Azure", "Azure AI Foundry", "Azure API Center", "Centralized Registry", "Cloud APIs", "Cloud Computing", "Custom Agents", "Dev", "Developer Tools", "Development", "DevOps", "MCP", "Microsoft", "Microsoft Cloud", "Remote MCP Servers", "Tech", "Technology", "Videos", "VS Code"]
 tags_normalized: ["agent service", "ai", "api discovery", "api governance", "api management", "azure", "azure ai foundry", "azure api center", "centralized registry", "cloud apis", "cloud computing", "custom agents", "dev", "developer tools", "development", "devops", "mcp", "microsoft", "microsoft cloud", "remote mcp servers", "tech", "technology", "videos", "vs code"]

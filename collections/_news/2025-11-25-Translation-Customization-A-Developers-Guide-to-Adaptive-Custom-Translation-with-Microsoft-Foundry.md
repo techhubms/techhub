@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft AI Foundry Blog"
 feed_url: "https://devblogs.microsoft.com/foundry/feed/"
 date: 2025-11-25 16:00:37 +00:00
-permalink: "/news/2025-11-25-Translation-Customization-A-Developers-Guide-to-Adaptive-Custom-Translation-with-Microsoft-Foundry.html"
+permalink: "/2025-11-25-Translation-Customization-A-Developers-Guide-to-Adaptive-Custom-Translation-with-Microsoft-Foundry.html"
 categories: ["AI", "Azure", "Coding"]
 tags: ["Adaptive Custom Translation", "AI", "AI Development", "AI Tools", "API Integration", "Azure", "Azure AI Translator", "Coding", "Custom Translator", "Developer Guide", "Domain Specific Translation", "Few Shot Learning", "Generative AI", "GPT 4o", "Indexing", "Language Services", "LLM", "Microsoft Foundry", "Model Customization", "MSIgnite", "News", "Text Translation", "TMX", "Translation API", "Translation Workflow"]
 tags_normalized: ["adaptive custom translation", "ai", "ai development", "ai tools", "api integration", "azure", "azure ai translator", "coding", "custom translator", "developer guide", "domain specific translation", "few shot learning", "generative ai", "gpt 4o", "indexing", "language services", "llm", "microsoft foundry", "model customization", "msignite", "news", "text translation", "tmx", "translation api", "translation workflow"]

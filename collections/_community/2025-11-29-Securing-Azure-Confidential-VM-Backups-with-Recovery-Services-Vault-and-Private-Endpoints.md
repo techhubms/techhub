@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-11-29 08:26:10 +00:00
-permalink: "/community/2025-11-29-Securing-Azure-Confidential-VM-Backups-with-Recovery-Services-Vault-and-Private-Endpoints.html"
+permalink: "/2025-11-29-Securing-Azure-Confidential-VM-Backups-with-Recovery-Services-Vault-and-Private-Endpoints.html"
 categories: ["Azure", "DevOps", "Security"]
 tags: ["Attestation", "Azure", "Azure Confidential VM", "Azure Monitor", "Backup Extension", "Bicep", "CMK Support", "Community", "Confidential Computing", "Customer Managed Keys", "CVM Encryption", "DevOps", "DNS Zone", "Enhanced Backup Policy", "Key Vault", "Managed HSM", "Network Isolation", "PowerShell", "Private Endpoints", "RBAC", "Recovery Services Vault", "REST API", "Security", "Terraform", "Zone Redundant Storage"]
 tags_normalized: ["attestation", "azure", "azure confidential vm", "azure monitor", "backup extension", "bicep", "cmk support", "community", "confidential computing", "customer managed keys", "cvm encryption", "devops", "dns zone", "enhanced backup policy", "key vault", "managed hsm", "network isolation", "powershell", "private endpoints", "rbac", "recovery services vault", "rest api", "security", "terraform", "zone redundant storage"]

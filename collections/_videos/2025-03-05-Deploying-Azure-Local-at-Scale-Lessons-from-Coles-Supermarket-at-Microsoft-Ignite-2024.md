@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Events YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
 date: 2025-03-05 22:00:38 +00:00
-permalink: "/videos/2025-03-05-Deploying-Azure-Local-at-Scale-Lessons-from-Coles-Supermarket-at-Microsoft-Ignite-2024.html"
+permalink: "/2025-03-05-Deploying-Azure-Local-at-Scale-Lessons-from-Coles-Supermarket-at-Microsoft-Ignite-2024.html"
 categories: ["AI", "Azure"]
 tags: ["AI", "AI Inferencing", "Azure", "Azure Local", "Azure Stack HCI", "Cloud Transition", "Coles Supermarket", "Deployment Strategies", "Edge Computing", "Enterprise IT", "Hybrid Cloud", "IT Infrastructure", "Microsoft", "Microsoft Azure", "Microsoft Ignite", "Node Management", "Retail Technology", "Videos", "Workload Deployment"]
 tags_normalized: ["ai", "ai inferencing", "azure", "azure local", "azure stack hci", "cloud transition", "coles supermarket", "deployment strategies", "edge computing", "enterprise it", "hybrid cloud", "it infrastructure", "microsoft", "microsoft azure", "microsoft ignite", "node management", "retail technology", "videos", "workload deployment"]

@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft DevBlog"
 feed_url: "https://devblogs.microsoft.com/azure-sdk/feed/"
 date: 2025-02-17 17:05:08 +00:00
-permalink: "/news/2025-02-17-Spring-Cloud-Azure-Latest-Updates-and-Troubleshooting-Tips-for-Java-on-AKS.html"
+permalink: "/2025-02-17-Spring-Cloud-Azure-Latest-Updates-and-Troubleshooting-Tips-for-Java-on-AKS.html"
 categories: ["Azure", "Coding", "DevOps"]
 tags: ["AKS", "Authentication", "Azure", "Azure Identity Extensions", "Azure SDK", "Coding", "Database", "DevOps", "Diagnostics", "Java", "JCA", "Key Vault", "Monitoring", "News", "Passwordless Connections", "Service Bus", "Spring", "Spring Boot", "Spring Cloud Azure", "TokenCredential"]
 tags_normalized: ["aks", "authentication", "azure", "azure identity extensions", "azure sdk", "coding", "database", "devops", "diagnostics", "java", "jca", "key vault", "monitoring", "news", "passwordless connections", "service bus", "spring", "spring boot", "spring cloud azure", "tokencredential"]

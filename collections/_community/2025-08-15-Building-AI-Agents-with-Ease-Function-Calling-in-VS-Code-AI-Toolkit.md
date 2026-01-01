@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Community"
 date: 2025-08-15 17:00:24 +00:00
-permalink: "/community/2025-08-15-Building-AI-Agents-with-Ease-Function-Calling-in-VS-Code-AI-Toolkit.html"
+permalink: "/2025-08-15-Building-AI-Agents-with-Ease-Function-Calling-in-VS-Code-AI-Toolkit.html"
 categories: ["AI", "Azure", "Coding"]
 tags: ["Agent Development", "AI", "AI Toolkit", "API Integration", "Azure", "Azure AI Inference SDK", "Coding", "Community", "Custom Tool Development", "Function Calling", "GitHub", "GPT", "Large Language Models", "LLM Integration", "MCP", "OpenWeather API", "Prompt Engineering", "Python", "Tool Calling", "VS Code"]
 tags_normalized: ["agent development", "ai", "ai toolkit", "api integration", "azure", "azure ai inference sdk", "coding", "community", "custom tool development", "function calling", "github", "gpt", "large language models", "llm integration", "mcp", "openweather api", "prompt engineering", "python", "tool calling", "vs code"]

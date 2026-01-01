@@ -8,7 +8,7 @@ canonical_url: "https://devclass.com/2025/04/08/vs-code-extension-marketplace-wa
 viewing_mode: "external"
 categories: ["DevOps"]
 date: 2025-04-08 00:00:00 +00:00
-permalink: "/community/2025-04-08-vs-code-extension-marketplace-wars-cursor-users-hit-roadblocks.html"
+permalink: "/2025-04-08-vs-code-extension-marketplace-wars-cursor-users-hit-roadblocks.html"
 tags: ["C/C++", "Community", "Compliance", "Cursor", "Developer Tools", "DevOps", "Extension Marketplace", "IDE", "Microsoft", "Open VSX", "VS Code"]
 tags_normalized: ["cslashcplusplus", "community", "compliance", "cursor", "developer tools", "devops", "extension marketplace", "ide", "microsoft", "open vsx", "vs code"]
 ---

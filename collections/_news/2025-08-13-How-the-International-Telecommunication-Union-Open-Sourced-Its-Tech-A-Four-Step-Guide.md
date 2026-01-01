@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/feed/"
 date: 2025-08-13 16:00:00 +00:00
-permalink: "/news/2025-08-13-How-the-International-Telecommunication-Union-Open-Sourced-Its-Tech-A-Four-Step-Guide.html"
+permalink: "/2025-08-13-How-the-International-Telecommunication-Union-Open-Sourced-Its-Tech-A-Four-Step-Guide.html"
 categories: ["DevOps"]
 tags: ["Azure DevOps", "BSD 2 License", "Community Engagement", "Continuous Integration", "Contribution Guidelines", "DevOps", "Documentation", "Getting Started Guide", "GitHub", "News", "Open Source", "Open Source Licensing", "Repository Management", "Social Impact", "UN ITU"]
 tags_normalized: ["azure devops", "bsd 2 license", "community engagement", "continuous integration", "contribution guidelines", "devops", "documentation", "getting started guide", "github", "news", "open source", "open source licensing", "repository management", "social impact", "un itu"]

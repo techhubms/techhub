@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Events YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
 date: 2025-03-03 22:00:45 +00:00
-permalink: "/videos/2025-03-03-AI-Transforming-Legal-Workflows-Insights-from-LawVu-at-Microsoft-Ignite-2024.html"
+permalink: "/2025-03-03-AI-Transforming-Legal-Workflows-Insights-from-LawVu-at-Microsoft-Ignite-2024.html"
 categories: ["AI"]
 tags: ["AI", "AI in Legal", "AI Integration", "AI Solutions", "Contextual AI", "Contract Summarization", "Customer Insights", "Key Date Extraction", "LawVu", "Legal Industry", "Legal Workflows", "Microsoft", "Microsoft Ignite", "Regulated Industries", "SaaS", "Videos", "Workflow Automation"]
 tags_normalized: ["ai", "ai in legal", "ai integration", "ai solutions", "contextual ai", "contract summarization", "customer insights", "key date extraction", "lawvu", "legal industry", "legal workflows", "microsoft", "microsoft ignite", "regulated industries", "saas", "videos", "workflow automation"]

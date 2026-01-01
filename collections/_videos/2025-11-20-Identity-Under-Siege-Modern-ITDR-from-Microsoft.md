@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Events YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
 date: 2025-11-20 15:59:31 +00:00
-permalink: "/videos/2025-11-20-Identity-Under-Siege-Modern-ITDR-from-Microsoft.html"
+permalink: "/2025-11-20-Identity-Under-Siege-Modern-ITDR-from-Microsoft.html"
 categories: ["Azure", "Security"]
 tags: ["Azure", "Cloud Security", "Conditional Access", "Cybersecurity", "Identity Fabric", "Identity Providers", "Identity Threat Detection And Response", "MFA Adoption", "Microsoft Defender", "Microsoft Entra", "Microsoft Ignite", "ModernizeSecOpswithaunifiedplatform", "MSIgnite", "Multi Factor Authentication", "Risk Analysis", "Security", "Security Automation", "Threat Protection", "Videos", "Zero Trust"]
 tags_normalized: ["azure", "cloud security", "conditional access", "cybersecurity", "identity fabric", "identity providers", "identity threat detection and response", "mfa adoption", "microsoft defender", "microsoft entra", "microsoft ignite", "modernizesecopswithaunifiedplatform", "msignite", "multi factor authentication", "risk analysis", "security", "security automation", "threat protection", "videos", "zero trust"]

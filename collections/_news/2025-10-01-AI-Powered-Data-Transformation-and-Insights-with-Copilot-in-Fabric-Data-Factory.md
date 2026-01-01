@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Fabric Blog"
 feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
 date: 2025-10-01 08:00:00 +00:00
-permalink: "/news/2025-10-01-AI-Powered-Data-Transformation-and-Insights-with-Copilot-in-Fabric-Data-Factory.html"
+permalink: "/2025-10-01-AI-Powered-Data-Transformation-and-Insights-with-Copilot-in-Fabric-Data-Factory.html"
 categories: ["AI", "Azure"]
 tags: ["AI", "AI Assistant", "Automation", "Azure", "Azure Data", "Cloud Data Integration", "Copilot", "Data Ingestion", "Data Transformation", "Dataflow Gen2", "Fabric Data Factory", "Mashup", "Microsoft Fabric", "Natural Language", "News", "Pipeline Orchestration", "Power Query", "Productivity Tools"]
 tags_normalized: ["ai", "ai assistant", "automation", "azure", "azure data", "cloud data integration", "copilot", "data ingestion", "data transformation", "dataflow gen2", "fabric data factory", "mashup", "microsoft fabric", "natural language", "news", "pipeline orchestration", "power query", "productivity tools"]

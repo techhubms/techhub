@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Fabric Blog"
 feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
 date: 2025-10-08 07:00:00 +00:00
-permalink: "/news/2025-10-08-Resolving-Write-Conflicts-in-Microsoft-Fabric-Data-Warehouse.html"
+permalink: "/2025-10-08-Resolving-Write-Conflicts-in-Microsoft-Fabric-Data-Warehouse.html"
 categories: ["Azure", "ML"]
 tags: ["ACID Transactions", "Atomic Operations", "Azure", "Compaction Preemption", "Concurrency Control", "Conflict Resolution", "Data Warehouse", "Error Handling", "ETL Pipelines", "Microsoft Fabric", "ML", "News", "Snapshot Isolation", "T SQL", "Table Level Locking", "Transaction Management", "Write Conflicts"]
 tags_normalized: ["acid transactions", "atomic operations", "azure", "compaction preemption", "concurrency control", "conflict resolution", "data warehouse", "error handling", "etl pipelines", "microsoft fabric", "ml", "news", "snapshot isolation", "t sql", "table level locking", "transaction management", "write conflicts"]

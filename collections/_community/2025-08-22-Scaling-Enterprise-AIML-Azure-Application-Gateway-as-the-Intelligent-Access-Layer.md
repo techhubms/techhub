@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-08-22 14:18:34 +00:00
-permalink: "/community/2025-08-22-Scaling-Enterprise-AIML-Azure-Application-Gateway-as-the-Intelligent-Access-Layer.html"
+permalink: "/2025-08-22-Scaling-Enterprise-AIML-Azure-Application-Gateway-as-the-Intelligent-Access-Layer.html"
 categories: ["AI", "Azure", "Security"]
 tags: ["AI", "AI Security", "API Security", "Application Gateway Integrations", "Azure", "Azure AI", "Azure Application Gateway", "Azure Cognitive Services", "Azure Machine Learning", "Community", "Endpoint Protection", "Load Balancing", "Rate Limiting", "Real Time Streaming", "Reverse Proxy", "Security", "Server Sent Events", "Traffic Management", "Web Application Firewall"]
 tags_normalized: ["ai", "ai security", "api security", "application gateway integrations", "azure", "azure ai", "azure application gateway", "azure cognitive services", "azure machine learning", "community", "endpoint protection", "load balancing", "rate limiting", "real time streaming", "reverse proxy", "security", "server sent events", "traffic management", "web application firewall"]

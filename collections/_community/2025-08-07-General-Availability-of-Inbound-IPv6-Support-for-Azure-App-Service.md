@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-08-07 15:04:17 +00:00
-permalink: "/community/2025-08-07-General-Availability-of-Inbound-IPv6-Support-for-Azure-App-Service.html"
+permalink: "/2025-08-07-General-Availability-of-Inbound-IPv6-Support-for-Azure-App-Service.html"
 categories: ["Azure"]
 tags: ["Azure", "Azure App Service", "Azure Government", "Cloud Deployment", "Community", "DNS", "Functions Consumption", "Functions Elastic Premium", "Inbound Traffic", "IPMode", "IPv6", "Linux App Service", "Logic Apps Standard", "Multi Tenant", "Network Configuration", "Public Cloud", "Windows App Service"]
 tags_normalized: ["azure", "azure app service", "azure government", "cloud deployment", "community", "dns", "functions consumption", "functions elastic premium", "inbound traffic", "ipmode", "ipv6", "linux app service", "logic apps standard", "multi tenant", "network configuration", "public cloud", "windows app service"]

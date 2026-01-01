@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Events YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
 date: 2025-11-21 10:21:47 +00:00
-permalink: "/videos/2025-11-21-Accelerate-and-Scale-Physical-AI-Development-with-Simulation.html"
+permalink: "/2025-11-21-Accelerate-and-Scale-Physical-AI-Development-with-Simulation.html"
 categories: ["AI", "Azure"]
 tags: ["Agentic AI", "AI", "AI For Robotics", "Azure", "Azure ARC", "Continuous Integration", "Digital Twins", "Edge Deployment", "Hybrid Systems", "Microsoft Azure", "Microsoft Ignite", "MicrosoftAICloudPartnerProgram", "MSIgnite", "NVIDIA Omniverse", "OpenUSD", "Physical AI", "Robotics Development", "Simulation", "Synthetic Data", "Videos"]
 tags_normalized: ["agentic ai", "ai", "ai for robotics", "azure", "azure arc", "continuous integration", "digital twins", "edge deployment", "hybrid systems", "microsoft azure", "microsoft ignite", "microsoftaicloudpartnerprogram", "msignite", "nvidia omniverse", "openusd", "physical ai", "robotics development", "simulation", "synthetic data", "videos"]

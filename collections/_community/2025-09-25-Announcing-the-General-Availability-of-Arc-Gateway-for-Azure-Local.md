@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-09-25 13:15:23 +00:00
-permalink: "/community/2025-09-25-Announcing-the-General-Availability-of-Arc-Gateway-for-Azure-Local.html"
+permalink: "/2025-09-25-Announcing-the-General-Availability-of-Arc-Gateway-for-Azure-Local.html"
 categories: ["Azure", "Security"]
 tags: ["AKS", "Arc Gateway", "Azure", "Azure Arc", "Azure Local", "Cloud Integration", "Community", "Connectivity", "Edge Computing", "Enterprise Proxy", "Firewall Management", "General Availability", "HTTPS Traffic", "Hybrid Cloud", "Microsoft Azure", "Network Security", "Security", "Virtual Machines"]
 tags_normalized: ["aks", "arc gateway", "azure", "azure arc", "azure local", "cloud integration", "community", "connectivity", "edge computing", "enterprise proxy", "firewall management", "general availability", "https traffic", "hybrid cloud", "microsoft azure", "network security", "security", "virtual machines"]

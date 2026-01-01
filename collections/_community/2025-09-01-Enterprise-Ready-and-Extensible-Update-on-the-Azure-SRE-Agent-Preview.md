@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-09-01 19:17:04 +00:00
-permalink: "/community/2025-09-01-Enterprise-Ready-and-Extensible-Update-on-the-Azure-SRE-Agent-Preview.html"
+permalink: "/2025-09-01-Enterprise-Ready-and-Extensible-Update-on-the-Azure-SRE-Agent-Preview.html"
 categories: ["AI", "Azure", "DevOps", "Security"]
 tags: ["AAU", "AI", "AI Automation", "App Service", "Azure", "Azure CLI", "Azure DevOps", "Azure Functions", "Azure Monitor", "Azure SRE Agent", "Cloud Governance", "Community", "DevOps", "Enterprise Integration", "GitHub Integration", "Incident Management", "Incident Response", "Kubernetes", "Operational Excellence", "PagerDuty", "Root Cause Analysis", "Security", "ServiceNow", "Source Code Analysis"]
 tags_normalized: ["aau", "ai", "ai automation", "app service", "azure", "azure cli", "azure devops", "azure functions", "azure monitor", "azure sre agent", "cloud governance", "community", "devops", "enterprise integration", "github integration", "incident management", "incident response", "kubernetes", "operational excellence", "pagerduty", "root cause analysis", "security", "servicenow", "source code analysis"]

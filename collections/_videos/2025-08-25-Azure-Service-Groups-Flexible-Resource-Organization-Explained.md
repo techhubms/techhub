@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "John Savill's Technical Training"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCpIn7ox7j7bH_OFj7tYouOQ"
 date: 2025-08-25 14:57:08 +00:00
-permalink: "/videos/2025-08-25-Azure-Service-Groups-Flexible-Resource-Organization-Explained.html"
+permalink: "/2025-08-25-Azure-Service-Groups-Flexible-Resource-Organization-Explained.html"
 categories: ["Azure"]
 tags: ["Azure", "Azure AD", "Azure Governance", "Azure Monitoring", "Azure Resource Manager", "Azure Service Groups", "Cloud", "Cloud Resource Organization", "Control Plane", "Entra Id", "Hierarchy", "Microsoft Azure", "Permissions", "Resource Group", "Resource Relationships", "Resources", "Scope Management", "Service Groups", "Subscription", "Videos"]
 tags_normalized: ["azure", "azure ad", "azure governance", "azure monitoring", "azure resource manager", "azure service groups", "cloud", "cloud resource organization", "control plane", "entra id", "hierarchy", "microsoft azure", "permissions", "resource group", "resource relationships", "resources", "scope management", "service groups", "subscription", "videos"]

@@ -9,10 +9,10 @@ viewing_mode: "external"
 feed_name: "DevOps Blog"
 feed_url: "https://devops.com/feed/"
 date: 2025-10-06 17:37:15 +00:00
-permalink: "/blogs/2025-10-06-How-Graph-Intelligence-Is-Transforming-Software-Supply-Chain-Visibility.html"
+permalink: "/2025-10-06-How-Graph-Intelligence-Is-Transforming-Software-Supply-Chain-Visibility.html"
 categories: ["AI", "DevOps", "Security"]
-tags: ["Agentic Automation", "AI", "AI Driven Workflows", "Automation", "Continuous Improvement", "Dependencies", "DevOps", "Ecosystem", "Graph Data", "Graph Intelligence", "JFrog Swampup", "Blogs", "RAG", "Risk Detection", "Security", "Software Delivery", "Software Supply Chain", "Transparency", "Video Interviews", "Visibility", "Vulnerabilities"]
-tags_normalized: ["agentic automation", "ai", "ai driven workflows", "automation", "continuous improvement", "dependencies", "devops", "ecosystem", "graph data", "graph intelligence", "jfrog swampup", "blogs", "rag", "risk detection", "security", "software delivery", "software supply chain", "transparency", "video interviews", "visibility", "vulnerabilities"]
+tags: ["Agentic Automation", "AI", "AI Driven Workflows", "Automation", "Blogs", "Continuous Improvement", "Dependencies", "DevOps", "Ecosystem", "Graph Data", "Graph Intelligence", "JFrog Swampup", "RAG", "Risk Detection", "Security", "Software Delivery", "Software Supply Chain", "Transparency", "Video Interviews", "Visibility", "Vulnerabilities"]
+tags_normalized: ["agentic automation", "ai", "ai driven workflows", "automation", "blogs", "continuous improvement", "dependencies", "devops", "ecosystem", "graph data", "graph intelligence", "jfrog swampup", "rag", "risk detection", "security", "software delivery", "software supply chain", "transparency", "video interviews", "visibility", "vulnerabilities"]
 ---
 
 Alan Shimel interviews Stephen Chin on how graph intelligence is reshaping visibility and security within software supply chains, highlighting DevOps and AI advances discussed at swampUP 2025.<!--excerpt_end-->

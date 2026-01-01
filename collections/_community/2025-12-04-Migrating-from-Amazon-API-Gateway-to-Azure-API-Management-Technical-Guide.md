@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-12-04 21:23:07 +00:00
-permalink: "/community/2025-12-04-Migrating-from-Amazon-API-Gateway-to-Azure-API-Management-Technical-Guide.html"
+permalink: "/2025-12-04-Migrating-from-Amazon-API-Gateway-to-Azure-API-Management-Technical-Guide.html"
 categories: ["Azure"]
 tags: ["AKS", "Amazon API Gateway", "API Configuration", "API Gateway Migration", "Authentication", "AWS To Azure", "Azure", "Azure API Management", "Azure Application Gateway", "Azure Functions", "Azure Monitor", "Cloud Architecture", "Cloud Migration", "Community", "DNS Cutover", "Infrastructure Mapping", "Microsoft Entra ID", "Migration Best Practices", "Network Isolation", "OpenAPI Specification", "Performance Baseline", "WAF Integration"]
 tags_normalized: ["aks", "amazon api gateway", "api configuration", "api gateway migration", "authentication", "aws to azure", "azure", "azure api management", "azure application gateway", "azure functions", "azure monitor", "cloud architecture", "cloud migration", "community", "dns cutover", "infrastructure mapping", "microsoft entra id", "migration best practices", "network isolation", "openapi specification", "performance baseline", "waf integration"]

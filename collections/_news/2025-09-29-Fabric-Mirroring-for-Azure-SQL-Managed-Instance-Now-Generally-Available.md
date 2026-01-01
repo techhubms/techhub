@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Fabric Blog"
 feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
 date: 2025-09-29 11:00:00 +00:00
-permalink: "/news/2025-09-29-Fabric-Mirroring-for-Azure-SQL-Managed-Instance-Now-Generally-Available.html"
+permalink: "/2025-09-29-Fabric-Mirroring-for-Azure-SQL-Managed-Instance-Now-Generally-Available.html"
 categories: ["Azure", "ML"]
 tags: ["Azure", "Azure SQL Managed Instance", "Data Engineering", "Data Platform", "Data Replication", "Data Science", "Data Warehouse", "ETL Free Data Integration", "Fabric Mirroring Pricing", "KQL Database", "Lakehouse", "Microsoft Fabric", "Mirroring", "ML", "News", "Notebooks", "OneLake", "Power BI Direct Lake", "Real Time Analytics", "Schema Changes"]
 tags_normalized: ["azure", "azure sql managed instance", "data engineering", "data platform", "data replication", "data science", "data warehouse", "etl free data integration", "fabric mirroring pricing", "kql database", "lakehouse", "microsoft fabric", "mirroring", "ml", "news", "notebooks", "onelake", "power bi direct lake", "real time analytics", "schema changes"]

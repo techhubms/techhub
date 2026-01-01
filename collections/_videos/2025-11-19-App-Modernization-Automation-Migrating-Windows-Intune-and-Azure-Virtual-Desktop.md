@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Events YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
 date: 2025-11-19 14:44:36 +00:00
-permalink: "/videos/2025-11-19-App-Modernization-Automation-Migrating-Windows-Intune-and-Azure-Virtual-Desktop.html"
+permalink: "/2025-11-19-App-Modernization-Automation-Migrating-Windows-Intune-and-Azure-Virtual-Desktop.html"
 categories: ["Azure", "DevOps", "Security"]
 tags: ["App Testing", "Application Readiness", "Automation", "Azure", "Azure Virtual Desktop", "Cloud Desktop", "Dashboard", "DevOps", "Intune", "IT Operations", "Microsoft Ignite", "Migrateandmodernizeyourestate", "Migration", "Modernization", "MSIgnite", "OS Upgrade", "Rimo3", "SCCM", "Security", "Videos", "Windows 11", "Windows 365"]
 tags_normalized: ["app testing", "application readiness", "automation", "azure", "azure virtual desktop", "cloud desktop", "dashboard", "devops", "intune", "it operations", "microsoft ignite", "migrateandmodernizeyourestate", "migration", "modernization", "msignite", "os upgrade", "rimo3", "sccm", "security", "videos", "windows 11", "windows 365"]

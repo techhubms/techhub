@@ -9,10 +9,10 @@ viewing_mode: "external"
 feed_name: "DevOps Blog"
 feed_url: "https://devops.com/feed/"
 date: 2025-08-14 10:00:21 +00:00
-permalink: "/blogs/2025-08-14-Eclipse-Foundation-Publishes-Toolkit-to-Simplify-CRA-Compliance.html"
+permalink: "/2025-08-14-Eclipse-Foundation-Publishes-Toolkit-to-Simplify-CRA-Compliance.html"
 categories: ["DevOps", "Security"]
-tags: ["Business Of DevOps", "Compliance", "Compliance Toolkit", "Conformity Assessment", "CRA", "CRA Compliance", "Cyber Resilience Act", "Dependency Analysis", "DevOps", "Eclipse Foundation", "EU", "EU Regulations", "Europe", "GitHub", "Microsoft", "OCCTET", "Open Regulatory Compliance", "Open Source", "ORC", "Blogs", "Red Hat", "Regulations", "Regulatory Compliance", "Security", "Security Requirements", "Social Facebook", "Social LinkedIn", "Social X", "Software Supply Chain Security"]
-tags_normalized: ["business of devops", "compliance", "compliance toolkit", "conformity assessment", "cra", "cra compliance", "cyber resilience act", "dependency analysis", "devops", "eclipse foundation", "eu", "eu regulations", "europe", "github", "microsoft", "occtet", "open regulatory compliance", "open source", "orc", "blogs", "red hat", "regulations", "regulatory compliance", "security", "security requirements", "social facebook", "social linkedin", "social x", "software supply chain security"]
+tags: ["Blogs", "Business Of DevOps", "Compliance", "Compliance Toolkit", "Conformity Assessment", "CRA", "CRA Compliance", "Cyber Resilience Act", "Dependency Analysis", "DevOps", "Eclipse Foundation", "EU", "EU Regulations", "Europe", "GitHub", "Microsoft", "OCCTET", "Open Regulatory Compliance", "Open Source", "ORC", "Red Hat", "Regulations", "Regulatory Compliance", "Security", "Security Requirements", "Social Facebook", "Social LinkedIn", "Social X", "Software Supply Chain Security"]
+tags_normalized: ["blogs", "business of devops", "compliance", "compliance toolkit", "conformity assessment", "cra", "cra compliance", "cyber resilience act", "dependency analysis", "devops", "eclipse foundation", "eu", "eu regulations", "europe", "github", "microsoft", "occtet", "open regulatory compliance", "open source", "orc", "red hat", "regulations", "regulatory compliance", "security", "security requirements", "social facebook", "social linkedin", "social x", "software supply chain security"]
 ---
 
 Mike Vizard examines how the Eclipse Foundation's OCCTET project enables organizations to address EU Cyber Resilience Act compliance, highlighting input from Microsoft and GitHub.<!--excerpt_end-->

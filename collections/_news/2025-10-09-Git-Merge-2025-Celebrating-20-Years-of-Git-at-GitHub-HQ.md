@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/feed/"
 date: 2025-10-09 08:00:00 +00:00
-permalink: "/news/2025-10-09-Git-Merge-2025-Celebrating-20-Years-of-Git-at-GitHub-HQ.html"
+permalink: "/2025-10-09-Git-Merge-2025-Celebrating-20-Years-of-Git-at-GitHub-HQ.html"
 categories: ["DevOps"]
 tags: ["Branching Strategies", "Collaboration", "Developer Tools", "DevOps", "Git", "Git Merge", "GitButler", "GitHub", "Jujutsu", "News", "Open Source", "Repository Visualization", "SHA 256", "Software Community", "Technical Conference", "Version Control", "Workflow"]
 tags_normalized: ["branching strategies", "collaboration", "developer tools", "devops", "git", "git merge", "gitbutler", "github", "jujutsu", "news", "open source", "repository visualization", "sha 256", "software community", "technical conference", "version control", "workflow"]

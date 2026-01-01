@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "GitHub YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ"
 date: 2025-10-31 14:00:21 +00:00
-permalink: "/videos/2025-10-31-Enterprise-Grade-AI-Governance-with-GitHub-Copilot-and-Advanced-Security.html"
+permalink: "/2025-10-31-Enterprise-Grade-AI-Governance-with-GitHub-Copilot-and-Advanced-Security.html"
 categories: ["AI", "DevOps", "GitHub Copilot"]
 tags: ["AI", "AI Agent", "Control Plane", "Copilot Metrics", "Custom Agents", "Developer Experience", "DevOps", "Enterprise Governance", "GitHub", "GitHub Advanced Security", "GitHub Copilot", "GitHub Copilot Enterprise", "GitHubUniverse", "Platform Engineering", "SDLC", "Videos", "VS Code"]
 tags_normalized: ["ai", "ai agent", "control plane", "copilot metrics", "custom agents", "developer experience", "devops", "enterprise governance", "github", "github advanced security", "github copilot", "github copilot enterprise", "githubuniverse", "platform engineering", "sdlc", "videos", "vs code"]

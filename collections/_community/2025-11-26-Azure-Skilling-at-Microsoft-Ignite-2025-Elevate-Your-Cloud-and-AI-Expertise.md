@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-11-26 22:14:11 +00:00
-permalink: "/community/2025-11-26-Azure-Skilling-at-Microsoft-Ignite-2025-Elevate-Your-Cloud-and-AI-Expertise.html"
+permalink: "/2025-11-26-Azure-Skilling-at-Microsoft-Ignite-2025-Elevate-Your-Cloud-and-AI-Expertise.html"
 categories: ["AI", "Azure", "Coding"]
 tags: ["AI", "AI Skills Navigator", "Applied Learning", "Applied Skills", "Azure", "Azure AI Foundry", "Azure Skills Challenge", "Certification", "Cloud", "Coding", "Community", "Data Platforms", "Developer", "Hands On Labs", "Infrastructure Optimization", "Livestream", "Microsoft Ignite", "Microsoft Learn", "Microsoft Reactor", "Performance Based Testing"]
 tags_normalized: ["ai", "ai skills navigator", "applied learning", "applied skills", "azure", "azure ai foundry", "azure skills challenge", "certification", "cloud", "coding", "community", "data platforms", "developer", "hands on labs", "infrastructure optimization", "livestream", "microsoft ignite", "microsoft learn", "microsoft reactor", "performance based testing"]

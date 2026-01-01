@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Security Blog"
 feed_url: "https://www.microsoft.com/en-us/security/blog/feed/"
 date: 2025-07-17 16:00:00 +00:00
-permalink: "/news/2025-07-17-Microsoft-Defender-for-Office-365-Transparent-Benchmarks-on-Email-Security-Effectiveness.html"
+permalink: "/2025-07-17-Microsoft-Defender-for-Office-365-Transparent-Benchmarks-on-Email-Security-Effectiveness.html"
 categories: ["Security"]
 tags: ["Benchmark Reports", "Cybersecurity", "Dashboard", "Data Driven Security", "Email Security", "Integrated Cloud Email Security", "Microsoft Defender For Office 365", "Microsoft Security", "Mitigation", "News", "Office 365", "Secure Email Gateway", "Security", "Security Benchmarking", "Spam Filtering", "Threat Detection", "Transparency"]
 tags_normalized: ["benchmark reports", "cybersecurity", "dashboard", "data driven security", "email security", "integrated cloud email security", "microsoft defender for office 365", "microsoft security", "mitigation", "news", "office 365", "secure email gateway", "security", "security benchmarking", "spam filtering", "threat detection", "transparency"]

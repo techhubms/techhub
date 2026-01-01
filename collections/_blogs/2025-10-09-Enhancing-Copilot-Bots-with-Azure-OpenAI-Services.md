@@ -9,10 +9,10 @@ viewing_mode: "external"
 feed_name: "Dellenny's Blog"
 feed_url: "https://dellenny.com/feed/"
 date: 2025-10-09 07:08:29 +00:00
-permalink: "/blogs/2025-10-09-Enhancing-Copilot-Bots-with-Azure-OpenAI-Services.html"
+permalink: "/2025-10-09-Enhancing-Copilot-Bots-with-Azure-OpenAI-Services.html"
 categories: ["AI", "Azure"]
-tags: ["AI", "AI Security", "Assistants API", "Azure", "Azure Cognitive Search", "Azure OpenAI Service", "Conversational AI", "Copilot", "Copilot Studio", "Enterprise Bots", "Enterprise Data Integration", "GPT 4", "Microsoft Copilot", "Model Governance", "Multimodal AI", "Blogs", "RAG", "Responsible AI"]
-tags_normalized: ["ai", "ai security", "assistants api", "azure", "azure cognitive search", "azure openai service", "conversational ai", "copilot", "copilot studio", "enterprise bots", "enterprise data integration", "gpt 4", "microsoft copilot", "model governance", "multimodal ai", "blogs", "rag", "responsible ai"]
+tags: ["AI", "AI Security", "Assistants API", "Azure", "Azure Cognitive Search", "Azure OpenAI Service", "Blogs", "Conversational AI", "Copilot", "Copilot Studio", "Enterprise Bots", "Enterprise Data Integration", "GPT 4", "Microsoft Copilot", "Model Governance", "Multimodal AI", "RAG", "Responsible AI"]
+tags_normalized: ["ai", "ai security", "assistants api", "azure", "azure cognitive search", "azure openai service", "blogs", "conversational ai", "copilot", "copilot studio", "enterprise bots", "enterprise data integration", "gpt 4", "microsoft copilot", "model governance", "multimodal ai", "rag", "responsible ai"]
 ---
 
 Dellenny explains how to enhance Copilot bots with Azure OpenAI Services, covering integration techniques, grounded AI, deployment best practices, and key implementation challenges for enterprise bots.<!--excerpt_end-->

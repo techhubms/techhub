@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Events YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
 date: 2025-11-25 15:54:09 +00:00
-permalink: "/videos/2025-11-25-From-VMs-and-Containers-to-AI-Apps-with-Azure-Red-Hat-OpenShift.html"
+permalink: "/2025-11-25-From-VMs-and-Containers-to-AI-Apps-with-Azure-Red-Hat-OpenShift.html"
 categories: ["AI", "Azure"]
 tags: ["AI", "AI Strategy", "ARO", "Azure", "Azure Red Hat OpenShift", "Banco Bradesco", "Cluster Administration", "Containers", "Enterprise AI", "Governance", "Hybrid Cloud", "Kubernetes", "Microsoft Azure", "Microsoft Foundry", "Migrateandmodernizeyourestate", "Migration", "MSIgnite", "Red Hat OpenShift Virtualization", "Videos", "Virtual Machines"]
 tags_normalized: ["ai", "ai strategy", "aro", "azure", "azure red hat openshift", "banco bradesco", "cluster administration", "containers", "enterprise ai", "governance", "hybrid cloud", "kubernetes", "microsoft azure", "microsoft foundry", "migrateandmodernizeyourestate", "migration", "msignite", "red hat openshift virtualization", "videos", "virtual machines"]

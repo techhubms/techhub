@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft DevBlog"
 feed_url: "https://devblogs.microsoft.com/semantic-kernel/feed/"
 date: 2025-06-05 09:28:47 +00:00
-permalink: "/news/2025-06-05-Smarter-SK-Agents-with-Contextual-Function-Selection-in-Semantic-Kernel.html"
+permalink: "/2025-06-05-Smarter-SK-Agents-with-Contextual-Function-Selection-in-Semantic-Kernel.html"
 categories: ["AI", "Coding"]
 tags: [".NET", "Agents", "AI", "AI Agents", "Azure OpenAI", "C#", "ChatCompletionAgent", "Coding", "Contextual Function Selection", "Customer Review Summarization", "Function Filtering", "News", "Plugin Integration", "Retrieval Augmented Generation", "Semantic Kernel", "Token Efficiency", "Tools"]
 tags_normalized: ["dotnet", "agents", "ai", "ai agents", "azure openai", "csharp", "chatcompletionagent", "coding", "contextual function selection", "customer review summarization", "function filtering", "news", "plugin integration", "retrieval augmented generation", "semantic kernel", "token efficiency", "tools"]

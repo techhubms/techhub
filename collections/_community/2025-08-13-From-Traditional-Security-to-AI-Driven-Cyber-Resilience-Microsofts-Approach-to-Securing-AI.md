@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Community"
 date: 2025-08-13 16:54:16 +00:00
-permalink: "/community/2025-08-13-From-Traditional-Security-to-AI-Driven-Cyber-Resilience-Microsofts-Approach-to-Securing-AI.html"
+permalink: "/2025-08-13-From-Traditional-Security-to-AI-Driven-Cyber-Resilience-Microsofts-Approach-to-Securing-AI.html"
 categories: ["AI", "Security"]
 tags: ["AI", "AI Security", "AI Workloads", "Azure AI Foundry", "Community", "Compliance", "Conditional Access", "Content Safety", "Copilot Security", "Cyber Resilience", "Data Loss Prevention", "Identity And Access Management", "Insider Risk Management", "Microsoft Defender", "Microsoft Defender For Cloud", "Microsoft Defender For Cloud Apps", "Microsoft Entra", "Microsoft Purview", "Non Human Identities", "Privileged Identity Management", "Red Teaming", "Security"]
 tags_normalized: ["ai", "ai security", "ai workloads", "azure ai foundry", "community", "compliance", "conditional access", "content safety", "copilot security", "cyber resilience", "data loss prevention", "identity and access management", "insider risk management", "microsoft defender", "microsoft defender for cloud", "microsoft defender for cloud apps", "microsoft entra", "microsoft purview", "non human identities", "privileged identity management", "red teaming", "security"]

@@ -8,8 +8,8 @@ canonical_url: "https://blog.matt-o.com/GitHub-Copilot-Custom-Instructions"
 viewing_mode: "external"
 categories: ["AI", "GitHub Copilot"]
 permalink: "/blogs/2024-08-15-VS-Code-supports-user-input-as-extra-prompt-instructions.html"
-tags: ["AI", "Configuration", "Custom Instructions", "GitHub Copilot", "Blogs", "Productivity"]
-tags_normalized: ["ai", "configuration", "custom instructions", "github copilot", "blogs", "productivity"]
+tags: ["AI", "Blogs", "Configuration", "Custom Instructions", "GitHub Copilot", "Productivity"]
+tags_normalized: ["ai", "blogs", "configuration", "custom instructions", "github copilot", "productivity"]
 ---
 
 Matt Olson discovered a powerful new GitHub Copilot feature in Visual Studio Code that allows users to set custom instructions to tailor Copilot's suggestions. This feature addresses a common request from developers who want to avoid repeating the same prompts, such as specifying library preferences or language version constraints.<!--excerpt_end-->

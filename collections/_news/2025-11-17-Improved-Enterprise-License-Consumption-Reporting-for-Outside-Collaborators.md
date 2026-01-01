@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/changelog/feed/"
 date: 2025-11-17 18:47:08 +00:00
-permalink: "/news/2025-11-17-Improved-Enterprise-License-Consumption-Reporting-for-Outside-Collaborators.html"
+permalink: "/2025-11-17-Improved-Enterprise-License-Consumption-Reporting-for-Outside-Collaborators.html"
 categories: ["DevOps"]
 tags: ["Account Management", "Billing Optimization", "Compliance", "CSV Export", "DevOps", "Enterprise Billing", "Enterprise Management Tools", "Enterprise Tools", "GitHub Enterprise", "Improvement", "License Management", "Member Roles", "News", "Organization Management", "Outside Collaborators", "Reporting"]
 tags_normalized: ["account management", "billing optimization", "compliance", "csv export", "devops", "enterprise billing", "enterprise management tools", "enterprise tools", "github enterprise", "improvement", "license management", "member roles", "news", "organization management", "outside collaborators", "reporting"]

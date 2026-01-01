@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Events YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
 date: 2025-11-20 10:46:14 +00:00
-permalink: "/videos/2025-11-20-Driving-Agentic-Innovation-with-Model-Context-Protocol-MCP-for-Tool-Aware-AI.html"
+permalink: "/2025-11-20-Driving-Agentic-Innovation-with-Model-Context-Protocol-MCP-for-Tool-Aware-AI.html"
 categories: ["AI", "Azure"]
 tags: ["Agent 365", "AI", "AI Agents", "API Management", "Autonomous Agents", "Azure", "Connectors Catalog", "Cross Cloud Support", "GitHub", "Governance", "InnovatewithAzureAIappsandagents", "MCP", "Microsoft Foundry", "MSIgnite", "ServiceNow Integration", "Tool Orchestration", "Unified Access", "Videos", "VS Code"]
 tags_normalized: ["agent 365", "ai", "ai agents", "api management", "autonomous agents", "azure", "connectors catalog", "cross cloud support", "github", "governance", "innovatewithazureaiappsandagents", "mcp", "microsoft foundry", "msignite", "servicenow integration", "tool orchestration", "unified access", "videos", "vs code"]

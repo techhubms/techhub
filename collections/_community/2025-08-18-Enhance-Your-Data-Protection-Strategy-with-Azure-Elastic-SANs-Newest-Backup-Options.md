@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-08-18 15:31:44 +00:00
-permalink: "/community/2025-08-18-Enhance-Your-Data-Protection-Strategy-with-Azure-Elastic-SANs-Newest-Backup-Options.html"
+permalink: "/2025-08-18-Enhance-Your-Data-Protection-Strategy-with-Azure-Elastic-SANs-Newest-Backup-Options.html"
 categories: ["Azure", "Security"]
 tags: ["Azure", "Azure Backup", "Azure Business Continuity Center", "Azure Elastic SAN", "Business Continuity", "Cloud Storage", "Community", "Commvault", "Cross Region Restore", "Data Protection", "Enterprise Backup", "Incremental Snapshots", "Iscsi", "Linux", "Managed Disks", "Restore Points", "Security", "Snapshot Retention", "VM Data Recovery", "Windows"]
 tags_normalized: ["azure", "azure backup", "azure business continuity center", "azure elastic san", "business continuity", "cloud storage", "community", "commvault", "cross region restore", "data protection", "enterprise backup", "incremental snapshots", "iscsi", "linux", "managed disks", "restore points", "security", "snapshot retention", "vm data recovery", "windows"]

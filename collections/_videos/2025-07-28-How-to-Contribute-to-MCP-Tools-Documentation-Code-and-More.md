@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Build 2025 YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
 date: 2025-07-28 16:01:33 +00:00
-permalink: "/videos/2025-07-28-How-to-Contribute-to-MCP-Tools-Documentation-Code-and-More.html"
+permalink: "/2025-07-28-How-to-Contribute-to-MCP-Tools-Documentation-Code-and-More.html"
 categories: ["Coding"]
 tags: [".NET", "Best Practices", "Coding", "Contribution", "Documentation", "GitHub", "Java", "MCP", "Open Source", "Python", "Tools", "Videos"]
 tags_normalized: ["dotnet", "best practices", "coding", "contribution", "documentation", "github", "java", "mcp", "open source", "python", "tools", "videos"]

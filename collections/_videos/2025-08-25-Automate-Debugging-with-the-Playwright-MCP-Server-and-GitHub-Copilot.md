@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "GitHub YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ"
 date: 2025-08-25 18:37:00 +00:00
-permalink: "/videos/2025-08-25-Automate-Debugging-with-the-Playwright-MCP-Server-and-GitHub-Copilot.html"
+permalink: "/2025-08-25-Automate-Debugging-with-the-Playwright-MCP-Server-and-GitHub-Copilot.html"
 categories: ["AI", "Coding", "GitHub Copilot"]
 tags: ["AI", "AI Peer Programmer", "AI Programming Assistant", "Automated Testing", "Bug Automation", "Code Fix Validation", "Coding", "CodingAgent", "Copilot Agent Mode", "CopilotCodingAgent", "Debugging", "Error Reproduction", "Frontend Testing", "GitHub Copilot", "Playwright MCP Server", "Root Cause Analysis", "Software Development Tools", "Videos"]
 tags_normalized: ["ai", "ai peer programmer", "ai programming assistant", "automated testing", "bug automation", "code fix validation", "coding", "codingagent", "copilot agent mode", "copilotcodingagent", "debugging", "error reproduction", "frontend testing", "github copilot", "playwright mcp server", "root cause analysis", "software development tools", "videos"]

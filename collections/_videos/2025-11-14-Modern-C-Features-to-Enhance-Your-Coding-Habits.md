@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "DotNet YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw"
 date: 2025-11-14 01:15:07 +00:00
-permalink: "/videos/2025-11-14-Modern-C-Features-to-Enhance-Your-Coding-Habits.html"
+permalink: "/2025-11-14-Modern-C-Features-to-Enhance-Your-Coding-Habits.html"
 categories: ["Coding"]
 tags: [".NET", ".NET Conf", "Best Practices", "C# 12", "C# 13", "C# 14", "C# Improvements", "Code Quality", "Coding", "Developer Tips", "Language Features", "LTS Release", "Productivity", "Refactoring", "Videos"]
 tags_normalized: ["dotnet", "dotnet conf", "best practices", "csharp 12", "csharp 13", "csharp 14", "csharp improvements", "code quality", "coding", "developer tips", "language features", "lts release", "productivity", "refactoring", "videos"]

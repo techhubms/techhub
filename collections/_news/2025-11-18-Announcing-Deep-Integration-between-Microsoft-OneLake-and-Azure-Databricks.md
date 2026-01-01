@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Fabric Blog"
 feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
 date: 2025-11-18 08:00:00 +00:00
-permalink: "/news/2025-11-18-Announcing-Deep-Integration-between-Microsoft-OneLake-and-Azure-Databricks.html"
+permalink: "/2025-11-18-Announcing-Deep-Integration-between-Microsoft-OneLake-and-Azure-Databricks.html"
 categories: ["AI", "Azure", "ML"]
 tags: ["AI", "Azure", "Azure AI Foundry", "Azure Databricks", "Catalog API", "Cloud Data Platform", "Copilot Studio", "Data Analytics", "Data Engineering", "Data Governance", "Data Integration", "Data Interoperability", "Data Lake", "Data Mirroring", "Data Sharing", "Delta Lake", "Lakehouse Architecture", "Microsoft Fabric", "Microsoft OneLake", "ML", "News", "Open Data", "Power BI", "Unity Catalog"]
 tags_normalized: ["ai", "azure", "azure ai foundry", "azure databricks", "catalog api", "cloud data platform", "copilot studio", "data analytics", "data engineering", "data governance", "data integration", "data interoperability", "data lake", "data mirroring", "data sharing", "delta lake", "lakehouse architecture", "microsoft fabric", "microsoft onelake", "ml", "news", "open data", "power bi", "unity catalog"]

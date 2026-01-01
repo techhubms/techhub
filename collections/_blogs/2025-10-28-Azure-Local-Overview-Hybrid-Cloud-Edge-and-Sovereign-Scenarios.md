@@ -9,10 +9,10 @@ viewing_mode: "external"
 feed_name: "Thomas Maurer's Blog"
 feed_url: "https://www.thomasmaurer.ch/feed/"
 date: 2025-10-28 13:57:29 +00:00
-permalink: "/blogs/2025-10-28-Azure-Local-Overview-Hybrid-Cloud-Edge-and-Sovereign-Scenarios.html"
+permalink: "/2025-10-28-Azure-Local-Overview-Hybrid-Cloud-Edge-and-Sovereign-Scenarios.html"
 categories: ["Azure", "Security"]
-tags: ["AKS", "Azure", "Azure Defender", "Azure Local", "Azure Monitor", "Azure Portal", "Azure Virtual Desktop", "Cloud Architecture", "Cloud Management", "Digital Sovereignty", "Disaster Recovery", "Disconnected Operations", "Edge Computing", "High Availability", "Hybrid Cloud", "Lifecycle Management", "Blogs", "Security", "Uncategorized", "Virtual Machines", "Workload Management"]
-tags_normalized: ["aks", "azure", "azure defender", "azure local", "azure monitor", "azure portal", "azure virtual desktop", "cloud architecture", "cloud management", "digital sovereignty", "disaster recovery", "disconnected operations", "edge computing", "high availability", "hybrid cloud", "lifecycle management", "blogs", "security", "uncategorized", "virtual machines", "workload management"]
+tags: ["AKS", "Azure", "Azure Defender", "Azure Local", "Azure Monitor", "Azure Portal", "Azure Virtual Desktop", "Blogs", "Cloud Architecture", "Cloud Management", "Digital Sovereignty", "Disaster Recovery", "Disconnected Operations", "Edge Computing", "High Availability", "Hybrid Cloud", "Lifecycle Management", "Security", "Uncategorized", "Virtual Machines", "Workload Management"]
+tags_normalized: ["aks", "azure", "azure defender", "azure local", "azure monitor", "azure portal", "azure virtual desktop", "blogs", "cloud architecture", "cloud management", "digital sovereignty", "disaster recovery", "disconnected operations", "edge computing", "high availability", "hybrid cloud", "lifecycle management", "security", "uncategorized", "virtual machines", "workload management"]
 ---
 
 Thomas Maurer provides a practical, architect-focused walkthrough of Azure Local, covering hybrid cloud architecture, edge scenarios, digital sovereignty, security features, and workload management, with actionable demos and management techniques.<!--excerpt_end-->

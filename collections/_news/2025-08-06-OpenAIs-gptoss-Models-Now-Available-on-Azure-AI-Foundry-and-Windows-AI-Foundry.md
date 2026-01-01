@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft News"
 feed_url: "https://news.microsoft.com/source/feed/"
 date: 2025-08-06 13:10:10 +00:00
-permalink: "/news/2025-08-06-OpenAIs-gptoss-Models-Now-Available-on-Azure-AI-Foundry-and-Windows-AI-Foundry.html"
+permalink: "/2025-08-06-OpenAIs-gptoss-Models-Now-Available-on-Azure-AI-Foundry-and-Windows-AI-Foundry.html"
 categories: ["AI", "Azure"]
 tags: ["AI", "AI Customization", "AI Model Catalog", "AI Transparency", "Azure", "Azure AI Foundry", "Company News", "Enterprise AI", "Foundry Local", "Gpt Oss", "Hybrid AI", "Intelligent Agents", "Model Deployment", "Model Fine Tuning", "News", "On Device Inference", "Open Source AI", "OpenAI", "Windows AI Foundry"]
 tags_normalized: ["ai", "ai customization", "ai model catalog", "ai transparency", "azure", "azure ai foundry", "company news", "enterprise ai", "foundry local", "gpt oss", "hybrid ai", "intelligent agents", "model deployment", "model fine tuning", "news", "on device inference", "open source ai", "openai", "windows ai foundry"]

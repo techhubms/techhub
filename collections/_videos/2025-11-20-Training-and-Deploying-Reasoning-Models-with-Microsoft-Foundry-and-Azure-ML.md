@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Events YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
 date: 2025-11-20 10:21:15 +00:00
-permalink: "/videos/2025-11-20-Training-and-Deploying-Reasoning-Models-with-Microsoft-Foundry-and-Azure-ML.html"
+permalink: "/2025-11-20-Training-and-Deploying-Reasoning-Models-with-Microsoft-Foundry-and-Azure-ML.html"
 categories: ["AI", "Azure", "ML"]
 tags: ["Agent Applications", "AI", "AI Production", "Asynchronous Learning", "Azure", "Azure Machine Learning", "Benchmarking", "Business Insights", "Financial Analyst Agent", "InnovatewithAzureAIappsandagents", "LLMs", "Microsoft Foundry", "Microsoft Ignite", "ML", "Model Deployment", "Model Fine Tuning", "MSIgnite", "Multitask Capabilities", "Performance Evaluation", "Real Time Inference", "Reasoning Models", "Reinforcement Learning", "Synchronous Learning", "Videos"]
 tags_normalized: ["agent applications", "ai", "ai production", "asynchronous learning", "azure", "azure machine learning", "benchmarking", "business insights", "financial analyst agent", "innovatewithazureaiappsandagents", "llms", "microsoft foundry", "microsoft ignite", "ml", "model deployment", "model fine tuning", "msignite", "multitask capabilities", "performance evaluation", "real time inference", "reasoning models", "reinforcement learning", "synchronous learning", "videos"]

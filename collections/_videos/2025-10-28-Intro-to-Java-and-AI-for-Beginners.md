@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Developer YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
 date: 2025-10-28 16:00:28 +00:00
-permalink: "/videos/2025-10-28-Intro-to-Java-and-AI-for-Beginners.html"
+permalink: "/2025-10-28-Intro-to-Java-and-AI-for-Beginners.html"
 categories: ["AI"]
 tags: ["AI", "AI Fundamentals", "AI Integration", "AIForBeginners", "Cloud Computing", "CloudDevelopment", "Context Engineering", "Developer Education", "DeveloperEducation", "Generative AI", "GenerativeAI", "Java", "Java Development", "JavaProgramming", "JavaTutorial", "Machine Learning", "MachineLearning", "MCP", "Microsoft", "Software Development", "Videos"]
 tags_normalized: ["ai", "ai fundamentals", "ai integration", "aiforbeginners", "cloud computing", "clouddevelopment", "context engineering", "developer education", "developereducation", "generative ai", "generativeai", "java", "java development", "javaprogramming", "javatutorial", "machine learning", "machinelearning", "mcp", "microsoft", "software development", "videos"]

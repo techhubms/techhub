@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Fabric Blog"
 feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
 date: 2025-11-21 08:00:00 +00:00
-permalink: "/news/2025-11-21-Auditing-Features-for-Fabric-SQL-Database-Preview.html"
+permalink: "/2025-11-21-Auditing-Features-for-Fabric-SQL-Database-Preview.html"
 categories: ["Azure", "ML", "Security"]
 tags: ["Access Control", "Audit Logs", "Auditing", "Azure", "Compliance", "Data Governance", "Fabric SQL Database", "HIPAA", "Microsoft Fabric", "ML", "News", "OneLake", "Retention Policy", "Role Based Access", "Security", "SOX", "T SQL"]
 tags_normalized: ["access control", "audit logs", "auditing", "azure", "compliance", "data governance", "fabric sql database", "hipaa", "microsoft fabric", "ml", "news", "onelake", "retention policy", "role based access", "security", "sox", "t sql"]

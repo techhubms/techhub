@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/changelog/feed/"
 date: 2025-10-28 18:05:01 +00:00
-permalink: "/news/2025-10-28-Upcoming-Deprecation-of-CodeQL-Action-v3.html"
+permalink: "/2025-10-28-Upcoming-Deprecation-of-CodeQL-Action-v3.html"
 categories: ["DevOps", "Security"]
 tags: ["Action Deprecation", "Actions", "Application Security", "Code Scanning", "CodeQL Action", "CodeQL V4", "Dependabot", "DevOps", "GitHub Actions", "GitHub Enterprise Server", "News", "Node.js 24", "Retired", "Security", "Security Automation", "Workflow Update"]
 tags_normalized: ["action deprecation", "actions", "application security", "code scanning", "codeql action", "codeql v4", "dependabot", "devops", "github actions", "github enterprise server", "news", "nodedotjs 24", "retired", "security", "security automation", "workflow update"]

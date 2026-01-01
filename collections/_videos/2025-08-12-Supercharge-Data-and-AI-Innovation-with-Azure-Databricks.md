@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Developer YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
 date: 2025-08-12 07:00:58 +00:00
-permalink: "/videos/2025-08-12-Supercharge-Data-and-AI-Innovation-with-Azure-Databricks.html"
+permalink: "/2025-08-12-Supercharge-Data-and-AI-Innovation-with-Azure-Databricks.html"
 categories: ["AI", "Azure", "ML"]
 tags: ["AI", "Analytics Platform", "Azure", "Azure AI Foundry", "Azure Databricks", "Azure Essentials Show", "AzureDatabricks", "AzureEssentialsShow", "Data Analytics", "Data Governance", "Data Preparation", "Machine Learning", "Microsoft Entra", "Microsoft Fabric", "ML", "Model Development", "Pipeline Management", "Skilling Resources", "Videos"]
 tags_normalized: ["ai", "analytics platform", "azure", "azure ai foundry", "azure databricks", "azure essentials show", "azuredatabricks", "azureessentialsshow", "data analytics", "data governance", "data preparation", "machine learning", "microsoft entra", "microsoft fabric", "ml", "model development", "pipeline management", "skilling resources", "videos"]

@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft DevBlog"
 feed_url: "https://devblogs.microsoft.com/feed"
 date: 2025-08-07 18:00:52 +00:00
-permalink: "/news/2025-08-07-The-Complete-Playwright-End-to-End-Testing-Story-Tools-AI-Integration-and-Real-World-Workflows.html"
+permalink: "/2025-08-07-The-Complete-Playwright-End-to-End-Testing-Story-Tools-AI-Integration-and-Real-World-Workflows.html"
 categories: ["AI", "Azure", "Coding", "DevOps", "GitHub Copilot"]
 tags: ["AI", "AI Automation", "Automated Debugging", "Azure", "Azure App Testing", "Browser Automation", "Codegen", "Coding", "Continuous Integration", "DevOps", "End To End Testing", "Functional Testing", "GitHub Copilot", "GitHub Copilot Coding Agent", "JavaScript", "MCP", "News", "Playwright", "Playwright MCP", "Reporting", "Test Automation", "Testing Workflows", "Trace Viewer", "TypeScript", "UI Mode", "VS Code Extension"]
 tags_normalized: ["ai", "ai automation", "automated debugging", "azure", "azure app testing", "browser automation", "codegen", "coding", "continuous integration", "devops", "end to end testing", "functional testing", "github copilot", "github copilot coding agent", "javascript", "mcp", "news", "playwright", "playwright mcp", "reporting", "test automation", "testing workflows", "trace viewer", "typescript", "ui mode", "vs code extension"]

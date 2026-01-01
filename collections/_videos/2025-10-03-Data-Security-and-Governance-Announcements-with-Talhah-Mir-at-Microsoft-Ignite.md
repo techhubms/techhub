@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Events YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
 date: 2025-10-03 17:00:26 +00:00
-permalink: "/videos/2025-10-03-Data-Security-and-Governance-Announcements-with-Talhah-Mir-at-Microsoft-Ignite.html"
+permalink: "/2025-10-03-Data-Security-and-Governance-Announcements-with-Talhah-Mir-at-Microsoft-Ignite.html"
 categories: ["Security"]
 tags: ["AI", "Compliance", "Data Governance", "Data Security", "Governance Tools", "Information Protection", "Microsoft", "Microsoft Ignite", "Microsoft Purview", "Microsoft Security", "Responsible AI", "Security", "Security Announcements", "Talhah Mir", "Videos"]
 tags_normalized: ["ai", "compliance", "data governance", "data security", "governance tools", "information protection", "microsoft", "microsoft ignite", "microsoft purview", "microsoft security", "responsible ai", "security", "security announcements", "talhah mir", "videos"]

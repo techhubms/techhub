@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Fabric Blog"
 feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
 date: 2025-07-30 10:00:00 +00:00
-permalink: "/news/2025-07-30-Autoscale-Billing-for-Spark-in-Microsoft-Fabric-Now-Generally-Available.html"
+permalink: "/2025-07-30-Autoscale-Billing-for-Spark-in-Microsoft-Fabric-Now-Generally-Available.html"
 categories: ["Azure", "ML"]
 tags: ["Apache Spark", "Autoscale Billing", "Azure", "Billing Model", "Capacity Management", "Cloud Computing", "Cost Efficiency", "Data Workloads", "General Availability", "Microsoft Fabric", "ML", "News", "Serverless"]
 tags_normalized: ["apache spark", "autoscale billing", "azure", "billing model", "capacity management", "cloud computing", "cost efficiency", "data workloads", "general availability", "microsoft fabric", "ml", "news", "serverless"]

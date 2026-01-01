@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Visual Studio Code Releases"
 feed_url: "https://code.visualstudio.com/feed.xml"
 date: 2025-12-10 17:00:00 +00:00
-permalink: "/news/2025-12-10-Whats-New-in-Visual-Studio-Code-November-2025-Insiders-Release-v1107.html"
+permalink: "/2025-12-10-Whats-New-in-Visual-Studio-Code-November-2025-Insiders-Release-v1107.html"
 categories: ["AI", "Coding", "DevOps", "GitHub Copilot"]
 tags: ["Accessibility", "AI", "Code Chat", "Codespaces", "Coding", "Copilot CLI", "DevOps", "Editor Improvements", "GitHub Copilot", "GitHub MCP Server", "Microsoft Authentication", "MSAL", "News", "PowerShell", "Terminal", "Tree Sitter", "VS Code", "VS Code 1.107"]
 tags_normalized: ["accessibility", "ai", "code chat", "codespaces", "coding", "copilot cli", "devops", "editor improvements", "github copilot", "github mcp server", "microsoft authentication", "msal", "news", "powershell", "terminal", "tree sitter", "vs code", "vs code 1dot107"]

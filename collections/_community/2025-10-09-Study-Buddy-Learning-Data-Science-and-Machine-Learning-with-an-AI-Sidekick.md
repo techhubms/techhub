@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-10-09 07:00:00 +00:00
-permalink: "/community/2025-10-09-Study-Buddy-Learning-Data-Science-and-Machine-Learning-with-an-AI-Sidekick.html"
+permalink: "/2025-10-09-Study-Buddy-Learning-Data-Science-and-Machine-Learning-with-an-AI-Sidekick.html"
 categories: ["AI", "GitHub Copilot", "ML"]
 tags: ["AI", "AI Assistant", "Beginner", "Chatmode", "Community", "Curriculum", "Data Science", "Data Science For Beginners", "Education Technology", "GitHub", "GitHub Copilot", "Interactive Learning", "Machine Learning", "Microsoft", "ML", "Python", "Study Buddy Agent", "VS Code"]
 tags_normalized: ["ai", "ai assistant", "beginner", "chatmode", "community", "curriculum", "data science", "data science for beginners", "education technology", "github", "github copilot", "interactive learning", "machine learning", "microsoft", "ml", "python", "study buddy agent", "vs code"]

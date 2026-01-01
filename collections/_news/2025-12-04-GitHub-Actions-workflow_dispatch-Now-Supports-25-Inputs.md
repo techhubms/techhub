@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/changelog/feed/"
 date: 2025-12-04 19:58:47 +00:00
-permalink: "/news/2025-12-04-GitHub-Actions-workflow_dispatch-Now-Supports-25-Inputs.html"
+permalink: "/2025-12-04-GitHub-Actions-workflow_dispatch-Now-Supports-25-Inputs.html"
 categories: ["DevOps"]
 tags: ["Actions", "Automation", "CI/CD", "Continuous Integration", "DevOps", "GitHub", "GitHub Actions", "Improvement", "News", "Workflow API", "Workflow Dispatch", "Workflow Inputs", "Workflow Trigger"]
 tags_normalized: ["actions", "automation", "cislashcd", "continuous integration", "devops", "github", "github actions", "improvement", "news", "workflow api", "workflow dispatch", "workflow inputs", "workflow trigger"]

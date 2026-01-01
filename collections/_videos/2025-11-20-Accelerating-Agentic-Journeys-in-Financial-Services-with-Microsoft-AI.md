@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Events YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
 date: 2025-11-20 11:23:30 +00:00
-permalink: "/videos/2025-11-20-Accelerating-Agentic-Journeys-in-Financial-Services-with-Microsoft-AI.html"
+permalink: "/2025-11-20-Accelerating-Agentic-Journeys-in-Financial-Services-with-Microsoft-AI.html"
 categories: ["AI", "Azure"]
 tags: ["Agentic Journeys", "AI", "AI Adoption", "Azure", "Azure AI Foundry", "Client Agents", "Copilot Studio", "Data Integration", "Financial Services", "Intelligent Agents", "MCP Server", "Microsoft AI", "Microsoft Cloud", "Microsoft Ignite", "MicrosoftAICloudPartnerProgram", "Morningstar Case Study", "MSIgnite", "Partner Program", "Videos"]
 tags_normalized: ["agentic journeys", "ai", "ai adoption", "azure", "azure ai foundry", "client agents", "copilot studio", "data integration", "financial services", "intelligent agents", "mcp server", "microsoft ai", "microsoft cloud", "microsoft ignite", "microsoftaicloudpartnerprogram", "morningstar case study", "msignite", "partner program", "videos"]

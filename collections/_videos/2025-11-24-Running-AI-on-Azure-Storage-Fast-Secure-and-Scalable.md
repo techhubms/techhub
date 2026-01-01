@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Events YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
 date: 2025-11-24 10:26:37 +00:00
-permalink: "/videos/2025-11-24-Running-AI-on-Azure-Storage-Fast-Secure-and-Scalable.html"
+permalink: "/2025-11-24-Running-AI-on-Azure-Storage-Fast-Secure-and-Scalable.html"
 categories: ["AI", "Azure"]
 tags: ["AI", "AI Fine Tuning", "AI Training", "AKS", "Azure", "Azure AI Services", "Azure Blob Storage", "Azure Container Storage", "Blobfuse2", "Data Security", "Developer Velocity", "Enterprise Data", "GPU Optimization", "KAITO", "LangChain", "Microsoft Ignite", "Migrateandmodernizeyourestate", "MSIgnite", "OpenAI", "Ray", "Retrieval Augmented Generation", "Unified Storage Management", "Videos"]
 tags_normalized: ["ai", "ai fine tuning", "ai training", "aks", "azure", "azure ai services", "azure blob storage", "azure container storage", "blobfuse2", "data security", "developer velocity", "enterprise data", "gpu optimization", "kaito", "langchain", "microsoft ignite", "migrateandmodernizeyourestate", "msignite", "openai", "ray", "retrieval augmented generation", "unified storage management", "videos"]

@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "DotNet YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw"
 date: 2025-08-08 23:02:43 +00:00
-permalink: "/videos/2025-08-08-Blazor-Community-Standup-Validation-Improvements-in-Blazor.html"
+permalink: "/2025-08-08-Blazor-Community-Standup-Validation-Improvements-in-Blazor.html"
 categories: ["Coding"]
 tags: [".NET", ".NET 10", "ASP.NET Core", "Blazor", "Blazor Community Standup", "Code Demos", "Coding", "Complex Types", "Demo", "Developer", "Developer Community", "Developer Tools", "Dotnetdeveloper", "Microsoft", "Minimal APIs", "Software Developer", "Software Development", "Validation", "Videos"]
 tags_normalized: ["dotnet", "dotnet 10", "aspdotnet core", "blazor", "blazor community standup", "code demos", "coding", "complex types", "demo", "developer", "developer community", "developer tools", "dotnetdeveloper", "microsoft", "minimal apis", "software developer", "software development", "validation", "videos"]

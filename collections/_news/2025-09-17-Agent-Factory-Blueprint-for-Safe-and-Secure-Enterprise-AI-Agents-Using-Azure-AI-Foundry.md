@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The Azure Blog"
 feed_url: "https://azure.microsoft.com/en-us/blog/feed/"
 date: 2025-09-17 21:30:00 +00:00
-permalink: "/news/2025-09-17-Agent-Factory-Blueprint-for-Safe-and-Secure-Enterprise-AI-Agents-Using-Azure-AI-Foundry.html"
+permalink: "/2025-09-17-Agent-Factory-Blueprint-for-Safe-and-Secure-Enterprise-AI-Agents-Using-Azure-AI-Foundry.html"
 categories: ["AI", "Azure", "Security"]
 tags: ["Agent Factory", "AI", "AI + Machine Learning", "AI Agent Blueprint", "Analytics", "Azure", "Azure AI Foundry", "Compliance", "Data Protection", "DLP", "Enterprise AI", "Entra Agent ID", "EU AI Act", "Governance", "Management And Governance", "Microsoft Defender", "Microsoft Purview", "News", "NIST AI RMF", "Observability", "Prompt Injection", "PyRIT", "Red Teaming Agent", "Risk Evaluation", "Security", "Shift Left Security"]
 tags_normalized: ["agent factory", "ai", "ai plus machine learning", "ai agent blueprint", "analytics", "azure", "azure ai foundry", "compliance", "data protection", "dlp", "enterprise ai", "entra agent id", "eu ai act", "governance", "management and governance", "microsoft defender", "microsoft purview", "news", "nist ai rmf", "observability", "prompt injection", "pyrit", "red teaming agent", "risk evaluation", "security", "shift left security"]

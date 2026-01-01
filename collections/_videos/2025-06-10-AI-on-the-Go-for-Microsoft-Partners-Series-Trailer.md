@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Cloud YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCSgzRJMqIiCNtoM6Q7Q9Lqw"
 date: 2025-06-10 14:01:04 +00:00
-permalink: "/videos/2025-06-10-AI-on-the-Go-for-Microsoft-Partners-Series-Trailer.html"
+permalink: "/2025-06-10-AI-on-the-Go-for-Microsoft-Partners-Series-Trailer.html"
 categories: ["AI"]
 tags: ["Agentic AI", "AI", "AI in Business", "AI Trends", "Brand Experience", "Customer Experience", "Industry Solutions", "Microsoft AI", "Microsoft AI Partner Program", "Microsoft Cloud", "Microsoft Cloud Partner Program", "Microsoft Leaders", "Partner Opportunities", "Videos"]
 tags_normalized: ["agentic ai", "ai", "ai in business", "ai trends", "brand experience", "customer experience", "industry solutions", "microsoft ai", "microsoft ai partner program", "microsoft cloud", "microsoft cloud partner program", "microsoft leaders", "partner opportunities", "videos"]

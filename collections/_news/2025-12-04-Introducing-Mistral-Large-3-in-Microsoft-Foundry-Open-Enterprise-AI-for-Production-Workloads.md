@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft News"
 feed_url: "https://news.microsoft.com/source/feed/"
 date: 2025-12-04 00:53:08 +00:00
-permalink: "/news/2025-12-04-Introducing-Mistral-Large-3-in-Microsoft-Foundry-Open-Enterprise-AI-for-Production-Workloads.html"
+permalink: "/2025-12-04-Introducing-Mistral-Large-3-in-Microsoft-Foundry-Open-Enterprise-AI-for-Production-Workloads.html"
 categories: ["AI", "Azure"]
 tags: ["Agentic Systems", "AI", "Apache 2.0 License", "Automation Flows", "Azure", "Azure AI Foundry", "Cloud AI", "Company News", "Document Intelligence", "Enterprise AI", "Hybrid Deployment", "Long Context Reasoning", "Microsoft Foundry", "Mistral Large 3", "Model Governance", "Multimodal AI", "News", "Observability", "Open Weight Models", "Performance Benchmarking", "Production Workloads", "Responsible AI", "Retrieval Augmented Generation", "Safety", "VPC"]
 tags_normalized: ["agentic systems", "ai", "apache 2dot0 license", "automation flows", "azure", "azure ai foundry", "cloud ai", "company news", "document intelligence", "enterprise ai", "hybrid deployment", "long context reasoning", "microsoft foundry", "mistral large 3", "model governance", "multimodal ai", "news", "observability", "open weight models", "performance benchmarking", "production workloads", "responsible ai", "retrieval augmented generation", "safety", "vpc"]

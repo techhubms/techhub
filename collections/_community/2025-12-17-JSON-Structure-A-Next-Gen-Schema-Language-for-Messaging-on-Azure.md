@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-12-17 08:03:09 +00:00
-permalink: "/community/2025-12-17-JSON-Structure-A-Next-Gen-Schema-Language-for-Messaging-on-Azure.html"
+permalink: "/2025-12-17-JSON-Structure-A-Next-Gen-Schema-Language-for-Messaging-on-Azure.html"
 categories: ["Azure", "Coding"]
 tags: [".NET", "Avro", "Azure", "Azure Event Grid", "Azure Event Hubs", "Azure Service Bus", "Code Generation", "Coding", "Community", "Data Definition", "Data Modeling", "JSON Schema", "JSON Structure", "Messaging", "Microsoft Fabric", "Protobuf", "Python", "Schema Language", "SQL Server", "Structurize", "TypeScript", "VS Code Extension"]
 tags_normalized: ["dotnet", "avro", "azure", "azure event grid", "azure event hubs", "azure service bus", "code generation", "coding", "community", "data definition", "data modeling", "json schema", "json structure", "messaging", "microsoft fabric", "protobuf", "python", "schema language", "sql server", "structurize", "typescript", "vs code extension"]

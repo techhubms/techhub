@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft .NET Blog"
 feed_url: "https://devblogs.microsoft.com/dotnet/feed/"
 date: 2025-10-07 17:05:00 +00:00
-permalink: "/news/2025-10-07-Reviewing-AI-Generated-Code-in-NET-Best-Practices-for-Developers.html"
+permalink: "/2025-10-07-Reviewing-AI-Generated-Code-in-NET-Best-Practices-for-Developers.html"
 categories: ["AI", "Coding", "GitHub Copilot"]
 tags: [".NET", "AI", "AI Generated Code", "API Design", "Best Practices", "C#", "Code Quality", "Code Review", "Code Standards", "Coding", "Copilot", "Documentation", "Error Handling", "GitHub Copilot", "News", "Pull Requests", "Software Architecture", "Test Coverage", "Unit Testing"]
 tags_normalized: ["dotnet", "ai", "ai generated code", "api design", "best practices", "csharp", "code quality", "code review", "code standards", "coding", "copilot", "documentation", "error handling", "github copilot", "news", "pull requests", "software architecture", "test coverage", "unit testing"]

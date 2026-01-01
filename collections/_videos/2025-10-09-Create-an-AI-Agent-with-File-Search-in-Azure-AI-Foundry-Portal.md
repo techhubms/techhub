@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Developer YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
 date: 2025-10-09 17:04:28 +00:00
-permalink: "/videos/2025-10-09-Create-an-AI-Agent-with-File-Search-in-Azure-AI-Foundry-Portal.html"
+permalink: "/2025-10-09-Create-an-AI-Agent-with-File-Search-in-Azure-AI-Foundry-Portal.html"
 categories: ["AI", "Azure"]
 tags: ["Agent Configuration", "Agent Playground", "AI", "AI Agent", "AI Development", "Azure", "Azure AI Foundry", "Cloud AI", "Cloud Computing", "Dev", "Development", "File Search", "File Upload", "Microsoft", "Microsoft Azure", "Model Mondays", "No Code Development", "Portal Tools", "Tech", "Technology", "Videos"]
 tags_normalized: ["agent configuration", "agent playground", "ai", "ai agent", "ai development", "azure", "azure ai foundry", "cloud ai", "cloud computing", "dev", "development", "file search", "file upload", "microsoft", "microsoft azure", "model mondays", "no code development", "portal tools", "tech", "technology", "videos"]

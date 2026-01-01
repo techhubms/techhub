@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-12-04 21:00:36 +00:00
-permalink: "/community/2025-12-04-KPI-Driven-AI-Enabled-Tiering-Architecture-for-Microsofts-Global-B2B-Business.html"
+permalink: "/2025-12-04-KPI-Driven-AI-Enabled-Tiering-Architecture-for-Microsofts-Global-B2B-Business.html"
 categories: ["AI", "Azure", "ML"]
 tags: ["AI", "Azure", "Azure Stream Analytics", "Azure Synapse Analytics", "Business Analytics", "CatBoost", "Clustering", "Community", "Composite Score Optimization", "Dynamic Tiering", "FastAPI", "Gurobi", "Hybrid Segmentation", "KPI Segmentation", "LLMs", "Machine Learning", "Microsoft MCAPS", "ML", "OpenAI API", "Optimization", "OR Tools", "Pyomo", "Sales Planning", "Ward Clustering", "XGBoost"]
 tags_normalized: ["ai", "azure", "azure stream analytics", "azure synapse analytics", "business analytics", "catboost", "clustering", "community", "composite score optimization", "dynamic tiering", "fastapi", "gurobi", "hybrid segmentation", "kpi segmentation", "llms", "machine learning", "microsoft mcaps", "ml", "openai api", "optimization", "or tools", "pyomo", "sales planning", "ward clustering", "xgboost"]

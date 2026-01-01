@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "GitHub YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ"
 date: 2025-08-26 14:01:29 +00:00
-permalink: "/videos/2025-08-26-End-to-End-Agentic-Development-with-GitHub-Copilot-A-Developer-Workflow-Demo.html"
+permalink: "/2025-08-26-End-to-End-Agentic-Development-with-GitHub-Copilot-A-Developer-Workflow-Demo.html"
 categories: ["AI", "Coding", "GitHub Copilot"]
 tags: ["AI", "AI Development", "Cloud Development Environment", "Code Generation", "Coding", "Coding Tools", "CodingAgent", "Copilot Coding Agent", "CopilotCodingAgent", "Debugging", "Developer Workflow", "GitHub Copilot", "Instruction Files", "Issue Triaging", "Pull Requests", "Software Development", "Test Automation", "Videos"]
 tags_normalized: ["ai", "ai development", "cloud development environment", "code generation", "coding", "coding tools", "codingagent", "copilot coding agent", "copilotcodingagent", "debugging", "developer workflow", "github copilot", "instruction files", "issue triaging", "pull requests", "software development", "test automation", "videos"]

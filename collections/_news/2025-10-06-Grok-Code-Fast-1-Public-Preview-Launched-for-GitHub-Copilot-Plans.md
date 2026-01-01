@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/changelog/feed/"
 date: 2025-10-06 16:11:26 +00:00
-permalink: "/news/2025-10-06-Grok-Code-Fast-1-Public-Preview-Launched-for-GitHub-Copilot-Plans.html"
+permalink: "/2025-10-06-Grok-Code-Fast-1-Public-Preview-Launched-for-GitHub-Copilot-Plans.html"
 categories: ["AI", "GitHub Copilot"]
 tags: ["Agent Mode", "AI", "AI Model", "Ask Mode", "Copilot", "Copilot Chat", "Developer Tools", "Eclipse", "Edit Mode", "Enterprise Admin", "GitHub Copilot", "Grok Code Fast 1", "JetBrains IDEs", "News", "Policy Management", "Public Preview", "VS", "VS Code", "Xcode"]
 tags_normalized: ["agent mode", "ai", "ai model", "ask mode", "copilot", "copilot chat", "developer tools", "eclipse", "edit mode", "enterprise admin", "github copilot", "grok code fast 1", "jetbrains ides", "news", "policy management", "public preview", "vs", "vs code", "xcode"]

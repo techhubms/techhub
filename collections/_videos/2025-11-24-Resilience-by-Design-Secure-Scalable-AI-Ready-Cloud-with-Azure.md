@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Events YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
 date: 2025-11-24 08:20:54 +00:00
-permalink: "/videos/2025-11-24-Resilience-by-Design-Secure-Scalable-AI-Ready-Cloud-with-Azure.html"
+permalink: "/2025-11-24-Resilience-by-Design-Secure-Scalable-AI-Ready-Cloud-with-Azure.html"
 categories: ["AI", "Azure", "Security"]
 tags: ["AI", "AI Ready", "Azure", "Azure Resiliency", "Azure SQL", "Cloud Architecture", "Failure Simulation", "Infrastructure Resilience", "InnovatewithAzureAIappsandagents", "Microsoft Ignite", "MSIgnite", "Recovery Orchestration", "Recovery Services", "Resilience Goals", "Security", "Shared Responsibility", "Threat Detection", "Videos", "VM Backup"]
 tags_normalized: ["ai", "ai ready", "azure", "azure resiliency", "azure sql", "cloud architecture", "failure simulation", "infrastructure resilience", "innovatewithazureaiappsandagents", "microsoft ignite", "msignite", "recovery orchestration", "recovery services", "resilience goals", "security", "shared responsibility", "threat detection", "videos", "vm backup"]

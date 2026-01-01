@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "John Savill's Technical Training"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCpIn7ox7j7bH_OFj7tYouOQ"
 date: 2025-08-06 13:27:43 +00:00
-permalink: "/videos/2025-08-06-App-Gateway-for-Containers-Web-Application-Firewall-WAF-Overview.html"
+permalink: "/2025-08-06-App-Gateway-for-Containers-Web-Application-Firewall-WAF-Overview.html"
 categories: ["Azure", "Security"]
 tags: ["AKS", "App Gateway For Containers", "Application Gateway", "Azure", "Azure Cloud", "Azure Networking", "Azure Service Operator", "Cloud", "Cloud Security", "Container Security", "Firewall", "Firewall Policies", "Kubernetes", "Load Balancing", "Logging", "Microsoft", "Microsoft Azure", "Pricing", "Security", "Security Configuration", "Videos", "WAF", "Web Application Firewall"]
 tags_normalized: ["aks", "app gateway for containers", "application gateway", "azure", "azure cloud", "azure networking", "azure service operator", "cloud", "cloud security", "container security", "firewall", "firewall policies", "kubernetes", "load balancing", "logging", "microsoft", "microsoft azure", "pricing", "security", "security configuration", "videos", "waf", "web application firewall"]

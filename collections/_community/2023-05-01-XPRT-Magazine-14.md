@@ -6,7 +6,7 @@ categories: ["AI", "Azure", "Coding", "DevOps", "Security"]
 date: 2023-05-01 00:00:00 +00:00
 author: "Xebia"
 viewing_mode: "external"
-permalink: "/community/2023-05-01-XPRT-Magazine-14.html"
+permalink: "/2023-05-01-XPRT-Magazine-14.html"
 excerpt_separator: <!--excerpt_end-->
 tags: ["AI", "Automation", "Azure", "Bicep", "Blazor", "ChatGPT", "CI/CD", "Cloud Security", "Coding", "Community", "DevOps", "Digital Transformation", "EF", "Identity", "Load Testing", "Magazines", "Mutation Testing", "OAuth2", "Pulumi", "Security", "Terraform", "Zero Trust"]
 tags_normalized: ["ai", "automation", "azure", "bicep", "blazor", "chatgpt", "cislashcd", "cloud security", "coding", "community", "devops", "digital transformation", "ef", "identity", "load testing", "magazines", "mutation testing", "oauth2", "pulumi", "security", "terraform", "zero trust"]

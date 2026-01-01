@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Events YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
 date: 2025-11-26 00:48:16 +00:00
-permalink: "/videos/2025-11-26-AI-Driven-Insights-and-Analytics-with-Microsoft-Fabric-and-Power-BI.html"
+permalink: "/2025-11-26-AI-Driven-Insights-and-Analytics-with-Microsoft-Fabric-and-Power-BI.html"
 categories: ["AI", "ML"]
 tags: ["AI", "AI First Organization", "AI Powered Analytics", "Business Intelligence", "Data Agents", "Data Driven Decisions", "Digital Transformation", "Fabric AI", "Fabric Breakout", "Microsoft Ecosystem", "Microsoft Fabric", "ML", "MSIgnite", "Power BI", "Scalable Analytics", "Trusted Analytics", "Unified Data Platform", "Unifyyourdataplatform", "Videos"]
 tags_normalized: ["ai", "ai first organization", "ai powered analytics", "business intelligence", "data agents", "data driven decisions", "digital transformation", "fabric ai", "fabric breakout", "microsoft ecosystem", "microsoft fabric", "ml", "msignite", "power bi", "scalable analytics", "trusted analytics", "unified data platform", "unifyyourdataplatform", "videos"]

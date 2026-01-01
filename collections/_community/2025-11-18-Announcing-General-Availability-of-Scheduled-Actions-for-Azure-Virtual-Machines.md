@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-11-18 17:35:21 +00:00
-permalink: "/community/2025-11-18-Announcing-General-Availability-of-Scheduled-Actions-for-Azure-Virtual-Machines.html"
+permalink: "/2025-11-18-Announcing-General-Availability-of-Scheduled-Actions-for-Azure-Virtual-Machines.html"
 categories: ["Azure"]
 tags: ["API Automation", "Azure", "Azure Compute", "Azure REST API", "Azure Virtual Machines", "Batch Operations", "Community", "Concurrent Operations", "Contoso Use Case", "Scheduled Actions", "Subscription Throttling", "VM Management"]
 tags_normalized: ["api automation", "azure", "azure compute", "azure rest api", "azure virtual machines", "batch operations", "community", "concurrent operations", "contoso use case", "scheduled actions", "subscription throttling", "vm management"]

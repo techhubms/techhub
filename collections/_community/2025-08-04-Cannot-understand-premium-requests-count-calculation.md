@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Reddit Github Copilot"
 feed_url: "https://www.reddit.com/r/GithubCopilot.rss"
 date: 2025-08-04 10:53:30 +00:00
-permalink: "/community/2025-08-04-Cannot-understand-premium-requests-count-calculation.html"
+permalink: "/2025-08-04-Cannot-understand-premium-requests-count-calculation.html"
 categories: ["AI", "GitHub Copilot"]
 tags: ["AI", "AI Models", "Community", "Copilot Usage", "GitHub Copilot", "Model Access", "Premium Requests", "Pricing", "Pricing Concerns", "Request Limits", "Subscription", "Usage Quota"]
 tags_normalized: ["ai", "ai models", "community", "copilot usage", "github copilot", "model access", "premium requests", "pricing", "pricing concerns", "request limits", "subscription", "usage quota"]

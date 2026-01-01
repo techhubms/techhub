@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Community"
 date: 2025-08-15 17:08:39 +00:00
-permalink: "/community/2025-08-15-Deploying-OpenAIs-GPT-OSS-20B-on-Azure-AKS-with-KAITO-and-vLLM.html"
+permalink: "/2025-08-15-Deploying-OpenAIs-GPT-OSS-20B-on-Azure-AKS-with-KAITO-and-vLLM.html"
 categories: ["AI", "Azure", "ML"]
 tags: ["AI", "AI Endpoint", "AKS", "API Deployment", "Azure", "Azure CLI", "Chat Completions API", "Community", "GPT OSS 20B", "GPU Inference", "KAITO", "Kubectl", "Kubernetes", "LLM", "Load Testing", "ML", "NVIDIA A10", "OpenAI", "Performance Benchmarking", "Token Throughput", "Vllm", "Workspace Configuration", "YAML"]
 tags_normalized: ["ai", "ai endpoint", "aks", "api deployment", "azure", "azure cli", "chat completions api", "community", "gpt oss 20b", "gpu inference", "kaito", "kubectl", "kubernetes", "llm", "load testing", "ml", "nvidia a10", "openai", "performance benchmarking", "token throughput", "vllm", "workspace configuration", "yaml"]

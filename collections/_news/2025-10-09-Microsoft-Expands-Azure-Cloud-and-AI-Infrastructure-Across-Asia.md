@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The Azure Blog"
 feed_url: "https://azure.microsoft.com/en-us/blog/feed/"
 date: 2025-10-09 15:00:00 +00:00
-permalink: "/news/2025-10-09-Microsoft-Expands-Azure-Cloud-and-AI-Infrastructure-Across-Asia.html"
+permalink: "/2025-10-09-Microsoft-Expands-Azure-Cloud-and-AI-Infrastructure-Across-Asia.html"
 categories: ["AI", "Azure", "DevOps"]
 tags: ["AI", "AI + Machine Learning", "AI Infrastructure", "Asia Datacenter Regions", "Azure", "Azure Availability Zones", "Azure Machine Learning", "Azure OpenAI Service", "Cloud Adoption Framework", "Cloud Infrastructure", "Cost Optimization", "Datacenter", "DevOps", "Digital Transformation", "India", "Indonesia", "Internet Of Things", "Low Latency Connectivity", "Malaysia", "Microsoft Azure", "Microsoft Cloud Adoption Framework", "Multi Region Architecture", "Network Infrastructure", "News", "Scalability", "Taiwan", "Well Architected Framework"]
 tags_normalized: ["ai", "ai plus machine learning", "ai infrastructure", "asia datacenter regions", "azure", "azure availability zones", "azure machine learning", "azure openai service", "cloud adoption framework", "cloud infrastructure", "cost optimization", "datacenter", "devops", "digital transformation", "india", "indonesia", "internet of things", "low latency connectivity", "malaysia", "microsoft azure", "microsoft cloud adoption framework", "multi region architecture", "network infrastructure", "news", "scalability", "taiwan", "well architected framework"]

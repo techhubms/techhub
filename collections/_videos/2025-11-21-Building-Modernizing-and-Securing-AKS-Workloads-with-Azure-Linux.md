@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Events YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
 date: 2025-11-21 11:13:59 +00:00
-permalink: "/videos/2025-11-21-Building-Modernizing-and-Securing-AKS-Workloads-with-Azure-Linux.html"
+permalink: "/2025-11-21-Building-Modernizing-and-Securing-AKS-Workloads-with-Azure-Linux.html"
 categories: ["Azure", "Security"]
 tags: ["AKS", "Azure", "Azure Linux", "CBL Mariner", "Container Host", "Dm Verity", "GPU Support", "Integrity Policy Enforcement", "Kata Container Architecture", "Linux On Azure", "Migrateandmodernizeyourestate", "Migration", "MSIgnite", "Node Lifecycle Management", "OS Guard", "Pod Sandboxing", "Security", "SELinux", "Videos", "Workload Isolation"]
 tags_normalized: ["aks", "azure", "azure linux", "cbl mariner", "container host", "dm verity", "gpu support", "integrity policy enforcement", "kata container architecture", "linux on azure", "migrateandmodernizeyourestate", "migration", "msignite", "node lifecycle management", "os guard", "pod sandboxing", "security", "selinux", "videos", "workload isolation"]

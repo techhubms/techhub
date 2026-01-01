@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Visual Studio Code Releases"
 feed_url: "https://code.visualstudio.com/feed.xml"
 date: 2025-04-03 17:00:00 +00:00
-permalink: "/news/2025-04-03-Visual-Studio-Code-March-2025-v199-Release-Notes.html"
+permalink: "/2025-04-03-Visual-Studio-Code-March-2025-v199-Release-Notes.html"
 categories: ["AI", "Coding"]
 tags: ["Accessibility", "Agent Mode", "AI", "AI Coding", "Chat", "Coding", "Copilot", "Extension API", "Jupyter Notebook", "MCP", "MCP Servers", "News", "Next Edit Suggestions", "Pylance", "Remote Development", "Source Control", "Terminal IntelliSense", "VS Code"]
 tags_normalized: ["accessibility", "agent mode", "ai", "ai coding", "chat", "coding", "copilot", "extension api", "jupyter notebook", "mcp", "mcp servers", "news", "next edit suggestions", "pylance", "remote development", "source control", "terminal intellisense", "vs code"]

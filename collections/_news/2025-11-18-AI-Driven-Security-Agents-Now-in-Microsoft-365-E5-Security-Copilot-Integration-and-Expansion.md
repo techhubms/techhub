@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Security Blog"
 feed_url: "https://www.microsoft.com/en-us/security/blog/feed/"
 date: 2025-11-18 16:00:00 +00:00
-permalink: "/news/2025-11-18-AI-Driven-Security-Agents-Now-in-Microsoft-365-E5-Security-Copilot-Integration-and-Expansion.html"
+permalink: "/2025-11-18-AI-Driven-Security-Agents-Now-in-Microsoft-365-E5-Security-Copilot-Integration-and-Expansion.html"
 categories: ["AI", "Security"]
 tags: ["Adaptive Agents", "AI", "AI Security Agents", "Conditional Access", "Data Security", "Identity And Access Management", "Microsoft 365 E5", "Microsoft Defender", "Microsoft Entra", "Microsoft Intune", "Microsoft Purview", "Microsoft Security Copilot", "News", "Partner Built Agents", "Security", "Security Automation", "Security Operations", "Threat Intelligence"]
 tags_normalized: ["adaptive agents", "ai", "ai security agents", "conditional access", "data security", "identity and access management", "microsoft 365 e5", "microsoft defender", "microsoft entra", "microsoft intune", "microsoft purview", "microsoft security copilot", "news", "partner built agents", "security", "security automation", "security operations", "threat intelligence"]

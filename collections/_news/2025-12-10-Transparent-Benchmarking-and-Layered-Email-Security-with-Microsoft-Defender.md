@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Security Blog"
 feed_url: "https://www.microsoft.com/en-us/security/blog/feed/"
 date: 2025-12-10 17:00:00 +00:00
-permalink: "/news/2025-12-10-Transparent-Benchmarking-and-Layered-Email-Security-with-Microsoft-Defender.html"
+permalink: "/2025-12-10-Transparent-Benchmarking-and-Layered-Email-Security-with-Microsoft-Defender.html"
 categories: ["Security"]
 tags: ["Benchmarking", "Cybersecurity", "Email Security", "Integrated Cloud Email Security", "Malicious Email Protection", "Microsoft Defender For Office 365", "Microsoft Security", "News", "Post Delivery Remediation", "Secure Email Gateway", "Security", "Security Architecture", "Security Vendor Comparison", "Spam Filtering", "Threat Detection", "Transparent Security", "Zero Hour Auto Purge"]
 tags_normalized: ["benchmarking", "cybersecurity", "email security", "integrated cloud email security", "malicious email protection", "microsoft defender for office 365", "microsoft security", "news", "post delivery remediation", "secure email gateway", "security", "security architecture", "security vendor comparison", "spam filtering", "threat detection", "transparent security", "zero hour auto purge"]

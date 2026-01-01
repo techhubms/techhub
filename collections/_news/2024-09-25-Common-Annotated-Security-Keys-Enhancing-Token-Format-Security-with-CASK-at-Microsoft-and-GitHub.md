@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft DevBlog"
 feed_url: "https://devblogs.microsoft.com/engineering-at-microsoft/feed/"
 date: 2024-09-25 18:50:15 +00:00
-permalink: "/news/2024-09-25-Common-Annotated-Security-Keys-Enhancing-Token-Format-Security-with-CASK-at-Microsoft-and-GitHub.html"
+permalink: "/2024-09-25-Common-Annotated-Security-Keys-Enhancing-Token-Format-Security-with-CASK-at-Microsoft-and-GitHub.html"
 categories: ["Azure", "DevOps", "Security"]
 tags: ["1ES", "ADO Azure DevOps GHAS", "Azure", "Azure DevOps", "BASE62", "CASK", "Checksum", "DevOps", "Engineering@Microsoft", "Entropy", "Fixed Signatures", "GitHub Advanced Security", "Identity Management", "Metadata", "News", "Open Standard", "Sdl", "Secret Management", "Security", "Security Tokens", "Static Analysis", "Test Keys", "Token Detection"]
 tags_normalized: ["1es", "ado azure devops ghas", "azure", "azure devops", "base62", "cask", "checksum", "devops", "engineeringatmicrosoft", "entropy", "fixed signatures", "github advanced security", "identity management", "metadata", "news", "open standard", "sdl", "secret management", "security", "security tokens", "static analysis", "test keys", "token detection"]

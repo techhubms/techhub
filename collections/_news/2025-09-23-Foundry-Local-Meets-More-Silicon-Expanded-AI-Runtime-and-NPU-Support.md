@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft AI Foundry Blog"
 feed_url: "https://devblogs.microsoft.com/foundry/feed/"
 date: 2025-09-23 19:01:15 +00:00
-permalink: "/news/2025-09-23-Foundry-Local-Meets-More-Silicon-Expanded-AI-Runtime-and-NPU-Support.html"
+permalink: "/2025-09-23-Foundry-Local-Meets-More-Silicon-Expanded-AI-Runtime-and-NPU-Support.html"
 categories: ["AI", "Azure", "Coding"]
 tags: ["AI", "AI Development", "AI Models", "AI Runtime", "AMD", "Azure", "Azure AI Foundry", "Brew", "Coding", "Cross Platform Development", "Developer Tools", "Edge AI", "Foundry Local", "FoundryLocal", "Installation Guide", "Intel", "News", "NPU", "NVIDIA", "On Device AI", "Performance Acceleration", "Qualcomm", "Windows 11", "Windows ML", "Winget"]
 tags_normalized: ["ai", "ai development", "ai models", "ai runtime", "amd", "azure", "azure ai foundry", "brew", "coding", "cross platform development", "developer tools", "edge ai", "foundry local", "foundrylocal", "installation guide", "intel", "news", "npu", "nvidia", "on device ai", "performance acceleration", "qualcomm", "windows 11", "windows ml", "winget"]

@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "GitHub YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ"
 date: 2025-09-01 14:01:20 +00:00
-permalink: "/videos/2025-09-01-A-First-Look-at-the-New-Copilot-Agents-Panel-on-GitHub.html"
+permalink: "/2025-09-01-A-First-Look-at-the-New-Copilot-Agents-Panel-on-GitHub.html"
 categories: ["AI", "GitHub Copilot"]
 tags: ["Agents Panel", "AI", "AI Assistance", "Browser Integration", "Code Collaboration", "Developer", "Developer Tools", "GitHub", "GitHub Copilot", "Issue Management", "Pull Requests", "Repository Management", "Videos", "Web Interface"]
 tags_normalized: ["agents panel", "ai", "ai assistance", "browser integration", "code collaboration", "developer", "developer tools", "github", "github copilot", "issue management", "pull requests", "repository management", "videos", "web interface"]

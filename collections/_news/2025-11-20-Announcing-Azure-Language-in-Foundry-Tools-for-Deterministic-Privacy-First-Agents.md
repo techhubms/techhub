@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft AI Foundry Blog"
 feed_url: "https://devblogs.microsoft.com/foundry/feed/"
 date: 2025-11-20 16:00:12 +00:00
-permalink: "/news/2025-11-20-Announcing-Azure-Language-in-Foundry-Tools-for-Deterministic-Privacy-First-Agents.html"
+permalink: "/2025-11-20-Announcing-Azure-Language-in-Foundry-Tools-for-Deterministic-Privacy-First-Agents.html"
 categories: ["AI", "Azure"]
 tags: ["AI", "AI Agent", "AI Agents", "AI Development", "AI Tools", "Authentication", "Azure", "Azure AI", "Azure AI Foundry", "Azure AI Services", "Azure Language", "CLU", "Conversational Language Understanding", "Determinism", "Entity Extraction", "Foundry Tools", "Healthcare Entity Extraction", "Intent Detection", "Intent Routing", "Key Phrase Extraction", "Language Detection", "MCP", "MCP Server", "Microsoft Entra ID", "Microsoft Foundry", "MSIgnite", "Multi Turn Conversations", "Named Entity Recognition", "News", "Pii Redaction", "Privacy", "Privacy Control", "Sentiment Analysis", "Slot Filling", "Text Summarization"]
 tags_normalized: ["ai", "ai agent", "ai agents", "ai development", "ai tools", "authentication", "azure", "azure ai", "azure ai foundry", "azure ai services", "azure language", "clu", "conversational language understanding", "determinism", "entity extraction", "foundry tools", "healthcare entity extraction", "intent detection", "intent routing", "key phrase extraction", "language detection", "mcp", "mcp server", "microsoft entra id", "microsoft foundry", "msignite", "multi turn conversations", "named entity recognition", "news", "pii redaction", "privacy", "privacy control", "sentiment analysis", "slot filling", "text summarization"]

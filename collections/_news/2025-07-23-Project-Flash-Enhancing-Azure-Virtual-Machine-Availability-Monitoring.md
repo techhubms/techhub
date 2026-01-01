@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The Azure Blog"
 feed_url: "https://azure.microsoft.com/en-us/blog/feed/"
 date: 2025-07-23 16:00:00 +00:00
-permalink: "/news/2025-07-23-Project-Flash-Enhancing-Azure-Virtual-Machine-Availability-Monitoring.html"
+permalink: "/2025-07-23-Project-Flash-Enhancing-Azure-Virtual-Machine-Availability-Monitoring.html"
 categories: ["Azure", "DevOps"]
 tags: ["Advancing Reliability", "Availability Monitoring", "Azure", "Azure Monitor", "Azure Resource Graph", "Azure Virtual Machines", "Cloud Observability", "Compute", "DevOps", "Event Grid", "Infrastructure Monitoring", "Infrastructure Reliability", "Internet Of Things", "Management And Governance", "News", "Project Flash", "Real Time Alerts", "Resource Health", "Root Cause Analysis", "Service Health"]
 tags_normalized: ["advancing reliability", "availability monitoring", "azure", "azure monitor", "azure resource graph", "azure virtual machines", "cloud observability", "compute", "devops", "event grid", "infrastructure monitoring", "infrastructure reliability", "internet of things", "management and governance", "news", "project flash", "real time alerts", "resource health", "root cause analysis", "service health"]

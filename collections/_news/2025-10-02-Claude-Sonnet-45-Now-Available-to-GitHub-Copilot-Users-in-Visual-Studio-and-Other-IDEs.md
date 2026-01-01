@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/changelog/feed/"
 date: 2025-10-02 19:20:00 +00:00
-permalink: "/news/2025-10-02-Claude-Sonnet-45-Now-Available-to-GitHub-Copilot-Users-in-Visual-Studio-and-Other-IDEs.html"
+permalink: "/2025-10-02-Claude-Sonnet-45-Now-Available-to-GitHub-Copilot-Users-in-Visual-Studio-and-Other-IDEs.html"
 categories: ["AI", "GitHub Copilot"]
 tags: ["AI", "AI Models", "Claude Sonnet 4.5", "Copilot", "Copilot Enterprise", "Copilot Pro", "Eclipse", "GitHub Copilot", "IDE Integration", "JetBrains IDEs", "Model Picker", "News", "Public Preview", "VS", "VS Code", "Xcode"]
 tags_normalized: ["ai", "ai models", "claude sonnet 4dot5", "copilot", "copilot enterprise", "copilot pro", "eclipse", "github copilot", "ide integration", "jetbrains ides", "model picker", "news", "public preview", "vs", "vs code", "xcode"]

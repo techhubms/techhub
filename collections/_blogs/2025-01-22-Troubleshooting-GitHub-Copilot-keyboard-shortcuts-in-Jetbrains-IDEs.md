@@ -9,10 +9,10 @@ viewing_mode: "external"
 feed_name: "Jesse Houwing's Blog"
 feed_url: "https://jessehouwing.net/rss/"
 date: 2025-01-22 18:39:29 +00:00
-permalink: "/blogs/2025-01-22-Troubleshooting-GitHub-Copilot-Keyboard-Shortcuts-in-JetBrains-IDEs.html"
+permalink: "/2025-01-22-Troubleshooting-GitHub-Copilot-keyboard-shortcuts-in-Jetbrains-IDEs.html"
 categories: ["AI", "GitHub Copilot"]
-tags: ["AI", "Codespaces", "GitHub", "GitHub Copilot", "IDE Configuration", "IntelliJ", "Jetbrains", "Keyboard Shortcuts", "Line Completion", "Plugin Conflicts", "Blogs", "Pycharm", "Rider", "RubyMine", "VS", "VS Code", "Webstorm"]
-tags_normalized: ["ai", "codespaces", "github", "github copilot", "ide configuration", "intellij", "jetbrains", "keyboard shortcuts", "line completion", "plugin conflicts", "blogs", "pycharm", "rider", "rubymine", "vs", "vs code", "webstorm"]
+tags: ["AI", "Blogs", "Codespaces", "GitHub", "GitHub Copilot", "IDE Configuration", "IntelliJ", "Jetbrains", "Keyboard Shortcuts", "Line Completion", "Plugin Conflicts", "Pycharm", "Rider", "RubyMine", "VS", "VS Code", "Webstorm"]
+tags_normalized: ["ai", "blogs", "codespaces", "github", "github copilot", "ide configuration", "intellij", "jetbrains", "keyboard shortcuts", "line completion", "plugin conflicts", "pycharm", "rider", "rubymine", "vs", "vs code", "webstorm"]
 ---
 
 Jesse Houwing provides a practical guide to resolving keyboard shortcut and code completion conflicts when using GitHub Copilot in JetBrains IDEs. This article outlines the main issues developers face and step-by-step solutions based on Houwing's workshop experiences.<!--excerpt_end-->

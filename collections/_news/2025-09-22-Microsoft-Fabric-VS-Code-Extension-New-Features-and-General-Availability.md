@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Fabric Blog"
 feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
 date: 2025-09-22 10:30:00 +00:00
-permalink: "/news/2025-09-22-Microsoft-Fabric-VS-Code-Extension-New-Features-and-General-Availability.html"
+permalink: "/2025-09-22-Microsoft-Fabric-VS-Code-Extension-New-Features-and-General-Availability.html"
 categories: ["Azure", "Coding", "DevOps", "ML"]
 tags: ["API", "Automation", "Azure", "Azure DevOps", "Coding", "DevOps", "Fabric Workspaces", "Git Integration", "Item Definitions", "Microsoft Fabric", "ML", "MSSQL Extension", "News", "Source Control", "SQL Database", "VS Code", "VS Code Extension", "Workspace Management"]
 tags_normalized: ["api", "automation", "azure", "azure devops", "coding", "devops", "fabric workspaces", "git integration", "item definitions", "microsoft fabric", "ml", "mssql extension", "news", "source control", "sql database", "vs code", "vs code extension", "workspace management"]

@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Events YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
 date: 2025-11-21 13:00:16 +00:00
-permalink: "/videos/2025-11-21-Advanced-Agent-Development-with-Copilot-Studio.html"
+permalink: "/2025-11-21-Advanced-Agent-Development-with-Copilot-Studio.html"
 categories: ["AI"]
 tags: ["Advanced AI", "Agent Orchestration", "AI", "AI Agents", "AI Development", "Anthropic Models", "Autonomous Triggers", "Business Process Automation", "Copilot Studio", "Demo", "Innovatewithlow", "Knowledge Grounding", "Microsoft Ignite", "MSIgnite", "Multi Agent Systems", "Scott Durow", "UI Automation", "Videos"]
 tags_normalized: ["advanced ai", "agent orchestration", "ai", "ai agents", "ai development", "anthropic models", "autonomous triggers", "business process automation", "copilot studio", "demo", "innovatewithlow", "knowledge grounding", "microsoft ignite", "msignite", "multi agent systems", "scott durow", "ui automation", "videos"]

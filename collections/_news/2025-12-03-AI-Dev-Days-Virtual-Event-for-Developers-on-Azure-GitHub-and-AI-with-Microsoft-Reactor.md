@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft AI Foundry Blog"
 feed_url: "https://devblogs.microsoft.com/foundry/feed/"
 date: 2025-12-03 03:15:13 +00:00
-permalink: "/news/2025-12-03-AI-Dev-Days-Virtual-Event-for-Developers-on-Azure-GitHub-and-AI-with-Microsoft-Reactor.html"
+permalink: "/2025-12-03-AI-Dev-Days-Virtual-Event-for-Developers-on-Azure-GitHub-and-AI-with-Microsoft-Reactor.html"
 categories: ["AI", "Azure", "Coding", "DevOps", "GitHub Copilot"]
 tags: ["Agent HQ", "Agentic DevOps", "AI", "AI Dev Days", "AI Training", "App Modernization", "Azure", "Azure SRE Agent", "Coding", "DevOps", "Foundry", "GitHub Copilot", "GitHub Universe", "MCP", "Microsoft Foundry", "Microsoft Ignite", "Microsoft Reactor", "News", "VirtualEvent", "VS", "VS Code"]
 tags_normalized: ["agent hq", "agentic devops", "ai", "ai dev days", "ai training", "app modernization", "azure", "azure sre agent", "coding", "devops", "foundry", "github copilot", "github universe", "mcp", "microsoft foundry", "microsoft ignite", "microsoft reactor", "news", "virtualevent", "vs", "vs code"]

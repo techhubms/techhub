@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-11-18 16:13:48 +00:00
-permalink: "/community/2025-11-18-Azure-Application-Platform-Innovations-Announced-at-Ignite-2025.html"
+permalink: "/2025-11-18-Azure-Application-Platform-Innovations-Announced-at-Ignite-2025.html"
 categories: ["AI", "Azure", "DevOps", "GitHub Copilot", "Security"]
 tags: [".NET Modernization", "AI", "AI Gateway", "AKS", "AKS Automatic", "API Management", "App Modernization", "Azure", "Azure Application Platform", "Azure Functions", "Azure Red Hat OpenShift", "Community", "Confidential Containers", "DevOps", "Docker Compose", "Durable Functions", "GitHub Copilot", "Logic Apps", "MCP", "Microsoft Foundry", "Multi Agent Orchestration", "Security", "Semantic Kernel"]
 tags_normalized: ["dotnet modernization", "ai", "ai gateway", "aks", "aks automatic", "api management", "app modernization", "azure", "azure application platform", "azure functions", "azure red hat openshift", "community", "confidential containers", "devops", "docker compose", "durable functions", "github copilot", "logic apps", "mcp", "microsoft foundry", "multi agent orchestration", "security", "semantic kernel"]

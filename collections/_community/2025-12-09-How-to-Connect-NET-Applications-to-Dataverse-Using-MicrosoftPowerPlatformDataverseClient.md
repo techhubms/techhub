@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=dotnet"
 date: 2025-12-09 07:18:58 +00:00
-permalink: "/community/2025-12-09-How-to-Connect-NET-Applications-to-Dataverse-Using-MicrosoftPowerPlatformDataverseClient.html"
+permalink: "/2025-12-09-How-to-Connect-NET-Applications-to-Dataverse-Using-MicrosoftPowerPlatformDataverseClient.html"
 categories: ["Azure", "Coding"]
 tags: [".NET", "App Registration", "Application User", "Authentication", "Azure", "Azure Active Directory", "Client ID", "Client Secret", "Coding", "Community", "Dataverse", "IOrganizationService", "Microsoft Entra ID", "Microsoft.PowerPlatform.Dataverse.Client", "OAuth", "Permissions", "Power Platform"]
 tags_normalized: ["dotnet", "app registration", "application user", "authentication", "azure", "azure active directory", "client id", "client secret", "coding", "community", "dataverse", "iorganizationservice", "microsoft entra id", "microsoftdotpowerplatformdotdataversedotclient", "oauth", "permissions", "power platform"]

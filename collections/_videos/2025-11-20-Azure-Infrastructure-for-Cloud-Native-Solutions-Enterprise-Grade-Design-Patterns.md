@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Events YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
 date: 2025-11-20 17:22:14 +00:00
-permalink: "/videos/2025-11-20-Azure-Infrastructure-for-Cloud-Native-Solutions-Enterprise-Grade-Design-Patterns.html"
+permalink: "/2025-11-20-Azure-Infrastructure-for-Cloud-Native-Solutions-Enterprise-Grade-Design-Patterns.html"
 categories: ["Azure", "Coding", "DevOps", "Security"]
 tags: ["Atomic Scaling", "Azure", "Azure Storage", "Cloud Native Architecture", "Coding", "Container Networking", "Databricks", "DevOps", "High Availability", "Illumia Breach Containment", "Kubernetes", "Migrateandmodernizeyourestate", "MITRE Framework", "MSIgnite", "Performance Optimization", "Resilience", "Scalability", "Security", "Sharding", "Threat Intelligence", "Videos", "VM Lifecycle Management", "VMSS", "Zone Aligned Architecture"]
 tags_normalized: ["atomic scaling", "azure", "azure storage", "cloud native architecture", "coding", "container networking", "databricks", "devops", "high availability", "illumia breach containment", "kubernetes", "migrateandmodernizeyourestate", "mitre framework", "msignite", "performance optimization", "resilience", "scalability", "security", "sharding", "threat intelligence", "videos", "vm lifecycle management", "vmss", "zone aligned architecture"]

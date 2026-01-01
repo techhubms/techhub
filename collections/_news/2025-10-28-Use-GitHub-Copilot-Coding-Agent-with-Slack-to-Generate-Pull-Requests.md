@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/changelog/feed/"
 date: 2025-10-28 15:26:45 +00:00
-permalink: "/news/2025-10-28-Use-GitHub-Copilot-Coding-Agent-with-Slack-to-Generate-Pull-Requests.html"
+permalink: "/2025-10-28-Use-GitHub-Copilot-Coding-Agent-with-Slack-to-Generate-Pull-Requests.html"
 categories: ["AI", "Coding", "DevOps", "GitHub Copilot"]
 tags: ["AI", "Automation", "Bug Fixing", "Coding", "Collaboration", "Copilot", "Copilot Coding Agent", "Developer Tools", "DevOps", "DevOps Automation", "Feature Development", "GitHub App", "GitHub Copilot", "Microsoft Teams Integration", "News", "Pull Requests", "Refactoring", "Slack Integration", "Test Coverage", "Universe25"]
 tags_normalized: ["ai", "automation", "bug fixing", "coding", "collaboration", "copilot", "copilot coding agent", "developer tools", "devops", "devops automation", "feature development", "github app", "github copilot", "microsoft teams integration", "news", "pull requests", "refactoring", "slack integration", "test coverage", "universe25"]

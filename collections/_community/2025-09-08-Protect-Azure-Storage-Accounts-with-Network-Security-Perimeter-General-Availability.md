@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-09-08 19:29:51 +00:00
-permalink: "/community/2025-09-08-Protect-Azure-Storage-Accounts-with-Network-Security-Perimeter-General-Availability.html"
+permalink: "/2025-09-08-Protect-Azure-Storage-Accounts-with-Network-Security-Perimeter-General-Availability.html"
 categories: ["Azure", "Security"]
 tags: ["Access Management", "Azure", "Azure Key Vault", "Azure Monitor", "Azure Storage", "Centralized Logging", "Community", "Compliance", "Data Exfiltration Prevention", "Enforced Mode", "Firewall Rules", "Network Security Perimeter", "PaaS Security", "Private Endpoints", "Resource Profiles", "Security", "Transition Mode", "Virtual Network"]
 tags_normalized: ["access management", "azure", "azure key vault", "azure monitor", "azure storage", "centralized logging", "community", "compliance", "data exfiltration prevention", "enforced mode", "firewall rules", "network security perimeter", "paas security", "private endpoints", "resource profiles", "security", "transition mode", "virtual network"]

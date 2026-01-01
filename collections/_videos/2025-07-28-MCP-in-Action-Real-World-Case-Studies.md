@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Build 2025 YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
 date: 2025-07-28 16:00:25 +00:00
-permalink: "/videos/2025-07-28-MCP-in-Action-Real-World-Case-Studies.html"
+permalink: "/2025-07-28-MCP-in-Action-Real-World-Case-Studies.html"
 categories: ["AI", "Azure", "DevOps"]
 tags: ["AI", "Azure", "Azure AI Search", "Azure API Management", "DevOps", "Enterprise Automation", "GitHub", "MCP", "Multi Agent Systems", "OpenAI", "Videos", "VS Code"]
 tags_normalized: ["ai", "azure", "azure ai search", "azure api management", "devops", "enterprise automation", "github", "mcp", "multi agent systems", "openai", "videos", "vs code"]

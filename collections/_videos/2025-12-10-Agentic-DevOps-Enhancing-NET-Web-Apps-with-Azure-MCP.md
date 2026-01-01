@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "DotNet YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw"
 date: 2025-12-10 00:00:33 +00:00
-permalink: "/videos/2025-12-10-Agentic-DevOps-Enhancing-NET-Web-Apps-with-Azure-MCP.html"
+permalink: "/2025-12-10-Agentic-DevOps-Enhancing-NET-Web-Apps-with-Azure-MCP.html"
 categories: ["AI", "Azure", "Coding", "DevOps"]
 tags: [".NET", "Agentic DevOps", "AI", "AI Driven Development", "Azure", "Azure MCP", "Azure SQL Database", "Azure Storage", "CI/CD", "Cloud Automation", "Coding", "DevOps", "IaC", "Microsoft Cloud Platform", "Modernization", "Videos", "VS", "Web App Development", "Workflow Optimization"]
 tags_normalized: ["dotnet", "agentic devops", "ai", "ai driven development", "azure", "azure mcp", "azure sql database", "azure storage", "cislashcd", "cloud automation", "coding", "devops", "iac", "microsoft cloud platform", "modernization", "videos", "vs", "web app development", "workflow optimization"]

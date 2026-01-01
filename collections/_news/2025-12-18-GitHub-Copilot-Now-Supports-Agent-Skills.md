@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/changelog/feed/"
 date: 2025-12-18 17:26:18 +00:00
-permalink: "/news/2025-12-18-GitHub-Copilot-Now-Supports-Agent-Skills.html"
+permalink: "/2025-12-18-GitHub-Copilot-Now-Supports-Agent-Skills.html"
 categories: ["AI", "Coding", "GitHub Copilot"]
 tags: ["Agent Skills", "AI", "Automation", "Coding", "Coding Agents", "Copilot", "Copilot CLI", "Developer Tools", "GitHub Community", "GitHub Copilot", "Instruction Scripting", "News", "SXkills Directory", "VS Code", "VS Code Insiders"]
 tags_normalized: ["agent skills", "ai", "automation", "coding", "coding agents", "copilot", "copilot cli", "developer tools", "github community", "github copilot", "instruction scripting", "news", "sxkills directory", "vs code", "vs code insiders"]

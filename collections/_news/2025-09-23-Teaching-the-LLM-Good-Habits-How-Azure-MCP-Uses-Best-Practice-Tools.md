@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft All Things Azure Blog"
 feed_url: "https://devblogs.microsoft.com/all-things-azure/feed/"
 date: 2025-09-23 23:02:30 +00:00
-permalink: "/news/2025-09-23-Teaching-the-LLM-Good-Habits-How-Azure-MCP-Uses-Best-Practice-Tools.html"
+permalink: "/2025-09-23-Teaching-the-LLM-Good-Habits-How-Azure-MCP-Uses-Best-Practice-Tools.html"
 categories: ["AI", "Azure", "Coding", "DevOps"]
 tags: ["AI", "All Things Azure", "Azure", "Azure Best Practices", "Azure MCP", "Bicep", "CI/CD", "Cloud Governance", "Coding", "DefaultAzureCredential", "DevOps", "IaC", "LLM", "MCP", "MCP (model Context Protocol)", "News", "SDK", "Terraform", "Thought Leadership", "VS Code"]
 tags_normalized: ["ai", "all things azure", "azure", "azure best practices", "azure mcp", "bicep", "cislashcd", "cloud governance", "coding", "defaultazurecredential", "devops", "iac", "llm", "mcp", "mcp model context protocol", "news", "sdk", "terraform", "thought leadership", "vs code"]

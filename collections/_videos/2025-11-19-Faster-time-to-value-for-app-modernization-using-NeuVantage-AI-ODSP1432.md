@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Events YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
 date: 2025-11-19 12:53:00 +00:00
-permalink: "/videos/2025-11-19-Faster-time-to-value-for-app-modernization-using-NeuVantage-AI-ODSP1432.html"
+permalink: "/2025-11-19-Faster-time-to-value-for-app-modernization-using-NeuVantage-AI-ODSP1432.html"
 categories: ["AI", "Azure", "DevOps"]
 tags: ["Agenticbusinessapplications", "AI", "AI Driven Assessment", "App Modernization", "Artifact Packages", "Azure", "Azure Resource Breakdown", "Azure Services Recommendation", "Cost Savings", "Deployment Scripts", "DevOps", "Infrastructure Assessment", "Microsoft Ignite", "Modernization Candidates", "MSIgnite", "NeuVantage", "Portfolio Analysis", "Refactor", "Rehost", "Replatform", "Terraform", "Videos", "Workflow Automation"]
 tags_normalized: ["agenticbusinessapplications", "ai", "ai driven assessment", "app modernization", "artifact packages", "azure", "azure resource breakdown", "azure services recommendation", "cost savings", "deployment scripts", "devops", "infrastructure assessment", "microsoft ignite", "modernization candidates", "msignite", "neuvantage", "portfolio analysis", "refactor", "rehost", "replatform", "terraform", "videos", "workflow automation"]

@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Visual Studio Code YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SLNwkd3w"
 date: 2025-11-18 16:15:06 +00:00
-permalink: "/videos/2025-11-18-VS-Code-Private-Marketplace-Enterprise-Control-Meets-Developer-Speed.html"
+permalink: "/2025-11-18-VS-Code-Private-Marketplace-Enterprise-Control-Meets-Developer-Speed.html"
 categories: ["Azure", "Coding", "DevOps", "Security"]
 tags: ["Azure", "Azure Deployment", "CI/CD", "Coding", "Compliance", "Copilot Enterprise", "Developer Tools", "DevOps", "Enterprise Extensions", "Extension Governance", "GitHub Integration", "Group Policy", "Security", "Security Policy", "Videos", "VS Code", "VS Code Private Marketplace"]
 tags_normalized: ["azure", "azure deployment", "cislashcd", "coding", "compliance", "copilot enterprise", "developer tools", "devops", "enterprise extensions", "extension governance", "github integration", "group policy", "security", "security policy", "videos", "vs code", "vs code private marketplace"]

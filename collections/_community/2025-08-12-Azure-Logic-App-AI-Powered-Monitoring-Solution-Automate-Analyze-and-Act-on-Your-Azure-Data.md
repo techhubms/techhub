@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Community"
 date: 2025-08-12 21:37:11 +00:00
-permalink: "/community/2025-08-12-Azure-Logic-App-AI-Powered-Monitoring-Solution-Automate-Analyze-and-Act-on-Your-Azure-Data.html"
+permalink: "/2025-08-12-Azure-Logic-App-AI-Powered-Monitoring-Solution-Automate-Analyze-and-Act-on-Your-Azure-Data.html"
 categories: ["AI", "Azure"]
 tags: ["AI", "AI Summarization", "Application Insights", "Azure", "Azure Log Analytics", "Azure Logic Apps", "Azure OpenAI Service", "Bicep", "Cloud Architecture", "Community", "Email Reporting", "GPT 4o", "IaC", "KQL", "Managed Identity", "Monitoring Automation", "RBAC", "Serverless"]
 tags_normalized: ["ai", "ai summarization", "application insights", "azure", "azure log analytics", "azure logic apps", "azure openai service", "bicep", "cloud architecture", "community", "email reporting", "gpt 4o", "iac", "kql", "managed identity", "monitoring automation", "rbac", "serverless"]

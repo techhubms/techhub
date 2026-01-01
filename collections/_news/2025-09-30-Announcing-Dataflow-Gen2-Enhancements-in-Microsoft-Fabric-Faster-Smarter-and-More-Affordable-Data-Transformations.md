@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Fabric Blog"
 feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
 date: 2025-09-30 09:00:00 +00:00
-permalink: "/news/2025-09-30-Announcing-Dataflow-Gen2-Enhancements-in-Microsoft-Fabric-Faster-Smarter-and-More-Affordable-Data-Transformations.html"
+permalink: "/2025-09-30-Announcing-Dataflow-Gen2-Enhancements-in-Microsoft-Fabric-Faster-Smarter-and-More-Affordable-Data-Transformations.html"
 categories: ["AI", "Azure", "ML"]
 tags: ["AI", "AI Powered Transformation", "Azure", "Azure Data Lake Storage Gen2", "CI/CD", "Copilot", "Data Transformation", "Dataflow Gen2", "Lakehouse", "Microsoft Fabric", "Migration", "ML", "Modern Query Evaluation", "Natural Language Data Ingestion", "News", "OneLake Catalog", "Parameterized Dataflows", "Performance Optimization", "Pricing Model", "SharePoint Integration", "Snowflake", "Variable Libraries"]
 tags_normalized: ["ai", "ai powered transformation", "azure", "azure data lake storage gen2", "cislashcd", "copilot", "data transformation", "dataflow gen2", "lakehouse", "microsoft fabric", "migration", "ml", "modern query evaluation", "natural language data ingestion", "news", "onelake catalog", "parameterized dataflows", "performance optimization", "pricing model", "sharepoint integration", "snowflake", "variable libraries"]

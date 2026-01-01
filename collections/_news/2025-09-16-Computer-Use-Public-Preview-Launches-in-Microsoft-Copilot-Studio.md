@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft News"
 feed_url: "https://news.microsoft.com/source/feed/"
 date: 2025-09-16 17:34:39 +00:00
-permalink: "/news/2025-09-16-Computer-Use-Public-Preview-Launches-in-Microsoft-Copilot-Studio.html"
+permalink: "/2025-09-16-Computer-Use-Public-Preview-Launches-in-Microsoft-Copilot-Studio.html"
 categories: ["AI"]
 tags: ["AI", "Allow List", "Automation", "Business Automation", "Company News", "Computer Use", "Copilot Studio", "Credentials Management", "Desktop Automation", "Microsoft Copilot", "News", "No Code", "Power Automate", "Public Preview", "RPA", "Templates", "UI Automation", "Web Automation", "Windows 365"]
 tags_normalized: ["ai", "allow list", "automation", "business automation", "company news", "computer use", "copilot studio", "credentials management", "desktop automation", "microsoft copilot", "news", "no code", "power automate", "public preview", "rpa", "templates", "ui automation", "web automation", "windows 365"]

@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "DotNet YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw"
 date: 2025-11-12 19:18:18 +00:00
-permalink: "/videos/2025-11-12-Whats-New-in-NET-MAUI.html"
+permalink: "/2025-11-12-Whats-New-in-NET-MAUI.html"
 categories: ["Coding"]
 tags: [".NET", ".NET 10", "App Tooling", "ASP.NET Core 10", "C# 14", "Coding", "Cross Platform Development", "Desktop Development", "F# 10", "MAUI", "Mobile Development", "Native Applications", "Performance Optimization", "Single Codebase", "User Interface", "Videos", "VS", "XAML"]
 tags_normalized: ["dotnet", "dotnet 10", "app tooling", "aspdotnet core 10", "csharp 14", "coding", "cross platform development", "desktop development", "fsharp 10", "maui", "mobile development", "native applications", "performance optimization", "single codebase", "user interface", "videos", "vs", "xaml"]

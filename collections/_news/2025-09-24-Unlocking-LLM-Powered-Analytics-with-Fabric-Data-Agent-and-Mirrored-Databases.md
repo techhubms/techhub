@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Fabric Blog"
 feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
 date: 2025-09-24 17:00:00 +00:00
-permalink: "/news/2025-09-24-Unlocking-LLM-Powered-Analytics-with-Fabric-Data-Agent-and-Mirrored-Databases.html"
+permalink: "/2025-09-24-Unlocking-LLM-Powered-Analytics-with-Fabric-Data-Agent-and-Mirrored-Databases.html"
 categories: ["AI", "Azure", "ML"]
 tags: ["AI", "AI Integration", "Azure", "Azure Cosmos DB", "Azure SQL Database", "Cloud Data", "Data Agent", "Data Analytics", "Data Pipeline", "Database Mirroring", "Delta Parquet", "LLM", "Microsoft Fabric", "Mirrored Database", "ML", "Natural Language Queries", "News", "NL2SQL", "Operational Data"]
 tags_normalized: ["ai", "ai integration", "azure", "azure cosmos db", "azure sql database", "cloud data", "data agent", "data analytics", "data pipeline", "database mirroring", "delta parquet", "llm", "microsoft fabric", "mirrored database", "ml", "natural language queries", "news", "nl2sql", "operational data"]

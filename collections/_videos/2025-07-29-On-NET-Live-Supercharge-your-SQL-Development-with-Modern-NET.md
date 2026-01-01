@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Dotnet's Youtube channel"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw"
 date: 2025-07-29 16:35:03 +00:00
-permalink: "/videos/2025-07-29-On-NET-Live-Supercharge-your-SQL-Development-with-Modern-NET.html"
+permalink: "/2025-07-29-On-NET-Live-Supercharge-your-SQL-Development-with-Modern-NET.html"
 categories: ["Coding", "ML"]
 tags: [".NET", ".NET Build SDK", "Build Validation", "Coding", "Cross Platform", "Global Tool", "ML", "NuGet", "Software Development", "SQL", "SQL Server", "Static Code Analysis", "Videos"]
 tags_normalized: ["dotnet", "dotnet build sdk", "build validation", "coding", "cross platform", "global tool", "ml", "nuget", "software development", "sql", "sql server", "static code analysis", "videos"]

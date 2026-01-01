@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/changelog/feed/"
 date: 2025-12-17 15:04:53 +00:00
-permalink: "/news/2025-12-17-Gemini-3-Flash-Public-Preview-Released-for-GitHub-Copilot-Users.html"
+permalink: "/2025-12-17-Gemini-3-Flash-Public-Preview-Released-for-GitHub-Copilot-Users.html"
 categories: ["AI", "GitHub Copilot"]
 tags: ["AI", "AI Models", "API Key", "Copilot", "Copilot Business", "Copilot Chat", "Copilot Enterprise", "Copilot Mobile", "Copilot Pro", "Gemini 3 Flash", "GitHub Copilot", "Model Picker", "News", "Public Preview", "VS Code"]
 tags_normalized: ["ai", "ai models", "api key", "copilot", "copilot business", "copilot chat", "copilot enterprise", "copilot mobile", "copilot pro", "gemini 3 flash", "github copilot", "model picker", "news", "public preview", "vs code"]

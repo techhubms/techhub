@@ -9,10 +9,10 @@ viewing_mode: "external"
 feed_name: "DevOps Blog"
 feed_url: "https://devops.com/feed/"
 date: 2025-07-31 08:08:53 +00:00
-permalink: "/blogs/2025-07-31-DevOps-Meets-Blazor-in-2025-Streamlining-NET-Web-App-Delivery-for-the-Future.html"
+permalink: "/2025-07-31-DevOps-Meets-Blazor-in-2025-Streamlining-NET-Web-App-Delivery-for-the-Future.html"
 categories: ["Coding", "DevOps"]
-tags: [".NET", "Blazor", "Business Of DevOps", "Coding", "Contributed Content", "DevOps", "DevOps Practice", "Doin' DevOps", "Enterprise", "Framework", "Microsoft", "Modern Web Development", "Blogs", "Social Facebook", "Social LinkedIn", "Social X", "Tooling", "Web App Delivery", "Workflow"]
-tags_normalized: ["dotnet", "blazor", "business of devops", "coding", "contributed content", "devops", "devops practice", "doin devops", "enterprise", "framework", "microsoft", "modern web development", "blogs", "social facebook", "social linkedin", "social x", "tooling", "web app delivery", "workflow"]
+tags: [".NET", "Blazor", "Blogs", "Business Of DevOps", "Coding", "Contributed Content", "DevOps", "DevOps Practice", "Doin' DevOps", "Enterprise", "Framework", "Microsoft", "Modern Web Development", "Social Facebook", "Social LinkedIn", "Social X", "Tooling", "Web App Delivery", "Workflow"]
+tags_normalized: ["dotnet", "blazor", "blogs", "business of devops", "coding", "contributed content", "devops", "devops practice", "doin devops", "enterprise", "framework", "microsoft", "modern web development", "social facebook", "social linkedin", "social x", "tooling", "web app delivery", "workflow"]
 ---
 
 Amber Talavera examines how Blazor's evolution and integration with DevOps practices are shaping the future of .NET web application delivery.<!--excerpt_end-->

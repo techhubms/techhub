@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft News"
 feed_url: "https://news.microsoft.com/source/feed/"
 date: 2025-11-21 13:57:14 +00:00
-permalink: "/news/2025-11-21-Microsofts-Strategic-Initiative-to-Accelerate-Thailands-AI-Powered-Future.html"
+permalink: "/2025-11-21-Microsofts-Strategic-Initiative-to-Accelerate-Thailands-AI-Powered-Future.html"
 categories: ["AI", "Azure"]
 tags: ["AI", "AI Infrastructure", "AI Skills Development", "Azure", "Azure OpenAI", "Cloud Region", "Company News", "Compliance", "Data Residency", "Digital Transformation", "EGAT", "Enterprise AI", "Government Partnerships", "KASIKORNBANK", "Microsoft Azure", "National AI Innovation Center", "News", "OECD", "SCBX", "Thailand"]
 tags_normalized: ["ai", "ai infrastructure", "ai skills development", "azure", "azure openai", "cloud region", "company news", "compliance", "data residency", "digital transformation", "egat", "enterprise ai", "government partnerships", "kasikornbank", "microsoft azure", "national ai innovation center", "news", "oecd", "scbx", "thailand"]

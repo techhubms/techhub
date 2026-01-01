@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/changelog/feed/"
 date: 2025-11-07 08:00:06 +00:00
-permalink: "/news/2025-11-07-GitHub-Retires-GraphQL-Explorer-from-API-Documentation.html"
+permalink: "/2025-11-07-GitHub-Retires-GraphQL-Explorer-from-API-Documentation.html"
 categories: ["DevOps"]
 tags: ["API", "API Client", "API Documentation", "Developer Tools", "DevOps", "Ecosystem", "Ecosystem & Accessibility", "GitHub", "GraphQL", "GraphQL Explorer", "News", "Platform Update", "Retired", "Tool Retirement"]
 tags_normalized: ["api", "api client", "api documentation", "developer tools", "devops", "ecosystem", "ecosystem and accessibility", "github", "graphql", "graphql explorer", "news", "platform update", "retired", "tool retirement"]

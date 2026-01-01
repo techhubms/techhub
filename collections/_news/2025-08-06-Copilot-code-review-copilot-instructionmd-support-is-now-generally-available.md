@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/changelog/label/copilot/feed/"
 date: 2025-08-06 17:31:54 +00:00
-permalink: "/news/2025-08-06-Copilot-code-review-copilot-instructionmd-support-is-now-generally-available.html"
+permalink: "/2025-08-06-Copilot-code-review-copilot-instructionmd-support-is-now-generally-available.html"
 categories: ["AI", "GitHub Copilot"]
 tags: ["AI", "AI Assisted Code Review", "Code Review Automation", "Copilot Code Review", "Copilot Instructions.md", "Developer Tools", "General Availability", "GitHub", "GitHub Copilot", "Natural Language Instructions", "News", "Workflow Customization"]
 tags_normalized: ["ai", "ai assisted code review", "code review automation", "copilot code review", "copilot instructionsdotmd", "developer tools", "general availability", "github", "github copilot", "natural language instructions", "news", "workflow customization"]

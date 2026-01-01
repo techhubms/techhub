@@ -9,10 +9,10 @@ viewing_mode: "external"
 feed_name: "Randy Pagels's Blog"
 feed_url: "https://www.cooknwithcopilot.com/rss.xml"
 date: 2025-05-09 00:00:00 +00:00
-permalink: "/blogs/2025-05-09-How-to-Use-GitHub-Copilot-Quick-Chat-for-Instant-Coding-Assistance.html"
+permalink: "/2025-05-09-How-to-Use-GitHub-Copilot-Quick-Chat-for-Instant-Coding-Assistance.html"
 categories: ["AI", "Coding", "GitHub Copilot"]
-tags: ["AI", "AI Assistant", "Code Explanation", "Code Optimization", "Coding", "Copilot Features", "Developer Productivity", "GitHub Copilot", "Inline Code Suggestions", "Keyboard Shortcuts", "Blogs", "Programming Tools", "Quick Chat", "Unit Testing"]
-tags_normalized: ["ai", "ai assistant", "code explanation", "code optimization", "coding", "copilot features", "developer productivity", "github copilot", "inline code suggestions", "keyboard shortcuts", "blogs", "programming tools", "quick chat", "unit testing"]
+tags: ["AI", "AI Assistant", "Blogs", "Code Explanation", "Code Optimization", "Coding", "Copilot Features", "Developer Productivity", "GitHub Copilot", "Inline Code Suggestions", "Keyboard Shortcuts", "Programming Tools", "Quick Chat", "Unit Testing"]
+tags_normalized: ["ai", "ai assistant", "blogs", "code explanation", "code optimization", "coding", "copilot features", "developer productivity", "github copilot", "inline code suggestions", "keyboard shortcuts", "programming tools", "quick chat", "unit testing"]
 ---
 
 Randy Pagels provides a quick guide on using GitHub Copilot Quick Chat, showing developers how to get fast, inline AI assistance—like code explanations and optimizations—without interrupting their coding flow.<!--excerpt_end-->

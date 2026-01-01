@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-10-14 00:00:00 +00:00
-permalink: "/community/2025-10-14-Next-Generation-HXU-Doubling-Cooling-Power-for-the-AI-Era.html"
+permalink: "/2025-10-14-Next-Generation-HXU-Doubling-Cooling-Power-for-the-AI-Era.html"
 categories: ["AI", "Azure", "Security"]
 tags: ["AI", "AI Accelerators", "AI Infrastructure", "Azure", "Community", "Cybersecurity", "Datacenter Cooling", "High Density Computing", "HXU", "ISO/IEC 27001", "Liquid Cooling", "Microsoft Azure", "Modular Design", "NIST SP 800 53", "Open Compute Project", "Power Density", "Predictive Maintenance", "Redundancy", "Security", "Telemetry"]
 tags_normalized: ["ai", "ai accelerators", "ai infrastructure", "azure", "community", "cybersecurity", "datacenter cooling", "high density computing", "hxu", "isoslashiec 27001", "liquid cooling", "microsoft azure", "modular design", "nist sp 800 53", "open compute project", "power density", "predictive maintenance", "redundancy", "security", "telemetry"]

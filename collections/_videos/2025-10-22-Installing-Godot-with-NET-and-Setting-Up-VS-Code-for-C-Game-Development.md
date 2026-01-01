@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "DotNet YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw"
 date: 2025-10-22 16:30:09 +00:00
-permalink: "/videos/2025-10-22-Installing-Godot-with-NET-and-Setting-Up-VS-Code-for-C-Game-Development.html"
+permalink: "/2025-10-22-Installing-Godot-with-NET-and-Setting-Up-VS-Code-for-C-Game-Development.html"
 categories: ["Coding"]
 tags: [".NET", "Beginner Tutorial", "C#", "C# Tools For Godot", "Coding", "Debugging", "Development Environment", "Game Development", "GitHub", "Godot", "Godot .NET", "Indie Games", "Microsoft", "SDK Installation", "Videos", "VS Code", "VS Code Extensions"]
 tags_normalized: ["dotnet", "beginner tutorial", "csharp", "csharp tools for godot", "coding", "debugging", "development environment", "game development", "github", "godot", "godot dotnet", "indie games", "microsoft", "sdk installation", "videos", "vs code", "vs code extensions"]

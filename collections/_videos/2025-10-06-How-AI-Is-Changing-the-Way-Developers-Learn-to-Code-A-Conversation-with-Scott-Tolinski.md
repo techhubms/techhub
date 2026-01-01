@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Visual Studio Code YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SLNwkd3w"
 date: 2025-10-06 07:00:50 +00:00
-permalink: "/videos/2025-10-06-How-AI-Is-Changing-the-Way-Developers-Learn-to-Code-A-Conversation-with-Scott-Tolinski.html"
+permalink: "/2025-10-06-How-AI-Is-Changing-the-Way-Developers-Learn-to-Code-A-Conversation-with-Scott-Tolinski.html"
 categories: ["AI", "Coding", "GitHub Copilot"]
 tags: ["AI", "AI in Education", "AI Powered Development", "Code Tutorials", "Coding", "Coding Assistants", "Developer Education", "GitHub Copilot", "Learning To Code", "Programming Tools", "Scott Tolinski", "Syntax Podcast", "Videos", "VS Code"]
 tags_normalized: ["ai", "ai in education", "ai powered development", "code tutorials", "coding", "coding assistants", "developer education", "github copilot", "learning to code", "programming tools", "scott tolinski", "syntax podcast", "videos", "vs code"]

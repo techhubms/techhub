@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Developer YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
 date: 2025-10-30 16:00:39 +00:00
-permalink: "/videos/2025-10-30-Deep-Dive-into-Microsoft-Agent-Framework-for-AutoGen-Users.html"
+permalink: "/2025-10-30-Deep-Dive-into-Microsoft-Agent-Framework-for-AutoGen-Users.html"
 categories: ["AI", "Azure", "Coding"]
 tags: ["Agent as A Tool", "Agent Orchestration", "AI", "AI Agents", "AutoGen", "Azure", "Cloud Computing", "Coding", "Debug Tools", "Dev", "Development", "Event Driven Runtime", "GraphFlow", "LLMs", "MCP Support", "Microsoft", "Microsoft Agent Framework", "Model Clients", "Multi Agent Systems", "Open Source", "Orchestration", "Pro Code Development", "SDK", "Semantic Kernel", "Tech", "Technology", "Videos", "Workflow"]
 tags_normalized: ["agent as a tool", "agent orchestration", "ai", "ai agents", "autogen", "azure", "cloud computing", "coding", "debug tools", "dev", "development", "event driven runtime", "graphflow", "llms", "mcp support", "microsoft", "microsoft agent framework", "model clients", "multi agent systems", "open source", "orchestration", "pro code development", "sdk", "semantic kernel", "tech", "technology", "videos", "workflow"]

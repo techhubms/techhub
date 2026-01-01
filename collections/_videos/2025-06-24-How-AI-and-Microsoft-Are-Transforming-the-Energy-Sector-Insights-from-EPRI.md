@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Cloud YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCSgzRJMqIiCNtoM6Q7Q9Lqw"
 date: 2025-06-24 15:01:15 +00:00
-permalink: "/videos/2025-06-24-How-AI-and-Microsoft-Are-Transforming-the-Energy-Sector-Insights-from-EPRI.html"
+permalink: "/2025-06-24-How-AI-and-Microsoft-Are-Transforming-the-Energy-Sector-Insights-from-EPRI.html"
 categories: ["AI"]
 tags: ["AI", "Collaboration", "Digital Transformation", "Electric Power Research Institute", "Energy", "Energy Industry", "EPRI", "Industry Trends", "Microsoft", "Microsoft Cloud", "OPAI", "Open Power AI Consortium", "Resilience", "Sustainability", "Utilities", "Videos"]
 tags_normalized: ["ai", "collaboration", "digital transformation", "electric power research institute", "energy", "energy industry", "epri", "industry trends", "microsoft", "microsoft cloud", "opai", "open power ai consortium", "resilience", "sustainability", "utilities", "videos"]

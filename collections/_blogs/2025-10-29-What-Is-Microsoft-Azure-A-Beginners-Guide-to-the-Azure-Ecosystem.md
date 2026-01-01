@@ -9,10 +9,10 @@ viewing_mode: "external"
 feed_name: "Dellenny's Blog"
 feed_url: "https://dellenny.com/feed/"
 date: 2025-10-29 07:46:39 +00:00
-permalink: "/blogs/2025-10-29-What-Is-Microsoft-Azure-A-Beginners-Guide-to-the-Azure-Ecosystem.html"
+permalink: "/2025-10-29-What-Is-Microsoft-Azure-A-Beginners-Guide-to-the-Azure-Ecosystem.html"
 categories: ["AI", "Azure", "Coding", "DevOps", "ML", "Security"]
-tags: ["AI", "AKS", "Azure", "Azure Arc", "Azure Blob Storage", "Azure Cognitive Services", "Azure DevOps", "Azure Ecosystem", "Azure Free Account", "Azure Functions", "Azure Machine Learning", "Azure OpenAI Service", "Azure SQL Database", "Azure Stack", "Azure Virtual Machines", "Cloud Computing", "Coding", "Cosmos DB", "DevOps", "GitHub", "Hybrid Cloud", "Microsoft Azure", "ML", "Blogs", "Security", "VS"]
-tags_normalized: ["ai", "aks", "azure", "azure arc", "azure blob storage", "azure cognitive services", "azure devops", "azure ecosystem", "azure free account", "azure functions", "azure machine learning", "azure openai service", "azure sql database", "azure stack", "azure virtual machines", "cloud computing", "coding", "cosmos db", "devops", "github", "hybrid cloud", "microsoft azure", "ml", "blogs", "security", "vs"]
+tags: ["AI", "AKS", "Azure", "Azure Arc", "Azure Blob Storage", "Azure Cognitive Services", "Azure DevOps", "Azure Ecosystem", "Azure Free Account", "Azure Functions", "Azure Machine Learning", "Azure OpenAI Service", "Azure SQL Database", "Azure Stack", "Azure Virtual Machines", "Blogs", "Cloud Computing", "Coding", "Cosmos DB", "DevOps", "GitHub", "Hybrid Cloud", "Microsoft Azure", "ML", "Security", "VS"]
+tags_normalized: ["ai", "aks", "azure", "azure arc", "azure blob storage", "azure cognitive services", "azure devops", "azure ecosystem", "azure free account", "azure functions", "azure machine learning", "azure openai service", "azure sql database", "azure stack", "azure virtual machines", "blogs", "cloud computing", "coding", "cosmos db", "devops", "github", "hybrid cloud", "microsoft azure", "ml", "security", "vs"]
 ---
 
 Dellenny presents a comprehensive beginner’s overview of Microsoft Azure, covering its main services, advantages, and essential tools for IT professionals and developers entering the Azure ecosystem.<!--excerpt_end-->

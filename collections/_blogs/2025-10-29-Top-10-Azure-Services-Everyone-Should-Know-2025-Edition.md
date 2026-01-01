@@ -9,10 +9,10 @@ viewing_mode: "external"
 feed_name: "Dellenny's Blog"
 feed_url: "https://dellenny.com/feed/"
 date: 2025-10-29 07:52:42 +00:00
-permalink: "/blogs/2025-10-29-Top-10-Azure-Services-Everyone-Should-Know-2025-Edition.html"
+permalink: "/2025-10-29-Top-10-Azure-Services-Everyone-Should-Know-2025-Edition.html"
 categories: ["Azure", "DevOps", "Security"]
-tags: ["Azure", "Azure Active Directory", "Azure App Service", "Azure Blob Storage", "Azure Cosmos DB", "Azure Data Factory", "Azure DevOps", "Azure Functions", "Azure Logic Apps", "Azure SQL Database", "Azure Virtual Machines", "CI/CD", "Cloud Architecture", "Cloud Security", "DevOps", "Hybrid Cloud", "IaaS", "Identity Management", "Microservices", "PaaS", "Blogs", "Security", "Serverless", "Workflow Automation"]
-tags_normalized: ["azure", "azure active directory", "azure app service", "azure blob storage", "azure cosmos db", "azure data factory", "azure devops", "azure functions", "azure logic apps", "azure sql database", "azure virtual machines", "cislashcd", "cloud architecture", "cloud security", "devops", "hybrid cloud", "iaas", "identity management", "microservices", "paas", "blogs", "security", "serverless", "workflow automation"]
+tags: ["Azure", "Azure Active Directory", "Azure App Service", "Azure Blob Storage", "Azure Cosmos DB", "Azure Data Factory", "Azure DevOps", "Azure Functions", "Azure Logic Apps", "Azure SQL Database", "Azure Virtual Machines", "Blogs", "CI/CD", "Cloud Architecture", "Cloud Security", "DevOps", "Hybrid Cloud", "IaaS", "Identity Management", "Microservices", "PaaS", "Security", "Serverless", "Workflow Automation"]
+tags_normalized: ["azure", "azure active directory", "azure app service", "azure blob storage", "azure cosmos db", "azure data factory", "azure devops", "azure functions", "azure logic apps", "azure sql database", "azure virtual machines", "blogs", "cislashcd", "cloud architecture", "cloud security", "devops", "hybrid cloud", "iaas", "identity management", "microservices", "paas", "security", "serverless", "workflow automation"]
 ---
 
 Dellenny provides a practical guide to the top 10 Azure services everyone in IT, development, or cloud architecture should know in 2025, outlining what they are, when to use them, and strategic considerations for mastering Microsoft’s evolving cloud platform.<!--excerpt_end-->

@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/feed/"
 date: 2025-07-16 15:00:00 +00:00
-permalink: "/news/2025-07-16-For-the-Love-of-Code-a-summer-hackathon-for-joyful-ridiculous-and-wildly-creative-projects.html"
+permalink: "/2025-07-16-For-the-Love-of-Code-a-summer-hackathon-for-joyful-ridiculous-and-wildly-creative-projects.html"
 categories: ["AI", "GitHub Copilot"]
 tags: ["AI", "Creativity", "Developer Community", "GitHub Copilot", "Hackathon", "Innovation", "News", "Open Source", "Side Projects", "Software Development", "Summer Event"]
 tags_normalized: ["ai", "creativity", "developer community", "github copilot", "hackathon", "innovation", "news", "open source", "side projects", "software development", "summer event"]

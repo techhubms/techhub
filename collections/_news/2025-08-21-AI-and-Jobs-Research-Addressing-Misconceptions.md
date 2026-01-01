@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft News"
 feed_url: "https://news.microsoft.com/source/feed/"
 date: 2025-08-21 22:06:16 +00:00
-permalink: "/news/2025-08-21-AI-and-Jobs-Research-Addressing-Misconceptions.html"
+permalink: "/2025-08-21-AI-and-Jobs-Research-Addressing-Misconceptions.html"
 categories: ["AI"]
 tags: ["AI", "AI Chatbot", "AI Limitations", "AI Use Cases", "Bing Copilot", "Company News", "Generative AI", "Job Displacement", "Knowledge Work", "Methodology", "Microsoft Research", "News", "O*NET", "Occupational Impact", "Research Clarification", "Societal Impact", "Work Trend Index"]
 tags_normalized: ["ai", "ai chatbot", "ai limitations", "ai use cases", "bing copilot", "company news", "generative ai", "job displacement", "knowledge work", "methodology", "microsoft research", "news", "ostarnet", "occupational impact", "research clarification", "societal impact", "work trend index"]

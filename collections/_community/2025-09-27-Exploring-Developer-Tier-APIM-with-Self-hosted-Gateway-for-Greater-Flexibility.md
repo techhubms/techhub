@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-09-27 16:45:43 +00:00
-permalink: "/community/2025-09-27-Exploring-Developer-Tier-APIM-with-Self-hosted-Gateway-for-Greater-Flexibility.html"
+permalink: "/2025-09-27-Exploring-Developer-Tier-APIM-with-Self-hosted-Gateway-for-Greater-Flexibility.html"
 categories: ["Azure"]
 tags: ["API Analytics", "API Gateway", "APIM", "Azure", "Azure API Management", "Azure Monitor", "Azure VM", "Cloud Architecture", "Community", "Developer Tier", "Entra Integration", "Feature Comparison", "Self Hosted Gateway", "Service Availability", "Virtual Network"]
 tags_normalized: ["api analytics", "api gateway", "apim", "azure", "azure api management", "azure monitor", "azure vm", "cloud architecture", "community", "developer tier", "entra integration", "feature comparison", "self hosted gateway", "service availability", "virtual network"]

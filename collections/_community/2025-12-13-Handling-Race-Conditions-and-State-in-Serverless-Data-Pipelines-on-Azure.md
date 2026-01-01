@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-12-13 12:22:51 +00:00
-permalink: "/community/2025-12-13-Handling-Race-Conditions-and-State-in-Serverless-Data-Pipelines-on-Azure.html"
+permalink: "/2025-12-13-Handling-Race-Conditions-and-State-in-Serverless-Data-Pipelines-on-Azure.html"
 categories: ["Azure", "Coding", "ML"]
 tags: ["Azure", "Azure Data Factory", "Azure Durable Functions", "Azure Functions", "Cloud Architecture", "Coding", "Community", "Data Engineering", "Distributed Systems", "Durable Entities", "ETL", "Fan Out/Fan in Pattern", "ML", "Parquet", "Race Condition", "Sequential ID Generation", "Serverless", "State Management", "Table Storage", "Workflow Design"]
 tags_normalized: ["azure", "azure data factory", "azure durable functions", "azure functions", "cloud architecture", "coding", "community", "data engineering", "distributed systems", "durable entities", "etl", "fan outslashfan in pattern", "ml", "parquet", "race condition", "sequential id generation", "serverless", "state management", "table storage", "workflow design"]

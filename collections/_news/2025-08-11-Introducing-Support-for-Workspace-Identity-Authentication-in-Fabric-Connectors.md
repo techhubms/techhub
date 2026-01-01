@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Fabric Blog"
 feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
 date: 2025-08-11 10:00:00 +00:00
-permalink: "/news/2025-08-11-Introducing-Support-for-Workspace-Identity-Authentication-in-Fabric-Connectors.html"
+permalink: "/2025-08-11-Introducing-Support-for-Workspace-Identity-Authentication-in-Fabric-Connectors.html"
 categories: ["Azure", "ML", "Security"]
 tags: ["Authentication", "Azure", "Azure Active Directory", "Azure Blob Storage", "Azure Data Lake Storage", "Azure Synapse Analytics", "Credential Management", "Data Governance", "Data Pipeline", "Data Security", "Dataflows Gen2", "Fabric Connectors", "Identity Management", "Microsoft Entra ID", "Microsoft Fabric", "ML", "News", "Role Based Access Control", "Secure Data Access", "Security", "Semantic Models", "Service Principal", "Workspace Identity"]
 tags_normalized: ["authentication", "azure", "azure active directory", "azure blob storage", "azure data lake storage", "azure synapse analytics", "credential management", "data governance", "data pipeline", "data security", "dataflows gen2", "fabric connectors", "identity management", "microsoft entra id", "microsoft fabric", "ml", "news", "role based access control", "secure data access", "security", "semantic models", "service principal", "workspace identity"]

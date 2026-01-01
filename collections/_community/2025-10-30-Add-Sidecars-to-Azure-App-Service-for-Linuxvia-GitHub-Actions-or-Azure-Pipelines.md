@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-10-30 04:08:13 +00:00
-permalink: "/community/2025-10-30-Add-Sidecars-to-Azure-App-Service-for-Linuxvia-GitHub-Actions-or-Azure-Pipelines.html"
+permalink: "/2025-10-30-Add-Sidecars-to-Azure-App-Service-for-Linuxvia-GitHub-Actions-or-Azure-Pipelines.html"
 categories: ["Azure", "Coding", "DevOps"]
 tags: [".NET", "App Service Runtime", "Azure", "Azure App Service", "Azure Pipelines", "CI/CD", "Coding", "Community", "DevOps", "GitHub Actions", "Java", "Linux Containers", "Monitoring Agents", "Node.js", "OIDC Authentication", "PHP", "Python", "Sidecar Containers", "Sitecontainers", "Telemetry", "VSTS", "YAML Templates"]
 tags_normalized: ["dotnet", "app service runtime", "azure", "azure app service", "azure pipelines", "cislashcd", "coding", "community", "devops", "github actions", "java", "linux containers", "monitoring agents", "nodedotjs", "oidc authentication", "php", "python", "sidecar containers", "sitecontainers", "telemetry", "vsts", "yaml templates"]

@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-11-17 18:14:09 +00:00
-permalink: "/community/2025-11-17-Azure-CycleCloud-88-and-CCWS-12-Enhanced-HPC-and-AI-Cluster-Management.html"
+permalink: "/2025-11-17-Azure-CycleCloud-88-and-CCWS-12-Enhanced-HPC-and-AI-Cluster-Management.html"
 categories: ["AI", "Azure"]
 tags: ["AI", "AI Workloads", "ARM64", "Azure", "Azure CycleCloud", "CCWS", "Cluster Management", "Community", "CycleCloud 8.8", "Event Driven Monitoring", "GB200 VMs", "Grafana", "HealthAgent", "High Performance Computing", "HPC", "Hub And Spoke Architecture", "Linux 9", "Nvidia GPUs", "Scientific Computing", "Slurm", "Ubuntu 20.24"]
 tags_normalized: ["ai", "ai workloads", "arm64", "azure", "azure cyclecloud", "ccws", "cluster management", "community", "cyclecloud 8dot8", "event driven monitoring", "gb200 vms", "grafana", "healthagent", "high performance computing", "hpc", "hub and spoke architecture", "linux 9", "nvidia gpus", "scientific computing", "slurm", "ubuntu 20dot24"]

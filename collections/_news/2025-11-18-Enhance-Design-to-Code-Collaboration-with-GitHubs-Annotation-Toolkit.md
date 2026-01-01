@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/feed/"
 date: 2025-11-18 18:05:17 +00:00
-permalink: "/news/2025-11-18-Enhance-Design-to-Code-Collaboration-with-GitHubs-Annotation-Toolkit.html"
+permalink: "/2025-11-18-Enhance-Design-to-Code-Collaboration-with-GitHubs-Annotation-Toolkit.html"
 categories: ["Coding", "DevOps"]
 tags: ["Accessibility", "Annotation Toolkit", "Coding", "Collaboration", "Design Collaboration", "Design Handoff", "Design Intent", "Developer Workflow", "DevOps", "Documentation", "Enterprise Software", "Figma", "Frontend Development", "GitHub", "News", "Open Source", "Productivity", "Quality Assurance", "UI Engineering", "WCAG"]
 tags_normalized: ["accessibility", "annotation toolkit", "coding", "collaboration", "design collaboration", "design handoff", "design intent", "developer workflow", "devops", "documentation", "enterprise software", "figma", "frontend development", "github", "news", "open source", "productivity", "quality assurance", "ui engineering", "wcag"]

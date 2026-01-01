@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-08-21 17:58:39 +00:00
-permalink: "/community/2025-08-21-Announcing-Public-Preview-for-Azure-Service-Groups.html"
+permalink: "/2025-08-21-Announcing-Public-Preview-for-Azure-Service-Groups.html"
 categories: ["Azure"]
 tags: ["Azure", "Azure Governance", "Azure Monitor", "Azure Service Groups", "Cloud Management", "Community", "Hierarchy Management", "Management Groups", "Microsoft Entra", "Observability", "RBAC", "Resource Management", "REST API", "Tenant Level Resources"]
 tags_normalized: ["azure", "azure governance", "azure monitor", "azure service groups", "cloud management", "community", "hierarchy management", "management groups", "microsoft entra", "observability", "rbac", "resource management", "rest api", "tenant level resources"]

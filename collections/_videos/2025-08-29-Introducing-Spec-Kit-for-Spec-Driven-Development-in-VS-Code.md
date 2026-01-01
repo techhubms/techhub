@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Visual Studio Code YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SLNwkd3w"
 date: 2025-08-29 19:51:24 +00:00
-permalink: "/videos/2025-08-29-Introducing-Spec-Kit-for-Spec-Driven-Development-in-VS-Code.html"
+permalink: "/2025-08-29-Introducing-Spec-Kit-for-Spec-Driven-Development-in-VS-Code.html"
 categories: ["AI", "Coding", "GitHub Copilot"]
 tags: ["AI", "AI Tools", "Automation", "Code", "Code Generation", "Coding", "Copilot", "Demo", "Developer", "Developer Community", "Developer Tools", "Executable Specifications", "GitHub", "GitHub Copilot", "Live Coding", "Microsoft", "Open Source", "Software Developer", "Software Development", "Spec Driven Development", "Spec Kit", "Specdrivendevelopement", "Specification Driven", "Speckit", "Videos", "VS Code"]
 tags_normalized: ["ai", "ai tools", "automation", "code", "code generation", "coding", "copilot", "demo", "developer", "developer community", "developer tools", "executable specifications", "github", "github copilot", "live coding", "microsoft", "open source", "software developer", "software development", "spec driven development", "spec kit", "specdrivendevelopement", "specification driven", "speckit", "videos", "vs code"]

@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft News"
 feed_url: "https://news.microsoft.com/source/feed/"
 date: 2025-09-30 14:14:35 +00:00
-permalink: "/news/2025-09-30-Grok-4-Now-Available-in-Azure-AI-Foundry-Advanced-Reasoning-and-Business-Ready-AI.html"
+permalink: "/2025-09-30-Grok-4-Now-Available-in-Azure-AI-Foundry-Advanced-Reasoning-and-Business-Ready-AI.html"
 categories: ["AI", "Azure"]
 tags: ["AI", "AI Benchmarking", "AI Safety", "Azure", "Azure AI Foundry", "Code Generation", "Company News", "Content Safety", "Enterprise AI", "First Principles Reasoning", "Frontier Models", "Grok 4", "Large Context Window", "Model Card", "News", "Pricing", "Real Time Data", "Reinforcement Learning", "Xai"]
 tags_normalized: ["ai", "ai benchmarking", "ai safety", "azure", "azure ai foundry", "code generation", "company news", "content safety", "enterprise ai", "first principles reasoning", "frontier models", "grok 4", "large context window", "model card", "news", "pricing", "real time data", "reinforcement learning", "xai"]

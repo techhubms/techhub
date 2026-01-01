@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-11-07 05:32:56 +00:00
-permalink: "/community/2025-11-07-Troubleshooting-Azure-Virtual-Desktop-Sign-In-Failures-After-Tenant-Migration.html"
+permalink: "/2025-11-07-Troubleshooting-Azure-Virtual-Desktop-Sign-In-Failures-After-Tenant-Migration.html"
 categories: ["Azure", "Security"]
 tags: ["Access Control", "Application Group", "Authentication", "Azure", "Azure AD", "Azure Virtual Desktop", "Community", "Conditional Access", "Host Pool", "Identity Management", "Keychain Access", "Macos", "Microsoft Entra ID", "Microsoft Graph PowerShell", "MSAL Tokens", "Security", "Tenant Migration", "Token Persistence"]
 tags_normalized: ["access control", "application group", "authentication", "azure", "azure ad", "azure virtual desktop", "community", "conditional access", "host pool", "identity management", "keychain access", "macos", "microsoft entra id", "microsoft graph powershell", "msal tokens", "security", "tenant migration", "token persistence"]

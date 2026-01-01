@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Visual Studio Code Releases"
 feed_url: "https://code.visualstudio.com/feed.xml"
 date: 2025-04-07 00:00:00 +00:00
-permalink: "/news/2025-04-07-Agent-Mode-Now-Available-to-All-VS-Code-Users-with-MCP-Support.html"
+permalink: "/2025-04-07-Agent-Mode-Now-Available-to-All-VS-Code-Users-with-MCP-Support.html"
 categories: ["AI", "Coding"]
 tags: ["Agent Mode", "AI", "AI Pair Programming", "AI Tools", "AI Workflows", "Autonomous Agents", "Chat UI", "Code Automation", "Code Editing", "Coding", "Developer Productivity", "Language Server Protocol", "LLM Integration", "MCP", "News", "Terminal Automation", "Tool Extensibility", "VS Code", "VS Code Extensions"]
 tags_normalized: ["agent mode", "ai", "ai pair programming", "ai tools", "ai workflows", "autonomous agents", "chat ui", "code automation", "code editing", "coding", "developer productivity", "language server protocol", "llm integration", "mcp", "news", "terminal automation", "tool extensibility", "vs code", "vs code extensions"]

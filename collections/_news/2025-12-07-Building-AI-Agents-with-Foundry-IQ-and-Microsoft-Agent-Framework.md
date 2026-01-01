@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft AI Foundry Blog"
 feed_url: "https://devblogs.microsoft.com/foundry/feed/"
 date: 2025-12-07 10:55:00 +00:00
-permalink: "/news/2025-12-07-Building-AI-Agents-with-Foundry-IQ-and-Microsoft-Agent-Framework.html"
+permalink: "/2025-12-07-Building-AI-Agents-with-Foundry-IQ-and-Microsoft-Agent-Framework.html"
 categories: ["AI", "Azure", "Coding"]
 tags: ["Agent Development", "Agent Framework", "Agentic AI", "Agentic Mode", "Agentic Retrieval", "AI", "Answer Synthesis", "Azure", "Azure AI Search", "Azure OpenAI", "Coding", "Context Provider", "Context Providers", "Enterprise AI", "Enterprise Knowledge", "Foundry Iq", "Knowledge Bases", "Managed Identity", "Microsoft Agent Framework", "Microsoft Foundry", "Multi Hop Reasoning", "News", "Open Source AI", "Python", "Query Planning", "Rag", "Semantic Search"]
 tags_normalized: ["agent development", "agent framework", "agentic ai", "agentic mode", "agentic retrieval", "ai", "answer synthesis", "azure", "azure ai search", "azure openai", "coding", "context provider", "context providers", "enterprise ai", "enterprise knowledge", "foundry iq", "knowledge bases", "managed identity", "microsoft agent framework", "microsoft foundry", "multi hop reasoning", "news", "open source ai", "python", "query planning", "rag", "semantic search"]

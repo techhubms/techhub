@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-11-20 18:04:09 +00:00
-permalink: "/community/2025-11-20-Troubleshooting-Azure-Firewall-and-VPN-Gateway-Routing-in-Hub-Spoke-Topology.html"
+permalink: "/2025-11-20-Troubleshooting-Azure-Firewall-and-VPN-Gateway-Routing-in-Hub-Spoke-Topology.html"
 categories: ["Azure", "Security"]
 tags: ["Azure", "Azure Firewall", "Azure Hybrid Connectivity", "Azure Networking", "BGP", "Community", "Connectivity Issues", "Hub Spoke Architecture", "Inbound Private Resolver", "Network Security", "Network Segmentation", "Route Propagation", "Routing Troubleshooter", "Security", "UDR", "User Defined Routing", "Virtual Appliance", "Virtual Network", "VPN Gateway"]
 tags_normalized: ["azure", "azure firewall", "azure hybrid connectivity", "azure networking", "bgp", "community", "connectivity issues", "hub spoke architecture", "inbound private resolver", "network security", "network segmentation", "route propagation", "routing troubleshooter", "security", "udr", "user defined routing", "virtual appliance", "virtual network", "vpn gateway"]

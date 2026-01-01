@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/changelog/feed/"
 date: 2025-08-29 17:32:16 +00:00
-permalink: "/news/2025-08-29-Next-Edit-Suggestions-NES-with-GitHub-Copilot-for-JetBrains-IDEs-Public-Preview.html"
+permalink: "/2025-08-29-Next-Edit-Suggestions-NES-with-GitHub-Copilot-for-JetBrains-IDEs-Public-Preview.html"
 categories: ["AI", "GitHub Copilot"]
 tags: ["AI", "AI Code Assistant", "Code Quality", "Code Refactoring", "Developer Tools", "GitHub Copilot", "IDE Extensions", "Inline Suggestions", "IntelliJ", "JetBrains IDEs", "NES", "News", "Next Edit Suggestions", "Productivity"]
 tags_normalized: ["ai", "ai code assistant", "code quality", "code refactoring", "developer tools", "github copilot", "ide extensions", "inline suggestions", "intellij", "jetbrains ides", "nes", "news", "next edit suggestions", "productivity"]

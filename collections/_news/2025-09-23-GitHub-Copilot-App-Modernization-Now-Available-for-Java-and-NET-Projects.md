@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/changelog/feed/"
 date: 2025-09-23 13:00:35 +00:00
-permalink: "/news/2025-09-23-GitHub-Copilot-App-Modernization-Now-Available-for-Java-and-NET-Projects.html"
+permalink: "/2025-09-23-GitHub-Copilot-App-Modernization-Now-Available-for-Java-and-NET-Projects.html"
 categories: ["AI", "Coding", "DevOps", "GitHub Copilot"]
 tags: [".NET", "AI", "App Modernization", "Application Assessment", "Build Patching", "Cloud Deployment", "Code Transformation", "Coding", "Containerization", "Continuous Integration", "Copilot", "Dependency Management", "DevOps", "GitHub", "GitHub Copilot", "Improvement", "Java", "Modernization Tools", "News", "Software Migration"]
 tags_normalized: ["dotnet", "ai", "app modernization", "application assessment", "build patching", "cloud deployment", "code transformation", "coding", "containerization", "continuous integration", "copilot", "dependency management", "devops", "github", "github copilot", "improvement", "java", "modernization tools", "news", "software migration"]

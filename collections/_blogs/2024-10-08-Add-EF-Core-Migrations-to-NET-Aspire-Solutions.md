@@ -9,10 +9,10 @@ viewing_mode: "external"
 feed_name: "Khalid Abuhakmeh's Blog"
 feed_url: "https://khalidabuhakmeh.com/feed.xml"
 date: 2024-10-08 00:00:00 +00:00
-permalink: "/blogs/2024-10-08-Add-EF-Core-Migrations-to-NET-Aspire-Solutions.html"
+permalink: "/2024-10-08-Add-EF-Core-Migrations-to-NET-Aspire-Solutions.html"
 categories: ["Coding"]
-tags: [".NET", ".NET Aspire", ".NET CLI", "Aspire", "AspireSandbox", "Coding", "Database Schema", "DbContext", "Distributed Applications", "EF Core", "EF Core Migrations", "IDesignTimeDbContextFactory", "PostgreSQL", "Blogs", "VS"]
-tags_normalized: ["dotnet", "dotnet aspire", "dotnet cli", "aspire", "aspiresandbox", "coding", "database schema", "dbcontext", "distributed applications", "ef core", "ef core migrations", "idesigntimedbcontextfactory", "postgresql", "blogs", "vs"]
+tags: [".NET", ".NET Aspire", ".NET CLI", "Aspire", "AspireSandbox", "Blogs", "Coding", "Database Schema", "DbContext", "Distributed Applications", "EF Core", "EF Core Migrations", "IDesignTimeDbContextFactory", "PostgreSQL", "VS"]
+tags_normalized: ["dotnet", "dotnet aspire", "dotnet cli", "aspire", "aspiresandbox", "blogs", "coding", "database schema", "dbcontext", "distributed applications", "ef core", "ef core migrations", "idesigntimedbcontextfactory", "postgresql", "vs"]
 ---
 
 In this detailed guide, Khalid Abuhakmeh walks through bridging the development/runtime gap for managing EF Core migrations within .NET Aspire distributed solutions. The post explores solution structure, code snippets, and essential CLI commands.<!--excerpt_end-->

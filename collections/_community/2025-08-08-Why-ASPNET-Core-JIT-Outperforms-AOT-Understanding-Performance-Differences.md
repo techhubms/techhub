@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Reddit DotNet"
 feed_url: "https://www.reddit.com/r/dotnet/.rss"
 date: 2025-08-08 12:41:21 +00:00
-permalink: "/community/2025-08-08-Why-ASPNET-Core-JIT-Outperforms-AOT-Understanding-Performance-Differences.html"
+permalink: "/2025-08-08-Why-ASPNET-Core-JIT-Outperforms-AOT-Understanding-Performance-Differences.html"
 categories: ["Coding"]
 tags: [".NET", "AOT Compilation", "ASP.NET Core", "Benchmarks", "CLR", "Coding", "Community", "Dynamic PGO", "JIT Compilation", "Optimization Techniques", "Performance Optimization", "Profile Guided Optimization", "R2R", "Startup Performance", "TechEmpower Benchmarks", "Web Application Performance"]
 tags_normalized: ["dotnet", "aot compilation", "aspdotnet core", "benchmarks", "clr", "coding", "community", "dynamic pgo", "jit compilation", "optimization techniques", "performance optimization", "profile guided optimization", "r2r", "startup performance", "techempower benchmarks", "web application performance"]

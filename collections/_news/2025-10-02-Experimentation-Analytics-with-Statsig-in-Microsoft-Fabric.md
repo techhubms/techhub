@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Fabric Blog"
 feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
 date: 2025-10-02 13:00:00 +00:00
-permalink: "/news/2025-10-02-Experimentation-Analytics-with-Statsig-in-Microsoft-Fabric.html"
+permalink: "/2025-10-02-Experimentation-Analytics-with-Statsig-in-Microsoft-Fabric.html"
 categories: ["Azure", "ML"]
 tags: ["A/B Testing", "Azure", "Control Group", "Data Science", "Experimentation Analytics", "Feature Rollouts", "Frequentist Testing", "KPI", "Microsoft Fabric", "ML", "News", "OneLake", "Power BI", "Product Analytics", "Sequential Testing", "Statistical Analysis", "Statsig", "Variant Group"]
 tags_normalized: ["aslashb testing", "azure", "control group", "data science", "experimentation analytics", "feature rollouts", "frequentist testing", "kpi", "microsoft fabric", "ml", "news", "onelake", "power bi", "product analytics", "sequential testing", "statistical analysis", "statsig", "variant group"]

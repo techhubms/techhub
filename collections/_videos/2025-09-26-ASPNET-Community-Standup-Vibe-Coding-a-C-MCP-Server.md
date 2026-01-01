@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "DotNet YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw"
 date: 2025-09-26 17:46:41 +00:00
-permalink: "/videos/2025-09-26-ASPNET-Community-Standup-Vibe-Coding-a-C-MCP-Server.html"
+permalink: "/2025-09-26-ASPNET-Community-Standup-Vibe-Coding-a-C-MCP-Server.html"
 categories: ["Coding"]
 tags: [".NET", "ASP.NET Core", "Aspdotnet", "C#", "Coding", "Community Standup", "Developer Community", "Developer Tools", "Live Coding", "Mcp", "MCP Server", "Mcpserver", "Microsoft", "Server Development", "Vibe Coding", "Vibecoding", "Videos"]
 tags_normalized: ["dotnet", "aspdotnet core", "aspdotnet", "csharp", "coding", "community standup", "developer community", "developer tools", "live coding", "mcp", "mcp server", "mcpserver", "microsoft", "server development", "vibe coding", "vibecoding", "videos"]

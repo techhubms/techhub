@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Developer YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
 date: 2025-08-28 15:39:03 +00:00
-permalink: "/videos/2025-08-28-Explaining-the-Open-Sourcing-of-Windows-Subsystem-for-Linux-WSL.html"
+permalink: "/2025-08-28-Explaining-the-Open-Sourcing-of-Windows-Subsystem-for-Linux-WSL.html"
 categories: ["Coding"]
 tags: ["Codebase", "Coding", "Community Contributions", "Developer Tools", "File System Mounting", "GPU Access", "Linux On Windows", "Microsoft", "OneDevQuestion", "Open Source", "Shorts", "Transparency", "Videos", "Virtual Machines", "Windows Subsystem For Linux", "WSL"]
 tags_normalized: ["codebase", "coding", "community contributions", "developer tools", "file system mounting", "gpu access", "linux on windows", "microsoft", "onedevquestion", "open source", "shorts", "transparency", "videos", "virtual machines", "windows subsystem for linux", "wsl"]

@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-12-08 11:27:19 +00:00
-permalink: "/community/2025-12-08-Applying-DevOps-Principles-on-Lean-Infrastructure-Lessons-from-Scaling-to-102000-Users-and-Planning-Azure-Migration.html"
+permalink: "/2025-12-08-Applying-DevOps-Principles-on-Lean-Infrastructure-Lessons-from-Scaling-to-102000-Users-and-Planning-Azure-Migration.html"
 categories: ["Azure", "DevOps"]
 tags: ["Application Insights", "Azure", "Azure App Service", "Azure Blob Storage", "Azure Cache For Redis", "Azure CDN", "Azure Database For MySQL", "Azure Functions", "Azure Migration", "CI/CD Pipeline", "Cloud Cost Management", "Community", "DevOps", "GitHub Actions", "Hybrid Cloud", "IaC", "Laravel", "Monitoring And Observability", "MySQL", "PHP", "Redis", "Scaling", "Startup"]
 tags_normalized: ["application insights", "azure", "azure app service", "azure blob storage", "azure cache for redis", "azure cdn", "azure database for mysql", "azure functions", "azure migration", "cislashcd pipeline", "cloud cost management", "community", "devops", "github actions", "hybrid cloud", "iac", "laravel", "monitoring and observability", "mysql", "php", "redis", "scaling", "startup"]

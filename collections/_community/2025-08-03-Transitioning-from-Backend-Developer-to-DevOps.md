@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Reddit DevOps"
 feed_url: "https://www.reddit.com/r/devops/.rss"
 date: 2025-08-03 22:48:15 +00:00
-permalink: "/community/2025-08-03-Transitioning-from-Backend-Developer-to-DevOps.html"
+permalink: "/2025-08-03-Transitioning-from-Backend-Developer-to-DevOps.html"
 categories: ["DevOps"]
 tags: ["Automation", "Backend Development", "Career Transition", "CI/CD", "Cloud", "Community", "Developer Skills", "DevOps", "Engineering Practices", "Infrastructure", "Software Engineering"]
 tags_normalized: ["automation", "backend development", "career transition", "cislashcd", "cloud", "community", "developer skills", "devops", "engineering practices", "infrastructure", "software engineering"]

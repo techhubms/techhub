@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Visual Studio Code Releases"
 feed_url: "https://code.visualstudio.com/feed.xml"
 date: 2025-05-14 00:00:00 +00:00
-permalink: "/news/2025-05-14-Integrating-Model-Context-Protocol-MCP-in-VS-Code-Agent-Mode.html"
+permalink: "/2025-05-14-Integrating-Model-Context-Protocol-MCP-in-VS-Code-Agent-Mode.html"
 categories: ["AI", "Coding"]
 tags: ["AI", "AI Agents", "Coding", "Developer Tools", "Dynamic Tool Discovery", "Extension Development", "GitHub MCP Server", "MCP", "News", "Playwright MCP Server", "Secrets Management", "Tool Server", "User Control", "VS Code", "Workspace Integration"]
 tags_normalized: ["ai", "ai agents", "coding", "developer tools", "dynamic tool discovery", "extension development", "github mcp server", "mcp", "news", "playwright mcp server", "secrets management", "tool server", "user control", "vs code", "workspace integration"]

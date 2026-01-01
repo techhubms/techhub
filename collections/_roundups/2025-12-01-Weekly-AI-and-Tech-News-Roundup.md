@@ -6,7 +6,7 @@ author: "Tech Hub Team"
 excerpt_separator: <!--excerpt_end-->
 viewing_mode: "internal"
 date: 2025-12-01 09:00:00 +00:00
-permalink: "/roundups/2025-12-01-Weekly-AI-and-Tech-News-Roundup.html"
+permalink: "/2025-12-01-Weekly-AI-and-Tech-News-Roundup.html"
 categories: ["AI", "GitHub Copilot", "ML", "Azure", "Coding", "DevOps", "Security"]
 tags: ["Agentic AI", "AI", "Automation", "Azure", "Cloud Native", "Coding", "Confidential Computing", "Data Platform", "Developer Productivity", "Device Security", "DevOps", "Enterprise Migration", "GitHub Copilot", "Low Code", "Machine Learning", "Microsoft Foundry", "ML", "Observability", "Power Platform", "Roundups", "Security", "VS", "Zero Trust"]
 tags_normalized: ["agentic ai", "ai", "automation", "azure", "cloud native", "coding", "confidential computing", "data platform", "developer productivity", "device security", "devops", "enterprise migration", "github copilot", "low code", "machine learning", "microsoft foundry", "ml", "observability", "power platform", "roundups", "security", "vs", "zero trust"]

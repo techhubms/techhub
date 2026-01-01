@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-11-18 14:41:47 +00:00
-permalink: "/community/2025-11-18-AI-Agents-Accelerate-App-Modernization-with-GitHub-Copilot-and-Azure.html"
+permalink: "/2025-11-18-AI-Agents-Accelerate-App-Modernization-with-GitHub-Copilot-and-Azure.html"
 categories: ["AI", "Azure", "Coding", "DevOps", "GitHub Copilot"]
 tags: [".NET", ".NET Framework", "Agent Framework", "Agentic AI", "AI", "AKS", "AKS Automatic", "Application Modernization", "Azure", "Azure App Service", "Azure Container Apps", "Azure Database Migration Service", "Azure Migrate", "CAST Highlight", "Cloud Migration", "Coding", "Coding Agents", "Community", "Compliance Automation", "Containerization Assist", "Copilot CLI", "DevOps", "Docker", "Dr. Migrate", "GA", "GitHub Copilot", "IaC", "IntelliJ", "JakartaEE", "Java", "Migration", "Modern DevOps", "Portfolio Assessment", "PostgreSQL", "Public Preview", "Python", "Semantic Kernel", "SQL Server", "VS", "VS Code"]
 tags_normalized: ["dotnet", "dotnet framework", "agent framework", "agentic ai", "ai", "aks", "aks automatic", "application modernization", "azure", "azure app service", "azure container apps", "azure database migration service", "azure migrate", "cast highlight", "cloud migration", "coding", "coding agents", "community", "compliance automation", "containerization assist", "copilot cli", "devops", "docker", "drdot migrate", "ga", "github copilot", "iac", "intellij", "jakartaee", "java", "migration", "modern devops", "portfolio assessment", "postgresql", "public preview", "python", "semantic kernel", "sql server", "vs", "vs code"]

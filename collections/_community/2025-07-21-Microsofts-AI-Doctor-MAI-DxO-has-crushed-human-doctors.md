@@ -9,7 +9,7 @@ categories: ["AI"]
 feed_name: "Reddit Artificial Inteligence"
 feed_url: "https://www.reddit.com/r/ArtificialInteligence/.rss"
 date: 2025-07-21 13:08:03 +00:00
-permalink: "/community/2025-07-21-Microsofts-AI-Doctor-MAI-DxO-has-crushed-human-doctors.html"
+permalink: "/2025-07-21-Microsofts-AI-Doctor-MAI-DxO-has-crushed-human-doctors.html"
 viewing_mode: "external"
 tags: ["Accuracy Comparison", "AI", "AI Healthcare", "AI Performance", "ArtificialInteligence", "Community", "Diagnostic Tools", "Healthcare Innovation", "Machine Learning", "Mai Dxo", "Medical Diagnostics", "Medical Technology", "Microsoft AI Diagnostics Orchestrator"]
 tags_normalized: ["accuracy comparison", "ai", "ai healthcare", "ai performance", "artificialinteligence", "community", "diagnostic tools", "healthcare innovation", "machine learning", "mai dxo", "medical diagnostics", "medical technology", "microsoft ai diagnostics orchestrator"]

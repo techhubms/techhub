@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Events YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
 date: 2025-11-21 07:25:32 +00:00
-permalink: "/videos/2025-11-21-Accelerating-Agentic-Solutions-for-Financial-Services-with-Copilot-Studio.html"
+permalink: "/2025-11-21-Accelerating-Agentic-Solutions-for-Financial-Services-with-Copilot-Studio.html"
 categories: ["AI"]
 tags: ["Agentic Solutions", "AI", "AI Agents", "Banking Technology", "Capital Markets", "Continuous Optimization", "Copilot Studio", "Data Integration", "Edward Jones", "Email Diversification Alerts", "Financial Services", "Innovatewithlow", "Insurance Automation", "MCP", "Microsoft Ignite", "Morningstar", "MSIgnite", "Sub Agents", "Videos"]
 tags_normalized: ["agentic solutions", "ai", "ai agents", "banking technology", "capital markets", "continuous optimization", "copilot studio", "data integration", "edward jones", "email diversification alerts", "financial services", "innovatewithlow", "insurance automation", "mcp", "microsoft ignite", "morningstar", "msignite", "sub agents", "videos"]

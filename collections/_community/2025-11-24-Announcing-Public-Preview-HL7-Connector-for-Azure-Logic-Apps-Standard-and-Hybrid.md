@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-11-24 12:13:17 +00:00
-permalink: "/community/2025-11-24-Announcing-Public-Preview-HL7-Connector-for-Azure-Logic-Apps-Standard-and-Hybrid.html"
+permalink: "/2025-11-24-Announcing-Public-Preview-HL7-Connector-for-Azure-Logic-Apps-Standard-and-Hybrid.html"
 categories: ["Azure"]
 tags: ["Automated Data Exchange", "Azure", "Azure Integration Services", "Azure Logic Apps", "BizTalk Migration", "Clinical Data Exchange", "Community", "Healthcare Integration", "HL7", "HL7 Connector", "Hybrid Deployment", "Integration Account", "Message Orchestration", "MLLP Adapter", "Schema Management", "Standard Workflow"]
 tags_normalized: ["automated data exchange", "azure", "azure integration services", "azure logic apps", "biztalk migration", "clinical data exchange", "community", "healthcare integration", "hl7", "hl7 connector", "hybrid deployment", "integration account", "message orchestration", "mllp adapter", "schema management", "standard workflow"]

@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-09-02 15:13:03 +00:00
-permalink: "/community/2025-09-02-Securing-Cloud-Shell-Access-to-Azure-Kubernetes-Service-AKS.html"
+permalink: "/2025-09-02-Securing-Cloud-Shell-Access-to-Azure-Kubernetes-Service-AKS.html"
 categories: ["Azure", "DevOps", "Security"]
 tags: ["Access Control", "AKS", "Azure", "Azure Bastion", "Azure CLI", "Azure Cloud Shell", "Azure Firewall", "Cloud Security", "Command Invoke", "Community", "DevOps", "IP Allow List", "Kubernetes", "NAT Gateway", "Network Security", "Private Endpoints", "Security", "Vnet Integration"]
 tags_normalized: ["access control", "aks", "azure", "azure bastion", "azure cli", "azure cloud shell", "azure firewall", "cloud security", "command invoke", "community", "devops", "ip allow list", "kubernetes", "nat gateway", "network security", "private endpoints", "security", "vnet integration"]

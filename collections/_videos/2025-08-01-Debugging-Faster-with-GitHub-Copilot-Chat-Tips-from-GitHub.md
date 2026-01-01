@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "GitHub YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ"
 date: 2025-08-01 14:01:09 +00:00
-permalink: "/videos/2025-08-01-Debugging-Faster-with-GitHub-Copilot-Chat-Tips-from-GitHub.html"
+permalink: "/2025-08-01-Debugging-Faster-with-GitHub-Copilot-Chat-Tips-from-GitHub.html"
 categories: ["AI", "GitHub Copilot"]
 tags: ["AI", "Automation", "Bug Fixing", "Code Assistance", "Copilot Chat", "Debugging", "Developer Productivity", "Error Messages", "GitHub", "GitHub Copilot", "Programming", "Videos"]
 tags_normalized: ["ai", "automation", "bug fixing", "code assistance", "copilot chat", "debugging", "developer productivity", "error messages", "github", "github copilot", "programming", "videos"]

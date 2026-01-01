@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "John Savill's Technical Training"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCpIn7ox7j7bH_OFj7tYouOQ"
 date: 2025-09-22 13:17:22 +00:00
-permalink: "/videos/2025-09-22-Azure-Database-for-PostgreSQL-Flexible-Server-Deep-Dive.html"
+permalink: "/2025-09-22-Azure-Database-for-PostgreSQL-Flexible-Server-Deep-Dive.html"
 categories: ["Azure"]
 tags: ["Authentication", "Azure", "Azure Backup", "Azure Cloud", "Azure Database For PostgreSQL", "Cloud", "Cloud Database", "Connection Pooling", "Database", "Database Management", "Disk Configuration", "Encryption", "Flexible Server", "High Availability", "Managed Database", "Microsoft", "Microsoft Azure", "Microsoft Cloud", "Postgresql", "Postgress", "Replication", "Videos", "Virtual Endpoints"]
 tags_normalized: ["authentication", "azure", "azure backup", "azure cloud", "azure database for postgresql", "cloud", "cloud database", "connection pooling", "database", "database management", "disk configuration", "encryption", "flexible server", "high availability", "managed database", "microsoft", "microsoft azure", "microsoft cloud", "postgresql", "postgress", "replication", "videos", "virtual endpoints"]

@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft PowerShell Blog"
 feed_url: "https://devblogs.microsoft.com/powershell/feed/"
 date: 2025-02-28 20:49:30 +00:00
-permalink: "/news/2025-02-28-Announcing-AI-Shell-Preview-2-Enhanced-Azure-PowerShell-Integration-and-More.html"
+permalink: "/2025-02-28-Announcing-AI-Shell-Preview-2-Enhanced-Azure-PowerShell-Integration-and-More.html"
 categories: ["AI", "Azure", "Coding", "DevOps"]
 tags: ["AI", "AI Shell", "Automation", "Azure", "Azure OpenAI", "Azure PowerShell", "Bicep", "CLI Tools", "Coding", "Copilot in Azure", "Deployment", "Developer Tools", "DevOps", "Error Handling", "Microsoft", "News", "OllamaSharp", "OpenAI Compatible Models", "PowerShell", "Windows Terminal"]
 tags_normalized: ["ai", "ai shell", "automation", "azure", "azure openai", "azure powershell", "bicep", "cli tools", "coding", "copilot in azure", "deployment", "developer tools", "devops", "error handling", "microsoft", "news", "ollamasharp", "openai compatible models", "powershell", "windows terminal"]

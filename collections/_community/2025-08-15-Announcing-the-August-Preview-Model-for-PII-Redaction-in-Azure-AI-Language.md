@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Community"
 date: 2025-08-15 07:34:14 +00:00
-permalink: "/community/2025-08-15-Announcing-the-August-Preview-Model-for-PII-Redaction-in-Azure-AI-Language.html"
+permalink: "/2025-08-15-Announcing-the-August-Preview-Model-for-PII-Redaction-in-Azure-AI-Language.html"
 categories: ["AI", "Azure"]
 tags: ["AI", "AI Model Update", "Azure", "Azure AI Foundry", "Azure AI Language", "Azure Cognitive Services", "Community", "Data Privacy", "Entity Recognition", "Financial Data", "Language Support", "LicensePlateNumber", "Machine Learning", "Multilingual AI", "Natural Language Processing", "PII Redaction", "Preview Release", "SortCode"]
 tags_normalized: ["ai", "ai model update", "azure", "azure ai foundry", "azure ai language", "azure cognitive services", "community", "data privacy", "entity recognition", "financial data", "language support", "licenseplatenumber", "machine learning", "multilingual ai", "natural language processing", "pii redaction", "preview release", "sortcode"]

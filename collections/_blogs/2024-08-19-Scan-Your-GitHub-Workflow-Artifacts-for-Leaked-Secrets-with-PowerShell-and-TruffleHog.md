@@ -9,10 +9,10 @@ viewing_mode: "external"
 feed_name: "Jesse Houwing's Blog"
 feed_url: "https://jessehouwing.net/rss/"
 date: 2024-08-19 21:24:47 +00:00
-permalink: "/blogs/2024-08-19-Scan-Your-GitHub-Workflow-Artifacts-for-Leaked-Secrets-with-PowerShell-and-TruffleHog.html"
+permalink: "/2024-08-19-Scan-Your-GitHub-Workflow-Artifacts-for-Leaked-Secrets-with-PowerShell-and-TruffleHog.html"
 categories: ["DevOps", "Security"]
-tags: ["Access Tokens", "Cloud Security", "DevOps", "DevSecOps", "GitHub", "GitHub Actions", "GitHub CLI", "JQ", "Blogs", "PowerShell", "Secrets Scanning", "Security", "TruffleHog", "Workflow Artifacts", "Workflow Automation"]
-tags_normalized: ["access tokens", "cloud security", "devops", "devsecops", "github", "github actions", "github cli", "jq", "blogs", "powershell", "secrets scanning", "security", "trufflehog", "workflow artifacts", "workflow automation"]
+tags: ["Access Tokens", "Blogs", "Cloud Security", "DevOps", "DevSecOps", "GitHub", "GitHub Actions", "GitHub CLI", "JQ", "PowerShell", "Secrets Scanning", "Security", "TruffleHog", "Workflow Artifacts", "Workflow Automation"]
+tags_normalized: ["access tokens", "blogs", "cloud security", "devops", "devsecops", "github", "github actions", "github cli", "jq", "powershell", "secrets scanning", "security", "trufflehog", "workflow artifacts", "workflow automation"]
 ---
 
 In this post, Jesse Houwing provides a practical PowerShell script for scanning GitHub workflow artifacts for leaked secrets. Learn how the script leverages TruffleHog and covers setup, execution, and best practices for securing your repositories.<!--excerpt_end-->

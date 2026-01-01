@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft DevBlog"
 feed_url: "https://devblogs.microsoft.com/devops/feed/"
 date: 2025-08-13 15:31:56 +00:00
-permalink: "/news/2025-08-13-Azure-DevOps-Improves-OAuth-Client-Secret-Security-Secrets-Now-Shown-Only-Once.html"
+permalink: "/2025-08-13-Azure-DevOps-Improves-OAuth-Client-Secret-Security-Secrets-Now-Shown-Only-Once.html"
 categories: ["Azure", "DevOps", "Security"]
 tags: ["API Deprecation", "Azure", "Azure DevOps", "Azure Key Vault", "Client Secrets", "Credential Storage", "DevOps", "DevOps Workflows", "News", "OAuth", "Secret Management", "Secret Rotation", "Secure First Initiative", "Security", "Security Best Practices"]
 tags_normalized: ["api deprecation", "azure", "azure devops", "azure key vault", "client secrets", "credential storage", "devops", "devops workflows", "news", "oauth", "secret management", "secret rotation", "secure first initiative", "security", "security best practices"]

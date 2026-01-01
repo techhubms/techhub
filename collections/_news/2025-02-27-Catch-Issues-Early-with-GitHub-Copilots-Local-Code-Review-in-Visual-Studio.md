@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft DevBlog"
 feed_url: "https://devblogs.microsoft.com/visualstudio/tag/copilot/feed/"
 date: 2025-02-27 17:06:24 +00:00
-permalink: "/news/2025-02-27-Catch-Issues-Early-with-GitHub-Copilots-Local-Code-Review-in-Visual-Studio.html"
+permalink: "/2025-02-27-Catch-Issues-Early-with-GitHub-Copilots-Local-Code-Review-in-Visual-Studio.html"
 categories: ["AI", "Coding", "DevOps", "GitHub Copilot"]
 tags: ["AI", "AI Features", "Code Review", "Coding", "Commit Workflow", "Copilot", "Copilot Suggestions", "Developer Experience", "DevOps", "Git", "GitHub Copilot", "News", "Performance Issues", "Security Issues", "Source Control", "VS"]
 tags_normalized: ["ai", "ai features", "code review", "coding", "commit workflow", "copilot", "copilot suggestions", "developer experience", "devops", "git", "github copilot", "news", "performance issues", "security issues", "source control", "vs"]

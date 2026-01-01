@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-09-16 16:39:16 +00:00
-permalink: "/community/2025-09-16-Search-Less-Build-More-Inner-Sourcing-with-GitHub-Copilot-and-Azure-DevOps-MCP-Server.html"
+permalink: "/2025-09-16-Search-Less-Build-More-Inner-Sourcing-with-GitHub-Copilot-and-Azure-DevOps-MCP-Server.html"
 categories: ["AI", "Azure", "DevOps", "GitHub Copilot"]
 tags: ["ADO", "AI", "Automation", "Azure", "Azure DevOps", "Code Discoverability", "Code Search Extension", "Community", "Copilot Instructions", "Developer Productivity", "DevOps", "GitHub Copilot", "IDE Integration", "Inner Sourcing", "Knowledge Management", "MCP Server", "Organization Standards", "Platform Engineering", "Repository Search"]
 tags_normalized: ["ado", "ai", "automation", "azure", "azure devops", "code discoverability", "code search extension", "community", "copilot instructions", "developer productivity", "devops", "github copilot", "ide integration", "inner sourcing", "knowledge management", "mcp server", "organization standards", "platform engineering", "repository search"]

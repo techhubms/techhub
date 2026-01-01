@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "DotNet YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw"
 date: 2025-08-25 22:38:30 +00:00
-permalink: "/videos/2025-08-25-NET-AI-Community-Standup-AI-Tools-Every-NET-Dev-Needs.html"
+permalink: "/2025-08-25-NET-AI-Community-Standup-AI-Tools-Every-NET-Dev-Needs.html"
 categories: ["AI", "Coding", "GitHub Copilot"]
 tags: [".NET", "AI", "AI Powered Development", "AI Tools", "Automation", "Best Practices", "Coding", "Coding With AI", "Demo", "Developer", "Developer Community", "Developer Tools", "Developer Workflow", "Dotnetdeveloper", "GitHub Copilot", "Lesson Learned", "Microsoft", "Microsoft Copilot Studio", "Software Developer", "Software Development", "Tipsandtricks", "Videos"]
 tags_normalized: ["dotnet", "ai", "ai powered development", "ai tools", "automation", "best practices", "coding", "coding with ai", "demo", "developer", "developer community", "developer tools", "developer workflow", "dotnetdeveloper", "github copilot", "lesson learned", "microsoft", "microsoft copilot studio", "software developer", "software development", "tipsandtricks", "videos"]

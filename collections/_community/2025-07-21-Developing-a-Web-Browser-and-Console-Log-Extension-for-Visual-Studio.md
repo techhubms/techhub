@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Reddit Visual Studio"
 feed_url: "https://www.reddit.com/r/VisualStudio/.rss"
 date: 2025-07-21 17:55:22 +00:00
-permalink: "/community/2025-07-21-Developing-a-Web-Browser-and-Console-Log-Extension-for-Visual-Studio.html"
+permalink: "/2025-07-21-Developing-a-Web-Browser-and-Console-Log-Extension-for-Visual-Studio.html"
 categories: ["Coding"]
 tags: ["Browser Panel", "Coding", "Community", "Console Log", "Developer Productivity", "Extension Development", "IDE Tools", "Olivier Dalet", "Proof Of Concept", "React", "User Interface", "VS", "WebView2"]
 tags_normalized: ["browser panel", "coding", "community", "console log", "developer productivity", "extension development", "ide tools", "olivier dalet", "proof of concept", "react", "user interface", "vs", "webview2"]

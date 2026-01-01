@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft News"
 feed_url: "https://news.microsoft.com/source/feed/"
 date: 2025-09-10 15:16:47 +00:00
-permalink: "/news/2025-09-10-NEA-Receives-Microsoft-Grant-to-Advance-AI-Literacy-and-Leadership-in-Education.html"
+permalink: "/2025-09-10-NEA-Receives-Microsoft-Grant-to-Advance-AI-Literacy-and-Leadership-in-Education.html"
 categories: ["AI"]
 tags: ["AI", "AI in Schools", "AI Literacy", "Company News", "Education Technology", "Educational Policy", "Educator Training", "ISTE", "K 12 Education", "Micro Credentials", "Microsoft", "Microsoft Elevate", "NEA", "News", "Policy Development", "Professional Learning"]
 tags_normalized: ["ai", "ai in schools", "ai literacy", "company news", "education technology", "educational policy", "educator training", "iste", "k 12 education", "micro credentials", "microsoft", "microsoft elevate", "nea", "news", "policy development", "professional learning"]

@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Visual Studio Code Releases"
 feed_url: "https://code.visualstudio.com/feed.xml"
 date: 2025-09-11 17:00:00 +00:00
-permalink: "/news/2025-09-11-Whats-New-in-Visual-Studio-Code-August-2025-v1104.html"
+permalink: "/2025-09-11-Whats-New-in-Visual-Studio-Code-August-2025-v1104.html"
 categories: ["AI", "Coding", "DevOps", "GitHub Copilot"]
 tags: ["AI", "AI Powered Development", "Chat Features", "Coding", "Coding Agents", "DevOps", "Extension APIs", "GitHub Copilot", "JavaScript", "Model Selection", "News", "Productivity Tools", "Python", "Release Notes", "Source Control", "Terminal Improvements", "TypeScript", "VS Code", "VS Code 1.104"]
 tags_normalized: ["ai", "ai powered development", "chat features", "coding", "coding agents", "devops", "extension apis", "github copilot", "javascript", "model selection", "news", "productivity tools", "python", "release notes", "source control", "terminal improvements", "typescript", "vs code", "vs code 1dot104"]

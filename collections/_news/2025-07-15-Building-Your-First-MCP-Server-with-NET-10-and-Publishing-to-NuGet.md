@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft .NET Blog"
 feed_url: "https://devblogs.microsoft.com/dotnet/feed/"
 date: 2025-07-15 20:00:00 +00:00
-permalink: "/news/2025-07-15-Building-Your-First-MCP-Server-with-NET-10-and-Publishing-to-NuGet.html"
+permalink: "/2025-07-15-Building-Your-First-MCP-Server-with-NET-10-and-Publishing-to-NuGet.html"
 categories: ["AI", "GitHub Copilot", "Coding"]
 tags: [".NET", ".NET 10", "AI", "AI Assistants", "C#", "Coding", "Community Tools", "Configuration", "GitHub Copilot", "MCP", "News", "NuGet", "Open Standard", "Project Publishing", "SDK", "Server Development", "Templates", "VS Code"]
 tags_normalized: ["dotnet", "dotnet 10", "ai", "ai assistants", "csharp", "coding", "community tools", "configuration", "github copilot", "mcp", "news", "nuget", "open standard", "project publishing", "sdk", "server development", "templates", "vs code"]

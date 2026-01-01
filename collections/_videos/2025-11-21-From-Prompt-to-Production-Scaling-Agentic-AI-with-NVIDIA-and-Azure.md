@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Events YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
 date: 2025-11-21 10:20:19 +00:00
-permalink: "/videos/2025-11-21-From-Prompt-to-Production-Scaling-Agentic-AI-with-NVIDIA-and-Azure.html"
+permalink: "/2025-11-21-From-Prompt-to-Production-Scaling-Agentic-AI-with-NVIDIA-and-Azure.html"
 categories: ["AI", "Azure"]
 tags: ["Agentic AI", "Agenticbusinessapplications", "AI", "AI Agents", "AI Deployment", "Azure", "Azure AI", "Business Innovation", "Cloud Computing", "Content Safety", "Custom AI Models", "Enterprise Automation", "Microsoft Ignite", "Model Benchmarking", "MSIgnite", "NeMo Agent Toolkit", "NVIDIA Nemotron", "NVIDIA NIM", "Videos", "Workflow Orchestration"]
 tags_normalized: ["agentic ai", "agenticbusinessapplications", "ai", "ai agents", "ai deployment", "azure", "azure ai", "business innovation", "cloud computing", "content safety", "custom ai models", "enterprise automation", "microsoft ignite", "model benchmarking", "msignite", "nemo agent toolkit", "nvidia nemotron", "nvidia nim", "videos", "workflow orchestration"]

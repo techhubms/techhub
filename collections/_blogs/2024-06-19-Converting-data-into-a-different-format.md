@@ -8,8 +8,8 @@ canonical_url: "https://blog.jesseswart.nl/post/copilot-data-conversion"
 viewing_mode: "external"
 categories: ["AI", "GitHub Copilot"]
 permalink: "/blogs/2024-06-19-Converting-data-into-a-different-format.html"
-tags: ["AI", "Data Conversion", "GitHub Copilot", "Markdown", "Blogs", "Productivity", "Programming", "SQL", "Tutorials"]
-tags_normalized: ["ai", "data conversion", "github copilot", "markdown", "blogs", "productivity", "programming", "sql", "tutorials"]
+tags: ["AI", "Blogs", "Data Conversion", "GitHub Copilot", "Markdown", "Productivity", "Programming", "SQL", "Tutorials"]
+tags_normalized: ["ai", "blogs", "data conversion", "github copilot", "markdown", "productivity", "programming", "sql", "tutorials"]
 ---
 
 GitHub Copilot can efficiently convert data between various formats, making it a powerful tool for developers working with exported data from design tools. Jesse Swart demonstrates a simple three-step process to transform structured data like SQL statements into other formats such as Markdown.<!--excerpt_end-->

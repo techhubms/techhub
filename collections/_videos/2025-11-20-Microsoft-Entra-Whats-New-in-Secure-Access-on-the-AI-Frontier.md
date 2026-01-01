@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Events YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
 date: 2025-11-20 16:57:00 +00:00
-permalink: "/videos/2025-11-20-Microsoft-Entra-Whats-New-in-Secure-Access-on-the-AI-Frontier.html"
+permalink: "/2025-11-20-Microsoft-Entra-Whats-New-in-Secure-Access-on-the-AI-Frontier.html"
 categories: ["AI", "Azure", "Security"]
 tags: ["Account Recovery", "Agent Governance", "Agent ID", "AI", "AI Security", "App Lifecycle Management", "Authentication", "Azure", "Cloud Security", "Conditional Access", "Identity Governance", "Microsoft Entra ID", "Microsoft Ignite", "Modern Identity", "ModernizeSecOpswithaunifiedplatform", "MSIgnite", "Permissions", "Prompt Injection Protection", "Security", "Security Architecture", "Unified Platform", "Videos", "Zero Trust"]
 tags_normalized: ["account recovery", "agent governance", "agent id", "ai", "ai security", "app lifecycle management", "authentication", "azure", "cloud security", "conditional access", "identity governance", "microsoft entra id", "microsoft ignite", "modern identity", "modernizesecopswithaunifiedplatform", "msignite", "permissions", "prompt injection protection", "security", "security architecture", "unified platform", "videos", "zero trust"]

@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Visual Studio Code YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SLNwkd3w"
 date: 2025-09-23 17:15:04 +00:00
-permalink: "/videos/2025-09-23-GitHub-MCP-Registry-Integration-with-Playwright-in-VS-Code-Insiders.html"
+permalink: "/2025-09-23-GitHub-MCP-Registry-Integration-with-Playwright-in-VS-Code-Insiders.html"
 categories: ["AI", "Coding", "DevOps", "GitHub Copilot"]
 tags: ["AI", "Automated Testing", "Code", "Coding", "Copilot", "Demo", "Developer", "Developer Community", "Developer Tools", "Developer Workflow", "Developerworkflow", "DevOps", "Extension Development", "GitHub Copilot", "GitHub MCP", "Mcp", "MCP Registry", "Playwright", "Software Developer", "Software Development", "Testing Automation", "Videos", "VS Code", "VS Code Insiders"]
 tags_normalized: ["ai", "automated testing", "code", "coding", "copilot", "demo", "developer", "developer community", "developer tools", "developer workflow", "developerworkflow", "devops", "extension development", "github copilot", "github mcp", "mcp", "mcp registry", "playwright", "software developer", "software development", "testing automation", "videos", "vs code", "vs code insiders"]

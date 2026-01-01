@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft TypeScript Blog"
 feed_url: "https://devblogs.microsoft.com/typescript/feed/"
 date: 2025-01-29 18:51:38 +00:00
-permalink: "/news/2025-01-29-Announcing-TypeScript-58-Beta-Key-Features-and-Improvements.html"
+permalink: "/2025-01-29-Announcing-TypeScript-58-Beta-Key-Features-and-Improvements.html"
 categories: ["Coding"]
 tags: ["Checked Return Types", "Coding", "CommonJS", "Compiler Flags", "Conditional Types", "Declaration Files", "Erasablesyntaxonly", "ESM", "Indexed Access Types", "JavaScript", "Libreplacement", "Module Node18", "Module Nodenext", "News", "Node.js", "Program Optimization", "TypeScript", "TypeScript 5.8"]
 tags_normalized: ["checked return types", "coding", "commonjs", "compiler flags", "conditional types", "declaration files", "erasablesyntaxonly", "esm", "indexed access types", "javascript", "libreplacement", "module node18", "module nodenext", "news", "nodedotjs", "program optimization", "typescript", "typescript 5dot8"]

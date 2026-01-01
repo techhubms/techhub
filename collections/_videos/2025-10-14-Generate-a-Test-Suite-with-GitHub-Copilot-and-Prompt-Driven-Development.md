@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Visual Studio Code YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SLNwkd3w"
 date: 2025-10-14 16:30:26 +00:00
-permalink: "/videos/2025-10-14-Generate-a-Test-Suite-with-GitHub-Copilot-and-Prompt-Driven-Development.html"
+permalink: "/2025-10-14-Generate-a-Test-Suite-with-GitHub-Copilot-and-Prompt-Driven-Development.html"
 categories: ["AI", "Coding", "GitHub Copilot"]
 tags: ["AI", "API Testing", "Coding", "Demo", "Developer", "Developer Tools", "Developertipsandtricks", "End To End Testing", "GitHub Copilot", "Integration Testing", "Microsoft", "Mocking Strategy", "Prompt Driven Development", "Prompt Engineering", "Promptdrivendevelopment", "Prompts", "Test Automation", "Unit Testing", "Videos", "VS Code"]
 tags_normalized: ["ai", "api testing", "coding", "demo", "developer", "developer tools", "developertipsandtricks", "end to end testing", "github copilot", "integration testing", "microsoft", "mocking strategy", "prompt driven development", "prompt engineering", "promptdrivendevelopment", "prompts", "test automation", "unit testing", "videos", "vs code"]

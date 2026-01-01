@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Azure SDK Blog"
 feed_url: "https://devblogs.microsoft.com/azure-sdk/feed/"
 date: 2025-10-14 21:54:15 +00:00
-permalink: "/news/2025-10-14-Azure-Developer-CLI-azd-October-2025-Layered-Provisioning-Service-Dependencies-and-More.html"
+permalink: "/2025-10-14-Azure-Developer-CLI-azd-October-2025-Layered-Provisioning-Service-Dependencies-and-More.html"
 categories: ["Azure", "Coding", "DevOps"]
 tags: [".NET", "AKS", "Authentication", "Azd", "Azure", "Azure App Service", "Azure Developer CLI", "Azure SDK", "Bicep", "CI/CD", "Cloud Development", "Codespaces", "Coding", "Community Templates", "Container Apps", "DevOps", "Docker", "Extension Management", "GitHub", "IaC", "Java", "JavaScript", "Kubernetes", "Layered Provisioning", "Managed Identity", "News", "Python", "Service Dependencies", "Templates", "Typescript", "VS Code"]
 tags_normalized: ["dotnet", "aks", "authentication", "azd", "azure", "azure app service", "azure developer cli", "azure sdk", "bicep", "cislashcd", "cloud development", "codespaces", "coding", "community templates", "container apps", "devops", "docker", "extension management", "github", "iac", "java", "javascript", "kubernetes", "layered provisioning", "managed identity", "news", "python", "service dependencies", "templates", "typescript", "vs code"]

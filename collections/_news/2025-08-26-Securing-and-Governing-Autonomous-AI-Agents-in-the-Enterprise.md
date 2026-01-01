@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Security Blog"
 feed_url: "https://www.microsoft.com/en-us/security/blog/feed/"
 date: 2025-08-26 16:00:00 +00:00
-permalink: "/news/2025-08-26-Securing-and-Governing-Autonomous-AI-Agents-in-the-Enterprise.html"
+permalink: "/2025-08-26-Securing-and-Governing-Autonomous-AI-Agents-in-the-Enterprise.html"
 categories: ["AI", "Security"]
 tags: ["Access Control", "Agent Identity", "Agent Registry", "Agentic Systems", "AI", "AI Governance", "AI Security", "Autonomous Agents", "Compliance", "Data Protection", "Enterprise Security", "Entra Agent ID", "MCP", "Microsoft Defender", "Microsoft Entra", "Microsoft Purview", "News", "Role Based Access Control", "Security", "Security Posture", "Threat Detection", "XPIA", "Zero Trust Security"]
 tags_normalized: ["access control", "agent identity", "agent registry", "agentic systems", "ai", "ai governance", "ai security", "autonomous agents", "compliance", "data protection", "enterprise security", "entra agent id", "mcp", "microsoft defender", "microsoft entra", "microsoft purview", "news", "role based access control", "security", "security posture", "threat detection", "xpia", "zero trust security"]

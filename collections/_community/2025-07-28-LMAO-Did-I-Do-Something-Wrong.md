@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Reddit Github Copilot"
 feed_url: "https://www.reddit.com/r/GithubCopilot.rss"
 date: 2025-07-28 11:13:32 +00:00
-permalink: "/community/2025-07-28-LMAO-Did-I-Do-Something-wrong.html"
+permalink: "/2025-07-28-LMAO-Did-I-Do-Something-Wrong.html"
 categories: ["AI", "GitHub Copilot"]
 tags: ["AI", "AI Assistant", "Automation", "Code Suggestions", "Community", "Community Discussion", "Developer Humor", "GitHub Copilot", "Programming Tools", "Reddit", "Software Development", "User Experience"]
 tags_normalized: ["ai", "ai assistant", "automation", "code suggestions", "community", "community discussion", "developer humor", "github copilot", "programming tools", "reddit", "software development", "user experience"]

@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-09-20 22:15:06 +00:00
-permalink: "/community/2025-09-20-Azure-Migrate-Connected-Experiences-for-Efficient-Cloud-Modernization.html"
+permalink: "/2025-09-20-Azure-Migrate-Connected-Experiences-for-Efficient-Cloud-Modernization.html"
 categories: ["AI", "Azure", "DevOps", "Security"]
 tags: ["6R Analysis", "AI", "AI Assistance", "Arc Enabled", "Azure", "Azure Key Vault", "Azure Migrate", "Cloud Migration", "Community", "Database Migration Service", "DevOps", "Hybrid Cloud", "IaC", "Microsoft Defender For Cloud", "Modernization", "PostgreSQL", "Private Link", "Security", "Security By Design", "Sustainability"]
 tags_normalized: ["6r analysis", "ai", "ai assistance", "arc enabled", "azure", "azure key vault", "azure migrate", "cloud migration", "community", "database migration service", "devops", "hybrid cloud", "iac", "microsoft defender for cloud", "modernization", "postgresql", "private link", "security", "security by design", "sustainability"]

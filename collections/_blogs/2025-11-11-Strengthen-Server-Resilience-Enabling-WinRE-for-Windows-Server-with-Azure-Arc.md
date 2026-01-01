@@ -9,10 +9,10 @@ viewing_mode: "external"
 feed_name: "Thomas Maurer's Blog"
 feed_url: "https://www.thomasmaurer.ch/feed/"
 date: 2025-11-11 13:16:43 +00:00
-permalink: "/blogs/2025-11-11-Strengthen-Server-Resilience-Enabling-WinRE-for-Windows-Server-with-Azure-Arc.html"
+permalink: "/2025-11-11-Strengthen-Server-Resilience-Enabling-WinRE-for-Windows-Server-with-Azure-Arc.html"
 categories: ["Azure", "Security"]
-tags: ["Adaptive Cloud", "Azure", "Azure Adaptive Cloud", "Azure Arc", "Azure Connected Machine Agent", "Azure Policy", "Centralized Governance", "Cloud", "Compliance", "Configuration Management", "Disaster Recovery", "Hybrid Cloud", "Microsoft", "Microsoft Azure", "Blogs", "Public Preview", "Security", "Server Management", "Windows", "Windows Recovery Environment", "Windows Server", "WinRE"]
-tags_normalized: ["adaptive cloud", "azure", "azure adaptive cloud", "azure arc", "azure connected machine agent", "azure policy", "centralized governance", "cloud", "compliance", "configuration management", "disaster recovery", "hybrid cloud", "microsoft", "microsoft azure", "blogs", "public preview", "security", "server management", "windows", "windows recovery environment", "windows server", "winre"]
+tags: ["Adaptive Cloud", "Azure", "Azure Adaptive Cloud", "Azure Arc", "Azure Connected Machine Agent", "Azure Policy", "Blogs", "Centralized Governance", "Cloud", "Compliance", "Configuration Management", "Disaster Recovery", "Hybrid Cloud", "Microsoft", "Microsoft Azure", "Public Preview", "Security", "Server Management", "Windows", "Windows Recovery Environment", "Windows Server", "WinRE"]
+tags_normalized: ["adaptive cloud", "azure", "azure adaptive cloud", "azure arc", "azure connected machine agent", "azure policy", "blogs", "centralized governance", "cloud", "compliance", "configuration management", "disaster recovery", "hybrid cloud", "microsoft", "microsoft azure", "public preview", "security", "server management", "windows", "windows recovery environment", "windows server", "winre"]
 ---
 
 Thomas Maurer details how to use Azure Arc and Azure Policy to audit and enable Windows Recovery Environment (WinRE) for Windows Server, empowering IT teams to improve hybrid cloud resilience and recovery.<!--excerpt_end-->

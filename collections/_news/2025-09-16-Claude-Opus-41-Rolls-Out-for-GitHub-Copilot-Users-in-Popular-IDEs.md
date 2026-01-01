@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/changelog/feed/"
 date: 2025-09-16 16:57:42 +00:00
-permalink: "/news/2025-09-16-Claude-Opus-41-Rolls-Out-for-GitHub-Copilot-Users-in-Popular-IDEs.html"
+permalink: "/2025-09-16-Claude-Opus-41-Rolls-Out-for-GitHub-Copilot-Users-in-Popular-IDEs.html"
 categories: ["AI", "GitHub Copilot"]
 tags: ["AI", "AI Model", "Anthropic", "Claude Opus 4.1", "Copilot", "Copilot Chat", "Copilot Enterprise", "Copilot Pro+", "Developer Tools", "Eclipse", "GitHub Copilot", "IDE Integration", "JetBrains", "Model Picker", "News", "Product Release", "VS", "Xcode"]
 tags_normalized: ["ai", "ai model", "anthropic", "claude opus 4dot1", "copilot", "copilot chat", "copilot enterprise", "copilot proplus", "developer tools", "eclipse", "github copilot", "ide integration", "jetbrains", "model picker", "news", "product release", "vs", "xcode"]

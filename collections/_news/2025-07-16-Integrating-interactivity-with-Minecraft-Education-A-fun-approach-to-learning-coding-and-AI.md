@@ -9,7 +9,7 @@ categories: ["AI"]
 feed_name: "Microsoft News"
 feed_url: "https://news.microsoft.com/source/feed/"
 date: 2025-07-16 14:14:45 +00:00
-permalink: "/news/2025-07-16-Integrating-interactivity-with-Minecraft-Education-A-fun-approach-to-learning-coding-and-AI.html"
+permalink: "/2025-07-16-Integrating-interactivity-with-Minecraft-Education-A-fun-approach-to-learning-coding-and-AI.html"
 viewing_mode: "external"
 tags: ["AI", "Classroom Tools", "Company News", "Education", "Education Technology", "Game Based Learning", "Interactivity", "Microsoft", "Minecraft Education", "News", "Programming", "STEM"]
 tags_normalized: ["ai", "classroom tools", "company news", "education", "education technology", "game based learning", "interactivity", "microsoft", "minecraft education", "news", "programming", "stem"]

@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "GitHub YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ"
 date: 2025-10-24 23:58:52 +00:00
-permalink: "/videos/2025-10-24-AI-and-GitHub-Copilot-Modernizing-Legacy-Apps-for-the-Cloud.html"
+permalink: "/2025-10-24-AI-and-GitHub-Copilot-Modernizing-Legacy-Apps-for-the-Cloud.html"
 categories: ["AI", "Azure", "Coding", "DevOps", "GitHub Copilot"]
 tags: [".NET Modernization", "AI", "AI Powered Modernization", "Application Modernization", "Azure", "Azure Deployment", "CI/CD Automation", "Cloud Migration", "Code Assessment", "Coding", "DevOps", "DevOps Workflow", "GitHub Copilot", "IaC", "Java Modernization", "Legacy Codebase", "Security Fixes", "Upgrade Automation", "Videos"]
 tags_normalized: ["dotnet modernization", "ai", "ai powered modernization", "application modernization", "azure", "azure deployment", "cislashcd automation", "cloud migration", "code assessment", "coding", "devops", "devops workflow", "github copilot", "iac", "java modernization", "legacy codebase", "security fixes", "upgrade automation", "videos"]

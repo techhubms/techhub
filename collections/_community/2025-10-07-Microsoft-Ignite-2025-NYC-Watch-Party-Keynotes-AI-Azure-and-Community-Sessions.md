@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-10-07 23:00:00 +00:00
-permalink: "/community/2025-10-07-Microsoft-Ignite-2025-NYC-Watch-Party-Keynotes-AI-Azure-and-Community-Sessions.html"
+permalink: "/2025-10-07-Microsoft-Ignite-2025-NYC-Watch-Party-Keynotes-AI-Azure-and-Community-Sessions.html"
 categories: ["AI", "Azure", "Coding"]
 tags: [".NET", "Agentic Orchestration", "AI", "Automation", "Azure", "Azure AI Foundry", "Azure Load Balancer", "Cloud", "Coding", "Community", "Copilot Studio", "Microsoft Ignite", "MVP", "Open Source", "Power Apps", "Power BI", "Vector Search"]
 tags_normalized: ["dotnet", "agentic orchestration", "ai", "automation", "azure", "azure ai foundry", "azure load balancer", "cloud", "coding", "community", "copilot studio", "microsoft ignite", "mvp", "open source", "power apps", "power bi", "vector search"]

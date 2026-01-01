@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Fabric Blog"
 feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
 date: 2025-11-24 09:30:00 +00:00
-permalink: "/news/2025-11-24-Querying-Database-Backups-in-Microsoft-Fabric-In-Place-Analytics-Without-ETL.html"
+permalink: "/2025-11-24-Querying-Database-Backups-in-Microsoft-Fabric-In-Place-Analytics-Without-ETL.html"
 categories: ["AI", "Azure", "ML", "Security"]
 tags: ["AI", "Analytics", "Apache Iceberg", "Azure", "Azure AI Foundry", "Cloud Data Lake", "Compliance", "Database Backup", "Delta Lake", "Eon", "ETL Elimination", "Fabric Data Warehouse", "Fabric Spark", "Governance", "Metadata Virtualization", "Microsoft Entra", "Microsoft Fabric", "ML", "Multi Cloud", "News", "OneLake", "Power BI", "Security"]
 tags_normalized: ["ai", "analytics", "apache iceberg", "azure", "azure ai foundry", "cloud data lake", "compliance", "database backup", "delta lake", "eon", "etl elimination", "fabric data warehouse", "fabric spark", "governance", "metadata virtualization", "microsoft entra", "microsoft fabric", "ml", "multi cloud", "news", "onelake", "power bi", "security"]

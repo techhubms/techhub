@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/changelog/feed/"
 date: 2025-11-05 20:25:52 +00:00
-permalink: "/news/2025-11-05-The-Legacy-Copilot-Usage-Report-CSV-Is-No-Longer-Available.html"
+permalink: "/2025-11-05-The-Legacy-Copilot-Usage-Report-CSV-Is-No-Longer-Available.html"
 categories: ["AI", "GitHub Copilot"]
 tags: ["Activity Report", "Admin Tools", "AI", "Automation", "Copilot", "CSV Retirement", "Data Export", "GitHub", "GitHub Administration", "GitHub Copilot", "Metrics", "News", "Reporting", "Retired", "Usage Report", "Workflow Updates"]
 tags_normalized: ["activity report", "admin tools", "ai", "automation", "copilot", "csv retirement", "data export", "github", "github administration", "github copilot", "metrics", "news", "reporting", "retired", "usage report", "workflow updates"]

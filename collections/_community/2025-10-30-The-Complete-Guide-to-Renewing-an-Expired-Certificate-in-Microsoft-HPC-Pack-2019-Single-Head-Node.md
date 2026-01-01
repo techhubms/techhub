@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-10-30 06:27:43 +00:00
-permalink: "/community/2025-10-30-The-Complete-Guide-to-Renewing-an-Expired-Certificate-in-Microsoft-HPC-Pack-2019-Single-Head-Node.html"
+permalink: "/2025-10-30-The-Complete-Guide-to-Renewing-an-Expired-Certificate-in-Microsoft-HPC-Pack-2019-Single-Head-Node.html"
 categories: ["Azure", "Security"]
 tags: ["Azure", "Certificate Renewal", "Cluster Security", "Community", "Compute Node", "Data Protection", "Head Node", "HPC Cluster Manager", "Microsoft HPC Pack", "PowerShell", "Private Key", "Root Certificate", "Security", "Self Signed Certificate", "SQL Server Management Studio", "SSLThumbprint", "Windows Server"]
 tags_normalized: ["azure", "certificate renewal", "cluster security", "community", "compute node", "data protection", "head node", "hpc cluster manager", "microsoft hpc pack", "powershell", "private key", "root certificate", "security", "self signed certificate", "sql server management studio", "sslthumbprint", "windows server"]

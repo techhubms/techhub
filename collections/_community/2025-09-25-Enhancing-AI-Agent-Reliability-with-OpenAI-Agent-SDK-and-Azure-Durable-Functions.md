@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-09-25 12:00:00 +00:00
-permalink: "/community/2025-09-25-Enhancing-AI-Agent-Reliability-with-OpenAI-Agent-SDK-and-Azure-Durable-Functions.html"
+permalink: "/2025-09-25-Enhancing-AI-Agent-Reliability-with-OpenAI-Agent-SDK-and-Azure-Durable-Functions.html"
 categories: ["AI", "Azure", "Coding"]
 tags: ["AI", "AI Agents", "Application Scalability", "Azure", "Azure Durable Functions", "Azure Functions", "Cloud Automation", "Coding", "Community", "Durable Orchestration", "LLM Orchestration", "Observability", "OpenAI Agent SDK", "Python", "Resilient Systems", "Retry Policies", "Serverless", "State Persistence", "Stateful Workflows", "Workflow Reliability"]
 tags_normalized: ["ai", "ai agents", "application scalability", "azure", "azure durable functions", "azure functions", "cloud automation", "coding", "community", "durable orchestration", "llm orchestration", "observability", "openai agent sdk", "python", "resilient systems", "retry policies", "serverless", "state persistence", "stateful workflows", "workflow reliability"]

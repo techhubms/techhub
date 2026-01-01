@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/changelog/feed/"
 date: 2025-10-28 15:23:43 +00:00
-permalink: "/news/2025-10-28-Copilot-Usage-Metrics-Dashboard-and-API-in-Public-Preview-for-GitHub-Enterprise.html"
+permalink: "/2025-10-28-Copilot-Usage-Metrics-Dashboard-and-API-in-Public-Preview-for-GitHub-Enterprise.html"
 categories: ["AI", "GitHub Copilot"]
 tags: ["AI", "AI Adoption", "API", "Copilot", "Copilot Agent", "Copilot Analytics", "Dashboard", "Enterprise Metrics", "GitHub Copilot", "IDE Usage", "Model Usage", "News", "Programming Languages", "Public Preview", "Software Development Metrics", "Universe25"]
 tags_normalized: ["ai", "ai adoption", "api", "copilot", "copilot agent", "copilot analytics", "dashboard", "enterprise metrics", "github copilot", "ide usage", "model usage", "news", "programming languages", "public preview", "software development metrics", "universe25"]

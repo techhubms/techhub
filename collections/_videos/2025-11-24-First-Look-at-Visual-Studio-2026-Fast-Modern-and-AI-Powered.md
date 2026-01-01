@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Events YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
 date: 2025-11-24 08:17:17 +00:00
-permalink: "/videos/2025-11-24-First-Look-at-Visual-Studio-2026-Fast-Modern-and-AI-Powered.html"
+permalink: "/2025-11-24-First-Look-at-Visual-Studio-2026-Fast-Modern-and-AI-Powered.html"
 categories: ["AI", "Coding", "GitHub Copilot"]
 tags: ["AI", "AI Powered Development", "Code Review", "Coding", "Collaboration Tools", "Diagnostics", "Enterprise Development", "GitHub Copilot", "IDE", "InnovatewithAzureAIappsandagents", "Microsoft Learn", "Modernization", "Monthly Update Cycle", "MSIgnite", "NuGet", "Performance Optimization", "Profiler Agent", "Project Upgrades", "Videos", "VS"]
 tags_normalized: ["ai", "ai powered development", "code review", "coding", "collaboration tools", "diagnostics", "enterprise development", "github copilot", "ide", "innovatewithazureaiappsandagents", "microsoft learn", "modernization", "monthly update cycle", "msignite", "nuget", "performance optimization", "profiler agent", "project upgrades", "videos", "vs"]

@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Nick Chapsas YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrkPsvLGln62OMZRO6K-llg"
 date: 2025-07-30 11:15:06 +00:00
-permalink: "/videos/2025-07-30-Introducing-TickerQ-A-Modern-NET-Scheduling-Library-for-C-Developers.html"
+permalink: "/2025-07-30-Introducing-TickerQ-A-Modern-NET-Scheduling-Library-for-C-Developers.html"
 categories: ["Coding"]
 tags: [".NET", "C#", "C# Development", "Coding", "GitHub", "Hangfire", "Job Scheduling", "Open Source", "Quartz", "Scheduling Library", "TickerQ", "Videos"]
 tags_normalized: ["dotnet", "csharp", "csharp development", "coding", "github", "hangfire", "job scheduling", "open source", "quartz", "scheduling library", "tickerq", "videos"]

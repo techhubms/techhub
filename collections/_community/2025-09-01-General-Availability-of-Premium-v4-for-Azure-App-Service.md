@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-09-01 15:44:34 +00:00
-permalink: "/community/2025-09-01-General-Availability-of-Premium-v4-for-Azure-App-Service.html"
+permalink: "/2025-09-01-General-Availability-of-Premium-v4-for-Azure-App-Service.html"
 categories: ["Azure"]
 tags: ["App Modernization", "ASP.NET", "Availability Zones", "Azure", "Azure App Service", "Cloud Scalability", "Community", "Cost Optimization", "Linux", "Load Testing", "PaaS", "Performance Improvement", "Premium V4", "VM Sizing", "Web Hosting", "Windows"]
 tags_normalized: ["app modernization", "aspdotnet", "availability zones", "azure", "azure app service", "cloud scalability", "community", "cost optimization", "linux", "load testing", "paas", "performance improvement", "premium v4", "vm sizing", "web hosting", "windows"]

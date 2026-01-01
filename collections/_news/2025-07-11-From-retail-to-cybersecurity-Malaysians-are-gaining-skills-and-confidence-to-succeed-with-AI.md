@@ -10,7 +10,7 @@ categories: ["AI"]
 feed_name: "Microsoft News"
 feed_url: "https://news.microsoft.com/source/feed/"
 date: 2025-07-11 14:12:30 +00:00
-permalink: "/news/2025-07-11-From-retail-to-cybersecurity-Malaysians-are-gaining-skills-and-confidence-to-succeed-with-AI.html"
+permalink: "/2025-07-11-From-retail-to-cybersecurity-Malaysians-are-gaining-skills-and-confidence-to-succeed-with-AI.html"
 tags: ["AI", "AI Skills", "Company News", "Confidence", "Cybersecurity", "Digital Transformation", "Malaysia", "News", "Retail", "Technology Adoption", "Upskilling", "Workforce"]
 tags_normalized: ["ai", "ai skills", "company news", "confidence", "cybersecurity", "digital transformation", "malaysia", "news", "retail", "technology adoption", "upskilling", "workforce"]
 ---

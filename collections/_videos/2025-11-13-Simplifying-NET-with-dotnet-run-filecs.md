@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "DotNet YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw"
 date: 2025-11-13 17:40:46 +00:00
-permalink: "/videos/2025-11-13-Simplifying-NET-with-dotnet-run-filecs.html"
+permalink: "/2025-11-13-Simplifying-NET-with-dotnet-run-filecs.html"
 categories: ["Coding"]
 tags: [".NET", ".NET 10", ".NET Run", "ASP.NET Core", "Automation", "C#", "Coding", "Developer Productivity", "Educational Scenarios", "F#", "MAUI", "Programming Language Features", "Rapid Prototyping", "Scripting", "Unified Development", "Utility Programs", "Videos", "VS"]
 tags_normalized: ["dotnet", "dotnet 10", "dotnet run", "aspdotnet core", "automation", "csharp", "coding", "developer productivity", "educational scenarios", "fsharp", "maui", "programming language features", "rapid prototyping", "scripting", "unified development", "utility programs", "videos", "vs"]

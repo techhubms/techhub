@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft DevBlog"
 feed_url: "https://devblogs.microsoft.com/openapi/feed/"
 date: 2024-10-01 18:48:35 +00:00
-permalink: "/news/2024-10-01-Welcome-to-the-OpenAPI-Blog-Microsofts-Hub-for-API-Development-Tools-and-Best-Practices.html"
+permalink: "/2024-10-01-Welcome-to-the-OpenAPI-Blog-Microsofts-Hub-for-API-Development-Tools-and-Best-Practices.html"
 categories: ["AI", "Azure", "Coding", "GitHub Copilot"]
 tags: [".NET", "AI", "API Center", "API Design", "API Development", "ASP.NET Core", "Azure", "Azure API Management", "Client Code Generation", "Coding", "Copilot Agents", "GitHub Copilot", "Hidi", "Kiota", "Microsoft", "News", "OpenAPI", "Power Platform", "Semantic Kernel", "TypeSpec"]
 tags_normalized: ["dotnet", "ai", "api center", "api design", "api development", "aspdotnet core", "azure", "azure api management", "client code generation", "coding", "copilot agents", "github copilot", "hidi", "kiota", "microsoft", "news", "openapi", "power platform", "semantic kernel", "typespec"]

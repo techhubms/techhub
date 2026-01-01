@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-10-10 01:32:21 +00:00
-permalink: "/community/2025-10-10-Announcing-Resource-Scope-Query-for-Azure-Monitor-Workspaces.html"
+permalink: "/2025-10-10-Announcing-Resource-Scope-Query-for-Azure-Monitor-Workspaces.html"
 categories: ["Azure", "DevOps", "Security"]
 tags: ["Access Control", "Application Insights", "Azure", "Azure Monitor Agent", "Azure Monitor Workspaces", "Azure Portal", "Azure RBAC", "Centralized Monitoring", "Community", "Container Insights", "DevOps", "Grafana", "Log Analytics Workspaces", "Metrics", "Observability", "OpenTelemetry", "Prometheus", "Query Endpoint", "RBAC", "Resource Permissions", "Resource Scope Query", "Security", "Workspace Permissions"]
 tags_normalized: ["access control", "application insights", "azure", "azure monitor agent", "azure monitor workspaces", "azure portal", "azure rbac", "centralized monitoring", "community", "container insights", "devops", "grafana", "log analytics workspaces", "metrics", "observability", "opentelemetry", "prometheus", "query endpoint", "rbac", "resource permissions", "resource scope query", "security", "workspace permissions"]

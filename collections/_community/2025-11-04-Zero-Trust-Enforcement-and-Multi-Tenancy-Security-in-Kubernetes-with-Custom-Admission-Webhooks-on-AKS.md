@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-11-04 16:22:40 +00:00
-permalink: "/community/2025-11-04-Zero-Trust-Enforcement-and-Multi-Tenancy-Security-in-Kubernetes-with-Custom-Admission-Webhooks-on-AKS.html"
+permalink: "/2025-11-04-Zero-Trust-Enforcement-and-Multi-Tenancy-Security-in-Kubernetes-with-Custom-Admission-Webhooks-on-AKS.html"
 categories: ["Azure", "DevOps", "Security"]
 tags: ["Admission Controller", "AKS", "Azure", "Azure AD", "Azure Policy", "Community", "Custom Webhooks", "DevOps", "Flask", "Kubernetes", "Kyverno", "Microsoft Sentinel", "Multi Tenancy", "NetworkPolicy", "OPA Gatekeeper", "Policy as Code", "Python", "RBAC", "ResourceQuota", "Runtime Security", "Security", "Supply Chain Security", "TLS", "Zero Trust"]
 tags_normalized: ["admission controller", "aks", "azure", "azure ad", "azure policy", "community", "custom webhooks", "devops", "flask", "kubernetes", "kyverno", "microsoft sentinel", "multi tenancy", "networkpolicy", "opa gatekeeper", "policy as code", "python", "rbac", "resourcequota", "runtime security", "security", "supply chain security", "tls", "zero trust"]

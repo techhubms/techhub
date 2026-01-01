@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft VisualStudio Blog"
 feed_url: "https://devblogs.microsoft.com/visualstudio/feed/"
 date: 2025-08-14 12:00:59 +00:00
-permalink: "/news/2025-08-14-Enhancing-Visual-Studio-Copilot-Chat-with-Semantic-Code-Search.html"
+permalink: "/2025-08-14-Enhancing-Visual-Studio-Copilot-Chat-with-Semantic-Code-Search.html"
 categories: ["AI", "Coding", "GitHub Copilot"]
 tags: ["AI", "AI Models", "Azure DevOps", "BM25", "Code Search", "Codebase Awareness", "Coding", "Contextual Search", "Copilot Chat", "Developer Productivity", "GitHub Copilot", "GitHub Copilot Chat", "GitHub Integration", "Microsoft", "News", "Release 17.14.11", "Remote Semantic Search", "Semantic Search", "Vector Embeddings", "VS"]
 tags_normalized: ["ai", "ai models", "azure devops", "bm25", "code search", "codebase awareness", "coding", "contextual search", "copilot chat", "developer productivity", "github copilot", "github copilot chat", "github integration", "microsoft", "news", "release 17dot14dot11", "remote semantic search", "semantic search", "vector embeddings", "vs"]

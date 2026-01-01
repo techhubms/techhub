@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/changelog/feed/"
 date: 2025-08-21 16:32:58 +00:00
-permalink: "/news/2025-08-21-Managing-Issue-Dependencies-in-GitHub-Now-Generally-Available.html"
+permalink: "/2025-08-21-Managing-Issue-Dependencies-in-GitHub-Now-Generally-Available.html"
 categories: ["DevOps"]
 tags: ["Agile Practices", "Blocked Issues", "DevOps", "GitHub", "GraphQL API", "Issue Dependencies", "News", "Project Management", "REST API", "Software Development", "Team Collaboration", "Webhooks", "Workflow Automation"]
 tags_normalized: ["agile practices", "blocked issues", "devops", "github", "graphql api", "issue dependencies", "news", "project management", "rest api", "software development", "team collaboration", "webhooks", "workflow automation"]

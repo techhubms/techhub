@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Visual Studio Code Releases"
 feed_url: "https://code.visualstudio.com/feed.xml"
 date: 2024-12-11 17:00:00 +00:00
-permalink: "/news/2024-12-11-Visual-Studio-Code-November-2024-v196-Release-Notes.html"
+permalink: "/2024-12-11-Visual-Studio-Code-November-2024-v196-Release-Notes.html"
 categories: ["AI", "Coding", "DevOps", "GitHub Copilot"]
 tags: ["Accessibility", "AI", "AI Assisted Development", "Coding", "Copilot Chat", "Copilot Debug", "Copilot Edits", "Debugging", "DevOps", "DevOps Workflows", "Editor Improvements", "Extension Management", "GitHub Copilot", "GitHub Copilot Free", "News", "Notebooks", "Python Environments", "Python Testing", "Remote Development", "Terminal Enhancements", "Test Coverage", "TypeScript 5.7", "VS Code", "VS Code Extension"]
 tags_normalized: ["accessibility", "ai", "ai assisted development", "coding", "copilot chat", "copilot debug", "copilot edits", "debugging", "devops", "devops workflows", "editor improvements", "extension management", "github copilot", "github copilot free", "news", "notebooks", "python environments", "python testing", "remote development", "terminal enhancements", "test coverage", "typescript 5dot7", "vs code", "vs code extension"]

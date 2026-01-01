@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft .NET Blog"
 feed_url: "https://devblogs.microsoft.com/dotnet/feed/"
 date: 2025-09-22 15:40:00 +00:00
-permalink: "/news/2025-09-22-New-Trusted-Publishing-Enhances-Security-on-NuGetorg.html"
+permalink: "/2025-09-22-New-Trusted-Publishing-Enhances-Security-on-NuGetorg.html"
 categories: ["Coding", "DevOps", "Security"]
 tags: [".NET", "API Key Rotation", "CI/CD", "Coding", "DevOps", "GitHub Actions", "News", "NuGet", "OIDC", "OpenSSF", "Package Security", "Policy Management", "Securing Software Supply Chain", "Security", "Security Best Practices", "Trusted Publishing", "Workflow Automation"]
 tags_normalized: ["dotnet", "api key rotation", "cislashcd", "coding", "devops", "github actions", "news", "nuget", "oidc", "openssf", "package security", "policy management", "securing software supply chain", "security", "security best practices", "trusted publishing", "workflow automation"]

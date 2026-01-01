@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Reddit CSharp"
 feed_url: "https://www.reddit.com/r/csharp/.rss"
 date: 2025-08-03 22:33:19 +00:00
-permalink: "/community/2025-08-03-EguiNET-unofficial-C-bindings-for-the-easy-to-use-Rust-UI-library.html"
+permalink: "/2025-08-03-EguiNET-unofficial-C-bindings-for-the-easy-to-use-Rust-UI-library.html"
 categories: ["Coding"]
 tags: ["Bindings", "C#", "Coding", "Community", "Egui", "Game Engines", "Immediate Mode GUI", "Memory Safety", "OpenGL", "Rust", "UI Library", "Vulkan"]
 tags_normalized: ["bindings", "csharp", "coding", "community", "egui", "game engines", "immediate mode gui", "memory safety", "opengl", "rust", "ui library", "vulkan"]

@@ -9,10 +9,10 @@ viewing_mode: "external"
 feed_name: "DevOps Blog"
 feed_url: "https://devops.com/feed/"
 date: 2025-09-16 13:47:10 +00:00
-permalink: "/blogs/2025-09-16-Why-Automation-Fails-Without-the-Right-QA-Mindset.html"
+permalink: "/2025-09-16-Why-Automation-Fails-Without-the-Right-QA-Mindset.html"
 categories: ["DevOps"]
-tags: ["Automated Testing", "Automation", "CI/CD", "Collaboration", "Continuous Delivery", "Contributed Content", "DevOps", "DevOps Culture", "Manual Testing", "Pipeline Automation", "Blogs", "QA", "QA Mindset", "Quality Assurance", "Regression Testing", "Risk Based Testing", "Social Facebook", "Social LinkedIn", "Social X", "Software Delivery", "Test Automation", "Testing Strategy", "UI", "User Experience", "UX"]
-tags_normalized: ["automated testing", "automation", "cislashcd", "collaboration", "continuous delivery", "contributed content", "devops", "devops culture", "manual testing", "pipeline automation", "blogs", "qa", "qa mindset", "quality assurance", "regression testing", "risk based testing", "social facebook", "social linkedin", "social x", "software delivery", "test automation", "testing strategy", "ui", "user experience", "ux"]
+tags: ["Automated Testing", "Automation", "Blogs", "CI/CD", "Collaboration", "Continuous Delivery", "Contributed Content", "DevOps", "DevOps Culture", "Manual Testing", "Pipeline Automation", "QA", "QA Mindset", "Quality Assurance", "Regression Testing", "Risk Based Testing", "Social Facebook", "Social LinkedIn", "Social X", "Software Delivery", "Test Automation", "Testing Strategy", "UI", "User Experience", "UX"]
+tags_normalized: ["automated testing", "automation", "blogs", "cislashcd", "collaboration", "continuous delivery", "contributed content", "devops", "devops culture", "manual testing", "pipeline automation", "qa", "qa mindset", "quality assurance", "regression testing", "risk based testing", "social facebook", "social linkedin", "social x", "software delivery", "test automation", "testing strategy", "ui", "user experience", "ux"]
 ---
 
 Imtiaz Shaik discusses the pitfalls of software automation without the right QA mindset, highlighting the importance of early QA involvement and risk-driven testing in the DevOps process.<!--excerpt_end-->

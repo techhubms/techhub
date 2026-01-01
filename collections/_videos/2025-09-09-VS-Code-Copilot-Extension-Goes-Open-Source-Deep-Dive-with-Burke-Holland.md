@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Developer YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
 date: 2025-09-09 13:00:35 +00:00
-permalink: "/videos/2025-09-09-VS-Code-Copilot-Extension-Goes-Open-Source-Deep-Dive-with-Burke-Holland.html"
+permalink: "/2025-09-09-VS-Code-Copilot-Extension-Goes-Open-Source-Deep-Dive-with-Burke-Holland.html"
 categories: ["AI", "Coding", "GitHub Copilot"]
 tags: ["AI", "AI Assistance", "Beast Mode", "Burke Holland", "Chat Modes", "Cloud Computing", "Code Optimization", "Coding", "Community Contribution", "Copilot Chat", "Copilot Custom Modes", "Dev", "Developer Tools", "Development", "Extension Development", "GitHub Copilot", "Microsoft", "Open Source", "OpenAI", "Prompt Engineering", "Tech", "Technology", "Videos", "VS Code", "VS Code Copilot Extension", "VS Code Insiders"]
 tags_normalized: ["ai", "ai assistance", "beast mode", "burke holland", "chat modes", "cloud computing", "code optimization", "coding", "community contribution", "copilot chat", "copilot custom modes", "dev", "developer tools", "development", "extension development", "github copilot", "microsoft", "open source", "openai", "prompt engineering", "tech", "technology", "videos", "vs code", "vs code copilot extension", "vs code insiders"]

@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "DotNet YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw"
 date: 2025-08-04 23:30:19 +00:00
-permalink: "/videos/2025-08-04-Distributed-Applications-with-Microsoft-Orleans-and-Event-Sourcing-Using-Sekiban.html"
+permalink: "/2025-08-04-Distributed-Applications-with-Microsoft-Orleans-and-Event-Sourcing-Using-Sekiban.html"
 categories: ["Coding"]
 tags: [".NET", "C#", "Coding", "CQRS", "Demo", "Developer", "Developer Community", "Developer Productivity", "Developer Tools", "Dotnetdeveloper", "Event Sourcing", "LLM Integration", "Microsoft Orleans", "Microsoftorleans", "Open Source", "Orleans", "Productivity", "Sekiban", "Software Developer", "Videos", "VS Code"]
 tags_normalized: ["dotnet", "csharp", "coding", "cqrs", "demo", "developer", "developer community", "developer productivity", "developer tools", "dotnetdeveloper", "event sourcing", "llm integration", "microsoft orleans", "microsoftorleans", "open source", "orleans", "productivity", "sekiban", "software developer", "videos", "vs code"]

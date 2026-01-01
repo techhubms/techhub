@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-10-13 10:00:00 +00:00
-permalink: "/community/2025-10-13-Environmental-Sustainability-Features-in-Azure-API-Management-Minimizing-API-Infrastructure-Carbon-Impact.html"
+permalink: "/2025-10-13-Environmental-Sustainability-Features-in-Azure-API-Management-Minimizing-API-Infrastructure-Carbon-Impact.html"
 categories: ["AI", "Azure"]
 tags: ["AI", "AI Infrastructure", "API Infrastructure", "API Policy", "Azure", "Azure API Management", "Azure Carbon Intensity", "Carbon Optimization", "Community", "Compliance", "Environmental Sustainability", "GenAI", "Green IT", "Load Balancing", "Microsoft Azure", "Scope 2 Emissions", "Sustainability Reporting", "Sustainable Workloads"]
 tags_normalized: ["ai", "ai infrastructure", "api infrastructure", "api policy", "azure", "azure api management", "azure carbon intensity", "carbon optimization", "community", "compliance", "environmental sustainability", "genai", "green it", "load balancing", "microsoft azure", "scope 2 emissions", "sustainability reporting", "sustainable workloads"]

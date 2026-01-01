@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Events YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
 date: 2025-11-19 13:11:38 +00:00
-permalink: "/videos/2025-11-19-Microsoft-Sentinel-Solution-for-SAP-Automated-Asset-Classification-and-Incident-Response.html"
+permalink: "/2025-11-19-Microsoft-Sentinel-Solution-for-SAP-Automated-Asset-Classification-and-Incident-Response.html"
 categories: ["Security"]
 tags: ["Asset Categories", "Automated Asset Classification", "CISO Roundtable", "Cloud Security", "Crisis Management", "Cybersecurity", "Endpoint Security", "English (us)", "F5n1", "Identity Protection", "Ignite", "Incident Response", "Microsoft", "Microsoft Ignite", "Microsoft Sentinel", "Ms Ignite", "Msft Ignite", "Network Security", "ODSP1489", "ODSP1489 V1", "Ontinue Pre Recorded Session Title | ODSP1489", "SAP", "Security", "Security Monitoring", "Security Rules", "Technical", "Videos"]
 tags_normalized: ["asset categories", "automated asset classification", "ciso roundtable", "cloud security", "crisis management", "cybersecurity", "endpoint security", "english us", "f5n1", "identity protection", "ignite", "incident response", "microsoft", "microsoft ignite", "microsoft sentinel", "ms ignite", "msft ignite", "network security", "odsp1489", "odsp1489 v1", "ontinue pre recorded session title pipe odsp1489", "sap", "security", "security monitoring", "security rules", "technical", "videos"]

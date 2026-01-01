@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-12-09 08:12:15 +00:00
-permalink: "/community/2025-12-09-From-Bronze-to-Gold-Data-Quality-Strategies-for-ETL-in-Microsoft-Fabric.html"
+permalink: "/2025-12-09-From-Bronze-to-Gold-Data-Quality-Strategies-for-ETL-in-Microsoft-Fabric.html"
 categories: ["Azure", "ML"]
 tags: ["Automated Testing", "Azure", "Bronze Layer", "Community", "Data Drift", "Data Quality", "Data Validation", "ETL", "Fabric Pipeline", "Gold Layer", "Great Expectations", "Lakehouse", "Medallion Architecture", "Microsoft Fabric", "ML", "NYC Taxi Dataset", "Observability", "Power BI", "Primary Key Uniqueness", "PySpark", "Schema Compliance", "Silver Layer", "Time Series Validation"]
 tags_normalized: ["automated testing", "azure", "bronze layer", "community", "data drift", "data quality", "data validation", "etl", "fabric pipeline", "gold layer", "great expectations", "lakehouse", "medallion architecture", "microsoft fabric", "ml", "nyc taxi dataset", "observability", "power bi", "primary key uniqueness", "pyspark", "schema compliance", "silver layer", "time series validation"]

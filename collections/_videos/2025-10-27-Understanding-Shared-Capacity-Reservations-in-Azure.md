@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "John Savill's Technical Training"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCpIn7ox7j7bH_OFj7tYouOQ"
 date: 2025-10-27 14:02:29 +00:00
-permalink: "/videos/2025-10-27-Understanding-Shared-Capacity-Reservations-in-Azure.html"
+permalink: "/2025-10-27-Understanding-Shared-Capacity-Reservations-in-Azure.html"
 categories: ["Azure"]
 tags: ["Availability Zone", "Availability Zones", "Azure", "Azure Cloud", "Azure SLA", "Azure Virtual Machines", "Capacity", "Capacity Reservation", "Cloud", "Cloud Architecture", "Microsoft", "Microsoft Azure", "Reservation Sharing", "Resource Management", "Savings Plans", "Subscription Management", "Videos"]
 tags_normalized: ["availability zone", "availability zones", "azure", "azure cloud", "azure sla", "azure virtual machines", "capacity", "capacity reservation", "cloud", "cloud architecture", "microsoft", "microsoft azure", "reservation sharing", "resource management", "savings plans", "subscription management", "videos"]

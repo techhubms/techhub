@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/changelog/feed/"
 date: 2025-09-25 19:22:27 +00:00
-permalink: "/news/2025-09-25-GitHub-Copilot-CLI-Now-Available-in-Public-Preview.html"
+permalink: "/2025-09-25-GitHub-Copilot-CLI-Now-Available-in-Public-Preview.html"
 categories: ["AI", "Coding", "GitHub Copilot"]
 tags: ["AI", "AI Coding Agent", "Automation", "CLI Tools", "Client Apps", "Code Assistance", "Coding", "Command Line Interface", "Copilot", "Debugging", "Developer Productivity", "GitHub", "GitHub Copilot", "GitHub Copilot CLI", "GitHub Integration", "MCP Server", "News", "npm", "Pro Plan", "Refactoring", "Terminal Development"]
 tags_normalized: ["ai", "ai coding agent", "automation", "cli tools", "client apps", "code assistance", "coding", "command line interface", "copilot", "debugging", "developer productivity", "github", "github copilot", "github copilot cli", "github integration", "mcp server", "news", "npm", "pro plan", "refactoring", "terminal development"]

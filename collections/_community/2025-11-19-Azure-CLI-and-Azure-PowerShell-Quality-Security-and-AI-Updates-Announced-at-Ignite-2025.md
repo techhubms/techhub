@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-11-19 19:13:15 +00:00
-permalink: "/community/2025-11-19-Azure-CLI-and-Azure-PowerShell-Quality-Security-and-AI-Updates-Announced-at-Ignite-2025.html"
+permalink: "/2025-11-19-Azure-CLI-and-Azure-PowerShell-Quality-Security-and-AI-Updates-Announced-at-Ignite-2025.html"
 categories: ["AI", "Azure", "Coding", "DevOps", "Security"]
 tags: ["AI", "ArizeAI Extension", "ARM API", "Automation", "Azure", "Azure CLI", "Azure PowerShell", "Azure Services", "Bicep Templates", "Claims Challenge", "Cloud Endpoint Discovery", "Coding", "Community", "DevOps", "Fabric Module", "IaC", "Identity Management", "Invoke AzRestMethod", "MFA Enforcement", "Microsoft Ignite", "Paginate Parameter", "Python 3.13", "Release Notes", "Security", "Security Vulnerabilities", "What If Analysis"]
 tags_normalized: ["ai", "arizeai extension", "arm api", "automation", "azure", "azure cli", "azure powershell", "azure services", "bicep templates", "claims challenge", "cloud endpoint discovery", "coding", "community", "devops", "fabric module", "iac", "identity management", "invoke azrestmethod", "mfa enforcement", "microsoft ignite", "paginate parameter", "python 3dot13", "release notes", "security", "security vulnerabilities", "what if analysis"]

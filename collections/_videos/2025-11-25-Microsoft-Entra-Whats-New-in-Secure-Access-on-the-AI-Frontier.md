@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Events YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
 date: 2025-11-25 23:30:22 +00:00
-permalink: "/videos/2025-11-25-Microsoft-Entra-Whats-New-in-Secure-Access-on-the-AI-Frontier.html"
+permalink: "/2025-11-25-Microsoft-Entra-Whats-New-in-Secure-Access-on-the-AI-Frontier.html"
 categories: ["AI", "Security"]
 tags: ["Access Policies", "Admin Setup", "Agent Governance", "Agent ID", "AI", "AI Security", "App Lifecycle Management", "Authentication", "Cloud Security", "Conditional Access", "Identity Management", "Lifecycle Management", "Microsoft Entra ID", "Microsoft Ignite", "ModernizeSecOpswithaunifiedplatform", "MSIgnite", "Network Security", "Permissions", "Prompt Injection Protection", "Secure Access", "Security", "Security Operations", "Videos", "Zero Trust"]
 tags_normalized: ["access policies", "admin setup", "agent governance", "agent id", "ai", "ai security", "app lifecycle management", "authentication", "cloud security", "conditional access", "identity management", "lifecycle management", "microsoft entra id", "microsoft ignite", "modernizesecopswithaunifiedplatform", "msignite", "network security", "permissions", "prompt injection protection", "secure access", "security", "security operations", "videos", "zero trust"]

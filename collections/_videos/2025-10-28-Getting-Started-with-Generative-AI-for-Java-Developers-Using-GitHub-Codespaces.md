@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Developer YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
 date: 2025-10-28 16:00:23 +00:00
-permalink: "/videos/2025-10-28-Getting-Started-with-Generative-AI-for-Java-Developers-Using-GitHub-Codespaces.html"
+permalink: "/2025-10-28-Getting-Started-with-Generative-AI-for-Java-Developers-Using-GitHub-Codespaces.html"
 categories: ["AI", "Coding", "DevOps"]
 tags: ["AI", "AI Tutorial", "AIForBeginners", "Authentication", "Cloud Development", "CloudDevelopment", "Coding", "Dev Container", "DevContainers", "DevOps", "Generative AI", "GenerativeAI", "GitHub Codespaces", "GitHub Models", "GitHubCodespaces", "GitHubModels", "GPT 4o", "GPT4", "Java", "Java Development", "JavaDevelopment", "JavaTutorial", "Large Language Models", "OpenAI", "OpenAI SDK", "Videos", "VS Code"]
 tags_normalized: ["ai", "ai tutorial", "aiforbeginners", "authentication", "cloud development", "clouddevelopment", "coding", "dev container", "devcontainers", "devops", "generative ai", "generativeai", "github codespaces", "github models", "githubcodespaces", "githubmodels", "gpt 4o", "gpt4", "java", "java development", "javadevelopment", "javatutorial", "large language models", "openai", "openai sdk", "videos", "vs code"]

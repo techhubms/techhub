@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft News"
 feed_url: "https://news.microsoft.com/source/feed/"
 date: 2025-11-13 18:41:10 +00:00
-permalink: "/news/2025-11-13-GPT-51-Experimental-Model-Now-Available-in-Microsoft-Copilot-Studio.html"
+permalink: "/2025-11-13-GPT-51-Experimental-Model-Now-Available-in-Microsoft-Copilot-Studio.html"
 categories: ["AI"]
 tags: ["AI", "AI Development", "AI Reasoning", "Chat Models", "Company News", "Early Access", "Experimental Model", "GPT 5.1", "Microsoft Copilot Studio", "Model Selection", "News", "Non Production Testing", "OpenAI", "Power Platform", "Release Announcement"]
 tags_normalized: ["ai", "ai development", "ai reasoning", "chat models", "company news", "early access", "experimental model", "gpt 5dot1", "microsoft copilot studio", "model selection", "news", "non production testing", "openai", "power platform", "release announcement"]

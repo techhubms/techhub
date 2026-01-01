@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/changelog/feed/"
 date: 2025-12-16 10:45:33 +00:00
-permalink: "/news/2025-12-16-Enhanced-Copilot-Autofix-Metrics-for-CodeQL-Security-Overview-on-GitHub.html"
+permalink: "/2025-12-16-Enhanced-Copilot-Autofix-Metrics-for-CodeQL-Security-Overview-on-GitHub.html"
 categories: ["AI", "GitHub Copilot", "Security"]
 tags: ["AI", "Application Security", "Code Scanning", "CodeQL", "Copilot Autofix", "GitHub Copilot", "GitHub Enterprise Cloud", "Improvement", "News", "Pull Request Insights", "Remediation", "Security", "Security Dashboard", "Security Metrics", "Security Overview", "Vulnerability Management"]
 tags_normalized: ["ai", "application security", "code scanning", "codeql", "copilot autofix", "github copilot", "github enterprise cloud", "improvement", "news", "pull request insights", "remediation", "security", "security dashboard", "security metrics", "security overview", "vulnerability management"]

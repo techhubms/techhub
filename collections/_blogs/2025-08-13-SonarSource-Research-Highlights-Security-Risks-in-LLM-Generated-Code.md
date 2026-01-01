@@ -9,10 +9,10 @@ viewing_mode: "external"
 feed_name: "DevOps Blog"
 feed_url: "https://devops.com/feed/"
 date: 2025-08-13 13:43:07 +00:00
-permalink: "/blogs/2025-08-13-SonarSource-Research-Highlights-Security-Risks-in-LLM-Generated-Code.html"
+permalink: "/2025-08-13-SonarSource-Research-Highlights-Security-Risks-in-LLM-Generated-Code.html"
 categories: ["AI", "Coding", "DevOps", "Security"]
-tags: ["AI", "AI Coding Tools", "Analysis", "Application Security", "Boilerplate Code", "Business Of DevOps", "Claude Sonnet", "Code Analysis", "Code Smells", "Code Vulnerabilities", "Coding", "DevOps", "GPT 4o", "Hard Coded Credentials", "HumanEval", "Java", "Llama 3.2", "LLM", "Messy Code", "Model Evaluation", "OpenCoder 8B", "Blogs", "Security", "Security Risks", "Social Facebook", "Social LinkedIn", "Social X", "SonarSource", "Technical Debt"]
-tags_normalized: ["ai", "ai coding tools", "analysis", "application security", "boilerplate code", "business of devops", "claude sonnet", "code analysis", "code smells", "code vulnerabilities", "coding", "devops", "gpt 4o", "hard coded credentials", "humaneval", "java", "llama 3dot2", "llm", "messy code", "model evaluation", "opencoder 8b", "blogs", "security", "security risks", "social facebook", "social linkedin", "social x", "sonarsource", "technical debt"]
+tags: ["AI", "AI Coding Tools", "Analysis", "Application Security", "Blogs", "Boilerplate Code", "Business Of DevOps", "Claude Sonnet", "Code Analysis", "Code Smells", "Code Vulnerabilities", "Coding", "DevOps", "GPT 4o", "Hard Coded Credentials", "HumanEval", "Java", "Llama 3.2", "LLM", "Messy Code", "Model Evaluation", "OpenCoder 8B", "Security", "Security Risks", "Social Facebook", "Social LinkedIn", "Social X", "SonarSource", "Technical Debt"]
+tags_normalized: ["ai", "ai coding tools", "analysis", "application security", "blogs", "boilerplate code", "business of devops", "claude sonnet", "code analysis", "code smells", "code vulnerabilities", "coding", "devops", "gpt 4o", "hard coded credentials", "humaneval", "java", "llama 3dot2", "llm", "messy code", "model evaluation", "opencoder 8b", "security", "security risks", "social facebook", "social linkedin", "social x", "sonarsource", "technical debt"]
 ---
 
 Mike Vizard summarizes SonarSource’s research into AI-generated code, highlighting both the strengths and serious security pitfalls of relying on LLMs such as GPT-4o, Claude Sonnet 4, and others.<!--excerpt_end-->

@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft News"
 feed_url: "https://news.microsoft.com/source/feed/"
 date: 2025-12-09 18:16:44 +00:00
-permalink: "/news/2025-12-09-AI-Powered-Spatial-Proteomics-Platform-GigaTIME-Accelerates-Cancer-Discovery.html"
+permalink: "/2025-12-09-AI-Powered-Spatial-Proteomics-Platform-GigaTIME-Accelerates-Cancer-Discovery.html"
 categories: ["AI"]
 tags: ["AI", "AI For Healthcare", "Biomedical AI", "Cancer Discovery", "Cell Journal", "Company News", "GigaTIME", "LinkedIn Post", "Machine Learning", "Medical Innovation", "Microsoft Research", "News", "Pathology Slides", "Population Scale Analysis", "Precision Oncology", "Spatial Proteomics", "Tumor Microenvironment"]
 tags_normalized: ["ai", "ai for healthcare", "biomedical ai", "cancer discovery", "cell journal", "company news", "gigatime", "linkedin post", "machine learning", "medical innovation", "microsoft research", "news", "pathology slides", "population scale analysis", "precision oncology", "spatial proteomics", "tumor microenvironment"]

@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/changelog/feed/"
 date: 2025-09-29 16:37:42 +00:00
-permalink: "/news/2025-09-29-Anthropic-Claude-Sonnet-45-Launches-for-GitHub-Copilot-Chat-and-CLI.html"
+permalink: "/2025-09-29-Anthropic-Claude-Sonnet-45-Launches-for-GitHub-Copilot-Chat-and-CLI.html"
 categories: ["AI", "GitHub Copilot"]
 tags: ["Agent Mode", "AI", "AI Models", "Anthropic", "API Key", "Claude Sonnet 4.5", "Copilot", "Copilot Business", "Copilot Chat", "Copilot CLI", "Copilot Pro", "Developer Tools", "Enterprise AI", "GitHub Copilot", "Model Picker", "Model Selection", "News", "VS Code"]
 tags_normalized: ["agent mode", "ai", "ai models", "anthropic", "api key", "claude sonnet 4dot5", "copilot", "copilot business", "copilot chat", "copilot cli", "copilot pro", "developer tools", "enterprise ai", "github copilot", "model picker", "model selection", "news", "vs code"]

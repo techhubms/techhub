@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Events YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
 date: 2025-11-21 17:17:10 +00:00
-permalink: "/videos/2025-11-21-Introducing-Microsoft-Foundry-Tools-for-Agentic-AI-Apps-BRK192.html"
+permalink: "/2025-11-21-Introducing-Microsoft-Foundry-Tools-for-Agentic-AI-Apps-BRK192.html"
 categories: ["AI", "Azure"]
 tags: ["AI", "AI Agents", "APIs", "Azure", "Azure AI", "Azure Database", "Cosmos DB", "Custom Translation", "Data Privacy", "Document Parsing", "GPT 4", "InnovatewithAzureAIappsandagents", "Insurance Claims", "LLM Integration", "MCP Server", "Microsoft Foundry", "Microsoft Ignite", "Model Versioning", "MSIgnite", "Transcription", "Videos"]
 tags_normalized: ["ai", "ai agents", "apis", "azure", "azure ai", "azure database", "cosmos db", "custom translation", "data privacy", "document parsing", "gpt 4", "innovatewithazureaiappsandagents", "insurance claims", "llm integration", "mcp server", "microsoft foundry", "microsoft ignite", "model versioning", "msignite", "transcription", "videos"]

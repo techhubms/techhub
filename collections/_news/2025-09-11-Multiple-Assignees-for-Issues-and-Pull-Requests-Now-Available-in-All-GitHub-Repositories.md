@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/changelog/feed/"
 date: 2025-09-11 20:11:25 +00:00
-permalink: "/news/2025-09-11-Multiple-Assignees-for-Issues-and-Pull-Requests-Now-Available-in-All-GitHub-Repositories.html"
+permalink: "/2025-09-11-Multiple-Assignees-for-Issues-and-Pull-Requests-Now-Available-in-All-GitHub-Repositories.html"
 categories: ["DevOps"]
 tags: ["Assignees", "Collaboration", "Collaboration Tools", "DevOps", "GitHub", "Improvement", "Issues", "News", "Open Source Tools", "Process Improvement", "Project Management", "Pull Requests", "Repository Management", "Software Development", "Team Workflow"]
 tags_normalized: ["assignees", "collaboration", "collaboration tools", "devops", "github", "improvement", "issues", "news", "open source tools", "process improvement", "project management", "pull requests", "repository management", "software development", "team workflow"]

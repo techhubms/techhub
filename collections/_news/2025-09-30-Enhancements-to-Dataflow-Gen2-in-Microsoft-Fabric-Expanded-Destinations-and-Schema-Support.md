@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Fabric Blog"
 feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
 date: 2025-09-30 11:00:00 +00:00
-permalink: "/news/2025-09-30-Enhancements-to-Dataflow-Gen2-in-Microsoft-Fabric-Expanded-Destinations-and-Schema-Support.html"
+permalink: "/2025-09-30-Enhancements-to-Dataflow-Gen2-in-Microsoft-Fabric-Expanded-Destinations-and-Schema-Support.html"
 categories: ["Azure", "ML"]
 tags: ["ADLS Gen2", "Azure", "Data Engineering", "Data Governance", "Data Integration", "Data Science", "Database Schema", "Dataflow Gen2", "Enterprise Data", "Hybrid Architecture", "Lakehouse", "Microsoft Fabric", "ML", "News", "Power BI", "SharePoint Integration", "Snowflake", "Spark"]
 tags_normalized: ["adls gen2", "azure", "data engineering", "data governance", "data integration", "data science", "database schema", "dataflow gen2", "enterprise data", "hybrid architecture", "lakehouse", "microsoft fabric", "ml", "news", "power bi", "sharepoint integration", "snowflake", "spark"]

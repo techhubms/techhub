@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/changelog/label/copilot/feed/"
 date: 2025-08-06 15:15:39 +00:00
-permalink: "/news/2025-08-06-Spark-Updates-Enhanced-Reliability-Seed-Data-and-Improved-Performance.html"
+permalink: "/2025-08-06-Spark-Updates-Enhanced-Reliability-Seed-Data-and-Improved-Performance.html"
 categories: ["DevOps"]
 tags: ["Agent Iterations", "App Development", "Development Tools", "DevOps", "GitHub", "Model Failover", "News", "Performance Updates", "Repository Creation", "Seed Data", "Spark", "User Notifications", "Workflow Reliability"]
 tags_normalized: ["agent iterations", "app development", "development tools", "devops", "github", "model failover", "news", "performance updates", "repository creation", "seed data", "spark", "user notifications", "workflow reliability"]

@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Fabric Blog"
 feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
 date: 2025-08-05 10:30:00 +00:00
-permalink: "/news/2025-08-05-Streamlining-Data-Management-New-Collation-Settings-in-Microsoft-Fabric-Warehouse-and-SQL-Endpoint.html"
+permalink: "/2025-08-05-Streamlining-Data-Management-New-Collation-Settings-in-Microsoft-Fabric-Warehouse-and-SQL-Endpoint.html"
 categories: ["Azure", "ML"]
 tags: ["Azure", "Case Insensitive", "Case Sensitive", "Collation", "Data Management", "Data Workflows", "Item Level Configuration", "Lakehouse", "Microsoft Fabric", "Mirrored Database", "ML", "News", "SQL Endpoint", "Warehouse", "Workspace Level Settings"]
 tags_normalized: ["azure", "case insensitive", "case sensitive", "collation", "data management", "data workflows", "item level configuration", "lakehouse", "microsoft fabric", "mirrored database", "ml", "news", "sql endpoint", "warehouse", "workspace level settings"]

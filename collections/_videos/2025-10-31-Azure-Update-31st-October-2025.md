@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "John Savill's Technical Training"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCpIn7ox7j7bH_OFj7tYouOQ"
 date: 2025-10-31 14:55:29 +00:00
-permalink: "/videos/2025-10-31-Azure-Update-31st-October-2025.html"
+permalink: "/2025-10-31-Azure-Update-31st-October-2025.html"
 categories: ["Azure", "DevOps", "ML"]
 tags: ["AFD WAF", "AFS Migration", "ASM NFS", "Azure", "Azure Cloud", "Azure Front Door", "Azure Functions", "Azure Machine Learning", "Azure Storage", "Azure Update", "Cloud", "Cloud Infrastructure", "DevOps", "Incident Management", "Microsoft", "Microsoft Azure", "ML", "Node.js 20", "PgBouncer", "PostgreSQL Flexible Server", "Private Endpoints", "Videos", "Zero Downtime Deployment"]
 tags_normalized: ["afd waf", "afs migration", "asm nfs", "azure", "azure cloud", "azure front door", "azure functions", "azure machine learning", "azure storage", "azure update", "cloud", "cloud infrastructure", "devops", "incident management", "microsoft", "microsoft azure", "ml", "nodedotjs 20", "pgbouncer", "postgresql flexible server", "private endpoints", "videos", "zero downtime deployment"]

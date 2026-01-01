@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Developer YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
 date: 2025-11-05 17:01:32 +00:00
-permalink: "/videos/2025-11-05-Running-GenAI-in-Containers-Dynamic-Sessions-with-Azure-Container-Apps-and-LangChain4j.html"
+permalink: "/2025-11-05-Running-GenAI-in-Containers-Dynamic-Sessions-with-Azure-Container-Apps-and-LangChain4j.html"
 categories: ["AI", "Azure", "Coding"]
 tags: ["AI", "AI Integration", "AI Workloads", "AIIntegration", "AIWorkloads", "Azure", "Azure Container Apps", "AzureContainerApps", "Cloud Native", "CloudNative", "Code Execution", "CodeExecution", "Coding", "Containerized AI", "ContainerizedAI", "Dynamic Sessions", "DynamicSessions", "Java", "Java Development", "JavaAI", "JavaDevelopment", "LangChain4j", "OpenAI", "Persistent Environment", "Python Integration", "Session Pools", "Stateful Containers", "StatefulContainers", "Videos"]
 tags_normalized: ["ai", "ai integration", "ai workloads", "aiintegration", "aiworkloads", "azure", "azure container apps", "azurecontainerapps", "cloud native", "cloudnative", "code execution", "codeexecution", "coding", "containerized ai", "containerizedai", "dynamic sessions", "dynamicsessions", "java", "java development", "javaai", "javadevelopment", "langchain4j", "openai", "persistent environment", "python integration", "session pools", "stateful containers", "statefulcontainers", "videos"]

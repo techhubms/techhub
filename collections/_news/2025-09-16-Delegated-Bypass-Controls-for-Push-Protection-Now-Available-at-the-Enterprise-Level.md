@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/changelog/feed/"
 date: 2025-09-16 21:29:55 +00:00
-permalink: "/news/2025-09-16-Delegated-Bypass-Controls-for-Push-Protection-Now-Available-at-the-Enterprise-Level.html"
+permalink: "/2025-09-16-Delegated-Bypass-Controls-for-Push-Protection-Now-Available-at-the-Enterprise-Level.html"
 categories: ["DevOps", "Security"]
 tags: ["API Integration", "Application Security", "Approver Management", "Bypass Controls", "Code Security", "DevOps", "Enterprise Security", "GitHub Enterprise", "Improvement", "News", "Push Protection", "Reviewers", "Secret Scanning", "Security", "Security Automation", "Security Configuration", "Security Workflow"]
 tags_normalized: ["api integration", "application security", "approver management", "bypass controls", "code security", "devops", "enterprise security", "github enterprise", "improvement", "news", "push protection", "reviewers", "secret scanning", "security", "security automation", "security configuration", "security workflow"]

@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-11-20 20:22:48 +00:00
-permalink: "/community/2025-11-20-Azure-DNS-Security-Policy-with-Threat-Intelligence-Feed-Now-Generally-Available.html"
+permalink: "/2025-11-20-Azure-DNS-Security-Policy-with-Threat-Intelligence-Feed-Now-Generally-Available.html"
 categories: ["Azure", "DevOps", "Security"]
 tags: ["ARM", "Azure", "Azure DNS", "Azure Private DNS Zones", "Bicep", "Community", "DevOps", "DevOps Integration", "DNS Filtering", "DNS Security Policy", "DNS Traffic Monitoring", "Event Hubs", "High Availability", "IaaS Alternatives", "Log Analytics", "Microsoft Security Response Center", "Private Resolver", "Security", "SOC", "Terraform", "Threat Intelligence", "Virtual Network", "Zero Day Threats", "Zone Redundancy"]
 tags_normalized: ["arm", "azure", "azure dns", "azure private dns zones", "bicep", "community", "devops", "devops integration", "dns filtering", "dns security policy", "dns traffic monitoring", "event hubs", "high availability", "iaas alternatives", "log analytics", "microsoft security response center", "private resolver", "security", "soc", "terraform", "threat intelligence", "virtual network", "zero day threats", "zone redundancy"]

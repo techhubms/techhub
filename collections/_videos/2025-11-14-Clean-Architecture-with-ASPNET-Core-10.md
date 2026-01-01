@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "DotNet YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw"
 date: 2025-11-14 19:21:17 +00:00
-permalink: "/videos/2025-11-14-Clean-Architecture-with-ASPNET-Core-10.html"
+permalink: "/2025-11-14-Clean-Architecture-with-ASPNET-Core-10.html"
 categories: ["Coding"]
 tags: [".NET", ".NET 10", ".NET MAUI 10", "ASP.NET Core 10", "C# 14", "Clean Architecture", "Cloud Native Apps", "Coding", "F# 10", "Loosely Coupled Code", "Maintainable Code", "Project Structure", "Refactoring", "Software Architecture", "Solution Organization", "Testable Code", "Videos", "VS"]
 tags_normalized: ["dotnet", "dotnet 10", "dotnet maui 10", "aspdotnet core 10", "csharp 14", "clean architecture", "cloud native apps", "coding", "fsharp 10", "loosely coupled code", "maintainable code", "project structure", "refactoring", "software architecture", "solution organization", "testable code", "videos", "vs"]

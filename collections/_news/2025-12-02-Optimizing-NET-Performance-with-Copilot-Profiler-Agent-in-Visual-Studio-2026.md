@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft VisualStudio Blog"
 feed_url: "https://devblogs.microsoft.com/visualstudio/feed/"
 date: 2025-12-02 15:00:16 +00:00
-permalink: "/news/2025-12-02-Optimizing-NET-Performance-with-Copilot-Profiler-Agent-in-Visual-Studio-2026.html"
+permalink: "/2025-12-02-Optimizing-NET-Performance-with-Copilot-Profiler-Agent-in-Visual-Studio-2026.html"
 categories: ["AI", "Coding", "GitHub Copilot"]
 tags: [".NET Performance", "Agent", "AI", "BenchmarkDotNet", "Code Benchmarking", "Code Optimization", "Coding", "Copilot", "Copilot Profiler Agent", "CsvHelper", "Delegate Invocation", "Delegate Optimization", "Expression Trees", "GitHub Copilot", "Natural Language Queries", "News", "NuGet Packages", "Performance", "Performance Profiling", "Profiler Integration", "Profiling", "VS"]
 tags_normalized: ["dotnet performance", "agent", "ai", "benchmarkdotnet", "code benchmarking", "code optimization", "coding", "copilot", "copilot profiler agent", "csvhelper", "delegate invocation", "delegate optimization", "expression trees", "github copilot", "natural language queries", "news", "nuget packages", "performance", "performance profiling", "profiler integration", "profiling", "vs"]

@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft News"
 feed_url: "https://news.microsoft.com/source/feed/"
 date: 2025-08-14 14:25:12 +00:00
-permalink: "/news/2025-08-14-Generative-AI-for-Permitting-Accelerating-Clean-Energy-with-Microsoft.html"
+permalink: "/2025-08-14-Generative-AI-for-Permitting-Accelerating-Clean-Energy-with-Microsoft.html"
 categories: ["AI", "Azure"]
 tags: ["Agentic AI Workflows", "AI", "AI in Government", "Azure", "Azure OpenAI Service", "Clean Energy", "Company News", "Copilot For Engineering", "Document Automation", "Energy Industry", "Generative AI", "Hackathon", "Innovation", "Kernel Memory", "Machine Learning", "MCAPS Energy", "Microsoft AI Solutions", "Microsoft Garage", "News", "Nuclear Licensing", "Permitting Automation", "Productivity Gains", "Regulatory Compliance", "Semantic Kernel"]
 tags_normalized: ["agentic ai workflows", "ai", "ai in government", "azure", "azure openai service", "clean energy", "company news", "copilot for engineering", "document automation", "energy industry", "generative ai", "hackathon", "innovation", "kernel memory", "machine learning", "mcaps energy", "microsoft ai solutions", "microsoft garage", "news", "nuclear licensing", "permitting automation", "productivity gains", "regulatory compliance", "semantic kernel"]

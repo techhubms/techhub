@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/feed/"
 date: 2025-08-13 21:00:00 +00:00
-permalink: "/news/2025-08-13-GitHub-Enterprise-Importer-Incident-and-IP-Range-Update-July-2025-Availability-Report.html"
+permalink: "/2025-08-13-GitHub-Enterprise-Importer-Incident-and-IP-Range-Update-July-2025-Availability-Report.html"
 categories: ["Azure", "DevOps", "Security"]
 tags: ["Availability Report", "AWS S3", "Azure", "Azure Blob Storage", "Azure DevOps", "Bitbucket", "Change Management", "Cloud Storage", "Company News", "DevOps", "GitHub Availability Report", "GitHub Enterprise Importer", "Incident Response", "Infrastructure Recovery", "IP Allow List", "Migration", "Network Security", "News", "News & Insights", "Security", "Service Incident", "Unit Testing", "Validation"]
 tags_normalized: ["availability report", "aws s3", "azure", "azure blob storage", "azure devops", "bitbucket", "change management", "cloud storage", "company news", "devops", "github availability report", "github enterprise importer", "incident response", "infrastructure recovery", "ip allow list", "migration", "network security", "news", "news and insights", "security", "service incident", "unit testing", "validation"]

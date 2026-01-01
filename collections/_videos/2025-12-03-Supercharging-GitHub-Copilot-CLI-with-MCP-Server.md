@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Visual Studio Code YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SLNwkd3w"
 date: 2025-12-03 18:01:15 +00:00
-permalink: "/videos/2025-12-03-Supercharging-GitHub-Copilot-CLI-with-MCP-Server.html"
+permalink: "/2025-12-03-Supercharging-GitHub-Copilot-CLI-with-MCP-Server.html"
 categories: ["AI", "Coding", "GitHub Copilot"]
 tags: ["AI", "AST", "CLI Tools", "Code Documentation", "Code Search", "Code Symbol Extraction", "Codebase Navigation", "Codebase Search", "Coding", "Developer Tools", "GitHub Copilot", "GitHub Copilot CLI", "Kit Dev", "MCP Server", "Package Documentation", "Terminal Chat", "Tree Sitter", "Videos", "VS Code"]
 tags_normalized: ["ai", "ast", "cli tools", "code documentation", "code search", "code symbol extraction", "codebase navigation", "codebase search", "coding", "developer tools", "github copilot", "github copilot cli", "kit dev", "mcp server", "package documentation", "terminal chat", "tree sitter", "videos", "vs code"]

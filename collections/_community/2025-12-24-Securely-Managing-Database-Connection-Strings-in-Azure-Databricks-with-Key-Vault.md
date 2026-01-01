@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-12-24 08:00:00 +00:00
-permalink: "/community/2025-12-24-Securely-Managing-Database-Connection-Strings-in-Azure-Databricks-with-Key-Vault.html"
+permalink: "/2025-12-24-Securely-Managing-Database-Connection-Strings-in-Azure-Databricks-with-Key-Vault.html"
 categories: ["Azure", "ML", "Security"]
 tags: ["Access Policies", "App Registration", "Azure", "Azure Identity", "Azure Key Vault", "Cloud Security", "Cluster Configuration", "Community", "Connection String", "Credential Management", "Data Engineering", "Database Security", "Databricks", "ML", "Python", "Secret Management", "Secrets Retrieval", "Security"]
 tags_normalized: ["access policies", "app registration", "azure", "azure identity", "azure key vault", "cloud security", "cluster configuration", "community", "connection string", "credential management", "data engineering", "database security", "databricks", "ml", "python", "secret management", "secrets retrieval", "security"]

@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/changelog/feed/"
 date: 2025-10-09 22:05:23 +00:00
-permalink: "/news/2025-10-09-CodeQL-2232-Adds-Rust-Security-Detections-and-Enhanced-Language-Support.html"
+permalink: "/2025-10-09-CodeQL-2232-Adds-Rust-Security-Detections-and-Enhanced-Language-Support.html"
 categories: ["Coding", "DevOps", "Security"]
 tags: ["Application Security", "C#", "CI/CD", "CodeQL", "Coding", "Data Flow Analysis", "DevOps", "GitHub Code Scanning", "Go", "Improvement", "JavaScript", "News", "Python", "Ruby", "Rust", "Security", "Static Analysis", "Taint Tracking", "TypeScript", "Vulnerability Detection"]
 tags_normalized: ["application security", "csharp", "cislashcd", "codeql", "coding", "data flow analysis", "devops", "github code scanning", "go", "improvement", "javascript", "news", "python", "ruby", "rust", "security", "static analysis", "taint tracking", "typescript", "vulnerability detection"]

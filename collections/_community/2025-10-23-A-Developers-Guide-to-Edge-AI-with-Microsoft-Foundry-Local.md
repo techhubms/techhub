@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-10-23 07:00:00 +00:00
-permalink: "/community/2025-10-23-A-Developers-Guide-to-Edge-AI-with-Microsoft-Foundry-Local.html"
+permalink: "/2025-10-23-A-Developers-Guide-to-Edge-AI-with-Microsoft-Foundry-Local.html"
 categories: ["AI", "Azure", "Coding"]
 tags: [".NET", "AI", "AI Cost Optimization", "AI Engineering", "Azure", "Coding", "Community", "Compliance", "Edge AI", "Edge Computing", "Enterprise AI", "Hardware Optimization", "Intel NPU", "JavaScript", "LLM", "Local LLM Deployment", "Microsoft Foundry Local", "NVIDIA GPU", "ONNX Runtime", "OpenAI API", "Private AI", "Python", "Real Time AI", "Rust", "TypeScript"]
 tags_normalized: ["dotnet", "ai", "ai cost optimization", "ai engineering", "azure", "coding", "community", "compliance", "edge ai", "edge computing", "enterprise ai", "hardware optimization", "intel npu", "javascript", "llm", "local llm deployment", "microsoft foundry local", "nvidia gpu", "onnx runtime", "openai api", "private ai", "python", "real time ai", "rust", "typescript"]

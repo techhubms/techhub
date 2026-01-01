@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Reddit Artificial Inteligence"
 feed_url: "https://www.reddit.com/r/ArtificialInteligence/.rss"
 date: 2025-08-08 09:28:36 +00:00
-permalink: "/community/2025-08-08-Building-a-Master-Prompt-System-for-SEO-Blog-Generation-with-Psychological-Engagement.html"
+permalink: "/2025-08-08-Building-a-Master-Prompt-System-for-SEO-Blog-Generation-with-Psychological-Engagement.html"
 categories: ["AI"]
 tags: ["AI", "AI Content Creation", "ArtificialInteligence", "Community", "Content Structure", "Engagement Psychology", "Expert Persona", "FOMO", "Keyword Optimization", "Meta Description", "Open Loops", "Prompt Engineering", "Psychological Hooks", "SEO Blog Writing", "Storytelling", "Structured Prompts"]
 tags_normalized: ["ai", "ai content creation", "artificialinteligence", "community", "content structure", "engagement psychology", "expert persona", "fomo", "keyword optimization", "meta description", "open loops", "prompt engineering", "psychological hooks", "seo blog writing", "storytelling", "structured prompts"]

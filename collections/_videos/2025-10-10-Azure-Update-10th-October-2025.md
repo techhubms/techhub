@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "John Savill's Technical Training"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCpIn7ox7j7bH_OFj7tYouOQ"
 date: 2025-10-10 15:15:12 +00:00
-permalink: "/videos/2025-10-10-Azure-Update-10th-October-2025.html"
+permalink: "/2025-10-10-Azure-Update-10th-October-2025.html"
 categories: ["AI", "Azure", "DevOps"]
 tags: ["AI", "AKS", "App Modernization", "App Service On Arc", "Azure", "Azure Backup", "Azure Cloud", "Azure Files Premium", "Azure Migrate", "Azure Update", "Cloud", "Cloud Infrastructure", "Container Insights", "DevOps", "Kubernetes Fleet Manager", "Marketplace", "Microsoft", "Microsoft Azure", "Monitoring", "MySQL", "PostgreSQL", "Videos"]
 tags_normalized: ["ai", "aks", "app modernization", "app service on arc", "azure", "azure backup", "azure cloud", "azure files premium", "azure migrate", "azure update", "cloud", "cloud infrastructure", "container insights", "devops", "kubernetes fleet manager", "marketplace", "microsoft", "microsoft azure", "monitoring", "mysql", "postgresql", "videos"]

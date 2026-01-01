@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/feed/"
 date: 2025-10-15 15:00:00 +00:00
-permalink: "/news/2025-10-15-GitHub-Copilot-From-Autocomplete-to-Multi-Model-AI-Coding-Assistant.html"
+permalink: "/2025-10-15-GitHub-Copilot-From-Autocomplete-to-Multi-Model-AI-Coding-Assistant.html"
 categories: ["AI", "Coding", "GitHub Copilot"]
 tags: ["AI", "AI & ML", "AI Coding Assistant", "Code Review Automation", "Coding", "Copilot Agent Mode", "Copilot CLI", "Developer Productivity", "GitHub Copilot", "GitHub Copilot CLI", "IDE Integration", "JetBrains", "LLM", "MCP", "MCP Server", "Multi Model AI", "News", "Pull Request Automation", "VS Code"]
 tags_normalized: ["ai", "ai and ml", "ai coding assistant", "code review automation", "coding", "copilot agent mode", "copilot cli", "developer productivity", "github copilot", "github copilot cli", "ide integration", "jetbrains", "llm", "mcp", "mcp server", "multi model ai", "news", "pull request automation", "vs code"]

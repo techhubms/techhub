@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-10-31 15:44:05 +00:00
-permalink: "/community/2025-10-31-Building-Multi-Agent-AI-Systems-on-Azure-App-Service-with-Microsoft-Agent-Framework.html"
+permalink: "/2025-10-31-Building-Multi-Agent-AI-Systems-on-Azure-App-Service-with-Microsoft-Agent-Framework.html"
 categories: ["AI", "Azure"]
 tags: [".NET 9", "AI", "AI Agents", "Async Request Reply", "Azure", "Azure AI Foundry", "Azure App Service", "Bicep", "Cloud Architecture", "Community", "Cosmos DB", "External API Integration", "Microsoft Agent Framework", "Multi Agent Systems", "Production Patterns", "Service Bus", "WebJobs", "Workflow Orchestration"]
 tags_normalized: ["dotnet 9", "ai", "ai agents", "async request reply", "azure", "azure ai foundry", "azure app service", "bicep", "cloud architecture", "community", "cosmos db", "external api integration", "microsoft agent framework", "multi agent systems", "production patterns", "service bus", "webjobs", "workflow orchestration"]

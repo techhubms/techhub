@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft AI Foundry Blog"
 feed_url: "https://devblogs.microsoft.com/foundry/feed/"
 date: 2025-12-03 19:15:11 +00:00
-permalink: "/news/2025-12-03-Accelerating-AI-Agent-Development-Foundry-MCP-Server-Preview-Announced.html"
+permalink: "/2025-12-03-Accelerating-AI-Agent-Development-Foundry-MCP-Server-Preview-Announced.html"
 categories: ["AI", "Azure", "Coding", "Security"]
 tags: ["Agent Management", "Agents", "AI", "AI Agents", "Azure", "Azure Entra ID", "Cloud Integration", "Coding", "Foundry MCP Server", "MCP", "Microsoft Foundry", "Model Benchmarks", "Model Deployment", "Monitoring", "MSIgnite", "News", "OAuth 2.0", "RBAC", "Security", "Security Best Practices", "VS", "VS Code"]
 tags_normalized: ["agent management", "agents", "ai", "ai agents", "azure", "azure entra id", "cloud integration", "coding", "foundry mcp server", "mcp", "microsoft foundry", "model benchmarks", "model deployment", "monitoring", "msignite", "news", "oauth 2dot0", "rbac", "security", "security best practices", "vs", "vs code"]

@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The Azure Blog"
 feed_url: "https://azure.microsoft.com/en-us/blog/feed/"
 date: 2025-09-18 15:00:00 +00:00
-permalink: "/news/2025-09-18-Microsoft-Recognized-as-Leader-in-2025-Gartner-Magic-Quadrant-for-Global-Industrial-IoT-Platforms.html"
+permalink: "/2025-09-18-Microsoft-Recognized-as-Leader-in-2025-Gartner-Magic-Quadrant-for-Global-Industrial-IoT-Platforms.html"
 categories: ["AI", "Azure", "Security"]
 tags: ["Adaptive Cloud", "AI", "AI Integration", "Azure", "Azure Arc", "Azure Digital Twins", "Azure IoT", "Cloud To Edge", "Copilot in Azure", "Digital Twins", "Gartner Magic Quadrant", "Gartner® Magic Quadrant™", "Hybrid + Multicloud", "Industrial Data Management", "Industrial IoT", "Internet Of Things", "IoT Hub", "Microsoft Defender For IoT", "Microsoft Entra", "Microsoft Fabric", "Microsoft Sentinel", "News", "Operational Technology", "Real Time Intelligence", "Security"]
 tags_normalized: ["adaptive cloud", "ai", "ai integration", "azure", "azure arc", "azure digital twins", "azure iot", "cloud to edge", "copilot in azure", "digital twins", "gartner magic quadrant", "gartner magic quadrant", "hybrid plus multicloud", "industrial data management", "industrial iot", "internet of things", "iot hub", "microsoft defender for iot", "microsoft entra", "microsoft fabric", "microsoft sentinel", "news", "operational technology", "real time intelligence", "security"]

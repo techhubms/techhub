@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-10-16 12:39:45 +00:00
-permalink: "/community/2025-10-16-Deployment-and-Build-Strategies-for-Azure-Linux-Web-Apps.html"
+permalink: "/2025-10-16-Deployment-and-Build-Strategies-for-Azure-Linux-Web-Apps.html"
 categories: ["Azure", "Coding", "DevOps"]
 tags: ["Azure", "Azure App Service", "Azure DevOps", "Azure Web Apps", "Build Pipeline", "CI/CD", "Coding", "Community", "Deployment Automation", "DevOps", "Environment Variables", "Flask", "Linux Web Apps", "Oryx Build", "PaaS", "Python", "Startup Script", "VS Code", "YAML Pipelines"]
 tags_normalized: ["azure", "azure app service", "azure devops", "azure web apps", "build pipeline", "cislashcd", "coding", "community", "deployment automation", "devops", "environment variables", "flask", "linux web apps", "oryx build", "paas", "python", "startup script", "vs code", "yaml pipelines"]

@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Fabric Blog"
 feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
 date: 2025-11-18 08:00:00 +00:00
-permalink: "/news/2025-11-18-Innovation-in-Data-Factory-Microsoft-Fabric-Data-Integration-Features-Announced-at-Ignite-2025.html"
+permalink: "/2025-11-18-Innovation-in-Data-Factory-Microsoft-Fabric-Data-Integration-Features-Announced-at-Ignite-2025.html"
 categories: ["AI", "Azure", "Coding", "ML"]
 tags: ["AI", "AI Function Transforms", "Apache Airflow API", "Azure", "Azure Data Factory", "Coding", "Copilot Integration", "CosmosDB", "Data Factory", "Data Lake", "Dbt Fusion", "Dbt Job", "Microsoft Fabric", "ML", "News", "OneLake", "Open Mirroring", "Pipeline Automation", "PostgreSQL", "Power BI", "Power Query", "SAP Business Data Cloud Connect", "Snowflake", "SQL Server", "Synapse Pipeline Migration", "Zero ETL"]
 tags_normalized: ["ai", "ai function transforms", "apache airflow api", "azure", "azure data factory", "coding", "copilot integration", "cosmosdb", "data factory", "data lake", "dbt fusion", "dbt job", "microsoft fabric", "ml", "news", "onelake", "open mirroring", "pipeline automation", "postgresql", "power bi", "power query", "sap business data cloud connect", "snowflake", "sql server", "synapse pipeline migration", "zero etl"]

@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Reddit DevOps"
 feed_url: "https://www.reddit.com/r/devops/.rss"
 date: 2025-08-06 12:26:20 +00:00
-permalink: "/community/2025-08-06-Why-Startups-Struggle-with-Real-DevOps-Misconceptions-and-Consequences.html"
+permalink: "/2025-08-06-Why-Startups-Struggle-with-Real-DevOps-Misconceptions-and-Consequences.html"
 categories: ["DevOps"]
 tags: ["Agile", "Automation", "CI/CD", "Community", "Development Processes", "DevOps", "IaC", "Monitoring", "Platform Engineering", "Rollbacks", "Scaling", "SOC2", "SOX", "Startups", "Team Culture", "Technical Debt", "Zero Downtime Deployments"]
 tags_normalized: ["agile", "automation", "cislashcd", "community", "development processes", "devops", "iac", "monitoring", "platform engineering", "rollbacks", "scaling", "soc2", "sox", "startups", "team culture", "technical debt", "zero downtime deployments"]

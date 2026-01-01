@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-09-09 18:10:15 +00:00
-permalink: "/community/2025-09-09-Python-Code-Interpreter-for-Logic-Apps-Execute-Python-in-Workflows-Using-Azure-Container-Apps.html"
+permalink: "/2025-09-09-Python-Code-Interpreter-for-Logic-Apps-Execute-Python-in-Workflows-Using-Azure-Container-Apps.html"
 categories: ["AI", "Azure", "Coding"]
 tags: ["Agent Loop", "AI", "AI Agents", "Azure", "Azure Container Apps", "Business Intelligence", "Code Execution", "Coding", "Community", "CSV Analysis", "Data Analysis", "Data Transformation", "Logic Apps", "Natural Language Processing", "Python", "Python Code Interpreter", "Visualization", "Workflow Automation"]
 tags_normalized: ["agent loop", "ai", "ai agents", "azure", "azure container apps", "business intelligence", "code execution", "coding", "community", "csv analysis", "data analysis", "data transformation", "logic apps", "natural language processing", "python", "python code interpreter", "visualization", "workflow automation"]

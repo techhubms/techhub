@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/changelog/feed/"
 date: 2025-12-18 09:20:59 +00:00
-permalink: "/news/2025-12-18-Enterprise-Pull-Request-Metrics-Now-Included-in-GitHub-Copilot-Usage-Metrics-API.html"
+permalink: "/2025-12-18-Enterprise-Pull-Request-Metrics-Now-Included-in-GitHub-Copilot-Usage-Metrics-API.html"
 categories: ["AI", "DevOps", "GitHub Copilot"]
 tags: ["AI", "AI Controls", "API Reporting", "Copilot", "Copilot API", "Copilot Usage Metrics", "Developer Productivity", "DevOps", "DevOps Metrics", "Enterprise Metrics", "GitHub Copilot", "GitHub Enterprise", "News", "Pull Request Analytics", "Pull Request Review"]
 tags_normalized: ["ai", "ai controls", "api reporting", "copilot", "copilot api", "copilot usage metrics", "developer productivity", "devops", "devops metrics", "enterprise metrics", "github copilot", "github enterprise", "news", "pull request analytics", "pull request review"]

@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Events YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
 date: 2025-11-24 14:33:12 +00:00
-permalink: "/videos/2025-11-24-Drive-Innovation-with-AI-Hybrid-Cloud-and-Azure-Storage-Solutions.html"
+permalink: "/2025-11-24-Drive-Innovation-with-AI-Hybrid-Cloud-and-Azure-Storage-Solutions.html"
 categories: ["AI", "Azure"]
 tags: ["AI", "AI Factory", "Azure", "Azure Local", "Azure Storage", "Cloud Infrastructure", "Copilot+", "Dell Technologies", "Disaggregated Storage", "Enterprise Cloud", "Hybrid Cloud", "Microsoft Ignite", "Migration", "MSIgnite", "PowerScale", "PowerStore", "Reliability", "Scalability", "Videos", "Workflow Automation"]
 tags_normalized: ["ai", "ai factory", "azure", "azure local", "azure storage", "cloud infrastructure", "copilotplus", "dell technologies", "disaggregated storage", "enterprise cloud", "hybrid cloud", "microsoft ignite", "migration", "msignite", "powerscale", "powerstore", "reliability", "scalability", "videos", "workflow automation"]

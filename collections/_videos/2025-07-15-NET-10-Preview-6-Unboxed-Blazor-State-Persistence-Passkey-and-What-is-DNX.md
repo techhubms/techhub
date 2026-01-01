@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Dotnet's Youtube channel"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw"
 date: 2025-07-15 21:09:16 +00:00
-permalink: "/videos/2025-07-15-NET-10-Preview-6-Unboxed-Blazor-State-Persistence-Passkey-and-What-is-DNX.html"
+permalink: "/2025-07-15-NET-10-Preview-6-Unboxed-Blazor-State-Persistence-Passkey-and-What-is-DNX.html"
 categories: ["Coding"]
 tags: [".NET", ".NET 10", "Blazor", "Coding", "DNX", "Dotnet10", "Kestrel", "MCP Server", "MSBuild", "NuGet", "Passkeys", "Preview 6", "Validation", "Videos", "VS Code", "WebAuthN"]
 tags_normalized: ["dotnet", "dotnet 10", "blazor", "coding", "dnx", "dotnet10", "kestrel", "mcp server", "msbuild", "nuget", "passkeys", "preview 6", "validation", "videos", "vs code", "webauthn"]

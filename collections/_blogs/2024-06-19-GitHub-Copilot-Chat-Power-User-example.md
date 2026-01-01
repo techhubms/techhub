@@ -10,9 +10,9 @@ categories: ["AI", "GitHub Copilot", "Coding"]
 feed_name: "Rob Bos' Blog"
 feed_url: "https://devopsjournal.io/blog/atom.xml"
 date: 2024-06-19 00:00:00 +00:00
-permalink: "/blogs/2024-06-19-GitHub-Copilot-Chat-Power-User-example.html"
-tags: ["AI", "API Scripting", "Automation", "Coding", "GitHub Copilot", "Blogs", "Programming", "Prompt Engineering"]
-tags_normalized: ["ai", "api scripting", "automation", "coding", "github copilot", "blogs", "programming", "prompt engineering"]
+permalink: "/2024-06-19-GitHub-Copilot-Chat-Power-User-example.html"
+tags: ["AI", "API Scripting", "Automation", "Blogs", "Coding", "GitHub Copilot", "Programming", "Prompt Engineering"]
+tags_normalized: ["ai", "api scripting", "automation", "blogs", "coding", "github copilot", "programming", "prompt engineering"]
 ---
 
 In this article, Rob Bos shares his experience leveraging GitHub Copilot Chat to streamline the development of a script designed for interacting with the GitHub API. Rob explains his workflow, detailing the prompts he used and the iterative nature of working with Copilot. <!--excerpt_end--> He openly discusses how initial attempts with Copilot did not yield perfect results and highlights the importance of refining prompts to achieve more accurate, effective code generation.

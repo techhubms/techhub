@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-10-22 17:59:16 +00:00
-permalink: "/community/2025-10-22-Orchestrating-Multi-Agent-Intelligence-with-Microsoft-Agent-Framework-and-MCP.html"
+permalink: "/2025-10-22-Orchestrating-Multi-Agent-Intelligence-with-Microsoft-Agent-Framework-and-MCP.html"
 categories: ["AI", "Azure", "Coding"]
 tags: ["AI", "AI Orchestration", "Azure", "Coding", "Community", "Cosmos DB", "Customer Support Bot", "FastAPI", "Handoff Pattern", "Magentic Orchestration", "MCP", "Microsoft Agent Framework", "Multi Agent Systems", "Python", "React", "Reflection Pattern", "Session Memory", "State Management", "Vector Embeddings"]
 tags_normalized: ["ai", "ai orchestration", "azure", "coding", "community", "cosmos db", "customer support bot", "fastapi", "handoff pattern", "magentic orchestration", "mcp", "microsoft agent framework", "multi agent systems", "python", "react", "reflection pattern", "session memory", "state management", "vector embeddings"]

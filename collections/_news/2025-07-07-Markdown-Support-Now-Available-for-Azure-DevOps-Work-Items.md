@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft DevBlog"
 feed_url: "https://devblogs.microsoft.com/devops/feed/"
 date: 2025-07-07 19:32:46 +00:00
-permalink: "/news/2025-07-07-Markdown-Support-Now-Available-for-Azure-DevOps-Work-Items.html"
+permalink: "/2025-07-07-Markdown-Support-Now-Available-for-Azure-DevOps-Work-Items.html"
 categories: ["Azure", "DevOps"]
 tags: ["Agile", "Azure", "Azure & Cloud", "Azure Cloud", "Azure DevOps", "DevOps", "Editor", "HTML Conversion", "Large Text Fields", "Markdown", "News", "Release Process", "REST API", "User Feedback", "Work Items"]
 tags_normalized: ["agile", "azure", "azure and cloud", "azure cloud", "azure devops", "devops", "editor", "html conversion", "large text fields", "markdown", "news", "release process", "rest api", "user feedback", "work items"]

@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Reddit CSharp"
 feed_url: "https://www.reddit.com/r/csharp/.rss"
 date: 2025-08-02 15:24:41 +00:00
-permalink: "/community/2025-08-02-Seeking-Recommendations-for-WPF-UI-Libraries-for-a-Windows-Game-Launcher.html"
+permalink: "/2025-08-02-Seeking-Recommendations-for-WPF-UI-Libraries-for-a-Windows-Game-Launcher.html"
 categories: ["Coding"]
 tags: ["Blazor Hybrid", "C#", "Coding", "Community", "Component Customization", "Frontend", "Game Launcher", "MAUI", "Themes", "UI Library", "Window Management", "Windows", "WPF", "XAML"]
 tags_normalized: ["blazor hybrid", "csharp", "coding", "community", "component customization", "frontend", "game launcher", "maui", "themes", "ui library", "window management", "windows", "wpf", "xaml"]

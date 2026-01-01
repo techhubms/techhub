@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Fabric Blog"
 feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
 date: 2025-11-19 10:00:00 +00:00
-permalink: "/news/2025-11-19-Fabric-IQ-The-Semantic-Foundation-for-Enterprise-AI.html"
+permalink: "/2025-11-19-Fabric-IQ-The-Semantic-Foundation-for-Enterprise-AI.html"
 categories: ["AI", "Azure", "ML"]
 tags: ["AI", "AI Agents", "Azure", "Business Rules", "Data Agent", "Data Governance", "Data Lake", "Enterprise AI", "Fabric IQ", "Foundry IQ", "Governance", "Graph Modeling", "Live Data Binding", "Low Code", "Microsoft Fabric", "ML", "News", "Ontology", "Operational Intelligence", "Operations Agent", "Power BI", "Semantic Modeling", "Unified Semantics"]
 tags_normalized: ["ai", "ai agents", "azure", "business rules", "data agent", "data governance", "data lake", "enterprise ai", "fabric iq", "foundry iq", "governance", "graph modeling", "live data binding", "low code", "microsoft fabric", "ml", "news", "ontology", "operational intelligence", "operations agent", "power bi", "semantic modeling", "unified semantics"]

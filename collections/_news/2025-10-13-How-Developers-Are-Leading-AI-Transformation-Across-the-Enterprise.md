@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The Azure Blog"
 feed_url: "https://azure.microsoft.com/en-us/blog/feed/"
 date: 2025-10-13 15:10:00 +00:00
-permalink: "/news/2025-10-13-How-Developers-Are-Leading-AI-Transformation-Across-the-Enterprise.html"
+permalink: "/2025-10-13-How-Developers-Are-Leading-AI-Transformation-Across-the-Enterprise.html"
 categories: ["AI", "Azure", "DevOps", "GitHub Copilot"]
 tags: ["Agent Factory", "Agentic DevOps", "AI", "AI + Machine Learning", "AI Agents", "Application Lifecycle", "Automation", "Azure", "Azure AI Foundry", "CI/CD", "Copilots", "Developer Experience", "DevOps", "Enterprise Integration", "Generative AI", "GitHub Copilot", "MCP", "Microsoft Cloud", "News", "Productivity Tools", "Software Modernization"]
 tags_normalized: ["agent factory", "agentic devops", "ai", "ai plus machine learning", "ai agents", "application lifecycle", "automation", "azure", "azure ai foundry", "cislashcd", "copilots", "developer experience", "devops", "enterprise integration", "generative ai", "github copilot", "mcp", "microsoft cloud", "news", "productivity tools", "software modernization"]

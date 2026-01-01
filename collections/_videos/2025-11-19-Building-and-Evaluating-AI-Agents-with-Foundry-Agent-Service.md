@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Events YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
 date: 2025-11-19 08:14:43 +00:00
-permalink: "/videos/2025-11-19-Building-and-Evaluating-AI-Agents-with-Foundry-Agent-Service.html"
+permalink: "/2025-11-19-Building-and-Evaluating-AI-Agents-with-Foundry-Agent-Service.html"
 categories: ["AI", "Azure", "Coding"]
 tags: ["Agent Evaluation", "AI", "AI Agents", "API Integration", "Azure", "Azure Functions", "Cloud Scalability", "Coding", "InnovatewithAzureAIappsandagents", "Live Data", "Microsoft Foundry Agent Service", "Microsoft Ignite", "MSIgnite", "Python", "Secure Deployment", "Session Recording", "Tool Registration", "Videos", "W&B Weave"]
 tags_normalized: ["agent evaluation", "ai", "ai agents", "api integration", "azure", "azure functions", "cloud scalability", "coding", "innovatewithazureaiappsandagents", "live data", "microsoft foundry agent service", "microsoft ignite", "msignite", "python", "secure deployment", "session recording", "tool registration", "videos", "wandb weave"]

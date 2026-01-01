@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-10-31 20:41:25 +00:00
-permalink: "/community/2025-10-31-Agentic-Integration-Patterns-Microsoft-Copilot-Studio-with-SAP-ServiceNow-and-Salesforce.html"
+permalink: "/2025-10-31-Agentic-Integration-Patterns-Microsoft-Copilot-Studio-with-SAP-ServiceNow-and-Salesforce.html"
 categories: ["AI", "Azure"]
 tags: ["Agent To Agent (a2a)", "AI", "Azure", "Azure Agent Framework", "Azure Logic Apps", "Community", "Conversational AI", "Enterprise Automation", "Federated Identity", "Foundry", "Identity Federation", "Low Code Integration", "MCP", "Microsoft Copilot Studio", "Microsoft Entra ID", "Salesforce Integration", "SAP Integration", "ServiceNow Integration"]
 tags_normalized: ["agent to agent a2a", "ai", "azure", "azure agent framework", "azure logic apps", "community", "conversational ai", "enterprise automation", "federated identity", "foundry", "identity federation", "low code integration", "mcp", "microsoft copilot studio", "microsoft entra id", "salesforce integration", "sap integration", "servicenow integration"]

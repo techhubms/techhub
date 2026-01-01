@@ -9,10 +9,10 @@ viewing_mode: "external"
 feed_name: "Dellenny's Blog"
 feed_url: "https://dellenny.com/feed/"
 date: 2025-07-29 11:50:50 +00:00
-permalink: "/blogs/2025-07-29-Boosting-Performance-with-the-Materialized-View-Pattern-in-Azure.html"
+permalink: "/2025-07-29-Boosting-Performance-with-the-Materialized-View-Pattern-in-Azure.html"
 categories: ["Azure", "ML"]
-tags: ["Analytical Dashboards", "Architecture", "Azure", "Azure Data Factory", "Azure Databricks", "Azure SQL Database", "Azure SQL Managed Instance", "Azure Synapse Analytics", "Cost Optimization", "Data Architecture", "Data Engineering", "Delta Lake", "ETL Pipelines", "Incremental Updates", "Indexed Views", "KPI Reporting", "Materialized View Pattern", "Microsoft Azure", "ML", "Partitioning", "Blogs", "Power BI DirectQuery", "Query Performance", "Scheduled Refresh", "Solution Architecture"]
-tags_normalized: ["analytical dashboards", "architecture", "azure", "azure data factory", "azure databricks", "azure sql database", "azure sql managed instance", "azure synapse analytics", "cost optimization", "data architecture", "data engineering", "delta lake", "etl pipelines", "incremental updates", "indexed views", "kpi reporting", "materialized view pattern", "microsoft azure", "ml", "partitioning", "blogs", "power bi directquery", "query performance", "scheduled refresh", "solution architecture"]
+tags: ["Analytical Dashboards", "Architecture", "Azure", "Azure Data Factory", "Azure Databricks", "Azure SQL Database", "Azure SQL Managed Instance", "Azure Synapse Analytics", "Blogs", "Cost Optimization", "Data Architecture", "Data Engineering", "Delta Lake", "ETL Pipelines", "Incremental Updates", "Indexed Views", "KPI Reporting", "Materialized View Pattern", "Microsoft Azure", "ML", "Partitioning", "Power BI DirectQuery", "Query Performance", "Scheduled Refresh", "Solution Architecture"]
+tags_normalized: ["analytical dashboards", "architecture", "azure", "azure data factory", "azure databricks", "azure sql database", "azure sql managed instance", "azure synapse analytics", "blogs", "cost optimization", "data architecture", "data engineering", "delta lake", "etl pipelines", "incremental updates", "indexed views", "kpi reporting", "materialized view pattern", "microsoft azure", "ml", "partitioning", "power bi directquery", "query performance", "scheduled refresh", "solution architecture"]
 ---
 
 Dellenny details how materialized views can enhance analytics performance on Azure services such as Synapse and Databricks. Practical code examples and architecture tips round out this must-read for data engineers.<!--excerpt_end-->

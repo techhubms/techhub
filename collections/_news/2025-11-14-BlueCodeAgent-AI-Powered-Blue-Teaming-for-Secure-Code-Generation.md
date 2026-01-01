@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft News"
 feed_url: "https://news.microsoft.com/source/feed/"
 date: 2025-11-14 16:48:52 +00:00
-permalink: "/news/2025-11-14-BlueCodeAgent-AI-Powered-Blue-Teaming-for-Secure-Code-Generation.html"
+permalink: "/2025-11-14-BlueCodeAgent-AI-Powered-Blue-Teaming-for-Secure-Code-Generation.html"
 categories: ["AI", "Security"]
 tags: ["AI", "AI Ethics", "AI Governance", "Automated Testing", "Bias Detection", "Blue Teaming", "BlueCodeAgent", "Code Generation", "Code Security", "Company News", "Constitutional AI", "Dynamic Testing", "LLM Security", "Malicious Code", "Microsoft Research", "News", "Red Teaming", "Security", "Vulnerability Detection"]
 tags_normalized: ["ai", "ai ethics", "ai governance", "automated testing", "bias detection", "blue teaming", "bluecodeagent", "code generation", "code security", "company news", "constitutional ai", "dynamic testing", "llm security", "malicious code", "microsoft research", "news", "red teaming", "security", "vulnerability detection"]

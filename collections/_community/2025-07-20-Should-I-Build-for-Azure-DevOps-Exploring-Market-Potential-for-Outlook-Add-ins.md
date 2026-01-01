@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Reddit Azure DevOps"
 feed_url: "https://www.reddit.com/r/azuredevops/.rss"
 date: 2025-07-20 08:10:49 +00:00
-permalink: "/community/2025-07-20-Should-I-Build-for-Azure-DevOps-Exploring-Market-Potential-for-Outlook-Add-ins.html"
+permalink: "/2025-07-20-Should-I-Build-for-Azure-DevOps-Exploring-Market-Potential-for-Outlook-Add-ins.html"
 categories: ["Azure", "DevOps"]
 tags: ["Azure", "Azure DevOps", "COM Technology", "Community", "Cross Platform Development", "DevOps", "Enterprise Productivity", "Fortune 100", "Market Analysis", "Outlook Add Ins", "SaaS Products", "TFS", "Work Item Integration"]
 tags_normalized: ["azure", "azure devops", "com technology", "community", "cross platform development", "devops", "enterprise productivity", "fortune 100", "market analysis", "outlook add ins", "saas products", "tfs", "work item integration"]

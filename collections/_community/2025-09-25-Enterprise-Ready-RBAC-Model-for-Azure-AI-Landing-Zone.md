@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-09-25 18:29:20 +00:00
-permalink: "/community/2025-09-25-Enterprise-Ready-RBAC-Model-for-Azure-AI-Landing-Zone.html"
+permalink: "/2025-09-25-Enterprise-Ready-RBAC-Model-for-Azure-AI-Landing-Zone.html"
 categories: ["AI", "Azure", "DevOps", "ML", "Security"]
 tags: ["Access Guardrails", "Access Patterns", "AI", "AKS", "Azure", "Azure AI", "Azure AI Foundry", "Azure AI Search", "Azure API Management", "Azure App Service", "Azure Container Apps", "Azure Landing Zone", "Azure Machine Learning", "Azure OpenAI", "Azure SQL", "CI/CD", "Community", "Cosmos DB", "Custom Roles", "Data Security", "DevOps", "Entra ID", "Governance", "Identity Architecture", "Least Privilege", "Managed Identities", "Microsoft Defender For Cloud", "ML", "MLOps", "PIM", "RBAC", "Role Based Access Control", "Security", "Segregation Of Duties", "Service Principals", "Zero Trust"]
 tags_normalized: ["access guardrails", "access patterns", "ai", "aks", "azure", "azure ai", "azure ai foundry", "azure ai search", "azure api management", "azure app service", "azure container apps", "azure landing zone", "azure machine learning", "azure openai", "azure sql", "cislashcd", "community", "cosmos db", "custom roles", "data security", "devops", "entra id", "governance", "identity architecture", "least privilege", "managed identities", "microsoft defender for cloud", "ml", "mlops", "pim", "rbac", "role based access control", "security", "segregation of duties", "service principals", "zero trust"]

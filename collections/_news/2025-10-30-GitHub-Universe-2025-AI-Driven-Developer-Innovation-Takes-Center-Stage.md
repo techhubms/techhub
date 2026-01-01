@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft News"
 feed_url: "https://news.microsoft.com/source/feed/"
 date: 2025-10-30 15:38:23 +00:00
-permalink: "/news/2025-10-30-GitHub-Universe-2025-AI-Driven-Developer-Innovation-Takes-Center-Stage.html"
+permalink: "/2025-10-30-GitHub-Universe-2025-AI-Driven-Developer-Innovation-Takes-Center-Stage.html"
 categories: ["AI", "Azure", "Coding", "DevOps", "GitHub Copilot"]
 tags: ["Agent HQ", "Agentic Development", "AI", "AI Agents", "AI Toolkit", "App Development", "Azure", "Azure MCP Server", "Cloud Native", "Coding", "Company News", "Developer Tools", "DevOps", "Enterprise Security", "GitHub Copilot", "GitHub Universe", "MCP", "Microsoft Azure", "News", "Open Source", "Python", "TypeScript", "VS Code"]
 tags_normalized: ["agent hq", "agentic development", "ai", "ai agents", "ai toolkit", "app development", "azure", "azure mcp server", "cloud native", "coding", "company news", "developer tools", "devops", "enterprise security", "github copilot", "github universe", "mcp", "microsoft azure", "news", "open source", "python", "typescript", "vs code"]

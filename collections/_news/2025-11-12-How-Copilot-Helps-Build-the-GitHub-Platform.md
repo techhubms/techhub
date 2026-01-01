@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/feed/"
 date: 2025-11-12 17:00:00 +00:00
-permalink: "/news/2025-11-12-How-Copilot-Helps-Build-the-GitHub-Platform.html"
+permalink: "/2025-11-12-How-Copilot-Helps-Build-the-GitHub-Platform.html"
 categories: ["AI", "Coding", "DevOps", "GitHub Copilot", "Security"]
 tags: ["AI", "AI & ML", "AI Assistant", "API Endpoints", "Bug Fixes", "CI/CD", "Code Automation", "Code Maintenance", "Coding", "Collaboration", "Database Migration", "DevOps", "Documentation", "Feature Flags", "GitHub Copilot", "News", "Performance Optimization", "Pull Requests", "Refactoring", "Repository Analysis", "Security", "Security Gates", "Software Development Lifecycle"]
 tags_normalized: ["ai", "ai and ml", "ai assistant", "api endpoints", "bug fixes", "cislashcd", "code automation", "code maintenance", "coding", "collaboration", "database migration", "devops", "documentation", "feature flags", "github copilot", "news", "performance optimization", "pull requests", "refactoring", "repository analysis", "security", "security gates", "software development lifecycle"]

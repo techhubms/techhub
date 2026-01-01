@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Events YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
 date: 2025-11-25 15:55:32 +00:00
-permalink: "/videos/2025-11-25-Fast-and-Flexible-Inference-for-Open-Source-AI-Models-at-Scale-with-Azure.html"
+permalink: "/2025-11-25-Fast-and-Flexible-Inference-for-Open-Source-AI-Models-at-Scale-with-Azure.html"
 categories: ["AI", "Azure", "ML"]
 tags: ["AI", "AI Agents", "AKS", "Azure", "Azure AI", "Azure Container Apps", "CI/CD Pipeline", "Cloud Inference", "Cloud Scalability", "Compliance", "Cost Optimization", "Data Boundary", "Gateway API", "GPU Workloads", "Hybrid Architecture", "InnovatewithAzureAIappsandagents", "LLM", "ML", "Model Deployment", "MSIgnite", "Open Source Models", "Serverless GPU", "Videos"]
 tags_normalized: ["ai", "ai agents", "aks", "azure", "azure ai", "azure container apps", "cislashcd pipeline", "cloud inference", "cloud scalability", "compliance", "cost optimization", "data boundary", "gateway api", "gpu workloads", "hybrid architecture", "innovatewithazureaiappsandagents", "llm", "ml", "model deployment", "msignite", "open source models", "serverless gpu", "videos"]

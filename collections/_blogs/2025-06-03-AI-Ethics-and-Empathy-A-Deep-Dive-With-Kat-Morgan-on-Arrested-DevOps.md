@@ -9,10 +9,10 @@ viewing_mode: "external"
 feed_name: "Arrested DevOps"
 feed_url: "https://www.arresteddevops.com/episode/index.xml"
 date: 2025-06-03 10:18:43 +00:00
-permalink: "/blogs/2025-06-03-AI-Ethics-and-Empathy-A-Deep-Dive-With-Kat-Morgan-on-Arrested-DevOps.html"
+permalink: "/2025-06-03-AI-Ethics-and-Empathy-A-Deep-Dive-With-Kat-Morgan-on-Arrested-DevOps.html"
 categories: ["AI", "DevOps"]
-tags: ["AI", "AI Ethics", "Code Hygiene", "Coding Assistance", "Dev Environments", "DevOps", "DevOps Culture", "Empathy", "Environmental Impact", "GitHub", "Intellectual Property", "Large Language Models", "LLMs", "Neurodivergence", "Blogs", "Privacy", "Software Development", "Team Collaboration"]
-tags_normalized: ["ai", "ai ethics", "code hygiene", "coding assistance", "dev environments", "devops", "devops culture", "empathy", "environmental impact", "github", "intellectual property", "large language models", "llms", "neurodivergence", "blogs", "privacy", "software development", "team collaboration"]
+tags: ["AI", "AI Ethics", "Blogs", "Code Hygiene", "Coding Assistance", "Dev Environments", "DevOps", "DevOps Culture", "Empathy", "Environmental Impact", "GitHub", "Intellectual Property", "Large Language Models", "LLMs", "Neurodivergence", "Privacy", "Software Development", "Team Collaboration"]
+tags_normalized: ["ai", "ai ethics", "blogs", "code hygiene", "coding assistance", "dev environments", "devops", "devops culture", "empathy", "environmental impact", "github", "intellectual property", "large language models", "llms", "neurodivergence", "privacy", "software development", "team collaboration"]
 ---
 
 In this Arrested DevOps episode, Matty Stratton and guest Kat Morgan examine AI's multifaceted role in development, delving into ethical, practical, and human-centered concerns. The discussion reflects on teamwork with AI, good practice, and building more humane, responsible technology.<!--excerpt_end-->

@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Community"
 date: 2025-08-13 13:00:00 +00:00
-permalink: "/community/2025-08-13-Transactable-Partner-Solutions-Apptividad-and-CoreView-in-Azure-Marketplace.html"
+permalink: "/2025-08-13-Transactable-Partner-Solutions-Apptividad-and-CoreView-in-Azure-Marketplace.html"
 categories: ["Azure", "Security"]
 tags: ["Apptividad Onboarding", "Automation", "Azure", "Azure Marketplace", "Biometric Validation", "Cloud Administration", "Community", "CoreView ONE", "Hybrid Environments", "Identity Verification", "License Management", "Microsoft 365 Governance", "Passive Liveness Detection", "Policy Enforcement", "Security"]
 tags_normalized: ["apptividad onboarding", "automation", "azure", "azure marketplace", "biometric validation", "cloud administration", "community", "coreview one", "hybrid environments", "identity verification", "license management", "microsoft 365 governance", "passive liveness detection", "policy enforcement", "security"]

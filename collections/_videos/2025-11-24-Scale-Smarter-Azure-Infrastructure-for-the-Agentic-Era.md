@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Events YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
 date: 2025-11-24 12:50:49 +00:00
-permalink: "/videos/2025-11-24-Scale-Smarter-Azure-Infrastructure-for-the-Agentic-Era.html"
+permalink: "/2025-11-24-Scale-Smarter-Azure-Infrastructure-for-the-Agentic-Era.html"
 categories: ["AI", "Azure", "DevOps", "ML", "Security"]
 tags: ["Agentic Operations", "AI", "AI Infrastructure", "AKS", "Azure", "Azure Copilot Resiliency Agent", "Azure Platform", "Azure Portal", "Azure Resiliency", "Cloud Operations", "Cloud Transformation", "Compliance", "DevOps", "Distributed AI", "Governance", "InnovatewithAzureAIappsandagents", "ML", "MSIgnite", "Red Hat Partnership", "Reliability Engineering", "Security", "SQL Server", "Videos"]
 tags_normalized: ["agentic operations", "ai", "ai infrastructure", "aks", "azure", "azure copilot resiliency agent", "azure platform", "azure portal", "azure resiliency", "cloud operations", "cloud transformation", "compliance", "devops", "distributed ai", "governance", "innovatewithazureaiappsandagents", "ml", "msignite", "red hat partnership", "reliability engineering", "security", "sql server", "videos"]

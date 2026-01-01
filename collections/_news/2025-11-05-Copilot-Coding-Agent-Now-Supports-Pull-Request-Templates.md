@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/changelog/feed/"
 date: 2025-11-05 18:18:54 +00:00
-permalink: "/news/2025-11-05-Copilot-Coding-Agent-Now-Supports-Pull-Request-Templates.html"
+permalink: "/2025-11-05-Copilot-Coding-Agent-Now-Supports-Pull-Request-Templates.html"
 categories: ["AI", "DevOps", "GitHub Copilot"]
 tags: ["AI", "Automation", "Autonomous Agents", "Best Practices", "Code Collaboration", "Copilot", "Copilot Coding Agent", "DevOps", "GitHub", "GitHub Copilot", "Improvement", "News", "Pull Request Templates", "Repository Management"]
 tags_normalized: ["ai", "automation", "autonomous agents", "best practices", "code collaboration", "copilot", "copilot coding agent", "devops", "github", "github copilot", "improvement", "news", "pull request templates", "repository management"]

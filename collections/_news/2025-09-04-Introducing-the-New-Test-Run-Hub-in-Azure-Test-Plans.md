@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft DevOps Blog"
 feed_url: "https://devblogs.microsoft.com/devops/feed/"
 date: 2025-09-04 09:58:58 +00:00
-permalink: "/news/2025-09-04-Introducing-the-New-Test-Run-Hub-in-Azure-Test-Plans.html"
+permalink: "/2025-09-04-Introducing-the-New-Test-Run-Hub-in-Azure-Test-Plans.html"
 categories: ["Azure", "DevOps"]
 tags: ["Analytics Dashboard", "Azure", "Azure DevOps", "Azure Test Plans", "Collaboration", "Continuous Improvement", "DevOps", "Markdown Support", "News", "QA", "REST API", "Software Testing", "Test", "Test Attachments", "Test Automation", "Test Management", "Test Reporting", "Test Run Hub", "UX", "Workflow Management"]
 tags_normalized: ["analytics dashboard", "azure", "azure devops", "azure test plans", "collaboration", "continuous improvement", "devops", "markdown support", "news", "qa", "rest api", "software testing", "test", "test attachments", "test automation", "test management", "test reporting", "test run hub", "ux", "workflow management"]

@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-11-04 13:16:37 +00:00
-permalink: "/community/2025-11-04-Enhancing-Azure-Data-Management-with-Silk-Software-Defined-Storage-and-Silk-Echo-for-AI.html"
+permalink: "/2025-11-04-Enhancing-Azure-Data-Management-with-Silk-Software-Defined-Storage-and-Silk-Echo-for-AI.html"
 categories: ["AI", "Azure"]
 tags: ["AI", "AI Infrastructure", "Azure", "CDM", "Cloning", "Community", "Copy Data Management", "Data Compression", "Data Deduplication", "Data Resilience", "Database Migration", "DataOps", "Dev/Test Environments", "Erasure Coding", "L Series VMs", "Microsoft Azure", "NVMe", "Silk", "Silk Echo", "Snapshots", "Software Defined Storage", "SQL Server", "Virtual Machines"]
 tags_normalized: ["ai", "ai infrastructure", "azure", "cdm", "cloning", "community", "copy data management", "data compression", "data deduplication", "data resilience", "database migration", "dataops", "devslashtest environments", "erasure coding", "l series vms", "microsoft azure", "nvme", "silk", "silk echo", "snapshots", "software defined storage", "sql server", "virtual machines"]

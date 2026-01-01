@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft News"
 feed_url: "https://news.microsoft.com/source/feed/"
 date: 2025-10-16 01:56:47 +00:00
-permalink: "/news/2025-10-16-Open-Source-Benchmarking-Tool-to-Measure-AI-for-Cybersecurity.html"
+permalink: "/2025-10-16-Open-Source-Benchmarking-Tool-to-Measure-AI-for-Cybersecurity.html"
 categories: ["AI", "Security"]
 tags: ["AI", "AI Benchmarking", "AI Reasoning", "AI Systems", "Benchmark Tool", "Company News", "Cybersecurity", "Defensive AI", "GitHub", "Incident Response", "LinkedIn Post", "Microsoft", "News", "Open Source", "Real World Scenarios", "Security", "Security Evaluation", "SOC", "Threat Detection"]
 tags_normalized: ["ai", "ai benchmarking", "ai reasoning", "ai systems", "benchmark tool", "company news", "cybersecurity", "defensive ai", "github", "incident response", "linkedin post", "microsoft", "news", "open source", "real world scenarios", "security", "security evaluation", "soc", "threat detection"]

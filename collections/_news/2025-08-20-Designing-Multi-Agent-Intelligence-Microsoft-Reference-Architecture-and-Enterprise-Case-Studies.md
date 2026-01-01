@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft DevBlog"
 feed_url: "https://devblogs.microsoft.com/feed"
 date: 2025-08-20 19:00:13 +00:00
-permalink: "/news/2025-08-20-Designing-Multi-Agent-Intelligence-Microsoft-Reference-Architecture-and-Enterprise-Case-Studies.html"
+permalink: "/2025-08-20-Designing-Multi-Agent-Intelligence-Microsoft-Reference-Architecture-and-Enterprise-Case-Studies.html"
 categories: ["AI", "Azure", "Security"]
 tags: ["Agent Orchestration", "Agent Registry", "AI", "AI Co Innovation Labs", "AI Governance", "AI Security", "Azure", "Azure AI", "Azure OpenAI Service", "Enterprise AI", "Generative AI", "LLM", "Microservices Architecture", "Microsoft AI Agent Service", "Microsoft Defender XDR", "Microsoft Sentinel", "MSSP", "Multi Agent", "Multi Agent Systems", "News", "Operational Resilience", "RAG (retrieval Augmented Generation)", "Reference Architecture", "Security", "Semantic Kernel", "SLM"]
 tags_normalized: ["agent orchestration", "agent registry", "ai", "ai co innovation labs", "ai governance", "ai security", "azure", "azure ai", "azure openai service", "enterprise ai", "generative ai", "llm", "microservices architecture", "microsoft ai agent service", "microsoft defender xdr", "microsoft sentinel", "mssp", "multi agent", "multi agent systems", "news", "operational resilience", "rag retrieval augmented generation", "reference architecture", "security", "semantic kernel", "slm"]

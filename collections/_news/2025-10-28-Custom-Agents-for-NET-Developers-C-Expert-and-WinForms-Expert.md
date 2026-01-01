@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft .NET Blog"
 feed_url: "https://devblogs.microsoft.com/dotnet/feed/"
 date: 2025-10-28 22:05:00 +00:00
-permalink: "/news/2025-10-28-Custom-Agents-for-NET-Developers-C-Expert-and-WinForms-Expert.html"
+permalink: "/2025-10-28-Custom-Agents-for-NET-Developers-C-Expert-and-WinForms-Expert.html"
 categories: ["AI", "Coding", "GitHub Copilot"]
 tags: [".NET", "Agents", "AI", "Async Programming", "C#", "Coding", "Copilot", "Copilot CLI", "Custom Agents", "Designer File Protection", "Developer Tools", "Event Driven Programming", "GitHub Copilot", "MVP", "MVVM", "News", "TDD", "Unit Testing", "VS", "VS Code", "WinForms"]
 tags_normalized: ["dotnet", "agents", "ai", "async programming", "csharp", "coding", "copilot", "copilot cli", "custom agents", "designer file protection", "developer tools", "event driven programming", "github copilot", "mvp", "mvvm", "news", "tdd", "unit testing", "vs", "vs code", "winforms"]

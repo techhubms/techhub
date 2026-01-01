@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-08-19 02:35:21 +00:00
-permalink: "/community/2025-08-19-Early-Preview-Host-Your-Own-Remote-MCP-Server-on-Azure-Functions.html"
+permalink: "/2025-08-19-Early-Preview-Host-Your-Own-Remote-MCP-Server-on-Azure-Functions.html"
 categories: ["Azure", "Coding"]
 tags: [".NET", "API Management", "Authentication", "Azure", "Azure Developer CLI", "Azure Functions", "BYO MCP Server", "CI/CD", "Coding", "Community", "Flex Consumption Plan", "Func Start", "MCP", "MCP SDK", "Node.js", "Python", "Remote Server Hosting", "Serverless", "Serverless Deployment", "Stateless Servers", "Streamable HTTP", "VS Code"]
 tags_normalized: ["dotnet", "api management", "authentication", "azure", "azure developer cli", "azure functions", "byo mcp server", "cislashcd", "coding", "community", "flex consumption plan", "func start", "mcp", "mcp sdk", "nodedotjs", "python", "remote server hosting", "serverless", "serverless deployment", "stateless servers", "streamable http", "vs code"]

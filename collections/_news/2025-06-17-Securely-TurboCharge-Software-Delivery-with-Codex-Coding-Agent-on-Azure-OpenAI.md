@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft DevBlog"
 feed_url: "https://devblogs.microsoft.com/all-things-azure/feed/"
 date: 2025-06-17 22:54:11 +00:00
-permalink: "/news/2025-06-17-Securely-TurboCharge-Software-Delivery-with-Codex-Coding-Agent-on-Azure-OpenAI.html"
+permalink: "/2025-06-17-Securely-TurboCharge-Software-Delivery-with-Codex-Coding-Agent-on-Azure-OpenAI.html"
 categories: ["AI", "Azure", "Coding", "DevOps", "Security"]
 tags: ["Agents", "AI", "All Things Azure", "App Development", "Automation", "Azure", "Azure AI Foundry", "Azure OpenAI", "CI/CD", "CLI", "Codex", "Codex Mini", "Coding", "Coding Agent", "Config.json", "Developer Productivity", "DevOps", "Entra ID", "GitHub Actions", "News", "Node.js", "OpenAI", "Private Networking", "Refactoring", "Security"]
 tags_normalized: ["agents", "ai", "all things azure", "app development", "automation", "azure", "azure ai foundry", "azure openai", "cislashcd", "cli", "codex", "codex mini", "coding", "coding agent", "configdotjson", "developer productivity", "devops", "entra id", "github actions", "news", "nodedotjs", "openai", "private networking", "refactoring", "security"]

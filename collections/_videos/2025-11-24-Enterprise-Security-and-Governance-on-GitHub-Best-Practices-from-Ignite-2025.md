@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Events YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
 date: 2025-11-24 10:27:37 +00:00
-permalink: "/videos/2025-11-24-Enterprise-Security-and-Governance-on-GitHub-Best-Practices-from-Ignite-2025.html"
+permalink: "/2025-11-24-Enterprise-Security-and-Governance-on-GitHub-Best-Practices-from-Ignite-2025.html"
 categories: ["DevOps", "Security"]
 tags: ["Artifact Attestation", "Build Validation", "Compliance", "Dev Containers", "Developer Productivity", "DevOps", "Enterprise Security", "GitHub", "Governance", "InnovatewithAzureAIappsandagents", "MSIgnite", "Onboarding", "Pull Requests", "Repository Management", "Rule Enforcement", "Security", "Security Policy", "Videos"]
 tags_normalized: ["artifact attestation", "build validation", "compliance", "dev containers", "developer productivity", "devops", "enterprise security", "github", "governance", "innovatewithazureaiappsandagents", "msignite", "onboarding", "pull requests", "repository management", "rule enforcement", "security", "security policy", "videos"]

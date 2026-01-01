@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Reddit DotNet"
 feed_url: "https://www.reddit.com/r/dotnet/.rss"
 date: 2025-08-03 05:51:52 +00:00
-permalink: "/community/2025-08-03-Build-Smarter-LLMs-with-Local-MCP-Servers-in-NET.html"
+permalink: "/2025-08-03-Build-Smarter-LLMs-with-Local-MCP-Servers-in-NET.html"
 categories: ["AI", "Coding"]
 tags: [".NET", "AI", "C#", "Code Samples", "Coding", "Community", "Deterministic AI", "Function Triggering", "LLM", "Local Deployment", "MCP Server", "Offline AI", "Structured Prompts"]
 tags_normalized: ["dotnet", "ai", "csharp", "code samples", "coding", "community", "deterministic ai", "function triggering", "llm", "local deployment", "mcp server", "offline ai", "structured prompts"]

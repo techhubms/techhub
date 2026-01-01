@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/feed/"
 date: 2025-11-06 20:30:00 +00:00
-permalink: "/news/2025-11-06-GitHub-Copilot-CLI-101-How-to-use-GitHub-Copilot-from-the-command-line.html"
+permalink: "/2025-11-06-GitHub-Copilot-CLI-101-How-to-use-GitHub-Copilot-from-the-command-line.html"
 categories: ["AI", "Coding", "GitHub Copilot"]
 tags: ["Agentic Workflows", "AI", "AI & ML", "AI Powered Development", "Code Generation", "Coding", "Command Line Interface", "Developer Tools", "Generative AI", "GitHub Copilot", "GitHub Copilot CLI", "Issue Management", "LLMs", "MCP Integration", "News", "Node.js", "npm", "Project Setup", "Pull Requests", "Script Refactoring", "Security Best Practices", "Terminal Productivity", "Workflow Automation"]
 tags_normalized: ["agentic workflows", "ai", "ai and ml", "ai powered development", "code generation", "coding", "command line interface", "developer tools", "generative ai", "github copilot", "github copilot cli", "issue management", "llms", "mcp integration", "news", "nodedotjs", "npm", "project setup", "pull requests", "script refactoring", "security best practices", "terminal productivity", "workflow automation"]

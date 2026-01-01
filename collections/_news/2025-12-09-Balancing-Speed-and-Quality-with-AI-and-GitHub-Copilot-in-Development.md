@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/feed/"
 date: 2025-12-09 17:00:00 +00:00
-permalink: "/news/2025-12-09-Balancing-Speed-and-Quality-with-AI-and-GitHub-Copilot-in-Development.html"
+permalink: "/2025-12-09-Balancing-Speed-and-Quality-with-AI-and-GitHub-Copilot-in-Development.html"
 categories: ["AI", "Coding", "GitHub Copilot"]
 tags: ["AI", "AI & ML", "AI Driven Development", "Automated Code Analysis", "Best Practices", "Code Review Automation", "CodeQL", "Coding", "Coding Agent", "Coding Standards", "Continuous Improvement", "Developer Tools", "Feature Documentation", "Generative AI", "GitHub Code Quality", "GitHub Copilot", "IDE Integration", "News", "Prompt Engineering", "Pull Request Workflow", "Quality Guardrails", "Software Maintainability", "Technical Debt", "Technical Documentation"]
 tags_normalized: ["ai", "ai and ml", "ai driven development", "automated code analysis", "best practices", "code review automation", "codeql", "coding", "coding agent", "coding standards", "continuous improvement", "developer tools", "feature documentation", "generative ai", "github code quality", "github copilot", "ide integration", "news", "prompt engineering", "pull request workflow", "quality guardrails", "software maintainability", "technical debt", "technical documentation"]

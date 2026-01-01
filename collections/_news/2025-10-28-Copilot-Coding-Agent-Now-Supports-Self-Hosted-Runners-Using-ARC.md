@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/changelog/feed/"
 date: 2025-10-28 15:20:53 +00:00
-permalink: "/news/2025-10-28-Copilot-Coding-Agent-Now-Supports-Self-Hosted-Runners-Using-ARC.html"
+permalink: "/2025-10-28-Copilot-Coding-Agent-Now-Supports-Self-Hosted-Runners-Using-ARC.html"
 categories: ["AI", "DevOps", "GitHub Copilot"]
 tags: ["Actions", "Actions Runner Controller", "Agent Customization", "AI", "ARC", "Build Automation", "Cloud Infrastructure", "Continuous Integration", "Copilot", "Copilot Coding Agent", "DevOps", "DevOps Automation", "GitHub Actions", "GitHub Copilot", "Improvement", "News", "Pull Request Automation", "Scale Sets", "Self Hosted Runners", "Universe25", "YAML"]
 tags_normalized: ["actions", "actions runner controller", "agent customization", "ai", "arc", "build automation", "cloud infrastructure", "continuous integration", "copilot", "copilot coding agent", "devops", "devops automation", "github actions", "github copilot", "improvement", "news", "pull request automation", "scale sets", "self hosted runners", "universe25", "yaml"]

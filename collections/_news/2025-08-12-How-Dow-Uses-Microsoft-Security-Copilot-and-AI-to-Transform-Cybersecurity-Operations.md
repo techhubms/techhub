@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft News"
 feed_url: "https://news.microsoft.com/source/feed/"
 date: 2025-08-12 16:31:43 +00:00
-permalink: "/news/2025-08-12-How-Dow-Uses-Microsoft-Security-Copilot-and-AI-to-Transform-Cybersecurity-Operations.html"
+permalink: "/2025-08-12-How-Dow-Uses-Microsoft-Security-Copilot-and-AI-to-Transform-Cybersecurity-Operations.html"
 categories: ["AI", "Security"]
 tags: ["AI", "AI in Security", "Alert Prioritization", "Apprenticeship", "Automation", "Compliance", "Cybersecurity Operations", "Data Privacy", "Dow", "Generative AI", "Identity And Access Management", "Incident Response", "Machine Learning", "Microsoft", "Microsoft Security Copilot", "News", "Responsible AI", "Security", "Security Governance", "Security Operations Center", "Threat Hunting"]
 tags_normalized: ["ai", "ai in security", "alert prioritization", "apprenticeship", "automation", "compliance", "cybersecurity operations", "data privacy", "dow", "generative ai", "identity and access management", "incident response", "machine learning", "microsoft", "microsoft security copilot", "news", "responsible ai", "security", "security governance", "security operations center", "threat hunting"]

@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft News"
 feed_url: "https://news.microsoft.com/source/feed/"
 date: 2025-11-05 18:09:51 +00:00
-permalink: "/news/2025-11-05-Securing-Critical-Infrastructure-Microsoft-Insights-on-Europes-Risk-Based-Cybersecurity-Regulations.html"
+permalink: "/2025-11-05-Securing-Critical-Infrastructure-Microsoft-Insights-on-Europes-Risk-Based-Cybersecurity-Regulations.html"
 categories: ["Security"]
 tags: ["CISO", "Company News", "Compliance", "Critical Infrastructure", "Cybersecurity", "Digital Defense Report", "DORA", "EU Regulations", "Governance", "Incident Response", "Microsoft Security", "Multifactor Authentication", "News", "NIS2", "Operational Technology", "Risk Management", "Security", "Threat Intelligence"]
 tags_normalized: ["ciso", "company news", "compliance", "critical infrastructure", "cybersecurity", "digital defense report", "dora", "eu regulations", "governance", "incident response", "microsoft security", "multifactor authentication", "news", "nis2", "operational technology", "risk management", "security", "threat intelligence"]

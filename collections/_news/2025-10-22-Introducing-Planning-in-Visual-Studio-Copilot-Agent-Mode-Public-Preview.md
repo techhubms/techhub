@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft VisualStudio Blog"
 feed_url: "https://devblogs.microsoft.com/visualstudio/feed/"
 date: 2025-10-22 15:54:18 +00:00
-permalink: "/news/2025-10-22-Introducing-Planning-in-Visual-Studio-Copilot-Agent-Mode-Public-Preview.html"
+permalink: "/2025-10-22-Introducing-Planning-in-Visual-Studio-Copilot-Agent-Mode-Public-Preview.html"
 categories: ["AI", "Coding", "GitHub Copilot"]
 tags: ["Agent Mode", "AI", "Claude Sonnet 4", "Coding", "Copilot", "Copilot Chat", "Copilot Planning", "Developer Tools", "GitHub Copilot", "GPT 5", "News", "Planning", "Planning Mode", "Prompt Engineering", "Public Preview", "Software Engineering", "Spec Driven Development", "Structured Workflow", "Task Automation", "Transparent AI", "VS"]
 tags_normalized: ["agent mode", "ai", "claude sonnet 4", "coding", "copilot", "copilot chat", "copilot planning", "developer tools", "github copilot", "gpt 5", "news", "planning", "planning mode", "prompt engineering", "public preview", "software engineering", "spec driven development", "structured workflow", "task automation", "transparent ai", "vs"]

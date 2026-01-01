@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/changelog/feed/"
 date: 2025-08-21 15:10:53 +00:00
-permalink: "/news/2025-08-21-GitHub-Copilot-Introduces-Commit-Message-Suggestions-and-Spaces-Enhancements.html"
+permalink: "/2025-08-21-GitHub-Copilot-Introduces-Commit-Message-Suggestions-and-Spaces-Enhancements.html"
 categories: ["AI", "GitHub Copilot"]
 tags: ["AI", "AI Code Assistance", "Code Review", "Commit Messages", "Commit Metadata", "Copilot Spaces", "Developer Tools", "Documentation Automation", "Enterprise Cloud", "GitHub Copilot", "GitHub.com", "News", "Productivity", "Public Preview", "Workflow Automation"]
 tags_normalized: ["ai", "ai code assistance", "code review", "commit messages", "commit metadata", "copilot spaces", "developer tools", "documentation automation", "enterprise cloud", "github copilot", "githubdotcom", "news", "productivity", "public preview", "workflow automation"]

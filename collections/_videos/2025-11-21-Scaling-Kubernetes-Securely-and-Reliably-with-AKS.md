@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Events YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
 date: 2025-11-21 17:22:46 +00:00
-permalink: "/videos/2025-11-21-Scaling-Kubernetes-Securely-and-Reliably-with-AKS.html"
+permalink: "/2025-11-21-Scaling-Kubernetes-Securely-and-Reliably-with-AKS.html"
 categories: ["AI", "Azure", "Security"]
 tags: ["AI", "AI Workloads", "AKS", "Azure", "Azure Fleet Manager", "Cloud Operations", "Cluster Management", "Edge Computing", "Enterprise Security", "Hybrid Cloud", "Infrastructure", "InnovatewithAzureAIappsandagents", "Kubernetes", "Microsoft Ignite", "MSIgnite", "Multi Cluster", "Scalability", "Scheduling", "Security", "Videos"]
 tags_normalized: ["ai", "ai workloads", "aks", "azure", "azure fleet manager", "cloud operations", "cluster management", "edge computing", "enterprise security", "hybrid cloud", "infrastructure", "innovatewithazureaiappsandagents", "kubernetes", "microsoft ignite", "msignite", "multi cluster", "scalability", "scheduling", "security", "videos"]

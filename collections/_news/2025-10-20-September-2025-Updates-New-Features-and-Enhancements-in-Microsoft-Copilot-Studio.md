@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft News"
 feed_url: "https://news.microsoft.com/source/feed/"
 date: 2025-10-20 17:18:22 +00:00
-permalink: "/news/2025-10-20-September-2025-Updates-New-Features-and-Enhancements-in-Microsoft-Copilot-Studio.html"
+permalink: "/2025-10-20-September-2025-Updates-New-Features-and-Enhancements-in-Microsoft-Copilot-Studio.html"
 categories: ["AI"]
 tags: ["Advanced Automation", "Agent Academy", "Agent Analytics", "Agent Lifecycle Management", "AI", "AI Agents", "Company News", "Copilot Studio", "Dataverse", "File Upload", "MCP Connectors", "Microsoft 365", "News", "Power Fx", "Power Platform", "Prompt Engineering", "Python Code Interpreter", "SDK Integration", "WhatsApp Integration", "Windows 365"]
 tags_normalized: ["advanced automation", "agent academy", "agent analytics", "agent lifecycle management", "ai", "ai agents", "company news", "copilot studio", "dataverse", "file upload", "mcp connectors", "microsoft 365", "news", "power fx", "power platform", "prompt engineering", "python code interpreter", "sdk integration", "whatsapp integration", "windows 365"]

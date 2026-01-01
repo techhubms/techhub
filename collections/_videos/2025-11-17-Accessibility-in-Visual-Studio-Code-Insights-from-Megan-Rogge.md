@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Visual Studio Code YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SLNwkd3w"
 date: 2025-11-17 08:00:38 +00:00
-permalink: "/videos/2025-11-17-Accessibility-in-Visual-Studio-Code-Insights-from-Megan-Rogge.html"
+permalink: "/2025-11-17-Accessibility-in-Visual-Studio-Code-Insights-from-Megan-Rogge.html"
 categories: ["Coding"]
 tags: ["Accessibility", "Accessible Views", "Coding", "Color Contrast", "Developer Tools", "IDE", "Inclusive Development", "Microsoft", "Screen Reader", "Software Engineering", "Sound Signals", "Terminal Output", "UI Design", "Videos", "VS Code"]
 tags_normalized: ["accessibility", "accessible views", "coding", "color contrast", "developer tools", "ide", "inclusive development", "microsoft", "screen reader", "software engineering", "sound signals", "terminal output", "ui design", "videos", "vs code"]

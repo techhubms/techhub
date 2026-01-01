@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft News"
 feed_url: "https://news.microsoft.com/source/feed/"
 date: 2025-08-04 15:03:28 +00:00
-permalink: "/news/2025-08-04-UNSW-Simplifies-Student-Life-with-Agentic-AI-Scout-Powered-by-Microsoft-Azure-OpenAI-and-Copilot-Studio.html"
+permalink: "/2025-08-04-UNSW-Simplifies-Student-Life-with-Agentic-AI-Scout-Powered-by-Microsoft-Azure-OpenAI-and-Copilot-Studio.html"
 categories: ["AI", "Azure"]
 tags: ["Agentic AI", "AI", "AI in Education", "Azure", "Chatbot", "Company News", "Copilot Studio", "Digital Accessibility", "Education Technology", "Learning Management System", "Microsoft", "Microsoft Azure", "Moodle", "News", "OpenAI", "Power Platform", "Pradhiban Duraisamy", "Scout", "Student Support", "UNSW"]
 tags_normalized: ["agentic ai", "ai", "ai in education", "azure", "chatbot", "company news", "copilot studio", "digital accessibility", "education technology", "learning management system", "microsoft", "microsoft azure", "moodle", "news", "openai", "power platform", "pradhiban duraisamy", "scout", "student support", "unsw"]

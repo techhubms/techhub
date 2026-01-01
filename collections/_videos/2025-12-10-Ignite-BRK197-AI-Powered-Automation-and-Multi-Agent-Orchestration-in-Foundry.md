@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Developer YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
 date: 2025-12-10 22:07:54 +00:00
-permalink: "/videos/2025-12-10-Ignite-BRK197-AI-Powered-Automation-and-Multi-Agent-Orchestration-in-Foundry.html"
+permalink: "/2025-12-10-Ignite-BRK197-AI-Powered-Automation-and-Multi-Agent-Orchestration-in-Foundry.html"
 categories: ["AI", "Azure"]
 tags: ["A2A", "Activity Protocol", "Agent Framework", "AI", "AI Orchestration", "AutoGen", "Azure", "Cloud Computing", "Containerization", "Dev", "Developer", "Development", "Human in The Loop", "LangGraph", "MCP Toolchain", "Microsoft", "Microsoft Foundry", "Multi Agent Systems", "OpenAI Agents SDK", "OpenTel", "Semantic Kernel", "Tech", "Technology", "Videos"]
 tags_normalized: ["a2a", "activity protocol", "agent framework", "ai", "ai orchestration", "autogen", "azure", "cloud computing", "containerization", "dev", "developer", "development", "human in the loop", "langgraph", "mcp toolchain", "microsoft", "microsoft foundry", "multi agent systems", "openai agents sdk", "opentel", "semantic kernel", "tech", "technology", "videos"]

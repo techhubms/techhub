@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-12-22 23:54:37 +00:00
-permalink: "/community/2025-12-22-Fix-It-Before-They-Feel-It-Proactive-Reliability-with-Azure-SRE-Agent.html"
+permalink: "/2025-12-22-Fix-It-Before-They-Feel-It-Proactive-Reliability-with-Azure-SRE-Agent.html"
 categories: ["AI", "Azure", "Coding", "DevOps"]
 tags: ["AI", "Application Insights", "ASP.NET Core 9.0", "Autonomous Remediation", "Azure", "Azure App Service", "Azure Bicep", "Azure Monitor", "Azure SRE Agent", "Coding", "Community", "Deployment Health", "DevOps", "DevOps Automation", "GitHub Integration", "Incident Detection", "Knowledge Store", "Microsoft Teams", "MTTD", "MTTR", "Performance Monitoring", "PowerShell", "Slot Swap"]
 tags_normalized: ["ai", "application insights", "aspdotnet core 9dot0", "autonomous remediation", "azure", "azure app service", "azure bicep", "azure monitor", "azure sre agent", "coding", "community", "deployment health", "devops", "devops automation", "github integration", "incident detection", "knowledge store", "microsoft teams", "mttd", "mttr", "performance monitoring", "powershell", "slot swap"]

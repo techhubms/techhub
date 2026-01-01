@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/changelog/feed/"
 date: 2025-10-23 18:05:54 +00:00
-permalink: "/news/2025-10-23-GitHub-Copilot-Deprecates-Legacy-Claude-OpenAI-and-Gemini-Models.html"
+permalink: "/2025-10-23-GitHub-Copilot-Deprecates-Legacy-Claude-OpenAI-and-Gemini-Models.html"
 categories: ["AI", "GitHub Copilot"]
 tags: ["AI", "Claude Opus", "Claude Sonnet", "Copilot", "Copilot Chat", "Copilot Settings", "Enterprise Administration", "Gemini 2.5 Pro", "GitHub Copilot", "GitHub Enterprise", "GPT 5", "Model Deprecation", "Model Management", "News", "Retired", "VS Code"]
 tags_normalized: ["ai", "claude opus", "claude sonnet", "copilot", "copilot chat", "copilot settings", "enterprise administration", "gemini 2dot5 pro", "github copilot", "github enterprise", "gpt 5", "model deprecation", "model management", "news", "retired", "vs code"]

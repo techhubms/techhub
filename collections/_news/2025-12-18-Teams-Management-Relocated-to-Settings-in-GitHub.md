@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/changelog/feed/"
 date: 2025-12-18 16:51:29 +00:00
-permalink: "/news/2025-12-18-Teams-Management-Relocated-to-Settings-in-GitHub.html"
+permalink: "/2025-12-18-Teams-Management-Relocated-to-Settings-in-GitHub.html"
 categories: ["DevOps"]
 tags: ["Collaboration", "Collaboration Tools", "Community Discussion", "Developer Tools", "DevOps", "Feedback", "GitHub", "Improvement", "Navigation Update", "News", "Settings", "Team Administration", "Teams Management", "User Interface"]
 tags_normalized: ["collaboration", "collaboration tools", "community discussion", "developer tools", "devops", "feedback", "github", "improvement", "navigation update", "news", "settings", "team administration", "teams management", "user interface"]

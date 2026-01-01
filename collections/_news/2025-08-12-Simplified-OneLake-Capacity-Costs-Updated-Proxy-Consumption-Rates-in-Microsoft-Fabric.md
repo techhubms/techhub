@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Fabric Blog"
 feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
 date: 2025-08-12 10:00:00 +00:00
-permalink: "/news/2025-08-12-Simplified-OneLake-Capacity-Costs-Updated-Proxy-Consumption-Rates-in-Microsoft-Fabric.html"
+permalink: "/2025-08-12-Simplified-OneLake-Capacity-Costs-Updated-Proxy-Consumption-Rates-in-Microsoft-Fabric.html"
 categories: ["Azure", "ML"]
 tags: ["ADLS", "Analytics", "Azure", "Azure Data Lake Storage", "Billing", "Capacity Utilization", "Cost Optimization", "CU Seconds", "Data Engineering", "Data Lake", "Data Storage", "Lakehouse", "Microsoft Fabric", "ML", "News", "OneLake", "Proxy Access", "Redirect Access", "Warehouse"]
 tags_normalized: ["adls", "analytics", "azure", "azure data lake storage", "billing", "capacity utilization", "cost optimization", "cu seconds", "data engineering", "data lake", "data storage", "lakehouse", "microsoft fabric", "ml", "news", "onelake", "proxy access", "redirect access", "warehouse"]

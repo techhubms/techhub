@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft AI Foundry Blog"
 feed_url: "https://devblogs.microsoft.com/foundry/feed/"
 date: 2025-11-20 16:00:28 +00:00
-permalink: "/news/2025-11-20-Debugging-and-Optimizing-RAG-Agents-in-Microsoft-Foundry.html"
+permalink: "/2025-11-20-Debugging-and-Optimizing-RAG-Agents-in-Microsoft-Foundry.html"
 categories: ["AI", "Azure", "Coding", "ML"]
 tags: ["A/B Testing", "Agent Workflow", "Agentic Retrieval", "AI", "Azure", "Azure AI Foundry", "Azure AI Search", "AzureOpenAIModelConfiguration", "Coding", "Document Retrieval Evaluator", "Enterprise Data", "Evaluation Metrics", "Foundry Observability", "Groundedness Evaluator", "Information Retrieval", "Knowledge Agent", "ML", "NDCG", "News", "Parameter Tuning", "Pass/Fail Analysis", "Python", "RAG", "Relevance Evaluator", "Retrieval Augmented Generation", "XDCG"]
 tags_normalized: ["aslashb testing", "agent workflow", "agentic retrieval", "ai", "azure", "azure ai foundry", "azure ai search", "azureopenaimodelconfiguration", "coding", "document retrieval evaluator", "enterprise data", "evaluation metrics", "foundry observability", "groundedness evaluator", "information retrieval", "knowledge agent", "ml", "ndcg", "news", "parameter tuning", "passslashfail analysis", "python", "rag", "relevance evaluator", "retrieval augmented generation", "xdcg"]

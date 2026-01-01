@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/changelog/feed/"
 date: 2025-12-02 20:55:34 +00:00
-permalink: "/news/2025-12-02-GitHub-Enterprise-Server-319-New-Release-Candidate-Features-and-Enhancements.html"
+permalink: "/2025-12-02-GitHub-Enterprise-Server-319-New-Release-Candidate-Features-and-Enhancements.html"
 categories: ["DevOps", "Security"]
 tags: ["App Manager", "Collaboration Tools", "DevOps", "Enterprise Administration", "GHES 3.19", "GitHub Enterprise Server", "Monitoring", "News", "OpenTelemetry", "Policy Enforcement", "Release Candidate", "Repository Management", "Ruleset Management", "Security", "SHA Pinning", "TLS Ciphers", "Version Control"]
 tags_normalized: ["app manager", "collaboration tools", "devops", "enterprise administration", "ghes 3dot19", "github enterprise server", "monitoring", "news", "opentelemetry", "policy enforcement", "release candidate", "repository management", "ruleset management", "security", "sha pinning", "tls ciphers", "version control"]

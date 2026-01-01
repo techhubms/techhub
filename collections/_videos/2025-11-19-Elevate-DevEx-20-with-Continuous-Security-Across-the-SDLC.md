@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Events YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
 date: 2025-11-19 12:22:05 +00:00
-permalink: "/videos/2025-11-19-Elevate-DevEx-20-with-Continuous-Security-Across-the-SDLC.html"
+permalink: "/2025-11-19-Elevate-DevEx-20-with-Continuous-Security-Across-the-SDLC.html"
 categories: ["AI", "Azure", "DevOps", "Security"]
 tags: ["AI", "AI Driven Triage", "API Testing", "AppScan", "Azure", "Azure OpenAI", "Container Scanning", "Continuous Security", "DAST", "Dependency Checks", "DevEx 2.0", "DevOps", "GitHub Pipelines", "GPT 5", "IDE Coaching", "Microsoft Copilot", "ModernizeSecOpswithaunifiedplatform", "MSIgnite", "Risk Tracking", "SAST", "SBOM", "Security", "Security Alignment", "Videos"]
 tags_normalized: ["ai", "ai driven triage", "api testing", "appscan", "azure", "azure openai", "container scanning", "continuous security", "dast", "dependency checks", "devex 2dot0", "devops", "github pipelines", "gpt 5", "ide coaching", "microsoft copilot", "modernizesecopswithaunifiedplatform", "msignite", "risk tracking", "sast", "sbom", "security", "security alignment", "videos"]

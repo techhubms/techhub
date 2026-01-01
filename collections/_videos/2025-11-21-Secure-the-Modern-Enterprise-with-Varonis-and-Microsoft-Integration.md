@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Events YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
 date: 2025-11-21 12:51:47 +00:00
-permalink: "/videos/2025-11-21-Secure-the-Modern-Enterprise-with-Varonis-and-Microsoft-Integration.html"
+permalink: "/2025-11-21-Secure-the-Modern-Enterprise-with-Varonis-and-Microsoft-Integration.html"
 categories: ["AI", "Security"]
 tags: ["AI", "AI Security", "Asset Explorer", "Cloud Integration", "Data Governance", "Data Monitoring", "Data Permissions", "Data Security Demo", "Enterprise Security", "Identity Management", "Microsoft Ignite", "MSIgnite", "Observability", "Risk Management", "Salesforce", "Security", "Sensitive Data Protection", "Varonis", "Videos"]
 tags_normalized: ["ai", "ai security", "asset explorer", "cloud integration", "data governance", "data monitoring", "data permissions", "data security demo", "enterprise security", "identity management", "microsoft ignite", "msignite", "observability", "risk management", "salesforce", "security", "sensitive data protection", "varonis", "videos"]

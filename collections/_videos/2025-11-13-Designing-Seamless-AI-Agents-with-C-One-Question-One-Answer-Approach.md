@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "DotNet YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw"
 date: 2025-11-13 23:36:11 +00:00
-permalink: "/videos/2025-11-13-Designing-Seamless-AI-Agents-with-C-One-Question-One-Answer-Approach.html"
+permalink: "/2025-11-13-Designing-Seamless-AI-Agents-with-C-One-Question-One-Answer-Approach.html"
 categories: ["AI", "Coding"]
 tags: [".NET", ".NET Development", "AI", "AI Agents", "AI Integration", "AI UX Patterns", "AiGen", "C#", "CodeRush", "Coding", "Coding Assistants", "Design Principles", "DevExpress", "Pair Programming", "Single Response Model", "User Experience", "Videos"]
 tags_normalized: ["dotnet", "dotnet development", "ai", "ai agents", "ai integration", "ai ux patterns", "aigen", "csharp", "coderush", "coding", "coding assistants", "design principles", "devexpress", "pair programming", "single response model", "user experience", "videos"]

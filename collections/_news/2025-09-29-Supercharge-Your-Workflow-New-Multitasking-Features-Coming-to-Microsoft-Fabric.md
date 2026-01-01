@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Fabric Blog"
 feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
 date: 2025-09-29 15:00:00 +00:00
-permalink: "/news/2025-09-29-Supercharge-Your-Workflow-New-Multitasking-Features-Coming-to-Microsoft-Fabric.html"
+permalink: "/2025-09-29-Supercharge-Your-Workflow-New-Multitasking-Features-Coming-to-Microsoft-Fabric.html"
 categories: ["ML"]
 tags: ["Analytics Development", "Data Engineering", "Developer Tools", "Horizontal Tabs", "IDE Experience", "Microsoft Fabric", "ML", "Multitasking", "News", "Notebooks", "Object Explorer", "Open Workspaces", "Pipelines", "Tab Management", "UI Enhancements", "Usability", "Workflow Optimization"]
 tags_normalized: ["analytics development", "data engineering", "developer tools", "horizontal tabs", "ide experience", "microsoft fabric", "ml", "multitasking", "news", "notebooks", "object explorer", "open workspaces", "pipelines", "tab management", "ui enhancements", "usability", "workflow optimization"]

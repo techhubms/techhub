@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/changelog/feed/"
 date: 2025-09-10 18:04:45 +00:00
-permalink: "/news/2025-09-10-CodeQL-2230-New-Rust-Log-Injection-Detection-and-Security-Improvements.html"
+permalink: "/2025-09-10-CodeQL-2230-New-Rust-Log-Injection-Detection-and-Security-Improvements.html"
 categories: ["Coding", "DevOps", "Security"]
 tags: ["Application Security", "C#", "Code Scanning", "CodeQL", "Coding", "Dataflow Analysis", "DevOps", "GitHub", "GitHub Enterprise Server", "Improvement", "Java", "Log Injection", "News", "Python", "Rust", "Security", "Security Scanning", "Spring Boot", "Static Analysis", "Taint Tracking"]
 tags_normalized: ["application security", "csharp", "code scanning", "codeql", "coding", "dataflow analysis", "devops", "github", "github enterprise server", "improvement", "java", "log injection", "news", "python", "rust", "security", "security scanning", "spring boot", "static analysis", "taint tracking"]

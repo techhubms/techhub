@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft DevBlog"
 feed_url: "https://devblogs.microsoft.com/visualstudio/tag/github-copilot/feed/"
 date: 2025-05-13 17:24:25 +00:00
-permalink: "/news/2025-05-13-Visual-Studio-2022-v1714-Now-Generally-Available-Copilot-Agent-Mode-C-Debugging-Git-Enhancements-and-More.html"
+permalink: "/2025-05-13-Visual-Studio-2022-v1714-Now-Generally-Available-Copilot-Agent-Mode-C-Debugging-Git-Enhancements-and-More.html"
 categories: ["AI", "Coding", "DevOps", "GitHub Copilot"]
 tags: ["Accessibility", "Agent Mode", "AI", "AI Assisted Development", "C++23", "Coding", "Debug", "Debugging", "Debugging And Diagnostics", "DevOps", "Diagnostics", "Git", "Git Tooling", "GitHub Copilot", "LINQ Debugging", "Live Preview", "MAUI", "MCP Support", "News", "Next Edit Suggestion", "Next Edits Suggestion", "Performance", "Productivity", "Release Party", "V17.14", "VS", "Zero Length Array Allocation"]
 tags_normalized: ["accessibility", "agent mode", "ai", "ai assisted development", "cplusplus23", "coding", "debug", "debugging", "debugging and diagnostics", "devops", "diagnostics", "git", "git tooling", "github copilot", "linq debugging", "live preview", "maui", "mcp support", "news", "next edit suggestion", "next edits suggestion", "performance", "productivity", "release party", "v17dot14", "vs", "zero length array allocation"]

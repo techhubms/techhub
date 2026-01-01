@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-11-14 14:09:16 +00:00
-permalink: "/community/2025-11-14-Unlocking-Direct-Spoke-Communication-with-Azure-Virtual-Network-Manager-and-Virtual-WAN.html"
+permalink: "/2025-11-14-Unlocking-Direct-Spoke-Communication-with-Azure-Virtual-Network-Manager-and-Virtual-WAN.html"
 categories: ["Azure"]
 tags: ["AVNM", "Azure", "Azure Firewall", "Azure Virtual Network Manager", "Azure Virtual WAN", "Cloud Networking", "Community", "ExpressRoute", "Hub And Spoke Architecture", "Hybrid Connectivity", "Managed Hub", "Network Mesh", "Network Security", "NSG Flow Logs", "Route Propagation", "VNet Peering", "Vwan"]
 tags_normalized: ["avnm", "azure", "azure firewall", "azure virtual network manager", "azure virtual wan", "cloud networking", "community", "expressroute", "hub and spoke architecture", "hybrid connectivity", "managed hub", "network mesh", "network security", "nsg flow logs", "route propagation", "vnet peering", "vwan"]

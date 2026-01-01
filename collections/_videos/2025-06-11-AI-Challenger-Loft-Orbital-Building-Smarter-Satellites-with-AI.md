@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Cloud YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCSgzRJMqIiCNtoM6Q7Q9Lqw"
 date: 2025-06-11 08:57:55 +00:00
-permalink: "/videos/2025-06-11-AI-Challenger-Loft-Orbital-Building-Smarter-Satellites-with-AI.html"
+permalink: "/2025-06-11-AI-Challenger-Loft-Orbital-Building-Smarter-Satellites-with-AI.html"
 categories: ["AI"]
 tags: ["AI", "AI For Aerospace", "AI Transformation", "Automation", "Data Transformation", "Digital Transformation", "Growth", "Loft Orbital", "Microsoft AI", "Microsoft AI Transformation", "Microsoft Cloud", "Process Optimization", "Satellite Management", "Space", "Space Operations", "Space Technology", "Videos"]
 tags_normalized: ["ai", "ai for aerospace", "ai transformation", "automation", "data transformation", "digital transformation", "growth", "loft orbital", "microsoft ai", "microsoft ai transformation", "microsoft cloud", "process optimization", "satellite management", "space", "space operations", "space technology", "videos"]

@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft .NET Blog"
 feed_url: "https://devblogs.microsoft.com/dotnet/feed/"
 date: 2025-12-09 18:05:00 +00:00
-permalink: "/news/2025-12-09-Cross-Platform-In-App-Billing-in-NET-MAUI-New-Sample-Implementation.html"
+permalink: "/2025-12-09-Cross-Platform-In-App-Billing-in-NET-MAUI-New-Sample-Implementation.html"
 categories: ["Coding"]
 tags: [".NET", "Android", "App Monetization", "Billing", "BillingService", "C#", "Coding", "Conditional Compilation", "Cross Platform", "Dependency Injection", "Google Play Billing", "in App Purchases", "Ios", "Mac Catalyst", "MAUI", "Microsoft Store", "MVVM", "News", "Sample Code", "StoreKit", "StoreKit 1", "StoreKit 2", "Windows"]
 tags_normalized: ["dotnet", "android", "app monetization", "billing", "billingservice", "csharp", "coding", "conditional compilation", "cross platform", "dependency injection", "google play billing", "in app purchases", "ios", "mac catalyst", "maui", "microsoft store", "mvvm", "news", "sample code", "storekit", "storekit 1", "storekit 2", "windows"]

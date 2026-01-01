@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-11-06 19:17:51 +00:00
-permalink: "/community/2025-11-06-Migrate-and-Modernize-Your-VMware-Platform-Using-Azure-VMware-Solution-Gen-2.html"
+permalink: "/2025-11-06-Migrate-and-Modernize-Your-VMware-Platform-Using-Azure-VMware-Solution-Gen-2.html"
 categories: ["Azure"]
 tags: ["Azure", "Azure Migrate", "Azure Native Integration", "Azure VMware Solution", "Cloud Infrastructure", "Community", "Deployment", "Hybrid Cloud", "Migration Strategy", "On Premises To Cloud", "VMware Migration", "Workload Migration"]
 tags_normalized: ["azure", "azure migrate", "azure native integration", "azure vmware solution", "cloud infrastructure", "community", "deployment", "hybrid cloud", "migration strategy", "on premises to cloud", "vmware migration", "workload migration"]

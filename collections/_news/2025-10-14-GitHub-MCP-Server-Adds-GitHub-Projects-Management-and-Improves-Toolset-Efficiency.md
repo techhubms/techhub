@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/changelog/feed/"
 date: 2025-10-14 15:22:40 +00:00
-permalink: "/news/2025-10-14-GitHub-MCP-Server-Adds-GitHub-Projects-Management-and-Improves-Toolset-Efficiency.html"
+permalink: "/2025-10-14-GitHub-MCP-Server-Adds-GitHub-Projects-Management-and-Improves-Toolset-Efficiency.html"
 categories: ["DevOps"]
 tags: ["Copilot", "Default Toolset", "DevOps", "DevOps Automation", "GitHub MCP Server", "GitHub Projects", "Label Toolset", "News", "Project Management", "Projects & Issues", "Pull Request Tools", "Server Configuration", "Tool Consolidation", "Workflow Automation"]
 tags_normalized: ["copilot", "default toolset", "devops", "devops automation", "github mcp server", "github projects", "label toolset", "news", "project management", "projects and issues", "pull request tools", "server configuration", "tool consolidation", "workflow automation"]

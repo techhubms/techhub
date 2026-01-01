@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Fabric Blog"
 feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
 date: 2025-10-02 09:00:00 +00:00
-permalink: "/news/2025-10-02-Enhancements-in-Microsoft-Fabric-Data-Factory-Connectors-for-Enterprise-Scale-Data-Integration.html"
+permalink: "/2025-10-02-Enhancements-in-Microsoft-Fabric-Data-Factory-Connectors-for-Enterprise-Scale-Data-Integration.html"
 categories: ["Azure", "ML", "Security"]
 tags: ["Azure", "Azure Database For PostgreSQL", "Azure Databricks", "Connectors", "Data Factory", "Data Integration", "Dataflow Gen2", "Delta Lake", "Enterprise Security", "Governance", "Lakehouse", "Microsoft Entra ID", "Microsoft Fabric", "ML", "MongoDB", "News", "Pipeline Automation", "Security", "Snowflake", "TLS 1.3", "Upsert"]
 tags_normalized: ["azure", "azure database for postgresql", "azure databricks", "connectors", "data factory", "data integration", "dataflow gen2", "delta lake", "enterprise security", "governance", "lakehouse", "microsoft entra id", "microsoft fabric", "ml", "mongodb", "news", "pipeline automation", "security", "snowflake", "tls 1dot3", "upsert"]

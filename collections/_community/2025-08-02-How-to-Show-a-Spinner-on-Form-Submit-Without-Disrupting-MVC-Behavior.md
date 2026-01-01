@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Reddit DotNet"
 feed_url: "https://www.reddit.com/r/dotnet/.rss"
 date: 2025-08-02 12:47:54 +00:00
-permalink: "/community/2025-08-02-How-to-Show-a-Spinner-on-Form-Submit-Without-Disrupting-MVC-Behavior.html"
+permalink: "/2025-08-02-How-to-Show-a-Spinner-on-Form-Submit-Without-Disrupting-MVC-Behavior.html"
 categories: ["Coding"]
 tags: [".NET", "AJAX", "ASP.NET MVC", "Client Side Validation", "Coding", "Community", "Double Requests", "Form Submission", "JavaScript", "MVC Forms", "Spinner Button", "UI Feedback", "UX"]
 tags_normalized: ["dotnet", "ajax", "aspdotnet mvc", "client side validation", "coding", "community", "double requests", "form submission", "javascript", "mvc forms", "spinner button", "ui feedback", "ux"]

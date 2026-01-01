@@ -10,7 +10,7 @@ categories: ["AI", "GitHub Copilot"]
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/changelog/label/copilot/feed/"
 date: 2025-06-30 17:30:46 +00:00
-permalink: "/news/2025-06-30-Copilot-search-now-on-GitHub-Docs.html"
+permalink: "/2025-06-30-Copilot-search-now-on-GitHub-Docs.html"
 tags: ["AI", "Documentation", "GitHub", "GitHub Copilot", "News", "Productivity", "Search"]
 tags_normalized: ["ai", "documentation", "github", "github copilot", "news", "productivity", "search"]
 ---

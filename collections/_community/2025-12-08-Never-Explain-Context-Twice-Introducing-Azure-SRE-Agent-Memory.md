@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-12-08 19:51:45 +00:00
-permalink: "/community/2025-12-08-Never-Explain-Context-Twice-Introducing-Azure-SRE-Agent-Memory.html"
+permalink: "/2025-12-08-Never-Explain-Context-Twice-Introducing-Azure-SRE-Agent-Memory.html"
 categories: ["AI", "Azure", "DevOps"]
 tags: ["AI", "AI Ops", "Automation", "Azure", "Azure DevOps", "Azure SRE Agent", "Community", "Context Engineering", "Custom Sub Agents", "DevOps", "DevOps Automation", "Incident Management", "Knowledge Base", "Memory Tool", "Operational Excellence", "Runbooks", "Session Insights", "Site Reliability Engineering"]
 tags_normalized: ["ai", "ai ops", "automation", "azure", "azure devops", "azure sre agent", "community", "context engineering", "custom sub agents", "devops", "devops automation", "incident management", "knowledge base", "memory tool", "operational excellence", "runbooks", "session insights", "site reliability engineering"]

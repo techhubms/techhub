@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/changelog/feed/"
 date: 2025-12-16 16:45:50 +00:00
-permalink: "/news/2025-12-16-Dependabot-Version-Updates-Now-Support-Bazel.html"
+permalink: "/2025-12-16-Dependabot-Version-Updates-Now-Support-Bazel.html"
 categories: ["DevOps"]
 tags: ["Automation", "Bazel", "Bzlmod", "Continuous Integration", "Dependabot", "Dependency Management", "DevOps", "GitHub", "Lockfile", "News", "Open Source", "Supply Chain Security", "WORKSPACE"]
 tags_normalized: ["automation", "bazel", "bzlmod", "continuous integration", "dependabot", "dependency management", "devops", "github", "lockfile", "news", "open source", "supply chain security", "workspace"]

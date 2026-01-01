@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft .NET Blog"
 feed_url: "https://devblogs.microsoft.com/dotnet/feed/"
 date: 2025-09-26 17:05:00 +00:00
-permalink: "/news/2025-09-26-Preparing-Your-NET-MAUI-Apps-for-Google-Plays-16-KB-Page-Size-Requirement.html"
+permalink: "/2025-09-26-Preparing-Your-NET-MAUI-Apps-for-Google-Plays-16-KB-Page-Size-Requirement.html"
 categories: ["Coding"]
 tags: [".NET", ".NET 9", ".NET For Android", "16 KB Page Size", "Android 15", "Android Development", "App Compatibility", "Coding", "Dependencies", "Developer Guidance", "Emulator Testing", "Google Play", "MAUI", "Memory Management", "Mobile Apps", "News", "NuGet", "Page Size Requirement"]
 tags_normalized: ["dotnet", "dotnet 9", "dotnet for android", "16 kb page size", "android 15", "android development", "app compatibility", "coding", "dependencies", "developer guidance", "emulator testing", "google play", "maui", "memory management", "mobile apps", "news", "nuget", "page size requirement"]

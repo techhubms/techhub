@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=AI"
 date: 2025-08-07 15:26:36 +00:00
-permalink: "/community/2025-08-07-From-Space-to-Subsurface-Predicting-Gold-Zones-with-Azure-AI-and-Machine-Learning.html"
+permalink: "/2025-08-07-From-Space-to-Subsurface-Predicting-Gold-Zones-with-Azure-AI-and-Machine-Learning.html"
 categories: ["AI", "Azure", "ML"]
 tags: ["AI", "AutoML", "Azure", "Azure AI", "Azure Machine Learning", "Azure Notebooks", "Azure Storage", "Classification Models", "Community", "Compute Cluster", "Data Processing", "Geoscience", "Geospatial Data", "Gold Exploration", "KMeans", "Microsoft Azure", "Mining", "ML", "Model Registry", "Model Validation", "Python", "Satellite Imagery", "Unsupervised Learning"]
 tags_normalized: ["ai", "automl", "azure", "azure ai", "azure machine learning", "azure notebooks", "azure storage", "classification models", "community", "compute cluster", "data processing", "geoscience", "geospatial data", "gold exploration", "kmeans", "microsoft azure", "mining", "ml", "model registry", "model validation", "python", "satellite imagery", "unsupervised learning"]

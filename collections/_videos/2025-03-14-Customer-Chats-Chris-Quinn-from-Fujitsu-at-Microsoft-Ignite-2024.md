@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Events YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
 date: 2025-03-14 15:01:17 +00:00
-permalink: "/videos/2025-03-14-Customer-Chats-Chris-Quinn-from-Fujitsu-at-Microsoft-Ignite-2024.html"
+permalink: "/2025-03-14-Customer-Chats-Chris-Quinn-from-Fujitsu-at-Microsoft-Ignite-2024.html"
 categories: ["AI", "Azure", "DevOps", "Security"]
 tags: ["AI", "AI Innovations", "Automation", "Azure", "Chris Quinn", "Cloud Adoption", "Cloud Migration", "Cloud Security", "DevOps", "Fujitsu", "Linux On Azure", "Microsoft", "Microsoft Events", "Microsoft Ignite", "Microsoft Strategic Partner", "Security", "Security Best Practices", "Videos"]
 tags_normalized: ["ai", "ai innovations", "automation", "azure", "chris quinn", "cloud adoption", "cloud migration", "cloud security", "devops", "fujitsu", "linux on azure", "microsoft", "microsoft events", "microsoft ignite", "microsoft strategic partner", "security", "security best practices", "videos"]

@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Security Blog"
 feed_url: "https://www.microsoft.com/en-us/security/blog/feed/"
 date: 2025-12-09 21:41:32 +00:00
-permalink: "/news/2025-12-09-Shai-Hulud-20-Guidance-for-Detecting-Investigating-and-Defending-Against-the-Supply-Chain-Attack.html"
+permalink: "/2025-12-09-Shai-Hulud-20-Guidance-for-Detecting-Investigating-and-Defending-Against-the-Supply-Chain-Attack.html"
 categories: ["Azure", "DevOps", "Security"]
 tags: ["Attack Path Analysis", "Azure", "Azure Key Vault", "Bun Runtime", "CI/CD Pipelines", "Cloud Security Explorer", "Credential Theft", "Defender For Cloud", "Defender XDR", "DevOps", "GitHub Actions", "Incident Response", "Key Vault", "Microsoft Defender", "Microsoft Sentinel", "News", "Node.js", "npm Package Security", "Security", "Security Copilot", "Shai Hulud 2.0", "Supply Chain Attack", "Threat Intelligence", "TruffleHog"]
 tags_normalized: ["attack path analysis", "azure", "azure key vault", "bun runtime", "cislashcd pipelines", "cloud security explorer", "credential theft", "defender for cloud", "defender xdr", "devops", "github actions", "incident response", "key vault", "microsoft defender", "microsoft sentinel", "news", "nodedotjs", "npm package security", "security", "security copilot", "shai hulud 2dot0", "supply chain attack", "threat intelligence", "trufflehog"]

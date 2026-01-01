@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft News"
 feed_url: "https://news.microsoft.com/source/feed/"
 date: 2025-10-10 17:50:49 +00:00
-permalink: "/news/2025-10-10-Microsoft-Elevate-Washington-Bringing-AI-Access-and-Skills-to-Every-Community-in-the-State.html"
+permalink: "/2025-10-10-Microsoft-Elevate-Washington-Bringing-AI-Access-and-Skills-to-Every-Community-in-the-State.html"
 categories: ["AI"]
 tags: ["AI", "AI For Good Lab", "AI Training", "Community Colleges", "Company News", "Copilot Chat", "Copilot Studio", "Digital Skills", "Generative AI", "K 12 Education", "Learning Accelerators", "Microsoft 365", "Microsoft Elevate Washington", "News", "Professional Development", "Public Education", "Teams For Education", "Washington State"]
 tags_normalized: ["ai", "ai for good lab", "ai training", "community colleges", "company news", "copilot chat", "copilot studio", "digital skills", "generative ai", "k 12 education", "learning accelerators", "microsoft 365", "microsoft elevate washington", "news", "professional development", "public education", "teams for education", "washington state"]

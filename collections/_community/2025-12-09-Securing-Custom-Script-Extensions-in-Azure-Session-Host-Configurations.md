@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-12-09 13:01:13 +00:00
-permalink: "/community/2025-12-09-Securing-Custom-Script-Extensions-in-Azure-Session-Host-Configurations.html"
+permalink: "/2025-12-09-Securing-Custom-Script-Extensions-in-Azure-Session-Host-Configurations.html"
 categories: ["Azure", "Security"]
 tags: ["Automation", "Azure", "Azure Key Vault", "Azure Portal", "Azure Virtual Desktop", "Blob Storage Authentication", "Community", "Credential Management", "Custom Script Extension", "Domain Join", "Golden Image", "Local Administrator", "Managed Identity", "SAS Token", "Secure Deployment", "Security", "Security Best Practices", "Session Host Configuration"]
 tags_normalized: ["automation", "azure", "azure key vault", "azure portal", "azure virtual desktop", "blob storage authentication", "community", "credential management", "custom script extension", "domain join", "golden image", "local administrator", "managed identity", "sas token", "secure deployment", "security", "security best practices", "session host configuration"]

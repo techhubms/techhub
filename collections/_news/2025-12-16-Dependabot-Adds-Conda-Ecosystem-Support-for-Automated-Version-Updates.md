@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/changelog/feed/"
 date: 2025-12-16 17:00:54 +00:00
-permalink: "/news/2025-12-16-Dependabot-Adds-Conda-Ecosystem-Support-for-Automated-Version-Updates.html"
+permalink: "/2025-12-16-Dependabot-Adds-Conda-Ecosystem-Support-for-Automated-Version-Updates.html"
 categories: ["DevOps"]
 tags: ["Automated Updates", "Conda", "Continuous Integration", "Dependabot", "Dependency Management", "DevOps", "Environment.yml", "GitHub", "GitHub Enterprise Server", "Improvement", "News", "Python", "Supply Chain Security"]
 tags_normalized: ["automated updates", "conda", "continuous integration", "dependabot", "dependency management", "devops", "environmentdotyml", "github", "github enterprise server", "improvement", "news", "python", "supply chain security"]

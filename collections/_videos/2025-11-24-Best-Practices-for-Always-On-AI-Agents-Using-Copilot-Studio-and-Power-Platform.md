@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Events YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
 date: 2025-11-24 07:32:17 +00:00
-permalink: "/videos/2025-11-24-Best-Practices-for-Always-On-AI-Agents-Using-Copilot-Studio-and-Power-Platform.html"
+permalink: "/2025-11-24-Best-Practices-for-Always-On-AI-Agents-Using-Copilot-Studio-and-Power-Platform.html"
 categories: ["AI"]
 tags: ["AI", "AI Agents", "Always On Agents", "API Automation", "Automation", "Compliance", "Continuous Operations", "Copilot Studio", "Dataverse", "Deployment Practices", "Failover", "High Availability", "Innovatewithlow", "Low Code AI", "Microsoft Events", "Microsoft Ignite", "Monitoring", "MSIgnite", "Observability", "Power Platform", "Resilience", "SSDR", "Videos"]
 tags_normalized: ["ai", "ai agents", "always on agents", "api automation", "automation", "compliance", "continuous operations", "copilot studio", "dataverse", "deployment practices", "failover", "high availability", "innovatewithlow", "low code ai", "microsoft events", "microsoft ignite", "monitoring", "msignite", "observability", "power platform", "resilience", "ssdr", "videos"]

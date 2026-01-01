@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "GitHub YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ"
 date: 2025-10-21 16:00:01 +00:00
-permalink: "/videos/2025-10-21-The-Future-of-Web-Development-with-AI-Integration.html"
+permalink: "/2025-10-21-The-Future-of-Web-Development-with-AI-Integration.html"
 categories: ["AI"]
 tags: ["AI", "AI Agents", "AI Integration", "Future Of Web", "GitHub Podcast", "Jquery", "Software Innovation", "User Experience", "Videos", "Web Design", "Web Development", "WebDevelopment"]
 tags_normalized: ["ai", "ai agents", "ai integration", "future of web", "github podcast", "jquery", "software innovation", "user experience", "videos", "web design", "web development", "webdevelopment"]

@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft News"
 feed_url: "https://news.microsoft.com/source/feed/"
 date: 2025-07-30 20:09:51 +00:00
-permalink: "/news/2025-07-30-Microsoft-Cloud-and-AI-Strength-Drives-Strong-Q4-and-Fiscal-Year-2025-Results.html"
+permalink: "/2025-07-30-Microsoft-Cloud-and-AI-Strength-Drives-Strong-Q4-and-Fiscal-Year-2025-Results.html"
 categories: ["AI", "Azure"]
 tags: ["AI", "Amy Hood", "Azure", "Cloud Computing", "Company News", "Dynamics 365", "Enterprise Software", "Financial Results", "Intelligent Cloud", "Microsoft", "Microsoft 365", "News", "Productivity And Business Processes", "Satya Nadella"]
 tags_normalized: ["ai", "amy hood", "azure", "cloud computing", "company news", "dynamics 365", "enterprise software", "financial results", "intelligent cloud", "microsoft", "microsoft 365", "news", "productivity and business processes", "satya nadella"]

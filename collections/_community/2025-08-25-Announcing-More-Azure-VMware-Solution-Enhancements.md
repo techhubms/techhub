@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-08-25 16:50:52 +00:00
-permalink: "/community/2025-08-25-Announcing-More-Azure-VMware-Solution-Enhancements.html"
+permalink: "/2025-08-25-Announcing-More-Azure-VMware-Solution-Enhancements.html"
 categories: ["Azure"]
 tags: ["AVS", "Azure", "Azure Elastic SAN", "Azure Government", "Azure NetApp Files", "Azure Region Expansion", "Azure VMware Solution", "Cloud Migration", "Community", "Data Center Modernization", "DISA Provisional Authorization", "Infrastructure", "Managed Service", "Microsoft Azure", "Private Cloud", "Storage Optimization", "VMware Cloud Foundation"]
 tags_normalized: ["avs", "azure", "azure elastic san", "azure government", "azure netapp files", "azure region expansion", "azure vmware solution", "cloud migration", "community", "data center modernization", "disa provisional authorization", "infrastructure", "managed service", "microsoft azure", "private cloud", "storage optimization", "vmware cloud foundation"]

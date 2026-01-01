@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Events YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
 date: 2025-11-21 13:16:13 +00:00
-permalink: "/videos/2025-11-21-Accelerate-Partner-Innovation-in-Every-Industry-with-Microsoft-AI.html"
+permalink: "/2025-11-21-Accelerate-Partner-Innovation-in-Every-Industry-with-Microsoft-AI.html"
 categories: ["AI", "Azure"]
 tags: ["AI", "AI Agents", "Ask Ralph", "Azure", "Co Innovation", "Co Sell", "Colin Fleming", "Go To Market", "Ihab Foudeh", "Industry Solutions", "Infosys", "Kathleen Mitford", "Lufthansa", "Microsoft AI Cloud Partner Program", "Microsoft Ignite", "MicrosoftAICloudPartnerProgram", "MSIgnite", "Partner Innovation", "Satish Thomas", "ServiceNow", "Sunil Senan", "Teleperformance", "Videos", "Virtual Stylist"]
 tags_normalized: ["ai", "ai agents", "ask ralph", "azure", "co innovation", "co sell", "colin fleming", "go to market", "ihab foudeh", "industry solutions", "infosys", "kathleen mitford", "lufthansa", "microsoft ai cloud partner program", "microsoft ignite", "microsoftaicloudpartnerprogram", "msignite", "partner innovation", "satish thomas", "servicenow", "sunil senan", "teleperformance", "videos", "virtual stylist"]

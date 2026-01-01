@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Security Blog"
 feed_url: "https://www.microsoft.com/en-us/security/blog/feed/"
 date: 2025-09-24 17:00:00 +00:00
-permalink: "/news/2025-09-24-Retail-at-Risk-How-a-Single-Alert-Uncovered-a-Major-Cyberthreat.html"
+permalink: "/2025-09-24-Retail-at-Risk-How-a-Single-Alert-Uncovered-a-Major-Cyberthreat.html"
 categories: ["Azure", "Security"]
 tags: ["Attack Detection", "Azure", "Azure Virtual Desktop", "Cloud Security", "Credential Security", "Cybersecurity", "DART", "Forensics", "Identity Management", "Incident Response", "MFA", "Microsoft Defender", "Microsoft Entra ID", "Microsoft Incident Response", "Microsoft Sentinel", "News", "Remote Desktop Protocol", "Retail Security", "Security", "SharePoint Vulnerabilities", "Threat Intelligence", "Zero Trust"]
 tags_normalized: ["attack detection", "azure", "azure virtual desktop", "cloud security", "credential security", "cybersecurity", "dart", "forensics", "identity management", "incident response", "mfa", "microsoft defender", "microsoft entra id", "microsoft incident response", "microsoft sentinel", "news", "remote desktop protocol", "retail security", "security", "sharepoint vulnerabilities", "threat intelligence", "zero trust"]

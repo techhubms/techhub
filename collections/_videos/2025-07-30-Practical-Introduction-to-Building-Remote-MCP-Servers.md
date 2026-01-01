@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Developer YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
 date: 2025-07-30 22:27:34 +00:00
-permalink: "/videos/2025-07-30-Practical-Introduction-to-Building-Remote-MCP-Servers.html"
+permalink: "/2025-07-30-Practical-Introduction-to-Building-Remote-MCP-Servers.html"
 categories: ["AI", "Coding", "DevOps", "Azure"]
 tags: ["Agent Integration", "AI", "Azure", "Azure AI Foundry", "Cloud Computing", "Cloud Platforms", "Coding", "Custom Agents", "Dev", "Developer Tools", "Development", "DevOps", "GitHub", "Live Demo", "MCP", "MCP SDK", "Microsoft", "Remote Server", "Tech", "Technology", "Videos", "VS Code"]
 tags_normalized: ["agent integration", "ai", "azure", "azure ai foundry", "cloud computing", "cloud platforms", "coding", "custom agents", "dev", "developer tools", "development", "devops", "github", "live demo", "mcp", "mcp sdk", "microsoft", "remote server", "tech", "technology", "videos", "vs code"]

@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The Azure Blog"
 feed_url: "https://azure.microsoft.com/en-us/blog/feed/"
 date: 2025-08-25 15:00:00 +00:00
-permalink: "/news/2025-08-25-Protecting-Azure-Infrastructure-Defense-in-Depth-from-Silicon-to-Systems.html"
+permalink: "/2025-08-25-Protecting-Azure-Infrastructure-Defense-in-Depth-from-Silicon-to-Systems.html"
 categories: ["Azure", "Security"]
 tags: ["AI", "AI Infrastructure Security", "Azure", "Azure Boost", "Azure Integrated HSM", "Caliptra", "Code Transparency Services", "Confidential Computing", "Confidential Virtual Machines", "FIPS 140 3", "Hardware Security", "Microsoft Azure", "News", "OCP SAFE", "Root Of Trust", "SCITT", "Secure Cloud", "Secure Future Initiative", "Security", "Supply Chain Integrity", "Trusted Execution Environments", "Uncategorized"]
 tags_normalized: ["ai", "ai infrastructure security", "azure", "azure boost", "azure integrated hsm", "caliptra", "code transparency services", "confidential computing", "confidential virtual machines", "fips 140 3", "hardware security", "microsoft azure", "news", "ocp safe", "root of trust", "scitt", "secure cloud", "secure future initiative", "security", "supply chain integrity", "trusted execution environments", "uncategorized"]

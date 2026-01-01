@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Fabric Blog"
 feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
 date: 2025-09-30 13:00:00 +00:00
-permalink: "/news/2025-09-30-Secure-Data-Movement-in-Microsoft-Fabric-with-Copy-Job-and-VNET-Data-Gateway.html"
+permalink: "/2025-09-30-Secure-Data-Movement-in-Microsoft-Fabric-with-Copy-Job-and-VNET-Data-Gateway.html"
 categories: ["Azure", "ML", "Security"]
 tags: ["Azure", "Compliance", "Copy Job", "Data Integration", "Data Movement", "Data Privacy", "Data Security", "Enterprise Data", "ExpressRoute", "Microsoft Fabric", "ML", "Network Architecture", "News", "Operational Simplicity", "Private Network", "Security", "Virtual Network Data Gateway", "VNET"]
 tags_normalized: ["azure", "compliance", "copy job", "data integration", "data movement", "data privacy", "data security", "enterprise data", "expressroute", "microsoft fabric", "ml", "network architecture", "news", "operational simplicity", "private network", "security", "virtual network data gateway", "vnet"]

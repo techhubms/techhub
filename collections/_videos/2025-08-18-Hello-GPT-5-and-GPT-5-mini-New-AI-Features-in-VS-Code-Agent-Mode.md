@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Visual Studio Code YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SLNwkd3w"
 date: 2025-08-18 14:00:09 +00:00
-permalink: "/videos/2025-08-18-Hello-GPT-5-and-GPT-5-mini-New-AI-Features-in-VS-Code-Agent-Mode.html"
+permalink: "/2025-08-18-Hello-GPT-5-and-GPT-5-mini-New-AI-Features-in-VS-Code-Agent-Mode.html"
 categories: ["AI", "Coding", "GitHub Copilot"]
 tags: ["Agent Mode", "AI", "AI Development", "AI Integration", "Beast Mode", "Coding", "Coding Productivity", "Developer Tools", "GitHub Copilot", "GPT 5", "GPT 5 Mini", "Model Management", "Task Lists", "Videos", "VS Code"]
 tags_normalized: ["agent mode", "ai", "ai development", "ai integration", "beast mode", "coding", "coding productivity", "developer tools", "github copilot", "gpt 5", "gpt 5 mini", "model management", "task lists", "videos", "vs code"]

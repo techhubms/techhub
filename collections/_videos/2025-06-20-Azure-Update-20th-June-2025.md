@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "John Savill's Technical Training"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCpIn7ox7j7bH_OFj7tYouOQ"
 date: 2025-06-20 14:50:36 +00:00
-permalink: "/videos/2025-06-20-Azure-Update-20th-June-2025.html"
+permalink: "/2025-06-20-Azure-Update-20th-June-2025.html"
 categories: ["Azure", "ML"]
 tags: [".NET 9", "AKS", "App Service", "ASR Ultra Disk", "Azure", "Azure Backup", "Azure Cloud", "Azure Functions", "Azure Red Hat OpenShift", "Azure Region", "Azure SQL Managed Instance", "Cloud", "Cloud Updates", "Kubernetes", "Linux VM Diagnostics", "Microsoft", "Microsoft Azure", "ML", "OpenTelemetry", "PostgreSQL", "Videos", "VNET"]
 tags_normalized: ["dotnet 9", "aks", "app service", "asr ultra disk", "azure", "azure backup", "azure cloud", "azure functions", "azure red hat openshift", "azure region", "azure sql managed instance", "cloud", "cloud updates", "kubernetes", "linux vm diagnostics", "microsoft", "microsoft azure", "ml", "opentelemetry", "postgresql", "videos", "vnet"]

@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Events YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
 date: 2025-11-19 11:24:57 +00:00
-permalink: "/videos/2025-11-19-Secure-Secrets-Certificate-and-Access-Management-for-Azure.html"
+permalink: "/2025-11-19-Secure-Secrets-Certificate-and-Access-Management-for-Azure.html"
 categories: ["Azure", "DevOps", "Security"]
 tags: ["ADCS Certificate Management", "Azure", "Azure Authentication", "Azure DevOps", "Cloud Security", "Credential Management", "DevOps", "Granular Permissions", "Infisical Platform", "Infrastructure Security", "IP Restrictions", "Microsoft Ignite", "MSIgnite", "OIDC Authentication", "Secret Management", "Secureyourdata", "Security", "Videos"]
 tags_normalized: ["adcs certificate management", "azure", "azure authentication", "azure devops", "cloud security", "credential management", "devops", "granular permissions", "infisical platform", "infrastructure security", "ip restrictions", "microsoft ignite", "msignite", "oidc authentication", "secret management", "secureyourdata", "security", "videos"]

@@ -6,7 +6,7 @@ categories: ["AI", "Azure", "Coding", "DevOps", "GitHub Copilot", "Security"]
 date: 2024-10-01 00:00:00 +00:00
 author: "Xebia"
 viewing_mode: "external"
-permalink: "/community/2024-10-01-XPRT-Magazine-17.html"
+permalink: "/2024-10-01-XPRT-Magazine-17.html"
 excerpt_separator: <!--excerpt_end-->
 tags: ["AI", "Automation", "Azure", "Cloud Native", "Coding", "Community", "Cost Allocation", "DevOps", "Documentation", "GitHub Copilot", "GitHub Models", "Kubernetes", "LLM", "Magazines", "Managed DevOps Pools", "Network Policy", "Platform Engineering", "Prompty", "Radius", "Security", "Terraform"]
 tags_normalized: ["ai", "automation", "azure", "cloud native", "coding", "community", "cost allocation", "devops", "documentation", "github copilot", "github models", "kubernetes", "llm", "magazines", "managed devops pools", "network policy", "platform engineering", "prompty", "radius", "security", "terraform"]

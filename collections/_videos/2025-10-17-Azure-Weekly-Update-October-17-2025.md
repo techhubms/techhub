@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "John Savill's Technical Training"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCpIn7ox7j7bH_OFj7tYouOQ"
 date: 2025-10-17 10:51:56 +00:00
-permalink: "/videos/2025-10-17-Azure-Weekly-Update-October-17-2025.html"
+permalink: "/2025-10-17-Azure-Weekly-Update-October-17-2025.html"
 categories: ["AI", "Azure"]
 tags: ["AI", "AKS", "API Management", "Azure", "Azure CLI", "Azure Cloud", "Azure Firewall", "Azure Functions", "Azure Storage", "Azure Update", "Cloud", "Cloud Infrastructure", "Cloud Security", "Custom Vision", "Databricks", "DMS PowerShell", "Event Grid", "GPT Image 1 Mini", "HSM", "Microsoft", "Microsoft Azure", "SAP BDC", "Ultra Disk", "Videos"]
 tags_normalized: ["ai", "aks", "api management", "azure", "azure cli", "azure cloud", "azure firewall", "azure functions", "azure storage", "azure update", "cloud", "cloud infrastructure", "cloud security", "custom vision", "databricks", "dms powershell", "event grid", "gpt image 1 mini", "hsm", "microsoft", "microsoft azure", "sap bdc", "ultra disk", "videos"]

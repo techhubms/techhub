@@ -9,10 +9,10 @@ viewing_mode: "external"
 feed_name: "DevClass"
 feed_url: "https://devclass.com/feed/"
 date: 2025-12-11 11:32:34 +00:00
-permalink: "/blogs/2025-12-11-Research-AIs-Impact-on-Developer-Productivity-Hinges-on-Best-Practices.html"
+permalink: "/2025-12-11-Research-AIs-Impact-on-Developer-Productivity-Hinges-on-Best-Practices.html"
 categories: ["AI"]
-tags: ["AI", "AI Assisted Coding", "AI/ML", "Atlassian", "Atlassian DX", "Code Hygiene", "Code Quality", "Developer Productivity", "Developer Research", "Development", "Generative AI", "Google DORA", "LaunchDarkly", "Blogs", "Programming Languages", "Pull Requests", "Software Development Lifecycle", "Stack Trace Analysis", "Team Dynamics"]
-tags_normalized: ["ai", "ai assisted coding", "aislashml", "atlassian", "atlassian dx", "code hygiene", "code quality", "developer productivity", "developer research", "development", "generative ai", "google dora", "launchdarkly", "blogs", "programming languages", "pull requests", "software development lifecycle", "stack trace analysis", "team dynamics"]
+tags: ["AI", "AI Assisted Coding", "AI/ML", "Atlassian", "Atlassian DX", "Blogs", "Code Hygiene", "Code Quality", "Developer Productivity", "Developer Research", "Development", "Generative AI", "Google DORA", "LaunchDarkly", "Programming Languages", "Pull Requests", "Software Development Lifecycle", "Stack Trace Analysis", "Team Dynamics"]
+tags_normalized: ["ai", "ai assisted coding", "aislashml", "atlassian", "atlassian dx", "blogs", "code hygiene", "code quality", "developer productivity", "developer research", "development", "generative ai", "google dora", "launchdarkly", "programming languages", "pull requests", "software development lifecycle", "stack trace analysis", "team dynamics"]
 ---
 
 Tim Anderson reviews research on how generative AI affects software development, revealing that longstanding best practices play a bigger role in success than the specific AI tools themselves.<!--excerpt_end-->

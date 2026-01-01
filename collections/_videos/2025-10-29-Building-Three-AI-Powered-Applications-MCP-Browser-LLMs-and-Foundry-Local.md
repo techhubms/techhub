@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Developer YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
 date: 2025-10-29 16:00:05 +00:00
-permalink: "/videos/2025-10-29-Building-Three-AI-Powered-Applications-MCP-Browser-LLMs-and-Foundry-Local.html"
+permalink: "/2025-10-29-Building-Three-AI-Powered-Applications-MCP-Browser-LLMs-and-Foundry-Local.html"
 categories: ["AI", "Coding"]
 tags: ["Agent Code Generation", "AI", "AI Application Development", "AI Toolkit", "AIApplications", "AIToolkit", "Browser LLM", "BuildingWithAI", "Cloud AI", "CloudAI", "Code Integration", "Coding", "Foundry Local", "FoundryLocal", "GenerativeAI", "GitHub Codespaces", "Java", "JavaApps", "JavaDevelopment", "JavaScript", "Language Models", "LLM", "Local AI", "LocalAI", "MCP", "Videos", "VS Code", "VS Code Extensions"]
 tags_normalized: ["agent code generation", "ai", "ai application development", "ai toolkit", "aiapplications", "aitoolkit", "browser llm", "buildingwithai", "cloud ai", "cloudai", "code integration", "coding", "foundry local", "foundrylocal", "generativeai", "github codespaces", "java", "javaapps", "javadevelopment", "javascript", "language models", "llm", "local ai", "localai", "mcp", "videos", "vs code", "vs code extensions"]

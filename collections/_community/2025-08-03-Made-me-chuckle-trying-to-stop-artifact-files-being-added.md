@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Reddit Github Copilot"
 feed_url: "https://www.reddit.com/r/GithubCopilot.rss"
 date: 2025-08-03 13:02:28 +00:00
-permalink: "/community/2025-08-03-Made-me-chuckle-trying-to-stop-artifact-files-being-added.html"
+permalink: "/2025-08-03-Made-me-chuckle-trying-to-stop-artifact-files-being-added.html"
 categories: ["AI", "GitHub Copilot"]
 tags: ["AI", "Artifact Files", "Automation", "Code Artifacts", "Community", "Developer Workflow", "GitHub Copilot", "Humor", "Software Development", "Source Control", "Version Control"]
 tags_normalized: ["ai", "artifact files", "automation", "code artifacts", "community", "developer workflow", "github copilot", "humor", "software development", "source control", "version control"]

@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Developer YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
 date: 2025-10-22 22:52:22 +00:00
-permalink: "/videos/2025-10-22-Microsoft-Agent-Framework-Workflows-Deep-Dive-and-Advanced-Concepts.html"
+permalink: "/2025-10-22-Microsoft-Agent-Framework-Workflows-Deep-Dive-and-Advanced-Concepts.html"
 categories: ["AI", "Azure", "Coding"]
 tags: ["AI", "AI Agents", "Automation Systems", "Azure", "Business Process Automation", "Cloud Computing", "Coding", "Debugging", "Dev", "Developer Feedback", "Development", "Graph Validation", "Hot Reload", "Input/Output", "Microsoft", "Microsoft Agent Framework", "Orchestration Patterns", "Tech", "Technology", "Type Safe Architecture", "Videos", "Web UI Demo", "Workflow Automation", "Workflow Web UI"]
 tags_normalized: ["ai", "ai agents", "automation systems", "azure", "business process automation", "cloud computing", "coding", "debugging", "dev", "developer feedback", "development", "graph validation", "hot reload", "inputslashoutput", "microsoft", "microsoft agent framework", "orchestration patterns", "tech", "technology", "type safe architecture", "videos", "web ui demo", "workflow automation", "workflow web ui"]

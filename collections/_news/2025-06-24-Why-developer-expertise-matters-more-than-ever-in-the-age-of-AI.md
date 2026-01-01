@@ -10,7 +10,7 @@ categories: ["AI"]
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/feed/"
 date: 2025-06-24 17:04:47 +00:00
-permalink: "/news/2025-06-24-Why-developer-expertise-matters-more-than-ever-in-the-age-of-AI.html"
+permalink: "/2025-06-24-Why-developer-expertise-matters-more-than-ever-in-the-age-of-AI.html"
 tags: ["AI", "AI Assisted Coding", "Career Growth", "Code Quality", "Developer Skills", "Human in The Loop", "News", "Productivity"]
 tags_normalized: ["ai", "ai assisted coding", "career growth", "code quality", "developer skills", "human in the loop", "news", "productivity"]
 ---

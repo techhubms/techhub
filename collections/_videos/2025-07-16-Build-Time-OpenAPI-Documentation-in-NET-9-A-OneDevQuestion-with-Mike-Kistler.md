@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "DotNet YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw"
 date: 2025-07-16 15:20:20 +00:00
-permalink: "/videos/2025-07-16-Build-Time-OpenAPI-Documentation-in-NET-9-A-OneDevQuestion-with-Mike-Kistler.html"
+permalink: "/2025-07-16-Build-Time-OpenAPI-Documentation-in-NET-9-A-OneDevQuestion-with-Mike-Kistler.html"
 categories: ["Coding"]
 tags: [".NET", ".NET 9", "API Development", "Build Time Generation", "Code Generation", "Coding", "Documentation", "Linting", "OneDevQuestion", "OpenAPI", "Spectral", "Videos", "Web API"]
 tags_normalized: ["dotnet", "dotnet 9", "api development", "build time generation", "code generation", "coding", "documentation", "linting", "onedevquestion", "openapi", "spectral", "videos", "web api"]

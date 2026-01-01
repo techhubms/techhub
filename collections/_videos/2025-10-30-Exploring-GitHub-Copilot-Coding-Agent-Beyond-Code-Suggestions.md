@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Developer YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
 date: 2025-10-30 18:08:46 +00:00
-permalink: "/videos/2025-10-30-Exploring-GitHub-Copilot-Coding-Agent-Beyond-Code-Suggestions.html"
+permalink: "/2025-10-30-Exploring-GitHub-Copilot-Coding-Agent-Beyond-Code-Suggestions.html"
 categories: ["AI", "GitHub Copilot"]
 tags: ["AI", "AI Powered Development", "Autonomous Agent", "Code Automation", "Coding Agent", "Damian Brady", "Developer Productivity", "GitHub Copilot", "GitHub Issues", "Microsoft Developer", "Videos", "Workflow Automation"]
 tags_normalized: ["ai", "ai powered development", "autonomous agent", "code automation", "coding agent", "damian brady", "developer productivity", "github copilot", "github issues", "microsoft developer", "videos", "workflow automation"]

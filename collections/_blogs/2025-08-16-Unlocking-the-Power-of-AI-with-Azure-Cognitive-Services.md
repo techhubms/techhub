@@ -9,10 +9,10 @@ viewing_mode: "external"
 feed_name: "Dellenny's Blog"
 feed_url: "https://dellenny.com/feed/"
 date: 2025-08-16 18:18:45 +00:00
-permalink: "/blogs/2025-08-16-Unlocking-the-Power-of-AI-with-Azure-Cognitive-Services.html"
+permalink: "/2025-08-16-Unlocking-the-Power-of-AI-with-Azure-Cognitive-Services.html"
 categories: ["AI", "Azure"]
-tags: ["AI", "AI Integration", "Anomaly Detector", "API Development", "Azure", "Azure Cognitive Services", "Cloud AI", "Content Moderator", "Developer Tools", "Enterprise AI", "Face API", "Form Recognizer", "Language API", "LUIS", "Machine Learning", "Microsoft Azure", "Natural Language Processing", "Personalizer", "Blogs", "Speech API", "Text Analytics", "Vision API"]
-tags_normalized: ["ai", "ai integration", "anomaly detector", "api development", "azure", "azure cognitive services", "cloud ai", "content moderator", "developer tools", "enterprise ai", "face api", "form recognizer", "language api", "luis", "machine learning", "microsoft azure", "natural language processing", "personalizer", "blogs", "speech api", "text analytics", "vision api"]
+tags: ["AI", "AI Integration", "Anomaly Detector", "API Development", "Azure", "Azure Cognitive Services", "Blogs", "Cloud AI", "Content Moderator", "Developer Tools", "Enterprise AI", "Face API", "Form Recognizer", "Language API", "LUIS", "Machine Learning", "Microsoft Azure", "Natural Language Processing", "Personalizer", "Speech API", "Text Analytics", "Vision API"]
+tags_normalized: ["ai", "ai integration", "anomaly detector", "api development", "azure", "azure cognitive services", "blogs", "cloud ai", "content moderator", "developer tools", "enterprise ai", "face api", "form recognizer", "language api", "luis", "machine learning", "microsoft azure", "natural language processing", "personalizer", "speech api", "text analytics", "vision api"]
 ---
 
 Dellenny explains how Microsoft Azure Cognitive Services empower developers and organizations to add AI features—like vision, speech, and language understanding—to their apps, all without deep machine learning expertise.<!--excerpt_end-->

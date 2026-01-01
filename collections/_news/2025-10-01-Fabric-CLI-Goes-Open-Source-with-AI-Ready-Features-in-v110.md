@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Fabric Blog"
 feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
 date: 2025-10-01 17:00:00 +00:00
-permalink: "/news/2025-10-01-Fabric-CLI-Goes-Open-Source-with-AI-Ready-Features-in-v110.html"
+permalink: "/2025-10-01-Fabric-CLI-Goes-Open-Source-with-AI-Ready-Features-in-v110.html"
 categories: ["AI", "Azure", "Coding", "DevOps"]
 tags: ["AI", "AI Assisted Development", "Automation", "Azure", "CI/CD", "CLI Tools", "Coding", "Command Line Interface", "Community Contributions", "Deployment", "Developer Tools", "DevOps", "Extensions", "Fabric CLI", "Interactive Scripting", "JSON Output", "Microsoft Fabric", "News", "Open Source", "VS Code Integration", "Workspace Automation"]
 tags_normalized: ["ai", "ai assisted development", "automation", "azure", "cislashcd", "cli tools", "coding", "command line interface", "community contributions", "deployment", "developer tools", "devops", "extensions", "fabric cli", "interactive scripting", "json output", "microsoft fabric", "news", "open source", "vs code integration", "workspace automation"]

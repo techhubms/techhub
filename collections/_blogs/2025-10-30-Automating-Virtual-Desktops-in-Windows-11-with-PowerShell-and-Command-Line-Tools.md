@@ -9,10 +9,10 @@ viewing_mode: "external"
 feed_name: "Dellenny's Blog"
 feed_url: "https://dellenny.com/feed/"
 date: 2025-10-30 06:56:21 +00:00
-permalink: "/blogs/2025-10-30-Automating-Virtual-Desktops-in-Windows-11-with-PowerShell-and-Command-Line-Tools.html"
+permalink: "/2025-10-30-Automating-Virtual-Desktops-in-Windows-11-with-PowerShell-and-Command-Line-Tools.html"
 categories: ["Coding"]
-tags: ["AutoHotkey", "Automation", "Batch Scripts", "Coding", "Command Line Automation", "Desktop Management", "Blogs", "PowerShell", "Productivity Tools", "Scripting", "VirtualDesktop Module", "VirtualDesktopCmd", "Windows 11", "Workspace Customization"]
-tags_normalized: ["autohotkey", "automation", "batch scripts", "coding", "command line automation", "desktop management", "blogs", "powershell", "productivity tools", "scripting", "virtualdesktop module", "virtualdesktopcmd", "windows 11", "workspace customization"]
+tags: ["AutoHotkey", "Automation", "Batch Scripts", "Blogs", "Coding", "Command Line Automation", "Desktop Management", "PowerShell", "Productivity Tools", "Scripting", "VirtualDesktop Module", "VirtualDesktopCmd", "Windows 11", "Workspace Customization"]
+tags_normalized: ["autohotkey", "automation", "batch scripts", "blogs", "coding", "command line automation", "desktop management", "powershell", "productivity tools", "scripting", "virtualdesktop module", "virtualdesktopcmd", "windows 11", "workspace customization"]
 ---
 
 Dellenny presents a practical guide to automating virtual desktop management in Windows 11, illustrating use of PowerShell, third-party tools, and scripting for improved efficiency.<!--excerpt_end-->

@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "DotNet YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw"
 date: 2025-11-14 19:20:58 +00:00
-permalink: "/videos/2025-11-14-Decision-Records-Understanding-Why-Those-Decisions-Were-Made-in-NET.html"
+permalink: "/2025-11-14-Decision-Records-Understanding-Why-Those-Decisions-Were-Made-in-NET.html"
 categories: ["Coding"]
 tags: [".NET", ".NET Aspire", ".NET Conf", "Architecture", "ASP.NET Identity", "Authentication", "Blazor", "C# 14", "Coding", "Decision Records", "Documentation", "Dynamic UI", "F# 10", "Maintainability", "MAUI", "Service Discovery", "Videos", "VS"]
 tags_normalized: ["dotnet", "dotnet aspire", "dotnet conf", "architecture", "aspdotnet identity", "authentication", "blazor", "csharp 14", "coding", "decision records", "documentation", "dynamic ui", "fsharp 10", "maintainability", "maui", "service discovery", "videos", "vs"]

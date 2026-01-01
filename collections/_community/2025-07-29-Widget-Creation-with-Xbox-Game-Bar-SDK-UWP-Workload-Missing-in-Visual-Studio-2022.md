@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Reddit Visual Studio"
 feed_url: "https://www.reddit.com/r/VisualStudio/.rss"
 date: 2025-07-29 19:44:01 +00:00
-permalink: "/community/2025-07-29-Widget-Creation-with-Xbox-Game-Bar-SDK-UWP-Workload-Missing-in-Visual-Studio-2022.html"
+permalink: "/2025-07-29-Widget-Creation-with-Xbox-Game-Bar-SDK-UWP-Workload-Missing-in-Visual-Studio-2022.html"
 categories: ["Coding"]
 tags: ["C#", "Coding", "Community", "Game Development", "Project Templates", "SDK", "Universal Windows Platform", "UWP", "VS", "Windows 10", "Workload Installation", "Xbox Game Bar"]
 tags_normalized: ["csharp", "coding", "community", "game development", "project templates", "sdk", "universal windows platform", "uwp", "vs", "windows 10", "workload installation", "xbox game bar"]

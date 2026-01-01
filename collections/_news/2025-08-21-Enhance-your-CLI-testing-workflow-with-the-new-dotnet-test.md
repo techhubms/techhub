@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft .NET Blog"
 feed_url: "https://devblogs.microsoft.com/dotnet/feed/"
 date: 2025-08-21 17:05:00 +00:00
-permalink: "/news/2025-08-21-Enhance-your-CLI-testing-workflow-with-the-new-dotnet-test.html"
+permalink: "/2025-08-21-Enhance-your-CLI-testing-workflow-with-the-new-dotnet-test.html"
 categories: ["Coding", "DevOps"]
 tags: [".NET", ".NET 10", ".NET Test", "C#", "CLI Testing", "Coding", "Continuous Integration", "DevOps", "F#", "Microsoft.Testing.Platform", "MSBuild", "MTP", "News", "Performance Optimization", "Test Automation", "Test Diagnostics", "Test Runner", "Testing", "Testing Frameworks", "Visual Basic", "VSTest"]
 tags_normalized: ["dotnet", "dotnet 10", "dotnet test", "csharp", "cli testing", "coding", "continuous integration", "devops", "fsharp", "microsoftdottestingdotplatform", "msbuild", "mtp", "news", "performance optimization", "test automation", "test diagnostics", "test runner", "testing", "testing frameworks", "visual basic", "vstest"]

@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Events YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
 date: 2025-11-21 13:28:16 +00:00
-permalink: "/videos/2025-11-21-Managing-AI-Agents-and-Security-in-Microsoft-365-Admin-Center.html"
+permalink: "/2025-11-21-Managing-AI-Agents-and-Security-in-Microsoft-365-Admin-Center.html"
 categories: ["Security"]
 tags: ["Agent Permissions", "AI", "AI Agent Management", "AI Business Solutions #2 | STUDIO37", "Compliance", "Developer Accountability", "Directory Integration", "English (us)", "Error Tracking", "F5n1", "Ignite", "IT Management", "Microsoft", "Microsoft 365 Admin Center", "Microsoft Entra ID", "Microsoft Ignite", "Ms Ignite", "Msft Ignite", "Other", "Policy Templates", "Risk Monitoring", "Security", "STUDIO37", "STUDIO37 V1", "Videos"]
 tags_normalized: ["agent permissions", "ai", "ai agent management", "ai business solutions sharp2 pipe studio37", "compliance", "developer accountability", "directory integration", "english us", "error tracking", "f5n1", "ignite", "it management", "microsoft", "microsoft 365 admin center", "microsoft entra id", "microsoft ignite", "ms ignite", "msft ignite", "other", "policy templates", "risk monitoring", "security", "studio37", "studio37 v1", "videos"]

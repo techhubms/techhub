@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Community"
 date: 2025-08-11 05:54:53 +00:00
-permalink: "/community/2025-08-11-Issuing-Custom-Claims-Using-Directory-Extension-Attributes-in-Microsoft-Entra-ID.html"
+permalink: "/2025-08-11-Issuing-Custom-Claims-Using-Directory-Extension-Attributes-in-Microsoft-Entra-ID.html"
 categories: ["Security"]
 tags: ["Acceptmappedclaims", "Azure Active Directory", "Claims Issuance", "Cloud Identity", "Community", "Conditional Access", "Directory Extension Attributes", "Enterprise Applications", "Group Based Claims", "JWT", "Microsoft Entra ID", "Microsoft Graph API", "OIDC", "SAML", "Security", "Single Sign On", "User Attributes"]
 tags_normalized: ["acceptmappedclaims", "azure active directory", "claims issuance", "cloud identity", "community", "conditional access", "directory extension attributes", "enterprise applications", "group based claims", "jwt", "microsoft entra id", "microsoft graph api", "oidc", "saml", "security", "single sign on", "user attributes"]

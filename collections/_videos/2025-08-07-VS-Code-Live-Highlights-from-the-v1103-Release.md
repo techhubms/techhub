@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Visual Studio Code YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SLNwkd3w"
 date: 2025-08-07 17:44:15 +00:00
-permalink: "/videos/2025-08-07-VS-Code-Live-Highlights-from-the-v1103-Release.html"
+permalink: "/2025-08-07-VS-Code-Live-Highlights-from-the-v1103-Release.html"
 categories: ["Coding"]
 tags: ["Code", "Code Demo", "Code Editor", "Coding", "Demo", "Developer", "Developer Community", "Developer Tools", "Live Q&A", "Microsoft", "New Features", "Newfeatures", "Productivity", "Release Highlights", "Software Developer", "Software Development", "Videos", "VS Code", "VS Code V1.103", "Vscoderelease"]
 tags_normalized: ["code", "code demo", "code editor", "coding", "demo", "developer", "developer community", "developer tools", "live qanda", "microsoft", "new features", "newfeatures", "productivity", "release highlights", "software developer", "software development", "videos", "vs code", "vs code v1dot103", "vscoderelease"]

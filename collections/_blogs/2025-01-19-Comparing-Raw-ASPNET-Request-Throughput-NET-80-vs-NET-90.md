@@ -9,10 +9,10 @@ viewing_mode: "external"
 feed_name: "Rick Strahl's Blog"
 feed_url: "https://feeds.feedburner.com/rickstrahl"
 date: 2025-01-19 22:51:02 +00:00
-permalink: "/blogs/2025-01-19-Comparing-Raw-ASPNET-Request-Throughput-NET-80-vs-NET-90.html"
+permalink: "/2025-01-19-Comparing-Raw-ASPNET-Request-Throughput-NET-80-vs-NET-90.html"
 categories: ["Coding"]
-tags: [".NET", ".NET 8.0", ".NET 9.0", ".NET ASP.NET", "ASP.NET", "Coding", "Controllers", "Garbage Collection", "Kestrel", "Load Testing", "Memory Footprint", "Minimal APIs", "Performance", "Blogs", "Resource Usage", "Startup Speed", "WebSurge"]
-tags_normalized: ["dotnet", "dotnet 8dot0", "dotnet 9dot0", "dotnet aspdotnet", "aspdotnet", "coding", "controllers", "garbage collection", "kestrel", "load testing", "memory footprint", "minimal apis", "performance", "blogs", "resource usage", "startup speed", "websurge"]
+tags: [".NET", ".NET 8.0", ".NET 9.0", ".NET ASP.NET", "ASP.NET", "Blogs", "Coding", "Controllers", "Garbage Collection", "Kestrel", "Load Testing", "Memory Footprint", "Minimal APIs", "Performance", "Resource Usage", "Startup Speed", "WebSurge"]
+tags_normalized: ["dotnet", "dotnet 8dot0", "dotnet 9dot0", "dotnet aspdotnet", "aspdotnet", "blogs", "coding", "controllers", "garbage collection", "kestrel", "load testing", "memory footprint", "minimal apis", "performance", "resource usage", "startup speed", "websurge"]
 ---
 
 In this detailed article, Rick Strahl compares the raw throughput and resource usage of ASP.NET applications running on .NET 8.0 and .NET 9.0. He shares benchmarks, test setup details, anecdotes from production, and practical performance findings.<!--excerpt_end-->

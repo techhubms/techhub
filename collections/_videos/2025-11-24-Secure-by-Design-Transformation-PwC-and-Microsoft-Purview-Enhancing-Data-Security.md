@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Events YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
 date: 2025-11-24 14:35:38 +00:00
-permalink: "/videos/2025-11-24-Secure-by-Design-Transformation-PwC-and-Microsoft-Purview-Enhancing-Data-Security.html"
+permalink: "/2025-11-24-Secure-by-Design-Transformation-PwC-and-Microsoft-Purview-Enhancing-Data-Security.html"
 categories: ["Security"]
 tags: ["Alert Management", "Automation", "Compliance", "Data Asset Visibility", "Data Catalog", "Data Governance", "Data Security", "Enterprise Efficiency", "Innovation", "Intelligent Agents", "Microsoft Ignite", "Microsoft Purview", "MSIgnite", "PwC", "Secure By Design", "Security", "Security Gaps", "Videos"]
 tags_normalized: ["alert management", "automation", "compliance", "data asset visibility", "data catalog", "data governance", "data security", "enterprise efficiency", "innovation", "intelligent agents", "microsoft ignite", "microsoft purview", "msignite", "pwc", "secure by design", "security", "security gaps", "videos"]

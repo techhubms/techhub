@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "DotNet YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw"
 date: 2025-08-14 14:24:36 +00:00
-permalink: "/videos/2025-08-14-Building-Confident-Application-Systems-with-NET-Aspire-From-Dev-to-Deployment.html"
+permalink: "/2025-08-14-Building-Confident-Application-Systems-with-NET-Aspire-From-Dev-to-Deployment.html"
 categories: ["Azure", "Coding", "DevOps"]
 tags: [".NET", ".NET Aspire", "Application Architecture", "Azure", "CI/CD", "Coding", "Containerization", "Custom Metrics", "Deployment", "DevOps", "Distributed Systems", "GitHub Actions", "Instrumentation", "Metrics", "Observability", "Software Development", "Videos", "VS"]
 tags_normalized: ["dotnet", "dotnet aspire", "application architecture", "azure", "cislashcd", "coding", "containerization", "custom metrics", "deployment", "devops", "distributed systems", "github actions", "instrumentation", "metrics", "observability", "software development", "videos", "vs"]

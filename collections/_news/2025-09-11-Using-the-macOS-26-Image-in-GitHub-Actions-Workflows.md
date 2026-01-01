@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/changelog/feed/"
 date: 2025-09-11 20:10:13 +00:00
-permalink: "/news/2025-09-11-Using-the-macOS-26-Image-in-GitHub-Actions-Workflows.html"
+permalink: "/2025-09-11-Using-the-macOS-26-Image-in-GitHub-Actions-Workflows.html"
 categories: ["DevOps"]
 tags: ["Actions", "ARM64", "CI/CD", "Continuous Integration", "DevOps", "GitHub Actions", "Ios Development", "Macos 26", "News", "Release Management", "Runner Images", "Workflow Automation", "Xcode"]
 tags_normalized: ["actions", "arm64", "cislashcd", "continuous integration", "devops", "github actions", "ios development", "macos 26", "news", "release management", "runner images", "workflow automation", "xcode"]

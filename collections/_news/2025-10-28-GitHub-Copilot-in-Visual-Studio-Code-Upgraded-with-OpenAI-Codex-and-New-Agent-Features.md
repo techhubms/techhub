@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/changelog/feed/"
 date: 2025-10-28 15:30:02 +00:00
-permalink: "/news/2025-10-28-GitHub-Copilot-in-Visual-Studio-Code-Upgraded-with-OpenAI-Codex-and-New-Agent-Features.html"
+permalink: "/2025-10-28-GitHub-Copilot-in-Visual-Studio-Code-Upgraded-with-OpenAI-Codex-and-New-Agent-Features.html"
 categories: ["AI", "Coding", "GitHub Copilot"]
 tags: ["Agent Sessions", "AI", "AI Agents", "Code Completion", "Coding", "Copilot", "Copilot Pro+", "Developer Productivity", "GitHub Copilot", "GitHub Universe", "Improvement", "News", "OpenAI Codex", "Plan Mode", "Subagents", "TDD Workflows", "Universe25", "VS Code", "VS Code Insiders"]
 tags_normalized: ["agent sessions", "ai", "ai agents", "code completion", "coding", "copilot", "copilot proplus", "developer productivity", "github copilot", "github universe", "improvement", "news", "openai codex", "plan mode", "subagents", "tdd workflows", "universe25", "vs code", "vs code insiders"]

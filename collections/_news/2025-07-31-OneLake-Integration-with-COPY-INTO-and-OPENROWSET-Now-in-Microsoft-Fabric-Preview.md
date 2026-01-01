@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Fabric Blog"
 feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
 date: 2025-07-31 09:00:00 +00:00
-permalink: "/news/2025-07-31-OneLake-Integration-with-COPY-INTO-and-OPENROWSET-Now-in-Microsoft-Fabric-Preview.html"
+permalink: "/2025-07-31-OneLake-Integration-with-COPY-INTO-and-OPENROWSET-Now-in-Microsoft-Fabric-Preview.html"
 categories: ["ML"]
 tags: ["COPY INTO", "Cross Workspace Data Loads", "CSV", "Data Engineering", "Data Ingestion", "Data Warehouse", "Entra ID", "Lakehouse", "Microsoft Fabric", "ML", "News", "OneLake", "OPENROWSET", "Parquet", "Private Link", "SaaS", "Service Principals", "SQL", "Workspace Permissions"]
 tags_normalized: ["copy into", "cross workspace data loads", "csv", "data engineering", "data ingestion", "data warehouse", "entra id", "lakehouse", "microsoft fabric", "ml", "news", "onelake", "openrowset", "parquet", "private link", "saas", "service principals", "sql", "workspace permissions"]

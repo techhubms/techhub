@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "GitHub YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ"
 date: 2025-07-30 14:01:12 +00:00
-permalink: "/videos/2025-07-30-Never-lose-your-GitHub-Copilot-session-history-again.html"
+permalink: "/2025-07-30-Never-lose-your-GitHub-Copilot-session-history-again.html"
 categories: ["AI", "GitHub Copilot"]
 tags: ["AI", "Code Documentation", "Copilot Deep Dive", "Developer Productivity", "GitHub", "GitHub Copilot", "Programming", "Prompt Engineering", "Session History", "Software Development", "Version Control", "Videos"]
 tags_normalized: ["ai", "code documentation", "copilot deep dive", "developer productivity", "github", "github copilot", "programming", "prompt engineering", "session history", "software development", "version control", "videos"]

@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-09-30 19:12:33 +00:00
-permalink: "/community/2025-09-30-Azure-Local-Now-Generally-Available-for-Government-Cloud-Customers.html"
+permalink: "/2025-09-30-Azure-Local-Now-Generally-Available-for-Government-Cloud-Customers.html"
 categories: ["Azure", "Security"]
 tags: ["AKS", "ARM Templates", "Azure", "Azure Arc", "Azure Government", "Azure Local", "Azure Monitor", "BitLocker", "Cloud Management", "Community", "Compliance", "Data Residency", "Government IT", "Hybrid Cloud", "IaC", "Kubernetes", "Microsoft Defender For Cloud", "Operational Control", "Security", "Security Updates", "Trusted Launch", "Virtual Machines", "Vtpm"]
 tags_normalized: ["aks", "arm templates", "azure", "azure arc", "azure government", "azure local", "azure monitor", "bitlocker", "cloud management", "community", "compliance", "data residency", "government it", "hybrid cloud", "iac", "kubernetes", "microsoft defender for cloud", "operational control", "security", "security updates", "trusted launch", "virtual machines", "vtpm"]

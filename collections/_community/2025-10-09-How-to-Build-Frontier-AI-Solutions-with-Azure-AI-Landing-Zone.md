@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-10-09 00:09:13 +00:00
-permalink: "/community/2025-10-09-How-to-Build-Frontier-AI-Solutions-with-Azure-AI-Landing-Zone.html"
+permalink: "/2025-10-09-How-to-Build-Frontier-AI-Solutions-with-Azure-AI-Landing-Zone.html"
 categories: ["AI", "Azure"]
 tags: ["AI", "AI Adoption", "AKS", "App Service", "Azure", "Azure AI Foundry", "Azure AI Landing Zone", "Azure Container Apps", "Azure Functions", "Bicep", "Cloud Adoption Framework", "Community", "Enterprise Architecture", "Governance", "IaC", "Operational Excellence", "Terraform", "Well Architected Framework"]
 tags_normalized: ["ai", "ai adoption", "aks", "app service", "azure", "azure ai foundry", "azure ai landing zone", "azure container apps", "azure functions", "bicep", "cloud adoption framework", "community", "enterprise architecture", "governance", "iac", "operational excellence", "terraform", "well architected framework"]

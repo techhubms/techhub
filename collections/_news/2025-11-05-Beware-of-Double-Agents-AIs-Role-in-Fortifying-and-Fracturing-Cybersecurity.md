@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft News"
 feed_url: "https://news.microsoft.com/source/feed/"
 date: 2025-11-05 14:08:19 +00:00
-permalink: "/news/2025-11-05-Beware-of-Double-Agents-AIs-Role-in-Fortifying-and-Fracturing-Cybersecurity.html"
+permalink: "/2025-11-05-Beware-of-Double-Agents-AIs-Role-in-Fortifying-and-Fracturing-Cybersecurity.html"
 categories: ["AI", "Azure", "Security"]
 tags: ["Agentic Zero Trust", "AI", "AI Agents", "AI Risk Management", "AI Security", "Azure", "Azure AI Foundry", "Company News", "Containment And Alignment", "Cybersecurity", "Data Governance", "Enterprise Security", "Identity Governance", "Microsoft Copilot Studio", "Microsoft Defender", "Microsoft Entra Agent ID", "News", "Phishing", "Security", "Security Copilot", "Zero Trust"]
 tags_normalized: ["agentic zero trust", "ai", "ai agents", "ai risk management", "ai security", "azure", "azure ai foundry", "company news", "containment and alignment", "cybersecurity", "data governance", "enterprise security", "identity governance", "microsoft copilot studio", "microsoft defender", "microsoft entra agent id", "news", "phishing", "security", "security copilot", "zero trust"]

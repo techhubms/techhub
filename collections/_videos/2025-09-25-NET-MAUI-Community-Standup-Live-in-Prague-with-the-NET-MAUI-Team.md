@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "DotNet YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw"
 date: 2025-09-25 21:07:04 +00:00
-permalink: "/videos/2025-09-25-NET-MAUI-Community-Standup-Live-in-Prague-with-the-NET-MAUI-Team.html"
+permalink: "/2025-09-25-NET-MAUI-Community-Standup-Live-in-Prague-with-the-NET-MAUI-Team.html"
 categories: ["Coding"]
 tags: [".NET", "C#", "Coding", "Cross Platform", "Demo", "Developer Community", "Developer Tools", "Dotnetdeveloper", "Dotnetmaui", "Live Demo", "MAUI", "Microsoft", "Mobile Development", "Q&A", "Software Developer", "Standup", "UI", "Videos"]
 tags_normalized: ["dotnet", "csharp", "coding", "cross platform", "demo", "developer community", "developer tools", "dotnetdeveloper", "dotnetmaui", "live demo", "maui", "microsoft", "mobile development", "qanda", "software developer", "standup", "ui", "videos"]

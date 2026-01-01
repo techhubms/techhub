@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-11-25 16:42:58 +00:00
-permalink: "/community/2025-11-25-Microsofts-Project-Pavilion-Presence-at-KubeCon-NA-2025-Supporting-Open-Source-in-Cloud-Native-Ecosystems.html"
+permalink: "/2025-11-25-Microsofts-Project-Pavilion-Presence-at-KubeCon-NA-2025-Supporting-Open-Source-in-Cloud-Native-Ecosystems.html"
 categories: ["AI", "Azure", "DevOps", "ML", "Security"]
 tags: ["AI", "AKS", "Artifact Signing", "Azure", "Azure Container Registry", "CloudNativeCon", "CNCF", "Community", "Containerd", "DevOps", "Istio", "KubeCon NA", "Microsoft Azure", "ML", "ML Workloads", "Notary Project", "Observability", "OCI Artifacts", "Open Policy Agent", "Open Source", "ORAS", "Policy Enforcement", "Project Pavilion", "Security", "Service Mesh"]
 tags_normalized: ["ai", "aks", "artifact signing", "azure", "azure container registry", "cloudnativecon", "cncf", "community", "containerd", "devops", "istio", "kubecon na", "microsoft azure", "ml", "ml workloads", "notary project", "observability", "oci artifacts", "open policy agent", "open source", "oras", "policy enforcement", "project pavilion", "security", "service mesh"]

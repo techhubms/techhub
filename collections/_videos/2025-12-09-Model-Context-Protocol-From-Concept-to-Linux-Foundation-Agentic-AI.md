@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "GitHub YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ"
 date: 2025-12-09 21:00:03 +00:00
-permalink: "/videos/2025-12-09-Model-Context-Protocol-From-Concept-to-Linux-Foundation-Agentic-AI.html"
+permalink: "/2025-12-09-Model-Context-Protocol-From-Concept-to-Linux-Foundation-Agentic-AI.html"
 categories: ["AI"]
 tags: ["Agentic AI Foundation", "AI", "AI Agents", "AI Integration", "AI Standards", "Anthropic", "Developer Tools", "GitHub", "Linux Foundation", "MCP", "Microsoft", "Open Source", "OpenAI", "OpenSource", "Videos"]
 tags_normalized: ["agentic ai foundation", "ai", "ai agents", "ai integration", "ai standards", "anthropic", "developer tools", "github", "linux foundation", "mcp", "microsoft", "open source", "openai", "opensource", "videos"]

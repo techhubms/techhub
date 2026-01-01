@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/feed/"
 date: 2025-10-08 16:00:00 +00:00
-permalink: "/news/2025-10-08-Completing-Urgent-Fixes-Remotely-Using-GitHub-Copilot-Coding-Agent-and-Mobile.html"
+permalink: "/2025-10-08-Completing-Urgent-Fixes-Remotely-Using-GitHub-Copilot-Coding-Agent-and-Mobile.html"
 categories: ["AI", "Coding", "DevOps", "GitHub Copilot"]
 tags: ["AI", "Best Practices", "Bug Fixing", "Code Quality", "Coding", "Coding Agent", "Continuous Deployment", "Copilot Instructions", "Developer Skills", "Developer Tools", "DevOps", "DevOps Automation", "GitHub", "GitHub Actions", "GitHub Copilot", "GitHub Mobile", "GitHub Platform", "IssueOps", "Mobile Code Review", "News", "Pull Requests"]
 tags_normalized: ["ai", "best practices", "bug fixing", "code quality", "coding", "coding agent", "continuous deployment", "copilot instructions", "developer skills", "developer tools", "devops", "devops automation", "github", "github actions", "github copilot", "github mobile", "github platform", "issueops", "mobile code review", "news", "pull requests"]

@@ -9,10 +9,10 @@ viewing_mode: "external"
 feed_name: "Randy Pagels's Blog"
 feed_url: "https://www.cooknwithcopilot.com/rss.xml"
 date: 2025-06-13 00:00:00 +00:00
-permalink: "/blogs/2025-06-13-Automate-Repetitive-Code-with-GitHub-Copilot.html"
+permalink: "/2025-06-13-Automate-Repetitive-Code-with-GitHub-Copilot.html"
 categories: ["AI", "Coding", "GitHub Copilot"]
-tags: ["AI", "AI Powered Coding", "API Calls", "Boilerplate Reduction", "C#", "Code Generation", "Coding", "Coding Assistant", "Developer Productivity", "GitHub Copilot", "JavaScript", "Natural Language Comments", "Pattern Recognition", "Blogs", "Python", "Repetitive Code Automation", "Tab Completion", "Workflow Automation"]
-tags_normalized: ["ai", "ai powered coding", "api calls", "boilerplate reduction", "csharp", "code generation", "coding", "coding assistant", "developer productivity", "github copilot", "javascript", "natural language comments", "pattern recognition", "blogs", "python", "repetitive code automation", "tab completion", "workflow automation"]
+tags: ["AI", "AI Powered Coding", "API Calls", "Blogs", "Boilerplate Reduction", "C#", "Code Generation", "Coding", "Coding Assistant", "Developer Productivity", "GitHub Copilot", "JavaScript", "Natural Language Comments", "Pattern Recognition", "Python", "Repetitive Code Automation", "Tab Completion", "Workflow Automation"]
+tags_normalized: ["ai", "ai powered coding", "api calls", "blogs", "boilerplate reduction", "csharp", "code generation", "coding", "coding assistant", "developer productivity", "github copilot", "javascript", "natural language comments", "pattern recognition", "python", "repetitive code automation", "tab completion", "workflow automation"]
 ---
 
 Randy Pagels shares practical tips on using GitHub Copilot to automate repetitive coding tasks, highlighting how AI-powered code completion streamlines development and saves time.<!--excerpt_end-->

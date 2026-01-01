@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-10-21 00:53:23 +00:00
-permalink: "/community/2025-10-21-Audit-and-Enable-Windows-Recovery-Environment-WinRE-via-Azure-Arc-Policies.html"
+permalink: "/2025-10-21-Audit-and-Enable-Windows-Recovery-Environment-WinRE-via-Azure-Arc-Policies.html"
 categories: ["Azure", "Security"]
 tags: ["Azure", "Azure Arc", "Azure Policy", "Community", "Compliance", "Configuration Management", "Connected Machine Agent", "Defender For Servers", "ESU", "Hybrid Cloud", "Machine Configuration", "Policy Enforcement", "Security", "Server Resiliency", "Windows Recovery Environment", "Windows Server", "WinRE"]
 tags_normalized: ["azure", "azure arc", "azure policy", "community", "compliance", "configuration management", "connected machine agent", "defender for servers", "esu", "hybrid cloud", "machine configuration", "policy enforcement", "security", "server resiliency", "windows recovery environment", "windows server", "winre"]

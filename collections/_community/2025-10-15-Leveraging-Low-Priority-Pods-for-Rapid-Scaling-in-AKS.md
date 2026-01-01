@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-10-15 09:46:02 +00:00
-permalink: "/community/2025-10-15-Leveraging-Low-Priority-Pods-for-Rapid-Scaling-in-AKS.html"
+permalink: "/2025-10-15-Leveraging-Low-Priority-Pods-for-Rapid-Scaling-in-AKS.html"
 categories: ["Azure", "DevOps"]
 tags: ["AKS", "Azure", "Buffer Nodes", "Cloud Native", "Cluster Scalability", "Community", "DevOps", "Grafana", "Kubernetes", "Low Priority Pods", "Node Autoscaler", "Pod Scheduling", "PriorityClass", "Production Workloads", "Prometheus", "Resource Preemption", "Scaling Strategies", "SRE"]
 tags_normalized: ["aks", "azure", "buffer nodes", "cloud native", "cluster scalability", "community", "devops", "grafana", "kubernetes", "low priority pods", "node autoscaler", "pod scheduling", "priorityclass", "production workloads", "prometheus", "resource preemption", "scaling strategies", "sre"]

@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Fabric Blog"
 feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
 date: 2025-11-18 08:00:00 +00:00
-permalink: "/news/2025-11-18-Whats-New-in-OneLake-and-the-Fabric-Platform-Expanded-Sources-Security-and-Capacity-Management.html"
+permalink: "/2025-11-18-Whats-New-in-OneLake-and-the-Fabric-Platform-Expanded-Sources-Security-and-Capacity-Management.html"
 categories: ["AI", "Azure", "ML", "Security"]
 tags: ["AI", "AI Readiness", "Azure", "Capacity Management", "Cosmos DB", "Customer Managed Keys", "Data Governance", "Data Lake", "Data Mirroring", "Data Shortcuts", "Fabric IQ", "Foundry IQ", "Microsoft 365", "Microsoft Fabric", "ML", "News", "OneLake", "Outbound Access Protection", "Power BI", "Real Time Analytics", "SAP Integration", "Security", "SQL Server", "Zero ETL"]
 tags_normalized: ["ai", "ai readiness", "azure", "capacity management", "cosmos db", "customer managed keys", "data governance", "data lake", "data mirroring", "data shortcuts", "fabric iq", "foundry iq", "microsoft 365", "microsoft fabric", "ml", "news", "onelake", "outbound access protection", "power bi", "real time analytics", "sap integration", "security", "sql server", "zero etl"]

@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "DotNet YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw"
 date: 2025-12-16 03:08:00 +00:00
-permalink: "/videos/2025-12-16-ASPNET-Core-Planning-Kickoff-for-NET-11.html"
+permalink: "/2025-12-16-ASPNET-Core-Planning-Kickoff-for-NET-11.html"
 categories: ["Coding"]
 tags: [".NET", ".NET 11", "ASP.NET Core", "Coding", "Community Standup", "Daniel Roth", "Demo", "Developer", "Developer Community", "Developer Tools", "Dotnet10", "Dotnetdeveloper", "Dotnetten", "Feature Development", "Jose Perez Rodriguez", "Larry Ewing", "Microsoft", "Mike Kistler", "Open Source", "Planning", "Roadmap", "Softaredeveloper", "Videos"]
 tags_normalized: ["dotnet", "dotnet 11", "aspdotnet core", "coding", "community standup", "daniel roth", "demo", "developer", "developer community", "developer tools", "dotnet10", "dotnetdeveloper", "dotnetten", "feature development", "jose perez rodriguez", "larry ewing", "microsoft", "mike kistler", "open source", "planning", "roadmap", "softaredeveloper", "videos"]

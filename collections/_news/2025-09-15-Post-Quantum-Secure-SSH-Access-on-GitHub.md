@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "GitHub Engineering Blog"
 feed_url: "https://github.blog/engineering/feed/"
 date: 2025-09-15 16:00:00 +00:00
-permalink: "/news/2025-09-15-Post-Quantum-Secure-SSH-Access-on-GitHub.html"
+permalink: "/2025-09-15-Post-Quantum-Secure-SSH-Access-on-GitHub.html"
 categories: ["DevOps", "Security"]
 tags: ["Cryptography", "DevOps", "Encryption", "Engineering", "Enterprise Security", "FIPS Compliance", "Git", "GitHub", "Key Exchange Algorithm", "News", "OpenSSH", "Platform Security", "Post Quantum Cryptography", "Quantum Security", "Security", "Security Best Practices", "Sntrup761x25519 Sha512", "SSH"]
 tags_normalized: ["cryptography", "devops", "encryption", "engineering", "enterprise security", "fips compliance", "git", "github", "key exchange algorithm", "news", "openssh", "platform security", "post quantum cryptography", "quantum security", "security", "security best practices", "sntrup761x25519 sha512", "ssh"]

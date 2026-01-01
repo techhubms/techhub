@@ -6,7 +6,7 @@ author: "Tech Hub Team"
 excerpt_separator: <!--excerpt_end-->
 viewing_mode: "internal"
 date: 2025-12-15 09:00:00 +00:00
-permalink: "/roundups/2025-12-15-Weekly-AI-and-Tech-News-Roundup.html"
+permalink: "/2025-12-15-Weekly-AI-and-Tech-News-Roundup.html"
 categories: ["AI", "GitHub Copilot", "ML", "Azure", "Coding", "DevOps", "Security"]
 tags: ["Agentic AI", "AI", "AI Agents", "Application Modernization", "Azure", "CI/CD", "Cloud Automation", "Coding", "Developer Productivity", "DevOps", "GitHub Copilot", "Machine Learning", "Microsoft Fabric", "ML", "OpenAI GPT 5.2", "Roundups", "Security", "Supply Chain Security", "VS Code"]
 tags_normalized: ["agentic ai", "ai", "ai agents", "application modernization", "azure", "cislashcd", "cloud automation", "coding", "developer productivity", "devops", "github copilot", "machine learning", "microsoft fabric", "ml", "openai gpt 5dot2", "roundups", "security", "supply chain security", "vs code"]

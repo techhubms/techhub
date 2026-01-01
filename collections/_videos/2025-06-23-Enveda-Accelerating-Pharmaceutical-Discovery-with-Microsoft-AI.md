@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Cloud YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCSgzRJMqIiCNtoM6Q7Q9Lqw"
 date: 2025-06-23 14:00:22 +00:00
-permalink: "/videos/2025-06-23-Enveda-Accelerating-Pharmaceutical-Discovery-with-Microsoft-AI.html"
+permalink: "/2025-06-23-Enveda-Accelerating-Pharmaceutical-Discovery-with-Microsoft-AI.html"
 categories: ["AI"]
 tags: ["AI", "AI Applications", "AI in Healthcare", "AI Transformation", "Chemical Informatics", "Clinical Trials", "Drug Discovery", "Enveda", "Life Sciences", "Microsoft AI", "Microsoft Cloud", "Pharmaceutical Innovation", "Videos", "Viswa Colluru"]
 tags_normalized: ["ai", "ai applications", "ai in healthcare", "ai transformation", "chemical informatics", "clinical trials", "drug discovery", "enveda", "life sciences", "microsoft ai", "microsoft cloud", "pharmaceutical innovation", "videos", "viswa colluru"]

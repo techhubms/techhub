@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft DevBlog"
 feed_url: "https://devblogs.microsoft.com/semantic-kernel/feed/"
 date: 2025-06-05 09:44:38 +00:00
-permalink: "/news/2025-06-05-Enhancing-Plugin-Metadata-Management-with-SemanticPluginForge.html"
+permalink: "/2025-06-05-Enhancing-Plugin-Metadata-Management-with-SemanticPluginForge.html"
 categories: ["AI", "Coding"]
 tags: [".NET", "AI", "Coding", "Dynamic Metadata", "Function Calling", "IPluginMetadataProvider", "LLM", "News", "NuGet", "Open Source Tools", "Plugin Metadata", "Semantic Kernel", "SemanticPluginForge", "Tools"]
 tags_normalized: ["dotnet", "ai", "coding", "dynamic metadata", "function calling", "ipluginmetadataprovider", "llm", "news", "nuget", "open source tools", "plugin metadata", "semantic kernel", "semanticpluginforge", "tools"]

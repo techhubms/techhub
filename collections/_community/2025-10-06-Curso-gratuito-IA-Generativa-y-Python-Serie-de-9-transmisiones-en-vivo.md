@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-10-06 18:55:15 +00:00
-permalink: "/community/2025-10-06-Curso-gratuito-IA-Generativa-y-Python-Serie-de-9-transmisiones-en-vivo.html"
+permalink: "/2025-10-06-Curso-gratuito-IA-Generativa-y-Python-Serie-de-9-transmisiones-en-vivo.html"
 categories: ["AI", "Azure", "Coding", "Security"]
 tags: ["Agentes De IA", "AI", "Autogen", "Azure", "Azure AI Content Safety", "Azure AI Search", "Coding", "Community", "Embeddings", "Evaluación ML", "FastMCP", "IA Generativa", "Langchain", "Langgraph", "LLM", "MCP", "Modelos De Lenguaje", "Modelos De Visión", "OpenAI SDK", "Pydantic AI", "Python", "RAG", "Security", "Seguridad En IA", "Semantic Kernel", "Structured Outputs", "Tool Calling", "Vector Search"]
 tags_normalized: ["agentes de ia", "ai", "autogen", "azure", "azure ai content safety", "azure ai search", "coding", "community", "embeddings", "evaluacin ml", "fastmcp", "ia generativa", "langchain", "langgraph", "llm", "mcp", "modelos de lenguaje", "modelos de visin", "openai sdk", "pydantic ai", "python", "rag", "security", "seguridad en ia", "semantic kernel", "structured outputs", "tool calling", "vector search"]

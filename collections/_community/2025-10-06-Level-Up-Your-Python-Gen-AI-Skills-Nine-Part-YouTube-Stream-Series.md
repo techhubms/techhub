@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-10-06 17:46:34 +00:00
-permalink: "/community/2025-10-06-Level-Up-Your-Python-Gen-AI-Skills-Nine-Part-YouTube-Stream-Series.html"
+permalink: "/2025-10-06-Level-Up-Your-Python-Gen-AI-Skills-Nine-Part-YouTube-Stream-Series.html"
 categories: ["AI", "Azure", "Coding"]
 tags: ["Agent Frameworks", "AI", "AI Content Safety", "AI Evaluation SDK", "Azure", "Azure AI Search", "Azure AI Services", "Coding", "Community", "Full Stack AI", "Generative AI", "LangChain", "Large Language Models", "LLM", "MCP", "Prompt Engineering", "Python", "RAG", "Retrieval Augmented Generation", "Semantic Kernel", "Structured Outputs", "Vector Embeddings", "Vision Models"]
 tags_normalized: ["agent frameworks", "ai", "ai content safety", "ai evaluation sdk", "azure", "azure ai search", "azure ai services", "coding", "community", "full stack ai", "generative ai", "langchain", "large language models", "llm", "mcp", "prompt engineering", "python", "rag", "retrieval augmented generation", "semantic kernel", "structured outputs", "vector embeddings", "vision models"]

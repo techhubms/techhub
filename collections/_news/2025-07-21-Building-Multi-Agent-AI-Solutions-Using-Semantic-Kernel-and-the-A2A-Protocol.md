@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft DevBlog"
 feed_url: "https://devblogs.microsoft.com/semantic-kernel/feed/"
 date: 2025-07-21 08:10:23 +00:00
-permalink: "/news/2025-07-21-Building-Multi-Agent-AI-Solutions-Using-Semantic-Kernel-and-the-A2A-Protocol.html"
+permalink: "/2025-07-21-Building-Multi-Agent-AI-Solutions-Using-Semantic-Kernel-and-the-A2A-Protocol.html"
 categories: ["AI", "Azure", "Coding"]
 tags: ["A2A", "A2A Protocol", "Agent Orchestration", "AI", "Azure", "Azure AI Foundry", "Azure Functions", "Coding", "DevTools", "Distributed AI", "Enterprise AI", "Gradio", "MCP", "Microservices", "Microsoft AI", "Multi Agent Systems", "News", "Playwright", "Python", "SDK", "Semantic Kernel"]
 tags_normalized: ["a2a", "a2a protocol", "agent orchestration", "ai", "azure", "azure ai foundry", "azure functions", "coding", "devtools", "distributed ai", "enterprise ai", "gradio", "mcp", "microservices", "microsoft ai", "multi agent systems", "news", "playwright", "python", "sdk", "semantic kernel"]

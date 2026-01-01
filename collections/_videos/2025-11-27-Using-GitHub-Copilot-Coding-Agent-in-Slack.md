@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "GitHub YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ"
 date: 2025-11-27 16:48:43 +00:00
-permalink: "/videos/2025-11-27-Using-GitHub-Copilot-Coding-Agent-in-Slack.html"
+permalink: "/2025-11-27-Using-GitHub-Copilot-Coding-Agent-in-Slack.html"
 categories: ["AI", "GitHub Copilot"]
 tags: ["AI", "AI Integration", "ChatOps", "Code Automation", "Coding Agent", "Collaboration", "Conversation To Code", "Developer Tools", "GitHub", "GitHub App", "GitHub Copilot", "Pull Requests", "Slack", "Software Development", "Videos", "Workflow Automation"]
 tags_normalized: ["ai", "ai integration", "chatops", "code automation", "coding agent", "collaboration", "conversation to code", "developer tools", "github", "github app", "github copilot", "pull requests", "slack", "software development", "videos", "workflow automation"]

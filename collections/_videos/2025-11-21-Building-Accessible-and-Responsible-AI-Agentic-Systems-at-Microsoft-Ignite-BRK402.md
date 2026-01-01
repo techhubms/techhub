@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Events YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
 date: 2025-11-21 08:09:41 +00:00
-permalink: "/videos/2025-11-21-Building-Accessible-and-Responsible-AI-Agentic-Systems-at-Microsoft-Ignite-BRK402.html"
+permalink: "/2025-11-21-Building-Accessible-and-Responsible-AI-Agentic-Systems-at-Microsoft-Ignite-BRK402.html"
 categories: ["AI"]
 tags: ["Agentic AI", "AI", "AI Accessibility", "AI Safety", "Alternative Text", "Data Accuracy", "Data Governance", "Developer Tools", "GitHub Accessibility Scanner", "Microsoft Ignite", "MSIgnite", "Other", "Python", "Red Teaming", "Responsible AI", "Risk Identification", "Videos", "Visual Accessibility"]
 tags_normalized: ["agentic ai", "ai", "ai accessibility", "ai safety", "alternative text", "data accuracy", "data governance", "developer tools", "github accessibility scanner", "microsoft ignite", "msignite", "other", "python", "red teaming", "responsible ai", "risk identification", "videos", "visual accessibility"]

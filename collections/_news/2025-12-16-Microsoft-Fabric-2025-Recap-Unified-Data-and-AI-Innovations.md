@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Fabric Blog"
 feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
 date: 2025-12-16 09:00:00 +00:00
-permalink: "/news/2025-12-16-Microsoft-Fabric-2025-Recap-Unified-Data-and-AI-Innovations.html"
+permalink: "/2025-12-16-Microsoft-Fabric-2025-Recap-Unified-Data-and-AI-Innovations.html"
 categories: ["AI", "Azure", "Coding", "DevOps", "ML", "Security"]
 tags: ["AI", "AI Functions", "Azure", "Azure Data Factory", "Azure SQL", "Coding", "Copilot", "Data Engineering", "Data Governance", "Data Science", "DevOps", "Fabric Cicd", "Fabric CLI", "Fabric Data Days", "Microsoft Fabric", "Migration Assistant", "ML", "Modernization", "News", "OneLake", "Outbound Access Protection", "Private Links", "Professional Developer Tools", "Real Time Intelligence", "Role Based Data Access", "Security", "SQL Server", "Terraform", "VS Code"]
 tags_normalized: ["ai", "ai functions", "azure", "azure data factory", "azure sql", "coding", "copilot", "data engineering", "data governance", "data science", "devops", "fabric cicd", "fabric cli", "fabric data days", "microsoft fabric", "migration assistant", "ml", "modernization", "news", "onelake", "outbound access protection", "private links", "professional developer tools", "real time intelligence", "role based data access", "security", "sql server", "terraform", "vs code"]

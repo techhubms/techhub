@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Azure SDK Blog"
 feed_url: "https://devblogs.microsoft.com/azure-sdk/feed/"
 date: 2025-11-19 16:00:44 +00:00
-permalink: "/news/2025-11-19-Azure-Developer-CLI-azd-November-2025-Release-Container-Apps-GA-Layered-Provisioning-Extension-Framework-and-Aspire-13.html"
+permalink: "/2025-11-19-Azure-Developer-CLI-azd-November-2025-Release-Container-Apps-GA-Layered-Provisioning-Extension-Framework-and-Aspire-13.html"
 categories: ["AI", "Azure", "Coding", "DevOps"]
 tags: [".NET", ".NET 10", "AI", "Aspire 13", "Azd", "Azure", "Azure AI Search", "Azure Communication Services", "Azure Container Apps", "Azure Developer CLI", "Azure Functions", "Azure SDK", "CI/CD", "Codespaces", "Coding", "Copilot Studio", "DevOps", "Docker", "Event Grid", "Extension Framework", "gRPC API", "Java", "JavaScript", "Kubernetes", "Layered Provisioning", "News", "Python", "Semantic Kernel", "Typescript", "VS Code"]
 tags_normalized: ["dotnet", "dotnet 10", "ai", "aspire 13", "azd", "azure", "azure ai search", "azure communication services", "azure container apps", "azure developer cli", "azure functions", "azure sdk", "cislashcd", "codespaces", "coding", "copilot studio", "devops", "docker", "event grid", "extension framework", "grpc api", "java", "javascript", "kubernetes", "layered provisioning", "news", "python", "semantic kernel", "typescript", "vs code"]

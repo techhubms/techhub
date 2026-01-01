@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/feed/"
 date: 2025-09-30 19:07:46 +00:00
-permalink: "/news/2025-09-30-Spec-driven-Development-with-Markdown-and-GitHub-Copilot-An-Experimental-AI-Coding-Workflow.html"
+permalink: "/2025-09-30-Spec-driven-Development-with-Markdown-and-GitHub-Copilot-An-Experimental-AI-Coding-Workflow.html"
 categories: ["AI", "Coding", "GitHub Copilot"]
 tags: ["AI", "AI & ML", "AI Coding Agents", "AI Development Workflow", "Automation", "CLIs", "Coding", "Command Line Tools", "Compile.prompt.md", "Copilot Instructions.md", "Generative AI", "GitHub Brain MCP Server", "GitHub Copilot", "Go Language", "Linting", "Main.md", "Markdown", "Markdown Programming", "MCP", "News", "README.md", "Spec Driven Development", "VS Code"]
 tags_normalized: ["ai", "ai and ml", "ai coding agents", "ai development workflow", "automation", "clis", "coding", "command line tools", "compiledotpromptdotmd", "copilot instructionsdotmd", "generative ai", "github brain mcp server", "github copilot", "go language", "linting", "maindotmd", "markdown", "markdown programming", "mcp", "news", "readmedotmd", "spec driven development", "vs code"]

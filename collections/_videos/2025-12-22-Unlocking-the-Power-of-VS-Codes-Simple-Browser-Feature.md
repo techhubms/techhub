@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Visual Studio Code YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SLNwkd3w"
 date: 2025-12-22 16:13:08 +00:00
-permalink: "/videos/2025-12-22-Unlocking-the-Power-of-VS-Codes-Simple-Browser-Feature.html"
+permalink: "/2025-12-22-Unlocking-the-Power-of-VS-Codes-Simple-Browser-Feature.html"
 categories: ["AI", "Coding"]
 tags: ["AI", "AI Integration", "Browser Logs", "Coding", "Developer Tools", "Element Inspection", "Error Debugging", "Local Development", "Productivity Tips", "Simple Browser", "Videos", "VS Code", "Web Development"]
 tags_normalized: ["ai", "ai integration", "browser logs", "coding", "developer tools", "element inspection", "error debugging", "local development", "productivity tips", "simple browser", "videos", "vs code", "web development"]

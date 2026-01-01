@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Visual Studio Code YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SLNwkd3w"
 date: 2025-09-08 07:00:18 +00:00
-permalink: "/videos/2025-09-08-Extending-VS-Code-with-the-Language-Model-Chat-Provider-BYOK-API-Insights-from-Logan-Ramos.html"
+permalink: "/2025-09-08-Extending-VS-Code-with-the-Language-Model-Chat-Provider-BYOK-API-Insights-from-Logan-Ramos.html"
 categories: ["AI", "Coding"]
 tags: ["AI", "Anthropic", "API", "BYOK", "Coding", "Developer Tools", "Extension Development", "Google", "IDE", "Language Model API", "Language Models", "Model Integration", "OpenAI", "Videos", "VS Code", "VS Code API", "Xai"]
 tags_normalized: ["ai", "anthropic", "api", "byok", "coding", "developer tools", "extension development", "google", "ide", "language model api", "language models", "model integration", "openai", "videos", "vs code", "vs code api", "xai"]

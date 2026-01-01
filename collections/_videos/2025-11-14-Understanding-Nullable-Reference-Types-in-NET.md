@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "DotNet YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw"
 date: 2025-11-14 08:30:06 +00:00
-permalink: "/videos/2025-11-14-Understanding-Nullable-Reference-Types-in-NET.html"
+permalink: "/2025-11-14-Understanding-Nullable-Reference-Types-in-NET.html"
 categories: ["Coding"]
 tags: [".NET", ".NET Conf", "C#", "C# 8.0", "Code Safety", "Coding", "Default Project Settings", "Modern C# Features", "Non Nullable References", "Nullability", "Nullable Reference Types", "Programming Best Practices", "Type System", "Videos"]
 tags_normalized: ["dotnet", "dotnet conf", "csharp", "csharp 8dot0", "code safety", "coding", "default project settings", "modern csharp features", "non nullable references", "nullability", "nullable reference types", "programming best practices", "type system", "videos"]

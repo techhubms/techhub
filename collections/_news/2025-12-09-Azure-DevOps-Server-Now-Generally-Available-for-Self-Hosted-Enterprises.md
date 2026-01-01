@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft DevOps Blog"
 feed_url: "https://devblogs.microsoft.com/devops/feed/"
 date: 2025-12-09 20:39:17 +00:00
-permalink: "/news/2025-12-09-Azure-DevOps-Server-Now-Generally-Available-for-Self-Hosted-Enterprises.html"
+permalink: "/2025-12-09-Azure-DevOps-Server-Now-Generally-Available-for-Self-Hosted-Enterprises.html"
 categories: ["DevOps"]
 tags: ["Azure DevOps Server", "DevOps", "Enterprise Software", "General Availability", "Installation Guide", "Microsoft Server Products", "News", "Production Readiness", "Release Notes", "Security Compliance", "Self Hosted Solutions", "Team Foundation Server", "TFS Upgrade"]
 tags_normalized: ["azure devops server", "devops", "enterprise software", "general availability", "installation guide", "microsoft server products", "news", "production readiness", "release notes", "security compliance", "self hosted solutions", "team foundation server", "tfs upgrade"]

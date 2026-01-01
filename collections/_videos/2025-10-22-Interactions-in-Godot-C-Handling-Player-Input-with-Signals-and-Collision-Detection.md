@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "DotNet YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw"
 date: 2025-10-22 16:30:04 +00:00
-permalink: "/videos/2025-10-22-Interactions-in-Godot-C-Handling-Player-Input-with-Signals-and-Collision-Detection.html"
+permalink: "/2025-10-22-Interactions-in-Godot-C-Handling-Player-Input-with-Signals-and-Collision-Detection.html"
 categories: ["Coding"]
 tags: [".NET", "Area3D", "C#", "Coding", "Collision Detection", "Crafting System", "Custom Signals", "Game Development", "Game Manager", "Godot", "Inventory System", "Microsoft Developer", "Player Interaction", "Scripting", "Signals", "UI Communication", "Videos", "VS Code"]
 tags_normalized: ["dotnet", "area3d", "csharp", "coding", "collision detection", "crafting system", "custom signals", "game development", "game manager", "godot", "inventory system", "microsoft developer", "player interaction", "scripting", "signals", "ui communication", "videos", "vs code"]

@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Events YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
 date: 2025-11-26 21:27:24 +00:00
-permalink: "/videos/2025-11-26-Azure-AI-Infrastructure-Updates-for-High-Performance-Workloads.html"
+permalink: "/2025-11-26-Azure-AI-Infrastructure-Updates-for-High-Performance-Workloads.html"
 categories: ["AI", "Azure"]
 tags: ["Agent Mode", "AI", "Anthropic Models", "Azure", "Azure AI Infra", "Azure AI Infra Updates To Power Frontier And Enterprise Workloads | BRK179", "BRK179", "Datacenter Cooling", "English (us)", "Enterprise Inferencing", "F5n1", "Hardware Software Codesign", "Ignite", "LLAMA 70B", "Microsoft", "Microsoft Ignite", "Migrate And Modernize Your Estate", "Ms Ignite", "Msft Ignite", "NC H100 VMs", "NC RTX Blackwell", "ND GB200 VMs", "ND GB300 VMs", "NVIDIA Grace Blackwell", "Power Optimization", "Quantum 2 InfiniBand", "Technical", "Videos"]
 tags_normalized: ["agent mode", "ai", "anthropic models", "azure", "azure ai infra", "azure ai infra updates to power frontier and enterprise workloads pipe brk179", "brk179", "datacenter cooling", "english us", "enterprise inferencing", "f5n1", "hardware software codesign", "ignite", "llama 70b", "microsoft", "microsoft ignite", "migrate and modernize your estate", "ms ignite", "msft ignite", "nc h100 vms", "nc rtx blackwell", "nd gb200 vms", "nd gb300 vms", "nvidia grace blackwell", "power optimization", "quantum 2 infiniband", "technical", "videos"]

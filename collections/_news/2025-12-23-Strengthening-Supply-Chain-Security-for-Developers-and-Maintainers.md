@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/feed/"
 date: 2025-12-23 23:52:08 +00:00
-permalink: "/news/2025-12-23-Strengthening-Supply-Chain-Security-for-Developers-and-Maintainers.html"
+permalink: "/2025-12-23-Strengthening-Supply-Chain-Security-for-Developers-and-Maintainers.html"
 categories: ["DevOps", "Security"]
 tags: ["Artifact Validation", "Branch Protection", "CI/CD", "Code Scanning", "Credentials", "Dependency Review", "DevOps", "GitHub", "GitHub Security Lab", "Malware", "Microsoft", "Multi Factor Authentication", "News", "npm", "OIDC", "Security", "Supply Chain", "Supply Chain Security", "Token Management", "Trusted Publishing"]
 tags_normalized: ["artifact validation", "branch protection", "cislashcd", "code scanning", "credentials", "dependency review", "devops", "github", "github security lab", "malware", "microsoft", "multi factor authentication", "news", "npm", "oidc", "security", "supply chain", "supply chain security", "token management", "trusted publishing"]

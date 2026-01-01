@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/feed/"
 date: 2025-08-04 16:00:00 +00:00
-permalink: "/news/2025-08-04-Automate-Your-Project-with-GitHub-Models-in-Actions-AI-Integration-for-Workflows.html"
+permalink: "/2025-08-04-Automate-Your-Project-with-GitHub-Models-in-Actions-AI-Integration-for-Workflows.html"
 categories: ["AI", "DevOps", "GitHub Copilot"]
 tags: ["AI", "AI & ML", "AI Inference Action", "AI Integration", "Automation", "CLI", "DevOps", "Generative AI", "Gh Models Extension", "GitHub Actions", "GitHub Copilot", "GitHub Models", "Issue Triage", "News", "Permissions", "Prompt Engineering", "Pull Requests", "Release Notes Automation", "Summarization", "Workflow Automation"]
 tags_normalized: ["ai", "ai and ml", "ai inference action", "ai integration", "automation", "cli", "devops", "generative ai", "gh models extension", "github actions", "github copilot", "github models", "issue triage", "news", "permissions", "prompt engineering", "pull requests", "release notes automation", "summarization", "workflow automation"]

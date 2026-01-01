@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft DevBlog"
 feed_url: "https://devblogs.microsoft.com/devops/feed/"
 date: 2025-07-21 16:17:37 +00:00
-permalink: "/news/2025-07-21-Azure-Developer-CLI-Build-Once-Deploy-Everywhere-from-Dev-to-Prod-with-One-Click.html"
+permalink: "/2025-07-21-Azure-Developer-CLI-Build-Once-Deploy-Everywhere-from-Dev-to-Prod-with-One-Click.html"
 categories: ["Azure", "Coding", "DevOps"]
 tags: ["Automation", "Azd", "Azure", "Azure & Cloud", "Azure Developer CLI", "Azure Developer CLI (azd)", "Bicep", "Build Artifacts", "CI/CD", "Cloud Deployment", "Coding", "Conditional Deployment", "DevOps", "Environment Variables", "GitHub Actions", "IaC", "News"]
 tags_normalized: ["automation", "azd", "azure", "azure and cloud", "azure developer cli", "azure developer cli azd", "bicep", "build artifacts", "cislashcd", "cloud deployment", "coding", "conditional deployment", "devops", "environment variables", "github actions", "iac", "news"]

@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Reddit CSharp"
 feed_url: "https://www.reddit.com/r/csharp/.rss"
 date: 2025-08-04 13:39:41 +00:00
-permalink: "/community/2025-08-04-Split-CommandQuery-Classes-vs-Monolithic-Repository-in-C-Projects.html"
+permalink: "/2025-08-04-Split-CommandQuery-Classes-vs-Monolithic-Repository-in-C-Projects.html"
 categories: ["Coding"]
 tags: ["Backend Development", "C#", "Coding", "Command Query Segregation", "Community", "CQRS", "Design Patterns", "File Organization", "Maintainability", "Project Structure", "Repository Pattern", "Software Practices"]
 tags_normalized: ["backend development", "csharp", "coding", "command query segregation", "community", "cqrs", "design patterns", "file organization", "maintainability", "project structure", "repository pattern", "software practices"]

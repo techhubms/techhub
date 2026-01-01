@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft DevBlog"
 feed_url: "https://devblogs.microsoft.com/foundry/feed/"
 date: 2025-08-06 15:00:56 +00:00
-permalink: "/news/2025-08-06-Announcing-the-Browser-Automation-Tool-Preview-in-Azure-AI-Foundry-Agent-Service.html"
+permalink: "/2025-08-06-Announcing-the-Browser-Automation-Tool-Preview-in-Azure-AI-Foundry-Agent-Service.html"
 categories: ["AI", "Azure", "Coding"]
 tags: ["Agent Setup", "Agentic AI", "AI", "AI Agent", "AI Agents", "API Integration", "Automation Security", "Azure", "Azure AI Foundry", "Azure SDK", "Azure Subscription", "Browser Automation Tool", "Cloud Browser Automation", "Code Sample", "Coding", "Form Automation", "Isolated Execution", "Multi Turn AI Agents", "Natural Language Automation", "Natural Language Prompts", "News", "Playwright", "Playwright Workspaces", "Python SDK", "Web UI Automation"]
 tags_normalized: ["agent setup", "agentic ai", "ai", "ai agent", "ai agents", "api integration", "automation security", "azure", "azure ai foundry", "azure sdk", "azure subscription", "browser automation tool", "cloud browser automation", "code sample", "coding", "form automation", "isolated execution", "multi turn ai agents", "natural language automation", "natural language prompts", "news", "playwright", "playwright workspaces", "python sdk", "web ui automation"]

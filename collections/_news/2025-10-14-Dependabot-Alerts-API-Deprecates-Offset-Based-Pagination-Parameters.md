@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/changelog/feed/"
 date: 2025-10-14 14:38:56 +00:00
-permalink: "/news/2025-10-14-Dependabot-Alerts-API-Deprecates-Offset-Based-Pagination-Parameters.html"
+permalink: "/2025-10-14-Dependabot-Alerts-API-Deprecates-Offset-Based-Pagination-Parameters.html"
 categories: ["DevOps", "Security"]
 tags: ["API Changes", "API Documentation", "Cursor Based Pagination", "Dependabot", "DevOps", "DevOps Practices", "GitHub", "News", "Pagination", "REST API", "Retired", "Security", "Security Alerts", "Supply Chain Security"]
 tags_normalized: ["api changes", "api documentation", "cursor based pagination", "dependabot", "devops", "devops practices", "github", "news", "pagination", "rest api", "retired", "security", "security alerts", "supply chain security"]

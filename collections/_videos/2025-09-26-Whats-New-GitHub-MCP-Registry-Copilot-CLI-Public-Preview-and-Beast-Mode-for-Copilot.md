@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "GitHub YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ"
 date: 2025-09-26 23:13:32 +00:00
-permalink: "/videos/2025-09-26-Whats-New-GitHub-MCP-Registry-Copilot-CLI-Public-Preview-and-Beast-Mode-for-Copilot.html"
+permalink: "/2025-09-26-Whats-New-GitHub-MCP-Registry-Copilot-CLI-Public-Preview-and-Beast-Mode-for-Copilot.html"
 categories: ["AI", "GitHub Copilot"]
 tags: ["AI", "Beast Mode", "Claude Opus 4.1", "Copilot CLI", "Copilot Features", "Developer Tools", "GitHub", "GitHub Copilot", "GitHub MCP Registry", "GPT 5 Codex", "Machine Learning", "MCP", "Public Preview", "Videos", "VS Code"]
 tags_normalized: ["ai", "beast mode", "claude opus 4dot1", "copilot cli", "copilot features", "developer tools", "github", "github copilot", "github mcp registry", "gpt 5 codex", "machine learning", "mcp", "public preview", "videos", "vs code"]

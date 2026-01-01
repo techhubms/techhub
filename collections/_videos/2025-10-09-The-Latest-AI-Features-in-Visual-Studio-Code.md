@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Visual Studio Code YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SLNwkd3w"
 date: 2025-10-09 17:41:40 +00:00
-permalink: "/videos/2025-10-09-The-Latest-AI-Features-in-Visual-Studio-Code.html"
+permalink: "/2025-10-09-The-Latest-AI-Features-in-Visual-Studio-Code.html"
 categories: ["AI", "Coding", "GitHub Copilot"]
 tags: ["AI", "AI Integration", "AI Merge Conflict", "AI Models", "Claude Sonnet", "Code Editing", "Coding", "Extension Tools", "GitHub Copilot", "GPT 5", "IDE Updates", "MCP Servers", "Plan Mode", "Productivity Tools", "Suggested Actions", "Videos", "VS Code"]
 tags_normalized: ["ai", "ai integration", "ai merge conflict", "ai models", "claude sonnet", "code editing", "coding", "extension tools", "github copilot", "gpt 5", "ide updates", "mcp servers", "plan mode", "productivity tools", "suggested actions", "videos", "vs code"]

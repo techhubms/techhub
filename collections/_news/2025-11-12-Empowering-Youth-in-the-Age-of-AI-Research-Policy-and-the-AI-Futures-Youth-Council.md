@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft News"
 feed_url: "https://news.microsoft.com/source/feed/"
 date: 2025-11-12 17:28:19 +00:00
-permalink: "/news/2025-11-12-Empowering-Youth-in-the-Age-of-AI-Research-Policy-and-the-AI-Futures-Youth-Council.html"
+permalink: "/2025-11-12-Empowering-Youth-in-the-Age-of-AI-Research-Policy-and-the-AI-Futures-Youth-Council.html"
 categories: ["AI"]
 tags: ["Age Assurance", "AI", "AI Companions", "AI Policy", "Child Privacy", "Company News", "Digital Identity", "Digital Wellbeing", "Family Safety", "Global Research", "Guardrails", "Microsoft", "News", "On The Issues", "Online Safety", "Parental Guidance", "Responsible AI", "Technology Regulation", "Youth And Technology"]
 tags_normalized: ["age assurance", "ai", "ai companions", "ai policy", "child privacy", "company news", "digital identity", "digital wellbeing", "family safety", "global research", "guardrails", "microsoft", "news", "on the issues", "online safety", "parental guidance", "responsible ai", "technology regulation", "youth and technology"]

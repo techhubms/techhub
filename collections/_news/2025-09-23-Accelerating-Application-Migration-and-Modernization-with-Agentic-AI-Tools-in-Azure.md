@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The Azure Blog"
 feed_url: "https://azure.microsoft.com/en-us/blog/feed/"
 date: 2025-09-23 13:00:00 +00:00
-permalink: "/news/2025-09-23-Accelerating-Application-Migration-and-Modernization-with-Agentic-AI-Tools-in-Azure.html"
+permalink: "/2025-09-23-Accelerating-Application-Migration-and-Modernization-with-Agentic-AI-Tools-in-Azure.html"
 categories: ["AI", "Azure", "Coding", "DevOps", "GitHub Copilot"]
 tags: [".NET", "Agentic AI", "AI", "AI + Machine Learning", "AI Powered Tools", "App Modernization Agents", "Application Assessment", "Application Modernization", "Azure", "Azure Accelerate", "Azure Migrate", "CI/CD", "Cloud Migration", "Coding", "Copilot", "Database Migration", "Databases", "DevOps", "Generative AI", "GitHub Copilot", "Hybrid + Multicloud", "Java", "Legacy Systems", "Management And Governance", "Microsoft Azure", "Migration", "News", "PostgreSQL", "SQL Server"]
 tags_normalized: ["dotnet", "agentic ai", "ai", "ai plus machine learning", "ai powered tools", "app modernization agents", "application assessment", "application modernization", "azure", "azure accelerate", "azure migrate", "cislashcd", "cloud migration", "coding", "copilot", "database migration", "databases", "devops", "generative ai", "github copilot", "hybrid plus multicloud", "java", "legacy systems", "management and governance", "microsoft azure", "migration", "news", "postgresql", "sql server"]

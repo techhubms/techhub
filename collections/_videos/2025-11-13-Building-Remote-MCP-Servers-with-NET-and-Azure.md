@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "DotNet YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw"
 date: 2025-11-13 17:40:46 +00:00
-permalink: "/videos/2025-11-13-Building-Remote-MCP-Servers-with-NET-and-Azure.html"
+permalink: "/2025-11-13-Building-Remote-MCP-Servers-with-NET-and-Azure.html"
 categories: ["AI", "Azure", "Coding"]
 tags: [".NET", ".NET 10", ".NET Aspire 13", ".NET MAUI 10", "AI", "ASP.NET Core 10", "Automation", "Azure", "C# 14", "Cloud Hosting", "Coding", "Cross Platform Development", "F# 10", "Full Stack Development", "MCP", "Microsoft", "Orchestration", "Remote Servers", "Scalability", "Tool Integration", "Videos", "VS"]
 tags_normalized: ["dotnet", "dotnet 10", "dotnet aspire 13", "dotnet maui 10", "ai", "aspdotnet core 10", "automation", "azure", "csharp 14", "cloud hosting", "coding", "cross platform development", "fsharp 10", "full stack development", "mcp", "microsoft", "orchestration", "remote servers", "scalability", "tool integration", "videos", "vs"]

@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-09-08 20:37:35 +00:00
-permalink: "/community/2025-09-08-Build-Modular-Agents-with-Logic-Apps-MCP-Servers-Public-Preview.html"
+permalink: "/2025-09-08-Build-Modular-Agents-with-Logic-Apps-MCP-Servers-Public-Preview.html"
 categories: ["AI", "Azure"]
 tags: ["Agent Solutions", "AI", "API Integration", "Azure", "Azure API Center", "Azure Logic Apps", "Cloud Integration", "Community", "Connectors", "Easy Auth", "Enterprise Integration", "MCP Server", "Microsoft Entra", "Modular Tools", "Public Preview", "Workflow Automation"]
 tags_normalized: ["agent solutions", "ai", "api integration", "azure", "azure api center", "azure logic apps", "cloud integration", "community", "connectors", "easy auth", "enterprise integration", "mcp server", "microsoft entra", "modular tools", "public preview", "workflow automation"]

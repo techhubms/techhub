@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Developer YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
 date: 2025-08-20 20:45:25 +00:00
-permalink: "/videos/2025-08-20-Mistral-Document-AI-Integration-with-Azure-AI-Foundry.html"
+permalink: "/2025-08-20-Mistral-Document-AI-Integration-with-Azure-AI-Foundry.html"
 categories: ["AI", "Azure"]
 tags: ["AI", "AI Agents", "AI Model Deployment", "Azure", "Azure AI", "Azure AI Foundry", "Cloud Computing", "Database Integration", "Dev", "Development", "Document Intelligence", "Handwritten Notes", "Microsoft", "Microsoft Azure", "Mistral Document AI", "Optical Character Recognition", "PDF Parsing", "RAG Workflows", "Sample Code", "Structured JSON Output", "Tech", "Technology", "Unstructured Data", "Videos"]
 tags_normalized: ["ai", "ai agents", "ai model deployment", "azure", "azure ai", "azure ai foundry", "cloud computing", "database integration", "dev", "development", "document intelligence", "handwritten notes", "microsoft", "microsoft azure", "mistral document ai", "optical character recognition", "pdf parsing", "rag workflows", "sample code", "structured json output", "tech", "technology", "unstructured data", "videos"]

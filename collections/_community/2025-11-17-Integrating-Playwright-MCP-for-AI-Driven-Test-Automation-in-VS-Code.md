@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-11-17 17:15:13 +00:00
-permalink: "/community/2025-11-17-Integrating-Playwright-MCP-for-AI-Driven-Test-Automation-in-VS-Code.html"
+permalink: "/2025-11-17-Integrating-Playwright-MCP-for-AI-Driven-Test-Automation-in-VS-Code.html"
 categories: ["AI", "Coding"]
 tags: ["Adaptive Testing", "AI", "AI Assisted Testing", "Automation Framework", "Browser Testing", "Coding", "Community", "Copilot Chat", "Dynamic Debugging", "JavaScript", "MCP", "Microsoft", "Node.js", "Playwright", "Test Automation", "Test Generation", "VS Code"]
 tags_normalized: ["adaptive testing", "ai", "ai assisted testing", "automation framework", "browser testing", "coding", "community", "copilot chat", "dynamic debugging", "javascript", "mcp", "microsoft", "nodedotjs", "playwright", "test automation", "test generation", "vs code"]

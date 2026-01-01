@@ -9,7 +9,7 @@ categories: ["AI", "GitHub Copilot"]
 feed_name: "Reddit Github Copilot"
 feed_url: "https://www.reddit.com/r/GithubCopilot.rss"
 date: 2025-04-24 19:04:44 +00:00
-permalink: "/community/2025-04-24-AMA-on-GitHub-Copilot-tomorrow-April-25.html"
+permalink: "/2025-04-24-AMA-on-GitHub-Copilot-tomorrow-April-25.html"
 viewing_mode: "external"
 tags: ["Agent Mode", "AI", "AI Agents", "AI Models", "Community", "Community Engagement", "Company Vision", "GitHub", "GitHub Copilot", "Reddit AMA", "Software Development", "VS Code"]
 tags_normalized: ["agent mode", "ai", "ai agents", "ai models", "community", "community engagement", "company vision", "github", "github copilot", "reddit ama", "software development", "vs code"]

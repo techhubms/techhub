@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft DevBlog"
 feed_url: "https://devblogs.microsoft.com/feed"
 date: 2025-05-21 17:00:09 +00:00
-permalink: "/news/2025-05-21-Connect-Once-Integrate-Anywhere-Model-Context-Protocol-MCP-for-AI-Integration.html"
+permalink: "/2025-05-21-Connect-Once-Integrate-Anywhere-Model-Context-Protocol-MCP-for-AI-Integration.html"
 categories: ["AI", "Azure", "Coding", "DevOps", "GitHub Copilot", "Security"]
 tags: ["Agent Mode", "AI", "AI Integration", "APIs", "Azure", "Azure API Management", "C# SDK", "Coding", "Developer Productivity", "DevOps", "GitHub Copilot", "MCP", "News", "OAuth 2.1", "Registry", "Security", "VS", "VS Code"]
 tags_normalized: ["agent mode", "ai", "ai integration", "apis", "azure", "azure api management", "csharp sdk", "coding", "developer productivity", "devops", "github copilot", "mcp", "news", "oauth 2dot1", "registry", "security", "vs", "vs code"]

@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Developer YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
 date: 2025-12-11 18:26:07 +00:00
-permalink: "/videos/2025-12-11-Whats-New-and-Generally-Available-in-SQL-Database-in-Microsoft-Fabric.html"
+permalink: "/2025-12-11-Whats-New-and-Generally-Available-in-SQL-Database-in-Microsoft-Fabric.html"
 categories: ["Azure", "ML"]
 tags: ["Azure", "Azure SQL", "Cloud Computing", "Cloud Data Platform", "Data Analytics", "Data Engineering", "Database Development", "Dev", "Development", "Fabric Roadmap", "Foundry", "General Availability", "Integration", "Microsoft", "Microsoft Fabric", "ML", "Sample Architecture", "SQL Database", "SQL Demo", "Tech", "Tech Release", "Technology", "Videos"]
 tags_normalized: ["azure", "azure sql", "cloud computing", "cloud data platform", "data analytics", "data engineering", "database development", "dev", "development", "fabric roadmap", "foundry", "general availability", "integration", "microsoft", "microsoft fabric", "ml", "sample architecture", "sql database", "sql demo", "tech", "tech release", "technology", "videos"]

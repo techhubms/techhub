@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-10-13 23:40:03 +00:00
-permalink: "/community/2025-10-13-Jump-Starting-Quantum-Computing-on-Azure.html"
+permalink: "/2025-10-13-Jump-Starting-Quantum-Computing-on-Azure.html"
 categories: ["AI", "Azure", "Coding"]
 tags: ["AI", "Azure", "Azure Quantum", "Azure Quantum Development Kit", "Cloud Quantum Computing", "CNOT Gate", "Coding", "Community", "Entanglement", "Hadamard Gate", "Python", "Qiskit", "Quantum Algorithm", "Quantum Circuit", "Quantum Computing", "Quantum Gates", "Quantum SDK", "Quantum Simulator", "Quantum Teleportation", "Quantum Workspace", "Qubit", "Shor's Algorithm", "Superposition", "VS Code"]
 tags_normalized: ["ai", "azure", "azure quantum", "azure quantum development kit", "cloud quantum computing", "cnot gate", "coding", "community", "entanglement", "hadamard gate", "python", "qiskit", "quantum algorithm", "quantum circuit", "quantum computing", "quantum gates", "quantum sdk", "quantum simulator", "quantum teleportation", "quantum workspace", "qubit", "shors algorithm", "superposition", "vs code"]

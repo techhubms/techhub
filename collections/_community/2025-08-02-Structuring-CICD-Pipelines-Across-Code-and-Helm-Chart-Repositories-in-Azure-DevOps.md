@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Reddit Azure DevOps"
 feed_url: "https://www.reddit.com/r/azuredevops/.rss"
 date: 2025-08-02 10:03:38 +00:00
-permalink: "/community/2025-08-02-Structuring-CICD-Pipelines-Across-Code-and-Helm-Chart-Repositories-in-Azure-DevOps.html"
+permalink: "/2025-08-02-Structuring-CICD-Pipelines-Across-Code-and-Helm-Chart-Repositories-in-Azure-DevOps.html"
 categories: ["Azure", "Coding", "DevOps"]
 tags: ["AKS", "Artifact Handoff", "Azure", "Azure Container Registry", "Azure DevOps", "Build Automation", "CI/CD", "Coding", "Community", "DevOps", "Docker", "Helm", "IaC", "Mono Repo", "Multi Repo CI/CD", "Pipelines", "Repository Structure", "YAML Pipelines"]
 tags_normalized: ["aks", "artifact handoff", "azure", "azure container registry", "azure devops", "build automation", "cislashcd", "coding", "community", "devops", "docker", "helm", "iac", "mono repo", "multi repo cislashcd", "pipelines", "repository structure", "yaml pipelines"]

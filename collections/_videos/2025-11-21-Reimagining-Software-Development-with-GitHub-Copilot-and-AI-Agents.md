@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Events YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
 date: 2025-11-21 08:24:03 +00:00
-permalink: "/videos/2025-11-21-Reimagining-Software-Development-with-GitHub-Copilot-and-AI-Agents.html"
+permalink: "/2025-11-21-Reimagining-Software-Development-with-GitHub-Copilot-and-AI-Agents.html"
 categories: ["AI", "Coding", "DevOps", "GitHub Copilot"]
 tags: ["Agentic DevOps", "AI", "AI Agents", "Automation", "Cloud Development", "Coding", "Copilot Controls", "Developer Productivity", "DevOps", "Enterprise Deployment", "GitHub", "GitHub Copilot", "InnovatewithAzureAIappsandagents", "Mission Control", "MSIgnite", "PagerDuty", "PR Integration", "Software Development", "SRE Agents", "Videos"]
 tags_normalized: ["agentic devops", "ai", "ai agents", "automation", "cloud development", "coding", "copilot controls", "developer productivity", "devops", "enterprise deployment", "github", "github copilot", "innovatewithazureaiappsandagents", "mission control", "msignite", "pagerduty", "pr integration", "software development", "sre agents", "videos"]

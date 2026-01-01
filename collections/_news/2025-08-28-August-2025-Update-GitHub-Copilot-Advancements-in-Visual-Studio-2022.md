@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/changelog/feed/"
 date: 2025-08-28 17:18:55 +00:00
-permalink: "/news/2025-08-28-August-2025-Update-GitHub-Copilot-Advancements-in-Visual-Studio-2022.html"
+permalink: "/2025-08-28-August-2025-Update-GitHub-Copilot-Advancements-in-Visual-Studio-2022.html"
 categories: ["AI", "Coding", "GitHub Copilot"]
 tags: ["AI", "AI Powered Development", "API Keys", "Code Suggestions", "Coding", "Copilot Chat", "Developer Productivity", "GitHub Copilot", "GPT 5", "IDE Integrations", "MCP", "Model Integration", "News", "Software Updates", "VS"]
 tags_normalized: ["ai", "ai powered development", "api keys", "code suggestions", "coding", "copilot chat", "developer productivity", "github copilot", "gpt 5", "ide integrations", "mcp", "model integration", "news", "software updates", "vs"]

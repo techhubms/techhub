@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/feed/"
 date: 2025-11-13 16:00:00 +00:00
-permalink: "/news/2025-11-13-How-AI-Is-Shaping-Language-Trends-in-Software-Development-Insights-from-GitHub-Next.html"
+permalink: "/2025-11-13-How-AI-Is-Shaping-Language-Trends-in-Software-Development-Insights-from-GitHub-Next.html"
 categories: ["AI", "Coding"]
 tags: ["Agents", "AI", "AI Development Tools", "AI Feedback Loop", "Bash Scripting", "Coding", "Developer Productivity", "Enterprise AI Adoption", "GitHub Next", "LLMs", "News", "News & Insights", "Octoverse", "Programming Languages", "Python", "Software Architecture", "Typed Languages", "Typescript", "WASM", "WebAssembly"]
 tags_normalized: ["agents", "ai", "ai development tools", "ai feedback loop", "bash scripting", "coding", "developer productivity", "enterprise ai adoption", "github next", "llms", "news", "news and insights", "octoverse", "programming languages", "python", "software architecture", "typed languages", "typescript", "wasm", "webassembly"]

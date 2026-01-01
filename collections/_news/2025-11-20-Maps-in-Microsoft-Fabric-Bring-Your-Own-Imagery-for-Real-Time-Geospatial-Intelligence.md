@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Fabric Blog"
 feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
 date: 2025-11-20 03:00:00 +00:00
-permalink: "/news/2025-11-20-Maps-in-Microsoft-Fabric-Bring-Your-Own-Imagery-for-Real-Time-Geospatial-Intelligence.html"
+permalink: "/2025-11-20-Maps-in-Microsoft-Fabric-Bring-Your-Own-Imagery-for-Real-Time-Geospatial-Intelligence.html"
 categories: ["Azure", "ML"]
 tags: ["Asset Tracking", "Azure", "Canopy Imagery", "Construction Monitoring", "Custom Labels", "Data Layers", "Data Visualization", "ESG Dashboards", "Geospatial Analytics", "Imagery", "Maps", "Microsoft Fabric", "ML", "News", "OneLake", "Org Apps", "Planetary Computer", "Raster Data", "Real Time Intelligence", "Site Monitoring", "Spatial Data", "Sustainability", "Vegetation Management"]
 tags_normalized: ["asset tracking", "azure", "canopy imagery", "construction monitoring", "custom labels", "data layers", "data visualization", "esg dashboards", "geospatial analytics", "imagery", "maps", "microsoft fabric", "ml", "news", "onelake", "org apps", "planetary computer", "raster data", "real time intelligence", "site monitoring", "spatial data", "sustainability", "vegetation management"]

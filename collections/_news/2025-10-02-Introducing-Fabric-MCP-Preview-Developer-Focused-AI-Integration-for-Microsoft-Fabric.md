@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Fabric Blog"
 feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
 date: 2025-10-02 15:00:00 +00:00
-permalink: "/news/2025-10-02-Introducing-Fabric-MCP-Preview-Developer-Focused-AI-Integration-for-Microsoft-Fabric.html"
+permalink: "/2025-10-02-Introducing-Fabric-MCP-Preview-Developer-Focused-AI-Integration-for-Microsoft-Fabric.html"
 categories: ["AI", "Azure", "Coding", "ML"]
 tags: [".NET 9", "AI", "AI Assisted Development", "API Integration", "Azure", "Coding", "Data Analytics", "Dev Box", "Fabric API", "KQL", "Lakehouse", "MCP", "Microsoft Fabric", "ML", "News", "Open Source", "OpenAI", "Pipelines", "Python", "REST API", "Semantic Models", "SQL Server", "VS Code", "Workflow Automation"]
 tags_normalized: ["dotnet 9", "ai", "ai assisted development", "api integration", "azure", "coding", "data analytics", "dev box", "fabric api", "kql", "lakehouse", "mcp", "microsoft fabric", "ml", "news", "open source", "openai", "pipelines", "python", "rest api", "semantic models", "sql server", "vs code", "workflow automation"]

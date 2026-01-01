@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft News"
 feed_url: "https://news.microsoft.com/source/feed/"
 date: 2025-10-22 17:56:46 +00:00
-permalink: "/news/2025-10-22-Building-Resilience-in-an-Era-of-Accelerated-Cyberthreats.html"
+permalink: "/2025-10-22-Building-Resilience-in-an-Era-of-Accelerated-Cyberthreats.html"
 categories: ["AI", "Azure", "Security"]
 tags: ["AI", "AI Enabled Attacks", "Automation", "Azure", "CISO", "Cloud Security", "Company News", "Cybersecurity", "Governance", "Identity Security", "Incident Response", "Microsoft Digital Defense Report", "Microsoft Entra ID", "News", "Operational Resilience", "Phishing Resistant MFA", "Secure Future Initiative", "Security", "Threat Intelligence", "Zero Trust"]
 tags_normalized: ["ai", "ai enabled attacks", "automation", "azure", "ciso", "cloud security", "company news", "cybersecurity", "governance", "identity security", "incident response", "microsoft digital defense report", "microsoft entra id", "news", "operational resilience", "phishing resistant mfa", "secure future initiative", "security", "threat intelligence", "zero trust"]

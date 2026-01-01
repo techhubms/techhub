@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-11-18 16:00:00 +00:00
-permalink: "/community/2025-11-18-Azure-Arc-Site-Manager-Public-Preview-Refresh-Unified-Management-for-Hybrid-and-Edge-Environments.html"
+permalink: "/2025-11-18-Azure-Arc-Site-Manager-Public-Preview-Refresh-Unified-Management-for-Hybrid-and-Edge-Environments.html"
 categories: ["Azure", "DevOps", "Security"]
 tags: ["Aggregated Alerts", "Azure", "Azure Arc", "Azure CLI", "Azure Resource Manager", "Community", "DevOps", "Edge Computing", "Hierarchical Organization", "Hybrid Cloud", "IoT", "Kubernetes", "Observability", "Operational Efficiency", "PowerShell", "RBAC", "Resource Groups", "Role Based Access Control", "Security", "Security Monitoring", "Service Groups", "Site Manager", "Terraform", "Update Management"]
 tags_normalized: ["aggregated alerts", "azure", "azure arc", "azure cli", "azure resource manager", "community", "devops", "edge computing", "hierarchical organization", "hybrid cloud", "iot", "kubernetes", "observability", "operational efficiency", "powershell", "rbac", "resource groups", "role based access control", "security", "security monitoring", "service groups", "site manager", "terraform", "update management"]

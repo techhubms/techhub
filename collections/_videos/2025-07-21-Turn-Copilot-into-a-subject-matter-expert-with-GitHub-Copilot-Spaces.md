@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "GitHub's Youtube channel"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ"
 date: 2025-07-21 14:00:59 +00:00
-permalink: "/videos/2025-07-21-Turn-Copilot-into-a-subject-matter-expert-with-GitHub-Copilot-Spaces.html"
+permalink: "/2025-07-21-Turn-Copilot-into-a-subject-matter-expert-with-GitHub-Copilot-Spaces.html"
 categories: ["AI", "GitHub Copilot"]
 tags: ["Accessibility Standards", "AI", "AI Integration", "Code Compliance", "Contextual AI", "Copilot Spaces", "CopilotSpaces", "Custom Knowledge Base", "Developer Tools", "GitHub", "GitHub Copilot", "Software Development", "Team Collaboration", "Videos"]
 tags_normalized: ["accessibility standards", "ai", "ai integration", "code compliance", "contextual ai", "copilot spaces", "copilotspaces", "custom knowledge base", "developer tools", "github", "github copilot", "software development", "team collaboration", "videos"]

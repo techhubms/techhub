@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Events YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
 date: 2025-11-21 17:16:03 +00:00
-permalink: "/videos/2025-11-21-From-DEV-to-PROD-Building-Agentic-Memory-with-Azure-Cosmos-DB.html"
+permalink: "/2025-11-21-From-DEV-to-PROD-Building-Agentic-Memory-with-Azure-Cosmos-DB.html"
 categories: ["AI", "Azure", "ML", "Security"]
 tags: ["Agentic Memory", "AI", "AI Applications", "AI Security", "Azure", "Azure Cosmos DB", "Cosmos DB Search", "Data Compliance", "Data Governance", "Data Platform", "Digital Workers", "Generative AI", "Hybrid Queries", "Microsoft Ignite", "ML", "MSIgnite", "Prompt Engineering", "Security", "Semantic Search", "SQL", "Threat Defense", "Unifyyourdataplatform", "Videos"]
 tags_normalized: ["agentic memory", "ai", "ai applications", "ai security", "azure", "azure cosmos db", "cosmos db search", "data compliance", "data governance", "data platform", "digital workers", "generative ai", "hybrid queries", "microsoft ignite", "ml", "msignite", "prompt engineering", "security", "semantic search", "sql", "threat defense", "unifyyourdataplatform", "videos"]

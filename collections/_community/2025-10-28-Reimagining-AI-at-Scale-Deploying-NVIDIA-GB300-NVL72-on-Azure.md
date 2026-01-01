@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-10-28 18:30:02 +00:00
-permalink: "/community/2025-10-28-Reimagining-AI-at-Scale-Deploying-NVIDIA-GB300-NVL72-on-Azure.html"
+permalink: "/2025-10-28-Reimagining-AI-at-Scale-Deploying-NVIDIA-GB300-NVL72-on-Azure.html"
 categories: ["AI", "Azure"]
 tags: ["AI", "AI Cluster", "AI Infrastructure", "Azure", "Azure Boost", "Blackwell Ultra GPU", "Community", "Datacenter", "Fleet Health", "Grace CPU", "Hardware Security Module", "High Performance Computing", "Infrastructure Innovation", "Liquid Cooling", "NVIDIA GB300", "NVL72", "Rack Management", "Supercomputing"]
 tags_normalized: ["ai", "ai cluster", "ai infrastructure", "azure", "azure boost", "blackwell ultra gpu", "community", "datacenter", "fleet health", "grace cpu", "hardware security module", "high performance computing", "infrastructure innovation", "liquid cooling", "nvidia gb300", "nvl72", "rack management", "supercomputing"]

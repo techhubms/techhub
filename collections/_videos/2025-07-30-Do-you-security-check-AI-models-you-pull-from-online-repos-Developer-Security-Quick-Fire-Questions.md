@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Developer YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
 date: 2025-07-30 16:09:52 +00:00
-permalink: "/videos/2025-07-30-Do-you-security-check-AI-models-you-pull-from-online-repos-Developer-Security-Quick-Fire-Questions.html"
+permalink: "/2025-07-30-Do-you-security-check-AI-models-you-pull-from-online-repos-Developer-Security-Quick-Fire-Questions.html"
 categories: ["AI", "Security"]
 tags: ["AI", "AI Models", "Application Security", "Cloud Computing", "Cloud Security", "Dev", "Developer Security", "Development", "Microsoft", "Microsoft Build", "Microsoft Developer", "Online Repositories", "Secure Development", "Secure Future Initiative", "Security", "Security Practices", "Tech", "Technology", "Videos"]
 tags_normalized: ["ai", "ai models", "application security", "cloud computing", "cloud security", "dev", "developer security", "development", "microsoft", "microsoft build", "microsoft developer", "online repositories", "secure development", "secure future initiative", "security", "security practices", "tech", "technology", "videos"]

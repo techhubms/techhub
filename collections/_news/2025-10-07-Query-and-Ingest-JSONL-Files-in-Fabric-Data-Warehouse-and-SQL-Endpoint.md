@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Fabric Blog"
 feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
 date: 2025-10-07 11:00:00 +00:00
-permalink: "/news/2025-10-07-Query-and-Ingest-JSONL-Files-in-Fabric-Data-Warehouse-and-SQL-Endpoint.html"
+permalink: "/2025-10-07-Query-and-Ingest-JSONL-Files-in-Fabric-Data-Warehouse-and-SQL-Endpoint.html"
 categories: ["Azure", "ML"]
 tags: ["Azure", "CREATE TABLE as SELECT", "CTAS", "Data Engineering", "Data Ingestion", "Data Warehouse", "JSONL", "Lakehouse", "Microsoft Fabric", "ML", "News", "OPENROWSET", "Schema Mapping", "Semi Structured Data", "SQL Endpoint", "T SQL"]
 tags_normalized: ["azure", "create table as select", "ctas", "data engineering", "data ingestion", "data warehouse", "jsonl", "lakehouse", "microsoft fabric", "ml", "news", "openrowset", "schema mapping", "semi structured data", "sql endpoint", "t sql"]

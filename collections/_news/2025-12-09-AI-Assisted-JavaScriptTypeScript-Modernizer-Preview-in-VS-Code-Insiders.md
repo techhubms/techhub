@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Blog"
 feed_url: "https://devblogs.microsoft.com/feed"
 date: 2025-12-09 17:41:29 +00:00
-permalink: "/news/2025-12-09-AI-Assisted-JavaScriptTypeScript-Modernizer-Preview-in-VS-Code-Insiders.html"
+permalink: "/2025-12-09-AI-Assisted-JavaScriptTypeScript-Modernizer-Preview-in-VS-Code-Insiders.html"
 categories: ["AI", "Coding", "GitHub Copilot"]
 tags: ["AI", "AI Assistance", "App Modernization", "Code Modernization", "Coding", "Copilot Chat", "Dependency Upgrades", "Extension", "GitHub Copilot", "JavaScript", "News", "Node.js", "npm", "Package.json", "TypeScript", "VS Code", "VS Code Insiders"]
 tags_normalized: ["ai", "ai assistance", "app modernization", "code modernization", "coding", "copilot chat", "dependency upgrades", "extension", "github copilot", "javascript", "news", "nodedotjs", "npm", "packagedotjson", "typescript", "vs code", "vs code insiders"]

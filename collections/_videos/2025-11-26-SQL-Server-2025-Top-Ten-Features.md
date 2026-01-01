@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "John Savill's Technical Training"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCpIn7ox7j7bH_OFj7tYouOQ"
 date: 2025-11-26 16:52:12 +00:00
-permalink: "/videos/2025-11-26-SQL-Server-2025-Top-Ten-Features.html"
+permalink: "/2025-11-26-SQL-Server-2025-Top-Ten-Features.html"
 categories: ["AI", "Azure", "Coding", "ML"]
 tags: ["AI", "AI Integration", "Azure", "Azure Arc", "Change Event Streaming", "Coding", "Database", "Diskann", "Engine Improvements", "Express Edition", "Fuzzy Matching", "GraphQL", "JSON", "Microsoft", "Microsoft Fabric", "ML", "Python Driver", "RAG", "Regex", "REST API", "SQL", "SQL Server", "Standard Edition", "Vector Support", "Videos"]
 tags_normalized: ["ai", "ai integration", "azure", "azure arc", "change event streaming", "coding", "database", "diskann", "engine improvements", "express edition", "fuzzy matching", "graphql", "json", "microsoft", "microsoft fabric", "ml", "python driver", "rag", "regex", "rest api", "sql", "sql server", "standard edition", "vector support", "videos"]

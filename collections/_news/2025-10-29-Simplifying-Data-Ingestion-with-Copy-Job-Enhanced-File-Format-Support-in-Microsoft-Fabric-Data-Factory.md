@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Fabric Blog"
 feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
 date: 2025-10-29 11:00:00 +00:00
-permalink: "/news/2025-10-29-Simplifying-Data-Ingestion-with-Copy-Job-Enhanced-File-Format-Support-in-Microsoft-Fabric-Data-Factory.html"
+permalink: "/2025-10-29-Simplifying-Data-Ingestion-with-Copy-Job-Enhanced-File-Format-Support-in-Microsoft-Fabric-Data-Factory.html"
 categories: ["Azure", "ML"]
 tags: ["Avro", "Azure", "Bulk Copy", "Cloud Data", "Copy Job", "CSV", "Data Engineering", "Data Factory", "Data Ingestion", "Data Movement", "Encoding", "Excel", "File Formats", "Incremental Copy", "Integration", "Microsoft Fabric", "ML", "News", "ORC", "XML"]
 tags_normalized: ["avro", "azure", "bulk copy", "cloud data", "copy job", "csv", "data engineering", "data factory", "data ingestion", "data movement", "encoding", "excel", "file formats", "incremental copy", "integration", "microsoft fabric", "ml", "news", "orc", "xml"]

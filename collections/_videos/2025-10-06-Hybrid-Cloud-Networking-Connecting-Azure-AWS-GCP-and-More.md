@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "John Savill's Technical Training"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCpIn7ox7j7bH_OFj7tYouOQ"
 date: 2025-10-06 14:11:52 +00:00
-permalink: "/videos/2025-10-06-Hybrid-Cloud-Networking-Connecting-Azure-AWS-GCP-and-More.html"
+permalink: "/2025-10-06-Hybrid-Cloud-Networking-Connecting-Azure-AWS-GCP-and-More.html"
 categories: ["Azure"]
 tags: ["AWS", "Azure", "Azure Cloud", "Cloud", "Cloud Architecture", "Cloud Exchange", "Direct Connect", "ExpressRoute", "FastConnect", "GCP", "Hybrid Cloud", "Microsoft", "Microsoft Azure", "Networking", "OCI", "Oracle", "Oracle Interconnect", "POP", "Private Connectivity", "S2S VPN", "Videos", "Virtual Networks", "VNet"]
 tags_normalized: ["aws", "azure", "azure cloud", "cloud", "cloud architecture", "cloud exchange", "direct connect", "expressroute", "fastconnect", "gcp", "hybrid cloud", "microsoft", "microsoft azure", "networking", "oci", "oracle", "oracle interconnect", "pop", "private connectivity", "s2s vpn", "videos", "virtual networks", "vnet"]

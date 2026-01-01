@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "DotNet YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw"
 date: 2025-08-01 21:55:53 +00:00
-permalink: "/videos/2025-08-01-ASPNET-Community-Standup-Building-a-Better-PerfView-Diagnostics-Tool-with-Blazor.html"
+permalink: "/2025-08-01-ASPNET-Community-Standup-Building-a-Better-PerfView-Diagnostics-Tool-with-Blazor.html"
 categories: ["Coding"]
 tags: [".NET", ".NET Events Viewer", "ASP.NET", "ASP.NET Core", "Aspdotnet", "Blazor", "Coding", "Contributing", "Demo", "Developer", "Developer Community", "Developer Tools", "Diagnostics", "Microsoft", "Open Source", "Perfview", "Software Developer", "Thread Pool", "Videos"]
 tags_normalized: ["dotnet", "dotnet events viewer", "aspdotnet", "aspdotnet core", "aspdotnet", "blazor", "coding", "contributing", "demo", "developer", "developer community", "developer tools", "diagnostics", "microsoft", "open source", "perfview", "software developer", "thread pool", "videos"]

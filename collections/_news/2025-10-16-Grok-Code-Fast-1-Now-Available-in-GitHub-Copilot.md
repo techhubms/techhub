@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/changelog/feed/"
 date: 2025-10-16 19:21:34 +00:00
-permalink: "/news/2025-10-16-Grok-Code-Fast-1-Now-Available-in-GitHub-Copilot.html"
+permalink: "/2025-10-16-Grok-Code-Fast-1-Now-Available-in-GitHub-Copilot.html"
 categories: ["AI", "GitHub Copilot"]
 tags: ["AI", "AI Models", "Copilot", "Copilot Business", "Copilot Chat", "Copilot Enterprise", "Copilot Pro", "Developer Tools", "GitHub", "GitHub Copilot", "Grok Code Fast 1", "IDE Integration", "News", "Release Notes", "VS", "VS Code"]
 tags_normalized: ["ai", "ai models", "copilot", "copilot business", "copilot chat", "copilot enterprise", "copilot pro", "developer tools", "github", "github copilot", "grok code fast 1", "ide integration", "news", "release notes", "vs", "vs code"]

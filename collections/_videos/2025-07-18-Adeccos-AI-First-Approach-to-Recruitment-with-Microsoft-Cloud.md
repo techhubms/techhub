@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Cloud YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCSgzRJMqIiCNtoM6Q7Q9Lqw"
 date: 2025-07-18 16:20:01 +00:00
-permalink: "/videos/2025-07-18-Adeccos-AI-First-Approach-to-Recruitment-with-Microsoft-Cloud.html"
+permalink: "/2025-07-18-Adeccos-AI-First-Approach-to-Recruitment-with-Microsoft-Cloud.html"
 categories: ["AI", "Azure"]
 tags: ["Adecco", "AI", "AI Driven Future", "AI First Strategy", "AI Tools", "AI Transformation", "Azure", "Caroline Basyn", "Digital Transformation", "Enterprise AI", "HR Services", "HR Technology", "Microsoft", "Microsoft Cloud", "Recruiting", "Recruitment", "Skills Development", "Talent Innovation", "Videos"]
 tags_normalized: ["adecco", "ai", "ai driven future", "ai first strategy", "ai tools", "ai transformation", "azure", "caroline basyn", "digital transformation", "enterprise ai", "hr services", "hr technology", "microsoft", "microsoft cloud", "recruiting", "recruitment", "skills development", "talent innovation", "videos"]

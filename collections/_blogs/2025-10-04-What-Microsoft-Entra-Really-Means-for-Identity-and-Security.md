@@ -9,10 +9,10 @@ viewing_mode: "external"
 feed_name: "Dellenny's Blog"
 feed_url: "https://dellenny.com/feed/"
 date: 2025-10-04 09:32:05 +00:00
-permalink: "/blogs/2025-10-04-What-Microsoft-Entra-Really-Means-for-Identity-and-Security.html"
+permalink: "/2025-10-04-What-Microsoft-Entra-Really-Means-for-Identity-and-Security.html"
 categories: ["Azure", "Security"]
-tags: ["Access Control", "Authentication", "Azure", "Azure Active Directory", "Conditional Access", "Governance", "Hybrid Cloud", "Identity Management", "Identity Protection", "Managed Identities", "Microsoft", "Microsoft Entra", "Microsoft Entra ID", "Microsoft General", "Passwordless Authentication", "Blogs", "Security", "SOC Integration", "Workload Identity", "Zero Trust"]
-tags_normalized: ["access control", "authentication", "azure", "azure active directory", "conditional access", "governance", "hybrid cloud", "identity management", "identity protection", "managed identities", "microsoft", "microsoft entra", "microsoft entra id", "microsoft general", "passwordless authentication", "blogs", "security", "soc integration", "workload identity", "zero trust"]
+tags: ["Access Control", "Authentication", "Azure", "Azure Active Directory", "Blogs", "Conditional Access", "Governance", "Hybrid Cloud", "Identity Management", "Identity Protection", "Managed Identities", "Microsoft", "Microsoft Entra", "Microsoft Entra ID", "Microsoft General", "Passwordless Authentication", "Security", "SOC Integration", "Workload Identity", "Zero Trust"]
+tags_normalized: ["access control", "authentication", "azure", "azure active directory", "blogs", "conditional access", "governance", "hybrid cloud", "identity management", "identity protection", "managed identities", "microsoft", "microsoft entra", "microsoft entra id", "microsoft general", "passwordless authentication", "security", "soc integration", "workload identity", "zero trust"]
 ---
 
 Dellenny delivers a comprehensive look at Microsoft Entra and its central role in modern identity and security management for cloud and hybrid environments.<!--excerpt_end-->

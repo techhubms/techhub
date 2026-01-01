@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The Azure Blog"
 feed_url: "https://azure.microsoft.com/en-us/blog/feed/"
 date: 2025-08-13 15:00:00 +00:00
-permalink: "/news/2025-08-13-Agent-Factory-Enterprise-Patterns-and-Best-Practices-for-Agentic-AI-with-Azure-AI-Foundry.html"
+permalink: "/2025-08-13-Agent-Factory-Enterprise-Patterns-and-Best-Practices-for-Agentic-AI-with-Azure-AI-Foundry.html"
 categories: ["AI", "Azure"]
 tags: ["Agent Factory", "Agent Orchestration", "Agentic AI", "AI", "AI + Machine Learning", "AI Design Patterns", "Azure", "Azure AI Foundry", "Azure OpenAI", "Compliance", "Enterprise AI Security", "Enterprise Automation", "Large Language Models (llms)", "LLMs", "MCP Protocol", "Microsoft Azure", "Modular AI Architecture", "Multi Agent Systems", "News", "Observability", "Planning Pattern", "RBAC", "ReAct Pattern", "Reflection Pattern", "Retrieval Augmented Generation", "Tool Use Pattern"]
 tags_normalized: ["agent factory", "agent orchestration", "agentic ai", "ai", "ai plus machine learning", "ai design patterns", "azure", "azure ai foundry", "azure openai", "compliance", "enterprise ai security", "enterprise automation", "large language models llms", "llms", "mcp protocol", "microsoft azure", "modular ai architecture", "multi agent systems", "news", "observability", "planning pattern", "rbac", "react pattern", "reflection pattern", "retrieval augmented generation", "tool use pattern"]

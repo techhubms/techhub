@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft DevBlog"
 feed_url: "https://devblogs.microsoft.com/openapi/feed/"
 date: 2025-02-04 16:12:50 +00:00
-permalink: "/news/2025-02-04-Announcing-Public-Preview-of-Kiota-Dart-Support.html"
+permalink: "/2025-02-04-Announcing-Public-Preview-of-Kiota-Dart-Support.html"
 categories: ["Coding"]
 tags: [".NET Tools", "API Automation", "API Client Generation", "API Integration", "Coding", "Community Contribution", "Dart", "Declarative Agents", "Kiota", "Microsoft", "Microsoft 365 Copilot", "News", "OAuth", "OpenAPI", "Strong Typing", "VS Code Extension"]
 tags_normalized: ["dotnet tools", "api automation", "api client generation", "api integration", "coding", "community contribution", "dart", "declarative agents", "kiota", "microsoft", "microsoft 365 copilot", "news", "oauth", "openapi", "strong typing", "vs code extension"]

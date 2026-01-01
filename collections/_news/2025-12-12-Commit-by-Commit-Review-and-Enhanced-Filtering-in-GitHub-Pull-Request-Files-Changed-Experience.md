@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/changelog/feed/"
 date: 2025-12-12 02:59:42 +00:00
-permalink: "/news/2025-12-12-Commit-by-Commit-Review-and-Enhanced-Filtering-in-GitHub-Pull-Request-Files-Changed-Experience.html"
+permalink: "/2025-12-12-Commit-by-Commit-Review-and-Enhanced-Filtering-in-GitHub-Pull-Request-Files-Changed-Experience.html"
 categories: ["DevOps"]
 tags: ["Code Review", "Collaboration", "Collaboration Tools", "Commit Filtering", "Developer Tools", "DevOps", "Files Changed", "GitHub", "Improvement", "News", "Performance Enhancements", "Pull Requests", "Shortcuts", "UI Improvements", "Version Control", "Workflow"]
 tags_normalized: ["code review", "collaboration", "collaboration tools", "commit filtering", "developer tools", "devops", "files changed", "github", "improvement", "news", "performance enhancements", "pull requests", "shortcuts", "ui improvements", "version control", "workflow"]

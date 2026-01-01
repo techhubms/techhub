@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft DevOps Blog"
 feed_url: "https://devblogs.microsoft.com/devops/feed/"
 date: 2025-10-13 11:00:46 +00:00
-permalink: "/news/2025-10-13-Azure-DevOps-Local-MCP-Server-Now-Generally-Available.html"
+permalink: "/2025-10-13-Azure-DevOps-Local-MCP-Server-Now-Generally-Available.html"
 categories: ["AI", "Azure", "DevOps"]
 tags: ["Agile", "AI", "Authorization", "Azure", "Azure DevOps", "Community Feedback", "Developer Tools", "DevOps", "GitHub Copilot", "GitHub Copilot Integration", "LLM Integration", "Local Deployment", "MCP Server", "Model Context Provider", "News", "Open Source", "Prompt Engineering", "Tooling", "VS Code"]
 tags_normalized: ["agile", "ai", "authorization", "azure", "azure devops", "community feedback", "developer tools", "devops", "github copilot", "github copilot integration", "llm integration", "local deployment", "mcp server", "model context provider", "news", "open source", "prompt engineering", "tooling", "vs code"]

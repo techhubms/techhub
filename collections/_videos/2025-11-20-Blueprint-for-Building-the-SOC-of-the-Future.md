@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Events YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
 date: 2025-11-20 14:27:33 +00:00
-permalink: "/videos/2025-11-20-Blueprint-for-Building-the-SOC-of-the-Future.html"
+permalink: "/2025-11-20-Blueprint-for-Building-the-SOC-of-the-Future.html"
 categories: ["AI", "Security"]
 tags: ["Agentic AI", "AI", "AI Security", "Attack Path Mapping", "Automated Response", "Graph Reasoning", "Incident Response", "Microsoft Defender", "Microsoft Ignite", "Microsoft Sentinel", "ModernizeSecOpswithaunifiedplatform", "MSIgnite", "Predictive Shielding", "Security", "Security Operations", "SOC Architecture", "Threat Detection", "Unified Identity Inventory", "Videos"]
 tags_normalized: ["agentic ai", "ai", "ai security", "attack path mapping", "automated response", "graph reasoning", "incident response", "microsoft defender", "microsoft ignite", "microsoft sentinel", "modernizesecopswithaunifiedplatform", "msignite", "predictive shielding", "security", "security operations", "soc architecture", "threat detection", "unified identity inventory", "videos"]

@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-11-18 16:00:44 +00:00
-permalink: "/community/2025-11-18-Transforming-City-Operations-Edge-RAG-and-Azure-Arc-in-Villa-Park.html"
+permalink: "/2025-11-18-Transforming-City-Operations-Edge-RAG-and-Azure-Arc-in-Villa-Park.html"
 categories: ["AI", "Azure", "Security"]
 tags: ["Adaptive Cloud", "Agentic Workflow", "AI", "Azure", "Azure Arc", "Community", "Compliance", "Conversational AI", "DataON", "Document Parsing", "Edge AI", "Edge RAG", "Foundry", "Foundry Local", "GPU Optimization", "LazyGraph RAG", "Microsoft", "Multimodal Search", "Municipal AI", "OCR", "Offline Support", "Security", "SharePoint Integration", "Smart Cities", "Zero Trust"]
 tags_normalized: ["adaptive cloud", "agentic workflow", "ai", "azure", "azure arc", "community", "compliance", "conversational ai", "dataon", "document parsing", "edge ai", "edge rag", "foundry", "foundry local", "gpu optimization", "lazygraph rag", "microsoft", "multimodal search", "municipal ai", "ocr", "offline support", "security", "sharepoint integration", "smart cities", "zero trust"]

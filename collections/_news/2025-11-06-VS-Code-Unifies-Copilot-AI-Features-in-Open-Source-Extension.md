@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Visual Studio Code Releases"
 feed_url: "https://code.visualstudio.com/feed.xml"
 date: 2025-11-06 00:00:00 +00:00
-permalink: "/news/2025-11-06-VS-Code-Unifies-Copilot-AI-Features-in-Open-Source-Extension.html"
+permalink: "/2025-11-06-VS-Code-Unifies-Copilot-AI-Features-in-Open-Source-Extension.html"
 categories: ["AI", "Coding", "GitHub Copilot"]
 tags: ["AI", "AI Code Suggestions", "Coding", "Copilot Chat", "Developer Tools", "Extension Development", "Ghost Text", "GitHub Copilot", "Inline Suggestions", "LLM Integration", "News", "Open Source", "OpenAI", "Performance Optimization", "Prompt Engineering", "TypeScript", "VS Code", "VS Code Extensions"]
 tags_normalized: ["ai", "ai code suggestions", "coding", "copilot chat", "developer tools", "extension development", "ghost text", "github copilot", "inline suggestions", "llm integration", "news", "open source", "openai", "performance optimization", "prompt engineering", "typescript", "vs code", "vs code extensions"]

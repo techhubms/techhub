@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Developer YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
 date: 2025-10-31 16:01:27 +00:00
-permalink: "/videos/2025-10-31-Context-Engineering-for-Java-Ecosystem.html"
+permalink: "/2025-10-31-Context-Engineering-for-Java-Ecosystem.html"
 categories: ["AI", "Coding", "GitHub Copilot"]
 tags: ["AI", "AI Assisted Development", "AIAssisted", "Bad Practice Analysis", "Chat Modes", "ChatModes", "Coding", "Context Engineering", "ContextEngineering", "Copilot Chat", "Custom Instructions", "CustomInstructions", "Developer Productivity", "DeveloperProductivity", "GitHub Copilot", "Hibernate", "Java", "Java 25", "Java25", "JavaDevelopment", "Planner Mode", "Prompt Engineering", "PromptEngineering", "Spring Framework", "Videos", "VS Code"]
 tags_normalized: ["ai", "ai assisted development", "aiassisted", "bad practice analysis", "chat modes", "chatmodes", "coding", "context engineering", "contextengineering", "copilot chat", "custom instructions", "custominstructions", "developer productivity", "developerproductivity", "github copilot", "hibernate", "java", "java 25", "java25", "javadevelopment", "planner mode", "prompt engineering", "promptengineering", "spring framework", "videos", "vs code"]

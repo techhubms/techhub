@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-11-08 17:44:18 +00:00
-permalink: "/community/2025-11-08-Extending-Layer-2-Networks-Over-Layer-3-IP-with-VXLAN-MTU-Overlay-and-BFD-Best-Practices.html"
+permalink: "/2025-11-08-Extending-Layer-2-Networks-Over-Layer-3-IP-with-VXLAN-MTU-Overlay-and-BFD-Best-Practices.html"
 categories: ["Azure"]
 tags: ["Azure", "Azure Networking", "Bidirectional Forwarding Detection", "Cloud Networking", "Community", "IP Routing", "Jumbo Frames", "L2 Extension", "Layer 2 Overlay", "Layer 3 IP", "MTU", "Network Virtualization", "Resilience", "UDP Encapsulation", "Virtual Extensible LAN", "VLAN", "VTEP", "VXLAN", "WAN"]
 tags_normalized: ["azure", "azure networking", "bidirectional forwarding detection", "cloud networking", "community", "ip routing", "jumbo frames", "l2 extension", "layer 2 overlay", "layer 3 ip", "mtu", "network virtualization", "resilience", "udp encapsulation", "virtual extensible lan", "vlan", "vtep", "vxlan", "wan"]

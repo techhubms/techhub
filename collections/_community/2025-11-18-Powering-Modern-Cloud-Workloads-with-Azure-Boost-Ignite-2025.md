@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-11-18 16:00:00 +00:00
-permalink: "/community/2025-11-18-Powering-Modern-Cloud-Workloads-with-Azure-Boost-Ignite-2025.html"
+permalink: "/2025-11-18-Powering-Modern-Cloud-Workloads-with-Azure-Boost-Ignite-2025.html"
 categories: ["Azure", "Security"]
 tags: ["ABCD", "Active Active Resiliency", "Attestation", "Azure", "Azure Boost", "Azure Infrastructure", "Azure VM", "Cloud Infrastructure", "Community", "Confidential Computing", "Enterprise Workloads", "High Throughput", "Ignite", "IOPS", "MANA Drivers", "Networking", "PCIe Encryption", "Performance", "RDMA", "Security", "TDISP", "Virtualization"]
 tags_normalized: ["abcd", "active active resiliency", "attestation", "azure", "azure boost", "azure infrastructure", "azure vm", "cloud infrastructure", "community", "confidential computing", "enterprise workloads", "high throughput", "ignite", "iops", "mana drivers", "networking", "pcie encryption", "performance", "rdma", "security", "tdisp", "virtualization"]

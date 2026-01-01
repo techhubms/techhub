@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/changelog/feed/"
 date: 2025-12-16 16:41:43 +00:00
-permalink: "/news/2025-12-16-GitHub-Actions-Pricing-Update-Lower-Runner-Costs-Platform-Enhancements-Coming-in-2026.html"
+permalink: "/2025-12-16-GitHub-Actions-Pricing-Update-Lower-Runner-Costs-Platform-Enhancements-Coming-in-2026.html"
 categories: ["DevOps"]
 tags: ["Actions", "Autoscaling", "Billing", "Cloud Platform Charge", "Developer Tools", "DevOps", "GitHub Actions", "GitHub Hosted Runners", "Linux Containers", "Migration Guide", "News", "Pipeline Automation", "Pricing", "Roadmap", "Runners", "Self Hosted Runners", "Windows Support"]
 tags_normalized: ["actions", "autoscaling", "billing", "cloud platform charge", "developer tools", "devops", "github actions", "github hosted runners", "linux containers", "migration guide", "news", "pipeline automation", "pricing", "roadmap", "runners", "self hosted runners", "windows support"]

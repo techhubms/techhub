@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "DotNet YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw"
 date: 2025-11-12 19:18:19 +00:00
-permalink: "/videos/2025-11-12-Real-World-NET-Profiling-with-Visual-Studio.html"
+permalink: "/2025-11-12-Real-World-NET-Profiling-with-Visual-Studio.html"
 categories: ["Coding", "GitHub Copilot"]
 tags: [".NET", "BenchmarkDotNet", "Benchmarking", "C#", "Code Improvement", "Coding", "CPU Tracing", "Developer Tools", "GitHub Copilot", "Memory Allocation", "Open Source", "Performance Optimization", "Performance Profiling", "Profiling Techniques", "Software Development", "Videos", "VS"]
 tags_normalized: ["dotnet", "benchmarkdotnet", "benchmarking", "csharp", "code improvement", "coding", "cpu tracing", "developer tools", "github copilot", "memory allocation", "open source", "performance optimization", "performance profiling", "profiling techniques", "software development", "videos", "vs"]

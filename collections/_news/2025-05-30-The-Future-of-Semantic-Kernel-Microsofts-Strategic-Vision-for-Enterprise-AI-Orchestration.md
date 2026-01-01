@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft DevBlog"
 feed_url: "https://devblogs.microsoft.com/foundry/feed/"
 date: 2025-05-30 13:15:06 +00:00
-permalink: "/news/2025-05-30-The-Future-of-Semantic-Kernel-Microsofts-Strategic-Vision-for-Enterprise-AI-Orchestration.html"
+permalink: "/2025-05-30-The-Future-of-Semantic-Kernel-Microsofts-Strategic-Vision-for-Enterprise-AI-Orchestration.html"
 categories: ["AI", "Azure", "Coding"]
 tags: [".NET", "AI", "AI Orchestration", "AutoGen", "Azure", "Azure AI", "Azure AI Foundry", "Coding", "Enterprise AI", "Foundry", "MCP", "Microsoft", "Multi Agent", "News", "Open Source", "Process Automation", "Semantic Kernel", "Vector Data"]
 tags_normalized: ["dotnet", "ai", "ai orchestration", "autogen", "azure", "azure ai", "azure ai foundry", "coding", "enterprise ai", "foundry", "mcp", "microsoft", "multi agent", "news", "open source", "process automation", "semantic kernel", "vector data"]

@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "DotNet YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw"
 date: 2025-09-04 19:05:16 +00:00
-permalink: "/videos/2025-09-04-NET-MAUI-Community-Standup-Release-Candidates-iPhone-Support-and-Updates.html"
+permalink: "/2025-09-04-NET-MAUI-Community-Standup-Release-Candidates-iPhone-Support-and-Updates.html"
 categories: ["Coding"]
 tags: [".NET", "App Development", "C#", "Coding", "Community Standup", "Cross Platform", "David Ortinau", "Dotnetmaui", "Gerald Versluis", "Ios", "Iphone", "MAUI", "Mobile", "Mobile Apps", "Mobile Development", "RC1", "Release Candidate", "Videos"]
 tags_normalized: ["dotnet", "app development", "csharp", "coding", "community standup", "cross platform", "david ortinau", "dotnetmaui", "gerald versluis", "ios", "iphone", "maui", "mobile", "mobile apps", "mobile development", "rc1", "release candidate", "videos"]

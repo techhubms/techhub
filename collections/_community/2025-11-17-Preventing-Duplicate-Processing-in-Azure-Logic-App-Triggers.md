@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-11-17 08:58:53 +00:00
-permalink: "/community/2025-11-17-Preventing-Duplicate-Processing-in-Azure-Logic-App-Triggers.html"
+permalink: "/2025-11-17-Preventing-Duplicate-Processing-in-Azure-Logic-App-Triggers.html"
 categories: ["Azure", "DevOps"]
 tags: ["Azure", "Azure Logic Apps", "Clienttrackingid", "Community", "Dataverse", "DevOps", "Duplicate Detection", "Implementation Guide", "Integration Services", "Logic App Standard", "Microsoft Learn", "Power Automate", "Resource Permissions", "REST API", "SharePoint", "Trigger Management", "Workflow Automation"]
 tags_normalized: ["azure", "azure logic apps", "clienttrackingid", "community", "dataverse", "devops", "duplicate detection", "implementation guide", "integration services", "logic app standard", "microsoft learn", "power automate", "resource permissions", "rest api", "sharepoint", "trigger management", "workflow automation"]

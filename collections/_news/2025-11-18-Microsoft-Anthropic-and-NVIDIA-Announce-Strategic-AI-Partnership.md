@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft News"
 feed_url: "https://news.microsoft.com/source/feed/"
 date: 2025-11-18 16:53:27 +00:00
-permalink: "/news/2025-11-18-Microsoft-Anthropic-and-NVIDIA-Announce-Strategic-AI-Partnership.html"
+permalink: "/2025-11-18-Microsoft-Anthropic-and-NVIDIA-Announce-Strategic-AI-Partnership.html"
 categories: ["AI", "Azure"]
 tags: ["AI", "AI Capacity", "AI Infrastructure", "AI Partnership", "AI Super Factory", "Anthropic", "Azure", "Azure AI", "Azure Foundry", "Claude Model", "Cloud AI", "Co Designed Silicon", "Company News", "Copilot", "Enterprise AI", "Enterprise Customers", "Frontier Models", "Grace Blackwell", "Hyperscale Compute", "LinkedIn Post", "MCP", "Microsoft", "Model Optimization", "News", "NVIDIA", "Token Economics", "Vera Rubin"]
 tags_normalized: ["ai", "ai capacity", "ai infrastructure", "ai partnership", "ai super factory", "anthropic", "azure", "azure ai", "azure foundry", "claude model", "cloud ai", "co designed silicon", "company news", "copilot", "enterprise ai", "enterprise customers", "frontier models", "grace blackwell", "hyperscale compute", "linkedin post", "mcp", "microsoft", "model optimization", "news", "nvidia", "token economics", "vera rubin"]

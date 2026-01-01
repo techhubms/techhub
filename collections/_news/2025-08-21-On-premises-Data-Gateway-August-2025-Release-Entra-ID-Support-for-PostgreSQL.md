@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Fabric Blog"
 feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
 date: 2025-08-21 10:00:00 +00:00
-permalink: "/news/2025-08-21-On-premises-Data-Gateway-August-2025-Release-Entra-ID-Support-for-PostgreSQL.html"
+permalink: "/2025-08-21-On-premises-Data-Gateway-August-2025-Release-Entra-ID-Support-for-PostgreSQL.html"
 categories: ["Azure", "ML", "Security"]
 tags: ["August", "Authentication", "Azure", "Connector", "Data Connectivity", "Data Integration", "Data Platform", "Enterprise Data", "Gateway Update", "Identity Management", "Microsoft Entra ID", "ML", "News", "On Premises Data Gateway", "PostgreSQL", "Power BI", "Power BI Desktop", "Security"]
 tags_normalized: ["august", "authentication", "azure", "connector", "data connectivity", "data integration", "data platform", "enterprise data", "gateway update", "identity management", "microsoft entra id", "ml", "news", "on premises data gateway", "postgresql", "power bi", "power bi desktop", "security"]

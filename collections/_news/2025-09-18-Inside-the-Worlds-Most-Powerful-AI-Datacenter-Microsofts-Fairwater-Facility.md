@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The Azure Blog"
 feed_url: "https://azure.microsoft.com/en-us/blog/feed/"
 date: 2025-09-18 15:45:10 +00:00
-permalink: "/news/2025-09-18-Inside-the-Worlds-Most-Powerful-AI-Datacenter-Microsofts-Fairwater-Facility.html"
+permalink: "/2025-09-18-Inside-the-Worlds-Most-Powerful-AI-Datacenter-Microsofts-Fairwater-Facility.html"
 categories: ["AI", "Azure"]
 tags: ["AI", "AI Infrastructure", "AI WAN", "Azure", "Azure Blob Storage", "Data Center Architecture", "Distributed Systems", "Exabyte Storage", "Fairwater Datacenter", "Frontier AI", "Green Cooling Technologies", "High Performance Computing", "Hyperscale", "Liquid Cooling", "Microsoft Cloud", "News", "NVIDIA GPUs", "NVLink", "Storage", "Supercomputer"]
 tags_normalized: ["ai", "ai infrastructure", "ai wan", "azure", "azure blob storage", "data center architecture", "distributed systems", "exabyte storage", "fairwater datacenter", "frontier ai", "green cooling technologies", "high performance computing", "hyperscale", "liquid cooling", "microsoft cloud", "news", "nvidia gpus", "nvlink", "storage", "supercomputer"]

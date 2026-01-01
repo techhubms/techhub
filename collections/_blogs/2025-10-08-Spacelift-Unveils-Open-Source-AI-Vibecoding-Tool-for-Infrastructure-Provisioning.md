@@ -9,10 +9,10 @@ viewing_mode: "external"
 feed_name: "DevOps Blog"
 feed_url: "https://devops.com/feed/"
 date: 2025-10-08 15:25:41 +00:00
-permalink: "/blogs/2025-10-08-Spacelift-Unveils-Open-Source-AI-Vibecoding-Tool-for-Infrastructure-Provisioning.html"
+permalink: "/2025-10-08-Spacelift-Unveils-Open-Source-AI-Vibecoding-Tool-for-Infrastructure-Provisioning.html"
 categories: ["AI", "DevOps"]
-tags: ["Agentic AI", "AI", "AI Framework", "API Integration", "Audit Trails", "DevOps", "DevOps Automation", "DevOps Workflows", "IaC", "Infrastructure Provisioning", "LLM", "MCP", "Natural Language Provisioning", "OpenTofu", "Orchestration Platform", "Policy Engine", "Blogs", "Social Facebook", "Social LinkedIn", "Social X", "Spacelift", "Spacelift Intent", "Terraform", "Vibecoding"]
-tags_normalized: ["agentic ai", "ai", "ai framework", "api integration", "audit trails", "devops", "devops automation", "devops workflows", "iac", "infrastructure provisioning", "llm", "mcp", "natural language provisioning", "opentofu", "orchestration platform", "policy engine", "blogs", "social facebook", "social linkedin", "social x", "spacelift", "spacelift intent", "terraform", "vibecoding"]
+tags: ["Agentic AI", "AI", "AI Framework", "API Integration", "Audit Trails", "Blogs", "DevOps", "DevOps Automation", "DevOps Workflows", "IaC", "Infrastructure Provisioning", "LLM", "MCP", "Natural Language Provisioning", "OpenTofu", "Orchestration Platform", "Policy Engine", "Social Facebook", "Social LinkedIn", "Social X", "Spacelift", "Spacelift Intent", "Terraform", "Vibecoding"]
+tags_normalized: ["agentic ai", "ai", "ai framework", "api integration", "audit trails", "blogs", "devops", "devops automation", "devops workflows", "iac", "infrastructure provisioning", "llm", "mcp", "natural language provisioning", "opentofu", "orchestration platform", "policy engine", "social facebook", "social linkedin", "social x", "spacelift", "spacelift intent", "terraform", "vibecoding"]
 ---
 
 Mike Vizard introduces Spacelift Intent, an AI-driven, open source framework that lets DevOps teams provision infrastructure using natural language, eliminating the need to manually write Terraform or OpenTofu code.<!--excerpt_end-->

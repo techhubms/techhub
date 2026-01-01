@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/changelog/feed/"
 date: 2025-10-17 20:49:48 +00:00
-permalink: "/news/2025-10-17-Migrating-Copilot-Knowledge-Bases-to-Copilot-Spaces.html"
+permalink: "/2025-10-17-Migrating-Copilot-Knowledge-Bases-to-Copilot-Spaces.html"
 categories: ["AI", "GitHub Copilot"]
 tags: ["AI", "API Standards", "Copilot", "Copilot Spaces", "Documentation", "GitHub", "GitHub Admin", "GitHub Copilot", "KB Sunset", "Knowledge Base Migration", "News", "Onboarding", "PRD", "Release Notes", "Team Collaboration"]
 tags_normalized: ["ai", "api standards", "copilot", "copilot spaces", "documentation", "github", "github admin", "github copilot", "kb sunset", "knowledge base migration", "news", "onboarding", "prd", "release notes", "team collaboration"]

@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft AI Foundry Blog"
 feed_url: "https://devblogs.microsoft.com/foundry/feed/"
 date: 2025-10-14 19:01:20 +00:00
-permalink: "/news/2025-10-14-The-Developers-Guide-to-Smarter-Fine-tuning-with-Azure-AI-Foundry.html"
+permalink: "/2025-10-14-The-Developers-Guide-to-Smarter-Fine-tuning-with-Azure-AI-Foundry.html"
 categories: ["AI", "Azure"]
 tags: ["Agentic AI", "AI", "Azure", "Azure AI Foundry", "Azure OpenAI", "Code Samples", "Developer Tier", "Direct Preference Optimization", "Distillation", "Fine Tuning", "GPT 4o", "LLM", "MicrosoftLearn", "Model Customization", "News", "Python Grader", "Region Deployment", "Reinforcement Fine Tuning", "REST API", "RFT", "Signal Loop", "SkilledByMTT"]
 tags_normalized: ["agentic ai", "ai", "azure", "azure ai foundry", "azure openai", "code samples", "developer tier", "direct preference optimization", "distillation", "fine tuning", "gpt 4o", "llm", "microsoftlearn", "model customization", "news", "python grader", "region deployment", "reinforcement fine tuning", "rest api", "rft", "signal loop", "skilledbymtt"]

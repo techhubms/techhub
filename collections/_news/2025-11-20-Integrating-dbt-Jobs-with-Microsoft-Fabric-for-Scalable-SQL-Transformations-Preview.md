@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Fabric Blog"
 feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
 date: 2025-11-20 12:30:00 +00:00
-permalink: "/news/2025-11-20-Integrating-dbt-Jobs-with-Microsoft-Fabric-for-Scalable-SQL-Transformations-Preview.html"
+permalink: "/2025-11-20-Integrating-dbt-Jobs-with-Microsoft-Fabric-for-Scalable-SQL-Transformations-Preview.html"
 categories: ["Azure", "ML"]
 tags: ["Admin Portal", "Authentication", "Azure", "CI/CD", "Data Engineering", "Data Factory", "Data Transformation", "Dbt", "Distributed Architecture", "Enterprise Security", "Entra ID", "Governance", "Microsoft Fabric", "ML", "Monitoring", "News", "Operationalization", "Scheduling", "SQL Models"]
 tags_normalized: ["admin portal", "authentication", "azure", "cislashcd", "data engineering", "data factory", "data transformation", "dbt", "distributed architecture", "enterprise security", "entra id", "governance", "microsoft fabric", "ml", "monitoring", "news", "operationalization", "scheduling", "sql models"]

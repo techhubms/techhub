@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/changelog/feed/"
 date: 2025-11-03 18:24:44 +00:00
-permalink: "/news/2025-11-03-GitHub-Billing-API-Updates-Programmatic-Budget-Management-and-Usage-Tracking.html"
+permalink: "/2025-11-03-GitHub-Billing-API-Updates-Programmatic-Budget-Management-and-Usage-Tracking.html"
 categories: ["DevOps"]
 tags: ["Account Management", "Account Usage", "API Integration", "Billing API", "Budget Management", "Cost Center", "DevOps", "Enterprise Management", "Enterprise Management Tools", "GitHub", "News", "Programmatic Access", "REST API", "Usage Tracking"]
 tags_normalized: ["account management", "account usage", "api integration", "billing api", "budget management", "cost center", "devops", "enterprise management", "enterprise management tools", "github", "news", "programmatic access", "rest api", "usage tracking"]

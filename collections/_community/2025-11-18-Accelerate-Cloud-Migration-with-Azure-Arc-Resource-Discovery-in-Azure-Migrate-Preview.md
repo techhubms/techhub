@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-11-18 16:23:18 +00:00
-permalink: "/community/2025-11-18-Accelerate-Cloud-Migration-with-Azure-Arc-Resource-Discovery-in-Azure-Migrate-Preview.html"
+permalink: "/2025-11-18-Accelerate-Cloud-Migration-with-Azure-Arc-Resource-Discovery-in-Azure-Migrate-Preview.html"
 categories: ["Azure"]
 tags: ["Arc Enabled Resources", "Azure", "Azure Arc", "Azure Hybrid Use Benefits", "Azure Migrate", "Cloud Migration", "Collector VM Extension", "Community", "Cost Savings", "Extended Security Updates", "Hybrid Cloud", "Migration Assessment", "Migration Planning", "Migration Readiness", "Reserved Instances", "SQL Server", "Sustainability Impact"]
 tags_normalized: ["arc enabled resources", "azure", "azure arc", "azure hybrid use benefits", "azure migrate", "cloud migration", "collector vm extension", "community", "cost savings", "extended security updates", "hybrid cloud", "migration assessment", "migration planning", "migration readiness", "reserved instances", "sql server", "sustainability impact"]

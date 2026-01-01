@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft .NET Blog"
 feed_url: "https://devblogs.microsoft.com/dotnet/feed/"
 date: 2025-07-02 20:00:00 +00:00
-permalink: "/news/2025-07-02-Local-AI-NET-Generate-AltText-with-C-Scripts-and-Ollama.html"
+permalink: "/2025-07-02-Local-AI-NET-Generate-AltText-with-C-Scripts-and-Ollama.html"
 categories: ["AI", "Coding"]
 tags: [".NET", ".NET 10", "Accessibility", "AI", "AI Foundry Local", "Alttext", "C#", "Coding", "Generative AI", "Image Processing", "Local AI Models", "Local Models", "News", "Ollama", "OllamaSharp", "Script Execution", "Vision Models"]
 tags_normalized: ["dotnet", "dotnet 10", "accessibility", "ai", "ai foundry local", "alttext", "csharp", "coding", "generative ai", "image processing", "local ai models", "local models", "news", "ollama", "ollamasharp", "script execution", "vision models"]

@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-11-19 18:01:29 +00:00
-permalink: "/community/2025-11-19-Comparing-Microsoft-Azure-Support-Plans-Choosing-the-Best-Fit-for-Your-Organization.html"
+permalink: "/2025-11-19-Comparing-Microsoft-Azure-Support-Plans-Choosing-the-Best-Fit-for-Your-Organization.html"
 categories: ["Azure"]
 tags: ["Azure", "Azure Support Plans", "Business Continuity", "Cloud Reliability", "Cloud Support", "Community", "Cost Optimization", "IT Operations", "Microsoft Azure", "Service Level Agreements", "Technical Guidance", "Technical Support"]
 tags_normalized: ["azure", "azure support plans", "business continuity", "cloud reliability", "cloud support", "community", "cost optimization", "it operations", "microsoft azure", "service level agreements", "technical guidance", "technical support"]

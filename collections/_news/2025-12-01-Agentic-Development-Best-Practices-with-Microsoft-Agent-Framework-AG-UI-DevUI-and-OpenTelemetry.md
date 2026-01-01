@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Semantic Kernel Blog"
 feed_url: "https://devblogs.microsoft.com/semantic-kernel/feed/"
 date: 2025-12-01 17:08:48 +00:00
-permalink: "/news/2025-12-01-Agentic-Development-Best-Practices-with-Microsoft-Agent-Framework-AG-UI-DevUI-and-OpenTelemetry.html"
+permalink: "/2025-12-01-Agentic-Development-Best-Practices-with-Microsoft-Agent-Framework-AG-UI-DevUI-and-OpenTelemetry.html"
 categories: ["AI", "Coding"]
 tags: [".NET", "AG UI", "Agent Framework", "Agent Workflow", "Agentic Development", "Agents", "AI", "Coding", "CopilotKit Integration", "Developer Tools", "DevUI", "Distributed Tracing", "GitHub Models", "LLM Debugging", "Microsoft Agent Framework", "Multi Agent Systems", "News", "Observability", "OpenTelemetry", "Python"]
 tags_normalized: ["dotnet", "ag ui", "agent framework", "agent workflow", "agentic development", "agents", "ai", "coding", "copilotkit integration", "developer tools", "devui", "distributed tracing", "github models", "llm debugging", "microsoft agent framework", "multi agent systems", "news", "observability", "opentelemetry", "python"]

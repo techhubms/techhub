@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-11-18 18:36:23 +00:00
-permalink: "/community/2025-11-18-Agent-Loop-Public-Preview-Now-Available-in-Azure-Logic-Apps-Consumption.html"
+permalink: "/2025-11-18-Agent-Loop-Public-Preview-Now-Available-in-Azure-Logic-Apps-Consumption.html"
 categories: ["AI", "Azure"]
 tags: ["Agent Loop", "AI", "AI Agents", "Autonomous Agents", "Azure", "Azure Logic Apps", "Business Process Automation", "Community", "Connectors", "Consumption Plan", "Conversational Agents", "Enterprise Upgrade Path", "Foundry Models", "Integration", "LLM Infrastructure", "Microsoft", "OAuth Authentication", "Pay as You Go", "Serverless Workflows", "Workflow Automation"]
 tags_normalized: ["agent loop", "ai", "ai agents", "autonomous agents", "azure", "azure logic apps", "business process automation", "community", "connectors", "consumption plan", "conversational agents", "enterprise upgrade path", "foundry models", "integration", "llm infrastructure", "microsoft", "oauth authentication", "pay as you go", "serverless workflows", "workflow automation"]

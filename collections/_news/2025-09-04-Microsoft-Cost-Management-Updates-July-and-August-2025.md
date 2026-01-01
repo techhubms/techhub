@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The Azure Blog"
 feed_url: "https://azure.microsoft.com/en-us/blog/feed/"
 date: 2025-09-04 15:00:00 +00:00
-permalink: "/news/2025-09-04-Microsoft-Cost-Management-Updates-July-and-August-2025.html"
+permalink: "/2025-09-04-Microsoft-Cost-Management-Updates-July-and-August-2025.html"
 categories: ["Azure"]
 tags: ["Azure", "Azure Documentation", "Azure Firewall", "Azure Pricing Calculator", "Azure Storage Mover", "Billing", "Billing Automation", "Cloud Governance", "Cost Optimization", "Enterprise Agreement", "Log Analytics", "Management And Governance", "Microsoft Cost Management", "Migration", "News", "Role Based Access Control", "Savings Plan", "Service Principal"]
 tags_normalized: ["azure", "azure documentation", "azure firewall", "azure pricing calculator", "azure storage mover", "billing", "billing automation", "cloud governance", "cost optimization", "enterprise agreement", "log analytics", "management and governance", "microsoft cost management", "migration", "news", "role based access control", "savings plan", "service principal"]

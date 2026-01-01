@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-09-22 11:00:00 +00:00
-permalink: "/community/2025-09-22-Architecting-Multi-Region-Solutions-in-Azure-Practical-Lessons-Learned.html"
+permalink: "/2025-09-22-Architecting-Multi-Region-Solutions-in-Azure-Practical-Lessons-Learned.html"
 categories: ["Azure", "DevOps", "Security"]
 tags: ["Active Directory", "Azure", "Azure Governance", "Azure Policy", "BCDR", "Cloud Adoption Framework", "Cloud Infrastructure", "Cloud Monitoring", "Cloud Networking", "Community", "Compliance", "Cost Optimization", "Data Residency", "DevOps", "Disaster Recovery", "Landing Zones", "Microsoft Entra ID", "Multi Region Architecture", "Performance Optimization", "Resilience", "Scalability", "Security", "Virtual Networks"]
 tags_normalized: ["active directory", "azure", "azure governance", "azure policy", "bcdr", "cloud adoption framework", "cloud infrastructure", "cloud monitoring", "cloud networking", "community", "compliance", "cost optimization", "data residency", "devops", "disaster recovery", "landing zones", "microsoft entra id", "multi region architecture", "performance optimization", "resilience", "scalability", "security", "virtual networks"]

@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Fabric Blog"
 feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
 date: 2025-12-16 09:00:00 +00:00
-permalink: "/news/2025-12-16-AI-Powered-Data-Transformation-with-Dataflow-Gen2-in-Microsoft-Fabric.html"
+permalink: "/2025-12-16-AI-Powered-Data-Transformation-with-Dataflow-Gen2-in-Microsoft-Fabric.html"
 categories: ["AI", "Azure", "ML"]
 tags: ["AI", "AI Prompt", "Analytics", "Automation", "Azure", "Classification", "Data Integration", "Data Transformation", "Dataflow Gen2", "Enterprise Data", "Microsoft Fabric", "ML", "Natural Language Processing", "News", "No Code", "Power Query", "Preview Release", "Prompt Engineering", "Sentiment Analysis", "Translation", "Workflow Automation"]
 tags_normalized: ["ai", "ai prompt", "analytics", "automation", "azure", "classification", "data integration", "data transformation", "dataflow gen2", "enterprise data", "microsoft fabric", "ml", "natural language processing", "news", "no code", "power query", "preview release", "prompt engineering", "sentiment analysis", "translation", "workflow automation"]

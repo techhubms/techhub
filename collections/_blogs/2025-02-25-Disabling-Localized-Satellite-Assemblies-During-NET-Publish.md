@@ -9,10 +9,10 @@ viewing_mode: "external"
 feed_name: "Andrew Lock's Blog"
 feed_url: "https://andrewlock.net/rss.xml"
 date: 2025-02-25 09:00:00 +00:00
-permalink: "/blogs/2025-02-25-Disabling-Localized-Satellite-Assemblies-During-NET-Publish.html"
+permalink: "/2025-02-25-Disabling-Localized-Satellite-Assemblies-During-NET-Publish.html"
 categories: ["Coding"]
-tags: [".NET", "Coding", "Configuration", "Globalization", "Hosting", "InvariantGlobalization", "Localization", "MSBuild", "Blogs", "Publish Output", "Satellite Assemblies", "SatelliteResourceLanguages", "System.CommandLine"]
-tags_normalized: ["dotnet", "coding", "configuration", "globalization", "hosting", "invariantglobalization", "localization", "msbuild", "blogs", "publish output", "satellite assemblies", "satelliteresourcelanguages", "systemdotcommandline"]
+tags: [".NET", "Blogs", "Coding", "Configuration", "Globalization", "Hosting", "InvariantGlobalization", "Localization", "MSBuild", "Publish Output", "Satellite Assemblies", "SatelliteResourceLanguages", "System.CommandLine"]
+tags_normalized: ["dotnet", "blogs", "coding", "configuration", "globalization", "hosting", "invariantglobalization", "localization", "msbuild", "publish output", "satellite assemblies", "satelliteresourcelanguages", "systemdotcommandline"]
 ---
 
 In this post, Andrew Lock explores how .NET developers can prevent unnecessary localization satellite assemblies from being included in publish outputs to reduce app size.<!--excerpt_end-->

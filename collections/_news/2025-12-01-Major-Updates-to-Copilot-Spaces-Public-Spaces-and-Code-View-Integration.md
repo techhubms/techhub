@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/changelog/feed/"
 date: 2025-12-01 23:35:29 +00:00
-permalink: "/news/2025-12-01-Major-Updates-to-Copilot-Spaces-Public-Spaces-and-Code-View-Integration.html"
+permalink: "/2025-12-01-Major-Updates-to-Copilot-Spaces-Public-Spaces-and-Code-View-Integration.html"
 categories: ["AI", "DevOps", "GitHub Copilot"]
 tags: ["AI", "Code Viewer", "Collaboration", "Copilot", "Copilot Spaces", "DevOps", "GitHub", "GitHub Copilot", "Individual Sharing", "News", "Open Source", "Public Spaces", "Role Based Access Control", "Workflow Integration"]
 tags_normalized: ["ai", "code viewer", "collaboration", "copilot", "copilot spaces", "devops", "github", "github copilot", "individual sharing", "news", "open source", "public spaces", "role based access control", "workflow integration"]

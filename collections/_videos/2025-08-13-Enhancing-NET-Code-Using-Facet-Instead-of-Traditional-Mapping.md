@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Nick Chapsas YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrkPsvLGln62OMZRO6K-llg"
 date: 2025-08-13 11:30:45 +00:00
-permalink: "/videos/2025-08-13-Enhancing-NET-Code-Using-Facet-Instead-of-Traditional-Mapping.html"
+permalink: "/2025-08-13-Enhancing-NET-Code-Using-Facet-Instead-of-Traditional-Mapping.html"
 categories: ["Coding"]
 tags: [".NET", "C#", "Code Performance", "Coding", "Data Transformation", "Development Practice", "Facet Library", "LINQ Projections", "Nick Chapsas", "Object Mapping", "Open Source", "Typed Projections", "Videos"]
 tags_normalized: ["dotnet", "csharp", "code performance", "coding", "data transformation", "development practice", "facet library", "linq projections", "nick chapsas", "object mapping", "open source", "typed projections", "videos"]

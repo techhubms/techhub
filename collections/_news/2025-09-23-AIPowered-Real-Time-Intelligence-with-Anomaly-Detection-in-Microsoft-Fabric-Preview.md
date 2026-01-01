@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Fabric Blog"
 feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
 date: 2025-09-23 15:00:00 +00:00
-permalink: "/news/2025-09-23-AIPowered-Real-Time-Intelligence-with-Anomaly-Detection-in-Microsoft-Fabric-Preview.html"
+permalink: "/2025-09-23-AIPowered-Real-Time-Intelligence-with-Anomaly-Detection-in-Microsoft-Fabric-Preview.html"
 categories: ["AI", "Azure", "ML"]
 tags: ["AI", "Alerting", "Anomaly Detection", "Azure", "Data Monitoring", "Data Science", "Eventhouse", "Machine Learning Models", "Microsoft Azure", "Microsoft Fabric", "ML", "News", "Operational Intelligence", "Real Time Hub", "Real Time Intelligence", "Streaming Data", "Teams Integration"]
 tags_normalized: ["ai", "alerting", "anomaly detection", "azure", "data monitoring", "data science", "eventhouse", "machine learning models", "microsoft azure", "microsoft fabric", "ml", "news", "operational intelligence", "real time hub", "real time intelligence", "streaming data", "teams integration"]

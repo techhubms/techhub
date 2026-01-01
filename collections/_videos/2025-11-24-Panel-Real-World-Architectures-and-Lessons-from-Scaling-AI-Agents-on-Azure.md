@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Events YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
 date: 2025-11-24 11:37:46 +00:00
-permalink: "/videos/2025-11-24-Panel-Real-World-Architectures-and-Lessons-from-Scaling-AI-Agents-on-Azure.html"
+permalink: "/2025-11-24-Panel-Real-World-Architectures-and-Lessons-from-Scaling-AI-Agents-on-Azure.html"
 categories: ["AI", "Azure"]
 tags: ["Agent Architecture", "AI", "AI Agents", "AI Governance", "Autoscaling", "Azure", "Azure AI", "Enterprise AI", "Fault Tolerance", "Human in The Loop", "InnovatewithAzureAIappsandagents", "Interactive Prototyping", "Microsoft Foundry", "Model Selection", "MSIgnite", "Observability", "Panel Discussion", "Production Challenges", "Videos"]
 tags_normalized: ["agent architecture", "ai", "ai agents", "ai governance", "autoscaling", "azure", "azure ai", "enterprise ai", "fault tolerance", "human in the loop", "innovatewithazureaiappsandagents", "interactive prototyping", "microsoft foundry", "model selection", "msignite", "observability", "panel discussion", "production challenges", "videos"]

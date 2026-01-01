@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Events YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
 date: 2025-11-21 10:50:59 +00:00
-permalink: "/videos/2025-11-21-Cloud-without-Compromise-Redefining-Private-and-Hybrid-Cloud-with-Dell-and-Microsoft.html"
+permalink: "/2025-11-21-Cloud-without-Compromise-Redefining-Private-and-Hybrid-Cloud-with-Dell-and-Microsoft.html"
 categories: ["Azure", "Security"]
 tags: ["AI", "AI Ops Monitoring", "AI Ready Workloads", "Azure", "Azure Local", "Azure Storage", "Cloud Infrastructure", "Cyber Resilience", "Data Security", "Dell PowerScale", "Dell Technologies", "File Storage", "Governance", "Hybrid Cloud", "Infrastructure Automation", "Microsoft Ignite", "MSIgnite", "Operational Efficiency", "Private Cloud", "ScalewithcloudandAIendpoints", "Security", "Tab0", "Videos"]
 tags_normalized: ["ai", "ai ops monitoring", "ai ready workloads", "azure", "azure local", "azure storage", "cloud infrastructure", "cyber resilience", "data security", "dell powerscale", "dell technologies", "file storage", "governance", "hybrid cloud", "infrastructure automation", "microsoft ignite", "msignite", "operational efficiency", "private cloud", "scalewithcloudandaiendpoints", "security", "tab0", "videos"]

@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/changelog/feed/"
 date: 2025-11-17 17:24:55 +00:00
-permalink: "/news/2025-11-17-Controlling-GitHub-App-Installations-by-Organization-Owners.html"
+permalink: "/2025-11-17-Controlling-GitHub-App-Installations-by-Organization-Owners.html"
 categories: ["DevOps"]
 tags: ["Access Control", "Administration", "Compliance", "DevOps", "DevOps Tools", "Enterprise Management", "Enterprise Management Tools", "GitHub", "GitHub Apps", "Governance", "Improvement", "News", "Organization Owners", "Permissions", "Public Preview", "Repository Administration", "Settings"]
 tags_normalized: ["access control", "administration", "compliance", "devops", "devops tools", "enterprise management", "enterprise management tools", "github", "github apps", "governance", "improvement", "news", "organization owners", "permissions", "public preview", "repository administration", "settings"]

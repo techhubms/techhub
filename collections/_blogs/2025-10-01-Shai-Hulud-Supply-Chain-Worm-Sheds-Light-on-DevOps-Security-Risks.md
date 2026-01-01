@@ -9,10 +9,10 @@ viewing_mode: "external"
 feed_name: "DevOps Blog"
 feed_url: "https://devops.com/feed/"
 date: 2025-10-01 09:23:26 +00:00
-permalink: "/blogs/2025-10-01-Shai-Hulud-Supply-Chain-Worm-Sheds-Light-on-DevOps-Security-Risks.html"
+permalink: "/2025-10-01-Shai-Hulud-Supply-Chain-Worm-Sheds-Light-on-DevOps-Security-Risks.html"
 categories: ["DevOps", "Security"]
-tags: ["Artifact Provenance", "Business Of DevOps", "CI/CD Security", "Continuous Verification", "Credential Theft", "DevOps", "DevOps Security", "DevSecOps", "GitHub Actions", "GitHub Tokens", "npm Malware", "OIDC", "Pipeline Security", "Blogs", "SBoM", "Secure Software Delivery", "Security", "Shai Hulud", "Shai Hulud Worm", "Short Lived Tokens", "Social Facebook", "Social LinkedIn", "Social X", "Software Supply Chain", "Supply Chain Attack", "TruffleHog"]
-tags_normalized: ["artifact provenance", "business of devops", "cislashcd security", "continuous verification", "credential theft", "devops", "devops security", "devsecops", "github actions", "github tokens", "npm malware", "oidc", "pipeline security", "blogs", "sbom", "secure software delivery", "security", "shai hulud", "shai hulud worm", "short lived tokens", "social facebook", "social linkedin", "social x", "software supply chain", "supply chain attack", "trufflehog"]
+tags: ["Artifact Provenance", "Blogs", "Business Of DevOps", "CI/CD Security", "Continuous Verification", "Credential Theft", "DevOps", "DevOps Security", "DevSecOps", "GitHub Actions", "GitHub Tokens", "npm Malware", "OIDC", "Pipeline Security", "SBoM", "Secure Software Delivery", "Security", "Shai Hulud", "Shai Hulud Worm", "Short Lived Tokens", "Social Facebook", "Social LinkedIn", "Social X", "Software Supply Chain", "Supply Chain Attack", "TruffleHog"]
+tags_normalized: ["artifact provenance", "blogs", "business of devops", "cislashcd security", "continuous verification", "credential theft", "devops", "devops security", "devsecops", "github actions", "github tokens", "npm malware", "oidc", "pipeline security", "sbom", "secure software delivery", "security", "shai hulud", "shai hulud worm", "short lived tokens", "social facebook", "social linkedin", "social x", "software supply chain", "supply chain attack", "trufflehog"]
 ---
 
 Alan Shimel analyzes the Shai-Hulud supply chain worm’s impact, guiding DevOps professionals on strengthening pipeline security, credential hygiene, and artifact provenance to combat the latest wave of automated supply chain attacks.<!--excerpt_end-->

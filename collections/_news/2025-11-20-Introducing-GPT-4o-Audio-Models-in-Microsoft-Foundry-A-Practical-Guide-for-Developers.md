@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft AI Foundry Blog"
 feed_url: "https://devblogs.microsoft.com/foundry/feed/"
 date: 2025-11-20 16:00:21 +00:00
-permalink: "/news/2025-11-20-Introducing-GPT-4o-Audio-Models-in-Microsoft-Foundry-A-Practical-Guide-for-Developers.html"
+permalink: "/2025-11-20-Introducing-GPT-4o-Audio-Models-in-Microsoft-Foundry-A-Practical-Guide-for-Developers.html"
 categories: ["AI", "Azure"]
 tags: ["AI", "API Integration", "Audio Models", "Authentication", "Azure", "Azure AI", "Azure AI Foundry", "Azure CLI", "Azure OpenAI", "Azure OpenAI Service", "Developer Guide", "GPT 4o", "Gradio", "Microsoft Foundry", "News", "OpenAI", "Speech To Text", "Text To Speech", "Transcription", "TTS"]
 tags_normalized: ["ai", "api integration", "audio models", "authentication", "azure", "azure ai", "azure ai foundry", "azure cli", "azure openai", "azure openai service", "developer guide", "gpt 4o", "gradio", "microsoft foundry", "news", "openai", "speech to text", "text to speech", "transcription", "tts"]

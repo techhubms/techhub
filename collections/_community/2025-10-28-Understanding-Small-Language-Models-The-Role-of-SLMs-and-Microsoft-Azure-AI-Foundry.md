@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-10-28 07:00:00 +00:00
-permalink: "/community/2025-10-28-Understanding-Small-Language-Models-The-Role-of-SLMs-and-Microsoft-Azure-AI-Foundry.html"
+permalink: "/2025-10-28-Understanding-Small-Language-Models-The-Role-of-SLMs-and-Microsoft-Azure-AI-Foundry.html"
 categories: ["AI"]
 tags: ["AI", "AI Deployment", "AI Privacy", "Azure AI Foundry", "Community", "Edge AI", "Inference", "Large Language Models", "LLM", "Machine Learning", "Microsoft", "On Device AI", "Parameters", "Prompt Engineering", "SLM", "Small Language Models", "Tokenization"]
 tags_normalized: ["ai", "ai deployment", "ai privacy", "azure ai foundry", "community", "edge ai", "inference", "large language models", "llm", "machine learning", "microsoft", "on device ai", "parameters", "prompt engineering", "slm", "small language models", "tokenization"]

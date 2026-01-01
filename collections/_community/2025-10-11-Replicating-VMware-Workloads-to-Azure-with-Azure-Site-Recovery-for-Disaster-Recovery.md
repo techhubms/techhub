@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-10-11 18:46:30 +00:00
-permalink: "/community/2025-10-11-Replicating-VMware-Workloads-to-Azure-with-Azure-Site-Recovery-for-Disaster-Recovery.html"
+permalink: "/2025-10-11-Replicating-VMware-Workloads-to-Azure-with-Azure-Site-Recovery-for-Disaster-Recovery.html"
 categories: ["Azure", "Security"]
 tags: ["Azure", "Azure Site Recovery", "Backup", "Community", "Cost Optimization", "Database Replication", "Disaster Recovery", "Failover", "Linux", "Microsoft Entra ID", "MySQL", "Network Security", "Non Destructive DR Drill", "Oracle", "Security", "SQL Server", "VMware", "Windows Server"]
 tags_normalized: ["azure", "azure site recovery", "backup", "community", "cost optimization", "database replication", "disaster recovery", "failover", "linux", "microsoft entra id", "mysql", "network security", "non destructive dr drill", "oracle", "security", "sql server", "vmware", "windows server"]

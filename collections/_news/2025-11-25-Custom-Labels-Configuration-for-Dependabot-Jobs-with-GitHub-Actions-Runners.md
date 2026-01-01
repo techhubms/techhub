@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/changelog/feed/"
 date: 2025-11-25 16:07:42 +00:00
-permalink: "/news/2025-11-25-Custom-Labels-Configuration-for-Dependabot-Jobs-with-GitHub-Actions-Runners.html"
+permalink: "/2025-11-25-Custom-Labels-Configuration-for-Dependabot-Jobs-with-GitHub-Actions-Runners.html"
 categories: ["DevOps", "Security"]
 tags: ["CI/CD", "Configuration", "Continuous Integration", "Custom Labels", "Dependabot", "DevOps", "GitHub Actions", "Improvement", "Job Queuing", "Kubernetes Runners", "News", "Operational Governance", "Organization Scope", "Runner Groups", "Security", "Self Hosted Runners", "Supply Chain Security", "Workflow Management"]
 tags_normalized: ["cislashcd", "configuration", "continuous integration", "custom labels", "dependabot", "devops", "github actions", "improvement", "job queuing", "kubernetes runners", "news", "operational governance", "organization scope", "runner groups", "security", "self hosted runners", "supply chain security", "workflow management"]

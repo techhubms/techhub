@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft DevBlog"
 feed_url: "https://devblogs.microsoft.com/foundry/feed/"
 date: 2025-06-30 15:00:36 +00:00
-permalink: "/news/2025-06-30-Whats-New-in-Azure-AI-Foundry-June-2025-Major-Model-Releases-Agent-Service-GA-and-Developer-Tools.html"
+permalink: "/2025-06-30-Whats-New-in-Azure-AI-Foundry-June-2025-Major-Model-Releases-Agent-Service-GA-and-Developer-Tools.html"
 categories: ["AI", "Azure", "Coding", "DevOps"]
 tags: ["Agent Service", "AI", "AI Development", "AutoGen", "Azure", "Azure AI Foundry", "Azure AI Search", "Azure OpenAI", "Coding", "DeepSeek R1", "DevOps", "Fine Tuning", "Generative AI", "GitHub Integration", "Healthcare AI", "Logic Apps", "MCP", "Model Safety", "News", "O3 Pro", "SDK", "Semantic Kernel", "SharePoint Integration", "Sora", "Voice Live API", "VS Code Extension"]
 tags_normalized: ["agent service", "ai", "ai development", "autogen", "azure", "azure ai foundry", "azure ai search", "azure openai", "coding", "deepseek r1", "devops", "fine tuning", "generative ai", "github integration", "healthcare ai", "logic apps", "mcp", "model safety", "news", "o3 pro", "sdk", "semantic kernel", "sharepoint integration", "sora", "voice live api", "vs code extension"]

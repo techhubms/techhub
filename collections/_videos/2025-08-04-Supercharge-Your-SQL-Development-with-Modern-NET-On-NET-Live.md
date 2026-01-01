@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "DotNet YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw"
 date: 2025-08-04 17:33:57 +00:00
-permalink: "/videos/2025-08-04-Supercharge-Your-SQL-Development-with-Modern-NET-On-NET-Live.html"
+permalink: "/2025-08-04-Supercharge-Your-SQL-Development-with-Modern-NET-On-NET-Live.html"
 categories: ["Coding", "ML"]
 tags: [".NET", "Build Validation", "CI/CD", "Coding", "Cross Platform Development", "Database Tooling", "Developer Tooling", "Erik Ejlskov Jensen", "Global Tool", "ML", "NuGet", "SQL Server", "Sqlpackage", "Static Code Analysis", "Videos"]
 tags_normalized: ["dotnet", "build validation", "cislashcd", "coding", "cross platform development", "database tooling", "developer tooling", "erik ejlskov jensen", "global tool", "ml", "nuget", "sql server", "sqlpackage", "static code analysis", "videos"]

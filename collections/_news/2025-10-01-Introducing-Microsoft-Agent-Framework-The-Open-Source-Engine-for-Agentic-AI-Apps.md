@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft AI Foundry Blog"
 feed_url: "https://devblogs.microsoft.com/foundry/feed/"
 date: 2025-10-01 13:57:12 +00:00
-permalink: "/news/2025-10-01-Introducing-Microsoft-Agent-Framework-The-Open-Source-Engine-for-Agentic-AI-Apps.html"
+permalink: "/2025-10-01-Introducing-Microsoft-Agent-Framework-The-Open-Source-Engine-for-Agentic-AI-Apps.html"
 categories: ["AI", "Azure", "Coding"]
 tags: [".NET", "A2A", "Agent Orchestration", "Agents", "AI", "AI Agent", "AI Agents", "AI Development", "AI Tools", "AutoGen", "Azure", "Azure AI Foundry", "Azure OpenAI", "Coding", "Compliance", "Declarative Agents", "Elasticsearch", "Enterprise AI", "MCP", "Microsoft Agent Framework", "Multi Agent Systems", "News", "Observability", "OpenAPI", "OpenTelemetry", "Python SDK", "Redis", "Semantic Kernel", "VS Code AI Toolkit", "Workflow Orchestration"]
 tags_normalized: ["dotnet", "a2a", "agent orchestration", "agents", "ai", "ai agent", "ai agents", "ai development", "ai tools", "autogen", "azure", "azure ai foundry", "azure openai", "coding", "compliance", "declarative agents", "elasticsearch", "enterprise ai", "mcp", "microsoft agent framework", "multi agent systems", "news", "observability", "openapi", "opentelemetry", "python sdk", "redis", "semantic kernel", "vs code ai toolkit", "workflow orchestration"]

@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-11-11 05:35:25 +00:00
-permalink: "/community/2025-11-11-Calculating-Expiry-and-Retention-Days-for-Azure-Blob-Storage-Using-Inventory-and-Synapse.html"
+permalink: "/2025-11-11-Calculating-Expiry-and-Retention-Days-for-Azure-Blob-Storage-Using-Inventory-and-Synapse.html"
 categories: ["Azure"]
 tags: ["Azure", "Azure Blob Storage", "Azure Data Lake Gen2", "Azure Storage Actions", "Azure Synapse Analytics", "Blob Expiry", "Blob Inventory", "Community", "Data Compliance", "Data Management", "Data Retention", "REST API", "Soft Delete", "SQL Query", "Storage Lifecycle"]
 tags_normalized: ["azure", "azure blob storage", "azure data lake gen2", "azure storage actions", "azure synapse analytics", "blob expiry", "blob inventory", "community", "data compliance", "data management", "data retention", "rest api", "soft delete", "sql query", "storage lifecycle"]

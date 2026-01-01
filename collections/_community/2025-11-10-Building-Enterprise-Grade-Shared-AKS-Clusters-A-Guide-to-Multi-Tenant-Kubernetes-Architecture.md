@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-11-10 14:45:40 +00:00
-permalink: "/community/2025-11-10-Building-Enterprise-Grade-Shared-AKS-Clusters-A-Guide-to-Multi-Tenant-Kubernetes-Architecture.html"
+permalink: "/2025-11-10-Building-Enterprise-Grade-Shared-AKS-Clusters-A-Guide-to-Multi-Tenant-Kubernetes-Architecture.html"
 categories: ["Azure", "Coding", "DevOps", "Security"]
 tags: ["AKS", "Argo CD", "Azure", "Azure CNI", "Azure DevOps", "Azure Disk", "Azure Files", "Azure Key Vault", "Azure Monitor", "CI/CD", "Coding", "Community", "Cosign", "Cost Management", "DevOps", "Flux", "GitHub Actions", "GitOps", "Grafana", "Helm", "Istio", "KEDA", "Kubernetes", "Multi Tenancy", "Namespace", "NetworkPolicy", "Observability", "Pod Security", "Prometheus", "RBAC", "ResourceQuota", "Security", "Service Mesh", "Trivy", "Velero"]
 tags_normalized: ["aks", "argo cd", "azure", "azure cni", "azure devops", "azure disk", "azure files", "azure key vault", "azure monitor", "cislashcd", "coding", "community", "cosign", "cost management", "devops", "flux", "github actions", "gitops", "grafana", "helm", "istio", "keda", "kubernetes", "multi tenancy", "namespace", "networkpolicy", "observability", "pod security", "prometheus", "rbac", "resourcequota", "security", "service mesh", "trivy", "velero"]

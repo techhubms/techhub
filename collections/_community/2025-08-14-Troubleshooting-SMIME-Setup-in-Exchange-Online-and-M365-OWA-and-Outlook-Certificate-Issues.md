@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Community"
 date: 2025-08-14 09:58:31 +00:00
-permalink: "/community/2025-08-14-Troubleshooting-SMIME-Setup-in-Exchange-Online-and-M365-OWA-and-Outlook-Certificate-Issues.html"
+permalink: "/2025-08-14-Troubleshooting-SMIME-Setup-in-Exchange-Online-and-M365-OWA-and-Outlook-Certificate-Issues.html"
 categories: ["Security"]
 tags: ["Certificate Enrollment", "Certificate Trust", "Community", "Connect ExchangeOnline", "Email Security", "Encryption", "Exchange Online", "GAL", "Intermediate Certificate", "Intune", "Macos", "Microsoft 365", "Outlook", "OWA", "PowerShell", "Root Certificate", "S/MIME", "Security", "SMIMECertificateIssuingCA", "Windows"]
 tags_normalized: ["certificate enrollment", "certificate trust", "community", "connect exchangeonline", "email security", "encryption", "exchange online", "gal", "intermediate certificate", "intune", "macos", "microsoft 365", "outlook", "owa", "powershell", "root certificate", "sslashmime", "security", "smimecertificateissuingca", "windows"]

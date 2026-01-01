@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/changelog/feed/"
 date: 2025-09-23 23:09:51 +00:00
-permalink: "/news/2025-09-23-Upcoming-Deprecation-of-Select-Copilot-Models-from-Claude-OpenAI-and-Gemini.html"
+permalink: "/2025-09-23-Upcoming-Deprecation-of-Select-Copilot-Models-from-Claude-OpenAI-and-Gemini.html"
 categories: ["AI", "GitHub Copilot"]
 tags: ["Admin Policies", "AI", "AI Integration", "AI Models", "Claude Opus", "Claude Sonnet", "Code Completion", "Copilot", "Copilot Chat", "Copilot Enterprise", "Enterprise Administration", "Gemini", "GitHub Copilot", "Model Deprecation", "Model Management", "News", "OpenAI GPT", "Retired", "VS Code"]
 tags_normalized: ["admin policies", "ai", "ai integration", "ai models", "claude opus", "claude sonnet", "code completion", "copilot", "copilot chat", "copilot enterprise", "enterprise administration", "gemini", "github copilot", "model deprecation", "model management", "news", "openai gpt", "retired", "vs code"]

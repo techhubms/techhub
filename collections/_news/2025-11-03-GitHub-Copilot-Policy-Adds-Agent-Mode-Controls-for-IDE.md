@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/changelog/feed/"
 date: 2025-11-03 18:13:16 +00:00
-permalink: "/news/2025-11-03-GitHub-Copilot-Policy-Adds-Agent-Mode-Controls-for-IDE.html"
+permalink: "/2025-11-03-GitHub-Copilot-Policy-Adds-Agent-Mode-Controls-for-IDE.html"
 categories: ["AI", "GitHub Copilot"]
 tags: ["Access Controls", "Agent Mode", "AI", "AI Controls", "Copilot", "Copilot Policies", "Developer Tools", "Enterprise Management", "Enterprise Management Tools", "GitHub Administration", "GitHub Copilot", "Governance", "IDE Integration", "Improvement", "News", "Policy Management"]
 tags_normalized: ["access controls", "agent mode", "ai", "ai controls", "copilot", "copilot policies", "developer tools", "enterprise management", "enterprise management tools", "github administration", "github copilot", "governance", "ide integration", "improvement", "news", "policy management"]

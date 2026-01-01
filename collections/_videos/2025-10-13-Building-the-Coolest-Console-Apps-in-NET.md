@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Nick Chapsas YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrkPsvLGln62OMZRO6K-llg"
 date: 2025-10-13 10:45:00 +00:00
-permalink: "/videos/2025-10-13-Building-the-Coolest-Console-Apps-in-NET.html"
+permalink: "/2025-10-13-Building-the-Coolest-Console-Apps-in-NET.html"
 categories: ["Coding"]
 tags: [".NET", "Application Development", "C#", "Code Tutorial", "Coding", "Console Applications", "Library", "Open Source", "Programming", "Razor Pages", "RazorConsole", "Videos"]
 tags_normalized: ["dotnet", "application development", "csharp", "code tutorial", "coding", "console applications", "library", "open source", "programming", "razor pages", "razorconsole", "videos"]

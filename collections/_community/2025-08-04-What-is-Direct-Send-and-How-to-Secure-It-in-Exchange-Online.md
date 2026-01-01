@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Community"
 date: 2025-08-04 16:06:17 +00:00
-permalink: "/community/2025-08-04-What-is-Direct-Send-and-How-to-Secure-It-in-Exchange-Online.html"
+permalink: "/2025-08-04-What-is-Direct-Send-and-How-to-Secure-It-in-Exchange-Online.html"
 categories: ["Azure"]
 tags: ["Advanced Hunting", "Azure", "Community", "Defender For Office 365", "Direct Send", "Email Quarantine", "Exchange Online", "Inbound Connectors", "Mail Flow", "Microsoft 365", "PowerShell", "Threat Explorer", "Transport Rules"]
 tags_normalized: ["advanced hunting", "azure", "community", "defender for office 365", "direct send", "email quarantine", "exchange online", "inbound connectors", "mail flow", "microsoft 365", "powershell", "threat explorer", "transport rules"]

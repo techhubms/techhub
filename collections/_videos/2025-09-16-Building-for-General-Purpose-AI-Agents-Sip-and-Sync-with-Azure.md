@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Developer YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
 date: 2025-09-16 14:16:02 +00:00
-permalink: "/videos/2025-09-16-Building-for-General-Purpose-AI-Agents-Sip-and-Sync-with-Azure.html"
+permalink: "/2025-09-16-Building-for-General-Purpose-AI-Agents-Sip-and-Sync-with-Azure.html"
 categories: ["AI", "Azure"]
 tags: ["Agent Integration", "Agent Optimization", "AI", "AI Agents", "Automation", "Azure", "Azure Roles", "Cloud Computing", "Cloud Development", "Core AI", "Dev", "Developer Tools", "Development", "General Purpose Agents", "Magnus", "MCP", "Microsoft", "Software Agents", "Tech", "Tech Demo", "Technology", "Videos", "Warp"]
 tags_normalized: ["agent integration", "agent optimization", "ai", "ai agents", "automation", "azure", "azure roles", "cloud computing", "cloud development", "core ai", "dev", "developer tools", "development", "general purpose agents", "magnus", "mcp", "microsoft", "software agents", "tech", "tech demo", "technology", "videos", "warp"]

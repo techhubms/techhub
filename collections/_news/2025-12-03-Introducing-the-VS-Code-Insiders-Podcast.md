@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Visual Studio Code Releases"
 feed_url: "https://code.visualstudio.com/feed.xml"
 date: 2025-12-03 00:00:00 +00:00
-permalink: "/news/2025-12-03-Introducing-the-VS-Code-Insiders-Podcast.html"
+permalink: "/2025-12-03-Introducing-the-VS-Code-Insiders-Podcast.html"
 categories: ["Coding"]
 tags: ["Accessibility", "AI", "AI in Coding", "Code Editor", "Coding", "Community Building", "Developer Tools", "Developer Workflow", "GitHub Universe", "News", "Open Source", "Planning Agent", "Podcast", "Product Management", "Software Engineering", "VS Code", "VS Code Insiders"]
 tags_normalized: ["accessibility", "ai", "ai in coding", "code editor", "coding", "community building", "developer tools", "developer workflow", "github universe", "news", "open source", "planning agent", "podcast", "product management", "software engineering", "vs code", "vs code insiders"]

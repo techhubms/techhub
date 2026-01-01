@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Events YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
 date: 2025-11-24 14:26:49 +00:00
-permalink: "/videos/2025-11-24-Securing-AI-at-Scale-Microsofts-Latest-Innovations-in-Agent-App-and-Data-Protection.html"
+permalink: "/2025-11-24-Securing-AI-at-Scale-Microsofts-Latest-Innovations-in-Agent-App-and-Data-Protection.html"
 categories: ["AI", "Security"]
 tags: ["Agent 365", "AI", "AI Agents", "AI Governance", "AI Security", "Copilot Security", "Data Protection", "Defender", "Entra", "Identity Management", "Lifecycle Management", "Microsoft Ignite", "Microsoft Security", "MSIgnite", "Other", "Purview", "Regulatory Compliance", "Security", "Security Dashboard For AI", "Supply Chain Security", "Threat Detection", "Videos"]
 tags_normalized: ["agent 365", "ai", "ai agents", "ai governance", "ai security", "copilot security", "data protection", "defender", "entra", "identity management", "lifecycle management", "microsoft ignite", "microsoft security", "msignite", "other", "purview", "regulatory compliance", "security", "security dashboard for ai", "supply chain security", "threat detection", "videos"]

@@ -9,10 +9,10 @@ viewing_mode: "external"
 feed_name: "Randy Pagels's Blog"
 feed_url: "https://www.cooknwithcopilot.com/rss.xml"
 date: 2025-07-04 00:00:00 +00:00
-permalink: "/blogs/2025-07-04-Avoid-These-Common-Prompts.html"
+permalink: "/2025-07-04-Avoid-These-Common-Prompts.html"
 categories: ["AI", "GitHub Copilot"]
-tags: ["AI", "AI Assisted Development", "Bug Fixing", "Coding Productivity", "Contextual Prompts", "Copilot Prompts", "Developer Experience", "GitHub Copilot", "Blogs", "Programming Best Practices", "Prompt Engineering", "Unit Test Generation"]
-tags_normalized: ["ai", "ai assisted development", "bug fixing", "coding productivity", "contextual prompts", "copilot prompts", "developer experience", "github copilot", "blogs", "programming best practices", "prompt engineering", "unit test generation"]
+tags: ["AI", "AI Assisted Development", "Blogs", "Bug Fixing", "Coding Productivity", "Contextual Prompts", "Copilot Prompts", "Developer Experience", "GitHub Copilot", "Programming Best Practices", "Prompt Engineering", "Unit Test Generation"]
+tags_normalized: ["ai", "ai assisted development", "blogs", "bug fixing", "coding productivity", "contextual prompts", "copilot prompts", "developer experience", "github copilot", "programming best practices", "prompt engineering", "unit test generation"]
 ---
 
 Randy Pagels shares actionable advice on how developers can improve their results with GitHub Copilot by avoiding vague prompts and leveraging precise language and clear context.<!--excerpt_end-->

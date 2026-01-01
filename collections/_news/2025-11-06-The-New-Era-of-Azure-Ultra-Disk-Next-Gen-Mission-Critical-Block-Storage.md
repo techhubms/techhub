@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The Azure Blog"
 feed_url: "https://azure.microsoft.com/en-us/blog/feed/"
 date: 2025-11-06 17:00:00 +00:00
-permalink: "/news/2025-11-06-The-New-Era-of-Azure-Ultra-Disk-Next-Gen-Mission-Critical-Block-Storage.html"
+permalink: "/2025-11-06-The-New-Era-of-Azure-Ultra-Disk-Next-Gen-Mission-Critical-Block-Storage.html"
 categories: ["Azure"]
 tags: ["Azure", "Azure Boost", "Azure Ultra Disk", "Backup And Recovery", "Block Storage", "Capacity Management", "Cloud Storage", "Cost Efficiency", "Encryption", "IOPS", "Latency", "Managed Disks", "Mission Critical Workloads", "News", "Performance Optimization", "Snapshot Recovery", "Storage", "Virtual Machines"]
 tags_normalized: ["azure", "azure boost", "azure ultra disk", "backup and recovery", "block storage", "capacity management", "cloud storage", "cost efficiency", "encryption", "iops", "latency", "managed disks", "mission critical workloads", "news", "performance optimization", "snapshot recovery", "storage", "virtual machines"]

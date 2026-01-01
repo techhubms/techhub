@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/changelog/feed/"
 date: 2025-12-19 20:15:36 +00:00
-permalink: "/news/2025-12-19-Require-Reviews-for-Dependabot-Alert-Dismissal-with-Delegated-Alert-Dismissal-in-GitHub.html"
+permalink: "/2025-12-19-Require-Reviews-for-Dependabot-Alert-Dismissal-with-Delegated-Alert-Dismissal-in-GitHub.html"
 categories: ["DevOps", "Security"]
 tags: ["Alert Dismissal", "Audit", "Code Scanning", "Code Security", "Compliance", "Delegated Alert Dismissal", "Dependabot", "DevOps", "GitHub", "GitHub Enterprise Server", "Improvement", "News", "Review Process", "Secret Scanning", "Security", "Security Alerts", "Security Governance", "Supply Chain Security", "Vulnerability Management"]
 tags_normalized: ["alert dismissal", "audit", "code scanning", "code security", "compliance", "delegated alert dismissal", "dependabot", "devops", "github", "github enterprise server", "improvement", "news", "review process", "secret scanning", "security", "security alerts", "security governance", "supply chain security", "vulnerability management"]

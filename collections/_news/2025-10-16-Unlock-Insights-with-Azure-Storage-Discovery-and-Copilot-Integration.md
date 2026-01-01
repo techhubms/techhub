@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The Azure Blog"
 feed_url: "https://azure.microsoft.com/en-us/blog/feed/"
 date: 2025-10-16 15:00:00 +00:00
-permalink: "/news/2025-10-16-Unlock-Insights-with-Azure-Storage-Discovery-and-Copilot-Integration.html"
+permalink: "/2025-10-16-Unlock-Insights-with-Azure-Storage-Discovery-and-Copilot-Integration.html"
 categories: ["AI", "Azure", "Security"]
 tags: ["AI", "Azure", "Azure Blob Storage", "Azure Data Lake Storage", "Azure Marketplace", "Azure Storage Discovery", "Capacity Planning", "Copilot", "Copilot in Azure", "Cost Optimization", "Data Compliance", "Data Insights", "Data Security", "Data Visualization", "Microsoft Azure", "Microsoft Entra ID", "Natural Language Queries", "News", "Redundancy", "Security", "Storage", "Storage Automation", "Storage Management"]
 tags_normalized: ["ai", "azure", "azure blob storage", "azure data lake storage", "azure marketplace", "azure storage discovery", "capacity planning", "copilot", "copilot in azure", "cost optimization", "data compliance", "data insights", "data security", "data visualization", "microsoft azure", "microsoft entra id", "natural language queries", "news", "redundancy", "security", "storage", "storage automation", "storage management"]

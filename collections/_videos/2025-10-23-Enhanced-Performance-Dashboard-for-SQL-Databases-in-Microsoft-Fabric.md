@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Developer YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
 date: 2025-10-23 19:06:55 +00:00
-permalink: "/videos/2025-10-23-Enhanced-Performance-Dashboard-for-SQL-Databases-in-Microsoft-Fabric.html"
+permalink: "/2025-10-23-Enhanced-Performance-Dashboard-for-SQL-Databases-in-Microsoft-Fabric.html"
 categories: ["Azure", "ML"]
 tags: ["Azure", "Cloud Computing", "Cloud Data Platform", "Data Analytics", "Database Insights", "Database Performance", "Dev", "Development", "Memory Monitoring", "Microsoft", "Microsoft Fabric", "ML", "Performance Dashboard", "Performance Tuning", "Resource Management", "SQL", "SQL Database", "Tech", "Technology", "Videos", "Workload Optimization"]
 tags_normalized: ["azure", "cloud computing", "cloud data platform", "data analytics", "database insights", "database performance", "dev", "development", "memory monitoring", "microsoft", "microsoft fabric", "ml", "performance dashboard", "performance tuning", "resource management", "sql", "sql database", "tech", "technology", "videos", "workload optimization"]

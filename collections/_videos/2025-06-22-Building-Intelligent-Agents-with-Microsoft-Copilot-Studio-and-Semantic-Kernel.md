@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Learn Microsoft AI Youtube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCQf_yRJpsfyEiWWpt1MZ6vA"
 date: 2025-06-22 01:58:09 +00:00
-permalink: "/videos/2025-06-22-Building-Intelligent-Agents-with-Microsoft-Copilot-Studio-and-Semantic-Kernel.html"
+permalink: "/2025-06-22-Building-Intelligent-Agents-with-Microsoft-Copilot-Studio-and-Semantic-Kernel.html"
 categories: ["AI", "Coding"]
 tags: ["Agent Communication", "Agent Development", "Agent Integration", "AI", "AI Hands On", "AI Orchestration", "Coding", "Copilot Studio", "Developer Tools", "Intelligent Agents", "Live Session", "Microsoft AI", "Microsoft Copilot", "Practical Demos", "Semantic Kernel", "Semantic Processing", "Videos", "Workflow Automation"]
 tags_normalized: ["agent communication", "agent development", "agent integration", "ai", "ai hands on", "ai orchestration", "coding", "copilot studio", "developer tools", "intelligent agents", "live session", "microsoft ai", "microsoft copilot", "practical demos", "semantic kernel", "semantic processing", "videos", "workflow automation"]

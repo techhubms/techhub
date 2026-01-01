@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Fabric Blog"
 feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
 date: 2025-09-25 11:00:00 +00:00
-permalink: "/news/2025-09-25-Building-AI-Agents-for-Enterprise-Data-with-Agent-Mart-Studio-and-Microsoft-Fabric.html"
+permalink: "/2025-09-25-Building-AI-Agents-for-Enterprise-Data-with-Agent-Mart-Studio-and-Microsoft-Fabric.html"
 categories: ["AI", "Azure"]
 tags: ["Agent Mart Studio", "AI", "AI Agents", "Azure", "Business Process Automation", "Data Automation", "Data Integration", "Enterprise Data", "Lucid Data Hub", "Microsoft Fabric", "News", "No Code AI", "OneLake", "Retail Automation", "Workflow Automation"]
 tags_normalized: ["agent mart studio", "ai", "ai agents", "azure", "business process automation", "data automation", "data integration", "enterprise data", "lucid data hub", "microsoft fabric", "news", "no code ai", "onelake", "retail automation", "workflow automation"]

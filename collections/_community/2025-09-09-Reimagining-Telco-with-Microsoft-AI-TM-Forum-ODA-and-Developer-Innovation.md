@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-09-09 16:54:57 +00:00
-permalink: "/community/2025-09-09-Reimagining-Telco-with-Microsoft-AI-TM-Forum-ODA-and-Developer-Innovation.html"
+permalink: "/2025-09-09-Reimagining-Telco-with-Microsoft-AI-TM-Forum-ODA-and-Developer-Innovation.html"
 categories: ["AI", "Azure", "Coding", "DevOps", "GitHub Copilot"]
 tags: ["Agent Mode", "Agentic AI", "AI", "AI Governance", "API Development", "Azure", "Azure AI Foundry", "Cloud Native", "Coding", "Community", "Connected Intelligence", "Copilot Chat", "Customer Management API", "Developer Productivity", "DevOps", "Enterprise AI", "GitHub Copilot", "MCP", "Microsoft Azure", "Open Digital Architecture", "OSS/BSS", "Telco", "TM Forum", "TMF Open APIs"]
 tags_normalized: ["agent mode", "agentic ai", "ai", "ai governance", "api development", "azure", "azure ai foundry", "cloud native", "coding", "community", "connected intelligence", "copilot chat", "customer management api", "developer productivity", "devops", "enterprise ai", "github copilot", "mcp", "microsoft azure", "open digital architecture", "ossslashbss", "telco", "tm forum", "tmf open apis"]

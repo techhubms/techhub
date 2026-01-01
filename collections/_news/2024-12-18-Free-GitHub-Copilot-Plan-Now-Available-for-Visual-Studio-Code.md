@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Visual Studio Code Releases"
 feed_url: "https://code.visualstudio.com/feed.xml"
 date: 2024-12-18 00:00:00 +00:00
-permalink: "/news/2024-12-18-Free-GitHub-Copilot-Plan-Now-Available-for-Visual-Studio-Code.html"
+permalink: "/2024-12-18-Free-GitHub-Copilot-Plan-Now-Available-for-Visual-Studio-Code.html"
 categories: ["AI", "Coding", "GitHub Copilot"]
 tags: ["AI", "AI Code Completion", "AI Models", "Claude 3.5 Sonnet", "Code Generation", "Coding", "Coding Workflows", "Commit Message Automation", "Copilot Edits", "Custom Instructions", "Free Developer Tools", "GitHub Copilot", "GPT 4o", "News", "Productivity", "Project Awareness", "Terminal Chat", "Voice Chat", "VS Code", "VS Code Extensions"]
 tags_normalized: ["ai", "ai code completion", "ai models", "claude 3dot5 sonnet", "code generation", "coding", "coding workflows", "commit message automation", "copilot edits", "custom instructions", "free developer tools", "github copilot", "gpt 4o", "news", "productivity", "project awareness", "terminal chat", "voice chat", "vs code", "vs code extensions"]

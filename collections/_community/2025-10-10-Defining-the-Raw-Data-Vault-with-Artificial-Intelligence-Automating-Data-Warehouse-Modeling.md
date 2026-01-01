@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-10-10 12:33:30 +00:00
-permalink: "/community/2025-10-10-Defining-the-Raw-Data-Vault-with-Artificial-Intelligence-Automating-Data-Warehouse-Modeling.html"
+permalink: "/2025-10-10-Defining-the-Raw-Data-Vault-with-Artificial-Intelligence-Automating-Data-Warehouse-Modeling.html"
 categories: ["AI", "Azure", "ML"]
 tags: ["AI", "Azure", "Azure Data Lake Storage", "Cloud Analytics", "Community", "Data Engineering", "Data Integration", "Data Modeling", "Data Privacy", "Data Vault", "Data Warehouse Automation", "Enterprise Data Model", "Flow.BI", "Machine Learning", "Metadata Driven", "Microsoft Fabric", "Microsoft SQL Server", "ML", "Multilingual Metadata", "Neural Networks", "Raw Data Vault", "Synapse"]
 tags_normalized: ["ai", "azure", "azure data lake storage", "cloud analytics", "community", "data engineering", "data integration", "data modeling", "data privacy", "data vault", "data warehouse automation", "enterprise data model", "flowdotbi", "machine learning", "metadata driven", "microsoft fabric", "microsoft sql server", "ml", "multilingual metadata", "neural networks", "raw data vault", "synapse"]

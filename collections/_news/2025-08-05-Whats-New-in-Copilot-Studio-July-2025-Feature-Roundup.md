@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft News"
 feed_url: "https://news.microsoft.com/source/feed/"
 date: 2025-08-05 15:42:51 +00:00
-permalink: "/news/2025-08-05-Whats-New-in-Copilot-Studio-July-2025-Feature-Roundup.html"
+permalink: "/2025-08-05-Whats-New-in-Copilot-Studio-July-2025-Feature-Roundup.html"
 categories: ["AI", "Security"]
 tags: ["Admin Center", "AI", "Analytics", "Company News", "Compliance", "Copilot Studio", "Dataverse", "Fabric Data Agents", "Governance", "Microsoft Copilot", "Natural Language Understanding", "News", "NLU+", "Power Platform", "Purview", "ROI Analysis", "Security"]
 tags_normalized: ["admin center", "ai", "analytics", "company news", "compliance", "copilot studio", "dataverse", "fabric data agents", "governance", "microsoft copilot", "natural language understanding", "news", "nluplus", "power platform", "purview", "roi analysis", "security"]

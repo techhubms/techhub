@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft News"
 feed_url: "https://news.microsoft.com/source/feed/"
 date: 2025-07-31 19:34:18 +00:00
-permalink: "/news/2025-07-31-Discover-the-Potential-of-Agentic-AI-in-Higher-Education.html"
+permalink: "/2025-07-31-Discover-the-potential-of-agentic-AI-in-higher-education.html"
 categories: ["AI"]
 tags: ["Academic Technology", "Agentic AI", "AI", "AI Applications", "AI in Education", "Company News", "Digital Transformation", "Education", "Education Innovation", "Future Of Learning", "Higher Education", "Microsoft", "News", "Personalized Learning"]
 tags_normalized: ["academic technology", "agentic ai", "ai", "ai applications", "ai in education", "company news", "digital transformation", "education", "education innovation", "future of learning", "higher education", "microsoft", "news", "personalized learning"]

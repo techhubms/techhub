@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft VisualStudio Blog"
 feed_url: "https://devblogs.microsoft.com/visualstudio/feed/"
 date: 2025-09-09 16:52:29 +00:00
-permalink: "/news/2025-09-09-Visual-Studio-2026-Insiders-Launch-Integrated-AI-Performance-and-Developer-Centric-Upgrades.html"
+permalink: "/2025-09-09-Visual-Studio-2026-Insiders-Launch-Integrated-AI-Performance-and-Developer-Centric-Upgrades.html"
 categories: ["AI", "Coding"]
 tags: ["AI", "AI Integration", "Arm64 Support", "Code Review", "Coding", "Developer Productivity", "Developer Tools", "Enterprise Development", "Fluent UI", "IDE", "Insiders", "News", "Performance Improvements", "Profiler Agent", "Visual Studio Insiders", "VS"]
 tags_normalized: ["ai", "ai integration", "arm64 support", "code review", "coding", "developer productivity", "developer tools", "enterprise development", "fluent ui", "ide", "insiders", "news", "performance improvements", "profiler agent", "visual studio insiders", "vs"]

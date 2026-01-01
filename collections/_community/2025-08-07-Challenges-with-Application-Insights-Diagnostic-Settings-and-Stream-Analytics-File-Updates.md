@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Reddit Azure"
 feed_url: "https://www.reddit.com/r/azure/.rss"
 date: 2025-08-07 11:02:14 +00:00
-permalink: "/community/2025-08-07-Challenges-with-Application-Insights-Diagnostic-Settings-and-Stream-Analytics-File-Updates.html"
+permalink: "/2025-08-07-Challenges-with-Application-Insights-Diagnostic-Settings-and-Stream-Analytics-File-Updates.html"
 categories: ["Azure", "ML"]
 tags: ["Application Insights", "Azure", "Azure Storage", "Azure Stream Analytics", "Community", "Data Export", "Data Pipeline", "Diagnostic Settings", "Log Export", "Log File Appending", "ML", "Monitoring", "Pageviews", "ResourceID Path", "Storage Account", "Streaming", "Telemetry"]
 tags_normalized: ["application insights", "azure", "azure storage", "azure stream analytics", "community", "data export", "data pipeline", "diagnostic settings", "log export", "log file appending", "ml", "monitoring", "pageviews", "resourceid path", "storage account", "streaming", "telemetry"]

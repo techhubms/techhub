@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft DevBlog"
 feed_url: "https://devblogs.microsoft.com/azure-sdk/feed/"
 date: 2025-06-26 15:00:12 +00:00
-permalink: "/news/2025-06-26-Integrating-Azure-Blob-Storage-into-PyTorch-Workflows-with-azstoragetorch.html"
+permalink: "/2025-06-26-Integrating-Azure-Blob-Storage-into-PyTorch-Workflows-with-azstoragetorch.html"
 categories: ["Azure", "ML"]
 tags: ["Azstoragetorch", "Azure", "Azure Blob Storage", "Azure SDK", "Azure Storage", "DataLoader", "Datasets", "DefaultAzureCredential", "Distributed Training", "Machine Learning", "ML", "Model Checkpointing", "Model Deployment", "News", "Python", "Pytorch", "Storage"]
 tags_normalized: ["azstoragetorch", "azure", "azure blob storage", "azure sdk", "azure storage", "dataloader", "datasets", "defaultazurecredential", "distributed training", "machine learning", "ml", "model checkpointing", "model deployment", "news", "python", "pytorch", "storage"]

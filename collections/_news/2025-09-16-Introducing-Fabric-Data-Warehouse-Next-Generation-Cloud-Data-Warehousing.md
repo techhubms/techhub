@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Fabric Blog"
 feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
 date: 2025-09-16 00:30:00 +00:00
-permalink: "/news/2025-09-16-Introducing-Fabric-Data-Warehouse-Next-Generation-Cloud-Data-Warehousing.html"
+permalink: "/2025-09-16-Introducing-Fabric-Data-Warehouse-Next-Generation-Cloud-Data-Warehousing.html"
 categories: ["Azure", "Coding", "ML"]
 tags: ["Audit Logs", "Azure", "Coding", "Copilot", "Customer Managed Keys", "Data Engineering", "Data Migration", "Dbt Connector", "Enterprise Data Warehousing", "Fabric Data Warehouse", "Lakehouse Architecture", "Microsoft Fabric", "Migration Assistant", "ML", "News", "OPENROWSET(JSONL)", "Performance Benchmarking", "PrivateLink", "Serverless Data", "SQL Optimization", "SSMS Integration"]
 tags_normalized: ["audit logs", "azure", "coding", "copilot", "customer managed keys", "data engineering", "data migration", "dbt connector", "enterprise data warehousing", "fabric data warehouse", "lakehouse architecture", "microsoft fabric", "migration assistant", "ml", "news", "openrowsetjsonl", "performance benchmarking", "privatelink", "serverless data", "sql optimization", "ssms integration"]

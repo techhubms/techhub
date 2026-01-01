@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "GitHub YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ"
 date: 2025-10-28 21:17:43 +00:00
-permalink: "/videos/2025-10-28-Introducing-Agent-HQ-Your-Mission-Control-for-AI-Agents.html"
+permalink: "/2025-10-28-Introducing-Agent-HQ-Your-Mission-Control-for-AI-Agents.html"
 categories: ["AI", "DevOps"]
 tags: ["AgentHQ", "AI", "AI Agents", "Code Review", "Command Line Interface", "Developer Productivity", "Developer Tools", "DevOps", "GitHub", "Project Tracking", "Session Management", "Task Assignment", "Videos", "Web IDE"]
 tags_normalized: ["agenthq", "ai", "ai agents", "code review", "command line interface", "developer productivity", "developer tools", "devops", "github", "project tracking", "session management", "task assignment", "videos", "web ide"]

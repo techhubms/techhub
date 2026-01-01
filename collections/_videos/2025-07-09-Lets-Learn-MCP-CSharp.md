@@ -10,7 +10,7 @@ categories: ["AI", "Coding"]
 feed_name: "dotnet"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw"
 date: 2025-07-09 17:53:52 +00:00
-permalink: "/videos/2025-07-09-Lets-Learn-MCP-CSharp.html"
+permalink: "/2025-07-09-Lets-Learn-MCP-CSharp.html"
 tags: [".NET", "AI", "Beginner", "C#", "Coding", "Developer", "Developer Tools", "Dotnetdeveloper", "Mcp", "Microsoft", "Software Developer", "Videos"]
 tags_normalized: ["dotnet", "ai", "beginner", "csharp", "coding", "developer", "developer tools", "dotnetdeveloper", "mcp", "microsoft", "software developer", "videos"]
 ---

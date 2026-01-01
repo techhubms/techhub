@@ -6,7 +6,7 @@ author: "Tech Hub Team"
 excerpt_separator: <!--excerpt_end-->
 viewing_mode: "internal"
 date: 2025-07-28 09:00:00 +00:00
-permalink: "/roundups/2025-07-28-Weekly-AI-and-Tech-News-Roundup.html"
+permalink: "/2025-07-28-Weekly-AI-and-Tech-News-Roundup.html"
 categories: ["AI", "GitHub Copilot", "ML", "Azure", "Coding", "DevOps", "Security"]
 tags: [".NET", "AI", "AI Agents", "Azure", "Cloud Modernization", "Coding", "DevOps", "Enterprise AI", "GitHub Copilot", "MCP Protocol", "ML", "Multi Agent Systems", "Open Source", "Roundups", "Security", "Test Automation", "TypeScript", "VS Code", "Workflow Automation"]
 tags_normalized: ["dotnet", "ai", "ai agents", "azure", "cloud modernization", "coding", "devops", "enterprise ai", "github copilot", "mcp protocol", "ml", "multi agent systems", "open source", "roundups", "security", "test automation", "typescript", "vs code", "workflow automation"]

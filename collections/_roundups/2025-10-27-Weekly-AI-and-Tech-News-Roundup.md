@@ -6,7 +6,7 @@ author: "Tech Hub Team"
 excerpt_separator: <!--excerpt_end-->
 viewing_mode: "internal"
 date: 2025-10-27 09:00:00 +00:00
-permalink: "/roundups/2025-10-27-Weekly-AI-and-Tech-News-Roundup.html"
+permalink: "/2025-10-27-Weekly-AI-and-Tech-News-Roundup.html"
 categories: ["AI", "GitHub Copilot", "ML", "Azure", "Coding", "DevOps", "Security"]
 tags: [".NET", "Agent Framework", "AI", "AI Agents", "Azure", "Cloud Native", "Coding", "Copilot Studio", "DevOps", "GitHub Copilot", "Hybrid Cloud", "Machine Learning", "ML", "Observability", "OpenTelemetry", "Retrieval Augmented Generation", "Roundups", "Security", "Supply Chain Security", "VS Code"]
 tags_normalized: ["dotnet", "agent framework", "ai", "ai agents", "azure", "cloud native", "coding", "copilot studio", "devops", "github copilot", "hybrid cloud", "machine learning", "ml", "observability", "opentelemetry", "retrieval augmented generation", "roundups", "security", "supply chain security", "vs code"]

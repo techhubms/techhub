@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Developer YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
 date: 2025-12-11 21:53:48 +00:00
-permalink: "/videos/2025-12-11-Plan-Specify-and-Implement-with-Spec-Kit-and-GitHub-Copilot.html"
+permalink: "/2025-12-11-Plan-Specify-and-Implement-with-Spec-Kit-and-GitHub-Copilot.html"
 categories: ["AI", "Coding", "GitHub Copilot"]
 tags: ["AI", "AI Development", "Cloud Computing", "Coding", "Dev", "Developer", "Developer Tools", "Development", "GitHub Copilot", "Microsoft", "Microsoft Developer", "Open Source", "Product Scenarios", "Software Engineering", "Spec Driven Development", "Spec Kit", "Tech", "Technology", "Toolkit", "Videos", "VS Code"]
 tags_normalized: ["ai", "ai development", "cloud computing", "coding", "dev", "developer", "developer tools", "development", "github copilot", "microsoft", "microsoft developer", "open source", "product scenarios", "software engineering", "spec driven development", "spec kit", "tech", "technology", "toolkit", "videos", "vs code"]

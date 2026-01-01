@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft AI Foundry Blog"
 feed_url: "https://devblogs.microsoft.com/foundry/feed/"
 date: 2025-11-25 16:00:48 +00:00
-permalink: "/news/2025-11-25-Introducing-Memory-in-Foundry-Agent-Service.html"
+permalink: "/2025-11-25-Introducing-Memory-in-Foundry-Agent-Service.html"
 categories: ["AI", "Azure"]
 tags: ["Agent Development", "Agent Factory", "Agent Memory", "Agent Service", "AI", "AI Agent", "AI Agents", "API Integration", "Azure", "Contextual AI", "Conversational AI", "Gpt 4.1", "Hybrid Retrieval", "Long Term Memory", "Machine Learning", "MCP", "Memory", "Memory Store", "Microsoft Foundry", "MSIgnite", "Natural Language Processing", "News", "Personalization", "Python SDK", "Stateful Agents", "Text Embedding 3 Small", "User Profile Extraction"]
 tags_normalized: ["agent development", "agent factory", "agent memory", "agent service", "ai", "ai agent", "ai agents", "api integration", "azure", "contextual ai", "conversational ai", "gpt 4dot1", "hybrid retrieval", "long term memory", "machine learning", "mcp", "memory", "memory store", "microsoft foundry", "msignite", "natural language processing", "news", "personalization", "python sdk", "stateful agents", "text embedding 3 small", "user profile extraction"]

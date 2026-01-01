@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft All Things Azure Blog"
 feed_url: "https://devblogs.microsoft.com/all-things-azure/feed/"
 date: 2025-10-31 16:11:13 +00:00
-permalink: "/news/2025-10-31-Multi-region-Expansion-Strategies-for-Azure-Deployments-in-Financial-Services.html"
+permalink: "/2025-10-31-Multi-region-Expansion-Strategies-for-Azure-Deployments-in-Financial-Services.html"
 categories: ["Azure"]
 tags: ["All Things Azure", "Azure", "Azure Landing Zones", "Azure Regions", "Business Continuity", "Cloud Architecture", "Cost Optimization", "Data Residency", "Data Sovereignty", "Disaster Recovery", "Financial Services", "Modernization", "Multi Region Deployment", "News", "Performance", "Regulatory Compliance", "Resiliency", "Sustainability", "Thought Leadership"]
 tags_normalized: ["all things azure", "azure", "azure landing zones", "azure regions", "business continuity", "cloud architecture", "cost optimization", "data residency", "data sovereignty", "disaster recovery", "financial services", "modernization", "multi region deployment", "news", "performance", "regulatory compliance", "resiliency", "sustainability", "thought leadership"]

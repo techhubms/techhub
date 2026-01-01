@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "John Savill's Technical Training"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCpIn7ox7j7bH_OFj7tYouOQ"
 date: 2025-09-29 13:13:51 +00:00
-permalink: "/videos/2025-09-29-Azure-Container-Storage-v2-Overview.html"
+permalink: "/2025-09-29-Azure-Container-Storage-v2-Overview.html"
 categories: ["Azure"]
 tags: ["ACStor", "AKS", "Azure", "Azure Cloud", "Azure Container Storage", "Cloud", "Cloud Storage", "Container Storage Interface", "Containers", "CSI", "Durability", "Kubernetes", "Local", "Local Disks", "Microsoft", "Microsoft Azure", "NVMe", "Performance", "Storage Architecture", "Videos", "VM SKUs"]
 tags_normalized: ["acstor", "aks", "azure", "azure cloud", "azure container storage", "cloud", "cloud storage", "container storage interface", "containers", "csi", "durability", "kubernetes", "local", "local disks", "microsoft", "microsoft azure", "nvme", "performance", "storage architecture", "videos", "vm skus"]

@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Visual Studio Code YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SLNwkd3w"
 date: 2025-09-30 14:00:49 +00:00
-permalink: "/videos/2025-09-30-Latest-Updates-to-Coding-Agent-Integration-in-Visual-Studio-Code.html"
+permalink: "/2025-09-30-Latest-Updates-to-Coding-Agent-Integration-in-Visual-Studio-Code.html"
 categories: ["Coding"]
 tags: ["Automation", "Code Editing", "Coding", "Coding Agent", "Developer Tools", "Editor Integration", "Feature Updates", "Programming Environment", "Software Engineering", "Videos", "VS Code"]
 tags_normalized: ["automation", "code editing", "coding", "coding agent", "developer tools", "editor integration", "feature updates", "programming environment", "software engineering", "videos", "vs code"]

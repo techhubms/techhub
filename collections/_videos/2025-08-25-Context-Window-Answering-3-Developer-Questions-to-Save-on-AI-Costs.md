@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Developer YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
 date: 2025-08-25 16:00:16 +00:00
-permalink: "/videos/2025-08-25-Context-Window-Answering-3-Developer-Questions-to-Save-on-AI-Costs.html"
+permalink: "/2025-08-25-Context-Window-Answering-3-Developer-Questions-to-Save-on-AI-Costs.html"
 categories: ["AI", "Azure"]
 tags: ["AI", "AI Best Practices", "AI Cost Optimization", "AI Development", "AI Services", "Azure", "Azure AI Foundry", "Cloud Computing", "Dev", "Developer Q&A", "Development", "Microsoft", "Microsoft AI", "Tech", "Technology", "Videos"]
 tags_normalized: ["ai", "ai best practices", "ai cost optimization", "ai development", "ai services", "azure", "azure ai foundry", "cloud computing", "dev", "developer qanda", "development", "microsoft", "microsoft ai", "tech", "technology", "videos"]

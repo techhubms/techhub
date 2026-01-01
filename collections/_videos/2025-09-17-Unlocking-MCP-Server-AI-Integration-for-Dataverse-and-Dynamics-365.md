@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Developer YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
 date: 2025-09-17 07:00:41 +00:00
-permalink: "/videos/2025-09-17-Unlocking-MCP-Server-AI-Integration-for-Dataverse-and-Dynamics-365.html"
+permalink: "/2025-09-17-Unlocking-MCP-Server-AI-Integration-for-Dataverse-and-Dynamics-365.html"
 categories: ["AI"]
 tags: ["Agentic AI", "AI", "AI Integration", "Autonomous Agents", "Cloud Computing", "Copilot Studio", "Dataverse", "Dev", "Development", "Dynamics 365", "Enterprise Applications", "Interactive Agents", "Low Code Development", "MCP", "MCP Server", "Microsoft", "Microsoft Learn", "Microsoft MVP", "Preview Features", "Security Considerations", "Tech", "Technology", "Videos"]
 tags_normalized: ["agentic ai", "ai", "ai integration", "autonomous agents", "cloud computing", "copilot studio", "dataverse", "dev", "development", "dynamics 365", "enterprise applications", "interactive agents", "low code development", "mcp", "mcp server", "microsoft", "microsoft learn", "microsoft mvp", "preview features", "security considerations", "tech", "technology", "videos"]

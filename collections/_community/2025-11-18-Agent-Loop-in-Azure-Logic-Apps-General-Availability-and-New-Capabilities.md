@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-11-18 18:40:38 +00:00
-permalink: "/community/2025-11-18-Agent-Loop-in-Azure-Logic-Apps-General-Availability-and-New-Capabilities.html"
+permalink: "/2025-11-18-Agent-Loop-in-Azure-Logic-Apps-General-Availability-and-New-Capabilities.html"
 categories: ["AI", "Azure", "DevOps", "Security"]
 tags: ["Access Control Lists (acl)", "Agent Loop", "AI", "AI Automation", "AI Gateway", "Azure", "Azure AI Search", "Azure Logic Apps", "Community", "Conversational Agents", "Data Residency", "DevOps", "DevOps Automation", "Enterprise Security", "Incident Management", "M365 Integration", "MCP", "Microsoft Entra ID", "Multi Agent Workflows", "OAuth 2.0", "On Behalf Of Authentication", "Public Preview Features", "Python Integration", "Security", "Teams Integration", "VNET Integration", "Workflow Orchestration"]
 tags_normalized: ["access control lists acl", "agent loop", "ai", "ai automation", "ai gateway", "azure", "azure ai search", "azure logic apps", "community", "conversational agents", "data residency", "devops", "devops automation", "enterprise security", "incident management", "m365 integration", "mcp", "microsoft entra id", "multi agent workflows", "oauth 2dot0", "on behalf of authentication", "public preview features", "python integration", "security", "teams integration", "vnet integration", "workflow orchestration"]

@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-11-20 16:37:24 +00:00
-permalink: "/community/2025-11-20-Introducing-Golazo-Open-Source-Framework-for-Transparent-Engineering-Teams.html"
+permalink: "/2025-11-20-Introducing-Golazo-Open-Source-Framework-for-Transparent-Engineering-Teams.html"
 categories: ["DevOps"]
 tags: ["Agile Practices", "Collaboration", "Community", "Continuous Improvement", "Design Documentation", "DevOps", "Engineering Framework", "GitHub", "Golazo", "Hybrid Teams", "Knowledge Management", "Microsoft", "Open Source", "Peer Review", "Software Engineering", "Standup Meetings", "Team Retrospectives", "Transparent Workflow", "Workflow Boards"]
 tags_normalized: ["agile practices", "collaboration", "community", "continuous improvement", "design documentation", "devops", "engineering framework", "github", "golazo", "hybrid teams", "knowledge management", "microsoft", "open source", "peer review", "software engineering", "standup meetings", "team retrospectives", "transparent workflow", "workflow boards"]

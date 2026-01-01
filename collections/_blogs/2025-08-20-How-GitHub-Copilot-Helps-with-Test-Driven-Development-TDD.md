@@ -9,10 +9,10 @@ viewing_mode: "external"
 feed_name: "Dellenny's Blog"
 feed_url: "https://dellenny.com/feed/"
 date: 2025-08-20 08:04:32 +00:00
-permalink: "/blogs/2025-08-20-How-GitHub-Copilot-Helps-with-Test-Driven-Development-TDD.html"
+permalink: "/2025-08-20-How-GitHub-Copilot-Helps-with-Test-Driven-Development-TDD.html"
 categories: ["AI", "Coding", "GitHub Copilot"]
-tags: ["AI", "AI Coding Assistant", "Assertion Generation", "Code Automation", "Coding", "Developer Productivity", "Edge Case Generation", "GitHub Copilot", "JUnit", "Blogs", "Pytest", "Red Green Refactor", "RSpec", "Software Engineering", "TDD", "Test Driven Development", "Test Scaffolding", "Testing Frameworks", "Unit Testing", "Unittest"]
-tags_normalized: ["ai", "ai coding assistant", "assertion generation", "code automation", "coding", "developer productivity", "edge case generation", "github copilot", "junit", "blogs", "pytest", "red green refactor", "rspec", "software engineering", "tdd", "test driven development", "test scaffolding", "testing frameworks", "unit testing", "unittest"]
+tags: ["AI", "AI Coding Assistant", "Assertion Generation", "Blogs", "Code Automation", "Coding", "Developer Productivity", "Edge Case Generation", "GitHub Copilot", "JUnit", "Pytest", "Red Green Refactor", "RSpec", "Software Engineering", "TDD", "Test Driven Development", "Test Scaffolding", "Testing Frameworks", "Unit Testing", "Unittest"]
+tags_normalized: ["ai", "ai coding assistant", "assertion generation", "blogs", "code automation", "coding", "developer productivity", "edge case generation", "github copilot", "junit", "pytest", "red green refactor", "rspec", "software engineering", "tdd", "test driven development", "test scaffolding", "testing frameworks", "unit testing", "unittest"]
 ---
 
 Dellenny discusses how GitHub Copilot supports Test-Driven Development (TDD) by helping developers write tests efficiently, generate edge cases, and stay productive throughout the coding cycle.<!--excerpt_end-->

@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-11-11 18:36:18 +00:00
-permalink: "/community/2025-11-11-Workflow-First-Code-First-and-Hybrid-AI-Agent-Design-Approaches-for-Enterprise-Automation.html"
+permalink: "/2025-11-11-Workflow-First-Code-First-and-Hybrid-AI-Agent-Design-Approaches-for-Enterprise-Automation.html"
 categories: ["AI", "Azure", "Coding"]
 tags: [".NET SDK", "Agent Orchestration", "AI", "AI Agents", "Azure", "Azure AI Foundry", "Azure Functions", "Coding", "Community", "Copilot Studio", "Enterprise Automation", "Hybrid Development", "Integration", "LangChain", "Logic Apps", "Microsoft Agent Framework", "Microsoft Graph", "Multi Agent Systems", "Observability", "Power Automate", "Python SDK", "SDK Development", "Semantic Kernel", "Visual Designers", "Workflow Automation"]
 tags_normalized: ["dotnet sdk", "agent orchestration", "ai", "ai agents", "azure", "azure ai foundry", "azure functions", "coding", "community", "copilot studio", "enterprise automation", "hybrid development", "integration", "langchain", "logic apps", "microsoft agent framework", "microsoft graph", "multi agent systems", "observability", "power automate", "python sdk", "sdk development", "semantic kernel", "visual designers", "workflow automation"]

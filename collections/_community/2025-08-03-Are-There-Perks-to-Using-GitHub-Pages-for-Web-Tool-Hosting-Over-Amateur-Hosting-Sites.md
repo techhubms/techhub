@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Reddit GitHub"
 feed_url: "https://www.reddit.com/r/github/.rss"
 date: 2025-08-03 14:00:17 +00:00
-permalink: "/community/2025-08-03-Are-There-Perks-to-Using-GitHub-Pages-for-Web-Tool-Hosting-Over-Amateur-Hosting-Sites.html"
+permalink: "/2025-08-03-Are-There-Perks-to-Using-GitHub-Pages-for-Web-Tool-Hosting-Over-Amateur-Hosting-Sites.html"
 categories: ["DevOps"]
 tags: ["Community", "Deployment", "DevOps", "GitHub", "GitHub Pages", "HTML", "JavaScript", "Nekoweb", "Neocities", "Open Source", "Static Sites", "Utilities", "Web Hosting"]
 tags_normalized: ["community", "deployment", "devops", "github", "github pages", "html", "javascript", "nekoweb", "neocities", "open source", "static sites", "utilities", "web hosting"]

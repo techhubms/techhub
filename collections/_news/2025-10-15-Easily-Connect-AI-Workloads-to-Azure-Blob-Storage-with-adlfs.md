@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Azure SDK Blog"
 feed_url: "https://devblogs.microsoft.com/azure-sdk/feed/"
 date: 2025-10-15 17:17:17 +00:00
-permalink: "/news/2025-10-15-Easily-Connect-AI-Workloads-to-Azure-Blob-Storage-with-adlfs.html"
+permalink: "/2025-10-15-Easily-Connect-AI-Workloads-to-Azure-Blob-Storage-with-adlfs.html"
 categories: ["AI", "Azure", "ML"]
 tags: ["Adlfs", "AI", "AI Workloads", "Azure", "Azure Blob Storage", "Azure Data Lake Storage", "Azure SDK", "Blob Storage", "Cloud Storage", "Concurrent Uploads", "Dask", "Data Engineering", "Data Lake", "Data Pipelines", "ETL", "Fsspec", "Machine Learning", "ML", "News", "Pandas", "Performance Optimization", "Python", "PyTorch", "Ray", "Storage", "Storage Authentication"]
 tags_normalized: ["adlfs", "ai", "ai workloads", "azure", "azure blob storage", "azure data lake storage", "azure sdk", "blob storage", "cloud storage", "concurrent uploads", "dask", "data engineering", "data lake", "data pipelines", "etl", "fsspec", "machine learning", "ml", "news", "pandas", "performance optimization", "python", "pytorch", "ray", "storage", "storage authentication"]

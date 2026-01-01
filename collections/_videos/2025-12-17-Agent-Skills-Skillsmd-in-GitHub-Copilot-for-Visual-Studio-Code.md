@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Visual Studio Code YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SLNwkd3w"
 date: 2025-12-17 20:14:12 +00:00
-permalink: "/videos/2025-12-17-Agent-Skills-Skillsmd-in-GitHub-Copilot-for-Visual-Studio-Code.html"
+permalink: "/2025-12-17-Agent-Skills-Skillsmd-in-GitHub-Copilot-for-Visual-Studio-Code.html"
 categories: ["AI", "Coding", "GitHub Copilot"]
 tags: ["Agent Mode", "Agent Skills", "Agentmode", "Agents", "Agentskills", "AI", "AI Agents", "AI Workflow", "Code", "Code Customization", "Coding", "Copilot CLI", "Copilot Coding Agent", "Developer", "Developer Community", "Developer Tools", "GitHub Copilot", "Microsoft", "Skills.md", "Software Developer", "Software Development", "Videos", "VS Code"]
 tags_normalized: ["agent mode", "agent skills", "agentmode", "agents", "agentskills", "ai", "ai agents", "ai workflow", "code", "code customization", "coding", "copilot cli", "copilot coding agent", "developer", "developer community", "developer tools", "github copilot", "microsoft", "skillsdotmd", "software developer", "software development", "videos", "vs code"]

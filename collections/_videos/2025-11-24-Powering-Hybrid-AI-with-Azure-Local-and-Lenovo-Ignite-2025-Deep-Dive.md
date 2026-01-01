@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Events YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
 date: 2025-11-24 10:34:29 +00:00
-permalink: "/videos/2025-11-24-Powering-Hybrid-AI-with-Azure-Local-and-Lenovo-Ignite-2025-Deep-Dive.html"
+permalink: "/2025-11-24-Powering-Hybrid-AI-with-Azure-Local-and-Lenovo-Ignite-2025-Deep-Dive.html"
 categories: ["AI", "Azure"]
 tags: ["AI", "AKS", "Azure", "Azure AI Foundry", "Azure Local", "Clustered Workloads", "Custom AI Models", "Data Sovereignty", "Edge AI", "Hybrid Cloud", "Legacy Migration", "Lenovo ThinkAgile MX", "Medical Diagnostics", "Microsoft Ignite", "Migrateandmodernizeyourestate", "MSIgnite", "NVIDIA Models", "Predictive Maintenance", "Real Time Analytics", "Scalable Infrastructure", "Videos"]
 tags_normalized: ["ai", "aks", "azure", "azure ai foundry", "azure local", "clustered workloads", "custom ai models", "data sovereignty", "edge ai", "hybrid cloud", "legacy migration", "lenovo thinkagile mx", "medical diagnostics", "microsoft ignite", "migrateandmodernizeyourestate", "msignite", "nvidia models", "predictive maintenance", "real time analytics", "scalable infrastructure", "videos"]

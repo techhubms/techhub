@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "GitHub YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ"
 date: 2025-08-15 16:12:57 +00:00
-permalink: "/videos/2025-08-15-GPT-5-and-Claude-41-Arrive-in-GitHub-Copilot-TypeScript-59-Updates-and-Community-News.html"
+permalink: "/2025-08-15-GPT-5-and-Claude-41-Arrive-in-GitHub-Copilot-TypeScript-59-Updates-and-Community-News.html"
 categories: ["AI", "Coding", "GitHub Copilot"]
 tags: ["AI", "AI Integration", "Anthropic", "Claude Opus 4.1", "Coding", "Developer Tools", "DeveloperNews", "GitHub", "GitHub Copilot", "GPT 5", "JS13kGames", "MCP", "Mojo Language", "Open Source", "OpenAI", "Python 3.14", "React Native", "Reanimated 4", "TypeScript 5.9", "Videos", "VS Code"]
 tags_normalized: ["ai", "ai integration", "anthropic", "claude opus 4dot1", "coding", "developer tools", "developernews", "github", "github copilot", "gpt 5", "js13kgames", "mcp", "mojo language", "open source", "openai", "python 3dot14", "react native", "reanimated 4", "typescript 5dot9", "videos", "vs code"]

@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "John Savill's Technical Training"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCpIn7ox7j7bH_OFj7tYouOQ"
 date: 2025-09-03 15:35:20 +00:00
-permalink: "/videos/2025-09-03-Zero-Trust-Workshop-Implementing-Microsofts-Security-Framework.html"
+permalink: "/2025-09-03-Zero-Trust-Workshop-Implementing-Microsofts-Security-Framework.html"
 categories: ["Azure", "Security"]
 tags: ["Assessment Tools", "Azure", "Azure Security", "Cloud", "Cloud Security", "Entra", "Intune", "Microsoft", "Microsoft Entra", "Microsoft Security", "Microsoft Sentinel", "NIST", "Security", "Security Roadmap", "Security Workshop", "Sentinel", "Videos", "Zero Trust"]
 tags_normalized: ["assessment tools", "azure", "azure security", "cloud", "cloud security", "entra", "intune", "microsoft", "microsoft entra", "microsoft security", "microsoft sentinel", "nist", "security", "security roadmap", "security workshop", "sentinel", "videos", "zero trust"]

@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Community"
 date: 2025-08-12 12:30:37 +00:00
-permalink: "/community/2025-08-12-SQL-Server-on-Linux-Now-Supports-cgroup-v2.html"
+permalink: "/2025-08-12-SQL-Server-on-Linux-Now-Supports-cgroup-v2.html"
 categories: ["Azure", "DevOps"]
 tags: ["AKS", "Azure", "Cgroup", "Cgroup V2", "Community", "Container Orchestration", "Containerization", "DevOps", "Docker", "Errorlog", "Kubernetes", "Linux", "Memory Limits", "OpenShift", "Platform Engineering", "Quality Of Service", "Resource Enforcement", "Resource Management", "SQL Server", "SQL Server CU 20", "SQL Server On Linux"]
 tags_normalized: ["aks", "azure", "cgroup", "cgroup v2", "community", "container orchestration", "containerization", "devops", "docker", "errorlog", "kubernetes", "linux", "memory limits", "openshift", "platform engineering", "quality of service", "resource enforcement", "resource management", "sql server", "sql server cu 20", "sql server on linux"]

@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Developer YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
 date: 2025-12-10 22:07:54 +00:00
-permalink: "/videos/2025-12-10-Ignite-BRK1706-Build-and-Manage-AI-Apps-with-Microsoft-Foundry.html"
+permalink: "/2025-12-10-Ignite-BRK1706-Build-and-Manage-AI-Apps-with-Microsoft-Foundry.html"
 categories: ["AI", "Azure"]
 tags: ["Agent Factory", "AI", "AI Agents", "AI Application Development", "Azure", "Azure Free Trial", "Cloud Computing", "Dev", "Developer", "Development", "Enterprise Security", "Intelligent Agents", "Microsoft", "Microsoft Foundry", "Modular AI", "Observability", "Tech", "Technology", "Videos", "Workflow Orchestration"]
 tags_normalized: ["agent factory", "ai", "ai agents", "ai application development", "azure", "azure free trial", "cloud computing", "dev", "developer", "development", "enterprise security", "intelligent agents", "microsoft", "microsoft foundry", "modular ai", "observability", "tech", "technology", "videos", "workflow orchestration"]

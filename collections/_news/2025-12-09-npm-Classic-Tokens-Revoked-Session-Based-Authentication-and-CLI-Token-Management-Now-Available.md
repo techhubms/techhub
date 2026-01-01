@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/changelog/feed/"
 date: 2025-12-09 16:21:59 +00:00
-permalink: "/news/2025-12-09-npm-Classic-Tokens-Revoked-Session-Based-Authentication-and-CLI-Token-Management-Now-Available.html"
+permalink: "/2025-12-09-npm-Classic-Tokens-Revoked-Session-Based-Authentication-and-CLI-Token-Management-Now-Available.html"
 categories: ["DevOps", "Security"]
 tags: ["Authentication", "CI/CD", "CLI", "DevOps", "Granular Tokens", "Legacy API Endpoint", "News", "npm", "OIDC Trusted Publishing", "Retired", "Secure Publishing", "Security", "Security Hardening", "Session Tokens", "Supply Chain Security", "Token Management", "Yarn V1", "Yarn V2"]
 tags_normalized: ["authentication", "cislashcd", "cli", "devops", "granular tokens", "legacy api endpoint", "news", "npm", "oidc trusted publishing", "retired", "secure publishing", "security", "security hardening", "session tokens", "supply chain security", "token management", "yarn v1", "yarn v2"]

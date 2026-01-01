@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft AI Foundry Blog"
 feed_url: "https://devblogs.microsoft.com/foundry/feed/"
 date: 2025-09-03 15:00:50 +00:00
-permalink: "/news/2025-09-03-Whats-New-in-Azure-AI-Foundry-August-2025-Release-Highlights.html"
+permalink: "/2025-09-03-Whats-New-in-Azure-AI-Foundry-August-2025-Release-Highlights.html"
 categories: ["AI", "Azure", "Coding"]
 tags: [".NET SDK", "Agents", "AI", "Azure", "Azure AI Foundry", "Azure OpenAI", "Azure SDKs", "Browser Automation", "CMK", "Coding", "FLUX", "FLUX Models", "Foundry Local", "GPT 5", "GPT OSS", "Java SDK", "JavaScript SDK", "Mistral Document AI", "Model Deployment", "Model Router", "News", "Observability", "OpenAI Gpt Oss", "Playwright Testing", "Provisioned Throughput", "Python SDK", "Region Availability", "Responses API", "REST API", "Serverless Inference", "Sora", "Sora API", "Tracing", "VibeVoice"]
 tags_normalized: ["dotnet sdk", "agents", "ai", "azure", "azure ai foundry", "azure openai", "azure sdks", "browser automation", "cmk", "coding", "flux", "flux models", "foundry local", "gpt 5", "gpt oss", "java sdk", "javascript sdk", "mistral document ai", "model deployment", "model router", "news", "observability", "openai gpt oss", "playwright testing", "provisioned throughput", "python sdk", "region availability", "responses api", "rest api", "serverless inference", "sora", "sora api", "tracing", "vibevoice"]

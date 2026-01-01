@@ -9,10 +9,10 @@ viewing_mode: "external"
 feed_name: "Spindev's Blog"
 feed_url: "https://spindev.net/index.xml"
 date: 2025-06-27 07:38:30 +00:00
-permalink: "/blogs/2025-06-27-Be-Careful-When-Using-GitHub-PAT-with-Repo-Scope.html"
+permalink: "/2025-06-27-Be-Careful-When-Using-GitHub-PAT-with-Repo-Scope.html"
 categories: ["DevOps", "Security"]
-tags: ["Access Control", "Authentication", "DevOps", "Enterprise Migration", "GEI", "GitHub", "GitHub API", "Organization Admin", "PAT", "Personal Access Token", "Blogs", "Privilege Escalation", "Repo Scope", "Scope Management", "Security", "Token Permissions"]
-tags_normalized: ["access control", "authentication", "devops", "enterprise migration", "gei", "github", "github api", "organization admin", "pat", "personal access token", "blogs", "privilege escalation", "repo scope", "scope management", "security", "token permissions"]
+tags: ["Access Control", "Authentication", "Blogs", "DevOps", "Enterprise Migration", "GEI", "GitHub", "GitHub API", "Organization Admin", "PAT", "Personal Access Token", "Privilege Escalation", "Repo Scope", "Scope Management", "Security", "Token Permissions"]
+tags_normalized: ["access control", "authentication", "blogs", "devops", "enterprise migration", "gei", "github", "github api", "organization admin", "pat", "personal access token", "privilege escalation", "repo scope", "scope management", "security", "token permissions"]
 ---
 
 Home on explores the hidden dangers of GitHub PATs with the `repo` scope, revealing how these tokens may inadvertently grant organization-level permissions and highlighting best practices for secure usage.<!--excerpt_end-->

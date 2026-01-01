@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-11-22 01:24:16 +00:00
-permalink: "/community/2025-11-22-Azure-Governance-Highlights-from-Ignite-2025-Service-Groups-Azure-Policy-and-Machine-Configuration-Updates.html"
+permalink: "/2025-11-22-Azure-Governance-Highlights-from-Ignite-2025-Service-Groups-Azure-Policy-and-Machine-Configuration-Updates.html"
 categories: ["Azure", "Security"]
 tags: ["Azure", "Azure Governance", "Azure Monitoring", "Azure Policy", "Azure Resiliency", "CIS Compliance", "Cloud Compliance", "Community", "Custom Baselines", "Extensibility Framework", "Identity Based Exemptions", "Linux Baselines", "Machine Configuration", "Policy Lifecycle", "Public Preview", "Remediations", "Resource Management", "Role Based Access Control", "Security", "Service Groups", "Tech Community", "UX Improvements", "Windows Baselines"]
 tags_normalized: ["azure", "azure governance", "azure monitoring", "azure policy", "azure resiliency", "cis compliance", "cloud compliance", "community", "custom baselines", "extensibility framework", "identity based exemptions", "linux baselines", "machine configuration", "policy lifecycle", "public preview", "remediations", "resource management", "role based access control", "security", "service groups", "tech community", "ux improvements", "windows baselines"]

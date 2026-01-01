@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/changelog/feed/"
 date: 2025-10-28 15:27:44 +00:00
-permalink: "/news/2025-10-28-New-Public-Preview-Features-in-Copilot-Code-Review-Smarter-AI-Driven-Code-Reviews.html"
+permalink: "/2025-10-28-New-Public-Preview-Features-in-Copilot-Code-Review-Smarter-AI-Driven-Code-Reviews.html"
 categories: ["AI", "Coding", "DevOps", "GitHub Copilot", "Security"]
 tags: ["AI", "AI Code Review", "Automation", "CodeQL", "Coding", "Copilot", "Copilot Code Review", "Custom Workflows", "Developer Tools", "DevOps", "ESLint", "GitHub Copilot", "JetBrains", "LLM", "News", "Pull Requests", "Quality Assurance", "Security", "Static Analysis", "Universe25", "VS", "VS Code", "Xcode"]
 tags_normalized: ["ai", "ai code review", "automation", "codeql", "coding", "copilot", "copilot code review", "custom workflows", "developer tools", "devops", "eslint", "github copilot", "jetbrains", "llm", "news", "pull requests", "quality assurance", "security", "static analysis", "universe25", "vs", "vs code", "xcode"]

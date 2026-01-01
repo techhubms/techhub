@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft News"
 feed_url: "https://news.microsoft.com/source/feed/"
 date: 2025-09-17 16:50:37 +00:00
-permalink: "/news/2025-09-17-Microsoft-Announces-30-Billion-Investment-in-UK-for-AI-Infrastructure.html"
+permalink: "/2025-09-17-Microsoft-Announces-30-Billion-Investment-in-UK-for-AI-Infrastructure.html"
 categories: ["AI", "Azure"]
 tags: ["AI", "AI Development", "AI Infrastructure", "AI Skills", "Azure", "Cloud Computing", "Company News", "Datacenters", "Investment", "Microsoft", "Microsoft Copilot", "Microsoft Research", "News", "NVIDIA GPUs", "On The Issues", "Prime Minister Keir Starmer", "Supercomputer", "Transatlantic Partnership", "United Kingdom", "Windows 365", "Workforce Training"]
 tags_normalized: ["ai", "ai development", "ai infrastructure", "ai skills", "azure", "cloud computing", "company news", "datacenters", "investment", "microsoft", "microsoft copilot", "microsoft research", "news", "nvidia gpus", "on the issues", "prime minister keir starmer", "supercomputer", "transatlantic partnership", "united kingdom", "windows 365", "workforce training"]

@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "DotNet YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw"
 date: 2025-10-20 15:47:52 +00:00
-permalink: "/videos/2025-10-20-NET-AI-Community-Standup-Microsoft-Agent-Framework-Workflows-and-Migration.html"
+permalink: "/2025-10-20-NET-AI-Community-Standup-Microsoft-Agent-Framework-Workflows-and-Migration.html"
 categories: ["AI", "Azure", "Coding"]
 tags: [".NET", "Agent Based Workflows", "Agents", "AI", "AI Integration", "Autonomous Agents", "Azure", "Azure AI", "C#", "Coding", "Community Standup", "Demo", "Developer", "Developer Community", "Developer Tools", "Dotnetdeveloper", "Intelligent Applications", "Live Demo", "Microsoft", "Microsoft Agent Framework", "Migration", "Semantic Kernel", "Software Developer", "Videos", "Workflow Automation", "Workflows"]
 tags_normalized: ["dotnet", "agent based workflows", "agents", "ai", "ai integration", "autonomous agents", "azure", "azure ai", "csharp", "coding", "community standup", "demo", "developer", "developer community", "developer tools", "dotnetdeveloper", "intelligent applications", "live demo", "microsoft", "microsoft agent framework", "migration", "semantic kernel", "software developer", "videos", "workflow automation", "workflows"]

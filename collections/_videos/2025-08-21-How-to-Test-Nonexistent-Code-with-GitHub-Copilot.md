@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "GitHub YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ"
 date: 2025-08-21 17:00:25 +00:00
-permalink: "/videos/2025-08-21-How-to-Test-Nonexistent-Code-with-GitHub-Copilot.html"
+permalink: "/2025-08-21-How-to-Test-Nonexistent-Code-with-GitHub-Copilot.html"
 categories: ["AI", "Coding", "GitHub Copilot"]
 tags: ["AI", "AI Assistant", "AI Development", "Code Completion", "Code Generation", "Coding", "Developer Tools", "GitHub", "GitHub Copilot", "Programming", "Software Engineering", "Validation Function", "Videos"]
 tags_normalized: ["ai", "ai assistant", "ai development", "code completion", "code generation", "coding", "developer tools", "github", "github copilot", "programming", "software engineering", "validation function", "videos"]

@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Azure SDK Blog"
 feed_url: "https://devblogs.microsoft.com/azure-sdk/feed/"
 date: 2025-09-10 18:24:47 +00:00
-permalink: "/news/2025-09-10-Azure-Storage-APIs-Gain-Microsoft-Entra-ID-and-RBAC-Support.html"
+permalink: "/2025-09-10-Azure-Storage-APIs-Gain-Microsoft-Entra-ID-and-RBAC-Support.html"
 categories: ["Azure", "Coding", "Security"]
 tags: [".NET", "Access Control", "API Integration", "Authentication", "Authorization", "Azure", "Azure SDK", "Azure Storage", "Blob Storage", "Coding", "DefaultAzureCredential", "Error Handling", "Microsoft Entra ID", "News", "OAuth 2.0", "RBAC", "REST API", "Security", "Security Best Practices", "Storage"]
 tags_normalized: ["dotnet", "access control", "api integration", "authentication", "authorization", "azure", "azure sdk", "azure storage", "blob storage", "coding", "defaultazurecredential", "error handling", "microsoft entra id", "news", "oauth 2dot0", "rbac", "rest api", "security", "security best practices", "storage"]

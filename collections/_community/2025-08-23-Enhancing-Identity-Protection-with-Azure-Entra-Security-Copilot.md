@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-08-23 11:28:05 +00:00
-permalink: "/community/2025-08-23-Enhancing-Identity-Protection-with-Azure-Entra-Security-Copilot.html"
+permalink: "/2025-08-23-Enhancing-Identity-Protection-with-Azure-Entra-Security-Copilot.html"
 categories: ["AI", "Azure", "Security"]
 tags: ["AI", "Azure", "Azure Entra", "Community", "Conditional Access", "Generative AI", "Identity Protection", "Incident Response", "Microsoft Defender", "Microsoft Entra ID", "Microsoft Sentinel", "Policy Optimization", "Security", "Security Copilot", "SIEM", "Threat Detection", "XDR"]
 tags_normalized: ["ai", "azure", "azure entra", "community", "conditional access", "generative ai", "identity protection", "incident response", "microsoft defender", "microsoft entra id", "microsoft sentinel", "policy optimization", "security", "security copilot", "siem", "threat detection", "xdr"]

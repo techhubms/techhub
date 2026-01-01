@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Reddit Github Copilot"
 feed_url: "https://www.reddit.com/r/GithubCopilot.rss"
 date: 2025-08-02 17:23:43 +00:00
-permalink: "/community/2025-08-02-Complete-functional-MVP-using-Copilot.html"
+permalink: "/2025-08-02-Complete-functional-MVP-using-Copilot.html"
 categories: ["AI", "GitHub Copilot"]
 tags: ["AI", "AI Tools", "Anthropic Claude Opus 4", "Claude Sonnet 4", "Community", "Copilot Features", "Copilot Pro", "Deployment", "Educational Websites", "GitHub Copilot", "Google Gemini 2.5 Pro", "MVP Development", "OpenAI GPT 3", "Web Development"]
 tags_normalized: ["ai", "ai tools", "anthropic claude opus 4", "claude sonnet 4", "community", "copilot features", "copilot pro", "deployment", "educational websites", "github copilot", "google gemini 2dot5 pro", "mvp development", "openai gpt 3", "web development"]

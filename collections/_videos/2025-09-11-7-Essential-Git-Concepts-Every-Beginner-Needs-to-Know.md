@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "GitHub YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ"
 date: 2025-09-11 14:00:01 +00:00
-permalink: "/videos/2025-09-11-7-Essential-Git-Concepts-Every-Beginner-Needs-to-Know.html"
+permalink: "/2025-09-11-7-Essential-Git-Concepts-Every-Beginner-Needs-to-Know.html"
 categories: ["DevOps"]
 tags: ["Branches", "Collaboration", "DevOps", "Git", "Gitcommands", "GitHub", "Local Repository", "Merging", "Pull Requests", "Remote Repository", "Software Development", "Staging Area", "Version Control", "Videos"]
 tags_normalized: ["branches", "collaboration", "devops", "git", "gitcommands", "github", "local repository", "merging", "pull requests", "remote repository", "software development", "staging area", "version control", "videos"]

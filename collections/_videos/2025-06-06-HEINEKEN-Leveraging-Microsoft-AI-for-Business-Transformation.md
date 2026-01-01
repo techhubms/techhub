@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Cloud YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCSgzRJMqIiCNtoM6Q7Q9Lqw"
 date: 2025-06-06 17:34:50 +00:00
-permalink: "/videos/2025-06-06-HEINEKEN-Leveraging-Microsoft-AI-for-Business-Transformation.html"
+permalink: "/2025-06-06-HEINEKEN-Leveraging-Microsoft-AI-for-Business-Transformation.html"
 categories: ["AI"]
 tags: ["Agentic AI", "AI", "AI Adoption", "AI Strategy", "Business Transformation", "Digital Innovation", "Enterprise AI", "Gen AI", "Generative AI", "Growth", "HEINEKEN", "Microsoft AI", "Microsoft AI Transformation", "Microsoft Cloud", "Videos"]
 tags_normalized: ["agentic ai", "ai", "ai adoption", "ai strategy", "business transformation", "digital innovation", "enterprise ai", "gen ai", "generative ai", "growth", "heineken", "microsoft ai", "microsoft ai transformation", "microsoft cloud", "videos"]

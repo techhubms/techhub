@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-09-25 15:23:36 +00:00
-permalink: "/community/2025-09-25-Simplify-Image-Signing-and-Verification-with-Notary-Project-and-Trusted-Signing-Public-Preview.html"
+permalink: "/2025-09-25-Simplify-Image-Signing-and-Verification-with-Notary-Project-and-Trusted-Signing-Public-Preview.html"
 categories: ["Azure", "DevOps", "Security"]
 tags: ["AKS", "Artifact Signing", "Azure", "Azure DevOps", "Azure Key Vault", "Azure Trusted Signing", "Certificate Management", "CI/CD Pipeline", "Community", "Container Image Security", "DevOps", "GitHub Actions", "Helm Charts", "Image Verification", "Notary Project", "Notation CLI", "OCI Artifacts", "Ratify", "SBOM", "Security", "Supply Chain Security"]
 tags_normalized: ["aks", "artifact signing", "azure", "azure devops", "azure key vault", "azure trusted signing", "certificate management", "cislashcd pipeline", "community", "container image security", "devops", "github actions", "helm charts", "image verification", "notary project", "notation cli", "oci artifacts", "ratify", "sbom", "security", "supply chain security"]

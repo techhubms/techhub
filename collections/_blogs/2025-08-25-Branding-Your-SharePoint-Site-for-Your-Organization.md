@@ -9,10 +9,10 @@ viewing_mode: "external"
 feed_name: "Dellenny's Blog"
 feed_url: "https://dellenny.com/feed/"
 date: 2025-08-25 10:06:56 +00:00
-permalink: "/blogs/2025-08-25-Branding-Your-SharePoint-Site-for-Your-Organization.html"
+permalink: "/2025-08-25-Branding-Your-SharePoint-Site-for-Your-Organization.html"
 categories: ["Coding"]
-tags: ["Accessibility", "Branding", "Coding", "Company Logo", "Employee Experience", "Hub Sites", "Intranet", "Microsoft 365", "Navigation", "Blogs", "SharePoint", "SharePoint Online", "Site Customization", "Site Templates", "Themes", "User Adoption", "Web Parts"]
-tags_normalized: ["accessibility", "branding", "coding", "company logo", "employee experience", "hub sites", "intranet", "microsoft 365", "navigation", "blogs", "sharepoint", "sharepoint online", "site customization", "site templates", "themes", "user adoption", "web parts"]
+tags: ["Accessibility", "Blogs", "Branding", "Coding", "Company Logo", "Employee Experience", "Hub Sites", "Intranet", "Microsoft 365", "Navigation", "SharePoint", "SharePoint Online", "Site Customization", "Site Templates", "Themes", "User Adoption", "Web Parts"]
+tags_normalized: ["accessibility", "blogs", "branding", "coding", "company logo", "employee experience", "hub sites", "intranet", "microsoft 365", "navigation", "sharepoint", "sharepoint online", "site customization", "site templates", "themes", "user adoption", "web parts"]
 ---
 
 Dellenny provides a practical, step-by-step guide to branding your SharePoint site, covering customization, design best practices, and tips for creating a unified digital workspace that reflects your organization’s identity.<!--excerpt_end-->

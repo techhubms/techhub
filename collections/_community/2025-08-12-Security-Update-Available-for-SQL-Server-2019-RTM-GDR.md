@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Community"
 date: 2025-08-12 21:35:08 +00:00
-permalink: "/community/2025-08-12-Security-Update-Available-for-SQL-Server-2019-RTM-GDR.html"
+permalink: "/2025-08-12-Security-Update-Available-for-SQL-Server-2019-RTM-GDR.html"
 categories: ["Security"]
 tags: ["Community", "CVE 49759", "Database Security", "Denial Of Service", "Download Center", "KB5063758", "Microsoft SQL Server", "Patch Management", "RTM GDR", "Security", "Security Update", "SQL Server", "Update Catalog", "Vulnerability"]
 tags_normalized: ["community", "cve 49759", "database security", "denial of service", "download center", "kb5063758", "microsoft sql server", "patch management", "rtm gdr", "security", "security update", "sql server", "update catalog", "vulnerability"]

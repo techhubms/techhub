@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Fabric Blog"
 feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
 date: 2025-11-19 08:30:00 +00:00
-permalink: "/news/2025-11-19-Advanced-SAP-Data-Integration-with-Microsoft-Fabric-Mirroring-and-Copy-Job.html"
+permalink: "/2025-11-19-Advanced-SAP-Data-Integration-with-Microsoft-Fabric-Mirroring-and-Copy-Job.html"
 categories: ["AI", "Azure", "ML"]
 tags: ["AI", "AI Ready Data", "Azure", "BW OpenHub", "Copy Job", "Data Agents", "Data Engineering", "Data Factory", "Data Integration", "Microsoft Fabric", "Mirroring", "ML", "Multi Cloud", "News", "OData", "ODBC", "OneLake", "Petabyte Scale", "Real Time Analytics", "SAP Business Data Cloud Connect", "SAP Connectors", "SAP Datasphere", "Zero ETL"]
 tags_normalized: ["ai", "ai ready data", "azure", "bw openhub", "copy job", "data agents", "data engineering", "data factory", "data integration", "microsoft fabric", "mirroring", "ml", "multi cloud", "news", "odata", "odbc", "onelake", "petabyte scale", "real time analytics", "sap business data cloud connect", "sap connectors", "sap datasphere", "zero etl"]

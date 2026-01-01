@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-10-15 06:01:24 +00:00
-permalink: "/community/2025-10-15-Unlock-Cost-Savings-with-Utilization-Based-Storage-Recommendations-in-Azure-Migrate.html"
+permalink: "/2025-10-15-Unlock-Cost-Savings-with-Utilization-Based-Storage-Recommendations-in-Azure-Migrate.html"
 categories: ["Azure"]
 tags: ["Azure", "Azure Assessment", "Azure Migrate", "Cloud Migration", "Cloud ROI", "Community", "Cost Savings", "Infrastructure Modernization", "Resource Planning", "Right Sizing", "Storage Optimization", "Utilization Based Recommendations"]
 tags_normalized: ["azure", "azure assessment", "azure migrate", "cloud migration", "cloud roi", "community", "cost savings", "infrastructure modernization", "resource planning", "right sizing", "storage optimization", "utilization based recommendations"]

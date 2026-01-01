@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft TypeScript Blog"
 feed_url: "https://devblogs.microsoft.com/typescript/feed/"
 date: 2025-12-02 17:31:32 +00:00
-permalink: "/news/2025-12-02-Progress-on-TypeScript-7-Native-Compiler-and-Language-Service-Updates.html"
+permalink: "/2025-12-02-Progress-on-TypeScript-7-Native-Compiler-and-Language-Service-Updates.html"
 categories: ["Coding"]
 tags: ["Coding", "Compiler", "Editor Integration", "JavaScript", "Language Service", "Migration", "Native Port", "News", "Performance", "Project Corsa", "Tooling", "Tsc", "Tsgo", "Type Checking", "TypeScript", "TypeScript 7.0", "VS Code Extension"]
 tags_normalized: ["coding", "compiler", "editor integration", "javascript", "language service", "migration", "native port", "news", "performance", "project corsa", "tooling", "tsc", "tsgo", "type checking", "typescript", "typescript 7dot0", "vs code extension"]

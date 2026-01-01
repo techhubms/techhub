@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft DevBlog"
 feed_url: "https://devblogs.microsoft.com/azure-sdk/feed/"
 date: 2025-04-25 17:55:05 +00:00
-permalink: "/news/2025-04-25-Azure-SDK-Release-Highlights-for-April-2025-New-Features-Platform-Support-and-Key-Updates.html"
+permalink: "/2025-04-25-Azure-SDK-Release-Highlights-for-April-2025-New-Features-Platform-Support-and-Key-Updates.html"
 categories: ["Azure", "Coding"]
 tags: [".NET", "Azure", "Azure SDK", "C++", "Coding", "Embedded C", "End Of Life", "Go", "Java", "JavaScript", "Management Libraries", "News", "Node.js", "Python", "Release Notes", "Rust", "SDK", "TypeScript"]
 tags_normalized: ["dotnet", "azure", "azure sdk", "cplusplus", "coding", "embedded c", "end of life", "go", "java", "javascript", "management libraries", "news", "nodedotjs", "python", "release notes", "rust", "sdk", "typescript"]

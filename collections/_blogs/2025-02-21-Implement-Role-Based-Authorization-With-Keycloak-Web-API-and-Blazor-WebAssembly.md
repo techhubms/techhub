@@ -9,10 +9,10 @@ viewing_mode: "external"
 feed_name: "Code Maze Blog"
 feed_url: "https://code-maze.com/feed/"
 date: 2025-02-21 07:20:52 +00:00
-permalink: "/blogs/2025-02-21-Implement-Role-Based-Authorization-With-Keycloak-Web-API-and-Blazor-WebAssembly.html"
+permalink: "/2025-02-21-Implement-Role-Based-Authorization-With-Keycloak-Web-API-and-Blazor-WebAssembly.html"
 categories: ["Coding", "Security"]
-tags: [".NET", "ASP.NET Core", "Authentication", "Authorization", "Blazor WebAssembly", "ClaimsPrincipal", "Coding", "Identity Management", "Keycloak", "OIDC", "Blogs", "RBAC", "Role Based Authorization", "Roles", "Security", "Web API"]
-tags_normalized: ["dotnet", "aspdotnet core", "authentication", "authorization", "blazor webassembly", "claimsprincipal", "coding", "identity management", "keycloak", "oidc", "blogs", "rbac", "role based authorization", "roles", "security", "web api"]
+tags: [".NET", "ASP.NET Core", "Authentication", "Authorization", "Blazor WebAssembly", "Blogs", "ClaimsPrincipal", "Coding", "Identity Management", "Keycloak", "OIDC", "RBAC", "Role Based Authorization", "Roles", "Security", "Web API"]
+tags_normalized: ["dotnet", "aspdotnet core", "authentication", "authorization", "blazor webassembly", "blogs", "claimsprincipal", "coding", "identity management", "keycloak", "oidc", "rbac", "role based authorization", "roles", "security", "web api"]
 ---
 
 Marinko Spasojević guides readers through implementing role-based authorization using Keycloak with Blazor WebAssembly and Web API, exploring role assignment, claims mapping, and securing both UI and API endpoints in modern .NET applications.<!--excerpt_end-->

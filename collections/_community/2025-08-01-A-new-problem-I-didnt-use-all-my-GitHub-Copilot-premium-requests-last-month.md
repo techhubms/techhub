@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Reddit Github Copilot"
 feed_url: "https://www.reddit.com/r/GithubCopilot.rss"
 date: 2025-08-01 12:20:43 +00:00
-permalink: "/community/2025-08-01-A-new-problem-I-didnt-use-all-my-GitHub-Copilot-premium-requests-last-month.html"
+permalink: "/2025-08-01-A-new-problem-I-didnt-use-all-my-GitHub-Copilot-premium-requests-last-month.html"
 categories: ["AI", "GitHub Copilot"]
 tags: ["AI", "AI Productivity", "Claude 4", "Community", "Copilot Budgeting", "Developer Tools", "Gemini CLI", "GitHub Copilot", "Model Selection", "Monthly Reset", "Premium Requests", "Usage Planning"]
 tags_normalized: ["ai", "ai productivity", "claude 4", "community", "copilot budgeting", "developer tools", "gemini cli", "github copilot", "model selection", "monthly reset", "premium requests", "usage planning"]

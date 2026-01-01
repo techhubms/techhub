@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-09-24 17:52:49 +00:00
-permalink: "/community/2025-09-24-Announcing-Azure-Container-Apps-Azure-Monitor-Dashboards-with-Grafana-Public-Preview.html"
+permalink: "/2025-09-24-Announcing-Azure-Container-Apps-Azure-Monitor-Dashboards-with-Grafana-Public-Preview.html"
 categories: ["Azure", "DevOps"]
 tags: ["Azure", "Azure Container Apps", "Azure Monitor", "Cloud Operations", "Community", "Containers", "Dashboards", "DevOps", "Grafana", "Metrics", "Microsoft Azure", "Monitoring", "Observability", "Performance Monitoring", "Public Preview", "RBAC", "Serverless", "Visualization"]
 tags_normalized: ["azure", "azure container apps", "azure monitor", "cloud operations", "community", "containers", "dashboards", "devops", "grafana", "metrics", "microsoft azure", "monitoring", "observability", "performance monitoring", "public preview", "rbac", "serverless", "visualization"]

@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Semantic Kernel Blog"
 feed_url: "https://devblogs.microsoft.com/semantic-kernel/feed/"
 date: 2025-08-27 05:17:18 +00:00
-permalink: "/news/2025-08-27-Stricter-Encoding-Rules-for-Template-Arguments-in-Semantic-Kernel.html"
+permalink: "/2025-08-27-Stricter-Encoding-Rules-for-Template-Arguments-in-Semantic-Kernel.html"
 categories: ["AI", "Coding"]
 tags: [".NET", "AI", "AllowDangerouslySetContent", "Automatic Encoding", "Coding", "Exception Handling", "Handlebars", "HttpUtility.HtmlEncode", "Liquid", "Manual Encoding", "News", "Prompt Templates", "Python", "SDK Update", "Semantic Kernel", "Template Encoding", "Template Injection"]
 tags_normalized: ["dotnet", "ai", "allowdangerouslysetcontent", "automatic encoding", "coding", "exception handling", "handlebars", "httputilitydothtmlencode", "liquid", "manual encoding", "news", "prompt templates", "python", "sdk update", "semantic kernel", "template encoding", "template injection"]

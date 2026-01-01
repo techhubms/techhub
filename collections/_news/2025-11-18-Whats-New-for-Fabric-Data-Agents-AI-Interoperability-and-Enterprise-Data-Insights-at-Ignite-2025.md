@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Fabric Blog"
 feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
 date: 2025-11-18 08:00:00 +00:00
-permalink: "/news/2025-11-18-Whats-New-for-Fabric-Data-Agents-AI-Interoperability-and-Enterprise-Data-Insights-at-Ignite-2025.html"
+permalink: "/2025-11-18-Whats-New-for-Fabric-Data-Agents-AI-Interoperability-and-Enterprise-Data-Insights-at-Ignite-2025.html"
 categories: ["AI", "Azure", "ML"]
 tags: ["Agentic Web", "AI", "AI Integration", "Azure", "Azure AI Search", "Context Aware Analytics", "Data Reasoning", "Enterprise Data", "Enterprise Knowledge", "Fabric Data Agents", "Interoperability", "MCP Server", "Microsoft Fabric", "ML", "Modular Agents", "News", "OneLake", "Ontology", "Teams Integration", "Unstructured Data", "VS Code"]
 tags_normalized: ["agentic web", "ai", "ai integration", "azure", "azure ai search", "context aware analytics", "data reasoning", "enterprise data", "enterprise knowledge", "fabric data agents", "interoperability", "mcp server", "microsoft fabric", "ml", "modular agents", "news", "onelake", "ontology", "teams integration", "unstructured data", "vs code"]

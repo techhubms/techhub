@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Developer YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
 date: 2025-10-16 15:10:09 +00:00
-permalink: "/videos/2025-10-16-Introducing-GitHub-Copilot-Integration-in-SQL-Server-Management-Studio-22.html"
+permalink: "/2025-10-16-Introducing-GitHub-Copilot-Integration-in-SQL-Server-Management-Studio-22.html"
 categories: ["AI", "Coding", "GitHub Copilot"]
 tags: ["AI", "Azure SQL", "Cloud Computing", "Code Completion", "Coding", "Data Exposed", "Database Management", "Dev", "Development", "GitHub Copilot", "Microsoft", "SQL", "SQL Development", "SQL Server Management Studio", "SSMS 22", "T SQL", "Tech", "Technology", "Troubleshooting", "Videos", "VS", "VS Code"]
 tags_normalized: ["ai", "azure sql", "cloud computing", "code completion", "coding", "data exposed", "database management", "dev", "development", "github copilot", "microsoft", "sql", "sql development", "sql server management studio", "ssms 22", "t sql", "tech", "technology", "troubleshooting", "videos", "vs", "vs code"]

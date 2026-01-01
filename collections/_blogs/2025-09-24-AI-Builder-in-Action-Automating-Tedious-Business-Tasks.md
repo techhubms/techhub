@@ -9,10 +9,10 @@ viewing_mode: "external"
 feed_name: "Dellenny's Blog"
 feed_url: "https://dellenny.com/feed/"
 date: 2025-09-24 09:13:30 +00:00
-permalink: "/blogs/2025-09-24-AI-Builder-in-Action-Automating-Tedious-Business-Tasks.html"
+permalink: "/2025-09-24-AI-Builder-in-Action-Automating-Tedious-Business-Tasks.html"
 categories: ["AI"]
-tags: ["AI", "AI Builder", "Business Automation", "Copilot", "Email Categorization", "Form Processing", "Invoice Automation", "Low Code", "Machine Learning", "Microsoft AI", "Object Detection", "Blogs", "Power Apps", "Power Automate", "Power Platform", "Prediction Models", "Text Classification", "Workflow Automation"]
-tags_normalized: ["ai", "ai builder", "business automation", "copilot", "email categorization", "form processing", "invoice automation", "low code", "machine learning", "microsoft ai", "object detection", "blogs", "power apps", "power automate", "power platform", "prediction models", "text classification", "workflow automation"]
+tags: ["AI", "AI Builder", "Blogs", "Business Automation", "Copilot", "Email Categorization", "Form Processing", "Invoice Automation", "Low Code", "Machine Learning", "Microsoft AI", "Object Detection", "Power Apps", "Power Automate", "Power Platform", "Prediction Models", "Text Classification", "Workflow Automation"]
+tags_normalized: ["ai", "ai builder", "blogs", "business automation", "copilot", "email categorization", "form processing", "invoice automation", "low code", "machine learning", "microsoft ai", "object detection", "power apps", "power automate", "power platform", "prediction models", "text classification", "workflow automation"]
 ---
 
 Dellenny demonstrates how Microsoft AI Builder simplifies business process automation for non-technical users, detailing real-world use cases such as invoice processing, email categorization, prediction models, and image-based insights.<!--excerpt_end-->

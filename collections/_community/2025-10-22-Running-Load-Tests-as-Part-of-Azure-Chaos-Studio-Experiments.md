@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-10-22 15:00:00 +00:00
-permalink: "/community/2025-10-22-Running-Load-Tests-as-Part-of-Azure-Chaos-Studio-Experiments.html"
+permalink: "/2025-10-22-Running-Load-Tests-as-Part-of-Azure-Chaos-Studio-Experiments.html"
 categories: ["Azure", "DevOps", "Security"]
 tags: ["App Service", "Application Insights", "Autoscaling", "Azure", "Azure Chaos Studio", "Azure Load Testing", "Chaos Engineering", "CI/CD", "Cloud Reliability", "Community", "DevOps", "Fault Injection", "Load Testing", "Log Analytics", "Microsoft Azure", "Monitoring", "Performance Testing", "Resiliency", "Security", "SQL Database"]
 tags_normalized: ["app service", "application insights", "autoscaling", "azure", "azure chaos studio", "azure load testing", "chaos engineering", "cislashcd", "cloud reliability", "community", "devops", "fault injection", "load testing", "log analytics", "microsoft azure", "monitoring", "performance testing", "resiliency", "security", "sql database"]

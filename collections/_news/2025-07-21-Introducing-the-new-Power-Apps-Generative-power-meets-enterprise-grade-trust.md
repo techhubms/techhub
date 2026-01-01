@@ -9,7 +9,7 @@ categories: ["AI"]
 feed_name: "Microsoft News"
 feed_url: "https://news.microsoft.com/source/feed/"
 date: 2025-07-21 16:52:37 +00:00
-permalink: "/news/2025-07-21-Introducing-the-new-Power-Apps-Generative-power-meets-enterprise-grade-trust.html"
+permalink: "/2025-07-21-Introducing-the-new-Power-Apps-Generative-power-meets-enterprise-grade-trust.html"
 viewing_mode: "external"
 tags: ["AI", "AI Integration", "Automation", "Business Applications", "Company News", "Enterprise Trust", "Generative AI", "Low Code", "Microsoft", "News", "Power Apps", "Power Platform"]
 tags_normalized: ["ai", "ai integration", "automation", "business applications", "company news", "enterprise trust", "generative ai", "low code", "microsoft", "news", "power apps", "power platform"]

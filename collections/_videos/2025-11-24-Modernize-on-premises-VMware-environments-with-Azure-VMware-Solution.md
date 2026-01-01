@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Events YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
 date: 2025-11-24 08:22:23 +00:00
-permalink: "/videos/2025-11-24-Modernize-on-premises-VMware-environments-with-Azure-VMware-Solution.html"
+permalink: "/2025-11-24-Modernize-on-premises-VMware-environments-with-Azure-VMware-Solution.html"
 categories: ["AI", "Azure"]
 tags: ["AI", "AVS", "Azure", "Azure Arc", "Azure NetApp Files", "Azure VMware Solution", "Banking Chatbot", "Cloud Modernization", "Customer Adoption", "Elastic SAN", "Managed Identities", "Microsoft Ignite", "Migrateandmodernizeyourestate", "Migration Strategy", "MSIgnite", "OpenAI", "Platform Services", "Videos", "VMware Migration", "Vsphere"]
 tags_normalized: ["ai", "avs", "azure", "azure arc", "azure netapp files", "azure vmware solution", "banking chatbot", "cloud modernization", "customer adoption", "elastic san", "managed identities", "microsoft ignite", "migrateandmodernizeyourestate", "migration strategy", "msignite", "openai", "platform services", "videos", "vmware migration", "vsphere"]

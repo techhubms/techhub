@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/changelog/feed/"
 date: 2025-09-19 16:21:39 +00:00
-permalink: "/news/2025-09-19-Retirement-of-GitHub-Actions-macOS-13-Runner-Image-Announced.html"
+permalink: "/2025-09-19-Retirement-of-GitHub-Actions-macOS-13-Runner-Image-Announced.html"
 categories: ["DevOps"]
 tags: ["Actions", "Apple Silicon", "Arm64", "CI/CD", "Deprecation", "DevOps", "GitHub Actions", "Intel Architecture", "Macos 13", "Macos 15", "News", "Retired", "Runner Image", "Workflow Migration", "X86 64"]
 tags_normalized: ["actions", "apple silicon", "arm64", "cislashcd", "deprecation", "devops", "github actions", "intel architecture", "macos 13", "macos 15", "news", "retired", "runner image", "workflow migration", "x86 64"]

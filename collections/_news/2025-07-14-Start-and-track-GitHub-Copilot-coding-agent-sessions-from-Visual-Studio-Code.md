@@ -9,7 +9,7 @@ categories: ["AI", "GitHub Copilot"]
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/changelog/label/copilot/feed/"
 date: 2025-07-14 14:57:20 +00:00
-permalink: "/news/2025-07-14-Start-and-track-GitHub-Copilot-coding-agent-sessions-from-Visual-Studio-Code.html"
+permalink: "/2025-07-14-Start-and-track-GitHub-Copilot-coding-agent-sessions-from-Visual-Studio-Code.html"
 viewing_mode: "external"
 tags: ["AI", "AI Assistant", "Automation", "Background Tasks", "Coding Agent", "Copilot Features", "Developer Productivity", "GitHub Copilot", "News", "Programming Tools", "Software Development", "Task Delegation"]
 tags_normalized: ["ai", "ai assistant", "automation", "background tasks", "coding agent", "copilot features", "developer productivity", "github copilot", "news", "programming tools", "software development", "task delegation"]

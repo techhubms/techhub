@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft .NET Blog"
 feed_url: "https://devblogs.microsoft.com/dotnet/feed/"
 date: 2025-08-20 17:05:00 +00:00
-permalink: "/news/2025-08-20-Copilot-Diagnostics-Toolset-Enhances-NET-Debugging-in-Visual-Studio.html"
+permalink: "/2025-08-20-Copilot-Diagnostics-Toolset-Enhances-NET-Debugging-in-Visual-Studio.html"
 categories: ["AI", "Coding", "GitHub Copilot"]
 tags: [".NET", ".NET Fundamentals", "AI", "AI Development", "Breakpoint Suggestions", "C#", "Coding", "Copilot", "CPU Usage", "Debugging", "Developer Productivity", "Diagnostics", "Exception Assistance", "GitHub Copilot", "IEnumerable Visualizer", "Instrumentation Tool", "LINQ", "Memory Allocation", "News", "Parallel Stacks", "Performance Analysis", "Profiling", "VS"]
 tags_normalized: ["dotnet", "dotnet fundamentals", "ai", "ai development", "breakpoint suggestions", "csharp", "coding", "copilot", "cpu usage", "debugging", "developer productivity", "diagnostics", "exception assistance", "github copilot", "ienumerable visualizer", "instrumentation tool", "linq", "memory allocation", "news", "parallel stacks", "performance analysis", "profiling", "vs"]

@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft News"
 feed_url: "https://news.microsoft.com/source/feed/"
 date: 2025-11-05 11:00:11 +00:00
-permalink: "/news/2025-11-05-Pantone-Collaborates-with-Microsoft-to-Launch-AI-Powered-Palette-Generator.html"
+permalink: "/2025-11-05-Pantone-Collaborates-with-Microsoft-to-Launch-AI-Powered-Palette-Generator.html"
 categories: ["AI", "Azure"]
 tags: ["AI", "AI Integration", "Azure", "Azure AI Foundry", "Azure AI Search", "Azure Cosmos DB", "Azure OpenAI", "Color Trend Forecasting", "Company News", "Conversational AI", "Creative Workflow", "Design Automation", "Digital Design", "Microsoft Azure", "News", "Pantone Connect", "Pantone Palette Generator", "Retrieval Augmented Generation", "Trend Forecasting"]
 tags_normalized: ["ai", "ai integration", "azure", "azure ai foundry", "azure ai search", "azure cosmos db", "azure openai", "color trend forecasting", "company news", "conversational ai", "creative workflow", "design automation", "digital design", "microsoft azure", "news", "pantone connect", "pantone palette generator", "retrieval augmented generation", "trend forecasting"]

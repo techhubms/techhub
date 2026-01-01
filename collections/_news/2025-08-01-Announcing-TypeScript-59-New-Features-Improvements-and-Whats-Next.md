@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft TypeScript Blog"
 feed_url: "https://devblogs.microsoft.com/typescript/feed/"
 date: 2025-08-01 16:19:25 +00:00
-permalink: "/news/2025-08-01-Announcing-TypeScript-59-New-Features-Improvements-and-Whats-Next.html"
+permalink: "/2025-08-01-Announcing-TypeScript-59-New-Features-Improvements-and-Whats-Next.html"
 categories: ["Coding"]
 tags: ["Coding", "ECMAScript", "Expandable Hovers", "Import Defer", "JavaScript", "News", "Node.js", "Performance Optimization", "Tsconfig", "Type Checking", "Type Inference", "TypeScript", "TypeScript 5.9", "VS Code"]
 tags_normalized: ["coding", "ecmascript", "expandable hovers", "import defer", "javascript", "news", "nodedotjs", "performance optimization", "tsconfig", "type checking", "type inference", "typescript", "typescript 5dot9", "vs code"]

@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "DotNet YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw"
 date: 2025-11-13 17:40:46 +00:00
-permalink: "/videos/2025-11-13-Azure-Keynote-Cloud-Innovation-with-NET.html"
+permalink: "/2025-11-13-Azure-Keynote-Cloud-Innovation-with-NET.html"
 categories: ["AI", "Azure", "Coding", "DevOps", "Security"]
 tags: [".NET", ".NET 10", ".NET Aspire", ".NET MAUI 10", "AI", "AI Services", "AKS", "Application Deployment", "ASP.NET Core 10", "Azure", "Azure Container Apps", "Azure Functions", "C# 14", "Cloud Native", "Coding", "DevOps", "F# 10", "Observability", "Scalability", "Security", "Videos", "VS"]
 tags_normalized: ["dotnet", "dotnet 10", "dotnet aspire", "dotnet maui 10", "ai", "ai services", "aks", "application deployment", "aspdotnet core 10", "azure", "azure container apps", "azure functions", "csharp 14", "cloud native", "coding", "devops", "fsharp 10", "observability", "scalability", "security", "videos", "vs"]

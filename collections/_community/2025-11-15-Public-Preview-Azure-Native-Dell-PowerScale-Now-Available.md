@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-11-15 20:17:04 +00:00
-permalink: "/community/2025-11-15-Public-Preview-Azure-Native-Dell-PowerScale-Now-Available.html"
+permalink: "/2025-11-15-Public-Preview-Azure-Native-Dell-PowerScale-Now-Available.html"
 categories: ["Azure"]
 tags: ["AI", "AI Workloads", "Azure", "Azure Blob Storage", "Azure CLI", "Azure Marketplace", "Azure Native ISV Service", "Azure Portal", "Cloud Disaster Recovery", "Cloud Pools", "Community", "Data Analytics", "Data Replication", "Dell PowerScale", "Enterprise Storage", "File System as A Service", "HPC", "Hybrid Cloud", "Multi Petabyte Scalability", "OneFS", "PowerShell", "Public Preview", "Scale Out Storage", "Unstructured Data"]
 tags_normalized: ["ai", "ai workloads", "azure", "azure blob storage", "azure cli", "azure marketplace", "azure native isv service", "azure portal", "cloud disaster recovery", "cloud pools", "community", "data analytics", "data replication", "dell powerscale", "enterprise storage", "file system as a service", "hpc", "hybrid cloud", "multi petabyte scalability", "onefs", "powershell", "public preview", "scale out storage", "unstructured data"]

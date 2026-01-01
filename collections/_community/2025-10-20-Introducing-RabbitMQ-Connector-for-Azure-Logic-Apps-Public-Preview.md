@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-10-20 13:00:00 +00:00
-permalink: "/community/2025-10-20-Introducing-RabbitMQ-Connector-for-Azure-Logic-Apps-Public-Preview.html"
+permalink: "/2025-10-20-Introducing-RabbitMQ-Connector-for-Azure-Logic-Apps-Public-Preview.html"
 categories: ["Azure"]
 tags: ["Azure", "Azure Logic Apps", "Cloud Native", "Community", "Connectors", "Exchange Routing", "High Availability", "Hybrid Cloud", "Integration", "Message Broker", "Messaging", "Microservices", "Queue", "RabbitMQ", "Scalability", "Triggers", "Workflow Automation"]
 tags_normalized: ["azure", "azure logic apps", "cloud native", "community", "connectors", "exchange routing", "high availability", "hybrid cloud", "integration", "message broker", "messaging", "microservices", "queue", "rabbitmq", "scalability", "triggers", "workflow automation"]

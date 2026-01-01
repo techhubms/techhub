@@ -10,7 +10,7 @@ categories: ["AI", "GitHub Copilot"]
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/changelog/label/copilot/feed/"
 date: 2025-06-30 08:47:01 +00:00
-permalink: "/news/2025-06-30-GitHub-Copilot-in-Xcode-Explore-with-Copilot-Vision-custom-instructions-and-locale-response-support.html"
+permalink: "/2025-06-30-GitHub-Copilot-in-Xcode-Explore-with-Copilot-Vision-custom-instructions-and-locale-response-support.html"
 tags: ["AI", "Copilot Vision", "Developer Tools", "GitHub Copilot", "Image Upload", "News", "Xcode"]
 tags_normalized: ["ai", "copilot vision", "developer tools", "github copilot", "image upload", "news", "xcode"]
 ---

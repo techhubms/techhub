@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Fabric Blog"
 feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
 date: 2025-11-24 10:00:00 +00:00
-permalink: "/news/2025-11-24-Data-Virtualization-and-External-Tables-in-Fabric-SQL-Databases-Preview.html"
+permalink: "/2025-11-24-Data-Virtualization-and-External-Tables-in-Fabric-SQL-Databases-Preview.html"
 categories: ["AI", "Azure", "ML"]
 tags: ["ABFS", "AI", "Azure", "Azure Data Lake Gen2", "Azure SQL Database", "BULK Operations", "Copilot", "CSV", "Data Virtualization", "External Data Sources", "External Tables", "Fabric SQL Database", "JSON", "JSON Functions", "Microsoft Fabric", "ML", "News", "OneLake", "OPENROWSET", "Parquet", "Real Time Analytics", "Reverse ETL", "Schema Abstraction", "SQL Server", "T SQL"]
 tags_normalized: ["abfs", "ai", "azure", "azure data lake gen2", "azure sql database", "bulk operations", "copilot", "csv", "data virtualization", "external data sources", "external tables", "fabric sql database", "json", "json functions", "microsoft fabric", "ml", "news", "onelake", "openrowset", "parquet", "real time analytics", "reverse etl", "schema abstraction", "sql server", "t sql"]

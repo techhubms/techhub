@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-09-09 13:36:43 +00:00
-permalink: "/community/2025-09-09-Announcing-Preview-of-New-Azure-Dasv7-Easv7-and-Fasv7-Series-VMs-Based-on-5th-Gen-AMD-EPYC-Turin-Processors.html"
+permalink: "/2025-09-09-Announcing-Preview-of-New-Azure-Dasv7-Easv7-and-Fasv7-Series-VMs-Based-on-5th-Gen-AMD-EPYC-Turin-Processors.html"
 categories: ["Azure"]
 tags: ["AMD EPYC", "Azure", "Azure Boost", "Azure Disk Storage", "Azure HSM", "Azure Virtual Machines", "Cloud Infrastructure", "Community", "Compute Optimization", "Dasv7", "Easv7", "Fasv7", "MANA", "Memory Optimization", "NVMe", "Turin", "Virtualization", "VM Performance"]
 tags_normalized: ["amd epyc", "azure", "azure boost", "azure disk storage", "azure hsm", "azure virtual machines", "cloud infrastructure", "community", "compute optimization", "dasv7", "easv7", "fasv7", "mana", "memory optimization", "nvme", "turin", "virtualization", "vm performance"]

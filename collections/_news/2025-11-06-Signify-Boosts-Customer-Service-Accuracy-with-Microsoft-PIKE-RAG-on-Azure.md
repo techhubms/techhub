@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft News"
 feed_url: "https://news.microsoft.com/source/feed/"
 date: 2025-11-06 17:14:37 +00:00
-permalink: "/news/2025-11-06-Signify-Boosts-Customer-Service-Accuracy-with-Microsoft-PIKE-RAG-on-Azure.html"
+permalink: "/2025-11-06-Signify-Boosts-Customer-Service-Accuracy-with-Microsoft-PIKE-RAG-on-Azure.html"
 categories: ["AI", "Azure"]
 tags: ["AI", "Algorithm Optimization", "Azure", "Company News", "Customer Service AI", "Document Intelligence", "Domain Adaptation", "Enterprise AI", "Industrial AI", "Knowledge Management", "LED Lighting", "Microsoft Azure OpenAI", "Microsoft Research Asia", "Multimodal AI", "News", "PIKE RAG", "Retrieval Augmented Generation", "Signify", "Technology"]
 tags_normalized: ["ai", "algorithm optimization", "azure", "company news", "customer service ai", "document intelligence", "domain adaptation", "enterprise ai", "industrial ai", "knowledge management", "led lighting", "microsoft azure openai", "microsoft research asia", "multimodal ai", "news", "pike rag", "retrieval augmented generation", "signify", "technology"]

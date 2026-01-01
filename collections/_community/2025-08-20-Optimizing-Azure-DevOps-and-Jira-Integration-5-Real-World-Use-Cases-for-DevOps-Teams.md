@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-08-20 04:52:51 +00:00
-permalink: "/community/2025-08-20-Optimizing-Azure-DevOps-and-Jira-Integration-5-Real-World-Use-Cases-for-DevOps-Teams.html"
+permalink: "/2025-08-20-Optimizing-Azure-DevOps-and-Jira-Integration-5-Real-World-Use-Cases-for-DevOps-Teams.html"
 categories: ["Azure", "DevOps"]
 tags: ["Agile Tools", "Automated Ticket Creation", "Azure", "Azure DevOps", "Community", "Cross Platform Workflow", "Development Teams", "DevOps", "DevOps Integration", "Epics", "Jira", "One Way Sync", "Portfolio Visibility", "Project Management", "Stakeholder Collaboration", "Two Way Sync", "Work Item Synchronization"]
 tags_normalized: ["agile tools", "automated ticket creation", "azure", "azure devops", "community", "cross platform workflow", "development teams", "devops", "devops integration", "epics", "jira", "one way sync", "portfolio visibility", "project management", "stakeholder collaboration", "two way sync", "work item synchronization"]

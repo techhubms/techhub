@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/changelog/feed/"
 date: 2025-10-28 15:24:07 +00:00
-permalink: "/news/2025-10-28-Enterprise-AI-Controls-and-Agent-Control-Plane-Public-Preview-for-GitHub-Copilot.html"
+permalink: "/2025-10-28-Enterprise-AI-Controls-and-Agent-Control-Plane-Public-Preview-for-GitHub-Copilot.html"
 categories: ["AI", "DevOps", "GitHub Copilot"]
 tags: ["Administration", "Agent Control Plane", "Agent Management", "AI", "AI Governance", "Audit Logs", "Copilot", "Custom Agents", "DevOps", "Enterprise Cloud", "Enterprise Management Tools", "Enterprise Roles", "Fine Grained Permissions", "GitHub Administration", "GitHub Copilot", "MCP Allowlist", "News", "Policy Configuration", "Universe25", "VS Code"]
 tags_normalized: ["administration", "agent control plane", "agent management", "ai", "ai governance", "audit logs", "copilot", "custom agents", "devops", "enterprise cloud", "enterprise management tools", "enterprise roles", "fine grained permissions", "github administration", "github copilot", "mcp allowlist", "news", "policy configuration", "universe25", "vs code"]

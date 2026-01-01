@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-10-14 00:00:00 +00:00
-permalink: "/community/2025-10-14-Rethinking-Power-Conversion-and-Distribution-for-the-AI-Era.html"
+permalink: "/2025-10-14-Rethinking-Power-Conversion-and-Distribution-for-the-AI-Era.html"
 categories: ["Azure"]
 tags: ["AI", "AI Infrastructure", "Azure", "Cloud Infrastructure", "Community", "Data Center Architecture", "Disaggregated Power", "Energy Efficiency", "Energy Technology", "GPU Clusters", "High Voltage DC", "Microsoft", "Mt Diablo", "Power Conversion", "Power Distribution", "Rack Density", "Solid State Transformer", "SST"]
 tags_normalized: ["ai", "ai infrastructure", "azure", "cloud infrastructure", "community", "data center architecture", "disaggregated power", "energy efficiency", "energy technology", "gpu clusters", "high voltage dc", "microsoft", "mt diablo", "power conversion", "power distribution", "rack density", "solid state transformer", "sst"]

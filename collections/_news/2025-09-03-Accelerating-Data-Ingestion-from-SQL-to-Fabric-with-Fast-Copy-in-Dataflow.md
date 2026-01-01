@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Fabric Blog"
 feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
 date: 2025-09-03 09:00:00 +00:00
-permalink: "/news/2025-09-03-Accelerating-Data-Ingestion-from-SQL-to-Fabric-with-Fast-Copy-in-Dataflow.html"
+permalink: "/2025-09-03-Accelerating-Data-Ingestion-from-SQL-to-Fabric-with-Fast-Copy-in-Dataflow.html"
 categories: ["Azure", "ML"]
 tags: ["Analytics", "Azure", "Bulk Loading", "Data Ingestion", "Data Integration", "Data Movement", "Data Pipelines", "Dataflow Gen2", "ETL", "Fast Copy", "Microsoft Fabric", "ML", "News", "OneLake", "Parallel Processing", "Performance Optimization", "SQL Database"]
 tags_normalized: ["analytics", "azure", "bulk loading", "data ingestion", "data integration", "data movement", "data pipelines", "dataflow gen2", "etl", "fast copy", "microsoft fabric", "ml", "news", "onelake", "parallel processing", "performance optimization", "sql database"]

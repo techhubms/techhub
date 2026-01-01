@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/changelog/feed/"
 date: 2025-08-14 07:00:31 +00:00
-permalink: "/news/2025-08-14-Expanded-File-Type-Support-for-GitHub-Attachments.html"
+permalink: "/2025-08-14-Expanded-File-Type-Support-for-GitHub-Attachments.html"
 categories: ["DevOps"]
 tags: ["Attachments", "Code Sharing", "Collaboration", "Developer Tools", "DevOps", "Discussions", "File Types", "GitHub", "Issue Tracking", "News", "Productivity", "Pull Requests", "Workflow"]
 tags_normalized: ["attachments", "code sharing", "collaboration", "developer tools", "devops", "discussions", "file types", "github", "issue tracking", "news", "productivity", "pull requests", "workflow"]

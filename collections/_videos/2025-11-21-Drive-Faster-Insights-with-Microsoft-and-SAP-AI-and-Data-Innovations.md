@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Events YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
 date: 2025-11-21 17:09:54 +00:00
-permalink: "/videos/2025-11-21-Drive-Faster-Insights-with-Microsoft-and-SAP-AI-and-Data-Innovations.html"
+permalink: "/2025-11-21-Drive-Faster-Insights-with-Microsoft-and-SAP-AI-and-Data-Innovations.html"
 categories: ["AI", "Azure"]
 tags: ["AI", "Automation", "Azure", "Business AI", "Cloud Integration", "Data Analytics", "Data Strategy", "Data Unification", "Digital Transformation", "Enterprise Data", "Jewel Connector", "LLM Integration", "MCP", "Microsoft 365", "Microsoft Copilot", "Migrateandmodernizeyourestate", "MSIgnite", "SAP", "Videos"]
 tags_normalized: ["ai", "automation", "azure", "business ai", "cloud integration", "data analytics", "data strategy", "data unification", "digital transformation", "enterprise data", "jewel connector", "llm integration", "mcp", "microsoft 365", "microsoft copilot", "migrateandmodernizeyourestate", "msignite", "sap", "videos"]

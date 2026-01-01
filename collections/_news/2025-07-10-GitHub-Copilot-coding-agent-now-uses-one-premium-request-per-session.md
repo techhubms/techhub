@@ -10,7 +10,7 @@ categories: ["AI", "GitHub Copilot"]
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/changelog/label/copilot/feed/"
 date: 2025-07-10 18:23:43 +00:00
-permalink: "/news/2025-07-10-GitHub-Copilot-coding-agent-now-uses-one-premium-request-per-session.html"
+permalink: "/2025-07-10-GitHub-Copilot-coding-agent-now-uses-one-premium-request-per-session.html"
 tags: ["AI", "Automation", "Bug Fixing", "Developer Productivity", "Feature Implementation", "GitHub Copilot", "News", "Tech Debt"]
 tags_normalized: ["ai", "automation", "bug fixing", "developer productivity", "feature implementation", "github copilot", "news", "tech debt"]
 ---

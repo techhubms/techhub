@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/changelog/feed/"
 date: 2025-08-12 21:20:14 +00:00
-permalink: "/news/2025-08-12-Secret-Scanning-Expands-Support-12-New-Token-Validators-Added-to-GitHub.html"
+permalink: "/2025-08-12-Secret-Scanning-Expands-Support-12-New-Token-Validators-Added-to-GitHub.html"
 categories: ["DevOps", "Security"]
 tags: ["API Tokens", "Apify", "Asaas", "Cockroach Labs", "Code Security", "Continuous Integration", "Credential Validation", "Developer Tools", "DevOps", "DevOps Security", "Fullstory", "GitHub", "Grafana", "News", "Polar", "RunPod", "Secret Scanning", "Security", "Sourcegraph", "Telnyx", "Token Validity Checks", "Val Town", "Yandex"]
 tags_normalized: ["api tokens", "apify", "asaas", "cockroach labs", "code security", "continuous integration", "credential validation", "developer tools", "devops", "devops security", "fullstory", "github", "grafana", "news", "polar", "runpod", "secret scanning", "security", "sourcegraph", "telnyx", "token validity checks", "val town", "yandex"]

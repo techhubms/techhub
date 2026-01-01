@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Reddit CSharp"
 feed_url: "https://www.reddit.com/r/csharp/.rss"
 date: 2025-08-07 06:50:03 +00:00
-permalink: "/community/2025-08-07-Automating-Legacy-WinForms-Apps-in-RDP-UI-Automation-vs-Computer-Vision-C-Solutions.html"
+permalink: "/2025-08-07-Automating-Legacy-WinForms-Apps-in-RDP-UI-Automation-vs-Computer-Vision-C-Solutions.html"
 categories: ["Coding"]
 tags: [".NET 6", ".NET 7", "API Monitor", "AutoHotkey", "C#", "Coding", "Community", "Computer Vision", "Database Access", "FlaUI", "Microsoft Access", "ML.NET", "OCR", "OpenCV", "PE Explorer", "PInvoke", "PowerShell Remoting", "Process Monitor", "RDP Automation", "Remote Desktop", "Reverse Engineering", "SendKeys", "Template Matching", "UI Automation API", "WinAutomation", "Windows Forms", "Windows Server", "YOLO"]
 tags_normalized: ["dotnet 6", "dotnet 7", "api monitor", "autohotkey", "csharp", "coding", "community", "computer vision", "database access", "flaui", "microsoft access", "mldotnet", "ocr", "opencv", "pe explorer", "pinvoke", "powershell remoting", "process monitor", "rdp automation", "remote desktop", "reverse engineering", "sendkeys", "template matching", "ui automation api", "winautomation", "windows forms", "windows server", "yolo"]

@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "GitHub YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ"
 date: 2025-12-03 09:21:56 +00:00
-permalink: "/videos/2025-12-03-Rubber-Duck-Thursdays-Building-with-Copilot-Custom-Agents.html"
+permalink: "/2025-12-03-Rubber-Duck-Thursdays-Building-with-Copilot-Custom-Agents.html"
 categories: ["AI", "GitHub Copilot"]
 tags: ["AI", "Copilot Custom Instructions", "Copilot Customization", "Custom Agents", "Developer Tools", "GitHub Copilot", "Live Coding", "Productivity", "Programming Workflow", "Rubber Duck Thursdays", "Videos"]
 tags_normalized: ["ai", "copilot custom instructions", "copilot customization", "custom agents", "developer tools", "github copilot", "live coding", "productivity", "programming workflow", "rubber duck thursdays", "videos"]

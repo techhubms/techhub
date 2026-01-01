@@ -9,10 +9,10 @@ viewing_mode: "external"
 feed_name: "Khalid Abuhakmeh's Blog"
 feed_url: "https://khalidabuhakmeh.com/feed.xml"
 date: 2025-02-18 00:00:00 +00:00
-permalink: "/blogs/2025-02-18-Avoiding-Closures-in-NET-ConcurrentDictionary-The-Efficient-GetOrAdd-Overload.html"
+permalink: "/2025-02-18-Avoiding-Closures-in-NET-ConcurrentDictionary-The-Efficient-GetOrAdd-Overload.html"
 categories: ["Coding"]
-tags: [".NET", "Allocations", "C#", "Closures", "Coding", "ConcurrentDictionary", "Delegates", "Lambda", "LINQ", "Memory Leaks", "Performance", "Blogs"]
-tags_normalized: ["dotnet", "allocations", "csharp", "closures", "coding", "concurrentdictionary", "delegates", "lambda", "linq", "memory leaks", "performance", "blogs"]
+tags: [".NET", "Allocations", "Blogs", "C#", "Closures", "Coding", "ConcurrentDictionary", "Delegates", "Lambda", "LINQ", "Memory Leaks", "Performance"]
+tags_normalized: ["dotnet", "allocations", "blogs", "csharp", "closures", "coding", "concurrentdictionary", "delegates", "lambda", "linq", "memory leaks", "performance"]
 ---
 
 In this article, Khalid Abuhakmeh delves into the nuances of closures in C#, focusing specifically on their impact in ConcurrentDictionary. He demonstrates code refactoring to avoid closures and highlights the advantages of using the more efficient overload of GetOrAdd.<!--excerpt_end-->

@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Security Blog"
 feed_url: "https://www.microsoft.com/en-us/security/blog/feed/"
 date: 2025-09-24 12:00:00 +00:00
-permalink: "/news/2025-09-24-AI-Obfuscated-Phishing-Campaign-Detection-by-Microsoft-Threat-Intelligence.html"
+permalink: "/2025-09-24-AI-Obfuscated-Phishing-Campaign-Detection-by-Microsoft-Threat-Intelligence.html"
 categories: ["AI", "Security"]
 tags: ["AI", "AI Generated Code", "Browser Fingerprinting", "CAPTCHA", "Credential Theft", "Cybersecurity", "Defender XDR", "Incident Response", "Microsoft Defender", "Microsoft Sentinel", "News", "Obfuscation", "Office 365", "Phishing", "Security", "Security Copilot", "SVG Payload", "Threat Intelligence"]
 tags_normalized: ["ai", "ai generated code", "browser fingerprinting", "captcha", "credential theft", "cybersecurity", "defender xdr", "incident response", "microsoft defender", "microsoft sentinel", "news", "obfuscation", "office 365", "phishing", "security", "security copilot", "svg payload", "threat intelligence"]

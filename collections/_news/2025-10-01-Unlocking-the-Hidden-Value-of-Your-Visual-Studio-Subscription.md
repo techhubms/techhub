@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft VisualStudio Blog"
 feed_url: "https://devblogs.microsoft.com/visualstudio/feed/"
 date: 2025-10-01 16:27:11 +00:00
-permalink: "/news/2025-10-01-Unlocking-the-Hidden-Value-of-Your-Visual-Studio-Subscription.html"
+permalink: "/2025-10-01-Unlocking-the-Hidden-Value-of-Your-Visual-Studio-Subscription.html"
 categories: ["Azure", "Coding", "DevOps"]
 tags: ["Azure", "Azure Credits", "Cloud Academy", "Coding", "Dev/Test Environment", "Developer Tools", "Development Environment", "DevOps", "DevOps Cost Savings", "Enterprise Subscription", "Microsoft Benefits", "MSDN", "My.visualstudio.com", "News", "Pluralsight", "Software Downloads", "SQL Server Developer Edition", "Visual Studio Live", "Visual Studio Subscription", "Visual Studio Subscriptions", "VS"]
 tags_normalized: ["azure", "azure credits", "cloud academy", "coding", "devslashtest environment", "developer tools", "development environment", "devops", "devops cost savings", "enterprise subscription", "microsoft benefits", "msdn", "mydotvisualstudiodotcom", "news", "pluralsight", "software downloads", "sql server developer edition", "visual studio live", "visual studio subscription", "visual studio subscriptions", "vs"]

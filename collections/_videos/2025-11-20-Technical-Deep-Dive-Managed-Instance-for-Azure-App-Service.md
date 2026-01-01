@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Events YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
 date: 2025-11-20 16:42:03 +00:00
-permalink: "/videos/2025-11-20-Technical-Deep-Dive-Managed-Instance-for-Azure-App-Service.html"
+permalink: "/2025-11-20-Technical-Deep-Dive-Managed-Instance-for-Azure-App-Service.html"
 categories: ["AI", "Azure", "Coding", "GitHub Copilot"]
 tags: ["Agentic Framework", "AI", "ASP.NET", "Azure", "Azure AI", "Azure App Service", "Cloud Modernization", "Coding", "Configuration Scripts", "GitHub Copilot", "Legacy App Migration", "Managed Identity", "Managed Instance", "Microsoft Ignite", "Migrateandmodernizeyourestate", "Migration", "MSIgnite", "Performance Optimization", "Scalability", "TCO", "Videos"]
 tags_normalized: ["agentic framework", "ai", "aspdotnet", "azure", "azure ai", "azure app service", "cloud modernization", "coding", "configuration scripts", "github copilot", "legacy app migration", "managed identity", "managed instance", "microsoft ignite", "migrateandmodernizeyourestate", "migration", "msignite", "performance optimization", "scalability", "tco", "videos"]

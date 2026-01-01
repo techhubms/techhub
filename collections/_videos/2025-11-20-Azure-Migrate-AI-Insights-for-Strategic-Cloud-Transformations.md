@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Events YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
 date: 2025-11-20 10:57:03 +00:00
-permalink: "/videos/2025-11-20-Azure-Migrate-AI-Insights-for-Strategic-Cloud-Transformations.html"
+permalink: "/2025-11-20-Azure-Migrate-AI-Insights-for-Strategic-Cloud-Transformations.html"
 categories: ["AI", "Azure"]
 tags: [".NET", "AI", "AI Insights", "Azure", "Azure Copilot Migration Agent", "Azure Migrate", "Business Case", "Cloud Migration", "Cloud Modernization", "Cost Savings", "Dependency Mapping", "IT Infrastructure", "Java", "Landing Zone Automation", "Linux", "Microsoft Ignite", "Migrateandmodernizeyourestate", "MSIgnite", "PostgreSQL", "ROI Analysis", "SQL Server", "TCO Insights", "Videos", "Wave Planning", "Windows Server"]
 tags_normalized: ["dotnet", "ai", "ai insights", "azure", "azure copilot migration agent", "azure migrate", "business case", "cloud migration", "cloud modernization", "cost savings", "dependency mapping", "it infrastructure", "java", "landing zone automation", "linux", "microsoft ignite", "migrateandmodernizeyourestate", "msignite", "postgresql", "roi analysis", "sql server", "tco insights", "videos", "wave planning", "windows server"]

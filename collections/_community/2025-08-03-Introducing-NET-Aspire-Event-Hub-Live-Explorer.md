@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Reddit DotNet"
 feed_url: "https://www.reddit.com/r/dotnet/.rss"
 date: 2025-08-03 15:28:59 +00:00
-permalink: "/community/2025-08-03-Introducing-NET-Aspire-Event-Hub-Live-Explorer.html"
+permalink: "/2025-08-03-Introducing-NET-Aspire-Event-Hub-Live-Explorer.html"
 categories: ["Azure", "Coding", "DevOps"]
 tags: [".NET", ".NET Aspire", "Azure", "Azure Event Hubs", "Blazor", "Coding", "Community", "Consumer Groups", "Dashboard Integration", "Developer Tooling", "DevOps", "Event Driven Workflows", "Local Development", "NuGet Package", "Open Source"]
 tags_normalized: ["dotnet", "dotnet aspire", "azure", "azure event hubs", "blazor", "coding", "community", "consumer groups", "dashboard integration", "developer tooling", "devops", "event driven workflows", "local development", "nuget package", "open source"]

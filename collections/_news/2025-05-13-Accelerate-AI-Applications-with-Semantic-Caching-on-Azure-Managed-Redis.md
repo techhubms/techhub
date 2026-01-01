@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft DevBlog"
 feed_url: "https://devblogs.microsoft.com/all-things-azure/feed/"
 date: 2025-05-13 21:18:06 +00:00
-permalink: "/news/2025-05-13-Accelerate-AI-Applications-with-Semantic-Caching-on-Azure-Managed-Redis.html"
+permalink: "/2025-05-13-Accelerate-AI-Applications-with-Semantic-Caching-on-Azure-Managed-Redis.html"
 categories: ["AI", "Azure", "Coding"]
 tags: ["Active Geo Replication", "AI", "AI Apps", "All Things Azure", "API Management", "Azure", "Azure Cache For Redis", "Azure Managed Redis", "Azure OpenAI", "Azure Redis", "Coding", "LLM", "News", "Python", "Redis", "Semantic Caching", "Vector Embeddings", "Vector Search", "Zone Redundancy"]
 tags_normalized: ["active geo replication", "ai", "ai apps", "all things azure", "api management", "azure", "azure cache for redis", "azure managed redis", "azure openai", "azure redis", "coding", "llm", "news", "python", "redis", "semantic caching", "vector embeddings", "vector search", "zone redundancy"]

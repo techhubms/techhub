@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Developer YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
 date: 2025-10-08 16:01:18 +00:00
-permalink: "/videos/2025-10-08-ADHD-GitHub-Copilot-and-Neurodiversity-Real-Talk-with-Mads-Torgersen-and-Klaus-Loffelmann.html"
+permalink: "/2025-10-08-ADHD-GitHub-Copilot-and-Neurodiversity-Real-Talk-with-Mads-Torgersen-and-Klaus-Loffelmann.html"
 categories: ["AI", "GitHub Copilot"]
 tags: ["ADHD", "AI", "AI Tools", "Cloud Computing", "Creativity", "Dev", "Developer Productivity", "Development", "Flow State", "GitHub Copilot", "Mental Health", "Microsoft", "Microsoft Developer", "Neurodiversity", "Personal Growth", "Public Speaking", "Software Development", "Stage Performance", "Tech", "Technology", "Videos", "Workplace Strategies"]
 tags_normalized: ["adhd", "ai", "ai tools", "cloud computing", "creativity", "dev", "developer productivity", "development", "flow state", "github copilot", "mental health", "microsoft", "microsoft developer", "neurodiversity", "personal growth", "public speaking", "software development", "stage performance", "tech", "technology", "videos", "workplace strategies"]

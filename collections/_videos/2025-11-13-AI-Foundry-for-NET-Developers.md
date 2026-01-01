@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "DotNet YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw"
 date: 2025-11-13 17:40:50 +00:00
-permalink: "/videos/2025-11-13-AI-Foundry-for-NET-Developers.html"
+permalink: "/2025-11-13-AI-Foundry-for-NET-Developers.html"
 categories: ["AI", "Azure", "Coding"]
 tags: [".NET", ".NET 10", ".NET Aspire", "AI", "AI Development", "AI Orchestration", "ASP.NET Core 10", "Azure", "Azure AI Foundry", "C# 14", "Cloud Native Apps", "Coding", "Developer Tools", "F# 10", "Intelligent Applications", "Microsoft", "Model Evaluation", "Production Deployment", "Prompt Engineering", "Testing", "Videos", "VS"]
 tags_normalized: ["dotnet", "dotnet 10", "dotnet aspire", "ai", "ai development", "ai orchestration", "aspdotnet core 10", "azure", "azure ai foundry", "csharp 14", "cloud native apps", "coding", "developer tools", "fsharp 10", "intelligent applications", "microsoft", "model evaluation", "production deployment", "prompt engineering", "testing", "videos", "vs"]

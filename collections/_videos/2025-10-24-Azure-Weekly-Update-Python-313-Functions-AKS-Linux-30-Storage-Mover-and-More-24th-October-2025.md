@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "John Savill's Technical Training"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCpIn7ox7j7bH_OFj7tYouOQ"
 date: 2025-10-24 14:44:20 +00:00
-permalink: "/videos/2025-10-24-Azure-Weekly-Update-Python-313-Functions-AKS-Linux-30-Storage-Mover-and-More-24th-October-2025.html"
+permalink: "/2025-10-24-Azure-Weekly-Update-Python-313-Functions-AKS-Linux-30-Storage-Mover-and-More-24th-October-2025.html"
 categories: ["Azure"]
 tags: ["AKS", "App Gateway Migration", "Azure", "Azure Cloud", "Azure Functions", "Azure Linux 3.0", "Azure Regions", "Azure Storage Mover", "Cloud", "Cloud Services", "Cloud Updates", "Containerization", "Gpt 4o", "Hyperscale", "Image Analysis", "John Savill", "Managed PostgreSQL", "Microsoft", "Microsoft Azure", "Python 3.13", "SQL Managed Instance", "Videos", "VM Vcore"]
 tags_normalized: ["aks", "app gateway migration", "azure", "azure cloud", "azure functions", "azure linux 3dot0", "azure regions", "azure storage mover", "cloud", "cloud services", "cloud updates", "containerization", "gpt 4o", "hyperscale", "image analysis", "john savill", "managed postgresql", "microsoft", "microsoft azure", "python 3dot13", "sql managed instance", "videos", "vm vcore"]

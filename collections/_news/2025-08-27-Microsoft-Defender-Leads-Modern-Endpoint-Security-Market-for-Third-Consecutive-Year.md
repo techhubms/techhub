@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Security Blog"
 feed_url: "https://www.microsoft.com/en-us/security/blog/feed/"
 date: 2025-08-27 15:00:00 +00:00
-permalink: "/news/2025-08-27-Microsoft-Defender-Leads-Modern-Endpoint-Security-Market-for-Third-Consecutive-Year.html"
+permalink: "/2025-08-27-Microsoft-Defender-Leads-Modern-Endpoint-Security-Market-for-Third-Consecutive-Year.html"
 categories: ["Security"]
 tags: ["AI", "AI Security", "Automatic Attack Disruption", "Cross Platform Security", "Cybersecurity", "Endpoint Security", "Exposure Management", "Extended Detection And Response", "IDC Report", "Linux Security", "Market Share", "Microsoft Defender", "News", "Security", "Security Operations Center", "Threat Protection", "Zero Trust"]
 tags_normalized: ["ai", "ai security", "automatic attack disruption", "cross platform security", "cybersecurity", "endpoint security", "exposure management", "extended detection and response", "idc report", "linux security", "market share", "microsoft defender", "news", "security", "security operations center", "threat protection", "zero trust"]

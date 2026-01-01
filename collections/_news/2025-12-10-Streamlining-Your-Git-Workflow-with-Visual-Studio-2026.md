@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft VisualStudio Blog"
 feed_url: "https://devblogs.microsoft.com/visualstudio/feed/"
 date: 2025-12-10 15:00:47 +00:00
-permalink: "/news/2025-12-10-Streamlining-Your-Git-Workflow-with-Visual-Studio-2026.html"
+permalink: "/2025-12-10-Streamlining-Your-Git-Workflow-with-Visual-Studio-2026.html"
 categories: ["AI", "Coding", "DevOps", "GitHub Copilot"]
 tags: [".NET", "AI", "Async Programming", "Azure DevOps", "Branch Management", "Code Review", "Coding", "Commit Message Automation", "Copilot Chat", "Copilot Code Review", "DevOps", "Git", "Git Changes Window", "Git Repository Window", "GitHub Copilot", "News", "Pull Requests", "Source Control", "Stashing", "VS"]
 tags_normalized: ["dotnet", "ai", "async programming", "azure devops", "branch management", "code review", "coding", "commit message automation", "copilot chat", "copilot code review", "devops", "git", "git changes window", "git repository window", "github copilot", "news", "pull requests", "source control", "stashing", "vs"]

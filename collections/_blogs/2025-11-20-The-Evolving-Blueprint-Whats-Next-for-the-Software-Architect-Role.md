@@ -9,10 +9,10 @@ viewing_mode: "external"
 feed_name: "Dellenny's Blog"
 feed_url: "https://dellenny.com/feed/"
 date: 2025-11-20 17:34:19 +00:00
-permalink: "/blogs/2025-11-20-The-Evolving-Blueprint-Whats-Next-for-the-Software-Architect-Role.html"
+permalink: "/2025-11-20-The-Evolving-Blueprint-Whats-Next-for-the-Software-Architect-Role.html"
 categories: ["AI", "Azure", "DevOps", "Security"]
-tags: ["AI", "Architecture", "Architecture as Code", "Azure", "CI/CD", "Cloud Native", "DevOps", "Distributed Systems", "Event Driven Architecture", "Governance", "Machine Learning", "Microservices", "MLOps", "Blogs", "Security", "Software Architecture", "Solution Architecture", "System Design", "Zero Trust"]
-tags_normalized: ["ai", "architecture", "architecture as code", "azure", "cislashcd", "cloud native", "devops", "distributed systems", "event driven architecture", "governance", "machine learning", "microservices", "mlops", "blogs", "security", "software architecture", "solution architecture", "system design", "zero trust"]
+tags: ["AI", "Architecture", "Architecture as Code", "Azure", "Blogs", "CI/CD", "Cloud Native", "DevOps", "Distributed Systems", "Event Driven Architecture", "Governance", "Machine Learning", "Microservices", "MLOps", "Security", "Software Architecture", "Solution Architecture", "System Design", "Zero Trust"]
+tags_normalized: ["ai", "architecture", "architecture as code", "azure", "blogs", "cislashcd", "cloud native", "devops", "distributed systems", "event driven architecture", "governance", "machine learning", "microservices", "mlops", "security", "software architecture", "solution architecture", "system design", "zero trust"]
 ---
 
 John Edward examines how the software architect role is evolving, focusing on technical leadership, cloud-native patterns, AI integration, DevOps, and security-driven design.<!--excerpt_end-->

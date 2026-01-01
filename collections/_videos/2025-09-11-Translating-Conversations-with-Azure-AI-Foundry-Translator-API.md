@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Developer YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
 date: 2025-09-11 17:57:05 +00:00
-permalink: "/videos/2025-09-11-Translating-Conversations-with-Azure-AI-Foundry-Translator-API.html"
+permalink: "/2025-09-11-Translating-Conversations-with-Azure-AI-Foundry-Translator-API.html"
 categories: ["AI", "Azure"]
 tags: ["AI", "API Integration", "Azure", "Azure AI Foundry", "Azure Cloud", "Cloud Computing", "Dev", "Developer Tutorial", "Development", "Gender Accommodation", "Large Language Models", "LLM Translation", "Microsoft", "Microsoft AI", "Natural Language Processing", "Neural Machine Translation", "NMT", "Tech", "Technology", "Text Translation", "Tone Detection", "Translation API", "Translator API", "Videos"]
 tags_normalized: ["ai", "api integration", "azure", "azure ai foundry", "azure cloud", "cloud computing", "dev", "developer tutorial", "development", "gender accommodation", "large language models", "llm translation", "microsoft", "microsoft ai", "natural language processing", "neural machine translation", "nmt", "tech", "technology", "text translation", "tone detection", "translation api", "translator api", "videos"]

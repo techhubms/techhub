@@ -9,7 +9,7 @@ categories: ["AI"]
 feed_name: "Microsoft News"
 feed_url: "https://news.microsoft.com/source/feed/"
 date: 2025-07-16 17:35:05 +00:00
-permalink: "/news/2025-07-16-Microsoft-introduces-new-training-framework-that-enhances-human-LLM-collaboration.html"
+permalink: "/2025-07-16-Microsoft-introduces-new-training-framework-that-enhances-human-LLM-collaboration.html"
 viewing_mode: "external"
 tags: ["AI", "AI Enhancement", "AI Research", "Collaborative AI", "Company News", "Human Computer Interaction", "Human LLM Collaboration", "Large Language Models", "LLM", "Microsoft", "News", "Source", "Training Framework"]
 tags_normalized: ["ai", "ai enhancement", "ai research", "collaborative ai", "company news", "human computer interaction", "human llm collaboration", "large language models", "llm", "microsoft", "news", "source", "training framework"]

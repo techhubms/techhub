@@ -9,10 +9,10 @@ viewing_mode: "external"
 feed_name: "Dellenny's Blog"
 feed_url: "https://dellenny.com/feed/"
 date: 2025-08-16 08:46:54 +00:00
-permalink: "/blogs/2025-08-16-No-Code-AI-Building-Chatbots-with-Copilot-Studio-for-Non-Developers.html"
+permalink: "/2025-08-16-No-Code-AI-Building-Chatbots-with-Copilot-Studio-for-Non-Developers.html"
 categories: ["AI"]
-tags: ["AI", "Bot Development", "Business Automation", "Chatbots", "Conversational AI", "Copilot", "Copilot Studio", "Customer Service", "Digital Transformation", "Integration", "Microsoft AI", "Natural Language Understanding", "No Code Tools", "Non Developers", "Blogs", "Visual Flow Design"]
-tags_normalized: ["ai", "bot development", "business automation", "chatbots", "conversational ai", "copilot", "copilot studio", "customer service", "digital transformation", "integration", "microsoft ai", "natural language understanding", "no code tools", "non developers", "blogs", "visual flow design"]
+tags: ["AI", "Blogs", "Bot Development", "Business Automation", "Chatbots", "Conversational AI", "Copilot", "Copilot Studio", "Customer Service", "Digital Transformation", "Integration", "Microsoft AI", "Natural Language Understanding", "No Code Tools", "Non Developers", "Visual Flow Design"]
+tags_normalized: ["ai", "blogs", "bot development", "business automation", "chatbots", "conversational ai", "copilot", "copilot studio", "customer service", "digital transformation", "integration", "microsoft ai", "natural language understanding", "no code tools", "non developers", "visual flow design"]
 ---
 
 Dellenny explains how Copilot Studio empowers non-developers to build AI-powered chatbots using a no-code interface, making advanced bot development accessible without programming expertise.<!--excerpt_end-->

@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/changelog/feed/"
 date: 2025-11-13 22:30:49 +00:00
-permalink: "/news/2025-11-13-How-to-Configure-Copilot-Coding-Agent-as-a-Bypass-Actor-for-GitHub-Rulesets.html"
+permalink: "/2025-11-13-How-to-Configure-Copilot-Coding-Agent-as-a-Bypass-Actor-for-GitHub-Rulesets.html"
 categories: ["AI", "DevOps", "GitHub Copilot"]
 tags: ["AI", "Asynchronous Agents", "Automation", "Branch Protection", "Bypass Actors", "Commit Rules", "Commit Signing", "Copilot", "Copilot Coding Agent", "DevOps", "GitHub Copilot", "Improvement", "News", "Platform Governance", "Platform Improvement", "Repository Governance", "Repository Management", "Rulesets"]
 tags_normalized: ["ai", "asynchronous agents", "automation", "branch protection", "bypass actors", "commit rules", "commit signing", "copilot", "copilot coding agent", "devops", "github copilot", "improvement", "news", "platform governance", "platform improvement", "repository governance", "repository management", "rulesets"]

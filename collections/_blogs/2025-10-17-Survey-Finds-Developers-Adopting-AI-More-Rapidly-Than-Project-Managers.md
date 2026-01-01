@@ -9,10 +9,10 @@ viewing_mode: "external"
 feed_name: "DevOps Blog"
 feed_url: "https://devops.com/feed/"
 date: 2025-10-17 12:45:40 +00:00
-permalink: "/blogs/2025-10-17-Survey-Finds-Developers-Adopting-AI-More-Rapidly-Than-Project-Managers.html"
+permalink: "/2025-10-17-Survey-Finds-Developers-Adopting-AI-More-Rapidly-Than-Project-Managers.html"
 categories: ["AI", "DevOps"]
-tags: ["AI", "AI Adoption", "AI Challenges", "AI Prototyping", "AI Skills", "BairesDev", "Career Opportunities", "Coding Automation", "Developer Productivity", "DevOps", "Machine Learning", "Blogs", "Project Management", "Social Facebook", "Social LinkedIn", "Social X", "Software Development", "Team Leadership", "Technical Debt", "Upskilling", "Workforce Development"]
-tags_normalized: ["ai", "ai adoption", "ai challenges", "ai prototyping", "ai skills", "bairesdev", "career opportunities", "coding automation", "developer productivity", "devops", "machine learning", "blogs", "project management", "social facebook", "social linkedin", "social x", "software development", "team leadership", "technical debt", "upskilling", "workforce development"]
+tags: ["AI", "AI Adoption", "AI Challenges", "AI Prototyping", "AI Skills", "BairesDev", "Blogs", "Career Opportunities", "Coding Automation", "Developer Productivity", "DevOps", "Machine Learning", "Project Management", "Social Facebook", "Social LinkedIn", "Social X", "Software Development", "Team Leadership", "Technical Debt", "Upskilling", "Workforce Development"]
+tags_normalized: ["ai", "ai adoption", "ai challenges", "ai prototyping", "ai skills", "bairesdev", "blogs", "career opportunities", "coding automation", "developer productivity", "devops", "machine learning", "project management", "social facebook", "social linkedin", "social x", "software development", "team leadership", "technical debt", "upskilling", "workforce development"]
 ---
 
 Mike Vizard summarizes the results of a BairesDev survey, showing developers are embracing AI faster than project managers, with implications for DevOps leaders and software teams.<!--excerpt_end-->

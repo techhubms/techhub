@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft News"
 feed_url: "https://news.microsoft.com/source/feed/"
 date: 2025-07-31 17:54:07 +00:00
-permalink: "/news/2025-07-31-Special-Visual-Studio-Toolbox-Live-Microsoft-Led-Sessions-on-NET-AI-Azure-and-Copilot-Aug-5.html"
+permalink: "/2025-07-31-Special-Visual-Studio-Toolbox-Live-Microsoft-Led-Sessions-on-NET-AI-Azure-and-Copilot-Aug-5.html"
 categories: ["AI", "Azure", "Coding", "GitHub Copilot"]
 tags: [".NET", "AI", "AI Apps", "Azure", "Cloud Native Development", "Code Quality", "Coding", "Company News", "Cross Platform Apps", "Debugging", "Engineering Tips", "GitHub Copilot", "Live Event", "MAUI", "Microsoft", "News", "Productivity Tools", "VS"]
 tags_normalized: ["dotnet", "ai", "ai apps", "azure", "cloud native development", "code quality", "coding", "company news", "cross platform apps", "debugging", "engineering tips", "github copilot", "live event", "maui", "microsoft", "news", "productivity tools", "vs"]

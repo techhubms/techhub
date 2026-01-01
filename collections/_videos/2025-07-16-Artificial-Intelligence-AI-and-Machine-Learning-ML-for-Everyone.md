@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "John Savill's Technical Training"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCpIn7ox7j7bH_OFj7tYouOQ"
 date: 2025-07-16 11:30:50 +00:00
-permalink: "/videos/2025-07-16-Artificial-Intelligence-AI-and-Machine-Learning-ML-for-Everyone.html"
+permalink: "/2025-07-16-Artificial-Intelligence-AI-and-Machine-Learning-ML-for-Everyone.html"
 categories: ["AI"]
 tags: ["Agent", "AI", "AI Agents", "AI Assistant", "AI Fundamentals", "AI Learning Path", "Assistant", "Azure Certification", "Generative AI", "John Savill", "Large Language Models", "LLM", "Machine Learning", "Machine Learning Basics", "Microsoft Azure AI", "Neural Networks", "Reinforcement Learning", "Supervised Learning", "Unsupervised Learning", "Videos"]
 tags_normalized: ["agent", "ai", "ai agents", "ai assistant", "ai fundamentals", "ai learning path", "assistant", "azure certification", "generative ai", "john savill", "large language models", "llm", "machine learning", "machine learning basics", "microsoft azure ai", "neural networks", "reinforcement learning", "supervised learning", "unsupervised learning", "videos"]

@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft PowerShell Blog"
 feed_url: "https://devblogs.microsoft.com/powershell/feed/"
 date: 2025-07-24 21:35:14 +00:00
-permalink: "/news/2025-07-24-Announcing-MicrosoftPowerShellPlatyPS-100-PowerShell-Help-Authoring-Simplified.html"
+permalink: "/2025-07-24-Announcing-MicrosoftPowerShellPlatyPS-100-PowerShell-Help-Authoring-Simplified.html"
 categories: ["Coding"]
 tags: ["C#", "Cmdlets", "Coding", "Cross Platform", "Documentation", "MAML", "Markdown", "Microsoft Learn", "News", "PlatyPS", "PowerShell", "PowerShell Gallery", "PowerShell Help", "PowerShell PlatyPS", "VS Code"]
 tags_normalized: ["csharp", "cmdlets", "coding", "cross platform", "documentation", "maml", "markdown", "microsoft learn", "news", "platyps", "powershell", "powershell gallery", "powershell help", "powershell platyps", "vs code"]

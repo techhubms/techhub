@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The Azure Blog"
 feed_url: "https://azure.microsoft.com/en-us/blog/feed/"
 date: 2025-11-12 17:33:00 +00:00
-permalink: "/news/2025-11-12-Infinite-Scale-Architecture-of-the-Azure-AI-Superfactory.html"
+permalink: "/2025-11-12-Infinite-Scale-Architecture-of-the-Azure-AI-Superfactory.html"
 categories: ["AI", "Azure"]
 tags: ["AI", "AI + Machine Learning", "AI Infrastructure", "AI Training", "AI WAN", "Azure", "Azure AI", "Cloud Infrastructure", "Datacenter Architecture", "Fairwater", "GPU Clusters", "High Density Compute", "Liquid Cooling", "Network Engineering", "News", "NVIDIA Blackwell", "SONiC", "Supercomputer", "Superfactory"]
 tags_normalized: ["ai", "ai plus machine learning", "ai infrastructure", "ai training", "ai wan", "azure", "azure ai", "cloud infrastructure", "datacenter architecture", "fairwater", "gpu clusters", "high density compute", "liquid cooling", "network engineering", "news", "nvidia blackwell", "sonic", "supercomputer", "superfactory"]

@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Fabric Blog"
 feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
 date: 2025-11-18 08:00:00 +00:00
-permalink: "/news/2025-11-18-Fabric-Databases-Now-Generally-Available-Unified-Data-Experience-in-Microsoft-Fabric.html"
+permalink: "/2025-11-18-Fabric-Databases-Now-Generally-Available-Unified-Data-Experience-in-Microsoft-Fabric.html"
 categories: ["AI", "Azure", "ML"]
 tags: ["AI", "AI Integration", "Azure", "Azure OpenAI Service", "Cosmos DB", "Enterprise Security", "Fabric Databases", "GraphQL API", "Microsoft Fabric", "ML", "News", "OneLake", "Operational Analytics", "Power BI", "Real Time Data", "Serverless Architecture", "SQL Database", "Unified Data Platform", "Vector Search", "VS Code Integration"]
 tags_normalized: ["ai", "ai integration", "azure", "azure openai service", "cosmos db", "enterprise security", "fabric databases", "graphql api", "microsoft fabric", "ml", "news", "onelake", "operational analytics", "power bi", "real time data", "serverless architecture", "sql database", "unified data platform", "vector search", "vs code integration"]

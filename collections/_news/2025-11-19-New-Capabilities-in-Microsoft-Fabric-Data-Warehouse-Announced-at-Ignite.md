@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Fabric Blog"
 feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
 date: 2025-11-19 11:00:00 +00:00
-permalink: "/news/2025-11-19-New-Capabilities-in-Microsoft-Fabric-Data-Warehouse-Announced-at-Ignite.html"
+permalink: "/2025-11-19-New-Capabilities-in-Microsoft-Fabric-Data-Warehouse-Announced-at-Ignite.html"
 categories: ["Azure", "ML"]
 tags: ["Analytics", "Azure", "BI", "Cloud Data Platform", "Cosmos DB", "Data Clustering", "Data Engineering", "Data Warehouse", "ETL", "IDENTITY Columns", "Microsoft Fabric", "ML", "News", "Schema Management", "Snapshot Consistency", "SQL Analytics", "VARBINARY(MAX)", "VARCHAR(MAX)", "Warehouse Snapshots"]
 tags_normalized: ["analytics", "azure", "bi", "cloud data platform", "cosmos db", "data clustering", "data engineering", "data warehouse", "etl", "identity columns", "microsoft fabric", "ml", "news", "schema management", "snapshot consistency", "sql analytics", "varbinarymax", "varcharmax", "warehouse snapshots"]

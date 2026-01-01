@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Security Blog"
 feed_url: "https://www.microsoft.com/en-us/security/blog/feed/"
 date: 2025-11-03 17:00:00 +00:00
-permalink: "/news/2025-11-03-SesameOp-Novel-Backdoor-Abuses-OpenAI-Assistants-API-for-Stealth-Command-and-Control.html"
+permalink: "/2025-11-03-SesameOp-Novel-Backdoor-Abuses-OpenAI-Assistants-API-for-Stealth-Command-and-Control.html"
 categories: ["AI", "Security"]
 tags: [".NET", "AI", "API Abuse", "AppDomainManager Injection", "Backdoor", "Command And Control", "Cybersecurity", "Eazfuscator.NET", "Encryption", "Incident Response", "Malware", "Microsoft DART", "Microsoft Defender", "News", "OpenAI Assistants API", "Security", "SesameOp", "Threat Intelligence", "VS"]
 tags_normalized: ["dotnet", "ai", "api abuse", "appdomainmanager injection", "backdoor", "command and control", "cybersecurity", "eazfuscatordotnet", "encryption", "incident response", "malware", "microsoft dart", "microsoft defender", "news", "openai assistants api", "security", "sesameop", "threat intelligence", "vs"]

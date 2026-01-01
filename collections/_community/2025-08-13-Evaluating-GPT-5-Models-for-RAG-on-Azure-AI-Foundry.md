@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Community"
 date: 2025-08-13 07:54:51 +00:00
-permalink: "/community/2025-08-13-Evaluating-GPT-5-Models-for-RAG-on-Azure-AI-Foundry.html"
+permalink: "/2025-08-13-Evaluating-GPT-5-Models-for-RAG-on-Azure-AI-Foundry.html"
 categories: ["AI", "Azure"]
 tags: ["AI", "Azure", "Azure AI Evaluation", "Azure AI Foundry", "Clarifying Questions", "Community", "Evaluation SDK", "GPT 5", "Groundedness", "Hybrid Search", "Latency Metrics", "LLM Evaluation", "OpenAI", "Prompt Engineering", "RAG", "Relevance Metrics", "Retrieval Augmented Generation", "Synonyms Search"]
 tags_normalized: ["ai", "azure", "azure ai evaluation", "azure ai foundry", "clarifying questions", "community", "evaluation sdk", "gpt 5", "groundedness", "hybrid search", "latency metrics", "llm evaluation", "openai", "prompt engineering", "rag", "relevance metrics", "retrieval augmented generation", "synonyms search"]

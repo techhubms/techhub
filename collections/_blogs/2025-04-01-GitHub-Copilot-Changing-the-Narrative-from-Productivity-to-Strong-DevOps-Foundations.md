@@ -9,10 +9,10 @@ viewing_mode: "external"
 feed_name: "Rob Bos' Blog"
 feed_url: "https://devopsjournal.io/blog/atom.xml"
 date: 2025-04-01 00:00:00 +00:00
-permalink: "/blogs/2025-04-01-GitHub-Copilot-Changing-the-Narrative-from-Productivity-to-Strong-DevOps-Foundations.html"
+permalink: "/2025-04-01-GitHub-Copilot-Changing-the-Narrative-from-Productivity-to-Strong-DevOps-Foundations.html"
 categories: ["AI", "DevOps", "GitHub Copilot"]
-tags: ["AI", "Application Delivery", "Automation", "CI/CD", "DevOps", "Engineering Productivity", "Generative AI", "GitHub Copilot", "Pipelines", "Blogs", "Project Padawan", "Software Quality", "Team Effectiveness", "Technical Debt", "Testing", "Workflows"]
-tags_normalized: ["ai", "application delivery", "automation", "cislashcd", "devops", "engineering productivity", "generative ai", "github copilot", "pipelines", "blogs", "project padawan", "software quality", "team effectiveness", "technical debt", "testing", "workflows"]
+tags: ["AI", "Application Delivery", "Automation", "Blogs", "CI/CD", "DevOps", "Engineering Productivity", "Generative AI", "GitHub Copilot", "Pipelines", "Project Padawan", "Software Quality", "Team Effectiveness", "Technical Debt", "Testing", "Workflows"]
+tags_normalized: ["ai", "application delivery", "automation", "blogs", "cislashcd", "devops", "engineering productivity", "generative ai", "github copilot", "pipelines", "project padawan", "software quality", "team effectiveness", "technical debt", "testing", "workflows"]
 ---
 
 In this post, Rob Bos challenges the current narrative around GitHub Copilot, advocating for a DevOps-focused approach rather than just productivity. He offers practical advice on integrating Copilot to strengthen engineering foundations and team processes.<!--excerpt_end-->

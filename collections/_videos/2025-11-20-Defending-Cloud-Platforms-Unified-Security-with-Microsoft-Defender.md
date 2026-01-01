@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Events YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
 date: 2025-11-20 14:36:50 +00:00
-permalink: "/videos/2025-11-20-Defending-Cloud-Platforms-Unified-Security-with-Microsoft-Defender.html"
+permalink: "/2025-11-20-Defending-Cloud-Platforms-Unified-Security-with-Microsoft-Defender.html"
 categories: ["AI", "Azure", "Security"]
 tags: ["Adversary Detection", "AI", "AI Threats", "Attack Prevention", "Azure", "Azure Security Center", "Cloud Security", "Cloud Workload Protection", "Exposure Management", "Hybrid Cloud", "Kubernetes Security", "Microsoft Defender For Cloud", "Microsoft Ignite", "MSIgnite", "Multi Cloud Security", "ProtectcloudAIplatformandapps", "Risk Prioritization", "Security", "Security Automation", "Security Posture Management", "Videos"]
 tags_normalized: ["adversary detection", "ai", "ai threats", "attack prevention", "azure", "azure security center", "cloud security", "cloud workload protection", "exposure management", "hybrid cloud", "kubernetes security", "microsoft defender for cloud", "microsoft ignite", "msignite", "multi cloud security", "protectcloudaiplatformandapps", "risk prioritization", "security", "security automation", "security posture management", "videos"]

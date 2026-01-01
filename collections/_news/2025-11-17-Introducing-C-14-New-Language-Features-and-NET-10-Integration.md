@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft .NET Blog"
 feed_url: "https://devblogs.microsoft.com/dotnet/feed/"
 date: 2025-11-17 18:05:00 +00:00
-permalink: "/news/2025-11-17-Introducing-C-14-New-Language-Features-and-NET-10-Integration.html"
+permalink: "/2025-11-17-Introducing-C-14-New-Language-Features-and-NET-10-Integration.html"
 categories: ["Coding"]
 tags: [".NET", ".NET 10", "C#", "C# 14", "Coding", "Compound Assignment", "Extension", "Extension Members", "Field Keyword", "Lambda Expressions", "Language Features", "News", "Null Conditional", "Null Conditional Assignment", "Operator Overloading", "Partial Types", "Performance Optimization", "Span Types", "Static Extension", "Unbound Generic Types"]
 tags_normalized: ["dotnet", "dotnet 10", "csharp", "csharp 14", "coding", "compound assignment", "extension", "extension members", "field keyword", "lambda expressions", "language features", "news", "null conditional", "null conditional assignment", "operator overloading", "partial types", "performance optimization", "span types", "static extension", "unbound generic types"]

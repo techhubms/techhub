@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/changelog/feed/"
 date: 2025-12-17 16:16:42 +00:00
-permalink: "/news/2025-12-17-GPT-51-and-GPT-51-Codex-Now-Available-in-GitHub-Copilot.html"
+permalink: "/2025-12-17-GPT-51-and-GPT-51-Codex-Now-Available-in-GitHub-Copilot.html"
 categories: ["AI", "GitHub Copilot"]
 tags: ["AI", "AI Code Completion", "AI Models", "Copilot", "Copilot Business", "Copilot Chat", "Copilot Enterprise", "Copilot Pro", "Eclipse", "GitHub Copilot", "GPT 5.1", "GPT 5.1 Codex", "IDE Integration", "JetBrains", "Model Deployment", "News", "VS Code", "Xcode"]
 tags_normalized: ["ai", "ai code completion", "ai models", "copilot", "copilot business", "copilot chat", "copilot enterprise", "copilot pro", "eclipse", "github copilot", "gpt 5dot1", "gpt 5dot1 codex", "ide integration", "jetbrains", "model deployment", "news", "vs code", "xcode"]

@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-09-08 07:00:00 +00:00
-permalink: "/community/2025-09-08-Zone-Redundancy-Now-Default-for-Azure-Container-Registry-in-Availability-Zone-Regions.html"
+permalink: "/2025-09-08-Zone-Redundancy-Now-Default-for-Azure-Container-Registry-in-Availability-Zone-Regions.html"
 categories: ["Azure"]
 tags: ["ACR", "Availability Zones", "Azure", "Azure Container Registry", "Cloud Infrastructure", "Cloud Resilience", "Community", "Container Registry", "Disaster Recovery", "High Availability", "Microsoft Azure", "Zone Redundancy"]
 tags_normalized: ["acr", "availability zones", "azure", "azure container registry", "cloud infrastructure", "cloud resilience", "community", "container registry", "disaster recovery", "high availability", "microsoft azure", "zone redundancy"]

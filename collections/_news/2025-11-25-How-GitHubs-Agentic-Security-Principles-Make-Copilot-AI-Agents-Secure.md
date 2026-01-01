@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/feed/"
 date: 2025-11-25 16:00:00 +00:00
-permalink: "/news/2025-11-25-How-GitHubs-Agentic-Security-Principles-Make-Copilot-AI-Agents-Secure.html"
+permalink: "/2025-11-25-How-GitHubs-Agentic-Security-Principles-Make-Copilot-AI-Agents-Secure.html"
 categories: ["AI", "GitHub Copilot", "Security"]
 tags: ["Action Attribution", "Agentic AI", "AI", "AI & ML", "AI Agents", "AI Risk Mitigation", "Copilot Coding Agent", "Data Exfiltration", "Firewall", "GitHub", "GitHub Copilot", "Human in The Loop", "News", "Permissions", "Prompt Injection", "Security", "Security Principles"]
 tags_normalized: ["action attribution", "agentic ai", "ai", "ai and ml", "ai agents", "ai risk mitigation", "copilot coding agent", "data exfiltration", "firewall", "github", "github copilot", "human in the loop", "news", "permissions", "prompt injection", "security", "security principles"]

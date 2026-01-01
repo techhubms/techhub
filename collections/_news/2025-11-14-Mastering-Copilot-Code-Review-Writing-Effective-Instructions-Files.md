@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/feed/"
 date: 2025-11-14 17:00:00 +00:00
-permalink: "/news/2025-11-14-Mastering-Copilot-Code-Review-Writing-Effective-Instructions-Files.html"
+permalink: "/2025-11-14-Mastering-Copilot-Code-Review-Writing-Effective-Instructions-Files.html"
 categories: ["AI", "GitHub Copilot"]
 tags: ["AI", "AI & ML", "Applyto Frontmatter", "Automation", "Best Practices", "Code Review Automation", "Code Review Tips", "Coding Guidelines", "Copilot Code Review", "Copilot Instructions.md", "Custom Instructions", "Developer Productivity", "GitHub Copilot", "GitHub Copilot Code Review", "Instructions Files", "News", "Path Specific Instructions", "Style Conventions", "Team Standards"]
 tags_normalized: ["ai", "ai and ml", "applyto frontmatter", "automation", "best practices", "code review automation", "code review tips", "coding guidelines", "copilot code review", "copilot instructionsdotmd", "custom instructions", "developer productivity", "github copilot", "github copilot code review", "instructions files", "news", "path specific instructions", "style conventions", "team standards"]

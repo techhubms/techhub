@@ -702,7 +702,6 @@ See: [Building a Center of Excellence for AI: A Strategic Roadmap for Enterprise
 
 ---
 
-
 <div class="page-nav-box page-nav-box--blue">
   <h3>💡 Ready to Build Real Applications?</h3>
   <p>Put your advanced knowledge into practice! Learn how to integrate GenAI into real-world applications and workflows.</p>

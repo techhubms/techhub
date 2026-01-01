@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-07-30 07:46:20 +00:00
-permalink: "/community/2025-07-30-Boosting-Performance-with-the-Materialized-View-Pattern-in-Azure.html"
+permalink: "/2025-07-30-Boosting-Performance-with-the-Materialized-View-Pattern-in-Azure.html"
 categories: ["Azure", "ML"]
 tags: ["Analytical Dashboards", "Azure", "Community", "Cost Effective Processing", "Data Architecture", "Data Systems", "Large Datasets", "Materialized View", "Microsoft Azure", "ML", "Precomputed Queries", "Query Performance"]
 tags_normalized: ["analytical dashboards", "azure", "community", "cost effective processing", "data architecture", "data systems", "large datasets", "materialized view", "microsoft azure", "ml", "precomputed queries", "query performance"]

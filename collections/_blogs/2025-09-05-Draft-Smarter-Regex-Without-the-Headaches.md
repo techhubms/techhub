@@ -9,10 +9,10 @@ viewing_mode: "external"
 feed_name: "Randy Pagels's Blog"
 feed_url: "https://www.cooknwithcopilot.com/rss.xml"
 date: 2025-09-05 00:00:00 +00:00
-permalink: "/blogs/2025-09-05-Draft-Smarter-Regex-Without-the-Headaches.html"
+permalink: "/2025-09-05-Draft-Smarter-Regex-Without-the-Headaches.html"
 categories: ["AI", "Coding", "GitHub Copilot"]
-tags: ["AI", "AI Tools", "Automation", "Code Generation", "Code Quality", "Code Refactoring", "Coding", "Copilot Agent Mode", "Copilot Chat", "Developer Productivity", "GitHub Copilot", "Pattern Matching", "Blogs", "Programming", "Regex", "Regular Expressions", "Software Engineering", "Testing"]
-tags_normalized: ["ai", "ai tools", "automation", "code generation", "code quality", "code refactoring", "coding", "copilot agent mode", "copilot chat", "developer productivity", "github copilot", "pattern matching", "blogs", "programming", "regex", "regular expressions", "software engineering", "testing"]
+tags: ["AI", "AI Tools", "Automation", "Blogs", "Code Generation", "Code Quality", "Code Refactoring", "Coding", "Copilot Agent Mode", "Copilot Chat", "Developer Productivity", "GitHub Copilot", "Pattern Matching", "Programming", "Regex", "Regular Expressions", "Software Engineering", "Testing"]
+tags_normalized: ["ai", "ai tools", "automation", "blogs", "code generation", "code quality", "code refactoring", "coding", "copilot agent mode", "copilot chat", "developer productivity", "github copilot", "pattern matching", "programming", "regex", "regular expressions", "software engineering", "testing"]
 ---
 
 Randy Pagels explains how GitHub Copilot helps developers quickly draft, explain, and test regex patterns, making regular expression work less frustrating and more productive.<!--excerpt_end-->

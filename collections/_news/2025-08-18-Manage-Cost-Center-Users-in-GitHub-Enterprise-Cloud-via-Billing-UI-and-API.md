@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/changelog/feed/"
 date: 2025-08-18 15:01:58 +00:00
-permalink: "/news/2025-08-18-Manage-Cost-Center-Users-in-GitHub-Enterprise-Cloud-via-Billing-UI-and-API.html"
+permalink: "/2025-08-18-Manage-Cost-Center-Users-in-GitHub-Enterprise-Cloud-via-Billing-UI-and-API.html"
 categories: ["DevOps"]
 tags: ["Access Control", "Admin Tools", "Billing UI", "Cloud Billing", "Cost Attribution", "Cost Centers", "DevOps", "Enterprise Admin", "GitHub Enterprise Cloud", "News", "Organization Admin", "REST API", "SaaS Management", "User Management"]
 tags_normalized: ["access control", "admin tools", "billing ui", "cloud billing", "cost attribution", "cost centers", "devops", "enterprise admin", "github enterprise cloud", "news", "organization admin", "rest api", "saas management", "user management"]

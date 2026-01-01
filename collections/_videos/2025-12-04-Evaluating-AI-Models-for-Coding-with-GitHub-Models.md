@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Developer YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
 date: 2025-12-04 16:00:37 +00:00
-permalink: "/videos/2025-12-04-Evaluating-AI-Models-for-Coding-with-GitHub-Models.html"
+permalink: "/2025-12-04-Evaluating-AI-Models-for-Coding-with-GitHub-Models.html"
 categories: ["AI"]
 tags: ["AI", "AI Code Assistants", "AI Evaluation", "AI For Developers", "AIForDevelopers", "Coding Tools", "Developer Tools", "GitHub", "GitHub Models", "GitHubModels", "Machine Learning", "Model Comparison", "Prompt Engineering", "Videos"]
 tags_normalized: ["ai", "ai code assistants", "ai evaluation", "ai for developers", "aifordevelopers", "coding tools", "developer tools", "github", "github models", "githubmodels", "machine learning", "model comparison", "prompt engineering", "videos"]

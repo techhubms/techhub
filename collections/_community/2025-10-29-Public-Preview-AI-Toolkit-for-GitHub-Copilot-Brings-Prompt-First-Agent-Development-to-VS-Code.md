@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-10-29 17:48:03 +00:00
-permalink: "/community/2025-10-29-Public-Preview-AI-Toolkit-for-GitHub-Copilot-Brings-Prompt-First-Agent-Development-to-VS-Code.html"
+permalink: "/2025-10-29-Public-Preview-AI-Toolkit-for-GitHub-Copilot-Brings-Prompt-First-Agent-Development-to-VS-Code.html"
 categories: ["AI", "Coding", "GitHub Copilot"]
 tags: ["Agent Development", "Agent Evaluation", "Agent Orchestration", "Agent Tracing", "AI", "AI Agents", "AI Toolkit", "CI/CD", "Coding", "Community", "Developer Tools", "GitHub Copilot", "Microsoft Agent Framework", "Model Selection", "Multi Agent Workflow", "Prompt Engineering", "VS Code", "VS Code Extensions"]
 tags_normalized: ["agent development", "agent evaluation", "agent orchestration", "agent tracing", "ai", "ai agents", "ai toolkit", "cislashcd", "coding", "community", "developer tools", "github copilot", "microsoft agent framework", "model selection", "multi agent workflow", "prompt engineering", "vs code", "vs code extensions"]

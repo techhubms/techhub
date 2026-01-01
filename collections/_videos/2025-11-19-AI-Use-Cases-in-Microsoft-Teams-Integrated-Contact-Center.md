@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Events YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
 date: 2025-11-19 13:33:03 +00:00
-permalink: "/videos/2025-11-19-AI-Use-Cases-in-Microsoft-Teams-Integrated-Contact-Center.html"
+permalink: "/2025-11-19-AI-Use-Cases-in-Microsoft-Teams-Integrated-Contact-Center.html"
 categories: ["AI"]
 tags: ["Agent Assist", "Agenticbusinessapplications", "AI", "AI Integration", "Business System Integration", "Contact Center", "Customer Service", "Digital Assistant", "FAQ Model", "IVR", "Microsoft Teams", "MSIgnite", "Performance Tracking", "Power Platform", "Scalable Performance", "Supervisor Functionality", "Videos"]
 tags_normalized: ["agent assist", "agenticbusinessapplications", "ai", "ai integration", "business system integration", "contact center", "customer service", "digital assistant", "faq model", "ivr", "microsoft teams", "msignite", "performance tracking", "power platform", "scalable performance", "supervisor functionality", "videos"]

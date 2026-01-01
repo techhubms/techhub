@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Events YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
 date: 2025-11-24 08:32:26 +00:00
-permalink: "/videos/2025-11-24-Accelerate-Data-and-AI-Transformation-with-Azure-Databricks.html"
+permalink: "/2025-11-24-Accelerate-Data-and-AI-Transformation-with-Azure-Databricks.html"
 categories: ["AI", "Azure", "ML"]
 tags: ["AI", "AI Agents", "Azure", "Azure Databricks", "Conversational Analytics", "Data Analytics", "Data Platform Integration", "Genie", "Knowledge Assistant", "Microsoft Foundry", "Microsoft Ignite", "ML", "Monitoring Tools", "MSIgnite", "Multi Agent Supervisor", "Power Apps", "Power BI", "Real Time Insights", "Unifyyourdataplatform", "Unity Catalog", "Videos"]
 tags_normalized: ["ai", "ai agents", "azure", "azure databricks", "conversational analytics", "data analytics", "data platform integration", "genie", "knowledge assistant", "microsoft foundry", "microsoft ignite", "ml", "monitoring tools", "msignite", "multi agent supervisor", "power apps", "power bi", "real time insights", "unifyyourdataplatform", "unity catalog", "videos"]

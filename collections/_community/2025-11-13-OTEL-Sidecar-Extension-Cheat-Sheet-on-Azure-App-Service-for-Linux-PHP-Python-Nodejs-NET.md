@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-11-13 10:17:50 +00:00
-permalink: "/community/2025-11-13-OTEL-Sidecar-Extension-Cheat-Sheet-on-Azure-App-Service-for-Linux-PHP-Python-Nodejs-NET.html"
+permalink: "/2025-11-13-OTEL-Sidecar-Extension-Cheat-Sheet-on-Azure-App-Service-for-Linux-PHP-Python-Nodejs-NET.html"
 categories: ["Azure", "Coding", "DevOps", "Security"]
 tags: [".NET", "Application Insights", "Azure", "Azure App Service", "Azure Monitor", "Coding", "Community", "DevOps", "Elastic APM", "Environment Variables", "Linux", "Logging", "Metrics", "Node.js", "Observability", "OpenTelemetry", "OTEL EXPORTER", "OTEL Sidecar", "OTLP", "PHP", "Python", "Sample Repositories", "SCM DO BUILD DURING DEPLOYMENT", "Security", "Startup Commands", "Tracing"]
 tags_normalized: ["dotnet", "application insights", "azure", "azure app service", "azure monitor", "coding", "community", "devops", "elastic apm", "environment variables", "linux", "logging", "metrics", "nodedotjs", "observability", "opentelemetry", "otel exporter", "otel sidecar", "otlp", "php", "python", "sample repositories", "scm do build during deployment", "security", "startup commands", "tracing"]

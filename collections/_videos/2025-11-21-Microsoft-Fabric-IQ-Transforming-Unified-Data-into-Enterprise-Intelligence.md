@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Events YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
 date: 2025-11-21 07:28:24 +00:00
-permalink: "/videos/2025-11-21-Microsoft-Fabric-IQ-Transforming-Unified-Data-into-Enterprise-Intelligence.html"
+permalink: "/2025-11-21-Microsoft-Fabric-IQ-Transforming-Unified-Data-into-Enterprise-Intelligence.html"
 categories: ["AI", "Azure", "ML"]
 tags: ["Agentic AI", "AI", "AI Collaboration", "Automation", "Azure", "Digital Trust", "Entity Relationship Modeling", "Geospatial Analysis", "Kyndryl", "Microsoft Fabric", "Microsoft Fabric IQ", "Microsoft Teams Integration", "ML", "MSIgnite", "Ontology", "Operational Intelligence", "Real Time Insights", "Rule Automation", "Semantic Model", "Unified Data", "Unifyyourdataplatform", "Videos"]
 tags_normalized: ["agentic ai", "ai", "ai collaboration", "automation", "azure", "digital trust", "entity relationship modeling", "geospatial analysis", "kyndryl", "microsoft fabric", "microsoft fabric iq", "microsoft teams integration", "ml", "msignite", "ontology", "operational intelligence", "real time insights", "rule automation", "semantic model", "unified data", "unifyyourdataplatform", "videos"]

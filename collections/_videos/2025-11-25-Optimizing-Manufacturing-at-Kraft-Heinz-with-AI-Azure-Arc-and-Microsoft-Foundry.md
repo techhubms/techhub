@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Events YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
 date: 2025-11-25 12:16:40 +00:00
-permalink: "/videos/2025-11-25-Optimizing-Manufacturing-at-Kraft-Heinz-with-AI-Azure-Arc-and-Microsoft-Foundry.html"
+permalink: "/2025-11-25-Optimizing-Manufacturing-at-Kraft-Heinz-with-AI-Azure-Arc-and-Microsoft-Foundry.html"
 categories: ["AI", "Azure"]
 tags: ["AI", "Autonomous Systems", "Azure", "Azure Arc", "Cloud Integration", "Connected Worker", "Copilot Studio", "Digital Transformation", "Digital Twin", "Enterprise AI", "Industrial Automation", "Kraft Heinz", "Manufacturing AI", "Microsoft Foundry", "Microsoft Ignite", "Migrateandmodernizeyourestate", "MSIgnite", "Real Time Recommendations", "Supply Chain Automation", "Videos"]
 tags_normalized: ["ai", "autonomous systems", "azure", "azure arc", "cloud integration", "connected worker", "copilot studio", "digital transformation", "digital twin", "enterprise ai", "industrial automation", "kraft heinz", "manufacturing ai", "microsoft foundry", "microsoft ignite", "migrateandmodernizeyourestate", "msignite", "real time recommendations", "supply chain automation", "videos"]

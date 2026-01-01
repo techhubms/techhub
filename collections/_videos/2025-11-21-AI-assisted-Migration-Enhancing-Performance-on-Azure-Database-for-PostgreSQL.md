@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Events YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
 date: 2025-11-21 16:23:57 +00:00
-permalink: "/videos/2025-11-21-AI-assisted-Migration-Enhancing-Performance-on-Azure-Database-for-PostgreSQL.html"
+permalink: "/2025-11-21-AI-assisted-Migration-Enhancing-Performance-on-Azure-Database-for-PostgreSQL.html"
 categories: ["AI", "Azure", "ML"]
 tags: ["AI", "AI Assisted Migration", "Automated Tuning", "Azure", "Azure Database For PostgreSQL", "Cloud Databases", "Database Migration", "Database Modernization", "Enterprise Readiness", "Migrateandmodernizeyourestate", "ML", "MSIgnite", "Oracle Migration", "Performance Tuning", "PostgreSQL", "Schema Validation", "Videos", "VS Code Demo"]
 tags_normalized: ["ai", "ai assisted migration", "automated tuning", "azure", "azure database for postgresql", "cloud databases", "database migration", "database modernization", "enterprise readiness", "migrateandmodernizeyourestate", "ml", "msignite", "oracle migration", "performance tuning", "postgresql", "schema validation", "videos", "vs code demo"]

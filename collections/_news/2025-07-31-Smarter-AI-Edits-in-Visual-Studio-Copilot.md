@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft VisualStudio Blog"
 feed_url: "https://devblogs.microsoft.com/visualstudio/feed/"
 date: 2025-07-31 12:00:42 +00:00
-permalink: "/news/2025-07-31-Smarter-AI-Edits-in-Visual-Studio-Copilot.html"
+permalink: "/2025-07-31-Smarter-AI-Edits-in-Visual-Studio-Copilot.html"
 categories: ["AI", "Coding", "GitHub Copilot"]
 tags: ["Agent Mode", "AI", "AI Agents", "AI Generated Edits", "AI Integration", "Bug Fixing", "Code Assistant", "Code Quality", "Coding", "Context Window", "Copilot", "Developer Tools", "GitHub Copilot", "GitHub Copilot Chat", "News", "Refactoring", "Smart Diff", "Speculative Decoding", "Streaming Edits", "Token Generation", "Visual Studio Copilot", "VS"]
 tags_normalized: ["agent mode", "ai", "ai agents", "ai generated edits", "ai integration", "bug fixing", "code assistant", "code quality", "coding", "context window", "copilot", "developer tools", "github copilot", "github copilot chat", "news", "refactoring", "smart diff", "speculative decoding", "streaming edits", "token generation", "visual studio copilot", "vs"]

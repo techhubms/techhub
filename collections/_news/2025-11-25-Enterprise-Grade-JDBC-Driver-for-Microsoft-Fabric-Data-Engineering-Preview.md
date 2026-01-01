@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Fabric Blog"
 feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
 date: 2025-11-25 11:00:00 +00:00
-permalink: "/news/2025-11-25-Enterprise-Grade-JDBC-Driver-for-Microsoft-Fabric-Data-Engineering-Preview.html"
+permalink: "/2025-11-25-Enterprise-Grade-JDBC-Driver-for-Microsoft-Fabric-Data-Engineering-Preview.html"
 categories: ["Azure", "ML"]
 tags: ["Authentication", "Azure", "Azure Entra ID", "BI Tools", "Certificate Authentication", "Circuit Breaker", "Connection Pooling", "Data Engineering", "DBeaver", "DbVisualizer", "HikariCP", "Java", "JDBC Driver", "Lakehouse", "Logging", "Microsoft Fabric", "ML", "News", "OneLake", "Power BI", "Preview Release", "Proxy Support", "Spark SQL", "Tableau"]
 tags_normalized: ["authentication", "azure", "azure entra id", "bi tools", "certificate authentication", "circuit breaker", "connection pooling", "data engineering", "dbeaver", "dbvisualizer", "hikaricp", "java", "jdbc driver", "lakehouse", "logging", "microsoft fabric", "ml", "news", "onelake", "power bi", "preview release", "proxy support", "spark sql", "tableau"]

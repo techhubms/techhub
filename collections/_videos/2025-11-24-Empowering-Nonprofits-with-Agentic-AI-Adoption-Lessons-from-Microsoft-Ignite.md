@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Events YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
 date: 2025-11-24 12:10:10 +00:00
-permalink: "/videos/2025-11-24-Empowering-Nonprofits-with-Agentic-AI-Adoption-Lessons-from-Microsoft-Ignite.html"
+permalink: "/2025-11-24-Empowering-Nonprofits-with-Agentic-AI-Adoption-Lessons-from-Microsoft-Ignite.html"
 categories: ["AI"]
 tags: ["Agentic AI", "AI", "AI Agents", "AI Leadership", "Digital Transformation", "Fundraising", "Grant Evaluation Dashboard", "Knowledge Sharing", "Microsoft Ignite", "MSIgnite", "Multi Agent Systems", "Nonprofit Solutions", "Operational AI", "Program Management", "Proposal Customization", "Reference Architecture", "Risk Assessment", "Unifyyourdataplatform", "Videos"]
 tags_normalized: ["agentic ai", "ai", "ai agents", "ai leadership", "digital transformation", "fundraising", "grant evaluation dashboard", "knowledge sharing", "microsoft ignite", "msignite", "multi agent systems", "nonprofit solutions", "operational ai", "program management", "proposal customization", "reference architecture", "risk assessment", "unifyyourdataplatform", "videos"]

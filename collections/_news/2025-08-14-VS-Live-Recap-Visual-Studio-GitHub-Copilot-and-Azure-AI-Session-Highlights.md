@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft News"
 feed_url: "https://news.microsoft.com/source/feed/"
 date: 2025-08-14 17:05:34 +00:00
-permalink: "/news/2025-08-14-VS-Live-Recap-Visual-Studio-GitHub-Copilot-and-Azure-AI-Session-Highlights.html"
+permalink: "/2025-08-14-VS-Live-Recap-Visual-Studio-GitHub-Copilot-and-Azure-AI-Session-Highlights.html"
 categories: ["AI", "Azure", "Coding", "GitHub Copilot"]
 tags: [".NET", "AI", "AI Assisted Debugging", "AI Development", "Azure", "Azure AI", "Coding", "Company News", "Demo", "Developer Conference", "Git Integration", "GitHub Copilot", "Inner Loop Productivity", "Microsoft HQ", "News", "Productivity Tools", "Session Highlights", "VS", "VS Live"]
 tags_normalized: ["dotnet", "ai", "ai assisted debugging", "ai development", "azure", "azure ai", "coding", "company news", "demo", "developer conference", "git integration", "github copilot", "inner loop productivity", "microsoft hq", "news", "productivity tools", "session highlights", "vs", "vs live"]

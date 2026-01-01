@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft All Things Azure Blog"
 feed_url: "https://devblogs.microsoft.com/all-things-azure/feed/"
 date: 2025-11-14 11:40:23 +00:00
-permalink: "/news/2025-11-14-Tutorial-Videos-Setting-up-GitHub-Copilot-for-Your-Company.html"
+permalink: "/2025-11-14-Tutorial-Videos-Setting-up-GitHub-Copilot-for-Your-Company.html"
 categories: ["AI", "Azure", "DevOps", "GitHub Copilot", "Security"]
 tags: ["Agentic Platform", "AI", "All Things Azure", "Azure", "Azure Subscription", "Code Review", "Configuration", "Developer Productivity", "Developer Tools", "DevOps", "GitHub", "GitHub Copilot", "GitHub Enterprise", "GitHub Licences", "IDE Integration", "Licensing", "Microsoft Entra ID", "News", "Operations", "Organization Onboarding", "Permissions", "Security", "Setup Guide", "Single Sign On", "SSO", "Trial Account"]
 tags_normalized: ["agentic platform", "ai", "all things azure", "azure", "azure subscription", "code review", "configuration", "developer productivity", "developer tools", "devops", "github", "github copilot", "github enterprise", "github licences", "ide integration", "licensing", "microsoft entra id", "news", "operations", "organization onboarding", "permissions", "security", "setup guide", "single sign on", "sso", "trial account"]

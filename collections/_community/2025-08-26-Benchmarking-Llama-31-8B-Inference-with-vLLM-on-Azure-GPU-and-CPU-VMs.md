@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-08-26 22:22:59 +00:00
-permalink: "/community/2025-08-26-Benchmarking-Llama-31-8B-Inference-with-vLLM-on-Azure-GPU-and-CPU-VMs.html"
+permalink: "/2025-08-26-Benchmarking-Llama-31-8B-Inference-with-vLLM-on-Azure-GPU-and-CPU-VMs.html"
 categories: ["AI", "Azure"]
 tags: ["A100", "AI", "AI Infrastructure", "AVX512", "Azure", "Azure ND Series", "Benchmarking", "Community", "Cost Efficiency", "CPU VM", "CUDA", "Hugging Face", "Inference Benchmark", "KV Cache", "Llama 3.1 8B", "NVIDIA H100", "NVIDIA H200", "Prompt Latency", "PyTorch", "Token Throughput", "Vllm"]
 tags_normalized: ["a100", "ai", "ai infrastructure", "avx512", "azure", "azure nd series", "benchmarking", "community", "cost efficiency", "cpu vm", "cuda", "hugging face", "inference benchmark", "kv cache", "llama 3dot1 8b", "nvidia h100", "nvidia h200", "prompt latency", "pytorch", "token throughput", "vllm"]

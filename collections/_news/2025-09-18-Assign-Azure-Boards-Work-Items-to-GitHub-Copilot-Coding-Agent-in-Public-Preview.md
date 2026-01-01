@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/changelog/feed/"
 date: 2025-09-18 19:43:27 +00:00
-permalink: "/news/2025-09-18-Assign-Azure-Boards-Work-Items-to-GitHub-Copilot-Coding-Agent-in-Public-Preview.html"
+permalink: "/2025-09-18-Assign-Azure-Boards-Work-Items-to-GitHub-Copilot-Coding-Agent-in-Public-Preview.html"
 categories: ["AI", "Azure", "DevOps", "GitHub Copilot"]
 tags: ["AI", "AI Agent", "Azure", "Azure Boards", "Azure DevOps", "Copilot", "Copilot Chat", "Copilot Coding Agent", "Developer Tools", "DevOps", "DevOps Automation", "GitHub", "GitHub Copilot", "GitHub Issues", "News", "Preview Release", "Pull Request Automation", "Raycast", "Software Development", "Task Assignment"]
 tags_normalized: ["ai", "ai agent", "azure", "azure boards", "azure devops", "copilot", "copilot chat", "copilot coding agent", "developer tools", "devops", "devops automation", "github", "github copilot", "github issues", "news", "preview release", "pull request automation", "raycast", "software development", "task assignment"]

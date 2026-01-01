@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Developer YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
 date: 2025-09-11 16:01:15 +00:00
-permalink: "/videos/2025-09-11-Building-a-Snapshot-Backup-Catalog-with-SQL-Server-2025-and-Pure-Storage-FlashArray.html"
+permalink: "/2025-09-11-Building-a-Snapshot-Backup-Catalog-with-SQL-Server-2025-and-Pure-Storage-FlashArray.html"
 categories: ["Azure"]
 tags: ["Azure", "Azure SQL", "Backup Catalog", "Cloud Computing", "Cloud Replication", "Database Backup", "Database Management", "Dev", "Development", "FlashArray", "Metadata Tagging", "Microsoft", "Pure Storage", "REST API", "Snapshot Backup", "Sp Invoke External REST Endpoint", "SQL Server", "Storage Snapshots", "T SQL", "Tech", "Technology", "Videos"]
 tags_normalized: ["azure", "azure sql", "backup catalog", "cloud computing", "cloud replication", "database backup", "database management", "dev", "development", "flasharray", "metadata tagging", "microsoft", "pure storage", "rest api", "snapshot backup", "sp invoke external rest endpoint", "sql server", "storage snapshots", "t sql", "tech", "technology", "videos"]

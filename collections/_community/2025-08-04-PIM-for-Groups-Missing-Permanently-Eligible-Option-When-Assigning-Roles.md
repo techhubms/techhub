@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Reddit Azure"
 feed_url: "https://www.reddit.com/r/azure/.rss"
 date: 2025-08-04 14:08:20 +00:00
-permalink: "/community/2025-08-04-PIM-for-Groups-Missing-Permanently-Eligible-Option-When-Assigning-Roles.html"
+permalink: "/2025-08-04-PIM-for-Groups-Missing-Permanently-Eligible-Option-When-Assigning-Roles.html"
 categories: ["Azure"]
 tags: ["Access Control", "Azure", "Community", "Exchange Recipient Administrator", "Groups", "Identity Management", "Microsoft Entra", "Permanently Eligible", "PIM", "Privileged Identity Management", "Role Assignments", "SharePoint Administrator", "User Administrator"]
 tags_normalized: ["access control", "azure", "community", "exchange recipient administrator", "groups", "identity management", "microsoft entra", "permanently eligible", "pim", "privileged identity management", "role assignments", "sharepoint administrator", "user administrator"]

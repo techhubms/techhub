@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Developer YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
 date: 2025-09-09 07:00:27 +00:00
-permalink: "/videos/2025-09-09-Build-AI-Agents-for-Fast-High-Volume-Document-Automation-in-Copilot-Studio.html"
+permalink: "/2025-09-09-Build-AI-Agents-for-Fast-High-Volume-Document-Automation-in-Copilot-Studio.html"
 categories: ["AI"]
 tags: ["AI", "AI Agents", "AI Builder", "Bulk Processing", "Business Process Automation", "Cloud Computing", "Conversational AI", "Copilot Studio", "Data Extraction", "Dev", "Development", "Document Automation", "Microsoft", "No Code Development", "Power Platform", "Real Time Alerts", "Tech", "Technology", "Videos", "Workflow Automation"]
 tags_normalized: ["ai", "ai agents", "ai builder", "bulk processing", "business process automation", "cloud computing", "conversational ai", "copilot studio", "data extraction", "dev", "development", "document automation", "microsoft", "no code development", "power platform", "real time alerts", "tech", "technology", "videos", "workflow automation"]

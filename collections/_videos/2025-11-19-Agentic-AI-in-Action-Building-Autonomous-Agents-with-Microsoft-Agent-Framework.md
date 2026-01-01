@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Events YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
 date: 2025-11-19 15:03:23 +00:00
-permalink: "/videos/2025-11-19-Agentic-AI-in-Action-Building-Autonomous-Agents-with-Microsoft-Agent-Framework.html"
+permalink: "/2025-11-19-Agentic-AI-in-Action-Building-Autonomous-Agents-with-Microsoft-Agent-Framework.html"
 categories: ["AI", "Azure"]
 tags: ["AI", "AI Agents", "Audit Traceability", "Autonomous Workflows", "Azure", "Azure AI", "Business Impact", "Compliance", "Copilot Studio", "InnovatewithAzureAIappsandagents", "Know Your Customer", "Microsoft Agent Framework", "Microsoft Ignite", "MSIgnite", "MVP Implementation", "Role Based Access Control", "Secure Document Management", "Videos", "Workflow Integration"]
 tags_normalized: ["ai", "ai agents", "audit traceability", "autonomous workflows", "azure", "azure ai", "business impact", "compliance", "copilot studio", "innovatewithazureaiappsandagents", "know your customer", "microsoft agent framework", "microsoft ignite", "msignite", "mvp implementation", "role based access control", "secure document management", "videos", "workflow integration"]

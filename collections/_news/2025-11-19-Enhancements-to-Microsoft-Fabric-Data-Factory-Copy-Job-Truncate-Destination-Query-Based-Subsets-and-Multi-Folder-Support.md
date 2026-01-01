@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Fabric Blog"
 feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
 date: 2025-11-19 13:00:00 +00:00
-permalink: "/news/2025-11-19-Enhancements-to-Microsoft-Fabric-Data-Factory-Copy-Job-Truncate-Destination-Query-Based-Subsets-and-Multi-Folder-Support.html"
+permalink: "/2025-11-19-Enhancements-to-Microsoft-Fabric-Data-Factory-Copy-Job-Truncate-Destination-Query-Based-Subsets-and-Multi-Folder-Support.html"
 categories: ["Azure", "ML"]
 tags: ["Azure", "Azure SQL Database", "Bulk Copy", "Change Data Capture", "Cloud Data Integration", "Copy Job", "Data Engineering", "Data Factory", "Data Ingestion", "Data Movement", "Database Queries", "ETL", "Folder Copy", "Incremental Copy", "Microsoft Fabric", "ML", "News", "Truncate Destination"]
 tags_normalized: ["azure", "azure sql database", "bulk copy", "change data capture", "cloud data integration", "copy job", "data engineering", "data factory", "data ingestion", "data movement", "database queries", "etl", "folder copy", "incremental copy", "microsoft fabric", "ml", "news", "truncate destination"]

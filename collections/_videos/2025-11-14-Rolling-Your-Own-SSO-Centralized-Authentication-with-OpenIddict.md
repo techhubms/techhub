@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "DotNet YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw"
 date: 2025-11-14 07:30:06 +00:00
-permalink: "/videos/2025-11-14-Rolling-Your-Own-SSO-Centralized-Authentication-with-OpenIddict.html"
+permalink: "/2025-11-14-Rolling-Your-Own-SSO-Centralized-Authentication-with-OpenIddict.html"
 categories: ["Coding", "Security"]
 tags: [".NET", "ADFS", "Application Integration", "Authentication", "Authorization", "Centralized Login", "Coding", "Custom Authentication", "Entra ID", "Identity Management", "OpenIddict", "Security", "Security Best Practices", "Session Management", "Single Sign On", "SSO Architecture", "User Workflow", "Videos"]
 tags_normalized: ["dotnet", "adfs", "application integration", "authentication", "authorization", "centralized login", "coding", "custom authentication", "entra id", "identity management", "openiddict", "security", "security best practices", "session management", "single sign on", "sso architecture", "user workflow", "videos"]

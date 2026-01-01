@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft DevOps Blog"
 feed_url: "https://devblogs.microsoft.com/devops/feed/"
 date: 2025-12-19 18:24:14 +00:00
-permalink: "/news/2025-12-19-Work-Item-Linking-for-GitHub-Advanced-Security-Alerts-in-Azure-DevOps-Now-Available.html"
+permalink: "/2025-12-19-Work-Item-Linking-for-GitHub-Advanced-Security-Alerts-in-Azure-DevOps-Now-Available.html"
 categories: ["Azure", "DevOps", "Security"]
 tags: ["#azure", "#devops", "Advanced Security Hub", "Azure", "Azure & Cloud", "Azure DevOps", "Dependency Scanning", "DevOps", "DevOps Boards", "GitHub Advanced Security", "News", "Permissions", "Security", "Security Alerts", "Security Workflow", "Sprint Planning", "Vulnerability Management", "Work Item Linking"]
 tags_normalized: ["sharpazure", "sharpdevops", "advanced security hub", "azure", "azure and cloud", "azure devops", "dependency scanning", "devops", "devops boards", "github advanced security", "news", "permissions", "security", "security alerts", "security workflow", "sprint planning", "vulnerability management", "work item linking"]

@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/feed/"
 date: 2025-08-21 18:02:34 +00:00
-permalink: "/news/2025-08-21-Explore-GitHub-Universe-2025-Dev-Tools-Community-Spaces-and-More.html"
+permalink: "/2025-08-21-Explore-GitHub-Universe-2025-Dev-Tools-Community-Spaces-and-More.html"
 categories: ["AI", "Coding", "DevOps", "GitHub Copilot"]
 tags: ["AI", "Career Coaching", "Cloud Development", "Coding", "Community Event", "Company News", "Developer Tools", "DevOps", "GitHub Actions", "GitHub Advanced Security", "GitHub Copilot", "GitHub Learn", "GitHub Universe", "Hackable Badges", "Live Sessions", "News", "News & Insights", "Open Source", "Programming", "Technical Demos", "Workshops"]
 tags_normalized: ["ai", "career coaching", "cloud development", "coding", "community event", "company news", "developer tools", "devops", "github actions", "github advanced security", "github copilot", "github learn", "github universe", "hackable badges", "live sessions", "news", "news and insights", "open source", "programming", "technical demos", "workshops"]

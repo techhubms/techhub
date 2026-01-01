@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Events YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
 date: 2025-11-19 15:21:41 +00:00
-permalink: "/videos/2025-11-19-Optimizing-Azure-Cloud-Spend-with-Holistic-FinOps-Approaches.html"
+permalink: "/2025-11-19-Optimizing-Azure-Cloud-Spend-with-Holistic-FinOps-Approaches.html"
 categories: ["Azure", "DevOps"]
 tags: ["Anomaly Detection", "Azure", "Cloud Cost Optimization", "Cost Allocation", "Dashboards", "Datadog", "DevOps", "FinOps", "Kubernetes", "MegaBill", "Microsoft Cloud", "MSIgnite", "OpenAI", "Telemetry", "Unifyyourdataplatform", "Unit Economics", "Videos", "Virtual Tags"]
 tags_normalized: ["anomaly detection", "azure", "cloud cost optimization", "cost allocation", "dashboards", "datadog", "devops", "finops", "kubernetes", "megabill", "microsoft cloud", "msignite", "openai", "telemetry", "unifyyourdataplatform", "unit economics", "videos", "virtual tags"]

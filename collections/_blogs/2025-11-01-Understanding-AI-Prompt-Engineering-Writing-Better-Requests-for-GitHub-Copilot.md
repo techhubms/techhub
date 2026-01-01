@@ -9,10 +9,10 @@ viewing_mode: "external"
 feed_name: "Dellenny's Blog"
 feed_url: "https://dellenny.com/feed/"
 date: 2025-11-01 08:08:59 +00:00
-permalink: "/blogs/2025-11-01-Understanding-AI-Prompt-Engineering-Writing-Better-Requests-for-GitHub-Copilot.html"
+permalink: "/2025-11-01-Understanding-AI-Prompt-Engineering-Writing-Better-Requests-for-GitHub-Copilot.html"
 categories: ["AI", "GitHub Copilot"]
-tags: ["AI", "AI Best Practices", "AI Prompts", "Code Completion", "Code Generation", "Coding Standards", "Copilot Usage", "Developer Productivity", "FastAPI", "GitHub Copilot", "M365 Copilot", "Blogs", "Programming Tools", "Prompt Engineering", "Prompt Examples", "Prompt Strategy", "Python"]
-tags_normalized: ["ai", "ai best practices", "ai prompts", "code completion", "code generation", "coding standards", "copilot usage", "developer productivity", "fastapi", "github copilot", "m365 copilot", "blogs", "programming tools", "prompt engineering", "prompt examples", "prompt strategy", "python"]
+tags: ["AI", "AI Best Practices", "AI Prompts", "Blogs", "Code Completion", "Code Generation", "Coding Standards", "Copilot Usage", "Developer Productivity", "FastAPI", "GitHub Copilot", "M365 Copilot", "Programming Tools", "Prompt Engineering", "Prompt Examples", "Prompt Strategy", "Python"]
+tags_normalized: ["ai", "ai best practices", "ai prompts", "blogs", "code completion", "code generation", "coding standards", "copilot usage", "developer productivity", "fastapi", "github copilot", "m365 copilot", "programming tools", "prompt engineering", "prompt examples", "prompt strategy", "python"]
 ---
 
 Dellenny shares practical insights on improving results with GitHub Copilot by mastering prompt writing. This guide covers strategies, advanced techniques, and common pitfalls for developers seeking to get more accurate and useful code suggestions.<!--excerpt_end-->

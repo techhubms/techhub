@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/changelog/feed/"
 date: 2025-10-14 17:28:22 +00:00
-permalink: "/news/2025-10-14-GitHub-Enterprise-Server-318-Release-Overview.html"
+permalink: "/2025-10-14-GitHub-Enterprise-Server-318-Release-Overview.html"
 categories: ["DevOps", "Security"]
 tags: ["Advanced Security", "Code Security", "Collaboration Tools", "Custom Properties", "Dependabot", "Deployment", "DevOps", "GHES 3.18", "GitHub Enterprise Server", "Issue Tracking", "Monitoring", "News", "OpenTelemetry", "Policy Management", "Project Management", "Prometheus", "Pull Request Rules", "Security"]
 tags_normalized: ["advanced security", "code security", "collaboration tools", "custom properties", "dependabot", "deployment", "devops", "ghes 3dot18", "github enterprise server", "issue tracking", "monitoring", "news", "opentelemetry", "policy management", "project management", "prometheus", "pull request rules", "security"]

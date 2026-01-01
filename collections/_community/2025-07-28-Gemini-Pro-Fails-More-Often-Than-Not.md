@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Reddit Github Copilot"
 feed_url: "https://www.reddit.com/r/GithubCopilot.rss"
 date: 2025-07-28 12:55:30 +00:00
-permalink: "/community/2025-07-28-Gemini-Pro-fails-more-often-than-not.html"
+permalink: "/2025-07-28-Gemini-Pro-Fails-More-Often-Than-Not.html"
 categories: ["AI", "GitHub Copilot"]
 tags: ["Agent Mode", "AI", "Community", "Gemini Pro", "GitHub Copilot", "Lag", "Long Context", "Model Errors", "Model Reliability", "Premium Requests", "Pull Request", "VS Code"]
 tags_normalized: ["agent mode", "ai", "community", "gemini pro", "github copilot", "lag", "long context", "model errors", "model reliability", "premium requests", "pull request", "vs code"]

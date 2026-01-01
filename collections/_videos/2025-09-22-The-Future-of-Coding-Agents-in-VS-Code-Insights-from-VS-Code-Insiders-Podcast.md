@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Visual Studio Code YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SLNwkd3w"
 date: 2025-09-22 07:00:47 +00:00
-permalink: "/videos/2025-09-22-The-Future-of-Coding-Agents-in-VS-Code-Insights-from-VS-Code-Insiders-Podcast.html"
+permalink: "/2025-09-22-The-Future-of-Coding-Agents-in-VS-Code-Insights-from-VS-Code-Insiders-Podcast.html"
 categories: ["AI", "Coding"]
 tags: ["AI", "AI Powered Development", "Background Agents", "Background Tasks", "Coding", "Coding Agents", "Developer Tools", "GitHub Pull Requests", "IDE Enhancements", "Software Development", "Videos", "VS Code", "VS Code Extensions"]
 tags_normalized: ["ai", "ai powered development", "background agents", "background tasks", "coding", "coding agents", "developer tools", "github pull requests", "ide enhancements", "software development", "videos", "vs code", "vs code extensions"]

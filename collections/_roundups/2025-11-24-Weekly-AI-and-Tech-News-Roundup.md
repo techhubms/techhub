@@ -6,7 +6,7 @@ author: "Tech Hub Team"
 excerpt_separator: <!--excerpt_end-->
 viewing_mode: "internal"
 date: 2025-11-24 09:00:00 +00:00
-permalink: "/roundups/2025-11-24-Weekly-AI-and-Tech-News-Roundup.html"
+permalink: "/2025-11-24-Weekly-AI-and-Tech-News-Roundup.html"
 categories: ["AI", "GitHub Copilot", "ML", "Azure", "Coding", "DevOps", "Security"]
 tags: [".NET", "AI", "AI Agents", "Azure", "Cloud Infrastructure", "Coding", "Data Governance", "DevOps", "GitHub Copilot", "IDE Integration", "Machine Learning", "ML", "Model Deployment", "Post Quantum Cryptography", "Roundups", "Security", "VS", "VS Code", "Workflow Automation"]
 tags_normalized: ["dotnet", "ai", "ai agents", "azure", "cloud infrastructure", "coding", "data governance", "devops", "github copilot", "ide integration", "machine learning", "ml", "model deployment", "post quantum cryptography", "roundups", "security", "vs", "vs code", "workflow automation"]

@@ -9,7 +9,7 @@ categories: ["AI"]
 feed_name: "Reddit AI Agents"
 feed_url: "https://www.reddit.com/r/AI_Agents/.rss"
 date: 2025-07-23 21:11:28 +00:00
-permalink: "/community/2025-07-23-Agent-feedback-is-the-new-User-feedback.html"
+permalink: "/2025-07-23-Agent-feedback-is-the-new-User-feedback.html"
 viewing_mode: "external"
 page: "community"
 tags: ["Agent Feedback", "Agent Native", "AI", "AI Agents", "Build Measure Learn", "Co Design", "Community", "Documentation", "Lean Startup", "LLM", "Minimum Agent Prototype", "MVP", "Prompt Engineering", "Software Development", "User Feedback"]

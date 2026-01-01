@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-11-19 09:55:04 +00:00
-permalink: "/community/2025-11-19-Granular-RBAC-Now-Generally-Available-in-Azure-Monitor-Logs.html"
+permalink: "/2025-11-19-Granular-RBAC-Now-Generally-Available-in-Azure-Monitor-Logs.html"
 categories: ["Azure", "Security"]
 tags: ["ABAC", "Access Management", "Attribute Based Access Control", "Azure", "Azure China", "Azure Government", "Azure Monitor Logs", "Azure Observability", "Azure Public Cloud", "Azure RBAC", "Community", "Compliance", "Data Security", "Data Segregation", "Granular RBAC", "Least Privilege", "Log Analytics", "Log Analytics Data Reader", "Role Based Access Control", "Row Level Security", "Security", "Table Level Security", "Workspace Security"]
 tags_normalized: ["abac", "access management", "attribute based access control", "azure", "azure china", "azure government", "azure monitor logs", "azure observability", "azure public cloud", "azure rbac", "community", "compliance", "data security", "data segregation", "granular rbac", "least privilege", "log analytics", "log analytics data reader", "role based access control", "row level security", "security", "table level security", "workspace security"]

@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Developer YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
 date: 2025-10-08 14:05:44 +00:00
-permalink: "/videos/2025-10-08-Generating-Reliable-Tests-with-AI-and-Copilot-in-Playwright.html"
+permalink: "/2025-10-08-Generating-Reliable-Tests-with-AI-and-Copilot-in-Playwright.html"
 categories: ["AI", "Coding", "GitHub Copilot"]
 tags: ["AI", "AI Testing", "Automated Testing", "Coding", "Developer Tools", "Developers", "GitHub Copilot", "JavaScript", "Microsoft Copilot Professional", "OneDevQuestion", "Playwright", "Test Automation", "Test Generation", "Testing", "Videos", "Web Automation"]
 tags_normalized: ["ai", "ai testing", "automated testing", "coding", "developer tools", "developers", "github copilot", "javascript", "microsoft copilot professional", "onedevquestion", "playwright", "test automation", "test generation", "testing", "videos", "web automation"]

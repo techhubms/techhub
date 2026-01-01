@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Developer YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
 date: 2025-11-04 08:00:39 +00:00
-permalink: "/videos/2025-11-04-Armchair-Architects-Defining-AI-Agents-and-Their-Core-Traits.html"
+permalink: "/2025-11-04-Armchair-Architects-Defining-AI-Agents-and-Their-Core-Traits.html"
 categories: ["AI", "Azure"]
 tags: ["Agentic Web Stack", "AI", "AI Agents", "AI Architects", "AI Architecture", "AI Development", "Azure", "Azure Architecture", "Chatbots", "Cloud Solutions", "David Blank Edelman", "Eric Charran", "LLMs", "Microsoft Azure", "Solution Architecture", "Uli Homann", "Videos"]
 tags_normalized: ["agentic web stack", "ai", "ai agents", "ai architects", "ai architecture", "ai development", "azure", "azure architecture", "chatbots", "cloud solutions", "david blank edelman", "eric charran", "llms", "microsoft azure", "solution architecture", "uli homann", "videos"]

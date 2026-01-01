@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Events YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
 date: 2025-11-24 10:37:38 +00:00
-permalink: "/videos/2025-11-24-Unified-Digital-Resilience-Integrating-Cisco-and-Microsoft-Security-on-Azure.html"
+permalink: "/2025-11-24-Unified-Digital-Resilience-Integrating-Cisco-and-Microsoft-Security-on-Azure.html"
 categories: ["AI", "Azure", "Security"]
 tags: ["AI", "AI Security", "Automation", "Azure", "Azure Security", "Business Continuity", "Cisco", "Cloud Security", "Collaborative Security", "Digital Resilience", "Microsoft Ignite", "MSIgnite", "Operational Efficiency", "Partners", "Security", "Security Matrix", "Security Operations", "Security Response", "Threat Modeling", "Unified Threat Detection", "Videos"]
 tags_normalized: ["ai", "ai security", "automation", "azure", "azure security", "business continuity", "cisco", "cloud security", "collaborative security", "digital resilience", "microsoft ignite", "msignite", "operational efficiency", "partners", "security", "security matrix", "security operations", "security response", "threat modeling", "unified threat detection", "videos"]

@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The Azure Blog"
 feed_url: "https://azure.microsoft.com/en-us/blog/feed/"
 date: 2025-10-22 16:00:00 +00:00
-permalink: "/news/2025-10-22-Microsoft-Recognized-as-Leader-in-2025-Gartner-Magic-Quadrant-for-Distributed-Hybrid-Infrastructure.html"
+permalink: "/2025-10-22-Microsoft-Recognized-as-Leader-in-2025-Gartner-Magic-Quadrant-for-Distributed-Hybrid-Infrastructure.html"
 categories: ["Azure"]
 tags: ["AKS", "Azure", "Azure Arc", "Azure Local", "Azure Policy", "Cloud Governance", "Cloud Migration", "Customer Enablement", "Disaster Recovery", "Distributed Infrastructure", "Edge Computing", "Enterprise IT", "Gartner® Magic Quadrant™", "Hybrid + Multicloud", "Hybrid Cloud", "Management And Governance", "Microsoft Azure", "Microsoft Defender For Cloud", "Multicloud", "News", "Sovereign Cloud"]
 tags_normalized: ["aks", "azure", "azure arc", "azure local", "azure policy", "cloud governance", "cloud migration", "customer enablement", "disaster recovery", "distributed infrastructure", "edge computing", "enterprise it", "gartner magic quadrant", "hybrid plus multicloud", "hybrid cloud", "management and governance", "microsoft azure", "microsoft defender for cloud", "multicloud", "news", "sovereign cloud"]

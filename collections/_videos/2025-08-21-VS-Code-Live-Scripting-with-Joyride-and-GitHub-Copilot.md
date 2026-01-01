@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Visual Studio Code YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SLNwkd3w"
 date: 2025-08-21 23:04:36 +00:00
-permalink: "/videos/2025-08-21-VS-Code-Live-Scripting-with-Joyride-and-GitHub-Copilot.html"
+permalink: "/2025-08-21-VS-Code-Live-Scripting-with-Joyride-and-GitHub-Copilot.html"
 categories: ["AI", "Coding", "GitHub Copilot"]
 tags: ["AI", "AI Coding Assistance", "Code", "Code Productivity", "Coding", "Coding Automation", "Developer Tools", "GitHub Copilot", "Joyride", "Live Coding", "User Scripting", "Videos", "VS Code", "VS Code Extensions"]
 tags_normalized: ["ai", "ai coding assistance", "code", "code productivity", "coding", "coding automation", "developer tools", "github copilot", "joyride", "live coding", "user scripting", "videos", "vs code", "vs code extensions"]

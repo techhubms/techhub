@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "DotNet YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw"
 date: 2025-09-23 15:00:00 +00:00
-permalink: "/videos/2025-09-23-Modernize-NET-Apps-in-Days-with-GitHub-Copilot.html"
+permalink: "/2025-09-23-Modernize-NET-Apps-in-Days-with-GitHub-Copilot.html"
 categories: ["AI", "Azure", "Coding", "DevOps", "GitHub Copilot"]
 tags: [".NET", ".NET Framework", ".NET Upgrade Tool", "AI", "App Modernization", "AZD", "Azure", "Azure Container Apps", "Azure Deployment", "Bicep", "Cloud Migration", "Code Automation", "Coding", "Compliance", "Developer Productivity", "DevOps", "Error Handling", "GitHub Copilot", "Legacy Migration", "Mermaid Diagrams", "Upgrade Planning", "Videos"]
 tags_normalized: ["dotnet", "dotnet framework", "dotnet upgrade tool", "ai", "app modernization", "azd", "azure", "azure container apps", "azure deployment", "bicep", "cloud migration", "code automation", "coding", "compliance", "developer productivity", "devops", "error handling", "github copilot", "legacy migration", "mermaid diagrams", "upgrade planning", "videos"]

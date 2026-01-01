@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The Azure Blog"
 feed_url: "https://azure.microsoft.com/en-us/blog/feed/"
 date: 2025-11-18 16:00:00 +00:00
-permalink: "/news/2025-11-18-Announcing-Next-Gen-Microsoft-Databases-and-Fabric-Unified-AI-Ready-Data-Estate.html"
+permalink: "/2025-11-18-Announcing-Next-Gen-Microsoft-Databases-and-Fabric-Unified-AI-Ready-Data-Estate.html"
 categories: ["AI", "Azure", "Coding", "ML"]
 tags: ["AI", "AI Integration", "Azure", "Azure DocumentDB", "Azure HorizonDB", "Coding", "Copilot", "Copilot Studio", "Cosmos DB", "Data Agents", "Database Security", "Databases", "Fabric IQ", "Hybrid + Multicloud", "Hybrid Cloud", "Identity", "Microsoft Fabric", "Microsoft Foundry", "Microsoft Ignite", "Mirroring", "ML", "News", "OneLake", "PostgreSQL", "Power BI", "Semantic Modeling", "SQL Server", "Vector Search", "Zero ETL"]
 tags_normalized: ["ai", "ai integration", "azure", "azure documentdb", "azure horizondb", "coding", "copilot", "copilot studio", "cosmos db", "data agents", "database security", "databases", "fabric iq", "hybrid plus multicloud", "hybrid cloud", "identity", "microsoft fabric", "microsoft foundry", "microsoft ignite", "mirroring", "ml", "news", "onelake", "postgresql", "power bi", "semantic modeling", "sql server", "vector search", "zero etl"]

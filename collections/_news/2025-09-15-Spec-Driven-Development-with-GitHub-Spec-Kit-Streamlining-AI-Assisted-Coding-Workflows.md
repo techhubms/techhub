@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Blog"
 feed_url: "https://devblogs.microsoft.com/feed"
 date: 2025-09-15 21:19:55 +00:00
-permalink: "/news/2025-09-15-Spec-Driven-Development-with-GitHub-Spec-Kit-Streamlining-AI-Assisted-Coding-Workflows.html"
+permalink: "/2025-09-15-Spec-Driven-Development-with-GitHub-Spec-Kit-Streamlining-AI-Assisted-Coding-Workflows.html"
 categories: ["AI", "Coding", "GitHub Copilot"]
 tags: ["AI", "AI Agents", "AI Assisted Coding", "Automation", "Coding", "Development Workflows", "GitHub", "GitHub Copilot", "GitHub Spec Kit", "News", "Open Source Tools", "Project Templates", "Python", "Requirements Engineering", "SDD", "Spec Driven Development", "Specify CLI", "VS Code"]
 tags_normalized: ["ai", "ai agents", "ai assisted coding", "automation", "coding", "development workflows", "github", "github copilot", "github spec kit", "news", "open source tools", "project templates", "python", "requirements engineering", "sdd", "spec driven development", "specify cli", "vs code"]

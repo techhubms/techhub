@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/changelog/feed/"
 date: 2025-11-25 16:09:17 +00:00
-permalink: "/news/2025-11-25-GitHub-Code-Scanning-Default-Setup-Bypasses-Restrictive-Actions-Policies.html"
+permalink: "/2025-11-25-GitHub-Code-Scanning-Default-Setup-Bypasses-Restrictive-Actions-Policies.html"
 categories: ["DevOps", "Security"]
 tags: ["Actions", "Application Security", "Code Scanning", "Continuous Integration", "Default Setup", "DevOps", "DevOps Tools", "Enterprise Server 3.19", "GitHub Actions", "Improvement", "News", "Platform Governance", "Policy Enforcement", "Repository Management", "Security", "Security Automation", "Security Coverage", "Workflow Policies"]
 tags_normalized: ["actions", "application security", "code scanning", "continuous integration", "default setup", "devops", "devops tools", "enterprise server 3dot19", "github actions", "improvement", "news", "platform governance", "policy enforcement", "repository management", "security", "security automation", "security coverage", "workflow policies"]

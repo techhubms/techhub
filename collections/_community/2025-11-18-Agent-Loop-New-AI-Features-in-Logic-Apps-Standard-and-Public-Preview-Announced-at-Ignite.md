@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-11-18 23:47:06 +00:00
-permalink: "/community/2025-11-18-Agent-Loop-New-AI-Features-in-Logic-Apps-Standard-and-Public-Preview-Announced-at-Ignite.html"
+permalink: "/2025-11-18-Agent-Loop-New-AI-Features-in-Logic-Apps-Standard-and-Public-Preview-Announced-at-Ignite.html"
 categories: ["AI", "Azure", "DevOps", "Security"]
 tags: ["Agent Loop", "AI", "AI Automation", "AI Gateway", "Azure", "Azure AI Search", "Azure API Management", "Azure Logic Apps", "BYOM", "Community", "Connector Ecosystem", "DevOps", "Document Level Security", "Identity And Access Management", "MCP", "Microsoft Entra ID", "Microsoft Teams Integration", "Okta Integration", "RAG", "Security", "Serverless", "Workflow Designer"]
 tags_normalized: ["agent loop", "ai", "ai automation", "ai gateway", "azure", "azure ai search", "azure api management", "azure logic apps", "byom", "community", "connector ecosystem", "devops", "document level security", "identity and access management", "mcp", "microsoft entra id", "microsoft teams integration", "okta integration", "rag", "security", "serverless", "workflow designer"]

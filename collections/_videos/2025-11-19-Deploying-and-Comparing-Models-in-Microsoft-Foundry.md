@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Developer YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
 date: 2025-11-19 23:05:52 +00:00
-permalink: "/videos/2025-11-19-Deploying-and-Comparing-Models-in-Microsoft-Foundry.html"
+permalink: "/2025-11-19-Deploying-and-Comparing-Models-in-Microsoft-Foundry.html"
 categories: ["AI", "Azure"]
 tags: ["AI", "AI Development", "AI Model Deployment", "Azure", "Azure AI Foundry", "Cloud Computing", "Code First Workflow", "Dev", "Developer Tools", "Development", "Microsoft", "Microsoft Foundry", "Model Benchmarks", "Model Comparison", "Model Playground", "Tech", "Technology", "Videos", "VS Code"]
 tags_normalized: ["ai", "ai development", "ai model deployment", "azure", "azure ai foundry", "cloud computing", "code first workflow", "dev", "developer tools", "development", "microsoft", "microsoft foundry", "model benchmarks", "model comparison", "model playground", "tech", "technology", "videos", "vs code"]

@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "GitHub's Youtube channel"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ"
 date: 2025-07-24 16:37:37 +00:00
-permalink: "/videos/2025-07-24-Upgrading-to-GitHubs-Remote-MCP-Server-From-Docker-Setup-to-OAuth-Simplicity.html"
+permalink: "/2025-07-24-Upgrading-to-GitHubs-Remote-MCP-Server-From-Docker-Setup-to-OAuth-Simplicity.html"
 categories: ["DevOps"]
 tags: ["DevOps", "DevOps Workflow", "Dynamic Toolsets", "GitHub", "Installation", "MCP", "OAuth", "Open Source", "Remote Server", "Server Upgrade", "Videos"]
 tags_normalized: ["devops", "devops workflow", "dynamic toolsets", "github", "installation", "mcp", "oauth", "open source", "remote server", "server upgrade", "videos"]

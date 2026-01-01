@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Community"
 date: 2025-08-11 18:59:33 +00:00
-permalink: "/community/2025-08-11-A-Deep-Dive-into-Spark-UI-for-Job-Optimization.html"
+permalink: "/2025-08-11-A-Deep-Dive-into-Spark-UI-for-Job-Optimization.html"
 categories: ["ML"]
 tags: ["Adaptive Query Execution", "Apache Spark", "Big Data", "Broadcast Join", "Community", "Data Skew", "Executors", "Job Optimization", "Kryo Serialization", "Memory Management", "ML", "Performance Tuning", "PySpark", "Resource Allocation", "Shuffle Operations", "Spark UI", "SQL Optimization"]
 tags_normalized: ["adaptive query execution", "apache spark", "big data", "broadcast join", "community", "data skew", "executors", "job optimization", "kryo serialization", "memory management", "ml", "performance tuning", "pyspark", "resource allocation", "shuffle operations", "spark ui", "sql optimization"]

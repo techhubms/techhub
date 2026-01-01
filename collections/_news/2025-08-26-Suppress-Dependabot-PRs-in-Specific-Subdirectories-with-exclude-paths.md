@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/changelog/feed/"
 date: 2025-08-26 17:53:23 +00:00
-permalink: "/news/2025-08-26-Suppress-Dependabot-PRs-in-Specific-Subdirectories-with-exclude-paths.html"
+permalink: "/2025-08-26-Suppress-Dependabot-PRs-in-Specific-Subdirectories-with-exclude-paths.html"
 categories: ["DevOps"]
 tags: ["Automation", "Change Management", "CI/CD", "Configuration", "Dependabot", "Dependabot.yml", "Dependency Management", "DevOps", "Exclude Paths", "GitHub", "Monorepo", "News", "Pull Requests", "Repository Management", "Software Maintenance", "Subdirectory"]
 tags_normalized: ["automation", "change management", "cislashcd", "configuration", "dependabot", "dependabotdotyml", "dependency management", "devops", "exclude paths", "github", "monorepo", "news", "pull requests", "repository management", "software maintenance", "subdirectory"]

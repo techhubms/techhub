@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Events YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
 date: 2025-11-21 16:37:26 +00:00
-permalink: "/videos/2025-11-21-From-Code-to-Care-Empowering-Healthcare-with-Agentic-AI.html"
+permalink: "/2025-11-21-From-Code-to-Care-Empowering-Healthcare-with-Agentic-AI.html"
 categories: ["AI", "Azure"]
 tags: ["Agentic AI", "AI", "AI Agents", "AI Orchestration", "Azure", "Azure AI", "Cancer Care", "Data Security", "Ethical AI", "Healthcare AI", "Healthcare Interoperability", "InnovatewithAzureAIappsandagents", "Low Code", "Microsoft Ignite", "MSIgnite", "Oncology", "Pro Code", "Trustworthy AI", "Unified Data", "Videos", "Workflow Automation"]
 tags_normalized: ["agentic ai", "ai", "ai agents", "ai orchestration", "azure", "azure ai", "cancer care", "data security", "ethical ai", "healthcare ai", "healthcare interoperability", "innovatewithazureaiappsandagents", "low code", "microsoft ignite", "msignite", "oncology", "pro code", "trustworthy ai", "unified data", "videos", "workflow automation"]

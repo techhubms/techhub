@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Fabric Blog"
 feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
 date: 2025-11-26 09:00:00 +00:00
-permalink: "/news/2025-11-26-On-premises-Data-Gateway-November-2025-Release-Now-Available.html"
+permalink: "/2025-11-26-On-premises-Data-Gateway-November-2025-Release-Now-Available.html"
 categories: ["ML"]
 tags: ["Analytics Platform", "Business Intelligence", "Dashboard", "Data Connectivity", "Data Connectors", "Data Integration", "Data Refresh", "Data Source", "Gateway Update", "Microsoft Fabric", "ML", "News", "On Premises Data Gateway", "Power BI", "Power BI Desktop", "Report Publishing"]
 tags_normalized: ["analytics platform", "business intelligence", "dashboard", "data connectivity", "data connectors", "data integration", "data refresh", "data source", "gateway update", "microsoft fabric", "ml", "news", "on premises data gateway", "power bi", "power bi desktop", "report publishing"]

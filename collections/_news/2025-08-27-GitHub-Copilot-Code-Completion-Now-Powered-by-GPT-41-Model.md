@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/changelog/feed/"
 date: 2025-08-27 15:59:03 +00:00
-permalink: "/news/2025-08-27-GitHub-Copilot-Code-Completion-Now-Powered-by-GPT-41-Model.html"
+permalink: "/2025-08-27-GitHub-Copilot-Code-Completion-Now-Powered-by-GPT-41-Model.html"
 categories: ["AI", "GitHub Copilot"]
 tags: ["AI", "AI Models", "AI Updates", "Code Completion", "Copilot Model Picker", "Developer Tools", "GitHub", "GitHub Copilot", "GPT 4.1", "Machine Learning", "News", "Reinforcement Learning", "Software Development"]
 tags_normalized: ["ai", "ai models", "ai updates", "code completion", "copilot model picker", "developer tools", "github", "github copilot", "gpt 4dot1", "machine learning", "news", "reinforcement learning", "software development"]

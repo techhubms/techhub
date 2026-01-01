@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-09-09 14:47:14 +00:00
-permalink: "/community/2025-09-09-Enforcing-and-Auditing-Policy-Inheritance-in-Azure-API-Management.html"
+permalink: "/2025-09-09-Enforcing-and-Auditing-Policy-Inheritance-in-Azure-API-Management.html"
 categories: ["Azure", "Security"]
 tags: ["API Management", "API Security", "Audit", "Azure", "Azure Policy", "Azure Portal", "Community", "Compliance", "Governance", "Operational Requirements", "Policy Enforcement", "Policy Inheritance", "Security", "Security Controls"]
 tags_normalized: ["api management", "api security", "audit", "azure", "azure policy", "azure portal", "community", "compliance", "governance", "operational requirements", "policy enforcement", "policy inheritance", "security", "security controls"]

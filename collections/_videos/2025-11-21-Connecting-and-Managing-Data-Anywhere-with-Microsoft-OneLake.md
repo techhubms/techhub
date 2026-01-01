@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Events YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
 date: 2025-11-21 08:30:17 +00:00
-permalink: "/videos/2025-11-21-Connecting-and-Managing-Data-Anywhere-with-Microsoft-OneLake.html"
+permalink: "/2025-11-21-Connecting-and-Managing-Data-Anywhere-with-Microsoft-OneLake.html"
 categories: ["Azure", "ML", "Security"]
 tags: ["Access Controls", "Azure", "Data Catalog", "Data Governance", "Data Integration", "Data Management", "Data Sharing", "Fabric Admin", "Lakehouse", "Microsoft Fabric", "Microsoft OneLake", "ML", "MSIgnite", "OneDrive", "Security", "SharePoint", "Snowflake", "Structured Data", "Unifyyourdataplatform", "Unstructured Data", "Videos"]
 tags_normalized: ["access controls", "azure", "data catalog", "data governance", "data integration", "data management", "data sharing", "fabric admin", "lakehouse", "microsoft fabric", "microsoft onelake", "ml", "msignite", "onedrive", "security", "sharepoint", "snowflake", "structured data", "unifyyourdataplatform", "unstructured data", "videos"]

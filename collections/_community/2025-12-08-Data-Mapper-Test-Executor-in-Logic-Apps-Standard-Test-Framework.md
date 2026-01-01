@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-12-08 16:00:00 +00:00
-permalink: "/community/2025-12-08-Data-Mapper-Test-Executor-in-Logic-Apps-Standard-Test-Framework.html"
+permalink: "/2025-12-08-Data-Mapper-Test-Executor-in-Logic-Apps-Standard-Test-Framework.html"
 categories: ["Azure", "Coding", "DevOps"]
 tags: ["Automated Test Framework", "Azure", "Azure Integration Services", "Coding", "Community", "Data Mapper Test Executor", "DevOps", "Integration Testing", "Liquid Templates", "Logic Apps Standard", "Map Definitions", "NuGet", "Schema Validation", "SDK", "Transformation Testing", "Unit Testing", "XML", "XSLT"]
 tags_normalized: ["automated test framework", "azure", "azure integration services", "coding", "community", "data mapper test executor", "devops", "integration testing", "liquid templates", "logic apps standard", "map definitions", "nuget", "schema validation", "sdk", "transformation testing", "unit testing", "xml", "xslt"]

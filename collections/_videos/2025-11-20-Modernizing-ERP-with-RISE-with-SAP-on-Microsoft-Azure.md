@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Events YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
 date: 2025-11-20 15:48:41 +00:00
-permalink: "/videos/2025-11-20-Modernizing-ERP-with-RISE-with-SAP-on-Microsoft-Azure.html"
+permalink: "/2025-11-20-Modernizing-ERP-with-RISE-with-SAP-on-Microsoft-Azure.html"
 categories: ["AI", "Azure", "Security"]
 tags: ["AI", "AI Monitoring", "Azure", "Azure Infrastructure", "Business Process Solutions", "Compliance", "Copilot", "Data Sovereignty", "High SLA", "Joule", "Microsoft Azure", "Microsoft Defender", "Microsoft Sentinel", "Migrateandmodernizeyourestate", "MSIgnite", "Performance Optimization", "RISE With SAP", "SAP BDC", "SAP BTP", "SAP Business Suite", "Security", "Videos"]
 tags_normalized: ["ai", "ai monitoring", "azure", "azure infrastructure", "business process solutions", "compliance", "copilot", "data sovereignty", "high sla", "joule", "microsoft azure", "microsoft defender", "microsoft sentinel", "migrateandmodernizeyourestate", "msignite", "performance optimization", "rise with sap", "sap bdc", "sap btp", "sap business suite", "security", "videos"]

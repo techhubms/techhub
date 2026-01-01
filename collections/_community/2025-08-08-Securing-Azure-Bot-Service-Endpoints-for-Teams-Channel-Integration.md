@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-08-08 01:10:31 +00:00
-permalink: "/community/2025-08-08-Securing-Azure-Bot-Service-Endpoints-for-Teams-Channel-Integration.html"
+permalink: "/2025-08-08-Securing-Azure-Bot-Service-Endpoints-for-Teams-Channel-Integration.html"
 categories: ["Azure", "Coding", "Security"]
 tags: ["Application Level Security", "ASP.NET Core", "Azure", "Azure App Service", "Azure Bot Service", "Azure Firewall", "Best Practices", "Bot Framework", "C#", "Cloud Security", "Coding", "Community", "Endpoint Security", "Entra ID", "JWT Token Validation", "Microsoft 365 Copilot", "Microsoft Teams", "Multi Tenant Security", "Network Isolation", "Network Security Groups", "Security", "Service Principal", "Token Authentication"]
 tags_normalized: ["application level security", "aspdotnet core", "azure", "azure app service", "azure bot service", "azure firewall", "best practices", "bot framework", "csharp", "cloud security", "coding", "community", "endpoint security", "entra id", "jwt token validation", "microsoft 365 copilot", "microsoft teams", "multi tenant security", "network isolation", "network security groups", "security", "service principal", "token authentication"]

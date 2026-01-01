@@ -9,10 +9,10 @@ viewing_mode: "external"
 feed_name: "Reinier van Maanen's blog"
 feed_url: "https://r-vm.com/feed.xml"
 date: 2025-08-19 00:00:00 +00:00
-permalink: "/blogs/2025-08-19-Announcing-techhubms-Curated-Microsoft-Tech-Content-Platform.html"
+permalink: "/2025-08-19-Announcing-techhubms-Curated-Microsoft-Tech-Content-Platform.html"
 categories: ["AI", "Azure", "DevOps", "GitHub Copilot"]
-tags: [".NET", "AI", "AI Powered Tagging", "Azure", "Azure App Services", "Azure Static Web Apps", "Curated Content", "Developer Tools", "DevOps", "GitHub Copilot", "GitHub Pages", "Jekyll", "Machine Learning", "Microsoft", "Microsoft Tech Hub", "OpenAI", "Personalization", "Playwright", "Blogs", "Site Launch", "Tech News", "Weekly Roundup"]
-tags_normalized: ["dotnet", "ai", "ai powered tagging", "azure", "azure app services", "azure static web apps", "curated content", "developer tools", "devops", "github copilot", "github pages", "jekyll", "machine learning", "microsoft", "microsoft tech hub", "openai", "personalization", "playwright", "blogs", "site launch", "tech news", "weekly roundup"]
+tags: [".NET", "AI", "AI Powered Tagging", "Azure", "Azure App Services", "Azure Static Web Apps", "Blogs", "Curated Content", "Developer Tools", "DevOps", "GitHub Copilot", "GitHub Pages", "Jekyll", "Machine Learning", "Microsoft", "Microsoft Tech Hub", "OpenAI", "Personalization", "Playwright", "Site Launch", "Tech News", "Weekly Roundup"]
+tags_normalized: ["dotnet", "ai", "ai powered tagging", "azure", "azure app services", "azure static web apps", "blogs", "curated content", "developer tools", "devops", "github copilot", "github pages", "jekyll", "machine learning", "microsoft", "microsoft tech hub", "openai", "personalization", "playwright", "site launch", "tech news", "weekly roundup"]
 ---
 
 Reinier van Maanen shares the launch of tech.hub.ms, a Microsoft tech news aggregator with AI-driven categorization, built in collaboration with Rob Bos and Xebia colleagues.<!--excerpt_end-->

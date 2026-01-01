@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft News"
 feed_url: "https://news.microsoft.com/source/feed/"
 date: 2025-09-02 17:04:06 +00:00
-permalink: "/news/2025-09-02-Argus-and-Azure-AI-Inclusive-Assistive-Tech-Triumphs-at-Imagine-Cup.html"
+permalink: "/2025-09-02-Argus-and-Azure-AI-Inclusive-Assistive-Tech-Triumphs-at-Imagine-Cup.html"
 categories: ["AI", "Azure"]
 tags: ["Accessibility", "AI", "AI Development", "Argus Panoptes", "Assistive Technology", "Azure", "Azure AI Foundry", "Azure AI Speech", "Cloud Inference", "Company News", "Edge Processing", "Education", "Inclusion", "Microsoft For Startups", "Microsoft Imagine Cup", "News", "Startups", "Student Innovation", "Wearable Tech", "Wi R Protocol"]
 tags_normalized: ["accessibility", "ai", "ai development", "argus panoptes", "assistive technology", "azure", "azure ai foundry", "azure ai speech", "cloud inference", "company news", "edge processing", "education", "inclusion", "microsoft for startups", "microsoft imagine cup", "news", "startups", "student innovation", "wearable tech", "wi r protocol"]

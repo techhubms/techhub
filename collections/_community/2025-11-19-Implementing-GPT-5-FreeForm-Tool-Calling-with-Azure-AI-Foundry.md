@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-11-19 18:29:45 +00:00
-permalink: "/community/2025-11-19-Implementing-GPT-5-FreeForm-Tool-Calling-with-Azure-AI-Foundry.html"
+permalink: "/2025-11-19-Implementing-GPT-5-FreeForm-Tool-Calling-with-Azure-AI-Foundry.html"
 categories: ["AI", "Azure", "Coding", "ML"]
 tags: ["Agentic Workflow", "AI", "API Integration", "Azure", "Azure AI Foundry", "Bar Chart", "Coding", "Community", "CSV", "Custom Tools", "Data Analysis", "FreeForm Tool Calling", "Function Calling", "GPT 5", "Iris Dataset", "JavaScript", "ML", "SQL", "TypeScript", "VM Sandbox"]
 tags_normalized: ["agentic workflow", "ai", "api integration", "azure", "azure ai foundry", "bar chart", "coding", "community", "csv", "custom tools", "data analysis", "freeform tool calling", "function calling", "gpt 5", "iris dataset", "javascript", "ml", "sql", "typescript", "vm sandbox"]

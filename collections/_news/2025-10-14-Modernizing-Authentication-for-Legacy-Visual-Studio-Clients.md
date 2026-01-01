@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft DevOps Blog"
 feed_url: "https://devblogs.microsoft.com/devops/feed/"
 date: 2025-10-14 15:28:47 +00:00
-permalink: "/news/2025-10-14-Modernizing-Authentication-for-Legacy-Visual-Studio-Clients.html"
+permalink: "/2025-10-14-Modernizing-Authentication-for-Legacy-Visual-Studio-Clients.html"
 categories: ["Azure", "DevOps", "Security"]
 tags: ["Authentication", "Azure", "Azure & Cloud", "Azure DevOps", "Client Upgrade", "DevOps", "End Of Support", "Identity Standards", "Interactive Reauthentication", "Legacy Clients", "Microsoft Entra ID", "Modern Authentication", "News", "Security", "Security Update", "Token Management", "VS"]
 tags_normalized: ["authentication", "azure", "azure and cloud", "azure devops", "client upgrade", "devops", "end of support", "identity standards", "interactive reauthentication", "legacy clients", "microsoft entra id", "modern authentication", "news", "security", "security update", "token management", "vs"]

@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/feed/"
 date: 2025-07-23 07:01:00 +00:00
-permalink: "/news/2025-07-23-We-Need-a-European-Sovereign-Tech-Fund-to-Sustain-Open-Source-Software.html"
+permalink: "/2025-07-23-We-Need-a-European-Sovereign-Tech-Fund-to-Sustain-Open-Source-Software.html"
 categories: ["DevOps", "Security"]
 tags: ["DevOps", "Digital Infrastructure", "EU Budget", "EU Policy", "European Commission", "Funding", "GitHub Sponsors", "Maintainers", "News", "News & Insights", "Open Source", "Open Source Funding", "OSS Maintainers", "Policy", "Public Private Partnership", "Security", "Software Sustainability", "Sovereign Tech Fund", "Supply Chain", "Supply Chain Security"]
 tags_normalized: ["devops", "digital infrastructure", "eu budget", "eu policy", "european commission", "funding", "github sponsors", "maintainers", "news", "news and insights", "open source", "open source funding", "oss maintainers", "policy", "public private partnership", "security", "software sustainability", "sovereign tech fund", "supply chain", "supply chain security"]

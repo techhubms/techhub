@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft News"
 feed_url: "https://news.microsoft.com/source/feed/"
 date: 2025-10-09 17:57:56 +00:00
-permalink: "/news/2025-10-09-Microsoft-Unveils-Supercomputing-Cluster-with-4600-NVIDIA-GB300-GPUs-for-Next-Gen-AI-Workloads.html"
+permalink: "/2025-10-09-Microsoft-Unveils-Supercomputing-Cluster-with-4600-NVIDIA-GB300-GPUs-for-Next-Gen-AI-Workloads.html"
 categories: ["AI", "Azure"]
 tags: ["AI", "AI Acceleration", "AI Infrastructure", "AI Scale", "AI Workloads", "Azure", "Cloud Computing", "Company News", "Datacenter", "GPUs", "High Performance Computing", "InfiniBand", "LinkedIn Post", "Microsoft", "Microsoft Azure", "News", "NVIDIA GB300", "Silicon Design", "Supercomputing Cluster", "System Architecture"]
 tags_normalized: ["ai", "ai acceleration", "ai infrastructure", "ai scale", "ai workloads", "azure", "cloud computing", "company news", "datacenter", "gpus", "high performance computing", "infiniband", "linkedin post", "microsoft", "microsoft azure", "news", "nvidia gb300", "silicon design", "supercomputing cluster", "system architecture"]

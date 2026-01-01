@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Events YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
 date: 2025-11-21 16:43:19 +00:00
-permalink: "/videos/2025-11-21-Anatomy-of-an-Outage-Evolving-Transparency-in-Microsoft-Engineering-Teams.html"
+permalink: "/2025-11-21-Anatomy-of-an-Outage-Evolving-Transparency-in-Microsoft-Engineering-Teams.html"
 categories: ["Azure", "DevOps", "Security"]
 tags: ["Azure", "Azure Front Door", "Azure Incident Response", "Azure Service Health", "DevOps", "Engineering Best Practices", "Incident Communication", "Incident Response", "Microsoft Ignite", "Migrateandmodernizeyourestate", "MSIgnite", "Operations", "Outage Management", "Post Incident Review", "Resilience", "Security", "Shared Responsibility Model", "Status Page", "Transparency", "Videos"]
 tags_normalized: ["azure", "azure front door", "azure incident response", "azure service health", "devops", "engineering best practices", "incident communication", "incident response", "microsoft ignite", "migrateandmodernizeyourestate", "msignite", "operations", "outage management", "post incident review", "resilience", "security", "shared responsibility model", "status page", "transparency", "videos"]

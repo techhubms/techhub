@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft News"
 feed_url: "https://news.microsoft.com/source/feed/"
 date: 2025-11-13 18:35:31 +00:00
-permalink: "/news/2025-11-13-Aurora-Microsofts-Open-Source-AI-Model-for-Weather-and-Climate-Forecasting.html"
+permalink: "/2025-11-13-Aurora-Microsofts-Open-Source-AI-Model-for-Weather-and-Climate-Forecasting.html"
 categories: ["AI"]
 tags: ["AI", "AI For Good", "AI Model", "Atmospheric Data", "Aurora", "Climate Science", "Community Collaboration", "Company News", "Earth Systems Modeling", "Environmental Data", "Machine Learning", "Meteorological Services", "Microsoft Research", "News", "On The Issues", "Open Source", "SPARROW", "Sustainability", "Weather Forecasting"]
 tags_normalized: ["ai", "ai for good", "ai model", "atmospheric data", "aurora", "climate science", "community collaboration", "company news", "earth systems modeling", "environmental data", "machine learning", "meteorological services", "microsoft research", "news", "on the issues", "open source", "sparrow", "sustainability", "weather forecasting"]

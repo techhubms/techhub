@@ -9,7 +9,7 @@ categories: ["AI", "GitHub Copilot"]
 feed_name: "Reddit Github Copilot"
 feed_url: "https://www.reddit.com/r/GithubCopilot.rss"
 date: 2025-07-10 14:36:36 +00:00
-permalink: "/community/2025-07-10-A-follow-up-to-Goodbye-Copilot.html"
+permalink: "/2025-07-10-A-follow-up-to-Goodbye-Copilot.html"
 viewing_mode: "external"
 tags: ["AI", "AI Models", "Code Completion", "Community", "Cursor", "Extension Compatibility", "GitHub Copilot", "Premium Plans", "Regressions", "Software Development", "User Experience", "VS Code"]
 tags_normalized: ["ai", "ai models", "code completion", "community", "cursor", "extension compatibility", "github copilot", "premium plans", "regressions", "software development", "user experience", "vs code"]

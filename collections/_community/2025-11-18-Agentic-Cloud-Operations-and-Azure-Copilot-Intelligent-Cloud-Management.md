@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-11-18 16:02:38 +00:00
-permalink: "/community/2025-11-18-Agentic-Cloud-Operations-and-Azure-Copilot-Intelligent-Cloud-Management.html"
+permalink: "/2025-11-18-Agentic-Cloud-Operations-and-Azure-Copilot-Intelligent-Cloud-Management.html"
 categories: ["AI", "Azure", "DevOps", "Security"]
 tags: ["Agentic Cloud Ops", "AI", "AI Agents", "Application Insights", "Azure", "Azure Copilot", "Azure Deployment", "Azure Migration", "Azure Monitor", "Azure Security", "BYOS", "Cloud Automation", "Cloud Management", "Community", "DevOps", "Governance", "IaC", "Intelligent Automation", "Microsoft Azure", "Observability", "PowerShell", "RBAC", "Resiliency", "Security", "Troubleshooting", "Well Architected Framework"]
 tags_normalized: ["agentic cloud ops", "ai", "ai agents", "application insights", "azure", "azure copilot", "azure deployment", "azure migration", "azure monitor", "azure security", "byos", "cloud automation", "cloud management", "community", "devops", "governance", "iac", "intelligent automation", "microsoft azure", "observability", "powershell", "rbac", "resiliency", "security", "troubleshooting", "well architected framework"]

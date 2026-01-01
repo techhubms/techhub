@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "GitHub YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ"
 date: 2025-11-10 15:00:34 +00:00
-permalink: "/videos/2025-11-10-Transforming-GitHub-Copilot-Metrics-into-Business-Value.html"
+permalink: "/2025-11-10-Transforming-GitHub-Copilot-Metrics-into-Business-Value.html"
 categories: ["AI", "GitHub Copilot"]
 tags: ["AI", "AI Adoption", "Analytics", "Business Value", "Copilot Metrics", "Dashboard", "Data Driven Decision Making", "Developer Productivity", "Engineering Leadership", "GitHub", "GitHub Copilot", "GitHub Universe", "GitHubUniverse", "Metrics", "ROI", "SDLC", "Usage Insights", "Videos"]
 tags_normalized: ["ai", "ai adoption", "analytics", "business value", "copilot metrics", "dashboard", "data driven decision making", "developer productivity", "engineering leadership", "github", "github copilot", "github universe", "githubuniverse", "metrics", "roi", "sdlc", "usage insights", "videos"]

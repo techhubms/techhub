@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft News"
 feed_url: "https://news.microsoft.com/source/feed/"
 date: 2025-08-20 21:00:30 +00:00
-permalink: "/news/2025-08-20-MindJourney-AI-Agents-Navigate-and-Reason-in-Simulated-3D-Worlds.html"
+permalink: "/2025-08-20-MindJourney-AI-Agents-Navigate-and-Reason-in-Simulated-3D-Worlds.html"
 categories: ["AI"]
 tags: ["3D Simulation", "AI", "AI Agents", "AI Evaluation", "Autonomous Systems", "Company News", "Computer Vision", "Microsoft Research", "MindJourney", "News", "Simulation", "Spatial Beam Search", "Spatial Reasoning", "Vision Language Models", "VLM", "World Models"]
 tags_normalized: ["3d simulation", "ai", "ai agents", "ai evaluation", "autonomous systems", "company news", "computer vision", "microsoft research", "mindjourney", "news", "simulation", "spatial beam search", "spatial reasoning", "vision language models", "vlm", "world models"]

@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "John Savill's Technical Training"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCpIn7ox7j7bH_OFj7tYouOQ"
 date: 2025-11-28 15:44:35 +00:00
-permalink: "/videos/2025-11-28-Azure-Weekly-Update-November-28-2025-New-Features-and-Enhancements.html"
+permalink: "/2025-11-28-Azure-Weekly-Update-November-28-2025-New-Features-and-Enhancements.html"
 categories: ["Azure", "Coding", "DevOps", "ML"]
 tags: ["API Management", "APIC", "APIM", "Azure", "Azure Bastion", "Azure Cloud", "Azure File Sync", "Azure Functions", "Azure Load Testing", "Azure Machine Learning", "Azure MCP Server", "Azure SQL Database", "Certification", "Claude Opus", "Cloud", "Coding", "DevOps", "DevOps Master Class", "Entra ID", "Foundry", "Italy North", "Managed Identities", "Microsoft", "Microsoft Azure", "ML", "MySQL Support", "Network Watcher", "New Zealand North", "PowerShell", "RDP Integration", "Regex", "T SQL", "Videos", "Virtual Machine Retirement"]
 tags_normalized: ["api management", "apic", "apim", "azure", "azure bastion", "azure cloud", "azure file sync", "azure functions", "azure load testing", "azure machine learning", "azure mcp server", "azure sql database", "certification", "claude opus", "cloud", "coding", "devops", "devops master class", "entra id", "foundry", "italy north", "managed identities", "microsoft", "microsoft azure", "ml", "mysql support", "network watcher", "new zealand north", "powershell", "rdp integration", "regex", "t sql", "videos", "virtual machine retirement"]

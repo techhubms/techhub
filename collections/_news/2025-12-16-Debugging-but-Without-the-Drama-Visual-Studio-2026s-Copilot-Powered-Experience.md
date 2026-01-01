@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft VisualStudio Blog"
 feed_url: "https://devblogs.microsoft.com/visualstudio/feed/"
 date: 2025-12-16 15:00:12 +00:00
-permalink: "/news/2025-12-16-Debugging-but-Without-the-Drama-Visual-Studio-2026s-Copilot-Powered-Experience.html"
+permalink: "/2025-12-16-Debugging-but-Without-the-Drama-Visual-Studio-2026s-Copilot-Powered-Experience.html"
 categories: ["AI", "Coding", "GitHub Copilot"]
 tags: ["AI", "AI Debugging", "Bug Fixing", "Code Analysis", "Coding", "Copilot Chat", "Debugger Agent", "Debugging And Diagnostics", "Developer Productivity", "Editor Integration", "Exception Assistance", "GitHub Copilot", "Inline Values", "News", "Performance", "Software Development", "Test Debugging", "VS"]
 tags_normalized: ["ai", "ai debugging", "bug fixing", "code analysis", "coding", "copilot chat", "debugger agent", "debugging and diagnostics", "developer productivity", "editor integration", "exception assistance", "github copilot", "inline values", "news", "performance", "software development", "test debugging", "vs"]

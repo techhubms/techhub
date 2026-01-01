@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Events YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
 date: 2025-11-20 14:49:27 +00:00
-permalink: "/videos/2025-11-20-Accelerating-AI-Agent-Development-with-Microsoft-Foundry-at-Ignite-2025.html"
+permalink: "/2025-11-20-Accelerating-AI-Agent-Development-with-Microsoft-Foundry-at-Ignite-2025.html"
 categories: ["AI", "Azure", "Security"]
 tags: ["Agent Factory", "Agentic Workflows", "AI", "AI Agents", "AI Studio", "Azure", "Azure AI", "Capgemini", "Citrix", "Compliance", "Defender", "Developer Tools", "Enterprise Security", "Industry Collaboration", "InnovatewithAzureAIappsandagents", "Microsoft 365 Integration", "Microsoft Foundry", "Microsoft Ignite", "Model Catalog", "MSIgnite", "Purview", "Security", "Threat Protection", "Videos", "Workflow Orchestration"]
 tags_normalized: ["agent factory", "agentic workflows", "ai", "ai agents", "ai studio", "azure", "azure ai", "capgemini", "citrix", "compliance", "defender", "developer tools", "enterprise security", "industry collaboration", "innovatewithazureaiappsandagents", "microsoft 365 integration", "microsoft foundry", "microsoft ignite", "model catalog", "msignite", "purview", "security", "threat protection", "videos", "workflow orchestration"]

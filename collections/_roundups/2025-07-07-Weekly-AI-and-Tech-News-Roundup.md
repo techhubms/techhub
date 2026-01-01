@@ -6,7 +6,7 @@ author: "Tech Hub Team"
 excerpt_separator: <!--excerpt_end-->
 viewing_mode: "internal"
 date: 2025-07-07 09:00:00 +00:00
-permalink: "/roundups/2025-07-07-Weekly-AI-and-Tech-News-Roundup.html"
+permalink: "/2025-07-07-Weekly-AI-and-Tech-News-Roundup.html"
 categories: ["AI", "GitHub Copilot", "ML", "Azure", "Coding", "DevOps", "Security"]
 tags: [".NET 10", "AI", "AI Accessibility", "AI Agents", "Azure", "Azure AI Foundry", "Azure Dev CLI", "Azure Files", "Blazor", "Cloud Security", "Coding", "Copilot Agent", "Copilot Vision", "Cosmos DB", "DevOps", "GitHub Copilot", "MAUI", "MCP", "ML", "Ollama", "PostgreSQL", "Roundups", "Security", "Semantic Kernel", "Terraform", "Vault"]
 tags_normalized: ["dotnet 10", "ai", "ai accessibility", "ai agents", "azure", "azure ai foundry", "azure dev cli", "azure files", "blazor", "cloud security", "coding", "copilot agent", "copilot vision", "cosmos db", "devops", "github copilot", "maui", "mcp", "ml", "ollama", "postgresql", "roundups", "security", "semantic kernel", "terraform", "vault"]

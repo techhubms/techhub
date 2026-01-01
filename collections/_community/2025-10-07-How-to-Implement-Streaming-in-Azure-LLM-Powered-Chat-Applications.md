@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-10-07 05:57:30 +00:00
-permalink: "/community/2025-10-07-How-to-Implement-Streaming-in-Azure-LLM-Powered-Chat-Applications.html"
+permalink: "/2025-10-07-How-to-Implement-Streaming-in-Azure-LLM-Powered-Chat-Applications.html"
 categories: ["AI", "Azure", "Coding"]
 tags: ["AI", "API Integration", "Azure", "Azure AI Search", "Azure OpenAI Service", "Backend Development", "Chat Applications", "Coding", "Community", "FastAPI", "Frontend Development", "JavaScript", "LLM", "NDJSON", "OpenAI Python SDK", "Python", "Quart", "RAG", "React", "Readable Streams", "Server Sent Events", "Streaming", "WebSockets"]
 tags_normalized: ["ai", "api integration", "azure", "azure ai search", "azure openai service", "backend development", "chat applications", "coding", "community", "fastapi", "frontend development", "javascript", "llm", "ndjson", "openai python sdk", "python", "quart", "rag", "react", "readable streams", "server sent events", "streaming", "websockets"]

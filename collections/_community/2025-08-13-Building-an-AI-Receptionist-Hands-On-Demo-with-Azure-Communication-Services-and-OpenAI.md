@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Community"
 date: 2025-08-13 16:35:46 +00:00
-permalink: "/community/2025-08-13-Building-an-AI-Receptionist-Hands-On-Demo-with-Azure-Communication-Services-and-OpenAI.html"
+permalink: "/2025-08-13-Building-an-AI-Receptionist-Hands-On-Demo-with-Azure-Communication-Services-and-OpenAI.html"
 categories: ["AI", "Azure", "Coding"]
 tags: ["AI", "API Integration", "Appointment Management", "Azure", "Azure Communication Services", "Azure OpenAI", "Coding", "Community", "Conversational AI", "Event Driven Architecture", "Event Grid", "FastAPI", "Microsoft Cloud", "Prompt Engineering", "Python", "Scheduling Automation", "SMS Automation", "Webhook"]
 tags_normalized: ["ai", "api integration", "appointment management", "azure", "azure communication services", "azure openai", "coding", "community", "conversational ai", "event driven architecture", "event grid", "fastapi", "microsoft cloud", "prompt engineering", "python", "scheduling automation", "sms automation", "webhook"]

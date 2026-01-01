@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Visual Studio Code YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SLNwkd3w"
 date: 2025-09-12 16:22:57 +00:00
-permalink: "/videos/2025-09-12-Latest-Features-in-Visual-Studio-Code-Agent-Mode-Git-Worktrees-and-More.html"
+permalink: "/2025-09-12-Latest-Features-in-Visual-Studio-Code-Agent-Mode-Git-Worktrees-and-More.html"
 categories: ["AI", "Coding", "DevOps"]
 tags: ["Agent Mode", "AI", "AI Features", "Background Agent Tasks", "Coding", "Development Tools", "DevOps", "Extensions API", "Git Worktrees", "Model Flexibility", "Terminal Automation", "Videos", "VS Code", "VS Code Agents"]
 tags_normalized: ["agent mode", "ai", "ai features", "background agent tasks", "coding", "development tools", "devops", "extensions api", "git worktrees", "model flexibility", "terminal automation", "videos", "vs code", "vs code agents"]

@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/feed/"
 date: 2025-10-20 16:00:16 +00:00
-permalink: "/news/2025-10-20-Inside-the-Log4Shell-Breach-Lessons-in-Open-Source-Security-and-Sustainability.html"
+permalink: "/2025-10-20-Inside-the-Log4Shell-Breach-Lessons-in-Open-Source-Security-and-Sustainability.html"
 categories: ["Security"]
 tags: ["CVSS", "Dependabot", "DevSecOps", "GitHub Secure Open Source Fund", "Java Security", "JNDI", "Log4j", "Log4Shell", "News", "Open Source", "Open Source Security", "OpenSSF", "Remote Code Execution", "SBOM", "Security", "Security Best Practices", "Software Maintenance", "Supply Chain Security", "Vulnerability Management"]
 tags_normalized: ["cvss", "dependabot", "devsecops", "github secure open source fund", "java security", "jndi", "log4j", "log4shell", "news", "open source", "open source security", "openssf", "remote code execution", "sbom", "security", "security best practices", "software maintenance", "supply chain security", "vulnerability management"]

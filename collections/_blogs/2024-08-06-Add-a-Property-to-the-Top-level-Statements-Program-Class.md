@@ -9,10 +9,10 @@ viewing_mode: "external"
 feed_name: "Khalid Abuhakmeh's Blog"
 feed_url: "https://khalidabuhakmeh.com/feed.xml"
 date: 2024-08-06 00:00:00 +00:00
-permalink: "/blogs/2024-08-06-Add-a-Property-to-the-Top-level-Statements-Program-Class.html"
+permalink: "/2024-08-06-Add-a-Property-to-the-Top-level-Statements-Program-Class.html"
 categories: ["Coding"]
-tags: [".NET", "C#", "Code Readability", "Coding", "Compiler", "Console Application", "Partial Class", "Blogs", "Program Class", "Program Structure", "Static Properties", "Top Level Statements"]
-tags_normalized: ["dotnet", "csharp", "code readability", "coding", "compiler", "console application", "partial class", "blogs", "program class", "program structure", "static properties", "top level statements"]
+tags: [".NET", "Blogs", "C#", "Code Readability", "Coding", "Compiler", "Console Application", "Partial Class", "Program Class", "Program Structure", "Static Properties", "Top Level Statements"]
+tags_normalized: ["dotnet", "blogs", "csharp", "code readability", "coding", "compiler", "console application", "partial class", "program class", "program structure", "static properties", "top level statements"]
 ---
 
 Khalid Abuhakmeh explains how to add static properties to a top-level statements Program class in C# using partial classes. This post guides readers on creating more readable console applications and delves into the compiler-generated code structure.<!--excerpt_end-->

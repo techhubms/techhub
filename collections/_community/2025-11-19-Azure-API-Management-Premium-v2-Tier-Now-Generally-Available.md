@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-11-19 21:10:17 +00:00
-permalink: "/community/2025-11-19-Azure-API-Management-Premium-v2-Tier-Now-Generally-Available.html"
+permalink: "/2025-11-19-Azure-API-Management-Premium-v2-Tier-Now-Generally-Available.html"
 categories: ["Azure", "Security"]
 tags: ["API Gateway", "Authorization Credentials", "Availability Zones", "Azure", "Azure API Management", "Backend Integration", "Cloud Infrastructure", "Community", "Custom CA Certificates", "Enterprise API", "Network Security", "Premium V2", "Private Link", "Security", "TLS", "Virtual Networks", "VNet Injection", "VNet Integration", "Zone Redundancy"]
 tags_normalized: ["api gateway", "authorization credentials", "availability zones", "azure", "azure api management", "backend integration", "cloud infrastructure", "community", "custom ca certificates", "enterprise api", "network security", "premium v2", "private link", "security", "tls", "virtual networks", "vnet injection", "vnet integration", "zone redundancy"]

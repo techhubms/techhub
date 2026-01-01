@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Fabric Blog"
 feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
 date: 2025-09-16 00:00:00 +00:00
-permalink: "/news/2025-09-16-Microsoft-Fabric-September-2025-Feature-Summary-Data-AI-Engineering-and-Governance-Enhancements.html"
+permalink: "/2025-09-16-Microsoft-Fabric-September-2025-Feature-Summary-Data-AI-Engineering-and-Governance-Enhancements.html"
 categories: ["AI", "Azure", "Coding", "DevOps", "ML", "Security"]
 tags: ["AI", "Apache Airflow", "Azure", "CI/CD", "CLI", "Coding", "Copilot", "Data Agent", "Data Engineering", "Data Governance", "Data Loss Prevention", "Data Wrangler", "Databricks", "Dataflow Gen2", "DevOps", "Entra ID", "Extensibility Toolkit", "Governance APIs", "Lakehouse", "Materialized Lake Views", "Microsoft Fabric", "Mirroring", "ML", "News", "Notebook", "OneLake", "Open Source", "Pipelines", "Purview", "Python", "Security", "Spark", "Terraform", "VS Code Extension", "Workload Assignment"]
 tags_normalized: ["ai", "apache airflow", "azure", "cislashcd", "cli", "coding", "copilot", "data agent", "data engineering", "data governance", "data loss prevention", "data wrangler", "databricks", "dataflow gen2", "devops", "entra id", "extensibility toolkit", "governance apis", "lakehouse", "materialized lake views", "microsoft fabric", "mirroring", "ml", "news", "notebook", "onelake", "open source", "pipelines", "purview", "python", "security", "spark", "terraform", "vs code extension", "workload assignment"]

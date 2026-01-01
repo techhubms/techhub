@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "GitHub YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ"
 date: 2025-10-28 22:06:09 +00:00
-permalink: "/videos/2025-10-28-GitHub-Universe-Day-1-Keynote-Recap-Agent-HQ-Mission-Control-and-Custom-Agents.html"
+permalink: "/2025-10-28-GitHub-Universe-Day-1-Keynote-Recap-Agent-HQ-Mission-Control-and-Custom-Agents.html"
 categories: ["DevOps"]
 tags: ["Agent HQ", "AgentHQ", "Anthropic", "Cloud Agents", "Custom Agents", "Developer Productivity", "Developer Tools", "DevOps", "GitHub", "GitHub Universe", "GitHubUniverse", "Mission Control", "MissionControl", "OpenAI", "Plan Mode", "Software Collaboration", "Videos", "VS Code"]
 tags_normalized: ["agent hq", "agenthq", "anthropic", "cloud agents", "custom agents", "developer productivity", "developer tools", "devops", "github", "github universe", "githubuniverse", "mission control", "missioncontrol", "openai", "plan mode", "software collaboration", "videos", "vs code"]

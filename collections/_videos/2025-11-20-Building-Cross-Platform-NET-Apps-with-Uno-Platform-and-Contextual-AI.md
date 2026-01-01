@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "DotNet YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw"
 date: 2025-11-20 17:46:59 +00:00
-permalink: "/videos/2025-11-20-Building-Cross-Platform-NET-Apps-with-Uno-Platform-and-Contextual-AI.html"
+permalink: "/2025-11-20-Building-Cross-Platform-NET-Apps-with-Uno-Platform-and-Contextual-AI.html"
 categories: ["AI", "Coding"]
 tags: [".NET", "Agentic Workflows", "AI", "AI Agents", "Bruno Capuano", "Coding", "Contextual AI", "Cross Platform Development", "Figma Plugins", "Hot Design", "Hot Reload", "Human in The Loop", "IDE", "Jérôme Laban", "Linux", "Macos", "MCP", "MCP Servers", "Mobile Development", "Sam Basu", "Uno Platform", "Uno Platform Studio", "UnoPlatform", "Videos", "WebAssembly", "Windows"]
 tags_normalized: ["dotnet", "agentic workflows", "ai", "ai agents", "bruno capuano", "coding", "contextual ai", "cross platform development", "figma plugins", "hot design", "hot reload", "human in the loop", "ide", "jrme laban", "linux", "macos", "mcp", "mcp servers", "mobile development", "sam basu", "uno platform", "uno platform studio", "unoplatform", "videos", "webassembly", "windows"]

@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Events YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
 date: 2025-11-25 16:00:20 +00:00
-permalink: "/videos/2025-11-25-Unlocking-AI-Practice-Scale-for-Partners-with-Azure-Insights-from-MS-Ignite.html"
+permalink: "/2025-11-25-Unlocking-AI-Practice-Scale-for-Partners-with-Azure-Insights-from-MS-Ignite.html"
 categories: ["AI", "Azure"]
 tags: ["AI", "AI Centers Of Excellence", "AI Deployment", "AI Landing Zone", "AI Transformation", "Azure", "Azure Accelerate", "Azure AI", "Business Impact", "Identity AI Factory", "KPI Tracking", "Microsoft Ignite", "MicrosoftAICloudPartnerProgram", "MSIgnite", "Multi Agent Models", "Packaged Learnings", "Partner Enablement", "User Adoption", "Videos"]
 tags_normalized: ["ai", "ai centers of excellence", "ai deployment", "ai landing zone", "ai transformation", "azure", "azure accelerate", "azure ai", "business impact", "identity ai factory", "kpi tracking", "microsoft ignite", "microsoftaicloudpartnerprogram", "msignite", "multi agent models", "packaged learnings", "partner enablement", "user adoption", "videos"]

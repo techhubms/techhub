@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-12-12 18:04:26 +00:00
-permalink: "/community/2025-12-12-Key-Considerations-for-Modernizing-and-Migrating-Custom-Applications-to-Azure.html"
+permalink: "/2025-12-12-Key-Considerations-for-Modernizing-and-Migrating-Custom-Applications-to-Azure.html"
 categories: ["AI", "Azure", "DevOps", "GitHub Copilot", "Security"]
 tags: ["AI", "AKS", "App Modernization", "Application Gateway", "Application Insights", "ARM Templates", "Availability Zones", "Azure", "Azure Advisor", "Azure AI Studio", "Azure App Service", "Azure Cost Management", "Azure DevOps", "Azure Functions", "Azure Key Vault", "Azure Migrate", "Azure Monitor", "Azure Policy", "Azure Sentinel", "Azure SQL Database", "Bicep", "Cloud Migration", "Community", "Database Migration", "Defender For Cloud", "DevOps", "Event Grid", "Geo Replication", "GitHub Actions", "GitHub Copilot", "Log Analytics", "Managed Identities", "Network Security", "Security", "Service Bus", "Terraform"]
 tags_normalized: ["ai", "aks", "app modernization", "application gateway", "application insights", "arm templates", "availability zones", "azure", "azure advisor", "azure ai studio", "azure app service", "azure cost management", "azure devops", "azure functions", "azure key vault", "azure migrate", "azure monitor", "azure policy", "azure sentinel", "azure sql database", "bicep", "cloud migration", "community", "database migration", "defender for cloud", "devops", "event grid", "geo replication", "github actions", "github copilot", "log analytics", "managed identities", "network security", "security", "service bus", "terraform"]

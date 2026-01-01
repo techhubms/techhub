@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Fabric Blog"
 feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
 date: 2025-11-28 10:00:00 +00:00
-permalink: "/news/2025-11-28-Fabric-Influencers-Spotlight-Highlights-from-the-Microsoft-Fabric-Community-November-2025.html"
+permalink: "/2025-11-28-Fabric-Influencers-Spotlight-Highlights-from-the-Microsoft-Fabric-Community-November-2025.html"
 categories: ["Azure", "Coding", "ML"]
 tags: ["Advanced Pipelines", "Azure", "Azure Tenants", "BigQuery Mirroring", "Coding", "Custom Transformers", "Data Engineering", "Data Science", "Data Warehousing", "Delta Tables", "Entra ID", "Fabric Community", "Fabric Governance", "Fabric Lakehouse", "Fabric Super User", "GraphQL", "Microsoft Fabric", "Microsoft MVP", "ML", "News", "Power BI", "Real Time Intelligence", "Row Level Security"]
 tags_normalized: ["advanced pipelines", "azure", "azure tenants", "bigquery mirroring", "coding", "custom transformers", "data engineering", "data science", "data warehousing", "delta tables", "entra id", "fabric community", "fabric governance", "fabric lakehouse", "fabric super user", "graphql", "microsoft fabric", "microsoft mvp", "ml", "news", "power bi", "real time intelligence", "row level security"]

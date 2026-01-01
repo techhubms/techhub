@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "GitHub YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ"
 date: 2025-12-08 17:12:15 +00:00
-permalink: "/videos/2025-12-08-The-Human-Side-of-Octoverse-2025-Insights-on-Open-Source-AI-and-Collaboration.html"
+permalink: "/2025-12-08-The-Human-Side-of-Octoverse-2025-Insights-on-Open-Source-AI-and-Collaboration.html"
 categories: ["AI", "DevOps"]
 tags: ["AI", "Code Standards", "Community Growth", "Contributor Advice", "Developer Collaboration", "DevOps", "GitHub", "Global Trends", "Maintainers", "Octoverse", "Open Source", "Open Source Ecosystem", "Software Development", "Videos"]
 tags_normalized: ["ai", "code standards", "community growth", "contributor advice", "developer collaboration", "devops", "github", "global trends", "maintainers", "octoverse", "open source", "open source ecosystem", "software development", "videos"]

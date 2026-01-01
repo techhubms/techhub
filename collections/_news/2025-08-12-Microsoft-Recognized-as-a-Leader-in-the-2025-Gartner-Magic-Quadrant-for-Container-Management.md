@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The Azure Blog"
 feed_url: "https://azure.microsoft.com/en-us/blog/feed/"
 date: 2025-08-12 15:00:00 +00:00
-permalink: "/news/2025-08-12-Microsoft-Recognized-as-a-Leader-in-the-2025-Gartner-Magic-Quadrant-for-Container-Management.html"
+permalink: "/2025-08-12-Microsoft-Recognized-as-a-Leader-in-the-2025-Gartner-Magic-Quadrant-for-Container-Management.html"
 categories: ["AI", "Azure", "Coding", "DevOps", "Security"]
 tags: ["AI", "AI Workloads", "AKS", "AKS Automatic", "Azure", "Azure Arc", "Azure Container Apps", "Azure Developer CLI", "Azure Kubernetes Fleet Manager", "Azure Machine Learning", "Cloud Native", "Coding", "Compute", "Container Management", "Containers", "DevOps", "DevSecOps", "Gartner Magic Quadrant", "Gartner® Magic Quadrant™", "GitHub Actions", "Hybrid + Multicloud", "Hybrid Cloud", "Kubernetes", "Microsoft Defender For Containers", "News", "Operational Simplicity", "Security", "VS Code"]
 tags_normalized: ["ai", "ai workloads", "aks", "aks automatic", "azure", "azure arc", "azure container apps", "azure developer cli", "azure kubernetes fleet manager", "azure machine learning", "cloud native", "coding", "compute", "container management", "containers", "devops", "devsecops", "gartner magic quadrant", "gartner magic quadrant", "github actions", "hybrid plus multicloud", "hybrid cloud", "kubernetes", "microsoft defender for containers", "news", "operational simplicity", "security", "vs code"]

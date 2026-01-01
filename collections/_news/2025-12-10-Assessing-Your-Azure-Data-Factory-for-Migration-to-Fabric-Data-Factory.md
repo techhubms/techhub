@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Fabric Blog"
 feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
 date: 2025-12-10 16:30:00 +00:00
-permalink: "/news/2025-12-10-Assessing-Your-Azure-Data-Factory-for-Migration-to-Fabric-Data-Factory.html"
+permalink: "/2025-12-10-Assessing-Your-Azure-Data-Factory-for-Migration-to-Fabric-Data-Factory.html"
 categories: ["Azure", "ML"]
 tags: ["Azure", "Azure Data Factory", "Cloud Data Platform", "Data Compatibility", "Data Engineering", "Data Integration", "Data Pipelines", "Data Workflow", "ETL", "Fabric Data Factory", "Microsoft Azure", "Microsoft Fabric", "Migration Assessment", "Migration Tools", "ML", "News", "Pipeline Migration", "PowerShell"]
 tags_normalized: ["azure", "azure data factory", "cloud data platform", "data compatibility", "data engineering", "data integration", "data pipelines", "data workflow", "etl", "fabric data factory", "microsoft azure", "microsoft fabric", "migration assessment", "migration tools", "ml", "news", "pipeline migration", "powershell"]

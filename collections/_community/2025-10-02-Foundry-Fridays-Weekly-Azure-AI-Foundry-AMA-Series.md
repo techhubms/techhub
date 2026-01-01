@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-10-02 07:00:00 +00:00
-permalink: "/community/2025-10-02-Foundry-Fridays-Weekly-Azure-AI-Foundry-AMA-Series.html"
+permalink: "/2025-10-02-Foundry-Fridays-Weekly-Azure-AI-Foundry-AMA-Series.html"
 categories: ["AI", "Azure"]
 tags: ["Agentic Workflows", "AI", "AI Agent Security", "AI Community", "AI Developer", "AI Tools", "AMA", "Ask Me Anything", "Azure", "Azure AI", "Azure AI Foundry", "Community", "Discord Events", "Foundry Fridays", "MCP Registries", "Microsoft Azure", "Model Fine Tuning", "Open Source AI"]
 tags_normalized: ["agentic workflows", "ai", "ai agent security", "ai community", "ai developer", "ai tools", "ama", "ask me anything", "azure", "azure ai", "azure ai foundry", "community", "discord events", "foundry fridays", "mcp registries", "microsoft azure", "model fine tuning", "open source ai"]

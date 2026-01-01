@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/changelog/feed/"
 date: 2025-09-24 16:16:48 +00:00
-permalink: "/news/2025-09-24-Start-and-Track-GitHub-Copilot-Coding-Agent-Tasks-in-GitHub-Mobile.html"
+permalink: "/2025-09-24-Start-and-Track-GitHub-Copilot-Coding-Agent-Tasks-in-GitHub-Mobile.html"
 categories: ["AI", "GitHub Copilot"]
 tags: ["AI", "Client Apps", "Copilot", "Copilot Coding Agent", "Developer Tools", "GitHub App", "GitHub Copilot", "GitHub Mobile", "Mobile Development", "News", "Pull Requests", "Repository Management", "Software Development", "Task Automation"]
 tags_normalized: ["ai", "client apps", "copilot", "copilot coding agent", "developer tools", "github app", "github copilot", "github mobile", "mobile development", "news", "pull requests", "repository management", "software development", "task automation"]

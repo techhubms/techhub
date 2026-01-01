@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Events YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
 date: 2025-11-20 14:53:41 +00:00
-permalink: "/videos/2025-11-20-Advancing-Industrial-Agility-with-Agentic-AI-at-Microsoft-Ignite.html"
+permalink: "/2025-11-20-Advancing-Industrial-Agility-with-Agentic-AI-at-Microsoft-Ignite.html"
 categories: ["AI", "Azure"]
 tags: ["Agentic AI", "AI", "AI Automation", "AI Strategy", "Autonomous Systems", "Azure", "Azure AI", "Digital Twins", "Energy", "Industrial AI", "Industrial Autonomy", "Industrial Transformation", "InnovatewithAzureAIappsandagents", "Manufacturing", "Microsoft Ignite", "Mobility", "MSIgnite", "Multi Agent Systems", "Service Delivery", "Videos"]
 tags_normalized: ["agentic ai", "ai", "ai automation", "ai strategy", "autonomous systems", "azure", "azure ai", "digital twins", "energy", "industrial ai", "industrial autonomy", "industrial transformation", "innovatewithazureaiappsandagents", "manufacturing", "microsoft ignite", "mobility", "msignite", "multi agent systems", "service delivery", "videos"]

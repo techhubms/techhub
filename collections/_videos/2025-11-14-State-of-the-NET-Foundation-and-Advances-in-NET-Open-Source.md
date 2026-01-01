@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "DotNet YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw"
 date: 2025-11-14 19:21:05 +00:00
-permalink: "/videos/2025-11-14-State-of-the-NET-Foundation-and-Advances-in-NET-Open-Source.html"
+permalink: "/2025-11-14-State-of-the-NET-Foundation-and-Advances-in-NET-Open-Source.html"
 categories: ["Coding"]
 tags: [".NET", ".NET 10", ".NET Aspire 13", ".NET Foundation", ".NET MAUI 10", "ASP.NET Core 10", "C# 14", "Cloud Native", "Coding", "Cross Platform", "F# 10", "Language Innovation", "Microsoft", "Open Source", "Videos", "VS", "Web Development"]
 tags_normalized: ["dotnet", "dotnet 10", "dotnet aspire 13", "dotnet foundation", "dotnet maui 10", "aspdotnet core 10", "csharp 14", "cloud native", "coding", "cross platform", "fsharp 10", "language innovation", "microsoft", "open source", "videos", "vs", "web development"]

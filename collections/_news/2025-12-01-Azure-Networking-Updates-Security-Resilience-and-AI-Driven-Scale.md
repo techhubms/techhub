@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The Azure Blog"
 feed_url: "https://azure.microsoft.com/en-us/blog/feed/"
 date: 2025-12-01 17:00:00 +00:00
-permalink: "/news/2025-12-01-Azure-Networking-Updates-Security-Resilience-and-AI-Driven-Scale.html"
+permalink: "/2025-12-01-Azure-Networking-Updates-Security-Resilience-and-AI-Driven-Scale.html"
 categories: ["AI", "Azure", "Security"]
 tags: ["Advanced Container Networking", "AI", "AI Workloads", "AKS", "Application Gateway", "Azure", "Azure ExpressRoute", "Azure Networking", "Azure Private Link", "Cloud Transformation", "DNS Security Policy", "High Availability", "JWT Validation", "NAT Gateway", "Network Security", "Networking", "News", "Security", "Virtual WAN", "VPN Gateway", "Web Application Firewall"]
 tags_normalized: ["advanced container networking", "ai", "ai workloads", "aks", "application gateway", "azure", "azure expressroute", "azure networking", "azure private link", "cloud transformation", "dns security policy", "high availability", "jwt validation", "nat gateway", "network security", "networking", "news", "security", "virtual wan", "vpn gateway", "web application firewall"]

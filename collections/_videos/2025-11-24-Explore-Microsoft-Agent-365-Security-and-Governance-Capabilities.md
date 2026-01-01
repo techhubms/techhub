@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Events YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
 date: 2025-11-24 06:28:51 +00:00
-permalink: "/videos/2025-11-24-Explore-Microsoft-Agent-365-Security-and-Governance-Capabilities.html"
+permalink: "/2025-11-24-Explore-Microsoft-Agent-365-Security-and-Governance-Capabilities.html"
 categories: ["AI", "Security"]
 tags: ["AI", "AI Agents", "Audit Trail", "Conditional Access", "Data Loss Prevention", "DLP", "Governance", "Incident Response", "Lateral Movement", "Microsoft Agent 365", "Microsoft Ignite", "MSIgnite", "ProtectcloudAIplatformandapps", "Purview Audit", "Regulatory Compliance", "Security", "Session Management", "Threat Protection", "Videos"]
 tags_normalized: ["ai", "ai agents", "audit trail", "conditional access", "data loss prevention", "dlp", "governance", "incident response", "lateral movement", "microsoft agent 365", "microsoft ignite", "msignite", "protectcloudaiplatformandapps", "purview audit", "regulatory compliance", "security", "session management", "threat protection", "videos"]

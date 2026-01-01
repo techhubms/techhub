@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-11-06 20:55:11 +00:00
-permalink: "/community/2025-11-06-Boosting-Hybrid-Cloud-Data-Efficiency-for-EDA-with-Azure-NetApp-Files-Cache-Volumes.html"
+permalink: "/2025-11-06-Boosting-Hybrid-Cloud-Data-Efficiency-for-EDA-with-Azure-NetApp-Files-Cache-Volumes.html"
 categories: ["Azure"]
 tags: ["Azure", "Azure NetApp Files", "Bandwidth Optimization", "Cache Volumes", "Cloud Architecture", "Cloud Bursting", "Community", "Data Collaboration", "Data Mobility", "Distributed Workloads", "Electronic Design Automation", "Hybrid Cloud", "NetApp FlexCache", "NFS Workflow", "ONTP", "Performance", "Semiconductor Design", "SnapMirror", "Snapshot"]
 tags_normalized: ["azure", "azure netapp files", "bandwidth optimization", "cache volumes", "cloud architecture", "cloud bursting", "community", "data collaboration", "data mobility", "distributed workloads", "electronic design automation", "hybrid cloud", "netapp flexcache", "nfs workflow", "ontp", "performance", "semiconductor design", "snapmirror", "snapshot"]

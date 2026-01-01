@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Events YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
 date: 2025-11-20 15:46:06 +00:00
-permalink: "/videos/2025-11-20-How-to-Modernize-Oracle-Workloads-on-Azure-BRK162.html"
+permalink: "/2025-11-20-How-to-Modernize-Oracle-Workloads-on-Azure-BRK162.html"
 categories: ["AI", "Azure", "ML", "Security"]
 tags: ["Agent Demonstration", "AI", "App Modernization", "Azure", "Azure AI Services", "Azure Key Vault", "Azure Marketplace", "Azure Sentinel", "Cloud Security", "Data Integration", "Enterprise Adoption", "Frontier AI", "Microsoft Fabric", "Migrateandmodernizeyourestate", "Migration", "ML", "MSIgnite", "Oracle Database", "Security", "Videos"]
 tags_normalized: ["agent demonstration", "ai", "app modernization", "azure", "azure ai services", "azure key vault", "azure marketplace", "azure sentinel", "cloud security", "data integration", "enterprise adoption", "frontier ai", "microsoft fabric", "migrateandmodernizeyourestate", "migration", "ml", "msignite", "oracle database", "security", "videos"]

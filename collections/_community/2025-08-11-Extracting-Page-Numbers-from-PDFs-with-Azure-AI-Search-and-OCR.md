@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Community"
 date: 2025-08-11 09:10:39 +00:00
-permalink: "/community/2025-08-11-Extracting-Page-Numbers-from-PDFs-with-Azure-AI-Search-and-OCR.html"
+permalink: "/2025-08-11-Extracting-Page-Numbers-from-PDFs-with-Azure-AI-Search-and-OCR.html"
 categories: ["AI", "Azure"]
 tags: ["AI", "AI Search", "Azure", "Azure AI Search", "Azure Blob Storage", "Azure Cognitive Search", "Community", "Document Cracking", "Index Definition", "Index Projection", "Indexer", "Knowledge Mining", "Managed Identity", "Microsoft Azure", "OCR Skill", "Page Number Extraction", "Parent Child Indexing", "PDF Indexing", "RBAC", "REST API Integration", "Search Pipeline", "Skillset", "Text Merger"]
 tags_normalized: ["ai", "ai search", "azure", "azure ai search", "azure blob storage", "azure cognitive search", "community", "document cracking", "index definition", "index projection", "indexer", "knowledge mining", "managed identity", "microsoft azure", "ocr skill", "page number extraction", "parent child indexing", "pdf indexing", "rbac", "rest api integration", "search pipeline", "skillset", "text merger"]

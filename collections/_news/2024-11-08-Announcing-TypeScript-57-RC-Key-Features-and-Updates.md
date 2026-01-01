@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft TypeScript Blog"
 feed_url: "https://devblogs.microsoft.com/typescript/feed/"
 date: 2024-11-08 21:01:44 +00:00
-permalink: "/news/2024-11-08-Announcing-TypeScript-57-RC-Key-Features-and-Updates.html"
+permalink: "/2024-11-08-Announcing-TypeScript-57-RC-Key-Features-and-Updates.html"
 categories: ["Coding"]
 tags: ["Coding", "Composite Projects", "ES2024", "Implicit Any", "Index Signature", "JavaScript", "JSON Imports", "Lib.d.ts", "News", "Node.js", "Path Rewriting", "Project Configuration", "Relative Imports", "Release Candidate", "Rewriterelativeimportextensions", "Tsconfig", "TypedArray", "TypeScript", "TypeScript 5.7", "V8 Compile Caching", "Variable Initialization"]
 tags_normalized: ["coding", "composite projects", "es2024", "implicit any", "index signature", "javascript", "json imports", "libdotddotts", "news", "nodedotjs", "path rewriting", "project configuration", "relative imports", "release candidate", "rewriterelativeimportextensions", "tsconfig", "typedarray", "typescript", "typescript 5dot7", "v8 compile caching", "variable initialization"]

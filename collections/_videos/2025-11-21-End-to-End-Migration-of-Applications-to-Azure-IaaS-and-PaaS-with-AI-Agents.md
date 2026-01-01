@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Events YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
 date: 2025-11-21 07:14:34 +00:00
-permalink: "/videos/2025-11-21-End-to-End-Migration-of-Applications-to-Azure-IaaS-and-PaaS-with-AI-Agents.html"
+permalink: "/2025-11-21-End-to-End-Migration-of-Applications-to-Azure-IaaS-and-PaaS-with-AI-Agents.html"
 categories: ["AI", "Azure"]
 tags: ["AI", "AI Agent", "Application Discovery", "Azure", "Azure Accelerate Program", "Azure Arc", "Azure Migration", "Business Case", "Cloud Migration", "Copilot Agent", "Customization Features", "Environment Readiness", "IaaS", "Linux VMs", "Microsoft Ignite", "Migrateandmodernizeyourestate", "Migration Tools", "MSIgnite", "PaaS", "Platform Landing Zone", "ROI Analysis", "Videos", "VMware To Azure", "Windows Server", "Workload Modernization"]
 tags_normalized: ["ai", "ai agent", "application discovery", "azure", "azure accelerate program", "azure arc", "azure migration", "business case", "cloud migration", "copilot agent", "customization features", "environment readiness", "iaas", "linux vms", "microsoft ignite", "migrateandmodernizeyourestate", "migration tools", "msignite", "paas", "platform landing zone", "roi analysis", "videos", "vmware to azure", "windows server", "workload modernization"]

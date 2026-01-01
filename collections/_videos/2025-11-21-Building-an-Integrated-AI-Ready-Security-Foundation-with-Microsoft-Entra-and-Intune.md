@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Events YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
 date: 2025-11-21 15:04:28 +00:00
-permalink: "/videos/2025-11-21-Building-an-Integrated-AI-Ready-Security-Foundation-with-Microsoft-Entra-and-Intune.html"
+permalink: "/2025-11-21-Building-an-Integrated-AI-Ready-Security-Foundation-with-Microsoft-Entra-and-Intune.html"
 categories: ["AI", "Security"]
 tags: ["AI", "AI Security", "Authentication", "Compliance", "Conditional Access", "Copilot Security", "Edge For Business", "EPM Dashboard", "Identity Management", "Microsoft 365", "Microsoft Entra", "Microsoft Intune", "ModernizeSecOpswithaunifiedplatform", "MSIgnite", "Network Protection", "Organizational Insights", "Phased Rollout", "Security", "Security Governance", "Videos", "Zero Trust"]
 tags_normalized: ["ai", "ai security", "authentication", "compliance", "conditional access", "copilot security", "edge for business", "epm dashboard", "identity management", "microsoft 365", "microsoft entra", "microsoft intune", "modernizesecopswithaunifiedplatform", "msignite", "network protection", "organizational insights", "phased rollout", "security", "security governance", "videos", "zero trust"]

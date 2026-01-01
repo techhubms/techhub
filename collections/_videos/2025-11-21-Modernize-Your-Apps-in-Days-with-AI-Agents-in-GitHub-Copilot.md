@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Events YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
 date: 2025-11-21 08:07:34 +00:00
-permalink: "/videos/2025-11-21-Modernize-Your-Apps-in-Days-with-AI-Agents-in-GitHub-Copilot.html"
+permalink: "/2025-11-21-Modernize-Your-Apps-in-Days-with-AI-Agents-in-GitHub-Copilot.html"
 categories: ["AI", "Azure", "Coding", "DevOps", "GitHub Copilot"]
 tags: [".NET Framework", "AI", "AI Agents", "Application Upgrade", "Azure", "Azure Migrate", "Azure OpenAI", "Cloud Migration", "Coding", "Containerization", "Database Migration", "Developer Workflows", "DevOps", "GitHub Copilot", "IntelliJ", "Legacy Apps", "Migrateandmodernizeyourestate", "Modernization", "MSIgnite", "Oracle To PostgreSQL", "Pull Request Automation", "Videos"]
 tags_normalized: ["dotnet framework", "ai", "ai agents", "application upgrade", "azure", "azure migrate", "azure openai", "cloud migration", "coding", "containerization", "database migration", "developer workflows", "devops", "github copilot", "intellij", "legacy apps", "migrateandmodernizeyourestate", "modernization", "msignite", "oracle to postgresql", "pull request automation", "videos"]

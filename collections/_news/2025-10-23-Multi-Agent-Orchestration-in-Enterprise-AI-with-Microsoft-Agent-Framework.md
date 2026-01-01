@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Semantic Kernel Blog"
 feed_url: "https://devblogs.microsoft.com/semantic-kernel/feed/"
 date: 2025-10-23 08:09:07 +00:00
-permalink: "/news/2025-10-23-Multi-Agent-Orchestration-in-Enterprise-AI-with-Microsoft-Agent-Framework.html"
+permalink: "/2025-10-23-Multi-Agent-Orchestration-in-Enterprise-AI-with-Microsoft-Agent-Framework.html"
 categories: ["AI", "Azure", "Coding"]
 tags: [".NET", "Agent Framework", "Agents", "AI", "AI Orchestration", "APM Tracing", "Azure", "Azure AI Foundry", "Azure OpenAI", "Cloud Architecture", "Coding", "DevUI", "Enterprise AI", "LLM", "Microsoft Agent Framework", "Multi Agent Systems", "News", "Observability", "OpenTelemetry", "Python", "Samples", "Workflow Automation", "Workflow Patterns"]
 tags_normalized: ["dotnet", "agent framework", "agents", "ai", "ai orchestration", "apm tracing", "azure", "azure ai foundry", "azure openai", "cloud architecture", "coding", "devui", "enterprise ai", "llm", "microsoft agent framework", "multi agent systems", "news", "observability", "opentelemetry", "python", "samples", "workflow automation", "workflow patterns"]

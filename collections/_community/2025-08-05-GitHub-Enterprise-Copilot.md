@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Reddit Github Copilot"
 feed_url: "https://www.reddit.com/r/GithubCopilot.rss"
 date: 2025-08-05 00:50:53 +00:00
-permalink: "/community/2025-08-05-GitHub-Enterprise-Copilot.html"
+permalink: "/2025-08-05-GitHub-Enterprise-Copilot.html"
 categories: ["AI", "DevOps", "GitHub Copilot"]
 tags: ["AI", "Automation", "CI/CD Pipelines", "Codespaces", "Community", "Consulting Firm", "Deployment", "DevOps", "Digital Ocean", "GitHub Copilot", "GitHub Enterprise", "Pipeline Minutes", "Subscription Cost"]
 tags_normalized: ["ai", "automation", "cislashcd pipelines", "codespaces", "community", "consulting firm", "deployment", "devops", "digital ocean", "github copilot", "github enterprise", "pipeline minutes", "subscription cost"]

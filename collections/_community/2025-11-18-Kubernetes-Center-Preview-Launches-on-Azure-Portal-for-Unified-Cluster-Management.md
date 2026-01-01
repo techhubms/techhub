@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-11-18 20:45:45 +00:00
-permalink: "/community/2025-11-18-Kubernetes-Center-Preview-Launches-on-Azure-Portal-for-Unified-Cluster-Management.html"
+permalink: "/2025-11-18-Kubernetes-Center-Preview-Launches-on-Azure-Portal-for-Unified-Cluster-Management.html"
 categories: ["Azure", "DevOps", "Security"]
 tags: ["AKS", "Azure", "Azure Portal", "Cloud Monitoring", "Cluster Management", "Community", "Compliance", "Container Security", "DevOps", "Fleet Manager", "Kubernetes Center", "Managed Namespaces", "Microsoft Defender For Containers", "Multi Cluster Management", "Operational Insights", "Platform Engineering", "Security", "Streamlined Workflows"]
 tags_normalized: ["aks", "azure", "azure portal", "cloud monitoring", "cluster management", "community", "compliance", "container security", "devops", "fleet manager", "kubernetes center", "managed namespaces", "microsoft defender for containers", "multi cluster management", "operational insights", "platform engineering", "security", "streamlined workflows"]

@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft .NET Blog"
 feed_url: "https://devblogs.microsoft.com/dotnet/feed/"
 date: 2025-09-17 17:05:00 +00:00
-permalink: "/news/2025-09-17-Understanding-Instruction-and-Prompt-Files-for-GitHub-Copilot-in-NET-Development.html"
+permalink: "/2025-09-17-Understanding-Instruction-and-Prompt-Files-for-GitHub-Copilot-in-NET-Development.html"
 categories: ["AI", "Coding", "GitHub Copilot"]
 tags: [".NET", "AI", "AI Powered Development", "ASP.NET", "Best Practices", "C#", "Code Automation", "Code Review", "Coding", "Copilot", "Copilot Configuration", "Custom Instructions", "GitHub Copilot", "Instruction Files", "News", "Productivity", "Productivity Tips", "Prompt Files", "Repository Standards", "Team Collaboration", "VS", "VS Code"]
 tags_normalized: ["dotnet", "ai", "ai powered development", "aspdotnet", "best practices", "csharp", "code automation", "code review", "coding", "copilot", "copilot configuration", "custom instructions", "github copilot", "instruction files", "news", "productivity", "productivity tips", "prompt files", "repository standards", "team collaboration", "vs", "vs code"]

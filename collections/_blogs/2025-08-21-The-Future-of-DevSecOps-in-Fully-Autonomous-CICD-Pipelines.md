@@ -9,10 +9,10 @@ viewing_mode: "external"
 feed_name: "DevOps Blog"
 feed_url: "https://devops.com/feed/"
 date: 2025-08-21 17:12:05 +00:00
-permalink: "/blogs/2025-08-21-The-Future-of-DevSecOps-in-Fully-Autonomous-CICD-Pipelines.html"
+permalink: "/2025-08-21-The-Future-of-DevSecOps-in-Fully-Autonomous-CICD-Pipelines.html"
 categories: ["AI", "DevOps", "Security"]
-tags: ["AI", "Autonomous Pipeline", "CI/CD", "Continuous Deployment", "Continuous Integration", "Contributed Content", "DevOps", "DevSecOps", "Machine Learning", "Pipeline Automation", "Blogs", "Security", "Security Automation", "Security Monitoring", "Social Facebook", "Social LinkedIn", "Social X", "Threat Detection", "Vulnerability Management", "Zero Trust Architecture"]
-tags_normalized: ["ai", "autonomous pipeline", "cislashcd", "continuous deployment", "continuous integration", "contributed content", "devops", "devsecops", "machine learning", "pipeline automation", "blogs", "security", "security automation", "security monitoring", "social facebook", "social linkedin", "social x", "threat detection", "vulnerability management", "zero trust architecture"]
+tags: ["AI", "Autonomous Pipeline", "Blogs", "CI/CD", "Continuous Deployment", "Continuous Integration", "Contributed Content", "DevOps", "DevSecOps", "Machine Learning", "Pipeline Automation", "Security", "Security Automation", "Security Monitoring", "Social Facebook", "Social LinkedIn", "Social X", "Threat Detection", "Vulnerability Management", "Zero Trust Architecture"]
+tags_normalized: ["ai", "autonomous pipeline", "blogs", "cislashcd", "continuous deployment", "continuous integration", "contributed content", "devops", "devsecops", "machine learning", "pipeline automation", "security", "security automation", "security monitoring", "social facebook", "social linkedin", "social x", "threat detection", "vulnerability management", "zero trust architecture"]
 ---
 
 Ravi Shanker Sharma’s white paper examines how AI and ML are transforming DevSecOps, enabling fully autonomous CI/CD pipelines with real-time, continuous security automation.<!--excerpt_end-->

@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-11-18 16:00:00 +00:00
-permalink: "/community/2025-11-18-Preview-of-Azure-Dlsv7-Dsv7-and-Esv7-VMs-with-Intel-Xeon-6-Granite-Rapids.html"
+permalink: "/2025-11-18-Preview-of-Azure-Dlsv7-Dsv7-and-Esv7-VMs-with-Intel-Xeon-6-Granite-Rapids.html"
 categories: ["Azure"]
 tags: ["Azure", "Azure Boost", "Azure VMs", "Business Intelligence", "Community", "Data Warehousing", "Dlsv7", "Dsv7", "Esv7", "Granite Rapids", "Intel Xeon 6", "Memory Optimized", "Networking", "NoSQL", "NVMe", "Premium Disk", "Redis", "SAP", "SQL Server", "Ultra Disk", "Vcpu", "VM Preview"]
 tags_normalized: ["azure", "azure boost", "azure vms", "business intelligence", "community", "data warehousing", "dlsv7", "dsv7", "esv7", "granite rapids", "intel xeon 6", "memory optimized", "networking", "nosql", "nvme", "premium disk", "redis", "sap", "sql server", "ultra disk", "vcpu", "vm preview"]

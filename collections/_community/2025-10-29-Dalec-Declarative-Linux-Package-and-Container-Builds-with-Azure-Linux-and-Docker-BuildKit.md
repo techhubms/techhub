@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-10-29 20:33:52 +00:00
-permalink: "/community/2025-10-29-Dalec-Declarative-Linux-Package-and-Container-Builds-with-Azure-Linux-and-Docker-BuildKit.html"
+permalink: "/2025-10-29-Dalec-Declarative-Linux-Package-and-Container-Builds-with-Azure-Linux-and-Docker-BuildKit.html"
 categories: ["Azure", "DevOps", "Security"]
 tags: ["Azure", "Azure Linux", "CI/CD", "Community", "Container Images", "Dalec", "Declarative Configuration", "DevOps", "Docker BuildKit", "Kubernetes", "Linux Packaging", "Multi Architecture Builds", "Package Signing", "Provenance", "RPM", "SBOM", "Security", "YAML"]
 tags_normalized: ["azure", "azure linux", "cislashcd", "community", "container images", "dalec", "declarative configuration", "devops", "docker buildkit", "kubernetes", "linux packaging", "multi architecture builds", "package signing", "provenance", "rpm", "sbom", "security", "yaml"]

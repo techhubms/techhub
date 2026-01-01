@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Fabric Blog"
 feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
 date: 2025-10-08 07:03:26 +00:00
-permalink: "/news/2025-10-08-Understanding-Locking-and-DDL-Blocking-in-Microsoft-Fabric-Data-Warehouse.html"
+permalink: "/2025-10-08-Understanding-Locking-and-DDL-Blocking-in-Microsoft-Fabric-Data-Warehouse.html"
 categories: ["Azure", "ML"]
 tags: ["ACID Transactions", "Azure", "Concurrency", "Data Engineering", "Data Warehouse", "Database Performance", "DDL Blocking", "DML Operations", "Locking", "Microsoft Fabric", "ML", "News", "Schema Modification Lock", "Snapshot Isolation", "Sys.dm Tran Locks", "Sys.tables", "T SQL", "Workload Management"]
 tags_normalized: ["acid transactions", "azure", "concurrency", "data engineering", "data warehouse", "database performance", "ddl blocking", "dml operations", "locking", "microsoft fabric", "ml", "news", "schema modification lock", "snapshot isolation", "sysdotdm tran locks", "sysdottables", "t sql", "workload management"]

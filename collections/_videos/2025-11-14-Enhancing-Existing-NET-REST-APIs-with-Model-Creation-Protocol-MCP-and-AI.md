@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "DotNet YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw"
 date: 2025-11-14 19:21:26 +00:00
-permalink: "/videos/2025-11-14-Enhancing-Existing-NET-REST-APIs-with-Model-Creation-Protocol-MCP-and-AI.html"
+permalink: "/2025-11-14-Enhancing-Existing-NET-REST-APIs-with-Model-Creation-Protocol-MCP-and-AI.html"
 categories: ["AI", "Coding"]
 tags: [".NET", ".NET 10", "AI", "AI Integration", "AI Services", "API Design", "API Development", "ASP.NET Core", "Azure API Management", "C#", "Coding", "LLM", "MCP", "MCP SDK", "Model Creation Protocol", "REST API", "Videos", "Web API"]
 tags_normalized: ["dotnet", "dotnet 10", "ai", "ai integration", "ai services", "api design", "api development", "aspdotnet core", "azure api management", "csharp", "coding", "llm", "mcp", "mcp sdk", "model creation protocol", "rest api", "videos", "web api"]

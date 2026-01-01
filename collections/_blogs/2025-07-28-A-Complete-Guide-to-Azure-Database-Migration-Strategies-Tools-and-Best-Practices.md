@@ -9,10 +9,10 @@ viewing_mode: "external"
 feed_name: "Dellenny's Blog"
 feed_url: "https://dellenny.com/feed/"
 date: 2025-07-28 09:12:20 +00:00
-permalink: "/blogs/2025-07-28-A-Complete-Guide-to-Azure-Database-Migration-Strategies-Tools-and-Best-Practices.html"
+permalink: "/2025-07-28-A-Complete-Guide-to-Azure-Database-Migration-Strategies-Tools-and-Best-Practices.html"
 categories: ["Azure"]
-tags: ["Azure", "Azure Advisor", "Azure Database Migration", "Azure Database Migration Service", "Azure Migrate", "Azure Monitor", "Azure SQL Database", "Backup", "Cloud Migration", "Cosmos DB", "Data Migration Assistant", "Database Migration", "Disaster Recovery", "Performance Tuning", "Blogs", "SQL Server", "SQL Server Migration Assistant"]
-tags_normalized: ["azure", "azure advisor", "azure database migration", "azure database migration service", "azure migrate", "azure monitor", "azure sql database", "backup", "cloud migration", "cosmos db", "data migration assistant", "database migration", "disaster recovery", "performance tuning", "blogs", "sql server", "sql server migration assistant"]
+tags: ["Azure", "Azure Advisor", "Azure Database Migration", "Azure Database Migration Service", "Azure Migrate", "Azure Monitor", "Azure SQL Database", "Backup", "Blogs", "Cloud Migration", "Cosmos DB", "Data Migration Assistant", "Database Migration", "Disaster Recovery", "Performance Tuning", "SQL Server", "SQL Server Migration Assistant"]
+tags_normalized: ["azure", "azure advisor", "azure database migration", "azure database migration service", "azure migrate", "azure monitor", "azure sql database", "backup", "blogs", "cloud migration", "cosmos db", "data migration assistant", "database migration", "disaster recovery", "performance tuning", "sql server", "sql server migration assistant"]
 ---
 
 Dellenny provides a detailed, actionable guide for database professionals on Azure database migration strategies, associated Microsoft tools, and operational best practices.<!--excerpt_end-->

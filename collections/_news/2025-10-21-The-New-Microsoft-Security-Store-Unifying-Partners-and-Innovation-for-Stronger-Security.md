@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Security Blog"
 feed_url: "https://www.microsoft.com/en-us/security/blog/feed/"
 date: 2025-10-21 16:00:00 +00:00
-permalink: "/news/2025-10-21-The-New-Microsoft-Security-Store-Unifying-Partners-and-Innovation-for-Stronger-Security.html"
+permalink: "/2025-10-21-The-New-Microsoft-Security-Store-Unifying-Partners-and-Innovation-for-Stronger-Security.html"
 categories: ["AI", "Security"]
 tags: ["AI", "AI Agents", "Automation", "Cloud Security", "Compliance Automation", "Endpoint Security", "Identity Management", "Microsoft Defender", "Microsoft Entra", "Microsoft Purview", "Microsoft Security Store", "Microsoft Sentinel", "News", "SaaS Solutions", "Security", "Security Copilot", "Security Marketplace", "Threat Protection", "Zero Trust"]
 tags_normalized: ["ai", "ai agents", "automation", "cloud security", "compliance automation", "endpoint security", "identity management", "microsoft defender", "microsoft entra", "microsoft purview", "microsoft security store", "microsoft sentinel", "news", "saas solutions", "security", "security copilot", "security marketplace", "threat protection", "zero trust"]

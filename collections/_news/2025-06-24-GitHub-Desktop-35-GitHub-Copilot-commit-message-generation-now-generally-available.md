@@ -10,7 +10,7 @@ categories: ["AI", "GitHub Copilot"]
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/changelog/label/copilot/feed/"
 date: 2025-06-24 10:26:20 +00:00
-permalink: "/news/2025-06-24-GitHub-Desktop-35-GitHub-Copilot-commit-message-generation-now-generally-available.html"
+permalink: "/2025-06-24-GitHub-Desktop-35-GitHub-Copilot-commit-message-generation-now-generally-available.html"
 tags: ["AI", "GitHub Copilot", "GitHub Desktop", "Improvements", "News", "Version 3.5"]
 tags_normalized: ["ai", "github copilot", "github desktop", "improvements", "news", "version 3dot5"]
 ---

@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/changelog/feed/"
 date: 2025-12-18 17:18:04 +00:00
-permalink: "/news/2025-12-18-Claude-Opus-45-Now-Available-in-GitHub-Copilot.html"
+permalink: "/2025-12-18-Claude-Opus-45-Now-Available-in-GitHub-Copilot.html"
 categories: ["AI", "GitHub Copilot"]
 tags: ["AI", "AI Models", "Claude Opus 4.5", "Copilot", "Copilot Business", "Copilot Chat", "Copilot Enterprise", "Copilot Pro", "Eclipse", "Enterprise Administration", "GitHub Copilot", "IDE Integration", "JetBrains", "Model Selection", "News", "VS", "VS Code", "Xcode"]
 tags_normalized: ["ai", "ai models", "claude opus 4dot5", "copilot", "copilot business", "copilot chat", "copilot enterprise", "copilot pro", "eclipse", "enterprise administration", "github copilot", "ide integration", "jetbrains", "model selection", "news", "vs", "vs code", "xcode"]

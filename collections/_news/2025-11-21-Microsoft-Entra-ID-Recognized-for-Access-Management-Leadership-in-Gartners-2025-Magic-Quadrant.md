@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Security Blog"
 feed_url: "https://www.microsoft.com/en-us/security/blog/feed/"
 date: 2025-11-21 17:00:00 +00:00
-permalink: "/news/2025-11-21-Microsoft-Entra-ID-Recognized-for-Access-Management-Leadership-in-Gartners-2025-Magic-Quadrant.html"
+permalink: "/2025-11-21-Microsoft-Entra-ID-Recognized-for-Access-Management-Leadership-in-Gartners-2025-Magic-Quadrant.html"
 categories: ["AI", "Security"]
 tags: ["Access Management", "Agent ID", "AI", "AI Powered Security", "Conditional Access", "Cybersecurity", "Entra External ID", "Gartner Magic Quadrant", "IAM", "Identity Governance", "Identity Solutions", "Microsoft Entra", "Microsoft Security", "Multifactor Authentication", "News", "Security", "Security Copilot", "Teams Integration", "Threat Response", "Zero Trust"]
 tags_normalized: ["access management", "agent id", "ai", "ai powered security", "conditional access", "cybersecurity", "entra external id", "gartner magic quadrant", "iam", "identity governance", "identity solutions", "microsoft entra", "microsoft security", "multifactor authentication", "news", "security", "security copilot", "teams integration", "threat response", "zero trust"]

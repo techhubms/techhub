@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "GitHub Engineering Blog"
 feed_url: "https://github.blog/engineering/feed/"
 date: 2025-05-09 16:56:41 +00:00
-permalink: "/news/2025-05-09-Design-System-Annotations-Part-1-Bridging-Accessibility-Gaps-in-Primer-Components.html"
+permalink: "/2025-05-09-Design-System-Annotations-Part-1-Bridging-Accessibility-Gaps-in-Primer-Components.html"
 categories: ["DevOps"]
 tags: ["A11y", "Accessibility", "Annotations", "ARIA", "Components", "Design", "Design Systems", "DevOps", "Engineering", "Figma", "GitHub", "News", "Primer", "User Experience", "Web Standards"]
 tags_normalized: ["a11y", "accessibility", "annotations", "aria", "components", "design", "design systems", "devops", "engineering", "figma", "github", "news", "primer", "user experience", "web standards"]

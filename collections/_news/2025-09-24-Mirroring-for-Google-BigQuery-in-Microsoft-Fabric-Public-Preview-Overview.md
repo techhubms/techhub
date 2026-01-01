@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Fabric Blog"
 feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
 date: 2025-09-24 15:00:00 +00:00
-permalink: "/news/2025-09-24-Mirroring-for-Google-BigQuery-in-Microsoft-Fabric-Public-Preview-Overview.html"
+permalink: "/2025-09-24-Mirroring-for-Google-BigQuery-in-Microsoft-Fabric-Public-Preview-Overview.html"
 categories: ["Azure", "ML"]
 tags: ["Analytics", "Azure", "Change Data Capture", "Cross Cloud", "Data Governance", "Data Integration", "Data Replication", "Data Synchronization", "ETL", "Google BigQuery", "Microsoft Fabric", "Mirroring", "ML", "News", "OneLake", "OPDG", "Power BI", "Real Time Data", "Zero ETL"]
 tags_normalized: ["analytics", "azure", "change data capture", "cross cloud", "data governance", "data integration", "data replication", "data synchronization", "etl", "google bigquery", "microsoft fabric", "mirroring", "ml", "news", "onelake", "opdg", "power bi", "real time data", "zero etl"]

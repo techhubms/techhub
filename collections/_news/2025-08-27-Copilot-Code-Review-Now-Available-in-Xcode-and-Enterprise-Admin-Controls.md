@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/changelog/feed/"
 date: 2025-08-27 18:03:54 +00:00
-permalink: "/news/2025-08-27-Copilot-Code-Review-Now-Available-in-Xcode-and-Enterprise-Admin-Controls.html"
+permalink: "/2025-08-27-Copilot-Code-Review-Now-Available-in-Xcode-and-Enterprise-Admin-Controls.html"
 categories: ["AI", "GitHub Copilot"]
 tags: ["Admin Control", "AI", "CCR", "Code Review Automation", "Copilot Code Review", "Developer Tools", "Eclipse", "Enterprise Administration", "Enterprise Policy", "GitHub Copilot", "JetBrains", "News", "Organization Settings", "Pull Requests", "Security Review", "VS Code", "Xcode"]
 tags_normalized: ["admin control", "ai", "ccr", "code review automation", "copilot code review", "developer tools", "eclipse", "enterprise administration", "enterprise policy", "github copilot", "jetbrains", "news", "organization settings", "pull requests", "security review", "vs code", "xcode"]

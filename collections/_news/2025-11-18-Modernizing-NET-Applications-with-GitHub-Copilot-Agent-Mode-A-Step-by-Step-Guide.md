@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft .NET Blog"
 feed_url: "https://devblogs.microsoft.com/dotnet/feed/"
 date: 2025-11-18 18:05:00 +00:00
-permalink: "/news/2025-11-18-Modernizing-NET-Applications-with-GitHub-Copilot-Agent-Mode-A-Step-by-Step-Guide.html"
+permalink: "/2025-11-18-Modernizing-NET-Applications-with-GitHub-Copilot-Agent-Mode-A-Step-by-Step-Guide.html"
 categories: ["AI", "Azure", "Coding", "DevOps", "GitHub Copilot", "Security"]
 tags: [".NET", "AI", "App Modernization", "Authentication", "Automated Testing", "Azure", "Azure Migration", "CI/CD", "Cloud", "Cloud Readiness", "Code Assessment", "Coding", "Dependency Management", "DevOps", "Framework Upgrade", "Git Integration", "GitHub Copilot", "Identity Management", "Monitoring", "News", "Security", "Security Scanning", "VS"]
 tags_normalized: ["dotnet", "ai", "app modernization", "authentication", "automated testing", "azure", "azure migration", "cislashcd", "cloud", "cloud readiness", "code assessment", "coding", "dependency management", "devops", "framework upgrade", "git integration", "github copilot", "identity management", "monitoring", "news", "security", "security scanning", "vs"]

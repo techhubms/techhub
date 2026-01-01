@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Developer YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
 date: 2025-11-25 17:24:34 +00:00
-permalink: "/videos/2025-11-25-AI-Assisted-Development-Workflow-with-mirrord-and-Azure-Kubernetes.html"
+permalink: "/2025-11-25-AI-Assisted-Development-Workflow-with-mirrord-and-Azure-Kubernetes.html"
 categories: ["AI", "Azure", "Coding", "DevOps"]
 tags: ["AI", "AI Code Editors", "AKS", "Azure", "Cloud Computing", "Cloud Development", "Coding", "Continuous Integration", "Debugging", "Dev", "Development", "Development Workflow", "DevOps", "Distributed Systems", "Kubernetes", "Local Testing", "Metalbear", "Microservices", "Microsoft", "Mirrord", "Open Source Tools", "Tech", "Technology", "Videos"]
 tags_normalized: ["ai", "ai code editors", "aks", "azure", "cloud computing", "cloud development", "coding", "continuous integration", "debugging", "dev", "development", "development workflow", "devops", "distributed systems", "kubernetes", "local testing", "metalbear", "microservices", "microsoft", "mirrord", "open source tools", "tech", "technology", "videos"]

@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Visual Studio Code YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SLNwkd3w"
 date: 2025-10-01 14:00:27 +00:00
-permalink: "/videos/2025-10-01-Prompting-for-More-Than-Code-with-GitHub-Copilot.html"
+permalink: "/2025-10-01-Prompting-for-More-Than-Code-with-GitHub-Copilot.html"
 categories: ["AI", "GitHub Copilot"]
 tags: ["AI", "Application Development", "Code", "Copilot", "Copilot Chat", "Creative AI", "Developer", "Developer Community", "Developer Productivity", "Developer Tools", "GitHub Copilot", "Microsoft", "Prompt Driven Development", "Prompt Engineering", "Promptdrivendevelopment", "Prompts", "Recipe Planning", "Software Developer", "Software Development", "Videos", "VS Code"]
 tags_normalized: ["ai", "application development", "code", "copilot", "copilot chat", "creative ai", "developer", "developer community", "developer productivity", "developer tools", "github copilot", "microsoft", "prompt driven development", "prompt engineering", "promptdrivendevelopment", "prompts", "recipe planning", "software developer", "software development", "videos", "vs code"]

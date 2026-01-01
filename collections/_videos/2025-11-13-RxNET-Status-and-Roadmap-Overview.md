@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "DotNet YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw"
 date: 2025-11-13 10:00:06 +00:00
-permalink: "/videos/2025-11-13-RxNET-Status-and-Roadmap-Overview.html"
+permalink: "/2025-11-13-RxNET-Status-and-Roadmap-Overview.html"
 categories: ["Coding"]
 tags: [".NET", "Asynchronous Programming", "Coding", "Event Streams", "Framework Updates", "Future Planning", "Library Development", "Microsoft", "Open Source", "Package Versioning", "Reactive Extensions", "Reactive Programming", "Rx.NET", "Software Roadmap", "Videos"]
 tags_normalized: ["dotnet", "asynchronous programming", "coding", "event streams", "framework updates", "future planning", "library development", "microsoft", "open source", "package versioning", "reactive extensions", "reactive programming", "rxdotnet", "software roadmap", "videos"]

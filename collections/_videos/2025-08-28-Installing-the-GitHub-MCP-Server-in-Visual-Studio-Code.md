@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Visual Studio Code YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SLNwkd3w"
 date: 2025-08-28 00:00:43 +00:00
-permalink: "/videos/2025-08-28-Installing-the-GitHub-MCP-Server-in-Visual-Studio-Code.html"
+permalink: "/2025-08-28-Installing-the-GitHub-MCP-Server-in-Visual-Studio-Code.html"
 categories: ["AI", "GitHub Copilot"]
 tags: ["AI", "AI Tools", "Code Completion", "Copilot", "Copilot Agent", "Developer Workflow", "GitHub", "GitHub Copilot", "Local Development", "Mcp", "MCP Server", "Mcpserver", "Remote Server Setup", "Videos", "VS Code", "VSC"]
 tags_normalized: ["ai", "ai tools", "code completion", "copilot", "copilot agent", "developer workflow", "github", "github copilot", "local development", "mcp", "mcp server", "mcpserver", "remote server setup", "videos", "vs code", "vsc"]

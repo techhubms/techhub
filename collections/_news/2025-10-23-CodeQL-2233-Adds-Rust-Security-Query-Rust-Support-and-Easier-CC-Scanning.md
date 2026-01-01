@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/changelog/feed/"
 date: 2025-10-23 18:47:31 +00:00
-permalink: "/news/2025-10-23-CodeQL-2233-Adds-Rust-Security-Query-Rust-Support-and-Easier-CC-Scanning.html"
+permalink: "/2025-10-23-CodeQL-2233-Adds-Rust-Security-Query-Rust-Support-and-Easier-CC-Scanning.html"
 categories: ["DevOps", "Security"]
 tags: ["Application Security", "Build Automation", "C++", "CodeQL", "Data Flow Analysis", "DevOps", "GitHub", "Go", "Improvement", "Java", "Kotlin", "News", "Query Coverage", "Rust", "Secure Coding", "Security", "Security Scanning", "Static Analysis", "Taint Analysis"]
 tags_normalized: ["application security", "build automation", "cplusplus", "codeql", "data flow analysis", "devops", "github", "go", "improvement", "java", "kotlin", "news", "query coverage", "rust", "secure coding", "security", "security scanning", "static analysis", "taint analysis"]

@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Events YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
 date: 2025-11-21 06:32:50 +00:00
-permalink: "/videos/2025-11-21-Windows-Development-for-Secure-Scalable-and-AI-powered-Enterprise-Solutions.html"
+permalink: "/2025-11-21-Windows-Development-for-Secure-Scalable-and-AI-powered-Enterprise-Solutions.html"
 categories: ["AI", "Coding", "Security"]
 tags: ["Agent Connectors", "Agent ID", "Agent Workspace", "AI", "AI Development", "Coding", "Developer Environment", "Enterprise Security", "Foundry Local", "Local AI", "LoRA Adapter", "MCP", "Microsoft Cloud Platform", "MSIgnite", "Performance", "Privacy", "Scalability", "ScalewithcloudandAIendpoints", "Security", "Semantic Search", "Videos", "Windows APIs", "Windows Developer Platform", "Winget"]
 tags_normalized: ["agent connectors", "agent id", "agent workspace", "ai", "ai development", "coding", "developer environment", "enterprise security", "foundry local", "local ai", "lora adapter", "mcp", "microsoft cloud platform", "msignite", "performance", "privacy", "scalability", "scalewithcloudandaiendpoints", "security", "semantic search", "videos", "windows apis", "windows developer platform", "winget"]

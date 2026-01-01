@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Reddit Github Copilot"
 feed_url: "https://www.reddit.com/r/GithubCopilot.rss"
 date: 2025-08-04 14:19:05 +00:00
-permalink: "/community/2025-08-04-Is-it-fraud-I-wish-it-is-not.html"
+permalink: "/2025-08-04-Is-it-fraud-I-wish-it-is-not.html"
 categories: ["AI", "GitHub Copilot"]
 tags: ["AI", "AI Services", "Billing", "Chat Credits", "Code Completion", "Community", "Developer Tools", "Feature Comparison", "GitHub Copilot", "Subscription", "Usage Patterns", "User Feedback"]
 tags_normalized: ["ai", "ai services", "billing", "chat credits", "code completion", "community", "developer tools", "feature comparison", "github copilot", "subscription", "usage patterns", "user feedback"]

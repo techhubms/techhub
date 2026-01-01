@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/changelog/feed/"
 date: 2025-11-20 15:46:54 +00:00
-permalink: "/news/2025-11-20-Enterprise-BYOK-for-GitHub-Copilot-Now-in-Public-Preview.html"
+permalink: "/2025-11-20-Enterprise-BYOK-for-GitHub-Copilot-Now-in-Public-Preview.html"
 categories: ["AI", "DevOps", "GitHub Copilot"]
 tags: ["Admin Controls", "AI", "Anthropic", "API Key", "Billing", "BYOK", "Copilot", "Copilot Chat", "DevOps", "Enterprise", "GitHub Copilot", "IDE Integration", "LLM Providers", "Microsoft Foundry", "Model Management", "News", "OpenAI", "Organization Admin", "VS Code", "Xai"]
 tags_normalized: ["admin controls", "ai", "anthropic", "api key", "billing", "byok", "copilot", "copilot chat", "devops", "enterprise", "github copilot", "ide integration", "llm providers", "microsoft foundry", "model management", "news", "openai", "organization admin", "vs code", "xai"]

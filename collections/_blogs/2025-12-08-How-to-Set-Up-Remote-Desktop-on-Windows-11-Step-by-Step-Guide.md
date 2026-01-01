@@ -9,10 +9,10 @@ viewing_mode: "external"
 feed_name: "Dellenny's Blog"
 feed_url: "https://dellenny.com/feed/"
 date: 2025-12-08 12:11:18 +00:00
-permalink: "/blogs/2025-12-08-How-to-Set-Up-Remote-Desktop-on-Windows-11-Step-by-Step-Guide.html"
+permalink: "/2025-12-08-How-to-Set-Up-Remote-Desktop-on-Windows-11-Step-by-Step-Guide.html"
 categories: ["Security"]
-tags: ["Desktop Connection", "Firewall", "Microsoft Account", "Mobile Access", "Network Level Authentication", "PC Configuration", "Port Forwarding", "Blogs", "RDP", "Remote Access", "Remote Desktop", "Security", "System Administration", "Technical Support", "User Permissions", "VPN", "Windows 11"]
-tags_normalized: ["desktop connection", "firewall", "microsoft account", "mobile access", "network level authentication", "pc configuration", "port forwarding", "blogs", "rdp", "remote access", "remote desktop", "security", "system administration", "technical support", "user permissions", "vpn", "windows 11"]
+tags: ["Blogs", "Desktop Connection", "Firewall", "Microsoft Account", "Mobile Access", "Network Level Authentication", "PC Configuration", "Port Forwarding", "RDP", "Remote Access", "Remote Desktop", "Security", "System Administration", "Technical Support", "User Permissions", "VPN", "Windows 11"]
+tags_normalized: ["blogs", "desktop connection", "firewall", "microsoft account", "mobile access", "network level authentication", "pc configuration", "port forwarding", "rdp", "remote access", "remote desktop", "security", "system administration", "technical support", "user permissions", "vpn", "windows 11"]
 ---
 
 John Edward outlines a practical guide to setting up and securing Remote Desktop on Windows 11, showing users how to enable connections, troubleshoot issues, add users, and protect access.<!--excerpt_end-->

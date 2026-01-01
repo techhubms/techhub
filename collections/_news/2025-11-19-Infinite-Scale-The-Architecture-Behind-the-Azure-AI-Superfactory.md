@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft News"
 feed_url: "https://news.microsoft.com/source/feed/"
 date: 2025-11-19 21:19:14 +00:00
-permalink: "/news/2025-11-19-Infinite-Scale-The-Architecture-Behind-the-Azure-AI-Superfactory.html"
+permalink: "/2025-11-19-Infinite-Scale-The-Architecture-Behind-the-Azure-AI-Superfactory.html"
 categories: ["AI", "Azure"]
 tags: ["AI", "AI Workload Management", "Azure", "Azure AI", "Blackwell Accelerators", "Cluster Networking", "Compute Density", "Dynamic Allocation", "Ethernet Backend", "Fairwater Datacenter", "Flat Network Architecture", "Frontier Model Training", "High Availability Power", "Hyperscale Infrastructure", "Liquid Cooling", "News", "NVIDIA GPU", "OPTICAL WAN Network", "Packet Trimming", "SONiC", "Supercomputer", "Sustainable Datacenter"]
 tags_normalized: ["ai", "ai workload management", "azure", "azure ai", "blackwell accelerators", "cluster networking", "compute density", "dynamic allocation", "ethernet backend", "fairwater datacenter", "flat network architecture", "frontier model training", "high availability power", "hyperscale infrastructure", "liquid cooling", "news", "nvidia gpu", "optical wan network", "packet trimming", "sonic", "supercomputer", "sustainable datacenter"]

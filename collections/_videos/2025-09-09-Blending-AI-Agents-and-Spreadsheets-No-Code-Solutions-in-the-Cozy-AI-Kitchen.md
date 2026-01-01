@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Developer YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
 date: 2025-09-09 15:19:04 +00:00
-permalink: "/videos/2025-09-09-Blending-AI-Agents-and-Spreadsheets-No-Code-Solutions-in-the-Cozy-AI-Kitchen.html"
+permalink: "/2025-09-09-Blending-AI-Agents-and-Spreadsheets-No-Code-Solutions-in-the-Cozy-AI-Kitchen.html"
 categories: ["AI", "Azure"]
 tags: ["AI", "AI Agents", "Automation", "Azure", "Azure OpenAI", "CalcLM", "Cloud Computing", "Data Analysis", "Data Science", "Dev", "Development", "Executive Summaries", "Foundry Labs", "GPT 4.1", "Machine Learning", "Microsoft", "Natural Language Processing", "No Code", "Product Management", "Spreadsheets", "Tech", "Technology", "Videos"]
 tags_normalized: ["ai", "ai agents", "automation", "azure", "azure openai", "calclm", "cloud computing", "data analysis", "data science", "dev", "development", "executive summaries", "foundry labs", "gpt 4dot1", "machine learning", "microsoft", "natural language processing", "no code", "product management", "spreadsheets", "tech", "technology", "videos"]

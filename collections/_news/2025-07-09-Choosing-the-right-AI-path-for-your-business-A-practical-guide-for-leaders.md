@@ -10,7 +10,7 @@ categories: ["AI"]
 feed_name: "Microsoft News"
 feed_url: "https://news.microsoft.com/source/feed/"
 date: 2025-07-09 21:48:06 +00:00
-permalink: "/news/2025-07-09-Choosing-the-right-AI-path-for-your-business-A-practical-guide-for-leaders.html"
+permalink: "/2025-07-09-Choosing-the-right-AI-path-for-your-business-A-practical-guide-for-leaders.html"
 tags: ["AI", "AI Strategy", "Business", "Company News", "Decision Making", "Leadership", "News", "Practical Guide"]
 tags_normalized: ["ai", "ai strategy", "business", "company news", "decision making", "leadership", "news", "practical guide"]
 ---

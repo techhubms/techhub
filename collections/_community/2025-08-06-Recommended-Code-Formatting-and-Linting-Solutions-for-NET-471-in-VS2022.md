@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Reddit CSharp"
 feed_url: "https://www.reddit.com/r/csharp/.rss"
 date: 2025-08-06 12:51:50 +00:00
-permalink: "/community/2025-08-06-Recommended-Code-Formatting-and-Linting-Solutions-for-NET-471-in-VS2022.html"
+permalink: "/2025-08-06-Recommended-Code-Formatting-and-Linting-Solutions-for-NET-471-in-VS2022.html"
 categories: ["Coding", "DevOps"]
 tags: [".NET", ".NET 4.7.1", "Build Enforcement", "C#", "Code Formatting", "CodeMaid", "Coding", "Community", "CSharpier", "DevOps", "EditorConfig", "Linting", "Roslyn Analyzers", "Ruleset", "SonarAnalyzer.CSharp", "StyleCop.Analyzers", "Team Collaboration", "VS"]
 tags_normalized: ["dotnet", "dotnet 4dot7dot1", "build enforcement", "csharp", "code formatting", "codemaid", "coding", "community", "csharpier", "devops", "editorconfig", "linting", "roslyn analyzers", "ruleset", "sonaranalyzerdotcsharp", "stylecopdotanalyzers", "team collaboration", "vs"]

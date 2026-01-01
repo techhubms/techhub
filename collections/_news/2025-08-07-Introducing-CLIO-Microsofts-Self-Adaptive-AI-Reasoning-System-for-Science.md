@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft News"
 feed_url: "https://news.microsoft.com/source/feed/"
 date: 2025-08-07 18:08:54 +00:00
-permalink: "/news/2025-08-07-Introducing-CLIO-Microsofts-Self-Adaptive-AI-Reasoning-System-for-Science.html"
+permalink: "/2025-08-07-Introducing-CLIO-Microsofts-Self-Adaptive-AI-Reasoning-System-for-Science.html"
 categories: ["AI"]
 tags: ["AI", "AI Evaluation", "AI in Science", "AI Trustworthiness", "Biomedical AI", "CLIO", "Cognitive Loop", "Company News", "Explainable AI", "GraphRAG", "HLE", "Humanity’s Last Exam", "in Situ Optimization", "MAI DxO", "Microsoft Discovery Platform", "Microsoft Research", "News", "OpenAI GPT 4.1", "Scientific Discovery", "Self Adaptive AI", "Transparent Reasoning", "Uncertainty Handling", "User Control"]
 tags_normalized: ["ai", "ai evaluation", "ai in science", "ai trustworthiness", "biomedical ai", "clio", "cognitive loop", "company news", "explainable ai", "graphrag", "hle", "humanitys last exam", "in situ optimization", "mai dxo", "microsoft discovery platform", "microsoft research", "news", "openai gpt 4dot1", "scientific discovery", "self adaptive ai", "transparent reasoning", "uncertainty handling", "user control"]

@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Events YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
 date: 2025-11-20 17:01:31 +00:00
-permalink: "/videos/2025-11-20-Unleashing-Telco-Innovation-Agentic-AI-and-Connected-Intelligence-with-Microsoft-Cloud.html"
+permalink: "/2025-11-20-Unleashing-Telco-Innovation-Agentic-AI-and-Connected-Intelligence-with-Microsoft-Cloud.html"
 categories: ["AI", "Azure", "ML", "Security"]
 tags: ["Agentic AI", "AI", "Autonomous Networks", "Azure", "Cloud Solutions", "Connected Intelligence", "Data Unification", "Machine Learning", "Microsoft AI", "Microsoft Ignite", "ML", "Model Tuning", "MSIgnite", "Network Automation", "Nokia", "Security", "Security Agents", "Service Delivery", "Telecom", "TM Forum Standards", "Unifyyourdataplatform", "Videos"]
 tags_normalized: ["agentic ai", "ai", "autonomous networks", "azure", "cloud solutions", "connected intelligence", "data unification", "machine learning", "microsoft ai", "microsoft ignite", "ml", "model tuning", "msignite", "network automation", "nokia", "security", "security agents", "service delivery", "telecom", "tm forum standards", "unifyyourdataplatform", "videos"]

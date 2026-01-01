@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Visual Studio Code YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SLNwkd3w"
 date: 2025-11-19 19:14:53 +00:00
-permalink: "/videos/2025-11-19-Using-the-Plan-Agent-in-VS-Code-for-Step-by-Step-Task-Planning.html"
+permalink: "/2025-11-19-Using-the-Plan-Agent-in-VS-Code-for-Step-by-Step-Task-Planning.html"
 categories: ["AI", "Coding"]
 tags: ["AI", "AI Tools", "Coding", "Copilot Chat", "Developer Productivity", "Implementation Strategy", "James Montemagno", "Microsoft", "Plan Agent", "Requirement Refinement", "Step By Step Planning", "Task Planning", "Videos", "VS Code"]
 tags_normalized: ["ai", "ai tools", "coding", "copilot chat", "developer productivity", "implementation strategy", "james montemagno", "microsoft", "plan agent", "requirement refinement", "step by step planning", "task planning", "videos", "vs code"]

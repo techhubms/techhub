@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Reddit GitHub"
 feed_url: "https://www.reddit.com/r/github/.rss"
 date: 2025-08-03 19:16:38 +00:00
-permalink: "/community/2025-08-03-How-to-Keep-keyproperties-Private-in-a-Public-GitHub-Repository.html"
+permalink: "/2025-08-03-How-to-Keep-keyproperties-Private-in-a-Public-GitHub-Repository.html"
 categories: ["DevOps"]
 tags: [".gitignore", "Android Development", "Community", "DevOps", "GitHub", "Key.properties", "Private Files", "Public Repository", "Repository Privacy", "Secrets Management", "Sensitive Data", "Version Control"]
 tags_normalized: ["dotgitignore", "android development", "community", "devops", "github", "keydotproperties", "private files", "public repository", "repository privacy", "secrets management", "sensitive data", "version control"]

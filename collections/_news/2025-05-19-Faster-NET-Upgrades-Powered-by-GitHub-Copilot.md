@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft DevBlog"
 feed_url: "https://devblogs.microsoft.com/visualstudio/tag/github-copilot/feed/"
 date: 2025-05-19 16:00:43 +00:00
-permalink: "/news/2025-05-19-Faster-NET-Upgrades-Powered-by-GitHub-Copilot.html"
+permalink: "/2025-05-19-Faster-NET-Upgrades-Powered-by-GitHub-Copilot.html"
 categories: ["AI", "Coding", "GitHub Copilot"]
 tags: [".NET", ".NET Upgrade", "AI", "AI Powered Upgrades", "App Modernization", "Code Transformation", "Coding", "Copilot Agent Mode", "Development Tools", "Git Integration", "GitHub Copilot", "Manual Change Learning", "Modernization", "News", "Unit Test Validation", "Upgrade", "Upgrade Workflows", "VS", "Workflow Automation"]
 tags_normalized: ["dotnet", "dotnet upgrade", "ai", "ai powered upgrades", "app modernization", "code transformation", "coding", "copilot agent mode", "development tools", "git integration", "github copilot", "manual change learning", "modernization", "news", "unit test validation", "upgrade", "upgrade workflows", "vs", "workflow automation"]

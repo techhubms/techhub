@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Fabric Blog"
 feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
 date: 2025-08-27 09:14:00 +00:00
-permalink: "/news/2025-08-27-August-2025-Microsoft-Fabric-Feature-Summary-Data-Engineering-ML-and-Platform-Enhancements.html"
+permalink: "/2025-08-27-August-2025-Microsoft-Fabric-Feature-Summary-Data-Engineering-ML-and-Platform-Enhancements.html"
 categories: ["AI", "Azure", "Coding", "DevOps", "ML"]
 tags: ["AI", "Apache Spark", "Audit Logging", "Autoscale Billing", "Azure", "Azure DevOps", "Coding", "Copilot", "Data Agent", "Data Engineering", "Data Factory", "Data Science", "Dataflow Gen2", "Deployment Pipelines", "DevOps", "Event Schema Registry", "Fabric APIs", "Livy API", "Machine Learning", "Microsoft Fabric", "ML", "News", "OneLake", "OpenAPI", "Python Notebooks", "Real Time Intelligence", "REST API", "Service Principal", "SQL Analytics"]
 tags_normalized: ["ai", "apache spark", "audit logging", "autoscale billing", "azure", "azure devops", "coding", "copilot", "data agent", "data engineering", "data factory", "data science", "dataflow gen2", "deployment pipelines", "devops", "event schema registry", "fabric apis", "livy api", "machine learning", "microsoft fabric", "ml", "news", "onelake", "openapi", "python notebooks", "real time intelligence", "rest api", "service principal", "sql analytics"]

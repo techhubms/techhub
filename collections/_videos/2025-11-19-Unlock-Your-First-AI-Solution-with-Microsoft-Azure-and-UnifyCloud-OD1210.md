@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Events YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
 date: 2025-11-19 05:30:51 +00:00
-permalink: "/videos/2025-11-19-Unlock-Your-First-AI-Solution-with-Microsoft-Azure-and-UnifyCloud-OD1210.html"
+permalink: "/2025-11-19-Unlock-Your-First-AI-Solution-with-Microsoft-Azure-and-UnifyCloud-OD1210.html"
 categories: ["AI", "Azure"]
 tags: ["AI", "AI Deployment", "AI Factory", "AI Guardian", "Azure", "Azure AI", "Cloud Atlas", "Cloud Shell", "Deployment Automation", "Foundry Templates", "GitHub Repository", "InnovatewithAzureAIappsandagents", "Microsoft Ignite", "Microsoft Marketplace", "MSIgnite", "Resource Management", "SMB", "Step By Step Demo", "Videos"]
 tags_normalized: ["ai", "ai deployment", "ai factory", "ai guardian", "azure", "azure ai", "cloud atlas", "cloud shell", "deployment automation", "foundry templates", "github repository", "innovatewithazureaiappsandagents", "microsoft ignite", "microsoft marketplace", "msignite", "resource management", "smb", "step by step demo", "videos"]

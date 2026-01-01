@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft News"
 feed_url: "https://news.microsoft.com/source/feed/"
 date: 2025-07-30 20:10:38 +00:00
-permalink: "/news/2025-07-30-Microsoft-Cloud-and-AI-Strength-Fuels-Q4-2025-Financial-Results.html"
+permalink: "/2025-07-30-Microsoft-Cloud-and-AI-Strength-Fuels-Q4-2025-Financial-Results.html"
 categories: ["AI", "Azure"]
 tags: ["AI", "Azure", "Cloud Revenue", "Company News", "Dynamics 365", "Earnings Call", "Financial Results", "Intelligent Cloud", "Investor Relations", "LinkedIn", "Microsoft 365", "Microsoft Cloud", "News", "Productivity And Business Processes", "Q4", "Windows", "Xbox"]
 tags_normalized: ["ai", "azure", "cloud revenue", "company news", "dynamics 365", "earnings call", "financial results", "intelligent cloud", "investor relations", "linkedin", "microsoft 365", "microsoft cloud", "news", "productivity and business processes", "q4", "windows", "xbox"]

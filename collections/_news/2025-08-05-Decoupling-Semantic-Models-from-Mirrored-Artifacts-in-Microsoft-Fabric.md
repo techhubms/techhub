@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Fabric Blog"
 feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
 date: 2025-08-05 11:30:00 +00:00
-permalink: "/news/2025-08-05-Decoupling-Semantic-Models-from-Mirrored-Artifacts-in-Microsoft-Fabric.html"
+permalink: "/2025-08-05-Decoupling-Semantic-Models-from-Mirrored-Artifacts-in-Microsoft-Fabric.html"
 categories: ["Azure", "ML"]
 tags: ["Azure", "Business Intelligence", "Data Analytics", "Data Architecture", "Data Modeling", "Data Science", "Microsoft Fabric", "Mirrored Artifacts", "ML", "News", "Semantic Models", "SQL", "Versioning"]
 tags_normalized: ["azure", "business intelligence", "data analytics", "data architecture", "data modeling", "data science", "microsoft fabric", "mirrored artifacts", "ml", "news", "semantic models", "sql", "versioning"]

@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Developer YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
 date: 2025-09-04 21:03:39 +00:00
-permalink: "/videos/2025-09-04-SQL-Database-in-Fabric-Whats-New-and-Improved-Data-Exposed-Public-Preview.html"
+permalink: "/2025-09-04-SQL-Database-in-Fabric-Whats-New-and-Improved-Data-Exposed-Public-Preview.html"
 categories: ["Azure", "ML"]
 tags: ["Analytics Platform", "Azure", "Azure SQL", "Cloud Computing", "Cloud Data", "Customer Managed Keys", "Data Exposed", "Database Security", "Dev", "Development", "Live Demo", "Microsoft", "Microsoft Fabric", "ML", "Private Preview", "Public Preview", "Roadmap", "SQL Auditing", "SQL Database", "SQL Features", "Tech", "Technology", "Videos"]
 tags_normalized: ["analytics platform", "azure", "azure sql", "cloud computing", "cloud data", "customer managed keys", "data exposed", "database security", "dev", "development", "live demo", "microsoft", "microsoft fabric", "ml", "private preview", "public preview", "roadmap", "sql auditing", "sql database", "sql features", "tech", "technology", "videos"]

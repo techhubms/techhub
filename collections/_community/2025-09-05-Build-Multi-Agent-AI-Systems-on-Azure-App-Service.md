@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-09-05 16:37:30 +00:00
-permalink: "/community/2025-09-05-Build-Multi-Agent-AI-Systems-on-Azure-App-Service.html"
+permalink: "/2025-09-05-Build-Multi-Agent-AI-Systems-on-Azure-App-Service.html"
 categories: ["AI", "Azure", "Coding"]
 tags: [".NET Aspire", "Agent Orchestration", "AI", "App Deployment", "App Monitoring", "Azure", "Azure AI Foundry", "Azure App Service", "Cloud Native", "Coding", "Community", "Connected Agents", "E Commerce", "MCP", "Multi Agent Systems", "Observability", "OpenAPI Tools", "Premium V4", "Python"]
 tags_normalized: ["dotnet aspire", "agent orchestration", "ai", "app deployment", "app monitoring", "azure", "azure ai foundry", "azure app service", "cloud native", "coding", "community", "connected agents", "e commerce", "mcp", "multi agent systems", "observability", "openapi tools", "premium v4", "python"]

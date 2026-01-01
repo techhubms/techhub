@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Developer YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
 date: 2025-11-19 23:05:48 +00:00
-permalink: "/videos/2025-11-19-Exploring-the-New-Microsoft-Foundry-Portal-A-Guided-Tour.html"
+permalink: "/2025-11-19-Exploring-the-New-Microsoft-Foundry-Portal-A-Guided-Tour.html"
 categories: ["AI", "Azure"]
 tags: ["Agent Building", "AI", "AI Development", "AI Portal", "AI Tools", "Application Development", "April Edwards", "Azure", "Azure AI Foundry", "Cloud Computing", "Community Links", "Dev", "Development", "Microsoft", "Microsoft Developer", "Microsoft Foundry", "Portal Tour", "Project Creation", "Tech", "Technology", "Videos"]
 tags_normalized: ["agent building", "ai", "ai development", "ai portal", "ai tools", "application development", "april edwards", "azure", "azure ai foundry", "cloud computing", "community links", "dev", "development", "microsoft", "microsoft developer", "microsoft foundry", "portal tour", "project creation", "tech", "technology", "videos"]

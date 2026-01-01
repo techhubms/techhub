@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Events YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
 date: 2025-11-19 14:50:50 +00:00
-permalink: "/videos/2025-11-19-Transforming-Industrial-Operations-with-SymphonyAI-IRIS-Foundry-on-Microsoft-Azure.html"
+permalink: "/2025-11-19-Transforming-Industrial-Operations-with-SymphonyAI-IRIS-Foundry-on-Microsoft-Azure.html"
 categories: ["AI", "Azure"]
 tags: ["Agenticbusinessapplications", "AI", "AI Modeling", "Asset Hierarchies", "Azure", "CMMS", "Data Integration", "Human in The Loop Validation", "Industrial DataOps", "Industrial Operations", "IRIS Foundry", "Knowledge Graphs", "Manufacturing Analytics", "Microsoft Azure", "Microsoft Ignite", "MSIgnite", "SymphonyAI", "Unified Data Models", "Unified Namespace", "Videos"]
 tags_normalized: ["agenticbusinessapplications", "ai", "ai modeling", "asset hierarchies", "azure", "cmms", "data integration", "human in the loop validation", "industrial dataops", "industrial operations", "iris foundry", "knowledge graphs", "manufacturing analytics", "microsoft azure", "microsoft ignite", "msignite", "symphonyai", "unified data models", "unified namespace", "videos"]

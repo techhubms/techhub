@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-11-18 16:22:26 +00:00
-permalink: "/community/2025-11-18-AI-Powered-Innovations-in-Azure-Load-Testing.html"
+permalink: "/2025-11-18-AI-Powered-Innovations-in-Azure-Load-Testing.html"
 categories: ["AI", "Azure", "DevOps"]
 tags: ["AI", "AI Powered Insights", "Application Reliability", "Azure", "Azure Load Testing", "Baseline Comparison", "Cloud Scale Testing", "Community", "DevOps", "Dynamic Correlation", "Intelligent Recommendations", "JMeter", "Performance Testing", "Root Cause Analysis", "Script Authoring", "Test Automation", "Test Results Analysis", "Think Time Parameterization"]
 tags_normalized: ["ai", "ai powered insights", "application reliability", "azure", "azure load testing", "baseline comparison", "cloud scale testing", "community", "devops", "dynamic correlation", "intelligent recommendations", "jmeter", "performance testing", "root cause analysis", "script authoring", "test automation", "test results analysis", "think time parameterization"]

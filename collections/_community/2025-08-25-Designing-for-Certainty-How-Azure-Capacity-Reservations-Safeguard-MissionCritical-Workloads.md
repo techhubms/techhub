@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-08-25 15:04:26 +00:00
-permalink: "/community/2025-08-25-Designing-for-Certainty-How-Azure-Capacity-Reservations-Safeguard-MissionCritical-Workloads.html"
+permalink: "/2025-08-25-Designing-for-Certainty-How-Azure-Capacity-Reservations-Safeguard-MissionCritical-Workloads.html"
 categories: ["Azure", "DevOps"]
 tags: ["Azure", "Azure Capacity Reservations", "Azure VM", "Capacity Planning", "Cloud Architecture", "Community", "Compute Availability", "DevOps", "FinOps", "High Availability", "Pay as You Go", "Reserved Instances", "Resilient Design", "Scale Sets", "SLA", "VM SKU", "Workload Placement", "Zonal Reservations"]
 tags_normalized: ["azure", "azure capacity reservations", "azure vm", "capacity planning", "cloud architecture", "community", "compute availability", "devops", "finops", "high availability", "pay as you go", "reserved instances", "resilient design", "scale sets", "sla", "vm sku", "workload placement", "zonal reservations"]

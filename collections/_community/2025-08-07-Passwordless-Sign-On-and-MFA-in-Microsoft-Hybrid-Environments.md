@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Reddit Microsoft"
 feed_url: "https://www.reddit.com/r/microsoft/.rss"
 date: 2025-08-07 12:19:51 +00:00
-permalink: "/community/2025-08-07-Passwordless-Sign-On-and-MFA-in-Microsoft-Hybrid-Environments.html"
+permalink: "/2025-08-07-Passwordless-Sign-On-and-MFA-in-Microsoft-Hybrid-Environments.html"
 categories: ["Security"]
 tags: ["Active Directory", "Authenticator App", "Azure Active Directory", "Cloud Authentication", "Community", "Hybrid Identity", "Kerberos Cloud Trust", "MFA", "Microsoft", "Microsoft Entra ID", "Multi Factor Authentication", "On Premises Integration", "Passkeys", "Passwordless Authentication", "Security"]
 tags_normalized: ["active directory", "authenticator app", "azure active directory", "cloud authentication", "community", "hybrid identity", "kerberos cloud trust", "mfa", "microsoft", "microsoft entra id", "multi factor authentication", "on premises integration", "passkeys", "passwordless authentication", "security"]

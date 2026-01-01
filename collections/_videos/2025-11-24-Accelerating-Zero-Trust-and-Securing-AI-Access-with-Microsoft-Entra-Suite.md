@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Events YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
 date: 2025-11-24 12:03:52 +00:00
-permalink: "/videos/2025-11-24-Accelerating-Zero-Trust-and-Securing-AI-Access-with-Microsoft-Entra-Suite.html"
+permalink: "/2025-11-24-Accelerating-Zero-Trust-and-Securing-AI-Access-with-Microsoft-Entra-Suite.html"
 categories: ["AI", "Security"]
 tags: ["Access Reviews", "Adaptive Policies", "Agent Identities", "AI", "AI Gateway", "AI Security", "Continuous Access Evaluation", "Enterprise Security", "Identity Management", "M365 Secure Internet Access", "Microsoft Entra Suite", "Microsoft Ignite", "MSIgnite", "ProtectcloudAIplatformandapps", "Security", "Security Leadership", "Videos", "Zero Trust"]
 tags_normalized: ["access reviews", "adaptive policies", "agent identities", "ai", "ai gateway", "ai security", "continuous access evaluation", "enterprise security", "identity management", "m365 secure internet access", "microsoft entra suite", "microsoft ignite", "msignite", "protectcloudaiplatformandapps", "security", "security leadership", "videos", "zero trust"]

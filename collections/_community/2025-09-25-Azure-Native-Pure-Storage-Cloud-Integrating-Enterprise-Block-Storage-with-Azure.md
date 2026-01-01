@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-09-25 16:00:00 +00:00
-permalink: "/community/2025-09-25-Azure-Native-Pure-Storage-Cloud-Integrating-Enterprise-Block-Storage-with-Azure.html"
+permalink: "/2025-09-25-Azure-Native-Pure-Storage-Cloud-Integrating-Enterprise-Block-Storage-with-Azure.html"
 categories: ["Azure"]
 tags: ["Azure", "Azure Native Integration", "Azure Storage", "Azure VMware Solution", "Cloud Infrastructure", "Cloud Storage", "Community", "Data Management", "Enterprise Block Storage", "Hybrid Cloud", "Premium Managed Disks", "Pure Storage Cloud", "Snapshot Replication", "Storage as A Service", "VMware Integration", "VNet Peering"]
 tags_normalized: ["azure", "azure native integration", "azure storage", "azure vmware solution", "cloud infrastructure", "cloud storage", "community", "data management", "enterprise block storage", "hybrid cloud", "premium managed disks", "pure storage cloud", "snapshot replication", "storage as a service", "vmware integration", "vnet peering"]

@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft News"
 feed_url: "https://news.microsoft.com/source/feed/"
 date: 2025-10-16 14:06:15 +00:00
-permalink: "/news/2025-10-16-Microsoft-Expands-Dragon-Copilot-AI-Innovations-for-Nursing-and-Healthcare-Partners.html"
+permalink: "/2025-10-16-Microsoft-Expands-Dragon-Copilot-AI-Innovations-for-Nursing-and-Healthcare-Partners.html"
 categories: ["AI"]
 tags: ["AI", "AI Assistant", "Ambient AI", "Atropos Health", "Clinical Documentation", "Clinical Insights", "Company News", "Dragon Copilot", "Elsevier", "Healthcare AI", "Microsoft Health", "News", "Nursing Workflows", "OpenEvidence", "Partner Integrations", "Patient Experience", "Press Ganey", "Revenue Cycle Management", "Smart Hospitals", "UpToDate", "Virtual Care"]
 tags_normalized: ["ai", "ai assistant", "ambient ai", "atropos health", "clinical documentation", "clinical insights", "company news", "dragon copilot", "elsevier", "healthcare ai", "microsoft health", "news", "nursing workflows", "openevidence", "partner integrations", "patient experience", "press ganey", "revenue cycle management", "smart hospitals", "uptodate", "virtual care"]

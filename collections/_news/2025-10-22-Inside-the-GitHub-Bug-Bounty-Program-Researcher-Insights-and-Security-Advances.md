@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/feed/"
 date: 2025-10-22 16:00:00 +00:00
-permalink: "/news/2025-10-22-Inside-the-GitHub-Bug-Bounty-Program-Researcher-Insights-and-Security-Advances.html"
+permalink: "/2025-10-22-Inside-the-GitHub-Bug-Bounty-Program-Researcher-Insights-and-Security-Advances.html"
 categories: ["DevOps", "GitHub Copilot", "Security"]
 tags: ["AI", "AI Security", "Application Security", "Bug Bounty", "Cybersecurity", "Cybersecurity Awareness Month", "DevOps", "DevOps Security", "GitHub", "GitHub Copilot", "GitHub Security", "Injection Vulnerabilities", "Logical Flaws", "News", "Security", "Security Engineering", "Security Research", "Security Tooling", "Software Vulnerabilities", "Supply Chain Security", "Vulnerability Research", "Web Application Security"]
 tags_normalized: ["ai", "ai security", "application security", "bug bounty", "cybersecurity", "cybersecurity awareness month", "devops", "devops security", "github", "github copilot", "github security", "injection vulnerabilities", "logical flaws", "news", "security", "security engineering", "security research", "security tooling", "software vulnerabilities", "supply chain security", "vulnerability research", "web application security"]

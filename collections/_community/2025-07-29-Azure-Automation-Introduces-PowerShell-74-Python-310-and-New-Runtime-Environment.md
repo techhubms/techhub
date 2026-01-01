@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Community"
 date: 2025-07-29 11:34:41 +00:00
-permalink: "/community/2025-07-29-Azure-Automation-Introduces-PowerShell-74-Python-310-and-New-Runtime-Environment.html"
+permalink: "/2025-07-29-Azure-Automation-Introduces-PowerShell-74-Python-310-and-New-Runtime-Environment.html"
 categories: ["Azure", "Coding", "Security"]
 tags: ["Azure", "Azure Automation", "Azure CLI", "Coding", "Community", "Cross Platform Orchestration", "Infrastructure Management", "Module Version Management", "Powershell", "PowerShell 7.4", "Python 3.10", "Rollback Capability", "Runbooks", "Runtime Environment", "Script Modernization", "Security"]
 tags_normalized: ["azure", "azure automation", "azure cli", "coding", "community", "cross platform orchestration", "infrastructure management", "module version management", "powershell", "powershell 7dot4", "python 3dot10", "rollback capability", "runbooks", "runtime environment", "script modernization", "security"]

@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Developer YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
 date: 2025-12-11 22:29:17 +00:00
-permalink: "/videos/2025-12-11-Scripting-the-GitHub-Copilot-CLI-Deep-Dive.html"
+permalink: "/2025-12-11-Scripting-the-GitHub-Copilot-CLI-Deep-Dive.html"
 categories: ["AI", "Coding", "GitHub Copilot"]
 tags: ["AI", "AI Development Tools", "Automation", "CLI Automation", "Cloud Computing", "Coding", "Copilot", "Dev", "Developer", "Developer Productivity", "Development", "Development Workflows", "GitHub Copilot", "GitHub Copilot CLI", "Microsoft", "Scripting", "Tech", "Technology", "Videos", "VS Code"]
 tags_normalized: ["ai", "ai development tools", "automation", "cli automation", "cloud computing", "coding", "copilot", "dev", "developer", "developer productivity", "development", "development workflows", "github copilot", "github copilot cli", "microsoft", "scripting", "tech", "technology", "videos", "vs code"]

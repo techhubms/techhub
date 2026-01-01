@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Developer YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
 date: 2025-10-31 16:12:32 +00:00
-permalink: "/videos/2025-10-31-Authentic-DevOps-with-AI-Foundry-and-GitHub-Enhancing-Security-Automation.html"
+permalink: "/2025-10-31-Authentic-DevOps-with-AI-Foundry-and-GitHub-Enhancing-Security-Automation.html"
 categories: ["AI", "Azure", "Coding", "DevOps", "GitHub Copilot", "Security"]
 tags: ["Agent Development", "AI", "Azure", "Azure AI Foundry", "Azure Key Vault", "Cloud Computing", "Coding", "Dev", "Developer Tools", "Development", "DevOps", "DevOps Automation", "GitHub Copilot", "GitHub Security", "Managed Identity", "MCP Tools", "Microsoft", "Microsoft Cloud", "Multi Agent Workflows", "Orchestration", "Prompt Engineering", "Python", "Security", "Security Agents", "Tech", "Technology", "Token Authentication", "Videos", "VS", "Vulnerability Insights"]
 tags_normalized: ["agent development", "ai", "azure", "azure ai foundry", "azure key vault", "cloud computing", "coding", "dev", "developer tools", "development", "devops", "devops automation", "github copilot", "github security", "managed identity", "mcp tools", "microsoft", "microsoft cloud", "multi agent workflows", "orchestration", "prompt engineering", "python", "security", "security agents", "tech", "technology", "token authentication", "videos", "vs", "vulnerability insights"]

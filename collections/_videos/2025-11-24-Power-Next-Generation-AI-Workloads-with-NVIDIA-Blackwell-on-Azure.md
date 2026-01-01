@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Events YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
 date: 2025-11-24 12:46:29 +00:00
-permalink: "/videos/2025-11-24-Power-Next-Generation-AI-Workloads-with-NVIDIA-Blackwell-on-Azure.html"
+permalink: "/2025-11-24-Power-Next-Generation-AI-Workloads-with-NVIDIA-Blackwell-on-Azure.html"
 categories: ["AI", "Azure"]
 tags: ["Agentic AI", "Agenticbusinessapplications", "AI", "AI Super Factories", "Azure", "Confidential Computing", "GPU Acceleration", "Microsoft Ignite", "Mixture Of Experts", "MSIgnite", "Multimodal Inference", "NVIDIA Blackwell", "NVLink", "Omniverse", "Pareto Curve", "Physical AI", "Robotics Simulation", "RTX PRO 6000 Blackwell", "Videos"]
 tags_normalized: ["agentic ai", "agenticbusinessapplications", "ai", "ai super factories", "azure", "confidential computing", "gpu acceleration", "microsoft ignite", "mixture of experts", "msignite", "multimodal inference", "nvidia blackwell", "nvlink", "omniverse", "pareto curve", "physical ai", "robotics simulation", "rtx pro 6000 blackwell", "videos"]

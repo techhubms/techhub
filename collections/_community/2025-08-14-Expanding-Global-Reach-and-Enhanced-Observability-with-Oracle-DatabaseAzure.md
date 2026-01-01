@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-08-14 22:42:37 +00:00
-permalink: "/community/2025-08-14-Expanding-Global-Reach-and-Enhanced-Observability-with-Oracle-DatabaseAzure.html"
+permalink: "/2025-08-14-Expanding-Global-Reach-and-Enhanced-Observability-with-Oracle-DatabaseAzure.html"
 categories: ["Azure", "Security"]
 tags: ["Azure", "Azure Monitor", "Azure Regions", "Azure Security Center", "Cloud Scalability", "Community", "Compliance", "Exadata", "Germany North", "Hybrid Cloud", "Kusto Query Language", "Log Analytics", "Microsoft Sentinel", "Observability", "Operational Monitoring", "Oracle Database@Azure", "Security", "Security Information And Event Management"]
 tags_normalized: ["azure", "azure monitor", "azure regions", "azure security center", "cloud scalability", "community", "compliance", "exadata", "germany north", "hybrid cloud", "kusto query language", "log analytics", "microsoft sentinel", "observability", "operational monitoring", "oracle databaseatazure", "security", "security information and event management"]

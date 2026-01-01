@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Events YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
 date: 2025-11-24 08:11:12 +00:00
-permalink: "/videos/2025-11-24-Security-Copilot-Empowering-Security-Teams-with-AI-at-Microsoft-Ignite-2025.html"
+permalink: "/2025-11-24-Security-Copilot-Empowering-Security-Teams-with-AI-at-Microsoft-Ignite-2025.html"
 categories: ["AI", "Security"]
 tags: ["AI", "ArcGIS Analytics", "BRK244", "Data Automation", "Data Engineering", "Esri", "Generative AI", "IT Transformation", "Microsoft Fabric", "Microsoft Ignite", "ModernizeSecOpswithaunifiedplatform", "MSIgnite", "OneLake", "Partner Solutions", "SecOps", "Security", "Security Automation", "Security Copilot", "SharePoint Integration", "Snowflake Integration", "Unified Data Platform", "Videos"]
 tags_normalized: ["ai", "arcgis analytics", "brk244", "data automation", "data engineering", "esri", "generative ai", "it transformation", "microsoft fabric", "microsoft ignite", "modernizesecopswithaunifiedplatform", "msignite", "onelake", "partner solutions", "secops", "security", "security automation", "security copilot", "sharepoint integration", "snowflake integration", "unified data platform", "videos"]

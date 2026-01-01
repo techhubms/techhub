@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Events YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
 date: 2025-11-21 07:29:55 +00:00
-permalink: "/videos/2025-11-21-Transforming-Public-Sector-Services-with-Microsoft-Cloud-and-AI.html"
+permalink: "/2025-11-21-Transforming-Public-Sector-Services-with-Microsoft-Cloud-and-AI.html"
 categories: ["AI", "Azure"]
 tags: ["AI", "AI Transformation", "Azure", "Azure Government", "Case Study", "Citizen Services", "Cloud Security", "Compliance", "Copilotandagentsatwork", "Digital Transformation", "Esri", "Frontline Worker Solutions", "GIS Analytics", "Government Data", "Government Modernization", "Infrastructure Modernization", "Microsoft Cloud", "MSIgnite", "Process Efficiency", "Public Sector", "Raleigh", "San Francisco", "Tomorrow.io", "Videos"]
 tags_normalized: ["ai", "ai transformation", "azure", "azure government", "case study", "citizen services", "cloud security", "compliance", "copilotandagentsatwork", "digital transformation", "esri", "frontline worker solutions", "gis analytics", "government data", "government modernization", "infrastructure modernization", "microsoft cloud", "msignite", "process efficiency", "public sector", "raleigh", "san francisco", "tomorrowdotio", "videos"]

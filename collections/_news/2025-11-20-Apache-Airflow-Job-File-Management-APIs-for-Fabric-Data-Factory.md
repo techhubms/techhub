@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Fabric Blog"
 feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
 date: 2025-11-20 09:30:00 +00:00
-permalink: "/news/2025-11-20-Apache-Airflow-Job-File-Management-APIs-for-Fabric-Data-Factory.html"
+permalink: "/2025-11-20-Apache-Airflow-Job-File-Management-APIs-for-Fabric-Data-Factory.html"
 categories: ["Azure", "ML"]
 tags: ["Apache Airflow", "API Endpoints", "Audit Trails", "Automation", "Azure", "DAG Management", "Data Engineering", "Error Recovery", "Fabric Data Factory", "Job File Management", "Microsoft Fabric", "ML", "News", "Observability", "Role Based Access Control", "Service Oriented Architecture", "Task Execution", "Workflow Orchestration"]
 tags_normalized: ["apache airflow", "api endpoints", "audit trails", "automation", "azure", "dag management", "data engineering", "error recovery", "fabric data factory", "job file management", "microsoft fabric", "ml", "news", "observability", "role based access control", "service oriented architecture", "task execution", "workflow orchestration"]

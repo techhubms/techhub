@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Reddit Azure"
 feed_url: "https://www.reddit.com/r/azure/.rss"
 date: 2025-08-01 00:01:37 +00:00
-permalink: "/community/2025-08-01-Free-Post-Fridays-is-now-live-please-follow-these-rules.html"
+permalink: "/2025-08-01-Free-Post-Fridays-is-now-live-please-follow-these-rules.html"
 categories: ["Azure"]
 tags: ["Ads", "AutoModerator", "Azure", "Community", "Community Guidelines", "Exam Dumps", "Free Post Fridays", "Meme Policy", "Moderation", "Paid Services", "Posting Rules", "Workplace Safety"]
 tags_normalized: ["ads", "automoderator", "azure", "community", "community guidelines", "exam dumps", "free post fridays", "meme policy", "moderation", "paid services", "posting rules", "workplace safety"]

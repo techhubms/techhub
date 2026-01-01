@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Reddit Visual Studio"
 feed_url: "https://www.reddit.com/r/VisualStudio/.rss"
 date: 2025-08-06 23:21:36 +00:00
-permalink: "/community/2025-08-06-Visual-Studio-C-Code-Cleanup-Solution-Wide-Inconsistencies.html"
+permalink: "/2025-08-06-Visual-Studio-C-Code-Cleanup-Solution-Wide-Inconsistencies.html"
 categories: ["Coding"]
 tags: ["Analyze Menu", "Bug Report", "C++", "Code Cleanup", "Code Quality", "Coding", "Community", "Developer Experience", "Documentation", "Feature Request", "IDE", "Microsoft", "Solution Explorer", "VS"]
 tags_normalized: ["analyze menu", "bug report", "cplusplus", "code cleanup", "code quality", "coding", "community", "developer experience", "documentation", "feature request", "ide", "microsoft", "solution explorer", "vs"]

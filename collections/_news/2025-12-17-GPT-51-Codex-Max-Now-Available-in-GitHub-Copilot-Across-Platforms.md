@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/changelog/feed/"
 date: 2025-12-17 17:28:26 +00:00
-permalink: "/news/2025-12-17-GPT-51-Codex-Max-Now-Available-in-GitHub-Copilot-Across-Platforms.html"
+permalink: "/2025-12-17-GPT-51-Codex-Max-Now-Available-in-GitHub-Copilot-Across-Platforms.html"
 categories: ["AI", "GitHub Copilot"]
 tags: ["AI", "AI Model", "Business", "Chat Model Picker", "Copilot", "Copilot Chat", "Copilot Settings", "Eclipse", "Enterprise", "GitHub Copilot", "GPT 5.1 Codex Max", "IDE Integration", "JetBrains", "Model Release", "News", "Pro", "Pro+", "VS", "VS Code", "Xcode"]
 tags_normalized: ["ai", "ai model", "business", "chat model picker", "copilot", "copilot chat", "copilot settings", "eclipse", "enterprise", "github copilot", "gpt 5dot1 codex max", "ide integration", "jetbrains", "model release", "news", "pro", "proplus", "vs", "vs code", "xcode"]

@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-10-08 13:49:40 +00:00
-permalink: "/community/2025-10-08-AMBA-ALZ-Pattern-Recent-Enhancements-to-Built-in-Policies-and-Role-Based-Access-in-Azure.html"
+permalink: "/2025-10-08-AMBA-ALZ-Pattern-Recent-Enhancements-to-Built-in-Policies-and-Role-Based-Access-in-Azure.html"
 categories: ["Azure", "DevOps", "Security"]
 tags: ["AMBA ALZ", "Azure", "Azure CLI", "Azure Deployment", "Azure Governance", "Azure Monitor", "Azure Pipelines", "Azure PowerShell", "Azure Role Based Access Control", "Azure Service Health", "Built in Policy", "Community", "DevOps", "GitHub Actions", "Managed Identities", "Monitoring Policy Contributor", "Operational Excellence", "Policy Management", "Security", "Security Best Practices", "Terraform"]
 tags_normalized: ["amba alz", "azure", "azure cli", "azure deployment", "azure governance", "azure monitor", "azure pipelines", "azure powershell", "azure role based access control", "azure service health", "built in policy", "community", "devops", "github actions", "managed identities", "monitoring policy contributor", "operational excellence", "policy management", "security", "security best practices", "terraform"]

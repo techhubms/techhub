@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-10-30 04:56:45 +00:00
-permalink: "/community/2025-10-30-Build-an-AI-Powered-Chat-App-in-Minutes-with-AI-Toolkit-VS-Code-Extension.html"
+permalink: "/2025-10-30-Build-an-AI-Powered-Chat-App-in-Minutes-with-AI-Toolkit-VS-Code-Extension.html"
 categories: ["AI", "Azure", "Coding", "GitHub Copilot"]
 tags: ["AI", "AI Toolkit", "Azure", "Azure App Service", "Azure Developer CLI", "Azure Storage", "Azure Web PubSub", "Backend", "Chat Application", "Cloud Deployment", "Coding", "Community", "Frontend", "GitHub Copilot", "GitHub LLM", "Project Scaffold", "Python", "React", "Real Time Messaging", "Token Authentication", "VS Code Extension", "WebSockets"]
 tags_normalized: ["ai", "ai toolkit", "azure", "azure app service", "azure developer cli", "azure storage", "azure web pubsub", "backend", "chat application", "cloud deployment", "coding", "community", "frontend", "github copilot", "github llm", "project scaffold", "python", "react", "real time messaging", "token authentication", "vs code extension", "websockets"]

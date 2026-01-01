@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Events YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
 date: 2025-11-24 12:54:49 +00:00
-permalink: "/videos/2025-11-24-Microsoft-Ignite-Agents-at-Work-and-Copilot-Studio-for-Business-Process-Automation.html"
+permalink: "/2025-11-24-Microsoft-Ignite-Agents-at-Work-and-Copilot-Studio-for-Business-Process-Automation.html"
 categories: ["AI"]
 tags: ["Agent Builder", "Agentic Architecture", "Aghogho Biakolo", "AI", "AI Agents", "Approval Workflow", "Billing Insights", "Bryan Goode", "Business Process Automation", "Copilot Studio", "Copilotandagentsatwork", "Custom AI Agent", "Dan Lewis", "Enterprise AI", "Greg Ulrich", "Kendra Springer", "Lead Qualification", "MasterCard", "Microsoft Ignite", "MSIgnite", "Reporting", "Sales Development Agent", "Security Integration", "Videos"]
 tags_normalized: ["agent builder", "agentic architecture", "aghogho biakolo", "ai", "ai agents", "approval workflow", "billing insights", "bryan goode", "business process automation", "copilot studio", "copilotandagentsatwork", "custom ai agent", "dan lewis", "enterprise ai", "greg ulrich", "kendra springer", "lead qualification", "mastercard", "microsoft ignite", "msignite", "reporting", "sales development agent", "security integration", "videos"]

@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/changelog/feed/"
 date: 2025-09-03 20:41:26 +00:00
-permalink: "/news/2025-09-03-Path-Scoped-Custom-Instructions-for-Copilot-Code-Review.html"
+permalink: "/2025-09-03-Path-Scoped-Custom-Instructions-for-Copilot-Code-Review.html"
 categories: ["AI", "GitHub Copilot"]
 tags: ["AI", "Applyto Section", "Code Review Automation", "Copilot Code Review", "Custom Instructions", "Developer Tools", "GitHub", "GitHub Copilot", "News", "Path Scoped Instructions", "Pull Requests", "Repository Guidance"]
 tags_normalized: ["ai", "applyto section", "code review automation", "copilot code review", "custom instructions", "developer tools", "github", "github copilot", "news", "path scoped instructions", "pull requests", "repository guidance"]

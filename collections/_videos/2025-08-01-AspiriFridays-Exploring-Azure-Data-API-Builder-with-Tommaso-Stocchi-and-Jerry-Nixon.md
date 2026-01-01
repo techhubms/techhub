@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "DotNet YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw"
 date: 2025-08-01 21:43:53 +00:00
-permalink: "/videos/2025-08-01-AspiriFridays-Exploring-Azure-Data-API-Builder-with-Tommaso-Stocchi-and-Jerry-Nixon.html"
+permalink: "/2025-08-01-AspiriFridays-Exploring-Azure-Data-API-Builder-with-Tommaso-Stocchi-and-Jerry-Nixon.html"
 categories: ["Azure", "ML"]
 tags: [".NET", "Application Programming Interfaces", "Aspirify", "Azure", "Azure Data API Builder", "Data API", "Jerry Nixon", "Microsoft", "ML", "Tommaso Stocchi", "Videos"]
 tags_normalized: ["dotnet", "application programming interfaces", "aspirify", "azure", "azure data api builder", "data api", "jerry nixon", "microsoft", "ml", "tommaso stocchi", "videos"]

@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Events YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
 date: 2025-11-20 15:42:31 +00:00
-permalink: "/videos/2025-11-20-Best-Practices-for-Modernizing-Apps-and-Databases-at-Scale-with-Azure.html"
+permalink: "/2025-11-20-Best-Practices-for-Modernizing-Apps-and-Databases-at-Scale-with-Azure.html"
 categories: ["AI", "Azure"]
 tags: ["Accessibility", "AI", "AI Readiness", "App Development", "App Modernization", "Azure", "Azure SQL", "Best Practices", "Cloud Migration", "Data Modernization", "Enterprise Transformation", "Microsoft Ignite", "Migrateandmodernizeyourestate", "MSIgnite", "Real World Case Studies", "SecOps", "Videos"]
 tags_normalized: ["accessibility", "ai", "ai readiness", "app development", "app modernization", "azure", "azure sql", "best practices", "cloud migration", "data modernization", "enterprise transformation", "microsoft ignite", "migrateandmodernizeyourestate", "msignite", "real world case studies", "secops", "videos"]

@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Reddit CSharp"
 feed_url: "https://www.reddit.com/r/csharp/.rss"
 date: 2025-08-02 09:07:59 +00:00
-permalink: "/community/2025-08-02-Is-C-Dying-A-Perspective-on-Job-Markets-and-Ecosystem-Trends.html"
+permalink: "/2025-08-02-Is-C-Dying-A-Perspective-on-Job-Markets-and-Ecosystem-Trends.html"
 categories: ["Coding"]
 tags: [".NET", "AWS", "C#", "Coding", "Community", "Ecosystem", "Engineering Management", "Go", "Java", "Job Market", "Kotlin", "Node.js", "Programming Languages", "Python", "Rust", "Technology Trends", "VS", "VS Code"]
 tags_normalized: ["dotnet", "aws", "csharp", "coding", "community", "ecosystem", "engineering management", "go", "java", "job market", "kotlin", "nodedotjs", "programming languages", "python", "rust", "technology trends", "vs", "vs code"]

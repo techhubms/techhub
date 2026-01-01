@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/changelog/feed/"
 date: 2025-11-25 18:10:22 +00:00
-permalink: "/news/2025-11-25-Copilot-Agent-Sessions-from-External-Apps-Now-Available-on-GitHub-Mobile-for-Android.html"
+permalink: "/2025-11-25-Copilot-Agent-Sessions-from-External-Apps-Now-Available-on-GitHub-Mobile-for-Android.html"
 categories: ["AI", "GitHub Copilot"]
 tags: ["Agent Tasks", "AI", "Android", "Client Apps", "Copilot", "Copilot Agent Sessions", "Developer Productivity", "External App Sharing", "Feature Planning", "GitHub Copilot", "GitHub Mobile", "Idea Management", "Improvement", "Integration", "Mobile Development", "News", "Sharesheet", "Workflow Automation"]
 tags_normalized: ["agent tasks", "ai", "android", "client apps", "copilot", "copilot agent sessions", "developer productivity", "external app sharing", "feature planning", "github copilot", "github mobile", "idea management", "improvement", "integration", "mobile development", "news", "sharesheet", "workflow automation"]

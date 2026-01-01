@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "DotNet YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw"
 date: 2025-09-24 23:13:32 +00:00
-permalink: "/videos/2025-09-24-NET-Data-Community-Standup-Jeremy-Miller-on-Marten-and-Database-Migrations.html"
+permalink: "/2025-09-24-NET-Data-Community-Standup-Jeremy-Miller-on-Marten-and-Database-Migrations.html"
 categories: ["Coding"]
 tags: [".NET", "C#", "Coding", "Data Architecture", "Data Persistence", "Database Migrations", "EF", "EF Core", "Jeremy Miller", "Marten", "Migrations", "ORM", "Videos"]
 tags_normalized: ["dotnet", "csharp", "coding", "data architecture", "data persistence", "database migrations", "ef", "ef core", "jeremy miller", "marten", "migrations", "orm", "videos"]

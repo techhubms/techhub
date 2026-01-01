@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft DevBlog"
 feed_url: "https://devblogs.microsoft.com/visualstudio/tag/github-copilot/feed/"
 date: 2025-08-21 16:00:37 +00:00
-permalink: "/news/2025-08-21-Better-Control-Over-GitHub-Copilot-Code-Suggestions-in-Visual-Studio.html"
+permalink: "/2025-08-21-Better-Control-Over-GitHub-Copilot-Code-Suggestions-in-Visual-Studio.html"
 categories: ["AI", "Coding", "GitHub Copilot"]
 tags: ["AI", "Code Completions", "Code Suggestions", "Coding", "Developer Productivity", "Editor Shortcuts", "GitHub Copilot", "IDE", "IntelliCode", "News", "Next Edit Suggestions", "Partial Accept", "Programming Tools", "VS"]
 tags_normalized: ["ai", "code completions", "code suggestions", "coding", "developer productivity", "editor shortcuts", "github copilot", "ide", "intellicode", "news", "next edit suggestions", "partial accept", "programming tools", "vs"]

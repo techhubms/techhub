@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/feed/"
 date: 2025-12-04 20:35:36 +00:00
-permalink: "/news/2025-12-04-Accelerate-Debugging-with-GitHub-Copilot-Spaces-and-Copilot-Coding-Agent.html"
+permalink: "/2025-12-04-Accelerate-Debugging-with-GitHub-Copilot-Spaces-and-Copilot-Coding-Agent.html"
 categories: ["AI", "Coding", "GitHub Copilot"]
 tags: ["AI", "AI & ML", "AI Coding Assistant", "Code Review", "Coding", "Copilot Coding Agent", "Copilot Spaces", "Debugging", "GitHub Checkout", "GitHub Copilot", "GitHub Copilot Spaces", "GitHub Enterprise", "IDE Integration", "Knowledge Sharing", "MCP Server", "News", "Onboarding", "Project Contextualization", "Pull Request Automation", "Security Guidelines", "Technical Planning"]
 tags_normalized: ["ai", "ai and ml", "ai coding assistant", "code review", "coding", "copilot coding agent", "copilot spaces", "debugging", "github checkout", "github copilot", "github copilot spaces", "github enterprise", "ide integration", "knowledge sharing", "mcp server", "news", "onboarding", "project contextualization", "pull request automation", "security guidelines", "technical planning"]

@@ -9,10 +9,10 @@ viewing_mode: "external"
 feed_name: "Rick Strahl's Blog"
 feed_url: "https://feeds.feedburner.com/rickstrahl"
 date: 2025-03-13 22:40:22 +00:00
-permalink: "/blogs/2025-03-13-Accessing-Windows-Settings-Dialogs-from-Code-via-Shell-Commands.html"
+permalink: "/2025-03-13-Accessing-Windows-Settings-Dialogs-from-Code-via-Shell-Commands.html"
 categories: ["Coding"]
-tags: [".NET", "Application Permissions", "C#", "Coding", "Ms Settings", "Blogs", "PowerShell", "Process.Start", "Protocol Handler", "Settings Dialogs", "ShellExecute", "URI Scheme", "Windows"]
-tags_normalized: ["dotnet", "application permissions", "csharp", "coding", "ms settings", "blogs", "powershell", "processdotstart", "protocol handler", "settings dialogs", "shellexecute", "uri scheme", "windows"]
+tags: [".NET", "Application Permissions", "Blogs", "C#", "Coding", "Ms Settings", "PowerShell", "Process.Start", "Protocol Handler", "Settings Dialogs", "ShellExecute", "URI Scheme", "Windows"]
+tags_normalized: ["dotnet", "application permissions", "blogs", "csharp", "coding", "ms settings", "powershell", "processdotstart", "protocol handler", "settings dialogs", "shellexecute", "uri scheme", "windows"]
 ---
 
 Rick Strahl discusses how developers can open Windows Settings dialogs directly from code or shell commands using the `ms-settings:` protocol handler. The article provides practical usage examples for applications built with .NET and Windows technologies.<!--excerpt_end-->

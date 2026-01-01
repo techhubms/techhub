@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Build 2025 YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
 date: 2025-07-28 16:00:13 +00:00
-permalink: "/videos/2025-07-28-Advanced-MCP-Secure-Scalable-and-Multi-Modal-AI-Agents.html"
+permalink: "/2025-07-28-Advanced-MCP-Secure-Scalable-and-Multi-Modal-AI-Agents.html"
 categories: ["AI", "Azure", "Security", "DevOps", "Coding"]
 tags: ["AI", "API Management", "Azure", "Azure OpenAI", "Cloud Native", "Coding", "Containers", "DevOps", "Enterprise Security", "Load Balancers", "MCP", "Microsoft AI Foundry", "Microsoft Entra ID", "Multi Modal AI", "OAuth2", "Performance Optimization", "Real Time Streaming", "Scaling Strategies", "Security", "Videos"]
 tags_normalized: ["ai", "api management", "azure", "azure openai", "cloud native", "coding", "containers", "devops", "enterprise security", "load balancers", "mcp", "microsoft ai foundry", "microsoft entra id", "multi modal ai", "oauth2", "performance optimization", "real time streaming", "scaling strategies", "security", "videos"]

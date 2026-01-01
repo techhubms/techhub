@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Events YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
 date: 2025-11-20 15:40:19 +00:00
-permalink: "/videos/2025-11-20-From-Zero-to-Kubernetes-with-AKS-Automatic.html"
+permalink: "/2025-11-20-From-Zero-to-Kubernetes-with-AKS-Automatic.html"
 categories: ["Azure", "DevOps", "Security"]
 tags: ["AKS", "AKS Automatic", "Azure", "Azure Monitor", "Cloud Native", "Cloud Operations", "DevOps", "Infrastructure Automation", "InnovatewithAzureAIappsandagents", "Karpenter", "Kubernetes", "Log Analytics", "Microsoft Ignite", "MSIgnite", "Node Auto Provisioning", "Observability", "OpenTelemetry", "Performance", "Production Ready Kubernetes", "Scalability", "Security", "Security Best Practices", "Videos"]
 tags_normalized: ["aks", "aks automatic", "azure", "azure monitor", "cloud native", "cloud operations", "devops", "infrastructure automation", "innovatewithazureaiappsandagents", "karpenter", "kubernetes", "log analytics", "microsoft ignite", "msignite", "node auto provisioning", "observability", "opentelemetry", "performance", "production ready kubernetes", "scalability", "security", "security best practices", "videos"]

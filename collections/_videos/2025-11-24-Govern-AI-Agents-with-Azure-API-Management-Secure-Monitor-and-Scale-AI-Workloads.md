@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Events YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
 date: 2025-11-24 08:08:59 +00:00
-permalink: "/videos/2025-11-24-Govern-AI-Agents-with-Azure-API-Management-Secure-Monitor-and-Scale-AI-Workloads.html"
+permalink: "/2025-11-24-Govern-AI-Agents-with-Azure-API-Management-Secure-Monitor-and-Scale-AI-Workloads.html"
 categories: ["AI", "Azure", "Security"]
 tags: ["Agent Governance", "AI", "AI Gateway", "API Center", "API Integration", "API Monitoring", "Azure", "Azure API Management", "Azure Foundry", "Content Safety", "Copilot Governance", "InnovatewithAzureAIappsandagents", "IT Security", "MCP Support", "Microsoft Ignite", "Model Governance", "MSIgnite", "Multi Model AI", "Policy Enforcement", "Security", "Semantic Caching", "Token Limit", "Videos"]
 tags_normalized: ["agent governance", "ai", "ai gateway", "api center", "api integration", "api monitoring", "azure", "azure api management", "azure foundry", "content safety", "copilot governance", "innovatewithazureaiappsandagents", "it security", "mcp support", "microsoft ignite", "model governance", "msignite", "multi model ai", "policy enforcement", "security", "semantic caching", "token limit", "videos"]

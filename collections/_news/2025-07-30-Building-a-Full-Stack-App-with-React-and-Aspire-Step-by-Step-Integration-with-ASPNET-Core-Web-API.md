@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft .NET Blog"
 feed_url: "https://devblogs.microsoft.com/dotnet/feed/"
 date: 2025-07-30 17:00:00 +00:00
-permalink: "/news/2025-07-30-Building-a-Full-Stack-App-with-React-and-Aspire-Step-by-Step-Integration-with-ASPNET-Core-Web-API.html"
+permalink: "/2025-07-30-Building-a-Full-Stack-App-with-React-and-Aspire-Step-by-Step-Integration-with-ASPNET-Core-Web-API.html"
 categories: ["Coding"]
 tags: [".NET", ".NET Aspire", ".NET CLI", "ASP.NET Core", "Aspire", "C#", "Coding", "EF Core", "Full Stack Development", "JavaScript", "News", "React", "REST API", "SQLite", "Vite", "VS Code"]
 tags_normalized: ["dotnet", "dotnet aspire", "dotnet cli", "aspdotnet core", "aspire", "csharp", "coding", "ef core", "full stack development", "javascript", "news", "react", "rest api", "sqlite", "vite", "vs code"]

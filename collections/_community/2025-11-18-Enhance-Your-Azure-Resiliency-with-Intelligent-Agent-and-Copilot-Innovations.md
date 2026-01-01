@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-11-18 16:03:51 +00:00
-permalink: "/community/2025-11-18-Enhance-Your-Azure-Resiliency-with-Intelligent-Agent-and-Copilot-Innovations.html"
+permalink: "/2025-11-18-Enhance-Your-Azure-Resiliency-with-Intelligent-Agent-and-Copilot-Innovations.html"
 categories: ["AI", "Azure", "Security"]
 tags: ["AI", "Azure", "Azure Backup", "Azure Copilot", "Azure Site Recovery", "Community", "Compliance", "Cyber Recovery", "Data Resiliency", "Disaster Recovery", "High Availability", "Immutability", "Infrastructure Resiliency", "Microsoft Defender For Cloud", "Microsoft Ignite", "Operations Center", "Recovery Services Vault", "Security", "Vault Soft Delete", "Zonal Architecture"]
 tags_normalized: ["ai", "azure", "azure backup", "azure copilot", "azure site recovery", "community", "compliance", "cyber recovery", "data resiliency", "disaster recovery", "high availability", "immutability", "infrastructure resiliency", "microsoft defender for cloud", "microsoft ignite", "operations center", "recovery services vault", "security", "vault soft delete", "zonal architecture"]

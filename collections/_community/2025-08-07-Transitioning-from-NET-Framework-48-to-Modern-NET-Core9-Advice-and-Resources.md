@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Reddit DotNet"
 feed_url: "https://www.reddit.com/r/dotnet/.rss"
 date: 2025-08-07 14:44:05 +00:00
-permalink: "/community/2025-08-07-Transitioning-from-NET-Framework-48-to-Modern-NET-Core9-Advice-and-Resources.html"
+permalink: "/2025-08-07-Transitioning-from-NET-Framework-48-to-Modern-NET-Core9-Advice-and-Resources.html"
 categories: ["Coding"]
 tags: [".NET", ".NET 9", ".NET Core", ".NET Framework", "ASP.NET Core", "C#", "Clean Architecture", "Coding", "Community", "CQRS", "Dependency Injection", "Docker", "EF", "Learning Resources", "LINQ", "Microservices", "Modularity", "Monolith", "NuGet", "Software Architecture", "Tim Corey", "Udemy", "VS Code"]
 tags_normalized: ["dotnet", "dotnet 9", "dotnet core", "dotnet framework", "aspdotnet core", "csharp", "clean architecture", "coding", "community", "cqrs", "dependency injection", "docker", "ef", "learning resources", "linq", "microservices", "modularity", "monolith", "nuget", "software architecture", "tim corey", "udemy", "vs code"]

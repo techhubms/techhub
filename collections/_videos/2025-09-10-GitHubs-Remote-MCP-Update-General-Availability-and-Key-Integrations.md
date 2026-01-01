@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "GitHub YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ"
 date: 2025-09-10 14:00:32 +00:00
-permalink: "/videos/2025-09-10-GitHubs-Remote-MCP-Update-General-Availability-and-Key-Integrations.html"
+permalink: "/2025-09-10-GitHubs-Remote-MCP-Update-General-Availability-and-Key-Integrations.html"
 categories: ["AI", "DevOps", "GitHub Copilot", "Security"]
 tags: ["AI", "AI Integration", "Automation", "Code Scanning", "Copilot", "Developer Tools", "DevOps", "GitHub", "GitHub Copilot", "GitHub MCP", "Large Language Models", "MCP", "Secret Scanning", "Security", "Security Advisories", "Security Alerts", "Videos"]
 tags_normalized: ["ai", "ai integration", "automation", "code scanning", "copilot", "developer tools", "devops", "github", "github copilot", "github mcp", "large language models", "mcp", "secret scanning", "security", "security advisories", "security alerts", "videos"]

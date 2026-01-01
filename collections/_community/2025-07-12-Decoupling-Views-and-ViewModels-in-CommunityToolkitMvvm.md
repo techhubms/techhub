@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=dotnet"
 date: 2025-07-12 17:03:00 +00:00
-permalink: "/community/2025-07-12-Decoupling-Views-and-ViewModels-in-CommunityToolkitMvvm.html"
+permalink: "/2025-07-12-Decoupling-Views-and-ViewModels-in-CommunityToolkitMvvm.html"
 categories: ["Coding"]
 tags: ["Coding", "Community", "CommunityToolkit.Mvvm", "DataContext", "Dependency Injection", "Design Patterns", "DI", "Microsoft .NET", "MVVM", "ServiceProvider", "View Reuse", "ViewModel Decoupling", "ViewModelLocator", "WPF", "XAML", "XAML Binding"]
 tags_normalized: ["coding", "community", "communitytoolkitdotmvvm", "datacontext", "dependency injection", "design patterns", "di", "microsoft dotnet", "mvvm", "serviceprovider", "view reuse", "viewmodel decoupling", "viewmodellocator", "wpf", "xaml", "xaml binding"]

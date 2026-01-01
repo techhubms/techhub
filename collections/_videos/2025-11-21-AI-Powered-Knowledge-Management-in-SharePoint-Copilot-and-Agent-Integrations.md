@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Events YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
 date: 2025-11-21 14:34:13 +00:00
-permalink: "/videos/2025-11-21-AI-Powered-Knowledge-Management-in-SharePoint-Copilot-and-Agent-Integrations.html"
+permalink: "/2025-11-21-AI-Powered-Knowledge-Management-in-SharePoint-Copilot-and-Agent-Integrations.html"
 categories: ["AI"]
 tags: ["AI", "AI Integration", "Content Automation", "Content Enrichment", "Content Organization", "Copilot", "Copilot Integration", "Copilotandagentsatwork", "Intelligent Curation", "Knowledge Agent", "Metadata", "Microsoft 365", "Microsoft Ignite", "MSIgnite", "No Code Agents", "PowerPoint", "SharePoint", "Videos", "Workflow Automation"]
 tags_normalized: ["ai", "ai integration", "content automation", "content enrichment", "content organization", "copilot", "copilot integration", "copilotandagentsatwork", "intelligent curation", "knowledge agent", "metadata", "microsoft 365", "microsoft ignite", "msignite", "no code agents", "powerpoint", "sharepoint", "videos", "workflow automation"]

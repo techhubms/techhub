@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-07-30 19:21:45 +00:00
-permalink: "/community/2025-07-30-Dependency-Agent-Alternatives.html"
+permalink: "/2025-07-30-Dependency-Agent-Alternatives.html"
 categories: ["Azure", "DevOps"]
 tags: ["AppDynamics", "Azure", "Azure Dependency Agent", "Azure Monitor", "Community", "Datadog", "Dependency Mapping", "Device42", "DevOps", "Dynatrace", "Faddom", "Full Stack Monitoring", "Infrastructure Monitoring", "Log Analytics", "Observability", "VM Insights"]
 tags_normalized: ["appdynamics", "azure", "azure dependency agent", "azure monitor", "community", "datadog", "dependency mapping", "device42", "devops", "dynatrace", "faddom", "full stack monitoring", "infrastructure monitoring", "log analytics", "observability", "vm insights"]

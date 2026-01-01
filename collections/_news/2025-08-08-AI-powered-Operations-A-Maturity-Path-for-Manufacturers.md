@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft News"
 feed_url: "https://news.microsoft.com/source/feed/"
 date: 2025-08-08 00:34:33 +00:00
-permalink: "/news/2025-08-08-AI-powered-Operations-A-Maturity-Path-for-Manufacturers.html"
+permalink: "/2025-08-08-AI-powered-Operations-A-Maturity-Path-for-Manufacturers.html"
 categories: ["AI"]
 tags: ["AI", "AI Powered Operations", "AI Strategy", "Company News", "Digital Transformation", "Energy Grid", "Industrial Automation", "Manufacturing", "Microsoft AI", "Microsoft Partners", "News", "Operational Maturity", "Smart Manufacturing"]
 tags_normalized: ["ai", "ai powered operations", "ai strategy", "company news", "digital transformation", "energy grid", "industrial automation", "manufacturing", "microsoft ai", "microsoft partners", "news", "operational maturity", "smart manufacturing"]

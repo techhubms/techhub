@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-11-10 17:54:01 +00:00
-permalink: "/community/2025-11-10-How-SleekFlow-Uses-Azure-and-AI-to-Orchestrate-Enterprise-Customer-Conversations.html"
+permalink: "/2025-11-10-How-SleekFlow-Uses-Azure-and-AI-to-Orchestrate-Enterprise-Customer-Conversations.html"
 categories: ["AI", "Azure"]
 tags: ["AgentFlow", "AI", "Azure", "Azure AI Foundry", "Azure Container Apps", "Azure Cosmos DB", "Azure OpenAI", "Cloud Architecture", "Community", "Compliance", "Conversational AI", "DiskANN", "KEDA Autoscaling", "Microservices", "Microsoft Phi", "Retrieval Augmented Generation", "Semantic Kernel", "Vector Search"]
 tags_normalized: ["agentflow", "ai", "azure", "azure ai foundry", "azure container apps", "azure cosmos db", "azure openai", "cloud architecture", "community", "compliance", "conversational ai", "diskann", "keda autoscaling", "microservices", "microsoft phi", "retrieval augmented generation", "semantic kernel", "vector search"]

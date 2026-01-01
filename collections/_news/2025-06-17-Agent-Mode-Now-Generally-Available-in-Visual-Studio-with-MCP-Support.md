@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft DevBlog"
 feed_url: "https://devblogs.microsoft.com/visualstudio/tag/github-copilot/feed/"
 date: 2025-06-17 18:24:08 +00:00
-permalink: "/news/2025-06-17-Agent-Mode-Now-Generally-Available-in-Visual-Studio-with-MCP-Support.html"
+permalink: "/2025-06-17-Agent-Mode-Now-Generally-Available-in-Visual-Studio-with-MCP-Support.html"
 categories: ["AI", "Coding", "GitHub Copilot"]
 tags: [".NET", "Agent Mode", "Agents Toolkit", "AI", "AI Assisted Development", "Automation", "Coding", "Copilot", "Copilot Chat", "Gemini 2.5 Pro", "GitHub Copilot", "GPT 4.1", "MCP", "News", "Prompt Sharing", "Tool Calling", "VS"]
 tags_normalized: ["dotnet", "agent mode", "agents toolkit", "ai", "ai assisted development", "automation", "coding", "copilot", "copilot chat", "gemini 2dot5 pro", "github copilot", "gpt 4dot1", "mcp", "news", "prompt sharing", "tool calling", "vs"]

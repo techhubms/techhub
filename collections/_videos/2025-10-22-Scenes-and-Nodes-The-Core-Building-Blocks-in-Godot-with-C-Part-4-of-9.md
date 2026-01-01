@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "DotNet YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw"
 date: 2025-10-22 16:30:21 +00:00
-permalink: "/videos/2025-10-22-Scenes-and-Nodes-The-Core-Building-Blocks-in-Godot-with-C-Part-4-of-9.html"
+permalink: "/2025-10-22-Scenes-and-Nodes-The-Core-Building-Blocks-in-Godot-with-C-Part-4-of-9.html"
 categories: ["Coding"]
 tags: [".NET", "C#", "CharacterBody3D", "Coding", "Collision Detection", "Game Development", "Godot Engine", "Lighting", "MeshInstance3D", "Microsoft Developer", "Node Hierarchy", "Nodes", "Scene Instancing", "Scenes", "SpringArm3D", "Third Person Camera", "Videos", "VS Code"]
 tags_normalized: ["dotnet", "csharp", "characterbody3d", "coding", "collision detection", "game development", "godot engine", "lighting", "meshinstance3d", "microsoft developer", "node hierarchy", "nodes", "scene instancing", "scenes", "springarm3d", "third person camera", "videos", "vs code"]

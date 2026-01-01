@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Reddit Github Copilot"
 feed_url: "https://www.reddit.com/r/GithubCopilot.rss"
 date: 2025-08-07 18:06:13 +00:00
-permalink: "/community/2025-08-07-VS-Code-1103-Released-GPT-5-Tool-Limit-Increase-Checkpoints-Git-Worktrees.html"
+permalink: "/2025-08-07-VS-Code-1103-Released-GPT-5-Tool-Limit-Increase-Checkpoints-Git-Worktrees.html"
 categories: ["AI", "Coding", "DevOps", "GitHub Copilot"]
 tags: ["AI", "Checkpoints", "Coding", "Coding Agents", "Community", "Copilot Rollout", "Development Tools", "DevOps", "Enterprise Plan", "Git Worktrees", "GitHub Copilot", "GPT 5", "Microsoft", "Pro Subscription", "Tool Limit Increase", "VS Code", "VS Code 1.103"]
 tags_normalized: ["ai", "checkpoints", "coding", "coding agents", "community", "copilot rollout", "development tools", "devops", "enterprise plan", "git worktrees", "github copilot", "gpt 5", "microsoft", "pro subscription", "tool limit increase", "vs code", "vs code 1dot103"]

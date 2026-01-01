@@ -9,10 +9,10 @@ viewing_mode: "external"
 feed_name: "Randy Pagels's Blog"
 feed_url: "https://cooknwithcopilot.com/rss.xml"
 date: 2025-09-19 00:00:00 +00:00
-permalink: "/blogs/2025-09-19-Picking-the-Right-AI-Model-for-Your-Task-in-GitHub-Copilot.html"
+permalink: "/2025-09-19-Picking-the-Right-AI-Model-for-Your-Task-in-GitHub-Copilot.html"
 categories: ["AI", "GitHub Copilot"]
-tags: ["AI", "AI Coding Assistant", "AI Models", "Claude 3.5 Sonnet", "Code Generation", "Developer Productivity", "Enterprise AI", "GitHub Copilot", "GPT 4", "GPT 5", "Model Selection", "O1 Preview", "O3 Mini", "Blogs", "Prompt Engineering"]
-tags_normalized: ["ai", "ai coding assistant", "ai models", "claude 3dot5 sonnet", "code generation", "developer productivity", "enterprise ai", "github copilot", "gpt 4", "gpt 5", "model selection", "o1 preview", "o3 mini", "blogs", "prompt engineering"]
+tags: ["AI", "AI Coding Assistant", "AI Models", "Blogs", "Claude 3.5 Sonnet", "Code Generation", "Developer Productivity", "Enterprise AI", "GitHub Copilot", "GPT 4", "GPT 5", "Model Selection", "O1 Preview", "O3 Mini", "Prompt Engineering"]
+tags_normalized: ["ai", "ai coding assistant", "ai models", "blogs", "claude 3dot5 sonnet", "code generation", "developer productivity", "enterprise ai", "github copilot", "gpt 4", "gpt 5", "model selection", "o1 preview", "o3 mini", "prompt engineering"]
 ---
 
 Randy Pagels outlines how developers using GitHub Copilot can select the right AI model for their coding tasks, sharing practical tips on matching model strength to workload and maximizing developer productivity.<!--excerpt_end-->

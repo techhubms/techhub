@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/changelog/feed/"
 date: 2025-09-09 20:02:16 +00:00
-permalink: "/news/2025-09-09-GitHub-Copilot-Adds-Support-for-OpenAI-GPT-5-and-GPT-5-Mini-Models.html"
+permalink: "/2025-09-09-GitHub-Copilot-Adds-Support-for-OpenAI-GPT-5-and-GPT-5-Mini-Models.html"
 categories: ["AI", "GitHub Copilot"]
 tags: ["AI", "AI Models", "Copilot", "Copilot Business", "Copilot Chat", "Copilot Enterprise", "Developer Tools", "Eclipse", "GitHub Copilot", "GPT 5", "GPT 5 Mini", "IDEs", "JetBrains IDEs", "Model Picker", "News", "OpenAI", "VS", "VS Code", "Xcode"]
 tags_normalized: ["ai", "ai models", "copilot", "copilot business", "copilot chat", "copilot enterprise", "developer tools", "eclipse", "github copilot", "gpt 5", "gpt 5 mini", "ides", "jetbrains ides", "model picker", "news", "openai", "vs", "vs code", "xcode"]

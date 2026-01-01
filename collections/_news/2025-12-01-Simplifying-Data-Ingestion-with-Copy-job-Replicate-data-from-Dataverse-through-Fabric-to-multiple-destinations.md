@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Fabric Blog"
 feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
 date: 2025-12-01 09:00:00 +00:00
-permalink: "/news/2025-12-01-Simplifying-Data-Ingestion-with-Copy-job-Replicate-data-from-Dataverse-through-Fabric-to-multiple-destinations.html"
+permalink: "/2025-12-01-Simplifying-Data-Ingestion-with-Copy-job-Replicate-data-from-Dataverse-through-Fabric-to-multiple-destinations.html"
 categories: ["Azure", "ML"]
 tags: ["Azure", "Azure SQL Database", "Bulk Copy", "Change Data Capture", "Copy Job", "Data Factory", "Data Ingestion", "Data Replication", "Data Synchronization", "Dataverse", "Dynamics 365", "Fabric Lakehouse", "Fabric Link", "Incremental Copy", "Microsoft Fabric", "ML", "News", "Power Platform"]
 tags_normalized: ["azure", "azure sql database", "bulk copy", "change data capture", "copy job", "data factory", "data ingestion", "data replication", "data synchronization", "dataverse", "dynamics 365", "fabric lakehouse", "fabric link", "incremental copy", "microsoft fabric", "ml", "news", "power platform"]

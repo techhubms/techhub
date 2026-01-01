@@ -9,10 +9,10 @@ viewing_mode: "external"
 feed_name: "DevOps Blog"
 feed_url: "https://devops.com/feed/"
 date: 2025-09-28 03:36:53 +00:00
-permalink: "/blogs/2025-09-28-Latest-DORA-Report-from-Google-Surfaces-Significant-AI-Adoption.html"
+permalink: "/2025-09-28-Latest-DORA-Report-from-Google-Surfaces-Significant-AI-Adoption.html"
 categories: ["AI", "DevOps"]
-tags: ["AI", "AI Adoption", "AI Tools", "Automation", "DevOps", "DORA", "Engineering Practices", "Google", "Internal Platforms", "Platform Engineering", "Blogs", "Productivity", "Social Facebook", "Social LinkedIn", "Social X", "Software Delivery", "Software Engineering", "Software Lifecycle", "Survey", "Team Archetypes"]
-tags_normalized: ["ai", "ai adoption", "ai tools", "automation", "devops", "dora", "engineering practices", "google", "internal platforms", "platform engineering", "blogs", "productivity", "social facebook", "social linkedin", "social x", "software delivery", "software engineering", "software lifecycle", "survey", "team archetypes"]
+tags: ["AI", "AI Adoption", "AI Tools", "Automation", "Blogs", "DevOps", "DORA", "Engineering Practices", "Google", "Internal Platforms", "Platform Engineering", "Productivity", "Social Facebook", "Social LinkedIn", "Social X", "Software Delivery", "Software Engineering", "Software Lifecycle", "Survey", "Team Archetypes"]
+tags_normalized: ["ai", "ai adoption", "ai tools", "automation", "blogs", "devops", "dora", "engineering practices", "google", "internal platforms", "platform engineering", "productivity", "social facebook", "social linkedin", "social x", "software delivery", "software engineering", "software lifecycle", "survey", "team archetypes"]
 ---
 
 Mike Vizard summarizes Google's 2025 DORA survey, examining strong AI adoption in IT, correlations with engineering practices, and key takeaways for DevOps teams and leaders.<!--excerpt_end-->

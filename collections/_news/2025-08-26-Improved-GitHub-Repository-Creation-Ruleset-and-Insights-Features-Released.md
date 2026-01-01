@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/changelog/feed/"
 date: 2025-08-26 20:02:38 +00:00
-permalink: "/news/2025-08-26-Improved-GitHub-Repository-Creation-Ruleset-and-Insights-Features-Released.html"
+permalink: "/2025-08-26-Improved-GitHub-Repository-Creation-Ruleset-and-Insights-Features-Released.html"
 categories: ["DevOps"]
 tags: ["Accessibility", "Branch Rulesets", "Commit Insights", "Developer Tools", "DevOps", "GitHub", "Merge Queue", "News", "Organization Policies", "Repository Creation", "Repository Management", "Workflow Improvements"]
 tags_normalized: ["accessibility", "branch rulesets", "commit insights", "developer tools", "devops", "github", "merge queue", "news", "organization policies", "repository creation", "repository management", "workflow improvements"]

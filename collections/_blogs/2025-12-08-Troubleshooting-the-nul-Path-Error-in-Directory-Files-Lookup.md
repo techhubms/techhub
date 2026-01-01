@@ -9,10 +9,10 @@ viewing_mode: "external"
 feed_name: "Rick Strahl's Blog"
 feed_url: "https://feeds.feedburner.com/rickstrahl"
 date: 2025-12-08 23:15:18 +00:00
-permalink: "/blogs/2025-12-08-Troubleshooting-the-nul-Path-Error-in-Directory-Files-Lookup.html"
+permalink: "/2025-12-08-Troubleshooting-the-nul-Path-Error-in-Directory-Files-Lookup.html"
 categories: ["Coding"]
-tags: [".NET", "Application Insights", "C#", "Code Workarounds", "Coding", "Directory.GetFiles", "EnumerationOptions", "Error Handling", "Exception Handling", "File Browser", "FileAttributes", "Hidden Files", "Markdown Monster", "Blogs", "Symlink", "System.IO", "Windows Devices"]
-tags_normalized: ["dotnet", "application insights", "csharp", "code workarounds", "coding", "directorydotgetfiles", "enumerationoptions", "error handling", "exception handling", "file browser", "fileattributes", "hidden files", "markdown monster", "blogs", "symlink", "systemdotio", "windows devices"]
+tags: [".NET", "Application Insights", "Blogs", "C#", "Code Workarounds", "Coding", "Directory.GetFiles", "EnumerationOptions", "Error Handling", "Exception Handling", "File Browser", "FileAttributes", "Hidden Files", "Markdown Monster", "Symlink", "System.IO", "Windows Devices"]
+tags_normalized: ["dotnet", "application insights", "blogs", "csharp", "code workarounds", "coding", "directorydotgetfiles", "enumerationoptions", "error handling", "exception handling", "file browser", "fileattributes", "hidden files", "markdown monster", "symlink", "systemdotio", "windows devices"]
 ---
 
 Rick Strahl analyzes frequent `\\.\nul` device errors breaking file lookups in Markdown Monster, offering insights into the Windows filesystem and practical .NET solutions for developers.<!--excerpt_end-->

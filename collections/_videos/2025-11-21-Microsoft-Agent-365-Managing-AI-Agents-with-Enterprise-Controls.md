@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Events YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
 date: 2025-11-21 07:08:08 +00:00
-permalink: "/videos/2025-11-21-Microsoft-Agent-365-Managing-AI-Agents-with-Enterprise-Controls.html"
+permalink: "/2025-11-21-Microsoft-Agent-365-Managing-AI-Agents-with-Enterprise-Controls.html"
 categories: ["AI", "Security"]
 tags: ["Agent Control Plane", "Agent Governance", "AI", "AI Agents", "Authorization", "Autonomous Agents", "Compliance", "Data Access Policies", "Developer Collaboration", "Digital Labor", "Enterprise Security", "Innovatewithlow", "IT Management", "Manus Integration", "Microsoft 365 Integration", "Microsoft Agent 365", "MSIgnite", "Security", "Videos"]
 tags_normalized: ["agent control plane", "agent governance", "ai", "ai agents", "authorization", "autonomous agents", "compliance", "data access policies", "developer collaboration", "digital labor", "enterprise security", "innovatewithlow", "it management", "manus integration", "microsoft 365 integration", "microsoft agent 365", "msignite", "security", "videos"]

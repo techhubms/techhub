@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Reddit Azure DevOps"
 feed_url: "https://www.reddit.com/r/azuredevops/.rss"
 date: 2025-07-22 12:49:16 +00:00
-permalink: "/community/2025-07-22-Implementing-dependsOn-Chain-Inside-Looped-Resources-in-ARM-Templates-for-Azure-Backup.html"
+permalink: "/2025-07-22-Implementing-dependsOn-Chain-Inside-Looped-Resources-in-ARM-Templates-for-Azure-Backup.html"
 categories: ["Azure", "DevOps"]
 tags: ["ARM Templates", "Azure", "Azure Backup", "Azure DevOps", "Azure Recovery Services", "Community", "Dependson", "DevOps", "IaC", "Protected Items", "Resource Deployment", "Resource Loops", "Sequential Deployment", "Validation Errors"]
 tags_normalized: ["arm templates", "azure", "azure backup", "azure devops", "azure recovery services", "community", "dependson", "devops", "iac", "protected items", "resource deployment", "resource loops", "sequential deployment", "validation errors"]

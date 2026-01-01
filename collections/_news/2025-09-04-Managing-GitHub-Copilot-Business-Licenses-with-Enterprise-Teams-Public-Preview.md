@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/changelog/feed/"
 date: 2025-09-04 16:59:13 +00:00
-permalink: "/news/2025-09-04-Managing-GitHub-Copilot-Business-Licenses-with-Enterprise-Teams-Public-Preview.html"
+permalink: "/2025-09-04-Managing-GitHub-Copilot-Business-Licenses-with-Enterprise-Teams-Public-Preview.html"
 categories: ["AI", "DevOps", "GitHub Copilot"]
 tags: ["Admin Tools", "AI", "Copilot Business", "DevOps", "Enterprise Managed Users", "Enterprise Teams", "GitHub Copilot", "GitHub Enterprise Cloud", "Group Management", "Identity Provider", "License Management", "News", "Public Preview", "SCIM", "User Management"]
 tags_normalized: ["admin tools", "ai", "copilot business", "devops", "enterprise managed users", "enterprise teams", "github copilot", "github enterprise cloud", "group management", "identity provider", "license management", "news", "public preview", "scim", "user management"]

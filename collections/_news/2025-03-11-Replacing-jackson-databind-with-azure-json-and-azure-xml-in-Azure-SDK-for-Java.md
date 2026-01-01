@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft DevBlog"
 feed_url: "https://devblogs.microsoft.com/azure-sdk/feed/"
 date: 2025-03-11 20:38:45 +00:00
-permalink: "/news/2025-03-11-Replacing-jackson-databind-with-azure-json-and-azure-xml-in-Azure-SDK-for-Java.html"
+permalink: "/2025-03-11-Replacing-jackson-databind-with-azure-json-and-azure-xml-in-Azure-SDK-for-Java.html"
 categories: ["Azure", "Coding"]
 tags: ["Azure", "Azure Core", "Azure JSON", "Azure SDK", "Azure XML", "Coding", "Core", "Dependency Management", "Gson", "Jackson Databind", "Java", "JsonSerializable", "Module System", "News", "Reflection", "Serialization", "XmlSerializable"]
 tags_normalized: ["azure", "azure core", "azure json", "azure sdk", "azure xml", "coding", "core", "dependency management", "gson", "jackson databind", "java", "jsonserializable", "module system", "news", "reflection", "serialization", "xmlserializable"]

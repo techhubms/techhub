@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Events YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
 date: 2025-11-19 13:42:19 +00:00
-permalink: "/videos/2025-11-19-Enterprise-AI-Innovations-Agentic-AI-and-Small-Language-Models-at-Microsoft-Ignite-2025.html"
+permalink: "/2025-11-19-Enterprise-AI-Innovations-Agentic-AI-and-Small-Language-Models-at-Microsoft-Ignite-2025.html"
 categories: ["AI"]
 tags: ["Agentic AI", "Agenticbusinessapplications", "AI", "AI Ethics", "AI Governance", "AI Orchestration", "AI Platform Services", "AI Security", "Automated Audit", "Continuous Learning", "Cross System Interoperability", "Enterprise AI", "Human Agent Collaboration", "Infosys", "Microsoft Ignite", "MSIgnite", "Responsible AI", "SLM", "Small Language Models", "Videos"]
 tags_normalized: ["agentic ai", "agenticbusinessapplications", "ai", "ai ethics", "ai governance", "ai orchestration", "ai platform services", "ai security", "automated audit", "continuous learning", "cross system interoperability", "enterprise ai", "human agent collaboration", "infosys", "microsoft ignite", "msignite", "responsible ai", "slm", "small language models", "videos"]

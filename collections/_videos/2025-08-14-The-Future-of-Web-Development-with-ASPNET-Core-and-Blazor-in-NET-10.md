@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "DotNet YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw"
 date: 2025-08-14 14:31:21 +00:00
-permalink: "/videos/2025-08-14-The-Future-of-Web-Development-with-ASPNET-Core-and-Blazor-in-NET-10.html"
+permalink: "/2025-08-14-The-Future-of-Web-Development-with-ASPNET-Core-and-Blazor-in-NET-10.html"
 categories: ["AI", "Coding", "Security"]
 tags: [".NET", ".NET 10", ".NET Aspire", "AI", "ASP.NET Core", "Blazor", "Coding", "Developer Productivity", "Diagnostics", "Minimal API", "OpenAPI", "Passkey", "Secure Web Apps", "Security", "Telemetry", "Videos", "VS", "Web Development", "WebAuthn"]
 tags_normalized: ["dotnet", "dotnet 10", "dotnet aspire", "ai", "aspdotnet core", "blazor", "coding", "developer productivity", "diagnostics", "minimal api", "openapi", "passkey", "secure web apps", "security", "telemetry", "videos", "vs", "web development", "webauthn"]

@@ -6,7 +6,7 @@ author: "Tech Hub Team"
 excerpt_separator: <!--excerpt_end-->
 viewing_mode: "internal"
 date: 2025-08-11 09:00:00 +00:00
-permalink: "/roundups/2025-08-11-Weekly-AI-and-Tech-News-Roundup.html"
+permalink: "/2025-08-11-Weekly-AI-and-Tech-News-Roundup.html"
 categories: ["AI", "GitHub Copilot", "ML", "Azure", "Coding", "DevOps", "Security"]
 tags: [".NET", "AI", "AI Agents", "Azure", "CI/CD", "Claude Opus 4.1", "Cloud Identity", "Coding", "DevOps", "Enterprise AI", "GitHub Copilot", "GPT 5", "MCP", "ML", "Multi Agent Systems", "Passwordless Authentication", "Roundups", "Security", "VS Code"]
 tags_normalized: ["dotnet", "ai", "ai agents", "azure", "cislashcd", "claude opus 4dot1", "cloud identity", "coding", "devops", "enterprise ai", "github copilot", "gpt 5", "mcp", "ml", "multi agent systems", "passwordless authentication", "roundups", "security", "vs code"]

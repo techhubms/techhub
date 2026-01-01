@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Visual Studio Code YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SLNwkd3w"
 date: 2025-08-04 23:12:20 +00:00
-permalink: "/videos/2025-08-04-MCP-is-the-new-browser-Kent-C-Dodds-x-Burke-Holland-Live.html"
+permalink: "/2025-08-04-MCP-is-the-new-browser-Kent-C-Dodds-x-Burke-Holland-Live.html"
 categories: ["AI"]
 tags: ["AI", "AI Tools", "AI Workflows", "Burke Holland", "Demo", "Developer", "Developer Community", "Developer Experience", "Developer Tools", "Kent C. Dodds", "Kentcdodds", "Mcp", "Microsoft", "Pro Tips", "Protips", "Vibecoding", "Videos", "VS Code", "Web Browser Analogy"]
 tags_normalized: ["ai", "ai tools", "ai workflows", "burke holland", "demo", "developer", "developer community", "developer experience", "developer tools", "kent cdot dodds", "kentcdodds", "mcp", "microsoft", "pro tips", "protips", "vibecoding", "videos", "vs code", "web browser analogy"]

@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "GitHub Engineering Blog"
 feed_url: "https://github.blog/engineering/feed/"
 date: 2025-06-10 16:00:00 +00:00
-permalink: "/news/2025-06-10-How-GitHub-Engineers-Solve-Platform-Problems-Best-Practices-and-Lessons-from-Infrastructure.html"
+permalink: "/2025-06-10-How-GitHub-Engineers-Solve-Platform-Problems-Best-Practices-and-Lessons-from-Infrastructure.html"
 categories: ["DevOps"]
 tags: ["Ansible", "Collaboration", "DevOps", "Distributed Systems", "Engineering", "GitHub", "IaC", "Incident Response", "Infrastructure", "Knowledge Sharing", "Monitoring", "Network Fundamentals", "News", "Platform Engineering", "Problem Solving", "System Reliability", "Terraform", "Testing"]
 tags_normalized: ["ansible", "collaboration", "devops", "distributed systems", "engineering", "github", "iac", "incident response", "infrastructure", "knowledge sharing", "monitoring", "network fundamentals", "news", "platform engineering", "problem solving", "system reliability", "terraform", "testing"]

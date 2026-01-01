@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "DotNet YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw"
 date: 2025-07-18 06:11:11 +00:00
-permalink: "/videos/2025-07-18-NET-Data-Community-Standup-Couchbase-EF-Core-Provider-Discussion.html"
+permalink: "/2025-07-18-NET-Data-Community-Standup-Couchbase-EF-Core-Provider-Discussion.html"
 categories: ["Coding", "ML"]
 tags: [".NET", ".NET Data Community", "Coding", "Couchbase", "Data Access", "Data Integration", "EF Core", "EF Core 9 Preview 6", "Jeff Morris", "Jiri Cincura", "Linq2Couchbase", "ML", "NoSQL", "Provider Development", "Relational Databases", "Videos"]
 tags_normalized: ["dotnet", "dotnet data community", "coding", "couchbase", "data access", "data integration", "ef core", "ef core 9 preview 6", "jeff morris", "jiri cincura", "linq2couchbase", "ml", "nosql", "provider development", "relational databases", "videos"]

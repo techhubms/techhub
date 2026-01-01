@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Events YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
 date: 2025-11-21 08:12:56 +00:00
-permalink: "/videos/2025-11-21-Best-Practices-for-Migration-and-Security-with-Azure-VMware-Solution.html"
+permalink: "/2025-11-21-Best-Practices-for-Migration-and-Security-with-Azure-VMware-Solution.html"
 categories: ["Azure", "Security"]
 tags: ["AVS", "Azure", "Azure Security Tools", "Azure VMware Solution", "Case Study", "Cloud Migration", "Data Center Migration", "Enterprise Security", "Extended Security Updates", "HCX", "Infrastructure Migration", "Microsoft Azure", "Migrateandmodernizeyourestate", "Modernization", "MSIgnite", "Networking", "Security", "SQL Server", "Videos", "VMware", "Windows Server"]
 tags_normalized: ["avs", "azure", "azure security tools", "azure vmware solution", "case study", "cloud migration", "data center migration", "enterprise security", "extended security updates", "hcx", "infrastructure migration", "microsoft azure", "migrateandmodernizeyourestate", "modernization", "msignite", "networking", "security", "sql server", "videos", "vmware", "windows server"]

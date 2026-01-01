@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-11-18 16:00:05 +00:00
-permalink: "/community/2025-11-18-Announcing-Azure-Cobalt-200-Next-Generation-Arm-Based-CPU-for-Cloud-Workloads.html"
+permalink: "/2025-11-18-Announcing-Azure-Cobalt-200-Next-Generation-Arm-Based-CPU-for-Cloud-Workloads.html"
 categories: ["Azure", "Security"]
 tags: ["ARM Neoverse CSS V3", "Azure", "Azure Boost", "Azure Cobalt 200", "Azure Infrastructure", "Azure Integrated HSM", "Cloud Native Compute", "Community", "Confidential Compute Architecture", "Cryptography Accelerator", "Data Analytics", "Dynamic Voltage Frequency Scaling", "Energy Efficiency", "FIPS 140 3", "Key Vault", "Memory Encryption", "Performance Benchmarking", "Security", "Server Architecture", "System On Chip", "TSMC 3nm", "Virtual Machines"]
 tags_normalized: ["arm neoverse css v3", "azure", "azure boost", "azure cobalt 200", "azure infrastructure", "azure integrated hsm", "cloud native compute", "community", "confidential compute architecture", "cryptography accelerator", "data analytics", "dynamic voltage frequency scaling", "energy efficiency", "fips 140 3", "key vault", "memory encryption", "performance benchmarking", "security", "server architecture", "system on chip", "tsmc 3nm", "virtual machines"]

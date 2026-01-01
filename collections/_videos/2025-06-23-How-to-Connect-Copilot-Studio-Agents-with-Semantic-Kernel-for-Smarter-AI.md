@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Learn Microsoft AI Youtube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCQf_yRJpsfyEiWWpt1MZ6vA"
 date: 2025-06-23 12:02:12 +00:00
-permalink: "/videos/2025-06-23-How-to-Connect-Copilot-Studio-Agents-with-Semantic-Kernel-for-Smarter-AI.html"
+permalink: "/2025-06-23-How-to-Connect-Copilot-Studio-Agents-with-Semantic-Kernel-for-Smarter-AI.html"
 categories: ["AI", "Azure", "Coding"]
 tags: ["AI", "AI Agents", "AI Workflow", "API Integration", "App Permissions", "Azure", "Azure App Registration", "Coding", "Coding Tutorial", "Copilot Studio Agent", "External Integrations", "Microsoft AI", "Microsoft Copilot", "PowerShell", "Safe Travels Agent", "Semantic Kernel", "Tool Integration", "Videos", "VS"]
 tags_normalized: ["ai", "ai agents", "ai workflow", "api integration", "app permissions", "azure", "azure app registration", "coding", "coding tutorial", "copilot studio agent", "external integrations", "microsoft ai", "microsoft copilot", "powershell", "safe travels agent", "semantic kernel", "tool integration", "videos", "vs"]

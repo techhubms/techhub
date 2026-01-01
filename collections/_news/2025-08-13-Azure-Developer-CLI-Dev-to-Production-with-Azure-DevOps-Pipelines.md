@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft DevBlog"
 feed_url: "https://devblogs.microsoft.com/devops/feed/"
 date: 2025-08-13 18:29:24 +00:00
-permalink: "/news/2025-08-13-Azure-Developer-CLI-Dev-to-Production-with-Azure-DevOps-Pipelines.html"
+permalink: "/2025-08-13-Azure-Developer-CLI-Dev-to-Production-with-Azure-DevOps-Pipelines.html"
 categories: ["AI", "Azure", "Coding", "DevOps", "GitHub Copilot"]
 tags: ["AI", "AI Assisted Development", "Artifact Management", "Azd", "Azure", "Azure & Cloud", "Azure Developer CLI", "Azure Developer CLI (azd)", "Azure DevOps", "Azure DevOps Pipelines", "Azure Subscription", "Bicep", "CI/CD", "Cloud Deployment", "Coding", "DevOps", "Environment Variables", "GitHub Copilot", "GitHub Copilot For Azure", "IaC", "Multi Stage Pipeline", "News", "Pipeline Automation", "Pipeline Validation", "VS Code", "YAML"]
 tags_normalized: ["ai", "ai assisted development", "artifact management", "azd", "azure", "azure and cloud", "azure developer cli", "azure developer cli azd", "azure devops", "azure devops pipelines", "azure subscription", "bicep", "cislashcd", "cloud deployment", "coding", "devops", "environment variables", "github copilot", "github copilot for azure", "iac", "multi stage pipeline", "news", "pipeline automation", "pipeline validation", "vs code", "yaml"]

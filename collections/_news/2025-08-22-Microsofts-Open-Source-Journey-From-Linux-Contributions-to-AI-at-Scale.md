@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The Azure Blog"
 feed_url: "https://azure.microsoft.com/en-us/blog/feed/"
 date: 2025-08-22 15:00:00 +00:00
-permalink: "/news/2025-08-22-Microsofts-Open-Source-Journey-From-Linux-Contributions-to-AI-at-Scale.html"
+permalink: "/2025-08-22-Microsofts-Open-Source-Journey-From-Linux-Contributions-to-AI-at-Scale.html"
 categories: ["AI", "Azure", "Coding"]
 tags: ["AI", "AKS", "AutoGen", "Azure", "Azure Open Source", "ChatGPT", "Coding", "Compute", "Containers", "COSMIC", "Cosmos DB", "Dapr", "Databases", "GitHub", "Grafana", "Internet Of Things", "KAITO", "Kubernetes", "Microsoft Open Source", "News", "OpenAI", "Phi 4 Mini", "PostgreSQL", "PROMETHEUS", "Radius", "SBOM", "Semantic Kernel", "Storage", "VS Code"]
 tags_normalized: ["ai", "aks", "autogen", "azure", "azure open source", "chatgpt", "coding", "compute", "containers", "cosmic", "cosmos db", "dapr", "databases", "github", "grafana", "internet of things", "kaito", "kubernetes", "microsoft open source", "news", "openai", "phi 4 mini", "postgresql", "prometheus", "radius", "sbom", "semantic kernel", "storage", "vs code"]

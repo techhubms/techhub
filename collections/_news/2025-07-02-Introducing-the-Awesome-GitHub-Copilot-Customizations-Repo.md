@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft DevBlog"
 feed_url: "https://devblogs.microsoft.com/feed"
 date: 2025-07-02 17:30:59 +00:00
-permalink: "/news/2025-07-02-Introducing-the-Awesome-GitHub-Copilot-Customizations-Repo.html"
+permalink: "/2025-07-02-Introducing-the-Awesome-GitHub-Copilot-Customizations-Repo.html"
 categories: ["AI", "Coding", "DevOps", "GitHub Copilot"]
 tags: ["Agent Mode", "AI", "Code Review", "Coding", "Community Driven", "Custom Chat Modes", "Custom Instructions", "Developer Productivity", "DevOps", "GitHub Copilot", "MCP Server", "Microsoft", "News", "Next.js", "PostgreSQL", "Prompt Engineering", "Reusable Prompts", "Tailwind CSS", "VS Code", "Workflow Customization"]
 tags_normalized: ["agent mode", "ai", "code review", "coding", "community driven", "custom chat modes", "custom instructions", "developer productivity", "devops", "github copilot", "mcp server", "microsoft", "news", "nextdotjs", "postgresql", "prompt engineering", "reusable prompts", "tailwind css", "vs code", "workflow customization"]

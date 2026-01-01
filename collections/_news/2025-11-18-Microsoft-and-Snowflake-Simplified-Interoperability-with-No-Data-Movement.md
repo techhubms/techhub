@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Fabric Blog"
 feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
 date: 2025-11-18 08:00:00 +00:00
-permalink: "/news/2025-11-18-Microsoft-and-Snowflake-Simplified-Interoperability-with-No-Data-Movement.html"
+permalink: "/2025-11-18-Microsoft-and-Snowflake-Simplified-Interoperability-with-No-Data-Movement.html"
 categories: ["AI", "Azure", "ML"]
 tags: ["AI", "AI Workloads", "Analytics", "Apache Iceberg", "Azure", "Cross Platform Integration", "Data Architecture", "Data Interoperability", "Data Lake", "Data Sharing", "Delta Lake", "Enterprise Data Management", "Fabric Shortcut", "General Availability", "Machine Learning", "Microsoft Fabric", "ML", "News", "OneLake", "Parquet", "Preview Features", "Snowflake", "Unified Data Access"]
 tags_normalized: ["ai", "ai workloads", "analytics", "apache iceberg", "azure", "cross platform integration", "data architecture", "data interoperability", "data lake", "data sharing", "delta lake", "enterprise data management", "fabric shortcut", "general availability", "machine learning", "microsoft fabric", "ml", "news", "onelake", "parquet", "preview features", "snowflake", "unified data access"]

@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Fabric Blog"
 feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
 date: 2025-11-20 10:00:00 +00:00
-permalink: "/news/2025-11-20-Hierarchical-View-Integration-Supported-in-Fabric-Pipelines.html"
+permalink: "/2025-11-20-Hierarchical-View-Integration-Supported-in-Fabric-Pipelines.html"
 categories: ["Azure", "ML"]
 tags: ["Analytics Integration", "Azure", "Data Engineering", "Data Orchestration", "Downstream Jobs", "Hierarchical View", "Job Dependencies", "Microsoft Fabric", "ML", "Monitoring Hub", "News", "Operational Visibility", "Orchestration", "Pipeline Runs", "Pipelines", "Troubleshooting", "Upstream Jobs", "Workflow Management"]
 tags_normalized: ["analytics integration", "azure", "data engineering", "data orchestration", "downstream jobs", "hierarchical view", "job dependencies", "microsoft fabric", "ml", "monitoring hub", "news", "operational visibility", "orchestration", "pipeline runs", "pipelines", "troubleshooting", "upstream jobs", "workflow management"]

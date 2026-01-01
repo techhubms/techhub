@@ -9,10 +9,10 @@ viewing_mode: "external"
 feed_name: "Dellenny's Blog"
 feed_url: "https://dellenny.com/feed/"
 date: 2025-08-01 17:58:18 +00:00
-permalink: "/blogs/2025-08-01-Token-Based-Authentication-in-Azure-Using-JWT-for-Stateless-Security.html"
+permalink: "/2025-08-01-Token-Based-Authentication-in-Azure-Using-JWT-for-Stateless-Security.html"
 categories: ["Azure", "Coding", "Security"]
-tags: ["APIM", "Architecture", "ASP.NET Core", "Authentication", "Authorization", "Azure", "Azure Active Directory", "Azure AD B2C", "Azure API Management", "Azure Functions", "Cloud Native Applications", "Coding", "Identity Provider", "JSON Web Tokens", "JWT", "Microservices", "MSAL.NET", "OpenID Connect", "Blogs", "Security", "Solution Architecture", "Stateless Security", "Token Based Authentication", "Token Validation"]
-tags_normalized: ["apim", "architecture", "aspdotnet core", "authentication", "authorization", "azure", "azure active directory", "azure ad b2c", "azure api management", "azure functions", "cloud native applications", "coding", "identity provider", "json web tokens", "jwt", "microservices", "msaldotnet", "openid connect", "blogs", "security", "solution architecture", "stateless security", "token based authentication", "token validation"]
+tags: ["APIM", "Architecture", "ASP.NET Core", "Authentication", "Authorization", "Azure", "Azure Active Directory", "Azure AD B2C", "Azure API Management", "Azure Functions", "Blogs", "Cloud Native Applications", "Coding", "Identity Provider", "JSON Web Tokens", "JWT", "Microservices", "MSAL.NET", "OpenID Connect", "Security", "Solution Architecture", "Stateless Security", "Token Based Authentication", "Token Validation"]
+tags_normalized: ["apim", "architecture", "aspdotnet core", "authentication", "authorization", "azure", "azure active directory", "azure ad b2c", "azure api management", "azure functions", "blogs", "cloud native applications", "coding", "identity provider", "json web tokens", "jwt", "microservices", "msaldotnet", "openid connect", "security", "solution architecture", "stateless security", "token based authentication", "token validation"]
 ---
 
 Dellenny presents a comprehensive technical walkthrough on implementing stateless, token-based authentication in Azure using JWT, with practical scenarios for developers and architects.<!--excerpt_end-->

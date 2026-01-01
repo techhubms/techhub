@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-11-19 12:36:16 +00:00
-permalink: "/community/2025-11-19-Accelerate-Cloud-Migration-with-Azure-Copilot-Migration-Agent.html"
+permalink: "/2025-11-19-Accelerate-Cloud-Migration-with-Azure-Copilot-Migration-Agent.html"
 categories: ["AI", "Azure", "DevOps"]
 tags: ["AI", "AI Driven Automation", "Automation", "Azure", "Azure Copilot", "Azure Migrate", "Cloud Adoption Framework", "Cloud Migration", "Community", "Database Modernization", "DevOps", "Governance", "Landing Zone Setup", "Linux Migration", "Migration Agent", "Modernization", "MySQL", "PostgreSQL", "ROI Analysis", "Security Practices", "VMWare To Azure"]
 tags_normalized: ["ai", "ai driven automation", "automation", "azure", "azure copilot", "azure migrate", "cloud adoption framework", "cloud migration", "community", "database modernization", "devops", "governance", "landing zone setup", "linux migration", "migration agent", "modernization", "mysql", "postgresql", "roi analysis", "security practices", "vmware to azure"]

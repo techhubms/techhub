@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/changelog/feed/"
 date: 2025-10-20 22:46:44 +00:00
-permalink: "/news/2025-10-20-Claude-Haiku-45-Now-Available-in-GitHub-Copilot-Across-All-Supported-IDEs.html"
+permalink: "/2025-10-20-Claude-Haiku-45-Now-Available-in-GitHub-Copilot-Across-All-Supported-IDEs.html"
 categories: ["AI", "GitHub Copilot"]
 tags: ["AI", "AI Model", "Chat Model Picker", "Claude Haiku 4.5", "CLI", "Copilot", "Copilot Business", "Copilot Chat", "Copilot Enterprise", "Copilot Pro", "Developer Tools", "Eclipse", "GitHub Copilot", "IDEs", "JetBrains", "News", "VS", "Xcode"]
 tags_normalized: ["ai", "ai model", "chat model picker", "claude haiku 4dot5", "cli", "copilot", "copilot business", "copilot chat", "copilot enterprise", "copilot pro", "developer tools", "eclipse", "github copilot", "ides", "jetbrains", "news", "vs", "xcode"]

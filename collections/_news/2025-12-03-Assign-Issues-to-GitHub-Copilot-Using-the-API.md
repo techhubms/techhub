@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/changelog/feed/"
 date: 2025-12-03 19:21:25 +00:00
-permalink: "/news/2025-12-03-Assign-Issues-to-GitHub-Copilot-Using-the-API.html"
+permalink: "/2025-12-03-Assign-Issues-to-GitHub-Copilot-Using-the-API.html"
 categories: ["AI", "DevOps", "GitHub Copilot"]
 tags: ["Addassigneestoassignable Mutation", "AI", "API Integration", "Branch Management", "Copilot", "Copilot Assignment", "Createissue Mutation", "Custom Agents", "Custom Instructions", "DevOps", "DevOps Automation", "GitHub Copilot", "GraphQL API", "Improvement", "Issue Assignment", "News", "Projects & Issues", "Replaceactorsforassignable Mutation", "Repository Configuration", "REST API", "Updateissue Mutation"]
 tags_normalized: ["addassigneestoassignable mutation", "ai", "api integration", "branch management", "copilot", "copilot assignment", "createissue mutation", "custom agents", "custom instructions", "devops", "devops automation", "github copilot", "graphql api", "improvement", "issue assignment", "news", "projects and issues", "replaceactorsforassignable mutation", "repository configuration", "rest api", "updateissue mutation"]

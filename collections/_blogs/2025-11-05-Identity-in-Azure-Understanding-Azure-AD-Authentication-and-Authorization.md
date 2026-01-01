@@ -9,10 +9,10 @@ viewing_mode: "external"
 feed_name: "Dellenny's Blog"
 feed_url: "https://dellenny.com/feed/"
 date: 2025-11-05 10:44:47 +00:00
-permalink: "/blogs/2025-11-05-Identity-in-Azure-Understanding-Azure-AD-Authentication-and-Authorization.html"
+permalink: "/2025-11-05-Identity-in-Azure-Understanding-Azure-AD-Authentication-and-Authorization.html"
 categories: ["Azure", "Security"]
-tags: ["Authentication", "Authorization", "Azure", "Azure Active Directory", "Azure AD", "Cloud Security", "Conditional Access", "IAM", "Identity Management", "Multi Factor Authentication", "OAuth 2.0", "OpenID Connect", "Blogs", "Privileged Identity Management", "Role Based Access Control", "SAML", "Security", "Single Sign On"]
-tags_normalized: ["authentication", "authorization", "azure", "azure active directory", "azure ad", "cloud security", "conditional access", "iam", "identity management", "multi factor authentication", "oauth 2dot0", "openid connect", "blogs", "privileged identity management", "role based access control", "saml", "security", "single sign on"]
+tags: ["Authentication", "Authorization", "Azure", "Azure Active Directory", "Azure AD", "Blogs", "Cloud Security", "Conditional Access", "IAM", "Identity Management", "Multi Factor Authentication", "OAuth 2.0", "OpenID Connect", "Privileged Identity Management", "Role Based Access Control", "SAML", "Security", "Single Sign On"]
+tags_normalized: ["authentication", "authorization", "azure", "azure active directory", "azure ad", "blogs", "cloud security", "conditional access", "iam", "identity management", "multi factor authentication", "oauth 2dot0", "openid connect", "privileged identity management", "role based access control", "saml", "security", "single sign on"]
 ---
 
 Dellenny offers IT professionals an in-depth look at managing digital identities and access in Azure, emphasizing concepts like authentication, authorization, and practical use of Azure Active Directory for secure application access.<!--excerpt_end-->

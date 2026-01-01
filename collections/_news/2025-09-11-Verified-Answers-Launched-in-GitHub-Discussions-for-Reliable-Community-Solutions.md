@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/changelog/feed/"
 date: 2025-09-11 20:32:02 +00:00
-permalink: "/news/2025-09-11-Verified-Answers-Launched-in-GitHub-Discussions-for-Reliable-Community-Solutions.html"
+permalink: "/2025-09-11-Verified-Answers-Launched-in-GitHub-Discussions-for-Reliable-Community-Solutions.html"
 categories: ["DevOps"]
 tags: ["AI", "AI Standards", "Best Practices", "Collaboration Tools", "Community Engagement", "Community Management", "Copilot Readiness", "Developer Collaboration", "DevOps", "GitHub Discussions", "Knowledge Sharing", "LLM Integration", "News", "Repository Administration", "Verified Answers"]
 tags_normalized: ["ai", "ai standards", "best practices", "collaboration tools", "community engagement", "community management", "copilot readiness", "developer collaboration", "devops", "github discussions", "knowledge sharing", "llm integration", "news", "repository administration", "verified answers"]

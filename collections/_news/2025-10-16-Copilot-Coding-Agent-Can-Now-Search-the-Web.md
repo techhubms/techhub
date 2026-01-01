@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/changelog/feed/"
 date: 2025-10-16 20:32:55 +00:00
-permalink: "/news/2025-10-16-Copilot-Coding-Agent-Can-Now-Search-the-Web.html"
+permalink: "/2025-10-16-Copilot-Coding-Agent-Can-Now-Search-the-Web.html"
 categories: ["AI", "GitHub Copilot"]
 tags: ["AI", "AI Assistant", "Asynchronous Automation", "Best Practices Research", "Copilot", "Copilot Coding Agent", "Copilot Enterprise", "Copilot Pro", "Developer Tools", "Error Debugging", "GitHub Copilot", "Improvement", "Language Support", "News", "Policy Configuration", "Pull Request Automation", "Software Development", "Web Search Integration"]
 tags_normalized: ["ai", "ai assistant", "asynchronous automation", "best practices research", "copilot", "copilot coding agent", "copilot enterprise", "copilot pro", "developer tools", "error debugging", "github copilot", "improvement", "language support", "news", "policy configuration", "pull request automation", "software development", "web search integration"]

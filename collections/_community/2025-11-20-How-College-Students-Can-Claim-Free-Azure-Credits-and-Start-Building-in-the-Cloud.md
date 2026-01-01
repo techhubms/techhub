@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-11-20 14:58:10 +00:00
-permalink: "/community/2025-11-20-How-College-Students-Can-Claim-Free-Azure-Credits-and-Start-Building-in-the-Cloud.html"
+permalink: "/2025-11-20-How-College-Students-Can-Claim-Free-Azure-Credits-and-Start-Building-in-the-Cloud.html"
 categories: ["Azure"]
 tags: ["Academic Cloud", "AI", "AI Tools", "App Services", "Azure", "Azure For Students", "Azure Functions", "Big Data", "Cloud Computing", "Cloud Platform", "Community", "Education Technology", "Free Credits", "Kubernetes", "Machine Learning", "Microsoft Azure", "Student Credits", "Student Technology"]
 tags_normalized: ["academic cloud", "ai", "ai tools", "app services", "azure", "azure for students", "azure functions", "big data", "cloud computing", "cloud platform", "community", "education technology", "free credits", "kubernetes", "machine learning", "microsoft azure", "student credits", "student technology"]

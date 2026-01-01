@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-11-13 04:36:41 +00:00
-permalink: "/community/2025-11-13-Introducing-AI-Playground-on-Azure-App-Service-for-Linux.html"
+permalink: "/2025-11-13-Introducing-AI-Playground-on-Azure-App-Service-for-Linux.html"
 categories: ["AI", "Azure", "Coding"]
 tags: ["AI", "AI Playground", "App Performance", "App Service Extensions", "Azure", "Azure App Service", "Azure Portal", "BitNet", "C#", "Code Integration", "Coding", "Community", "Kudu", "Linux App Service", "Model Latency", "Node.js", "Performance Metrics", "Phi", "Prompt Engineering", "Python", "SLM Sidecar", "Small Language Model", "Web App Deployment"]
 tags_normalized: ["ai", "ai playground", "app performance", "app service extensions", "azure", "azure app service", "azure portal", "bitnet", "csharp", "code integration", "coding", "community", "kudu", "linux app service", "model latency", "nodedotjs", "performance metrics", "phi", "prompt engineering", "python", "slm sidecar", "small language model", "web app deployment"]

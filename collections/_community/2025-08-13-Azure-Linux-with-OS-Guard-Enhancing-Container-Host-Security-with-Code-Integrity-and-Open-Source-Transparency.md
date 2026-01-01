@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Community"
 date: 2025-08-13 16:01:17 +00:00
-permalink: "/community/2025-08-13-Azure-Linux-with-OS-Guard-Enhancing-Container-Host-Security-with-Code-Integrity-and-Open-Source-Transparency.html"
+permalink: "/2025-08-13-Azure-Linux-with-OS-Guard-Enhancing-Container-Host-Security-with-Code-Integrity-and-Open-Source-Transparency.html"
 categories: ["Azure", "Security"]
 tags: ["AKS", "Azure", "Azure Linux", "Code Integrity", "Community", "Container Security", "Dm Verity", "FedRAMP", "FIPS 140 3", "Immutability", "IPE", "Microsoft Azure", "Open Source", "OS Guard", "Rootkit Protection", "Secure Boot", "Security", "Security Compliance", "SELinux", "Supply Chain Security", "Trusted Launch", "Unified Kernel Images", "Vtpm"]
 tags_normalized: ["aks", "azure", "azure linux", "code integrity", "community", "container security", "dm verity", "fedramp", "fips 140 3", "immutability", "ipe", "microsoft azure", "open source", "os guard", "rootkit protection", "secure boot", "security", "security compliance", "selinux", "supply chain security", "trusted launch", "unified kernel images", "vtpm"]

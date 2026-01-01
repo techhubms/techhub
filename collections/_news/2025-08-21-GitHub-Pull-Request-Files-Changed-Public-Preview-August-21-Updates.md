@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/changelog/feed/"
 date: 2025-08-21 19:44:25 +00:00
-permalink: "/news/2025-08-21-GitHub-Pull-Request-Files-Changed-Public-Preview-August-21-Updates.html"
+permalink: "/2025-08-21-GitHub-Pull-Request-Files-Changed-Public-Preview-August-21-Updates.html"
 categories: ["DevOps"]
 tags: ["Bug Fixes", "Code Review", "Developer Experience", "DevOps", "DevOps Tools", "GitHub", "News", "Public Preview", "Pull Requests", "Review Submission", "Software Development", "Submodule Support", "UI Improvements", "Version Control", "Workflow"]
 tags_normalized: ["bug fixes", "code review", "developer experience", "devops", "devops tools", "github", "news", "public preview", "pull requests", "review submission", "software development", "submodule support", "ui improvements", "version control", "workflow"]

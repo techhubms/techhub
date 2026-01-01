@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Developer YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
 date: 2025-10-21 15:41:25 +00:00
-permalink: "/videos/2025-10-21-AI-Powered-Enhancements-in-Microsoft-Learn-Developer-Docs-with-Copilot-Highlights.html"
+permalink: "/2025-10-21-AI-Powered-Enhancements-in-Microsoft-Learn-Developer-Docs-with-Copilot-Highlights.html"
 categories: ["AI", "Azure", "Coding", "GitHub Copilot"]
 tags: [".NET", "AI", "AI Integration", "AI Powered Docs", "Azure", "Azure Functions", "Cloud Computing", "Code Migration", "Coding", "Coding Best Practices", "Content Engineering", "Context Engineering", "Copilot Highlights", "Dev", "Developer Documentation", "Developer Tools", "Development", "GitHub Copilot", "Machine Learning", "Microsoft", "Microsoft Developer", "Microsoft Learn", "Python", "Tech", "Technical Writing", "Technology", "Videos", "VS Code"]
 tags_normalized: ["dotnet", "ai", "ai integration", "ai powered docs", "azure", "azure functions", "cloud computing", "code migration", "coding", "coding best practices", "content engineering", "context engineering", "copilot highlights", "dev", "developer documentation", "developer tools", "development", "github copilot", "machine learning", "microsoft", "microsoft developer", "microsoft learn", "python", "tech", "technical writing", "technology", "videos", "vs code"]

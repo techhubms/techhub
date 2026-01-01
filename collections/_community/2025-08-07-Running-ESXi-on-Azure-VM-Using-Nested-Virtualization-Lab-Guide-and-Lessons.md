@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Reddit Azure"
 feed_url: "https://www.reddit.com/r/azure/.rss"
 date: 2025-08-07 20:18:01 +00:00
-permalink: "/community/2025-08-07-Running-ESXi-on-Azure-VM-Using-Nested-Virtualization-Lab-Guide-and-Lessons.html"
+permalink: "/2025-08-07-Running-ESXi-on-Azure-VM-Using-Nested-Virtualization-Lab-Guide-and-Lessons.html"
 categories: ["Azure"]
 tags: ["AVS", "Azure", "Azure Migrate", "Azure VM", "Cloud Labs", "Community", "CSP", "EA", "ESXi", "High Availability", "Lab Environment", "Microsoft Azure", "Nested Virtualization", "Pay as You Go", "Student Subscription", "Subscription Models", "VMware"]
 tags_normalized: ["avs", "azure", "azure migrate", "azure vm", "cloud labs", "community", "csp", "ea", "esxi", "high availability", "lab environment", "microsoft azure", "nested virtualization", "pay as you go", "student subscription", "subscription models", "vmware"]

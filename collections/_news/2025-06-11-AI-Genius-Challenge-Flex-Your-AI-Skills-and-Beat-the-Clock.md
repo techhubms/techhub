@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft DevBlog"
 feed_url: "https://devblogs.microsoft.com/all-things-azure/feed/"
 date: 2025-06-11 23:38:57 +00:00
-permalink: "/news/2025-06-11-AI-Genius-Challenge-Flex-Your-AI-Skills-and-Beat-the-Clock.html"
+permalink: "/2025-06-11-AI-Genius-Challenge-Flex-Your-AI-Skills-and-Beat-the-Clock.html"
 categories: ["AI", "Azure"]
 tags: ["Agents", "AI", "AI Agent", "AI Agents", "AI Apps", "AI Genius Challenge", "AI Studio", "All Things Azure", "App Development", "Azure", "Azure AI", "Azure Databases", "Copilot", "Developer Skilling", "Hackathon", "Kubernetes", "Microsoft Reactor", "News", "Public RAG Endpoints", "Retrieval Augmented Generation"]
 tags_normalized: ["agents", "ai", "ai agent", "ai agents", "ai apps", "ai genius challenge", "ai studio", "all things azure", "app development", "azure", "azure ai", "azure databases", "copilot", "developer skilling", "hackathon", "kubernetes", "microsoft reactor", "news", "public rag endpoints", "retrieval augmented generation"]

@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "John Savill's Technical Training"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCpIn7ox7j7bH_OFj7tYouOQ"
 date: 2025-09-10 16:04:17 +00:00
-permalink: "/videos/2025-09-10-Understanding-the-New-File-Share-Resource-Type-in-Azure.html"
+permalink: "/2025-09-10-Understanding-the-New-File-Share-Resource-Type-in-Azure.html"
 categories: ["Azure"]
 tags: ["Azure", "Azure Cloud", "Azure File Share", "Azure Storage", "Billing", "Cloud", "Cloud Infrastructure", "Cloud Storage", "File Share", "File Share Resource Type", "Microsoft", "Microsoft Azure", "Nfs", "Scalability", "Storage", "Storage Management", "Videos"]
 tags_normalized: ["azure", "azure cloud", "azure file share", "azure storage", "billing", "cloud", "cloud infrastructure", "cloud storage", "file share", "file share resource type", "microsoft", "microsoft azure", "nfs", "scalability", "storage", "storage management", "videos"]

@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-11-15 08:01:17 +00:00
-permalink: "/community/2025-11-15-Azure-Databricks-Cost-Optimization-A-Practical-Guide.html"
+permalink: "/2025-11-15-Azure-Databricks-Cost-Optimization-A-Practical-Guide.html"
 categories: ["Azure", "Coding", "DevOps", "ML"]
 tags: ["Adaptive Query Execution", "Auto Scaling", "Azure", "Azure Databricks", "Azure Monitor", "Change Data Capture", "Cluster Management", "Cluster Policies", "Coding", "Community", "Cost Optimization", "Data Engineering", "Data Storage", "Delta Lake", "DevOps", "ETL", "FinOps", "Machine Learning", "ML", "Performance Tuning", "Photon Engine", "Spark", "SQL Warehouse", "Unity Catalog"]
 tags_normalized: ["adaptive query execution", "auto scaling", "azure", "azure databricks", "azure monitor", "change data capture", "cluster management", "cluster policies", "coding", "community", "cost optimization", "data engineering", "data storage", "delta lake", "devops", "etl", "finops", "machine learning", "ml", "performance tuning", "photon engine", "spark", "sql warehouse", "unity catalog"]

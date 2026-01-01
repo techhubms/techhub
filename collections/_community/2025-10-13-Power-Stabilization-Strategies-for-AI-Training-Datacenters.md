@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-10-13 13:47:18 +00:00
-permalink: "/community/2025-10-13-Power-Stabilization-Strategies-for-AI-Training-Datacenters.html"
+permalink: "/2025-10-13-Power-Stabilization-Strategies-for-AI-Training-Datacenters.html"
 categories: ["AI"]
 tags: ["AI", "AI Infrastructure", "AI Training", "Community", "Datacenters", "Energy Storage", "GPU Clusters", "Grid Stability", "Hardware Smoothing", "Hyperscale", "Industry Collaboration", "Matrix Multiplications", "Microsoft", "Nvidia GB200", "OpenAI", "Power Management", "Power Stabilization", "Rack Level Batteries", "Software Mitigation", "Supercomputing", "Utility Requirements"]
 tags_normalized: ["ai", "ai infrastructure", "ai training", "community", "datacenters", "energy storage", "gpu clusters", "grid stability", "hardware smoothing", "hyperscale", "industry collaboration", "matrix multiplications", "microsoft", "nvidia gb200", "openai", "power management", "power stabilization", "rack level batteries", "software mitigation", "supercomputing", "utility requirements"]

@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft .NET Blog"
 feed_url: "https://devblogs.microsoft.com/dotnet/feed/"
 date: 2025-08-12 19:20:00 +00:00
-permalink: "/news/2025-08-12-NET-10-Preview-7-Released-Key-Updates-for-Libraries-ASPNET-Core-Blazor-and-MAUI.html"
+permalink: "/2025-08-12-NET-10-Preview-7-Released-Key-Updates-for-Libraries-ASPNET-Core-Blazor-and-MAUI.html"
 categories: ["Coding"]
 tags: [".NET", ".NET 10", ".NET Runtime", "AES KeyWrap", "ASP.NET Core", "Blazor", "C#", "C# Dev Kit", "Coding", "Community Standup", "EF Core", "Featured", "Libraries", "MAUI", "News", "PipeReader", "Preview Release", "Process Group", "Release Notes", "SDK", "TLS 1.3", "VS", "WebSocketStream", "Windows Forms", "WPF"]
 tags_normalized: ["dotnet", "dotnet 10", "dotnet runtime", "aes keywrap", "aspdotnet core", "blazor", "csharp", "csharp dev kit", "coding", "community standup", "ef core", "featured", "libraries", "maui", "news", "pipereader", "preview release", "process group", "release notes", "sdk", "tls 1dot3", "vs", "websocketstream", "windows forms", "wpf"]

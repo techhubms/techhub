@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Developer YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
 date: 2025-08-14 22:41:29 +00:00
-permalink: "/videos/2025-08-14-GPT-5-for-Developers.html"
+permalink: "/2025-08-14-GPT-5-for-Developers.html"
 categories: ["AI", "Coding"]
 tags: [".NET", "AI", "AI APIs", "AI Integration", "Code Samples", "Coding", "Developer Demos", "GPT 5", "JavaScript", "Machine Learning", "Microsoft Developer Tools", "Python", "Videos"]
 tags_normalized: ["dotnet", "ai", "ai apis", "ai integration", "code samples", "coding", "developer demos", "gpt 5", "javascript", "machine learning", "microsoft developer tools", "python", "videos"]

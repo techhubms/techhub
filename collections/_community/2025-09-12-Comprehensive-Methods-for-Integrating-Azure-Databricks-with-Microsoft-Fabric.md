@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-09-12 21:43:27 +00:00
-permalink: "/community/2025-09-12-Comprehensive-Methods-for-Integrating-Azure-Databricks-with-Microsoft-Fabric.html"
+permalink: "/2025-09-12-Comprehensive-Methods-for-Integrating-Azure-Databricks-with-Microsoft-Fabric.html"
 categories: ["Azure", "ML"]
 tags: ["Azure", "Azure Databricks", "Community", "Data Engineering", "Data Governance", "Data Integration", "Data Lake", "Data Orchestration", "Data Pipelines", "Data Warehouse", "Delta Sharing", "ETL", "Lakehouse", "Microsoft Fabric", "ML", "OneLake", "Power BI", "Trusted Workspace Access", "Unity Catalog"]
 tags_normalized: ["azure", "azure databricks", "community", "data engineering", "data governance", "data integration", "data lake", "data orchestration", "data pipelines", "data warehouse", "delta sharing", "etl", "lakehouse", "microsoft fabric", "ml", "onelake", "power bi", "trusted workspace access", "unity catalog"]

@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/changelog/feed/"
 date: 2025-11-06 19:02:42 +00:00
-permalink: "/news/2025-11-06-GitHub-Actions-November-2025-Releases-Increased-Limits-M2-Runners-and-Copilot-Agent-Update.html"
+permalink: "/2025-11-06-GitHub-Actions-November-2025-Releases-Increased-Limits-M2-Runners-and-Copilot-Agent-Update.html"
 categories: ["AI", "DevOps", "GitHub Copilot"]
 tags: ["Actions", "AI", "AI Integration", "CI/CD", "Coding Agent", "Continuous Integration", "DevOps", "GitHub Actions", "GitHub Copilot", "Improvement", "M2 Macos Runners", "Macos", "News", "Organizational Settings", "Performance", "Reusable Workflows", "Runner Improvements", "Workflow Automation"]
 tags_normalized: ["actions", "ai", "ai integration", "cislashcd", "coding agent", "continuous integration", "devops", "github actions", "github copilot", "improvement", "m2 macos runners", "macos", "news", "organizational settings", "performance", "reusable workflows", "runner improvements", "workflow automation"]

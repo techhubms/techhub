@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "John Savill's Technical Training"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCpIn7ox7j7bH_OFj7tYouOQ"
 date: 2025-09-08 11:41:29 +00:00
-permalink: "/videos/2025-09-08-Application-Gateway-Network-Isolation-Explained.html"
+permalink: "/2025-09-08-Application-Gateway-Network-Isolation-Explained.html"
 categories: ["Azure", "Security"]
 tags: ["Application Gateway", "Azure", "Azure Application Gateway", "Azure Cloud", "Azure Networking", "Azure Security", "Azure Virtual Network", "Cloud", "Cloud Networking", "Microsoft", "Microsoft Azure", "Network Architecture", "Network Isolation", "Security", "Security Best Practices", "Videos"]
 tags_normalized: ["application gateway", "azure", "azure application gateway", "azure cloud", "azure networking", "azure security", "azure virtual network", "cloud", "cloud networking", "microsoft", "microsoft azure", "network architecture", "network isolation", "security", "security best practices", "videos"]

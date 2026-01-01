@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft VisualStudio Blog"
 feed_url: "https://devblogs.microsoft.com/visualstudio/feed/"
 date: 2025-11-11 16:08:47 +00:00
-permalink: "/news/2025-11-11-Visual-Studio-2026-Faster-Performance-and-AI-Driven-Developer-Tools-Now-Available.html"
+permalink: "/2025-11-11-Visual-Studio-2026-Faster-Performance-and-AI-Driven-Developer-Tools-Now-Available.html"
 categories: ["AI", "Coding"]
 tags: [".NET 10", "AI", "AI Native IDE", "Automatic Updates", "C#", "C++", "Coding", "Developer Productivity", "Extensions", "IDE", "Insiders Channel", "News", "Performance Improvement", "Profiler Agent", "User Experience", "VS"]
 tags_normalized: ["dotnet 10", "ai", "ai native ide", "automatic updates", "csharp", "cplusplus", "coding", "developer productivity", "extensions", "ide", "insiders channel", "news", "performance improvement", "profiler agent", "user experience", "vs"]

@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=AI"
 date: 2025-08-08 13:31:56 +00:00
-permalink: "/community/2025-08-08-An-Interns-Perspective-Improving-Model-Management-with-Azure-AI-Foundry-Agents.html"
+permalink: "/2025-08-08-An-Interns-Perspective-Improving-Model-Management-with-Azure-AI-Foundry-Agents.html"
 categories: ["AI", "Azure"]
 tags: ["AI", "AI Agents", "Azure", "Azure AI", "Azure AI Foundry", "Azure OpenAI Service", "Bicep", "Cloud Automation", "Community", "Conversational AI", "Deployment Automation", "Enterprise AI", "IaC", "Infrastructure as Agents", "Microsoft", "Model Inventory", "Model Lifecycle", "Model Management", "Model Operation Agent", "Model Upgrades", "Quota Validation", "SDK", "Terraform", "VS Code"]
 tags_normalized: ["ai", "ai agents", "azure", "azure ai", "azure ai foundry", "azure openai service", "bicep", "cloud automation", "community", "conversational ai", "deployment automation", "enterprise ai", "iac", "infrastructure as agents", "microsoft", "model inventory", "model lifecycle", "model management", "model operation agent", "model upgrades", "quota validation", "sdk", "terraform", "vs code"]

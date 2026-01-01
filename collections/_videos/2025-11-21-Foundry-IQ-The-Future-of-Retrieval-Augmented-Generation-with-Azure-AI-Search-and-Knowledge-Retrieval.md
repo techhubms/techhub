@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Events YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
 date: 2025-11-21 07:32:34 +00:00
-permalink: "/videos/2025-11-21-Foundry-IQ-The-Future-of-Retrieval-Augmented-Generation-with-Azure-AI-Search-and-Knowledge-Retrieval.html"
+permalink: "/2025-11-21-Foundry-IQ-The-Future-of-Retrieval-Augmented-Generation-with-Azure-AI-Search-and-Knowledge-Retrieval.html"
 categories: ["AI", "Azure"]
 tags: ["Agentic RAG", "AI", "AI Agents", "Azure", "Azure AI Search", "Cloud Indexing", "Contextual AI", "Data Retrieval", "Dynamic Security Controls", "Enterprise Data", "Foundry IQ", "GitHub Documentation", "InnovatewithAzureAIappsandagents", "Knowledge Retrieval", "Microsoft Foundry", "MSIgnite", "RAG Orchestration", "Retrieval Augmented Generation", "Steering Instructions", "Videos"]
 tags_normalized: ["agentic rag", "ai", "ai agents", "azure", "azure ai search", "cloud indexing", "contextual ai", "data retrieval", "dynamic security controls", "enterprise data", "foundry iq", "github documentation", "innovatewithazureaiappsandagents", "knowledge retrieval", "microsoft foundry", "msignite", "rag orchestration", "retrieval augmented generation", "steering instructions", "videos"]

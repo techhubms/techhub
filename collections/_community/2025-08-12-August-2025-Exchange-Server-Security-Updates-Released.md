@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Community"
 date: 2025-08-12 17:48:04 +00:00
-permalink: "/community/2025-08-12-August-2025-Exchange-Server-Security-Updates-Released.html"
+permalink: "/2025-08-12-August-2025-Exchange-Server-Security-Updates-Released.html"
 categories: ["Security"]
 tags: ["AMSI Integration", "August Update", "Community", "Cumulative Update (cu)", "CVE 53786", "Exchange Management Tools", "Exchange Server", "Exchange Server Subscription Edition", "Health Checker Script", "Hybrid Deployment", "Microsoft Security", "On Premises Exchange", "Security", "Security Update", "SetupAssist Script", "Vulnerability"]
 tags_normalized: ["amsi integration", "august update", "community", "cumulative update cu", "cve 53786", "exchange management tools", "exchange server", "exchange server subscription edition", "health checker script", "hybrid deployment", "microsoft security", "on premises exchange", "security", "security update", "setupassist script", "vulnerability"]

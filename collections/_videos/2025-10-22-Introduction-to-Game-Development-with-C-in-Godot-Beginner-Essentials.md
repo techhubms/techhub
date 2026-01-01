@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "DotNet YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw"
 date: 2025-10-22 16:30:13 +00:00
-permalink: "/videos/2025-10-22-Introduction-to-Game-Development-with-C-in-Godot-Beginner-Essentials.html"
+permalink: "/2025-10-22-Introduction-to-Game-Development-with-C-in-Godot-Beginner-Essentials.html"
 categories: ["Coding"]
 tags: [".NET", "Beginner Tutorial", "C#", "Coding", "Crafting UI", "Game Development", "GitHub", "Godot", "Godot Engine", "Indie Game Dev", "Interactive Objects", "Microsoft", "Player Control", "Programming", "Scenes And Nodes", "Videos", "VS"]
 tags_normalized: ["dotnet", "beginner tutorial", "csharp", "coding", "crafting ui", "game development", "github", "godot", "godot engine", "indie game dev", "interactive objects", "microsoft", "player control", "programming", "scenes and nodes", "videos", "vs"]

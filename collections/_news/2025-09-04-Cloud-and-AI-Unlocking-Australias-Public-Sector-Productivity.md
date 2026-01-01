@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft News"
 feed_url: "https://news.microsoft.com/source/feed/"
 date: 2025-09-04 14:32:28 +00:00
-permalink: "/news/2025-09-04-Cloud-and-AI-Unlocking-Australias-Public-Sector-Productivity.html"
+permalink: "/2025-09-04-Cloud-and-AI-Unlocking-Australias-Public-Sector-Productivity.html"
 categories: ["AI", "Azure", "Security"]
 tags: ["AI", "AI Tools", "Azure", "Cloud", "Cloud Adoption", "Company News", "Cybersecurity", "Digital Government", "Digital Transformation", "Government IT", "IT Modernization", "Legacy System Modernization", "Microsoft Azure", "News", "Procurement Reform", "Productivity", "Public Sector Innovation", "Security", "Service Delivery", "Sustainability"]
 tags_normalized: ["ai", "ai tools", "azure", "cloud", "cloud adoption", "company news", "cybersecurity", "digital government", "digital transformation", "government it", "it modernization", "legacy system modernization", "microsoft azure", "news", "procurement reform", "productivity", "public sector innovation", "security", "service delivery", "sustainability"]

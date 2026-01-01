@@ -9,10 +9,10 @@ viewing_mode: "external"
 feed_name: "David Fowler's Blog"
 feed_url: "https://medium.com/feed/@davidfowl"
 date: 2025-03-28 01:13:30 +00:00
-permalink: "/blogs/2025-03-28-Bridging-the-Gap-The-Future-of-Aspire.html"
+permalink: "/2025-03-28-Bridging-the-Gap-The-Future-of-Aspire.html"
 categories: ["Azure", "Coding", "DevOps"]
-tags: ["Application Modeling", "Aspire", "Azure", "Bicep", "Cloud Native", "Coding", "Developer Experience", "DevOps", "Distributed Systems", "IaC", "Platform Engineering", "Blogs", "Pulumi", "Service Discovery", "Terraform"]
-tags_normalized: ["application modeling", "aspire", "azure", "bicep", "cloud native", "coding", "developer experience", "devops", "distributed systems", "iac", "platform engineering", "blogs", "pulumi", "service discovery", "terraform"]
+tags: ["Application Modeling", "Aspire", "Azure", "Bicep", "Blogs", "Cloud Native", "Coding", "Developer Experience", "DevOps", "Distributed Systems", "IaC", "Platform Engineering", "Pulumi", "Service Discovery", "Terraform"]
+tags_normalized: ["application modeling", "aspire", "azure", "bicep", "blogs", "cloud native", "coding", "developer experience", "devops", "distributed systems", "iac", "platform engineering", "pulumi", "service discovery", "terraform"]
 ---
 
 Written by David Fowler, this post discusses the future direction of Aspire, focusing on how it bridges the gap between application development and cloud infrastructure for both developers and platform engineers.<!--excerpt_end-->

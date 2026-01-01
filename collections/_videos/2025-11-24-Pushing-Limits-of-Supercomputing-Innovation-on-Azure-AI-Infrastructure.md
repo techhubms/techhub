@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Events YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
 date: 2025-11-24 06:42:11 +00:00
-permalink: "/videos/2025-11-24-Pushing-Limits-of-Supercomputing-Innovation-on-Azure-AI-Infrastructure.html"
+permalink: "/2025-11-24-Pushing-Limits-of-Supercomputing-Innovation-on-Azure-AI-Infrastructure.html"
 categories: ["AI", "Azure", "ML"]
 tags: ["AI", "AI Validation", "Azure", "Azure AI Infrastructure", "Cloud Compute", "Data Ingestion", "GB200", "GB300", "GPU Kernels", "GRAC 314B", "H100", "Large Language Models", "LLAMA Pretraining", "Microsoft Ignite", "Migrateandmodernizeyourestate", "ML", "Model Training", "MSIgnite", "Multi Billion Parameter Models", "Performance Optimization", "Supercomputing", "Videos"]
 tags_normalized: ["ai", "ai validation", "azure", "azure ai infrastructure", "cloud compute", "data ingestion", "gb200", "gb300", "gpu kernels", "grac 314b", "h100", "large language models", "llama pretraining", "microsoft ignite", "migrateandmodernizeyourestate", "ml", "model training", "msignite", "multi billion parameter models", "performance optimization", "supercomputing", "videos"]

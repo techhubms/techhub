@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Reddit Visual Studio"
 feed_url: "https://www.reddit.com/r/VisualStudio/.rss"
 date: 2025-07-24 11:14:13 +00:00
-permalink: "/community/2025-07-24-Visual-Studio-might-be-getting-its-biggest-upgrade-in-years-and-itll-include-AI.html"
+permalink: "/2025-07-24-Visual-Studio-might-be-getting-its-biggest-upgrade-in-years-and-itll-include-AI.html"
 categories: ["AI", "Coding"]
 tags: ["AI", "AI Features", "AI Integration", "Coding", "Community", "Development Tools", "IDE", "Microsoft", "Microsoft AI", "Programming", "Software Development", "Upgrade", "VS"]
 tags_normalized: ["ai", "ai features", "ai integration", "coding", "community", "development tools", "ide", "microsoft", "microsoft ai", "programming", "software development", "upgrade", "vs"]

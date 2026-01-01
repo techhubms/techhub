@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Reddit Azure DevOps"
 feed_url: "https://www.reddit.com/r/azuredevops/.rss"
 date: 2025-08-08 10:59:17 +00:00
-permalink: "/community/2025-08-08-Sprint-Planning-and-Capacity-Management-in-Azure-DevOps-Without-Predefined-Tasks.html"
+permalink: "/2025-08-08-Sprint-Planning-and-Capacity-Management-in-Azure-DevOps-Without-Predefined-Tasks.html"
 categories: ["Azure", "DevOps"]
 tags: ["Agile", "Azure", "Azure DevOps", "Backlog Management", "Capacity Planning", "Community", "DevOps", "Forecasting", "Sprint Planning", "Story Points", "Task Tracking", "User Stories", "Workflow Management"]
 tags_normalized: ["agile", "azure", "azure devops", "backlog management", "capacity planning", "community", "devops", "forecasting", "sprint planning", "story points", "task tracking", "user stories", "workflow management"]

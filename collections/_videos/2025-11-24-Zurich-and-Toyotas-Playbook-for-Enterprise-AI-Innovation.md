@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Events YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
 date: 2025-11-24 10:32:04 +00:00
-permalink: "/videos/2025-11-24-Zurich-and-Toyotas-Playbook-for-Enterprise-AI-Innovation.html"
+permalink: "/2025-11-24-Zurich-and-Toyotas-Playbook-for-Enterprise-AI-Innovation.html"
 categories: ["AI", "Azure"]
 tags: ["AI", "AI Deployment", "AI Document Processing", "AI Review Board", "API Reliability", "Azure", "Azure AI", "Business Alignment", "Context Modeling", "Cost Control", "Data Retrieval", "Enterprise AI", "Ingestion Pipeline", "InnovatewithAzureAIappsandagents", "Metadata", "Microsoft Ignite", "MSIgnite", "Ontology", "Technical Challenges", "Toyota", "Unstructured Data", "Videos", "Zurich"]
 tags_normalized: ["ai", "ai deployment", "ai document processing", "ai review board", "api reliability", "azure", "azure ai", "business alignment", "context modeling", "cost control", "data retrieval", "enterprise ai", "ingestion pipeline", "innovatewithazureaiappsandagents", "metadata", "microsoft ignite", "msignite", "ontology", "technical challenges", "toyota", "unstructured data", "videos", "zurich"]

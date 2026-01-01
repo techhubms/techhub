@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "GitHub YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ"
 date: 2025-10-30 14:01:27 +00:00
-permalink: "/videos/2025-10-30-How-GitHub-Copilot-Hacked-a-Furby.html"
+permalink: "/2025-10-30-How-GitHub-Copilot-Hacked-a-Furby.html"
 categories: ["AI", "Coding", "GitHub Copilot"]
 tags: ["AI", "Coding", "Developer Tools", "Furby", "GitHub Copilot", "GitHub Universe", "GitHubUniverse", "Hacking", "Home Assistant", "Integration", "IoT", "Machine Learning", "Programming", "Python", "Robotics", "Toy Hacking", "Videos"]
 tags_normalized: ["ai", "coding", "developer tools", "furby", "github copilot", "github universe", "githubuniverse", "hacking", "home assistant", "integration", "iot", "machine learning", "programming", "python", "robotics", "toy hacking", "videos"]

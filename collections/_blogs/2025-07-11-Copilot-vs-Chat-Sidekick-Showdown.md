@@ -9,10 +9,10 @@ viewing_mode: "external"
 feed_name: "Randy Pagels's Blog"
 feed_url: "https://www.cooknwithcopilot.com/rss.xml"
 date: 2025-07-11 00:00:00 +00:00
-permalink: "/blogs/2025-07-11-Copilot-vs-Chat-Sidekick-Showdown.html"
+permalink: "/2025-07-11-Copilot-vs-Chat-Sidekick-Showdown.html"
 categories: ["AI", "GitHub Copilot"]
-tags: ["AI", "AI Assistant", "ChatGPT", "Code Completion", "Code Review", "Coding Tools", "Copilot Chat", "Developer Productivity", "Gemini", "GitHub Copilot", "Integrated Development Environment", "Blogs", "Workflow Tips"]
-tags_normalized: ["ai", "ai assistant", "chatgpt", "code completion", "code review", "coding tools", "copilot chat", "developer productivity", "gemini", "github copilot", "integrated development environment", "blogs", "workflow tips"]
+tags: ["AI", "AI Assistant", "Blogs", "ChatGPT", "Code Completion", "Code Review", "Coding Tools", "Copilot Chat", "Developer Productivity", "Gemini", "GitHub Copilot", "Integrated Development Environment", "Workflow Tips"]
+tags_normalized: ["ai", "ai assistant", "blogs", "chatgpt", "code completion", "code review", "coding tools", "copilot chat", "developer productivity", "gemini", "github copilot", "integrated development environment", "workflow tips"]
 ---
 
 Randy Pagels compares GitHub Copilot's inline code completions with conversational AI chatbots, outlining when and how developers can leverage both to accelerate coding and solve complex problems.<!--excerpt_end-->

@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "DotNet YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw"
 date: 2025-09-09 17:07:40 +00:00
-permalink: "/videos/2025-09-09-NET-Data-Community-Standup-Practical-Dapper-vs-Entity-Framework-Core-Comparison.html"
+permalink: "/2025-09-09-NET-Data-Community-Standup-Practical-Dapper-vs-Entity-Framework-Core-Comparison.html"
 categories: ["Coding"]
 tags: [".NET", "Architecture", "Best Practices", "C#", "Coding", "Dapper", "Data", "Data Access", "Demo", "Developer", "Developer Community", "Developer Tools", "Development Tools", "Dotnetdata", "Dotnetdeveloper", "EF Core", "Micro ORM", "Microsoft", "ORM", "Performance", "Trade Offs", "Videos"]
 tags_normalized: ["dotnet", "architecture", "best practices", "csharp", "coding", "dapper", "data", "data access", "demo", "developer", "developer community", "developer tools", "development tools", "dotnetdata", "dotnetdeveloper", "ef core", "micro orm", "microsoft", "orm", "performance", "trade offs", "videos"]

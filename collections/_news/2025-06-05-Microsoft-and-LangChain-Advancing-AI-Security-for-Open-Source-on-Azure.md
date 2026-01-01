@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft DevBlog"
 feed_url: "https://devblogs.microsoft.com/feed"
 date: 2025-06-05 17:05:24 +00:00
-permalink: "/news/2025-06-05-Microsoft-and-LangChain-Advancing-AI-Security-for-Open-Source-on-Azure.html"
+permalink: "/2025-06-05-Microsoft-and-LangChain-Advancing-AI-Security-for-Open-Source-on-Azure.html"
 categories: ["AI", "Azure", "Security"]
 tags: ["AI", "AI Security", "Autogen", "Azure", "Azure AI Foundry", "Continuous Integration", "Information Leakage", "Langchain", "LangChain4J", "LangGraph", "Large Language Models", "News", "Open Source", "Privilege Escalation", "Python", "Security", "Semantic Kernel", "Trust"]
 tags_normalized: ["ai", "ai security", "autogen", "azure", "azure ai foundry", "continuous integration", "information leakage", "langchain", "langchain4j", "langgraph", "large language models", "news", "open source", "privilege escalation", "python", "security", "semantic kernel", "trust"]

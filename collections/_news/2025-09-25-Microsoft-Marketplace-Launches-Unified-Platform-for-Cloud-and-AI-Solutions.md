@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft News"
 feed_url: "https://news.microsoft.com/source/feed/"
 date: 2025-09-25 14:13:11 +00:00
-permalink: "/news/2025-09-25-Microsoft-Marketplace-Launches-Unified-Platform-for-Cloud-and-AI-Solutions.html"
+permalink: "/2025-09-25-Microsoft-Marketplace-Launches-Unified-Platform-for-Cloud-and-AI-Solutions.html"
 categories: ["AI", "Azure"]
 tags: ["AI", "AI Agents", "AI Apps", "Azure", "Azure AI Foundry", "Azure Marketplace", "Cloud Management", "Cloud Solutions", "Company News", "CSP Integration", "Dynamics 365", "Enterprise Solutions", "IT Procurement", "MCP", "Microsoft 365 Copilot", "Microsoft AppSource", "Microsoft Marketplace", "Microsoft Security", "News", "Partner Ecosystem", "Power Platform", "Private Offers"]
 tags_normalized: ["ai", "ai agents", "ai apps", "azure", "azure ai foundry", "azure marketplace", "cloud management", "cloud solutions", "company news", "csp integration", "dynamics 365", "enterprise solutions", "it procurement", "mcp", "microsoft 365 copilot", "microsoft appsource", "microsoft marketplace", "microsoft security", "news", "partner ecosystem", "power platform", "private offers"]

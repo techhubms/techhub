@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Fabric Blog"
 feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
 date: 2025-09-30 14:00:00 +00:00
-permalink: "/news/2025-09-30-September-2025-Microsoft-Fabric-Influencers-Spotlight.html"
+permalink: "/2025-09-30-September-2025-Microsoft-Fabric-Influencers-Spotlight.html"
 categories: ["Azure", "ML"]
 tags: ["Administration", "Azure", "CI/CD", "Data Engineering", "Data Integration", "Data Pipeline", "Data Science", "Data Warehousing", "Fabric Community", "Fabric Platform", "Governance", "Microsoft Fabric", "ML", "Model Metrics", "MVP", "News", "Power BI", "Python", "Scikit Learn", "Semantic Models", "Super User"]
 tags_normalized: ["administration", "azure", "cislashcd", "data engineering", "data integration", "data pipeline", "data science", "data warehousing", "fabric community", "fabric platform", "governance", "microsoft fabric", "ml", "model metrics", "mvp", "news", "power bi", "python", "scikit learn", "semantic models", "super user"]

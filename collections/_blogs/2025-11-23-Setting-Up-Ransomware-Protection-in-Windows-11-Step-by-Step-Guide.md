@@ -9,10 +9,10 @@ viewing_mode: "external"
 feed_name: "Dellenny's Blog"
 feed_url: "https://dellenny.com/feed/"
 date: 2025-11-23 17:10:25 +00:00
-permalink: "/blogs/2025-11-23-Setting-Up-Ransomware-Protection-in-Windows-11-Step-by-Step-Guide.html"
+permalink: "/2025-11-23-Setting-Up-Ransomware-Protection-in-Windows-11-Step-by-Step-Guide.html"
 categories: ["Security"]
-tags: ["Cloud Backup", "Controlled Folder Access", "Cybersecurity", "File Recovery", "Malware Defense", "OneDrive", "Blogs", "Ransomware", "Ransomware Protection", "Security", "Windows 11", "Windows Security"]
-tags_normalized: ["cloud backup", "controlled folder access", "cybersecurity", "file recovery", "malware defense", "onedrive", "blogs", "ransomware", "ransomware protection", "security", "windows 11", "windows security"]
+tags: ["Blogs", "Cloud Backup", "Controlled Folder Access", "Cybersecurity", "File Recovery", "Malware Defense", "OneDrive", "Ransomware", "Ransomware Protection", "Security", "Windows 11", "Windows Security"]
+tags_normalized: ["blogs", "cloud backup", "controlled folder access", "cybersecurity", "file recovery", "malware defense", "onedrive", "ransomware", "ransomware protection", "security", "windows 11", "windows security"]
 ---
 
 John Edward presents a practical walkthrough for enabling ransomware protection on Windows 11, highlighting essential security settings and backup strategies to safeguard your files.<!--excerpt_end-->

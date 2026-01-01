@@ -9,10 +9,10 @@ viewing_mode: "external"
 feed_name: "Randy Pagels's Blog"
 feed_url: "https://www.cooknwithcopilot.com/rss.xml"
 date: 2025-06-27 00:00:00 +00:00
-permalink: "/blogs/2025-06-27-Top-10-Copilot-Tips.html"
+permalink: "/2025-06-27-Top-10-Copilot-Tips.html"
 categories: ["AI", "Coding", "GitHub Copilot"]
-tags: ["AI", "AI Coding Assistant", "Best Practices", "Code Refactoring", "Code Review", "Coding", "Copilot Chat", "Developer Productivity", "GitHub Copilot", "Blogs", "Pro Tips", "Prompt Engineering", "Testing Automation", "Type Hints", "VS Code", "Workspace Context"]
-tags_normalized: ["ai", "ai coding assistant", "best practices", "code refactoring", "code review", "coding", "copilot chat", "developer productivity", "github copilot", "blogs", "pro tips", "prompt engineering", "testing automation", "type hints", "vs code", "workspace context"]
+tags: ["AI", "AI Coding Assistant", "Best Practices", "Blogs", "Code Refactoring", "Code Review", "Coding", "Copilot Chat", "Developer Productivity", "GitHub Copilot", "Pro Tips", "Prompt Engineering", "Testing Automation", "Type Hints", "VS Code", "Workspace Context"]
+tags_normalized: ["ai", "ai coding assistant", "best practices", "blogs", "code refactoring", "code review", "coding", "copilot chat", "developer productivity", "github copilot", "pro tips", "prompt engineering", "testing automation", "type hints", "vs code", "workspace context"]
 ---
 
 Randy Pagels shares practical and insightful tips on harnessing the full potential of GitHub Copilot, enabling developers to write better code, streamline reviews, and integrate Copilot into everyday workflows.<!--excerpt_end-->

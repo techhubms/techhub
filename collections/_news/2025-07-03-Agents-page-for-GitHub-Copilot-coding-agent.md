@@ -10,7 +10,7 @@ categories: ["AI", "GitHub Copilot"]
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/changelog/label/copilot/feed/"
 date: 2025-07-03 12:00:54 +00:00
-permalink: "/news/2025-07-03-Agents-page-for-GitHub-Copilot-coding-agent.html"
+permalink: "/2025-07-03-Agents-page-for-GitHub-Copilot-coding-agent.html"
 tags: ["AI", "Bug Fixing", "Coding Agents", "Developer Productivity", "Feature Implementation", "GitHub Copilot", "News", "Tech Debt"]
 tags_normalized: ["ai", "bug fixing", "coding agents", "developer productivity", "feature implementation", "github copilot", "news", "tech debt"]
 ---

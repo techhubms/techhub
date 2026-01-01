@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Events YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
 date: 2025-11-25 12:07:51 +00:00
-permalink: "/videos/2025-11-25-Connecting-Computing-Eras-From-Altair-8800-to-Azure-Cloud-Architecture.html"
+permalink: "/2025-11-25-Connecting-Computing-Eras-From-Altair-8800-to-Azure-Cloud-Architecture.html"
 categories: ["Azure", "Coding", "DevOps"]
 tags: ["Altair 8800", "Assembler", "Azure", "BASIC", "Bootloaders", "Cloud Architecture", "Coding", "CP/M", "Development Practices", "DevOps", "Emulators", "Mark Russinovich", "Microsoft Ignite", "Migrateandmodernizeyourestate", "Modern Apps", "MSIgnite", "Open Source", "Personal Computing", "REST APIs", "Scaling", "Scott Hanselman", "Sysinternals", "Terminal", "UEFI", "Videos"]
 tags_normalized: ["altair 8800", "assembler", "azure", "basic", "bootloaders", "cloud architecture", "coding", "cpslashm", "development practices", "devops", "emulators", "mark russinovich", "microsoft ignite", "migrateandmodernizeyourestate", "modern apps", "msignite", "open source", "personal computing", "rest apis", "scaling", "scott hanselman", "sysinternals", "terminal", "uefi", "videos"]

@@ -9,10 +9,10 @@ viewing_mode: "external"
 feed_name: "Randy Pagels's Blog"
 feed_url: "https://cooknwithcopilot.com/rss.xml"
 date: 2025-03-21 00:00:00 +00:00
-permalink: "/blogs/2025-03-21-Ask-Better-Questions-Get-Better-Code-with-GitHub-Copilot.html"
+permalink: "/2025-03-21-Ask-Better-Questions-Get-Better-Code-with-GitHub-Copilot.html"
 categories: ["AI", "GitHub Copilot"]
-tags: ["AI", "Clear Communication", "Code Review", "Code Suggestions", "Collaborative Coding", "Copilot Chat", "Developer Productivity", "Efficient Coding", "GitHub Copilot", "Blogs", "Prompt Engineering", "Software Development"]
-tags_normalized: ["ai", "clear communication", "code review", "code suggestions", "collaborative coding", "copilot chat", "developer productivity", "efficient coding", "github copilot", "blogs", "prompt engineering", "software development"]
+tags: ["AI", "Blogs", "Clear Communication", "Code Review", "Code Suggestions", "Collaborative Coding", "Copilot Chat", "Developer Productivity", "Efficient Coding", "GitHub Copilot", "Prompt Engineering", "Software Development"]
+tags_normalized: ["ai", "blogs", "clear communication", "code review", "code suggestions", "collaborative coding", "copilot chat", "developer productivity", "efficient coding", "github copilot", "prompt engineering", "software development"]
 ---
 
 Randy Pagels explains how developers can get the most out of GitHub Copilot by improving the way they phrase their questions. The guide shares actionable advice for crafting more effective prompts and treating Copilot as a true coding collaborator.<!--excerpt_end-->

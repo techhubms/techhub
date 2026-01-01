@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "DotNet YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw"
 date: 2025-11-12 19:18:19 +00:00
-permalink: "/videos/2025-11-12-NET-Diagnostic-Tooling-with-AI.html"
+permalink: "/2025-11-12-NET-Diagnostic-Tooling-with-AI.html"
 categories: ["AI", "Coding"]
 tags: [".NET", ".NET 10", "AI", "AI Diagnostics", "Application Optimization", "ASP.NET Core", "Automated Debugging", "C#", "Cloud Native Apps", "Coding", "Developer Productivity", "Diagnostic Workflows", "Error Detection", "F#", "Intelligent Tooling", "MAUI", "Performance Analysis", "Videos", "VS"]
 tags_normalized: ["dotnet", "dotnet 10", "ai", "ai diagnostics", "application optimization", "aspdotnet core", "automated debugging", "csharp", "cloud native apps", "coding", "developer productivity", "diagnostic workflows", "error detection", "fsharp", "intelligent tooling", "maui", "performance analysis", "videos", "vs"]

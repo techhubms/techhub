@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/changelog/feed/"
 date: 2025-12-02 16:50:31 +00:00
-permalink: "/news/2025-12-02-GitHub-Secret-Scanning-Updates-and-New-Patterns-November-2025.html"
+permalink: "/2025-12-02-GitHub-Secret-Scanning-Updates-and-New-Patterns-November-2025.html"
 categories: ["Azure", "DevOps", "Security"]
 tags: ["Application Security", "AWS", "Azure", "Databricks", "DevOps", "Discord", "Elliptic Curve", "GitHub", "Improvement", "Key Management", "Metadata Validation", "Microsoft", "News", "Partner Integrations", "PKCS#8", "PostHog", "Private Key Detection", "Push Protection", "Rainforest Pay", "Secret Scanning", "Security", "Sentry"]
 tags_normalized: ["application security", "aws", "azure", "databricks", "devops", "discord", "elliptic curve", "github", "improvement", "key management", "metadata validation", "microsoft", "news", "partner integrations", "pkcssharp8", "posthog", "private key detection", "push protection", "rainforest pay", "secret scanning", "security", "sentry"]

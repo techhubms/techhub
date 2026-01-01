@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Events YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
 date: 2025-11-24 08:12:27 +00:00
-permalink: "/videos/2025-11-24-Powering-Modern-Cloud-Workloads-with-Azure-Compute.html"
+permalink: "/2025-11-24-Powering-Modern-Cloud-Workloads-with-Azure-Compute.html"
 categories: ["AI", "Azure", "Security"]
 tags: ["AI", "AI Inference", "Azure", "Azure Compute", "Azure Virtual Machines", "Cloud Scalability", "Cloud Security", "Cobalt 200", "Confidential Computing", "DADS V6", "DADS V7", "Enterprise Applications", "IaaS", "Microsoft Ignite", "Migrate App Workloads", "Migrateandmodernizeyourestate", "MSIgnite", "Performance Optimization", "Security", "V4L Series", "Videos"]
 tags_normalized: ["ai", "ai inference", "azure", "azure compute", "azure virtual machines", "cloud scalability", "cloud security", "cobalt 200", "confidential computing", "dads v6", "dads v7", "enterprise applications", "iaas", "microsoft ignite", "migrate app workloads", "migrateandmodernizeyourestate", "msignite", "performance optimization", "security", "v4l series", "videos"]

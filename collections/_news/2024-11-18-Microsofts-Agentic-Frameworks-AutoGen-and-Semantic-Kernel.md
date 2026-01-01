@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft DevBlog"
 feed_url: "https://devblogs.microsoft.com/autogen/feed/"
 date: 2024-11-18 15:50:54 +00:00
-permalink: "/news/2024-11-18-Microsofts-Agentic-Frameworks-AutoGen-and-Semantic-Kernel.html"
+permalink: "/2024-11-18-Microsofts-Agentic-Frameworks-AutoGen-and-Semantic-Kernel.html"
 categories: ["AI", "Coding"]
 tags: ["Agentic Frameworks", "AI", "AI Agents", "AutoGen", "C#", "Coding", "Dapr", "Enterprise AI", "Event Driven Architecture", "GenAI", "Java", "LLMs", "Microsoft", "Microsoft Orleans", "Multi Agent Applications", "News", "Python", "Semantic Kernel"]
 tags_normalized: ["agentic frameworks", "ai", "ai agents", "autogen", "csharp", "coding", "dapr", "enterprise ai", "event driven architecture", "genai", "java", "llms", "microsoft", "microsoft orleans", "multi agent applications", "news", "python", "semantic kernel"]

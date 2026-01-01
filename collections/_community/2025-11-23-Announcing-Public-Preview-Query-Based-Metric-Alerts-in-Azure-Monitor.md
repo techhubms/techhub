@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-11-23 18:55:48 +00:00
-permalink: "/community/2025-11-23-Announcing-Public-Preview-Query-Based-Metric-Alerts-in-Azure-Monitor.html"
+permalink: "/2025-11-23-Announcing-Public-Preview-Query-Based-Metric-Alerts-in-Azure-Monitor.html"
 categories: ["Azure"]
 tags: ["AKS", "Alerting", "ARM Templates", "Azure", "Azure Monitor", "Azure REST API", "Cloud Monitoring", "Community", "Custom Metrics", "Kubernetes Monitoring", "Managed Identity", "Metric Alerts", "OpenTelemetry", "Prometheus", "PromQL", "RBAC", "Resource Management"]
 tags_normalized: ["aks", "alerting", "arm templates", "azure", "azure monitor", "azure rest api", "cloud monitoring", "community", "custom metrics", "kubernetes monitoring", "managed identity", "metric alerts", "opentelemetry", "prometheus", "promql", "rbac", "resource management"]

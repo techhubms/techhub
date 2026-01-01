@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "GitHub YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ"
 date: 2025-11-25 08:44:19 +00:00
-permalink: "/videos/2025-11-25-Building-Custom-Agents-for-Copilot-on-Rubber-Duck-Thursdays.html"
+permalink: "/2025-11-25-Building-Custom-Agents-for-Copilot-on-Rubber-Duck-Thursdays.html"
 categories: ["AI", "GitHub Copilot"]
 tags: ["Agent Design", "AI", "AI Development", "Copilot Customization", "Custom Agents", "Developer Tools", "GitHub", "GitHub Copilot", "Live Coding", "Programming Stream", "Software Engineering", "Videos"]
 tags_normalized: ["agent design", "ai", "ai development", "copilot customization", "custom agents", "developer tools", "github", "github copilot", "live coding", "programming stream", "software engineering", "videos"]

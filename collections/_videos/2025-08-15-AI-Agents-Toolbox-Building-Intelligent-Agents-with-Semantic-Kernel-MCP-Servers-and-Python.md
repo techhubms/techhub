@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Developer YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
 date: 2025-08-15 16:13:20 +00:00
-permalink: "/videos/2025-08-15-AI-Agents-Toolbox-Building-Intelligent-Agents-with-Semantic-Kernel-MCP-Servers-and-Python.html"
+permalink: "/2025-08-15-AI-Agents-Toolbox-Building-Intelligent-Agents-with-Semantic-Kernel-MCP-Servers-and-Python.html"
 categories: ["AI", "Azure", "Coding"]
 tags: ["Agent Workflows", "Agents Toolbox", "AI", "AI Agents", "AI Plugin Development", "API Economy", "Azure", "Azure AI Foundry", "Cloud Computing", "Coding", "Dev", "Development", "Function Calling", "GitHub MCP Server", "MCP", "MCPStdioPlugin", "Microsoft", "Microsoft Cloud", "Microsoft Learn", "Microsoft Learn MCP Server", "Open Source", "Plugin Architecture", "Python", "Semantic Kernel", "StreamableHTTP", "Tech", "Technology", "Videos"]
 tags_normalized: ["agent workflows", "agents toolbox", "ai", "ai agents", "ai plugin development", "api economy", "azure", "azure ai foundry", "cloud computing", "coding", "dev", "development", "function calling", "github mcp server", "mcp", "mcpstdioplugin", "microsoft", "microsoft cloud", "microsoft learn", "microsoft learn mcp server", "open source", "plugin architecture", "python", "semantic kernel", "streamablehttp", "tech", "technology", "videos"]

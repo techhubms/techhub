@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-10-27 16:00:00 +00:00
-permalink: "/community/2025-10-27-Red-Hat-Enterprise-Linux-Software-Reservations-Now-Available-on-Azure.html"
+permalink: "/2025-10-27-Red-Hat-Enterprise-Linux-Software-Reservations-Now-Available-on-Azure.html"
 categories: ["Azure"]
 tags: ["Azure", "Azure Reservations", "Billing", "Cloud Cost Management", "Community", "Linux", "Microsoft Azure", "Open Source", "Pricing", "Red Hat Enterprise Linux", "RHEL", "Software Licensing", "Software Reservations", "Virtual Machines", "Workload Optimization"]
 tags_normalized: ["azure", "azure reservations", "billing", "cloud cost management", "community", "linux", "microsoft azure", "open source", "pricing", "red hat enterprise linux", "rhel", "software licensing", "software reservations", "virtual machines", "workload optimization"]

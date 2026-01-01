@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft News"
 feed_url: "https://news.microsoft.com/source/feed/"
 date: 2025-08-06 17:17:57 +00:00
-permalink: "/news/2025-08-06-Practical-Guidance-Launching-Microsoft-Secure-Future-Initiative-Patterns-and-Practices.html"
+permalink: "/2025-08-06-Practical-Guidance-Launching-Microsoft-Secure-Future-Initiative-Patterns-and-Practices.html"
 categories: ["Security"]
 tags: ["CI/CD Security", "Engineering Practices", "Identity Management", "Incident Response", "Log Retention", "Microsoft Security", "News", "Operational Security", "Phishing Resistant MFA", "Risk Management", "Secure Future Initiative", "Security", "Security Patterns", "SFI Pillars", "Threat Detection", "Vulnerability Mitigation", "Zero Trust"]
 tags_normalized: ["cislashcd security", "engineering practices", "identity management", "incident response", "log retention", "microsoft security", "news", "operational security", "phishing resistant mfa", "risk management", "secure future initiative", "security", "security patterns", "sfi pillars", "threat detection", "vulnerability mitigation", "zero trust"]

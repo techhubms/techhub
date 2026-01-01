@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The Azure Blog"
 feed_url: "https://azure.microsoft.com/en-us/blog/feed/"
 date: 2025-10-31 16:00:00 +00:00
-permalink: "/news/2025-10-31-Building-Resilient-Cloud-Solutions-with-Azure-Essentials-and-Shared-Responsibility.html"
+permalink: "/2025-10-31-Building-Resilient-Cloud-Solutions-with-Azure-Essentials-and-Shared-Responsibility.html"
 categories: ["AI", "Azure", "DevOps", "Security"]
 tags: ["AI", "AI Resilience", "Automation", "Azure", "Azure Chaos Studio", "Azure DevOps", "Azure Essentials", "Azure Monitor", "Backup", "Cloud Resiliency", "Compute", "Developer Tools", "DevOps", "Disaster Recovery", "Governance", "High Availability", "Hybrid + Multicloud", "Management And Governance", "Microsoft Defender For Cloud", "News", "Reliability", "Security", "Shared Responsibility", "Zone Redundant Architecture"]
 tags_normalized: ["ai", "ai resilience", "automation", "azure", "azure chaos studio", "azure devops", "azure essentials", "azure monitor", "backup", "cloud resiliency", "compute", "developer tools", "devops", "disaster recovery", "governance", "high availability", "hybrid plus multicloud", "management and governance", "microsoft defender for cloud", "news", "reliability", "security", "shared responsibility", "zone redundant architecture"]

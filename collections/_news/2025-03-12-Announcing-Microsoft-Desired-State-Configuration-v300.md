@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft PowerShell Blog"
 feed_url: "https://devblogs.microsoft.com/powershell/feed/"
 date: 2025-03-12 17:58:25 +00:00
-permalink: "/news/2025-03-12-Announcing-Microsoft-Desired-State-Configuration-v300.html"
+permalink: "/2025-03-12-Announcing-Microsoft-Desired-State-Configuration-v300.html"
 categories: ["Azure", "Coding", "DevOps"]
 tags: ["Automation", "Azure", "Coding", "Configuration Management", "Cross Platform", "Desired State Configuration", "DevOps", "DSC", "IaC", "JSON", "News", "PowerShell", "PowerShell DSC", "PSDSC", "Resource Authoring", "System Orchestration", "YAML"]
 tags_normalized: ["automation", "azure", "coding", "configuration management", "cross platform", "desired state configuration", "devops", "dsc", "iac", "json", "news", "powershell", "powershell dsc", "psdsc", "resource authoring", "system orchestration", "yaml"]

@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/changelog/feed/"
 date: 2025-08-26 21:00:52 +00:00
-permalink: "/news/2025-08-26-Public-Preview-Grok-Code-Fast-1-Model-Now-Available-in-GitHub-Copilot.html"
+permalink: "/2025-08-26-Public-Preview-Grok-Code-Fast-1-Model-Now-Available-in-GitHub-Copilot.html"
 categories: ["AI", "GitHub Copilot"]
 tags: ["AI", "AI Models", "Bring Your Own Key", "Copilot Business", "Copilot Enterprise", "Copilot Pro", "Copilot Pro+", "Developer Tools", "GitHub Copilot", "Grok Code Fast 1", "Model Management", "News", "VS Code", "Xai"]
 tags_normalized: ["ai", "ai models", "bring your own key", "copilot business", "copilot enterprise", "copilot pro", "copilot proplus", "developer tools", "github copilot", "grok code fast 1", "model management", "news", "vs code", "xai"]

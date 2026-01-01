@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Fabric Blog"
 feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
 date: 2025-11-19 11:30:00 +00:00
-permalink: "/news/2025-11-19-New-Data-Factory-Pipeline-Features-Unveiled-at-Microsoft-Ignite.html"
+permalink: "/2025-11-19-New-Data-Factory-Pipeline-Features-Unveiled-at-Microsoft-Ignite.html"
 categories: ["AI", "Azure", "ML"]
 tags: ["AI", "Apache Airflow", "Azure", "Copilot For Data Factory", "Data Factory", "Data Integration", "Data Orchestration", "Delta Tables", "Interval Based Scheduling", "Lakehouse Maintenance", "Microsoft Fabric", "Microsoft Ignite", "ML", "Monitor Hub", "News", "Observability", "Optimize Activity", "Parquet", "Pipeline Automation", "Pipeline Expression Builder", "Pipeline Expressions", "Vacuum Activity"]
 tags_normalized: ["ai", "apache airflow", "azure", "copilot for data factory", "data factory", "data integration", "data orchestration", "delta tables", "interval based scheduling", "lakehouse maintenance", "microsoft fabric", "microsoft ignite", "ml", "monitor hub", "news", "observability", "optimize activity", "parquet", "pipeline automation", "pipeline expression builder", "pipeline expressions", "vacuum activity"]

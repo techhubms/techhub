@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/changelog/feed/"
 date: 2025-08-26 21:21:48 +00:00
-permalink: "/news/2025-08-26-GitHub-Introduces-Free-Secret-Risk-Assessment-Tool-for-Organizations.html"
+permalink: "/2025-08-26-GitHub-Introduces-Free-Secret-Risk-Assessment-Tool-for-Organizations.html"
 categories: ["DevOps", "Security"]
 tags: ["Continuous Monitoring", "DevOps", "GitHub", "GitHub Enterprise", "Incident Management", "News", "Organization Security", "Risk Assessment", "Secret Scanning", "Security", "Security Tools", "Token Exposure"]
 tags_normalized: ["continuous monitoring", "devops", "github", "github enterprise", "incident management", "news", "organization security", "risk assessment", "secret scanning", "security", "security tools", "token exposure"]

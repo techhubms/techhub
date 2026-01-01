@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Events YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
 date: 2025-11-24 12:08:44 +00:00
-permalink: "/videos/2025-11-24-AI-Enterprise-Value-Real-World-Applications-with-Microsoft-Foundry-and-MCP.html"
+permalink: "/2025-11-24-AI-Enterprise-Value-Real-World-Applications-with-Microsoft-Foundry-and-MCP.html"
 categories: ["AI"]
 tags: ["Advanced AI Applications", "Agentic AI", "AI", "AI For Traders", "AI Integration", "Business Value", "Enterprise AI", "Intelligent Solutions", "Local AI", "MCP", "Microsoft Foundry", "MSIgnite", "ScalewithcloudandAIendpoints", "Speech To Form Technology", "Videos", "Windows", "Workflow Automation"]
 tags_normalized: ["advanced ai applications", "agentic ai", "ai", "ai for traders", "ai integration", "business value", "enterprise ai", "intelligent solutions", "local ai", "mcp", "microsoft foundry", "msignite", "scalewithcloudandaiendpoints", "speech to form technology", "videos", "windows", "workflow automation"]

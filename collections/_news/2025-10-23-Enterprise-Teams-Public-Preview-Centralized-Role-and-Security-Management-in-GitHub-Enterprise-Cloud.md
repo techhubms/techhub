@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/changelog/feed/"
 date: 2025-10-23 17:00:00 +00:00
-permalink: "/news/2025-10-23-Enterprise-Teams-Public-Preview-Centralized-Role-and-Security-Management-in-GitHub-Enterprise-Cloud.html"
+permalink: "/2025-10-23-Enterprise-Teams-Public-Preview-Centralized-Role-and-Security-Management-in-GitHub-Enterprise-Cloud.html"
 categories: ["DevOps", "Security"]
 tags: ["Advanced Security", "Application Security", "Code Security", "DevOps", "Enterprise Management Tools", "Enterprise Teams", "GitHub API", "GitHub Enterprise Cloud", "Governance", "Granular Access Control", "News", "Organization Management", "Permissions", "Platform Governance", "Policy Management", "Push Protection", "Repository Rulesets", "Role Management", "Secret Scanning", "Security", "Security Manager"]
 tags_normalized: ["advanced security", "application security", "code security", "devops", "enterprise management tools", "enterprise teams", "github api", "github enterprise cloud", "governance", "granular access control", "news", "organization management", "permissions", "platform governance", "policy management", "push protection", "repository rulesets", "role management", "secret scanning", "security", "security manager"]

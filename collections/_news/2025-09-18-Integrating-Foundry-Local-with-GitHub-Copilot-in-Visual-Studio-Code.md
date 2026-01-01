@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft AI Foundry Blog"
 feed_url: "https://devblogs.microsoft.com/foundry/feed/"
 date: 2025-09-18 19:00:50 +00:00
-permalink: "/news/2025-09-18-Integrating-Foundry-Local-with-GitHub-Copilot-in-Visual-Studio-Code.html"
+permalink: "/2025-09-18-Integrating-Foundry-Local-with-GitHub-Copilot-in-Visual-Studio-Code.html"
 categories: ["AI", "Coding", "GitHub Copilot"]
 tags: ["AI", "AI Development", "AI Toolkit", "Azure AI Foundry", "Code Generation", "Coding", "Development Tools", "Foundry Local", "FoundryLocal", "GitHub Copilot", "Local AI Models", "Microsoft Phi", "Model Management", "News", "Offline Development", "OpenAI GPT", "Privacy", "Qwen Models", "VS Code", "VS Code Extensions"]
 tags_normalized: ["ai", "ai development", "ai toolkit", "azure ai foundry", "code generation", "coding", "development tools", "foundry local", "foundrylocal", "github copilot", "local ai models", "microsoft phi", "model management", "news", "offline development", "openai gpt", "privacy", "qwen models", "vs code", "vs code extensions"]

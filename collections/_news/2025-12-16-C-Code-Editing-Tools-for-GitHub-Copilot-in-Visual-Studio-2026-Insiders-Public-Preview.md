@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/changelog/feed/"
 date: 2025-12-16 18:28:30 +00:00
-permalink: "/news/2025-12-16-C-Code-Editing-Tools-for-GitHub-Copilot-in-Visual-Studio-2026-Insiders-Public-Preview.html"
+permalink: "/2025-12-16-C-Code-Editing-Tools-for-GitHub-Copilot-in-Visual-Studio-2026-Insiders-Public-Preview.html"
 categories: ["AI", "Coding", "GitHub Copilot"]
 tags: ["Agent Mode", "AI", "C++", "Class Hierarchies", "Code Editing", "Code Refactoring", "Coding", "Copilot", "Copilot Chat", "Developer Tools", "Function Call Tracing", "GitHub Copilot", "Multi File Support", "News", "Public Preview", "Semantic Analysis", "Symbol Awareness", "Tool Integration", "VS"]
 tags_normalized: ["agent mode", "ai", "cplusplus", "class hierarchies", "code editing", "code refactoring", "coding", "copilot", "copilot chat", "developer tools", "function call tracing", "github copilot", "multi file support", "news", "public preview", "semantic analysis", "symbol awareness", "tool integration", "vs"]

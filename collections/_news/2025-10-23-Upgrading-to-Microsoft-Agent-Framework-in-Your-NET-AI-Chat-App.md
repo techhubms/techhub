@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft .NET Blog"
 feed_url: "https://devblogs.microsoft.com/dotnet/feed/"
 date: 2025-10-23 17:00:00 +00:00
-permalink: "/news/2025-10-23-Upgrading-to-Microsoft-Agent-Framework-in-Your-NET-AI-Chat-App.html"
+permalink: "/2025-10-23-Upgrading-to-Microsoft-Agent-Framework-in-Your-NET-AI-Chat-App.html"
 categories: ["AI", "Azure", "Coding"]
 tags: [".NET", ".NET Aspire", "AgentFx", "AI", "AI Agents", "AI Chat Application", "Aspire", "Azure", "Azure AI Foundry", "Azure OpenAI", "Blazor", "C#", "Coding", "Dependency Injection", "Microsoft Agent Framework", "Microsoft.Extensions.AI", "Multi Agent Systems", "News", "NuGet Packages", "Program.cs", "Semantic Search", "Telemetry", "Tool Invocation"]
 tags_normalized: ["dotnet", "dotnet aspire", "agentfx", "ai", "ai agents", "ai chat application", "aspire", "azure", "azure ai foundry", "azure openai", "blazor", "csharp", "coding", "dependency injection", "microsoft agent framework", "microsoftdotextensionsdotai", "multi agent systems", "news", "nuget packages", "programdotcs", "semantic search", "telemetry", "tool invocation"]

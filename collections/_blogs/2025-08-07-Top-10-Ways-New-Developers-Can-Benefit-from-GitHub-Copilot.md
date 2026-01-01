@@ -9,10 +9,10 @@ viewing_mode: "external"
 feed_name: "Dellenny's Blog"
 feed_url: "https://dellenny.com/feed/"
 date: 2025-08-07 09:54:15 +00:00
-permalink: "/blogs/2025-08-07-Top-10-Ways-New-Developers-Can-Benefit-from-GitHub-Copilot.html"
+permalink: "/2025-08-07-Top-10-Ways-New-Developers-Can-Benefit-from-GitHub-Copilot.html"
 categories: ["AI", "Coding", "GitHub Copilot"]
-tags: ["AI", "AI Coding Assistant", "Automated Code Suggestions", "Code Autocompletion", "Coding", "Coding Best Practices", "Debugging", "Developer Productivity", "GitHub Copilot", "JetBrains", "Language Learning", "Learning Programming", "New Developers", "OpenAI", "Pair Programming", "Blogs", "Unit Test Generation", "VS Code"]
-tags_normalized: ["ai", "ai coding assistant", "automated code suggestions", "code autocompletion", "coding", "coding best practices", "debugging", "developer productivity", "github copilot", "jetbrains", "language learning", "learning programming", "new developers", "openai", "pair programming", "blogs", "unit test generation", "vs code"]
+tags: ["AI", "AI Coding Assistant", "Automated Code Suggestions", "Blogs", "Code Autocompletion", "Coding", "Coding Best Practices", "Debugging", "Developer Productivity", "GitHub Copilot", "JetBrains", "Language Learning", "Learning Programming", "New Developers", "OpenAI", "Pair Programming", "Unit Test Generation", "VS Code"]
+tags_normalized: ["ai", "ai coding assistant", "automated code suggestions", "blogs", "code autocompletion", "coding", "coding best practices", "debugging", "developer productivity", "github copilot", "jetbrains", "language learning", "learning programming", "new developers", "openai", "pair programming", "unit test generation", "vs code"]
 ---
 
 Dellenny shares a practical top-10 guide for new developers, outlining how GitHub Copilot can accelerate coding, improve learning, and boost confidence through AI-powered assistance.<!--excerpt_end-->

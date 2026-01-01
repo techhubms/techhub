@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Events YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
 date: 2025-11-19 17:07:28 +00:00
-permalink: "/videos/2025-11-19-Brillios-Agentic-Data-and-Application-Management-Platform-at-Microsoft-Ignite-2025.html"
+permalink: "/2025-11-19-Brillios-Agentic-Data-and-Application-Management-Platform-at-Microsoft-Ignite-2025.html"
 categories: ["AI"]
 tags: ["Agentic Platforms", "AI", "AI Business Applications", "AI Control Tower", "AI Operations", "AI Roadmapping", "AI Strategy Toolkit", "Brillio ADAM", "Conversational AI", "Domain Intelligent Solutions", "Enterprise AI", "Innovatewithlow", "Microsoft Ignite", "MSIgnite", "Prebuilt Agents", "Self Learning Systems", "Videos"]
 tags_normalized: ["agentic platforms", "ai", "ai business applications", "ai control tower", "ai operations", "ai roadmapping", "ai strategy toolkit", "brillio adam", "conversational ai", "domain intelligent solutions", "enterprise ai", "innovatewithlow", "microsoft ignite", "msignite", "prebuilt agents", "self learning systems", "videos"]

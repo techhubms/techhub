@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-09-04 05:50:05 +00:00
-permalink: "/community/2025-09-04-Upgrade-Azure-VMs-with-Trusted-Launch-In-Place-Security-Enhancement-Now-Available.html"
+permalink: "/2025-09-04-Upgrade-Azure-VMs-with-Trusted-Launch-In-Place-Security-Enhancement-Now-Available.html"
 categories: ["Azure", "Security"]
 tags: ["Azure", "Azure Security Benchmark", "Azure Virtual Machines", "Boot Integrity Monitoring", "Cloud Security", "Community", "Compliance", "FedRAMP", "Gen1 VM", "Gen2 VM", "HIPAA", "in Place Upgrade", "Infrastructure Security", "Microsoft Azure", "PCI DSS", "Scale Set", "Secure Boot", "Security", "Trusted Launch", "Vtpm"]
 tags_normalized: ["azure", "azure security benchmark", "azure virtual machines", "boot integrity monitoring", "cloud security", "community", "compliance", "fedramp", "gen1 vm", "gen2 vm", "hipaa", "in place upgrade", "infrastructure security", "microsoft azure", "pci dss", "scale set", "secure boot", "security", "trusted launch", "vtpm"]

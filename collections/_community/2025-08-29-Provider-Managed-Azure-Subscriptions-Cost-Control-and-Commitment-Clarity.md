@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-08-29 04:48:21 +00:00
-permalink: "/community/2025-08-29-Provider-Managed-Azure-Subscriptions-Cost-Control-and-Commitment-Clarity.html"
+permalink: "/2025-08-29-Provider-Managed-Azure-Subscriptions-Cost-Control-and-Commitment-Clarity.html"
 categories: ["Azure"]
 tags: ["Azure", "Azure Billing", "Azure Subscription Management", "Billing Policies", "Community", "Cost Management", "Enterprise Agreement", "FinOps", "MACC", "Microsoft Customer Agreement", "Microsoft Entra ID", "RBAC", "Reservations", "Resource Management", "Savings Plans", "Service Provider", "Subscription Ownership"]
 tags_normalized: ["azure", "azure billing", "azure subscription management", "billing policies", "community", "cost management", "enterprise agreement", "finops", "macc", "microsoft customer agreement", "microsoft entra id", "rbac", "reservations", "resource management", "savings plans", "service provider", "subscription ownership"]

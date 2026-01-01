@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "DotNet YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw"
 date: 2025-11-13 17:40:46 +00:00
-permalink: "/videos/2025-11-13-AI-Powered-Testing-in-Visual-Studio.html"
+permalink: "/2025-11-13-AI-Powered-Testing-in-Visual-Studio.html"
 categories: ["AI", "Coding"]
 tags: [".NET", ".NET 10", "AI", "AI Powered Testing", "ASP.NET Core 10", "Automated Testing", "Bug Detection", "C# 14", "Cloud Native Apps", "Coding", "F# 10", "Intelligent Features", "Quality Assurance", "Software Development", "Test Case Suggestion", "Test Coverage", "Test Data Generation", "Testing Workflow", "Videos", "VS"]
 tags_normalized: ["dotnet", "dotnet 10", "ai", "ai powered testing", "aspdotnet core 10", "automated testing", "bug detection", "csharp 14", "cloud native apps", "coding", "fsharp 10", "intelligent features", "quality assurance", "software development", "test case suggestion", "test coverage", "test data generation", "testing workflow", "videos", "vs"]

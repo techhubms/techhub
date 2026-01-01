@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Security Blog"
 feed_url: "https://www.microsoft.com/en-us/security/blog/feed/"
 date: 2025-12-09 17:00:00 +00:00
-permalink: "/news/2025-12-09-Changing-the-Physics-of-Cyber-Defense-Graph-Based-Strategies-and-AI-with-Microsoft-Security.html"
+permalink: "/2025-12-09-Changing-the-Physics-of-Cyber-Defense-Graph-Based-Strategies-and-AI-with-Microsoft-Security.html"
 categories: ["AI", "Azure", "Security"]
 tags: ["AI", "AI in Security", "Attack Graphs", "Azure", "Azure Data Explorer", "Best Practices", "Collaboration", "Cyber Defense", "Defender For Endpoint", "Entitlement Management", "Identity Management", "Incident Response", "Kusto Query Language", "Microsoft Security", "Microsoft Threat Intelligence Center", "Multifactor Authentication", "News", "Security", "Security Analytics", "Security Data Visualization", "Security Frameworks", "Security Hygiene", "Telemetry", "Threat Detection"]
 tags_normalized: ["ai", "ai in security", "attack graphs", "azure", "azure data explorer", "best practices", "collaboration", "cyber defense", "defender for endpoint", "entitlement management", "identity management", "incident response", "kusto query language", "microsoft security", "microsoft threat intelligence center", "multifactor authentication", "news", "security", "security analytics", "security data visualization", "security frameworks", "security hygiene", "telemetry", "threat detection"]

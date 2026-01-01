@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Events YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
 date: 2025-11-19 14:58:50 +00:00
-permalink: "/videos/2025-11-19-Maximize-Azure-ROI-Real-world-strategies-with-confirmed-reservations.html"
+permalink: "/2025-11-19-Maximize-Azure-ROI-Real-world-strategies-with-confirmed-reservations.html"
 categories: ["Azure"]
 tags: ["Archera", "Automation", "Azure", "Azure Cost Management", "Azure Reservations", "Azure Savings", "Cloud Strategy", "Commitment Planner", "Cost Optimization", "Forecasting", "Live Demo", "Microsoft Ignite", "Migrateandmodernizeyourestate", "MSIgnite", "Resource Management", "ROI", "Savings Plans", "Underperforming Commitment", "Videos"]
 tags_normalized: ["archera", "automation", "azure", "azure cost management", "azure reservations", "azure savings", "cloud strategy", "commitment planner", "cost optimization", "forecasting", "live demo", "microsoft ignite", "migrateandmodernizeyourestate", "msignite", "resource management", "roi", "savings plans", "underperforming commitment", "videos"]

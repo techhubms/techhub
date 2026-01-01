@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Fabric Blog"
 feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
 date: 2025-12-09 14:31:51 +00:00
-permalink: "/news/2025-12-09-Microsoft-Fabric-Real-Time-Intelligence-Setting-the-Standard-for-Streaming-Data-Platforms.html"
+permalink: "/2025-12-09-Microsoft-Fabric-Real-Time-Intelligence-Setting-the-Standard-for-Streaming-Data-Platforms.html"
 categories: ["AI", "Azure", "ML"]
 tags: ["AI", "Anomaly Detection", "Azure", "Data Explorer", "Data Platforms", "Digital Twin", "Enterprise Data", "Event Hubs", "Eventstream", "Fabric IQ", "Forrester Wave", "Governance", "Graph Analytics", "Microsoft Fabric", "ML", "News", "OneLake", "Operational Dashboards", "Predictive Analytics", "Real Time Intelligence", "Semantic Models", "Stream Analytics", "Streaming Data"]
 tags_normalized: ["ai", "anomaly detection", "azure", "data explorer", "data platforms", "digital twin", "enterprise data", "event hubs", "eventstream", "fabric iq", "forrester wave", "governance", "graph analytics", "microsoft fabric", "ml", "news", "onelake", "operational dashboards", "predictive analytics", "real time intelligence", "semantic models", "stream analytics", "streaming data"]

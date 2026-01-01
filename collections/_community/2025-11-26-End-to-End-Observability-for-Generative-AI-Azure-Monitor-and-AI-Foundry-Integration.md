@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-11-26 18:35:59 +00:00
-permalink: "/community/2025-11-26-End-to-End-Observability-for-Generative-AI-Azure-Monitor-and-AI-Foundry-Integration.html"
+permalink: "/2025-11-26-End-to-End-Observability-for-Generative-AI-Azure-Monitor-and-AI-Foundry-Integration.html"
 categories: ["AI", "Azure", "DevOps"]
 tags: ["Agent Monitoring", "AI", "Application Insights", "Azure", "Azure AI Foundry", "Azure Monitor", "Azure Monitor Workbooks", "Cloud Monitoring", "Community", "Compliance", "Cost Governance", "DevOps", "Generative AI", "Grafana", "LLM", "Multi Agent Orchestration", "Observability", "OpenTelemetry", "Telemetry"]
 tags_normalized: ["agent monitoring", "ai", "application insights", "azure", "azure ai foundry", "azure monitor", "azure monitor workbooks", "cloud monitoring", "community", "compliance", "cost governance", "devops", "generative ai", "grafana", "llm", "multi agent orchestration", "observability", "opentelemetry", "telemetry"]

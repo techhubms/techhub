@@ -9,10 +9,10 @@ viewing_mode: "external"
 feed_name: "Andrew Lock's Blog"
 feed_url: "https://andrewlock.net/rss.xml"
 date: 2025-05-20 09:00:00 +00:00
-permalink: "/blogs/2025-05-20-Pushing-a-Whole-Stack-of-Branches-with-a-Single-Git-Command.html"
+permalink: "/2025-05-20-Pushing-a-Whole-Stack-of-Branches-with-a-Single-Git-Command.html"
 categories: ["DevOps"]
-tags: ["Branch Management", "Code Review", "DevOps", "Force With Lease", "Git", "Git Aliases", "Git Push Stack", "GitHub", "Blogs", "PR Workflow", "Repository Collaboration", "Stacked Branches"]
-tags_normalized: ["branch management", "code review", "devops", "force with lease", "git", "git aliases", "git push stack", "github", "blogs", "pr workflow", "repository collaboration", "stacked branches"]
+tags: ["Blogs", "Branch Management", "Code Review", "DevOps", "Force With Lease", "Git", "Git Aliases", "Git Push Stack", "GitHub", "PR Workflow", "Repository Collaboration", "Stacked Branches"]
+tags_normalized: ["blogs", "branch management", "code review", "devops", "force with lease", "git", "git aliases", "git push stack", "github", "pr workflow", "repository collaboration", "stacked branches"]
 ---
 
 In this post, Andrew Lock introduces a method for pushing an entire stack of Git branches using a custom alias, streamlining PR workflows and branch management for large features or incremental development.<!--excerpt_end-->

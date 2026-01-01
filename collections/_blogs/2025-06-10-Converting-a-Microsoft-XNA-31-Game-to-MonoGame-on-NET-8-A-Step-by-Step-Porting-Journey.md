@@ -9,10 +9,10 @@ viewing_mode: "external"
 feed_name: "Andrew Lock's Blog"
 feed_url: "https://andrewlock.net/rss.xml"
 date: 2025-06-10 09:00:00 +00:00
-permalink: "/blogs/2025-06-10-Converting-a-Microsoft-XNA-31-Game-to-MonoGame-on-NET-8-A-Step-by-Step-Porting-Journey.html"
+permalink: "/2025-06-10-Converting-a-Microsoft-XNA-31-Game-to-MonoGame-on-NET-8-A-Step-by-Step-Porting-Journey.html"
 categories: ["Coding"]
-tags: [".NET 8", "Coding", "Content Pipeline", "Game Development", "Microsoft XNA", "MonoGame", "Porting", "Blogs", "RasterizerState", "SoundEffect", "SpriteFont", "XNA 3.1"]
-tags_normalized: ["dotnet 8", "coding", "content pipeline", "game development", "microsoft xna", "monogame", "porting", "blogs", "rasterizerstate", "soundeffect", "spritefont", "xna 3dot1"]
+tags: [".NET 8", "Blogs", "Coding", "Content Pipeline", "Game Development", "Microsoft XNA", "MonoGame", "Porting", "RasterizerState", "SoundEffect", "SpriteFont", "XNA 3.1"]
+tags_normalized: ["dotnet 8", "blogs", "coding", "content pipeline", "game development", "microsoft xna", "monogame", "porting", "rasterizerstate", "soundeffect", "spritefont", "xna 3dot1"]
 ---
 
 In this article, Andrew Lock details the process of porting a classic Microsoft XNA 3.1 game from 2009 to MonoGame running on .NET 8. He covers technical steps, challenges, and solutions encountered during the migration.<!--excerpt_end-->

@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-11-18 05:18:55 +00:00
-permalink: "/community/2025-11-18-Windows-Server-2019-Retirement-on-AKS-enabled-by-Azure-Arc-Migration-Guidance.html"
+permalink: "/2025-11-18-Windows-Server-2019-Retirement-on-AKS-enabled-by-Azure-Arc-Migration-Guidance.html"
 categories: ["Azure", "DevOps"]
 tags: ["AKS", "Azure", "Azure Arc", "Cloud Operations", "Cluster Management", "Community", "Container Migration", "DevOps", "Kubernetes", "Microsoft Azure", "Node Pools", "OS Upgrade", "Support Lifecycle", "Windows Server", "Workload Migration"]
 tags_normalized: ["aks", "azure", "azure arc", "cloud operations", "cluster management", "community", "container migration", "devops", "kubernetes", "microsoft azure", "node pools", "os upgrade", "support lifecycle", "windows server", "workload migration"]

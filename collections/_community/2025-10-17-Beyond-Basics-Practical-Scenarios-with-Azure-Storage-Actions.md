@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-10-17 17:00:29 +00:00
-permalink: "/community/2025-10-17-Beyond-Basics-Practical-Scenarios-with-Azure-Storage-Actions.html"
+permalink: "/2025-10-17-Beyond-Basics-Practical-Scenarios-with-Azure-Storage-Actions.html"
 categories: ["AI", "Azure", "ML"]
 tags: ["AI", "AI Workflows", "Audit Readiness", "Azure", "Azure Blob Storage", "Azure Storage Actions", "Blob Tags", "Blob Tiering", "Cloud Automation", "Community", "Compliance", "Content Archiving", "Cost Management", "Data Governance", "Data Lifecycle", "Data Retention", "Immutability", "ML", "ML Data Pipelines", "Operational Optimization", "Policy Based Management", "Retrieval Augmented Generation"]
 tags_normalized: ["ai", "ai workflows", "audit readiness", "azure", "azure blob storage", "azure storage actions", "blob tags", "blob tiering", "cloud automation", "community", "compliance", "content archiving", "cost management", "data governance", "data lifecycle", "data retention", "immutability", "ml", "ml data pipelines", "operational optimization", "policy based management", "retrieval augmented generation"]

@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-09-03 15:22:37 +00:00
-permalink: "/community/2025-09-03-General-Availability-of-Teams-Phone-Extensibility-with-Azure-Communication-Services.html"
+permalink: "/2025-09-03-General-Availability-of-Teams-Phone-Extensibility-with-Azure-Communication-Services.html"
 categories: ["AI", "Azure"]
 tags: ["AI", "Azure", "Azure Communication Services", "Azure SDK", "Call Automation API", "Call Recording", "CCaaS", "Community", "Compliance", "Conversational AI", "ISV Solutions", "Language Detection", "Meeting Summaries", "Microsoft Teams", "PII Redaction", "Real Time Analytics", "Teams Phone Extensibility", "Telephony Integration", "UCaaS", "Unified Communications"]
 tags_normalized: ["ai", "azure", "azure communication services", "azure sdk", "call automation api", "call recording", "ccaas", "community", "compliance", "conversational ai", "isv solutions", "language detection", "meeting summaries", "microsoft teams", "pii redaction", "real time analytics", "teams phone extensibility", "telephony integration", "ucaas", "unified communications"]

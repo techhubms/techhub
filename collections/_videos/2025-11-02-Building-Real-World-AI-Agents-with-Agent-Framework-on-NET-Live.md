@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "DotNet YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw"
 date: 2025-11-02 20:11:45 +00:00
-permalink: "/videos/2025-11-02-Building-Real-World-AI-Agents-with-Agent-Framework-on-NET-Live.html"
+permalink: "/2025-11-02-Building-Real-World-AI-Agents-with-Agent-Framework-on-NET-Live.html"
 categories: ["AI", "Azure", "Coding"]
 tags: [".NET", "Agent Framework", "Agents", "AI", "AI Agents", "Autogen", "Azure", "Azure AI Foundry", "Coding", "Context Sharing", "Demo", "Developer", "Developer Community", "Developer Tools", "Dotnetdeveloper", "LLM Integration", "MCP", "Microsoft", "Open Source", "Orchestration Patterns", "Semantic Kernel", "SemantiClip", "Software Developer", "Videos", "Workflow Automation"]
 tags_normalized: ["dotnet", "agent framework", "agents", "ai", "ai agents", "autogen", "azure", "azure ai foundry", "coding", "context sharing", "demo", "developer", "developer community", "developer tools", "dotnetdeveloper", "llm integration", "mcp", "microsoft", "open source", "orchestration patterns", "semantic kernel", "semanticlip", "software developer", "videos", "workflow automation"]

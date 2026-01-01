@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft DevBlog"
 feed_url: "https://devblogs.microsoft.com/devops/feed/"
 date: 2025-07-09 15:37:13 +00:00
-permalink: "/news/2025-07-09-July-Patches-for-Azure-DevOps-Server-Now-Available.html"
+permalink: "/2025-07-09-July-Patches-for-Azure-DevOps-Server-Now-Available.html"
 categories: ["Azure", "DevOps", "Security"]
 tags: ["Azure", "Azure DevOps Server", "DevOps", "Microsoft", "Multi Repo Trigger", "News", "Null Reference Exception", "On Premises DevOps", "Patch Installation", "Patches", "Release Notes", "Security", "Security Update", "YAML Pipelines"]
 tags_normalized: ["azure", "azure devops server", "devops", "microsoft", "multi repo trigger", "news", "null reference exception", "on premises devops", "patch installation", "patches", "release notes", "security", "security update", "yaml pipelines"]

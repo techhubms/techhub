@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "John Savill's Technical Training"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCpIn7ox7j7bH_OFj7tYouOQ"
 date: 2025-11-07 15:51:24 +00:00
-permalink: "/videos/2025-11-07-Azure-Weekly-Update-November-7-2025.html"
+permalink: "/2025-11-07-Azure-Weekly-Update-November-7-2025.html"
 categories: ["Azure", "Coding", "DevOps"]
 tags: ["ANF", "Azure", "Azure Cloud", "Azure Storage", "Azure Updates", "Cloud", "Cloud Computing", "Coding", "Cosmos DB", "DevOps", "DocumentDB", "ExpressRoute", "Failover", "Geospatial", "Infrastructure", "Kubernetes", "Microsoft", "Microsoft Azure", "PostgreSQL", "Replication", "REST API", "SQL Database", "SSMS", "Videos", "Virtual Machines"]
 tags_normalized: ["anf", "azure", "azure cloud", "azure storage", "azure updates", "cloud", "cloud computing", "coding", "cosmos db", "devops", "documentdb", "expressroute", "failover", "geospatial", "infrastructure", "kubernetes", "microsoft", "microsoft azure", "postgresql", "replication", "rest api", "sql database", "ssms", "videos", "virtual machines"]

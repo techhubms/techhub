@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Events YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
 date: 2025-12-02 20:30:27 +00:00
-permalink: "/videos/2025-12-02-Building-Connected-Managed-Agentic-Apps-with-Microsoft-Foundry-Ignite-BRK113.html"
+permalink: "/2025-12-02-Building-Connected-Managed-Agentic-Apps-with-Microsoft-Foundry-Ignite-BRK113.html"
 categories: ["AI", "Azure"]
 tags: ["Agentic Applications", "AI", "AI Agents", "AI Gateway", "AI Governance", "AI Platform", "Azure", "Azure AI", "BRK113", "Business Process Automation", "Code Based Workflows", "Connected Managed And Complete Agentic Apps With Microsoft Foundry | BRK113", "English (us)", "Enterprise AI", "F5n1", "Ignite", "Innovate With Azure AI Apps And Agents", "Innovate With Azure AI Apps And Agents:microsoft Foundry", "KPMG", "Microsoft", "Microsoft Foundry", "Microsoft Ignite", "Ms Ignite", "Msft Ignite", "Python", "Real Time Business Context", "Videos"]
 tags_normalized: ["agentic applications", "ai", "ai agents", "ai gateway", "ai governance", "ai platform", "azure", "azure ai", "brk113", "business process automation", "code based workflows", "connected managed and complete agentic apps with microsoft foundry pipe brk113", "english us", "enterprise ai", "f5n1", "ignite", "innovate with azure ai apps and agents", "innovate with azure ai apps and agentsmicrosoft foundry", "kpmg", "microsoft", "microsoft foundry", "microsoft ignite", "ms ignite", "msft ignite", "python", "real time business context", "videos"]

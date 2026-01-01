@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Events YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
 date: 2025-11-21 17:15:06 +00:00
-permalink: "/videos/2025-11-21-Inside-Windows-Security-from-Client-to-Cloud-Innovations-in-Windows-11-and-Windows-365-BRK258.html"
+permalink: "/2025-11-21-Inside-Windows-Security-from-Client-to-Cloud-Innovations-in-Windows-11-and-Windows-365-BRK258.html"
 categories: ["Security"]
 tags: ["Clipboard Protection", "Cloud PC", "Cloud Security", "Data Security", "Endpoint Security", "Hotpatching", "Identity Management", "Malware Protection", "Microsoft Ignite", "MSIgnite", "Passkey Integration", "PQC Certificates", "Secureyourdata", "Security", "Sysmon", "Videos", "Windows 11", "Windows 365", "Windows Hello"]
 tags_normalized: ["clipboard protection", "cloud pc", "cloud security", "data security", "endpoint security", "hotpatching", "identity management", "malware protection", "microsoft ignite", "msignite", "passkey integration", "pqc certificates", "secureyourdata", "security", "sysmon", "videos", "windows 11", "windows 365", "windows hello"]

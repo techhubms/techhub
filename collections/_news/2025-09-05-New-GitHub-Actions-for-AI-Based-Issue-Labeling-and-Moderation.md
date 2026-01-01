@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/changelog/feed/"
 date: 2025-09-05 22:38:54 +00:00
-permalink: "/news/2025-09-05-New-GitHub-Actions-for-AI-Based-Issue-Labeling-and-Moderation.html"
+permalink: "/2025-09-05-New-GitHub-Actions-for-AI-Based-Issue-Labeling-and-Moderation.html"
 categories: ["AI", "DevOps"]
 tags: ["AI", "AI Models", "Automation", "Community Health", "Developer Tools", "DevOps", "GitHub Actions", "GitHub Models Inference API", "Issue Triage", "Moderation", "News", "Open Source", "Spam Detection", "Workflow Automation"]
 tags_normalized: ["ai", "ai models", "automation", "community health", "developer tools", "devops", "github actions", "github models inference api", "issue triage", "moderation", "news", "open source", "spam detection", "workflow automation"]

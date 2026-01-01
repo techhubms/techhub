@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-11-18 16:26:46 +00:00
-permalink: "/community/2025-11-18-Expanding-Azure-Arc-for-Hybrid-and-Multicloud-Management.html"
+permalink: "/2025-11-18-Expanding-Azure-Arc-for-Hybrid-and-Multicloud-Management.html"
 categories: ["Azure", "DevOps", "Security"]
 tags: ["Agentless Inventory", "AWS", "Azure", "Azure Arc", "Azure Key Vault", "Azure Migrate", "Azure Policy", "Azure Virtual Desktop", "Community", "Compliance", "Connected Machine Agent", "DevOps", "Disaster Recovery", "Google Cloud Platform", "Hybrid Cloud", "Kubernetes", "Microsoft Entra", "Multicloud", "OIDC Federation", "Operational Consistency", "OS Configuration Editor", "Security", "Site Management", "Windows Recovery Environment", "Workload Identity"]
 tags_normalized: ["agentless inventory", "aws", "azure", "azure arc", "azure key vault", "azure migrate", "azure policy", "azure virtual desktop", "community", "compliance", "connected machine agent", "devops", "disaster recovery", "google cloud platform", "hybrid cloud", "kubernetes", "microsoft entra", "multicloud", "oidc federation", "operational consistency", "os configuration editor", "security", "site management", "windows recovery environment", "workload identity"]

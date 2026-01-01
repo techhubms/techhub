@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Developer YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
 date: 2025-09-22 18:59:37 +00:00
-permalink: "/videos/2025-09-22-AI-Agent-Memory-Building-Self-Improving-Agents.html"
+permalink: "/2025-09-22-AI-Agent-Memory-Building-Self-Improving-Agents.html"
 categories: ["AI", "Azure", "Coding"]
 tags: ["Agent Design", "AI", "AI Agents", "AI Development", "Azure", "Azure AI Search", "Cloud Computing", "Cloud Development", "Coding", "Dev", "Development", "Mem0", "Memory Management", "Microsoft", "Microsoft Azure", "Personalization", "Self Improvement", "Semantic Kernel", "Tech", "Technical Tutorial", "Technology", "Videos"]
 tags_normalized: ["agent design", "ai", "ai agents", "ai development", "azure", "azure ai search", "cloud computing", "cloud development", "coding", "dev", "development", "mem0", "memory management", "microsoft", "microsoft azure", "personalization", "self improvement", "semantic kernel", "tech", "technical tutorial", "technology", "videos"]

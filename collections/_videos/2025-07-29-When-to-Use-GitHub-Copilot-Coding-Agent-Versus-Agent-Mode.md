@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "GitHub YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ"
 date: 2025-07-29 14:00:00 +00:00
-permalink: "/videos/2025-07-29-When-to-Use-GitHub-Copilot-Coding-Agent-Versus-Agent-Mode.html"
+permalink: "/2025-07-29-When-to-Use-GitHub-Copilot-Coding-Agent-Versus-Agent-Mode.html"
 categories: ["AI", "Coding", "GitHub Copilot"]
 tags: ["AI", "Autonomous Development", "Coding", "Coding Agent", "CodingAgent", "Copilot Agent Mode", "CopilotCodingAgent", "Developer Productivity", "Game Development", "GitHub", "GitHub Copilot", "Interactive Development", "Software Automation", "Testing Migration", "Videos"]
 tags_normalized: ["ai", "autonomous development", "coding", "coding agent", "codingagent", "copilot agent mode", "copilotcodingagent", "developer productivity", "game development", "github", "github copilot", "interactive development", "software automation", "testing migration", "videos"]

@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Events YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
 date: 2025-11-21 08:28:54 +00:00
-permalink: "/videos/2025-11-21-Advanced-Capabilities-and-Innovation-of-Azure-Storage-Solutions.html"
+permalink: "/2025-11-21-Advanced-Capabilities-and-Innovation-of-Azure-Storage-Solutions.html"
 categories: ["AI", "Azure"]
 tags: ["AI", "AI Inference", "Azure", "Azure Files", "Azure Storage", "Blob Storage", "Business Continuity", "Cloud Migration", "FS Spec Compatibility", "Identity Authentication", "Instant Snapshots", "Kaito Framework", "Lustre", "Microsoft Ignite", "Migrateandmodernizeyourestate", "MSIgnite", "NAS Migration", "NetApp Files Migration Assistant", "NVIDIA DGX Cloud", "NVMe", "Priority Replication", "Smart Tiering", "Videos"]
 tags_normalized: ["ai", "ai inference", "azure", "azure files", "azure storage", "blob storage", "business continuity", "cloud migration", "fs spec compatibility", "identity authentication", "instant snapshots", "kaito framework", "lustre", "microsoft ignite", "migrateandmodernizeyourestate", "msignite", "nas migration", "netapp files migration assistant", "nvidia dgx cloud", "nvme", "priority replication", "smart tiering", "videos"]

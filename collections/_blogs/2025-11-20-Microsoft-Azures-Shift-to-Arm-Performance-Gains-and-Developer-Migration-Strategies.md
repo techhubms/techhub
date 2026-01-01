@@ -9,10 +9,10 @@ viewing_mode: "external"
 feed_name: "DevClass"
 feed_url: "https://devclass.com/feed/"
 date: 2025-11-20 09:00:00 +00:00
-permalink: "/blogs/2025-11-20-Microsoft-Azures-Shift-to-Arm-Performance-Gains-and-Developer-Migration-Strategies.html"
+permalink: "/2025-11-20-Microsoft-Azures-Shift-to-Arm-Performance-Gains-and-Developer-Migration-Strategies.html"
 categories: ["AI", "Azure", "Coding", "ML"]
-tags: ["AI", "AI Workloads", "ARM 22824 Sp1", "ARM Neoverse", "Arm64 Runners", "Azure", "Cloud Migration", "Cobalt 100", "Cobalt 200", "Coding", "Databricks", "Developer Tools", "Efficiency", "Kubernetes", "Machine Learning", "Microsoft Azure", "ML", "ONNX Runtime", "Blogs", "Price Performance", "Snowflake", "Virtual Machines", "VMs"]
-tags_normalized: ["ai", "ai workloads", "arm 22824 sp1", "arm neoverse", "arm64 runners", "azure", "cloud migration", "cobalt 100", "cobalt 200", "coding", "databricks", "developer tools", "efficiency", "kubernetes", "machine learning", "microsoft azure", "ml", "onnx runtime", "blogs", "price performance", "snowflake", "virtual machines", "vms"]
+tags: ["AI", "AI Workloads", "ARM 22824 Sp1", "ARM Neoverse", "Arm64 Runners", "Azure", "Blogs", "Cloud Migration", "Cobalt 100", "Cobalt 200", "Coding", "Databricks", "Developer Tools", "Efficiency", "Kubernetes", "Machine Learning", "Microsoft Azure", "ML", "ONNX Runtime", "Price Performance", "Snowflake", "Virtual Machines", "VMs"]
+tags_normalized: ["ai", "ai workloads", "arm 22824 sp1", "arm neoverse", "arm64 runners", "azure", "blogs", "cloud migration", "cobalt 100", "cobalt 200", "coding", "databricks", "developer tools", "efficiency", "kubernetes", "machine learning", "microsoft azure", "ml", "onnx runtime", "price performance", "snowflake", "virtual machines", "vms"]
 ---
 
 David Gordon explores the major transition toward Arm-based architectures in cloud computing, focusing on Microsoft Azure's Cobalt series. The article outlines performance benchmarks, developer migration strategies, and efficiency gains for ML and AI workloads.<!--excerpt_end-->

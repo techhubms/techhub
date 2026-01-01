@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-11-04 07:33:04 +00:00
-permalink: "/community/2025-11-04-Deploying-a-Low-Light-Image-Enhancer-Python-OpenCV-on-Azure-App-Service.html"
+permalink: "/2025-11-04-Deploying-a-Low-Light-Image-Enhancer-Python-OpenCV-on-Azure-App-Service.html"
 categories: ["Azure", "Coding"]
 tags: ["App Architecture", "Azure", "Azure App Service", "Azure Developer CLI", "Brightness Adjustment", "CLAHE", "Coding", "Community", "Deployment", "Flask", "Gamma Correction", "Image Processing", "Linux", "NumPy", "OpenCV", "Python", "Saturation Boost", "Web Application"]
 tags_normalized: ["app architecture", "azure", "azure app service", "azure developer cli", "brightness adjustment", "clahe", "coding", "community", "deployment", "flask", "gamma correction", "image processing", "linux", "numpy", "opencv", "python", "saturation boost", "web application"]

@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Azure SDK Blog"
 feed_url: "https://devblogs.microsoft.com/azure-sdk/feed/"
 date: 2025-12-09 18:34:22 +00:00
-permalink: "/news/2025-12-09-Blue-Green-Deployment-in-Azure-Container-Apps-with-Azure-Developer-CLI.html"
+permalink: "/2025-12-09-Blue-Green-Deployment-in-Azure-Container-Apps-with-Azure-Developer-CLI.html"
 categories: ["Azure", "Coding", "DevOps"]
 tags: ["Azd", "Azure", "Azure Container Apps", "Azure Developer CLI", "Azure SDK", "Bicep", "Blue Green Deployment", "CI/CD", "Coding", "Containerization", "Deployment Strategies", "DevOps", "Docker", "GitHub Actions", "IaC", "Immutable Deployments", "News", "Python", "Revision Based Deployment", "Traffic Splitting"]
 tags_normalized: ["azd", "azure", "azure container apps", "azure developer cli", "azure sdk", "bicep", "blue green deployment", "cislashcd", "coding", "containerization", "deployment strategies", "devops", "docker", "github actions", "iac", "immutable deployments", "news", "python", "revision based deployment", "traffic splitting"]

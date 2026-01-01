@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/feed/"
 date: 2025-10-07 17:00:00 +00:00
-permalink: "/news/2025-10-07-How-GitHub-Copilot-Automated-Accessibility-Governance-at-GitHub.html"
+permalink: "/2025-10-07-How-GitHub-Copilot-Automated-Accessibility-Governance-at-GitHub.html"
 categories: ["AI", "DevOps", "GitHub Copilot"]
 tags: ["Accessibility", "AI", "AI & ML", "AI Assisted Development", "Automation", "Collaboration", "Compliance", "Developer Experience", "Developer Workflow", "DevOps", "DevOps Automation", "GitHub Actions", "GitHub Copilot", "GitHub Issues", "Governance", "Idempotent Logic", "News", "Project Management", "Remediation Workflow", "Stakeholder Visibility"]
 tags_normalized: ["accessibility", "ai", "ai and ml", "ai assisted development", "automation", "collaboration", "compliance", "developer experience", "developer workflow", "devops", "devops automation", "github actions", "github copilot", "github issues", "governance", "idempotent logic", "news", "project management", "remediation workflow", "stakeholder visibility"]

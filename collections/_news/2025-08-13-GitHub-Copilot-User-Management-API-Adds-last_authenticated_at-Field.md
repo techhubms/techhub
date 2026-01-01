@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/changelog/feed/"
 date: 2025-08-13 21:51:19 +00:00
-permalink: "/news/2025-08-13-GitHub-Copilot-User-Management-API-Adds-last_authenticated_at-Field.html"
+permalink: "/2025-08-13-GitHub-Copilot-User-Management-API-Adds-last_authenticated_at-Field.html"
 categories: ["AI", "GitHub Copilot"]
 tags: ["Admin Tools", "AI", "API Schema", "API Update", "Authentication", "Copilot API", "Feature Parity", "GitHub Copilot", "GitHub REST API", "Last Authenticated At", "News", "User Management"]
 tags_normalized: ["admin tools", "ai", "api schema", "api update", "authentication", "copilot api", "feature parity", "github copilot", "github rest api", "last authenticated at", "news", "user management"]

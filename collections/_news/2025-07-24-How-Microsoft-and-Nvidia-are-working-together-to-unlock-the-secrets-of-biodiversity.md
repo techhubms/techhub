@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft News"
 feed_url: "https://news.microsoft.com/source/feed/"
 date: 2025-07-24 14:00:42 +00:00
-permalink: "/news/2025-07-24-How-Microsoft-and-Nvidia-are-working-together-to-unlock-the-secrets-of-biodiversity.html"
+permalink: "/2025-07-24-How-Microsoft-and-Nvidia-are-working-together-to-unlock-the-secrets-of-biodiversity.html"
 categories: ["AI"]
 tags: ["AI", "Biodiversity", "Collaboration", "Company News", "Data Analysis", "Environment", "Machine Learning", "Microsoft", "News", "Nvidia", "Partnership", "Research", "Sustainability", "Technology"]
 tags_normalized: ["ai", "biodiversity", "collaboration", "company news", "data analysis", "environment", "machine learning", "microsoft", "news", "nvidia", "partnership", "research", "sustainability", "technology"]

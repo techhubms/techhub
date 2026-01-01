@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/changelog/label/copilot/feed/"
 date: 2025-08-05 20:05:53 +00:00
-permalink: "/news/2025-08-05-Copilot-Coding-Agent-Enhanced-Pull-Request-Review-Workflow.html"
+permalink: "/2025-08-05-Copilot-Coding-Agent-Enhanced-Pull-Request-Review-Workflow.html"
 categories: ["AI", "DevOps", "GitHub Copilot"]
 tags: ["AI", "Automation", "Change Requests", "Coding Agent", "Collaboration", "Development Workflow", "DevOps", "GitHub Copilot", "News", "Pull Request", "Repository Management", "Write Access"]
 tags_normalized: ["ai", "automation", "change requests", "coding agent", "collaboration", "development workflow", "devops", "github copilot", "news", "pull request", "repository management", "write access"]

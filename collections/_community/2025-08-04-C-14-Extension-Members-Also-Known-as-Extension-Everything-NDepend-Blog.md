@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Reddit DotNet"
 feed_url: "https://www.reddit.com/r/dotnet/.rss"
 date: 2025-08-04 12:18:27 +00:00
-permalink: "/community/2025-08-04-C-14-Extension-Members-Also-Known-as-Extension-Everything-NDepend-Blog.html"
+permalink: "/2025-08-04-C-14-Extension-Members-Also-Known-as-Extension-Everything-NDepend-Blog.html"
 categories: ["Coding"]
 tags: [".NET", "C# 14", "C# Features", "Coding", "Community", "Developer Productivity", "Extension Members", "Extension Methods", "Language Design", "NDepend", "Operators", "Properties"]
 tags_normalized: ["dotnet", "csharp 14", "csharp features", "coding", "community", "developer productivity", "extension members", "extension methods", "language design", "ndepend", "operators", "properties"]

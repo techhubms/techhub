@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Reddit Azure"
 feed_url: "https://www.reddit.com/r/azure/.rss"
 date: 2025-08-04 06:56:51 +00:00
-permalink: "/community/2025-08-04-Logic-apps-how-do-you-export-it-to-vscode.html"
+permalink: "/2025-08-04-Logic-apps-how-do-you-export-it-to-vscode.html"
 categories: ["Azure", "DevOps"]
 tags: ["Azure", "Azure Logic Apps", "CI/CD", "Community", "Deployment", "Designer", "DevOps", "Export", "Integration", "Local Development", "Source Code Management", "VS Code", "Workflow Automation"]
 tags_normalized: ["azure", "azure logic apps", "cislashcd", "community", "deployment", "designer", "devops", "export", "integration", "local development", "source code management", "vs code", "workflow automation"]

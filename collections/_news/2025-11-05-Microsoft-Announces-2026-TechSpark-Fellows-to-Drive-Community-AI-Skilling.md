@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft News"
 feed_url: "https://news.microsoft.com/source/feed/"
 date: 2025-11-05 18:14:19 +00:00
-permalink: "/news/2025-11-05-Microsoft-Announces-2026-TechSpark-Fellows-to-Drive-Community-AI-Skilling.html"
+permalink: "/2025-11-05-Microsoft-Announces-2026-TechSpark-Fellows-to-Drive-Community-AI-Skilling.html"
 categories: ["AI"]
 tags: ["AI", "AI Adoption", "AI Skilling", "AI Training", "Cloud Technology", "Community Programs", "Company News", "Digital Divide", "Digital Literacy", "Digital Skills", "Infrastructure", "Learning Initiatives", "Microsoft TechSpark", "News", "Nonprofit", "On The Issues", "STEM Education", "Tech For Good", "Workforce Development"]
 tags_normalized: ["ai", "ai adoption", "ai skilling", "ai training", "cloud technology", "community programs", "company news", "digital divide", "digital literacy", "digital skills", "infrastructure", "learning initiatives", "microsoft techspark", "news", "nonprofit", "on the issues", "stem education", "tech for good", "workforce development"]

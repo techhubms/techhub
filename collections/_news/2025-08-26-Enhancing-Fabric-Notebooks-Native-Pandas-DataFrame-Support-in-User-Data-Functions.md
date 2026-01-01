@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Fabric Blog"
 feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
 date: 2025-08-26 11:45:35 +00:00
-permalink: "/news/2025-08-26-Enhancing-Fabric-Notebooks-Native-Pandas-DataFrame-Support-in-User-Data-Functions.html"
+permalink: "/2025-08-26-Enhancing-Fabric-Notebooks-Native-Pandas-DataFrame-Support-in-User-Data-Functions.html"
 categories: ["Azure", "ML"]
 tags: ["Apache Arrow", "Azure", "Cross Language Support", "Data Analytics", "Data Engineering", "Data Processing", "DataFrames", "Microsoft Fabric", "ML", "News", "Notebook", "Pandas", "Performance Optimization", "PySpark", "Python", "Python Notebooks", "Scala", "UDF", "User Data Functions"]
 tags_normalized: ["apache arrow", "azure", "cross language support", "data analytics", "data engineering", "data processing", "dataframes", "microsoft fabric", "ml", "news", "notebook", "pandas", "performance optimization", "pyspark", "python", "python notebooks", "scala", "udf", "user data functions"]

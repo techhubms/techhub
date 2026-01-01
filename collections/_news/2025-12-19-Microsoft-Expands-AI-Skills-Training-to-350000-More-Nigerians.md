@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft News"
 feed_url: "https://news.microsoft.com/source/feed/"
 date: 2025-12-19 14:23:41 +00:00
-permalink: "/news/2025-12-19-Microsoft-Expands-AI-Skills-Training-to-350000-More-Nigerians.html"
+permalink: "/2025-12-19-Microsoft-Expands-AI-Skills-Training-to-350000-More-Nigerians.html"
 categories: ["AI"]
 tags: ["AI", "AI Hackathon", "AI National Skills Initiative", "AI Skills", "AINSI", "Company News", "Data Science Nigeria", "Developer Training", "Digital Literacy", "Ethical AI", "Lagos Business School", "Machine Learning", "Microsoft Nigeria", "News", "Nigeria Digital Transformation", "Public Sector Training", "Skills Development"]
 tags_normalized: ["ai", "ai hackathon", "ai national skills initiative", "ai skills", "ainsi", "company news", "data science nigeria", "developer training", "digital literacy", "ethical ai", "lagos business school", "machine learning", "microsoft nigeria", "news", "nigeria digital transformation", "public sector training", "skills development"]

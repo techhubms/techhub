@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Events YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
 date: 2025-11-26 10:01:45 +00:00
-permalink: "/videos/2025-11-26-Deploying-and-Operating-Power-Platform-Solutions-with-DevOps.html"
+permalink: "/2025-11-26-Deploying-and-Operating-Power-Platform-Solutions-with-DevOps.html"
 categories: ["AI", "DevOps"]
 tags: ["AI", "ALM", "BRK310", "Canvases", "Continuous Improvement", "Copilot Studio", "Dataverse", "Deploying And Operating Power Platform Solutions With DevOps | BRK310", "DevOps", "Environment Groups", "F5n1", "GitHub", "Ignite", "Innovate With Low Code AI And Agents", "Innovate With Low Code AI And Agents:dataverse", "Innovate With Low Code AI And Agents:power Automate", "Microsoft", "Microsoft Ignite", "Monitoring", "Ms Ignite", "Msft Ignite", "OpenTelemetry", "Pipeline Templating", "Power Automate", "Power Platform", "Power Platform Monitor", "Production Deployment", "Source Control", "Videos"]
 tags_normalized: ["ai", "alm", "brk310", "canvases", "continuous improvement", "copilot studio", "dataverse", "deploying and operating power platform solutions with devops pipe brk310", "devops", "environment groups", "f5n1", "github", "ignite", "innovate with low code ai and agents", "innovate with low code ai and agentsdataverse", "innovate with low code ai and agentspower automate", "microsoft", "microsoft ignite", "monitoring", "ms ignite", "msft ignite", "opentelemetry", "pipeline templating", "power automate", "power platform", "power platform monitor", "production deployment", "source control", "videos"]

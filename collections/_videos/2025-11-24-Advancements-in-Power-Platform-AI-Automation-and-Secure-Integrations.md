@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Events YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
 date: 2025-11-24 11:20:28 +00:00
-permalink: "/videos/2025-11-24-Advancements-in-Power-Platform-AI-Automation-and-Secure-Integrations.html"
+permalink: "/2025-11-24-Advancements-in-Power-Platform-AI-Automation-and-Secure-Integrations.html"
 categories: ["AI"]
 tags: ["AI", "AI Integration", "Automation", "Copilot Studio", "Data Visualization", "Governance", "Innovatewithlow", "Low Code Development", "Microsoft Ignite", "MSIgnite", "Observability", "Power Apps", "Power Automate", "Power Pages", "Power Platform", "RPA", "Secure Connectors", "Server Side Logic", "Videos"]
 tags_normalized: ["ai", "ai integration", "automation", "copilot studio", "data visualization", "governance", "innovatewithlow", "low code development", "microsoft ignite", "msignite", "observability", "power apps", "power automate", "power pages", "power platform", "rpa", "secure connectors", "server side logic", "videos"]

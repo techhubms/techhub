@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-09-15 13:37:12 +00:00
-permalink: "/community/2025-09-15-Unlocking-Application-Modernisation-with-GitHub-Copilot.html"
+permalink: "/2025-09-15-Unlocking-Application-Modernisation-with-GitHub-Copilot.html"
 categories: ["AI", "Azure", "Coding", "DevOps", "GitHub Copilot"]
 tags: [".NET", "Agentic AI", "AI", "App Configuration", "Application Modernisation", "Azure", "Azure AD", "Azure Functions", "Azure SQL", "CI/CD Pipelines", "Cloud Migration", "Coding", "Community", "DevOps", "DevOps Automation", "Docker", "GitHub Copilot", "IaC", "Java", "Key Vault", "Kubernetes", "Legacy Code Refactoring", "Technical Debt Reduction", "Unit Testing"]
 tags_normalized: ["dotnet", "agentic ai", "ai", "app configuration", "application modernisation", "azure", "azure ad", "azure functions", "azure sql", "cislashcd pipelines", "cloud migration", "coding", "community", "devops", "devops automation", "docker", "github copilot", "iac", "java", "key vault", "kubernetes", "legacy code refactoring", "technical debt reduction", "unit testing"]

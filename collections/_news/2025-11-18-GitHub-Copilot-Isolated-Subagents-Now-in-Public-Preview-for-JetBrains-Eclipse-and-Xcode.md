@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/changelog/feed/"
 date: 2025-11-18 17:30:17 +00:00
-permalink: "/news/2025-11-18-GitHub-Copilot-Isolated-Subagents-Now-in-Public-Preview-for-JetBrains-Eclipse-and-Xcode.html"
+permalink: "/2025-11-18-GitHub-Copilot-Isolated-Subagents-Now-in-Public-Preview-for-JetBrains-Eclipse-and-Xcode.html"
 categories: ["AI", "GitHub Copilot"]
 tags: ["AI", "AI Development Tools", "API Design", "Autonomous Agents", "Code Review", "Copilot", "Copilot Chat", "Custom Agents", "Developer Tools", "Eclipse", "GitHub Copilot", "IDE Extensions", "JetBrains IDEs", "News", "Productivity", "Subagents", "Technical Documentation", "Xcode"]
 tags_normalized: ["ai", "ai development tools", "api design", "autonomous agents", "code review", "copilot", "copilot chat", "custom agents", "developer tools", "eclipse", "github copilot", "ide extensions", "jetbrains ides", "news", "productivity", "subagents", "technical documentation", "xcode"]

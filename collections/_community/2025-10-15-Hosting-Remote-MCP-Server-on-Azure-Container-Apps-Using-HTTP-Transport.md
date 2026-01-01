@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-10-15 04:22:11 +00:00
-permalink: "/community/2025-10-15-Hosting-Remote-MCP-Server-on-Azure-Container-Apps-Using-HTTP-Transport.html"
+permalink: "/2025-10-15-Hosting-Remote-MCP-Server-on-Azure-Container-Apps-Using-HTTP-Transport.html"
 categories: ["AI", "Azure", "Coding"]
 tags: ["AI", "Azure", "Azure Container Apps", "Azure Deployment", "Bicep", "Cloud Scaling", "Coding", "Community", "Containerization", "Currency Conversion", "HTTP Transport", "JSON RPC", "Live Forex Rates", "MCP", "Node.js", "REST API", "Serverless", "VS Code Chat"]
 tags_normalized: ["ai", "azure", "azure container apps", "azure deployment", "bicep", "cloud scaling", "coding", "community", "containerization", "currency conversion", "http transport", "json rpc", "live forex rates", "mcp", "nodedotjs", "rest api", "serverless", "vs code chat"]

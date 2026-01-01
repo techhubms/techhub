@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Fabric Blog"
 feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
 date: 2025-07-23 07:00:00 +00:00
-permalink: "/news/2025-07-23-Terraform-Provider-for-Microsoft-Fabric-Using-MCP-Servers-and-Fabric-CLI.html"
+permalink: "/2025-07-23-Terraform-Provider-for-Microsoft-Fabric-Using-MCP-Servers-and-Fabric-CLI.html"
 categories: ["Azure", "DevOps"]
 tags: ["Automation", "Azure", "Cloud Infrastructure", "Declarative Deployment", "DevOps", "DevOps Practices", "Fabric CLI", "IaC", "MCP Server", "Microsoft Fabric", "News", "Resource Management", "Terraform"]
 tags_normalized: ["automation", "azure", "cloud infrastructure", "declarative deployment", "devops", "devops practices", "fabric cli", "iac", "mcp server", "microsoft fabric", "news", "resource management", "terraform"]

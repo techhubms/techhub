@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Reddit Azure DevOps"
 feed_url: "https://www.reddit.com/r/azuredevops/.rss"
 date: 2025-07-31 13:38:24 +00:00
-permalink: "/community/2025-07-31-Questions-About-Azure-DevOps-Backlogs-Closed-Work-Items-and-Iteration-Filtering.html"
+permalink: "/2025-07-31-Questions-About-Azure-DevOps-Backlogs-Closed-Work-Items-and-Iteration-Filtering.html"
 categories: ["Azure", "DevOps"]
 tags: ["ADO Backlog", "Azure", "Azure Boards", "Azure DevOps", "Board Configuration", "Closed Work Items", "Community", "DevOps", "Epics", "Hierarchy View", "Iteration Path", "Team Configuration", "User Stories", "Work Item Visibility"]
 tags_normalized: ["ado backlog", "azure", "azure boards", "azure devops", "board configuration", "closed work items", "community", "devops", "epics", "hierarchy view", "iteration path", "team configuration", "user stories", "work item visibility"]

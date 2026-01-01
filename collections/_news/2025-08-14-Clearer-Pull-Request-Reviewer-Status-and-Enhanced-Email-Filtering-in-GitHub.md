@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/changelog/feed/"
 date: 2025-08-14 20:27:11 +00:00
-permalink: "/news/2025-08-14-Clearer-Pull-Request-Reviewer-Status-and-Enhanced-Email-Filtering-in-GitHub.html"
+permalink: "/2025-08-14-Clearer-Pull-Request-Reviewer-Status-and-Enhanced-Email-Filtering-in-GitHub.html"
 categories: ["DevOps"]
 tags: ["Accessibility", "Collaboration", "DevOps", "Email Filtering", "Email Notifications", "GitHub", "Inclusive Design", "Issue Tracking", "Metadata", "News", "PR Approvals", "Pull Requests", "Reviewer Status", "Workflow Automation"]
 tags_normalized: ["accessibility", "collaboration", "devops", "email filtering", "email notifications", "github", "inclusive design", "issue tracking", "metadata", "news", "pr approvals", "pull requests", "reviewer status", "workflow automation"]

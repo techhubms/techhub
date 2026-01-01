@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-09-18 10:43:54 +00:00
-permalink: "/community/2025-09-18-Introducing-WireGuard-In-Transit-Encryption-for-Azure-Kubernetes-Service-Public-Preview.html"
+permalink: "/2025-09-18-Introducing-WireGuard-In-Transit-Encryption-for-Azure-Kubernetes-Service-Public-Preview.html"
 categories: ["Azure", "Security"]
 tags: ["Advanced Container Networking", "AKS", "Azure", "Azure CNI", "Cilium", "Cloud Security", "Cluster Security", "Community", "Container Networking", "Encryption", "in Transit Encryption", "Key Management", "Network Security", "Security", "VNet Encryption", "WireGuard"]
 tags_normalized: ["advanced container networking", "aks", "azure", "azure cni", "cilium", "cloud security", "cluster security", "community", "container networking", "encryption", "in transit encryption", "key management", "network security", "security", "vnet encryption", "wireguard"]

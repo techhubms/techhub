@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Fabric Blog"
 feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
 date: 2025-12-03 12:00:00 +00:00
-permalink: "/news/2025-12-03-Integrating-OneDrive-and-SharePoint-Documents-into-OneLake-Analytics-with-Shortcuts.html"
+permalink: "/2025-12-03-Integrating-OneDrive-and-SharePoint-Documents-into-OneLake-Analytics-with-Shortcuts.html"
 categories: ["Azure", "ML"]
 tags: ["AI", "AI Transforms", "Analytics", "Azure", "BI Integration", "Data Governance", "Data Virtualization", "Document Indexing", "Excel", "Fabric", "Lakehouse", "Microsoft OneLake", "ML", "News", "OneDrive", "Power BI", "SharePoint", "Shortcut Workflow", "Structured Data", "Unstructured Data"]
 tags_normalized: ["ai", "ai transforms", "analytics", "azure", "bi integration", "data governance", "data virtualization", "document indexing", "excel", "fabric", "lakehouse", "microsoft onelake", "ml", "news", "onedrive", "power bi", "sharepoint", "shortcut workflow", "structured data", "unstructured data"]

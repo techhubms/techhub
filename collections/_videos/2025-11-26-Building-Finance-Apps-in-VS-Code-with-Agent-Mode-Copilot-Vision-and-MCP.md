@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Visual Studio Code YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SLNwkd3w"
 date: 2025-11-26 15:00:12 +00:00
-permalink: "/videos/2025-11-26-Building-Finance-Apps-in-VS-Code-with-Agent-Mode-Copilot-Vision-and-MCP.html"
+permalink: "/2025-11-26-Building-Finance-Apps-in-VS-Code-with-Agent-Mode-Copilot-Vision-and-MCP.html"
 categories: ["AI", "Coding", "GitHub Copilot"]
 tags: ["Agent Mode", "Agentmode", "AI", "AI Development", "App Debugging", "BYOK", "Coding", "Copilot Vision", "Custom Agents", "Customvision", "Demo", "Developer", "Developer Tools", "GitHub", "GitHub Copilot", "Issue Tracking", "Mcp", "Microsoft", "Model Management", "Multi Agent Collaboration", "Software Developer", "Source Control", "Tutorial", "Videos", "VS Code", "Workflow Automation"]
 tags_normalized: ["agent mode", "agentmode", "ai", "ai development", "app debugging", "byok", "coding", "copilot vision", "custom agents", "customvision", "demo", "developer", "developer tools", "github", "github copilot", "issue tracking", "mcp", "microsoft", "model management", "multi agent collaboration", "software developer", "source control", "tutorial", "videos", "vs code", "workflow automation"]

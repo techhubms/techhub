@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-11-18 17:27:09 +00:00
-permalink: "/community/2025-11-18-Compose-for-Agents-on-Azure-Container-Apps-Serverless-GPU-and-Agentic-AI-Workloads.html"
+permalink: "/2025-11-18-Compose-for-Agents-on-Azure-Container-Apps-Serverless-GPU-and-Agentic-AI-Workloads.html"
 categories: ["AI", "Azure", "DevOps"]
 tags: ["Agentic Applications", "AI", "AI Frameworks", "Azure", "Azure Container Apps", "Cloud Deployment", "Community", "Containerization", "CrewAI", "DevOps", "DevOps Automation", "Docker Compose", "Dynamic Scaling", "LangGraph", "LLM Orchestration", "MCP", "MCP Gateway", "Microservices", "Model Runner", "Retrieval Augmented Generation", "Serverless GPU", "Spring AI", "Vector Database"]
 tags_normalized: ["agentic applications", "ai", "ai frameworks", "azure", "azure container apps", "cloud deployment", "community", "containerization", "crewai", "devops", "devops automation", "docker compose", "dynamic scaling", "langgraph", "llm orchestration", "mcp", "mcp gateway", "microservices", "model runner", "retrieval augmented generation", "serverless gpu", "spring ai", "vector database"]

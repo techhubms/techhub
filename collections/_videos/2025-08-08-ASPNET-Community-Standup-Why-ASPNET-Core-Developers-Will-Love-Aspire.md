@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "DotNet YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw"
 date: 2025-08-08 23:12:24 +00:00
-permalink: "/videos/2025-08-08-ASPNET-Community-Standup-Why-ASPNET-Core-Developers-Will-Love-Aspire.html"
+permalink: "/2025-08-08-ASPNET-Community-Standup-Why-ASPNET-Core-Developers-Will-Love-Aspire.html"
 categories: ["Coding", "DevOps"]
 tags: [".NET", "Application Deployment", "ASP.NET", "ASP.NET Core", "Aspire", "Cloud Native Development", "Coding", "Community Standup", "Continuous Integration", "Daniel Roth", "Demo", "Developer", "Developer Community", "Developer Tools", "Developer Workflow", "DevOps", "Dotnetaspire", "Maddy Montaquila", "Microsoft", "Modernization", "Software Developer", "Software Engineering", "Testing", "Videos"]
 tags_normalized: ["dotnet", "application deployment", "aspdotnet", "aspdotnet core", "aspire", "cloud native development", "coding", "community standup", "continuous integration", "daniel roth", "demo", "developer", "developer community", "developer tools", "developer workflow", "devops", "dotnetaspire", "maddy montaquila", "microsoft", "modernization", "software developer", "software engineering", "testing", "videos"]

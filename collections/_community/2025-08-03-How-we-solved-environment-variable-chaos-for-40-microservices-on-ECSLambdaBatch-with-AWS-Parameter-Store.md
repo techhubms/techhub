@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Reddit DevOps"
 feed_url: "https://www.reddit.com/r/devops/.rss"
 date: 2025-08-03 14:54:50 +00:00
-permalink: "/community/2025-08-03-How-we-solved-environment-variable-chaos-for-40-microservices-on-ECSLambdaBatch-with-AWS-Parameter-Store.html"
+permalink: "/2025-08-03-How-we-solved-environment-variable-chaos-for-40-microservices-on-ECSLambdaBatch-with-AWS-Parameter-Store.html"
 categories: ["DevOps", "Security"]
 tags: ["AWS Batch", "AWS ECS", "AWS Lambda", "AWS Parameter Store", "Community", "DevOps", "Environment Variables", "Go", "IAM", "Microservices", "Secrets Management", "SecureString", "Security"]
 tags_normalized: ["aws batch", "aws ecs", "aws lambda", "aws parameter store", "community", "devops", "environment variables", "go", "iam", "microservices", "secrets management", "securestring", "security"]

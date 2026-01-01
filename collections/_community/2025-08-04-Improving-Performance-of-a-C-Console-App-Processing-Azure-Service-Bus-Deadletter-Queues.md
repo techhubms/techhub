@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Reddit CSharp"
 feed_url: "https://www.reddit.com/r/csharp/.rss"
 date: 2025-08-04 11:47:42 +00:00
-permalink: "/community/2025-08-04-Improving-Performance-of-a-C-Console-App-Processing-Azure-Service-Bus-Deadletter-Queues.html"
+permalink: "/2025-08-04-Improving-Performance-of-a-C-Console-App-Processing-Azure-Service-Bus-Deadletter-Queues.html"
 categories: ["Azure", "Coding", "DevOps"]
 tags: ["Async Programming", "Azure", "Azure Service Bus", "Azure Storage", "C#", "Coding", "Community", "Console App", "Deadletter Queue", "DevOps", "DevOps Pipeline", "Message Processing", "Performance", "Subscription"]
 tags_normalized: ["async programming", "azure", "azure service bus", "azure storage", "csharp", "coding", "community", "console app", "deadletter queue", "devops", "devops pipeline", "message processing", "performance", "subscription"]

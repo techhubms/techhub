@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft DevBlog"
 feed_url: "https://devblogs.microsoft.com/devops/feed/"
 date: 2025-07-25 06:47:36 +00:00
-permalink: "/news/2025-07-25-From-Manual-Testing-to-AI-Generated-Automation-Azure-DevOps-MCP-and-Playwright-with-GitHub-Copilot.html"
+permalink: "/2025-07-25-From-Manual-Testing-to-AI-Generated-Automation-Azure-DevOps-MCP-and-Playwright-with-GitHub-Copilot.html"
 categories: ["AI", "Azure", "Coding", "DevOps", "GitHub Copilot"]
 tags: ["AI", "AI Generated Code", "Automated Testing", "Azure", "Azure DevOps", "CI/CD", "Coding", "DevOps", "End To End Testing", "GitHub Copilot", "MCP Server", "News", "Playwright", "Prompt Engineering", "Software Quality", "Test", "Test Automation", "Test Pipelines", "Test Scripts", "TypeScript"]
 tags_normalized: ["ai", "ai generated code", "automated testing", "azure", "azure devops", "cislashcd", "coding", "devops", "end to end testing", "github copilot", "mcp server", "news", "playwright", "prompt engineering", "software quality", "test", "test automation", "test pipelines", "test scripts", "typescript"]

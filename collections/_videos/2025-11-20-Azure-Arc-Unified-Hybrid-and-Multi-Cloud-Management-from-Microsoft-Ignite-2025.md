@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Events YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
 date: 2025-11-20 16:58:22 +00:00
-permalink: "/videos/2025-11-20-Azure-Arc-Unified-Hybrid-and-Multi-Cloud-Management-from-Microsoft-Ignite-2025.html"
+permalink: "/2025-11-20-Azure-Arc-Unified-Hybrid-and-Multi-Cloud-Management-from-Microsoft-Ignite-2025.html"
 categories: ["Azure", "DevOps", "Security"]
 tags: ["Application Deployment", "AWS Integration", "Azure", "Azure Arc", "Azure Ignite", "Azure Managed Flux", "Brendan Burns", "Cloud Management", "Cloud Native Apps", "Cluster Scaling", "DevOps", "Governance", "Hybrid Cloud", "Kubernetes Fleet Manager", "Linux Modernization", "Migrateandmodernizeyourestate", "Monitoring", "MSIgnite", "Multi Cloud", "Policy Management", "Security", "Steven Bucher", "System Center", "Update Management", "Videos", "Windows Modernization"]
 tags_normalized: ["application deployment", "aws integration", "azure", "azure arc", "azure ignite", "azure managed flux", "brendan burns", "cloud management", "cloud native apps", "cluster scaling", "devops", "governance", "hybrid cloud", "kubernetes fleet manager", "linux modernization", "migrateandmodernizeyourestate", "monitoring", "msignite", "multi cloud", "policy management", "security", "steven bucher", "system center", "update management", "videos", "windows modernization"]

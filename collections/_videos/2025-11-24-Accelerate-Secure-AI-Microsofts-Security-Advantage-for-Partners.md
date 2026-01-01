@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Events YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
 date: 2025-11-24 13:33:32 +00:00
-permalink: "/videos/2025-11-24-Accelerate-Secure-AI-Microsofts-Security-Advantage-for-Partners.html"
+permalink: "/2025-11-24-Accelerate-Secure-AI-Microsofts-Security-Advantage-for-Partners.html"
 categories: ["AI", "Security"]
 tags: ["Agent 365", "AI", "AI Governance", "AI Security", "Data Protection", "Enterprise Security", "Ignite Announcements", "Microsoft Entra ID", "Microsoft Security Solutions", "Microsoft Sentinel", "MicrosoftAICloudPartnerProgram", "MSIgnite", "Partner Enablement", "Resilient Systems", "Security", "Security AI Synergies", "Security Copilot", "SMB Security", "Threat Protection", "Unified Security", "Videos"]
 tags_normalized: ["agent 365", "ai", "ai governance", "ai security", "data protection", "enterprise security", "ignite announcements", "microsoft entra id", "microsoft security solutions", "microsoft sentinel", "microsoftaicloudpartnerprogram", "msignite", "partner enablement", "resilient systems", "security", "security ai synergies", "security copilot", "smb security", "threat protection", "unified security", "videos"]

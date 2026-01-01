@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "DotNet YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw"
 date: 2025-11-13 17:40:49 +00:00
-permalink: "/videos/2025-11-13-Whats-New-in-NuGet-Security-AI-and-Modern-Package-Management-for-NET.html"
+permalink: "/2025-11-13-Whats-New-in-NuGet-Security-AI-and-Modern-Package-Management-for-NET.html"
 categories: ["AI", "Coding", "Security"]
 tags: [".NET", "AI", "AI Productivity", "Coding", "Dependency Mitigation", "Developer Tools", "MCP", "MCP Registry", "MCP Server", "Microsoft", "NuGet", "NuGet Audit", "Package Discovery", "Package Management", "Secure Dependencies", "Security", "Sponsorship", "Trusted Publishing", "Videos"]
 tags_normalized: ["dotnet", "ai", "ai productivity", "coding", "dependency mitigation", "developer tools", "mcp", "mcp registry", "mcp server", "microsoft", "nuget", "nuget audit", "package discovery", "package management", "secure dependencies", "security", "sponsorship", "trusted publishing", "videos"]

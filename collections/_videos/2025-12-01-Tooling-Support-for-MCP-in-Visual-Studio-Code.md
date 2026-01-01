@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Visual Studio Code YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SLNwkd3w"
 date: 2025-12-01 18:00:38 +00:00
-permalink: "/videos/2025-12-01-Tooling-Support-for-MCP-in-Visual-Studio-Code.html"
+permalink: "/2025-12-01-Tooling-Support-for-MCP-in-Visual-Studio-Code.html"
 categories: ["Coding"]
 tags: ["Coding", "Command Palette", "Development Tools", "Installation", "Logging", "MCP", "Python", "Registry", "Tooling", "Troubleshooting", "Videos", "VS Code"]
 tags_normalized: ["coding", "command palette", "development tools", "installation", "logging", "mcp", "python", "registry", "tooling", "troubleshooting", "videos", "vs code"]

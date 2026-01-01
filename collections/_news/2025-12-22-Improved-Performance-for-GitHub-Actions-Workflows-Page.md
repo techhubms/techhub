@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/changelog/feed/"
 date: 2025-12-22 21:40:47 +00:00
-permalink: "/news/2025-12-22-Improved-Performance-for-GitHub-Actions-Workflows-Page.html"
+permalink: "/2025-12-22-Improved-Performance-for-GitHub-Actions-Workflows-Page.html"
 categories: ["DevOps"]
 tags: ["Actions", "Automation", "CI/CD", "Continuous Integration", "Developer Experience", "DevOps", "GitHub Actions", "GitHub Improvements", "Improvement", "Job Filtering", "Lazy Loading", "Monorepo Management", "News", "Workflow Optimization"]
 tags_normalized: ["actions", "automation", "cislashcd", "continuous integration", "developer experience", "devops", "github actions", "github improvements", "improvement", "job filtering", "lazy loading", "monorepo management", "news", "workflow optimization"]

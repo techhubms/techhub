@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The Azure Blog"
 feed_url: "https://azure.microsoft.com/en-us/blog/feed/"
 date: 2025-10-20 16:00:00 +00:00
-permalink: "/news/2025-10-20-Driving-Change-with-Migration-to-Azure-SQL-Managed-Instance.html"
+permalink: "/2025-10-20-Driving-Change-with-Migration-to-Azure-SQL-Managed-Instance.html"
 categories: ["Azure"]
 tags: ["AI", "AI Ready Infrastructure", "Azure", "Azure SQL Managed Instance", "Cloud Databases", "Database Modernization", "Databases", "Hybrid + Multicloud", "Hybrid Cloud", "Microsoft Azure", "Multicloud", "News", "Scalability", "SQL Server", "SQL Server Migration"]
 tags_normalized: ["ai", "ai ready infrastructure", "azure", "azure sql managed instance", "cloud databases", "database modernization", "databases", "hybrid plus multicloud", "hybrid cloud", "microsoft azure", "multicloud", "news", "scalability", "sql server", "sql server migration"]

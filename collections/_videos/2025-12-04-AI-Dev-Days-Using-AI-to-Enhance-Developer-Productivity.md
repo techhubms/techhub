@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Developer YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
 date: 2025-12-04 01:07:13 +00:00
-permalink: "/videos/2025-12-04-AI-Dev-Days-Using-AI-to-Enhance-Developer-Productivity.html"
+permalink: "/2025-12-04-AI-Dev-Days-Using-AI-to-Enhance-Developer-Productivity.html"
 categories: ["AI", "Azure", "Coding", "GitHub Copilot"]
 tags: ["Agent HQ", "AI", "AI Developer Tools", "App Modernization", "Azure", "Coding", "Coding Agent", "Demo", "Developer", "Developer Community", "Developer Productivity", "Developer Tools", "GitHub Copilot", "GitHub Universe", "GPT", "GPT 5", "GPT5", "Microsoft", "Microsoft Ignite", "Python", "Softwaredevelopers", "Videos", "VS", "VS Code"]
 tags_normalized: ["agent hq", "ai", "ai developer tools", "app modernization", "azure", "coding", "coding agent", "demo", "developer", "developer community", "developer productivity", "developer tools", "github copilot", "github universe", "gpt", "gpt 5", "gpt5", "microsoft", "microsoft ignite", "python", "softwaredevelopers", "videos", "vs", "vs code"]

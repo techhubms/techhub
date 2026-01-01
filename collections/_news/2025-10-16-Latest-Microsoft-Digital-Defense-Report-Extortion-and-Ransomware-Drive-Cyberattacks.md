@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft News"
 feed_url: "https://news.microsoft.com/source/feed/"
 date: 2025-10-16 15:48:34 +00:00
-permalink: "/news/2025-10-16-Latest-Microsoft-Digital-Defense-Report-Extortion-and-Ransomware-Drive-Cyberattacks.html"
+permalink: "/2025-10-16-Latest-Microsoft-Digital-Defense-Report-Extortion-and-Ransomware-Drive-Cyberattacks.html"
 categories: ["AI", "Security"]
 tags: ["AI", "AI Security", "Automation", "Company News", "Credential Theft", "Critical Infrastructure", "Cybersecurity", "Extortion", "Identity Protection", "Incident Response", "Infostealer Malware", "MFA", "Microsoft Digital Defense Report", "Microsoft Security", "Nation State Threats", "News", "On The Issues", "Phishing", "Ransomware", "Security"]
 tags_normalized: ["ai", "ai security", "automation", "company news", "credential theft", "critical infrastructure", "cybersecurity", "extortion", "identity protection", "incident response", "infostealer malware", "mfa", "microsoft digital defense report", "microsoft security", "nation state threats", "news", "on the issues", "phishing", "ransomware", "security"]

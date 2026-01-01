@@ -9,10 +9,10 @@ viewing_mode: "external"
 feed_name: "DevOps Blog"
 feed_url: "https://devops.com/feed/"
 date: 2025-08-04 15:11:20 +00:00
-permalink: "/blogs/2025-08-04-AI-Driven-Observability-Fast-Context-Rich-MCP-Servers.html"
+permalink: "/2025-08-04-AI-Driven-Observability-Fast-Context-Rich-MCP-Servers.html"
 categories: ["AI", "DevOps"]
-tags: ["Agentic AI", "AI", "AI Agents", "API Discoverability", "Automation", "Context Mapping", "Developer Experience", "DevOps", "Honeycomb", "LLM", "MCP", "Observability", "Blogs", "Root Cause Analysis", "Telemetry", "Video Interviews"]
-tags_normalized: ["agentic ai", "ai", "ai agents", "api discoverability", "automation", "context mapping", "developer experience", "devops", "honeycomb", "llm", "mcp", "observability", "blogs", "root cause analysis", "telemetry", "video interviews"]
+tags: ["Agentic AI", "AI", "AI Agents", "API Discoverability", "Automation", "Blogs", "Context Mapping", "Developer Experience", "DevOps", "Honeycomb", "LLM", "MCP", "Observability", "Root Cause Analysis", "Telemetry", "Video Interviews"]
+tags_normalized: ["agentic ai", "ai", "ai agents", "api discoverability", "automation", "blogs", "context mapping", "developer experience", "devops", "honeycomb", "llm", "mcp", "observability", "root cause analysis", "telemetry", "video interviews"]
 ---
 
 Authored by Alan Shimel, this article features insights from Honeycomb CEO Christine Yen on how Model Context Protocol (MCP) servers enhance AI-driven observability and the evolving landscape for DevOps teams.<!--excerpt_end-->

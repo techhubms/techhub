@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-09-03 22:43:07 +00:00
-permalink: "/community/2025-09-03-Migrating-from-AWS-Application-Load-Balancer-to-Azure-Application-Gateway.html"
+permalink: "/2025-09-03-Migrating-from-AWS-Application-Load-Balancer-to-Azure-Application-Gateway.html"
 categories: ["Azure", "DevOps", "Security"]
 tags: ["Automation", "AWS Application Load Balancer", "Azure", "Azure Application Gateway", "Azure Key Vault", "Azure Monitor", "Certificate Management", "Cloud Migration", "Cloud Networking", "Community", "DevOps", "DNS Cutover", "Enterprise Migration", "Health Probes", "IaC", "Log Analytics", "Performance Optimization", "Routing", "Security", "SSL/TLS Termination", "Web Application Firewall", "Zone Redundancy"]
 tags_normalized: ["automation", "aws application load balancer", "azure", "azure application gateway", "azure key vault", "azure monitor", "certificate management", "cloud migration", "cloud networking", "community", "devops", "dns cutover", "enterprise migration", "health probes", "iac", "log analytics", "performance optimization", "routing", "security", "sslslashtls termination", "web application firewall", "zone redundancy"]

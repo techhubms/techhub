@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-11-11 04:10:13 +00:00
-permalink: "/community/2025-11-11-Nodejs-24-Now-Available-on-Azure-App-Service-for-Linux.html"
+permalink: "/2025-11-11-Nodejs-24-Now-Available-on-Azure-App-Service-for-Linux.html"
 categories: ["Azure", "Coding"]
 tags: ["App Service Deployment", "ARM Templates", "Azure", "Azure App Service", "Bicep Templates", "CI Workflows", "Coding", "Community", "Continuous Integration", "JavaScript", "Linux", "Node:test", "Node.js 24", "npm 11", "Testing", "V8 Engine"]
 tags_normalized: ["app service deployment", "arm templates", "azure", "azure app service", "bicep templates", "ci workflows", "coding", "community", "continuous integration", "javascript", "linux", "nodetest", "nodedotjs 24", "npm 11", "testing", "v8 engine"]

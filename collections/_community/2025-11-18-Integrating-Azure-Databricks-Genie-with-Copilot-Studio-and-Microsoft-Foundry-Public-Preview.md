@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-11-18 18:48:18 +00:00
-permalink: "/community/2025-11-18-Integrating-Azure-Databricks-Genie-with-Copilot-Studio-and-Microsoft-Foundry-Public-Preview.html"
+permalink: "/2025-11-18-Integrating-Azure-Databricks-Genie-with-Copilot-Studio-and-Microsoft-Foundry-Public-Preview.html"
 categories: ["AI", "Azure", "ML"]
 tags: ["AI", "Azure", "Azure Databricks", "Community", "Conversational Analytics", "Copilot Studio", "Data Democratization", "Data Insights", "Enterprise Data", "Entra ID", "Genie", "Integration", "Machine Learning", "MCP", "Microsoft Foundry", "ML", "OAuth", "Power Apps", "Teams Integration"]
 tags_normalized: ["ai", "azure", "azure databricks", "community", "conversational analytics", "copilot studio", "data democratization", "data insights", "enterprise data", "entra id", "genie", "integration", "machine learning", "mcp", "microsoft foundry", "ml", "oauth", "power apps", "teams integration"]

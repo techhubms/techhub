@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The Azure Blog"
 feed_url: "https://azure.microsoft.com/en-us/blog/feed/"
 date: 2025-07-02 15:00:00 +00:00
-permalink: "/news/2025-07-02-Running-High-Performance-PostgreSQL-on-Azure-Kubernetes-Service.html"
+permalink: "/2025-07-02-Running-high-performance-PostgreSQL-on-Azure-Kubernetes-Service.html"
 categories: ["Azure", "ML"]
 tags: ["AKS", "Azure", "Azure Blob Storage", "Azure Container Storage", "CloudNativePG", "Compute", "Containers", "Data Durability", "Database Performance", "High Availability", "Kubernetes", "ML", "News", "NVMe", "Persistent Storage", "PostgreSQL", "Premium SSD V2", "SQL", "Storage", "Storage Benchmarking"]
 tags_normalized: ["aks", "azure", "azure blob storage", "azure container storage", "cloudnativepg", "compute", "containers", "data durability", "database performance", "high availability", "kubernetes", "ml", "news", "nvme", "persistent storage", "postgresql", "premium ssd v2", "sql", "storage", "storage benchmarking"]

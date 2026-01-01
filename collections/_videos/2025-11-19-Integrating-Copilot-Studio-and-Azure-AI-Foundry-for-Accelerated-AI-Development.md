@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Events YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
 date: 2025-11-19 15:12:00 +00:00
-permalink: "/videos/2025-11-19-Integrating-Copilot-Studio-and-Azure-AI-Foundry-for-Accelerated-AI-Development.html"
+permalink: "/2025-11-19-Integrating-Copilot-Studio-and-Azure-AI-Foundry-for-Accelerated-AI-Development.html"
 categories: ["AI", "Azure"]
 tags: ["Activity Explorer", "Agent Orchestration", "AI", "AI Development", "AI Governance", "AI Integration", "Azure", "Azure AI Foundry", "Copilot Studio", "Deterministic AI", "Fine Tuning Models", "InnovatewithAzureAIappsandagents", "Intelligent Applications", "Low Code Agent Builder", "Microsoft Ignite", "MSIgnite", "Prompt Engineering", "Scalable Solutions", "Videos"]
 tags_normalized: ["activity explorer", "agent orchestration", "ai", "ai development", "ai governance", "ai integration", "azure", "azure ai foundry", "copilot studio", "deterministic ai", "fine tuning models", "innovatewithazureaiappsandagents", "intelligent applications", "low code agent builder", "microsoft ignite", "msignite", "prompt engineering", "scalable solutions", "videos"]

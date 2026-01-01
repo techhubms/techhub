@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Events YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
 date: 2025-11-24 08:27:45 +00:00
-permalink: "/videos/2025-11-24-Real-Stories-of-AI-Transformation-in-Local-Government.html"
+permalink: "/2025-11-24-Real-Stories-of-AI-Transformation-in-Local-Government.html"
 categories: ["AI", "Azure", "Security"]
 tags: ["AI", "AI Adoption", "Azure", "Citizen Services", "City Infrastructure", "Copilotandagentsatwork", "Cybersecurity", "Data Modernization", "Data Sovereignty", "Digital Transformation", "Equitable Access", "Government Technology", "Microsoft Ignite", "MSIgnite", "Public Sector", "Responsible AI", "Scalable AI", "Security", "Videos", "Workforce Optimization"]
 tags_normalized: ["ai", "ai adoption", "azure", "citizen services", "city infrastructure", "copilotandagentsatwork", "cybersecurity", "data modernization", "data sovereignty", "digital transformation", "equitable access", "government technology", "microsoft ignite", "msignite", "public sector", "responsible ai", "scalable ai", "security", "videos", "workforce optimization"]

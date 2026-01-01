@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/changelog/feed/"
 date: 2025-08-27 23:37:22 +00:00
-permalink: "/news/2025-08-27-Managing-Sub-Issues-with-GitHub-Copilot-Public-Preview-Update.html"
+permalink: "/2025-08-27-Managing-Sub-Issues-with-GitHub-Copilot-Public-Preview-Update.html"
 categories: ["AI", "DevOps", "GitHub Copilot"]
 tags: ["AI", "Copilot Chat", "Developer Workflow", "DevOps", "Epic Tracking", "GitHub", "GitHub Copilot", "Issue Management", "News", "Project Organization", "Public Preview", "Software Development", "Sub Issues"]
 tags_normalized: ["ai", "copilot chat", "developer workflow", "devops", "epic tracking", "github", "github copilot", "issue management", "news", "project organization", "public preview", "software development", "sub issues"]

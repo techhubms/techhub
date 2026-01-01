@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-09-15 17:29:56 +00:00
-permalink: "/community/2025-09-15-How-AI-and-Communication-APIs-Are-Transforming-Industry-Workflows.html"
+permalink: "/2025-09-15-How-AI-and-Communication-APIs-Are-Transforming-Industry-Workflows.html"
 categories: ["AI", "Azure"]
 tags: ["AI", "AI Routing", "Appointment Scheduling", "Azure", "Azure AI Foundry", "Azure Communication Services", "Communication Workflows", "Community", "Compliance Automation", "Conversational AI", "Copilot Studio", "Customer Service Automation", "Education Technology", "Financial Services Automation", "HIPAA Compliance", "Industry Solutions", "Personalization", "Sales Automation", "Sentiment Analysis"]
 tags_normalized: ["ai", "ai routing", "appointment scheduling", "azure", "azure ai foundry", "azure communication services", "communication workflows", "community", "compliance automation", "conversational ai", "copilot studio", "customer service automation", "education technology", "financial services automation", "hipaa compliance", "industry solutions", "personalization", "sales automation", "sentiment analysis"]

@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-09-23 08:09:24 +00:00
-permalink: "/community/2025-09-23-Discover-and-Assess-PostgreSQL-Databases-for-Azure-Migration-Using-Azure-Migrate.html"
+permalink: "/2025-09-23-Discover-and-Assess-PostgreSQL-Databases-for-Azure-Migration-Using-Azure-Migrate.html"
 categories: ["Azure"]
 tags: ["Agentless Discovery", "Azure", "Azure Compute SKU", "Azure Database For PostgreSQL", "Azure Migrate", "Cloud Migration", "Community", "Configuration Compatibility", "Cost Analysis", "Database Migration", "Dependency Mapping", "IaaS", "Microsoft Hyper V", "Migration Assessment", "PaaS", "PostgreSQL", "VMware"]
 tags_normalized: ["agentless discovery", "azure", "azure compute sku", "azure database for postgresql", "azure migrate", "cloud migration", "community", "configuration compatibility", "cost analysis", "database migration", "dependency mapping", "iaas", "microsoft hyper v", "migration assessment", "paas", "postgresql", "vmware"]

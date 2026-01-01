@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Fabric Blog"
 feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
 date: 2025-09-25 13:00:00 +00:00
-permalink: "/news/2025-09-25-Microsoft-Fabric-Update-Workspace-Admins-Gain-Direct-Workload-Assignment.html"
+permalink: "/2025-09-25-Microsoft-Fabric-Update-Workspace-Admins-Gain-Direct-Workload-Assignment.html"
 categories: ["Azure", "ML"]
 tags: ["Analytics", "Azure", "Data Governance", "Data Ingestion", "Data Management", "Data Quality", "Entra ID", "Microsoft Fabric", "ML", "News", "No Code Data Integration", "Osmos", "Power BI", "Profisee", "Tenant Settings", "Workloads Hub", "Workspace Admin", "Workspace Level Assignment"]
 tags_normalized: ["analytics", "azure", "data governance", "data ingestion", "data management", "data quality", "entra id", "microsoft fabric", "ml", "news", "no code data integration", "osmos", "power bi", "profisee", "tenant settings", "workloads hub", "workspace admin", "workspace level assignment"]

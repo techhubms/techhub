@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "John Savill's Technical Training"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCpIn7ox7j7bH_OFj7tYouOQ"
 date: 2025-07-28 14:15:52 +00:00
-permalink: "/videos/2025-07-28-Ctrl-Shift-MCP-and-A2A-Why-Business-Leaders-Should-Care.html"
+permalink: "/2025-07-28-Ctrl-Shift-MCP-and-A2A-Why-Business-Leaders-Should-Care.html"
 categories: ["AI"]
 tags: ["A2A", "Agent 2 Agent", "Agent To Agent", "Agents", "AI", "AI Agents", "AI Architecture", "Business AI", "Generative AI", "Large Language Models", "LLM", "MCP", "Tech Trends", "Videos"]
 tags_normalized: ["a2a", "agent 2 agent", "agent to agent", "agents", "ai", "ai agents", "ai architecture", "business ai", "generative ai", "large language models", "llm", "mcp", "tech trends", "videos"]

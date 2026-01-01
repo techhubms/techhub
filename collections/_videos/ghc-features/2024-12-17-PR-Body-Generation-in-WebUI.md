@@ -7,7 +7,7 @@ excerpt_separator: <!--excerpt_end-->
 canonical_url: "https://youtu.be/chD-UE4DmJk"
 categories: ["AI", "GitHub Copilot"]
 date: 2024-12-17 23:00:34 +00:00
-permalink: "/videos/2024-12-17-PR-Body-Generation-in-WebUI.html"
+permalink: "/2024-12-17-PR-Body-Generation-in-WebUI.html"
 viewing_mode: "internal"
 section: "github-copilot"
 ghes_support: "false"

@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft VisualStudio Blog"
 feed_url: "https://devblogs.microsoft.com/visualstudio/feed/"
 date: 2025-11-14 14:00:14 +00:00
-permalink: "/news/2025-11-14-Azure-MCP-Server-Now-Built-In-with-Visual-Studio-2026-Agentic-Cloud-Automation-for-Developers.html"
+permalink: "/2025-11-14-Azure-MCP-Server-Now-Built-In-with-Visual-Studio-2026-Agentic-Cloud-Automation-for-Developers.html"
 categories: ["AI", "Azure", "Coding", "DevOps", "GitHub Copilot", "Security"]
 tags: ["Agentic Automation", "AI", "AI Native IDE", "AKS", "Azure", "Azure CLI", "Azure Container Apps", "Azure Development", "Azure DevOps", "Azure Functions", "Azure MCP Server", "CI/CD Workflows", "Cloud", "Cloud Resource Management", "Coding", "Copilot", "Cosmos DB", "DevOps", "Diagnostics", "GitHub Copilot", "IaC", "MCP", "Natural Language Query", "News", "Security", "Security Best Practices", "Telemetry", "VS"]
 tags_normalized: ["agentic automation", "ai", "ai native ide", "aks", "azure", "azure cli", "azure container apps", "azure development", "azure devops", "azure functions", "azure mcp server", "cislashcd workflows", "cloud", "cloud resource management", "coding", "copilot", "cosmos db", "devops", "diagnostics", "github copilot", "iac", "mcp", "natural language query", "news", "security", "security best practices", "telemetry", "vs"]

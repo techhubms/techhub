@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Events YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
 date: 2025-11-20 17:03:57 +00:00
-permalink: "/videos/2025-11-20-AI-Playbook-for-ROI-with-Microsoft-Foundry-at-Ignite-2025.html"
+permalink: "/2025-11-20-AI-Playbook-for-ROI-with-Microsoft-Foundry-at-Ignite-2025.html"
 categories: ["AI", "Azure"]
 tags: ["AI", "Azure", "Azure AI", "Business Impact", "Compliance", "Cost Reduction", "Customer Service Automation", "Governance", "Hybrid Models", "InnovatewithAzureAIappsandagents", "Machine Learning", "Metrics", "Microsoft Foundry", "Model Router", "MS Ignite", "MSIgnite", "Multi Agent Architecture", "Priority Processing", "Prompt Caching", "ROI", "Scalability", "Token Costs", "Videos"]
 tags_normalized: ["ai", "azure", "azure ai", "business impact", "compliance", "cost reduction", "customer service automation", "governance", "hybrid models", "innovatewithazureaiappsandagents", "machine learning", "metrics", "microsoft foundry", "model router", "ms ignite", "msignite", "multi agent architecture", "priority processing", "prompt caching", "roi", "scalability", "token costs", "videos"]

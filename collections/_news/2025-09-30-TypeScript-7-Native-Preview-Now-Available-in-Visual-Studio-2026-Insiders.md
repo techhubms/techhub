@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Blog"
 feed_url: "https://devblogs.microsoft.com/feed"
 date: 2025-09-30 16:04:20 +00:00
-permalink: "/news/2025-09-30-TypeScript-7-Native-Preview-Now-Available-in-Visual-Studio-2026-Insiders.html"
+permalink: "/2025-09-30-TypeScript-7-Native-Preview-Now-Available-in-Visual-Studio-2026-Insiders.html"
 categories: ["Coding"]
 tags: ["Coding", "Compile Time", "Developer Experience", "IntelliSense", "JavaScript", "Native Compiler", "News", "npm", "Package Management", "Performance Optimization", "TypeScript 7", "TypeScript Native Preview", "Visual Studio Insiders", "VS"]
 tags_normalized: ["coding", "compile time", "developer experience", "intellisense", "javascript", "native compiler", "news", "npm", "package management", "performance optimization", "typescript 7", "typescript native preview", "visual studio insiders", "vs"]

@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Fabric Blog"
 feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
 date: 2025-11-20 10:30:00 +00:00
-permalink: "/news/2025-11-20-Copilot-and-Query-Editor-Now-Generally-Available-in-SQL-Database-on-Microsoft-Fabric.html"
+permalink: "/2025-11-20-Copilot-and-Query-Editor-Now-Generally-Available-in-SQL-Database-on-Microsoft-Fabric.html"
 categories: ["AI", "Azure", "Coding", "ML"]
 tags: ["AI", "AI Assistance", "Azure", "Azure SQL Database", "Coding", "Copilot", "Data Engineering", "Data Grid", "Database Design", "Developer Tools", "Keyboard Shortcuts", "Microsoft Fabric", "ML", "Natural Language To SQL", "News", "Performance Optimization", "Query Editor", "SaaS", "Schema Designer", "Shared Queries", "SQL Database", "SQL Server", "SSMS", "T SQL", "Telemetry", "VS Code"]
 tags_normalized: ["ai", "ai assistance", "azure", "azure sql database", "coding", "copilot", "data engineering", "data grid", "database design", "developer tools", "keyboard shortcuts", "microsoft fabric", "ml", "natural language to sql", "news", "performance optimization", "query editor", "saas", "schema designer", "shared queries", "sql database", "sql server", "ssms", "t sql", "telemetry", "vs code"]

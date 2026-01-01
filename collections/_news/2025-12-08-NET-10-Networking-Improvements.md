@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft .NET Blog"
 feed_url: "https://devblogs.microsoft.com/dotnet/feed/"
 date: 2025-12-08 18:05:00 +00:00
-permalink: "/news/2025-12-08-NET-10-Networking-Improvements.html"
+permalink: "/2025-12-08-NET-10-Networking-Improvements.html"
 categories: ["Coding", "Security"]
 tags: [".NET", ".NET 10", "Coding", "Cookies", "HTTP", "IP Address", "MediaTypeNames.Yaml", "NegotiatedCipherSuite", "Net Security", "Networking", "News", "Performance Optimization", "Query Verb", "QuicConnection", "Security", "Server Sent Events", "ServerCertificateValidationCallback", "SslStream", "TLS 1.3", "URI", "Web Sockets", "WebSockets", "WebSocketStream", "WinHttpHandler"]
 tags_normalized: ["dotnet", "dotnet 10", "coding", "cookies", "http", "ip address", "mediatypenamesdotyaml", "negotiatedciphersuite", "net security", "networking", "news", "performance optimization", "query verb", "quicconnection", "security", "server sent events", "servercertificatevalidationcallback", "sslstream", "tls 1dot3", "uri", "web sockets", "websockets", "websocketstream", "winhttphandler"]

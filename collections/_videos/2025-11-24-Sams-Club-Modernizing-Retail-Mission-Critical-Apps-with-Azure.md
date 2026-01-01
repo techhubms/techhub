@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Events YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
 date: 2025-11-24 12:15:09 +00:00
-permalink: "/videos/2025-11-24-Sams-Club-Modernizing-Retail-Mission-Critical-Apps-with-Azure.html"
+permalink: "/2025-11-24-Sams-Club-Modernizing-Retail-Mission-Critical-Apps-with-Azure.html"
 categories: ["Azure", "Coding", "DevOps", "ML"]
 tags: ["AKS", "Azure", "Azure SQL", "Cloud Native", "Coding", "Cosmos DB", "Data Consistency", "Demo", "DevOps", "E Commerce", "Fault Tolerance", "High Availability", "Hyperscale", "Microservices", "Microsoft Ignite", "Migrateandmodernizeyourestate", "Migration", "ML", "MSIgnite", "Multi Region Deployment", "Platform Modernization", "Resilience Patterns", "Retail Apps", "Saga Pattern", "Sam's Club", "Service Architecture", "Videos"]
 tags_normalized: ["aks", "azure", "azure sql", "cloud native", "coding", "cosmos db", "data consistency", "demo", "devops", "e commerce", "fault tolerance", "high availability", "hyperscale", "microservices", "microsoft ignite", "migrateandmodernizeyourestate", "migration", "ml", "msignite", "multi region deployment", "platform modernization", "resilience patterns", "retail apps", "saga pattern", "sams club", "service architecture", "videos"]

@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/feed/"
 date: 2025-08-26 16:10:14 +00:00
-permalink: "/news/2025-08-26-Rediscovering-Joy-in-Learning-Jason-Lengstorf-on-AI-Open-Source-and-Developer-Growth.html"
+permalink: "/2025-08-26-Rediscovering-Joy-in-Learning-Jason-Lengstorf-on-AI-Open-Source-and-Developer-Growth.html"
 categories: ["AI"]
 tags: ["AI", "AI in Development", "Autonomous Agents", "Career Growth", "CodeTV", "Developer Education", "Developer Skills", "GitHub Podcast", "Jason Lengstorf", "JavaScript Ecosystem", "Learning Strategies", "MCP", "Modern Web", "News", "Nuxt", "Open Source", "Open Source Sustainability", "React", "ShadCN/UI", "Tailwind", "TypeScript", "Vue", "Web Innovation", "Zod"]
 tags_normalized: ["ai", "ai in development", "autonomous agents", "career growth", "codetv", "developer education", "developer skills", "github podcast", "jason lengstorf", "javascript ecosystem", "learning strategies", "mcp", "modern web", "news", "nuxt", "open source", "open source sustainability", "react", "shadcnslashui", "tailwind", "typescript", "vue", "web innovation", "zod"]

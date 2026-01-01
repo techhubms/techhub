@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Developer YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
 date: 2025-11-24 19:12:00 +00:00
-permalink: "/videos/2025-11-24-Microsoft-Foundry-Workflows-Pt-1-Creating-a-Sequential-Multi-Agent-Workflow.html"
+permalink: "/2025-11-24-Microsoft-Foundry-Workflows-Pt-1-Creating-a-Sequential-Multi-Agent-Workflow.html"
 categories: ["AI", "Azure"]
 tags: ["Agent Orchestration", "AI", "AI Workflow", "Azure", "Azure AI Foundry", "Cloud Computing", "Dev", "Development", "Development Tools", "Microsoft", "Microsoft Foundry", "Model Deployment", "Multi Agent System", "Portal Setup", "Sequential Workflow", "Tech", "Technology", "Template Usage", "Videos", "Workflow Automation"]
 tags_normalized: ["agent orchestration", "ai", "ai workflow", "azure", "azure ai foundry", "cloud computing", "dev", "development", "development tools", "microsoft", "microsoft foundry", "model deployment", "multi agent system", "portal setup", "sequential workflow", "tech", "technology", "template usage", "videos", "workflow automation"]

@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/feed/"
 date: 2025-09-24 16:12:47 +00:00
-permalink: "/news/2025-09-24-Using-AI-and-Open-Source-to-Map-Refugee-Settlements-The-UNHCR-and-GitHub-Story.html"
+permalink: "/2025-09-24-Using-AI-and-Open-Source-to-Map-Refugee-Settlements-The-UNHCR-and-GitHub-Story.html"
 categories: ["AI", "GitHub Copilot"]
 tags: ["AI", "Collaboration", "Community Development", "Data Science", "Drone Imagery", "GitHub", "GitHub Copilot", "Humanitarian Mapping", "Machine Learning", "Microsoft AI For Good Lab", "News", "Open Source", "OpenStreetMap", "Refugee Support", "Social Impact", "Sustainable Planning", "UNHCR"]
 tags_normalized: ["ai", "collaboration", "community development", "data science", "drone imagery", "github", "github copilot", "humanitarian mapping", "machine learning", "microsoft ai for good lab", "news", "open source", "openstreetmap", "refugee support", "social impact", "sustainable planning", "unhcr"]

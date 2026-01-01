@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Fabric Blog"
 feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
 date: 2025-07-31 11:00:00 +00:00
-permalink: "/news/2025-07-31-Boost-Performance-with-Fast-Copy-in-Dataflows-Gen2-for-Snowflake.html"
+permalink: "/2025-07-31-Boost-Performance-with-Fast-Copy-in-Dataflows-Gen2-for-Snowflake.html"
 categories: ["ML"]
 tags: ["Benchmarking", "Big Data", "Copy Activity", "Data Ingestion", "Data Migration", "Data Pipelines", "Dataflows Gen2", "ETL", "Fast Copy", "Lakehouse", "Microsoft Fabric", "ML", "News", "Performance Optimization", "Production Workloads", "Snowflake"]
 tags_normalized: ["benchmarking", "big data", "copy activity", "data ingestion", "data migration", "data pipelines", "dataflows gen2", "etl", "fast copy", "lakehouse", "microsoft fabric", "ml", "news", "performance optimization", "production workloads", "snowflake"]

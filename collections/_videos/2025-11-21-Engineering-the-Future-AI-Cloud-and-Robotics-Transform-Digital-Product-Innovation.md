@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Events YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
 date: 2025-11-21 11:47:07 +00:00
-permalink: "/videos/2025-11-21-Engineering-the-Future-AI-Cloud-and-Robotics-Transform-Digital-Product-Innovation.html"
+permalink: "/2025-11-21-Engineering-the-Future-AI-Cloud-and-Robotics-Transform-Digital-Product-Innovation.html"
 categories: ["AI", "Azure", "DevOps"]
 tags: ["Agentic AI", "AI", "AI Agents", "Autodesk", "Automation", "Azure", "Cloud Engineering", "Data Automation", "DevOps", "Digital Workflows", "Enterprise Modernization", "ERP Integration", "GitHub", "Industrial Innovation", "Manufacturing", "Microsoft Ignite", "Migrateandmodernizeyourestate", "MSIgnite", "PLM Modernization", "Product Lifecycle Management", "Robotics", "Simulation", "Videos"]
 tags_normalized: ["agentic ai", "ai", "ai agents", "autodesk", "automation", "azure", "cloud engineering", "data automation", "devops", "digital workflows", "enterprise modernization", "erp integration", "github", "industrial innovation", "manufacturing", "microsoft ignite", "migrateandmodernizeyourestate", "msignite", "plm modernization", "product lifecycle management", "robotics", "simulation", "videos"]

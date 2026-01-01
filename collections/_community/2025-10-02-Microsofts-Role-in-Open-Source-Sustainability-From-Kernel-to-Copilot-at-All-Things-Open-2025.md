@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-10-02 17:45:28 +00:00
-permalink: "/community/2025-10-02-Microsofts-Role-in-Open-Source-Sustainability-From-Kernel-to-Copilot-at-All-Things-Open-2025.html"
+permalink: "/2025-10-02-Microsofts-Role-in-Open-Source-Sustainability-From-Kernel-to-Copilot-at-All-Things-Open-2025.html"
 categories: ["AI", "Azure", "Coding", "DevOps", "GitHub Copilot", "Security"]
 tags: ["AI", "AI Agents", "AKS Automatic", "App Modernization", "Application Modernization", "Automation", "Azure", "Azure Arc", "Cloud Computing", "Cloud Native", "Coding", "Community", "DevOps", "GitHub", "GitHub Copilot", "Infrastructure", "Kubernetes", "Linux On Azure", "Microsoft", "Open Source", "OpenShift", "Security", "VS Code"]
 tags_normalized: ["ai", "ai agents", "aks automatic", "app modernization", "application modernization", "automation", "azure", "azure arc", "cloud computing", "cloud native", "coding", "community", "devops", "github", "github copilot", "infrastructure", "kubernetes", "linux on azure", "microsoft", "open source", "openshift", "security", "vs code"]

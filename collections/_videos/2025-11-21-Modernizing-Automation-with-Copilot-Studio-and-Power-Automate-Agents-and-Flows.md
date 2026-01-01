@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Events YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
 date: 2025-11-21 15:03:04 +00:00
-permalink: "/videos/2025-11-21-Modernizing-Automation-with-Copilot-Studio-and-Power-Automate-Agents-and-Flows.html"
+permalink: "/2025-11-21-Modernizing-Automation-with-Copilot-Studio-and-Power-Automate-Agents-and-Flows.html"
 categories: ["AI"]
 tags: ["Agent Flows", "Agentic Automation", "AI", "Automation", "Cloud Flows", "Copilot Studio", "Desktop Flows", "Enterprise Automation", "Innovatewithlow", "Integration Frameworks", "LLMs", "Low Code", "Microsoft Ignite", "MSIgnite", "Power Automate", "Process Analytics", "Process Insights", "RPA", "Videos"]
 tags_normalized: ["agent flows", "agentic automation", "ai", "automation", "cloud flows", "copilot studio", "desktop flows", "enterprise automation", "innovatewithlow", "integration frameworks", "llms", "low code", "microsoft ignite", "msignite", "power automate", "process analytics", "process insights", "rpa", "videos"]

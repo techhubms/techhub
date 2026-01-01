@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/changelog/feed/"
 date: 2025-10-08 00:34:21 +00:00
-permalink: "/news/2025-10-08-Deprecation-of-Claude-Sonnet-35-in-GitHub-Copilot-What-You-Need-to-Know.html"
+permalink: "/2025-10-08-Deprecation-of-Claude-Sonnet-35-in-GitHub-Copilot-What-You-Need-to-Know.html"
 categories: ["AI", "GitHub Copilot"]
 tags: ["Administrator Guide", "AI", "AI Models", "Claude Sonnet 3.5", "Code Completions", "Copilot", "Copilot Chat", "Copilot Enterprise", "Copilot Free", "GitHub Copilot", "Model Deprecation", "Model Policies", "News", "Retired", "VS Code"]
 tags_normalized: ["administrator guide", "ai", "ai models", "claude sonnet 3dot5", "code completions", "copilot", "copilot chat", "copilot enterprise", "copilot free", "github copilot", "model deprecation", "model policies", "news", "retired", "vs code"]

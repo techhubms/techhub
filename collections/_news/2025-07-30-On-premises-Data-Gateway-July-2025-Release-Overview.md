@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Fabric Blog"
 feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
 date: 2025-07-30 11:00:00 +00:00
-permalink: "/news/2025-07-30-On-premises-Data-Gateway-July-2025-Release-Overview.html"
+permalink: "/2025-07-30-On-premises-Data-Gateway-July-2025-Release-Overview.html"
 categories: ["ML"]
 tags: ["Bug Fix", "Data Connectivity", "Data Integration", "Enterprise Data", "Fabric Pipelines", "Gateway Update", "Microsoft", "Microsoft Fabric", "ML", "News", "On Premises Data Gateway", "Power BI", "Power BI Desktop", "Proxy Settings", "Release Notes", "Version 3000.278"]
 tags_normalized: ["bug fix", "data connectivity", "data integration", "enterprise data", "fabric pipelines", "gateway update", "microsoft", "microsoft fabric", "ml", "news", "on premises data gateway", "power bi", "power bi desktop", "proxy settings", "release notes", "version 3000dot278"]

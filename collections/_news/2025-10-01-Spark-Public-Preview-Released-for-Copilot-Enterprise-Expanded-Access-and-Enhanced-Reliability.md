@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/changelog/feed/"
 date: 2025-10-01 17:30:05 +00:00
-permalink: "/news/2025-10-01-Spark-Public-Preview-Released-for-Copilot-Enterprise-Expanded-Access-and-Enhanced-Reliability.html"
+permalink: "/2025-10-01-Spark-Public-Preview-Released-for-Copilot-Enterprise-Expanded-Access-and-Enhanced-Reliability.html"
 categories: ["AI", "GitHub Copilot"]
 tags: ["AI", "App Development", "Bug Fixes", "Build Errors", "Copilot", "Copilot Enterprise", "Deployment", "Enterprise Managed Users", "GitHub Copilot", "Improvement", "Iteration History", "News", "Performance Improvements", "Public Preview", "Publishing", "Reliability", "Spark", "User Experience", "Workbench"]
 tags_normalized: ["ai", "app development", "bug fixes", "build errors", "copilot", "copilot enterprise", "deployment", "enterprise managed users", "github copilot", "improvement", "iteration history", "news", "performance improvements", "public preview", "publishing", "reliability", "spark", "user experience", "workbench"]

@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Visual Studio Code Releases"
 feed_url: "https://code.visualstudio.com/feed.xml"
 date: 2025-09-15 00:00:00 +00:00
-permalink: "/news/2025-09-15-Auto-Model-Selection-Preview-for-GitHub-Copilot-Chat-in-VS-Code.html"
+permalink: "/2025-09-15-Auto-Model-Selection-Preview-for-GitHub-Copilot-Chat-in-VS-Code.html"
 categories: ["AI", "GitHub Copilot"]
 tags: ["AI", "AI Integration", "AI Model Selection", "Auto Selection", "Claude Sonnet 4", "Copilot Chat", "Developer Tools", "GitHub Copilot", "GPT 5", "GPT 5 Mini", "Model Discount", "Model Multiplier", "News", "OpenAI", "Premium Requests", "VS Code", "VS Code Dev Days"]
 tags_normalized: ["ai", "ai integration", "ai model selection", "auto selection", "claude sonnet 4", "copilot chat", "developer tools", "github copilot", "gpt 5", "gpt 5 mini", "model discount", "model multiplier", "news", "openai", "premium requests", "vs code", "vs code dev days"]

@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "John Savill's Technical Training"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCpIn7ox7j7bH_OFj7tYouOQ"
 date: 2025-07-21 08:20:00 +00:00
-permalink: "/videos/2025-07-21-Choosing-Your-First-AI-Application.html"
+permalink: "/2025-07-21-Choosing-Your-First-AI-Application.html"
 categories: ["AI"]
 tags: ["Agent", "Agents", "AI", "AI Deployment", "AI Strategy", "AI Use Cases", "AI Workloads", "Azure Learning", "Business Value", "Data Readiness", "Ethical AI", "Generative AI", "John Savill", "LLM", "Machine Learning", "Project Selection", "Risk Management", "ROI", "Technical Feasibility", "Videos"]
 tags_normalized: ["agent", "agents", "ai", "ai deployment", "ai strategy", "ai use cases", "ai workloads", "azure learning", "business value", "data readiness", "ethical ai", "generative ai", "john savill", "llm", "machine learning", "project selection", "risk management", "roi", "technical feasibility", "videos"]

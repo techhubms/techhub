@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "GitHub Engineering Blog"
 feed_url: "https://github.blog/engineering/feed/"
 date: 2025-05-09 16:56:57 +00:00
-permalink: "/news/2025-05-09-Advanced-Methods-for-Annotating-Design-System-Components-Making-Accessibility-a-Priority.html"
+permalink: "/2025-05-09-Advanced-Methods-for-Annotating-Design-System-Components-Making-Accessibility-a-Priority.html"
 categories: ["DevOps"]
 tags: ["Accessibility", "Annotations", "ARIA", "Code Connect", "Component Properties", "Components", "Design", "Design System Automation", "Design Systems", "Developer Experience", "DevOps", "Engineering", "Figma", "GitHub", "News", "Primer", "React", "UI Components", "User Experience", "Visual Regression Testing"]
 tags_normalized: ["accessibility", "annotations", "aria", "code connect", "component properties", "components", "design", "design system automation", "design systems", "developer experience", "devops", "engineering", "figma", "github", "news", "primer", "react", "ui components", "user experience", "visual regression testing"]

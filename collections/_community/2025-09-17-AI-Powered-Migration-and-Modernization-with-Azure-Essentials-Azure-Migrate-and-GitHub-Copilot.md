@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-09-17 17:45:09 +00:00
-permalink: "/community/2025-09-17-AI-Powered-Migration-and-Modernization-with-Azure-Essentials-Azure-Migrate-and-GitHub-Copilot.html"
+permalink: "/2025-09-17-AI-Powered-Migration-and-Modernization-with-Azure-Essentials-Azure-Migrate-and-GitHub-Copilot.html"
 categories: ["AI", "Azure", "DevOps", "GitHub Copilot", "Security"]
 tags: ["Agentic Applications", "AI", "AI Assisted Migration", "Azure", "Azure Advisor", "Azure Essentials", "Azure Migrate", "Azure Monitor", "Azure Policy", "Azure Security Benchmark", "Azure Security Center", "Cloud Adoption Framework", "Cloud Security", "Community", "DevOps", "Disaster Recovery", "FinOps", "GitHub Copilot", "Governance", "Microsoft Defender For Cloud", "Migration", "Modernization", "RBAC", "Resiliency", "Security"]
 tags_normalized: ["agentic applications", "ai", "ai assisted migration", "azure", "azure advisor", "azure essentials", "azure migrate", "azure monitor", "azure policy", "azure security benchmark", "azure security center", "cloud adoption framework", "cloud security", "community", "devops", "disaster recovery", "finops", "github copilot", "governance", "microsoft defender for cloud", "migration", "modernization", "rbac", "resiliency", "security"]

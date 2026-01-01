@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Events YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
 date: 2025-11-26 00:47:08 +00:00
-permalink: "/videos/2025-11-26-Modernizing-Kubernetes-Monitoring-with-Drasi-Inspektor-Gadget-and-Headlamp-on-Azure.html"
+permalink: "/2025-11-26-Modernizing-Kubernetes-Monitoring-with-Drasi-Inspektor-Gadget-and-Headlamp-on-Azure.html"
 categories: ["Azure", "DevOps"]
 tags: ["AKS", "Azure", "Cloud Agnostic", "Cloud Native", "Cluster Management", "Container Orchestration", "DevOps", "Drasi", "Headlamp", "Inspektor Gadget", "Kubernetes", "Management Interface", "Microsoft Ignite", "Migrateandmodernizeyourestate", "Monitoring", "MSIgnite", "Observability", "Open Source Tools", "Real Time Insights", "Videos"]
 tags_normalized: ["aks", "azure", "cloud agnostic", "cloud native", "cluster management", "container orchestration", "devops", "drasi", "headlamp", "inspektor gadget", "kubernetes", "management interface", "microsoft ignite", "migrateandmodernizeyourestate", "monitoring", "msignite", "observability", "open source tools", "real time insights", "videos"]

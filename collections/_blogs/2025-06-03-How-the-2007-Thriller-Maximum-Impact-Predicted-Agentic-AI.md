@@ -9,10 +9,10 @@ viewing_mode: "external"
 feed_name: "René van Osnabrugge's Blog"
 feed_url: "https://roadtoalm.com/feed/"
 date: 2025-06-03 12:34:16 +00:00
-permalink: "/blogs/2025-06-03-How-the-2007-Thriller-Maximum-Impact-Predicted-Agentic-AI.html"
+permalink: "/2025-06-03-How-the-2007-Thriller-Maximum-Impact-Predicted-Agentic-AI.html"
 categories: ["AI"]
-tags: ["6Ds Of Exponential Organizations", "Agentic AI", "AI", "AI Middleware", "AI Orchestration", "Automation", "Book Reflection", "ChatGPT", "Digital Transformation", "GitHub Spark", "MCP (multi Agent Coordination Protocol)", "Microsoft Copilot Studio", "Multi Agent Systems", "Natural Language Interfaces", "Blogs", "Software Industry Trends", "Uncategorized"]
-tags_normalized: ["6ds of exponential organizations", "agentic ai", "ai", "ai middleware", "ai orchestration", "automation", "book reflection", "chatgpt", "digital transformation", "github spark", "mcp multi agent coordination protocol", "microsoft copilot studio", "multi agent systems", "natural language interfaces", "blogs", "software industry trends", "uncategorized"]
+tags: ["6Ds Of Exponential Organizations", "Agentic AI", "AI", "AI Middleware", "AI Orchestration", "Automation", "Blogs", "Book Reflection", "ChatGPT", "Digital Transformation", "GitHub Spark", "MCP (multi Agent Coordination Protocol)", "Microsoft Copilot Studio", "Multi Agent Systems", "Natural Language Interfaces", "Software Industry Trends", "Uncategorized"]
+tags_normalized: ["6ds of exponential organizations", "agentic ai", "ai", "ai middleware", "ai orchestration", "automation", "blogs", "book reflection", "chatgpt", "digital transformation", "github spark", "mcp multi agent coordination protocol", "microsoft copilot studio", "multi agent systems", "natural language interfaces", "software industry trends", "uncategorized"]
 ---
 
 Rene van Osnabrugge reflects on how Jack Henderson’s 2007 thriller Maximum Impact foreshadowed the arrival of agentic AI, discussing how real-world advances such as ChatGPT, GitHub Spark, and Microsoft Copilot Studio now fulfill that vision.<!--excerpt_end-->

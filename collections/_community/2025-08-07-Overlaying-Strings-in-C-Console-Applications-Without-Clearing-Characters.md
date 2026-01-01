@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Reddit CSharp"
 feed_url: "https://www.reddit.com/r/csharp/.rss"
 date: 2025-08-07 18:08:40 +00:00
-permalink: "/community/2025-08-07-Overlaying-Strings-in-C-Console-Applications-Without-Clearing-Characters.html"
+permalink: "/2025-08-07-Overlaying-Strings-in-C-Console-Applications-Without-Clearing-Characters.html"
 categories: ["Coding"]
 tags: [".NET", "ANSI Codes", "C#", "Character Output", "Coding", "Community", "Console Application", "Cursor Positioning", "Display Logic", "Escape Sequences", "Extension Methods", "Screen Buffer", "Spectre.Console", "String Manipulation", "String Overlay", "System.Console"]
 tags_normalized: ["dotnet", "ansi codes", "csharp", "character output", "coding", "community", "console application", "cursor positioning", "display logic", "escape sequences", "extension methods", "screen buffer", "spectredotconsole", "string manipulation", "string overlay", "systemdotconsole"]

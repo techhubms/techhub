@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Learn Microsoft AI Youtube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCQf_yRJpsfyEiWWpt1MZ6vA"
 date: 2025-06-02 06:45:23 +00:00
-permalink: "/videos/2025-06-02-Agent-Concurrent-Orchestration-in-Semantic-Kernel.html"
+permalink: "/2025-06-02-Agent-Concurrent-Orchestration-in-Semantic-Kernel.html"
 categories: ["AI", "Coding"]
 tags: ["Agent Aggregation", "AI", "AI Agent Orchestration", "AI Agents", "AI Demo", "AI in .NET", "AI Patterns", "AIDemo", "AIinTamil", "AIOrchestration", "BrainstormingAI", "Coding", "Concurrent Pattern", "ConcurrentPattern", "DotNetAI", "Ensemble Reasoning", "Microsoft AI", "Microsoft Ecosystem", "OpenAI", "OpenAISolutions", "Parallel Processing", "Semantic Kernel", "Videos", "Voting Systems"]
 tags_normalized: ["agent aggregation", "ai", "ai agent orchestration", "ai agents", "ai demo", "ai in dotnet", "ai patterns", "aidemo", "aiintamil", "aiorchestration", "brainstormingai", "coding", "concurrent pattern", "concurrentpattern", "dotnetai", "ensemble reasoning", "microsoft ai", "microsoft ecosystem", "openai", "openaisolutions", "parallel processing", "semantic kernel", "videos", "voting systems"]

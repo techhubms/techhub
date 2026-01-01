@@ -9,10 +9,10 @@ viewing_mode: "external"
 feed_name: "Dellenny's Blog"
 feed_url: "https://dellenny.com/feed/"
 date: 2025-09-18 08:30:25 +00:00
-permalink: "/blogs/2025-09-18-Automating-Jira-PR-Reviews-and-Deployment-with-AI-Agents.html"
+permalink: "/2025-09-18-Automating-Jira-PR-Reviews-and-Deployment-with-AI-Agents.html"
 categories: ["AI", "Coding", "DevOps"]
-tags: ["AI", "AI Agent", "Atlassian Python API", "Automation", "CI/CD", "Coding", "DevOps", "DevOps Pipeline", "GitHub", "GitHub Actions", "Jira API", "LangChain", "OpenAI", "Blogs", "Pull Request Review", "PyGithub", "Software Engineering", "Workflow Orchestration"]
-tags_normalized: ["ai", "ai agent", "atlassian python api", "automation", "cislashcd", "coding", "devops", "devops pipeline", "github", "github actions", "jira api", "langchain", "openai", "blogs", "pull request review", "pygithub", "software engineering", "workflow orchestration"]
+tags: ["AI", "AI Agent", "Atlassian Python API", "Automation", "Blogs", "CI/CD", "Coding", "DevOps", "DevOps Pipeline", "GitHub", "GitHub Actions", "Jira API", "LangChain", "OpenAI", "Pull Request Review", "PyGithub", "Software Engineering", "Workflow Orchestration"]
+tags_normalized: ["ai", "ai agent", "atlassian python api", "automation", "blogs", "cislashcd", "coding", "devops", "devops pipeline", "github", "github actions", "jira api", "langchain", "openai", "pull request review", "pygithub", "software engineering", "workflow orchestration"]
 ---
 
 Dellenny explains how teams can use AI agents to automate Jira updates, pull request reviews, and code deployments, offering step-by-step examples for integrating modern tools into the development workflow.<!--excerpt_end-->

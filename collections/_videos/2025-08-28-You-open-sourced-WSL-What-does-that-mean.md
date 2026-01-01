@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Developer YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
 date: 2025-08-28 15:35:34 +00:00
-permalink: "/videos/2025-08-28-You-open-sourced-WSL-What-does-that-mean.html"
+permalink: "/2025-08-28-You-open-sourced-WSL-What-does-that-mean.html"
 categories: ["Coding"]
 tags: ["Coding", "Developer Tools", "File Systems", "GPU Access", "Linux On Windows", "Microsoft", "Open Source", "Platform Development", "Videos", "Virtual Machines", "Windows Subsystem For Linux", "WSL"]
 tags_normalized: ["coding", "developer tools", "file systems", "gpu access", "linux on windows", "microsoft", "open source", "platform development", "videos", "virtual machines", "windows subsystem for linux", "wsl"]

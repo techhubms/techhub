@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-10-01 23:25:57 +00:00
-permalink: "/community/2025-10-01-Enhancing-Logic-Apps-with-Parse-and-Chunk-with-Metadata-for-AI-Powered-Document-Processing.html"
+permalink: "/2025-10-01-Enhancing-Logic-Apps-with-Parse-and-Chunk-with-Metadata-for-AI-Powered-Document-Processing.html"
 categories: ["AI", "Azure"]
 tags: ["Agent Loop", "AI", "Azure", "Azure AI Search", "Azure OpenAI", "Blob Storage", "Chunk Text With Metadata", "Community", "Conversational AI", "Document Indexing", "Enterprise Contracts", "GPT 4.1", "Logic Apps", "Metadata Extraction", "Natural Language Processing", "Parse Document With Metadata", "RAG (retrieval Augmented Generation)", "Vector Search"]
 tags_normalized: ["agent loop", "ai", "azure", "azure ai search", "azure openai", "blob storage", "chunk text with metadata", "community", "conversational ai", "document indexing", "enterprise contracts", "gpt 4dot1", "logic apps", "metadata extraction", "natural language processing", "parse document with metadata", "rag retrieval augmented generation", "vector search"]

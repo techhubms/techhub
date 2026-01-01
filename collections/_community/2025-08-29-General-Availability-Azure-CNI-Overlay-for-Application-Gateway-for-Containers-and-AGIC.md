@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-08-29 16:12:02 +00:00
-permalink: "/community/2025-08-29-General-Availability-Azure-CNI-Overlay-for-Application-Gateway-for-Containers-and-AGIC.html"
+permalink: "/2025-08-29-General-Availability-Azure-CNI-Overlay-for-Application-Gateway-for-Containers-and-AGIC.html"
 categories: ["Azure", "DevOps"]
 tags: ["AKS", "Application Gateway For Containers", "Application Gateway Ingress Controller", "Azure", "Azure CNI Overlay", "Azure Networking", "Azure VNet", "Community", "Container Networking", "DevOps", "Ingress Controller", "IPAM", "Kubenet", "L7 Load Balancing", "Pod Routing", "Scalability"]
 tags_normalized: ["aks", "application gateway for containers", "application gateway ingress controller", "azure", "azure cni overlay", "azure networking", "azure vnet", "community", "container networking", "devops", "ingress controller", "ipam", "kubenet", "l7 load balancing", "pod routing", "scalability"]

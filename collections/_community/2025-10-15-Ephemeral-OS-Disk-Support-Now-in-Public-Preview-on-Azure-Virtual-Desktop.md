@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-10-15 19:00:00 +00:00
-permalink: "/community/2025-10-15-Ephemeral-OS-Disk-Support-Now-in-Public-Preview-on-Azure-Virtual-Desktop.html"
+permalink: "/2025-10-15-Ephemeral-OS-Disk-Support-Now-in-Public-Preview-on-Azure-Virtual-Desktop.html"
 categories: ["Azure"]
 tags: ["ARM Templates", "Azure", "Azure Infrastructure", "Azure Portal", "Azure Virtual Desktop", "CLI", "Cloud Deployment", "Community", "Dynamic Autoscaling", "Ephemeral OS Disk", "Performance Optimization", "Pooled Host Pools", "PowerShell", "Session Hosts", "Stateless Workloads", "Virtual Machines"]
 tags_normalized: ["arm templates", "azure", "azure infrastructure", "azure portal", "azure virtual desktop", "cli", "cloud deployment", "community", "dynamic autoscaling", "ephemeral os disk", "performance optimization", "pooled host pools", "powershell", "session hosts", "stateless workloads", "virtual machines"]

@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/changelog/feed/"
 date: 2025-09-30 17:31:57 +00:00
-permalink: "/news/2025-09-30-GitHub-Secret-Scanning-Now-Validates-Azure-MongoDB-and-Meta-Credentials.html"
+permalink: "/2025-09-30-GitHub-Secret-Scanning-Now-Validates-Azure-MongoDB-and-Meta-Credentials.html"
 categories: ["Azure", "DevOps", "Security"]
 tags: ["Application Security", "Azure", "Azure APIM", "Azure Entra ID", "Code Security", "Continuous Integration", "Credential Security", "DevOps", "DevOps Security", "GitHub", "Improvement", "Meta", "Microsoft Azure", "MongoDB", "News", "Personal Access Token", "Product Update", "Secret Scanning", "Security", "Token Validation"]
 tags_normalized: ["application security", "azure", "azure apim", "azure entra id", "code security", "continuous integration", "credential security", "devops", "devops security", "github", "improvement", "meta", "microsoft azure", "mongodb", "news", "personal access token", "product update", "secret scanning", "security", "token validation"]

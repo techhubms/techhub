@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft VisualStudio Blog"
 feed_url: "https://devblogs.microsoft.com/visualstudio/feed/"
 date: 2025-12-15 15:00:33 +00:00
-permalink: "/news/2025-12-15-How-Visual-Studio-Feedback-Improves-the-Developer-Experience.html"
+permalink: "/2025-12-15-How-Visual-Studio-Feedback-Improves-the-Developer-Experience.html"
 categories: ["Coding", "DevOps"]
 tags: ["Accessibility", "Azure DevOps", "Bug Reporting", "Coding", "Developer Community", "Developer Experience", "DevOps", "Feature Requests", "Feedback", "Feedback System", "IDE", "Issue Tracking", "News", "Performance Issues", "Regression Analysis", "Ticket Triage", "VS"]
 tags_normalized: ["accessibility", "azure devops", "bug reporting", "coding", "developer community", "developer experience", "devops", "feature requests", "feedback", "feedback system", "ide", "issue tracking", "news", "performance issues", "regression analysis", "ticket triage", "vs"]

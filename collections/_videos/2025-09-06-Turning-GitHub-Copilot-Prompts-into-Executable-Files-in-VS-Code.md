@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "GitHub YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ"
 date: 2025-09-06 14:01:05 +00:00
-permalink: "/videos/2025-09-06-Turning-GitHub-Copilot-Prompts-into-Executable-Files-in-VS-Code.html"
+permalink: "/2025-09-06-Turning-GitHub-Copilot-Prompts-into-Executable-Files-in-VS-Code.html"
 categories: ["AI", "Coding", "GitHub Copilot"]
 tags: ["AI", "AI Integration", "AI Workflow", "Code Automation", "Coding", "Context Engineering", "Developer Tools", "GitHub Copilot", "Productivity", "Prompt Files", "Videos", "VS Code", "VS Code Extensions"]
 tags_normalized: ["ai", "ai integration", "ai workflow", "code automation", "coding", "context engineering", "developer tools", "github copilot", "productivity", "prompt files", "videos", "vs code", "vs code extensions"]

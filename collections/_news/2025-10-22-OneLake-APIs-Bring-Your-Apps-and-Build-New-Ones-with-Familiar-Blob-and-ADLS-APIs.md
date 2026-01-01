@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Fabric Blog"
 feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
 date: 2025-10-22 09:00:00 +00:00
-permalink: "/news/2025-10-22-OneLake-APIs-Bring-Your-Apps-and-Build-New-Ones-with-Familiar-Blob-and-ADLS-APIs.html"
+permalink: "/2025-10-22-OneLake-APIs-Bring-Your-Apps-and-Build-New-Ones-with-Familiar-Blob-and-ADLS-APIs.html"
 categories: ["Azure", "ML"]
 tags: ["API Compatibility", "Azure", "Azure Blob Storage", "Azure Data Lake Storage", "Blob API", "C#", "Cloud File Systems", "Data Engineering", "Data Lake", "Data Migration", "Delta Tables", "Developer Tools", "DF API", "Microsoft Fabric", "ML", "News", "On Premises Mirroring", "OneLake"]
 tags_normalized: ["api compatibility", "azure", "azure blob storage", "azure data lake storage", "blob api", "csharp", "cloud file systems", "data engineering", "data lake", "data migration", "delta tables", "developer tools", "df api", "microsoft fabric", "ml", "news", "on premises mirroring", "onelake"]

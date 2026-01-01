@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Reddit CSharp"
 feed_url: "https://www.reddit.com/r/csharp/.rss"
 date: 2025-08-04 09:43:05 +00:00
-permalink: "/community/2025-08-04-Navigation-Property-Best-Practices-in-C.html"
+permalink: "/2025-08-04-Navigation-Property-Best-Practices-in-C.html"
 categories: ["Coding", "ML"]
 tags: [".NET", "Best Practices", "C#", "Coding", "Community", "Community Discussion", "Data Modeling", "Database Relationships", "EF", "ML", "Navigation Property", "Object Relational Mapping", "ORM"]
 tags_normalized: ["dotnet", "best practices", "csharp", "coding", "community", "community discussion", "data modeling", "database relationships", "ef", "ml", "navigation property", "object relational mapping", "orm"]

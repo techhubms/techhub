@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft PowerShell Blog"
 feed_url: "https://devblogs.microsoft.com/powershell/feed/"
 date: 2025-02-27 22:28:17 +00:00
-permalink: "/news/2025-02-27-Microsoft-Update-Changes-for-PowerShell-7-Expected-Behavior-and-Update-Rules.html"
+permalink: "/2025-02-27-Microsoft-Update-Changes-for-PowerShell-7-Expected-Behavior-and-Update-Rules.html"
 categories: ["Coding"]
 tags: ["Automation", "Coding", "LTS", "Microsoft Update", "News", "PowerShell", "PowerShell Installation", "Preview Releases", "SCCM", "Stable Releases", "Update Process", "Versioning", "Windows Server Update Services", "Windows Updates", "WSUS"]
 tags_normalized: ["automation", "coding", "lts", "microsoft update", "news", "powershell", "powershell installation", "preview releases", "sccm", "stable releases", "update process", "versioning", "windows server update services", "windows updates", "wsus"]

@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Visual Studio Code Releases"
 feed_url: "https://code.visualstudio.com/feed.xml"
 date: 2025-06-12 17:00:00 +00:00
-permalink: "/news/2025-06-12-Visual-Studio-Code-May-2025-Update-v1101-Release-Highlights.html"
+permalink: "/2025-06-12-Visual-Studio-Code-May-2025-Update-v1101-Release-Highlights.html"
 categories: ["AI", "Coding", "DevOps", "GitHub Copilot"]
 tags: ["Accessibility", "Agent Mode", "AI", "Authentication", "Chat AI", "Coding", "DevOps", "Electron 35", "Extension Authoring", "GitHub Copilot", "Jupyter", "MCP", "MCP Servers", "News", "Notebook", "Pull Requests", "Python", "Remote Development", "Semantic Search", "Source Control", "V1.101", "VS Code", "VSCE"]
 tags_normalized: ["accessibility", "agent mode", "ai", "authentication", "chat ai", "coding", "devops", "electron 35", "extension authoring", "github copilot", "jupyter", "mcp", "mcp servers", "news", "notebook", "pull requests", "python", "remote development", "semantic search", "source control", "v1dot101", "vs code", "vsce"]

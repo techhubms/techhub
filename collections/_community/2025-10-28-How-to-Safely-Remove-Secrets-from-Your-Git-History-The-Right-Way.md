@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-10-28 11:05:12 +00:00
-permalink: "/community/2025-10-28-How-to-Safely-Remove-Secrets-from-Your-Git-History-The-Right-Way.html"
+permalink: "/2025-10-28-How-to-Safely-Remove-Secrets-from-Your-Git-History-The-Right-Way.html"
 categories: ["DevOps", "Security"]
 tags: [".gitignore", "API Keys", "Backup", "Community", "DevOps", "DevOps Best Practices", "Force Push", "Git", "Git Filter Repo", "GitHub", "History Rewriting", "Incident Response", "Secret Management", "Security", "Team Coordination", "Token Rotation", "Version Control"]
 tags_normalized: ["dotgitignore", "api keys", "backup", "community", "devops", "devops best practices", "force push", "git", "git filter repo", "github", "history rewriting", "incident response", "secret management", "security", "team coordination", "token rotation", "version control"]

@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-08-27 18:22:42 +00:00
-permalink: "/community/2025-08-27-Deploying-Hybrid-Azure-Logic-Apps-on-K3s-for-Lightweight-On-Premises-Integration.html"
+permalink: "/2025-08-27-Deploying-Hybrid-Azure-Logic-Apps-on-K3s-for-Lightweight-On-Premises-Integration.html"
 categories: ["Azure", "Coding", "DevOps"]
 tags: ["Azure", "Azure Arc", "Azure Logic Apps", "Cluster Management", "Coding", "Community", "DevOps", "Docker Desktop", "Edge Computing", "Hybrid Deployment", "IaC", "K3s", "Kubernetes", "Logic Apps Standard", "PowerShell", "SMB File Share", "SQL Server", "Workflow Automation"]
 tags_normalized: ["azure", "azure arc", "azure logic apps", "cluster management", "coding", "community", "devops", "docker desktop", "edge computing", "hybrid deployment", "iac", "k3s", "kubernetes", "logic apps standard", "powershell", "smb file share", "sql server", "workflow automation"]

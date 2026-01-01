@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "DotNet YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw"
 date: 2025-09-15 17:03:05 +00:00
-permalink: "/videos/2025-09-15-ASPNET-Community-Standup-NET-10-WebAssembly-Performance-Enhancements.html"
+permalink: "/2025-09-15-ASPNET-Community-Standup-NET-10-WebAssembly-Performance-Enhancements.html"
 categories: ["Coding"]
 tags: [".NET", ".NET 10", "ASP.NET", "ASP.NET Core", "Blazor", "Blazor WebAssembly", "Coding", "Daniel Roth", "Demo", "Developer", "Developer Community", "Developer Tools", "Dotnetdeveloper", "Larry Ewing", "Microsoft", "Performance Enhancement", "Software Developer", "Videos", "Web Development", "Webassembly", "WebAssembly Performance"]
 tags_normalized: ["dotnet", "dotnet 10", "aspdotnet", "aspdotnet core", "blazor", "blazor webassembly", "coding", "daniel roth", "demo", "developer", "developer community", "developer tools", "dotnetdeveloper", "larry ewing", "microsoft", "performance enhancement", "software developer", "videos", "web development", "webassembly", "webassembly performance"]

@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "GitHub's Youtube channel"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ"
 date: 2025-07-26 05:06:15 +00:00
-permalink: "/videos/2025-07-26-Open-Source-Friday-Brasil-with-Ana-Carolyne-from-Codaqui.html"
+permalink: "/2025-07-26-Open-Source-Friday-Brasil-with-Ana-Carolyne-from-Codaqui.html"
 categories: ["DevOps"]
 tags: ["Ana Carolyne", "Brazil", "Codaqui", "Collaboration", "Contributions", "Developer Ecosystem", "DevOps", "GitHub", "Open Source", "Software Development", "Videos"]
 tags_normalized: ["ana carolyne", "brazil", "codaqui", "collaboration", "contributions", "developer ecosystem", "devops", "github", "open source", "software development", "videos"]

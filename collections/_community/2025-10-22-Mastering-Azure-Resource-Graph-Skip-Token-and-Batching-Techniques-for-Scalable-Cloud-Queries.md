@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-10-22 08:53:15 +00:00
-permalink: "/community/2025-10-22-Mastering-Azure-Resource-Graph-Skip-Token-and-Batching-Techniques-for-Scalable-Cloud-Queries.html"
+permalink: "/2025-10-22-Mastering-Azure-Resource-Graph-Skip-Token-and-Batching-Techniques-for-Scalable-Cloud-Queries.html"
 categories: ["Azure", "Coding", "DevOps"]
 tags: ["API Pagination", "Automation", "Azure", "Azure API", "Azure Resource Graph", "Batching", "Cloud Inventory", "Coding", "Community", "DevOps", "DevOps Best Practices", "KQL", "Kusto Query Language", "Large Scale Query", "PowerShell", "Resource Management", "Search AzGraph", "Skip Token"]
 tags_normalized: ["api pagination", "automation", "azure", "azure api", "azure resource graph", "batching", "cloud inventory", "coding", "community", "devops", "devops best practices", "kql", "kusto query language", "large scale query", "powershell", "resource management", "search azgraph", "skip token"]

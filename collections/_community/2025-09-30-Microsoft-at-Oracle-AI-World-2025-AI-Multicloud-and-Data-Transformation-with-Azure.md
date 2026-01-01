@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-09-30 16:33:49 +00:00
-permalink: "/community/2025-09-30-Microsoft-at-Oracle-AI-World-2025-AI-Multicloud-and-Data-Transformation-with-Azure.html"
+permalink: "/2025-09-30-Microsoft-at-Oracle-AI-World-2025-AI-Multicloud-and-Data-Transformation-with-Azure.html"
 categories: ["AI", "Azure", "ML"]
 tags: ["AI", "AI Integration", "Azure", "Azure AI Foundry", "Azure Migration", "Cloud Native", "Community", "Copilot Studio", "Data Transformation", "Enterprise Security", "Intelligent Applications", "Microsoft Fabric", "ML", "Multicloud", "Oracle Database@Azure", "Power BI", "Real Time Analytics"]
 tags_normalized: ["ai", "ai integration", "azure", "azure ai foundry", "azure migration", "cloud native", "community", "copilot studio", "data transformation", "enterprise security", "intelligent applications", "microsoft fabric", "ml", "multicloud", "oracle databaseatazure", "power bi", "real time analytics"]

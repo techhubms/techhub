@@ -9,10 +9,10 @@ viewing_mode: "external"
 feed_name: "DevOps Blog"
 feed_url: "https://devops.com/feed/"
 date: 2025-09-09 18:52:25 +00:00
-permalink: "/blogs/2025-09-09-JFrog-CEO-AI-Agents-Require-Practices-Beyond-Security-Traceability.html"
+permalink: "/2025-09-09-JFrog-CEO-AI-Agents-Require-Practices-Beyond-Security-Traceability.html"
 categories: ["AI", "DevOps", "GitHub Copilot", "Security"]
-tags: ["AI", "AI Agents", "Anthropic", "AppTrust", "Claude Code", "Cursor", "DevOps", "DevOps At The Edge", "DevSecOps", "GitHub", "GitHub Copilot", "Governance", "GRC", "JFrog", "JFrog Fly", "JFrog SwampUP", "JFry", "MCP", "Model Registry", "NVIDIA", "Policy Analytics", "Blogs", "Security", "ServiceNow", "Social Facebook", "Social LinkedIn", "Social X", "Software Supply Chain", "SonarQube", "Traceability"]
-tags_normalized: ["ai", "ai agents", "anthropic", "apptrust", "claude code", "cursor", "devops", "devops at the edge", "devsecops", "github", "github copilot", "governance", "grc", "jfrog", "jfrog fly", "jfrog swampup", "jfry", "mcp", "model registry", "nvidia", "policy analytics", "blogs", "security", "servicenow", "social facebook", "social linkedin", "social x", "software supply chain", "sonarqube", "traceability"]
+tags: ["AI", "AI Agents", "Anthropic", "AppTrust", "Blogs", "Claude Code", "Cursor", "DevOps", "DevOps At The Edge", "DevSecOps", "GitHub", "GitHub Copilot", "Governance", "GRC", "JFrog", "JFrog Fly", "JFrog SwampUP", "JFry", "MCP", "Model Registry", "NVIDIA", "Policy Analytics", "Security", "ServiceNow", "Social Facebook", "Social LinkedIn", "Social X", "Software Supply Chain", "SonarQube", "Traceability"]
+tags_normalized: ["ai", "ai agents", "anthropic", "apptrust", "blogs", "claude code", "cursor", "devops", "devops at the edge", "devsecops", "github", "github copilot", "governance", "grc", "jfrog", "jfrog fly", "jfrog swampup", "jfry", "mcp", "model registry", "nvidia", "policy analytics", "security", "servicenow", "social facebook", "social linkedin", "social x", "software supply chain", "sonarqube", "traceability"]
 ---
 
 Jon Swartz highlights key takeaways from JFrog's swampUP 2025, discussing the adoption of AI agents, security and governance in the software supply chain, and partnerships with platforms like GitHub Copilot.<!--excerpt_end-->

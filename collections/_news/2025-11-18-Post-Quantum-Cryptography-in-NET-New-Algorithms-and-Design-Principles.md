@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft .NET Blog"
 feed_url: "https://devblogs.microsoft.com/dotnet/feed/"
 date: 2025-11-18 16:00:00 +00:00
-permalink: "/news/2025-11-18-Post-Quantum-Cryptography-in-NET-New-Algorithms-and-Design-Principles.html"
+permalink: "/2025-11-18-Post-Quantum-Cryptography-in-NET-New-Algorithms-and-Design-Principles.html"
 categories: ["Coding", "Security"]
 tags: [".NET", ".NET 10", "CertificateRequest", "CmsSigner", "CNG", "Coding", "Composite ML DSA", "Cryptography", "Cryptography API", "Experimental Features", "Key Encapsulation", "Microsoft.Bcl.Cryptography", "ML DSA", "ML KEM", "News", "NIST FIPS 203", "NIST FIPS 204", "OpenSSL 3.5", "Post Quantum Cryptography", "PQC", "Quantum", "Security", "Signature Algorithms", "SLH DSA", "System.Security.Cryptography", "TLS 1.3", "X509Certificate2"]
 tags_normalized: ["dotnet", "dotnet 10", "certificaterequest", "cmssigner", "cng", "coding", "composite ml dsa", "cryptography", "cryptography api", "experimental features", "key encapsulation", "microsoftdotbcldotcryptography", "ml dsa", "ml kem", "news", "nist fips 203", "nist fips 204", "openssl 3dot5", "post quantum cryptography", "pqc", "quantum", "security", "signature algorithms", "slh dsa", "systemdotsecuritydotcryptography", "tls 1dot3", "x509certificate2"]

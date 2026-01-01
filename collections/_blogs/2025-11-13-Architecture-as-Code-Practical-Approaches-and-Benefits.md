@@ -9,10 +9,10 @@ viewing_mode: "external"
 feed_name: "Dellenny's Blog"
 feed_url: "https://dellenny.com/feed/"
 date: 2025-11-13 08:34:16 +00:00
-permalink: "/blogs/2025-11-13-Architecture-as-Code-Practical-Approaches-and-Benefits.html"
+permalink: "/2025-11-13-Architecture-as-Code-Practical-Approaches-and-Benefits.html"
 categories: ["Coding", "DevOps"]
-tags: ["Architecture", "Architecture as Code", "Automation", "C4 Model", "CI/CD", "Coding", "Collaboration", "DevOps", "Documentation", "Governance", "IaC", "JSON", "Microservices", "Blogs", "Software Architecture", "Solution Architecture", "Version Control", "YAML"]
-tags_normalized: ["architecture", "architecture as code", "automation", "c4 model", "cislashcd", "coding", "collaboration", "devops", "documentation", "governance", "iac", "json", "microservices", "blogs", "software architecture", "solution architecture", "version control", "yaml"]
+tags: ["Architecture", "Architecture as Code", "Automation", "Blogs", "C4 Model", "CI/CD", "Coding", "Collaboration", "DevOps", "Documentation", "Governance", "IaC", "JSON", "Microservices", "Software Architecture", "Solution Architecture", "Version Control", "YAML"]
+tags_normalized: ["architecture", "architecture as code", "automation", "blogs", "c4 model", "cislashcd", "coding", "collaboration", "devops", "documentation", "governance", "iac", "json", "microservices", "software architecture", "solution architecture", "version control", "yaml"]
 ---
 
 Dellenny explains the benefits and practical steps for implementing Architecture as Code, showing developers and DevOps engineers how to keep system architecture aligned and versioned.<!--excerpt_end-->

@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Reddit DotNet"
 feed_url: "https://www.reddit.com/r/dotnet/.rss"
 date: 2025-08-02 16:12:59 +00:00
-permalink: "/community/2025-08-02-Full-Stack-Is-It-Better-to-Use-Visual-Studio-or-VSCode-for-Back-End-and-Front-End-Development.html"
+permalink: "/2025-08-02-Full-Stack-Is-It-Better-to-Use-Visual-Studio-or-VSCode-for-Back-End-and-Front-End-Development.html"
 categories: ["Coding", "DevOps"]
 tags: [".NET", "ASP.NET", "Backend", "Coding", "Community", "DevOps", "Frontend", "Full Stack Development", "GitHub", "IDE", "Monorepo", "Project Structure", "Repository Organization", "TypeScript", "VS", "VS Code"]
 tags_normalized: ["dotnet", "aspdotnet", "backend", "coding", "community", "devops", "frontend", "full stack development", "github", "ide", "monorepo", "project structure", "repository organization", "typescript", "vs", "vs code"]

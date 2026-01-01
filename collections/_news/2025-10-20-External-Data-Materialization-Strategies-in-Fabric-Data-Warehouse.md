@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Fabric Blog"
 feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
 date: 2025-10-20 09:00:00 +00:00
-permalink: "/news/2025-10-20-External-Data-Materialization-Strategies-in-Fabric-Data-Warehouse.html"
+permalink: "/2025-10-20-External-Data-Materialization-Strategies-in-Fabric-Data-Warehouse.html"
 categories: ["Azure", "ML"]
 tags: ["Analytics", "Azure", "Azure Data Lake Storage", "CSV", "CTAS", "Data Engineering", "Data Modeling", "Data Virtualization", "Fabric Data Warehouse", "JSONL", "Materialization", "Microsoft Fabric", "ML", "News", "OneLake", "OPENROWSET", "Parquet", "Performance Optimization", "Schema Inference", "SQL Views"]
 tags_normalized: ["analytics", "azure", "azure data lake storage", "csv", "ctas", "data engineering", "data modeling", "data virtualization", "fabric data warehouse", "jsonl", "materialization", "microsoft fabric", "ml", "news", "onelake", "openrowset", "parquet", "performance optimization", "schema inference", "sql views"]

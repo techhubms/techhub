@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft News"
 feed_url: "https://news.microsoft.com/source/feed/"
 date: 2025-10-01 19:03:22 +00:00
-permalink: "/news/2025-10-01-Introducing-Microsoft-Agent-Framework-Streamlining-Multi-Agent-AI-Systems-with-Azure-AI-Foundry.html"
+permalink: "/2025-10-01-Introducing-Microsoft-Agent-Framework-Streamlining-Multi-Agent-AI-Systems-with-Azure-AI-Foundry.html"
 categories: ["AI", "Azure", "Coding"]
 tags: ["Agent2Agent", "AI", "AI Agents", "AutoGen", "Azure", "Azure AI Foundry", "Coding", "Company News", "Developer Tools", "Enterprise AI", "KPMG Clara", "MCP", "Microsoft Agent Framework", "Multi Agent Systems", "News", "Observability", "OpenAPI", "OpenTelemetry", "Responsible AI", "SDK", "Semantic Kernel", "Voice Live API", "VS Code Extension", "Workflow Automation"]
 tags_normalized: ["agent2agent", "ai", "ai agents", "autogen", "azure", "azure ai foundry", "coding", "company news", "developer tools", "enterprise ai", "kpmg clara", "mcp", "microsoft agent framework", "multi agent systems", "news", "observability", "openapi", "opentelemetry", "responsible ai", "sdk", "semantic kernel", "voice live api", "vs code extension", "workflow automation"]

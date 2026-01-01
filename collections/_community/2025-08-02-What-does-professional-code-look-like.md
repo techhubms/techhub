@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Reddit CSharp"
 feed_url: "https://www.reddit.com/r/csharp/.rss"
 date: 2025-08-02 15:09:10 +00:00
-permalink: "/community/2025-08-02-What-does-professional-code-look-like.html"
+permalink: "/2025-08-02-What-does-professional-code-look-like.html"
 categories: ["Coding"]
 tags: ["Backend Development", "Best Practices", "C#", "Clean Code", "Coding", "Community", "Dependency Injection", "Industry Standards", "Maintainability", "Professional Code", "Refactoring", "Software Methodology"]
 tags_normalized: ["backend development", "best practices", "csharp", "clean code", "coding", "community", "dependency injection", "industry standards", "maintainability", "professional code", "refactoring", "software methodology"]

@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Events YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
 date: 2025-11-24 13:48:44 +00:00
-permalink: "/videos/2025-11-24-Amplifying-SecOps-Practices-with-Microsoft-Sentinel-and-Unified-Platform.html"
+permalink: "/2025-11-24-Amplifying-SecOps-Practices-with-Microsoft-Sentinel-and-Unified-Platform.html"
 categories: ["AI", "Azure", "Security"]
 tags: ["AI", "Attack Disruption", "Azure", "Business Premium", "Cloud Security", "Customer Success", "Defender", "Enterprise Security", "GTMs", "Microsoft Ignite", "Microsoft Sentinel", "MicrosoftAICloudPartnerProgram", "Modern SecOps", "MSIgnite", "Partner Resources", "Predictive SOC", "Role Based AI Agent", "Secure Future Initiative", "Security", "Security Analytics", "Security Copilot", "Security Incentives", "Security Operations", "Sentinel Data Lake", "Sentinel Graph", "Tab", "Threat Detection", "Videos"]
 tags_normalized: ["ai", "attack disruption", "azure", "business premium", "cloud security", "customer success", "defender", "enterprise security", "gtms", "microsoft ignite", "microsoft sentinel", "microsoftaicloudpartnerprogram", "modern secops", "msignite", "partner resources", "predictive soc", "role based ai agent", "secure future initiative", "security", "security analytics", "security copilot", "security incentives", "security operations", "sentinel data lake", "sentinel graph", "tab", "threat detection", "videos"]

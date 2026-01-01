@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft News"
 feed_url: "https://news.microsoft.com/source/feed/"
 date: 2025-07-28 14:22:54 +00:00
-permalink: "/news/2025-07-28-How-Microsoft-Research-is-enhancing-the-ability-of-LLMs-to-handle-more-complex-reasoning-tasks.html"
+permalink: "/2025-07-28-How-Microsoft-Research-is-enhancing-the-ability-of-LLMs-to-handle-more-complex-reasoning-tasks.html"
 categories: ["AI"]
 tags: ["AI", "AI Research", "Cognitive Abilities", "Company News", "Complex Reasoning", "Deep Learning", "Large Language Models", "LLM", "Machine Learning", "Microsoft Research", "Natural Language Processing", "News", "Problem Solving"]
 tags_normalized: ["ai", "ai research", "cognitive abilities", "company news", "complex reasoning", "deep learning", "large language models", "llm", "machine learning", "microsoft research", "natural language processing", "news", "problem solving"]

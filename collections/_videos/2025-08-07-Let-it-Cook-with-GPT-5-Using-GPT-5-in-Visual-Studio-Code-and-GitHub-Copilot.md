@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Visual Studio Code YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SLNwkd3w"
 date: 2025-08-07 23:16:05 +00:00
-permalink: "/videos/2025-08-07-Let-it-Cook-with-GPT-5-Using-GPT-5-in-Visual-Studio-Code-and-GitHub-Copilot.html"
+permalink: "/2025-08-07-Let-it-Cook-with-GPT-5-Using-GPT-5-in-Visual-Studio-Code-and-GitHub-Copilot.html"
 categories: ["AI", "Coding", "GitHub Copilot"]
 tags: ["AI", "AI Integration", "AI Models", "AI Powered Development", "Burke Holland", "Code", "Coding", "Copilot Workflow", "Demo", "Developer", "Developer Tools", "GitHub Copilot", "GPT 5", "GPT5", "James Montemagno", "Microsoft", "Microsoft AI", "Pierce Boggan", "Software Developer", "Vibecoding", "Videos", "VS Code", "VS Code Extensions", "Workflow Customization"]
 tags_normalized: ["ai", "ai integration", "ai models", "ai powered development", "burke holland", "code", "coding", "copilot workflow", "demo", "developer", "developer tools", "github copilot", "gpt 5", "gpt5", "james montemagno", "microsoft", "microsoft ai", "pierce boggan", "software developer", "vibecoding", "videos", "vs code", "vs code extensions", "workflow customization"]

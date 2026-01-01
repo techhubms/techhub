@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-11-18 22:42:56 +00:00
-permalink: "/community/2025-11-18-Scenario-Based-Feature-Flag-Management-in-Azure-App-Configuration-Portal.html"
+permalink: "/2025-11-18-Scenario-Based-Feature-Flag-Management-in-Azure-App-Configuration-Portal.html"
 categories: ["AI", "Azure", "DevOps"]
 tags: ["A/B Testing", "AI", "AI Deployment", "Application Insights", "Azure", "Azure App Configuration", "Azure Portal", "Canary Deployments", "Community", "DevOps", "Experimentation", "Feature Flags", "Feature Management", "Model Versioning", "Operations", "Rollouts", "Switch Rollout Experiment", "Telemetry"]
 tags_normalized: ["aslashb testing", "ai", "ai deployment", "application insights", "azure", "azure app configuration", "azure portal", "canary deployments", "community", "devops", "experimentation", "feature flags", "feature management", "model versioning", "operations", "rollouts", "switch rollout experiment", "telemetry"]

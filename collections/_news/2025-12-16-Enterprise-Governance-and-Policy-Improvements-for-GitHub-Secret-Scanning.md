@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/changelog/feed/"
 date: 2025-12-16 20:46:09 +00:00
-permalink: "/news/2025-12-16-Enterprise-Governance-and-Policy-Improvements-for-GitHub-Secret-Scanning.html"
+permalink: "/2025-12-16-Enterprise-Governance-and-Policy-Improvements-for-GitHub-Secret-Scanning.html"
 categories: ["DevOps", "Security"]
 tags: ["Alert Management", "Application Security", "Custom Patterns", "DevOps", "DevOps Security", "Enterprise Security", "GitHub", "GitHub Apps", "Improvement", "News", "Permissions", "Policy Management", "Push Protection", "Secret Scanning", "Security", "Security Governance", "Security Manager Role"]
 tags_normalized: ["alert management", "application security", "custom patterns", "devops", "devops security", "enterprise security", "github", "github apps", "improvement", "news", "permissions", "policy management", "push protection", "secret scanning", "security", "security governance", "security manager role"]

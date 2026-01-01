@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Visual Studio Code YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SLNwkd3w"
 date: 2025-08-14 20:17:42 +00:00
-permalink: "/videos/2025-08-14-VS-Code-Beast-Mode-Explained-Features-and-Usage.html"
+permalink: "/2025-08-14-VS-Code-Beast-Mode-Explained-Features-and-Usage.html"
 categories: ["Coding"]
 tags: ["Beast Mode", "Beastmode", "Burke Holland", "Code", "Code Editing", "Coding", "Demo", "Developer", "Developer Community", "Developer Tools", "James Montemagno", "Microsoft", "Productivity", "Software Developer", "Software Development", "Vibecoding", "Videos", "VS Code", "VS Code Extensions", "VS Code Features"]
 tags_normalized: ["beast mode", "beastmode", "burke holland", "code", "code editing", "coding", "demo", "developer", "developer community", "developer tools", "james montemagno", "microsoft", "productivity", "software developer", "software development", "vibecoding", "videos", "vs code", "vs code extensions", "vs code features"]

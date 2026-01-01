@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Reddit Azure"
 feed_url: "https://www.reddit.com/r/azure/.rss"
 date: 2025-08-04 13:31:23 +00:00
-permalink: "/community/2025-08-04-Strategies-for-Minimizing-Costs-of-Azure-Container-Instances-with-Event-Driven-Usage.html"
+permalink: "/2025-08-04-Strategies-for-Minimizing-Costs-of-Azure-Container-Instances-with-Event-Driven-Usage.html"
 categories: ["Azure"]
 tags: ["AZ CLI", "Azure", "Azure Container Instances", "Azure Functions", "Cloud Deployment", "Community", "Cost Optimization", "On Demand Compute", "Resource Management", "Scaling Strategies", "Serverless Computing", "Spring Boot"]
 tags_normalized: ["az cli", "azure", "azure container instances", "azure functions", "cloud deployment", "community", "cost optimization", "on demand compute", "resource management", "scaling strategies", "serverless computing", "spring boot"]

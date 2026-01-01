@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/changelog/feed/"
 date: 2025-09-16 15:55:14 +00:00
-permalink: "/news/2025-09-16-GitHub-MCP-Registry-Centralizing-AI-Agent-Tool-Discovery.html"
+permalink: "/2025-09-16-GitHub-MCP-Registry-Centralizing-AI-Agent-Tool-Discovery.html"
 categories: ["AI", "GitHub Copilot"]
 tags: ["Agentic Workflows", "AI", "AI Agents", "AI Ecosystem", "AI Tools", "Copilot", "Developer Experience", "GitHub", "GitHub Copilot", "MCP", "MCP Registry", "MCP Servers", "News", "Open Source", "Registry", "Tool Discovery"]
 tags_normalized: ["agentic workflows", "ai", "ai agents", "ai ecosystem", "ai tools", "copilot", "developer experience", "github", "github copilot", "mcp", "mcp registry", "mcp servers", "news", "open source", "registry", "tool discovery"]

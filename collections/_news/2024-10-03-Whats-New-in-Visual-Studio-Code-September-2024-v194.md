@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Visual Studio Code Releases"
 feed_url: "https://code.visualstudio.com/feed.xml"
 date: 2024-10-03 17:00:00 +00:00
-permalink: "/news/2024-10-03-Whats-New-in-Visual-Studio-Code-September-2024-v194.html"
+permalink: "/2024-10-03-Whats-New-in-Visual-Studio-Code-September-2024-v194.html"
 categories: ["AI", "Coding", "DevOps", "GitHub Copilot"]
 tags: ["Accessibility", "Account Management", "AI", "Code Completion", "Coding", "Copilot Chat", "Debugging", "DevOps", "Experimental Features", "Extension Management", "GitHub Copilot", "GPT 4o", "News", "Notebook Editor", "OpenAI Integration", "Python", "Release Notes", "Semantic Search", "Source Control", "Testing Coverage", "TypeScript 5.6", "V1.94", "VS Code"]
 tags_normalized: ["accessibility", "account management", "ai", "code completion", "coding", "copilot chat", "debugging", "devops", "experimental features", "extension management", "github copilot", "gpt 4o", "news", "notebook editor", "openai integration", "python", "release notes", "semantic search", "source control", "testing coverage", "typescript 5dot6", "v1dot94", "vs code"]

@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=AI"
 date: 2025-08-13 19:05:27 +00:00
-permalink: "/community/2025-08-13-Azure-AI-Blogs-Consolidate-into-New-Azure-AI-Foundry-Blog.html"
+permalink: "/2025-08-13-Azure-AI-Blogs-Consolidate-into-New-Azure-AI-Foundry-Blog.html"
 categories: ["AI", "Azure"]
 tags: ["AI", "AI News", "AI Platform Blog", "Azure", "Azure AI", "Azure AI Foundry", "Azure AI Services", "Azure Community", "Azure Machine Learning", "Blog Migration", "Community", "Machine Learning Blog", "Microsoft AI", "RSS Subscription", "Tech Community", "Technical Blogging"]
 tags_normalized: ["ai", "ai news", "ai platform blog", "azure", "azure ai", "azure ai foundry", "azure ai services", "azure community", "azure machine learning", "blog migration", "community", "machine learning blog", "microsoft ai", "rss subscription", "tech community", "technical blogging"]

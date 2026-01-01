@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Events YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
 date: 2025-11-19 13:08:33 +00:00
-permalink: "/videos/2025-11-19-NIST-Zero-Trust-with-Forescout-and-Microsoft.html"
+permalink: "/2025-11-19-NIST-Zero-Trust-with-Forescout-and-Microsoft.html"
 categories: ["Security"]
 tags: ["Attack Surface", "Device Compliance", "Endpoint Security", "Forescout", "Managed Devices", "Microsoft Defender", "Microsoft Ignite", "Microsoft Intune", "ModernizeSecOpswithaunifiedplatform", "MSIgnite", "NIST 1800 35", "Policy Decision Point", "Security", "Security Architecture", "Security Operations", "Unmanaged Devices", "Videos", "Zero Trust"]
 tags_normalized: ["attack surface", "device compliance", "endpoint security", "forescout", "managed devices", "microsoft defender", "microsoft ignite", "microsoft intune", "modernizesecopswithaunifiedplatform", "msignite", "nist 1800 35", "policy decision point", "security", "security architecture", "security operations", "unmanaged devices", "videos", "zero trust"]

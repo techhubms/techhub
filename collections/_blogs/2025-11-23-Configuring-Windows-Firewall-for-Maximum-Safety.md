@@ -9,10 +9,10 @@ viewing_mode: "external"
 feed_name: "Dellenny's Blog"
 feed_url: "https://dellenny.com/feed/"
 date: 2025-11-23 17:26:01 +00:00
-permalink: "/blogs/2025-11-23-Configuring-Windows-Firewall-for-Maximum-Safety.html"
+permalink: "/2025-11-23-Configuring-Windows-Firewall-for-Maximum-Safety.html"
 categories: ["Security"]
-tags: ["Advanced Security", "Antivirus", "Cybersecurity", "Firewall Configuration", "Firewall Logging", "Inbound Rules", "Network Protection", "Outbound Rules", "Port Blocking", "Blogs", "Security", "Security Best Practices", "System Hardening", "Windows 11", "Windows Firewall"]
-tags_normalized: ["advanced security", "antivirus", "cybersecurity", "firewall configuration", "firewall logging", "inbound rules", "network protection", "outbound rules", "port blocking", "blogs", "security", "security best practices", "system hardening", "windows 11", "windows firewall"]
+tags: ["Advanced Security", "Antivirus", "Blogs", "Cybersecurity", "Firewall Configuration", "Firewall Logging", "Inbound Rules", "Network Protection", "Outbound Rules", "Port Blocking", "Security", "Security Best Practices", "System Hardening", "Windows 11", "Windows Firewall"]
+tags_normalized: ["advanced security", "antivirus", "blogs", "cybersecurity", "firewall configuration", "firewall logging", "inbound rules", "network protection", "outbound rules", "port blocking", "security", "security best practices", "system hardening", "windows 11", "windows firewall"]
 ---
 
 John Edward explains how to maximize Windows Firewall’s protection through clear, practical steps, enabling users of all levels to better secure their Windows computers.<!--excerpt_end-->

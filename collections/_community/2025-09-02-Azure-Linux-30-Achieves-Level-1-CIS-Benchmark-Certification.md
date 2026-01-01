@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-09-02 16:28:04 +00:00
-permalink: "/community/2025-09-02-Azure-Linux-30-Achieves-Level-1-CIS-Benchmark-Certification.html"
+permalink: "/2025-09-02-Azure-Linux-30-Achieves-Level-1-CIS-Benchmark-Certification.html"
 categories: ["Azure", "Security"]
 tags: ["AKS", "Azure", "Azure Linux 3.0", "Azure Security", "Center For Internet Security", "CIS Benchmarks", "Cloud Compliance", "Community", "HIPAA", "ISO 27001", "Linux Workloads", "NIST CSF", "PCI DSS", "Regulatory Standards", "Security", "Security Best Practices", "Security Compliance"]
 tags_normalized: ["aks", "azure", "azure linux 3dot0", "azure security", "center for internet security", "cis benchmarks", "cloud compliance", "community", "hipaa", "iso 27001", "linux workloads", "nist csf", "pci dss", "regulatory standards", "security", "security best practices", "security compliance"]

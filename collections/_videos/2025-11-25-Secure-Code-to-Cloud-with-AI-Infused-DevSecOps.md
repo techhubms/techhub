@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Events YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
 date: 2025-11-25 15:36:04 +00:00
-permalink: "/videos/2025-11-25-Secure-Code-to-Cloud-with-AI-Infused-DevSecOps.html"
+permalink: "/2025-11-25-Secure-Code-to-Cloud-with-AI-Infused-DevSecOps.html"
 categories: ["AI", "DevOps", "Security"]
 tags: ["Agentic Workflows", "AI", "AI Powered Remediation", "Alert Fatigue", "Azure AI", "Cloud Security", "Code To Cloud", "Developer Tools", "DevOps", "DevSecOps", "GitHub Advanced Security", "InnovatewithAzureAIappsandagents", "Microsoft Defender For Cloud", "MSIgnite", "Security", "Security Automation", "Session BRK112", "Videos", "Vulnerability Management"]
 tags_normalized: ["agentic workflows", "ai", "ai powered remediation", "alert fatigue", "azure ai", "cloud security", "code to cloud", "developer tools", "devops", "devsecops", "github advanced security", "innovatewithazureaiappsandagents", "microsoft defender for cloud", "msignite", "security", "security automation", "session brk112", "videos", "vulnerability management"]

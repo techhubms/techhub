@@ -9,10 +9,10 @@ viewing_mode: "external"
 feed_name: "DevOps Blog"
 feed_url: "https://devops.com/feed/"
 date: 2025-09-18 16:41:29 +00:00
-permalink: "/blogs/2025-09-18-Shai-Hulud-Attacks-Undermine-Software-Supply-Chain-Security.html"
+permalink: "/2025-09-18-Shai-Hulud-Attacks-Undermine-Software-Supply-Chain-Security.html"
 categories: ["DevOps", "Security"]
-tags: ["CI/CD", "Credential Theft", "CrowdStrike", "Dependency Management", "DevOps", "DevOps Security", "JavaScript Security", "Multi Factor Authentication", "npm", "Open Source Security", "Package Signing", "Blogs", "SBOM", "Secure Software Development", "Security", "Shai Hulud", "Social Facebook", "Social LinkedIn", "Social X", "Software Bill Of Materials", "Software Supply Chain", "Supply Chain Attack", "Worm Attack"]
-tags_normalized: ["cislashcd", "credential theft", "crowdstrike", "dependency management", "devops", "devops security", "javascript security", "multi factor authentication", "npm", "open source security", "package signing", "blogs", "sbom", "secure software development", "security", "shai hulud", "social facebook", "social linkedin", "social x", "software bill of materials", "software supply chain", "supply chain attack", "worm attack"]
+tags: ["Blogs", "CI/CD", "Credential Theft", "CrowdStrike", "Dependency Management", "DevOps", "DevOps Security", "JavaScript Security", "Multi Factor Authentication", "npm", "Open Source Security", "Package Signing", "SBOM", "Secure Software Development", "Security", "Shai Hulud", "Social Facebook", "Social LinkedIn", "Social X", "Software Bill Of Materials", "Software Supply Chain", "Supply Chain Attack", "Worm Attack"]
+tags_normalized: ["blogs", "cislashcd", "credential theft", "crowdstrike", "dependency management", "devops", "devops security", "javascript security", "multi factor authentication", "npm", "open source security", "package signing", "sbom", "secure software development", "security", "shai hulud", "social facebook", "social linkedin", "social x", "software bill of materials", "software supply chain", "supply chain attack", "worm attack"]
 ---
 
 Alan Shimel analyzes the Shai-Hulud NPM attacks and their impact on software supply chain security, offering practical advice for DevOps practitioners to enhance trust and resilience.<!--excerpt_end-->

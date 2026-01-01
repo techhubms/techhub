@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/changelog/feed/"
 date: 2025-09-10 17:25:36 +00:00
-permalink: "/news/2025-09-10-GitHub-Ruleset-Exemptions-and-New-Repository-Insights-Features.html"
+permalink: "/2025-09-10-GitHub-Ruleset-Exemptions-and-New-Repository-Insights-Features.html"
 categories: ["DevOps"]
 tags: ["Accessibility", "Automation", "Branch Protection", "DevOps", "Exempt Bypass", "GitHub", "Improvement", "Migration", "News", "Platform Governance", "Pulse Pages", "Repository Analytics", "Repository Rulesets", "Traffic Insights"]
 tags_normalized: ["accessibility", "automation", "branch protection", "devops", "exempt bypass", "github", "improvement", "migration", "news", "platform governance", "pulse pages", "repository analytics", "repository rulesets", "traffic insights"]

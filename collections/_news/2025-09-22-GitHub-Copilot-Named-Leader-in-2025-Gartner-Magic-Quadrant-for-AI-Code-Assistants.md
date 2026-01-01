@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/feed/"
 date: 2025-09-22 18:24:17 +00:00
-permalink: "/news/2025-09-22-GitHub-Copilot-Named-Leader-in-2025-Gartner-Magic-Quadrant-for-AI-Code-Assistants.html"
+permalink: "/2025-09-22-GitHub-Copilot-Named-Leader-in-2025-Gartner-Magic-Quadrant-for-AI-Code-Assistants.html"
 categories: ["AI", "GitHub Copilot"]
 tags: ["Agentic Workflows", "AI", "AI & ML", "AI Code Assistants", "AI Powered Development", "Application Refactoring", "Code Suggestions", "Developer Productivity", "Developer Tools", "Enterprise Software", "Gartner Magic Quadrant", "GitHub Copilot", "News", "Productivity", "Software Modernization", "VS", "VS Code"]
 tags_normalized: ["agentic workflows", "ai", "ai and ml", "ai code assistants", "ai powered development", "application refactoring", "code suggestions", "developer productivity", "developer tools", "enterprise software", "gartner magic quadrant", "github copilot", "news", "productivity", "software modernization", "vs", "vs code"]

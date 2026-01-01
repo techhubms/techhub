@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Community"
 date: 2025-08-12 17:00:00 +00:00
-permalink: "/community/2025-08-12-How-Adastra-Used-Microsoft-Fabric-and-Azure-OpenAI-Service-to-Transform-Heritage-Grocers-Groups-Data-Analytics.html"
+permalink: "/2025-08-12-How-Adastra-Used-Microsoft-Fabric-and-Azure-OpenAI-Service-to-Transform-Heritage-Grocers-Groups-Data-Analytics.html"
 categories: ["AI", "Azure", "ML"]
 tags: ["Adastra", "AI", "AI Transformation", "Azure", "Azure OpenAI Service", "Business Intelligence", "Cloud Scalability", "Community", "Data Analytics", "Data Consistency", "Data Management", "Data Unification", "ERP Integration", "Heritage Grocers Group", "Microsoft Fabric", "Microsoft Partner", "ML", "POS Data", "Predictive Analytics", "Process Automation"]
 tags_normalized: ["adastra", "ai", "ai transformation", "azure", "azure openai service", "business intelligence", "cloud scalability", "community", "data analytics", "data consistency", "data management", "data unification", "erp integration", "heritage grocers group", "microsoft fabric", "microsoft partner", "ml", "pos data", "predictive analytics", "process automation"]

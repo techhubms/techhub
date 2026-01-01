@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/changelog/feed/"
 date: 2025-08-19 15:56:42 +00:00
-permalink: "/news/2025-08-19-Dependabot-Adds-Support-for-Automated-Rust-Toolchain-Updates.html"
+permalink: "/2025-08-19-Dependabot-Adds-Support-for-Automated-Rust-Toolchain-Updates.html"
 categories: ["DevOps"]
 tags: [".github/dependabot.yml", "Automation", "CI", "Continuous Integration", "Dependabot", "Dependency Management", "DevOps", "GitHub", "News", "Rust", "Rust Toolchain", "Rust Toolchain.toml", "Rustup", "Toolchain Management", "Version Updates"]
 tags_normalized: ["dotgithubslashdependabotdotyml", "automation", "ci", "continuous integration", "dependabot", "dependency management", "devops", "github", "news", "rust", "rust toolchain", "rust toolchaindottoml", "rustup", "toolchain management", "version updates"]

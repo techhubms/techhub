@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Learn Microsoft AI Youtube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCQf_yRJpsfyEiWWpt1MZ6vA"
 date: 2025-06-04 11:17:38 +00:00
-permalink: "/videos/2025-06-04-Deploying-MCP-Server-to-Azure-and-Connecting-with-Semantic-Kernel-A-Step-by-Step-Tutorial.html"
+permalink: "/2025-06-04-Deploying-MCP-Server-to-Azure-and-Connecting-with-Semantic-Kernel-A-Step-by-Step-Tutorial.html"
 categories: ["AI", "Azure", "Coding"]
 tags: ["AI", "AI Development", "AI Orchestration", "AI Tools", "Azure", "Azure Deployment", "Azure Services", "Cloud Deployment", "Coding", "Intelligent Apps", "MCP", "MCP Server", "Microsoft AI", "Microsoft Azure", "Scalable Applications", "Semantic Kernel", "Step By Step Guide", "Tutorial", "Videos"]
 tags_normalized: ["ai", "ai development", "ai orchestration", "ai tools", "azure", "azure deployment", "azure services", "cloud deployment", "coding", "intelligent apps", "mcp", "mcp server", "microsoft ai", "microsoft azure", "scalable applications", "semantic kernel", "step by step guide", "tutorial", "videos"]

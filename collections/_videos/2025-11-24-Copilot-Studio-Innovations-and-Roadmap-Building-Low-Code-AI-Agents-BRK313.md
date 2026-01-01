@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Events YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
 date: 2025-11-24 06:26:53 +00:00
-permalink: "/videos/2025-11-24-Copilot-Studio-Innovations-and-Roadmap-Building-Low-Code-AI-Agents-BRK313.html"
+permalink: "/2025-11-24-Copilot-Studio-Innovations-and-Roadmap-Building-Low-Code-AI-Agents-BRK313.html"
 categories: ["AI"]
 tags: ["Agent Builder", "Agent Creation", "Agent Identity", "AI", "Automation", "Copilot Agents", "Copilot Studio", "Cost Management", "Debugging", "Enterprise AI", "Erez Altus", "Evaluation", "Generative Orchestration", "Governance", "Innovatewithlow", "Knowledge Capabilities", "Low Code Development", "Microsoft Ignite", "MSIgnite", "Omar Aftab", "Platform Governance", "Scoring Methods", "Testing Tools", "Videos", "Zac Cadi"]
 tags_normalized: ["agent builder", "agent creation", "agent identity", "ai", "automation", "copilot agents", "copilot studio", "cost management", "debugging", "enterprise ai", "erez altus", "evaluation", "generative orchestration", "governance", "innovatewithlow", "knowledge capabilities", "low code development", "microsoft ignite", "msignite", "omar aftab", "platform governance", "scoring methods", "testing tools", "videos", "zac cadi"]

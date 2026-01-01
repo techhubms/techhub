@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/changelog/feed/"
 date: 2025-12-17 18:12:19 +00:00
-permalink: "/news/2025-12-17-GPT-52-is-now-generally-available-in-GitHub-Copilot.html"
+permalink: "/2025-12-17-GPT-52-is-now-generally-available-in-GitHub-Copilot.html"
 categories: ["AI", "GitHub Copilot"]
 tags: ["AI", "AI Model", "Chat Model", "Copilot", "Copilot Business", "Copilot Chat", "Copilot Enterprise", "Copilot Pro", "GitHub Copilot", "GPT 5.2", "IDE Integration", "JetBrains IDEs", "Model Picker", "News", "VS Code"]
 tags_normalized: ["ai", "ai model", "chat model", "copilot", "copilot business", "copilot chat", "copilot enterprise", "copilot pro", "github copilot", "gpt 5dot2", "ide integration", "jetbrains ides", "model picker", "news", "vs code"]

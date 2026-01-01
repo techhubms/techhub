@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Events YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
 date: 2025-11-20 11:14:23 +00:00
-permalink: "/videos/2025-11-20-Solving-Real-MSP-Challenges-with-Agentic-AI-at-Microsoft-Ignite-2025.html"
+permalink: "/2025-11-20-Solving-Real-MSP-Challenges-with-Agentic-AI-at-Microsoft-Ignite-2025.html"
 categories: ["AI"]
 tags: ["AI", "AI Agents", "Billing Automation", "Copilot Chat", "Copilotandagentsatwork", "Destination AI", "Generative AI", "Help Desk", "HR Onboarding", "Monetization", "MS Ignite", "MSIgnite", "Process Integration", "Retail Automation", "Security Automation", "Service Management", "StreamOne", "Supply Chain", "TD SYNNEX", "Videos"]
 tags_normalized: ["ai", "ai agents", "billing automation", "copilot chat", "copilotandagentsatwork", "destination ai", "generative ai", "help desk", "hr onboarding", "monetization", "ms ignite", "msignite", "process integration", "retail automation", "security automation", "service management", "streamone", "supply chain", "td synnex", "videos"]

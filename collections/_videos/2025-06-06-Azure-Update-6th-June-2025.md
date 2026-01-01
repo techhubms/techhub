@@ -9,7 +9,7 @@ categories: ["AI", "Azure", "Security", "ML"]
 feed_name: "John Savill's Technical Training"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCpIn7ox7j7bH_OFj7tYouOQ"
 date: 2025-06-06 14:35:12 +00:00
-permalink: "/videos/2025-06-06-Azure-Update-6th-June-2025.html"
+permalink: "/2025-06-06-Azure-Update-6th-June-2025.html"
 viewing_mode: "internal"
 tags: ["AI", "AI Managed Network", "ASR Premium SSD", "Azure", "Azure Files NFS", "Azure Migrate", "Azure Storage Mover", "Cloud", "CrowdStrike", "Fabric Data Factory", "Johnsavillstechnicaltraining", "Microsoft", "ML", "MySQL", "Onboard to Azure", "Pg Cron Extension", "PostgreSQL Flexible Server", "Quota Groups", "RBAC", "Security", "SMB To Blob", "Videos"]
 tags_normalized: ["ai", "ai managed network", "asr premium ssd", "azure", "azure files nfs", "azure migrate", "azure storage mover", "cloud", "crowdstrike", "fabric data factory", "johnsavillstechnicaltraining", "microsoft", "ml", "mysql", "onboard to azure", "pg cron extension", "postgresql flexible server", "quota groups", "rbac", "security", "smb to blob", "videos"]

@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-11-18 08:24:37 +00:00
-permalink: "/community/2025-11-18-Azure-Logic-Apps-Designer-Major-Redesign-Phase-I-Public-Preview.html"
+permalink: "/2025-11-18-Azure-Logic-Apps-Designer-Major-Redesign-Phase-I-Public-Preview.html"
 categories: ["Azure", "Coding", "DevOps"]
 tags: ["Auto Save", "Azure", "Azure Integration", "Azure Logic Apps", "Coding", "Community", "Debugging", "Developer Tools", "Development Loop", "DevOps", "Draft Mode", "Logic Apps Designer", "Monitoring", "Public Preview", "Run History", "Standard Workflows", "Unified Canvas", "VS Code", "Workflow Automation"]
 tags_normalized: ["auto save", "azure", "azure integration", "azure logic apps", "coding", "community", "debugging", "developer tools", "development loop", "devops", "draft mode", "logic apps designer", "monitoring", "public preview", "run history", "standard workflows", "unified canvas", "vs code", "workflow automation"]

@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft DevBlog"
 feed_url: "https://devblogs.microsoft.com/azure-sdk/feed/"
 date: 2025-04-11 21:11:34 +00:00
-permalink: "/news/2025-04-11-Introducing-Spring-Cloud-Azure-Starter-Key-Vault-JCA-for-Streamlined-TLS-and-mTLS-in-Spring-Boot.html"
+permalink: "/2025-04-11-Introducing-Spring-Cloud-Azure-Starter-Key-Vault-JCA-for-Streamlined-TLS-and-mTLS-in-Spring-Boot.html"
 categories: ["Azure", "Security", "Coding"]
 tags: ["Azure", "Azure Key Vault", "Azure SDK", "Certificate Management", "Coding", "Java", "JCA", "Mtls", "News", "RestTemplate", "Security", "Service Principal", "Spring", "Spring Boot", "Spring Cloud Azure", "SSL Bundles", "TLS", "WebClient"]
 tags_normalized: ["azure", "azure key vault", "azure sdk", "certificate management", "coding", "java", "jca", "mtls", "news", "resttemplate", "security", "service principal", "spring", "spring boot", "spring cloud azure", "ssl bundles", "tls", "webclient"]

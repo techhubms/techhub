@@ -9,10 +9,10 @@ viewing_mode: "external"
 feed_name: "Dellenny's Blog"
 feed_url: "https://dellenny.com/feed/"
 date: 2025-09-11 13:22:14 +00:00
-permalink: "/blogs/2025-09-11-How-GitHub-Copilot-Can-Boost-Your-Microsoft-Certification-Prep.html"
+permalink: "/2025-09-11-How-GitHub-Copilot-Can-Boost-Your-Microsoft-Certification-Prep.html"
 categories: ["AI", "GitHub Copilot"]
-tags: ["AI", "AI Study Tools", "AZ 500", "Azure Active Directory", "Azure CLI", "Certification Prep", "Copilot", "Exam Practice", "Flashcards", "GitHub Copilot", "Hands On Labs", "M365 Copilot", "Microsoft 365", "Microsoft Azure", "Blogs", "Power Platform", "PowerShell", "Python", "SC 200", "Scripting"]
-tags_normalized: ["ai", "ai study tools", "az 500", "azure active directory", "azure cli", "certification prep", "copilot", "exam practice", "flashcards", "github copilot", "hands on labs", "m365 copilot", "microsoft 365", "microsoft azure", "blogs", "power platform", "powershell", "python", "sc 200", "scripting"]
+tags: ["AI", "AI Study Tools", "AZ 500", "Azure Active Directory", "Azure CLI", "Blogs", "Certification Prep", "Copilot", "Exam Practice", "Flashcards", "GitHub Copilot", "Hands On Labs", "M365 Copilot", "Microsoft 365", "Microsoft Azure", "Power Platform", "PowerShell", "Python", "SC 200", "Scripting"]
+tags_normalized: ["ai", "ai study tools", "az 500", "azure active directory", "azure cli", "blogs", "certification prep", "copilot", "exam practice", "flashcards", "github copilot", "hands on labs", "m365 copilot", "microsoft 365", "microsoft azure", "power platform", "powershell", "python", "sc 200", "scripting"]
 ---
 
 Dellenny demonstrates how IT professionals can use GitHub Copilot as an AI-powered study partner to prepare more effectively for Microsoft certifications.<!--excerpt_end-->

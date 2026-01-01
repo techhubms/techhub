@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "DotNet YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw"
 date: 2025-11-17 20:12:59 +00:00
-permalink: "/videos/2025-11-17-NET-Conf-Student-Zone-2025.html"
+permalink: "/2025-11-17-NET-Conf-Student-Zone-2025.html"
 categories: ["AI", "Coding", "GitHub Copilot"]
 tags: [".NET", "AI", "Aspire", "CLI", "Coding", "Copilot", "Cross Platform", "Demo", "Gaming", "GitHub Copilot", "Hands On", "Linux", "Mac", "Open Source", "Programming", "Student Zone", "Videos", "VS", "VS Code"]
 tags_normalized: ["dotnet", "ai", "aspire", "cli", "coding", "copilot", "cross platform", "demo", "gaming", "github copilot", "hands on", "linux", "mac", "open source", "programming", "student zone", "videos", "vs", "vs code"]

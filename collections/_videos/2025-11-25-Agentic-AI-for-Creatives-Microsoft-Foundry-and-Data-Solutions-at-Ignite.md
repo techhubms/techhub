@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Events YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
 date: 2025-11-25 12:10:15 +00:00
-permalink: "/videos/2025-11-25-Agentic-AI-for-Creatives-Microsoft-Foundry-and-Data-Solutions-at-Ignite.html"
+permalink: "/2025-11-25-Agentic-AI-for-Creatives-Microsoft-Foundry-and-Data-Solutions-at-Ignite.html"
 categories: ["AI", "Azure"]
 tags: ["Agentic AI", "AI", "Azure", "Azure Cosmos DB", "Azure SQL", "Creative Pipeline", "Data Architecture", "EV Charging Finder", "Generative Design", "InnovatewithAzureAIappsandagents", "Integration Patterns", "Intelligent Agents", "Kantar", "Microsoft Fabric", "Microsoft Foundry", "MSIgnite", "Palette Generator", "Pantone", "Semantic Search", "Technical Demo", "TomTom", "Videos"]
 tags_normalized: ["agentic ai", "ai", "azure", "azure cosmos db", "azure sql", "creative pipeline", "data architecture", "ev charging finder", "generative design", "innovatewithazureaiappsandagents", "integration patterns", "intelligent agents", "kantar", "microsoft fabric", "microsoft foundry", "msignite", "palette generator", "pantone", "semantic search", "technical demo", "tomtom", "videos"]

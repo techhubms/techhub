@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Developer YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
 date: 2025-11-19 23:25:02 +00:00
-permalink: "/videos/2025-11-19-Building-Omnichannel-Voice-AI-Agents-with-Azure.html"
+permalink: "/2025-11-19-Building-Omnichannel-Voice-AI-Agents-with-Azure.html"
 categories: ["AI", "Azure"]
 tags: ["AI", "AI Workflows", "Azure", "Azure Communication Services", "Cloud Computing", "Conversational AI", "Dev", "Development", "Intent Recognition", "Microsoft", "Microsoft Azure", "Multi Agent Orchestration", "Multilingual Support", "Omnichannel", "Real Time Applications", "Speech To Text", "Tech", "Technology", "Telephony Integration", "Text To Speech", "Videos", "Voice AI", "WebRTC", "WebSocket"]
 tags_normalized: ["ai", "ai workflows", "azure", "azure communication services", "cloud computing", "conversational ai", "dev", "development", "intent recognition", "microsoft", "microsoft azure", "multi agent orchestration", "multilingual support", "omnichannel", "real time applications", "speech to text", "tech", "technology", "telephony integration", "text to speech", "videos", "voice ai", "webrtc", "websocket"]

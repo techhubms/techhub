@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-08-02 03:15:53 +00:00
-permalink: "/community/2025-08-02-Announcing-a-Flexible-Predictable-Billing-Model-for-Azure-SRE-Agent.html"
+permalink: "/2025-08-02-Announcing-a-Flexible-Predictable-Billing-Model-for-Azure-SRE-Agent.html"
 categories: ["AI", "Azure", "DevOps", "Security"]
 tags: ["Agentic DevOps", "AI", "AI in DevOps", "Automation", "Azure", "Azure Agent Unit", "Azure SRE Agent", "Billing Model", "Cloud Operations", "Community", "Cost Scenarios", "DevOps", "Incident Response", "Machine Learning", "Predictable Pricing", "Security", "Site Reliability Engineering"]
 tags_normalized: ["agentic devops", "ai", "ai in devops", "automation", "azure", "azure agent unit", "azure sre agent", "billing model", "cloud operations", "community", "cost scenarios", "devops", "incident response", "machine learning", "predictable pricing", "security", "site reliability engineering"]

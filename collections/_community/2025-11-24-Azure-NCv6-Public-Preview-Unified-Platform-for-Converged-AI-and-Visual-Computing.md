@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-11-24 22:05:04 +00:00
-permalink: "/community/2025-11-24-Azure-NCv6-Public-Preview-Unified-Platform-for-Converged-AI-and-Visual-Computing.html"
+permalink: "/2025-11-24-Azure-NCv6-Public-Preview-Unified-Platform-for-Converged-AI-and-Visual-Computing.html"
 categories: ["AI", "Azure"]
 tags: ["3D Rendering", "Agentic Workflows", "AI", "AI Infrastructure", "Azure", "Azure HPC", "Azure NCv6", "Azure Virtual Desktop", "Community", "Digital Twins", "Fractional GPU", "Generative AI", "GPU Virtual Machines", "High Performance Computing", "Intel Xeon Granite Rapids", "LLM Inference", "MIG", "NVIDIA RTX PRO 6000 Blackwell", "Omniverse", "RAG", "Virtual Desktop"]
 tags_normalized: ["3d rendering", "agentic workflows", "ai", "ai infrastructure", "azure", "azure hpc", "azure ncv6", "azure virtual desktop", "community", "digital twins", "fractional gpu", "generative ai", "gpu virtual machines", "high performance computing", "intel xeon granite rapids", "llm inference", "mig", "nvidia rtx pro 6000 blackwell", "omniverse", "rag", "virtual desktop"]

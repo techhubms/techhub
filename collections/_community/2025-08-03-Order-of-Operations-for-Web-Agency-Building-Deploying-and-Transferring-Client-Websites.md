@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Reddit GitHub"
 feed_url: "https://www.reddit.com/r/github/.rss"
 date: 2025-08-03 05:28:12 +00:00
-permalink: "/community/2025-08-03-Order-of-Operations-for-Web-Agency-Building-Deploying-and-Transferring-Client-Websites.html"
+permalink: "/2025-08-03-Order-of-Operations-for-Web-Agency-Building-Deploying-and-Transferring-Client-Websites.html"
 categories: ["DevOps"]
 tags: ["Client Handoff", "Community", "DevOps", "DNS Configuration", "Domain Management", "GitHub", "Lovable.dev", "Project Transfer", "SSL", "Vercel", "Web Agency Workflow", "Website Deployment"]
 tags_normalized: ["client handoff", "community", "devops", "dns configuration", "domain management", "github", "lovabledotdev", "project transfer", "ssl", "vercel", "web agency workflow", "website deployment"]

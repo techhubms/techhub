@@ -9,10 +9,10 @@ viewing_mode: "external"
 feed_name: "René van Osnabrugge's Blog"
 feed_url: "https://roadtoalm.com/feed/"
 date: 2025-11-26 11:01:39 +00:00
-permalink: "/blogs/2025-11-26-Dont-Let-AI-Optimize-the-Wrong-30.html"
+permalink: "/2025-11-26-Dont-Let-AI-Optimize-the-Wrong-30.html"
 categories: ["AI", "DevOps"]
-tags: ["AI", "AI Driven Workflows", "AI For Meetings", "AI in Software Development", "AI Productivity", "AI SDLC", "AI Testing", "Chatgpt", "CI/CD Automation", "Developer Experience", "DevOps", "Documentation Automation", "Blogs", "Programming", "Requirements Management", "Security Automation", "Software Lifecycle", "Technology"]
-tags_normalized: ["ai", "ai driven workflows", "ai for meetings", "ai in software development", "ai productivity", "ai sdlc", "ai testing", "chatgpt", "cislashcd automation", "developer experience", "devops", "documentation automation", "blogs", "programming", "requirements management", "security automation", "software lifecycle", "technology"]
+tags: ["AI", "AI Driven Workflows", "AI For Meetings", "AI in Software Development", "AI Productivity", "AI SDLC", "AI Testing", "Blogs", "Chatgpt", "CI/CD Automation", "Developer Experience", "DevOps", "Documentation Automation", "Programming", "Requirements Management", "Security Automation", "Software Lifecycle", "Technology"]
+tags_normalized: ["ai", "ai driven workflows", "ai for meetings", "ai in software development", "ai productivity", "ai sdlc", "ai testing", "blogs", "chatgpt", "cislashcd automation", "developer experience", "devops", "documentation automation", "programming", "requirements management", "security automation", "software lifecycle", "technology"]
 ---
 
 Rene van Osnabrugge discusses how AI is often misapplied to speed up coding, which is only a minor part of development. He suggests AI's real power lies in reducing bottlenecks in the broader DevOps workflow.<!--excerpt_end-->

@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Events YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
 date: 2025-11-24 11:18:51 +00:00
-permalink: "/videos/2025-11-24-Optimizing-Azure-Investments-with-Citrix-Security-Cost-and-Experience.html"
+permalink: "/2025-11-24-Optimizing-Azure-Investments-with-Citrix-Security-Cost-and-Experience.html"
 categories: ["Azure", "Security"]
 tags: ["Azure", "Capture Prevention", "Citrix", "Citrix Cloud", "Cloud Migration", "Cloud Optimization", "Hybrid Work", "IT Troubleshooting", "Migrateandmodernizeyourestate", "MSIgnite", "On Premises Migration", "Secure Private Access", "Security", "Unified Communications", "User Experience", "Videos", "Watermarking", "Windows 365", "Zero Trust"]
 tags_normalized: ["azure", "capture prevention", "citrix", "citrix cloud", "cloud migration", "cloud optimization", "hybrid work", "it troubleshooting", "migrateandmodernizeyourestate", "msignite", "on premises migration", "secure private access", "security", "unified communications", "user experience", "videos", "watermarking", "windows 365", "zero trust"]

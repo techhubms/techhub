@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Reddit CSharp"
 feed_url: "https://www.reddit.com/r/csharp/.rss"
 date: 2025-08-01 17:38:03 +00:00
-permalink: "/community/2025-08-01-More-type-union-proposals-adopted-by-the-language-design-team.html"
+permalink: "/2025-08-01-More-type-union-proposals-adopted-by-the-language-design-team.html"
 categories: ["Coding"]
 tags: [".NET", "C#", "C# Language", "C# Proposals", "Coding", "Community", "Csharplang", "Feature Adoption", "Language Design", "Language Features", "Type System", "Type Unions"]
 tags_normalized: ["dotnet", "csharp", "csharp language", "csharp proposals", "coding", "community", "csharplang", "feature adoption", "language design", "language features", "type system", "type unions"]

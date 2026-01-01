@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "GitHub YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ"
 date: 2025-12-03 15:01:14 +00:00
-permalink: "/videos/2025-12-03-Managing-and-Auditing-GitHub-Copilot-Agents-Insights-and-Governance-Tools.html"
+permalink: "/2025-12-03-Managing-and-Auditing-GitHub-Copilot-Agents-Insights-and-Governance-Tools.html"
 categories: ["AI", "DevOps", "GitHub Copilot", "Security"]
 tags: ["Access Management", "Activity Monitoring", "Administration", "AI", "Audit Logging", "Control Panel", "Copilot Agents", "Developer Tools", "DevOps", "GitHub Copilot", "Governance", "Insights Dashboard", "MCP", "Security", "Videos"]
 tags_normalized: ["access management", "activity monitoring", "administration", "ai", "audit logging", "control panel", "copilot agents", "developer tools", "devops", "github copilot", "governance", "insights dashboard", "mcp", "security", "videos"]

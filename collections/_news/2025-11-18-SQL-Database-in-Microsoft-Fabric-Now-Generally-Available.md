@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Fabric Blog"
 feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
 date: 2025-11-18 08:00:00 +00:00
-permalink: "/news/2025-11-18-SQL-Database-in-Microsoft-Fabric-Now-Generally-Available.html"
+permalink: "/2025-11-18-SQL-Database-in-Microsoft-Fabric-Now-Generally-Available.html"
 categories: ["AI", "Azure", "ML", "Security"]
 tags: ["AI", "AI Ready Database", "Azure", "Azure DevOps", "Azure Key Vault", "Azure OpenAI", "Azure SQL Database", "CI/CD", "Copilot Editor", "Customer Managed Keys", "Data Analytics", "Data Driven AI", "Data Estate", "Disaster Recovery", "General Availability", "GitHub", "LangChain", "Microsoft Fabric", "Microsoft Foundry", "Microsoft Purview", "ML", "News", "OneLake", "Operational Data Store", "Power BI", "RAG", "SaaS", "Security", "Semantic Kernel", "Semantic Search", "SQL Auditing", "SQL Database", "SQL Server", "Streaming Data", "T SQL", "Vector Data"]
 tags_normalized: ["ai", "ai ready database", "azure", "azure devops", "azure key vault", "azure openai", "azure sql database", "cislashcd", "copilot editor", "customer managed keys", "data analytics", "data driven ai", "data estate", "disaster recovery", "general availability", "github", "langchain", "microsoft fabric", "microsoft foundry", "microsoft purview", "ml", "news", "onelake", "operational data store", "power bi", "rag", "saas", "security", "semantic kernel", "semantic search", "sql auditing", "sql database", "sql server", "streaming data", "t sql", "vector data"]

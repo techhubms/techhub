@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Events YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
 date: 2025-11-19 15:06:19 +00:00
-permalink: "/videos/2025-11-19-Demo-ice-Contact-Center-Integrating-Chatbots-and-Live-Agents-at-Microsoft-Ignite.html"
+permalink: "/2025-11-19-Demo-ice-Contact-Center-Integrating-Chatbots-and-Live-Agents-at-Microsoft-Ignite.html"
 categories: ["AI"]
 tags: ["Agent Handoff", "Agenticbusinessapplications", "AI", "AI Services", "Chatbot", "Customer Communication", "FAQ Bot", "Generative AI", "Ice Contact Center", "Icebot", "Knowledge Base", "Live Chat", "Microsoft Ignite", "MSIgnite", "Post Conversation Analytics", "SMS Channel", "Translation", "Videos", "Voice Channel"]
 tags_normalized: ["agent handoff", "agenticbusinessapplications", "ai", "ai services", "chatbot", "customer communication", "faq bot", "generative ai", "ice contact center", "icebot", "knowledge base", "live chat", "microsoft ignite", "msignite", "post conversation analytics", "sms channel", "translation", "videos", "voice channel"]

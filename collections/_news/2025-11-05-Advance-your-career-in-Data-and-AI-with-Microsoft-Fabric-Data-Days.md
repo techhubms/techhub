@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Fabric Blog"
 feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
 date: 2025-11-05 09:30:00 +00:00
-permalink: "/news/2025-11-05-Advance-your-career-in-Data-and-AI-with-Microsoft-Fabric-Data-Days.html"
+permalink: "/2025-11-05-Advance-your-career-in-Data-and-AI-with-Microsoft-Fabric-Data-Days.html"
 categories: ["AI", "Azure", "ML"]
 tags: ["AI", "Azure", "Certification", "Contests", "Data Engineering", "Data Science", "Data Visualization", "DP 600", "DP 700", "DP 900", "Learning Events", "Microsoft Certified Trainer", "Microsoft Data Platform", "Microsoft Fabric", "ML", "News", "Notebooks", "PL 300", "Power BI", "Skills Challenge", "Study Groups"]
 tags_normalized: ["ai", "azure", "certification", "contests", "data engineering", "data science", "data visualization", "dp 600", "dp 700", "dp 900", "learning events", "microsoft certified trainer", "microsoft data platform", "microsoft fabric", "ml", "news", "notebooks", "pl 300", "power bi", "skills challenge", "study groups"]

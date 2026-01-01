@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Events YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
 date: 2025-11-24 14:31:52 +00:00
-permalink: "/videos/2025-11-24-Transforming-Manufacturing-with-Digital-Twins-and-Real-Time-Simulation-Featuring-Azure-and-NVIDIA-AI.html"
+permalink: "/2025-11-24-Transforming-Manufacturing-with-Digital-Twins-and-Real-Time-Simulation-Featuring-Azure-and-NVIDIA-AI.html"
 categories: ["AI", "Azure"]
 tags: ["AI", "AI Models", "Ansys", "Azure", "Cloud Computing", "Digital Twins", "Emergency Response", "Industry 4.0", "Manufacturing Optimization", "Microsoft Azure", "MSIgnite", "NVIDIA AI", "Omniverse", "OpenUSD", "Process Automation", "Real Time Simulation", "Simulation Platforms", "Traffic Data Analytics", "Videos"]
 tags_normalized: ["ai", "ai models", "ansys", "azure", "cloud computing", "digital twins", "emergency response", "industry 4dot0", "manufacturing optimization", "microsoft azure", "msignite", "nvidia ai", "omniverse", "openusd", "process automation", "real time simulation", "simulation platforms", "traffic data analytics", "videos"]

@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/changelog/feed/"
 date: 2025-08-28 18:00:58 +00:00
-permalink: "/news/2025-08-28-Copilot-Coding-Agent-Adds-AGENTSmd-Custom-Instruction-Support.html"
+permalink: "/2025-08-28-Copilot-Coding-Agent-Adds-AGENTSmd-Custom-Instruction-Support.html"
 categories: ["AI", "GitHub Copilot"]
 tags: ["AGENTS.md", "AI", "AI Development", "Automation", "Coding Best Practices", "Copilot Coding Agent", "Custom Instructions", "Developer Tools", "GitHub", "GitHub Copilot", "Instructions File", "News", "Project Configuration", "Workflow"]
 tags_normalized: ["agentsdotmd", "ai", "ai development", "automation", "coding best practices", "copilot coding agent", "custom instructions", "developer tools", "github", "github copilot", "instructions file", "news", "project configuration", "workflow"]

@@ -9,10 +9,10 @@ viewing_mode: "external"
 feed_name: "Steve Gordon's Blog"
 feed_url: "https://www.stevejgordon.co.uk/feed"
 date: 2024-10-08 07:20:31 +00:00
-permalink: "/blogs/2024-10-08-Implementing-ASPNET-Core-Automatic-Span-Linking-for-Internal-Redirects-with-Middleware-on-NET-9.html"
+permalink: "/2024-10-08-Implementing-ASPNET-Core-Automatic-Span-Linking-for-Internal-Redirects-with-Middleware-on-NET-9.html"
 categories: ["Coding", "DevOps"]
-tags: [".NET 9", "Activity", "ASP.NET Core", "Coding", "DevOps", "Distributed Tracing", "ITempDataDictionaryFactory", "Middleware", "Observability", "OpenTelemetry", "Blogs", "Span Linking", "Tracing"]
-tags_normalized: ["dotnet 9", "activity", "aspdotnet core", "coding", "devops", "distributed tracing", "itempdatadictionaryfactory", "middleware", "observability", "opentelemetry", "blogs", "span linking", "tracing"]
+tags: [".NET 9", "Activity", "ASP.NET Core", "Blogs", "Coding", "DevOps", "Distributed Tracing", "ITempDataDictionaryFactory", "Middleware", "Observability", "OpenTelemetry", "Span Linking", "Tracing"]
+tags_normalized: ["dotnet 9", "activity", "aspdotnet core", "blogs", "coding", "devops", "distributed tracing", "itempdatadictionaryfactory", "middleware", "observability", "opentelemetry", "span linking", "tracing"]
 ---
 
 In this detailed post by Steve Gordon, the author demonstrates a practical approach to implementing automatic span linking for internal redirects in ASP.NET Core apps with .NET 9, enhancing traceability and observability.<!--excerpt_end-->

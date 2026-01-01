@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/feed/"
 date: 2025-08-28 17:08:51 +00:00
-permalink: "/news/2025-08-28-How-GitHub-Copilot-Accelerated-Secret-Protection-Engineering.html"
+permalink: "/2025-08-28-How-GitHub-Copilot-Accelerated-Secret-Protection-Engineering.html"
 categories: ["AI", "Coding", "DevOps", "GitHub Copilot", "Security"]
 tags: ["Agentic AI", "AI", "AI & ML", "API Integration", "Application Security", "Automation", "Coding", "Coding Automation", "Credential Management", "DevOps", "DevOps Workflow", "Engineering Productivity", "Framework Driven Development", "GitHub Actions", "GitHub Copilot", "News", "Pull Requests", "Secret Protection", "Security", "Software Engineering", "Token Validation"]
 tags_normalized: ["agentic ai", "ai", "ai and ml", "api integration", "application security", "automation", "coding", "coding automation", "credential management", "devops", "devops workflow", "engineering productivity", "framework driven development", "github actions", "github copilot", "news", "pull requests", "secret protection", "security", "software engineering", "token validation"]

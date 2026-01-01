@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Events YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
 date: 2025-11-24 06:39:24 +00:00
-permalink: "/videos/2025-11-24-Foundry-Control-Plane-Managing-AI-Agents-at-Scale.html"
+permalink: "/2025-11-24-Foundry-Control-Plane-Managing-AI-Agents-at-Scale.html"
 categories: ["AI", "Azure", "Security"]
 tags: ["AI", "AI Agents", "AI Compliance", "AI Governance", "AI Lifecycle Management", "Azure", "Azure AI", "Control Plane", "Guardrails", "InnovatewithAzureAIappsandagents", "Microsoft Foundry", "Microsoft Ignite", "MSIgnite", "Operational AI", "PII Protection", "Red Teaming", "Responsible AI", "Risk Management", "Security", "Security Integrations", "Videos"]
 tags_normalized: ["ai", "ai agents", "ai compliance", "ai governance", "ai lifecycle management", "azure", "azure ai", "control plane", "guardrails", "innovatewithazureaiappsandagents", "microsoft foundry", "microsoft ignite", "msignite", "operational ai", "pii protection", "red teaming", "responsible ai", "risk management", "security", "security integrations", "videos"]

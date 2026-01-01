@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-11-25 03:45:25 +00:00
-permalink: "/community/2025-11-25-General-Availability-of-XML-Parse-and-Compose-Actions-for-Azure-Logic-Apps.html"
+permalink: "/2025-11-25-General-Availability-of-XML-Parse-and-Compose-Actions-for-Azure-Logic-Apps.html"
 categories: ["Azure", "Coding"]
 tags: ["Array Input", "Azure", "Azure Logic Apps", "BizTalk Migration", "Cloud Workflow", "Coding", "Community", "Compose XML", "Content Type", "Data Integration", "Encoding", "HTTP Request", "Integration Account", "Parse XML", "Rules Engine", "Token Picker", "Workflow Automation", "XML Operations Connector", "XML Schema", "XSD Schema", "XSLT"]
 tags_normalized: ["array input", "azure", "azure logic apps", "biztalk migration", "cloud workflow", "coding", "community", "compose xml", "content type", "data integration", "encoding", "http request", "integration account", "parse xml", "rules engine", "token picker", "workflow automation", "xml operations connector", "xml schema", "xsd schema", "xslt"]

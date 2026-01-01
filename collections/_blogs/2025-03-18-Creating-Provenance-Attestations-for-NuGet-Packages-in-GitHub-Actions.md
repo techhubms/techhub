@@ -9,10 +9,10 @@ viewing_mode: "external"
 feed_name: "Andrew Lock's Blog"
 feed_url: "https://andrewlock.net/rss.xml"
 date: 2025-03-18 09:00:00 +00:00
-permalink: "/blogs/2025-03-18-Creating-Provenance-Attestations-for-NuGet-Packages-in-GitHub-Actions.html"
+permalink: "/2025-03-18-Creating-Provenance-Attestations-for-NuGet-Packages-in-GitHub-Actions.html"
 categories: ["Coding", "DevOps", "Security"]
-tags: [".NET", "Artifact Verification", "Attestation", "CI/CD", "Coding", "DevOps", "GitHub", "GitHub Actions", "NuGet", "OpenID Connect", "Package Signing", "Blogs", "Security", "Security Best Practices", "Sigstore", "SLSA", "Software Provenance", "Supply Chain Security", "Workflow Automation"]
-tags_normalized: ["dotnet", "artifact verification", "attestation", "cislashcd", "coding", "devops", "github", "github actions", "nuget", "openid connect", "package signing", "blogs", "security", "security best practices", "sigstore", "slsa", "software provenance", "supply chain security", "workflow automation"]
+tags: [".NET", "Artifact Verification", "Attestation", "Blogs", "CI/CD", "Coding", "DevOps", "GitHub", "GitHub Actions", "NuGet", "OpenID Connect", "Package Signing", "Security", "Security Best Practices", "Sigstore", "SLSA", "Software Provenance", "Supply Chain Security", "Workflow Automation"]
+tags_normalized: ["dotnet", "artifact verification", "attestation", "blogs", "cislashcd", "coding", "devops", "github", "github actions", "nuget", "openid connect", "package signing", "security", "security best practices", "sigstore", "slsa", "software provenance", "supply chain security", "workflow automation"]
 ---
 
 Andrew Lock examines how developers can create provenance attestations for NuGet packages using GitHub Actions. He details the underlying mechanics, security implications, verification methods, and practical challenges, including how to address NuGet.org’s modifications for reliable attestation.<!--excerpt_end-->

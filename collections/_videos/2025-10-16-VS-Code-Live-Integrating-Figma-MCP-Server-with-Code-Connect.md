@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Visual Studio Code YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SLNwkd3w"
 date: 2025-10-16 18:04:49 +00:00
-permalink: "/videos/2025-10-16-VS-Code-Live-Integrating-Figma-MCP-Server-with-Code-Connect.html"
+permalink: "/2025-10-16-VS-Code-Live-Integrating-Figma-MCP-Server-with-Code-Connect.html"
 categories: ["Coding"]
 tags: ["Code", "Code Connect", "Code Generation", "Coding", "Design Systems", "Design To Code", "Developer", "Developer Community", "Developer Productivity", "Developer Tools", "Development Workflow", "Figma", "Figma Integration", "Figma MCP Server", "Mcp", "Mcpserver", "Microsoft", "Software Developer", "Videos", "VS Code"]
 tags_normalized: ["code", "code connect", "code generation", "coding", "design systems", "design to code", "developer", "developer community", "developer productivity", "developer tools", "development workflow", "figma", "figma integration", "figma mcp server", "mcp", "mcpserver", "microsoft", "software developer", "videos", "vs code"]

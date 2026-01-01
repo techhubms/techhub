@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-09-09 16:00:00 +00:00
-permalink: "/community/2025-09-09-Bring-Your-Own-License-BYOL-Now-Available-for-JBoss-EAP-on-Azure-App-Service.html"
+permalink: "/2025-09-09-Bring-Your-Own-License-BYOL-Now-Available-for-JBoss-EAP-on-Azure-App-Service.html"
 categories: ["Azure"]
 tags: ["Application Hosting", "Azure", "Azure App Service", "Azure Red Hat OpenShift", "Azure VMs", "Bring Your Own License", "BYOL", "Cloud Migration", "Community", "Enterprise Java", "Java", "Java EE", "JBoss EAP", "Licensing Strategy", "Microsoft Azure", "Pay as You Go", "Red Hat"]
 tags_normalized: ["application hosting", "azure", "azure app service", "azure red hat openshift", "azure vms", "bring your own license", "byol", "cloud migration", "community", "enterprise java", "java", "java ee", "jboss eap", "licensing strategy", "microsoft azure", "pay as you go", "red hat"]

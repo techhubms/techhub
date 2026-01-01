@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Community"
 date: 2025-08-05 04:30:00 +00:00
-permalink: "/community/2025-08-05-Azure-Workbook-for-Monitoring-ACR-Token-Expiration-Dates.html"
+permalink: "/2025-08-05-Azure-Workbook-for-Monitoring-ACR-Token-Expiration-Dates.html"
 categories: ["Azure", "DevOps", "Security"]
 tags: ["ACR", "Authentication", "Automation", "Azure", "Azure Container Registry", "Azure Monitor Workbook", "Azure REST API", "Bash Scripting", "Community", "DevOps", "PowerShell", "Resource Graph", "Security", "Token Expiration", "Workbook Deployment"]
 tags_normalized: ["acr", "authentication", "automation", "azure", "azure container registry", "azure monitor workbook", "azure rest api", "bash scripting", "community", "devops", "powershell", "resource graph", "security", "token expiration", "workbook deployment"]

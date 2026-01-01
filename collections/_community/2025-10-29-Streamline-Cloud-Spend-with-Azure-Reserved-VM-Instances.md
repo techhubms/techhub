@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-10-29 17:26:23 +00:00
-permalink: "/community/2025-10-29-Streamline-Cloud-Spend-with-Azure-Reserved-VM-Instances.html"
+permalink: "/2025-10-29-Streamline-Cloud-Spend-with-Azure-Reserved-VM-Instances.html"
 categories: ["AI", "Azure"]
 tags: ["AI", "AI Infrastructure", "Azure", "Azure Advisor", "Azure Compute", "Azure Reserved VM Instances", "Batch Processing", "Cloud Cost Optimization", "Cloud Financial Management", "Community", "Cost Monitoring", "Deep Learning", "Generative AI", "GPU Workloads", "Instance Size Flexibility", "Microsoft Cost Management", "NC64as T4 V3", "Virtual Machines"]
 tags_normalized: ["ai", "ai infrastructure", "azure", "azure advisor", "azure compute", "azure reserved vm instances", "batch processing", "cloud cost optimization", "cloud financial management", "community", "cost monitoring", "deep learning", "generative ai", "gpu workloads", "instance size flexibility", "microsoft cost management", "nc64as t4 v3", "virtual machines"]

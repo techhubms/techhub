@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft News"
 feed_url: "https://news.microsoft.com/source/feed/"
 date: 2025-10-13 16:48:07 +00:00
-permalink: "/news/2025-10-13-Building-a-Security-First-Culture-at-Microsoft-Strategies-and-Best-Practices.html"
+permalink: "/2025-10-13-Building-a-Security-First-Culture-at-Microsoft-Strategies-and-Best-Practices.html"
 categories: ["Azure", "DevOps", "Security"]
 tags: ["AI", "AI Cyberthreats", "Azure", "Chief Information Security Officer", "Company News", "DevOps", "DevSecOps", "Employee Awareness", "Engineering Security", "Governance", "Identity Protection", "Incident Response", "Microsoft Security", "Microsoft Security Academy", "News", "Secure Future Initiative", "Security", "Security Culture", "Security Foundations", "Security Training", "Threat Intelligence", "Zero Trust"]
 tags_normalized: ["ai", "ai cyberthreats", "azure", "chief information security officer", "company news", "devops", "devsecops", "employee awareness", "engineering security", "governance", "identity protection", "incident response", "microsoft security", "microsoft security academy", "news", "secure future initiative", "security", "security culture", "security foundations", "security training", "threat intelligence", "zero trust"]

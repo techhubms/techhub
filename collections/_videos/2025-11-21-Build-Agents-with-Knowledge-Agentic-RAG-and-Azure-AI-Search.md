@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Events YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
 date: 2025-11-21 17:21:54 +00:00
-permalink: "/videos/2025-11-21-Build-Agents-with-Knowledge-Agentic-RAG-and-Azure-AI-Search.html"
+permalink: "/2025-11-21-Build-Agents-with-Knowledge-Agentic-RAG-and-Azure-AI-Search.html"
 categories: ["AI", "Azure"]
 tags: ["Agent Development", "AI", "Azure", "Azure AI Search", "Bing Integration", "Blob Storage", "Code Tutorial", "Expert Session", "Hybrid Search", "InnovatewithAzureAIappsandagents", "Knowledge Sources", "Microsoft Foundry", "Microsoft Ignite", "MSIgnite", "Query Planning", "RAG", "Retrieval Augmented Generation", "Semantic Ranker", "SharePoint Integration", "Videos"]
 tags_normalized: ["agent development", "ai", "azure", "azure ai search", "bing integration", "blob storage", "code tutorial", "expert session", "hybrid search", "innovatewithazureaiappsandagents", "knowledge sources", "microsoft foundry", "microsoft ignite", "msignite", "query planning", "rag", "retrieval augmented generation", "semantic ranker", "sharepoint integration", "videos"]

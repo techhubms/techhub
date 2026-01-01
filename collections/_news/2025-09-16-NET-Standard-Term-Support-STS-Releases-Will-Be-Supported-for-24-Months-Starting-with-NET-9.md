@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft .NET Blog"
 feed_url: "https://devblogs.microsoft.com/dotnet/feed/"
 date: 2025-09-16 17:00:00 +00:00
-permalink: "/news/2025-09-16-NET-Standard-Term-Support-STS-Releases-Will-Be-Supported-for-24-Months-Starting-with-NET-9.html"
+permalink: "/2025-09-16-NET-Standard-Term-Support-STS-Releases-Will-Be-Supported-for-24-Months-Starting-with-NET-9.html"
 categories: ["Coding"]
 tags: [".NET", ".NET 8", ".NET 9", "C#", "Coding", "Development Lifecycle", "Lifecycle", "Long Term Support", "LTS", "Maintenance & Updates", "Microsoft", "News", "OOB Releases", "Package Dependencies", "Release Management", "Standard Term Support", "STS", "Support", "Support Policy", "Upgrade Strategy"]
 tags_normalized: ["dotnet", "dotnet 8", "dotnet 9", "csharp", "coding", "development lifecycle", "lifecycle", "long term support", "lts", "maintenance and updates", "microsoft", "news", "oob releases", "package dependencies", "release management", "standard term support", "sts", "support", "support policy", "upgrade strategy"]

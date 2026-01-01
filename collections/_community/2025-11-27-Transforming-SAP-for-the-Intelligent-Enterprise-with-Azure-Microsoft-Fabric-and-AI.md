@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-11-27 15:51:55 +00:00
-permalink: "/community/2025-11-27-Transforming-SAP-for-the-Intelligent-Enterprise-with-Azure-Microsoft-Fabric-and-AI.html"
+permalink: "/2025-11-27-Transforming-SAP-for-the-Intelligent-Enterprise-with-Azure-Microsoft-Fabric-and-AI.html"
 categories: ["AI", "Azure", "ML", "Security"]
 tags: ["AI", "Azure", "Azure AD", "Azure API Management", "Azure Backup", "Azure Logic Apps", "Azure Machine Learning", "Azure Monitor", "Azure NetApp Files", "Azure OpenAI", "Cloud Adoption Framework", "Community", "Defender For Cloud", "Entra ID", "Event Grid", "ExpressRoute", "HA/DR", "Landing Zone", "Microsoft Fabric", "Microsoft Sentinel", "ML", "OneLake", "Premium SSD", "SAP On Azure", "Security", "Service Bus", "Ultra Disk", "Virtual Machines", "Zero Trust"]
 tags_normalized: ["ai", "azure", "azure ad", "azure api management", "azure backup", "azure logic apps", "azure machine learning", "azure monitor", "azure netapp files", "azure openai", "cloud adoption framework", "community", "defender for cloud", "entra id", "event grid", "expressroute", "haslashdr", "landing zone", "microsoft fabric", "microsoft sentinel", "ml", "onelake", "premium ssd", "sap on azure", "security", "service bus", "ultra disk", "virtual machines", "zero trust"]

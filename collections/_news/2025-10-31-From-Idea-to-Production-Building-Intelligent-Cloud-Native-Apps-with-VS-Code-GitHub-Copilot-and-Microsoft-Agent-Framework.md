@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Blog"
 feed_url: "https://devblogs.microsoft.com/feed"
 date: 2025-10-31 19:00:45 +00:00
-permalink: "/news/2025-10-31-From-Idea-to-Production-Building-Intelligent-Cloud-Native-Apps-with-VS-Code-GitHub-Copilot-and-Microsoft-Agent-Framework.html"
+permalink: "/2025-10-31-From-Idea-to-Production-Building-Intelligent-Cloud-Native-Apps-with-VS-Code-GitHub-Copilot-and-Microsoft-Agent-Framework.html"
 categories: ["AI", "Azure", "Coding", "DevOps", "GitHub Copilot"]
 tags: ["Agent Orchestration", "Agentic DevOps", "AI", "AI Toolkit", "Azure", "Azure AI Foundry", "Azure SRE Agent", "CI/CD", "Cloud Native", "Coding", "Developer Events", "DevOps", "GitHub Copilot", "GitHub Spec Kit", "Intelligent Applications", "Microsoft Agent Framework", "Microsoft For Developers", "Natural Language Programming", "News", "Prompt Engineering", "VS Code"]
 tags_normalized: ["agent orchestration", "agentic devops", "ai", "ai toolkit", "azure", "azure ai foundry", "azure sre agent", "cislashcd", "cloud native", "coding", "developer events", "devops", "github copilot", "github spec kit", "intelligent applications", "microsoft agent framework", "microsoft for developers", "natural language programming", "news", "prompt engineering", "vs code"]

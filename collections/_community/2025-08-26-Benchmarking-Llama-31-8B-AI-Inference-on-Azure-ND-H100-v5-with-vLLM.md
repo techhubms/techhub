@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-08-26 17:02:48 +00:00
-permalink: "/community/2025-08-26-Benchmarking-Llama-31-8B-AI-Inference-on-Azure-ND-H100-v5-with-vLLM.html"
+permalink: "/2025-08-26-Benchmarking-Llama-31-8B-AI-Inference-on-Azure-ND-H100-v5-with-vLLM.html"
 categories: ["AI", "Azure", "ML"]
 tags: ["AI", "AI Inference", "Azure", "Azure ND H100 V5", "Community", "Dynamo Inference Framework", "FP8 Quantization", "GPU Deployment", "HuggingFace", "KV Cache", "Large Language Models", "Llama 3.1 8B", "ML", "PagedAttention", "Performance Benchmarking", "Python", "Tensor Parallelism", "Token Throughput", "Vllm"]
 tags_normalized: ["ai", "ai inference", "azure", "azure nd h100 v5", "community", "dynamo inference framework", "fp8 quantization", "gpu deployment", "huggingface", "kv cache", "large language models", "llama 3dot1 8b", "ml", "pagedattention", "performance benchmarking", "python", "tensor parallelism", "token throughput", "vllm"]

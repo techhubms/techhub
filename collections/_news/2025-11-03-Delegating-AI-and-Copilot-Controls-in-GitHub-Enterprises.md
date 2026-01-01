@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/changelog/feed/"
 date: 2025-11-03 20:55:24 +00:00
-permalink: "/news/2025-11-03-Delegating-AI-and-Copilot-Controls-in-GitHub-Enterprises.html"
+permalink: "/2025-11-03-Delegating-AI-and-Copilot-Controls-in-GitHub-Enterprises.html"
 categories: ["AI", "GitHub Copilot"]
 tags: ["Agent Control Plane", "AI", "AI Governance", "AI Policy Management", "Audit Logging", "Copilot", "Copilot Management", "Custom Roles", "Enterprise Administration", "Enterprise Management Tools", "Enterprise Roles", "Fine Grained Permissions", "GitHub Copilot", "GitHub Enterprise", "News", "Policy Delegation"]
 tags_normalized: ["agent control plane", "ai", "ai governance", "ai policy management", "audit logging", "copilot", "copilot management", "custom roles", "enterprise administration", "enterprise management tools", "enterprise roles", "fine grained permissions", "github copilot", "github enterprise", "news", "policy delegation"]

@@ -9,10 +9,10 @@ viewing_mode: "external"
 feed_name: "Dellenny's Blog"
 feed_url: "https://dellenny.com/feed/"
 date: 2025-10-04 09:14:50 +00:00
-permalink: "/blogs/2025-10-04-The-Hybrid-Cloud-Playbook-Mastering-Azure-Stack.html"
+permalink: "/2025-10-04-The-Hybrid-Cloud-Playbook-Mastering-Azure-Stack.html"
 categories: ["Azure", "Coding", "DevOps", "Security"]
-tags: ["Azure", "Azure Active Directory", "Azure Blueprints", "Azure DevOps", "Azure Monitor", "Azure Policy", "Azure Resource Manager", "Azure Stack", "Azure Stack Edge", "Azure Stack HCI", "Backup", "Bicep", "Coding", "Containers", "DevOps", "Disaster Recovery", "Edge Computing", "ExpressRoute", "Hybrid Cloud", "Kubernetes", "Log Analytics", "Blogs", "Security", "Terraform", "Virtual Machines", "Zero Trust"]
-tags_normalized: ["azure", "azure active directory", "azure blueprints", "azure devops", "azure monitor", "azure policy", "azure resource manager", "azure stack", "azure stack edge", "azure stack hci", "backup", "bicep", "coding", "containers", "devops", "disaster recovery", "edge computing", "expressroute", "hybrid cloud", "kubernetes", "log analytics", "blogs", "security", "terraform", "virtual machines", "zero trust"]
+tags: ["Azure", "Azure Active Directory", "Azure Blueprints", "Azure DevOps", "Azure Monitor", "Azure Policy", "Azure Resource Manager", "Azure Stack", "Azure Stack Edge", "Azure Stack HCI", "Backup", "Bicep", "Blogs", "Coding", "Containers", "DevOps", "Disaster Recovery", "Edge Computing", "ExpressRoute", "Hybrid Cloud", "Kubernetes", "Log Analytics", "Security", "Terraform", "Virtual Machines", "Zero Trust"]
+tags_normalized: ["azure", "azure active directory", "azure blueprints", "azure devops", "azure monitor", "azure policy", "azure resource manager", "azure stack", "azure stack edge", "azure stack hci", "backup", "bicep", "blogs", "coding", "containers", "devops", "disaster recovery", "edge computing", "expressroute", "hybrid cloud", "kubernetes", "log analytics", "security", "terraform", "virtual machines", "zero trust"]
 ---
 
 Dellenny shares actionable strategies and best practices for mastering hybrid cloud environments with Azure Stack, highlighting governance, DevOps, security, and workload management.<!--excerpt_end-->

@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft News"
 feed_url: "https://news.microsoft.com/source/feed/"
 date: 2025-11-06 17:33:18 +00:00
-permalink: "/news/2025-11-06-Microsoft-Elevate-UAE-Training-Over-100000-Students-and-Educators-in-AI-Skills.html"
+permalink: "/2025-11-06-Microsoft-Elevate-UAE-Training-Over-100000-Students-and-Educators-in-AI-Skills.html"
 categories: ["AI"]
 tags: ["AI", "AI Adoption", "AI Fundamentals", "AI Skills Training", "Company News", "Copilot Workshops", "Digital Transformation", "Education Technology", "GEMS Education", "Government Training", "Human Capital Development", "INJAZ UAE", "JAHIZ Platform", "Leadership Development", "MBZUAI", "Microsoft Elevate", "News", "On The Issues", "UAE"]
 tags_normalized: ["ai", "ai adoption", "ai fundamentals", "ai skills training", "company news", "copilot workshops", "digital transformation", "education technology", "gems education", "government training", "human capital development", "injaz uae", "jahiz platform", "leadership development", "mbzuai", "microsoft elevate", "news", "on the issues", "uae"]

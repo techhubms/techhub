@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/feed/"
 date: 2025-11-07 16:00:00 +00:00
-permalink: "/news/2025-11-07-Developer-Workflows-in-2025-Insights-from-986-Million-Code-Pushes.html"
+permalink: "/2025-11-07-Developer-Workflows-in-2025-Insights-from-986-Million-Code-Pushes.html"
 categories: ["DevOps"]
 tags: ["Agentic Workflows", "Automation", "CI/CD", "Continuous Deployment", "Continuous Integration", "Developer Productivity", "Developer Workflows", "DevOps", "Engineering Practices", "Feature Flags", "GitHub", "GitHub Actions", "Modern Developer Practices", "News", "News & Insights", "Octoverse", "Pull Requests", "Team Communication", "Testing"]
 tags_normalized: ["agentic workflows", "automation", "cislashcd", "continuous deployment", "continuous integration", "developer productivity", "developer workflows", "devops", "engineering practices", "feature flags", "github", "github actions", "modern developer practices", "news", "news and insights", "octoverse", "pull requests", "team communication", "testing"]

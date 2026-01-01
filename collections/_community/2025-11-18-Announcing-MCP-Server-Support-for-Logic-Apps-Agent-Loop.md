@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-11-18 18:35:43 +00:00
-permalink: "/community/2025-11-18-Announcing-MCP-Server-Support-for-Logic-Apps-Agent-Loop.html"
+permalink: "/2025-11-18-Announcing-MCP-Server-Support-for-Logic-Apps-Agent-Loop.html"
 categories: ["AI", "Azure"]
 tags: ["Agent Loop", "AI", "Azure", "Azure Logic Apps Standard", "Community", "Connector Driven Architecture", "Custom Connectors", "Enterprise Integration", "Intelligent Workflows", "Managed Connectors", "MCP", "MCP Server", "On Behalf Of Authentication", "OpenAPI", "Secure Authentication", "Tool Extensibility"]
 tags_normalized: ["agent loop", "ai", "azure", "azure logic apps standard", "community", "connector driven architecture", "custom connectors", "enterprise integration", "intelligent workflows", "managed connectors", "mcp", "mcp server", "on behalf of authentication", "openapi", "secure authentication", "tool extensibility"]

@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft News"
 feed_url: "https://news.microsoft.com/source/feed/"
 date: 2025-12-01 14:30:17 +00:00
-permalink: "/news/2025-12-01-National-4-H-Council-and-Microsoft-Extend-Partnership-to-Expand-AI-Education-for-Rural-Youth.html"
+permalink: "/2025-12-01-National-4-H-Council-and-Microsoft-Extend-Partnership-to-Expand-AI-Education-for-Rural-Youth.html"
 categories: ["AI"]
 tags: ["4 H Tech Changemakers", "Agriculture Technology", "AI", "AI Education", "AI Ethics", "AI Foundations Curriculum", "Company News", "DeGLS", "Digital Skills", "Gray Leaf Spot", "Land Grant Universities", "Microsoft", "Minecraft Education", "News", "Presidential AI Challenge", "Rural Communities", "STEM", "Train The Trainer", "Youth Development"]
 tags_normalized: ["4 h tech changemakers", "agriculture technology", "ai", "ai education", "ai ethics", "ai foundations curriculum", "company news", "degls", "digital skills", "gray leaf spot", "land grant universities", "microsoft", "minecraft education", "news", "presidential ai challenge", "rural communities", "stem", "train the trainer", "youth development"]

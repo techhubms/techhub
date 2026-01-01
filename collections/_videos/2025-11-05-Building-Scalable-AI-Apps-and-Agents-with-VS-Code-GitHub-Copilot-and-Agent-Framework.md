@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "GitHub YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ"
 date: 2025-11-05 15:01:39 +00:00
-permalink: "/videos/2025-11-05-Building-Scalable-AI-Apps-and-Agents-with-VS-Code-GitHub-Copilot-and-Agent-Framework.html"
+permalink: "/2025-11-05-Building-Scalable-AI-Apps-and-Agents-with-VS-Code-GitHub-Copilot-and-Agent-Framework.html"
 categories: ["AI", "Azure", "Coding", "DevOps", "GitHub Copilot"]
 tags: ["Agent Framework", "AI", "AI Toolkit", "Azure", "Azure AI Foundry", "Coding", "Demo", "DevOps", "GitHub", "GitHub Copilot", "GitHub Universe", "GitHubUniverse", "Incident Response", "Microsoft", "Multi Agent Workflows", "Observability", "Scalable Applications", "Spec Driven Development", "Spec Kit", "Tracing", "Videos", "VS Code"]
 tags_normalized: ["agent framework", "ai", "ai toolkit", "azure", "azure ai foundry", "coding", "demo", "devops", "github", "github copilot", "github universe", "githubuniverse", "incident response", "microsoft", "multi agent workflows", "observability", "scalable applications", "spec driven development", "spec kit", "tracing", "videos", "vs code"]

@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-11-17 06:10:49 +00:00
-permalink: "/community/2025-11-17-Automating-Microsoft-Fabric-Deployments-with-Azure-DevOps-and-Python.html"
+permalink: "/2025-11-17-Automating-Microsoft-Fabric-Deployments-with-Azure-DevOps-and-Python.html"
 categories: ["Azure", "Coding", "DevOps", "ML"]
 tags: ["Authentication", "Azure", "Azure DevOps", "CI/CD Pipeline", "Coding", "Community", "Configuration Files", "Data Pipeline", "DevOps", "Environment Strategy", "Fabric Cicd", "Lakehouse", "Microsoft Fabric", "ML", "Notebook Deployment", "Parameter Management", "Pipeline Orchestration", "Python", "Report Automation", "Semantic Model", "Service Principal", "Workspace Configuration"]
 tags_normalized: ["authentication", "azure", "azure devops", "cislashcd pipeline", "coding", "community", "configuration files", "data pipeline", "devops", "environment strategy", "fabric cicd", "lakehouse", "microsoft fabric", "ml", "notebook deployment", "parameter management", "pipeline orchestration", "python", "report automation", "semantic model", "service principal", "workspace configuration"]

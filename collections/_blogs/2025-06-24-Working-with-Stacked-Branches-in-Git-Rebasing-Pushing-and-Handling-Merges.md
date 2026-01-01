@@ -9,10 +9,10 @@ viewing_mode: "external"
 feed_name: "Andrew Lock's Blog"
 feed_url: "https://andrewlock.net/rss.xml"
 date: 2025-06-24 09:00:00 +00:00
-permalink: "/blogs/2025-06-24-Working-with-Stacked-Branches-in-Git-Rebasing-Pushing-and-Handling-Merges.html"
+permalink: "/2025-06-24-Working-with-Stacked-Branches-in-Git-Rebasing-Pushing-and-Handling-Merges.html"
 categories: ["DevOps"]
-tags: ["Branch Management", "Continuous Integration", "DevOps", "Feature Branches", "Git", "Git Alias", "Merge Conflicts", "Blogs", "PR Workflow", "Push Stack", "Rebase", "Stacked Branches", "Update Refs"]
-tags_normalized: ["branch management", "continuous integration", "devops", "feature branches", "git", "git alias", "merge conflicts", "blogs", "pr workflow", "push stack", "rebase", "stacked branches", "update refs"]
+tags: ["Blogs", "Branch Management", "Continuous Integration", "DevOps", "Feature Branches", "Git", "Git Alias", "Merge Conflicts", "PR Workflow", "Push Stack", "Rebase", "Stacked Branches", "Update Refs"]
+tags_normalized: ["blogs", "branch management", "continuous integration", "devops", "feature branches", "git", "git alias", "merge conflicts", "pr workflow", "push stack", "rebase", "stacked branches", "update refs"]
 ---
 
 In this detailed post, Andrew Lock discusses workflows for managing stacked branches in Git. He provides advanced advice on rebasing, merging, and pushing branch stacks to streamline feature development and improve code review processes.<!--excerpt_end-->

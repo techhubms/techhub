@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft DevBlog"
 feed_url: "https://devblogs.microsoft.com/all-things-azure/feed/"
 date: 2025-05-06 09:15:41 +00:00
-permalink: "/news/2025-05-06-Reinventing-Legacy-App-Modernization-with-Crowdbotics-AI-Native-Platform-on-Azure.html"
+permalink: "/2025-05-06-Reinventing-Legacy-App-Modernization-with-Crowdbotics-AI-Native-Platform-on-Azure.html"
 categories: ["AI", "Azure"]
 tags: ["Agents", "AI", "AI Apps", "AI Native Platform", "AKS", "App Development", "Application Development", "Azure", "Azure App Service", "Azure Functions", "Azure OpenAI Service", "COBOL", "Crowdbotics", "Developer Productivity", "Documentation Automation", "Functional Decomposition", "Legacy Modernization", "Mainframe Migration", "News", "Requirements Generation", "Software Architecture"]
 tags_normalized: ["agents", "ai", "ai apps", "ai native platform", "aks", "app development", "application development", "azure", "azure app service", "azure functions", "azure openai service", "cobol", "crowdbotics", "developer productivity", "documentation automation", "functional decomposition", "legacy modernization", "mainframe migration", "news", "requirements generation", "software architecture"]

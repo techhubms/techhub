@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/changelog/feed/"
 date: 2025-09-03 08:41:54 +00:00
-permalink: "/news/2025-09-03-CodeQL-2224-Adds-Go-125-Support-and-Security-Enhancements.html"
+permalink: "/2025-09-03-CodeQL-2224-Adds-Go-125-Support-and-Security-Enhancements.html"
 categories: ["DevOps", "Security"]
 tags: ["C++", "Code Scanning", "CodeQL", "DevOps", "GitHub", "Go", "Java", "JavaScript", "Kotlin", "News", "Rust", "Secure Development", "Security", "SQL Injection", "Static Analysis", "TypeScript", "Vulnerability Detection"]
 tags_normalized: ["cplusplus", "code scanning", "codeql", "devops", "github", "go", "java", "javascript", "kotlin", "news", "rust", "secure development", "security", "sql injection", "static analysis", "typescript", "vulnerability detection"]

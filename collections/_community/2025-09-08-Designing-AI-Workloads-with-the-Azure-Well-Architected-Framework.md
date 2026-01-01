@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-09-08 23:35:59 +00:00
-permalink: "/community/2025-09-08-Designing-AI-Workloads-with-the-Azure-Well-Architected-Framework.html"
+permalink: "/2025-09-08-Designing-AI-Workloads-with-the-Azure-Well-Architected-Framework.html"
 categories: ["AI", "Azure", "DevOps", "ML", "Security"]
 tags: ["AI", "AI Workloads", "AKS", "Application Insights", "Azure", "Azure Machine Learning", "Azure Monitor", "Azure Well Architected Framework", "CI/CD", "Cloud Architecture", "Community", "Cost Optimization", "Data Security", "DevOps", "ML", "MLOps", "Model Decay", "Model Explainability", "Operational Excellence", "Performance Optimization", "Scalable AI Solutions", "Security"]
 tags_normalized: ["ai", "ai workloads", "aks", "application insights", "azure", "azure machine learning", "azure monitor", "azure well architected framework", "cislashcd", "cloud architecture", "community", "cost optimization", "data security", "devops", "ml", "mlops", "model decay", "model explainability", "operational excellence", "performance optimization", "scalable ai solutions", "security"]

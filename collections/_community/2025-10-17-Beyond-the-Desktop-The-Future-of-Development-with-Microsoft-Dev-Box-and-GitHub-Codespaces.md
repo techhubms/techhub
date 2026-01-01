@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-10-17 17:58:05 +00:00
-permalink: "/community/2025-10-17-Beyond-the-Desktop-The-Future-of-Development-with-Microsoft-Dev-Box-and-GitHub-Codespaces.html"
+permalink: "/2025-10-17-Beyond-the-Desktop-The-Future-of-Development-with-Microsoft-Dev-Box-and-GitHub-Codespaces.html"
 categories: ["Azure", "Coding", "DevOps"]
 tags: ["Azure", "Best Practices", "CI/CD", "Cloud Workstations", "Coding", "Community", "Devcontainer", "Developer Platform", "DevOps", "Docker", "Environment Automation", "FastAPI", "GitHub Codespaces", "Hybrid Development", "Infrastructure", "Linux Development", "Microservices", "Microsoft Dev Box", "Onboarding", "Productivity", "React", "VS Code", "Windows Development"]
 tags_normalized: ["azure", "best practices", "cislashcd", "cloud workstations", "coding", "community", "devcontainer", "developer platform", "devops", "docker", "environment automation", "fastapi", "github codespaces", "hybrid development", "infrastructure", "linux development", "microservices", "microsoft dev box", "onboarding", "productivity", "react", "vs code", "windows development"]

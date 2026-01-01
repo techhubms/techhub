@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Fabric Blog"
 feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
 date: 2025-11-18 08:00:00 +00:00
-permalink: "/news/2025-11-18-Integrating-SAP-Business-Data-Cloud-with-Microsoft-Fabric-Accelerating-AI-and-Analytics.html"
+permalink: "/2025-11-18-Integrating-SAP-Business-Data-Cloud-with-Microsoft-Fabric-Accelerating-AI-and-Analytics.html"
 categories: ["AI", "Azure", "ML"]
 tags: ["AI", "AI Development", "Analytics", "Azure", "Azure AI Foundry", "Bi Directional Data Sharing", "Copilot in Power BI", "Copilot Studio", "Data Engineering", "Data Integration", "Data Warehouse", "Enterprise Data", "Intelligent Agents", "Microsoft Fabric", "ML", "News", "OneLake", "Power BI", "SAP Business Data Cloud"]
 tags_normalized: ["ai", "ai development", "analytics", "azure", "azure ai foundry", "bi directional data sharing", "copilot in power bi", "copilot studio", "data engineering", "data integration", "data warehouse", "enterprise data", "intelligent agents", "microsoft fabric", "ml", "news", "onelake", "power bi", "sap business data cloud"]

@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Fabric Blog"
 feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
 date: 2025-11-21 09:00:00 +00:00
-permalink: "/news/2025-11-21-Microsoft-Fabric-FabCon-Global-Hackathon-AI-Innovation-Winners-Announced.html"
+permalink: "/2025-11-21-Microsoft-Fabric-FabCon-Global-Hackathon-AI-Innovation-Winners-Announced.html"
 categories: ["AI", "Azure", "ML"]
 tags: ["AI", "AI Applications", "Azure", "Azure Databases", "Azure OpenAI", "Copilot Studio", "Data Agents", "Data Analytics", "Enterprise Migration", "Eventstream", "Governance", "Hackathon", "IoT", "Machine Learning", "Microsoft Fabric", "ML", "News", "Open Mirroring", "Power BI", "Prompt Engineering", "Python", "RAG", "Real Time Intelligence"]
 tags_normalized: ["ai", "ai applications", "azure", "azure databases", "azure openai", "copilot studio", "data agents", "data analytics", "enterprise migration", "eventstream", "governance", "hackathon", "iot", "machine learning", "microsoft fabric", "ml", "news", "open mirroring", "power bi", "prompt engineering", "python", "rag", "real time intelligence"]

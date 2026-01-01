@@ -6,7 +6,7 @@ categories: ["DevOps", "Azure", "ML", "AI", "Coding"]
 date: 2019-05-01 00:00:00 +00:00
 author: "Xebia"
 viewing_mode: "external"
-permalink: "/community/2019-05-01-XPRT-Magazine-08.html"
+permalink: "/2019-05-01-XPRT-Magazine-08.html"
 excerpt_separator: <!--excerpt_end-->
 tags: ["AI", "APIs", "Automation", "Azure", "Azure Service Bus", "Chaos Engineering", "Cloud", "Coding", "Community", "Data Science", "DevOps", "Event Sourcing", "Kubernetes", "Magazines", "ML", "Productivity", "Serverless", "Symbol Management", "Unit Testing", "Xamarin"]
 tags_normalized: ["ai", "apis", "automation", "azure", "azure service bus", "chaos engineering", "cloud", "coding", "community", "data science", "devops", "event sourcing", "kubernetes", "magazines", "ml", "productivity", "serverless", "symbol management", "unit testing", "xamarin"]

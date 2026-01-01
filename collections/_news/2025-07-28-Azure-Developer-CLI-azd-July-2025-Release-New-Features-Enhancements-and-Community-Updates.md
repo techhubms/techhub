@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft DevBlog"
 feed_url: "https://devblogs.microsoft.com/azure-sdk/feed/"
 date: 2025-07-28 20:07:42 +00:00
-permalink: "/news/2025-07-28-Azure-Developer-CLI-azd-July-2025-Release-New-Features-Enhancements-and-Community-Updates.html"
+permalink: "/2025-07-28-Azure-Developer-CLI-azd-July-2025-Release-New-Features-Enhancements-and-Community-Updates.html"
 categories: ["Azure", "Coding", "DevOps"]
 tags: [".NET", ".NET Aspire", "Azd", "Azure", "Azure Container Apps", "Azure Developer CLI", "Azure Functions", "Azure SDK", "Bicep", "CI/CD", "Codespaces", "Coding", "Deployment Packaging", "DevOps", "Docker", "Environment Management", "Event Driven Architecture", "Extension Framework", "GitHub Codespaces", "Java", "JavaScript", "Kubernetes", "News", "OIDC Authentication", "Project Validation", "Python", "Remote Build", "Template Gallery", "Terraform", "Typescript", "VS Code"]
 tags_normalized: ["dotnet", "dotnet aspire", "azd", "azure", "azure container apps", "azure developer cli", "azure functions", "azure sdk", "bicep", "cislashcd", "codespaces", "coding", "deployment packaging", "devops", "docker", "environment management", "event driven architecture", "extension framework", "github codespaces", "java", "javascript", "kubernetes", "news", "oidc authentication", "project validation", "python", "remote build", "template gallery", "terraform", "typescript", "vs code"]

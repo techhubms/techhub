@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft DevBlog"
 feed_url: "https://devblogs.microsoft.com/azure-sdk/feed/"
 date: 2025-04-24 17:20:06 +00:00
-permalink: "/news/2025-04-24-Practical-Insights-on-Using-Azure-Developer-CLI-azd-for-Migration-Projects.html"
+permalink: "/2025-04-24-Practical-Insights-on-Using-Azure-Developer-CLI-azd-for-Migration-Projects.html"
 categories: ["Azure", "Coding", "DevOps"]
 tags: [".NET", "Azd", "Azure", "Azure Container Apps", "Azure Developer CLI", "Azure SDK", "Bicep", "Coding", "DevOps", "IaC", "News"]
 tags_normalized: ["dotnet", "azd", "azure", "azure container apps", "azure developer cli", "azure sdk", "bicep", "coding", "devops", "iac", "news"]

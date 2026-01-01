@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft News"
 feed_url: "https://news.microsoft.com/source/feed/"
 date: 2025-11-11 15:22:57 +00:00
-permalink: "/news/2025-11-11-How-Frontier-Firms-Drive-Business-Transformation-with-Microsoft-AI.html"
+permalink: "/2025-11-11-How-Frontier-Firms-Drive-Business-Transformation-with-Microsoft-AI.html"
 categories: ["AI", "Azure"]
 tags: ["Agentic AI", "AI", "AI Budgets", "AI Transformation", "Azure", "Azure AI Foundry", "Azure OpenAI", "Business Transformation", "Company News", "Copilot Studio", "Custom AI Solutions", "Digital Factory", "Financial Services", "Frontier Firms", "Governance", "IDC Study", "Industry Specific AI", "Manufacturing", "Microsoft AI", "News", "Retail AI"]
 tags_normalized: ["agentic ai", "ai", "ai budgets", "ai transformation", "azure", "azure ai foundry", "azure openai", "business transformation", "company news", "copilot studio", "custom ai solutions", "digital factory", "financial services", "frontier firms", "governance", "idc study", "industry specific ai", "manufacturing", "microsoft ai", "news", "retail ai"]

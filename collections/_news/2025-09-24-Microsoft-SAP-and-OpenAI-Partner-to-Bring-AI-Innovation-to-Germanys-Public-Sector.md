@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft News"
 feed_url: "https://news.microsoft.com/source/feed/"
 date: 2025-09-24 16:29:50 +00:00
-permalink: "/news/2025-09-24-Microsoft-SAP-and-OpenAI-Partner-to-Bring-AI-Innovation-to-Germanys-Public-Sector.html"
+permalink: "/2025-09-24-Microsoft-SAP-and-OpenAI-Partner-to-Bring-AI-Innovation-to-Germanys-Public-Sector.html"
 categories: ["AI", "Azure", "Security"]
 tags: ["AI", "AI Innovation", "Azure", "Azure AI", "Azure Security", "Cloud Computing", "Company News", "Data Sovereignty", "Enterprise Collaboration", "Germany", "Legal Compliance", "LinkedIn Post", "Microsoft Azure", "News", "OpenAI", "Partnership", "Privacy Compliance", "Public Sector", "Responsible AI", "SAP", "Security", "Security Standards"]
 tags_normalized: ["ai", "ai innovation", "azure", "azure ai", "azure security", "cloud computing", "company news", "data sovereignty", "enterprise collaboration", "germany", "legal compliance", "linkedin post", "microsoft azure", "news", "openai", "partnership", "privacy compliance", "public sector", "responsible ai", "sap", "security", "security standards"]

@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/changelog/feed/"
 date: 2025-09-01 16:00:30 +00:00
-permalink: "/news/2025-09-01-GitHub-GraphQL-API-Resource-Limits-Introduced.html"
+permalink: "/2025-09-01-GitHub-GraphQL-API-Resource-Limits-Introduced.html"
 categories: ["DevOps"]
 tags: ["API Best Practices", "API Design", "API Resource Limits", "Developer Integrations", "DevOps", "Error Handling", "GitHub", "GraphQL API", "News", "Partial Responses", "Query Optimization", "Rate Limiting"]
 tags_normalized: ["api best practices", "api design", "api resource limits", "developer integrations", "devops", "error handling", "github", "graphql api", "news", "partial responses", "query optimization", "rate limiting"]

@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The Azure Blog"
 feed_url: "https://azure.microsoft.com/en-us/blog/feed/"
 date: 2025-07-07 15:00:00 +00:00
-permalink: "/news/2025-07-07-Introducing-Azure-Accelerate-Expert-Support-and-Investments-for-Your-Cloud-and-AI-Transformation.html"
+permalink: "/2025-07-07-Introducing-Azure-Accelerate-Expert-Support-and-Investments-for-Your-Cloud-and-AI-Transformation.html"
 categories: ["AI", "Azure"]
 tags: ["AI", "AI + Machine Learning", "Azure", "Azure Accelerate", "Azure AI Search", "Azure Essentials", "Azure Innovate", "Azure Migrate", "Azure OpenAI", "Azure Well Architected Framework", "Cloud Accelerate Factory", "Cloud Transformation", "Customer Success", "Data Modernization", "Expert Support", "Funding", "Management And Governance", "Microsoft Partners", "Migration", "News"]
 tags_normalized: ["ai", "ai plus machine learning", "azure", "azure accelerate", "azure ai search", "azure essentials", "azure innovate", "azure migrate", "azure openai", "azure well architected framework", "cloud accelerate factory", "cloud transformation", "customer success", "data modernization", "expert support", "funding", "management and governance", "microsoft partners", "migration", "news"]

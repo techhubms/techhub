@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Learn Microsoft AI Youtube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCQf_yRJpsfyEiWWpt1MZ6vA"
 date: 2025-06-06 08:34:23 +00:00
-permalink: "/videos/2025-06-06-Agent-Orchestration-Strongly-Typed-Inputs-and-Results-in-Semantic-Kernel.html"
+permalink: "/2025-06-06-Agent-Orchestration-Strongly-Typed-Inputs-and-Results-in-Semantic-Kernel.html"
 categories: ["AI", "Coding"]
 tags: ["Agent Orchestration", "AI", "AI Agent Workflow", "AI Development", "AI Orchestration", "C#", "Code Robustness", "Coding", "Custom Classes", "InputTransform", "Microsoft AI", "Modular Architecture", "ResultTransform", "Semantic Kernel", "Strongly Typed Models", "Structured Data", "Type Safe AI", "Videos"]
 tags_normalized: ["agent orchestration", "ai", "ai agent workflow", "ai development", "ai orchestration", "csharp", "code robustness", "coding", "custom classes", "inputtransform", "microsoft ai", "modular architecture", "resulttransform", "semantic kernel", "strongly typed models", "structured data", "type safe ai", "videos"]

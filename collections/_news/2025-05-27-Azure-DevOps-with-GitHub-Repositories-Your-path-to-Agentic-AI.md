@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft DevBlog"
 feed_url: "https://devblogs.microsoft.com/devops/feed/"
 date: 2025-05-27 19:38:19 +00:00
-permalink: "/news/2025-05-27-Azure-DevOps-with-GitHub-Repositories-Your-path-to-Agentic-AI.html"
+permalink: "/2025-05-27-Azure-DevOps-with-GitHub-Repositories-Your-path-to-Agentic-AI.html"
 categories: ["AI", "Azure", "DevOps", "GitHub Copilot"]
 tags: ["Agentic AI", "AI", "AI Assistant", "Azure", "Azure & Cloud", "Azure DevOps", "Bug Fixing", "DevOps", "DevOps Integration", "Feature Implementation", "GitHub Copilot", "GitHub Repositories", "News", "Pull Requests", "Software Development Lifecycle"]
 tags_normalized: ["agentic ai", "ai", "ai assistant", "azure", "azure and cloud", "azure devops", "bug fixing", "devops", "devops integration", "feature implementation", "github copilot", "github repositories", "news", "pull requests", "software development lifecycle"]

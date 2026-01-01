@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Visual Studio Code YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SLNwkd3w"
 date: 2025-09-22 14:00:26 +00:00
-permalink: "/videos/2025-09-22-Use-Copilot-and-MCP-to-Query-Microsoft-Learn-Docs.html"
+permalink: "/2025-09-22-Use-Copilot-and-MCP-to-Query-Microsoft-Learn-Docs.html"
 categories: ["AI", "Coding", "GitHub Copilot"]
 tags: ["AI", "API Integration", "Coding", "Demo", "Developer Community", "Developer Tools", "Documentation Query", "GitHub Copilot", "Machine Learning", "MCP", "Microsoft", "Microsoft Docs", "Microsoft Learn", "Prompt Driven Development", "Promptdrivendevelopment", "Python", "Python Client", "Videos", "VS Code"]
 tags_normalized: ["ai", "api integration", "coding", "demo", "developer community", "developer tools", "documentation query", "github copilot", "machine learning", "mcp", "microsoft", "microsoft docs", "microsoft learn", "prompt driven development", "promptdrivendevelopment", "python", "python client", "videos", "vs code"]

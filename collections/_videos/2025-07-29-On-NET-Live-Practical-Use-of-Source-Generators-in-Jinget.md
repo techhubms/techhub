@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "DotNet YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw"
 date: 2025-07-29 05:04:52 +00:00
-permalink: "/videos/2025-07-29-On-NET-Live-Practical-Use-of-Source-Generators-in-Jinget.html"
+permalink: "/2025-07-29-On-NET-Live-Practical-Use-of-Source-Generators-in-Jinget.html"
 categories: ["Coding"]
 tags: [".NET", ".NET 5", "Boilerplate Reduction", "Coding", "Compile Time Code Generation", "Demo", "Developer Community", "Developer Productivity", "Dotnetdeveloper", "Framework Design", "Jinget", "Microsoft", "Software Developer", "Software Development", "Source Generators", "Sourcegenerators", "Videos"]
 tags_normalized: ["dotnet", "dotnet 5", "boilerplate reduction", "coding", "compile time code generation", "demo", "developer community", "developer productivity", "dotnetdeveloper", "framework design", "jinget", "microsoft", "software developer", "software development", "source generators", "sourcegenerators", "videos"]

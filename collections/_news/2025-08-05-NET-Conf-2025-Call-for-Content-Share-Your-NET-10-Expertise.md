@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft .NET Blog"
 feed_url: "https://devblogs.microsoft.com/dotnet/feed/"
 date: 2025-08-05 16:00:00 +00:00
-permalink: "/news/2025-08-05-NET-Conf-2025-Call-for-Content-Share-Your-NET-10-Expertise.html"
+permalink: "/2025-08-05-NET-Conf-2025-Call-for-Content-Share-Your-NET-10-Expertise.html"
 categories: ["AI", "Coding", "DevOps"]
 tags: [".NET", ".NET 10", ".NET Conf", "AI", "Blazor", "Cloud", "Coding", "Conference", "Developers", "DevOps", "IoT", "Machine Learning", "MAUI", "Mobile Apps", "News", "Open Source", "Productivity", "Session Proposal", "Speakers", "Virtual Event", "Web"]
 tags_normalized: ["dotnet", "dotnet 10", "dotnet conf", "ai", "blazor", "cloud", "coding", "conference", "developers", "devops", "iot", "machine learning", "maui", "mobile apps", "news", "open source", "productivity", "session proposal", "speakers", "virtual event", "web"]

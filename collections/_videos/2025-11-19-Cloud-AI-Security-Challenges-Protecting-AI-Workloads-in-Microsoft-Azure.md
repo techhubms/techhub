@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Events YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
 date: 2025-11-19 12:09:27 +00:00
-permalink: "/videos/2025-11-19-Cloud-AI-Security-Challenges-Protecting-AI-Workloads-in-Microsoft-Azure.html"
+permalink: "/2025-11-19-Cloud-AI-Security-Challenges-Protecting-AI-Workloads-in-Microsoft-Azure.html"
 categories: ["AI", "Azure", "Security"]
 tags: ["AI", "AI Workloads", "Application Level Access Control", "Azure", "Check Point CloudGuard", "Cloud AI Security", "Cloud Security", "CNAPP Integration", "Compliance", "East West Traffic", "Encrypted Communication", "Firewall Protection", "Gen AI APIs", "LLM Security", "Microsoft Azure", "Microsoft Ignite", "MicrosoftAICloudPartnerProgram", "MSIgnite", "Network Security", "SD WAN", "Security", "Security Architecture", "Videos", "Virtual WAN", "VPN", "WAF"]
 tags_normalized: ["ai", "ai workloads", "application level access control", "azure", "check point cloudguard", "cloud ai security", "cloud security", "cnapp integration", "compliance", "east west traffic", "encrypted communication", "firewall protection", "gen ai apis", "llm security", "microsoft azure", "microsoft ignite", "microsoftaicloudpartnerprogram", "msignite", "network security", "sd wan", "security", "security architecture", "videos", "virtual wan", "vpn", "waf"]

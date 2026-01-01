@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Fabric Blog"
 feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
 date: 2025-12-01 09:00:00 +00:00
-permalink: "/news/2025-12-01-Securely-Access-VPC-Protected-Amazon-S3-Buckets-in-Microsoft-Fabric-Using-Entra-Integration.html"
+permalink: "/2025-12-01-Securely-Access-VPC-Protected-Amazon-S3-Buckets-in-Microsoft-Fabric-Using-Entra-Integration.html"
 categories: ["Azure", "ML", "Security"]
 tags: ["Amazon S3", "AWS IAM", "Azure", "Cloud Security", "CloudTrail", "Cross Cloud Access", "Data Governance", "Identity Management", "Microsoft Entra ID", "Microsoft Fabric", "ML", "News", "OIDC", "On Premises Data Gateway", "S3 Shortcut", "Security", "Service Principal", "VPC", "Zero Trust"]
 tags_normalized: ["amazon s3", "aws iam", "azure", "cloud security", "cloudtrail", "cross cloud access", "data governance", "identity management", "microsoft entra id", "microsoft fabric", "ml", "news", "oidc", "on premises data gateway", "s3 shortcut", "security", "service principal", "vpc", "zero trust"]

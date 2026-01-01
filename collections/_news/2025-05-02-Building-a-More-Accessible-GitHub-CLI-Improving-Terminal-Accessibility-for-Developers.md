@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "GitHub Engineering Blog"
 feed_url: "https://github.blog/engineering/feed/"
 date: 2025-05-02 14:30:00 +00:00
-permalink: "/news/2025-05-02-Building-a-More-Accessible-GitHub-CLI-Improving-Terminal-Accessibility-for-Developers.html"
+permalink: "/2025-05-02-Building-a-More-Accessible-GitHub-CLI-Improving-Terminal-Accessibility-for-Developers.html"
 categories: ["DevOps"]
 tags: ["Accessibility", "CLI", "Color Contrast", "Command Line", "Customization", "DevOps", "Engineering", "GitHub CLI", "High Contrast", "News", "Prompting Library", "Screen Readers", "Terminal", "User Experience"]
 tags_normalized: ["accessibility", "cli", "color contrast", "command line", "customization", "devops", "engineering", "github cli", "high contrast", "news", "prompting library", "screen readers", "terminal", "user experience"]

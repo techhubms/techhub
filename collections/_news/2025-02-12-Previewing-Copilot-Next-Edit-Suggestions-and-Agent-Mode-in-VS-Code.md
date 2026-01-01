@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Visual Studio Code Releases"
 feed_url: "https://code.visualstudio.com/feed.xml"
 date: 2025-02-12 00:00:00 +00:00
-permalink: "/news/2025-02-12-Previewing-Copilot-Next-Edit-Suggestions-and-Agent-Mode-in-VS-Code.html"
+permalink: "/2025-02-12-Previewing-Copilot-Next-Edit-Suggestions-and-Agent-Mode-in-VS-Code.html"
 categories: ["AI", "Coding", "GitHub Copilot"]
 tags: ["Agent Mode", "AI", "AI Code Completion", "AI Pair Programming", "Code Refactoring", "Coding", "Copilot Chat", "Editing Assistance", "Editor Automation", "GitHub Copilot", "GPT 4o", "News", "Next Edit Suggestions", "Preview Features", "Vision Feature", "VS Code", "VS Code Extensions"]
 tags_normalized: ["agent mode", "ai", "ai code completion", "ai pair programming", "code refactoring", "coding", "copilot chat", "editing assistance", "editor automation", "github copilot", "gpt 4o", "news", "next edit suggestions", "preview features", "vision feature", "vs code", "vs code extensions"]

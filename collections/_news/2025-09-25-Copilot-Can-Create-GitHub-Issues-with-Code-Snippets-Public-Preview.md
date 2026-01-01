@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/changelog/feed/"
 date: 2025-09-25 21:59:40 +00:00
-permalink: "/news/2025-09-25-Copilot-Can-Create-GitHub-Issues-with-Code-Snippets-Public-Preview.html"
+permalink: "/2025-09-25-Copilot-Can-Create-GitHub-Issues-with-Code-Snippets-Public-Preview.html"
 categories: ["AI", "GitHub Copilot"]
 tags: ["AI", "AI Powered Issue Creation", "Code Snippets", "Continuous Development", "Copilot", "Copilot Features", "Copilot Suggestions", "Developer Tools", "GitHub Copilot", "GitHub Issues", "Improvement", "Issue Automation", "News", "Preview Release", "Workflow Enhancement"]
 tags_normalized: ["ai", "ai powered issue creation", "code snippets", "continuous development", "copilot", "copilot features", "copilot suggestions", "developer tools", "github copilot", "github issues", "improvement", "issue automation", "news", "preview release", "workflow enhancement"]

@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft News"
 feed_url: "https://news.microsoft.com/source/feed/"
 date: 2025-12-11 19:11:15 +00:00
-permalink: "/news/2025-12-11-GPT-52-Integration-Across-Microsoft-Tools-AI-Model-Choice-and-Developer-Impact.html"
+permalink: "/2025-12-11-GPT-52-Integration-Across-Microsoft-Tools-AI-Model-Choice-and-Developer-Impact.html"
 categories: ["AI", "GitHub Copilot"]
 tags: ["AI", "AI Integration", "AI Productivity", "AI Reasoning", "Company News", "Copilot", "Copilot Studio", "Enterprise AI", "GitHub Copilot", "GPT 5.2", "LinkedIn Post", "Long Context AI", "Microsoft 365 Copilot", "Microsoft Fabric", "Microsoft Foundry", "Model Selection", "News", "OpenAI", "Work IQ"]
 tags_normalized: ["ai", "ai integration", "ai productivity", "ai reasoning", "company news", "copilot", "copilot studio", "enterprise ai", "github copilot", "gpt 5dot2", "linkedin post", "long context ai", "microsoft 365 copilot", "microsoft fabric", "microsoft foundry", "model selection", "news", "openai", "work iq"]

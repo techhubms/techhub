@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Fabric Blog"
 feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
 date: 2025-09-30 17:00:00 +00:00
-permalink: "/news/2025-09-30-Enhancements-to-Copy-Job-for-Data-Ingestion-in-Microsoft-Fabric-Data-Factory.html"
+permalink: "/2025-09-30-Enhancements-to-Copy-Job-for-Data-Ingestion-in-Microsoft-Fabric-Data-Factory.html"
 categories: ["Azure", "ML"]
 tags: ["Amazon RDS", "Amazon S3", "Azure", "Azure SQL Database", "Change Data Capture", "CI/CD Automation", "Connection Parameterization", "Copy Job", "Data Factory", "Data Ingestion", "Data Replication", "Delta Change Data Feed", "Fabric Lakehouse Table", "Greenplum", "Incremental Copy", "Lakehouse", "MariaDB", "Microsoft Fabric", "ML", "New Connectors", "News", "Oracle Cloud Storage", "Pipeline Automation", "SAP", "SFTP", "Snowflake Integration", "SQL Server", "Storage Integration", "Variables Library"]
 tags_normalized: ["amazon rds", "amazon s3", "azure", "azure sql database", "change data capture", "cislashcd automation", "connection parameterization", "copy job", "data factory", "data ingestion", "data replication", "delta change data feed", "fabric lakehouse table", "greenplum", "incremental copy", "lakehouse", "mariadb", "microsoft fabric", "ml", "new connectors", "news", "oracle cloud storage", "pipeline automation", "sap", "sftp", "snowflake integration", "sql server", "storage integration", "variables library"]

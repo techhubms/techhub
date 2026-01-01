@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/changelog/feed/"
 date: 2025-11-13 15:16:52 +00:00
-permalink: "/news/2025-11-13-GitHub-Actions-OIDC-Token-Claims-Now-Include-check_run_id.html"
+permalink: "/2025-11-13-GitHub-Actions-OIDC-Token-Claims-Now-Include-check_run_id.html"
 categories: ["DevOps"]
 tags: ["Actions", "Attribute Based Access Control", "Auditing", "Azure Integration", "Check Run Id", "CI/CD", "Compliance", "DevOps", "GitHub Actions", "Improvement", "Least Privilege", "News", "OIDC", "OpenID Connect", "Token Claims", "Workflow Security"]
 tags_normalized: ["actions", "attribute based access control", "auditing", "azure integration", "check run id", "cislashcd", "compliance", "devops", "github actions", "improvement", "least privilege", "news", "oidc", "openid connect", "token claims", "workflow security"]

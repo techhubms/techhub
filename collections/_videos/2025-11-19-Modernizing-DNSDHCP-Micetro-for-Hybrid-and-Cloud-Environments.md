@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Events YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
 date: 2025-11-19 08:41:16 +00:00
-permalink: "/videos/2025-11-19-Modernizing-DNSDHCP-Micetro-for-Hybrid-and-Cloud-Environments.html"
+permalink: "/2025-11-19-Modernizing-DNSDHCP-Micetro-for-Hybrid-and-Cloud-Environments.html"
 categories: ["Azure"]
 tags: ["Active Directory", "API Gateway", "Automation", "Azure", "DHCP", "DNS", "Hybrid Cloud", "IP Address Management", "IPAM", "Micetro", "Migrateandmodernizeyourestate", "MSIgnite", "NetOps", "Network Observability", "Network Optimizations", "ServiceNow Integration", "Videos"]
 tags_normalized: ["active directory", "api gateway", "automation", "azure", "dhcp", "dns", "hybrid cloud", "ip address management", "ipam", "micetro", "migrateandmodernizeyourestate", "msignite", "netops", "network observability", "network optimizations", "servicenow integration", "videos"]

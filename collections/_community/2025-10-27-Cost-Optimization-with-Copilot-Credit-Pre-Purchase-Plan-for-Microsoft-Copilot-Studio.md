@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-10-27 15:29:27 +00:00
-permalink: "/community/2025-10-27-Cost-Optimization-with-Copilot-Credit-Pre-Purchase-Plan-for-Microsoft-Copilot-Studio.html"
+permalink: "/2025-10-27-Cost-Optimization-with-Copilot-Credit-Pre-Purchase-Plan-for-Microsoft-Copilot-Studio.html"
 categories: ["AI", "Azure"]
 tags: ["AI", "AI Agent Development", "Azure", "Billing", "Commit Units", "Community", "Copilot Credit", "Copilot Studio", "Cost Estimation", "Cost Optimization", "Dynamics 365", "Power Platform", "Pre Purchase Plan", "Subscription Management", "Volume Discount"]
 tags_normalized: ["ai", "ai agent development", "azure", "billing", "commit units", "community", "copilot credit", "copilot studio", "cost estimation", "cost optimization", "dynamics 365", "power platform", "pre purchase plan", "subscription management", "volume discount"]

@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "GitHub YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ"
 date: 2025-09-29 19:11:52 +00:00
-permalink: "/videos/2025-09-29-How-to-find-the-right-MCP-server-in-seconds-with-GitHub-MCP-registry.html"
+permalink: "/2025-09-29-How-to-find-the-right-MCP-server-in-seconds-with-GitHub-MCP-registry.html"
 categories: ["AI", "DevOps"]
 tags: ["AI", "AI Agents", "Automation", "Developer Tools", "DevOps", "Figma", "GitHub", "Interoperability", "MCP", "MCP Registry", "MCPRegistry", "Open Source", "Postman", "Registry", "Terraform", "Tool Integration", "Videos", "Workflows"]
 tags_normalized: ["ai", "ai agents", "automation", "developer tools", "devops", "figma", "github", "interoperability", "mcp", "mcp registry", "mcpregistry", "open source", "postman", "registry", "terraform", "tool integration", "videos", "workflows"]

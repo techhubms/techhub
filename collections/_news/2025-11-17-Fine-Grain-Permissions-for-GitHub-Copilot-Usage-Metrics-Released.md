@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/changelog/feed/"
 date: 2025-11-17 16:57:55 +00:00
-permalink: "/news/2025-11-17-Fine-Grain-Permissions-for-GitHub-Copilot-Usage-Metrics-Released.html"
+permalink: "/2025-11-17-Fine-Grain-Permissions-for-GitHub-Copilot-Usage-Metrics-Released.html"
 categories: ["AI", "GitHub Copilot"]
 tags: ["AI", "AI Controls", "API", "Copilot", "Copilot Usage Metrics", "Dashboard", "Enterprise Role", "GitHub Copilot", "Metrics", "News", "Permission Management", "User Access"]
 tags_normalized: ["ai", "ai controls", "api", "copilot", "copilot usage metrics", "dashboard", "enterprise role", "github copilot", "metrics", "news", "permission management", "user access"]

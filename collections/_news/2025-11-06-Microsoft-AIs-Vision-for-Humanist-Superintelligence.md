@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft News"
 feed_url: "https://news.microsoft.com/source/feed/"
 date: 2025-11-06 14:07:20 +00:00
-permalink: "/news/2025-11-06-Microsoft-AIs-Vision-for-Humanist-Superintelligence.html"
+permalink: "/2025-11-06-Microsoft-AIs-Vision-for-Humanist-Superintelligence.html"
 categories: ["AI"]
 tags: ["AGI", "AI", "AI Alignment", "AI Containment", "AI Ethics", "AI For Healthcare", "AI in Education", "AI Policy", "AI Safety", "Clean Energy", "Company News", "Humanist Superintelligence", "MAI Superintelligence Team", "Medical Superintelligence", "Microsoft AI", "Mustafa Suleyman", "News", "Superintelligence"]
 tags_normalized: ["agi", "ai", "ai alignment", "ai containment", "ai ethics", "ai for healthcare", "ai in education", "ai policy", "ai safety", "clean energy", "company news", "humanist superintelligence", "mai superintelligence team", "medical superintelligence", "microsoft ai", "mustafa suleyman", "news", "superintelligence"]

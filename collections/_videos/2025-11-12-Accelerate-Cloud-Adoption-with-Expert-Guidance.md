@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Developer YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
 date: 2025-11-12 08:00:36 +00:00
-permalink: "/videos/2025-11-12-Accelerate-Cloud-Adoption-with-Expert-Guidance.html"
+permalink: "/2025-11-12-Accelerate-Cloud-Adoption-with-Expert-Guidance.html"
 categories: ["Azure", "DevOps"]
 tags: ["Azure", "Azure Adoption", "Azure Essentials", "Azure Partners", "Azure Services", "Best Practices", "Cloud Accelerate Factory", "Cloud Migration", "Deployment Assistance", "DevOps", "Expert Support", "Microsoft Azure", "Migration Frameworks", "Modernization", "Project Management", "Ravi Mangipudi", "Sprint Deployment", "Thomas Maurer", "Videos"]
 tags_normalized: ["azure", "azure adoption", "azure essentials", "azure partners", "azure services", "best practices", "cloud accelerate factory", "cloud migration", "deployment assistance", "devops", "expert support", "microsoft azure", "migration frameworks", "modernization", "project management", "ravi mangipudi", "sprint deployment", "thomas maurer", "videos"]

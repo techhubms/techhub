@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-11-18 17:12:17 +00:00
-permalink: "/community/2025-11-18-Introducing-Preview-of-Async-Scaling-for-Azure-App-Service-Plans.html"
+permalink: "/2025-11-18-Introducing-Preview-of-Async-Scaling-for-Azure-App-Service-Plans.html"
 categories: ["Azure"]
 tags: ["App Service Plan", "ARM", "Async Scaling", "Azure", "Azure App Service", "Azure CLI", "Cloud Scalability", "Community", "Linux", "Platform as A Service", "Preview Feature", "Provisioning", "Resource Management", "Scaling", "Web Apps", "Windows"]
 tags_normalized: ["app service plan", "arm", "async scaling", "azure", "azure app service", "azure cli", "cloud scalability", "community", "linux", "platform as a service", "preview feature", "provisioning", "resource management", "scaling", "web apps", "windows"]

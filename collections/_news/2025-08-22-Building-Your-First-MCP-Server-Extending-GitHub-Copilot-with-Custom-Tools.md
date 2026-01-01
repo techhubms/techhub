@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/feed/"
 date: 2025-08-22 16:52:27 +00:00
-permalink: "/news/2025-08-22-Building-Your-First-MCP-Server-Extending-GitHub-Copilot-with-Custom-Tools.html"
+permalink: "/2025-08-22-Building-Your-First-MCP-Server-Extending-GitHub-Copilot-with-Custom-Tools.html"
 categories: ["AI", "Coding", "GitHub Copilot"]
 tags: ["AI", "AI & ML", "AI Extensibility", "AI Integration", "APIs", "Coding", "Custom API", "Developer Tools", "Game Server", "GitHub Copilot", "MCP", "MCP Server", "MCP Tools", "News", "Next.js", "Open Source", "Prompt Engineering", "Rock Paper Scissors", "Rubber Duck Thursdays", "SDK", "Tic Tac Toe", "TypeScript", "VS Code"]
 tags_normalized: ["ai", "ai and ml", "ai extensibility", "ai integration", "apis", "coding", "custom api", "developer tools", "game server", "github copilot", "mcp", "mcp server", "mcp tools", "news", "nextdotjs", "open source", "prompt engineering", "rock paper scissors", "rubber duck thursdays", "sdk", "tic tac toe", "typescript", "vs code"]

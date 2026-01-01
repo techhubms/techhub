@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Events YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
 date: 2025-11-25 12:02:39 +00:00
-permalink: "/videos/2025-11-25-Impigers-AI-First-Enterprise-Transformation-at-Microsoft-Ignite.html"
+permalink: "/2025-11-25-Impigers-AI-First-Enterprise-Transformation-at-Microsoft-Ignite.html"
 categories: ["AI"]
 tags: ["AI", "AI Architecture", "AI Ethics", "AI Governance", "Copilotandagentsatwork", "Enterprise AI", "Enterprise Transformation", "Identity Management", "Impiger", "Internal Governance", "LLM", "Microsoft Ignite", "Moderor.ai", "MSIgnite", "Platform Engineering", "Secure AI Development", "Third Party LLM Integration", "Videos", "Zero Trust"]
 tags_normalized: ["ai", "ai architecture", "ai ethics", "ai governance", "copilotandagentsatwork", "enterprise ai", "enterprise transformation", "identity management", "impiger", "internal governance", "llm", "microsoft ignite", "moderordotai", "msignite", "platform engineering", "secure ai development", "third party llm integration", "videos", "zero trust"]

@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "GitHub YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ"
 date: 2025-09-05 18:01:32 +00:00
-permalink: "/videos/2025-09-05-Whats-New-with-the-GitHub-Copilot-Coding-Agent.html"
+permalink: "/2025-09-05-Whats-New-with-the-GitHub-Copilot-Coding-Agent.html"
 categories: ["AI", "GitHub Copilot"]
 tags: ["AI", "Browser Automation", "Copilot Coding Agent", "CopilotCodingAgent", "Dev Productivity", "GitHub Agents Panel", "GitHub Copilot", "GitHub Features", "MCP Servers", "Mobile Development", "Pull Request Automation", "Software Engineering", "Task Automation", "Technical Debt", "Videos"]
 tags_normalized: ["ai", "browser automation", "copilot coding agent", "copilotcodingagent", "dev productivity", "github agents panel", "github copilot", "github features", "mcp servers", "mobile development", "pull request automation", "software engineering", "task automation", "technical debt", "videos"]

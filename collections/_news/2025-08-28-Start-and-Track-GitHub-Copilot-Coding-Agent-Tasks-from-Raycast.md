@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/changelog/feed/"
 date: 2025-08-28 17:55:41 +00:00
-permalink: "/news/2025-08-28-Start-and-Track-GitHub-Copilot-Coding-Agent-Tasks-from-Raycast.html"
+permalink: "/2025-08-28-Start-and-Track-GitHub-Copilot-Coding-Agent-Tasks-from-Raycast.html"
 categories: ["AI", "GitHub Copilot"]
 tags: ["AI", "Coding Agent", "Copilot Agents", "Copilot Business", "Copilot Enterprise", "Copilot Pro", "Desktop Productivity", "Developer Tools", "GitHub", "GitHub Copilot", "Macos", "News", "Public Preview", "Pull Request Automation", "Raycast", "Task Management", "Workflow Integration"]
 tags_normalized: ["ai", "coding agent", "copilot agents", "copilot business", "copilot enterprise", "copilot pro", "desktop productivity", "developer tools", "github", "github copilot", "macos", "news", "public preview", "pull request automation", "raycast", "task management", "workflow integration"]

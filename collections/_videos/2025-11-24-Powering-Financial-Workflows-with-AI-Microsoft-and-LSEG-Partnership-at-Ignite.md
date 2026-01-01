@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Events YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
 date: 2025-11-24 12:40:28 +00:00
-permalink: "/videos/2025-11-24-Powering-Financial-Workflows-with-AI-Microsoft-and-LSEG-Partnership-at-Ignite.html"
+permalink: "/2025-11-24-Powering-Financial-Workflows-with-AI-Microsoft-and-LSEG-Partnership-at-Ignite.html"
 categories: ["AI"]
 tags: ["AI", "AI Integration", "Collaboration", "Copilot Agents", "Custom Agents", "Data Interoperability", "Excel", "Financial Workflows", "LSEG", "M365 Copilot", "Microsoft Copilot Studio", "Microsoft Fabric", "Microsoft Ignite", "MSIgnite", "No Code Development", "Open Directory", "PowerPoint", "Researcher Agent", "Semantic Search", "Teams", "Unifyyourdataplatform", "Videos", "Workspace"]
 tags_normalized: ["ai", "ai integration", "collaboration", "copilot agents", "custom agents", "data interoperability", "excel", "financial workflows", "lseg", "m365 copilot", "microsoft copilot studio", "microsoft fabric", "microsoft ignite", "msignite", "no code development", "open directory", "powerpoint", "researcher agent", "semantic search", "teams", "unifyyourdataplatform", "videos", "workspace"]

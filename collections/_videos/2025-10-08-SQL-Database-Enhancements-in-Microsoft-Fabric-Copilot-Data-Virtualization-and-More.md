@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Developer YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
 date: 2025-10-08 16:01:29 +00:00
-permalink: "/videos/2025-10-08-SQL-Database-Enhancements-in-Microsoft-Fabric-Copilot-Data-Virtualization-and-More.html"
+permalink: "/2025-10-08-SQL-Database-Enhancements-in-Microsoft-Fabric-Copilot-Data-Virtualization-and-More.html"
 categories: ["AI", "Azure", "ML"]
 tags: ["AI", "Azure", "Backup", "Cloud Computing", "Copilot", "Data Engineering", "Data Exposed", "Data Platform", "Data Virtualization", "Dev", "Development", "Microsoft", "Microsoft Fabric", "Microsoft Learn", "ML", "Notebook Integration", "Restore", "SQL Database", "T SQL", "Tech", "Technology", "Videos", "Workflow Automation"]
 tags_normalized: ["ai", "azure", "backup", "cloud computing", "copilot", "data engineering", "data exposed", "data platform", "data virtualization", "dev", "development", "microsoft", "microsoft fabric", "microsoft learn", "ml", "notebook integration", "restore", "sql database", "t sql", "tech", "technology", "videos", "workflow automation"]

@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Security Blog"
 feed_url: "https://www.microsoft.com/en-us/security/blog/feed/"
 date: 2025-10-23 16:00:00 +00:00
-permalink: "/news/2025-10-23-Harden-Your-Identity-Defense-with-Microsoft-Defender-and-Entra-Enhanced-ITDR-and-Unified-Insights.html"
+permalink: "/2025-10-23-Harden-Your-Identity-Defense-with-Microsoft-Defender-and-Entra-Enhanced-ITDR-and-Unified-Insights.html"
 categories: ["Azure", "Security"]
 tags: ["Active Directory", "Azure", "Cloud Security", "Conditional Access", "Cybersecurity", "Extended Detection And Response", "Hybrid Environments", "Identity Threat Detection And Response", "ITDR", "Microsoft Defender For Identity", "Microsoft Entra ID", "News", "Privileged Access Management", "Security", "Security Operations", "SOC", "Threat Intelligence", "Zero Trust"]
 tags_normalized: ["active directory", "azure", "cloud security", "conditional access", "cybersecurity", "extended detection and response", "hybrid environments", "identity threat detection and response", "itdr", "microsoft defender for identity", "microsoft entra id", "news", "privileged access management", "security", "security operations", "soc", "threat intelligence", "zero trust"]

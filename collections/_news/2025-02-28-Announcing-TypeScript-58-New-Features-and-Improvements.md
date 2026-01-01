@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft TypeScript Blog"
 feed_url: "https://devblogs.microsoft.com/typescript/feed/"
 date: 2025-02-28 19:35:56 +00:00
-permalink: "/news/2025-02-28-Announcing-TypeScript-58-New-Features-and-Improvements.html"
+permalink: "/2025-02-28-Announcing-TypeScript-58-New-Features-and-Improvements.html"
 categories: ["Coding"]
 tags: ["Coding", "Compiler Options", "Declaration Files", "ECMAScript Modules", "JavaScript", "News", "Node.js", "Performance Optimization", "Return Type Checking", "Type System", "TypeScript", "VS Code"]
 tags_normalized: ["coding", "compiler options", "declaration files", "ecmascript modules", "javascript", "news", "nodedotjs", "performance optimization", "return type checking", "type system", "typescript", "vs code"]

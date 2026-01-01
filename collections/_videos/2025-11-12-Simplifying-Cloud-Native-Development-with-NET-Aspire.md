@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "DotNet YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw"
 date: 2025-11-12 22:51:40 +00:00
-permalink: "/videos/2025-11-12-Simplifying-Cloud-Native-Development-with-NET-Aspire.html"
+permalink: "/2025-11-12-Simplifying-Cloud-Native-Development-with-NET-Aspire.html"
 categories: ["Azure", "Coding", "DevOps"]
 tags: [".NET", ".NET 10", ".NET Aspire", ".NET MAUI 10", "Application Monitoring", "ASP.NET Core 10", "Azure", "C# 14", "Cloud Integration", "Cloud Native", "Coding", "Dashboard", "DevOps", "Distributed Applications", "F# 10", "Modern Web Development", "Production Readiness", "Service Discovery", "Telemetry", "Videos", "VS"]
 tags_normalized: ["dotnet", "dotnet 10", "dotnet aspire", "dotnet maui 10", "application monitoring", "aspdotnet core 10", "azure", "csharp 14", "cloud integration", "cloud native", "coding", "dashboard", "devops", "distributed applications", "fsharp 10", "modern web development", "production readiness", "service discovery", "telemetry", "videos", "vs"]

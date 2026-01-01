@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-10-14 00:00:00 +00:00
-permalink: "/community/2025-10-14-Caliptra-21-Advancing-Open-Source-Silicon-Root-of-Trust-for-Data-Protection.html"
+permalink: "/2025-10-14-Caliptra-21-Advancing-Open-Source-Silicon-Root-of-Trust-for-Data-Protection.html"
 categories: ["Azure", "Security"]
 tags: ["Azure", "Caliptra 2.1", "Community", "Confidential Computing", "Cryptographic Hardware", "FPV Verification", "Hardware Security", "Key Management", "Microsoft Security", "OCP LOCK", "Open Compute Project", "Quantum Cryptography", "Root Of Trust", "Security", "Silicon Security", "Trusted Execution Environments", "Zero Trust"]
 tags_normalized: ["azure", "caliptra 2dot1", "community", "confidential computing", "cryptographic hardware", "fpv verification", "hardware security", "key management", "microsoft security", "ocp lock", "open compute project", "quantum cryptography", "root of trust", "security", "silicon security", "trusted execution environments", "zero trust"]

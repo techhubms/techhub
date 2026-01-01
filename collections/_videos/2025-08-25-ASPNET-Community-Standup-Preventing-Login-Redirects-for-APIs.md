@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "DotNet YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw"
 date: 2025-08-25 22:49:37 +00:00
-permalink: "/videos/2025-08-25-ASPNET-Community-Standup-Preventing-Login-Redirects-for-APIs.html"
+permalink: "/2025-08-25-ASPNET-Community-Standup-Preventing-Login-Redirects-for-APIs.html"
 categories: ["Coding", "Security"]
 tags: [".NET", ".NET 10", "API", "API Development", "API Security", "ASP.NET Core", "Authentication", "Authorization", "Coding", "Daniel Roth", "Demo", "Developer Community", "Developer Tools", "Dotnetdeveloper", "HTTP 401", "Microsoft", "Security", "Software Developer", "Stephen Halter", "Videos", "Web APIs"]
 tags_normalized: ["dotnet", "dotnet 10", "api", "api development", "api security", "aspdotnet core", "authentication", "authorization", "coding", "daniel roth", "demo", "developer community", "developer tools", "dotnetdeveloper", "http 401", "microsoft", "security", "software developer", "stephen halter", "videos", "web apis"]

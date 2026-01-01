@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Events YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
 date: 2025-11-20 16:38:24 +00:00
-permalink: "/videos/2025-11-20-Building-Scalable-AI-Apps-with-Azure-SQL-Database-Hyperscale.html"
+permalink: "/2025-11-20-Building-Scalable-AI-Apps-with-Azure-SQL-Database-Hyperscale.html"
 categories: ["AI", "Azure", "ML"]
 tags: ["Advanced Session", "AI", "AI Automation", "Azure", "Azure Architecture", "Azure SQL Database Hyperscale", "Cloud Native SQL", "Continuous Priming", "Cost Management", "Elastic Pools", "Embeddings", "InnovatewithAzureAIappsandagents", "Knowledge Graphs", "Microservices", "Microsoft Foundry", "Microsoft Ignite", "ML", "MSIgnite", "RAG", "Read Scale Out", "Scalability", "Semantic Search", "Serverless", "T SQL", "Vector Indexes", "Videos"]
 tags_normalized: ["advanced session", "ai", "ai automation", "azure", "azure architecture", "azure sql database hyperscale", "cloud native sql", "continuous priming", "cost management", "elastic pools", "embeddings", "innovatewithazureaiappsandagents", "knowledge graphs", "microservices", "microsoft foundry", "microsoft ignite", "ml", "msignite", "rag", "read scale out", "scalability", "semantic search", "serverless", "t sql", "vector indexes", "videos"]

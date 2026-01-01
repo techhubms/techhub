@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-10-14 22:00:00 +00:00
-permalink: "/community/2025-10-14-Windows-10-Extended-Security-Updates-for-Azure-Virtual-Desktop.html"
+permalink: "/2025-10-14-Windows-10-Extended-Security-Updates-for-Azure-Virtual-Desktop.html"
 categories: ["Azure", "Security"]
 tags: ["Autopatch", "Azure", "Azure Marketplace", "Azure Virtual Desktop", "Community", "Cybersecurity", "ESU", "Extended Security Updates", "Microsoft 365 Apps", "Operating System Support", "Security", "Session Hosts", "Windows 10", "Windows 11 Migration", "Windows Lifecycle", "Windows Update"]
 tags_normalized: ["autopatch", "azure", "azure marketplace", "azure virtual desktop", "community", "cybersecurity", "esu", "extended security updates", "microsoft 365 apps", "operating system support", "security", "session hosts", "windows 10", "windows 11 migration", "windows lifecycle", "windows update"]

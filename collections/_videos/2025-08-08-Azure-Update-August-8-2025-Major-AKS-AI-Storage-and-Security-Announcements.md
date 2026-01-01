@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "John Savill's Technical Training"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCpIn7ox7j7bH_OFj7tYouOQ"
 date: 2025-08-08 12:09:46 +00:00
-permalink: "/videos/2025-08-08-Azure-Update-August-8-2025-Major-AKS-AI-Storage-and-Security-Announcements.html"
+permalink: "/2025-08-08-Azure-Update-August-8-2025-Major-AKS-AI-Storage-and-Security-Announcements.html"
 categories: ["AI", "Azure", "ML", "Security"]
 tags: ["AI", "AI Shell", "AKS", "Application Gateway WAF", "AVNM", "Azure", "Azure Arc", "Azure Backup", "Azure Cloud", "Azure Data Box", "Azure File Sync", "Azure Infrastructure", "Azure Storage", "Azure Updates", "AzureDNS", "Cloud", "Cloud Networking", "Cloud Security", "Data Protection", "DNSSEC", "GPT 5", "GPT Image 1", "GPT Oss 120/20", "Microsoft", "Microsoft Azure", "ML", "Multi Disk Backup", "Network Security Perimeter", "Security", "Vcpu Options", "Videos", "Virtual Network Mesh"]
 tags_normalized: ["ai", "ai shell", "aks", "application gateway waf", "avnm", "azure", "azure arc", "azure backup", "azure cloud", "azure data box", "azure file sync", "azure infrastructure", "azure storage", "azure updates", "azuredns", "cloud", "cloud networking", "cloud security", "data protection", "dnssec", "gpt 5", "gpt image 1", "gpt oss 120slash20", "microsoft", "microsoft azure", "ml", "multi disk backup", "network security perimeter", "security", "vcpu options", "videos", "virtual network mesh"]

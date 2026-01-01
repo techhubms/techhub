@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Community"
 date: 2025-08-18 07:00:00 +00:00
-permalink: "/community/2025-08-18-Beginners-Guide-Using-Custom-AI-Models-with-Foundry-Local-and-Microsoft-Olive.html"
+permalink: "/2025-08-18-Beginners-Guide-Using-Custom-AI-Models-with-Foundry-Local-and-Microsoft-Olive.html"
 categories: ["AI"]
 tags: ["AI", "AI Chatbot", "Community", "CPU", "DeepSeek Models", "Foundry Local", "GGUF", "GPU", "Hugging Face", "INT4", "Local Inference", "Mac", "Microsoft Olive", "Model Compression", "Model Conversion", "ONNX", "Phi Models", "Python", "PyTorch", "Qwen Models", "Qwen3 0.6B", "Transformers", "Windows"]
 tags_normalized: ["ai", "ai chatbot", "community", "cpu", "deepseek models", "foundry local", "gguf", "gpu", "hugging face", "int4", "local inference", "mac", "microsoft olive", "model compression", "model conversion", "onnx", "phi models", "python", "pytorch", "qwen models", "qwen3 0dot6b", "transformers", "windows"]

@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Fabric Blog"
 feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
 date: 2025-10-14 07:00:00 +00:00
-permalink: "/news/2025-10-14-Introducing-the-Job-Level-Bursting-Switch-in-Microsoft-Fabric.html"
+permalink: "/2025-10-14-Introducing-the-Job-Level-Bursting-Switch-in-Microsoft-Fabric.html"
 categories: ["Azure", "ML"]
 tags: ["Autoscale Billing", "Azure", "Burst Capacity", "Capacity Administrator", "Compute Units", "Concurrency", "Data Engineering", "Data Science", "ETL Workloads", "Fabric Capacity", "Interactive Notebooks", "Job Level Bursting", "Microsoft Fabric", "ML", "News", "Performance Optimization", "Resource Management", "Spark"]
 tags_normalized: ["autoscale billing", "azure", "burst capacity", "capacity administrator", "compute units", "concurrency", "data engineering", "data science", "etl workloads", "fabric capacity", "interactive notebooks", "job level bursting", "microsoft fabric", "ml", "news", "performance optimization", "resource management", "spark"]

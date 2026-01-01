@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Developer YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
 date: 2025-08-19 16:00:48 +00:00
-permalink: "/videos/2025-08-19-From-UX-to-AX-Why-Agent-Experience-is-the-Next-Frontier-in-Business-AI.html"
+permalink: "/2025-08-19-From-UX-to-AX-Why-Agent-Experience-is-the-Next-Frontier-in-Business-AI.html"
 categories: ["AI", "Azure"]
 tags: ["Agent Automation", "Agent Experience", "AI", "AI Agents", "AI Leadership", "AI Planning", "AI Strategy", "AX Design", "Azure", "Azure AI", "Business AI", "Cloud Computing", "Computational Thinking", "Dev", "Development", "Digital Transformation", "Enterprise AI", "GenAI", "GPT 4", "John Maeda", "Microsoft", "Microsoft AI", "Priyanka Vergadia", "Prompt Engineering", "Tech", "Technology", "Videos", "Workflow Automation"]
 tags_normalized: ["agent automation", "agent experience", "ai", "ai agents", "ai leadership", "ai planning", "ai strategy", "ax design", "azure", "azure ai", "business ai", "cloud computing", "computational thinking", "dev", "development", "digital transformation", "enterprise ai", "genai", "gpt 4", "john maeda", "microsoft", "microsoft ai", "priyanka vergadia", "prompt engineering", "tech", "technology", "videos", "workflow automation"]

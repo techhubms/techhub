@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Fabric Blog"
 feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
 date: 2025-12-08 11:00:00 +00:00
-permalink: "/news/2025-12-08-Optimizing-Permissions-with-OneLake-Security-ReadWrite-Access.html"
+permalink: "/2025-12-08-Optimizing-Permissions-with-OneLake-Security-ReadWrite-Access.html"
 categories: ["Azure", "Security"]
 tags: ["Access Control", "Azure", "Collaboration", "Data Architecture", "Data Governance", "Data Security", "Enterprise Data", "Granular Permissions", "Lakehouse", "Microsoft Fabric", "News", "OneLake", "ReadWrite Permissions", "Role Based Security", "Schema Level Access", "Security", "Storage Solutions"]
 tags_normalized: ["access control", "azure", "collaboration", "data architecture", "data governance", "data security", "enterprise data", "granular permissions", "lakehouse", "microsoft fabric", "news", "onelake", "readwrite permissions", "role based security", "schema level access", "security", "storage solutions"]

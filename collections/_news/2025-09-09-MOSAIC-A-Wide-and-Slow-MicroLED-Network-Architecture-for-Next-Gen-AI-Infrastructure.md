@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft News"
 feed_url: "https://news.microsoft.com/source/feed/"
 date: 2025-09-09 17:05:53 +00:00
-permalink: "/news/2025-09-09-MOSAIC-A-Wide-and-Slow-MicroLED-Network-Architecture-for-Next-Gen-AI-Infrastructure.html"
+permalink: "/2025-09-09-MOSAIC-A-Wide-and-Slow-MicroLED-Network-Architecture-for-Next-Gen-AI-Infrastructure.html"
 categories: ["AI", "Azure"]
 tags: ["AI", "AI Infrastructure", "Azure", "Company News", "Datacenter Networking", "Energy Efficiency", "GPU Interconnect", "Hardware Co Design", "Microled", "Microsoft Research", "MOSAIC", "Network Bottleneck", "News", "Optical Interconnect", "Optical Transmission", "Parallel Low Speed Channels", "SIGCOMM", "Wide And Slow Architecture"]
 tags_normalized: ["ai", "ai infrastructure", "azure", "company news", "datacenter networking", "energy efficiency", "gpu interconnect", "hardware co design", "microled", "microsoft research", "mosaic", "network bottleneck", "news", "optical interconnect", "optical transmission", "parallel low speed channels", "sigcomm", "wide and slow architecture"]

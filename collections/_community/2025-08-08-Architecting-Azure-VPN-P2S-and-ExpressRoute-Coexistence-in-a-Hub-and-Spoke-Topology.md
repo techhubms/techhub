@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Reddit Azure"
 feed_url: "https://www.reddit.com/r/azure/.rss"
 date: 2025-08-08 11:50:57 +00:00
-permalink: "/community/2025-08-08-Architecting-Azure-VPN-P2S-and-ExpressRoute-Coexistence-in-a-Hub-and-Spoke-Topology.html"
+permalink: "/2025-08-08-Architecting-Azure-VPN-P2S-and-ExpressRoute-Coexistence-in-a-Hub-and-Spoke-Topology.html"
 categories: ["Azure", "Security"]
 tags: ["Azure", "Azure Firewall", "Azure Route Server", "Azure VPN", "Community", "Cost Optimization", "ExpressRoute", "Hub And Spoke", "Network Architecture", "Network Security", "On Premises Connectivity", "Point To Site VPN", "RDP", "Remote Access", "Security", "Transitive Routing", "Virtual Network Gateway", "Virtual WAN"]
 tags_normalized: ["azure", "azure firewall", "azure route server", "azure vpn", "community", "cost optimization", "expressroute", "hub and spoke", "network architecture", "network security", "on premises connectivity", "point to site vpn", "rdp", "remote access", "security", "transitive routing", "virtual network gateway", "virtual wan"]

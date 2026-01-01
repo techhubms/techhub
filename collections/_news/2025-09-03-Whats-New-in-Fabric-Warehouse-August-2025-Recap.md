@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Fabric Blog"
 feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
 date: 2025-09-03 10:30:00 +00:00
-permalink: "/news/2025-09-03-Whats-New-in-Fabric-Warehouse-August-2025-Recap.html"
+permalink: "/2025-09-03-Whats-New-in-Fabric-Warehouse-August-2025-Recap.html"
 categories: ["AI", "Azure", "Coding", "DevOps", "ML", "Security"]
 tags: ["AI", "AzCopy", "Azure", "Azure AI Foundry", "CI/CD", "Coding", "Copilot Studio", "Data Agents", "Data Ingestion", "Database Projects", "DevOps", "ETL", "Fabric Warehouse", "JSON Lines", "Microsoft Fabric", "ML", "News", "NuGet", "Private Link", "Scheduler", "Security", "SQL Analytics Endpoint", "T SQL", "VS Code"]
 tags_normalized: ["ai", "azcopy", "azure", "azure ai foundry", "cislashcd", "coding", "copilot studio", "data agents", "data ingestion", "database projects", "devops", "etl", "fabric warehouse", "json lines", "microsoft fabric", "ml", "news", "nuget", "private link", "scheduler", "security", "sql analytics endpoint", "t sql", "vs code"]

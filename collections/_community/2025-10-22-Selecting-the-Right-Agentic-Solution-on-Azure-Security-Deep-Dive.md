@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-10-22 18:10:53 +00:00
-permalink: "/community/2025-10-22-Selecting-the-Right-Agentic-Solution-on-Azure-Security-Deep-Dive.html"
+permalink: "/2025-10-22-Selecting-the-Right-Agentic-Solution-on-Azure-Security-Deep-Dive.html"
 categories: ["AI", "Azure", "Security"]
 tags: ["Agent Framework", "Agent Orchestration", "AI", "API Management", "AutoGen", "Azure", "Azure AI Foundry Agent Service", "Azure Key Vault", "Azure Logic Apps", "Community", "Data Encryption", "Microsoft Entra ID", "OAuth2", "PII Protection", "Prompt Injection", "RBAC", "Security", "Security Best Practices", "Semantic Kernel", "Web Application Firewall"]
 tags_normalized: ["agent framework", "agent orchestration", "ai", "api management", "autogen", "azure", "azure ai foundry agent service", "azure key vault", "azure logic apps", "community", "data encryption", "microsoft entra id", "oauth2", "pii protection", "prompt injection", "rbac", "security", "security best practices", "semantic kernel", "web application firewall"]

@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft .NET Blog"
 feed_url: "https://devblogs.microsoft.com/dotnet/feed/"
 date: 2025-12-04 18:05:00 +00:00
-permalink: "/news/2025-12-04-NET-Conf-2025-Recap-Whats-New-in-NET-10-Visual-Studio-2026-AI-and-App-Modernization.html"
+permalink: "/2025-12-04-NET-Conf-2025-Recap-Whats-New-in-NET-10-Visual-Studio-2026-AI-and-App-Modernization.html"
 categories: ["AI", "Azure", "Coding", "DevOps", "GitHub Copilot", "ML", "Security"]
 tags: [".NET", ".NET 10", "Agentic UI", "AI", "AI Development", "App Modernization", "ASP.NET Core", "Aspire 13", "Azure", "Azure Functions", "Blazor", "C#", "C# 14", "CI/CD", "Cloud Native", "Coding", "Conference", "Cryptography", "DevOps", "F# 10", "Featured", "GitHub Copilot", "MAUI", "MCP C# SDK", "Microsoft Agent Framework", "ML", "Modernization", "News", "NuGet", "OpenTelemetry", "Passkeys", "Performance", "Security", "Testing", "VS"]
 tags_normalized: ["dotnet", "dotnet 10", "agentic ui", "ai", "ai development", "app modernization", "aspdotnet core", "aspire 13", "azure", "azure functions", "blazor", "csharp", "csharp 14", "cislashcd", "cloud native", "coding", "conference", "cryptography", "devops", "fsharp 10", "featured", "github copilot", "maui", "mcp csharp sdk", "microsoft agent framework", "ml", "modernization", "news", "nuget", "opentelemetry", "passkeys", "performance", "security", "testing", "vs"]

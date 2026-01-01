@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Visual Studio Code YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SLNwkd3w"
 date: 2025-10-27 16:35:14 +00:00
-permalink: "/videos/2025-10-27-VS-Code-Live-Highlights-from-GitHub-Universe-Announcements.html"
+permalink: "/2025-10-27-VS-Code-Live-Highlights-from-GitHub-Universe-Announcements.html"
 categories: ["DevOps"]
 tags: ["Code", "Code Demos", "Demo", "Developer", "Developer Community", "Developer Tools", "Developerevents", "DevOps", "Event Recap", "GitHub", "GitHub Universe", "Githubuniverse", "Microsoft", "Product Announcements", "Software Developer", "Software Development", "Videos", "VS Code"]
 tags_normalized: ["code", "code demos", "demo", "developer", "developer community", "developer tools", "developerevents", "devops", "event recap", "github", "github universe", "githubuniverse", "microsoft", "product announcements", "software developer", "software development", "videos", "vs code"]

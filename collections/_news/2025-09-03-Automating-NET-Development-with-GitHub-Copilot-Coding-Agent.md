@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft .NET Blog"
 feed_url: "https://devblogs.microsoft.com/dotnet/feed/"
 date: 2025-09-03 17:05:00 +00:00
-permalink: "/news/2025-09-03-Automating-NET-Development-with-GitHub-Copilot-Coding-Agent.html"
+permalink: "/2025-09-03-Automating-NET-Development-with-GitHub-Copilot-Coding-Agent.html"
 categories: ["AI", "Coding", "DevOps", "GitHub Copilot"]
 tags: [".NET", "AI", "AI in Development", "Automation", "C#", "Coding", "Continuous Integration", "DevOps", "Eshoplite", "GitHub", "GitHub Copilot", "GitHub Copilot Coding Agent", "MCP Server", "News", "Product Requirements Document", "Pull Requests", "Test Coverage", "Unit Testing", "Workflow Automation"]
 tags_normalized: ["dotnet", "ai", "ai in development", "automation", "csharp", "coding", "continuous integration", "devops", "eshoplite", "github", "github copilot", "github copilot coding agent", "mcp server", "news", "product requirements document", "pull requests", "test coverage", "unit testing", "workflow automation"]

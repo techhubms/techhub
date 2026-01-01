@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Reddit Azure"
 feed_url: "https://www.reddit.com/r/azure/.rss"
 date: 2025-08-03 21:00:24 +00:00
-permalink: "/community/2025-08-03-Seeking-Advice-on-Preparing-for-Azure-Solutions-Architect-Certification-Exams.html"
+permalink: "/2025-08-03-Seeking-Advice-on-Preparing-for-Azure-Solutions-Architect-Certification-Exams.html"
 categories: ["Azure"]
 tags: ["AZ 104", "AZ 305", "Azure", "Azure Administrator", "Azure Certification", "Azure Solutions Architect", "CBT Training", "Cloud Computing", "Community", "Exam Preparation", "Free Azure Account", "Learning Resources"]
 tags_normalized: ["az 104", "az 305", "azure", "azure administrator", "azure certification", "azure solutions architect", "cbt training", "cloud computing", "community", "exam preparation", "free azure account", "learning resources"]

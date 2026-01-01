@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Events YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
 date: 2025-11-21 15:28:56 +00:00
-permalink: "/videos/2025-11-21-AI-Powered-Endpoint-Security-Updates-in-Microsoft-Defender.html"
+permalink: "/2025-11-21-AI-Powered-Endpoint-Security-Updates-in-Microsoft-Defender.html"
 categories: ["AI", "Security"]
 tags: ["AI", "AI Security", "Autonomous Protection", "Device Protection", "Endpoint Security", "Incident Analytics", "Microsoft Defender", "Microsoft Ignite", "ModernizeSecOpswithaunifiedplatform", "MSIgnite", "Predictive Shielding", "Real Time Protection", "SecOps", "Security", "Security Demo", "Server R2", "Threat Detection", "Threat Landscape", "Videos", "Windows 7 Support"]
 tags_normalized: ["ai", "ai security", "autonomous protection", "device protection", "endpoint security", "incident analytics", "microsoft defender", "microsoft ignite", "modernizesecopswithaunifiedplatform", "msignite", "predictive shielding", "real time protection", "secops", "security", "security demo", "server r2", "threat detection", "threat landscape", "videos", "windows 7 support"]

@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Developer YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
 date: 2025-08-14 15:59:58 +00:00
-permalink: "/videos/2025-08-14-Using-Model-Router-with-GPT-5-Models-in-Azure-AI-Foundry.html"
+permalink: "/2025-08-14-Using-Model-Router-with-GPT-5-Models-in-Azure-AI-Foundry.html"
 categories: ["AI", "Azure"]
 tags: ["AI", "AI Models", "Azure", "Azure AI Foundry", "Cloud AI", "Cloud Computing", "Cost Optimization", "Deployment", "Dev", "Development", "Development Workflow", "GPT 5", "Intelligent Agents", "Microsoft", "Microsoft AI", "Model Router", "Model Selection", "Performance Optimization", "Sample Code", "Tech", "Technology", "Videos", "VS Code"]
 tags_normalized: ["ai", "ai models", "azure", "azure ai foundry", "cloud ai", "cloud computing", "cost optimization", "deployment", "dev", "development", "development workflow", "gpt 5", "intelligent agents", "microsoft", "microsoft ai", "model router", "model selection", "performance optimization", "sample code", "tech", "technology", "videos", "vs code"]

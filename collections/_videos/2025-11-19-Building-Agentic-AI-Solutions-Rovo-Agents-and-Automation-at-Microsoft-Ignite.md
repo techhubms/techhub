@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Events YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
 date: 2025-11-19 15:08:11 +00:00
-permalink: "/videos/2025-11-19-Building-Agentic-AI-Solutions-Rovo-Agents-and-Automation-at-Microsoft-Ignite.html"
+permalink: "/2025-11-19-Building-Agentic-AI-Solutions-Rovo-Agents-and-Automation-at-Microsoft-Ignite.html"
 categories: ["AI"]
 tags: ["Action Driven Workflows", "Agent Orchestration", "Agentic Automation", "AI", "AI Agents", "Community Blog Automation", "Copilotandagentsatwork", "Intermediate Session", "Microsoft Ignite", "Mini Agents", "MSIgnite", "No Code Solutions", "Prompt Engineering", "Release Notes Automation", "Rovo Agents", "Team Collaboration", "Videos", "Workflow Design"]
 tags_normalized: ["action driven workflows", "agent orchestration", "agentic automation", "ai", "ai agents", "community blog automation", "copilotandagentsatwork", "intermediate session", "microsoft ignite", "mini agents", "msignite", "no code solutions", "prompt engineering", "release notes automation", "rovo agents", "team collaboration", "videos", "workflow design"]

@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-11-11 21:32:57 +00:00
-permalink: "/community/2025-11-11-Top-Microsoft-Ignite-2025-Sessions-for-Azure-Developers-AI-Copilot-and-Fabric.html"
+permalink: "/2025-11-11-Top-Microsoft-Ignite-2025-Sessions-for-Azure-Developers-AI-Copilot-and-Fabric.html"
 categories: ["AI", "Azure", "DevOps", "GitHub Copilot", "ML"]
 tags: ["Agent Framework", "AI", "AI Agents", "AI Integration", "Azure", "Azure AI Foundry", "CI/CD", "Cloud Development", "Community", "Data Agents", "Developers", "DevOps", "GitHub Copilot", "Lakehouse", "MCP Systems", "Microsoft Fabric", "Microsoft Ignite", "ML", "Session Scheduler"]
 tags_normalized: ["agent framework", "ai", "ai agents", "ai integration", "azure", "azure ai foundry", "cislashcd", "cloud development", "community", "data agents", "developers", "devops", "github copilot", "lakehouse", "mcp systems", "microsoft fabric", "microsoft ignite", "ml", "session scheduler"]

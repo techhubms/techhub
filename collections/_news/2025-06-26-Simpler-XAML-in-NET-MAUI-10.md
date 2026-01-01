@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft .NET Blog"
 feed_url: "https://devblogs.microsoft.com/dotnet/feed/"
 date: 2025-06-26 19:15:00 +00:00
-permalink: "/news/2025-06-26-Simpler-XAML-in-NET-MAUI-10.html"
+permalink: "/2025-06-26-Simpler-XAML-in-NET-MAUI-10.html"
 categories: ["Coding"]
 tags: [".NET", ".NET 10", "AlohaKit Animations", "Coding", "Community Toolkit", "Global Namespaces", "Hot Reload", "Implicit Namespaces", "MAUI", "Namespace Prefixes", "News", "NuGet Packages", "Syncfusion Toolkit", "VS", "Xaml", "XmlnsDefinition", "XmlnsPrefix"]
 tags_normalized: ["dotnet", "dotnet 10", "alohakit animations", "coding", "community toolkit", "global namespaces", "hot reload", "implicit namespaces", "maui", "namespace prefixes", "news", "nuget packages", "syncfusion toolkit", "vs", "xaml", "xmlnsdefinition", "xmlnsprefix"]

@@ -9,7 +9,7 @@ categories: ["AI", "Coding", "GitHub Copilot"]
 feed_name: "Reddit Github Copilot"
 feed_url: "https://www.reddit.com/r/GithubCopilot.rss"
 date: 2025-07-09 20:18:19 +00:00
-permalink: "/community/2025-07-09-Hot-take-Copilot-is-amazing-Youre-probably-just-lazy.html"
+permalink: "/2025-07-09-Hot-take-Copilot-is-amazing-Youre-probably-just-lazy.html"
 viewing_mode: "external"
 tags: [".NET", "AI", "Angular", "Backend Development", "Claude 4", "Coding", "Community", "Enterprise Software", "Frontend Development", "GitHub Copilot", "Junior Developers", "Prompt Engineering", "Software Maintenance", "Solution Architecture", "Testability"]
 tags_normalized: ["dotnet", "ai", "angular", "backend development", "claude 4", "coding", "community", "enterprise software", "frontend development", "github copilot", "junior developers", "prompt engineering", "software maintenance", "solution architecture", "testability"]

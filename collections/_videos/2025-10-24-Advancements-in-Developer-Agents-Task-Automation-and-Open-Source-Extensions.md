@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Developer YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
 date: 2025-10-24 17:49:02 +00:00
-permalink: "/videos/2025-10-24-Advancements-in-Developer-Agents-Task-Automation-and-Open-Source-Extensions.html"
+permalink: "/2025-10-24-Advancements-in-Developer-Agents-Task-Automation-and-Open-Source-Extensions.html"
 categories: ["AI", "Coding"]
 tags: ["Agent Architecture", "AI", "AI Agents", "Coding", "Developer Agents", "Developer Tools", "Issue Resolution", "Microsoft", "Open Source Extensions", "Software Engineering", "SRE Agent", "Task Automation", "Videos"]
 tags_normalized: ["agent architecture", "ai", "ai agents", "coding", "developer agents", "developer tools", "issue resolution", "microsoft", "open source extensions", "software engineering", "sre agent", "task automation", "videos"]

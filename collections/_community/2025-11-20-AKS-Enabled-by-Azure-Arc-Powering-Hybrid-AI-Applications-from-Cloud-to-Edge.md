@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-11-20 00:36:19 +00:00
-permalink: "/community/2025-11-20-AKS-Enabled-by-Azure-Arc-Powering-Hybrid-AI-Applications-from-Cloud-to-Edge.html"
+permalink: "/2025-11-20-AKS-Enabled-by-Azure-Arc-Powering-Hybrid-AI-Applications-from-Cloud-to-Edge.html"
 categories: ["AI", "Azure", "DevOps", "ML", "Security"]
 tags: ["AI", "AI Foundry Local", "AI Model Deployment", "AKS", "AKS Container Apps", "Azure", "Azure Arc", "Azure Container Storage", "Azure Monitor Pipeline", "Bare Metal Kubernetes", "Cluster High Availability", "Community", "Data Sovereignty", "DevOps", "Disconnected Operations", "Edge Computing", "GPU Acceleration", "Hybrid Cloud", "KAITO", "Key Vault Extension", "KMS V2", "Kubernetes Security", "ML", "RAG", "Retrieval Augmented Generation", "Security", "Telecom", "Workload Identity Federation"]
 tags_normalized: ["ai", "ai foundry local", "ai model deployment", "aks", "aks container apps", "azure", "azure arc", "azure container storage", "azure monitor pipeline", "bare metal kubernetes", "cluster high availability", "community", "data sovereignty", "devops", "disconnected operations", "edge computing", "gpu acceleration", "hybrid cloud", "kaito", "key vault extension", "kms v2", "kubernetes security", "ml", "rag", "retrieval augmented generation", "security", "telecom", "workload identity federation"]

@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-07-31 15:48:17 +00:00
-permalink: "/community/2025-07-31-Azure-Functions-vs-Logic-Apps-vs-Power-Automate-When-to-Use-What.html"
+permalink: "/2025-07-31-Azure-Functions-vs-Logic-Apps-vs-Power-Automate-When-to-Use-What.html"
 categories: ["Azure"]
 tags: ["Application Design", "Automation Tools", "Azure", "Azure Functions", "Cloud Integration", "Community", "Logic Apps", "Microsoft Cloud", "Power Automate", "Solution Architecture", "Use Cases", "Workflow Automation"]
 tags_normalized: ["application design", "automation tools", "azure", "azure functions", "cloud integration", "community", "logic apps", "microsoft cloud", "power automate", "solution architecture", "use cases", "workflow automation"]

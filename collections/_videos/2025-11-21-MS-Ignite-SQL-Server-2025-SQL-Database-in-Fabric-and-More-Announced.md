@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Developer YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
 date: 2025-11-21 20:06:07 +00:00
-permalink: "/videos/2025-11-21-MS-Ignite-SQL-Server-2025-SQL-Database-in-Fabric-and-More-Announced.html"
+permalink: "/2025-11-21-MS-Ignite-SQL-Server-2025-SQL-Database-in-Fabric-and-More-Announced.html"
 categories: ["Azure", "ML"]
 tags: ["Azure", "Azure SQL", "Azure SQL DB", "Cloud Computing", "Cloud Data Platform", "Data Analytics", "Data Engineering", "Data Exposed", "Database Development", "Dev", "Development", "GA Announcements", "Microsoft", "Microsoft Developer", "Microsoft Fabric", "Microsoft Ignite", "ML", "SQL", "SQL Server", "Tech", "Technology", "Videos"]
 tags_normalized: ["azure", "azure sql", "azure sql db", "cloud computing", "cloud data platform", "data analytics", "data engineering", "data exposed", "database development", "dev", "development", "ga announcements", "microsoft", "microsoft developer", "microsoft fabric", "microsoft ignite", "ml", "sql", "sql server", "tech", "technology", "videos"]

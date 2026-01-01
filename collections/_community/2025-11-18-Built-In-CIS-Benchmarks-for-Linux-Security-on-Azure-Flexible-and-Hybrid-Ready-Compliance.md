@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-11-18 08:00:00 +00:00
-permalink: "/community/2025-11-18-Built-In-CIS-Benchmarks-for-Linux-Security-on-Azure-Flexible-and-Hybrid-Ready-Compliance.html"
+permalink: "/2025-11-18-Built-In-CIS-Benchmarks-for-Linux-Security-on-Azure-Flexible-and-Hybrid-Ready-Compliance.html"
 categories: ["Azure", "Security"]
 tags: ["Audit Automation", "Azure", "Azure Arc", "Azure Osconfig", "CIS Benchmarks", "Cloud Security", "Community", "Compliance as Code", "Custom Configuration", "Ebpf", "GuestConfig", "HIPAA", "Hybrid Cloud", "Linux Security", "Machine Configuration", "Microsoft Certification", "NIST", "OVAL/XCCDF", "PCI DSS", "Policy Management", "Regulatory Compliance", "Security", "STIG"]
 tags_normalized: ["audit automation", "azure", "azure arc", "azure osconfig", "cis benchmarks", "cloud security", "community", "compliance as code", "custom configuration", "ebpf", "guestconfig", "hipaa", "hybrid cloud", "linux security", "machine configuration", "microsoft certification", "nist", "ovalslashxccdf", "pci dss", "policy management", "regulatory compliance", "security", "stig"]

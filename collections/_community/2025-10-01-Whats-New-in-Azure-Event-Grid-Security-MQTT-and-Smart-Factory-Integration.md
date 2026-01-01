@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-10-01 23:22:50 +00:00
-permalink: "/community/2025-10-01-Whats-New-in-Azure-Event-Grid-Security-MQTT-and-Smart-Factory-Integration.html"
+permalink: "/2025-10-01-Whats-New-in-Azure-Event-Grid-Security-MQTT-and-Smart-Factory-Integration.html"
 categories: ["Azure", "DevOps", "Security"]
 tags: ["API Security", "Azure", "Azure Event Grid", "Azure Fabric", "Azure Functions", "Cloud Events", "Community", "Custom Webhook", "Device Authentication", "DevOps", "Edge To Cloud", "Event Driven Architecture", "Industry 4.0", "IoT", "JWT", "Microsoft Entra ID", "MQTT", "OAuth 2.0", "Pub/Sub", "Real Time Analytics", "SCADA", "Security", "Sparkplug B", "Telemetry"]
 tags_normalized: ["api security", "azure", "azure event grid", "azure fabric", "azure functions", "cloud events", "community", "custom webhook", "device authentication", "devops", "edge to cloud", "event driven architecture", "industry 4dot0", "iot", "jwt", "microsoft entra id", "mqtt", "oauth 2dot0", "pubslashsub", "real time analytics", "scada", "security", "sparkplug b", "telemetry"]

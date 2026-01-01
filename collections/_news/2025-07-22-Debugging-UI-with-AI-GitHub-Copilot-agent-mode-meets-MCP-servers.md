@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/feed/"
 date: 2025-07-22 21:58:35 +00:00
-permalink: "/news/2025-07-22-Debugging-UI-with-AI-GitHub-Copilot-Agent-Mode-Meets-MCP-Servers.html"
+permalink: "/2025-07-22-Debugging-UI-with-AI-GitHub-Copilot-agent-mode-meets-MCP-servers.html"
 categories: ["AI", "Coding", "DevOps", "GitHub Copilot"]
 tags: ["Agent Mode", "Agentic AI", "AI", "AI & ML", "AI Workflows", "Automation", "Coding", "Custom Instructions", "Developer Productivity", "DevOps", "End To End Testing", "GitHub Copilot", "MCP", "MCP Server", "News", "Next.js", "Playwright", "Rubber Duck Thursdays", "TypeScript", "UI Debugging", "VS Code"]
 tags_normalized: ["agent mode", "agentic ai", "ai", "ai and ml", "ai workflows", "automation", "coding", "custom instructions", "developer productivity", "devops", "end to end testing", "github copilot", "mcp", "mcp server", "news", "nextdotjs", "playwright", "rubber duck thursdays", "typescript", "ui debugging", "vs code"]

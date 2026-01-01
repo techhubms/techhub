@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Developer YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
 date: 2025-09-15 07:00:26 +00:00
-permalink: "/videos/2025-09-15-Unlocking-Cloud-Savings-for-Linux-VMs-with-Azure-Hybrid-Benefit.html"
+permalink: "/2025-09-15-Unlocking-Cloud-Savings-for-Linux-VMs-with-Azure-Hybrid-Benefit.html"
 categories: ["Azure"]
 tags: ["Azure", "Azure Cloud", "Azure Hybrid Benefit", "Azure Pricing Calculator", "Azure VM", "BYOS", "Cloud Migration", "Cost Savings", "Infrastructure Modernization", "Licensing", "Linux", "Migration", "PAYG", "Red Hat", "SUSE", "Videos"]
 tags_normalized: ["azure", "azure cloud", "azure hybrid benefit", "azure pricing calculator", "azure vm", "byos", "cloud migration", "cost savings", "infrastructure modernization", "licensing", "linux", "migration", "payg", "red hat", "suse", "videos"]

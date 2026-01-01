@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Developer YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
 date: 2025-07-30 22:23:12 +00:00
-permalink: "/videos/2025-07-30-Vibe-Code-Your-First-MCP-Server-with-GitHub-Copilot.html"
+permalink: "/2025-07-30-Vibe-Code-your-first-MCP-server-with-GitHub-Copilot.html"
 categories: ["AI", "Coding", "GitHub Copilot"]
 tags: ["Agent Development", "AI", "AI Agent", "AI Integration", "AI Tools", "Azure AI Foundry", "Cloud Computing", "Coding", "Custom Agents", "Dev", "Development", "Foundry Agent Service", "GitHub Copilot", "MCP", "MCP Server", "Microsoft", "Tech", "Technology", "Videos", "VS Code"]
 tags_normalized: ["agent development", "ai", "ai agent", "ai integration", "ai tools", "azure ai foundry", "cloud computing", "coding", "custom agents", "dev", "development", "foundry agent service", "github copilot", "mcp", "mcp server", "microsoft", "tech", "technology", "videos", "vs code"]

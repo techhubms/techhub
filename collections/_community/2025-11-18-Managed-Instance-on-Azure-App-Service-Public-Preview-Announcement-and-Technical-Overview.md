@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-11-18 16:00:00 +00:00
-permalink: "/community/2025-11-18-Managed-Instance-on-Azure-App-Service-Public-Preview-Announcement-and-Technical-Overview.html"
+permalink: "/2025-11-18-Managed-Instance-on-Azure-App-Service-Public-Preview-Announcement-and-Technical-Overview.html"
 categories: ["Azure", "Coding", "DevOps", "Security"]
 tags: [".NET Framework", "Azure", "Azure App Service", "Azure Bastion", "Azure Storage", "Cloud Migration", "Coding", "Community", "Compliance", "DevOps", "DevOps Automation", "Enterprise Applications", "Key Vault", "Legacy Modernization", "Managed Instance", "PowerShell", "Premium V4", "RDP", "Security", "VNET Integration", "Windows Registry"]
 tags_normalized: ["dotnet framework", "azure", "azure app service", "azure bastion", "azure storage", "cloud migration", "coding", "community", "compliance", "devops", "devops automation", "enterprise applications", "key vault", "legacy modernization", "managed instance", "powershell", "premium v4", "rdp", "security", "vnet integration", "windows registry"]

@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-11-18 16:49:02 +00:00
-permalink: "/community/2025-11-18-Azure-Linux-Security-Focused-Cloud-Innovation-at-Ignite-2025.html"
+permalink: "/2025-11-18-Azure-Linux-Security-Focused-Cloud-Innovation-at-Ignite-2025.html"
 categories: ["Azure", "Security"]
 tags: ["AKS", "Azure", "Azure Linux", "Azure Red Hat OpenShift", "Cloud Security", "Community", "Container Security", "Dm Verity", "FedRAMP", "FIPS Compliance", "Immutable Host", "Kata Containers", "Linux On Azure", "Microsoft Ignite", "OS Guard", "Pod Sandboxing", "Security", "SELinux", "Trusted Launch", "Upstream Transparency", "VM Level Isolation", "Vtpm", "Workload Isolation"]
 tags_normalized: ["aks", "azure", "azure linux", "azure red hat openshift", "cloud security", "community", "container security", "dm verity", "fedramp", "fips compliance", "immutable host", "kata containers", "linux on azure", "microsoft ignite", "os guard", "pod sandboxing", "security", "selinux", "trusted launch", "upstream transparency", "vm level isolation", "vtpm", "workload isolation"]

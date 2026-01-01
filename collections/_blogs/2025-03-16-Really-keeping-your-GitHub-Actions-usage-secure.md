@@ -9,10 +9,10 @@ viewing_mode: "external"
 feed_name: "Rob Bos' Blog"
 feed_url: "https://devopsjournal.io/blog/atom.xml"
 date: 2025-03-16 00:00:00 +00:00
-permalink: "/blogs/2025-03-16-Really-Keeping-Your-GitHub-Actions-Usage-Secure.html"
+permalink: "/2025-03-16-Really-keeping-your-GitHub-Actions-usage-secure.html"
 categories: ["DevOps", "Security"]
-tags: ["Action Backups", "CVE 30066", "Dependency Monitoring", "DevOps", "GitHub Actions", "GitHub Advanced Security", "Internal Marketplace", "Blogs", "Security", "Security Alerts", "Slsa.dev", "StepSecurity", "Supply Chain Security", "Workflow Automation"]
-tags_normalized: ["action backups", "cve 30066", "dependency monitoring", "devops", "github actions", "github advanced security", "internal marketplace", "blogs", "security", "security alerts", "slsadotdev", "stepsecurity", "supply chain security", "workflow automation"]
+tags: ["Action Backups", "Blogs", "CVE 30066", "Dependency Monitoring", "DevOps", "GitHub Actions", "GitHub Advanced Security", "Internal Marketplace", "Security", "Security Alerts", "Slsa.dev", "StepSecurity", "Supply Chain Security", "Workflow Automation"]
+tags_normalized: ["action backups", "blogs", "cve 30066", "dependency monitoring", "devops", "github actions", "github advanced security", "internal marketplace", "security", "security alerts", "slsadotdev", "stepsecurity", "supply chain security", "workflow automation"]
 ---
 
 In this post, Rob Bos details a recent security incident involving a compromised GitHub Action and offers guidance on securing your CI/CD pipelines with robust processes and tooling.<!--excerpt_end-->

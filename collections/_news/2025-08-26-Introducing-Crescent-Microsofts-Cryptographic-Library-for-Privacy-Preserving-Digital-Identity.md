@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft News"
 feed_url: "https://news.microsoft.com/source/feed/"
 date: 2025-08-26 18:56:40 +00:00
-permalink: "/news/2025-08-26-Introducing-Crescent-Microsofts-Cryptographic-Library-for-Privacy-Preserving-Digital-Identity.html"
+permalink: "/2025-08-26-Introducing-Crescent-Microsofts-Cryptographic-Library-for-Privacy-Preserving-Digital-Identity.html"
 categories: ["AI", "Security"]
 tags: ["AI", "Authentication", "Azure AI Foundry", "Company News", "Credential Unlinkability", "Crescent", "Cryptography", "Digital Identity", "Groth16", "Identity Verification", "JSON Web Token", "Microsoft Research", "Mobile Driver’s License", "News", "Privacy", "Rust", "Security", "Selective Disclosure", "SNARK", "Zero Knowledge Proofs"]
 tags_normalized: ["ai", "authentication", "azure ai foundry", "company news", "credential unlinkability", "crescent", "cryptography", "digital identity", "groth16", "identity verification", "json web token", "microsoft research", "mobile drivers license", "news", "privacy", "rust", "security", "selective disclosure", "snark", "zero knowledge proofs"]

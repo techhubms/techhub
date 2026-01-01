@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Developer YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
 date: 2025-07-30 22:33:04 +00:00
-permalink: "/videos/2025-07-30-Agents-Talking-to-Agents-Harnessing-MCP-for-Seamless-Inter-Agent-Collaboration.html"
+permalink: "/2025-07-30-Agents-Talking-to-Agents-Harnessing-MCP-for-Seamless-Inter-Agent-Collaboration.html"
 categories: ["AI", "Azure"]
 tags: ["Agent Collaboration", "Agent Integration", "AI", "AI Agents", "Azure", "Azure AI Foundry", "Cloud Computing", "Context Sharing", "Delegation", "Dev", "Development", "Foundry Agent Service", "Inter Agent Communication", "MCP", "Microsoft", "Remote Servers", "Result Merging", "Schema Registry", "Tech", "Technology", "Tool Catalog", "Videos", "VS Code"]
 tags_normalized: ["agent collaboration", "agent integration", "ai", "ai agents", "azure", "azure ai foundry", "cloud computing", "context sharing", "delegation", "dev", "development", "foundry agent service", "inter agent communication", "mcp", "microsoft", "remote servers", "result merging", "schema registry", "tech", "technology", "tool catalog", "videos", "vs code"]

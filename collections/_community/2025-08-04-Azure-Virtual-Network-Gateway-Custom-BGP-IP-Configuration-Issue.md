@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Reddit Azure"
 feed_url: "https://www.reddit.com/r/azure/.rss"
 date: 2025-08-04 09:52:09 +00:00
-permalink: "/community/2025-08-04-Azure-Virtual-Network-Gateway-Custom-BGP-IP-Configuration-Issue.html"
+permalink: "/2025-08-04-Azure-Virtual-Network-Gateway-Custom-BGP-IP-Configuration-Issue.html"
 categories: ["Azure"]
 tags: ["Azure", "Azure Virtual Network Gateway", "BGP", "BGP Peer IP", "Community", "Custom APIPA IP", "GatewaySubnet", "Get AzVirtualNetworkGateway", "IPSEC Tunnel", "Network Configuration", "PowerShell", "Troubleshooting"]
 tags_normalized: ["azure", "azure virtual network gateway", "bgp", "bgp peer ip", "community", "custom apipa ip", "gatewaysubnet", "get azvirtualnetworkgateway", "ipsec tunnel", "network configuration", "powershell", "troubleshooting"]

@@ -9,10 +9,10 @@ viewing_mode: "external"
 feed_name: "Rob Bos' Blog"
 feed_url: "https://devopsjournal.io/blog/atom.xml"
 date: 2025-06-07 00:00:00 +00:00
-permalink: "/blogs/2025-06-07-GitHub-Copilot-and-Productivity-Rethinking-Metrics-and-Value-in-Modern-Development.html"
+permalink: "/2025-06-07-GitHub-Copilot-and-Productivity-Rethinking-Metrics-and-Value-in-Modern-Development.html"
 categories: ["AI", "DevOps", "GitHub Copilot"]
-tags: ["Agent Mode", "AI", "Automation", "Business Value", "Code Engagement", "Continuous Integration", "Developer Productivity", "DevOps", "Engineering Culture", "Generative AI", "GitHub Copilot", "Metrics", "Blogs", "ROI in Software Tools", "SDLC", "Software Development Lifecycle"]
-tags_normalized: ["agent mode", "ai", "automation", "business value", "code engagement", "continuous integration", "developer productivity", "devops", "engineering culture", "generative ai", "github copilot", "metrics", "blogs", "roi in software tools", "sdlc", "software development lifecycle"]
+tags: ["Agent Mode", "AI", "Automation", "Blogs", "Business Value", "Code Engagement", "Continuous Integration", "Developer Productivity", "DevOps", "Engineering Culture", "Generative AI", "GitHub Copilot", "Metrics", "ROI in Software Tools", "SDLC", "Software Development Lifecycle"]
+tags_normalized: ["agent mode", "ai", "automation", "blogs", "business value", "code engagement", "continuous integration", "developer productivity", "devops", "engineering culture", "generative ai", "github copilot", "metrics", "roi in software tools", "sdlc", "software development lifecycle"]
 ---
 
 In this insightful post, Rob Bos critiques current productivity metrics in engineering teams—especially with GitHub Copilot in the mix—and offers practical strategies for embracing AI tools for real business value.<!--excerpt_end-->

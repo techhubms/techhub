@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Events YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
 date: 2025-11-21 17:18:13 +00:00
-permalink: "/videos/2025-11-21-AI-for-Energy-From-Advanced-Operations-to-Emissions-Management.html"
+permalink: "/2025-11-21-AI-for-Energy-From-Advanced-Operations-to-Emissions-Management.html"
 categories: ["AI"]
 tags: ["Agentic AI", "AI", "AI Adoption", "Autonomous Grid", "Compliance Workflows", "Computer Vision", "Copilot", "Copilotandagentsatwork", "Decarbonization", "Digital Twins", "Energy Industry", "Generative AI", "Methane Emissions", "Microsoft Ignite", "MSIgnite", "Operational Efficiency", "Predictive Maintenance", "Transformer Monitoring", "Utility Industry", "Videos"]
 tags_normalized: ["agentic ai", "ai", "ai adoption", "autonomous grid", "compliance workflows", "computer vision", "copilot", "copilotandagentsatwork", "decarbonization", "digital twins", "energy industry", "generative ai", "methane emissions", "microsoft ignite", "msignite", "operational efficiency", "predictive maintenance", "transformer monitoring", "utility industry", "videos"]

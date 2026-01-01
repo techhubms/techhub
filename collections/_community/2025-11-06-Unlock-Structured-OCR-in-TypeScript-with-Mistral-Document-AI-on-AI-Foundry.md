@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-11-06 14:15:35 +00:00
-permalink: "/community/2025-11-06-Unlock-Structured-OCR-in-TypeScript-with-Mistral-Document-AI-on-AI-Foundry.html"
+permalink: "/2025-11-06-Unlock-Structured-OCR-in-TypeScript-with-Mistral-Document-AI-on-AI-Foundry.html"
 categories: ["AI", "Azure", "Coding"]
 tags: ["AI", "AI Agents", "API Integration", "Azure", "Azure AI Foundry", "Azure Security", "Coding", "Community", "Data Extraction", "Document Automation", "Document Understanding", "Handwriting Recognition", "JSON", "Markdown", "Mistral Document AI", "Multimodal AI", "OCR", "PDF Processing", "RAG Pipelines", "Responsible AI", "Serverless", "TypeScript"]
 tags_normalized: ["ai", "ai agents", "api integration", "azure", "azure ai foundry", "azure security", "coding", "community", "data extraction", "document automation", "document understanding", "handwriting recognition", "json", "markdown", "mistral document ai", "multimodal ai", "ocr", "pdf processing", "rag pipelines", "responsible ai", "serverless", "typescript"]

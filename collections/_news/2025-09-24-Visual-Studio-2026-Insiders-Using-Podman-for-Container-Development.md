@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Blog"
 feed_url: "https://devblogs.microsoft.com/feed"
 date: 2025-09-24 17:30:30 +00:00
-permalink: "/news/2025-09-24-Visual-Studio-2026-Insiders-Using-Podman-for-Container-Development.html"
+permalink: "/2025-09-24-Visual-Studio-2026-Insiders-Using-Podman-for-Container-Development.html"
 categories: ["Coding", "DevOps"]
 tags: ["Cloud Native", "Coding", "Container Development", "Container Engine", "Container Runtime", "Debugging", "Developer Tools", "DevOps", "Docker Alternative", "IDE", "Image Management", "Integrated Terminal", "News", "Open Source", "Podman", "Uncategorized", "VS", "Windows Development"]
 tags_normalized: ["cloud native", "coding", "container development", "container engine", "container runtime", "debugging", "developer tools", "devops", "docker alternative", "ide", "image management", "integrated terminal", "news", "open source", "podman", "uncategorized", "vs", "windows development"]

@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The Azure Blog"
 feed_url: "https://azure.microsoft.com/en-us/blog/feed/"
 date: 2025-12-09 16:00:00 +00:00
-permalink: "/news/2025-12-09-Microsoft-Expands-Azure-Cloud-and-AI-Infrastructure-Across-the-United-States.html"
+permalink: "/2025-12-09-Microsoft-Expands-Azure-Cloud-and-AI-Infrastructure-Across-the-United-States.html"
 categories: ["AI", "Azure"]
 tags: ["AI", "AI + Machine Learning", "AI Infrastructure", "Availability Zones", "Azure", "Azure Government", "Cloud Infrastructure", "Cloud Strategy", "Compliance", "Datacenter Expansion", "Disaster Recovery", "East US 3", "LEED Certification", "Multi Region Architecture", "News", "Resilience", "Sustainability"]
 tags_normalized: ["ai", "ai plus machine learning", "ai infrastructure", "availability zones", "azure", "azure government", "cloud infrastructure", "cloud strategy", "compliance", "datacenter expansion", "disaster recovery", "east us 3", "leed certification", "multi region architecture", "news", "resilience", "sustainability"]

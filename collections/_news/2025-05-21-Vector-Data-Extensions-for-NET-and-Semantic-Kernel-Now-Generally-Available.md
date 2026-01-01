@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft DevBlog"
 feed_url: "https://devblogs.microsoft.com/semantic-kernel/feed/"
 date: 2025-05-21 14:41:49 +00:00
-permalink: "/news/2025-05-21-Vector-Data-Extensions-for-NET-and-Semantic-Kernel-Now-Generally-Available.html"
+permalink: "/2025-05-21-Vector-Data-Extensions-for-NET-and-Semantic-Kernel-Now-Generally-Available.html"
 categories: ["AI", "Coding"]
 tags: [".NET", "Abstractions", "AI", "AI Powered Applications", "Application Development", "Azure AI Search", "Coding", "Embedding Generation", "GA Release", "Interoperability", "Library Development", "Microsoft.Extensions.AI.Abstractions", "Microsoft.Extensions.VectorData.Abstractions", "News", "Semantic Kernel", "Vector Database", "Vector Store Connectors"]
 tags_normalized: ["dotnet", "abstractions", "ai", "ai powered applications", "application development", "azure ai search", "coding", "embedding generation", "ga release", "interoperability", "library development", "microsoftdotextensionsdotaidotabstractions", "microsoftdotextensionsdotvectordatadotabstractions", "news", "semantic kernel", "vector database", "vector store connectors"]

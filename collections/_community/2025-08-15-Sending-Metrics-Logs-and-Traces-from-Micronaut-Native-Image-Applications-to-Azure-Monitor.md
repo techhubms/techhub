@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-08-15 04:54:15 +00:00
-permalink: "/community/2025-08-15-Sending-Metrics-Logs-and-Traces-from-Micronaut-Native-Image-Applications-to-Azure-Monitor.html"
+permalink: "/2025-08-15-Sending-Metrics-Logs-and-Traces-from-Micronaut-Native-Image-Applications-to-Azure-Monitor.html"
 categories: ["Azure"]
 tags: ["Application Insights", "Azure", "Azure Container Apps", "Azure Monitor", "Cloud Native", "Community", "Distributed Tracing", "Fat JAR", "GraalVM Native Image", "Java", "Java Agent", "Log Analytics Workspace", "Logging", "Metrics", "Micronaut", "Micronaut Azure Tracing", "Monitoring", "Observability", "OpenTelemetry"]
 tags_normalized: ["application insights", "azure", "azure container apps", "azure monitor", "cloud native", "community", "distributed tracing", "fat jar", "graalvm native image", "java", "java agent", "log analytics workspace", "logging", "metrics", "micronaut", "micronaut azure tracing", "monitoring", "observability", "opentelemetry"]

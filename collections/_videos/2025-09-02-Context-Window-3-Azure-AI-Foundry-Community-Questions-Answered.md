@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Developer YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
 date: 2025-09-02 19:16:29 +00:00
-permalink: "/videos/2025-09-02-Context-Window-3-Azure-AI-Foundry-Community-Questions-Answered.html"
+permalink: "/2025-09-02-Context-Window-3-Azure-AI-Foundry-Community-Questions-Answered.html"
 categories: ["AI", "Azure"]
 tags: ["AI", "AI Agents", "AI Best Practices", "AI Development", "Azure", "Azure AI", "Azure AI Foundry", "Cloud Computing", "Dev", "Developer Questions", "Development", "Microsoft", "Tech", "Tech Community", "Technology", "Videos"]
 tags_normalized: ["ai", "ai agents", "ai best practices", "ai development", "azure", "azure ai", "azure ai foundry", "cloud computing", "dev", "developer questions", "development", "microsoft", "tech", "tech community", "technology", "videos"]

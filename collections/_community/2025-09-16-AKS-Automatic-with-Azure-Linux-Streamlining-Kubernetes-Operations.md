@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-09-16 17:37:20 +00:00
-permalink: "/community/2025-09-16-AKS-Automatic-with-Azure-Linux-Streamlining-Kubernetes-Operations.html"
+permalink: "/2025-09-16-AKS-Automatic-with-Azure-Linux-Streamlining-Kubernetes-Operations.html"
 categories: ["Azure", "DevOps", "Security"]
 tags: ["AKS", "AKS Automatic", "Azure", "Azure Linux", "CIS Benchmarks", "Cloud Infrastructure", "Cluster Security", "Community", "Container Workloads", "CVE Management", "DevOps", "FedRAMP", "FIPS Compliance", "Kubernetes", "Monitoring Tools", "Node Management", "Operational Efficiency", "Performance Optimization", "Scaling", "Security"]
 tags_normalized: ["aks", "aks automatic", "azure", "azure linux", "cis benchmarks", "cloud infrastructure", "cluster security", "community", "container workloads", "cve management", "devops", "fedramp", "fips compliance", "kubernetes", "monitoring tools", "node management", "operational efficiency", "performance optimization", "scaling", "security"]

@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Fabric Blog"
 feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
 date: 2025-11-24 12:47:12 +00:00
-permalink: "/news/2025-11-24-Managing-Environment-Configuration-in-Microsoft-Fabric-with-Variable-Libraries.html"
+permalink: "/2025-11-24-Managing-Environment-Configuration-in-Microsoft-Fabric-with-Variable-Libraries.html"
 categories: ["AI", "Azure", "Coding", "ML"]
 tags: ["AI", "Azure", "Azure Key Vault", "Azure OpenAI", "CI/CD", "Coding", "Data Engineering", "Deployment Pipeline", "Dynamic Configuration", "Environment Configuration", "Lakehouse", "Microsoft Fabric", "ML", "News", "Python", "Schema Management", "Secrets Management", "Secure Variables", "User Data Functions", "Variable Libraries"]
 tags_normalized: ["ai", "azure", "azure key vault", "azure openai", "cislashcd", "coding", "data engineering", "deployment pipeline", "dynamic configuration", "environment configuration", "lakehouse", "microsoft fabric", "ml", "news", "python", "schema management", "secrets management", "secure variables", "user data functions", "variable libraries"]

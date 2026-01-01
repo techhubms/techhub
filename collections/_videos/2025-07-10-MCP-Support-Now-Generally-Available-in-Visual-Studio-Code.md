@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Visual Studio Code YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SLNwkd3w"
 date: 2025-07-10 21:30:10 +00:00
-permalink: "/videos/2025-07-10-MCP-Support-Now-Generally-Available-in-Visual-Studio-Code.html"
+permalink: "/2025-07-10-MCP-Support-Now-Generally-Available-in-Visual-Studio-Code.html"
 categories: ["AI"]
 tags: ["Agent Mode", "AI", "Developer Productivity", "Full Spec Support", "IDE Integration", "MCP", "MCP Support", "Microsoft Copilot Protocol", "Server Extensibility", "Videos", "VS Code", "VS Code Extensions"]
 tags_normalized: ["agent mode", "ai", "developer productivity", "full spec support", "ide integration", "mcp", "mcp support", "microsoft copilot protocol", "server extensibility", "videos", "vs code", "vs code extensions"]

@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-10-14 18:00:00 +00:00
-permalink: "/community/2025-10-14-Oracle-DatabaseAzure-Advances-at-Oracle-AI-World-2025-Integration-AI-and-Security-Enhancements.html"
+permalink: "/2025-10-14-Oracle-DatabaseAzure-Advances-at-Oracle-AI-World-2025-Integration-AI-and-Security-Enhancements.html"
 categories: ["AI", "Azure", "DevOps", "ML", "Security"]
 tags: ["AI", "Autonomous Database", "Azure", "Azure AI Foundry", "Azure Arc", "Cloud Migration", "Community", "Copilot Studio", "Data Integration", "DevOps", "Entra ID", "GoldenGate", "Hybrid Cloud", "Microsoft Defender For Cloud", "Microsoft Fabric", "Microsoft Purview", "Microsoft Sentinel", "ML", "OneLake", "Operational Automation", "Oracle Database@Azure", "Power BI", "Security", "Terraform"]
 tags_normalized: ["ai", "autonomous database", "azure", "azure ai foundry", "azure arc", "cloud migration", "community", "copilot studio", "data integration", "devops", "entra id", "goldengate", "hybrid cloud", "microsoft defender for cloud", "microsoft fabric", "microsoft purview", "microsoft sentinel", "ml", "onelake", "operational automation", "oracle databaseatazure", "power bi", "security", "terraform"]

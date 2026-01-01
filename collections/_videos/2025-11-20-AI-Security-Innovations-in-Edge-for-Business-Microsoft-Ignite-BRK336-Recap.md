@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Events YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
 date: 2025-11-20 07:23:25 +00:00
-permalink: "/videos/2025-11-20-AI-Security-Innovations-in-Edge-for-Business-Microsoft-Ignite-BRK336-Recap.html"
+permalink: "/2025-11-20-AI-Security-Innovations-in-Edge-for-Business-Microsoft-Ignite-BRK336-Recap.html"
 categories: ["AI", "Security"]
 tags: ["Agentic AI", "AI", "AI Productivity", "Browser Security", "Copilot Mode", "Data Protection", "Edge For Business", "Enterprise Browser", "Enterprise Security", "Microsoft Edge", "Microsoft Ignite", "MSIgnite", "Purview DLP", "ScalewithcloudandAIendpoints", "Security", "Security Features", "Teams Integration", "Videos", "Workflow Automation"]
 tags_normalized: ["agentic ai", "ai", "ai productivity", "browser security", "copilot mode", "data protection", "edge for business", "enterprise browser", "enterprise security", "microsoft edge", "microsoft ignite", "msignite", "purview dlp", "scalewithcloudandaiendpoints", "security", "security features", "teams integration", "videos", "workflow automation"]

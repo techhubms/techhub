@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Cloud YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCSgzRJMqIiCNtoM6Q7Q9Lqw"
 date: 2025-04-30 16:00:03 +00:00
-permalink: "/videos/2025-04-30-AI-on-the-Go-for-Microsoft-Partners-How-AI-is-Transforming-Manufacturing.html"
+permalink: "/2025-04-30-AI-on-the-Go-for-Microsoft-Partners-How-AI-is-Transforming-Manufacturing.html"
 categories: ["AI"]
 tags: ["AI", "AI On The Go", "AI Opportunities", "AI Trends", "Cyril Belikoff", "Dayan Rodriguez", "Engineering Innovation", "Factory Floor", "Hannover Messe", "Industrial Transformation", "Industrials", "Manufacturing", "Microsoft", "Microsoft Cloud", "Partner Ecosystem", "Videos"]
 tags_normalized: ["ai", "ai on the go", "ai opportunities", "ai trends", "cyril belikoff", "dayan rodriguez", "engineering innovation", "factory floor", "hannover messe", "industrial transformation", "industrials", "manufacturing", "microsoft", "microsoft cloud", "partner ecosystem", "videos"]

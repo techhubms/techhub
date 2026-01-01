@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-12-01 16:00:00 +00:00
-permalink: "/community/2025-12-01-Logic-Apps-Aviators-Newsletter-December-2025.html"
+permalink: "/2025-12-01-Logic-Apps-Aviators-Newsletter-December-2025.html"
 categories: ["AI", "Azure", "Coding", "DevOps", "Security"]
 tags: ["Agent Loop", "AI", "API Management", "Automation", "Azure", "Azure Functions", "Azure Integration Services", "Azure Logic Apps", "BizTalk Server", "Coding", "Community", "Community Day", "Debugging", "DevOps", "Entra ID", "Foundry", "HL7 Connector", "Integration Patterns", "LangChain", "MCP Tools", "Multi Agent Workflows", "OAuth", "RabbitMQ", "Security", "Semantic Kernel", "Service Bus", "XML"]
 tags_normalized: ["agent loop", "ai", "api management", "automation", "azure", "azure functions", "azure integration services", "azure logic apps", "biztalk server", "coding", "community", "community day", "debugging", "devops", "entra id", "foundry", "hl7 connector", "integration patterns", "langchain", "mcp tools", "multi agent workflows", "oauth", "rabbitmq", "security", "semantic kernel", "service bus", "xml"]

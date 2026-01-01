@@ -9,10 +9,10 @@ viewing_mode: "external"
 feed_name: "DevClass"
 feed_url: "https://devclass.com/feed/"
 date: 2025-12-16 12:49:25 +00:00
-permalink: "/blogs/2025-12-16-AI-Driven-Cursor-Editor-Adds-Visual-Designer-Amid-Developer-Frustrations.html"
+permalink: "/2025-12-16-AI-Driven-Cursor-Editor-Adds-Visual-Designer-Amid-Developer-Frustrations.html"
 categories: ["AI", "Coding"]
-tags: ["AI", "AI Agents", "AI/ML", "Anthropic Claude", "Browser Sidebar", "Code Instrumentation", "Code Integrity", "Coding", "Cursor", "Cursor AI Editor", "Debug Mode", "Developer Productivity", "Development", "Feature Release", "Google AI", "Hot Reload", "LLM Integration", "OpenAI", "Blogs", "Pricing Model", "Software Development", "Subscription Cost", "UI/UX", "User Interface", "Visual Designer", "VS Code"]
-tags_normalized: ["ai", "ai agents", "aislashml", "anthropic claude", "browser sidebar", "code instrumentation", "code integrity", "coding", "cursor", "cursor ai editor", "debug mode", "developer productivity", "development", "feature release", "google ai", "hot reload", "llm integration", "openai", "blogs", "pricing model", "software development", "subscription cost", "uislashux", "user interface", "visual designer", "vs code"]
+tags: ["AI", "AI Agents", "AI/ML", "Anthropic Claude", "Blogs", "Browser Sidebar", "Code Instrumentation", "Code Integrity", "Coding", "Cursor", "Cursor AI Editor", "Debug Mode", "Developer Productivity", "Development", "Feature Release", "Google AI", "Hot Reload", "LLM Integration", "OpenAI", "Pricing Model", "Software Development", "Subscription Cost", "UI/UX", "User Interface", "Visual Designer", "VS Code"]
+tags_normalized: ["ai", "ai agents", "aislashml", "anthropic claude", "blogs", "browser sidebar", "code instrumentation", "code integrity", "coding", "cursor", "cursor ai editor", "debug mode", "developer productivity", "development", "feature release", "google ai", "hot reload", "llm integration", "openai", "pricing model", "software development", "subscription cost", "uislashux", "user interface", "visual designer", "vs code"]
 ---
 
 Tim Anderson examines the new visual web designer in Cursor, an AI-powered editor based on VS Code, exploring its technical features and developer reactions to bugs and UI changes.<!--excerpt_end-->

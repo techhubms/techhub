@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "DotNet YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw"
 date: 2025-11-14 19:21:55 +00:00
-permalink: "/videos/2025-11-14-Exploring-the-NET-Community-Toolkits-MAUI-Windows-and-More.html"
+permalink: "/2025-11-14-Exploring-the-NET-Community-Toolkits-MAUI-Windows-and-More.html"
 categories: ["Coding"]
 tags: [".NET", ".NET 10", ".NET Aspire", ".NET Community Toolkit", "ASP.NET Core", "C#", "Coding", "Cross Platform Development", "Desktop Development", "F#", "MAUI", "MAUI Community Toolkit", "Microsoft", "Mobile Development", "Open Source", "Videos", "VS", "Web Development", "Windows Community Toolkit"]
 tags_normalized: ["dotnet", "dotnet 10", "dotnet aspire", "dotnet community toolkit", "aspdotnet core", "csharp", "coding", "cross platform development", "desktop development", "fsharp", "maui", "maui community toolkit", "microsoft", "mobile development", "open source", "videos", "vs", "web development", "windows community toolkit"]

@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Events YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
 date: 2025-11-24 13:50:45 +00:00
-permalink: "/videos/2025-11-24-Empowering-the-SOC-Security-Copilot-and-the-Rise-of-Agentic-Defense.html"
+permalink: "/2025-11-24-Empowering-the-SOC-Security-Copilot-and-the-Rise-of-Agentic-Defense.html"
 categories: ["AI", "Security"]
 tags: ["Agentic AI", "AI", "AI Automation", "Azure Security", "Copilot Investigation", "Intermediate Security", "Microsoft Defender", "Microsoft Ignite", "Microsoft Sentinel", "ModernizeSecOpswithaunifiedplatform", "MSIgnite", "Phishing Triage Agent", "SCU Pricing", "Security", "Security Copilot", "Security Operations", "SOC", "SOC Lifecycle", "Threat Intelligence", "Videos"]
 tags_normalized: ["agentic ai", "ai", "ai automation", "azure security", "copilot investigation", "intermediate security", "microsoft defender", "microsoft ignite", "microsoft sentinel", "modernizesecopswithaunifiedplatform", "msignite", "phishing triage agent", "scu pricing", "security", "security copilot", "security operations", "soc", "soc lifecycle", "threat intelligence", "videos"]

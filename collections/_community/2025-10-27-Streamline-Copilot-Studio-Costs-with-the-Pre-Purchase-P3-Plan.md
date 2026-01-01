@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-10-27 21:53:23 +00:00
-permalink: "/community/2025-10-27-Streamline-Copilot-Studio-Costs-with-the-Pre-Purchase-P3-Plan.html"
+permalink: "/2025-10-27-Streamline-Copilot-Studio-Costs-with-the-Pre-Purchase-P3-Plan.html"
 categories: ["AI"]
 tags: ["AI", "AI Agents", "Billing", "Capacity Planning", "CCCU", "Community", "Copilot Credit Pre Purchase Plan", "Copilot Studio", "Cost Optimization", "Discounts", "Dynamics 365", "P3", "Power Platform", "Resource Groups", "Subscription Management", "Usage Monitoring"]
 tags_normalized: ["ai", "ai agents", "billing", "capacity planning", "cccu", "community", "copilot credit pre purchase plan", "copilot studio", "cost optimization", "discounts", "dynamics 365", "p3", "power platform", "resource groups", "subscription management", "usage monitoring"]

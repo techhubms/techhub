@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/feed/"
 date: 2025-08-27 16:00:00 +00:00
-permalink: "/news/2025-08-27-How-to-Use-GitHub-Copilot-on-githubcom-A-Power-Users-Guide.html"
+permalink: "/2025-08-27-How-to-Use-GitHub-Copilot-on-githubcom-A-Power-Users-Guide.html"
 categories: ["AI", "Coding", "DevOps", "GitHub Copilot"]
 tags: ["AI", "AI & ML", "AI Agent", "Claude Sonnet 4", "Coding", "Development Workflow", "DevOps", "GitHub Checkout", "GitHub Copilot", "GitHub.com", "GPT 4.1", "Issue Tracking", "Model Selection", "News", "Opus 4", "Project Management", "Prototyping", "Pull Requests", "Spark", "VS Code Integration", "Workflow Automation"]
 tags_normalized: ["ai", "ai and ml", "ai agent", "claude sonnet 4", "coding", "development workflow", "devops", "github checkout", "github copilot", "githubdotcom", "gpt 4dot1", "issue tracking", "model selection", "news", "opus 4", "project management", "prototyping", "pull requests", "spark", "vs code integration", "workflow automation"]

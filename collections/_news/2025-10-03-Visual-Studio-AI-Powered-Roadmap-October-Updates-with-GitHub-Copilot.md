@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft VisualStudio Blog"
 feed_url: "https://devblogs.microsoft.com/visualstudio/feed/"
 date: 2025-10-03 19:29:09 +00:00
-permalink: "/news/2025-10-03-Visual-Studio-AI-Powered-Roadmap-October-Updates-with-GitHub-Copilot.html"
+permalink: "/2025-10-03-Visual-Studio-AI-Powered-Roadmap-October-Updates-with-GitHub-Copilot.html"
 categories: ["AI", "Coding", "GitHub Copilot"]
 tags: ["Agentic Experiences", "AI", "AI Integration", "Chat", "Coding", "Coding Agent", "Coding Productivity", "Copilot", "Copilot Chat", "Debugger Agent", "Developer Tools", "Dynamic Tool Calling", "GitHub Copilot", "IDE", "MCP", "Modernize Agent", "News", "Performance Optimization", "VS"]
 tags_normalized: ["agentic experiences", "ai", "ai integration", "chat", "coding", "coding agent", "coding productivity", "copilot", "copilot chat", "debugger agent", "developer tools", "dynamic tool calling", "github copilot", "ide", "mcp", "modernize agent", "news", "performance optimization", "vs"]

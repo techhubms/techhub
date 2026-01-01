@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Events YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
 date: 2025-11-26 00:46:43 +00:00
-permalink: "/videos/2025-11-26-Azure-Networking-Innovations-for-Scalable-and-Secure-Cloud-Transformations.html"
+permalink: "/2025-11-26-Azure-Networking-Innovations-for-Scalable-and-Secure-Cloud-Transformations.html"
 categories: ["Azure", "Security"]
 tags: ["Application Delivery", "Azure", "Azure Networking", "Azure Security", "Cloud Architecture", "Cloud Connectivity", "Hybrid Cloud", "Intelligent Cloud", "Microsoft Ignite", "Migrateandmodernizeyourestate", "MSIgnite", "Multi Region Deployment", "Network Security", "Networking Foundations", "Resilient Infrastructure", "Scalable Networking", "Security", "Videos"]
 tags_normalized: ["application delivery", "azure", "azure networking", "azure security", "cloud architecture", "cloud connectivity", "hybrid cloud", "intelligent cloud", "microsoft ignite", "migrateandmodernizeyourestate", "msignite", "multi region deployment", "network security", "networking foundations", "resilient infrastructure", "scalable networking", "security", "videos"]

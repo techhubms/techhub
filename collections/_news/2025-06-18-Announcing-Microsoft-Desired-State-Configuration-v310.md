@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft PowerShell Blog"
 feed_url: "https://devblogs.microsoft.com/powershell/feed/"
 date: 2025-06-18 14:12:40 +00:00
-permalink: "/news/2025-06-18-Announcing-Microsoft-Desired-State-Configuration-v310.html"
+permalink: "/2025-06-18-Announcing-Microsoft-Desired-State-Configuration-v310.html"
 categories: ["Coding", "DevOps"]
 tags: ["Automation", "Coding", "Configuration Management", "Cross Platform", "Desired State Configuration", "DevOps", "DSC", "IaC", "Linux", "News", "PowerShell", "PowerShell DSC", "Resource Authoring", "Windows", "WinGet"]
 tags_normalized: ["automation", "coding", "configuration management", "cross platform", "desired state configuration", "devops", "dsc", "iac", "linux", "news", "powershell", "powershell dsc", "resource authoring", "windows", "winget"]

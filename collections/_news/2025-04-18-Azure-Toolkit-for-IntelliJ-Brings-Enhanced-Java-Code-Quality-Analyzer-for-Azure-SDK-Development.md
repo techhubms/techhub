@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft DevBlog"
 feed_url: "https://devblogs.microsoft.com/azure-sdk/feed/"
 date: 2025-04-18 17:49:56 +00:00
-permalink: "/news/2025-04-18-Azure-Toolkit-for-IntelliJ-Brings-Enhanced-Java-Code-Quality-Analyzer-for-Azure-SDK-Development.html"
+permalink: "/2025-04-18-Azure-Toolkit-for-IntelliJ-Brings-Enhanced-Java-Code-Quality-Analyzer-for-Azure-SDK-Development.html"
 categories: ["Azure", "Coding", "Security"]
 tags: ["Asynchronous Programming", "Authentication", "Azure", "Azure SDK", "Azure Toolkit", "Best Practices", "Code Quality", "Coding", "Event Hub", "IntelliJ", "Java", "Microsoft Entra ID", "News", "OpenAI", "Performance", "Reactive Streams", "Security", "Service Bus", "Storage"]
 tags_normalized: ["asynchronous programming", "authentication", "azure", "azure sdk", "azure toolkit", "best practices", "code quality", "coding", "event hub", "intellij", "java", "microsoft entra id", "news", "openai", "performance", "reactive streams", "security", "service bus", "storage"]

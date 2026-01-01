@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/changelog/feed/"
 date: 2025-09-04 15:00:49 +00:00
-permalink: "/news/2025-09-04-Remote-GitHub-MCP-Server-Now-Generally-Available.html"
+permalink: "/2025-09-04-Remote-GitHub-MCP-Server-Now-Generally-Available.html"
 categories: ["AI", "DevOps", "GitHub Copilot", "Security"]
 tags: ["AI", "AI Workflow", "Authentication", "Code Scanning", "Copilot Coding Agent", "Cursor", "DevOps", "DevOps Tools", "Eclipse", "GHAS", "GitHub Copilot", "GitHub MCP Server", "JetBrains", "News", "OAuth 2.1", "PKCE", "Pull Request Workflow", "Secret Scanning", "Security", "Security Advisories", "Security Guardrails", "Sub Issue Management", "VS", "VS Code", "Xcode"]
 tags_normalized: ["ai", "ai workflow", "authentication", "code scanning", "copilot coding agent", "cursor", "devops", "devops tools", "eclipse", "ghas", "github copilot", "github mcp server", "jetbrains", "news", "oauth 2dot1", "pkce", "pull request workflow", "secret scanning", "security", "security advisories", "security guardrails", "sub issue management", "vs", "vs code", "xcode"]

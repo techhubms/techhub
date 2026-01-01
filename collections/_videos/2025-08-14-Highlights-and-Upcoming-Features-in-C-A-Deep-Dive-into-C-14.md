@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "DotNet YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw"
 date: 2025-08-14 14:27:34 +00:00
-permalink: "/videos/2025-08-14-Highlights-and-Upcoming-Features-in-C-A-Deep-Dive-into-C-14.html"
+permalink: "/2025-08-14-Highlights-and-Upcoming-Features-in-C-A-Deep-Dive-into-C-14.html"
 categories: ["Coding"]
 tags: [".NET", "C#", "C# 14", "C# Features", "Code Clarity", "Code Safety", "Coding", "Developer Tools", "Expressiveness", "Language Evolution", "Modern C#", "Performance", "Programming", "Videos", "VS"]
 tags_normalized: ["dotnet", "csharp", "csharp 14", "csharp features", "code clarity", "code safety", "coding", "developer tools", "expressiveness", "language evolution", "modern csharp", "performance", "programming", "videos", "vs"]

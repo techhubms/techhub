@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-11-18 16:04:11 +00:00
-permalink: "/community/2025-11-18-Runtime-Security-and-AI-Fixes-Integrating-GitHub-Advanced-Security-with-Defender-for-Cloud.html"
+permalink: "/2025-11-18-Runtime-Security-and-AI-Fixes-Integrating-GitHub-Advanced-Security-with-Defender-for-Cloud.html"
 categories: ["AI", "Azure", "DevOps", "GitHub Copilot", "Security"]
 tags: ["Agentic Remediation", "AI", "AI Suggested Fix", "Alert Fatigue", "Application Security", "Artifact Metadata", "Azure", "Azure Portal", "Cloud Native Apps", "Code Scanning", "Community", "Copilot Autofix", "Dependabot", "DevOps", "DevSecOps", "GitHub Advanced Security", "GitHub Copilot", "Microsoft Defender For Cloud", "PR Automation", "Pull Request Automation", "Runtime Security", "Security", "Security Campaigns", "Security Integration", "Virtual Registry", "Vulnerability Prioritization"]
 tags_normalized: ["agentic remediation", "ai", "ai suggested fix", "alert fatigue", "application security", "artifact metadata", "azure", "azure portal", "cloud native apps", "code scanning", "community", "copilot autofix", "dependabot", "devops", "devsecops", "github advanced security", "github copilot", "microsoft defender for cloud", "pr automation", "pull request automation", "runtime security", "security", "security campaigns", "security integration", "virtual registry", "vulnerability prioritization"]

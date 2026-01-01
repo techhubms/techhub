@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Reddit DevOps"
 feed_url: "https://www.reddit.com/r/devops/.rss"
 date: 2025-08-07 13:37:34 +00:00
-permalink: "/community/2025-08-07-Best-Practices-for-Deploying-Custom-OpenSSH-Packages-Across-Multiple-Linux-Machines.html"
+permalink: "/2025-08-07-Best-Practices-for-Deploying-Custom-OpenSSH-Packages-Across-Multiple-Linux-Machines.html"
 categories: ["DevOps"]
 tags: ["Almalinux", "Artifactory", "Chef", "Community", "Configuration Management", "Deployment Pipeline", "DevOps", "DevOps Automation", "Docker Build Environment", "Fleet Operations", "FPM", "Internal Yum Repository", "Linux Packaging", "Nexus", "OpenSSH", "RPM"]
 tags_normalized: ["almalinux", "artifactory", "chef", "community", "configuration management", "deployment pipeline", "devops", "devops automation", "docker build environment", "fleet operations", "fpm", "internal yum repository", "linux packaging", "nexus", "openssh", "rpm"]

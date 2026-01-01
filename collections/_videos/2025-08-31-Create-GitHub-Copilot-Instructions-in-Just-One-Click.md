@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "GitHub YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ"
 date: 2025-08-31 14:01:22 +00:00
-permalink: "/videos/2025-08-31-Create-GitHub-Copilot-Instructions-in-Just-One-Click.html"
+permalink: "/2025-08-31-Create-GitHub-Copilot-Instructions-in-Just-One-Click.html"
 categories: ["AI", "GitHub Copilot"]
 tags: ["AI", "AI Coding Assistant", "AI Integration", "Codebase Context", "Coding Productivity", "Copilot Features", "Custom Instructions", "Developer", "Developer Tools", "GitHub", "GitHub Copilot", "Repository Analysis", "Software Development", "Videos"]
 tags_normalized: ["ai", "ai coding assistant", "ai integration", "codebase context", "coding productivity", "copilot features", "custom instructions", "developer", "developer tools", "github", "github copilot", "repository analysis", "software development", "videos"]

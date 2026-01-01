@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-09-10 16:00:00 +00:00
-permalink: "/community/2025-09-10-General-Availability-of-Automatic-Identity-Management-AIM-for-Entra-ID-on-Azure-Databricks.html"
+permalink: "/2025-09-10-General-Availability-of-Automatic-Identity-Management-AIM-for-Entra-ID-on-Azure-Databricks.html"
 categories: ["Azure", "Security"]
 tags: ["Access Control", "Admin Console", "AIM", "API Automation", "Automation", "Azure", "Azure Databricks", "Community", "Dashboards", "Entra ID", "Identity Management", "Microsoft Entra", "Nested Groups", "Security", "User Provisioning"]
 tags_normalized: ["access control", "admin console", "aim", "api automation", "automation", "azure", "azure databricks", "community", "dashboards", "entra id", "identity management", "microsoft entra", "nested groups", "security", "user provisioning"]

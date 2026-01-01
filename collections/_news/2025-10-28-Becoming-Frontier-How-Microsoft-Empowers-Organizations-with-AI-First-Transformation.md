@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft News"
 feed_url: "https://news.microsoft.com/source/feed/"
 date: 2025-10-28 16:05:50 +00:00
-permalink: "/news/2025-10-28-Becoming-Frontier-How-Microsoft-Empowers-Organizations-with-AI-First-Transformation.html"
+permalink: "/2025-10-28-Becoming-Frontier-How-Microsoft-Empowers-Organizations-with-AI-First-Transformation.html"
 categories: ["AI", "Azure"]
 tags: ["AI", "AI Transformation", "Automation", "Autonomous Agents", "Azure", "Azure AI Foundry", "Azure AI Search", "Azure Cosmos DB", "Azure IoT", "Azure OpenAI Service", "Cloud Transformation", "Company News", "Conversational AI", "Data Driven Insights", "Digital Twins", "Industry Solutions", "Machine Learning", "Microsoft Cloud", "Natural Language Processing", "News", "Operational Efficiency", "Predictive Analytics", "Workflow Optimization"]
 tags_normalized: ["ai", "ai transformation", "automation", "autonomous agents", "azure", "azure ai foundry", "azure ai search", "azure cosmos db", "azure iot", "azure openai service", "cloud transformation", "company news", "conversational ai", "data driven insights", "digital twins", "industry solutions", "machine learning", "microsoft cloud", "natural language processing", "news", "operational efficiency", "predictive analytics", "workflow optimization"]

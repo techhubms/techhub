@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft DevBlog"
 feed_url: "https://devblogs.microsoft.com/azure-sdk/feed/"
 date: 2025-05-07 17:30:53 +00:00
-permalink: "/news/2025-05-07-Azure-Developer-CLI-azd-May-2025-Release-New-Features-Templates-and-Docs.html"
+permalink: "/2025-05-07-Azure-Developer-CLI-azd-May-2025-Release-New-Features-Templates-and-Docs.html"
 categories: ["AI", "Azure", "Coding", "DevOps"]
 tags: [".NET", "AI", "App Service", "Azd", "Azure", "Azure API Management", "Azure Container Apps", "Azure Developer CLI", "Azure SDK", "Azure SQL", "Blazor", "CI/CD", "Codespaces", "Coding", "DevOps", "Docker", "GitHub Actions", "GitHub Codespaces", "Java", "JavaScript", "Kubernetes", "News", "Node.js", "OpenAI", "Python", "Semantic Kernel", "Templates", "Typescript", "VS Code"]
 tags_normalized: ["dotnet", "ai", "app service", "azd", "azure", "azure api management", "azure container apps", "azure developer cli", "azure sdk", "azure sql", "blazor", "cislashcd", "codespaces", "coding", "devops", "docker", "github actions", "github codespaces", "java", "javascript", "kubernetes", "news", "nodedotjs", "openai", "python", "semantic kernel", "templates", "typescript", "vs code"]

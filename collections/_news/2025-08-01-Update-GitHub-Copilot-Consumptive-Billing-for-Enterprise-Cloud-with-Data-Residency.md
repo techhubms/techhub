@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/changelog/label/copilot/feed/"
 date: 2025-08-01 16:08:03 +00:00
-permalink: "/news/2025-08-01-Update-GitHub-Copilot-Consumptive-Billing-for-Enterprise-Cloud-with-Data-Residency.html"
+permalink: "/2025-08-01-Update-GitHub-Copilot-Consumptive-Billing-for-Enterprise-Cloud-with-Data-Residency.html"
 categories: ["AI", "DevOps", "GitHub Copilot"]
 tags: ["AI", "Billing Update", "Consumptive Billing", "Copilot Business", "Copilot Enterprise", "Data Residency", "Developer Tools", "DevOps", "Enterprise Cloud", "GitHub Billing", "GitHub Copilot", "News", "Premium Models", "Premium Requests"]
 tags_normalized: ["ai", "billing update", "consumptive billing", "copilot business", "copilot enterprise", "data residency", "developer tools", "devops", "enterprise cloud", "github billing", "github copilot", "news", "premium models", "premium requests"]

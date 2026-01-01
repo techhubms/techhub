@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/changelog/feed/"
 date: 2025-08-07 19:08:07 +00:00
-permalink: "/news/2025-08-07-Single-Sign-On-Banners-Consolidated-Across-GitHub.html"
+permalink: "/2025-08-07-Single-Sign-On-Banners-Consolidated-Across-GitHub.html"
 categories: ["DevOps"]
 tags: ["Authentication", "Cloud Platforms", "Developer Tools", "DevOps", "GitHub", "Identity Management", "News", "Organization Management", "Single Sign On", "SSO", "User Experience"]
 tags_normalized: ["authentication", "cloud platforms", "developer tools", "devops", "github", "identity management", "news", "organization management", "single sign on", "sso", "user experience"]

@@ -9,10 +9,10 @@ viewing_mode: "external"
 feed_name: "Randy Pagels's Blog"
 feed_url: "https://www.cooknwithcopilot.com/rss.xml"
 date: 2025-08-15 00:00:00 +00:00
-permalink: "/blogs/2025-08-15-Speed-Up-API-Integration-with-GitHub-Copilot.html"
+permalink: "/2025-08-15-Speed-Up-API-Integration-with-GitHub-Copilot.html"
 categories: ["AI", "Coding", "GitHub Copilot"]
-tags: ["AI", "AI Development", "API Documentation", "API Integration", "Async/Await", "Code Automation", "Coding", "Developer Productivity", "Error Handling", "GitHub Copilot", "JavaScript", "OpenWeatherMap API", "Blogs"]
-tags_normalized: ["ai", "ai development", "api documentation", "api integration", "asyncslashawait", "code automation", "coding", "developer productivity", "error handling", "github copilot", "javascript", "openweathermap api", "blogs"]
+tags: ["AI", "AI Development", "API Documentation", "API Integration", "Async/Await", "Blogs", "Code Automation", "Coding", "Developer Productivity", "Error Handling", "GitHub Copilot", "JavaScript", "OpenWeatherMap API"]
+tags_normalized: ["ai", "ai development", "api documentation", "api integration", "asyncslashawait", "blogs", "code automation", "coding", "developer productivity", "error handling", "github copilot", "javascript", "openweathermap api"]
 ---
 
 Randy Pagels demonstrates how GitHub Copilot helps developers speed up API integration, offering practical tips for combining AI code suggestions with their API knowledge.<!--excerpt_end-->

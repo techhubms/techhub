@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/changelog/feed/"
 date: 2025-08-12 17:30:37 +00:00
-permalink: "/news/2025-08-12-OpenAI-GPT-5-Now-Available-to-GitHub-Copilot-Users-in-Major-IDEs.html"
+permalink: "/2025-08-12-OpenAI-GPT-5-Now-Available-to-GitHub-Copilot-Users-in-Major-IDEs.html"
 categories: ["AI", "GitHub Copilot"]
 tags: ["AI", "AI Coding Assistant", "AI Model", "Copilot Business", "Copilot Chat", "Copilot Enterprise", "Developer Tools", "Eclipse", "GitHub Copilot", "GPT 5", "IDE Integration", "JetBrains IDEs", "News", "OpenAI", "VS", "Xcode"]
 tags_normalized: ["ai", "ai coding assistant", "ai model", "copilot business", "copilot chat", "copilot enterprise", "developer tools", "eclipse", "github copilot", "gpt 5", "ide integration", "jetbrains ides", "news", "openai", "vs", "xcode"]

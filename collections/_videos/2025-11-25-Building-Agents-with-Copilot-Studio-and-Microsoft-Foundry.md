@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Events YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
 date: 2025-11-25 15:52:27 +00:00
-permalink: "/videos/2025-11-25-Building-Agents-with-Copilot-Studio-and-Microsoft-Foundry.html"
+permalink: "/2025-11-25-Building-Agents-with-Copilot-Studio-and-Microsoft-Foundry.html"
 categories: ["AI"]
 tags: ["Agent Deployment", "AI", "AI Integration", "Copilot Studio", "Cross Platform Orchestration", "Custom AI Models", "Enterprise AI", "Innovatewithlow", "Live Demos", "Low Code Development", "Microsoft 365 Copilot (deployment Target)", "Microsoft Agent Framework", "Microsoft Foundry", "MSIgnite", "Observability", "Policy Processing", "Session BRK314", "Unified SDK", "Unified Tracing", "Videos"]
 tags_normalized: ["agent deployment", "ai", "ai integration", "copilot studio", "cross platform orchestration", "custom ai models", "enterprise ai", "innovatewithlow", "live demos", "low code development", "microsoft 365 copilot deployment target", "microsoft agent framework", "microsoft foundry", "msignite", "observability", "policy processing", "session brk314", "unified sdk", "unified tracing", "videos"]

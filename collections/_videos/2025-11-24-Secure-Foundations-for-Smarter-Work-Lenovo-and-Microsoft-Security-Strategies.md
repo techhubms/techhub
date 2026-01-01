@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Events YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
 date: 2025-11-24 10:33:11 +00:00
-permalink: "/videos/2025-11-24-Secure-Foundations-for-Smarter-Work-Lenovo-and-Microsoft-Security-Strategies.html"
+permalink: "/2025-11-24-Secure-Foundations-for-Smarter-Work-Lenovo-and-Microsoft-Security-Strategies.html"
 categories: ["AI", "Azure", "Security"]
 tags: ["AI", "AI Innovation", "AI Security", "Azure", "Azure Stack HCI", "Business Transformation", "CISO", "Cloud Infrastructure", "Data Protection", "Enterprise Resiliency", "Lenovo Cybersecurity Services", "Microsoft Defender", "Microsoft Sentinel", "MSIgnite", "ScalewithcloudandAIendpoints", "Security", "Security Copilot", "Security Services", "ThinkAgile", "TruScale", "Videos"]
 tags_normalized: ["ai", "ai innovation", "ai security", "azure", "azure stack hci", "business transformation", "ciso", "cloud infrastructure", "data protection", "enterprise resiliency", "lenovo cybersecurity services", "microsoft defender", "microsoft sentinel", "msignite", "scalewithcloudandaiendpoints", "security", "security copilot", "security services", "thinkagile", "truscale", "videos"]

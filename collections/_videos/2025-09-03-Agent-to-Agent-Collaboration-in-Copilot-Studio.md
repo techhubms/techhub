@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Developer YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
 date: 2025-09-03 07:00:38 +00:00
-permalink: "/videos/2025-09-03-Agent-to-Agent-Collaboration-in-Copilot-Studio.html"
+permalink: "/2025-09-03-Agent-to-Agent-Collaboration-in-Copilot-Studio.html"
 categories: ["AI"]
 tags: ["Agent Collaboration", "Agent Solution Design", "AI", "AI Agents", "Cloud Computing", "Copilot Studio", "Demo", "Dev", "Developer Tools", "Development", "Employee Onboarding", "Enterprise Solutions", "HR Automation", "Intelligent Automation", "IT Setup", "Microsoft", "Microsoft Copilot Studio", "Preview Feature", "Tech", "Technology", "Videos", "Workflow Automation"]
 tags_normalized: ["agent collaboration", "agent solution design", "ai", "ai agents", "cloud computing", "copilot studio", "demo", "dev", "developer tools", "development", "employee onboarding", "enterprise solutions", "hr automation", "intelligent automation", "it setup", "microsoft", "microsoft copilot studio", "preview feature", "tech", "technology", "videos", "workflow automation"]

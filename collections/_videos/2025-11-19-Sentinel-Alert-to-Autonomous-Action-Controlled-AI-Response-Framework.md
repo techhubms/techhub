@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Events YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
 date: 2025-11-19 15:09:40 +00:00
-permalink: "/videos/2025-11-19-Sentinel-Alert-to-Autonomous-Action-Controlled-AI-Response-Framework.html"
+permalink: "/2025-11-19-Sentinel-Alert-to-Autonomous-Action-Controlled-AI-Response-Framework.html"
 categories: ["AI", "Azure", "Security"]
 tags: ["AI", "AI Agents", "Analyst Copilot", "Automation", "Azure", "Blink Micro Agents", "Builder Copilot", "Incident Response", "KQL", "Large Language Models", "LLM Agents", "Microsoft Azure", "Microsoft Sentinel", "Microsoft Teams Alerts", "MicrosoftAICloudPartnerProgram", "MSIgnite", "Security", "Security Automation", "Videos", "Workflow Editor"]
 tags_normalized: ["ai", "ai agents", "analyst copilot", "automation", "azure", "blink micro agents", "builder copilot", "incident response", "kql", "large language models", "llm agents", "microsoft azure", "microsoft sentinel", "microsoft teams alerts", "microsoftaicloudpartnerprogram", "msignite", "security", "security automation", "videos", "workflow editor"]

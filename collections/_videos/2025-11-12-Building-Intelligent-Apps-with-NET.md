@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "DotNet YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw"
 date: 2025-11-12 19:18:19 +00:00
-permalink: "/videos/2025-11-12-Building-Intelligent-Apps-with-NET.html"
+permalink: "/2025-11-12-Building-Intelligent-Apps-with-NET.html"
 categories: ["AI", "Coding"]
 tags: [".NET", ".NET Aspire", "AI", "AI Development", "AI Integration", "AI Powered Assistants", "App Development", "ASP.NET Core 10", "C# 14", "Classification", "Cloud Hosted AI", "Coding", "F# 10", "Large Language Models", "Local AI Models", "MAUI", "Microsoft.Extensions.AI", "Semantic Search", "Summarization", "Unified AI Abstractions", "Videos", "VS"]
 tags_normalized: ["dotnet", "dotnet aspire", "ai", "ai development", "ai integration", "ai powered assistants", "app development", "aspdotnet core 10", "csharp 14", "classification", "cloud hosted ai", "coding", "fsharp 10", "large language models", "local ai models", "maui", "microsoftdotextensionsdotai", "semantic search", "summarization", "unified ai abstractions", "videos", "vs"]

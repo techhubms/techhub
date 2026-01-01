@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/changelog/feed/"
 date: 2025-11-20 21:29:04 +00:00
-permalink: "/news/2025-11-20-Pull-Request-Files-Changed-Public-Preview-November-20-Updates.html"
+permalink: "/2025-11-20-Pull-Request-Files-Changed-Public-Preview-November-20-Updates.html"
 categories: ["DevOps"]
 tags: ["Code Review", "Collaboration Tools", "Development Workflow", "DevOps", "Feedback", "Files Changed", "GitHub", "Improvement", "News", "Performance Improvements", "Public Preview", "Pull Requests", "UI Enhancement", "Version Control"]
 tags_normalized: ["code review", "collaboration tools", "development workflow", "devops", "feedback", "files changed", "github", "improvement", "news", "performance improvements", "public preview", "pull requests", "ui enhancement", "version control"]

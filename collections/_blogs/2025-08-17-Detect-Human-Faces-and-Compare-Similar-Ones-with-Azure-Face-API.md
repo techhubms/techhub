@@ -9,10 +9,10 @@ viewing_mode: "external"
 feed_name: "Dellenny's Blog"
 feed_url: "https://dellenny.com/feed/"
 date: 2025-08-17 10:07:04 +00:00
-permalink: "/blogs/2025-08-17-Detect-Human-Faces-and-Compare-Similar-Ones-with-Azure-Face-API.html"
+permalink: "/2025-08-17-Detect-Human-Faces-and-Compare-Similar-Ones-with-Azure-Face-API.html"
 categories: ["AI", "Azure"]
-tags: ["AI", "API Integration", "Authentication", "Azure", "Azure Cognitive Services", "Azure Face API", "C#", "Cloud AI", "Computer Vision", "Detection Model", "Emotion Detection", "Face Attribute Extraction", "Face Client", "Face Comparison", "Face Detection", "Facial Recognition", "GDPR Compliance", "Identity Management", "Blogs", "Python"]
-tags_normalized: ["ai", "api integration", "authentication", "azure", "azure cognitive services", "azure face api", "csharp", "cloud ai", "computer vision", "detection model", "emotion detection", "face attribute extraction", "face client", "face comparison", "face detection", "facial recognition", "gdpr compliance", "identity management", "blogs", "python"]
+tags: ["AI", "API Integration", "Authentication", "Azure", "Azure Cognitive Services", "Azure Face API", "Blogs", "C#", "Cloud AI", "Computer Vision", "Detection Model", "Emotion Detection", "Face Attribute Extraction", "Face Client", "Face Comparison", "Face Detection", "Facial Recognition", "GDPR Compliance", "Identity Management", "Python"]
+tags_normalized: ["ai", "api integration", "authentication", "azure", "azure cognitive services", "azure face api", "blogs", "csharp", "cloud ai", "computer vision", "detection model", "emotion detection", "face attribute extraction", "face client", "face comparison", "face detection", "facial recognition", "gdpr compliance", "identity management", "python"]
 ---
 
 Dellenny demonstrates how to use the Azure Face API for facial recognition—showing developers step-by-step how to detect, analyze, and compare faces using Python and cloud-hosted AI services.<!--excerpt_end-->

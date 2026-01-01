@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/feed/"
 date: 2025-12-03 17:00:45 +00:00
-permalink: "/news/2025-12-03-Introducing-Custom-Agents-in-GitHub-Copilot-for-Developer-Workflows.html"
+permalink: "/2025-12-03-Introducing-Custom-Agents-in-GitHub-Copilot-for-Developer-Workflows.html"
 categories: ["AI", "Coding", "DevOps", "GitHub Copilot", "Security"]
 tags: ["Agentic AI", "AI", "AI & ML", "API Integration", "Automation", "CI/CD", "Coding", "Custom Agents", "Database Migrations", "DevOps", "DevOps Workflows", "Generative AI", "GitHub Copilot", "IaC", "Incident Response", "JFrog Security", "News", "News & Insights", "Observability", "PagerDuty", "Product", "Security", "Security Automation", "Terraform", "VS Code"]
 tags_normalized: ["agentic ai", "ai", "ai and ml", "api integration", "automation", "cislashcd", "coding", "custom agents", "database migrations", "devops", "devops workflows", "generative ai", "github copilot", "iac", "incident response", "jfrog security", "news", "news and insights", "observability", "pagerduty", "product", "security", "security automation", "terraform", "vs code"]

@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-11-18 18:43:59 +00:00
-permalink: "/community/2025-11-18-Agent-Loop-Expands-AI-Automation-in-Azure-Logic-Apps-with-New-Features.html"
+permalink: "/2025-11-18-Agent-Loop-Expands-AI-Automation-in-Azure-Logic-Apps-with-New-Features.html"
 categories: ["AI", "Azure", "Security"]
 tags: ["Agent Loop", "AI", "AI Automation", "APIM AI Gateway", "Automation", "Azure", "Azure Logic Apps", "Bring Your Own Model", "Community", "Conversational Agents", "Document Level Permissions", "Enterprise Integration", "Identity Management", "MCP", "Microsoft Entra ID", "Observability", "Okta", "Preview Features", "RAG Security", "Security", "Serverless", "Teams Integration", "Tool Calling", "Workflow Designer"]
 tags_normalized: ["agent loop", "ai", "ai automation", "apim ai gateway", "automation", "azure", "azure logic apps", "bring your own model", "community", "conversational agents", "document level permissions", "enterprise integration", "identity management", "mcp", "microsoft entra id", "observability", "okta", "preview features", "rag security", "security", "serverless", "teams integration", "tool calling", "workflow designer"]

@@ -9,10 +9,10 @@ viewing_mode: "external"
 feed_name: "DevOps Blog"
 feed_url: "https://devops.com/feed/"
 date: 2025-08-11 19:34:46 +00:00
-permalink: "/blogs/2025-08-11-Minimus-Adds-VEX-Support-and-Microsoft-SSO-Integration-to-Hardened-Images-Service.html"
+permalink: "/2025-08-11-Minimus-Adds-VEX-Support-and-Microsoft-SSO-Integration-to-Hardened-Images-Service.html"
 categories: ["DevOps", "Security"]
-tags: ["Application Security", "CIS Benchmarks", "Compliance Dashboards", "Container Security", "DevOps", "DevSecOps", "Hardened Images", "Helm Charts", "Kubernetes Security", "Microsoft SSO", "Minimus", "NIST", "Blogs", "Role Based Access Control", "Secure Software Supply Chain", "Security", "Single Sign On", "Social Facebook", "Social LinkedIn", "Social X", "Threat Intelligence", "VEX", "Vulnerability Exploittability Exchange"]
-tags_normalized: ["application security", "cis benchmarks", "compliance dashboards", "container security", "devops", "devsecops", "hardened images", "helm charts", "kubernetes security", "microsoft sso", "minimus", "nist", "blogs", "role based access control", "secure software supply chain", "security", "single sign on", "social facebook", "social linkedin", "social x", "threat intelligence", "vex", "vulnerability exploittability exchange"]
+tags: ["Application Security", "Blogs", "CIS Benchmarks", "Compliance Dashboards", "Container Security", "DevOps", "DevSecOps", "Hardened Images", "Helm Charts", "Kubernetes Security", "Microsoft SSO", "Minimus", "NIST", "Role Based Access Control", "Secure Software Supply Chain", "Security", "Single Sign On", "Social Facebook", "Social LinkedIn", "Social X", "Threat Intelligence", "VEX", "Vulnerability Exploittability Exchange"]
+tags_normalized: ["application security", "blogs", "cis benchmarks", "compliance dashboards", "container security", "devops", "devsecops", "hardened images", "helm charts", "kubernetes security", "microsoft sso", "minimus", "nist", "role based access control", "secure software supply chain", "security", "single sign on", "social facebook", "social linkedin", "social x", "threat intelligence", "vex", "vulnerability exploittability exchange"]
 ---
 
 Mike Vizard explains how Minimus’ updated service now helps DevSecOps teams with VEX support, secure Helm charts for Kubernetes, compliance dashboards, and Microsoft SSO integration, enhancing application security workflows.<!--excerpt_end-->

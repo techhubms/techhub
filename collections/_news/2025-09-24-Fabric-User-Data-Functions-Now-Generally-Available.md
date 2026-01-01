@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Fabric Blog"
 feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
 date: 2025-09-24 11:00:00 +00:00
-permalink: "/news/2025-09-24-Fabric-User-Data-Functions-Now-Generally-Available.html"
+permalink: "/2025-09-24-Fabric-User-Data-Functions-Now-Generally-Available.html"
 categories: ["Azure", "Coding", "ML"]
 tags: ["API Integration", "Async Functions", "Azure", "Coding", "Custom Functions", "Data Engineering", "Data Pipelines", "Fabric Lakehouse", "Fabric SQL Database", "Microsoft Fabric", "ML", "News", "Notebooks", "OpenAPI", "Pandas", "Power BI", "Python", "User Data Functions", "VS Code"]
 tags_normalized: ["api integration", "async functions", "azure", "coding", "custom functions", "data engineering", "data pipelines", "fabric lakehouse", "fabric sql database", "microsoft fabric", "ml", "news", "notebooks", "openapi", "pandas", "power bi", "python", "user data functions", "vs code"]

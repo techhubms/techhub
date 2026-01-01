@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "DotNet YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw"
 date: 2025-11-14 02:30:06 +00:00
-permalink: "/videos/2025-11-14-If-NET-Brewed-Beer-IoT-Brewing-Automation-with-Raspberry-Pi.html"
+permalink: "/2025-11-14-If-NET-Brewed-Beer-IoT-Brewing-Automation-with-Raspberry-Pi.html"
 categories: ["Coding"]
 tags: [".NET", ".NET Conf", "Coding", "Device Automation", "Embedded Systems", "Hardware Integration", "IoT", "Low Powered Devices", "Machine Control", "Meadow Board", "Raspberry Pi", "Software Development", "Tech Conference", "Videos"]
 tags_normalized: ["dotnet", "dotnet conf", "coding", "device automation", "embedded systems", "hardware integration", "iot", "low powered devices", "machine control", "meadow board", "raspberry pi", "software development", "tech conference", "videos"]

@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Developer YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
 date: 2025-08-12 15:33:36 +00:00
-permalink: "/videos/2025-08-12-Designing-Empathetic-AI-Experiences-Trish-Winter-Hunt-on-Content-Design-and-Azure-AI-Foundry.html"
+permalink: "/2025-08-12-Designing-Empathetic-AI-Experiences-Trish-Winter-Hunt-on-Content-Design-and-Azure-AI-Foundry.html"
 categories: ["AI", "Azure"]
 tags: ["AI", "AI Adoption", "AI Agents", "AI Hallucinations Handling", "AI UX", "Azure", "Azure AI Foundry", "ChatGPT", "Cloud Computing", "Content Design", "Content Strategy", "Copilot", "Dev", "Development", "Error Message Design", "Generative AI", "Grounded AI", "Human Centered Design", "Microsoft", "Product Design", "Software Development", "Tech", "Technical Communication", "Technology", "User Experience", "UX Writing", "Videos"]
 tags_normalized: ["ai", "ai adoption", "ai agents", "ai hallucinations handling", "ai ux", "azure", "azure ai foundry", "chatgpt", "cloud computing", "content design", "content strategy", "copilot", "dev", "development", "error message design", "generative ai", "grounded ai", "human centered design", "microsoft", "product design", "software development", "tech", "technical communication", "technology", "user experience", "ux writing", "videos"]

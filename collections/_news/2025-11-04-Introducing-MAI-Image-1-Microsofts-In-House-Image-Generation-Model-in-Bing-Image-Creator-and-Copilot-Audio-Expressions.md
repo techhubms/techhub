@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft News"
 feed_url: "https://news.microsoft.com/source/feed/"
 date: 2025-11-04 19:08:50 +00:00
-permalink: "/news/2025-11-04-Introducing-MAI-Image-1-Microsofts-In-House-Image-Generation-Model-in-Bing-Image-Creator-and-Copilot-Audio-Expressions.html"
+permalink: "/2025-11-04-Introducing-MAI-Image-1-Microsofts-In-House-Image-Generation-Model-in-Bing-Image-Creator-and-Copilot-Audio-Expressions.html"
 categories: ["AI"]
 tags: ["AI", "AI Model Evaluation", "AI Product Integration", "Bing Image Creator", "Company News", "Copilot Audio Expressions", "Creative AI", "DALL E 3", "GPT 4o", "Image Generation", "in House AI Model", "LMArena", "MAI Image 1", "Microsoft AI", "News", "Text To Image"]
 tags_normalized: ["ai", "ai model evaluation", "ai product integration", "bing image creator", "company news", "copilot audio expressions", "creative ai", "dall e 3", "gpt 4o", "image generation", "in house ai model", "lmarena", "mai image 1", "microsoft ai", "news", "text to image"]

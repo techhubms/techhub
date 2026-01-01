@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft AI Foundry Blog"
 feed_url: "https://devblogs.microsoft.com/foundry/feed/"
 date: 2025-11-20 16:00:05 +00:00
-permalink: "/news/2025-11-20-Assess-Agentic-Risks-with-the-AI-Red-Teaming-Agent-in-Microsoft-Foundry.html"
+permalink: "/2025-11-20-Assess-Agentic-Risks-with-the-AI-Red-Teaming-Agent-in-Microsoft-Foundry.html"
 categories: ["AI", "Azure", "Security"]
 tags: ["Adversarial Testing", "Agentic Pipelines", "AI", "AI Development", "AI Red Teaming Agent", "AI Security", "AI Tools", "Azure", "Azure AI Foundry", "CI/CD", "Compliance", "Generative AI", "Microsoft Foundry", "News", "Prompt Injection", "PyRIT", "Red Teaming", "SDK Integration", "Security", "Sensitive Data Leakage", "Trustworthy AI"]
 tags_normalized: ["adversarial testing", "agentic pipelines", "ai", "ai development", "ai red teaming agent", "ai security", "ai tools", "azure", "azure ai foundry", "cislashcd", "compliance", "generative ai", "microsoft foundry", "news", "prompt injection", "pyrit", "red teaming", "sdk integration", "security", "sensitive data leakage", "trustworthy ai"]

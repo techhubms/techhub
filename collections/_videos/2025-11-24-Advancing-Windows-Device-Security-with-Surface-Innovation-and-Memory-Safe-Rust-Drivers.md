@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Events YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
 date: 2025-11-24 04:58:05 +00:00
-permalink: "/videos/2025-11-24-Advancing-Windows-Device-Security-with-Surface-Innovation-and-Memory-Safe-Rust-Drivers.html"
+permalink: "/2025-11-24-Advancing-Windows-Device-Security-with-Surface-Innovation-and-Memory-Safe-Rust-Drivers.html"
 categories: ["Coding", "Security"]
 tags: ["Cargo WDK", "Coding", "Device Drivers", "Device Firmware Configuration Interface", "DFCI", "Embedded Controller", "Firmware Security", "Hardware Security", "IT Security", "Microsoft Ignite", "Microsoft Surface", "MSIgnite", "Open Device Partnership", "Open Source", "Rust", "ScalewithcloudandAIendpoints", "Secure Core PC", "Security", "Videos", "Windows Drivers Rs", "Windows Security"]
 tags_normalized: ["cargo wdk", "coding", "device drivers", "device firmware configuration interface", "dfci", "embedded controller", "firmware security", "hardware security", "it security", "microsoft ignite", "microsoft surface", "msignite", "open device partnership", "open source", "rust", "scalewithcloudandaiendpoints", "secure core pc", "security", "videos", "windows drivers rs", "windows security"]

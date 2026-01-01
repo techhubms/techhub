@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft News"
 feed_url: "https://news.microsoft.com/source/feed/"
 date: 2025-10-02 20:43:12 +00:00
-permalink: "/news/2025-10-02-Microsoft-Led-Study-Unveils-AI-Protein-Design-Biosecurity-Research-in-Science-Magazine.html"
+permalink: "/2025-10-02-Microsoft-Led-Study-Unveils-AI-Protein-Design-Biosecurity-Research-in-Science-Magazine.html"
 categories: ["AI", "Security"]
 tags: ["AI", "AI Ethics", "AI Governance", "AI Protein Design", "AI Risks", "AI Safety", "Biosecurity", "Company News", "LinkedIn Post", "Microsoft Research", "Mitigation Strategies", "News", "Red Teaming", "Responsible AI", "Science Magazine", "Security", "Synthetic Biology"]
 tags_normalized: ["ai", "ai ethics", "ai governance", "ai protein design", "ai risks", "ai safety", "biosecurity", "company news", "linkedin post", "microsoft research", "mitigation strategies", "news", "red teaming", "responsible ai", "science magazine", "security", "synthetic biology"]

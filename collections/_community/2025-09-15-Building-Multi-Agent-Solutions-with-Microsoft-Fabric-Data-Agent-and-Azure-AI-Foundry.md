@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-09-15 14:49:18 +00:00
-permalink: "/community/2025-09-15-Building-Multi-Agent-Solutions-with-Microsoft-Fabric-Data-Agent-and-Azure-AI-Foundry.html"
+permalink: "/2025-09-15-Building-Multi-Agent-Solutions-with-Microsoft-Fabric-Data-Agent-and-Azure-AI-Foundry.html"
 categories: ["AI", "Azure", "ML"]
 tags: ["Agentic AI", "AI", "Azure", "Azure AI Foundry", "Azure AI Services", "Community", "Copilot Studio", "Data Engineering", "Data Lakehouse", "Fabric Data Agent", "Fabric Notebook", "Financial Services", "Generative AI", "Industry Solutions", "Insurance Analytics", "Low Code Development", "M365 Agents Toolkit", "Microsoft Fabric", "Microsoft Teams Integration", "ML", "Multi Agent Architecture", "Power BI", "Pro Code Development", "Responsible AI"]
 tags_normalized: ["agentic ai", "ai", "azure", "azure ai foundry", "azure ai services", "community", "copilot studio", "data engineering", "data lakehouse", "fabric data agent", "fabric notebook", "financial services", "generative ai", "industry solutions", "insurance analytics", "low code development", "m365 agents toolkit", "microsoft fabric", "microsoft teams integration", "ml", "multi agent architecture", "power bi", "pro code development", "responsible ai"]

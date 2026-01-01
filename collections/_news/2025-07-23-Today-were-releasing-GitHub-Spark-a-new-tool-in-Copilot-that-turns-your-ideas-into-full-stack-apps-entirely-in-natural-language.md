@@ -9,7 +9,7 @@ categories: ["AI", "GitHub Copilot"]
 feed_name: "Microsoft News"
 feed_url: "https://news.microsoft.com/source/feed/"
 date: 2025-07-23 21:14:13 +00:00
-permalink: "/news/2025-07-23-Today-were-releasing-GitHub-Spark-a-new-tool-in-Copilot-that-turns-your-ideas-into-full-stack-apps-entirely-in-natural-language.html"
+permalink: "/2025-07-23-Today-were-releasing-GitHub-Spark-a-new-tool-in-Copilot-that-turns-your-ideas-into-full-stack-apps-entirely-in-natural-language.html"
 viewing_mode: "external"
 page: "news"
 tags: ["AI", "AI Tools", "App Creation", "Automation", "Company News", "Developer Tools", "Full Stack Apps", "GitHub", "GitHub Copilot", "GitHub Spark", "LinkedIn Post", "Natural Language", "News", "Software Development"]

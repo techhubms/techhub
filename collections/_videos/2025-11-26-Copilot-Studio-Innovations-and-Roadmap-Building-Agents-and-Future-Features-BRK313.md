@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Events YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
 date: 2025-11-26 21:58:57 +00:00
-permalink: "/videos/2025-11-26-Copilot-Studio-Innovations-and-Roadmap-Building-Agents-and-Future-Features-BRK313.html"
+permalink: "/2025-11-26-Copilot-Studio-Innovations-and-Roadmap-Building-Agents-and-Future-Features-BRK313.html"
 categories: ["AI"]
 tags: ["Agent Development", "Agent Identity", "AI", "Automation", "BRK313", "Business Impact", "Copilot And Agents At Work:copilot Agents", "Copilot And Agents At Work:copilot Studio", "Copilot Studio", "Debugging Tools", "Enterprise Agents", "F5n1", "Future Features", "Generative Orchestration", "Governance", "Ignite", "Innovate With Low Code AI And Agents", "Integration", "Low Code AI", "Microsoft", "Microsoft Ignite", "Ms Ignite", "Msft Ignite", "Platform Management", "Testing Tools", "Videos", "What’s New in Copilot Studio And Roadmap | BRK313"]
 tags_normalized: ["agent development", "agent identity", "ai", "automation", "brk313", "business impact", "copilot and agents at workcopilot agents", "copilot and agents at workcopilot studio", "copilot studio", "debugging tools", "enterprise agents", "f5n1", "future features", "generative orchestration", "governance", "ignite", "innovate with low code ai and agents", "integration", "low code ai", "microsoft", "microsoft ignite", "ms ignite", "msft ignite", "platform management", "testing tools", "videos", "whats new in copilot studio and roadmap pipe brk313"]

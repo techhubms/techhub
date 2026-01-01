@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/changelog/feed/"
 date: 2025-11-20 21:01:36 +00:00
-permalink: "/news/2025-11-20-Expanded-GitHub-Actions-Cache-Limits-Exceed-10-GB-per-Repository.html"
+permalink: "/2025-11-20-Expanded-GitHub-Actions-Cache-Limits-Exceed-10-GB-per-Repository.html"
 categories: ["DevOps"]
 tags: ["Actions", "Automation", "Billing", "Cache Management", "CI/CD", "Codespaces", "DevOps", "Enterprise Account", "Enterprise Admin", "Eviction Policies", "Git LFS", "GitHub Actions", "Improvement", "News", "Pro Account", "Repository Management", "Retention Policies", "Storage Policies", "Team Account", "Workflow Optimization"]
 tags_normalized: ["actions", "automation", "billing", "cache management", "cislashcd", "codespaces", "devops", "enterprise account", "enterprise admin", "eviction policies", "git lfs", "github actions", "improvement", "news", "pro account", "repository management", "retention policies", "storage policies", "team account", "workflow optimization"]

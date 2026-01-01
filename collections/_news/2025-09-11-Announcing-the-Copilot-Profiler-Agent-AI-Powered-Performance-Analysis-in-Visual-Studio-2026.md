@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft VisualStudio Blog"
 feed_url: "https://devblogs.microsoft.com/visualstudio/feed/"
 date: 2025-09-11 16:05:09 +00:00
-permalink: "/news/2025-09-11-Announcing-the-Copilot-Profiler-Agent-AI-Powered-Performance-Analysis-in-Visual-Studio-2026.html"
+permalink: "/2025-09-11-Announcing-the-Copilot-Profiler-Agent-AI-Powered-Performance-Analysis-in-Visual-Studio-2026.html"
 categories: ["AI", "Coding", "GitHub Copilot"]
 tags: [".NET", "AI", "AI Assistant", "BenchmarkDotNet", "Coding", "Copilot Profiler Agent", "CPU Analysis", "Debugging And Diagnostics", "Developer Productivity", "GitHub Copilot", "Memory Optimization", "News", "Open Source", "Performance Improvements", "Performance Profiling", "Profiling", "Profiling Tools", "SharpZipLib", "Software Optimization", "VS"]
 tags_normalized: ["dotnet", "ai", "ai assistant", "benchmarkdotnet", "coding", "copilot profiler agent", "cpu analysis", "debugging and diagnostics", "developer productivity", "github copilot", "memory optimization", "news", "open source", "performance improvements", "performance profiling", "profiling", "profiling tools", "sharpziplib", "software optimization", "vs"]

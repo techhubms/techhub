@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft AI Foundry Blog"
 feed_url: "https://devblogs.microsoft.com/foundry/feed/"
 date: 2025-11-20 16:30:12 +00:00
-permalink: "/news/2025-11-20-Foundry-Local-Brings-On-Device-AI-to-Android-and-Arc-Enabled-Kubernetes.html"
+permalink: "/2025-11-20-Foundry-Local-Brings-On-Device-AI-to-Android-and-Arc-Enabled-Kubernetes.html"
 categories: ["AI", "Azure", "Coding"]
 tags: ["AI", "AI Development", "AI Tools", "Android Development", "AnythingLLM", "Azure", "Azure AI Foundry", "Azure Arc", "Coding", "Container Deployment", "Deep Learning Models", "Edge AI", "Foundry Local", "FoundryLocal", "GPT OSS", "Hybrid Cloud", "Kubernetes", "LangChain Integration", "Mistral", "MSIgnite", "News", "On Device AI", "OpenAI API", "Phi", "Qwen", "SDK", "Speech API", "Whisper Speech To Text", "Windows ML"]
 tags_normalized: ["ai", "ai development", "ai tools", "android development", "anythingllm", "azure", "azure ai foundry", "azure arc", "coding", "container deployment", "deep learning models", "edge ai", "foundry local", "foundrylocal", "gpt oss", "hybrid cloud", "kubernetes", "langchain integration", "mistral", "msignite", "news", "on device ai", "openai api", "phi", "qwen", "sdk", "speech api", "whisper speech to text", "windows ml"]

@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-11-17 10:31:44 +00:00
-permalink: "/community/2025-11-17-Secure-Azure-Stream-Analytics-Jobs-with-Dedicated-Clusters-and-Managed-Private-Endpoints.html"
+permalink: "/2025-11-17-Secure-Azure-Stream-Analytics-Jobs-with-Dedicated-Clusters-and-Managed-Private-Endpoints.html"
 categories: ["Azure", "Coding", "DevOps", "Security"]
 tags: ["Automation", "Azure", "Azure Portal", "Azure Stream Analytics", "Blob Storage", "Cloud Security", "Coding", "Community", "Data Pipeline", "Dedicated Cluster", "DevOps", "Event Processing", "IAM", "Input/Output Configuration", "JSON Serialization", "Managed Identity", "Managed Private Endpoint", "Private Link", "Role Assignment", "Security", "Stream Analytics Job", "Terraform", "Zero Trust"]
 tags_normalized: ["automation", "azure", "azure portal", "azure stream analytics", "blob storage", "cloud security", "coding", "community", "data pipeline", "dedicated cluster", "devops", "event processing", "iam", "inputslashoutput configuration", "json serialization", "managed identity", "managed private endpoint", "private link", "role assignment", "security", "stream analytics job", "terraform", "zero trust"]

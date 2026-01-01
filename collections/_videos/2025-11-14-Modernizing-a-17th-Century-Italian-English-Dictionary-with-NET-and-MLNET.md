@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "DotNet YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw"
 date: 2025-11-14 05:30:06 +00:00
-permalink: "/videos/2025-11-14-Modernizing-a-17th-Century-Italian-English-Dictionary-with-NET-and-MLNET.html"
+permalink: "/2025-11-14-Modernizing-a-17th-Century-Italian-English-Dictionary-with-NET-and-MLNET.html"
 categories: ["Azure", "Coding", "ML"]
 tags: [".NET", "Application Architecture", "Aspire", "Azure", "Cloud Storage", "Coding", "CosmosDb", "Custom Model Training", "Data Engineering", "Data Migration", "Dictionary Modernization", "Machine Learning", "Microsoft", "ML", "ML.NET", "Renaissance Texts", "Vector Embeddings", "Videos"]
 tags_normalized: ["dotnet", "application architecture", "aspire", "azure", "cloud storage", "coding", "cosmosdb", "custom model training", "data engineering", "data migration", "dictionary modernization", "machine learning", "microsoft", "ml", "mldotnet", "renaissance texts", "vector embeddings", "videos"]

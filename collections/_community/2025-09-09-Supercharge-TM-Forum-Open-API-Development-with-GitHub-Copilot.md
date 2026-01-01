@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-09-09 13:42:07 +00:00
-permalink: "/community/2025-09-09-Supercharge-TM-Forum-Open-API-Development-with-GitHub-Copilot.html"
+permalink: "/2025-09-09-Supercharge-TM-Forum-Open-API-Development-with-GitHub-Copilot.html"
 categories: ["AI", "Coding", "GitHub Copilot"]
 tags: ["Agent Mode", "AI", "AI Coding Assistant", "API Development", "Coding", "Community", "Copilot Chat", "Developer Productivity", "Express", "GitHub Copilot", "Node.js", "OpenAPI Specification", "REST API", "Software Engineering Best Practices", "Telecommunications", "Test Automation", "TM Forum Open API", "TMF629", "VS Code"]
 tags_normalized: ["agent mode", "ai", "ai coding assistant", "api development", "coding", "community", "copilot chat", "developer productivity", "express", "github copilot", "nodedotjs", "openapi specification", "rest api", "software engineering best practices", "telecommunications", "test automation", "tm forum open api", "tmf629", "vs code"]

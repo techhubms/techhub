@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-11-18 16:00:14 +00:00
-permalink: "/community/2025-11-18-Intelligent-Real-Time-Video-Insights-and-Agents-with-Azure-AI-Video-Indexer-Public-Preview.html"
+permalink: "/2025-11-18-Intelligent-Real-Time-Video-Insights-and-Agents-with-Azure-AI-Video-Indexer-Public-Preview.html"
 categories: ["AI", "Azure"]
 tags: ["Agentic AI", "AI", "API Integration", "Azure", "Azure AI Video Indexer", "Azure Arc", "Community", "Conversational AI", "Custom AI Models", "Edge Native", "Event Investigation", "Foundry Gen AI", "Kubernetes", "Live Video Intelligence", "Manufacturing Safety", "Operational Monitoring", "Privacy Compliance", "Public Safety", "Real Time Video Analysis", "RetailOps Agent", "Scalability", "Security Agent", "Video Summarization"]
 tags_normalized: ["agentic ai", "ai", "api integration", "azure", "azure ai video indexer", "azure arc", "community", "conversational ai", "custom ai models", "edge native", "event investigation", "foundry gen ai", "kubernetes", "live video intelligence", "manufacturing safety", "operational monitoring", "privacy compliance", "public safety", "real time video analysis", "retailops agent", "scalability", "security agent", "video summarization"]

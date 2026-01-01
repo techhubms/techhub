@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft DevBlog"
 feed_url: "https://devblogs.microsoft.com/autogen/feed/"
 date: 2025-01-17 23:39:51 +00:00
-permalink: "/news/2025-01-17-AutoGen-Reimagined-Announcing-the-Launch-of-AutoGen-04.html"
+permalink: "/2025-01-17-AutoGen-Reimagined-Announcing-the-Launch-of-AutoGen-04.html"
 categories: ["AI"]
 tags: [".NET", "Agentic Workflows", "AI", "Asynchronous Messaging", "Autogen", "AutoGen Studio", "Cross Language Support", "Developer Tools", "Layered Architecture", "Magentic One", "Modular AI", "New Release", "News", "OpenTelemetry", "Python"]
 tags_normalized: ["dotnet", "agentic workflows", "ai", "asynchronous messaging", "autogen", "autogen studio", "cross language support", "developer tools", "layered architecture", "magentic one", "modular ai", "new release", "news", "opentelemetry", "python"]

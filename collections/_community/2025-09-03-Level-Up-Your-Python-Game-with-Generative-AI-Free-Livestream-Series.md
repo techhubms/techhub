@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-09-03 23:03:37 +00:00
-permalink: "/community/2025-09-03-Level-Up-Your-Python-Game-with-Generative-AI-Free-Livestream-Series.html"
+permalink: "/2025-09-03-Level-Up-Your-Python-Game-with-Generative-AI-Free-Livestream-Series.html"
 categories: ["AI", "Coding"]
 tags: ["Agents", "AI", "AI Discord", "Coding", "Community", "Community Event", "Generative AI", "GitHub Codespaces", "Learning Series", "Live Coding", "LLMs", "MCP", "Microsoft", "Multi Agent Workflows", "Python", "VS Code"]
 tags_normalized: ["agents", "ai", "ai discord", "coding", "community", "community event", "generative ai", "github codespaces", "learning series", "live coding", "llms", "mcp", "microsoft", "multi agent workflows", "python", "vs code"]

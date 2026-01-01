@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Fabric Blog"
 feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
 date: 2025-10-02 11:00:00 +00:00
-permalink: "/news/2025-10-02-Extending-Point-in-Time-Retention-in-Fabric-SQL-DB-From-7-to-35-Days.html"
+permalink: "/2025-10-02-Extending-Point-in-Time-Retention-in-Fabric-SQL-DB-From-7-to-35-Days.html"
 categories: ["Azure", "ML"]
 tags: ["Automated Backups", "Azure", "Backup Retention", "Compliance", "Data Platform", "Database Management", "Database Recovery", "Disaster Recovery", "Enterprise Data", "Fabric SQL DB", "Microsoft Fabric", "ML", "News", "PITR", "Point in Time Restore", "Sys.dm Database Backups", "ZRS"]
 tags_normalized: ["automated backups", "azure", "backup retention", "compliance", "data platform", "database management", "database recovery", "disaster recovery", "enterprise data", "fabric sql db", "microsoft fabric", "ml", "news", "pitr", "point in time restore", "sysdotdm database backups", "zrs"]

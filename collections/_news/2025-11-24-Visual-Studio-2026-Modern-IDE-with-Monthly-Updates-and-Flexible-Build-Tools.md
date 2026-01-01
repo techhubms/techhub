@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft VisualStudio Blog"
 feed_url: "https://devblogs.microsoft.com/visualstudio/feed/"
 date: 2025-11-24 15:00:06 +00:00
-permalink: "/news/2025-11-24-Visual-Studio-2026-Modern-IDE-with-Monthly-Updates-and-Flexible-Build-Tools.html"
+permalink: "/2025-11-24-Visual-Studio-2026-Modern-IDE-with-Monthly-Updates-and-Flexible-Build-Tools.html"
 categories: ["AI", "Coding", "DevOps"]
 tags: [".NET", "AI", "Build Tools", "C++", "Coding", "Continuous Delivery", "Developer Tools", "DevOps", "Enterprise Support", "IDE", "Insiders Channel", "Lifecycle", "Long Term Servicing Channel", "Microsoft", "Modern Support Lifecycle", "Monthly Updates", "MSVC", "News", "Project Compatibility", "Release Cadence", "Servicing Channels", "Software Development", "Stable Channel", "Support", "VS"]
 tags_normalized: ["dotnet", "ai", "build tools", "cplusplus", "coding", "continuous delivery", "developer tools", "devops", "enterprise support", "ide", "insiders channel", "lifecycle", "long term servicing channel", "microsoft", "modern support lifecycle", "monthly updates", "msvc", "news", "project compatibility", "release cadence", "servicing channels", "software development", "stable channel", "support", "vs"]

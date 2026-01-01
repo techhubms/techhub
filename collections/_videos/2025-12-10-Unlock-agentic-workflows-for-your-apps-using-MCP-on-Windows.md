@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Developer YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
 date: 2025-12-10 22:07:54 +00:00
-permalink: "/videos/2025-12-10-Unlock-agentic-workflows-for-your-apps-using-MCP-on-Windows.html"
+permalink: "/2025-12-10-Unlock-agentic-workflows-for-your-apps-using-MCP-on-Windows.html"
 categories: ["AI", "Azure"]
 tags: ["Agentic Workflows", "AI", "AI Agents", "AI Development", "App Integration", "Automation", "Azure", "Cloud Computing", "Dev", "Developer", "Development", "Enterprise AI", "Extensibility", "MCP", "MCP Registry", "MCP Server", "Microsoft", "Microsoft Copilot Platform", "Scalability", "Tech", "Technology", "Videos", "Windows"]
 tags_normalized: ["agentic workflows", "ai", "ai agents", "ai development", "app integration", "automation", "azure", "cloud computing", "dev", "developer", "development", "enterprise ai", "extensibility", "mcp", "mcp registry", "mcp server", "microsoft", "microsoft copilot platform", "scalability", "tech", "technology", "videos", "windows"]

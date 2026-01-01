@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-07-29 15:00:00 +00:00
-permalink: "/community/2025-07-29-Announcing-GA-of-Bicep-Templates-for-Microsoft-Entra-ID-Resources.html"
+permalink: "/2025-07-29-Announcing-GA-of-Bicep-Templates-for-Microsoft-Entra-ID-Resources.html"
 categories: ["Azure", "Coding", "DevOps", "Security"]
 tags: ["Azure", "Azure Resource Manager", "Bicep", "Coding", "Community", "Deployment Automation", "DevOps", "Federated Identity", "GitHub Actions", "IaC", "Managed Identity", "Microsoft Entra ID", "Microsoft Graph", "Resource Orchestration", "Security", "VS Code Extension"]
 tags_normalized: ["azure", "azure resource manager", "bicep", "coding", "community", "deployment automation", "devops", "federated identity", "github actions", "iac", "managed identity", "microsoft entra id", "microsoft graph", "resource orchestration", "security", "vs code extension"]

@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/feed/"
 date: 2025-10-13 16:00:00 +00:00
-permalink: "/news/2025-10-13-How-to-Build-Reliable-AI-Workflows-with-Agentic-Primitives-and-Context-Engineering.html"
+permalink: "/2025-10-13-How-to-Build-Reliable-AI-Workflows-with-Agentic-Primitives-and-Context-Engineering.html"
 categories: ["AI", "Coding", "DevOps", "GitHub Copilot"]
 tags: [".instructions.md", ".prompt.md", "Agent CLI", "Agentic AI", "Agentic Primitives", "AI", "AI & ML", "APM", "CI/CD", "Coding", "Context Engineering", "DevOps", "GitHub CLI", "GitHub Copilot", "GitHub Copilot CLI", "Markdown Prompt Engineering", "MCP Tools", "Natural Language Programming", "News", "Prompt Engineering", "Specification Templates", "VS Code", "Workflow Automation"]
 tags_normalized: ["dotinstructionsdotmd", "dotpromptdotmd", "agent cli", "agentic ai", "agentic primitives", "ai", "ai and ml", "apm", "cislashcd", "coding", "context engineering", "devops", "github cli", "github copilot", "github copilot cli", "markdown prompt engineering", "mcp tools", "natural language programming", "news", "prompt engineering", "specification templates", "vs code", "workflow automation"]

@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Reddit DotNet"
 feed_url: "https://www.reddit.com/r/dotnet/.rss"
 date: 2025-08-08 09:05:50 +00:00
-permalink: "/community/2025-08-08-ZaString-A-Zero-Allocation-Span-Based-String-Builder-for-NET.html"
+permalink: "/2025-08-08-ZaString-A-Zero-Allocation-Span-Based-String-Builder-for-NET.html"
 categories: ["Coding"]
 tags: [".NET", "API Design", "ArrayPool", "Benchmarks", "Buffer Management", "C#", "Coding", "Community", "Garbage Collection", "ISpanFormattable", "Logging", "NuGet", "Performance", "ReadOnlySpan", "Serialization", "Span", "Stackalloc", "StringBuilder", "ZaString", "Zero Allocation", "ZString"]
 tags_normalized: ["dotnet", "api design", "arraypool", "benchmarks", "buffer management", "csharp", "coding", "community", "garbage collection", "ispanformattable", "logging", "nuget", "performance", "readonlyspan", "serialization", "span", "stackalloc", "stringbuilder", "zastring", "zero allocation", "zstring"]

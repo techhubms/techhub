@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Events YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
 date: 2025-11-19 11:47:25 +00:00
-permalink: "/videos/2025-11-19-Optimizing-Azure-Managed-Disk-Tiering-for-Performance-and-Cost-Efficiency.html"
+permalink: "/2025-11-19-Optimizing-Azure-Managed-Disk-Tiering-for-Performance-and-Cost-Efficiency.html"
 categories: ["Azure"]
 tags: ["AutoScaler", "Azure", "Azure Managed Disks", "Cloud Storage", "Cost Management", "Disk Tiering", "Downtime Mitigation", "Enterprise IT", "Infrastructure", "Lucidity", "Microsoft Ignite", "Migrateandmodernizeyourestate", "Migration", "MSIgnite", "Performance Tuning", "Storage Management", "Storage Optimization", "Videos"]
 tags_normalized: ["autoscaler", "azure", "azure managed disks", "cloud storage", "cost management", "disk tiering", "downtime mitigation", "enterprise it", "infrastructure", "lucidity", "microsoft ignite", "migrateandmodernizeyourestate", "migration", "msignite", "performance tuning", "storage management", "storage optimization", "videos"]

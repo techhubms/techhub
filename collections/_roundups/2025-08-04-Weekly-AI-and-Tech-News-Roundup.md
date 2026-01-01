@@ -6,7 +6,7 @@ author: "Tech Hub Team"
 excerpt_separator: <!--excerpt_end-->
 viewing_mode: "internal"
 date: 2025-08-04 09:00:00 +00:00
-permalink: "/roundups/2025-08-04-Weekly-AI-and-Tech-News-Roundup.html"
+permalink: "/2025-08-04-Weekly-AI-and-Tech-News-Roundup.html"
 categories: ["AI", "GitHub Copilot", "ML", "Azure", "Coding", "DevOps", "Security"]
 tags: [".NET Aspire", "A2A", "Agent Orchestration", "AI", "AI Agents", "Azure", "C#", "Cloud Security", "Coding", "Developer Productivity", "DevOps", "GitHub Copilot", "Identity Management", "MCP", "ML", "Prompt Engineering", "Roundups", "Security", "TypeScript", "VS Code"]
 tags_normalized: ["dotnet aspire", "a2a", "agent orchestration", "ai", "ai agents", "azure", "csharp", "cloud security", "coding", "developer productivity", "devops", "github copilot", "identity management", "mcp", "ml", "prompt engineering", "roundups", "security", "typescript", "vs code"]

@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft VisualStudio Blog"
 feed_url: "https://devblogs.microsoft.com/visualstudio/feed/"
 date: 2025-07-22 14:00:40 +00:00
-permalink: "/news/2025-07-22-New-Pluralsight-Learning-Paths-for-Visual-Studio-Subscribers.html"
+permalink: "/2025-07-22-New-Pluralsight-Learning-Paths-for-Visual-Studio-Subscribers.html"
 categories: ["AI", "Azure", "Coding", "GitHub Copilot"]
 tags: ["AI", "AI Powered Development", "Azure", "Azure Blob Storage", "Azure Functions", "Cloud Automation", "Coding", "Data Pipelines", "Generative AI", "GitHub Copilot", "IaC", "Learning Benefits", "Microservices", "Microsoft Fabric", "News", "Pluralsight", "Power BI", "Prompt Engineering", "Serverless", "Visual Studio Subscriptions", "VS", "VS Code"]
 tags_normalized: ["ai", "ai powered development", "azure", "azure blob storage", "azure functions", "cloud automation", "coding", "data pipelines", "generative ai", "github copilot", "iac", "learning benefits", "microservices", "microsoft fabric", "news", "pluralsight", "power bi", "prompt engineering", "serverless", "visual studio subscriptions", "vs", "vs code"]

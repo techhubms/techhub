@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-10-21 17:04:22 +00:00
-permalink: "/community/2025-10-21-Build-Long-Running-AI-Agents-on-Azure-App-Service-with-Microsoft-Agent-Framework.html"
+permalink: "/2025-10-21-Build-Long-Running-AI-Agents-on-Azure-App-Service-with-Microsoft-Agent-Framework.html"
 categories: ["AI", "Azure", "Coding"]
 tags: [".NET 9", "Agent Framework Samples", "AI", "AI Agents", "Async Pattern", "Azure", "Azure AI Foundry", "Azure App Service", "Azure Durable Functions", "Background Workers", "Cloud Architecture", "Coding", "Community", "Cosmos DB", "GPT 4o", "Long Running Workflows", "Microsoft Agent Framework", "Production AI", "Request Reply Pattern", "Service Bus"]
 tags_normalized: ["dotnet 9", "agent framework samples", "ai", "ai agents", "async pattern", "azure", "azure ai foundry", "azure app service", "azure durable functions", "background workers", "cloud architecture", "coding", "community", "cosmos db", "gpt 4o", "long running workflows", "microsoft agent framework", "production ai", "request reply pattern", "service bus"]

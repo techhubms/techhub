@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft DevBlog"
 feed_url: "https://devblogs.microsoft.com/visualstudio/tag/github-copilot/feed/"
 date: 2025-04-23 14:51:46 +00:00
-permalink: "/news/2025-04-23-Effortless-Adjustments-with-Adaptive-Paste-Powered-by-Copilot-in-Visual-Studio-2022.html"
+permalink: "/2025-04-23-Effortless-Adjustments-with-Adaptive-Paste-Powered-by-Copilot-in-Visual-Studio-2022.html"
 categories: ["AI", "Coding", "GitHub Copilot"]
 tags: ["Adaptive Paste", "AI", "Code Adaptation", "Code Modification", "Coding", "Copilot", "Developer Productivity", "Editor Features", "GitHub Copilot", "Interface Implementation", "News", "Productivity", "Software Development", "VS", "Workflow Efficiency"]
 tags_normalized: ["adaptive paste", "ai", "code adaptation", "code modification", "coding", "copilot", "developer productivity", "editor features", "github copilot", "interface implementation", "news", "productivity", "software development", "vs", "workflow efficiency"]

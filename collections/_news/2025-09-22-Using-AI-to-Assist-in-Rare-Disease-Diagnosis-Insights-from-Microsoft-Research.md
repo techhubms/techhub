@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft News"
 feed_url: "https://news.microsoft.com/source/feed/"
 date: 2025-09-22 17:38:17 +00:00
-permalink: "/news/2025-09-22-Using-AI-to-Assist-in-Rare-Disease-Diagnosis-Insights-from-Microsoft-Research.html"
+permalink: "/2025-09-22-Using-AI-to-Assist-in-Rare-Disease-Diagnosis-Insights-from-Microsoft-Research.html"
 categories: ["AI"]
 tags: ["ACM Transactions On Interactive Intelligent Systems", "AI", "Azure AI Foundry", "Biomedical Data", "Company News", "Data Synthesis", "Diagnosis", "Expert AI Collaboration", "Generative AI", "Genetic Analysis", "HCI", "Health", "Health AI", "Microsoft Research", "News", "Rare Diseases", "Sensemaking", "Whole Genome Sequencing"]
 tags_normalized: ["acm transactions on interactive intelligent systems", "ai", "azure ai foundry", "biomedical data", "company news", "data synthesis", "diagnosis", "expert ai collaboration", "generative ai", "genetic analysis", "hci", "health", "health ai", "microsoft research", "news", "rare diseases", "sensemaking", "whole genome sequencing"]

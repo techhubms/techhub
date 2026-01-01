@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "GitHub YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ"
 date: 2025-10-14 21:10:06 +00:00
-permalink: "/videos/2025-10-14-Open-Source-Friday-Archestra-Secure-Platform-for-Enterprise-Agents-with-MCP.html"
+permalink: "/2025-10-14-Open-Source-Friday-Archestra-Secure-Platform-for-Enterprise-Agents-with-MCP.html"
 categories: ["AI", "Security"]
 tags: ["Access Control", "AI", "AI Orchestration", "Archestra", "Automation", "Community Contribution", "Enterprise Agents", "MCP", "Microsoft Cloud Platform", "Model Governance", "Open Source", "Security", "Software Deployment", "Videos"]
 tags_normalized: ["access control", "ai", "ai orchestration", "archestra", "automation", "community contribution", "enterprise agents", "mcp", "microsoft cloud platform", "model governance", "open source", "security", "software deployment", "videos"]

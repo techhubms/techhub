@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Developer YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
 date: 2025-12-11 22:29:20 +00:00
-permalink: "/videos/2025-12-11-Tackling-Tech-Debt-with-the-GitHub-Copilot-Cloud-Agent.html"
+permalink: "/2025-12-11-Tackling-Tech-Debt-with-the-GitHub-Copilot-Cloud-Agent.html"
 categories: ["AI", "Coding", "GitHub Copilot"]
 tags: ["AI", "AI Agents", "AI Development", "Cloud Computing", "Cloud Development", "Code Refactoring", "Coding", "Copilot Cloud Agent", "Dev", "Developer", "Development", "GitHub Copilot", "Legacy Modernization", "Microsoft", "Microsoft Foundry", "Software Modernization", "Tech", "Technical Debt", "Technology", "Videos", "VS Code"]
 tags_normalized: ["ai", "ai agents", "ai development", "cloud computing", "cloud development", "code refactoring", "coding", "copilot cloud agent", "dev", "developer", "development", "github copilot", "legacy modernization", "microsoft", "microsoft foundry", "software modernization", "tech", "technical debt", "technology", "videos", "vs code"]

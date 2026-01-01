@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-10-03 14:06:10 +00:00
-permalink: "/community/2025-10-03-Choosing-the-Right-Azure-Containerisation-Strategy-AKS-App-Service-or-Container-Apps.html"
+permalink: "/2025-10-03-Choosing-the-Right-Azure-Containerisation-Strategy-AKS-App-Service-or-Container-Apps.html"
 categories: ["Azure", "DevOps"]
 tags: ["AKS", "Azure", "Azure App Service", "Azure Container Apps", "CI/CD", "Cloud Native", "Community", "Containerisation", "Dapr", "DevOps", "Infrastructure Management", "KEDA", "Kubernetes", "Linux Containers", "Microservices", "Orchestration", "PaaS", "Scaling", "Serverless", "Windows Containers"]
 tags_normalized: ["aks", "azure", "azure app service", "azure container apps", "cislashcd", "cloud native", "community", "containerisation", "dapr", "devops", "infrastructure management", "keda", "kubernetes", "linux containers", "microservices", "orchestration", "paas", "scaling", "serverless", "windows containers"]

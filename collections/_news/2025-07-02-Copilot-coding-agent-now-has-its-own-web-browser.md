@@ -10,7 +10,7 @@ categories: ["AI", "GitHub Copilot"]
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/changelog/label/copilot/feed/"
 date: 2025-07-02 18:45:04 +00:00
-permalink: "/news/2025-07-02-Copilot-coding-agent-now-has-its-own-web-browser.html"
+permalink: "/2025-07-02-Copilot-coding-agent-now-has-its-own-web-browser.html"
 tags: ["AI", "Coding Agent", "Developer Tools", "GitHub Copilot", "News", "Playwright MCP", "Public Preview", "Web Browsing"]
 tags_normalized: ["ai", "coding agent", "developer tools", "github copilot", "news", "playwright mcp", "public preview", "web browsing"]
 ---

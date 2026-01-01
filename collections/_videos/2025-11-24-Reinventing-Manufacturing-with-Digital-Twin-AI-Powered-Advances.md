@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Events YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
 date: 2025-11-24 14:36:39 +00:00
-permalink: "/videos/2025-11-24-Reinventing-Manufacturing-with-Digital-Twin-AI-Powered-Advances.html"
+permalink: "/2025-11-24-Reinventing-Manufacturing-with-Digital-Twin-AI-Powered-Advances.html"
 categories: ["AI", "Azure"]
 tags: ["Advanced Manufacturing", "Agents", "AI", "Azure", "Data Integration", "Digital Twin", "Generative AI", "Manufacturing", "Microsoft Cloud", "Microsoft Ignite", "MicrosoftAICloudPartnerProgram", "MSIgnite", "NVIDIA Omniverse", "Omniverse", "Operations Efficiency", "Panel Discussion", "Product Launch", "Reshoring", "Simulation", "Supply Chain", "Training", "Videos", "Workforce Attrition"]
 tags_normalized: ["advanced manufacturing", "agents", "ai", "azure", "data integration", "digital twin", "generative ai", "manufacturing", "microsoft cloud", "microsoft ignite", "microsoftaicloudpartnerprogram", "msignite", "nvidia omniverse", "omniverse", "operations efficiency", "panel discussion", "product launch", "reshoring", "simulation", "supply chain", "training", "videos", "workforce attrition"]

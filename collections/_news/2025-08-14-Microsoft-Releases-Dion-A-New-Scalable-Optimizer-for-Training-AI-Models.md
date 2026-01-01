@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft News"
 feed_url: "https://news.microsoft.com/source/feed/"
 date: 2025-08-14 15:28:24 +00:00
-permalink: "/news/2025-08-14-Microsoft-Releases-Dion-A-New-Scalable-Optimizer-for-Training-AI-Models.html"
+permalink: "/2025-08-14-Microsoft-Releases-Dion-A-New-Scalable-Optimizer-for-Training-AI-Models.html"
 categories: ["AI"]
 tags: ["AdamW", "AI", "AI Model Training", "Company News", "Deep Learning", "Dion Optimizer", "Distributed Training", "FSDP", "Large Language Models", "LLaMA 3", "Machine Learning", "Microsoft Research", "Muon Optimizer", "News", "Optimization Algorithms", "Orthonormal Updates", "PyTorch", "Scale Efficiency", "Tensor Parallelism"]
 tags_normalized: ["adamw", "ai", "ai model training", "company news", "deep learning", "dion optimizer", "distributed training", "fsdp", "large language models", "llama 3", "machine learning", "microsoft research", "muon optimizer", "news", "optimization algorithms", "orthonormal updates", "pytorch", "scale efficiency", "tensor parallelism"]

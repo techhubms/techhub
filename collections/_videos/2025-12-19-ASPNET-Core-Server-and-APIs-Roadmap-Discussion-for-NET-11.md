@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "DotNet YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw"
 date: 2025-12-19 17:34:57 +00:00
-permalink: "/videos/2025-12-19-ASPNET-Core-Server-and-APIs-Roadmap-Discussion-for-NET-11.html"
+permalink: "/2025-12-19-ASPNET-Core-Server-and-APIs-Roadmap-Discussion-for-NET-11.html"
 categories: ["Coding"]
 tags: [".NET", ".NET 11", ".NET Roadmap", "API Development", "API Enhancements", "Apis", "ASP.NET Core", "Backend", "Coding", "Community Standup", "Daniel Roth", "Developer", "Developer Community", "Dotnet10", "Dotnet11", "Dotnetdeveloper", "Dotnetten", "Jose Perez Rodriguez", "Microsoft", "Mike Kistler", "Server Architecture", "Software Developer", "Videos"]
 tags_normalized: ["dotnet", "dotnet 11", "dotnet roadmap", "api development", "api enhancements", "apis", "aspdotnet core", "backend", "coding", "community standup", "daniel roth", "developer", "developer community", "dotnet10", "dotnet11", "dotnetdeveloper", "dotnetten", "jose perez rodriguez", "microsoft", "mike kistler", "server architecture", "software developer", "videos"]

@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft .NET Blog"
 feed_url: "https://devblogs.microsoft.com/dotnet/feed/"
 date: 2025-07-09 17:15:00 +00:00
-permalink: "/news/2025-07-09-How-the-NET-MAUI-Team-Uses-GitHub-Copilot-for-Productivity.html"
+permalink: "/2025-07-09-How-the-NET-MAUI-Team-Uses-GitHub-Copilot-for-Productivity.html"
 categories: ["AI", "Coding", "DevOps", "GitHub Copilot"]
 tags: [".NET", "AI", "Automation", "C#", "CI/CD", "Coding", "Copilot Coding Agent", "Copilot Productivity", "DevOps", "Firewall Rules", "GitHub Copilot", "MAUI", "MCP Server", "MEAI", "News", "Pull Requests", "Repository Instructions", "VS Code"]
 tags_normalized: ["dotnet", "ai", "automation", "csharp", "cislashcd", "coding", "copilot coding agent", "copilot productivity", "devops", "firewall rules", "github copilot", "maui", "mcp server", "meai", "news", "pull requests", "repository instructions", "vs code"]

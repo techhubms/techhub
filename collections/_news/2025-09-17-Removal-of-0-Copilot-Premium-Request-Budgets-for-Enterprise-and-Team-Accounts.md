@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/changelog/feed/"
 date: 2025-09-17 19:27:07 +00:00
-permalink: "/news/2025-09-17-Removal-of-0-Copilot-Premium-Request-Budgets-for-Enterprise-and-Team-Accounts.html"
+permalink: "/2025-09-17-Removal-of-0-Copilot-Premium-Request-Budgets-for-Enterprise-and-Team-Accounts.html"
 categories: ["AI", "GitHub Copilot"]
 tags: ["Account Management", "AI", "AI Tools", "Billing Policy", "Copilot Policy", "Enterprise Accounts", "GitHub Administration", "GitHub Copilot", "Improvement", "News", "Paid Usage Control", "Premium Request", "SKU Management", "Team Accounts"]
 tags_normalized: ["account management", "ai", "ai tools", "billing policy", "copilot policy", "enterprise accounts", "github administration", "github copilot", "improvement", "news", "paid usage control", "premium request", "sku management", "team accounts"]

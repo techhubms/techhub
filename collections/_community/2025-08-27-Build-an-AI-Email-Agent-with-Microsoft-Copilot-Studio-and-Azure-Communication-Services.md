@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-08-27 22:49:57 +00:00
-permalink: "/community/2025-08-27-Build-an-AI-Email-Agent-with-Microsoft-Copilot-Studio-and-Azure-Communication-Services.html"
+permalink: "/2025-08-27-Build-an-AI-Email-Agent-with-Microsoft-Copilot-Studio-and-Azure-Communication-Services.html"
 categories: ["AI", "Azure", "Coding"]
 tags: ["AI", "AI Agent", "Azure", "Azure Communication Services", "Azure Functions", "Azure Portal", "Bot Development", "Coding", "Community", "Conversation Design", "Debugging", "Email Automation", "Function App", "HTTP API Integration", "M365 Integration", "Microsoft Copilot Studio", "Microsoft Teams", "Python", "VS Code"]
 tags_normalized: ["ai", "ai agent", "azure", "azure communication services", "azure functions", "azure portal", "bot development", "coding", "community", "conversation design", "debugging", "email automation", "function app", "http api integration", "m365 integration", "microsoft copilot studio", "microsoft teams", "python", "vs code"]

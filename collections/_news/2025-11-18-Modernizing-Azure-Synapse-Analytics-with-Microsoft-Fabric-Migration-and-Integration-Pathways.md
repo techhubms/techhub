@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Fabric Blog"
 feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
 date: 2025-11-18 08:00:00 +00:00
-permalink: "/news/2025-11-18-Modernizing-Azure-Synapse-Analytics-with-Microsoft-Fabric-Migration-and-Integration-Pathways.html"
+permalink: "/2025-11-18-Modernizing-Azure-Synapse-Analytics-with-Microsoft-Fabric-Migration-and-Integration-Pathways.html"
 categories: ["AI", "Azure", "ML"]
 tags: ["AI", "AI Native Analytics", "Architecture Patterns", "Azure", "Azure Data Factory", "Azure Synapse", "Compliance", "Copilot", "Cost Optimization", "Data Governance", "Data Integration", "Data Warehouse", "Enterprise Analytics", "Fabric Data Factory", "Microsoft Fabric", "Migration", "ML", "News", "Notebook Migration", "OneLake", "Power BI", "Spark", "T SQL"]
 tags_normalized: ["ai", "ai native analytics", "architecture patterns", "azure", "azure data factory", "azure synapse", "compliance", "copilot", "cost optimization", "data governance", "data integration", "data warehouse", "enterprise analytics", "fabric data factory", "microsoft fabric", "migration", "ml", "news", "notebook migration", "onelake", "power bi", "spark", "t sql"]

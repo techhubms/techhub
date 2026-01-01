@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Events YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
 date: 2025-11-21 17:08:37 +00:00
-permalink: "/videos/2025-11-21-Reimagine-Finance-with-AI-and-Agents.html"
+permalink: "/2025-11-21-Reimagine-Finance-with-AI-and-Agents.html"
 categories: ["AI", "Azure"]
 tags: ["Agenticbusinessapplications", "AI", "AI Agents", "Auditability", "Azure", "Azure AI Foundry", "Business Applications", "Copilot Studio", "Custom Financial Agents", "ERP Integration", "Finance Transformation", "Financial Automation", "Human Oversight", "Microsoft Ignite", "MSIgnite", "Variance Analysis", "Videos"]
 tags_normalized: ["agenticbusinessapplications", "ai", "ai agents", "auditability", "azure", "azure ai foundry", "business applications", "copilot studio", "custom financial agents", "erp integration", "finance transformation", "financial automation", "human oversight", "microsoft ignite", "msignite", "variance analysis", "videos"]

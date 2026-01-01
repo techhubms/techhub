@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Community"
 date: 2025-08-14 15:42:48 +00:00
-permalink: "/community/2025-08-14-Troubleshooting-OAuth2-API-Token-Retrieval-with-ADF-Web-Activity.html"
+permalink: "/2025-08-14-Troubleshooting-OAuth2-API-Token-Retrieval-with-ADF-Web-Activity.html"
 categories: ["Azure", "Security"]
 tags: ["Access Token", "API Authentication", "Authorization Header", "Azure", "Azure Data Factory", "Client Id", "Client Secret", "Community", "Ilevel API", "OAuth2", "Pipeline Automation", "REST API", "Security", "Token Acquisition", "Web Activity"]
 tags_normalized: ["access token", "api authentication", "authorization header", "azure", "azure data factory", "client id", "client secret", "community", "ilevel api", "oauth2", "pipeline automation", "rest api", "security", "token acquisition", "web activity"]

@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "GitHub YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ"
 date: 2025-11-02 14:00:11 +00:00
-permalink: "/videos/2025-11-02-Power-Agentic-Workflows-in-Your-Terminal-with-GitHub-Copilot-CLI.html"
+permalink: "/2025-11-02-Power-Agentic-Workflows-in-Your-Terminal-with-GitHub-Copilot-CLI.html"
 categories: ["AI", "Coding", "GitHub Copilot"]
 tags: ["Accessibility Review", "AI", "AI Assistant", "Automation", "Coding", "Command Line", "Debugging", "Developer Tools", "GitHub", "GitHub Copilot", "GitHub Copilot CLI", "GitHubUniverse", "Headless Operation", "Natural Language Coding", "Software Development", "Terminal Workflows", "Videos"]
 tags_normalized: ["accessibility review", "ai", "ai assistant", "automation", "coding", "command line", "debugging", "developer tools", "github", "github copilot", "github copilot cli", "githubuniverse", "headless operation", "natural language coding", "software development", "terminal workflows", "videos"]

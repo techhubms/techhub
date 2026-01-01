@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Reddit DevOps"
 feed_url: "https://www.reddit.com/r/devops/.rss"
 date: 2025-08-08 12:32:38 +00:00
-permalink: "/community/2025-08-08-Semantic-Clinic-A-Math-First-Model-Agnostic-Map-for-Diagnosing-AI-Failures.html"
+permalink: "/2025-08-08-Semantic-Clinic-A-Math-First-Model-Agnostic-Map-for-Diagnosing-AI-Failures.html"
 categories: ["AI", "ML", "DevOps"]
 tags: ["AI", "AI Diagnostics", "AI Failures", "Attention Variance", "BBAM", "BBCR", "BBMC", "BBPF", "Community", "DevOps", "Embedding Geometry", "LLM", "Machine Learning", "Math First AI Tools", "MIT Licensed", "ML", "Model Agnostic", "Multi Agent Systems", "Open Source", "Pipeline Debugging", "Problem Map", "RAG Drift", "Reproducibility", "Semantic Clinic", "System Observability", "Vector Store"]
 tags_normalized: ["ai", "ai diagnostics", "ai failures", "attention variance", "bbam", "bbcr", "bbmc", "bbpf", "community", "devops", "embedding geometry", "llm", "machine learning", "math first ai tools", "mit licensed", "ml", "model agnostic", "multi agent systems", "open source", "pipeline debugging", "problem map", "rag drift", "reproducibility", "semantic clinic", "system observability", "vector store"]

@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/changelog/label/copilot/feed/"
 date: 2025-07-25 19:24:19 +00:00
-permalink: "/news/2025-07-25-Enhanced-Model-Selection-in-Copilot-Chat-on-GitHub-Mobile.html"
+permalink: "/2025-07-25-Enhanced-Model-Selection-in-Copilot-Chat-on-GitHub-Mobile.html"
 categories: ["AI", "GitHub Copilot"]
 tags: ["AI", "AI Models", "Copilot Chat", "Feature Update", "GitHub", "GitHub Copilot", "GitHub Mobile", "Mobile Development", "Model Selection", "News", "User Experience", "UX"]
 tags_normalized: ["ai", "ai models", "copilot chat", "feature update", "github", "github copilot", "github mobile", "mobile development", "model selection", "news", "user experience", "ux"]

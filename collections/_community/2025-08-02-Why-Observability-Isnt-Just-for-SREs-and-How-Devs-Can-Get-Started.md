@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Reddit DevOps"
 feed_url: "https://www.reddit.com/r/devops/.rss"
 date: 2025-08-02 15:09:58 +00:00
-permalink: "/community/2025-08-02-Why-Observability-Isnt-Just-for-SREs-and-How-Devs-Can-Get-Started.html"
+permalink: "/2025-08-02-Why-Observability-Isnt-Just-for-SREs-and-How-Devs-Can-Get-Started.html"
 categories: ["DevOps"]
 tags: ["Application Performance", "Community", "Developer Practices", "DevOps", "Logging", "Metrics", "Monitoring", "Observability", "Open Source", "Site Reliability", "Software Engineering", "SRE", "Tracing"]
 tags_normalized: ["application performance", "community", "developer practices", "devops", "logging", "metrics", "monitoring", "observability", "open source", "site reliability", "software engineering", "sre", "tracing"]

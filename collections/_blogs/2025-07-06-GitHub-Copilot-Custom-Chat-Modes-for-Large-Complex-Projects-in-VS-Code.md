@@ -9,10 +9,10 @@ viewing_mode: "external"
 feed_name: "Harald Binkle's blog"
 feed_url: "https://harrybin.de/rss.xml"
 date: 2025-07-06 15:00:00 +00:00
-permalink: "/blogs/2025-07-06-GitHub-Copilot-Custom-Chat-Modes-for-Large-Complex-Projects-in-VS-Code.html"
+permalink: "/2025-07-06-GitHub-Copilot-Custom-Chat-Modes-for-Large-Complex-Projects-in-VS-Code.html"
 categories: ["AI", "Coding", "DevOps", "GitHub Copilot"]
-tags: ["AI", "AI Configuration", "API Design", "Code Review", "Coding", "Custom Chat Modes", "Developer Workflow", "DevOps", "Documentation", "GitHub Copilot", "Instruction Files", "Performance Optimization", "Blogs", "Productivity", "Testing", "VS Code"]
-tags_normalized: ["ai", "ai configuration", "api design", "code review", "coding", "custom chat modes", "developer workflow", "devops", "documentation", "github copilot", "instruction files", "performance optimization", "blogs", "productivity", "testing", "vs code"]
+tags: ["AI", "AI Configuration", "API Design", "Blogs", "Code Review", "Coding", "Custom Chat Modes", "Developer Workflow", "DevOps", "Documentation", "GitHub Copilot", "Instruction Files", "Performance Optimization", "Productivity", "Testing", "VS Code"]
+tags_normalized: ["ai", "ai configuration", "api design", "blogs", "code review", "coding", "custom chat modes", "developer workflow", "devops", "documentation", "github copilot", "instruction files", "performance optimization", "productivity", "testing", "vs code"]
 ---
 
 In this article, Harald Binkle details how custom chat modes for GitHub Copilot in VS Code can improve productivity and collaboration in large projects by tailoring AI behavior and tools to specific workflows.<!--excerpt_end-->

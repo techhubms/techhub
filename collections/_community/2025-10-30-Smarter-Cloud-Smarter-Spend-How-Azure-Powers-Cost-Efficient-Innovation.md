@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-10-30 17:05:07 +00:00
-permalink: "/community/2025-10-30-Smarter-Cloud-Smarter-Spend-How-Azure-Powers-Cost-Efficient-Innovation.html"
+permalink: "/2025-10-30-Smarter-Cloud-Smarter-Spend-How-Azure-Powers-Cost-Efficient-Innovation.html"
 categories: ["AI", "Azure"]
 tags: ["AI", "AI Cost Optimization", "Azure", "Azure Advisor", "Azure AI Foundry", "Azure Hybrid Benefit", "Azure Pricing Calculator", "Azure Reservations", "Azure Savings Plan", "Cloud Governance", "Cloud Insights", "Cloud Migration", "Community", "Cost Optimization", "Digital Transformation", "FinOps", "Microsoft Cost Management", "Strategic Pricing"]
 tags_normalized: ["ai", "ai cost optimization", "azure", "azure advisor", "azure ai foundry", "azure hybrid benefit", "azure pricing calculator", "azure reservations", "azure savings plan", "cloud governance", "cloud insights", "cloud migration", "community", "cost optimization", "digital transformation", "finops", "microsoft cost management", "strategic pricing"]

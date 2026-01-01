@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-11-10 20:21:17 +00:00
-permalink: "/community/2025-11-10-Priority-Replication-Now-Generally-Available-for-Azure-GRS-and-Object-Replication.html"
+permalink: "/2025-11-10-Priority-Replication-Now-Generally-Available-for-Azure-GRS-and-Object-Replication.html"
 categories: ["Azure"]
 tags: ["Azure", "Azure Portal", "Azure Storage", "Blob Storage", "Block Blob", "Community", "Data Durability", "Disaster Recovery", "Geo Priority Replication", "Geo Redundant Storage", "GRS", "GZRS", "Object Replication", "Replication Metrics", "SLA"]
 tags_normalized: ["azure", "azure portal", "azure storage", "blob storage", "block blob", "community", "data durability", "disaster recovery", "geo priority replication", "geo redundant storage", "grs", "gzrs", "object replication", "replication metrics", "sla"]

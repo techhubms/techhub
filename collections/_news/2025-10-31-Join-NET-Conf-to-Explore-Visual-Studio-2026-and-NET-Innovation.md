@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft VisualStudio Blog"
 feed_url: "https://devblogs.microsoft.com/visualstudio/feed/"
 date: 2025-10-31 14:00:54 +00:00
-permalink: "/news/2025-10-31-Join-NET-Conf-to-Explore-Visual-Studio-2026-and-NET-Innovation.html"
+permalink: "/2025-10-31-Join-NET-Conf-to-Explore-Visual-Studio-2026-and-NET-Innovation.html"
 categories: ["AI", "Azure", "Coding"]
 tags: [".NET", ".NET 10", ".NET Conf", "AI", "AI Integration", "Azure", "Coding", "Copilot For Visual Studio", "Cross Platform Development", "Debugging", "Developer Conference", "Microsoft", "News", "Performance Optimization", "Productivity Tools", "Profiling", "VS"]
 tags_normalized: ["dotnet", "dotnet 10", "dotnet conf", "ai", "ai integration", "azure", "coding", "copilot for visual studio", "cross platform development", "debugging", "developer conference", "microsoft", "news", "performance optimization", "productivity tools", "profiling", "vs"]

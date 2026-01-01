@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Community"
 date: 2025-08-14 21:26:24 +00:00
-permalink: "/community/2025-08-14-Advancements-in-Table-Structure-Recognition-with-Azure-Document-Intelligence.html"
+permalink: "/2025-08-14-Advancements-in-Table-Structure-Recognition-with-Azure-Document-Intelligence.html"
 categories: ["AI", "Azure"]
 tags: ["AI", "Azure", "Azure AI Services", "Azure Document Intelligence", "Community", "Computer Vision", "Deep Learning", "Document AI", "Document Processing", "GPU Acceleration", "Hungarian Matching", "Large Language Models", "Layout Analysis", "Model Architecture", "Performance Benchmarking", "Separation Line Placement", "Synthetic Data", "Table Extraction", "Table Recognition"]
 tags_normalized: ["ai", "azure", "azure ai services", "azure document intelligence", "community", "computer vision", "deep learning", "document ai", "document processing", "gpu acceleration", "hungarian matching", "large language models", "layout analysis", "model architecture", "performance benchmarking", "separation line placement", "synthetic data", "table extraction", "table recognition"]

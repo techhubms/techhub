@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "GitHub YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ"
 date: 2025-10-28 16:05:04 +00:00
-permalink: "/videos/2025-10-28-Octoverse-2025-AI-India-and-TypeScripts-Rise.html"
+permalink: "/2025-10-28-Octoverse-2025-AI-India-and-TypeScripts-Rise.html"
 categories: ["AI", "Coding", "DevOps"]
 tags: ["AI", "AI Adoption", "Coding", "Developer", "Developer Community", "Developer Map", "Developer Trends", "DevOps", "Generative AI", "GitHub", "India Developers", "Octoverse", "Open Source", "Programming Languages", "Software Engineering", "TypeScript", "Videos"]
 tags_normalized: ["ai", "ai adoption", "coding", "developer", "developer community", "developer map", "developer trends", "devops", "generative ai", "github", "india developers", "octoverse", "open source", "programming languages", "software engineering", "typescript", "videos"]

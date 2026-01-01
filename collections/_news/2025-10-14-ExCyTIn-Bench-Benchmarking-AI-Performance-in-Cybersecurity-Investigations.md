@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Security Blog"
 feed_url: "https://www.microsoft.com/en-us/security/blog/feed/"
 date: 2025-10-14 16:00:00 +00:00
-permalink: "/news/2025-10-14-ExCyTIn-Bench-Benchmarking-AI-Performance-in-Cybersecurity-Investigations.html"
+permalink: "/2025-10-14-ExCyTIn-Bench-Benchmarking-AI-Performance-in-Cybersecurity-Investigations.html"
 categories: ["AI", "Azure", "Security"]
 tags: ["AI", "AI Benchmarking", "AI Security", "Azure", "Cybersecurity", "Defender", "ExCyTIn Bench", "Incident Graphs", "LLM Evaluation", "Microsoft", "Microsoft Sentinel", "News", "Open Source", "Security", "Security Copilot", "Security Operations Center", "SOC", "Threat Investigation"]
 tags_normalized: ["ai", "ai benchmarking", "ai security", "azure", "cybersecurity", "defender", "excytin bench", "incident graphs", "llm evaluation", "microsoft", "microsoft sentinel", "news", "open source", "security", "security copilot", "security operations center", "soc", "threat investigation"]

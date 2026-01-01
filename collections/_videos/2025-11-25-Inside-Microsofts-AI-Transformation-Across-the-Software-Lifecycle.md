@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Events YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
 date: 2025-11-25 15:37:51 +00:00
-permalink: "/videos/2025-11-25-Inside-Microsofts-AI-Transformation-Across-the-Software-Lifecycle.html"
+permalink: "/2025-11-25-Inside-Microsofts-AI-Transformation-Across-the-Software-Lifecycle.html"
 categories: ["AI", "Azure", "DevOps", "GitHub Copilot"]
 tags: ["Agentic DevOps", "AI", "AI Powered Tools", "Automation", "Azure", "Azure AI", "Cloud Developer Infrastructure", "Code Alignment", "DevOps", "DevOps Transformation", "Engineering Standards", "GitHub Copilot", "InnovatewithAzureAIappsandagents", "Microsoft Foundry", "Microsoft Ignite", "Migration Systems", "MSIgnite", "Pipeline Templates", "Software Engineering", "Technical Debt", "Videos"]
 tags_normalized: ["agentic devops", "ai", "ai powered tools", "automation", "azure", "azure ai", "cloud developer infrastructure", "code alignment", "devops", "devops transformation", "engineering standards", "github copilot", "innovatewithazureaiappsandagents", "microsoft foundry", "microsoft ignite", "migration systems", "msignite", "pipeline templates", "software engineering", "technical debt", "videos"]

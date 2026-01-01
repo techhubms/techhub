@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft News"
 feed_url: "https://news.microsoft.com/source/feed/"
 date: 2025-12-09 15:56:34 +00:00
-permalink: "/news/2025-12-09-Microsoft-Announces-175B-Investment-to-Accelerate-Indias-AI-and-Cloud-Infrastructure.html"
+permalink: "/2025-12-09-Microsoft-Announces-175B-Investment-to-Accelerate-Indias-AI-and-Cloud-Infrastructure.html"
 categories: ["AI", "Azure"]
 tags: ["AI", "AI Infrastructure", "AI Integration", "AI Skilling", "Azure", "Azure Machine Learning", "Azure OpenAI Service", "Company News", "Data Centers", "Digital Sovereignty", "E Shram", "Government Technology", "Microsoft 365 Local", "Microsoft India", "Multilingual Access", "National Career Service", "News", "NVIDIA GPUs", "Population Scale AI", "Predictive Analytics", "Public Cloud", "Sovereign Cloud"]
 tags_normalized: ["ai", "ai infrastructure", "ai integration", "ai skilling", "azure", "azure machine learning", "azure openai service", "company news", "data centers", "digital sovereignty", "e shram", "government technology", "microsoft 365 local", "microsoft india", "multilingual access", "national career service", "news", "nvidia gpus", "population scale ai", "predictive analytics", "public cloud", "sovereign cloud"]

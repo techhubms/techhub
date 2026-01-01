@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Fabric Blog"
 feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
 date: 2025-08-12 11:30:00 +00:00
-permalink: "/news/2025-08-12-Load-Data-from-Network-Protected-Azure-Storage-Accounts-to-Microsoft-OneLake-with-AzCopy.html"
+permalink: "/2025-08-12-Load-Data-from-Network-Protected-Azure-Storage-Accounts-to-Microsoft-OneLake-with-AzCopy.html"
 categories: ["Azure"]
 tags: ["ARM Template", "AzCopy", "Azure", "Azure Data Engineering", "Azure Storage", "Cloud Data Integration", "Cloud Security", "Data Movement", "Data Pipeline", "Fabric", "Firewall", "Managed Identity", "Microsoft OneLake", "News", "OneLake Shortcut", "Resource Instance Rule", "Trusted Workspace Access"]
 tags_normalized: ["arm template", "azcopy", "azure", "azure data engineering", "azure storage", "cloud data integration", "cloud security", "data movement", "data pipeline", "fabric", "firewall", "managed identity", "microsoft onelake", "news", "onelake shortcut", "resource instance rule", "trusted workspace access"]

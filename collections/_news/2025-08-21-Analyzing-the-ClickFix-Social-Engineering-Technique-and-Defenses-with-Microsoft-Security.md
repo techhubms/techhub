@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Security Blog"
 feed_url: "https://www.microsoft.com/en-us/security/blog/feed/"
 date: 2025-08-21 16:00:00 +00:00
-permalink: "/news/2025-08-21-Analyzing-the-ClickFix-Social-Engineering-Technique-and-Defenses-with-Microsoft-Security.html"
+permalink: "/2025-08-21-Analyzing-the-ClickFix-Social-Engineering-Technique-and-Defenses-with-Microsoft-Security.html"
 categories: ["Azure", "Security"]
 tags: ["Attack Chain", "Azure", "ClickFix", "Detection", "Drive By Compromise", "Endpoint Protection", "Incident Response", "Infostealer", "LOLBins", "Macos Security", "Malvertising", "Malware", "Microsoft Defender", "Microsoft Defender For Office 365", "Microsoft Defender XDR", "Microsoft Security Copilot", "Microsoft Threat Intelligence", "News", "Phishing", "PowerShell", "RunMRU", "Security", "Security Mitigation", "Social Engineering", "Windows Security"]
 tags_normalized: ["attack chain", "azure", "clickfix", "detection", "drive by compromise", "endpoint protection", "incident response", "infostealer", "lolbins", "macos security", "malvertising", "malware", "microsoft defender", "microsoft defender for office 365", "microsoft defender xdr", "microsoft security copilot", "microsoft threat intelligence", "news", "phishing", "powershell", "runmru", "security", "security mitigation", "social engineering", "windows security"]

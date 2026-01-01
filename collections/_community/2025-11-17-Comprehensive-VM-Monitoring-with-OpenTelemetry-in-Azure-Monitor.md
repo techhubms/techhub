@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-11-17 23:17:57 +00:00
-permalink: "/community/2025-11-17-Comprehensive-VM-Monitoring-with-OpenTelemetry-in-Azure-Monitor.html"
+permalink: "/2025-11-17-Comprehensive-VM-Monitoring-with-OpenTelemetry-in-Azure-Monitor.html"
 categories: ["Azure", "DevOps"]
 tags: ["Arc Servers", "Azure", "Azure Monitor", "Azure Monitor Workspace", "Community", "Data Collection Rules", "DevOps", "Grafana", "Guest OS", "Linux", "Log Analytics", "Metrics", "Monitoring", "Observability", "OpenTelemetry", "Performance Counters", "Process Metrics", "PromQL", "Virtual Machines", "Windows"]
 tags_normalized: ["arc servers", "azure", "azure monitor", "azure monitor workspace", "community", "data collection rules", "devops", "grafana", "guest os", "linux", "log analytics", "metrics", "monitoring", "observability", "opentelemetry", "performance counters", "process metrics", "promql", "virtual machines", "windows"]

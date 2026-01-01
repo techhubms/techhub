@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft News"
 feed_url: "https://news.microsoft.com/source/feed/"
 date: 2025-09-02 14:43:12 +00:00
-permalink: "/news/2025-09-02-How-Microsoft-Is-Advancing-AI-Driven-Clean-Energy-in-Asia.html"
+permalink: "/2025-09-02-How-Microsoft-Is-Advancing-AI-Driven-Clean-Energy-in-Asia.html"
 categories: ["AI", "Azure"]
 tags: ["AI", "Asia Pacific", "Azure", "Circular Economy", "Clean Energy", "Climate Innovation Fund", "Cloud Computing", "Company News", "Datacenters", "Geothermal", "Grid Forecasting", "Microsoft", "News", "Renewable Energy", "Solar Power", "Sustainability", "Virtual PPA", "Water Resilience"]
 tags_normalized: ["ai", "asia pacific", "azure", "circular economy", "clean energy", "climate innovation fund", "cloud computing", "company news", "datacenters", "geothermal", "grid forecasting", "microsoft", "news", "renewable energy", "solar power", "sustainability", "virtual ppa", "water resilience"]

@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Developer YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
 date: 2025-11-19 23:05:59 +00:00
-permalink: "/videos/2025-11-19-Chatting-with-Microsoft-Foundry-AI-Models-Using-Python-in-VS-Code.html"
+permalink: "/2025-11-19-Chatting-with-Microsoft-Foundry-AI-Models-Using-Python-in-VS-Code.html"
 categories: ["AI", "Azure", "Coding"]
 tags: ["AI", "AI Integration", "Azure", "Azure AI", "Azure AI Foundry", "Cloud AI", "Cloud Computing", "Coding", "Dev", "Development", "Development Tutorial", "Machine Learning", "Microsoft", "Microsoft Foundry", "Model Chat", "Model Deployment", "Python", "Sample Code", "Tech", "Technology", "Videos", "VS Code"]
 tags_normalized: ["ai", "ai integration", "azure", "azure ai", "azure ai foundry", "cloud ai", "cloud computing", "coding", "dev", "development", "development tutorial", "machine learning", "microsoft", "microsoft foundry", "model chat", "model deployment", "python", "sample code", "tech", "technology", "videos", "vs code"]

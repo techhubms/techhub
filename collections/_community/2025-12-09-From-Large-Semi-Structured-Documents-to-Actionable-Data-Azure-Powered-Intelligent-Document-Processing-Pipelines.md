@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-12-09 07:35:03 +00:00
-permalink: "/community/2025-12-09-From-Large-Semi-Structured-Documents-to-Actionable-Data-Azure-Powered-Intelligent-Document-Processing-Pipelines.html"
+permalink: "/2025-12-09-From-Large-Semi-Structured-Documents-to-Actionable-Data-Azure-Powered-Intelligent-Document-Processing-Pipelines.html"
 categories: ["AI", "Azure", "ML"]
 tags: ["AI", "AI Pipelines", "Analytics", "Azure", "Azure AI Search", "Azure Databricks", "Azure Document Intelligence", "Azure OpenAI", "Community", "Compliance", "Custom OCR", "Data Stewardship", "Document Automation", "Enterprise Data", "Entity Extraction", "Hybrid Search", "Intelligent Document Processing", "Machine Learning", "Microsoft Fabric", "ML", "ML Pipelines", "OCR", "RAG", "Semantic Search", "Structured Data"]
 tags_normalized: ["ai", "ai pipelines", "analytics", "azure", "azure ai search", "azure databricks", "azure document intelligence", "azure openai", "community", "compliance", "custom ocr", "data stewardship", "document automation", "enterprise data", "entity extraction", "hybrid search", "intelligent document processing", "machine learning", "microsoft fabric", "ml", "ml pipelines", "ocr", "rag", "semantic search", "structured data"]

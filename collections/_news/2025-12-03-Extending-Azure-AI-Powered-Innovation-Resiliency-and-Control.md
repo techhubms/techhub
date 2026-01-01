@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The Azure Blog"
 feed_url: "https://azure.microsoft.com/en-us/blog/feed/"
 date: 2025-12-03 17:00:00 +00:00
-permalink: "/news/2025-12-03-Extending-Azure-AI-Powered-Innovation-Resiliency-and-Control.html"
+permalink: "/2025-12-03-Extending-Azure-AI-Powered-Innovation-Resiliency-and-Control.html"
 categories: ["AI", "Azure", "ML", "Security"]
 tags: ["Advanced Analytics", "AI", "AI Innovation", "Azure", "Azure Arc", "Azure Device Registry", "Azure IoT", "Azure Key Vault", "Azure Local", "Compliance", "Data Sovereignty", "Digital Twin", "Disconnected Operations", "Distributed Estate", "Edge Computing", "Fabric IQ", "Hybrid + Multicloud", "Hybrid Cloud", "Internet Of Things", "Kubernetes", "Microsoft Fabric", "Mission Critical Workloads", "ML", "News", "Operational Sovereignty", "Private Cloud", "Security"]
 tags_normalized: ["advanced analytics", "ai", "ai innovation", "azure", "azure arc", "azure device registry", "azure iot", "azure key vault", "azure local", "compliance", "data sovereignty", "digital twin", "disconnected operations", "distributed estate", "edge computing", "fabric iq", "hybrid plus multicloud", "hybrid cloud", "internet of things", "kubernetes", "microsoft fabric", "mission critical workloads", "ml", "news", "operational sovereignty", "private cloud", "security"]

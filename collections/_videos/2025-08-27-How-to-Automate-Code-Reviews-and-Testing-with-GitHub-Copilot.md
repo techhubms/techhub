@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "GitHub YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ"
 date: 2025-08-27 14:00:27 +00:00
-permalink: "/videos/2025-08-27-How-to-Automate-Code-Reviews-and-Testing-with-GitHub-Copilot.html"
+permalink: "/2025-08-27-How-to-Automate-Code-Reviews-and-Testing-with-GitHub-Copilot.html"
 categories: ["AI", "DevOps", "GitHub Copilot"]
 tags: ["AI", "AI Assisted Development", "Autofix", "Automated Testing", "Code Review", "CodeReview", "Continuous Integration", "DevOps", "GitHub", "GitHub Copilot", "Pull Requests", "Repository Management", "Security Scanning", "Software Development", "Videos"]
 tags_normalized: ["ai", "ai assisted development", "autofix", "automated testing", "code review", "codereview", "continuous integration", "devops", "github", "github copilot", "pull requests", "repository management", "security scanning", "software development", "videos"]

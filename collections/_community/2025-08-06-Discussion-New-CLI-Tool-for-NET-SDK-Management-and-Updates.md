@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Reddit DotNet"
 feed_url: "https://www.reddit.com/r/dotnet/.rss"
 date: 2025-08-06 21:13:04 +00:00
-permalink: "/community/2025-08-06-Discussion-New-CLI-Tool-for-NET-SDK-Management-and-Updates.html"
+permalink: "/2025-08-06-Discussion-New-CLI-Tool-for-NET-SDK-Management-and-Updates.html"
 categories: ["Coding"]
 tags: [".NET", ".NET Install", ".NET Runtime", ".NET SDK", "CLI Tools", "Coding", "Community", "Cross Platform Development", "Developer Experience", "Dnup", "Linux", "Package Management", "Scoop", "Self Contained Deployment", "Software Installation", "Tool Updates", "Ubuntu", "VS", "Windows", "Winget"]
 tags_normalized: ["dotnet", "dotnet install", "dotnet runtime", "dotnet sdk", "cli tools", "coding", "community", "cross platform development", "developer experience", "dnup", "linux", "package management", "scoop", "self contained deployment", "software installation", "tool updates", "ubuntu", "vs", "windows", "winget"]

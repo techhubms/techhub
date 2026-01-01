@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-10-09 10:26:14 +00:00
-permalink: "/community/2025-10-09-Cut-migration-costs-with-B-Series-and-Cobalt-100-VM-support-in-Azure-Migrate.html"
+permalink: "/2025-10-09-Cut-migration-costs-with-B-Series-and-Cobalt-100-VM-support-in-Azure-Migrate.html"
 categories: ["Azure"]
 tags: ["ARM Native Workloads", "ARM64", "Azure", "Azure Infrastructure", "Azure Migrate", "Azure Virtual Machines", "B Series VM", "Burstable VMs", "Cloud Migration", "Cobalt 100 VM", "Community", "Cost Estimation", "Energy Efficiency", "VM Cost Optimization", "Workload Assessment"]
 tags_normalized: ["arm native workloads", "arm64", "azure", "azure infrastructure", "azure migrate", "azure virtual machines", "b series vm", "burstable vms", "cloud migration", "cobalt 100 vm", "community", "cost estimation", "energy efficiency", "vm cost optimization", "workload assessment"]

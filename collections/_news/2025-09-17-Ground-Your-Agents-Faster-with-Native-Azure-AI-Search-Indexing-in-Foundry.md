@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft AI Foundry Blog"
 feed_url: "https://devblogs.microsoft.com/foundry/feed/"
 date: 2025-09-17 08:00:51 +00:00
-permalink: "/news/2025-09-17-Ground-Your-Agents-Faster-with-Native-Azure-AI-Search-Indexing-in-Foundry.html"
+permalink: "/2025-09-17-Ground-Your-Agents-Faster-with-Native-Azure-AI-Search-Indexing-in-Foundry.html"
 categories: ["AI", "Azure"]
 tags: ["ADLS Gen2", "Agent Development", "Agents", "AI", "AI Development", "AI Indexing", "Azure", "Azure AI Foundry", "Azure AI Search", "Azure Blob Storage", "Azure RBAC", "Data Ingestion", "Embedding Models", "Enterprise Search", "Hybrid Retrieval", "Knowledge Grounding", "Microsoft OneLake", "News", "Retrieval Augmented Generation", "Vector Search"]
 tags_normalized: ["adls gen2", "agent development", "agents", "ai", "ai development", "ai indexing", "azure", "azure ai foundry", "azure ai search", "azure blob storage", "azure rbac", "data ingestion", "embedding models", "enterprise search", "hybrid retrieval", "knowledge grounding", "microsoft onelake", "news", "retrieval augmented generation", "vector search"]

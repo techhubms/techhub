@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Events YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
 date: 2025-11-25 15:51:30 +00:00
-permalink: "/videos/2025-11-25-Building-the-Most-Intelligent-Agents-with-the-Latest-Knowledge-Sources.html"
+permalink: "/2025-11-25-Building-the-Most-Intelligent-Agents-with-the-Latest-Knowledge-Sources.html"
 categories: ["AI"]
 tags: ["Active Directory", "AI", "AI Agents", "API Integration", "Azure AI Search", "Connectors", "Copilot Agents", "Copilot Studio", "Data Extraction", "Evaluation", "Innovatewithlow", "Knowledge Sources", "Low Code Development", "MCP Servers", "Microsoft Graph", "Microsoft Ignite", "MSIgnite", "Personalization", "Videos", "Visualization"]
 tags_normalized: ["active directory", "ai", "ai agents", "api integration", "azure ai search", "connectors", "copilot agents", "copilot studio", "data extraction", "evaluation", "innovatewithlow", "knowledge sources", "low code development", "mcp servers", "microsoft graph", "microsoft ignite", "msignite", "personalization", "videos", "visualization"]

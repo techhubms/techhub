@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/feed/"
 date: 2025-11-19 20:00:00 +00:00
-permalink: "/news/2025-11-19-How-GitHub-Copilot-Uses-Embedding-Guided-Tool-Routing-in-VS-Code.html"
+permalink: "/2025-11-19-How-GitHub-Copilot-Uses-Embedding-Guided-Tool-Routing-in-VS-Code.html"
 categories: ["AI", "Coding", "GitHub Copilot"]
 tags: ["Adaptive Tool Clustering", "Agentic Workflows", "AI", "AI & ML", "AI Driven Tooling", "Codebase Analysis", "Coding", "Copilot Embedding Model", "Developer Tools", "Embedding Guided Routing", "GitHub Copilot", "LLM", "MCP", "News", "Performance Optimization", "Semantic Similarity", "SWE Lancer", "SWEbench Verified", "Tool Selection", "Virtual Tools", "VS Code"]
 tags_normalized: ["adaptive tool clustering", "agentic workflows", "ai", "ai and ml", "ai driven tooling", "codebase analysis", "coding", "copilot embedding model", "developer tools", "embedding guided routing", "github copilot", "llm", "mcp", "news", "performance optimization", "semantic similarity", "swe lancer", "swebench verified", "tool selection", "virtual tools", "vs code"]

@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/changelog/feed/"
 date: 2025-12-16 09:40:33 +00:00
-permalink: "/news/2025-12-16-General-Availability-of-Code-Scanning-Alert-Assignees-in-GitHub.html"
+permalink: "/2025-12-16-General-Availability-of-Code-Scanning-Alert-Assignees-in-GitHub.html"
 categories: ["AI", "DevOps", "GitHub Copilot", "Security"]
 tags: ["AI", "Alert Assignment", "Alert Notifications", "Application Security", "Code Scanning", "Copilot Autofix", "DevOps", "DevOps Workflows", "GitHub Advanced Security", "GitHub Code Security", "GitHub Copilot", "GitHub Enterprise Server", "News", "Repository Management", "REST API", "Security", "Security Automation", "Security Workflows", "Vulnerability Remediation", "Webhooks"]
 tags_normalized: ["ai", "alert assignment", "alert notifications", "application security", "code scanning", "copilot autofix", "devops", "devops workflows", "github advanced security", "github code security", "github copilot", "github enterprise server", "news", "repository management", "rest api", "security", "security automation", "security workflows", "vulnerability remediation", "webhooks"]

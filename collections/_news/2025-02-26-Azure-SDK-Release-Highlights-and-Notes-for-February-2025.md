@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft DevBlog"
 feed_url: "https://devblogs.microsoft.com/azure-sdk/feed/"
 date: 2025-02-26 19:09:17 +00:00
-permalink: "/news/2025-02-26-Azure-SDK-Release-Highlights-and-Notes-for-February-2025.html"
+permalink: "/2025-02-26-Azure-SDK-Release-Highlights-and-Notes-for-February-2025.html"
 categories: ["Azure", "Coding", "DevOps"]
 tags: [".NET", "Android", "Azure", "Azure SDK", "C++", "Coding", "Compute Schedule", "Dependency Management", "DevOps", "Embedded C", "Go", "Ios", "Java", "JavaScript", "Library", "News", "Node.js", "Open Telemetry", "Pinecone Vector DB", "Platform Support", "Python", "SDK"]
 tags_normalized: ["dotnet", "android", "azure", "azure sdk", "cplusplus", "coding", "compute schedule", "dependency management", "devops", "embedded c", "go", "ios", "java", "javascript", "library", "news", "nodedotjs", "open telemetry", "pinecone vector db", "platform support", "python", "sdk"]

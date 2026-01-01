@@ -9,10 +9,10 @@ viewing_mode: "external"
 feed_name: "Randy Pagels's Blog"
 feed_url: "https://cooknwithcopilot.com/rss.xml"
 date: 2025-07-04 00:00:00 +00:00
-permalink: "/blogs/2025-07-04-Avoid-These-Common-Copilot-Prompts-How-to-Get-Better-Results-with-Specific-Guidance.html"
+permalink: "/2025-07-04-Avoid-These-Common-Copilot-Prompts-How-to-Get-Better-Results-with-Specific-Guidance.html"
 categories: ["AI", "Coding", "GitHub Copilot"]
-tags: ["AI", "Best Practices", "Bug Fixing", "Code Generation", "Code Review", "Coding", "Developer Productivity", "GitHub Copilot", "Blogs", "Programming Languages", "Prompt Engineering", "Software Development", "Unit Testing"]
-tags_normalized: ["ai", "best practices", "bug fixing", "code generation", "code review", "coding", "developer productivity", "github copilot", "blogs", "programming languages", "prompt engineering", "software development", "unit testing"]
+tags: ["AI", "Best Practices", "Blogs", "Bug Fixing", "Code Generation", "Code Review", "Coding", "Developer Productivity", "GitHub Copilot", "Programming Languages", "Prompt Engineering", "Software Development", "Unit Testing"]
+tags_normalized: ["ai", "best practices", "blogs", "bug fixing", "code generation", "code review", "coding", "developer productivity", "github copilot", "programming languages", "prompt engineering", "software development", "unit testing"]
 ---
 
 Randy Pagels discusses why vague prompts like 'write a function' often produce suboptimal results in GitHub Copilot, and shares specific strategies and examples for crafting effective, context-rich prompts.<!--excerpt_end-->

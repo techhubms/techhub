@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Developer YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
 date: 2025-08-27 16:00:56 +00:00
-permalink: "/videos/2025-08-27-Using-Agentic-Protocols-MCP-A2A-and-NLWeb.html"
+permalink: "/2025-08-27-Using-Agentic-Protocols-MCP-A2A-and-NLWeb.html"
 categories: ["AI", "Azure", "Coding"]
 tags: ["A2A", "Agentic Protocols", "AI", "AI Agents", "AI Integration", "Azure", "Cloud Computing", "Coding", "Dev", "Developer Guides", "Development", "MCP", "Microsoft", "Microsoft Cloud", "Microsoft Developer", "NLWeb", "Sample Code", "Tech", "Technology", "Videos"]
 tags_normalized: ["a2a", "agentic protocols", "ai", "ai agents", "ai integration", "azure", "cloud computing", "coding", "dev", "developer guides", "development", "mcp", "microsoft", "microsoft cloud", "microsoft developer", "nlweb", "sample code", "tech", "technology", "videos"]

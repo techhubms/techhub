@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-08-14 17:56:30 +00:00
-permalink: "/community/2025-08-14-Announcing-Public-Preview-of-the-Terraform-MSGraph-Provider-and-Microsoft-Terraform-VSCode-Extension.html"
+permalink: "/2025-08-14-Announcing-Public-Preview-of-the-Terraform-MSGraph-Provider-and-Microsoft-Terraform-VSCode-Extension.html"
 categories: ["Azure", "Coding", "DevOps", "Security"]
 tags: ["AppRoleAssignment", "AzAPI", "Azure", "AzureAD", "AzureRM", "Code Generation", "Coding", "Community", "DevOps", "DevOps Automation", "Entra API", "HashiCorp Configuration Language", "IaC", "Identity Management", "IntelliSense", "M365 Graph API", "Microsoft Entra", "Microsoft Graph", "MSGraph Provider", "Outlook API", "Role Assignment", "Security", "Service Principal", "SharePoint", "Terraform", "VS Code", "VS Code Extension"]
 tags_normalized: ["approleassignment", "azapi", "azure", "azuread", "azurerm", "code generation", "coding", "community", "devops", "devops automation", "entra api", "hashicorp configuration language", "iac", "identity management", "intellisense", "m365 graph api", "microsoft entra", "microsoft graph", "msgraph provider", "outlook api", "role assignment", "security", "service principal", "sharepoint", "terraform", "vs code", "vs code extension"]

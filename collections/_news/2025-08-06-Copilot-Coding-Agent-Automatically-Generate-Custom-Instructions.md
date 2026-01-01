@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/changelog/label/copilot/feed/"
 date: 2025-08-06 17:23:25 +00:00
-permalink: "/news/2025-08-06-Copilot-Coding-Agent-Automatically-Generate-Custom-Instructions.html"
+permalink: "/2025-08-06-Copilot-Coding-Agent-Automatically-Generate-Custom-Instructions.html"
 categories: ["AI", "DevOps", "GitHub Copilot"]
 tags: ["AI", "Automation", "Copilot Coding Agent", "Copilot Enterprise", "Copilot Pro", "Custom Instructions", "DevOps", "GitHub CLI", "GitHub Copilot", "IDE Integration", "MCP Server", "News", "Pull Requests", "Repository Configuration", "Software Development", "Task Delegation"]
 tags_normalized: ["ai", "automation", "copilot coding agent", "copilot enterprise", "copilot pro", "custom instructions", "devops", "github cli", "github copilot", "ide integration", "mcp server", "news", "pull requests", "repository configuration", "software development", "task delegation"]

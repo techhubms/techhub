@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "GitHub YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ"
 date: 2025-11-19 15:00:51 +00:00
-permalink: "/videos/2025-11-19-Scaling-Code-Quality-in-the-Age-of-AI.html"
+permalink: "/2025-11-19-Scaling-Code-Quality-in-the-Age-of-AI.html"
 categories: ["AI", "Coding", "DevOps", "GitHub Copilot", "Security"]
 tags: ["AI", "AI in Development", "AI Powered Development", "Code Lifecycle Management", "Code Quality", "Code Review", "Coding", "Developer Workflow", "Development Automation", "DevOps", "GitHub", "GitHub Advanced Security", "GitHub Copilot", "GitHub Universe", "GitHubUniverse", "Pull Request Automation", "Quality Assurance", "Security", "Security Standards", "Software Engineering", "Videos"]
 tags_normalized: ["ai", "ai in development", "ai powered development", "code lifecycle management", "code quality", "code review", "coding", "developer workflow", "development automation", "devops", "github", "github advanced security", "github copilot", "github universe", "githubuniverse", "pull request automation", "quality assurance", "security", "security standards", "software engineering", "videos"]

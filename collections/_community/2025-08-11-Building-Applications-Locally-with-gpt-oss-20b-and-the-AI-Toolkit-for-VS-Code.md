@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Community"
 date: 2025-08-11 18:12:15 +00:00
-permalink: "/community/2025-08-11-Building-Applications-Locally-with-gpt-oss-20b-and-the-AI-Toolkit-for-VS-Code.html"
+permalink: "/2025-08-11-Building-Applications-Locally-with-gpt-oss-20b-and-the-AI-Toolkit-for-VS-Code.html"
 categories: ["AI"]
 tags: ["Agent Builder", "AI", "AI Agents", "AI Toolkit", "Azure AI Foundry", "Community", "Edge AI", "Gpt Oss 120b", "Gpt Oss 20b", "Hugging Face", "Inference Frameworks", "Local AI Deployment", "MCP (model Control Protocol)", "Mixture Of Experts", "Model Testing", "MXFP4 Quantization", "Ollama", "OpenAI", "Transformers", "Vllm", "VS Code", "VS Code Extension"]
 tags_normalized: ["agent builder", "ai", "ai agents", "ai toolkit", "azure ai foundry", "community", "edge ai", "gpt oss 120b", "gpt oss 20b", "hugging face", "inference frameworks", "local ai deployment", "mcp model control protocol", "mixture of experts", "model testing", "mxfp4 quantization", "ollama", "openai", "transformers", "vllm", "vs code", "vs code extension"]

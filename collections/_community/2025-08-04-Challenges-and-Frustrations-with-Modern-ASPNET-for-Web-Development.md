@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Reddit DotNet"
 feed_url: "https://www.reddit.com/r/dotnet/.rss"
 date: 2025-08-04 11:12:31 +00:00
-permalink: "/community/2025-08-04-Challenges-and-Frustrations-with-Modern-ASPNET-for-Web-Development.html"
+permalink: "/2025-08-04-Challenges-and-Frustrations-with-Modern-ASPNET-for-Web-Development.html"
 categories: ["Coding"]
 tags: [".NET", "ASP.NET", "Blazor", "Bun", "C#", "Coding", "Community", "Deno", "JavaScript Frameworks", "Node.js", "Razor", "SignalR", "VS", "VS Code", "Vue", "Webforms"]
 tags_normalized: ["dotnet", "aspdotnet", "blazor", "bun", "csharp", "coding", "community", "deno", "javascript frameworks", "nodedotjs", "razor", "signalr", "vs", "vs code", "vue", "webforms"]

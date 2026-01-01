@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft VisualStudio Blog"
 feed_url: "https://devblogs.microsoft.com/visualstudio/feed/"
 date: 2025-12-04 13:00:24 +00:00
-permalink: "/news/2025-12-04-Unlocking-Developer-Productivity-with-Copilot-Chats-New-URL-Context.html"
+permalink: "/2025-12-04-Unlocking-Developer-Productivity-with-Copilot-Chats-New-URL-Context.html"
 categories: ["AI", "GitHub Copilot"]
 tags: ["AI", "AI Assistant", "Code Assistance", "Copilot Chat", "Developer Productivity", "Feature Limitations", "GitHub Copilot", "GitHub Copilot Chat", "Model Training", "News", "Real Time Information", "Reference URLs", "Technical Documentation", "Up To Date Answers", "URL Context", "VS", "Web Frameworks", "Web Integration"]
 tags_normalized: ["ai", "ai assistant", "code assistance", "copilot chat", "developer productivity", "feature limitations", "github copilot", "github copilot chat", "model training", "news", "real time information", "reference urls", "technical documentation", "up to date answers", "url context", "vs", "web frameworks", "web integration"]

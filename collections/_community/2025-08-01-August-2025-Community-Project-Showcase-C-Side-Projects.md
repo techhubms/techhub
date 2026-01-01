@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Reddit CSharp"
 feed_url: "https://www.reddit.com/r/csharp/.rss"
 date: 2025-08-01 04:00:55 +00:00
-permalink: "/community/2025-08-01-August-2025-Community-Project-Showcase-C-Side-Projects.html"
+permalink: "/2025-08-01-August-2025-Community-Project-Showcase-C-Side-Projects.html"
 categories: ["Coding"]
 tags: ["AOT", "ASP.NET Core", "Blazor", "C#", "Clean Architecture", "Coding", "Community", "Community Projects", "GitHub", "Nature Sounds App", "Open Source", "Performance Optimization", "React", "SignalR", "Tray Application", "Windows Service", "WinForms"]
 tags_normalized: ["aot", "aspdotnet core", "blazor", "csharp", "clean architecture", "coding", "community", "community projects", "github", "nature sounds app", "open source", "performance optimization", "react", "signalr", "tray application", "windows service", "winforms"]

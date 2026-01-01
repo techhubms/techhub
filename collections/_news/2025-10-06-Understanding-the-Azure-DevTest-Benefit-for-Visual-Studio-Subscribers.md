@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft VisualStudio Blog"
 feed_url: "https://devblogs.microsoft.com/visualstudio/feed/"
 date: 2025-10-06 15:52:00 +00:00
-permalink: "/news/2025-10-06-Understanding-the-Azure-DevTest-Benefit-for-Visual-Studio-Subscribers.html"
+permalink: "/2025-10-06-Understanding-the-Azure-DevTest-Benefit-for-Visual-Studio-Subscribers.html"
 categories: ["Azure", "DevOps"]
 tags: ["Azure", "Azure Dev/Test Benefit", "Cloud Cost Optimization", "Cloud Provisioning", "Continuous Integration", "Deployment Environments", "Development Environments", "DevOps", "DevOps Practices", "Enterprise Agreement", "Microsoft Azure", "News", "Non Production Environments", "Pay as You Go Dev/Test", "Productivity", "Software Modernization", "Test Automation", "Visual Studio Subscription", "Visual Studio Subscriptions", "VS", "VSS Benefits"]
 tags_normalized: ["azure", "azure devslashtest benefit", "cloud cost optimization", "cloud provisioning", "continuous integration", "deployment environments", "development environments", "devops", "devops practices", "enterprise agreement", "microsoft azure", "news", "non production environments", "pay as you go devslashtest", "productivity", "software modernization", "test automation", "visual studio subscription", "visual studio subscriptions", "vs", "vss benefits"]

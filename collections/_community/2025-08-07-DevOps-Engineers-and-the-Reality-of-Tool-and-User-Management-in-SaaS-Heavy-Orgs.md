@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Reddit DevOps"
 feed_url: "https://www.reddit.com/r/devops/.rss"
 date: 2025-08-07 13:56:26 +00:00
-permalink: "/community/2025-08-07-DevOps-Engineers-and-the-Reality-of-Tool-and-User-Management-in-SaaS-Heavy-Orgs.html"
+permalink: "/2025-08-07-DevOps-Engineers-and-the-Reality-of-Tool-and-User-Management-in-SaaS-Heavy-Orgs.html"
 categories: ["DevOps"]
 tags: ["Automation", "CI/CD", "Community", "DevOps", "Google Workspace", "IAM", "IT Operations", "Platform Engineering", "RBAC", "Role Management", "SaaS Administration", "Scope Creep", "SSO", "Terraform", "User Provisioning", "Workload Management"]
 tags_normalized: ["automation", "cislashcd", "community", "devops", "google workspace", "iam", "it operations", "platform engineering", "rbac", "role management", "saas administration", "scope creep", "sso", "terraform", "user provisioning", "workload management"]

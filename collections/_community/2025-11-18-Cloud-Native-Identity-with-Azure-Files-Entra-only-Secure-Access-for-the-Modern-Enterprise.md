@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-11-18 17:41:59 +00:00
-permalink: "/community/2025-11-18-Cloud-Native-Identity-with-Azure-Files-Entra-only-Secure-Access-for-the-Modern-Enterprise.html"
+permalink: "/2025-11-18-Cloud-Native-Identity-with-Azure-Files-Entra-only-Secure-Access-for-the-Modern-Enterprise.html"
 categories: ["Azure", "Security"]
 tags: ["Active Directory", "Admin Roles", "Azure", "Azure Files", "Cloud Security", "Cloud Storage", "Community", "FSLogix", "Hybrid Identity", "Identity Management", "Microsoft Entra ID", "Operational Overhead", "RBAC", "Remote Work", "Security", "SMB Authentication", "Thin Client", "Virtual Desktop Infrastructure", "Zero Trust"]
 tags_normalized: ["active directory", "admin roles", "azure", "azure files", "cloud security", "cloud storage", "community", "fslogix", "hybrid identity", "identity management", "microsoft entra id", "operational overhead", "rbac", "remote work", "security", "smb authentication", "thin client", "virtual desktop infrastructure", "zero trust"]

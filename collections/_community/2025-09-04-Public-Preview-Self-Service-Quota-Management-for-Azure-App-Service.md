@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-09-04 21:49:24 +00:00
-permalink: "/community/2025-09-04-Public-Preview-Self-Service-Quota-Management-for-Azure-App-Service.html"
+permalink: "/2025-09-04-Public-Preview-Self-Service-Quota-Management-for-Azure-App-Service.html"
 categories: ["Azure"]
 tags: ["App Service Plans", "Azure", "Azure App Service", "Azure Portal", "Capacity Management", "Cloud Platforms", "Community", "Deployment", "Portal Experience", "Public Preview", "Quota Management", "Resource Management", "Scaling", "Self Service", "Support Tickets", "VM SKUs"]
 tags_normalized: ["app service plans", "azure", "azure app service", "azure portal", "capacity management", "cloud platforms", "community", "deployment", "portal experience", "public preview", "quota management", "resource management", "scaling", "self service", "support tickets", "vm skus"]

@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/changelog/feed/"
 date: 2025-08-28 17:50:18 +00:00
-permalink: "/news/2025-08-28-Public-Preview-Enhanced-Home-Dashboard-with-My-Work-and-Feed-Tabs.html"
+permalink: "/2025-08-28-Public-Preview-Enhanced-Home-Dashboard-with-My-Work-and-Feed-Tabs.html"
 categories: ["DevOps"]
 tags: ["Dashboard", "Developer Productivity", "DevOps", "Feed Tab", "GitHub", "Issues", "My Work Tab", "News", "Public Preview", "Pull Requests", "Repository Management", "UI Improvements", "Workflow"]
 tags_normalized: ["dashboard", "developer productivity", "devops", "feed tab", "github", "issues", "my work tab", "news", "public preview", "pull requests", "repository management", "ui improvements", "workflow"]

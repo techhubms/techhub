@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Fabric Blog"
 feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
 date: 2025-08-19 10:00:00 +00:00
-permalink: "/news/2025-08-19-OpenAPI-Specification-Generation-in-Fabric-User-Data-Functions.html"
+permalink: "/2025-08-19-OpenAPI-Specification-Generation-in-Fabric-User-Data-Functions.html"
 categories: ["AI", "Azure", "ML"]
 tags: ["Agentic Use Cases", "AI", "AI Agents", "API Gateway", "API Integration", "API Management", "Azure", "Azure AI Foundry", "Azure API Management", "Client Code", "Code Generation", "Data Engineering", "Develop Mode", "Docstring", "Fabric User Data Functions", "JSON", "Microsoft Fabric", "ML", "News", "OpenAPI Specification", "Python", "REST API", "Swagger", "User Data Functions", "YAML"]
 tags_normalized: ["agentic use cases", "ai", "ai agents", "api gateway", "api integration", "api management", "azure", "azure ai foundry", "azure api management", "client code", "code generation", "data engineering", "develop mode", "docstring", "fabric user data functions", "json", "microsoft fabric", "ml", "news", "openapi specification", "python", "rest api", "swagger", "user data functions", "yaml"]

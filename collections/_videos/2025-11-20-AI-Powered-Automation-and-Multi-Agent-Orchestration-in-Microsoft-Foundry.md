@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Events YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
 date: 2025-11-20 15:47:30 +00:00
-permalink: "/videos/2025-11-20-AI-Powered-Automation-and-Multi-Agent-Orchestration-in-Microsoft-Foundry.html"
+permalink: "/2025-11-20-AI-Powered-Automation-and-Multi-Agent-Orchestration-in-Microsoft-Foundry.html"
 categories: ["AI", "Azure", "ML", "Security"]
 tags: ["Activity Protocol", "Agent Framework", "Agent Orchestration", "AI", "AutoGen", "Azure", "Azure AI", "Azure Purview", "Containerized Agents", "Data Governance", "GitHub Copilot", "GitHub Copilot Extensions", "Human in The Loop", "InnovatewithAzureAIappsandagents", "LangGraph", "MCP Toolchains", "Microsoft Foundry", "ML", "MSIgnite", "Multi Agent Systems", "OpenAI Agents SDK", "OpenTelemetry", "Policy Middleware", "Secure Deployment", "Security", "Semantic Kernel", "Videos", "VS"]
 tags_normalized: ["activity protocol", "agent framework", "agent orchestration", "ai", "autogen", "azure", "azure ai", "azure purview", "containerized agents", "data governance", "github copilot", "github copilot extensions", "human in the loop", "innovatewithazureaiappsandagents", "langgraph", "mcp toolchains", "microsoft foundry", "ml", "msignite", "multi agent systems", "openai agents sdk", "opentelemetry", "policy middleware", "secure deployment", "security", "semantic kernel", "videos", "vs"]

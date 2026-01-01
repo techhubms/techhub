@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-11-11 14:08:54 +00:00
-permalink: "/community/2025-11-11-Intermittent-Access-Issue-Azure-Function-App-Fails-to-Retrieve-Key-Vault-Secrets-via-Private-Endpoint.html"
+permalink: "/2025-11-11-Intermittent-Access-Issue-Azure-Function-App-Fails-to-Retrieve-Key-Vault-Secrets-via-Private-Endpoint.html"
 categories: ["Azure", "Security"]
 tags: ["AccessToKeyVaultDenied", "Authentication Errors", "Azure", "Azure Function App", "Azure Key Vault", "Community", "Connectivity Issues", "Key Vault References", "Managed Identity", "Network Security", "Premium Plan", "Private Endpoint", "Secret Management", "Security", "Troubleshooting", "VNet Integration"]
 tags_normalized: ["accesstokeyvaultdenied", "authentication errors", "azure", "azure function app", "azure key vault", "community", "connectivity issues", "key vault references", "managed identity", "network security", "premium plan", "private endpoint", "secret management", "security", "troubleshooting", "vnet integration"]

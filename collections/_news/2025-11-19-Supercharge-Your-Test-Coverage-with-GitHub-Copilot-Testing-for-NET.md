@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft .NET Blog"
 feed_url: "https://devblogs.microsoft.com/dotnet/feed/"
 date: 2025-11-19 18:05:00 +00:00
-permalink: "/news/2025-11-19-Supercharge-Your-Test-Coverage-with-GitHub-Copilot-Testing-for-NET.html"
+permalink: "/2025-11-19-Supercharge-Your-Test-Coverage-with-GitHub-Copilot-Testing-for-NET.html"
 categories: ["AI", "Coding", "GitHub Copilot"]
 tags: [".NET", "AI", "AI Testing", "C#", "Code Coverage", "Coding", "Copilot", "GitHub Copilot", "IDE Integration", "MSBuild", "MSTest", "News", "NUnit", "Roslyn Analyzer", "Software Quality", "Test Automation", "Test Explorer", "Unit Testing", "VS", "xUnit"]
 tags_normalized: ["dotnet", "ai", "ai testing", "csharp", "code coverage", "coding", "copilot", "github copilot", "ide integration", "msbuild", "mstest", "news", "nunit", "roslyn analyzer", "software quality", "test automation", "test explorer", "unit testing", "vs", "xunit"]

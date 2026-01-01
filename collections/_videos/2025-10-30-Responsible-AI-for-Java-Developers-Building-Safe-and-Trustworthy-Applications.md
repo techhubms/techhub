@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Developer YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
 date: 2025-10-30 00:01:11 +00:00
-permalink: "/videos/2025-10-30-Responsible-AI-for-Java-Developers-Building-Safe-and-Trustworthy-Applications.html"
+permalink: "/2025-10-30-Responsible-AI-for-Java-Developers-Building-Safe-and-Trustworthy-Applications.html"
 categories: ["AI", "Azure", "Security"]
 tags: ["AI", "AI Best Practices", "AI Governance", "AI Security", "AIEthics", "AIFiltering", "AIGovernance", "AISecurity", "Azure", "Azure AI", "Azure AI Content Safety", "Azure Search", "Content Filtering", "Content Moderation", "ContentSafety", "Ethical AI", "EthicalAI", "GitHub Models", "GitHubModels", "Hard Blocks", "Java Development", "JavaDevelopment", "Production Safeguards", "Red Teaming", "Responsible AI", "ResponsibleAI", "Safe AI", "SafeAI", "Security", "Soft Blocks", "Videos"]
 tags_normalized: ["ai", "ai best practices", "ai governance", "ai security", "aiethics", "aifiltering", "aigovernance", "aisecurity", "azure", "azure ai", "azure ai content safety", "azure search", "content filtering", "content moderation", "contentsafety", "ethical ai", "ethicalai", "github models", "githubmodels", "hard blocks", "java development", "javadevelopment", "production safeguards", "red teaming", "responsible ai", "responsibleai", "safe ai", "safeai", "security", "soft blocks", "videos"]

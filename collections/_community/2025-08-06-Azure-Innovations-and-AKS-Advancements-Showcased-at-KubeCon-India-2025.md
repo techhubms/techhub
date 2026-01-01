@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-08-06 02:30:00 +00:00
-permalink: "/community/2025-08-06-Azure-Innovations-and-AKS-Advancements-Showcased-at-KubeCon-India-2025.html"
+permalink: "/2025-08-06-Azure-Innovations-and-AKS-Advancements-Showcased-at-KubeCon-India-2025.html"
 categories: ["AI", "Azure", "DevOps", "Security"]
 tags: ["AI", "AI Model Context Protocol", "AKS", "AKS Security Dashboard", "Azure", "Azure Bastion", "Azure Monitor", "Cloud Native", "Community", "Confidential VMs", "Deployment Safeguards", "DevOps", "Encryption", "KubeCon", "Kubernetes", "Layer 7 Network Policy", "Microsoft Azure", "Node Auto Provisioning", "Observability", "Prometheus", "Security", "Web Application Firewall", "Zero Trust"]
 tags_normalized: ["ai", "ai model context protocol", "aks", "aks security dashboard", "azure", "azure bastion", "azure monitor", "cloud native", "community", "confidential vms", "deployment safeguards", "devops", "encryption", "kubecon", "kubernetes", "layer 7 network policy", "microsoft azure", "node auto provisioning", "observability", "prometheus", "security", "web application firewall", "zero trust"]

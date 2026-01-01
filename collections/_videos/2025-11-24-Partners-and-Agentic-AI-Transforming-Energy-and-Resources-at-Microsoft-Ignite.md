@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Events YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
 date: 2025-11-24 13:25:12 +00:00
-permalink: "/videos/2025-11-24-Partners-and-Agentic-AI-Transforming-Energy-and-Resources-at-Microsoft-Ignite.html"
+permalink: "/2025-11-24-Partners-and-Agentic-AI-Transforming-Energy-and-Resources-at-Microsoft-Ignite.html"
 categories: ["AI", "Azure", "Security"]
 tags: ["Agent 365", "Agentic AI", "AI", "AI Transformation", "Azure", "Chevron", "Decision Making", "Energy Industry", "Frontier Firms", "Governance", "Industrial Practice", "Microsoft Ignite", "Microsoft Partners", "MicrosoftAICloudPartnerProgram", "MSIgnite", "Petronas", "Real Time Data", "Resource Management", "Security", "Videos"]
 tags_normalized: ["agent 365", "agentic ai", "ai", "ai transformation", "azure", "chevron", "decision making", "energy industry", "frontier firms", "governance", "industrial practice", "microsoft ignite", "microsoft partners", "microsoftaicloudpartnerprogram", "msignite", "petronas", "real time data", "resource management", "security", "videos"]

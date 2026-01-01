@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-09-08 20:32:48 +00:00
-permalink: "/community/2025-09-08-Building-MCP-Servers-with-Azure-Logic-Apps-Demo-Collection.html"
+permalink: "/2025-09-08-Building-MCP-Servers-with-Azure-Logic-Apps-Demo-Collection.html"
 categories: ["Azure", "DevOps"]
 tags: ["API Center", "API Management", "Automation", "Azure", "Azure Logic Apps", "Cloud Automation", "Community", "Connectors", "DevOps", "Enterprise Integration", "MCP", "MCP Server", "Microsoft Integration Services", "Salesforce Integration", "ServiceNow Integration", "Workflow"]
 tags_normalized: ["api center", "api management", "automation", "azure", "azure logic apps", "cloud automation", "community", "connectors", "devops", "enterprise integration", "mcp", "mcp server", "microsoft integration services", "salesforce integration", "servicenow integration", "workflow"]

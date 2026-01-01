@@ -9,10 +9,10 @@ viewing_mode: "external"
 feed_name: "Dellenny's Blog"
 feed_url: "https://dellenny.com/feed/"
 date: 2025-09-30 08:24:48 +00:00
-permalink: "/blogs/2025-09-30-How-AI-is-Transforming-DevOps-Smarter-Faster-and-More-Reliable-Software-Delivery.html"
+permalink: "/2025-09-30-How-AI-is-Transforming-DevOps-Smarter-Faster-and-More-Reliable-Software-Delivery.html"
 categories: ["AI", "DevOps"]
-tags: ["AI", "AI in DevOps", "AIOps", "Automated Testing", "Automation", "CI/CD Pipelines", "Cloud Infrastructure", "Continuous Deployment", "Continuous Integration", "DevOps", "DevSecOps", "Incident Management", "Machine Learning", "Monitoring", "Blogs", "Predictive Analytics", "Resource Optimization", "Software Delivery"]
-tags_normalized: ["ai", "ai in devops", "aiops", "automated testing", "automation", "cislashcd pipelines", "cloud infrastructure", "continuous deployment", "continuous integration", "devops", "devsecops", "incident management", "machine learning", "monitoring", "blogs", "predictive analytics", "resource optimization", "software delivery"]
+tags: ["AI", "AI in DevOps", "AIOps", "Automated Testing", "Automation", "Blogs", "CI/CD Pipelines", "Cloud Infrastructure", "Continuous Deployment", "Continuous Integration", "DevOps", "DevSecOps", "Incident Management", "Machine Learning", "Monitoring", "Predictive Analytics", "Resource Optimization", "Software Delivery"]
+tags_normalized: ["ai", "ai in devops", "aiops", "automated testing", "automation", "blogs", "cislashcd pipelines", "cloud infrastructure", "continuous deployment", "continuous integration", "devops", "devsecops", "incident management", "machine learning", "monitoring", "predictive analytics", "resource optimization", "software delivery"]
 ---
 
 Dellenny outlines how AI is revolutionizing DevOps by enabling smarter automation, from predictive monitoring to automated testing and resource optimization, creating a more reliable and efficient software delivery process.<!--excerpt_end-->

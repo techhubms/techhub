@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Visual Studio Code YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SLNwkd3w"
 date: 2025-10-25 12:01:39 +00:00
-permalink: "/videos/2025-10-25-Adding-a-Database-to-Your-App-with-GitHub-Copilot-and-Microsoft-Docs-MCP-Server.html"
+permalink: "/2025-10-25-Adding-a-Database-to-Your-App-with-GitHub-Copilot-and-Microsoft-Docs-MCP-Server.html"
 categories: ["AI", "Coding", "GitHub Copilot"]
 tags: ["AI", "Best Practices", "Coding", "Copilot", "Database Integration", "Development Workflow", "GitHub", "GitHub Copilot", "Mcp", "MCP Server", "Microsoft Docs", "Microsoft Learn", "Micrsoft", "Shorts", "Tutorial", "Videos", "VS Code"]
 tags_normalized: ["ai", "best practices", "coding", "copilot", "database integration", "development workflow", "github", "github copilot", "mcp", "mcp server", "microsoft docs", "microsoft learn", "micrsoft", "shorts", "tutorial", "videos", "vs code"]

@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Developer YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
 date: 2025-11-05 17:01:13 +00:00
-permalink: "/videos/2025-11-05-Secure-by-Design-Upcoming-CMK-and-Auditing-Features-in-Fabric-SQL-Database.html"
+permalink: "/2025-11-05-Secure-by-Design-Upcoming-CMK-and-Auditing-Features-in-Fabric-SQL-Database.html"
 categories: ["Azure", "Security"]
 tags: ["Access Control", "Auditing", "Azure", "Cloud Computing", "CMK", "Compliance", "Customer Managed Keys", "Data Security", "Data Sovereignty", "Database Auditing", "Dev", "Development", "Encryption", "Fabric SQL Database", "Microsoft", "Microsoft Azure", "Microsoft Fabric", "Regulatory Compliance", "Security", "SQL Security", "TDE", "Tech", "Technology", "Transparent Data Encryption", "Videos"]
 tags_normalized: ["access control", "auditing", "azure", "cloud computing", "cmk", "compliance", "customer managed keys", "data security", "data sovereignty", "database auditing", "dev", "development", "encryption", "fabric sql database", "microsoft", "microsoft azure", "microsoft fabric", "regulatory compliance", "security", "sql security", "tde", "tech", "technology", "transparent data encryption", "videos"]

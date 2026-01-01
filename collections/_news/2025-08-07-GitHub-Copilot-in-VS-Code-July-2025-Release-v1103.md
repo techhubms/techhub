@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/changelog/label/copilot/feed/"
 date: 2025-08-07 23:01:07 +00:00
-permalink: "/news/2025-08-07-GitHub-Copilot-in-VS-Code-July-2025-Release-v1103.html"
+permalink: "/2025-08-07-GitHub-Copilot-in-VS-Code-July-2025-Release-v1103.html"
 categories: ["AI", "GitHub Copilot"]
 tags: ["Agent Sessions", "AI", "AI Coding Assistant", "Chat Agents", "Chat Checkpoints", "Coding Workflows", "Developer Productivity", "Experimental Features", "GitHub Copilot", "News", "Release Notes", "Terminal Integrations", "To Do Lists", "UI Improvements", "V1.103", "VS Code"]
 tags_normalized: ["agent sessions", "ai", "ai coding assistant", "chat agents", "chat checkpoints", "coding workflows", "developer productivity", "experimental features", "github copilot", "news", "release notes", "terminal integrations", "to do lists", "ui improvements", "v1dot103", "vs code"]

@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-08-07 17:43:18 +00:00
-permalink: "/community/2025-08-07-Azure-App-Testing-Unified-AI-Driven-Load-and-E2E-Testing-in-the-Cloud.html"
+permalink: "/2025-08-07-Azure-App-Testing-Unified-AI-Driven-Load-and-E2E-Testing-in-the-Cloud.html"
 categories: ["AI", "GitHub Copilot", "Azure", "DevOps", "Coding"]
 tags: ["AI", "AI Driven Testing", "Azure", "Azure App Testing", "Azure Load Testing", "CI/CD", "Cloud Testing", "Coding", "Community", "Continuous Integration", "Cross Browser Testing", "DevOps", "End To End Testing", "GitHub Copilot", "GitHub Copilot Agent", "Infrastructure Automation", "JMeter", "Load Testing", "Locust", "Microsoft Azure", "Microsoft Playwright Testing", "Performance Testing", "Playwright Workspaces", "Test Automation", "Test Parallelization", "VS Code"]
 tags_normalized: ["ai", "ai driven testing", "azure", "azure app testing", "azure load testing", "cislashcd", "cloud testing", "coding", "community", "continuous integration", "cross browser testing", "devops", "end to end testing", "github copilot", "github copilot agent", "infrastructure automation", "jmeter", "load testing", "locust", "microsoft azure", "microsoft playwright testing", "performance testing", "playwright workspaces", "test automation", "test parallelization", "vs code"]

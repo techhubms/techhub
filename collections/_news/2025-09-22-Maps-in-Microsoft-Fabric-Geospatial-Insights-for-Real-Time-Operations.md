@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Fabric Blog"
 feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
 date: 2025-09-22 13:30:00 +00:00
-permalink: "/news/2025-09-22-Maps-in-Microsoft-Fabric-Geospatial-Insights-for-Real-Time-Operations.html"
+permalink: "/2025-09-22-Maps-in-Microsoft-Fabric-Geospatial-Insights-for-Real-Time-Operations.html"
 categories: ["Azure", "ML"]
 tags: ["Azure", "Business Intelligence", "Data Integration", "Data Visualization", "Eventhouse", "Fleet Tracking", "Footfall Analytics", "Geospatial Analytics", "Lakehouse", "Maps", "Microsoft Fabric", "ML", "News", "No Code Development", "Real Time Intelligence", "Spatial Data", "Streaming Data", "Telemetry"]
 tags_normalized: ["azure", "business intelligence", "data integration", "data visualization", "eventhouse", "fleet tracking", "footfall analytics", "geospatial analytics", "lakehouse", "maps", "microsoft fabric", "ml", "news", "no code development", "real time intelligence", "spatial data", "streaming data", "telemetry"]

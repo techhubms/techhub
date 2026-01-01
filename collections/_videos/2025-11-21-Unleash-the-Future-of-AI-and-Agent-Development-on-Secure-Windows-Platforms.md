@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Events YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
 date: 2025-11-21 11:17:21 +00:00
-permalink: "/videos/2025-11-21-Unleash-the-Future-of-AI-and-Agent-Development-on-Secure-Windows-Platforms.html"
+permalink: "/2025-11-21-Unleash-the-Future-of-AI-and-Agent-Development-on-Secure-Windows-Platforms.html"
 categories: ["AI", "Coding", "Security"]
 tags: ["Advanced Security", "Agent Connectors", "Agent Hierarchies", "Agent Packaging", "Agent Registry", "AI", "Client Server Model", "Coding", "Computer Using Agents", "Isolated Workspace", "MCP", "MCP Host", "Microsoft Defender", "Microsoft Ignite", "MSIgnite", "Platform Development", "Privacy", "ScalewithcloudandAIendpoints", "Secure Deployment", "Security", "Videos", "Windows AI"]
 tags_normalized: ["advanced security", "agent connectors", "agent hierarchies", "agent packaging", "agent registry", "ai", "client server model", "coding", "computer using agents", "isolated workspace", "mcp", "mcp host", "microsoft defender", "microsoft ignite", "msignite", "platform development", "privacy", "scalewithcloudandaiendpoints", "secure deployment", "security", "videos", "windows ai"]

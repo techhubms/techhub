@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Nick Chapsas YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrkPsvLGln62OMZRO6K-llg"
 date: 2025-07-23 12:30:14 +00:00
-permalink: "/videos/2025-07-23-Getting-Started-with-MCP-Model-Context-Protocol.html"
+permalink: "/2025-07-23-Getting-Started-with-MCP-Model-Context-Protocol.html"
 categories: ["AI", "Coding"]
 tags: [".NET", "AI", "AI Development", "AI Integration", "C#", "Coding", "Dan Clarke", "Data Interface", "Large Language Models", "LLM", "MCP", "Microsoft", "Nick Chapsas", "Videos"]
 tags_normalized: ["dotnet", "ai", "ai development", "ai integration", "csharp", "coding", "dan clarke", "data interface", "large language models", "llm", "mcp", "microsoft", "nick chapsas", "videos"]

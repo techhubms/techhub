@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Community"
 date: 2025-08-11 16:00:00 +00:00
-permalink: "/community/2025-08-11-Microsoft-Defender-for-Cloud-Expands-Security-and-Compliance-Features-for-US-Government-Cloud.html"
+permalink: "/2025-08-11-Microsoft-Defender-for-Cloud-Expands-Security-and-Compliance-Features-for-US-Government-Cloud.html"
 categories: ["Azure", "Security"]
 tags: ["Agentless Monitoring", "Azure", "Azure Government", "Cloud Security Posture Management", "Community", "Compliance", "Continuous Compliance", "CSPM", "Defender For Servers", "DISA IL4", "DISA IL5", "EDR", "FedRAMP", "File Integrity Monitoring", "Hybrid Security", "Microsoft Defender For Cloud", "Multicloud Security", "Risk Based Prioritization", "Secrets Detection", "Security", "Threat Protection", "U.S. Government Cloud", "Vulnerability Management"]
 tags_normalized: ["agentless monitoring", "azure", "azure government", "cloud security posture management", "community", "compliance", "continuous compliance", "cspm", "defender for servers", "disa il4", "disa il5", "edr", "fedramp", "file integrity monitoring", "hybrid security", "microsoft defender for cloud", "multicloud security", "risk based prioritization", "secrets detection", "security", "threat protection", "udotsdot government cloud", "vulnerability management"]

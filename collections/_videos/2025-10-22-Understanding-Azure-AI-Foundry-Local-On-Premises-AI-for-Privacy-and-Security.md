@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Developer YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
 date: 2025-10-22 16:49:42 +00:00
-permalink: "/videos/2025-10-22-Understanding-Azure-AI-Foundry-Local-On-Premises-AI-for-Privacy-and-Security.html"
+permalink: "/2025-10-22-Understanding-Azure-AI-Foundry-Local-On-Premises-AI-for-Privacy-and-Security.html"
 categories: ["AI"]
 tags: ["AI", "AI Models", "Azure AI Foundry Local", "Cloud VS Local Deployment", "Dona Sarkar", "Edge Computing", "Microsoft Azure", "Offline Scenarios", "On Premises AI", "Privacy", "Videos"]
 tags_normalized: ["ai", "ai models", "azure ai foundry local", "cloud vs local deployment", "dona sarkar", "edge computing", "microsoft azure", "offline scenarios", "on premises ai", "privacy", "videos"]

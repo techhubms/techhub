@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-08-28 08:18:30 +00:00
-permalink: "/community/2025-08-28-Automating-Azure-Logic-Apps-Deployments-with-Deployment-Center-and-VS-Code.html"
+permalink: "/2025-08-28-Automating-Azure-Logic-Apps-Deployments-with-Deployment-Center-and-VS-Code.html"
 categories: ["Azure", "DevOps"]
 tags: ["Automation", "Azure", "Azure DevOps", "Azure Logic Apps", "Azure Repos", "CI/CD", "Community", "Continuous Deployment", "Deployment Center", "DevOps", "GitHub", "Infrastructure Automation", "Integration Services", "SCM Authentication", "Source Control", "VS Code", "Workflow Automation"]
 tags_normalized: ["automation", "azure", "azure devops", "azure logic apps", "azure repos", "cislashcd", "community", "continuous deployment", "deployment center", "devops", "github", "infrastructure automation", "integration services", "scm authentication", "source control", "vs code", "workflow automation"]

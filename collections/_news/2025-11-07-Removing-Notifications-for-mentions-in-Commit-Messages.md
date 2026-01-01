@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/changelog/feed/"
 date: 2025-11-07 16:22:05 +00:00
-permalink: "/news/2025-11-07-Removing-Notifications-for-mentions-in-Commit-Messages.html"
+permalink: "/2025-11-07-Removing-Notifications-for-mentions-in-Commit-Messages.html"
 categories: ["DevOps"]
 tags: ["Change Management", "Commit Messages", "Community Engagement", "Community Feedback", "Developer Productivity", "DevOps", "GitHub", "Issue Tracking", "Mentions", "News", "Retired", "Software Development", "Team Collaboration"]
 tags_normalized: ["change management", "commit messages", "community engagement", "community feedback", "developer productivity", "devops", "github", "issue tracking", "mentions", "news", "retired", "software development", "team collaboration"]

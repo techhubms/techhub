@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Reddit CSharp"
 feed_url: "https://www.reddit.com/r/csharp/.rss"
 date: 2025-08-04 13:18:37 +00:00
-permalink: "/community/2025-08-04-Seeking-Advice-Testing-Individual-C-Classes-Without-Running-the-Entire-Program.html"
+permalink: "/2025-08-04-Seeking-Advice-Testing-Individual-C-Classes-Without-Running-the-Entire-Program.html"
 categories: ["Coding"]
 tags: [".NET Fiddle", "C#", "Class Testing", "Code Testing", "Coding", "Community", "Debugging", "Development Workflow", "Intellisense", "Interactive Coding", "Lambda Expressions", "Project Structure"]
 tags_normalized: ["dotnet fiddle", "csharp", "class testing", "code testing", "coding", "community", "debugging", "development workflow", "intellisense", "interactive coding", "lambda expressions", "project structure"]

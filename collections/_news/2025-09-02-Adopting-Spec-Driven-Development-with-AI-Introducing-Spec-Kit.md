@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/feed/"
 date: 2025-09-02 16:48:03 +00:00
-permalink: "/news/2025-09-02-Adopting-Spec-Driven-Development-with-AI-Introducing-Spec-Kit.html"
+permalink: "/2025-09-02-Adopting-Spec-Driven-Development-with-AI-Introducing-Spec-Kit.html"
 categories: ["AI", "Coding", "GitHub Copilot"]
 tags: ["AI", "AI & ML", "AI Tooling", "Automation", "CLI Tools", "Coding", "Development Workflow", "Feature Implementation", "Generative AI", "GitHub Copilot", "Legacy Modernization", "News", "Open Source", "Project Planning", "Software Engineering", "Spec Driven Development", "Spec Kit", "Specifications", "VS Code Integration"]
 tags_normalized: ["ai", "ai and ml", "ai tooling", "automation", "cli tools", "coding", "development workflow", "feature implementation", "generative ai", "github copilot", "legacy modernization", "news", "open source", "project planning", "software engineering", "spec driven development", "spec kit", "specifications", "vs code integration"]

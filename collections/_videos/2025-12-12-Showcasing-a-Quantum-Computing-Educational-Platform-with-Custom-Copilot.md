@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "DotNet YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw"
 date: 2025-12-12 23:04:41 +00:00
-permalink: "/videos/2025-12-12-Showcasing-a-Quantum-Computing-Educational-Platform-with-Custom-Copilot.html"
+permalink: "/2025-12-12-Showcasing-a-Quantum-Computing-Educational-Platform-with-Custom-Copilot.html"
 categories: ["AI", "Azure", "Coding"]
 tags: [".NET", "AI", "ASP.NET Blazor", "Azure", "Coding", "Custom Copilot", "Educational Platform", "Interactive Learning", "Microsoft Quantum", "Programming Challenges", "Q#", "Q# Compiler", "Quantum Computing", "Real Time Feedback", "Simulator", "Videos"]
 tags_normalized: ["dotnet", "ai", "aspdotnet blazor", "azure", "coding", "custom copilot", "educational platform", "interactive learning", "microsoft quantum", "programming challenges", "qsharp", "qsharp compiler", "quantum computing", "real time feedback", "simulator", "videos"]

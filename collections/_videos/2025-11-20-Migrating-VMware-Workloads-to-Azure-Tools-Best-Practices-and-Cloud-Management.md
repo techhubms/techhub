@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Events YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
 date: 2025-11-20 10:58:45 +00:00
-permalink: "/videos/2025-11-20-Migrating-VMware-Workloads-to-Azure-Tools-Best-Practices-and-Cloud-Management.html"
+permalink: "/2025-11-20-Migrating-VMware-Workloads-to-Azure-Tools-Best-Practices-and-Cloud-Management.html"
 categories: ["Azure", "DevOps", "Security"]
 tags: ["Application Tagging", "Azure", "Azure Arc", "Azure Migrate", "Azure VMware Solution", "Cloud Management", "Cloud Security", "DevOps", "High Availability", "Hybrid Cloud", "Migrateandmodernizeyourestate", "Modernization", "MSIgnite", "Network Architecture", "Operational Monitoring", "Security", "Videos", "Virtual Machines", "VM Provisioning", "VMware", "Windows Admin Center", "Workload Migration"]
 tags_normalized: ["application tagging", "azure", "azure arc", "azure migrate", "azure vmware solution", "cloud management", "cloud security", "devops", "high availability", "hybrid cloud", "migrateandmodernizeyourestate", "modernization", "msignite", "network architecture", "operational monitoring", "security", "videos", "virtual machines", "vm provisioning", "vmware", "windows admin center", "workload migration"]

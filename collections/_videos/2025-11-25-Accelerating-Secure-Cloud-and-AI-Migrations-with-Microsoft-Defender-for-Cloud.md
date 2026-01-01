@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Events YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
 date: 2025-11-25 15:58:47 +00:00
-permalink: "/videos/2025-11-25-Accelerating-Secure-Cloud-and-AI-Migrations-with-Microsoft-Defender-for-Cloud.html"
+permalink: "/2025-11-25-Accelerating-Secure-Cloud-and-AI-Migrations-with-Microsoft-Defender-for-Cloud.html"
 categories: ["AI", "Azure", "Security"]
 tags: ["AI", "AI Platforms", "Azure", "Azure Accelerate", "Business Critical Applications", "Cloud", "Cloud Security", "Cloud Security Ambitioning", "Cloud Workloads", "GTM Resources", "Hybrid Security", "MDC", "Microsoft Defender For Cloud", "Microsoft Ignite", "Microsoft Purview", "MicrosoftAICloudPartnerProgram", "MSIgnite", "Multi Cloud", "Orchestration", "Partner Business Models", "Secure Migration", "Security", "Security Assessment", "Security Recommendations", "Tab", "Videos"]
 tags_normalized: ["ai", "ai platforms", "azure", "azure accelerate", "business critical applications", "cloud", "cloud security", "cloud security ambitioning", "cloud workloads", "gtm resources", "hybrid security", "mdc", "microsoft defender for cloud", "microsoft ignite", "microsoft purview", "microsoftaicloudpartnerprogram", "msignite", "multi cloud", "orchestration", "partner business models", "secure migration", "security", "security assessment", "security recommendations", "tab", "videos"]

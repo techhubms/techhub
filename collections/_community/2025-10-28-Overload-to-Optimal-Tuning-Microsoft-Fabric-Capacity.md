@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-10-28 16:48:43 +00:00
-permalink: "/community/2025-10-28-Overload-to-Optimal-Tuning-Microsoft-Fabric-Capacity.html"
+permalink: "/2025-10-28-Overload-to-Optimal-Tuning-Microsoft-Fabric-Capacity.html"
 categories: ["Azure", "ML"]
 tags: ["Autotune", "Azure", "Azure Analytics", "Capacity Metrics", "Capacity Planning", "Cluster Optimization", "Community", "Concurrency", "Data Engineering", "Data Skew", "Delta Lake", "Microsoft Fabric", "ML", "Monitoring Hub", "Native Execution Engine", "Performance Tuning", "Spark", "Spark UI", "Table Compaction"]
 tags_normalized: ["autotune", "azure", "azure analytics", "capacity metrics", "capacity planning", "cluster optimization", "community", "concurrency", "data engineering", "data skew", "delta lake", "microsoft fabric", "ml", "monitoring hub", "native execution engine", "performance tuning", "spark", "spark ui", "table compaction"]

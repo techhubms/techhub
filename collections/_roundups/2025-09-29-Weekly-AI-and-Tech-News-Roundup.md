@@ -6,7 +6,7 @@ author: "Tech Hub Team"
 excerpt_separator: <!--excerpt_end-->
 viewing_mode: "internal"
 date: 2025-09-29 09:00:00 +00:00
-permalink: "/roundups/2025-09-29-Weekly-AI-and-Tech-News-Roundup.html"
+permalink: "/2025-09-29-Weekly-AI-and-Tech-News-Roundup.html"
 categories: ["AI", "GitHub Copilot", "ML", "Azure", "Coding", "DevOps", "Security"]
 tags: [".NET", "Agentic Automation", "AI", "AI Agents", "Azure", "Azure AI", "Claude Opus", "Cloud Modernization", "Coding", "Containerization", "DevOps", "GitHub Copilot", "Hybrid Cloud", "IaC", "MCP", "Microsoft Fabric", "ML", "MLOps", "OpenAI", "Roundups", "Security", "Supply Chain Security", "VS"]
 tags_normalized: ["dotnet", "agentic automation", "ai", "ai agents", "azure", "azure ai", "claude opus", "cloud modernization", "coding", "containerization", "devops", "github copilot", "hybrid cloud", "iac", "mcp", "microsoft fabric", "ml", "mlops", "openai", "roundups", "security", "supply chain security", "vs"]

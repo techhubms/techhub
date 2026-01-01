@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The Azure Blog"
 feed_url: "https://azure.microsoft.com/en-us/blog/feed/"
 date: 2025-10-21 15:00:00 +00:00
-permalink: "/news/2025-10-21-The-Signals-Loop-Fine-Tuning-for-World-Class-AI-Apps-and-Agents.html"
+permalink: "/2025-10-21-The-Signals-Loop-Fine-Tuning-for-World-Class-AI-Apps-and-Agents.html"
 categories: ["AI", "Azure", "GitHub Copilot", "ML"]
 tags: ["Agent Design", "AI", "AI + Machine Learning", "AI Agents", "Autonomous Workflows", "Azure", "Azure AI Foundry", "Azure OpenAI", "Cloud AI", "Compliance", "Continuous Learning", "Distillation", "Dragon Copilot", "Feedback Loops", "Fine Tuning", "GitHub Copilot", "LLM Architecture", "LoRA", "ML", "Model Evaluation", "News", "Open Source Models", "Productivity", "Real Time Telemetry", "Reinforcement Learning", "Signals Loop"]
 tags_normalized: ["agent design", "ai", "ai plus machine learning", "ai agents", "autonomous workflows", "azure", "azure ai foundry", "azure openai", "cloud ai", "compliance", "continuous learning", "distillation", "dragon copilot", "feedback loops", "fine tuning", "github copilot", "llm architecture", "lora", "ml", "model evaluation", "news", "open source models", "productivity", "real time telemetry", "reinforcement learning", "signals loop"]

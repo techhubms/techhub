@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/feed/"
 date: 2025-08-28 19:02:44 +00:00
-permalink: "/news/2025-08-28-Automating-Open-Source-Maintenance-with-GitHub-Models-and-AI-Workflows.html"
+permalink: "/2025-08-28-Automating-Open-Source-Maintenance-with-GitHub-Models-and-AI-Workflows.html"
 categories: ["AI", "DevOps"]
 tags: ["Action Scripts", "AI", "AI Integration", "AI Workflows", "Continuous AI", "Contributor Onboarding", "DevOps", "Duplicate Detection", "GitHub Actions", "GitHub Models", "Issue Triage", "Maintainer Tools", "Maintainers", "News", "Open Source", "Open Source Automation", "Pull Request Management", "Spam Filtering", "Workflow Automation", "YAML"]
 tags_normalized: ["action scripts", "ai", "ai integration", "ai workflows", "continuous ai", "contributor onboarding", "devops", "duplicate detection", "github actions", "github models", "issue triage", "maintainer tools", "maintainers", "news", "open source", "open source automation", "pull request management", "spam filtering", "workflow automation", "yaml"]

@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-09-19 20:06:44 +00:00
-permalink: "/community/2025-09-19-Disciplined-Guardrail-Development-in-Enterprise-Applications-with-GitHub-Copilot.html"
+permalink: "/2025-09-19-Disciplined-Guardrail-Development-in-Enterprise-Applications-with-GitHub-Copilot.html"
 categories: ["AI", "Coding", "DevOps", "GitHub Copilot"]
 tags: [".NET", "AI", "AI Assisted Development", "Application Architecture", "Chat Modes", "Code Quality", "Coding", "Community", "Custom Instructions", "Database Schema", "Design Documentation", "DevOps", "DevOps Practices", "Enterprise Software", "GitHub Copilot", "Guardrails", "LLM Integration", "Project Structure", "Requirements Definition"]
 tags_normalized: ["dotnet", "ai", "ai assisted development", "application architecture", "chat modes", "code quality", "coding", "community", "custom instructions", "database schema", "design documentation", "devops", "devops practices", "enterprise software", "github copilot", "guardrails", "llm integration", "project structure", "requirements definition"]

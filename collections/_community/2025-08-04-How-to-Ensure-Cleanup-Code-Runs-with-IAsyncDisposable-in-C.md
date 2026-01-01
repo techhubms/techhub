@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Reddit CSharp"
 feed_url: "https://www.reddit.com/r/csharp/.rss"
 date: 2025-08-04 21:20:25 +00:00
-permalink: "/community/2025-08-04-How-to-Ensure-Cleanup-Code-Runs-with-IAsyncDisposable-in-C.html"
+permalink: "/2025-08-04-How-to-Ensure-Cleanup-Code-Runs-with-IAsyncDisposable-in-C.html"
 categories: ["Coding"]
 tags: ["Async", "Best Practices", "C#", "Cleanup", "Coding", "Community", "Finalizer", "IAsyncDisposable", "IDisposable", "Memory Management", "Resource Management", "Using Statement"]
 tags_normalized: ["async", "best practices", "csharp", "cleanup", "coding", "community", "finalizer", "iasyncdisposable", "idisposable", "memory management", "resource management", "using statement"]

@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft DevBlog"
 feed_url: "https://devblogs.microsoft.com/all-things-azure/feed/"
 date: 2025-07-25 21:01:29 +00:00
-permalink: "/news/2025-07-25-Azure-Container-Options-Operational-Responsibility-and-Choosing-the-Right-Service.html"
+permalink: "/2025-07-25-Azure-Container-Options-Operational-Responsibility-and-Choosing-the-Right-Service.html"
 categories: ["Azure", "DevOps"]
 tags: ["ACI", "AKS", "All Things Azure", "Automation", "Azure", "Azure Container Apps", "Azure Container Instances", "CI/CD", "Cloud Modernization", "Cloud Native", "Container Orchestration", "Containers", "DevOps", "IaaS", "Kubernetes", "Microservices", "Migration", "Modernization", "News", "Operational Responsibility", "Operations", "Opinion", "PaaS", "Serverless Containers", "Shared Responsibility Model", "Thought Leadership"]
 tags_normalized: ["aci", "aks", "all things azure", "automation", "azure", "azure container apps", "azure container instances", "cislashcd", "cloud modernization", "cloud native", "container orchestration", "containers", "devops", "iaas", "kubernetes", "microservices", "migration", "modernization", "news", "operational responsibility", "operations", "opinion", "paas", "serverless containers", "shared responsibility model", "thought leadership"]

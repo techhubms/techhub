@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/changelog/feed/"
 date: 2025-09-12 00:20:55 +00:00
-permalink: "/news/2025-09-12-Public-Preview-Bring-Your-Own-Key-BYOK-for-GitHub-Copilot-Chat-in-JetBrains-and-Xcode.html"
+permalink: "/2025-09-12-Public-Preview-Bring-Your-Own-Key-BYOK-for-GitHub-Copilot-Chat-in-JetBrains-and-Xcode.html"
 categories: ["AI", "GitHub Copilot"]
 tags: ["AI", "Anthropic", "API Key", "BYOK", "Copilot", "Copilot Chat", "Developer Tools", "GitHub Copilot", "Google Gemini", "Groq", "IDE Integration", "Improvement", "JetBrains", "Model Flexibility", "News", "OpenAI", "OpenRouter", "Plugin", "Productivity", "Xcode"]
 tags_normalized: ["ai", "anthropic", "api key", "byok", "copilot", "copilot chat", "developer tools", "github copilot", "google gemini", "groq", "ide integration", "improvement", "jetbrains", "model flexibility", "news", "openai", "openrouter", "plugin", "productivity", "xcode"]

@@ -9,10 +9,10 @@ viewing_mode: "external"
 feed_name: "DevOps Blog"
 feed_url: "https://devops.com/feed/"
 date: 2025-07-31 12:58:31 +00:00
-permalink: "/blogs/2025-07-31-BMC-Extends-Scope-and-Reach-of-DevOps-Mainframe-Workflows.html"
+permalink: "/2025-07-31-BMC-Extends-Scope-and-Reach-of-DevOps-Mainframe-Workflows.html"
 categories: ["AI", "DevOps"]
-tags: ["AI", "AI Assistant", "Automation", "BMC", "BMC AMI Cloud", "BMC AMI Zadviser Enterprise", "Business Of DevOps", "Cloud Object Storage", "DevOps", "DevOps Analytics", "Git Integration", "Identity Management", "IT Operations", "Mainframe", "Okta", "Blogs", "Social Facebook", "Social LinkedIn", "Social X", "Software Supply Chain Security", "Workflow Optimization"]
-tags_normalized: ["ai", "ai assistant", "automation", "bmc", "bmc ami cloud", "bmc ami zadviser enterprise", "business of devops", "cloud object storage", "devops", "devops analytics", "git integration", "identity management", "it operations", "mainframe", "okta", "blogs", "social facebook", "social linkedin", "social x", "software supply chain security", "workflow optimization"]
+tags: ["AI", "AI Assistant", "Automation", "Blogs", "BMC", "BMC AMI Cloud", "BMC AMI Zadviser Enterprise", "Business Of DevOps", "Cloud Object Storage", "DevOps", "DevOps Analytics", "Git Integration", "Identity Management", "IT Operations", "Mainframe", "Okta", "Social Facebook", "Social LinkedIn", "Social X", "Software Supply Chain Security", "Workflow Optimization"]
+tags_normalized: ["ai", "ai assistant", "automation", "blogs", "bmc", "bmc ami cloud", "bmc ami zadviser enterprise", "business of devops", "cloud object storage", "devops", "devops analytics", "git integration", "identity management", "it operations", "mainframe", "okta", "social facebook", "social linkedin", "social x", "software supply chain security", "workflow optimization"]
 ---
 
 Mike Vizard explores BMC's latest advancements in DevOps analytics for mainframe environments, highlighting new AI capabilities, improved security, and enhanced cloud data management.<!--excerpt_end-->

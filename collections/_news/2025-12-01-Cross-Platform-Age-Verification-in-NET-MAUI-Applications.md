@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft .NET Blog"
 feed_url: "https://devblogs.microsoft.com/dotnet/feed/"
 date: 2025-12-01 18:05:00 +00:00
-permalink: "/news/2025-12-01-Cross-Platform-Age-Verification-in-NET-MAUI-Applications.html"
+permalink: "/2025-12-01-Cross-Platform-Age-Verification-in-NET-MAUI-Applications.html"
 categories: ["Coding"]
 tags: [".NET", "Age Verification", "Android", "API Integration", "Apple Declared Age Range", "Coding", "Compliance", "Cross Platform", "Family Sharing", "Google Play Age Signals", "IAgeSignalService", "Ios", "MAUI", "News", "NuGet", "Platform Specific Code", "Sample App", "Swift Interop", "UserAccountInformation", "Windows", "Windows Age Consent"]
 tags_normalized: ["dotnet", "age verification", "android", "api integration", "apple declared age range", "coding", "compliance", "cross platform", "family sharing", "google play age signals", "iagesignalservice", "ios", "maui", "news", "nuget", "platform specific code", "sample app", "swift interop", "useraccountinformation", "windows", "windows age consent"]

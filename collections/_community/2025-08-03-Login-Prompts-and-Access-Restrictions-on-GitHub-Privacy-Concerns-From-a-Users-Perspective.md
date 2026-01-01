@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Reddit GitHub"
 feed_url: "https://www.reddit.com/r/github/.rss"
 date: 2025-08-03 21:58:23 +00:00
-permalink: "/community/2025-08-03-Login-Prompts-and-Access-Restrictions-on-GitHub-Privacy-Concerns-From-a-Users-Perspective.html"
+permalink: "/2025-08-03-Login-Prompts-and-Access-Restrictions-on-GitHub-Privacy-Concerns-From-a-Users-Perspective.html"
 categories: ["DevOps"]
 tags: ["Browser Fingerprinting", "Community", "DevOps", "GitHub", "Login Issues", "Mobile Browsing", "Privacy", "Repository Access", "Too Many Requests", "Tor", "User Experience", "VPN"]
 tags_normalized: ["browser fingerprinting", "community", "devops", "github", "login issues", "mobile browsing", "privacy", "repository access", "too many requests", "tor", "user experience", "vpn"]

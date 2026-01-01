@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-11-17 21:36:26 +00:00
-permalink: "/community/2025-11-17-Automate-Large-Scale-VM-Power-Management-with-Azure-Scheduled-Actions.html"
+permalink: "/2025-11-17-Automate-Large-Scale-VM-Power-Management-with-Azure-Scheduled-Actions.html"
 categories: ["Azure"]
 tags: ["API Automation", "Azure", "Batch Operations", "Cloud Infrastructure", "Community", "Compute.schedule", "Error Handling", "High Scale", "Microsoft Azure", "Power Management", "Resource Provider", "Scheduled Actions", "Throttling", "Virtual Machines", "VM Operations"]
 tags_normalized: ["api automation", "azure", "batch operations", "cloud infrastructure", "community", "computedotschedule", "error handling", "high scale", "microsoft azure", "power management", "resource provider", "scheduled actions", "throttling", "virtual machines", "vm operations"]

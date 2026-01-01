@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-11-26 20:43:14 +00:00
-permalink: "/community/2025-11-26-Best-Practices-for-Migrating-COTS-Applications-to-Microsoft-Azure.html"
+permalink: "/2025-11-26-Best-Practices-for-Migrating-COTS-Applications-to-Microsoft-Azure.html"
 categories: ["Azure", "Security"]
 tags: ["Automation", "Availability Zones", "Azure", "Azure Advisor", "Azure API Management", "Azure Governance", "Azure Landing Zone", "Azure Migrate", "Azure Monitor", "Azure Site Recovery", "Azure SQL Managed Instance", "Azure Virtual Machines", "Azure VMware Solution", "Backup", "Cloud Adoption Framework", "Cloud Security", "Community", "COTS Migration", "Disaster Recovery", "Identity Integration", "Licensing", "Logic Apps", "Microsoft Azure", "Microsoft Entra ID", "Microsoft Sentinel", "Monitoring", "Operational Optimization", "Runbooks", "Security"]
 tags_normalized: ["automation", "availability zones", "azure", "azure advisor", "azure api management", "azure governance", "azure landing zone", "azure migrate", "azure monitor", "azure site recovery", "azure sql managed instance", "azure virtual machines", "azure vmware solution", "backup", "cloud adoption framework", "cloud security", "community", "cots migration", "disaster recovery", "identity integration", "licensing", "logic apps", "microsoft azure", "microsoft entra id", "microsoft sentinel", "monitoring", "operational optimization", "runbooks", "security"]

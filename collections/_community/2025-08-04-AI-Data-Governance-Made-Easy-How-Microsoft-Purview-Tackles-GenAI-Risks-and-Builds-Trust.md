@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Community"
 date: 2025-08-04 21:26:39 +00:00
-permalink: "/community/2025-08-04-AI-Data-Governance-Made-Easy-How-Microsoft-Purview-Tackles-GenAI-Risks-and-Builds-Trust.html"
+permalink: "/2025-08-04-AI-Data-Governance-Made-Easy-How-Microsoft-Purview-Tackles-GenAI-Risks-and-Builds-Trust.html"
 categories: ["AI", "Azure", "DevOps", "ML", "Security"]
 tags: ["AI", "AI Security", "Audit Trails", "Azure", "Azure AI Foundry", "Azure AI Studio", "Community", "Compliance", "Confidential Data Protection", "Copilot Studio", "Data Governance", "Data Loss Prevention", "DevOps", "GenAI", "Microsoft Copilot", "Microsoft Graph APIs", "Microsoft Purview", "ML", "Security"]
 tags_normalized: ["ai", "ai security", "audit trails", "azure", "azure ai foundry", "azure ai studio", "community", "compliance", "confidential data protection", "copilot studio", "data governance", "data loss prevention", "devops", "genai", "microsoft copilot", "microsoft graph apis", "microsoft purview", "ml", "security"]

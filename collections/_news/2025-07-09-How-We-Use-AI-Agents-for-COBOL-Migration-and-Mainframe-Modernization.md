@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft DevBlog"
 feed_url: "https://devblogs.microsoft.com/all-things-azure/feed/"
 date: 2025-07-09 17:10:30 +00:00
-permalink: "/news/2025-07-09-How-We-Use-AI-Agents-for-COBOL-Migration-and-Mainframe-Modernization.html"
+permalink: "/2025-07-09-How-We-Use-AI-Agents-for-COBOL-Migration-and-Mainframe-Modernization.html"
 categories: ["AI", "Azure"]
 tags: ["Agent Orchestration", "Agents", "AI", "AI Agents", "All Things Azure", "App Development", "AutoGen", "Azure", "Bankdata", "Cloud Native", "COBOL Modernization", "Code Analysis", "Code Transformation", "Dependency Mapping", "Developer Productivity", "Java Quarkus", "Legacy Systems", "Mainframe Migration", "Microsoft Azure", "News", "OpenAI", "Semantic Kernel"]
 tags_normalized: ["agent orchestration", "agents", "ai", "ai agents", "all things azure", "app development", "autogen", "azure", "bankdata", "cloud native", "cobol modernization", "code analysis", "code transformation", "dependency mapping", "developer productivity", "java quarkus", "legacy systems", "mainframe migration", "microsoft azure", "news", "openai", "semantic kernel"]

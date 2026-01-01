@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/feed/"
 date: 2025-07-16 16:00:00 +00:00
-permalink: "/news/2025-07-16-How-to-catch-GitHub-Actions-workflow-injections-before-attackers-do.html"
+permalink: "/2025-07-16-How-to-Catch-GitHub-Actions-Workflow-Injections-Before-Attackers-Do.html"
 categories: ["DevOps", "Security"]
 tags: ["Attack Prevention", "CI/CD", "Code Scanning", "CodeQL", "DevOps", "GitHub Actions", "News", "Repository Security", "Security", "Vulnerability Research", "Workflow Injection", "Workflow Security"]
 tags_normalized: ["attack prevention", "cislashcd", "code scanning", "codeql", "devops", "github actions", "news", "repository security", "security", "vulnerability research", "workflow injection", "workflow security"]

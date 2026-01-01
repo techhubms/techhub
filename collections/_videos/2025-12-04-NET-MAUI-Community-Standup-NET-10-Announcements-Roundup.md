@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "DotNet YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw"
 date: 2025-12-04 16:48:58 +00:00
-permalink: "/videos/2025-12-04-NET-MAUI-Community-Standup-NET-10-Announcements-Roundup.html"
+permalink: "/2025-12-04-NET-MAUI-Community-Standup-NET-10-Announcements-Roundup.html"
 categories: ["Coding"]
 tags: [".NET", ".NET 10", "Coding", "David Ortinau", "Demo", "Developer", "Developer Community", "Dotnetdeveloper", "Dotnetmaui", "Gerald Versluis", "MAUI", "Microsoft", "Platform Updates", "Software Developer", "Software Development", "Videos"]
 tags_normalized: ["dotnet", "dotnet 10", "coding", "david ortinau", "demo", "developer", "developer community", "dotnetdeveloper", "dotnetmaui", "gerald versluis", "maui", "microsoft", "platform updates", "software developer", "software development", "videos"]

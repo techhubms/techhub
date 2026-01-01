@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Developer YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
 date: 2025-10-02 17:35:52 +00:00
-permalink: "/videos/2025-10-02-What-is-an-AI-Agent.html"
+permalink: "/2025-10-02-What-is-an-AI-Agent.html"
 categories: ["AI"]
 tags: ["AI", "AI Agent", "AI Development", "Code Execution", "Control Structures", "Developer Tools", "Microsoft AI", "Natural Language Processing", "OneDevQuestion", "Seth Juarez", "Shorts", "Software Automation", "Videos"]
 tags_normalized: ["ai", "ai agent", "ai development", "code execution", "control structures", "developer tools", "microsoft ai", "natural language processing", "onedevquestion", "seth juarez", "shorts", "software automation", "videos"]

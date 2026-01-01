@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/feed/"
 date: 2025-08-12 13:52:49 +00:00
-permalink: "/news/2025-08-12-Why-We-Open-Sourced-Our-MCP-Server-and-What-It-Means-for-Developers.html"
+permalink: "/2025-08-12-Why-We-Open-Sourced-Our-MCP-Server-and-What-It-Means-for-Developers.html"
 categories: ["AI", "Coding", "DevOps"]
 tags: ["AI", "AI Integration", "APIs", "Architecture", "Automation", "Chatbots", "Coding", "Copilot", "DevOps", "DevOps Tools", "GitHub Actions", "GitHub MCP Server", "GitHub Podcast", "LLMs", "Maintainers", "MCP", "Natural Language Processing", "News", "Open Source", "VS Code", "VS Code Extensions"]
 tags_normalized: ["ai", "ai integration", "apis", "architecture", "automation", "chatbots", "coding", "copilot", "devops", "devops tools", "github actions", "github mcp server", "github podcast", "llms", "maintainers", "mcp", "natural language processing", "news", "open source", "vs code", "vs code extensions"]

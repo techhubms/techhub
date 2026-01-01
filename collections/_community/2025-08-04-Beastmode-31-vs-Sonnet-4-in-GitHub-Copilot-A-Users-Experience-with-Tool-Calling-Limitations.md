@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Reddit Github Copilot"
 feed_url: "https://www.reddit.com/r/GithubCopilot.rss"
 date: 2025-08-04 16:46:19 +00:00
-permalink: "/community/2025-08-04-Beastmode-31-vs-Sonnet-4-in-GitHub-Copilot-A-Users-Experience-with-Tool-Calling-Limitations.html"
+permalink: "/2025-08-04-Beastmode-31-vs-Sonnet-4-in-GitHub-Copilot-A-Users-Experience-with-Tool-Calling-Limitations.html"
 categories: ["AI", "GitHub Copilot"]
 tags: ["AI", "AI Model Comparison", "Beastmode 3.1", "Code Commit", "Community", "Developer Workflow", "GitHub Copilot", "GPT 4.1", "Rate Limits", "Software Development", "Sonnet 4", "Tool Calling", "VS Code"]
 tags_normalized: ["ai", "ai model comparison", "beastmode 3dot1", "code commit", "community", "developer workflow", "github copilot", "gpt 4dot1", "rate limits", "software development", "sonnet 4", "tool calling", "vs code"]

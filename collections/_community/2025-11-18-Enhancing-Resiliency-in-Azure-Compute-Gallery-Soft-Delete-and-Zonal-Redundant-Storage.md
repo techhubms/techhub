@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-11-18 17:24:09 +00:00
-permalink: "/community/2025-11-18-Enhancing-Resiliency-in-Azure-Compute-Gallery-Soft-Delete-and-Zonal-Redundant-Storage.html"
+permalink: "/2025-11-18-Enhancing-Resiliency-in-Azure-Compute-Gallery-Soft-Delete-and-Zonal-Redundant-Storage.html"
 categories: ["Azure"]
 tags: ["Access Control", "Azure", "Azure Compute Gallery", "Azure Portal", "Business Continuity", "Cloud Resiliency", "Cloud Storage", "Community", "Disaster Recovery", "Image Management", "Image Recovery", "REST API", "Soft Delete", "Virtual Machines", "VM Images", "Zonal Redundant Storage", "ZRS"]
 tags_normalized: ["access control", "azure", "azure compute gallery", "azure portal", "business continuity", "cloud resiliency", "cloud storage", "community", "disaster recovery", "image management", "image recovery", "rest api", "soft delete", "virtual machines", "vm images", "zonal redundant storage", "zrs"]

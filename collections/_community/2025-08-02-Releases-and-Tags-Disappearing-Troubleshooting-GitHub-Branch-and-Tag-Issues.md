@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Reddit GitHub"
 feed_url: "https://www.reddit.com/r/github/.rss"
 date: 2025-08-02 16:13:34 +00:00
-permalink: "/community/2025-08-02-Releases-and-Tags-Disappearing-Troubleshooting-GitHub-Branch-and-Tag-Issues.html"
+permalink: "/2025-08-02-Releases-and-Tags-Disappearing-Troubleshooting-GitHub-Branch-and-Tag-Issues.html"
 categories: ["DevOps"]
 tags: ["Actions", "Branches", "Community", "DevOps", "Docker", "Git", "Git Push", "GitHub", "Snyk", "Tags", "Webhooks"]
 tags_normalized: ["actions", "branches", "community", "devops", "docker", "git", "git push", "github", "snyk", "tags", "webhooks"]

@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Reddit DotNet"
 feed_url: "https://www.reddit.com/r/dotnet/.rss"
 date: 2025-08-02 08:40:47 +00:00
-permalink: "/community/2025-08-02-NET-Aspire-Start-Resource-on-Service-Bus-Message.html"
+permalink: "/2025-08-02-NET-Aspire-Start-Resource-on-Service-Bus-Message.html"
 categories: ["Azure", "Coding"]
 tags: [".NET", ".NET Aspire", "Application Architecture", "Azure", "Azure Service Bus", "Cloud Services", "Coding", "Community", "Event Driven", "Messaging", "Resource Management", "Service Bus", "Workloads"]
 tags_normalized: ["dotnet", "dotnet aspire", "application architecture", "azure", "azure service bus", "cloud services", "coding", "community", "event driven", "messaging", "resource management", "service bus", "workloads"]

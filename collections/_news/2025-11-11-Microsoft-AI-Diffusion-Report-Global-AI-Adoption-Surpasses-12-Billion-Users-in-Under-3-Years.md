@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft News"
 feed_url: "https://news.microsoft.com/source/feed/"
 date: 2025-11-11 18:10:45 +00:00
-permalink: "/news/2025-11-11-Microsoft-AI-Diffusion-Report-Global-AI-Adoption-Surpasses-12-Billion-Users-in-Under-3-Years.html"
+permalink: "/2025-11-11-Microsoft-AI-Diffusion-Report-Global-AI-Adoption-Surpasses-12-Billion-Users-in-Under-3-Years.html"
 categories: ["AI"]
 tags: ["AI", "AI Adoption", "AI Diffusion Report", "AI Infrastructure", "AI Policy", "Company News", "Connectivity", "Digital Access", "General Purpose Technology", "Global Technology Trends", "Infrastructure", "Microsoft", "News", "Skills Development", "Technology Adoption"]
 tags_normalized: ["ai", "ai adoption", "ai diffusion report", "ai infrastructure", "ai policy", "company news", "connectivity", "digital access", "general purpose technology", "global technology trends", "infrastructure", "microsoft", "news", "skills development", "technology adoption"]

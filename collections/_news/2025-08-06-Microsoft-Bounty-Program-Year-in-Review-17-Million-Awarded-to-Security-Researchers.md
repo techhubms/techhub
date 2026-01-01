@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft News"
 feed_url: "https://news.microsoft.com/source/feed/"
 date: 2025-08-06 17:21:40 +00:00
-permalink: "/news/2025-08-06-Microsoft-Bounty-Program-Year-in-Review-17-Million-Awarded-to-Security-Researchers.html"
+permalink: "/2025-08-06-Microsoft-Bounty-Program-Year-in-Review-17-Million-Awarded-to-Security-Researchers.html"
 categories: ["AI", "Security"]
 tags: ["AI", "AI Security", "Bug Bounty", "Cloud Security", "Company News", "Copilot Bounty Program", "Dynamics 365", "Identity Bounty Program", "Microsoft 365", "Microsoft Bounty Program", "Microsoft Defender", "MSRC", "News", "Power Platform", "Security", "Security Research", "Vulnerability Disclosure", "Windows", "Zero Day Quest"]
 tags_normalized: ["ai", "ai security", "bug bounty", "cloud security", "company news", "copilot bounty program", "dynamics 365", "identity bounty program", "microsoft 365", "microsoft bounty program", "microsoft defender", "msrc", "news", "power platform", "security", "security research", "vulnerability disclosure", "windows", "zero day quest"]

@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "DotNet YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw"
 date: 2025-11-14 09:00:06 +00:00
-permalink: "/videos/2025-11-14-Going-Passwordless-Implementing-Passkeys-in-ASPNET-Core.html"
+permalink: "/2025-11-14-Going-Passwordless-Implementing-Passkeys-in-ASPNET-Core.html"
 categories: ["Coding", "Security"]
 tags: [".NET", "1Password", "ASP.NET Core", "Authentication", "Coding", "Device Security", "Passkeys", "Passwordless Authentication", "Phishing Resistance", "Public Key Cryptography", "Security", "Security Key Integration", "Videos", "WebAuthn", "Yubikey"]
 tags_normalized: ["dotnet", "1password", "aspdotnet core", "authentication", "coding", "device security", "passkeys", "passwordless authentication", "phishing resistance", "public key cryptography", "security", "security key integration", "videos", "webauthn", "yubikey"]

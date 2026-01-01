@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/feed/"
 date: 2025-10-06 20:12:49 +00:00
-permalink: "/news/2025-10-06-The-Developer-Role-Is-Evolving-How-to-Stay-Ahead-with-AI-and-GitHub-Copilot.html"
+permalink: "/2025-10-06-The-Developer-Role-Is-Evolving-How-to-Stay-Ahead-with-AI-and-GitHub-Copilot.html"
 categories: ["AI", "Coding", "GitHub Copilot"]
 tags: ["AI", "AI & ML", "AI Development", "AI Productivity Tools", "Coding", "Collaborative Development", "Company News", "Continuous Learning", "Copilot Code Review", "Developer Collaboration", "Developer Orchestration", "Developer Skills", "GitHub Copilot", "GitHub Copilot Code Review", "GitHub Copilot Spaces", "GitHub Universe", "Machine Learning", "News", "News & Insights", "Open Source", "Python", "Software Automation", "Software Strategy"]
 tags_normalized: ["ai", "ai and ml", "ai development", "ai productivity tools", "coding", "collaborative development", "company news", "continuous learning", "copilot code review", "developer collaboration", "developer orchestration", "developer skills", "github copilot", "github copilot code review", "github copilot spaces", "github universe", "machine learning", "news", "news and insights", "open source", "python", "software automation", "software strategy"]

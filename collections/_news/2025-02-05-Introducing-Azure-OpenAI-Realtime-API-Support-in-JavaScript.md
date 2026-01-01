@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft DevBlog"
 feed_url: "https://devblogs.microsoft.com/azure-sdk/feed/"
 date: 2025-02-05 05:35:07 +00:00
-permalink: "/news/2025-02-05-Introducing-Azure-OpenAI-Realtime-API-Support-in-JavaScript.html"
+permalink: "/2025-02-05-Introducing-Azure-OpenAI-Realtime-API-Support-in-JavaScript.html"
 categories: ["AI", "Azure", "Coding"]
 tags: ["AI", "Authentication", "Azure", "Azure OpenAI", "Azure SDK", "Coding", "DefaultAzureCredential", "Event Handling", "JavaScript", "News", "Node.js", "OpenAI", "OpenAI Library", "Realtime API", "Streaming Data", "Typescript", "WebSocket"]
 tags_normalized: ["ai", "authentication", "azure", "azure openai", "azure sdk", "coding", "defaultazurecredential", "event handling", "javascript", "news", "nodedotjs", "openai", "openai library", "realtime api", "streaming data", "typescript", "websocket"]

@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Developer YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
 date: 2025-09-23 13:01:50 +00:00
-permalink: "/videos/2025-09-23-Modernizing-Java-Applications-with-GitHub-Copilot-and-Azure-Deployment.html"
+permalink: "/2025-09-23-Modernizing-Java-Applications-with-GitHub-Copilot-and-Azure-Deployment.html"
 categories: ["AI", "Azure", "Coding", "DevOps", "GitHub Copilot"]
 tags: ["AI", "App Modernization", "Automated Assessment", "Azure", "Cloud Computing", "Cloud Deployment", "Code To Cloud", "Code Upgrade", "Coding", "Continuous Deployment", "Dependency Management", "Dev", "Development", "DevOps", "Enterprise Security", "GitHub Copilot", "Java", "Java 21", "Microsoft", "Microsoft Developer", "Migration", "PostgreSQL Migration", "Security Compliance", "Tech", "Technology", "Videos"]
 tags_normalized: ["ai", "app modernization", "automated assessment", "azure", "cloud computing", "cloud deployment", "code to cloud", "code upgrade", "coding", "continuous deployment", "dependency management", "dev", "development", "devops", "enterprise security", "github copilot", "java", "java 21", "microsoft", "microsoft developer", "migration", "postgresql migration", "security compliance", "tech", "technology", "videos"]

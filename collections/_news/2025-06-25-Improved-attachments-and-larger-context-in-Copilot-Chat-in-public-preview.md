@@ -10,7 +10,7 @@ categories: ["AI", "GitHub Copilot"]
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/changelog/label/copilot/feed/"
 date: 2025-06-25 20:27:52 +00:00
-permalink: "/news/2025-06-25-Improved-attachments-and-larger-context-in-Copilot-Chat-in-public-preview.html"
+permalink: "/2025-06-25-Improved-attachments-and-larger-context-in-Copilot-Chat-in-public-preview.html"
 tags: ["AI", "Attachments", "Collaboration", "Context Limits", "Copilot Chat", "GitHub Copilot", "Image Support", "News"]
 tags_normalized: ["ai", "attachments", "collaboration", "context limits", "copilot chat", "github copilot", "image support", "news"]
 ---

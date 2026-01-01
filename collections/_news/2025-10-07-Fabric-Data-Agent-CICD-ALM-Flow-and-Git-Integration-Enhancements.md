@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Fabric Blog"
 feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
 date: 2025-10-07 10:00:00 +00:00
-permalink: "/news/2025-10-07-Fabric-Data-Agent-CICD-ALM-Flow-and-Git-Integration-Enhancements.html"
+permalink: "/2025-10-07-Fabric-Data-Agent-CICD-ALM-Flow-and-Git-Integration-Enhancements.html"
 categories: ["Azure", "DevOps", "ML"]
 tags: ["ALM", "Application Lifecycle Management", "Azure", "CI/CD", "Collaboration", "Data Engineering", "Data Management", "Deployment Pipeline", "Development Workspace", "DevOps", "Fabric Data Agent", "Git Integration", "Microsoft Fabric", "ML", "News", "Production Workspace", "Source Control", "Version Control"]
 tags_normalized: ["alm", "application lifecycle management", "azure", "cislashcd", "collaboration", "data engineering", "data management", "deployment pipeline", "development workspace", "devops", "fabric data agent", "git integration", "microsoft fabric", "ml", "news", "production workspace", "source control", "version control"]

@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-12-02 21:20:46 +00:00
-permalink: "/community/2025-12-02-Scaling-Azure-Compute-for-Performance-Innovations-from-Ignite-2025.html"
+permalink: "/2025-12-02-Scaling-Azure-Compute-for-Performance-Innovations-from-Ignite-2025.html"
 categories: ["AI", "Azure", "DevOps", "Security"]
 tags: ["AI", "AI Inference", "Automation", "Azure", "Azure Compute", "Capacity Optimization", "Cloud Resiliency", "Community", "Compute Gallery", "Data Analytics", "DevOps", "Direct Virtualization", "Global Deployment", "GPU", "Large Containers", "NVMe", "Performance Tuning", "Scale Sets", "Scheduled Actions", "Security", "Soft Delete", "VM Applications", "VMSS Instance Mix", "Zonal Redundant Storage"]
 tags_normalized: ["ai", "ai inference", "automation", "azure", "azure compute", "capacity optimization", "cloud resiliency", "community", "compute gallery", "data analytics", "devops", "direct virtualization", "global deployment", "gpu", "large containers", "nvme", "performance tuning", "scale sets", "scheduled actions", "security", "soft delete", "vm applications", "vmss instance mix", "zonal redundant storage"]

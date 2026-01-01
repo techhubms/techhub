@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Developer YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
 date: 2025-10-07 07:00:05 +00:00
-permalink: "/videos/2025-10-07-Azure-Pricing-Calculator-Estimate-Smarter-Plan-Confidently.html"
+permalink: "/2025-10-07-Azure-Pricing-Calculator-Estimate-Smarter-Plan-Confidently.html"
 categories: ["Azure"]
 tags: ["Azure", "Azure Cost Management", "Azure Essentials Show", "Azure Pricing Calculator", "AzureEssentialsShow", "AzurePricingCalculator", "Billing", "Cloud Collaboration", "Cloud Cost Estimation", "Cloud Pricing", "Cost Planning", "Microsoft Azure", "Personalized Pricing", "Real Time Pricing", "Resource Optimization", "Scenario Modeling", "Videos", "Workload Management"]
 tags_normalized: ["azure", "azure cost management", "azure essentials show", "azure pricing calculator", "azureessentialsshow", "azurepricingcalculator", "billing", "cloud collaboration", "cloud cost estimation", "cloud pricing", "cost planning", "microsoft azure", "personalized pricing", "real time pricing", "resource optimization", "scenario modeling", "videos", "workload management"]

@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "DotNet YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw"
 date: 2025-11-13 17:40:50 +00:00
-permalink: "/videos/2025-11-13-Aspire-Unplugged-David-Fowler-Discusses-NET-Aspires-Vision-and-Future.html"
+permalink: "/2025-11-13-Aspire-Unplugged-David-Fowler-Discusses-NET-Aspires-Vision-and-Future.html"
 categories: ["Azure", "Coding"]
 tags: [".NET", ".NET 10", ".NET Aspire", "App Orchestration", "ASP.NET Core", "Azure", "C# 14", "Cloud Native Development", "Coding", "Community Q&A", "David Fowler", "Development Process", "F# 10", "Framework Architecture", "MAUI", "Microsoft Azure", "Modern Web Development", "Videos", "VS"]
 tags_normalized: ["dotnet", "dotnet 10", "dotnet aspire", "app orchestration", "aspdotnet core", "azure", "csharp 14", "cloud native development", "coding", "community qanda", "david fowler", "development process", "fsharp 10", "framework architecture", "maui", "microsoft azure", "modern web development", "videos", "vs"]

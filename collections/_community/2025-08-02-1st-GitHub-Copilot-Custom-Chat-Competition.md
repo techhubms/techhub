@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Reddit Github Copilot"
 feed_url: "https://www.reddit.com/r/GithubCopilot.rss"
 date: 2025-08-02 06:29:17 +00:00
-permalink: "/community/2025-08-02-1st-GitHub-Copilot-Custom-Chat-Competition.html"
+permalink: "/2025-08-02-1st-GitHub-Copilot-Custom-Chat-Competition.html"
 categories: ["AI", "GitHub Copilot"]
 tags: ["AI", "AI Competition", "Coding Productivity", "Community", "Community Initiative", "Custom Chat Mode", "GitHub Copilot", "Gpt 4.1", "Gpt 4o", "MCP Tools", "Open Source", "Performance", "VS Code"]
 tags_normalized: ["ai", "ai competition", "coding productivity", "community", "community initiative", "custom chat mode", "github copilot", "gpt 4dot1", "gpt 4o", "mcp tools", "open source", "performance", "vs code"]

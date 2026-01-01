@@ -6,7 +6,7 @@ author: "Tech Hub Team"
 excerpt_separator: <!--excerpt_end-->
 viewing_mode: "internal"
 date: 2025-11-03 09:00:00 +00:00
-permalink: "/roundups/2025-11-03-Weekly-AI-and-Tech-News-Roundup.html"
+permalink: "/2025-11-03-Weekly-AI-and-Tech-News-Roundup.html"
 categories: ["AI", "GitHub Copilot", "ML", "Azure", "Coding", "DevOps", "Security"]
 tags: [".NET", "AI", "AI Agents", "AI Security", "App Modernization", "Azure", "Coding", "Developer Tools", "DevOps", "Generative AI", "GitHub Copilot", "Machine Learning", "Microsoft Fabric", "ML", "Open Source", "Quantum Computing", "Roundups", "Security", "Vector Search", "VS Code"]
 tags_normalized: ["dotnet", "ai", "ai agents", "ai security", "app modernization", "azure", "coding", "developer tools", "devops", "generative ai", "github copilot", "machine learning", "microsoft fabric", "ml", "open source", "quantum computing", "roundups", "security", "vector search", "vs code"]

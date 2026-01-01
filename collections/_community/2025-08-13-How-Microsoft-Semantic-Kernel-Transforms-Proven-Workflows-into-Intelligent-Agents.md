@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Community"
 date: 2025-08-13 07:00:00 +00:00
-permalink: "/community/2025-08-13-How-Microsoft-Semantic-Kernel-Transforms-Proven-Workflows-into-Intelligent-Agents.html"
+permalink: "/2025-08-13-How-Microsoft-Semantic-Kernel-Transforms-Proven-Workflows-into-Intelligent-Agents.html"
 categories: ["AI", "Coding"]
 tags: ["Agent Architecture", "AI", "AI Orchestration", "Business Intelligence", "Business Logic", "Code Execution", "Coding", "Community", "Data Analysis", "Email Automation", "Function Decorators", "Kernel Functions", "LLM Integration", "Matplotlib", "Microsoft Semantic Kernel", "Natural Language Processing", "OpenAI Integration", "Pandas", "Prompt Engineering", "Python", "Skill Plugins", "Workflow Automation"]
 tags_normalized: ["agent architecture", "ai", "ai orchestration", "business intelligence", "business logic", "code execution", "coding", "community", "data analysis", "email automation", "function decorators", "kernel functions", "llm integration", "matplotlib", "microsoft semantic kernel", "natural language processing", "openai integration", "pandas", "prompt engineering", "python", "skill plugins", "workflow automation"]

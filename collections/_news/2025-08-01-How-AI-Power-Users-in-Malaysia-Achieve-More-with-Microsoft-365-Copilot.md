@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft News"
 feed_url: "https://news.microsoft.com/source/feed/"
 date: 2025-08-01 16:45:01 +00:00
-permalink: "/news/2025-08-01-How-AI-Power-Users-in-Malaysia-Achieve-More-with-Microsoft-365-Copilot.html"
+permalink: "/2025-08-01-How-AI-Power-Users-in-Malaysia-Achieve-More-with-Microsoft-365-Copilot.html"
 categories: ["AI", "GitHub Copilot"]
 tags: ["AI", "AI Adoption", "AI Integration", "Automation", "Company News", "Copilot Features", "Copilot Language Support", "Digital Productivity", "Employee Experience", "Excel", "Financial Services", "GitHub Copilot", "Malaysia", "Microsoft 365 Copilot", "News", "PowerPoint", "Word", "Workplace Efficiency"]
 tags_normalized: ["ai", "ai adoption", "ai integration", "automation", "company news", "copilot features", "copilot language support", "digital productivity", "employee experience", "excel", "financial services", "github copilot", "malaysia", "microsoft 365 copilot", "news", "powerpoint", "word", "workplace efficiency"]

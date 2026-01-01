@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-11-11 08:00:00 +00:00
-permalink: "/community/2025-11-11-Adaptive-Model-Selection-with-Azure-AI-Foundry-Model-Router-in-TypeScript.html"
+permalink: "/2025-11-11-Adaptive-Model-Selection-with-Azure-AI-Foundry-Model-Router-in-TypeScript.html"
 categories: ["AI", "Azure", "Coding"]
 tags: ["AI", "API Authentication", "Application Insights", "Azure", "Azure AI Foundry", "Azure Inference SDK", "Azure Monitor", "Chat Models", "Coding", "Community", "Cost Optimization", "Dynamic Model Selection", "GPT 4.1", "GPT 5", "Latency Monitoring", "LLM Routing", "Microsoft Entra ID", "Model Router", "Observability", "Reasoning Models", "TypeScript", "Versioning"]
 tags_normalized: ["ai", "api authentication", "application insights", "azure", "azure ai foundry", "azure inference sdk", "azure monitor", "chat models", "coding", "community", "cost optimization", "dynamic model selection", "gpt 4dot1", "gpt 5", "latency monitoring", "llm routing", "microsoft entra id", "model router", "observability", "reasoning models", "typescript", "versioning"]

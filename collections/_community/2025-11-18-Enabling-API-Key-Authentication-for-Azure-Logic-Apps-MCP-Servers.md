@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-11-18 18:35:39 +00:00
-permalink: "/community/2025-11-18-Enabling-API-Key-Authentication-for-Azure-Logic-Apps-MCP-Servers.html"
+permalink: "/2025-11-18-Enabling-API-Key-Authentication-for-Azure-Logic-Apps-MCP-Servers.html"
 categories: ["AI", "Azure", "Security"]
 tags: ["Access Token", "Agent Loop", "AI", "API Key Authentication", "API Management", "Az CLI", "Azure", "Azure AI Foundry", "Azure API Center", "Azure Logic Apps", "Community", "Conversational Agents", "Host.json", "Key Expiry", "Logic Apps MCP Server", "Microsoft Azure", "OAuth2", "Primary/Secondary Key", "Regenerate API Key", "REST API", "Security", "Security Configuration", "X API Key"]
 tags_normalized: ["access token", "agent loop", "ai", "api key authentication", "api management", "az cli", "azure", "azure ai foundry", "azure api center", "azure logic apps", "community", "conversational agents", "hostdotjson", "key expiry", "logic apps mcp server", "microsoft azure", "oauth2", "primaryslashsecondary key", "regenerate api key", "rest api", "security", "security configuration", "x api key"]

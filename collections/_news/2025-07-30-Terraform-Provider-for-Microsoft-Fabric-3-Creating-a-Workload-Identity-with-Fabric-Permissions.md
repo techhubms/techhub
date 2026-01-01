@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Fabric Blog"
 feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
 date: 2025-07-30 07:00:00 +00:00
-permalink: "/news/2025-07-30-Terraform-Provider-for-Microsoft-Fabric-3-Creating-a-Workload-Identity-with-Fabric-Permissions.html"
+permalink: "/2025-07-30-Terraform-Provider-for-Microsoft-Fabric-3-Creating-a-Workload-Identity-with-Fabric-Permissions.html"
 categories: ["DevOps", "Azure", "ML"]
 tags: ["Automation", "Azure", "Deployment", "DevOps", "Fabric Administrator", "IaC", "Identity Management", "Microsoft Fabric", "ML", "News", "Permissions", "Resource Configuration", "Terraform", "Workload Identity"]
 tags_normalized: ["automation", "azure", "deployment", "devops", "fabric administrator", "iac", "identity management", "microsoft fabric", "ml", "news", "permissions", "resource configuration", "terraform", "workload identity"]

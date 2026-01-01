@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The Azure Blog"
 feed_url: "https://azure.microsoft.com/en-us/blog/feed/"
 date: 2025-12-11 18:18:05 +00:00
-permalink: "/news/2025-12-11-Introducing-GPT-52-in-Microsoft-Foundry-The-New-Standard-for-Enterprise-AI.html"
+permalink: "/2025-12-11-Introducing-GPT-52-in-Microsoft-Foundry-The-New-Standard-for-Enterprise-AI.html"
 categories: ["AI", "Azure"]
 tags: ["Agentic Execution", "AI", "AI + Machine Learning", "AI Agents", "AI Model Deployment", "Analytics", "Application Modernization", "Azure", "Coding Automation", "Compliance", "Context Aware Planning", "Enterprise AI", "Governance", "GPT 5.2", "Large Language Model", "Microsoft Foundry", "Model Pricing", "News", "Reasoning", "Technical Leadership"]
 tags_normalized: ["agentic execution", "ai", "ai plus machine learning", "ai agents", "ai model deployment", "analytics", "application modernization", "azure", "coding automation", "compliance", "context aware planning", "enterprise ai", "governance", "gpt 5dot2", "large language model", "microsoft foundry", "model pricing", "news", "reasoning", "technical leadership"]

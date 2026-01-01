@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-12-11 18:57:02 +00:00
-permalink: "/community/2025-12-11-Transforming-Data-Migration-Decisions-with-Azure-Copilots-Storage-Migration-Solutions-Advisor.html"
+permalink: "/2025-12-11-Transforming-Data-Migration-Decisions-with-Azure-Copilots-Storage-Migration-Solutions-Advisor.html"
 categories: ["AI", "Azure"]
 tags: ["AI", "AI Driven Workflow", "AWS S3", "AzCopy", "Azure", "Azure Copilot", "Azure Files", "Azure Storage Discovery", "Azure Storage Mover", "Blob Storage", "Cloud Migration", "Community", "Conversational Guidance", "Data Box", "Data Migration", "Hybrid Cloud", "Microsoft Azure", "Migration Planning", "Migration Tools", "NFS", "Partner Solutions", "SMB", "Storage Migration Solutions Advisor"]
 tags_normalized: ["ai", "ai driven workflow", "aws s3", "azcopy", "azure", "azure copilot", "azure files", "azure storage discovery", "azure storage mover", "blob storage", "cloud migration", "community", "conversational guidance", "data box", "data migration", "hybrid cloud", "microsoft azure", "migration planning", "migration tools", "nfs", "partner solutions", "smb", "storage migration solutions advisor"]

@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/changelog/feed/"
 date: 2025-12-16 15:08:56 +00:00
-permalink: "/news/2025-12-16-Track-Organization-Copilot-Usage-with-Copilot-Usage-APIs.html"
+permalink: "/2025-12-16-Track-Organization-Copilot-Usage-with-Copilot-Usage-APIs.html"
 categories: ["AI", "GitHub Copilot"]
 tags: ["Admin Tools", "AI", "AI Controls", "API Metrics", "Copilot", "Copilot Usage API", "Enterprise Management", "Feature Adoption", "GitHub Copilot", "News", "Organization Settings", "Permissions", "Policy Settings", "Reporting", "REST API", "Usage Statistics", "User Engagement"]
 tags_normalized: ["admin tools", "ai", "ai controls", "api metrics", "copilot", "copilot usage api", "enterprise management", "feature adoption", "github copilot", "news", "organization settings", "permissions", "policy settings", "reporting", "rest api", "usage statistics", "user engagement"]

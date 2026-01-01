@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Security Blog"
 feed_url: "https://www.microsoft.com/en-us/security/blog/feed/"
 date: 2025-12-02 17:00:00 +00:00
-permalink: "/news/2025-12-02-Building-Future-Ready-Cybersecurity-Teams-in-the-Age-of-AI.html"
+permalink: "/2025-12-02-Building-Future-Ready-Cybersecurity-Teams-in-the-Age-of-AI.html"
 categories: ["AI", "Security"]
 tags: ["Adaptive Defenders", "AI", "AI in Security", "CISO", "Continuous Learning", "Cybersecurity Teams", "Cyberthreats", "Deepfakes", "Diversity Of Thought", "Hiring Practices", "Malware", "Microsoft Security", "News", "Onboarding", "Phishing", "Retention", "Secure Future Initiative", "Security", "Security Culture", "Security Leadership", "Talent Strategy", "Threat Intelligence", "Upskilling"]
 tags_normalized: ["adaptive defenders", "ai", "ai in security", "ciso", "continuous learning", "cybersecurity teams", "cyberthreats", "deepfakes", "diversity of thought", "hiring practices", "malware", "microsoft security", "news", "onboarding", "phishing", "retention", "secure future initiative", "security", "security culture", "security leadership", "talent strategy", "threat intelligence", "upskilling"]

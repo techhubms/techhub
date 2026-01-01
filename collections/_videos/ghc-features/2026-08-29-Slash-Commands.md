@@ -7,7 +7,7 @@ excerpt_separator: <!--excerpt_end-->
 canonical_url: ""
 categories: ["AI", "GitHub Copilot"]
 date: 2026-08-29 09:39:31 +00:00
-permalink: "/videos/2026-08-29-Slash-Commands.html"
+permalink: "/2026-08-29-Slash-Commands.html"
 viewing_mode: "internal"
 section: "github-copilot"
 ghes_support: "true"

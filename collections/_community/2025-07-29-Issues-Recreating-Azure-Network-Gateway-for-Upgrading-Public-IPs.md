@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Reddit Azure"
 feed_url: "https://www.reddit.com/r/azure/.rss"
 date: 2025-07-29 12:55:30 +00:00
-permalink: "/community/2025-07-29-Issues-Recreating-Azure-Network-Gateway-for-Upgrading-Public-IPs.html"
+permalink: "/2025-07-29-Issues-Recreating-Azure-Network-Gateway-for-Upgrading-Public-IPs.html"
 categories: ["Azure"]
 tags: ["Azure", "Azure Network Gateway", "Azure Networking", "Community", "Connectivity Issues", "Downtime", "Firewall Rule", "FortiGate", "IPsec Tunnel", "NSG", "Public IP Upgrade", "Virtual Network"]
 tags_normalized: ["azure", "azure network gateway", "azure networking", "community", "connectivity issues", "downtime", "firewall rule", "fortigate", "ipsec tunnel", "nsg", "public ip upgrade", "virtual network"]

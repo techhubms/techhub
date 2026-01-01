@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/changelog/feed/"
 date: 2025-11-19 19:43:03 +00:00
-permalink: "/news/2025-11-19-CodeQL-2235-Adds-New-Language-Support-and-Security-Query-Improvements.html"
+permalink: "/2025-11-19-CodeQL-2235-Adds-New-Language-Support-and-Security-Query-Improvements.html"
 categories: ["DevOps", "Security"]
 tags: [".NET", "Actix Web", "Application Security", "C# Compiler", "CodeQL", "CodeQL 2.23.5", "Concurrency Issues", "DevOps", "GHES", "GitHub Code Scanning", "Improvement", "Java Security", "Mysql Async", "News", "Python", "Query Pack", "Rust", "Security", "Security Queries", "Sensitive Data", "Static Analysis", "Swift 6.2", "Thread Safety", "Vulnerability Detection"]
 tags_normalized: ["dotnet", "actix web", "application security", "csharp compiler", "codeql", "codeql 2dot23dot5", "concurrency issues", "devops", "ghes", "github code scanning", "improvement", "java security", "mysql async", "news", "python", "query pack", "rust", "security", "security queries", "sensitive data", "static analysis", "swift 6dot2", "thread safety", "vulnerability detection"]

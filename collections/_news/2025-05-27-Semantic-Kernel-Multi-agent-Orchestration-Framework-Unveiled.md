@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft DevBlog"
 feed_url: "https://devblogs.microsoft.com/semantic-kernel/feed/"
 date: 2025-05-27 16:54:32 +00:00
-permalink: "/news/2025-05-27-Semantic-Kernel-Multi-agent-Orchestration-Framework-Unveiled.html"
+permalink: "/2025-05-27-Semantic-Kernel-Multi-agent-Orchestration-Framework-Unveiled.html"
 categories: ["AI", "Coding"]
 tags: [".NET", "Agent Orchestration", "AI", "Coding", "Collaborative AI", "Concurrent Orchestration", "Developer Tools", "Group Chat Orchestration", "Handoff Orchestration", "Magentic Orchestration", "Microsoft AI", "Multi Agent Systems", "News", "Orchestration Framework", "Python", "Semantic Kernel", "Sequential Orchestration", "Workflow Automation"]
 tags_normalized: ["dotnet", "agent orchestration", "ai", "coding", "collaborative ai", "concurrent orchestration", "developer tools", "group chat orchestration", "handoff orchestration", "magentic orchestration", "microsoft ai", "multi agent systems", "news", "orchestration framework", "python", "semantic kernel", "sequential orchestration", "workflow automation"]

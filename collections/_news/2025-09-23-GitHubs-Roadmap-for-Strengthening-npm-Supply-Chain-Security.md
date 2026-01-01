@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/feed/"
 date: 2025-09-23 00:29:50 +00:00
-permalink: "/news/2025-09-23-GitHubs-Roadmap-for-Strengthening-npm-Supply-Chain-Security.html"
+permalink: "/2025-09-23-GitHubs-Roadmap-for-Strengthening-npm-Supply-Chain-Security.html"
 categories: ["DevOps", "Security"]
 tags: ["API Tokens", "Authentication", "CI/CD", "Cybersecurity", "DevOps", "GitHub", "GitHub Security Lab", "Malware", "News", "npm", "Open Source", "OpenSSF", "Package Registry", "Publishing Workflow", "Security", "Supply Chain Security", "Tokens", "Trusted Publishing", "Two Factor Authentication"]
 tags_normalized: ["api tokens", "authentication", "cislashcd", "cybersecurity", "devops", "github", "github security lab", "malware", "news", "npm", "open source", "openssf", "package registry", "publishing workflow", "security", "supply chain security", "tokens", "trusted publishing", "two factor authentication"]

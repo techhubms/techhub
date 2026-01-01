@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Security Blog"
 feed_url: "https://www.microsoft.com/en-us/security/blog/feed/"
 date: 2025-10-30 18:00:00 +00:00
-permalink: "/news/2025-10-30-5-Critical-Generative-AI-Security-Threats-Insights-from-Microsoft.html"
+permalink: "/2025-10-30-5-Critical-Generative-AI-Security-Threats-Insights-from-Microsoft.html"
 categories: ["AI", "Azure", "Security"]
 tags: ["AI", "AI Security", "Azure", "CIEM", "Cloud Native Application Protection", "Cloud Security", "CSPM", "CWPP", "Cybersecurity", "Data Leakage", "Deepfakes", "Generative AI", "Malware", "Microsoft Defender For Cloud", "Microsoft Security", "Model Vulnerabilities", "News", "Phishing", "Prompt Injection", "Security", "Threat Detection"]
 tags_normalized: ["ai", "ai security", "azure", "ciem", "cloud native application protection", "cloud security", "cspm", "cwpp", "cybersecurity", "data leakage", "deepfakes", "generative ai", "malware", "microsoft defender for cloud", "microsoft security", "model vulnerabilities", "news", "phishing", "prompt injection", "security", "threat detection"]

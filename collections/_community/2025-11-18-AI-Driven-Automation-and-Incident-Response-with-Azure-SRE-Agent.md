@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-11-18 16:00:00 +00:00
-permalink: "/community/2025-11-18-AI-Driven-Automation-and-Incident-Response-with-Azure-SRE-Agent.html"
+permalink: "/2025-11-18-AI-Driven-Automation-and-Incident-Response-with-Azure-SRE-Agent.html"
 categories: ["AI", "Azure", "DevOps", "GitHub Copilot"]
 tags: ["AI", "AIOps", "Application Insights", "Automation", "Azure", "Azure DevOps", "Azure Monitor", "Azure SRE Agent", "CI/CD Integration", "Community", "Continuous Integration", "Custom Actions", "DevOps", "DevOps Workflows", "Event Driven Triggers", "GitHub Copilot", "Hybrid Cloud", "IaC Drift Detection", "Incident Response", "Log Analytics", "No Code Sub Agent", "Observability", "Operational Playbooks", "Root Cause Analysis"]
 tags_normalized: ["ai", "aiops", "application insights", "automation", "azure", "azure devops", "azure monitor", "azure sre agent", "cislashcd integration", "community", "continuous integration", "custom actions", "devops", "devops workflows", "event driven triggers", "github copilot", "hybrid cloud", "iac drift detection", "incident response", "log analytics", "no code sub agent", "observability", "operational playbooks", "root cause analysis"]

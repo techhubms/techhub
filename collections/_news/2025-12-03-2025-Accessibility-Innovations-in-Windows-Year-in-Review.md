@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft News"
 feed_url: "https://news.microsoft.com/source/feed/"
 date: 2025-12-03 14:23:49 +00:00
-permalink: "/news/2025-12-03-2025-Accessibility-Innovations-in-Windows-Year-in-Review.html"
+permalink: "/2025-12-03-2025-Accessibility-Innovations-in-Windows-Year-in-Review.html"
 categories: ["AI", "Azure", "Coding"]
 tags: ["Accessibility", "AI", "Azure", "Chinese Language Support", "Coding", "Company News", "Copilot+ PC", "Custom Vocabulary", "Fluid Dictation", "HD Voices", "Image Description", "Japanese Language Support", "Magnifier", "Microsoft Azure", "Microsoft Word Accessibility", "Narrator", "Natural Voices", "News", "On Device AI", "Screen Curtain", "Speech Recap", "Voice Access", "Voice Typing", "Windows Accessibility", "Windows Insider"]
 tags_normalized: ["accessibility", "ai", "azure", "chinese language support", "coding", "company news", "copilotplus pc", "custom vocabulary", "fluid dictation", "hd voices", "image description", "japanese language support", "magnifier", "microsoft azure", "microsoft word accessibility", "narrator", "natural voices", "news", "on device ai", "screen curtain", "speech recap", "voice access", "voice typing", "windows accessibility", "windows insider"]

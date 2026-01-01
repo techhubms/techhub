@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Fabric Blog"
 feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
 date: 2025-12-09 14:22:51 +00:00
-permalink: "/news/2025-12-09-Microsoft-Fabric-Extensibility-Toolkit-Streamlining-Workload-Publishing-for-Partners.html"
+permalink: "/2025-12-09-Microsoft-Fabric-Extensibility-Toolkit-Streamlining-Workload-Publishing-for-Partners.html"
 categories: ["Azure", "ML"]
 tags: ["Attestation Template", "Azure", "Compliance Guidelines", "Component Standards", "Documentation", "Ecosystem Integration", "Extensibility Toolkit", "Fabric Validation", "Fabric Workload Hub", "FET", "Microsoft Fabric", "ML", "News", "Partner Workloads", "Private Preview", "Publishing Criteria", "Test Cases", "Validation Tool", "Workload Publishing"]
 tags_normalized: ["attestation template", "azure", "compliance guidelines", "component standards", "documentation", "ecosystem integration", "extensibility toolkit", "fabric validation", "fabric workload hub", "fet", "microsoft fabric", "ml", "news", "partner workloads", "private preview", "publishing criteria", "test cases", "validation tool", "workload publishing"]

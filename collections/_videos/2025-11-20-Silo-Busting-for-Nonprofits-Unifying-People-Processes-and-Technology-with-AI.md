@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Events YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
 date: 2025-11-20 11:21:09 +00:00
-permalink: "/videos/2025-11-20-Silo-Busting-for-Nonprofits-Unifying-People-Processes-and-Technology-with-AI.html"
+permalink: "/2025-11-20-Silo-Busting-for-Nonprofits-Unifying-People-Processes-and-Technology-with-AI.html"
 categories: ["AI"]
 tags: ["AI", "AI Adoption", "Collaboration", "Copilot Integration", "Data Migration", "Digital Transformation", "Governance", "Microsoft Ignite", "MSIgnite", "Nonprofit Technology", "Process Automation", "Secureyourdata", "Skilling", "Videos"]
 tags_normalized: ["ai", "ai adoption", "collaboration", "copilot integration", "data migration", "digital transformation", "governance", "microsoft ignite", "msignite", "nonprofit technology", "process automation", "secureyourdata", "skilling", "videos"]

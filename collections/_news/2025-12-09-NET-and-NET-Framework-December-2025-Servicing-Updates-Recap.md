@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft .NET Blog"
 feed_url: "https://devblogs.microsoft.com/dotnet/feed/"
 date: 2025-12-09 18:48:25 +00:00
-permalink: "/news/2025-12-09-NET-and-NET-Framework-December-2025-Servicing-Updates-Recap.html"
+permalink: "/2025-12-09-NET-and-NET-Framework-December-2025-Servicing-Updates-Recap.html"
 categories: ["Coding"]
 tags: [".NET", ".NET 10.0", ".NET Framework", "ASP.NET Core", "Coding", "Container Images", "EF Core", "Linux Packages", "Maintenance & Updates", "Microsoft", "News", "Non Security Fixes", "Patch Update", "Platform Maintenance", "Release Notes", "Runtime", "SDK", "Servicing Release", "WinForms"]
 tags_normalized: ["dotnet", "dotnet 10dot0", "dotnet framework", "aspdotnet core", "coding", "container images", "ef core", "linux packages", "maintenance and updates", "microsoft", "news", "non security fixes", "patch update", "platform maintenance", "release notes", "runtime", "sdk", "servicing release", "winforms"]

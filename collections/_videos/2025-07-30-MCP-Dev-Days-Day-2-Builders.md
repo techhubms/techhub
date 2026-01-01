@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Developer YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
 date: 2025-07-30 20:16:44 +00:00
-permalink: "/videos/2025-07-30-MCP-Dev-Days-Day-2-Builders.html"
+permalink: "/2025-07-30-MCP-Dev-Days-Day-2-Builders.html"
 categories: ["AI", "Azure", "Security", "Coding"]
 tags: ["Agent Integration", "AI", "AI Development", "API Management", "Azure", "Azure Container Apps", "Azure Functions", "Coding", "MCP", "MCP Servers", "MCPDevDays", "Prompt Engineering", "Scalability", "Security", "Security Best Practices", "Videos"]
 tags_normalized: ["agent integration", "ai", "ai development", "api management", "azure", "azure container apps", "azure functions", "coding", "mcp", "mcp servers", "mcpdevdays", "prompt engineering", "scalability", "security", "security best practices", "videos"]

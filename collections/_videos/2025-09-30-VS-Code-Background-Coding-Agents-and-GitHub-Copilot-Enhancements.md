@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Visual Studio Code YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SLNwkd3w"
 date: 2025-09-30 19:14:54 +00:00
-permalink: "/videos/2025-09-30-VS-Code-Background-Coding-Agents-and-GitHub-Copilot-Enhancements.html"
+permalink: "/2025-09-30-VS-Code-Background-Coding-Agents-and-GitHub-Copilot-Enhancements.html"
 categories: ["AI", "Coding", "GitHub Copilot"]
 tags: ["AI", "AI Tools", "Background Coding Agents", "Brigit Murtaugh", "Code", "Code Enhancement", "Coding", "Codingagents", "Copilot", "Copilot Coding Agent", "Demo", "Developer", "Developer Community", "Developer Tools", "Extension Development", "GitHub Copilot", "Microsoft", "Productivity", "Videos", "VS Code"]
 tags_normalized: ["ai", "ai tools", "background coding agents", "brigit murtaugh", "code", "code enhancement", "coding", "codingagents", "copilot", "copilot coding agent", "demo", "developer", "developer community", "developer tools", "extension development", "github copilot", "microsoft", "productivity", "videos", "vs code"]

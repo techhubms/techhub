@@ -10,7 +10,7 @@ categories: ["AI", "GitHub Copilot", "DevOps", "Coding"]
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/feed/"
 date: 2025-07-02 17:44:02 +00:00
-permalink: "/news/2025-07-02-5-ways-to-transform-your-workflow-using-GitHub-Copilot-and-MCP.html"
+permalink: "/2025-07-02-5-ways-to-transform-your-workflow-using-GitHub-Copilot-and-MCP.html"
 tags: ["Agent Mode", "AI", "AI & ML", "Automation", "Coding", "Development Workflow", "DevOps", "GitHub Copilot", "MCP", "News", "Productivity", "Use Cases"]
 tags_normalized: ["agent mode", "ai", "ai and ml", "automation", "coding", "development workflow", "devops", "github copilot", "mcp", "news", "productivity", "use cases"]
 ---

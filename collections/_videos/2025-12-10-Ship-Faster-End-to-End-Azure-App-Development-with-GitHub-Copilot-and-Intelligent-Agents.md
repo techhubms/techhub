@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Developer YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
 date: 2025-12-10 22:07:54 +00:00
-permalink: "/videos/2025-12-10-Ship-Faster-End-to-End-Azure-App-Development-with-GitHub-Copilot-and-Intelligent-Agents.html"
+permalink: "/2025-12-10-Ship-Faster-End-to-End-Azure-App-Development-with-GitHub-Copilot-and-Intelligent-Agents.html"
 categories: ["AI", "Azure", "Coding", "DevOps", "GitHub Copilot"]
 tags: ["AI", "AI Agents", "App Modernization", "Automation", "Azure", "Cloud Architecture", "Cloud Computing", "Coding", "Deployment", "Dev", "Developer", "Development", "DevOps", "Diagnostics", "GitHub Copilot", "MCP Server", "Microsoft", "Planning", "Quality Assurance", "Software Development", "SRE Agent", "Tech", "Technology", "Testing Agent", "Videos"]
 tags_normalized: ["ai", "ai agents", "app modernization", "automation", "azure", "cloud architecture", "cloud computing", "coding", "deployment", "dev", "developer", "development", "devops", "diagnostics", "github copilot", "mcp server", "microsoft", "planning", "quality assurance", "software development", "sre agent", "tech", "technology", "testing agent", "videos"]

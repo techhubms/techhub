@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-11-19 00:57:37 +00:00
-permalink: "/community/2025-11-19-Azure-Copilot-Deployment-Agent-Preview-Smarter-Infrastructure-Planning.html"
+permalink: "/2025-11-19-Azure-Copilot-Deployment-Agent-Preview-Smarter-Infrastructure-Planning.html"
 categories: ["AI", "Azure", "Coding", "DevOps"]
 tags: ["AI", "Application Insights", "Azure", "Azure AD", "Azure Cognitive Search", "Azure Copilot", "Azure Key Vault", "CI/CD", "Cloud Architecture", "Coding", "Community", "Deployment Agent", "DevOps", "GenAI", "GitHub", "IaC", "Multi Turn Conversational Assistants", "OpenAI", "PostgreSQL", "Python", "Terraform", "VS Code For Web", "Well Architected Framework"]
 tags_normalized: ["ai", "application insights", "azure", "azure ad", "azure cognitive search", "azure copilot", "azure key vault", "cislashcd", "cloud architecture", "coding", "community", "deployment agent", "devops", "genai", "github", "iac", "multi turn conversational assistants", "openai", "postgresql", "python", "terraform", "vs code for web", "well architected framework"]

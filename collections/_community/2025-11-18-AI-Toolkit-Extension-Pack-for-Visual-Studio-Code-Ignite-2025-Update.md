@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-11-18 17:09:41 +00:00
-permalink: "/community/2025-11-18-AI-Toolkit-Extension-Pack-for-Visual-Studio-Code-Ignite-2025-Update.html"
+permalink: "/2025-11-18-AI-Toolkit-Extension-Pack-for-Visual-Studio-Code-Ignite-2025-Update.html"
 categories: ["AI", "Azure", "Coding", "GitHub Copilot"]
 tags: [".NET", "Agentic Applications", "AI", "AI Agents", "AI Toolkit", "Azure", "Azure AI Foundry", "Cloud Deployment", "Coding", "Community", "Debugging", "Foundry SDK", "GitHub Copilot", "Graph Visualizer", "Hosted Agents Playground", "Microsoft Agent Framework", "Python", "VS Code", "VS Code Extensions", "YAML Workflows"]
 tags_normalized: ["dotnet", "agentic applications", "ai", "ai agents", "ai toolkit", "azure", "azure ai foundry", "cloud deployment", "coding", "community", "debugging", "foundry sdk", "github copilot", "graph visualizer", "hosted agents playground", "microsoft agent framework", "python", "vs code", "vs code extensions", "yaml workflows"]

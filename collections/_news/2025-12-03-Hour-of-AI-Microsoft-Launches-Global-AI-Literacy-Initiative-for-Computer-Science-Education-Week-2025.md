@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft News"
 feed_url: "https://news.microsoft.com/source/feed/"
 date: 2025-12-03 15:06:57 +00:00
-permalink: "/news/2025-12-03-Hour-of-AI-Microsoft-Launches-Global-AI-Literacy-Initiative-for-Computer-Science-Education-Week-2025.html"
+permalink: "/2025-12-03-Hour-of-AI-Microsoft-Launches-Global-AI-Literacy-Initiative-for-Computer-Science-Education-Week-2025.html"
 categories: ["AI", "Coding"]
 tags: ["AI", "AI Coding", "AI Literacy", "AI Prompts", "AI Skills", "Algorithm Design", "Classroom Resources", "Code.org", "Coding", "Company News", "Computer Science Education Week", "CSforALL", "Education", "Game Based Learning", "Hour Of AI", "K 12 Education", "MakeCode", "Microsoft Education", "Minecraft Education", "News", "Visual Studio Code For Education"]
 tags_normalized: ["ai", "ai coding", "ai literacy", "ai prompts", "ai skills", "algorithm design", "classroom resources", "codedotorg", "coding", "company news", "computer science education week", "csforall", "education", "game based learning", "hour of ai", "k 12 education", "makecode", "microsoft education", "minecraft education", "news", "visual studio code for education"]

@@ -9,10 +9,10 @@ viewing_mode: "external"
 feed_name: "DevOps Blog"
 feed_url: "https://devops.com/feed/"
 date: 2025-08-25 22:03:46 +00:00
-permalink: "/blogs/2025-08-25-Morgan-Stanley-Open-Sources-CALM-Architecture-as-Code-for-Enterprise-DevOps.html"
+permalink: "/2025-08-25-Morgan-Stanley-Open-Sources-CALM-Architecture-as-Code-for-Enterprise-DevOps.html"
 categories: ["DevOps"]
-tags: ["Architectural Compliance", "Architecture as Code", "Automation", "CALM", "CI/CD", "Configuration as Code", "DevOps", "Enterprise", "Enterprise Software", "FINOS", "JSON Meta Schema", "Machine Readable Architecture", "Morgan Stanley", "Open Source", "Blogs", "Security Approvals", "Social Facebook", "Social LinkedIn", "Social X", "Software Delivery"]
-tags_normalized: ["architectural compliance", "architecture as code", "automation", "calm", "cislashcd", "configuration as code", "devops", "enterprise", "enterprise software", "finos", "json meta schema", "machine readable architecture", "morgan stanley", "open source", "blogs", "security approvals", "social facebook", "social linkedin", "social x", "software delivery"]
+tags: ["Architectural Compliance", "Architecture as Code", "Automation", "Blogs", "CALM", "CI/CD", "Configuration as Code", "DevOps", "Enterprise", "Enterprise Software", "FINOS", "JSON Meta Schema", "Machine Readable Architecture", "Morgan Stanley", "Open Source", "Security Approvals", "Social Facebook", "Social LinkedIn", "Social X", "Software Delivery"]
+tags_normalized: ["architectural compliance", "architecture as code", "automation", "blogs", "calm", "cislashcd", "configuration as code", "devops", "enterprise", "enterprise software", "finos", "json meta schema", "machine readable architecture", "morgan stanley", "open source", "security approvals", "social facebook", "social linkedin", "social x", "software delivery"]
 ---
 
 Authored by Tom Smith, this article introduces CALM, Morgan Stanley's open-source Architecture-as-Code tool, and explores how it streamlines enterprise DevOps through automation, compliance, and architectural validation.<!--excerpt_end-->

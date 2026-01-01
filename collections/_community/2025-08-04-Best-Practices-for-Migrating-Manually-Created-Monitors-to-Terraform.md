@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Reddit DevOps"
 feed_url: "https://www.reddit.com/r/devops/.rss"
 date: 2025-08-04 16:09:23 +00:00
-permalink: "/community/2025-08-04-Best-Practices-for-Migrating-Manually-Created-Monitors-to-Terraform.html"
+permalink: "/2025-08-04-Best-Practices-for-Migrating-Manually-Created-Monitors-to-Terraform.html"
 categories: ["DevOps"]
 tags: ["Automation", "Best Practices", "Community", "Configuration Management", "Datadog", "DevOps", "IaC", "Migration", "Monitoring", "Resource Drift", "Terraform", "Version Control"]
 tags_normalized: ["automation", "best practices", "community", "configuration management", "datadog", "devops", "iac", "migration", "monitoring", "resource drift", "terraform", "version control"]

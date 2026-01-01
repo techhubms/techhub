@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Events YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
 date: 2025-11-24 07:11:10 +00:00
-permalink: "/videos/2025-11-24-Build-AI-Apps-Fast-with-GitHub-and-Microsoft-Foundry-in-Action-MS-Ignite-BRK110.html"
+permalink: "/2025-11-24-Build-AI-Apps-Fast-with-GitHub-and-Microsoft-Foundry-in-Action-MS-Ignite-BRK110.html"
 categories: ["AI", "Azure", "Coding", "DevOps", "GitHub Copilot"]
 tags: ["Agent Framework", "AI", "AI Toolkit", "App Deployment", "Azure", "Azure AI", "Cloud Security", "Coding", "Developer Tools", "DevOps", "GitHub", "GitHub Actions", "GitHub Copilot", "InnovatewithAzureAIappsandagents", "Microsoft Foundry", "Modular Architecture", "MSIgnite", "Multi Agent Systems", "Orchestration", "Retrieval Augmented Generation", "Videos"]
 tags_normalized: ["agent framework", "ai", "ai toolkit", "app deployment", "azure", "azure ai", "cloud security", "coding", "developer tools", "devops", "github", "github actions", "github copilot", "innovatewithazureaiappsandagents", "microsoft foundry", "modular architecture", "msignite", "multi agent systems", "orchestration", "retrieval augmented generation", "videos"]

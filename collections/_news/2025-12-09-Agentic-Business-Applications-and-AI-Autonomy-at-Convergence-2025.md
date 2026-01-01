@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft News"
 feed_url: "https://news.microsoft.com/source/feed/"
 date: 2025-12-09 17:51:59 +00:00
-permalink: "/news/2025-12-09-Agentic-Business-Applications-and-AI-Autonomy-at-Convergence-2025.html"
+permalink: "/2025-12-09-Agentic-Business-Applications-and-AI-Autonomy-at-Convergence-2025.html"
 categories: ["AI"]
 tags: ["Agentic Business Applications", "AI", "AI Agents", "Automation", "Business Central", "Company News", "Convergence", "Copilot Studio", "CRM", "Data Governance", "Dynamics 365", "ERP", "MCP Protocol", "Microsoft Cloud", "Microsoft Fabric", "News", "Operational Autonomy", "Partner Agents"]
 tags_normalized: ["agentic business applications", "ai", "ai agents", "automation", "business central", "company news", "convergence", "copilot studio", "crm", "data governance", "dynamics 365", "erp", "mcp protocol", "microsoft cloud", "microsoft fabric", "news", "operational autonomy", "partner agents"]

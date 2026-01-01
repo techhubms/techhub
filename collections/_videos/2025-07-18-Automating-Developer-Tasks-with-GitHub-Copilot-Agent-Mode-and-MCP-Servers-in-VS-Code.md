@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Visual Studio Code YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SLNwkd3w"
 date: 2025-07-18 20:27:10 +00:00
-permalink: "/videos/2025-07-18-Automating-Developer-Tasks-with-GitHub-Copilot-Agent-Mode-and-MCP-Servers-in-VS-Code.html"
+permalink: "/2025-07-18-Automating-Developer-Tasks-with-GitHub-Copilot-Agent-Mode-and-MCP-Servers-in-VS-Code.html"
 categories: ["AI", "DevOps", "GitHub Copilot"]
 tags: ["Agent Mode", "AI", "Copilot", "Copilot Agent", "Developer", "Developer Automation", "Developer Tools", "DevOps", "GitHub Copilot", "Issue Assignment", "LeetCode Integration", "Mcp", "MCP Server", "Mcpserver", "Productivity", "Pull Requests", "Videos", "VS Code"]
 tags_normalized: ["agent mode", "ai", "copilot", "copilot agent", "developer", "developer automation", "developer tools", "devops", "github copilot", "issue assignment", "leetcode integration", "mcp", "mcp server", "mcpserver", "productivity", "pull requests", "videos", "vs code"]

@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Fabric Blog"
 feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
 date: 2025-07-30 09:05:00 +00:00
-permalink: "/news/2025-07-30-Fabric-July-2025-Feature-Summary.html"
+permalink: "/2025-07-30-Fabric-July-2025-Feature-Summary.html"
 categories: ["AI", "Azure", "ML", "Security"]
 tags: ["Activator", "AI", "Azure", "Azure SQL Database", "Connectors", "Copilot Studio", "Cosmos DB", "Data Factory", "Data Governance", "Data Mesh", "Fabric Data Agent", "Microsoft Fabric", "Mirroring", "ML", "News", "NoSQL", "OneLake Catalog", "Pipelines", "Power BI", "Real Time Intelligence", "Security"]
 tags_normalized: ["activator", "ai", "azure", "azure sql database", "connectors", "copilot studio", "cosmos db", "data factory", "data governance", "data mesh", "fabric data agent", "microsoft fabric", "mirroring", "ml", "news", "nosql", "onelake catalog", "pipelines", "power bi", "real time intelligence", "security"]

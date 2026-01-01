@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "DotNet YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw"
 date: 2025-11-13 17:40:46 +00:00
-permalink: "/videos/2025-11-13-Whats-New-in-Azure-App-Service-for-NET-Developers.html"
+permalink: "/2025-11-13-Whats-New-in-Azure-App-Service-for-NET-Developers.html"
 categories: ["Azure", "Coding", "DevOps", "Security"]
 tags: [".NET", ".NET 10", ".NET Aspire", ".NET MAUI 10", "Application Security", "ASP.NET Core 10", "Azure", "Azure App Service", "Azure DevOps", "C# 14", "Cloud Deployment", "Coding", "DevOps", "Diagnostics", "F# 10", "GitHub Actions", "Microservices", "Monitoring", "Performance Optimization", "Scaling Applications", "Security", "Videos", "VS", "Web Apps"]
 tags_normalized: ["dotnet", "dotnet 10", "dotnet aspire", "dotnet maui 10", "application security", "aspdotnet core 10", "azure", "azure app service", "azure devops", "csharp 14", "cloud deployment", "coding", "devops", "diagnostics", "fsharp 10", "github actions", "microservices", "monitoring", "performance optimization", "scaling applications", "security", "videos", "vs", "web apps"]

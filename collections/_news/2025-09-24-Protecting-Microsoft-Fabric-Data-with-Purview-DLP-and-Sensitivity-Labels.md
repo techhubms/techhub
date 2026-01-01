@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Fabric Blog"
 feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
 date: 2025-09-24 13:00:00 +00:00
-permalink: "/news/2025-09-24-Protecting-Microsoft-Fabric-Data-with-Purview-DLP-and-Sensitivity-Labels.html"
+permalink: "/2025-09-24-Protecting-Microsoft-Fabric-Data-with-Purview-DLP-and-Sensitivity-Labels.html"
 categories: ["Azure", "Security"]
 tags: ["Access Controls", "Auditing", "Azure", "Azure Data", "Compliance", "Data Classification", "Data Governance", "Data Loss Prevention", "DLP", "Domain Level Security", "Encryption", "Information Protection", "Microsoft Fabric", "Microsoft Purview", "News", "Security", "Security Policies", "Sensitivity Labels"]
 tags_normalized: ["access controls", "auditing", "azure", "azure data", "compliance", "data classification", "data governance", "data loss prevention", "dlp", "domain level security", "encryption", "information protection", "microsoft fabric", "microsoft purview", "news", "security", "security policies", "sensitivity labels"]

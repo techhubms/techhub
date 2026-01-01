@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-12-08 17:13:27 +00:00
-permalink: "/community/2025-12-08-Exploring-the-Future-of-AI-Agents-with-Microsoft-Foundry.html"
+permalink: "/2025-12-08-Exploring-the-Future-of-AI-Agents-with-Microsoft-Foundry.html"
 categories: ["AI", "Azure"]
 tags: ["Agentic AI", "AI", "AI Agents", "AI Development", "AI Implementation", "Autonomous Systems", "Azure", "Azure AI", "Community", "Copilot Studio", "Developer Community", "Foundry Agent Service", "Foundry IQ", "Knowledge Grounding", "Large Language Models", "LLM", "Microsoft Foundry", "Model Catalogue", "OpenAI", "Platform as A Service", "Workflow Automation"]
 tags_normalized: ["agentic ai", "ai", "ai agents", "ai development", "ai implementation", "autonomous systems", "azure", "azure ai", "community", "copilot studio", "developer community", "foundry agent service", "foundry iq", "knowledge grounding", "large language models", "llm", "microsoft foundry", "model catalogue", "openai", "platform as a service", "workflow automation"]

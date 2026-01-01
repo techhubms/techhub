@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft News"
 feed_url: "https://news.microsoft.com/source/feed/"
 date: 2025-11-25 16:03:02 +00:00
-permalink: "/news/2025-11-25-Microsoft-Expands-AI-and-Cloud-Services-in-Indonesia-Central-Region.html"
+permalink: "/2025-11-25-Microsoft-Expands-AI-and-Cloud-Services-in-Indonesia-Central-Region.html"
 categories: ["AI", "Azure", "GitHub Copilot", "ML"]
 tags: ["Agentic AI", "AI", "AI Infrastructure", "AI Powered Solutions", "AI Skilling", "Azure", "Azure App Services", "Azure Central Region", "Azure Databases", "Azure OpenAI Service", "Business Intelligence", "Cloud Innovation", "Company News", "Data Management", "Data Science", "Developer Enablement", "Frontier Firms", "GitHub Copilot", "Indonesia", "Microsoft Azure", "Microsoft Elevate", "Microsoft Fabric", "ML", "NCads H100 V5", "News", "NVadsA10 V5"]
 tags_normalized: ["agentic ai", "ai", "ai infrastructure", "ai powered solutions", "ai skilling", "azure", "azure app services", "azure central region", "azure databases", "azure openai service", "business intelligence", "cloud innovation", "company news", "data management", "data science", "developer enablement", "frontier firms", "github copilot", "indonesia", "microsoft azure", "microsoft elevate", "microsoft fabric", "ml", "ncads h100 v5", "news", "nvadsa10 v5"]

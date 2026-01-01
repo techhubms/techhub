@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Developer YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
 date: 2025-12-01 21:00:26 +00:00
-permalink: "/videos/2025-12-01-Generating-Agent-Code-Using-AI-Toolkit-and-GitHub-Copilot.html"
+permalink: "/2025-12-01-Generating-Agent-Code-Using-AI-Toolkit-and-GitHub-Copilot.html"
 categories: ["AI", "Coding", "GitHub Copilot"]
 tags: ["Agent Builder", "Agent Code Generation", "AI", "AI Toolkit", "Cloud Computing", "Code Refinement", "Coding", "Copilot Integration", "Dev", "Developer Tools", "Development", "GitHub Copilot", "Local Environment Setup", "Microsoft", "Microsoft Foundry", "Tech", "Technology", "Videos"]
 tags_normalized: ["agent builder", "agent code generation", "ai", "ai toolkit", "cloud computing", "code refinement", "coding", "copilot integration", "dev", "developer tools", "development", "github copilot", "local environment setup", "microsoft", "microsoft foundry", "tech", "technology", "videos"]

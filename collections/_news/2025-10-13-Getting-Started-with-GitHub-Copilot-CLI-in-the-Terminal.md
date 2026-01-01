@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/feed/"
 date: 2025-10-13 22:40:04 +00:00
-permalink: "/news/2025-10-13-Getting-Started-with-GitHub-Copilot-CLI-in-the-Terminal.html"
+permalink: "/2025-10-13-Getting-Started-with-GitHub-Copilot-CLI-in-the-Terminal.html"
 categories: ["AI", "Coding", "GitHub Copilot"]
 tags: ["AI", "AI & ML", "AI Assistant", "Automation", "CLI", "CLI Tools", "Coding", "Command Line Interface", "Developer Workflow", "GitHub", "GitHub Copilot", "GitHub Copilot CLI", "Installation", "MCP Server", "News", "Node.js", "npm", "Permissions", "Pull Requests", "Repository Onboarding", "Terminal"]
 tags_normalized: ["ai", "ai and ml", "ai assistant", "automation", "cli", "cli tools", "coding", "command line interface", "developer workflow", "github", "github copilot", "github copilot cli", "installation", "mcp server", "news", "nodedotjs", "npm", "permissions", "pull requests", "repository onboarding", "terminal"]

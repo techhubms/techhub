@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft .NET Blog"
 feed_url: "https://devblogs.microsoft.com/dotnet/feed/"
 date: 2025-07-08 19:00:00 +00:00
-permalink: "/news/2025-07-08-NET-and-NET-Framework-July-2025-servicing-releases-updates.html"
+permalink: "/2025-07-08-NET-and-NET-Framework-July-2025-Servicing-Releases-Updates.html"
 categories: ["Coding", "Security"]
 tags: [".NET", ".NET Framework", "Bug Fixes", "Coding", "Framework", "Maintenance", "Maintenance & Updates", "Microsoft", "News", "Patches", "Release Notes", "Security", "Servicing Update"]
 tags_normalized: ["dotnet", "dotnet framework", "bug fixes", "coding", "framework", "maintenance", "maintenance and updates", "microsoft", "news", "patches", "release notes", "security", "servicing update"]

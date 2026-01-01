@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft AI Foundry Blog"
 feed_url: "https://devblogs.microsoft.com/foundry/feed/"
 date: 2025-11-25 16:00:37 +00:00
-permalink: "/news/2025-11-25-Introducing-Multi-Agent-Workflows-in-Foundry-Agent-Service.html"
+permalink: "/2025-11-25-Introducing-Multi-Agent-Workflows-in-Foundry-Agent-Service.html"
 categories: ["AI", "Azure"]
 tags: ["Agent Evaluation", "Agent Framework", "Agents", "AI", "AI Agent", "AI Agents", "AI Applications", "AI Development", "AI Orchestration", "AI Tools", "Azure", "Azure AI", "Azure AI Services", "Azure OpenAI", "CI/CD Integration", "Developer Guide", "Enterprise Automation", "Foundry Agent Service", "Microsoft Agent Framework", "Microsoft Foundry", "MSIgnite", "Multi Agent Workflows", "News", "Observability", "Power Fx", "VS Code", "Workflow Automation", "YAML Workflows"]
 tags_normalized: ["agent evaluation", "agent framework", "agents", "ai", "ai agent", "ai agents", "ai applications", "ai development", "ai orchestration", "ai tools", "azure", "azure ai", "azure ai services", "azure openai", "cislashcd integration", "developer guide", "enterprise automation", "foundry agent service", "microsoft agent framework", "microsoft foundry", "msignite", "multi agent workflows", "news", "observability", "power fx", "vs code", "workflow automation", "yaml workflows"]

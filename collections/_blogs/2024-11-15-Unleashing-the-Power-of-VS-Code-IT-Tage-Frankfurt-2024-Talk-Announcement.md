@@ -9,10 +9,10 @@ viewing_mode: "external"
 feed_name: "Harald Binkle's blog"
 feed_url: "https://harrybin.de/rss.xml"
 date: 2024-11-15 10:00:00 +00:00
-permalink: "/blogs/2024-11-15-Unleashing-the-Power-of-VS-Code-IT-Tage-Frankfurt-2024-Talk-Announcement.html"
+permalink: "/2024-11-15-Unleashing-the-Power-of-VS-Code-IT-Tage-Frankfurt-2024-Talk-Announcement.html"
 categories: ["Coding", "DevOps"]
-tags: ["Azure DevOps", "C#", "CI/CD", "Coding", "Conference", "DevOps", "Full Stack Development", "GitHub", "Harald Binkle", "IT Tage Frankfurt", "Blogs", "React", "VS Code"]
-tags_normalized: ["azure devops", "csharp", "cislashcd", "coding", "conference", "devops", "full stack development", "github", "harald binkle", "it tage frankfurt", "blogs", "react", "vs code"]
+tags: ["Azure DevOps", "Blogs", "C#", "CI/CD", "Coding", "Conference", "DevOps", "Full Stack Development", "GitHub", "Harald Binkle", "IT Tage Frankfurt", "React", "VS Code"]
+tags_normalized: ["azure devops", "blogs", "csharp", "cislashcd", "coding", "conference", "devops", "full stack development", "github", "harald binkle", "it tage frankfurt", "react", "vs code"]
 ---
 
 In this announcement, Harald Binkle shares details about his talk at IT-Tage Frankfurt 2024, where he will demonstrate Visual Studio Code’s standout features for full-stack development and integration with Azure DevOps and GitHub.<!--excerpt_end-->

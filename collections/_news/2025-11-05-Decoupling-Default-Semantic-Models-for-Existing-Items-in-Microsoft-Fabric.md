@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Fabric Blog"
 feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
 date: 2025-11-05 10:00:00 +00:00
-permalink: "/news/2025-11-05-Decoupling-Default-Semantic-Models-for-Existing-Items-in-Microsoft-Fabric.html"
+permalink: "/2025-11-05-Decoupling-Default-Semantic-Models-for-Existing-Items-in-Microsoft-Fabric.html"
 categories: ["ML"]
 tags: ["API Integration", "Automation", "Business Intelligence", "Data Engineering", "Data Lifecycle", "Data Modeling", "Data Warehouses", "Lakehouses", "Microsoft Fabric", "ML", "Model Management", "News", "Python Script", "Reporting", "REST API", "Semantic Models", "Workspace Management"]
 tags_normalized: ["api integration", "automation", "business intelligence", "data engineering", "data lifecycle", "data modeling", "data warehouses", "lakehouses", "microsoft fabric", "ml", "model management", "news", "python script", "reporting", "rest api", "semantic models", "workspace management"]

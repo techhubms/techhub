@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Fabric Blog"
 feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
 date: 2025-09-22 17:00:00 +00:00
-permalink: "/news/2025-09-22-Unlocking-Real-Time-Operational-Intelligence-Azure-Monitor-Logs-Integration-in-Fabric-via-Eventstream.html"
+permalink: "/2025-09-22-Unlocking-Real-Time-Operational-Intelligence-Azure-Monitor-Logs-Integration-in-Fabric-via-Eventstream.html"
 categories: ["Azure", "ML"]
 tags: ["Analytics Workflow", "Azure", "Azure Integration", "Azure Monitor", "Business Intelligence", "Cloud Monitoring", "Data Ingestion", "Data Transformation", "Diagnostic Logs", "Eventhouse", "Eventstream", "Microsoft Fabric", "ML", "Monitoring Logs", "News", "Operational Monitoring", "Real Time Intelligence", "Streaming Analytics"]
 tags_normalized: ["analytics workflow", "azure", "azure integration", "azure monitor", "business intelligence", "cloud monitoring", "data ingestion", "data transformation", "diagnostic logs", "eventhouse", "eventstream", "microsoft fabric", "ml", "monitoring logs", "news", "operational monitoring", "real time intelligence", "streaming analytics"]

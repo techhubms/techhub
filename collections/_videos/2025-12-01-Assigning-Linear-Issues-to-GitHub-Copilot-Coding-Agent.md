@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "GitHub YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ"
 date: 2025-12-01 14:58:19 +00:00
-permalink: "/videos/2025-12-01-Assigning-Linear-Issues-to-GitHub-Copilot-Coding-Agent.html"
+permalink: "/2025-12-01-Assigning-Linear-Issues-to-GitHub-Copilot-Coding-Agent.html"
 categories: ["AI", "DevOps", "GitHub Copilot"]
 tags: ["AI", "AI Powered Development", "Code Automation", "Coding Agent", "Collaboration Tools", "Copilot Coding Agent", "CopilotCodingAgent", "Development Workflow", "DevOps", "DevOps Integration", "GitHub", "GitHub Copilot", "Issue Management", "Linear", "Pull Requests", "Videos"]
 tags_normalized: ["ai", "ai powered development", "code automation", "coding agent", "collaboration tools", "copilot coding agent", "copilotcodingagent", "development workflow", "devops", "devops integration", "github", "github copilot", "issue management", "linear", "pull requests", "videos"]

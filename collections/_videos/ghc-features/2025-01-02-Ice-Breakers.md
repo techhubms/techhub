@@ -7,7 +7,7 @@ excerpt_separator: <!--excerpt_end-->
 canonical_url: "https://youtu.be/ri8EG4-rM9A"
 categories: ["AI", "GitHub Copilot"]
 date: 2025-01-02 11:21:13 +00:00
-permalink: "/videos/2025-01-02-Ice-Breakers.html"
+permalink: "/2025-01-02-Ice-Breakers.html"
 viewing_mode: "internal"
 section: "github-copilot"
 ghes_support: "true"

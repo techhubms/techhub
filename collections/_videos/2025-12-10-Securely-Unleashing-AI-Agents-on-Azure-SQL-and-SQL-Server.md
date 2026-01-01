@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "DotNet YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw"
 date: 2025-12-10 00:00:56 +00:00
-permalink: "/videos/2025-12-10-Securely-Unleashing-AI-Agents-on-Azure-SQL-and-SQL-Server.html"
+permalink: "/2025-12-10-Securely-Unleashing-AI-Agents-on-Azure-SQL-and-SQL-Server.html"
 categories: ["AI", "Azure", "ML", "Security"]
 tags: [".NET", "Agent Errors", "AI", "AI Agents", "Autonomous Systems", "Azure", "Azure SQL Database", "Compliance", "Custom Code", "Data Protection", "Database Access", "Enterprise Data", "Least Privilege", "ML", "Query Optimization", "Schema Understanding", "Security", "Security Boundaries", "SQL Server", "Videos"]
 tags_normalized: ["dotnet", "agent errors", "ai", "ai agents", "autonomous systems", "azure", "azure sql database", "compliance", "custom code", "data protection", "database access", "enterprise data", "least privilege", "ml", "query optimization", "schema understanding", "security", "security boundaries", "sql server", "videos"]

@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Developer YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
 date: 2025-11-12 17:00:47 +00:00
-permalink: "/videos/2025-11-12-Refactor-C-Code-with-C-Code-Editing-Tools-for-GitHub-Copilot-in-Visual-Studio.html"
+permalink: "/2025-11-12-Refactor-C-Code-with-C-Code-Editing-Tools-for-GitHub-Copilot-in-Visual-Studio.html"
 categories: ["AI", "Coding", "GitHub Copilot"]
 tags: ["Agent Mode", "AI", "C++", "Class Inheritance", "Cloud Computing", "Code Editing Tools", "Codebase Analysis", "Coding", "Copilot", "Dev", "Development", "Development Tools", "Function Call Tracing", "GitHub", "GitHub Copilot", "IntelliSense", "Microsoft", "Modernization", "Private Preview", "Refactoring", "Tech", "Technology", "Videos", "VS"]
 tags_normalized: ["agent mode", "ai", "cplusplus", "class inheritance", "cloud computing", "code editing tools", "codebase analysis", "coding", "copilot", "dev", "development", "development tools", "function call tracing", "github", "github copilot", "intellisense", "microsoft", "modernization", "private preview", "refactoring", "tech", "technology", "videos", "vs"]

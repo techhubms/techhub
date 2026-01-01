@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/changelog/feed/"
 date: 2025-11-11 19:22:02 +00:00
-permalink: "/news/2025-11-11-Auto-Model-Selection-for-GitHub-Copilot-in-Visual-Studio-Public-Preview.html"
+permalink: "/2025-11-11-Auto-Model-Selection-for-GitHub-Copilot-in-Visual-Studio-Public-Preview.html"
 categories: ["AI", "GitHub Copilot"]
 tags: ["AI", "Auto Model Selection", "Business", "Copilot", "Enterprise", "GitHub Copilot", "GPT 4.1", "GPT 5", "Haiku 4.5", "IDE Integration", "Model Picker", "News", "Premium Request", "Pro", "Public Preview", "Sonnet 4.5", "Subscription", "VS"]
 tags_normalized: ["ai", "auto model selection", "business", "copilot", "enterprise", "github copilot", "gpt 4dot1", "gpt 5", "haiku 4dot5", "ide integration", "model picker", "news", "premium request", "pro", "public preview", "sonnet 4dot5", "subscription", "vs"]

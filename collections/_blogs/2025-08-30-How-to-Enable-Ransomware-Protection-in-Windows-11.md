@@ -9,10 +9,10 @@ viewing_mode: "external"
 feed_name: "Dellenny's Blog"
 feed_url: "https://dellenny.com/feed/"
 date: 2025-08-30 10:50:23 +00:00
-permalink: "/blogs/2025-08-30-How-to-Enable-Ransomware-Protection-in-Windows-11.html"
+permalink: "/2025-08-30-How-to-Enable-Ransomware-Protection-in-Windows-11.html"
 categories: ["Security"]
-tags: ["Controlled Folder Access", "Cybersecurity", "Data Protection", "File Recovery", "Microsoft Defender Antivirus", "Microsoft Security", "OneDrive", "Blogs", "Ransomware Protection", "Security", "Windows 11", "Windows Security"]
-tags_normalized: ["controlled folder access", "cybersecurity", "data protection", "file recovery", "microsoft defender antivirus", "microsoft security", "onedrive", "blogs", "ransomware protection", "security", "windows 11", "windows security"]
+tags: ["Blogs", "Controlled Folder Access", "Cybersecurity", "Data Protection", "File Recovery", "Microsoft Defender Antivirus", "Microsoft Security", "OneDrive", "Ransomware Protection", "Security", "Windows 11", "Windows Security"]
+tags_normalized: ["blogs", "controlled folder access", "cybersecurity", "data protection", "file recovery", "microsoft defender antivirus", "microsoft security", "onedrive", "ransomware protection", "security", "windows 11", "windows security"]
 ---
 
 Dellenny provides a practical guide on enabling ransomware protection in Windows 11 using Microsoft Defender Antivirus, helping users secure their data from cyber threats.<!--excerpt_end-->

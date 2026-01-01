@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Events YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
 date: 2025-11-19 07:57:38 +00:00
-permalink: "/videos/2025-11-19-Modernizing-User-Environment-Management-in-Entra-ID-with-ProfileUnity.html"
+permalink: "/2025-11-19-Modernizing-User-Environment-Management-in-Entra-ID-with-ProfileUnity.html"
 categories: ["Azure", "Security"]
 tags: ["Azure", "Azure Blob Storage", "Cloud Workspace", "Configuration Reports", "Entra ID", "FlexApp", "Group Policy Preferences", "Hybrid Management", "Intune", "Microsoft Azure", "Migrateandmodernizeyourestate", "MS Ignite", "MSIgnite", "Offline Capabilities", "Policy Delivery", "ProfileUnity", "Security", "User Data Synchronization", "Videos", "Zero Trust"]
 tags_normalized: ["azure", "azure blob storage", "cloud workspace", "configuration reports", "entra id", "flexapp", "group policy preferences", "hybrid management", "intune", "microsoft azure", "migrateandmodernizeyourestate", "ms ignite", "msignite", "offline capabilities", "policy delivery", "profileunity", "security", "user data synchronization", "videos", "zero trust"]

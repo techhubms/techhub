@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Reddit DevOps"
 feed_url: "https://www.reddit.com/r/devops/.rss"
 date: 2025-08-03 15:32:35 +00:00
-permalink: "/community/2025-08-03-Terraform-Associate-003-Exam-Sharing-Study-Resources-That-Helped-Me-Pass.html"
+permalink: "/2025-08-03-Terraform-Associate-003-Exam-Sharing-Study-Resources-That-Helped-Me-Pass.html"
 categories: ["DevOps"]
 tags: ["AWS", "Certification", "Cloud Computing", "Community", "DevOps", "HashiCorp", "IaC", "Modules", "Practice Exams", "Remote Backends", "State Management", "Study Resources", "Terraform", "Terraform Associate", "Udemy"]
 tags_normalized: ["aws", "certification", "cloud computing", "community", "devops", "hashicorp", "iac", "modules", "practice exams", "remote backends", "state management", "study resources", "terraform", "terraform associate", "udemy"]

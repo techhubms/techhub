@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Community"
 date: 2025-08-14 01:25:53 +00:00
-permalink: "/community/2025-08-14-Accelerating-SAP-Sybase-ASE-to-Azure-SQL-Migration-Using-SSMA-and-Parallel-BCP.html"
+permalink: "/2025-08-14-Accelerating-SAP-Sybase-ASE-to-Azure-SQL-Migration-Using-SSMA-and-Parallel-BCP.html"
 categories: ["Azure"]
 tags: ["Azure", "Azure Data Migration", "Azure SQL Database", "BCP", "Cloud Modernization", "Community", "Data Chunking", "Data Engineering", "Database Migration", "Linux", "LOB Data Handling", "Migration Automation", "Parallel Data Transfer", "Performance Tuning", "SAP ASE", "Shell Script", "SQL Server", "SQL Server Migration Assistant", "SSMA", "Sybase ASE"]
 tags_normalized: ["azure", "azure data migration", "azure sql database", "bcp", "cloud modernization", "community", "data chunking", "data engineering", "database migration", "linux", "lob data handling", "migration automation", "parallel data transfer", "performance tuning", "sap ase", "shell script", "sql server", "sql server migration assistant", "ssma", "sybase ase"]

@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Fabric Blog"
 feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
 date: 2025-12-19 09:00:00 +00:00
-permalink: "/news/2025-12-19-Microsoft-Fabric-Influencers-Spotlight-December-2025-Highlights.html"
+permalink: "/2025-12-19-Microsoft-Fabric-Influencers-Spotlight-December-2025-Highlights.html"
 categories: ["Azure", "Coding", "DevOps", "ML"]
 tags: ["Administration", "Autoencoder", "Azure", "Azure DevOps", "CI/CD", "Coding", "Data Engineering", "Data Science", "Data Warehouse", "DAX", "Delta Tables", "DevOps", "Eventhouse", "Eventstream", "Fabric Platform", "Fabric Super Users", "Governance", "Lakehouse", "Microsoft Fabric", "ML", "MVP", "News", "Power BI", "Real Time Analytics", "Semantic Models", "SQL Database", "Warehouse"]
 tags_normalized: ["administration", "autoencoder", "azure", "azure devops", "cislashcd", "coding", "data engineering", "data science", "data warehouse", "dax", "delta tables", "devops", "eventhouse", "eventstream", "fabric platform", "fabric super users", "governance", "lakehouse", "microsoft fabric", "ml", "mvp", "news", "power bi", "real time analytics", "semantic models", "sql database", "warehouse"]

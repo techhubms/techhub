@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft News"
 feed_url: "https://news.microsoft.com/source/feed/"
 date: 2025-10-01 16:42:33 +00:00
-permalink: "/news/2025-10-01-Transforming-Event-Management-with-InEvent-and-Microsoft-Azure.html"
+permalink: "/2025-10-01-Transforming-Event-Management-with-InEvent-and-Microsoft-Azure.html"
 categories: ["AI", "Azure", "Security"]
 tags: ["AI", "AI Automation", "AKS", "Azure", "Azure Active Directory", "Azure OpenAI Service", "ChatGPT", "Company News", "Dynamics 365", "Enterprise Security", "Event Management", "Event Software", "InEvent", "Microsoft Azure", "Microsoft Teams", "News", "Outlook Integration", "Security", "Single Sign On", "Workflow Integration"]
 tags_normalized: ["ai", "ai automation", "aks", "azure", "azure active directory", "azure openai service", "chatgpt", "company news", "dynamics 365", "enterprise security", "event management", "event software", "inevent", "microsoft azure", "microsoft teams", "news", "outlook integration", "security", "single sign on", "workflow integration"]

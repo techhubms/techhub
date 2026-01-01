@@ -9,10 +9,10 @@ viewing_mode: "external"
 feed_name: "DevOps Blog"
 feed_url: "https://devops.com/feed/"
 date: 2025-08-04 14:47:46 +00:00
-permalink: "/blogs/2025-08-04-Context-on-Tap-How-MCP-Servers-Bridge-AI-Agents-and-DevOps-Pipelines.html"
+permalink: "/2025-08-04-Context-on-Tap-How-MCP-Servers-Bridge-AI-Agents-and-DevOps-Pipelines.html"
 categories: ["AI", "DevOps"]
-tags: ["A2A", "Agent To Agent Protocols", "Agentic AI", "AI", "AI Agents", "Artifact Storage", "Automation", "CI/CD", "Cloudsmith", "Contextual Awareness", "Continuous Integration", "DevOps", "DevOps Pipelines", "MCP", "Open Standards", "Blogs", "Supply Chain Security", "Video Interviews"]
-tags_normalized: ["a2a", "agent to agent protocols", "agentic ai", "ai", "ai agents", "artifact storage", "automation", "cislashcd", "cloudsmith", "contextual awareness", "continuous integration", "devops", "devops pipelines", "mcp", "open standards", "blogs", "supply chain security", "video interviews"]
+tags: ["A2A", "Agent To Agent Protocols", "Agentic AI", "AI", "AI Agents", "Artifact Storage", "Automation", "Blogs", "CI/CD", "Cloudsmith", "Contextual Awareness", "Continuous Integration", "DevOps", "DevOps Pipelines", "MCP", "Open Standards", "Supply Chain Security", "Video Interviews"]
+tags_normalized: ["a2a", "agent to agent protocols", "agentic ai", "ai", "ai agents", "artifact storage", "automation", "blogs", "cislashcd", "cloudsmith", "contextual awareness", "continuous integration", "devops", "devops pipelines", "mcp", "open standards", "supply chain security", "video interviews"]
 ---
 
 In this interview, Mike Vizard talks with Cloudsmith CEO Glenn Weinstein about the pivotal role of MCP servers in enhancing AI agent situational awareness and seamless collaboration in DevOps pipelines.<!--excerpt_end-->

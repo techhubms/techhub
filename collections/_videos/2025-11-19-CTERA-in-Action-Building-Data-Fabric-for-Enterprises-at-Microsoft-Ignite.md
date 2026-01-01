@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Events YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
 date: 2025-11-19 15:07:07 +00:00
-permalink: "/videos/2025-11-19-CTERA-in-Action-Building-Data-Fabric-for-Enterprises-at-Microsoft-Ignite.html"
+permalink: "/2025-11-19-CTERA-in-Action-Building-Data-Fabric-for-Enterprises-at-Microsoft-Ignite.html"
 categories: ["AI", "Azure"]
 tags: ["AI", "AI Readiness", "Azure", "CTERA", "Data Fabric", "Data Intelligence", "Data Silos", "Data Sources", "Enterprise Collaboration", "Integration", "Intelligent File Operations", "MCP", "Microsoft Ignite", "Microsoft Teams", "MSIgnite", "Operational Scalability", "Secure Data Management", "Unified File Systems", "Unifyyourdataplatform", "Videos", "Virtual Experts"]
 tags_normalized: ["ai", "ai readiness", "azure", "ctera", "data fabric", "data intelligence", "data silos", "data sources", "enterprise collaboration", "integration", "intelligent file operations", "mcp", "microsoft ignite", "microsoft teams", "msignite", "operational scalability", "secure data management", "unified file systems", "unifyyourdataplatform", "videos", "virtual experts"]

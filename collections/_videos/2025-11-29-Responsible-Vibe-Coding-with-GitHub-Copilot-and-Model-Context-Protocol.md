@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "GitHub YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ"
 date: 2025-11-29 15:00:51 +00:00
-permalink: "/videos/2025-11-29-Responsible-Vibe-Coding-with-GitHub-Copilot-and-Model-Context-Protocol.html"
+permalink: "/2025-11-29-Responsible-Vibe-Coding-with-GitHub-Copilot-and-Model-Context-Protocol.html"
 categories: ["AI", "Coding", "GitHub Copilot"]
 tags: ["Agent Client Protocol", "AI", "AI Agents", "AI Observability", "Coding", "Demo", "Developer Tools", "GitHub", "GitHub Copilot", "GitHub Universe", "GitHubUniverse", "Goose", "LLM", "MCP", "Open Source", "Prompt Engineering", "Responsible Coding", "Team Workload Visualization", "Videos"]
 tags_normalized: ["agent client protocol", "ai", "ai agents", "ai observability", "coding", "demo", "developer tools", "github", "github copilot", "github universe", "githubuniverse", "goose", "llm", "mcp", "open source", "prompt engineering", "responsible coding", "team workload visualization", "videos"]

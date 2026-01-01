@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "GitHub YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ"
 date: 2025-08-28 14:00:18 +00:00
-permalink: "/videos/2025-08-28-Managing-Your-GitHub-Enterprise-Policies-Copilot-and-Security-Settings.html"
+permalink: "/2025-08-28-Managing-Your-GitHub-Enterprise-Policies-Copilot-and-Security-Settings.html"
 categories: ["AI", "DevOps", "GitHub Copilot", "Security"]
 tags: ["Access Control", "Admin Tools", "AI", "Copilot Configuration", "Developer Tools", "DevOps", "DevOps Practices", "Enterprise", "GitHub", "GitHub Copilot", "GitHub Enterprise", "Governance", "Organization Management", "Policy Enforcement", "Repository Governance", "Security", "Security Policies", "Top Down Governance", "Videos"]
 tags_normalized: ["access control", "admin tools", "ai", "copilot configuration", "developer tools", "devops", "devops practices", "enterprise", "github", "github copilot", "github enterprise", "governance", "organization management", "policy enforcement", "repository governance", "security", "security policies", "top down governance", "videos"]

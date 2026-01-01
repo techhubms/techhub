@@ -9,7 +9,7 @@ categories: ["AI", "GitHub Copilot"]
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/changelog/label/copilot/feed/"
 date: 2025-07-16 16:04:14 +00:00
-permalink: "/news/2025-07-16-Support-for-issue-forms-in-chat-and-file-uploads-in-spaces.html"
+permalink: "/2025-07-16-Support-for-issue-forms-in-chat-and-file-uploads-in-spaces.html"
 viewing_mode: "external"
 tags: ["AI", "AI Assistance", "Automation", "Copilot Features", "Developer Tools", "GitHub", "GitHub Copilot", "Github.com", "Issue Creation", "Issue Forms", "News", "Productivity"]
 tags_normalized: ["ai", "ai assistance", "automation", "copilot features", "developer tools", "github", "github copilot", "githubdotcom", "issue creation", "issue forms", "news", "productivity"]

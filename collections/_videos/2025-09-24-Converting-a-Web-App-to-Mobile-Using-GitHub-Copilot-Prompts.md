@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Visual Studio Code YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SLNwkd3w"
 date: 2025-09-24 14:01:37 +00:00
-permalink: "/videos/2025-09-24-Converting-a-Web-App-to-Mobile-Using-GitHub-Copilot-Prompts.html"
+permalink: "/2025-09-24-Converting-a-Web-App-to-Mobile-Using-GitHub-Copilot-Prompts.html"
 categories: ["AI", "Coding", "GitHub Copilot"]
 tags: ["AI", "Code", "Coding", "Copilot", "Demo", "Developer", "Developer Community", "Developer Tools", "GitHub Copilot", "MCP", "Microsoft", "Mobile Development", "Model Picker", "Plan Mode", "Prompt Driven Development", "Prompt Engineering", "Promptdrivendevelopment", "Software Developer", "Videos", "Voice Prompting", "VS Code", "Web App Conversion"]
 tags_normalized: ["ai", "code", "coding", "copilot", "demo", "developer", "developer community", "developer tools", "github copilot", "mcp", "microsoft", "mobile development", "model picker", "plan mode", "prompt driven development", "prompt engineering", "promptdrivendevelopment", "software developer", "videos", "voice prompting", "vs code", "web app conversion"]

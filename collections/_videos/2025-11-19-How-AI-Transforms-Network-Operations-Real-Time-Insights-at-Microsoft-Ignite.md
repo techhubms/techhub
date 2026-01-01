@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Events YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
 date: 2025-11-19 13:03:09 +00:00
-permalink: "/videos/2025-11-19-How-AI-Transforms-Network-Operations-Real-Time-Insights-at-Microsoft-Ignite.html"
+permalink: "/2025-11-19-How-AI-Transforms-Network-Operations-Real-Time-Insights-at-Microsoft-Ignite.html"
 categories: ["AI", "Azure", "DevOps", "ML", "Security"]
 tags: ["Agenticbusinessapplications", "AI", "AI in Network Operations", "API Integration", "Azure", "Build VS Buy", "Compliance", "Data Pipelines", "DevOps", "Human in The Loop", "Hybrid Data", "Incident Triage", "Knowledge Retrieval", "Large Language Models", "Machine Learning", "Microsoft Azure", "ML", "MLOps", "MSIgnite", "Natural Language Processing", "Network Observability", "RAG", "Real Time Insights", "Security", "Text To SQL", "Traffic Analysis", "Videos"]
 tags_normalized: ["agenticbusinessapplications", "ai", "ai in network operations", "api integration", "azure", "build vs buy", "compliance", "data pipelines", "devops", "human in the loop", "hybrid data", "incident triage", "knowledge retrieval", "large language models", "machine learning", "microsoft azure", "ml", "mlops", "msignite", "natural language processing", "network observability", "rag", "real time insights", "security", "text to sql", "traffic analysis", "videos"]

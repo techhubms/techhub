@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-10-06 16:19:44 +00:00
-permalink: "/community/2025-10-06-Azure-Migrate-Adds-Support-for-Microsoft-Customer-Agreement-Pricing.html"
+permalink: "/2025-10-06-Azure-Migrate-Adds-Support-for-Microsoft-Customer-Agreement-Pricing.html"
 categories: ["Azure"]
 tags: ["Azure", "Azure Migrate", "Azure Pricing", "Cloud Migration", "Community", "Cost Assessment", "Enterprise Agreement", "Infrastructure", "MCA", "Microsoft Customer Agreement", "Migration Planning", "Workload Assessment"]
 tags_normalized: ["azure", "azure migrate", "azure pricing", "cloud migration", "community", "cost assessment", "enterprise agreement", "infrastructure", "mca", "microsoft customer agreement", "migration planning", "workload assessment"]

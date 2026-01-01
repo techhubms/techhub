@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Developer YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
 date: 2025-10-31 16:41:45 +00:00
-permalink: "/videos/2025-10-31-Getting-Started-with-PowerToys-Command-Palette-Extension-Development.html"
+permalink: "/2025-10-31-Getting-Started-with-PowerToys-Command-Palette-Extension-Development.html"
 categories: ["Coding"]
 tags: ["Coding", "Command Palette", "Developer Tools", "Extension Development", "Extensions", "Microsoft PowerToys", "Open Source", "PowerToys", "Publishing", "Scaffolding", "Videos", "VS"]
 tags_normalized: ["coding", "command palette", "developer tools", "extension development", "extensions", "microsoft powertoys", "open source", "powertoys", "publishing", "scaffolding", "videos", "vs"]

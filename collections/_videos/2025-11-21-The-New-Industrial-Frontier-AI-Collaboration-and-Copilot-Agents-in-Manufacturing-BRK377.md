@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Events YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
 date: 2025-11-21 16:14:24 +00:00
-permalink: "/videos/2025-11-21-The-New-Industrial-Frontier-AI-Collaboration-and-Copilot-Agents-in-Manufacturing-BRK377.html"
+permalink: "/2025-11-21-The-New-Industrial-Frontier-AI-Collaboration-and-Copilot-Agents-in-Manufacturing-BRK377.html"
 categories: ["AI", "Azure"]
 tags: ["AI", "Autonomous Operations", "Azure", "Azure IoT", "Copilot Agents", "Copilotandagentsatwork", "Device Management", "Frontline Workforce", "Generative AI", "Industrial AI", "Industrial Automation", "Manufacturing Innovation", "Microsoft Ignite", "MSIgnite", "Robotics", "Sensors", "Videos", "Virtual Support Agents"]
 tags_normalized: ["ai", "autonomous operations", "azure", "azure iot", "copilot agents", "copilotandagentsatwork", "device management", "frontline workforce", "generative ai", "industrial ai", "industrial automation", "manufacturing innovation", "microsoft ignite", "msignite", "robotics", "sensors", "videos", "virtual support agents"]

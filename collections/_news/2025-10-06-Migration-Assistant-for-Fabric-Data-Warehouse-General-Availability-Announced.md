@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Fabric Blog"
 feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
 date: 2025-10-06 09:00:00 +00:00
-permalink: "/news/2025-10-06-Migration-Assistant-for-Fabric-Data-Warehouse-General-Availability-Announced.html"
+permalink: "/2025-10-06-Migration-Assistant-for-Fabric-Data-Warehouse-General-Availability-Announced.html"
 categories: ["Azure", "ML"]
 tags: ["ACID Compliance", "Analytics Platform", "Azure", "Azure Synapse Analytics", "Cloud Migration", "Data Engineering", "Data Lake", "Data Migration", "Data Warehouse", "Delta Parquet", "Distributed Computing", "Microsoft Fabric", "Migration Assistant", "ML", "News", "Power BI Integration", "SaaS Analytics", "T SQL"]
 tags_normalized: ["acid compliance", "analytics platform", "azure", "azure synapse analytics", "cloud migration", "data engineering", "data lake", "data migration", "data warehouse", "delta parquet", "distributed computing", "microsoft fabric", "migration assistant", "ml", "news", "power bi integration", "saas analytics", "t sql"]

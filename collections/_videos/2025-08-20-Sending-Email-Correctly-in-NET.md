@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Nick Chapsas YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrkPsvLGln62OMZRO6K-llg"
 date: 2025-08-20 11:00:02 +00:00
-permalink: "/videos/2025-08-20-Sending-Email-Correctly-in-NET.html"
+permalink: "/2025-08-20-Sending-Email-Correctly-in-NET.html"
 categories: ["Coding"]
 tags: [".NET", "Application Development", "Backend Development", "C#", "Coding", "Dylan Beattie", "Email Best Practices", "Email Integration", "Email Sending", "Nick Chapsas", "SMTP", "Software Engineering", "Videos"]
 tags_normalized: ["dotnet", "application development", "backend development", "csharp", "coding", "dylan beattie", "email best practices", "email integration", "email sending", "nick chapsas", "smtp", "software engineering", "videos"]

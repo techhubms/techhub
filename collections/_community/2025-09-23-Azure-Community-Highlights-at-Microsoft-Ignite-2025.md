@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-09-23 19:59:06 +00:00
-permalink: "/community/2025-09-23-Azure-Community-Highlights-at-Microsoft-Ignite-2025.html"
+permalink: "/2025-09-23-Azure-Community-Highlights-at-Microsoft-Ignite-2025.html"
 categories: ["AI", "Azure", "ML"]
 tags: ["AI", "AI Community", "AKS", "Azure", "Azure AI", "Azure AI Foundry", "Azure Data", "Azure Infrastructure", "Cloud Migration", "Community", "Community Sessions", "Data Analytics", "Data Platform", "Event", "IaC", "Microsoft Ignite", "ML", "MVP Program", "SQL Server Management Studio", "SSMS Copilot"]
 tags_normalized: ["ai", "ai community", "aks", "azure", "azure ai", "azure ai foundry", "azure data", "azure infrastructure", "cloud migration", "community", "community sessions", "data analytics", "data platform", "event", "iac", "microsoft ignite", "ml", "mvp program", "sql server management studio", "ssms copilot"]

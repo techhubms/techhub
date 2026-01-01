@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-11-18 19:20:27 +00:00
-permalink: "/community/2025-11-18-Azure-Copilot-Adds-Advanced-Kubernetes-Troubleshooting-Agents-for-AKS.html"
+permalink: "/2025-11-18-Azure-Copilot-Adds-Advanced-Kubernetes-Troubleshooting-Agents-for-AKS.html"
 categories: ["AI", "Azure", "DevOps"]
 tags: ["Agent Mode", "Agentic Cloud Operations", "AI", "AKS", "Automated Mitigation", "Azure", "Azure Copilot", "Cloud Diagnostics", "Cluster Management", "Community", "DevOps", "Kubectl", "Kubernetes", "Kubernetes Troubleshooting", "Microsoft Azure", "Preview Feature", "Root Cause Analysis", "Support Automation"]
 tags_normalized: ["agent mode", "agentic cloud operations", "ai", "aks", "automated mitigation", "azure", "azure copilot", "cloud diagnostics", "cluster management", "community", "devops", "kubectl", "kubernetes", "kubernetes troubleshooting", "microsoft azure", "preview feature", "root cause analysis", "support automation"]

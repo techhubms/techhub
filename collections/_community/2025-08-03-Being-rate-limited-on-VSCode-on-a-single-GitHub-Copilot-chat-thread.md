@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Reddit Github Copilot"
 feed_url: "https://www.reddit.com/r/GithubCopilot.rss"
 date: 2025-08-03 11:37:06 +00:00
-permalink: "/community/2025-08-03-Being-rate-limited-on-VSCode-on-a-single-GitHub-Copilot-chat-thread.html"
+permalink: "/2025-08-03-Being-rate-limited-on-VSCode-on-a-single-GitHub-Copilot-chat-thread.html"
 categories: ["AI", "GitHub Copilot"]
 tags: ["AI", "API Limits", "Chat Thread", "Community", "Copilot Pro+", "Developer Experience", "Extension Usage", "GitHub Copilot", "Rate Limiting", "Scaffolding", "Usage Limits", "VS Code"]
 tags_normalized: ["ai", "api limits", "chat thread", "community", "copilot proplus", "developer experience", "extension usage", "github copilot", "rate limiting", "scaffolding", "usage limits", "vs code"]

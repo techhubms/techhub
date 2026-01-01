@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-11-18 16:27:30 +00:00
-permalink: "/community/2025-11-18-Whats-New-in-Azure-App-Service-Managed-Instance-Aspire-AI-and-Developer-Platform-Updates-at-MS-Ignite-2025.html"
+permalink: "/2025-11-18-Whats-New-in-Azure-App-Service-Managed-Instance-Aspire-AI-and-Developer-Platform-Updates-at-MS-Ignite-2025.html"
 categories: ["AI", "Azure", "Coding", "DevOps"]
 tags: [".NET", "AI", "AI Integration", "App Service Environment V3", "ASP.NET", "Aspire", "Azure", "Azure App Service", "Azure Monitor", "Azure Pipelines", "CI/CD", "Coding", "Community", "Custom Error Pages", "DevOps", "Elastic APM", "Foundry Agent Service", "GitHub Actions", "Hyper V", "Linux", "Log Stream", "Managed Instance", "Microsoft Agent Framework", "Microsoft Ignite", "Network Segmentation", "Node.js", "Open Telemetry", "PHP", "Premium V4 SKU", "Private Endpoints", "Python", "Root Certificate", "Scaling", "SCM Advanced Tools", "Small Language Models", "Ubuntu"]
 tags_normalized: ["dotnet", "ai", "ai integration", "app service environment v3", "aspdotnet", "aspire", "azure", "azure app service", "azure monitor", "azure pipelines", "cislashcd", "coding", "community", "custom error pages", "devops", "elastic apm", "foundry agent service", "github actions", "hyper v", "linux", "log stream", "managed instance", "microsoft agent framework", "microsoft ignite", "network segmentation", "nodedotjs", "open telemetry", "php", "premium v4 sku", "private endpoints", "python", "root certificate", "scaling", "scm advanced tools", "small language models", "ubuntu"]

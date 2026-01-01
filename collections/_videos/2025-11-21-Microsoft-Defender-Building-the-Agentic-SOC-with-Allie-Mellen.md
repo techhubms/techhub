@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Events YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
 date: 2025-11-21 14:57:25 +00:00
-permalink: "/videos/2025-11-21-Microsoft-Defender-Building-the-Agentic-SOC-with-Allie-Mellen.html"
+permalink: "/2025-11-21-Microsoft-Defender-Building-the-Agentic-SOC-with-Allie-Mellen.html"
 categories: ["AI", "Security"]
 tags: ["Agentic AI", "AI", "AI Security", "Alert Management", "Defender XDR", "Explainability", "Generative AI", "Guardrails", "Incident Response", "Microsoft Defender", "Microsoft Ignite", "ModernizeSecOpswithaunifiedplatform", "MSIgnite", "Runbooks", "Security", "Security Analysts", "Security Automation", "Security Operations Center", "SOC", "Threat Response", "Vendor Transparency", "Videos"]
 tags_normalized: ["agentic ai", "ai", "ai security", "alert management", "defender xdr", "explainability", "generative ai", "guardrails", "incident response", "microsoft defender", "microsoft ignite", "modernizesecopswithaunifiedplatform", "msignite", "runbooks", "security", "security analysts", "security automation", "security operations center", "soc", "threat response", "vendor transparency", "videos"]

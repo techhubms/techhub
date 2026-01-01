@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/changelog/feed/"
 date: 2025-09-05 18:14:35 +00:00
-permalink: "/news/2025-09-05-New-Organization-Sharing-and-Local-Development-Improvements-in-GitHub-Spark.html"
+permalink: "/2025-09-05-New-Organization-Sharing-and-Local-Development-Improvements-in-GitHub-Spark.html"
 categories: ["Coding", "DevOps"]
 tags: ["App Deployment", "Bug Fixes", "Codespaces", "Coding", "Collaboration", "Developer Tools", "DevOps", "Discord Integration", "GitHub Spark", "IME Support", "Iteration Panel", "Local Development", "News", "npm", "Organization Sharing", "Version Control", "Workflow Improvement"]
 tags_normalized: ["app deployment", "bug fixes", "codespaces", "coding", "collaboration", "developer tools", "devops", "discord integration", "github spark", "ime support", "iteration panel", "local development", "news", "npm", "organization sharing", "version control", "workflow improvement"]

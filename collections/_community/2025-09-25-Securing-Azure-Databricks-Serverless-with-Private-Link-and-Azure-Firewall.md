@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-09-25 23:42:50 +00:00
-permalink: "/community/2025-09-25-Securing-Azure-Databricks-Serverless-with-Private-Link-and-Azure-Firewall.html"
+permalink: "/2025-09-25-Securing-Azure-Databricks-Serverless-with-Private-Link-and-Azure-Firewall.html"
 categories: ["Azure", "ML", "Security"]
 tags: ["Application Rules", "Azure", "Azure Databricks", "Azure Firewall", "Cloud Security", "Community", "Compliance", "Data Analytics", "FQDN Filtering", "Health Probe", "Load Balancer", "Microsoft Azure", "ML", "NAT", "Network Connectivity Configuration", "Network Security Group", "NGINX", "Outbound Control", "Private Link", "Route Tables", "Router VM", "Security", "Serverless", "Virtual Network", "VNET Peering"]
 tags_normalized: ["application rules", "azure", "azure databricks", "azure firewall", "cloud security", "community", "compliance", "data analytics", "fqdn filtering", "health probe", "load balancer", "microsoft azure", "ml", "nat", "network connectivity configuration", "network security group", "nginx", "outbound control", "private link", "route tables", "router vm", "security", "serverless", "virtual network", "vnet peering"]

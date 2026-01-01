@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-09-24 18:12:34 +00:00
-permalink: "/community/2025-09-24-From-Call-Transcripts-to-CRM-Gold-AI-Powered-Post-Call-Intelligence.html"
+permalink: "/2025-09-24-From-Call-Transcripts-to-CRM-Gold-AI-Powered-Post-Call-Intelligence.html"
 categories: ["AI", "Azure"]
 tags: ["AI", "AI Workflow", "API Integration", "Azure", "Azure Communication Services", "Azure OpenAI", "Business Intelligence", "Call Transcripts", "Community", "CRM Integration", "Human in The Loop", "JavaScript", "JSON Schema", "Microsoft Teams", "Node.js", "Post Call Analysis", "Sentiment Analysis", "Structured Output"]
 tags_normalized: ["ai", "ai workflow", "api integration", "azure", "azure communication services", "azure openai", "business intelligence", "call transcripts", "community", "crm integration", "human in the loop", "javascript", "json schema", "microsoft teams", "nodedotjs", "post call analysis", "sentiment analysis", "structured output"]

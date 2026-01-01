@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft VisualStudio Blog"
 feed_url: "https://devblogs.microsoft.com/visualstudio/feed/"
 date: 2025-08-05 16:16:53 +00:00
-permalink: "/news/2025-08-05-Visual-Studio-2015-Retirement-Support-Deadlines-and-Upgrade-Recommendations.html"
+permalink: "/2025-08-05-Visual-Studio-2015-Retirement-Support-Deadlines-and-Upgrade-Recommendations.html"
 categories: ["Coding", "DevOps"]
 tags: [".NET 8", ".NET 9", "Administration", "AI", "AI Code Completion", "C++ Redistributable", "Coding", "Developer Tools", "DevOps", "GitHub Integration", "IDE Support", "Installation And Updates", "Lifecycle", "Lifecycle Management", "Microsoft", "MSVC Tools", "News", "Productivity Tools", "Support", "Upgrade Guidance", "Version Control", "Visual Studio Subscriptions", "VS"]
 tags_normalized: ["dotnet 8", "dotnet 9", "administration", "ai", "ai code completion", "cplusplus redistributable", "coding", "developer tools", "devops", "github integration", "ide support", "installation and updates", "lifecycle", "lifecycle management", "microsoft", "msvc tools", "news", "productivity tools", "support", "upgrade guidance", "version control", "visual studio subscriptions", "vs"]

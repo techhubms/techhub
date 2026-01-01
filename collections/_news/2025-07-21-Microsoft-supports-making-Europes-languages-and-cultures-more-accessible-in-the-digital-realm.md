@@ -9,7 +9,7 @@ categories: ["AI"]
 feed_name: "Microsoft News"
 feed_url: "https://news.microsoft.com/source/feed/"
 date: 2025-07-21 16:42:58 +00:00
-permalink: "/news/2025-07-21-Microsoft-supports-making-Europes-languages-and-cultures-more-accessible-in-the-digital-realm.html"
+permalink: "/2025-07-21-Microsoft-supports-making-Europes-languages-and-cultures-more-accessible-in-the-digital-realm.html"
 viewing_mode: "external"
 tags: ["AI", "Company News", "Cultural Diversity", "Digital Accessibility", "Europe", "European Languages", "Inclusion", "Innovation", "Linguistic Technology", "Localization", "Microsoft", "News", "On The Issues", "Technology"]
 tags_normalized: ["ai", "company news", "cultural diversity", "digital accessibility", "europe", "european languages", "inclusion", "innovation", "linguistic technology", "localization", "microsoft", "news", "on the issues", "technology"]

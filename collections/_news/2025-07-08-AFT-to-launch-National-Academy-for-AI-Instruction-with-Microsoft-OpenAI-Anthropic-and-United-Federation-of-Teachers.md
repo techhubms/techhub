@@ -10,7 +10,7 @@ categories: ["AI"]
 feed_name: "Microsoft News"
 feed_url: "https://news.microsoft.com/source/feed/"
 date: 2025-07-08 14:00:11 +00:00
-permalink: "/news/2025-07-08-AFT-to-launch-National-Academy-for-AI-Instruction-with-Microsoft-OpenAI-Anthropic-and-United-Federation-of-Teachers.html"
+permalink: "/2025-07-08-AFT-to-launch-National-Academy-for-AI-Instruction-with-Microsoft-OpenAI-Anthropic-and-United-Federation-of-Teachers.html"
 tags: ["Academy", "AFT", "AI", "AI Instruction", "Anthropic", "Company News", "Education", "Microsoft", "News", "OpenAI", "Teachers", "United Federation Of Teachers"]
 tags_normalized: ["academy", "aft", "ai", "ai instruction", "anthropic", "company news", "education", "microsoft", "news", "openai", "teachers", "united federation of teachers"]
 ---

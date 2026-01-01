@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-09-09 18:11:58 +00:00
-permalink: "/community/2025-09-09-Azure-Logic-Apps-Multi-Agentic-Business-Process-Automation-Platform-Enhancements.html"
+permalink: "/2025-09-09-Azure-Logic-Apps-Multi-Agentic-Business-Process-Automation-Platform-Enhancements.html"
 categories: ["AI", "Azure", "Coding", "Security"]
 tags: ["A2A Standard", "Agent Based Architecture", "Agent Loop", "AI", "AI Integration", "Automation Workflows", "Azure", "Azure Logic Apps", "Coding", "Community", "Conversational Agents", "Enterprise Security", "Foundry Agent Service", "Microsoft Entra ID", "Multiagent Automation", "Observability", "On Behalf Of Authentication", "Python Code Interpreter", "Security", "State Machine Orchestration"]
 tags_normalized: ["a2a standard", "agent based architecture", "agent loop", "ai", "ai integration", "automation workflows", "azure", "azure logic apps", "coding", "community", "conversational agents", "enterprise security", "foundry agent service", "microsoft entra id", "multiagent automation", "observability", "on behalf of authentication", "python code interpreter", "security", "state machine orchestration"]

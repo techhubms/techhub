@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Visual Studio Code YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SLNwkd3w"
 date: 2025-11-15 15:01:46 +00:00
-permalink: "/videos/2025-11-15-5-Things-You-Need-to-Know-About-Model-Context-Protocol-MCP.html"
+permalink: "/2025-11-15-5-Things-You-Need-to-Know-About-Model-Context-Protocol-MCP.html"
 categories: ["AI", "Coding"]
 tags: ["Agent Features", "AI", "Coding", "Developer Tools", "MCP", "Programming Standards", "Prompts", "Resource Sharing", "Tool Discovery", "Videos", "VS Code"]
 tags_normalized: ["agent features", "ai", "coding", "developer tools", "mcp", "programming standards", "prompts", "resource sharing", "tool discovery", "videos", "vs code"]

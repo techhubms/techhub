@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/feed/"
 date: 2025-09-03 16:00:00 +00:00
-permalink: "/news/2025-09-03-5-Tips-for-Crafting-Better-Custom-Instructions-for-GitHub-Copilot.html"
+permalink: "/2025-09-03-5-Tips-for-Crafting-Better-Custom-Instructions-for-GitHub-Copilot.html"
 categories: ["AI", "Coding", "GitHub Copilot"]
 tags: ["Agentic Workflows", "AI", "AI & ML", "Astro", "Coding", "Coding Guidelines", "Copilot Agent", "Copilot Instructions.md", "Custom Instructions", "Developer Productivity", "Flask", "Generative AI", "GitHub Copilot", "News", "Playwright", "Project Structure", "SQLAlchemy", "Svelte", "Tech Stack", "Testing", "TypeScript", "VS Code"]
 tags_normalized: ["agentic workflows", "ai", "ai and ml", "astro", "coding", "coding guidelines", "copilot agent", "copilot instructionsdotmd", "custom instructions", "developer productivity", "flask", "generative ai", "github copilot", "news", "playwright", "project structure", "sqlalchemy", "svelte", "tech stack", "testing", "typescript", "vs code"]

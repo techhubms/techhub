@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "GitHub YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ"
 date: 2025-11-06 14:48:36 +00:00
-permalink: "/videos/2025-11-06-Anders-Hejlsberg-on-Octoverse-2025-TypeScript-Evolution-Go-and-AI-in-Development.html"
+permalink: "/2025-11-06-Anders-Hejlsberg-on-Octoverse-2025-TypeScript-Evolution-Go-and-AI-in-Development.html"
 categories: ["AI", "Coding", "DevOps"]
 tags: ["AI", "AI Assisted Development", "Coding", "Developer Productivity", "Developer Workflows", "DevOps", "GitHub", "Go", "Language Evolution", "Microsoft", "Octoverse", "Open Source", "Programming Languages", "Software Development", "TypeScript", "Videos"]
 tags_normalized: ["ai", "ai assisted development", "coding", "developer productivity", "developer workflows", "devops", "github", "go", "language evolution", "microsoft", "octoverse", "open source", "programming languages", "software development", "typescript", "videos"]

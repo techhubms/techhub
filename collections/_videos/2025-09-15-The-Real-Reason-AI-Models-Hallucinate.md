@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "GitHub YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ"
 date: 2025-09-15 20:14:54 +00:00
-permalink: "/videos/2025-09-15-The-Real-Reason-AI-Models-Hallucinate.html"
+permalink: "/2025-09-15-The-Real-Reason-AI-Models-Hallucinate.html"
 categories: ["AI"]
 tags: ["AI", "AI Explanation", "AI Hallucination", "AI Research", "AI Training", "Chatbots", "GitHub", "Large Language Models", "LLM", "Machine Learning", "Model Confidence", "OpenAI", "Videos"]
 tags_normalized: ["ai", "ai explanation", "ai hallucination", "ai research", "ai training", "chatbots", "github", "large language models", "llm", "machine learning", "model confidence", "openai", "videos"]

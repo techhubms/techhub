@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft News"
 feed_url: "https://news.microsoft.com/source/feed/"
 date: 2025-10-03 01:48:00 +00:00
-permalink: "/news/2025-10-03-Microsofts-Scalable-AI-Infrastructure-for-Copilot-ChatGPT-and-Enterprise-AI-Workloads.html"
+permalink: "/2025-10-03-Microsofts-Scalable-AI-Infrastructure-for-Copilot-ChatGPT-and-Enterprise-AI-Workloads.html"
 categories: ["AI", "Azure"]
 tags: ["AI", "AI Inference", "AI Infrastructure", "AI Training", "APIs", "Azure", "ChatGPT", "Cloud Architecture", "Company News", "Copilot", "Data Center", "Enterprise AI", "LinkedIn Post", "Microsoft 365 Copilot", "Microsoft Azure", "News", "Nuance", "Satya Nadella", "Scalability", "Scott Guthrie"]
 tags_normalized: ["ai", "ai inference", "ai infrastructure", "ai training", "apis", "azure", "chatgpt", "cloud architecture", "company news", "copilot", "data center", "enterprise ai", "linkedin post", "microsoft 365 copilot", "microsoft azure", "news", "nuance", "satya nadella", "scalability", "scott guthrie"]

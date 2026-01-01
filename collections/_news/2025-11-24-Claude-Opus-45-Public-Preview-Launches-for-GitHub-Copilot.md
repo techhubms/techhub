@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/changelog/feed/"
 date: 2025-11-24 18:12:32 +00:00
-permalink: "/news/2025-11-24-Claude-Opus-45-Public-Preview-Launches-for-GitHub-Copilot.html"
+permalink: "/2025-11-24-Claude-Opus-45-Public-Preview-Launches-for-GitHub-Copilot.html"
 categories: ["AI", "GitHub Copilot"]
 tags: ["AI", "AI Model", "Anthropic", "Claude Opus 4.5", "Coding Benchmarks", "Copilot", "Copilot Chat", "Copilot CLI", "Copilot Mobile", "Documentation", "Enterprise Plans", "GitHub Copilot", "Model Picker", "Model Rollout", "News", "Premium Request Multiplier", "Pro Plans", "Token Usage", "VS Code"]
 tags_normalized: ["ai", "ai model", "anthropic", "claude opus 4dot5", "coding benchmarks", "copilot", "copilot chat", "copilot cli", "copilot mobile", "documentation", "enterprise plans", "github copilot", "model picker", "model rollout", "news", "premium request multiplier", "pro plans", "token usage", "vs code"]

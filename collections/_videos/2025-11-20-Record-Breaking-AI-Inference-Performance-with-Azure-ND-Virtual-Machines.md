@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Events YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
 date: 2025-11-20 16:14:48 +00:00
-permalink: "/videos/2025-11-20-Record-Breaking-AI-Inference-Performance-with-Azure-ND-Virtual-Machines.html"
+permalink: "/2025-11-20-Record-Breaking-AI-Inference-Performance-with-Azure-ND-Virtual-Machines.html"
 categories: ["AI", "Azure"]
 tags: ["AI", "AI Inference", "AI Infrastructure", "Attention Mechanisms", "Azure", "Azure ND Virtual Machines", "Azure Supercomputing", "Deep Learning", "GEMM Optimization", "GPU Kernels", "Hardware Codesign", "LLAMA Benchmarks", "Microsoft Ignite", "Migrateandmodernizeyourestate", "Model Architecture", "MSIgnite", "Multi Node Scaling", "ND GB200", "ND GB300", "Tokens Per Second", "Videos"]
 tags_normalized: ["ai", "ai inference", "ai infrastructure", "attention mechanisms", "azure", "azure nd virtual machines", "azure supercomputing", "deep learning", "gemm optimization", "gpu kernels", "hardware codesign", "llama benchmarks", "microsoft ignite", "migrateandmodernizeyourestate", "model architecture", "msignite", "multi node scaling", "nd gb200", "nd gb300", "tokens per second", "videos"]

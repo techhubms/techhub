@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Reddit DotNet"
 feed_url: "https://www.reddit.com/r/dotnet/.rss"
 date: 2025-08-01 16:25:32 +00:00
-permalink: "/community/2025-08-01-Templates-for-MVC-Razor-Pages-with-a-Modern-Frontend-Build-System.html"
+permalink: "/2025-08-01-Templates-for-MVC-Razor-Pages-with-a-Modern-Frontend-Build-System.html"
 categories: ["Coding"]
 tags: [".NET", "ASP.NET", "Coding", "Community", "Custom Build System", "Frontend Architecture", "JavaScript", "MVC", "Razor Pages", "Template Repository", "Web Development", "Webpack"]
 tags_normalized: ["dotnet", "aspdotnet", "coding", "community", "custom build system", "frontend architecture", "javascript", "mvc", "razor pages", "template repository", "web development", "webpack"]

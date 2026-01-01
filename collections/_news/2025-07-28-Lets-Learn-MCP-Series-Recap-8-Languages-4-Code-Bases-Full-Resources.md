@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft DevBlog"
 feed_url: "https://devblogs.microsoft.com/feed"
 date: 2025-07-28 16:00:02 +00:00
-permalink: "/news/2025-07-28-Lets-Learn-MCP-Series-Recap-8-Languages-4-Code-Bases-Full-Resources.html"
+permalink: "/2025-07-28-Lets-Learn-MCP-Series-Recap-8-Languages-4-Code-Bases-Full-Resources.html"
 categories: ["AI", "Coding"]
 tags: ["AI", "AI Agents", "C#", "Coding", "Community Events", "Developer Events", "Developer Resources", "GitHub", "Integration", "Java", "MCP", "Microsoft", "Multilingual", "News", "Open Source", "Python", "Training", "TypeScript"]
 tags_normalized: ["ai", "ai agents", "csharp", "coding", "community events", "developer events", "developer resources", "github", "integration", "java", "mcp", "microsoft", "multilingual", "news", "open source", "python", "training", "typescript"]

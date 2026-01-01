@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft News"
 feed_url: "https://news.microsoft.com/source/feed/"
 date: 2025-11-03 18:35:28 +00:00
-permalink: "/news/2025-11-03-Microsofts-152-Billion-USD-Investment-in-AI-and-Cloud-Innovation-in-the-UAE.html"
+permalink: "/2025-11-03-Microsofts-152-Billion-USD-Investment-in-AI-and-Cloud-Innovation-in-the-UAE.html"
 categories: ["AI", "Azure"]
 tags: ["AI", "AI Diffusion Report", "AI For Good Lab", "AI Investment", "AI Models", "AI Summit", "Azure", "Cloud Infrastructure", "Company News", "Compliance", "Export Controls", "G42", "Global South", "GPU Datacenters", "Microsoft", "News", "On The Issues", "Public Private Partnership", "Responsible AI", "Talent Development", "UAE"]
 tags_normalized: ["ai", "ai diffusion report", "ai for good lab", "ai investment", "ai models", "ai summit", "azure", "cloud infrastructure", "company news", "compliance", "export controls", "g42", "global south", "gpu datacenters", "microsoft", "news", "on the issues", "public private partnership", "responsible ai", "talent development", "uae"]

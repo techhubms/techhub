@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft DevBlog"
 feed_url: "https://devblogs.microsoft.com/devops/feed/"
 date: 2025-06-17 18:40:23 +00:00
-permalink: "/news/2025-06-17-Azure-DevOps-MCP-Server-Now-in-Public-Preview-Integrating-GitHub-Copilot-with-DevOps-Context.html"
+permalink: "/2025-06-17-Azure-DevOps-MCP-Server-Now-in-Public-Preview-Integrating-GitHub-Copilot-with-DevOps-Context.html"
 categories: ["AI", "Azure", "DevOps", "GitHub Copilot"]
 tags: ["Agentic AI", "Agile", "AI", "AI Integration", "Azure", "Azure & Cloud", "Azure DevOps", "Build Automation", "Cloud Development", "Developer Tools", "DevOps", "GitHub Copilot", "LLM", "MCP Server", "News", "Public Preview", "Pull Requests", "Test Plans", "VS", "VS Code", "Work Items"]
 tags_normalized: ["agentic ai", "agile", "ai", "ai integration", "azure", "azure and cloud", "azure devops", "build automation", "cloud development", "developer tools", "devops", "github copilot", "llm", "mcp server", "news", "public preview", "pull requests", "test plans", "vs", "vs code", "work items"]

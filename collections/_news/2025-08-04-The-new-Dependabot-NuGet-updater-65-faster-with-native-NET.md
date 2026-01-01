@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft .NET Blog"
 feed_url: "https://devblogs.microsoft.com/dotnet/feed/"
 date: 2025-08-04 15:00:00 +00:00
-permalink: "/news/2025-08-04-The-new-Dependabot-NuGet-updater-65-faster-with-native-NET.html"
+permalink: "/2025-08-04-The-new-Dependabot-NuGet-updater-65-faster-with-native-NET.html"
 categories: ["Coding", "DevOps", "Security"]
 tags: [".NET", "Azure Artifacts", "Central Package Management", "Coding", "Conflict Resolution", "Dependabot", "Dependency Update", "DevOps", "GitHub Packages", "Global.json", "MSBuild", "News", "NuGet", "Package Management", "Performance", "Security", "Transitive Dependencies"]
 tags_normalized: ["dotnet", "azure artifacts", "central package management", "coding", "conflict resolution", "dependabot", "dependency update", "devops", "github packages", "globaldotjson", "msbuild", "news", "nuget", "package management", "performance", "security", "transitive dependencies"]

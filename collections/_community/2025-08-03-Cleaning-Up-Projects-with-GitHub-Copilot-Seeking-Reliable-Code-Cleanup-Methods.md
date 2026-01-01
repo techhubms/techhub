@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Reddit Github Copilot"
 feed_url: "https://www.reddit.com/r/GithubCopilot.rss"
 date: 2025-08-03 22:55:20 +00:00
-permalink: "/community/2025-08-03-Cleaning-Up-Projects-with-GitHub-Copilot-Seeking-Reliable-Code-Cleanup-Methods.html"
+permalink: "/2025-08-03-Cleaning-Up-Projects-with-GitHub-Copilot-Seeking-Reliable-Code-Cleanup-Methods.html"
 categories: ["AI", "GitHub Copilot"]
 tags: ["AI", "AI Assistant", "Automation Challenges", "Code Cleanup", "Community", "Context Limitation", "Deprecated Files", "GitHub Copilot", "Manual Code Review", "Overlapping Styles", "Project Maintenance", "Project Summary"]
 tags_normalized: ["ai", "ai assistant", "automation challenges", "code cleanup", "community", "context limitation", "deprecated files", "github copilot", "manual code review", "overlapping styles", "project maintenance", "project summary"]

@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Alireza Chegini's YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCZSAqzABRmDxDHuPS6YuXZA"
 date: 2025-11-10 15:21:11 +00:00
-permalink: "/videos/2025-11-10-Build-Your-FIRST-AI-Agent-in-Minutes-with-Azure-AI-Foundry.html"
+permalink: "/2025-11-10-Build-Your-FIRST-AI-Agent-in-Minutes-with-Azure-AI-Foundry.html"
 categories: ["AI", "Azure"]
 tags: ["Agent Customization", "Agent Project", "AI", "AI Agent", "AI Agent Tutorial", "AI Agents", "AI Agents Explained", "AI Foundry Azure", "AI Foundry Tutorial", "AI Research", "Automation", "Azure", "Azure AI Foundry", "Azure Deployment", "Azure Rag Chatbot", "Beginner Tutorial", "Build Rag Chatbot", "Chat With Your Data", "How To Build AI Agent", "Live Testing", "Monitoring", "No Code AI", "PDF Q&A", "Performance Dashboard", "Private Knowledge Upload", "RAG Chatbot", "Resource Management", "Videos"]
 tags_normalized: ["agent customization", "agent project", "ai", "ai agent", "ai agent tutorial", "ai agents", "ai agents explained", "ai foundry azure", "ai foundry tutorial", "ai research", "automation", "azure", "azure ai foundry", "azure deployment", "azure rag chatbot", "beginner tutorial", "build rag chatbot", "chat with your data", "how to build ai agent", "live testing", "monitoring", "no code ai", "pdf qanda", "performance dashboard", "private knowledge upload", "rag chatbot", "resource management", "videos"]

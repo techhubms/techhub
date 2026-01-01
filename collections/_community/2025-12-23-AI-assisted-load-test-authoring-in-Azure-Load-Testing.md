@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-12-23 21:50:11 +00:00
-permalink: "/community/2025-12-23-AI-assisted-load-test-authoring-in-Azure-Load-Testing.html"
+permalink: "/2025-12-23-AI-assisted-load-test-authoring-in-Azure-Load-Testing.html"
 categories: ["AI", "Azure", "DevOps"]
 tags: ["AI", "AI Assisted Authoring", "Azure", "Azure App Testing Extension", "Azure Load Testing", "Browser Recording", "Cloud Scalability", "Community", "Correlation", "DevOps", "JMeter", "Microsoft Azure", "Parameterization", "Performance Testing", "Script Quality", "Test Automation", "Think Times"]
 tags_normalized: ["ai", "ai assisted authoring", "azure", "azure app testing extension", "azure load testing", "browser recording", "cloud scalability", "community", "correlation", "devops", "jmeter", "microsoft azure", "parameterization", "performance testing", "script quality", "test automation", "think times"]

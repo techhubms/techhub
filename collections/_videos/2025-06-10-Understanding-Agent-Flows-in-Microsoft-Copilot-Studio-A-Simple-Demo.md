@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Learn Microsoft AI Youtube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCQf_yRJpsfyEiWWpt1MZ6vA"
 date: 2025-06-10 06:11:02 +00:00
-permalink: "/videos/2025-06-10-Understanding-Agent-Flows-in-Microsoft-Copilot-Studio-A-Simple-Demo.html"
+permalink: "/2025-06-10-Understanding-Agent-Flows-in-Microsoft-Copilot-Studio-A-Simple-Demo.html"
 categories: ["AI"]
 tags: ["Agent Flows", "AgentFlows", "AI", "API Integration", "App Integration", "Automation", "Business Process Automation", "Copilot Demo", "Copilot Studio", "CopilotStudio", "Microsoft AI", "Microsoft Copilot", "MicrosoftAI", "Power Platform", "Task Automation", "Videos", "Workflow Automation"]
 tags_normalized: ["agent flows", "agentflows", "ai", "api integration", "app integration", "automation", "business process automation", "copilot demo", "copilot studio", "copilotstudio", "microsoft ai", "microsoft copilot", "microsoftai", "power platform", "task automation", "videos", "workflow automation"]

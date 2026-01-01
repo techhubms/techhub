@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-11-05 06:42:40 +00:00
-permalink: "/community/2025-11-05-Performance-and-Scalability-of-Azure-HBv5-series-Virtual-Machines.html"
+permalink: "/2025-11-05-Performance-and-Scalability-of-Azure-HBv5-series-Virtual-Machines.html"
 categories: ["Azure"]
 tags: ["AMD EPYC", "Ansys Fluent", "Azure", "Azure HBv5", "Community", "Cost Optimization", "CPU Benchmarking", "Devito", "High Performance Computing", "HPC", "InfiniBand", "Memory Bandwidth", "NAMD", "NVIDIA Quantum 2", "OpenFOAM", "Scalability", "Siemens Star CCM+", "STREAM Benchmark", "Strong Scaling", "Virtual Machines", "VM Fleet Consolidation", "Weak Scaling", "WRF"]
 tags_normalized: ["amd epyc", "ansys fluent", "azure", "azure hbv5", "community", "cost optimization", "cpu benchmarking", "devito", "high performance computing", "hpc", "infiniband", "memory bandwidth", "namd", "nvidia quantum 2", "openfoam", "scalability", "siemens star ccmplus", "stream benchmark", "strong scaling", "virtual machines", "vm fleet consolidation", "weak scaling", "wrf"]

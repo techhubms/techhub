@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/feed/"
 date: 2025-08-11 16:00:00 +00:00
-permalink: "/news/2025-08-11-Securing-the-Open-Source-Supply-Chain-Impact-of-the-GitHub-Secure-Open-Source-Fund.html"
+permalink: "/2025-08-11-Securing-the-Open-Source-Supply-Chain-Impact-of-the-GitHub-Secure-Open-Source-Fund.html"
 categories: ["AI", "DevOps", "Security"]
 tags: ["AI", "AI Security", "AutoGPT", "CodeQL", "Dependency Management", "DevOps", "DevOps Tooling", "Fuzz Testing", "GitHub Secure Open Source Fund", "GitHub Security Lab", "Incident Response", "Log4j", "Maintainers", "Microsoft", "News", "Ollama", "Open Source", "Open Source Security", "Secret Scanning", "Secure Development", "Security", "Security Best Practices", "Supply Chain Security", "Threat Modeling", "Vulnerability Remediation"]
 tags_normalized: ["ai", "ai security", "autogpt", "codeql", "dependency management", "devops", "devops tooling", "fuzz testing", "github secure open source fund", "github security lab", "incident response", "log4j", "maintainers", "microsoft", "news", "ollama", "open source", "open source security", "secret scanning", "secure development", "security", "security best practices", "supply chain security", "threat modeling", "vulnerability remediation"]

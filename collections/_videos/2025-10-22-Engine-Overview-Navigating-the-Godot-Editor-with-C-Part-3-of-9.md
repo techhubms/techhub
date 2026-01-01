@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "DotNet YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw"
 date: 2025-10-22 16:30:11 +00:00
-permalink: "/videos/2025-10-22-Engine-Overview-Navigating-the-Godot-Editor-with-C-Part-3-of-9.html"
+permalink: "/2025-10-22-Engine-Overview-Navigating-the-Godot-Editor-with-C-Part-3-of-9.html"
 categories: ["Coding"]
 tags: [".NET", "Beginner Tutorial", "C#", "Coding", "Debugging", "Editor Views", "File System", "Game Development", "Godot", "Godot Editor", "Godot Project Manager", "Inspector", "Microsoft Developer", "Scene Panel", "Videos", "VS Code"]
 tags_normalized: ["dotnet", "beginner tutorial", "csharp", "coding", "debugging", "editor views", "file system", "game development", "godot", "godot editor", "godot project manager", "inspector", "microsoft developer", "scene panel", "videos", "vs code"]

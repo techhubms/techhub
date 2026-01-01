@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-11-18 06:42:34 +00:00
-permalink: "/community/2025-11-18-Microsofts-Open-Source-Advancements-for-Linux-Reliability-on-Azure.html"
+permalink: "/2025-11-18-Microsofts-Open-Source-Advancements-for-Linux-Reliability-on-Azure.html"
 categories: ["Azure", "Coding", "DevOps", "Security"]
 tags: ["ARM64", "Azure", "Cloud Hypervisor", "Cloud LTS", "Coding", "Community", "Confidential Computing", "Container Security", "DevOps", "Hyper V", "Kernel Updates", "Kexec HandOver", "Linux Kernel", "Linux Systems Group", "LISA", "MANA Network Driver", "Mshv Vtl Driver", "Networking Optimization", "OP TEE", "Rust VMM", "Secure Boot", "Security", "Systemd", "Virtual File System"]
 tags_normalized: ["arm64", "azure", "cloud hypervisor", "cloud lts", "coding", "community", "confidential computing", "container security", "devops", "hyper v", "kernel updates", "kexec handover", "linux kernel", "linux systems group", "lisa", "mana network driver", "mshv vtl driver", "networking optimization", "op tee", "rust vmm", "secure boot", "security", "systemd", "virtual file system"]

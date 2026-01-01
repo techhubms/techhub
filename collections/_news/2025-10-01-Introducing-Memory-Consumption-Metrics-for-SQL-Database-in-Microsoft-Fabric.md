@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Fabric Blog"
 feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
 date: 2025-10-01 15:00:00 +00:00
-permalink: "/news/2025-10-01-Introducing-Memory-Consumption-Metrics-for-SQL-Database-in-Microsoft-Fabric.html"
+permalink: "/2025-10-01-Introducing-Memory-Consumption-Metrics-for-SQL-Database-in-Microsoft-Fabric.html"
 categories: ["Azure", "ML"]
 tags: ["Automatic Index", "Azure", "CPU Usage", "Dashboard Metrics", "Data Engineering", "Data Workloads", "Database Administration", "Database Metrics", "Database Optimization", "Memory Consumption", "Metrics Tracking", "Microsoft Fabric", "ML", "News", "Performance Dashboard", "Performance Monitoring", "Query Analysis", "Query Performance", "Resource Utilization", "SQL Database", "Tempdb Spillover", "Visualization"]
 tags_normalized: ["automatic index", "azure", "cpu usage", "dashboard metrics", "data engineering", "data workloads", "database administration", "database metrics", "database optimization", "memory consumption", "metrics tracking", "microsoft fabric", "ml", "news", "performance dashboard", "performance monitoring", "query analysis", "query performance", "resource utilization", "sql database", "tempdb spillover", "visualization"]

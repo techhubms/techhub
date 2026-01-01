@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft DevOps Blog"
 feed_url: "https://devblogs.microsoft.com/devops/feed/"
 date: 2025-12-16 13:17:08 +00:00
-permalink: "/news/2025-12-16-Azure-Boards-Now-Integrates-Directly-with-GitHub-Copilot-Coding-Agent.html"
+permalink: "/2025-12-16-Azure-Boards-Now-Integrates-Directly-with-GitHub-Copilot-Coding-Agent.html"
 categories: ["AI", "Azure", "DevOps", "GitHub Copilot"]
 tags: ["Agentic AI", "AI", "Azure", "Azure & Cloud", "Azure Boards", "Azure DevOps", "Branch Management", "Copilot Coding Agent", "Custom Agents", "DevOps", "Enterprise Integration", "Feature Rollout", "GitHub Copilot", "Kanban Board", "MCP Server", "Model Selection", "News", "Pull Request Workflow", "Repository Integration", "REST API", "Work Item Automation"]
 tags_normalized: ["agentic ai", "ai", "azure", "azure and cloud", "azure boards", "azure devops", "branch management", "copilot coding agent", "custom agents", "devops", "enterprise integration", "feature rollout", "github copilot", "kanban board", "mcp server", "model selection", "news", "pull request workflow", "repository integration", "rest api", "work item automation"]

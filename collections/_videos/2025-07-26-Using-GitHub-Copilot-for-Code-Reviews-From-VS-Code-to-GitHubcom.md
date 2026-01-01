@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "GitHub's Youtube channel"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ"
 date: 2025-07-26 14:01:31 +00:00
-permalink: "/videos/2025-07-26-Using-GitHub-Copilot-for-code-reviews-from-VS-Code-to-githubcom.html"
+permalink: "/2025-07-26-Using-GitHub-Copilot-for-Code-Reviews-From-VS-Code-to-GitHubcom.html"
 categories: ["AI", "DevOps", "GitHub Copilot"]
 tags: ["AI", "AI Powered Code Review", "Code Review Automation", "Code Suggestions", "CodeReview", "Development Workflow", "DevOps", "GitHub", "GitHub Copilot", "Logic Bugs", "Pull Requests", "Security Patterns", "Team Guidelines", "Videos", "VS Code"]
 tags_normalized: ["ai", "ai powered code review", "code review automation", "code suggestions", "codereview", "development workflow", "devops", "github", "github copilot", "logic bugs", "pull requests", "security patterns", "team guidelines", "videos", "vs code"]

@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft News"
 feed_url: "https://news.microsoft.com/source/feed/"
 date: 2025-08-14 14:15:40 +00:00
-permalink: "/news/2025-08-14-Queensland-Government-Enhances-Cybersecurity-for-Vulnerable-Communities-with-Microsoft-365-E5.html"
+permalink: "/2025-08-14-Queensland-Government-Enhances-Cybersecurity-for-Vulnerable-Communities-with-Microsoft-365-E5.html"
 categories: ["Azure", "Security"]
 tags: ["Azure", "Azure Security", "Company News", "Compliance", "Cybersecurity", "Data Loss Prevention", "Defender For Cloud", "Defender For Identity", "Defender For Office 365", "Essential Eight", "Incident Response", "Microsoft 365 E5", "Microsoft Defender", "Microsoft Defender For Endpoint", "Microsoft Defender XDR", "Microsoft Purview", "Microsoft Secure Score", "Microsoft Sentinel", "News", "Security", "Security Operations", "Zero Trust"]
 tags_normalized: ["azure", "azure security", "company news", "compliance", "cybersecurity", "data loss prevention", "defender for cloud", "defender for identity", "defender for office 365", "essential eight", "incident response", "microsoft 365 e5", "microsoft defender", "microsoft defender for endpoint", "microsoft defender xdr", "microsoft purview", "microsoft secure score", "microsoft sentinel", "news", "security", "security operations", "zero trust"]

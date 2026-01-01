@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Developer YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
 date: 2025-11-11 21:47:17 +00:00
-permalink: "/videos/2025-11-11-Build-AI-Agents-with-Zero-Code-Using-Azure-Logic-Apps.html"
+permalink: "/2025-11-11-Build-AI-Agents-with-Zero-Code-Using-Azure-Logic-Apps.html"
 categories: ["AI", "Azure"]
 tags: ["AI", "AI Agents", "Authentication", "Azure", "Azure Logic Apps", "Azure OpenAI", "Cloud Computing", "Compliance", "Connectors", "Debugging", "Dev", "Development", "Enterprise Integration", "GPT 4", "Low Code", "Microsoft", "Microsoft Developer", "Microsoft Teams", "Multi Agent Systems", "No Code", "Prompt Engineering", "ServiceNow Integration", "Tech", "Technology", "Videos", "Workflow Automation"]
 tags_normalized: ["ai", "ai agents", "authentication", "azure", "azure logic apps", "azure openai", "cloud computing", "compliance", "connectors", "debugging", "dev", "development", "enterprise integration", "gpt 4", "low code", "microsoft", "microsoft developer", "microsoft teams", "multi agent systems", "no code", "prompt engineering", "servicenow integration", "tech", "technology", "videos", "workflow automation"]

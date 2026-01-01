@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/changelog/feed/"
 date: 2025-10-14 19:52:02 +00:00
-permalink: "/news/2025-10-14-CodeQL-Adds-Rust-and-Build-Free-CC-Scanning-in-General-Availability.html"
+permalink: "/2025-10-14-CodeQL-Adds-Rust-and-Build-Free-CC-Scanning-in-General-Availability.html"
 categories: ["DevOps", "Security"]
 tags: ["Application Security", "Build Automation", "C/C++", "Code Scanning", "CodeQL", "CodeQL CLI", "Continuous Integration", "Copilot Autofix", "DevOps", "GitHub", "GitHub Actions", "GitHub Enterprise Server", "News", "OWASP Top 10", "Release Notes", "Rust", "Security", "Security Analysis"]
 tags_normalized: ["application security", "build automation", "cslashcplusplus", "code scanning", "codeql", "codeql cli", "continuous integration", "copilot autofix", "devops", "github", "github actions", "github enterprise server", "news", "owasp top 10", "release notes", "rust", "security", "security analysis"]

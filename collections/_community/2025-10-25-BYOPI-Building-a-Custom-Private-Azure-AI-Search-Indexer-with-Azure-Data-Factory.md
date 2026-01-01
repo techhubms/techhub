@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-10-25 15:57:45 +00:00
-permalink: "/community/2025-10-25-BYOPI-Building-a-Custom-Private-Azure-AI-Search-Indexer-with-Azure-Data-Factory.html"
+permalink: "/2025-10-25-BYOPI-Building-a-Custom-Private-Azure-AI-Search-Indexer-with-Azure-Data-Factory.html"
 categories: ["AI", "Azure", "Security"]
 tags: ["ADF Pipeline", "AI", "Azure", "Azure AI Search", "Azure Data Factory", "BYOPI", "Community", "Compliance", "CRUD", "Data Integration", "Data Synchronization", "Indexing", "Key Vault", "Network Security", "No Code", "Pipeline Monitoring", "PowerShell", "Private Endpoint", "REST API", "Security", "Self Hosted Integration Runtime", "SQL Server", "VNet"]
 tags_normalized: ["adf pipeline", "ai", "azure", "azure ai search", "azure data factory", "byopi", "community", "compliance", "crud", "data integration", "data synchronization", "indexing", "key vault", "network security", "no code", "pipeline monitoring", "powershell", "private endpoint", "rest api", "security", "self hosted integration runtime", "sql server", "vnet"]

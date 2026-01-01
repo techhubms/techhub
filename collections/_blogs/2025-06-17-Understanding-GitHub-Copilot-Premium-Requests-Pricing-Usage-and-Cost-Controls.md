@@ -9,10 +9,10 @@ viewing_mode: "external"
 feed_name: "Rob Bos' Blog"
 feed_url: "https://devopsjournal.io/blog/atom.xml"
 date: 2025-06-17 00:00:00 +00:00
-permalink: "/blogs/2025-06-17-Understanding-GitHub-Copilot-Premium-Requests-Pricing-Usage-and-Cost-Controls.html"
+permalink: "/2025-06-17-Understanding-GitHub-Copilot-Premium-Requests-Pricing-Usage-and-Cost-Controls.html"
 categories: ["AI", "GitHub Copilot"]
-tags: ["AI", "Billing", "Coding Agent", "Copilot Extensions", "Copilot Plans", "Cost Control", "Enterprise Reporting", "Generative AI", "GitHub", "GitHub Copilot", "Model Multipliers", "Blogs", "Premium Requests", "Usage Monitoring", "VS", "VS Code"]
-tags_normalized: ["ai", "billing", "coding agent", "copilot extensions", "copilot plans", "cost control", "enterprise reporting", "generative ai", "github", "github copilot", "model multipliers", "blogs", "premium requests", "usage monitoring", "vs", "vs code"]
+tags: ["AI", "Billing", "Blogs", "Coding Agent", "Copilot Extensions", "Copilot Plans", "Cost Control", "Enterprise Reporting", "Generative AI", "GitHub", "GitHub Copilot", "Model Multipliers", "Premium Requests", "Usage Monitoring", "VS", "VS Code"]
+tags_normalized: ["ai", "billing", "blogs", "coding agent", "copilot extensions", "copilot plans", "cost control", "enterprise reporting", "generative ai", "github", "github copilot", "model multipliers", "premium requests", "usage monitoring", "vs", "vs code"]
 ---
 
 In this article, Rob Bos details the upcoming enforcement of GitHub Copilot Premium Requests. He explains how pricing will work, what actions incur costs, and walks users through tools and strategies to monitor and control their Copilot spending.<!--excerpt_end-->

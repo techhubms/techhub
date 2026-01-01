@@ -10,7 +10,7 @@ categories: ["AI", "GitHub Copilot"]
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/feed/"
 date: 2025-07-01 18:57:22 +00:00
-permalink: "/news/2025-07-01-From-idea-to-PR-A-guide-to-GitHub-Copilots-agentic-workflows.html"
+permalink: "/2025-07-01-From-idea-to-PR-A-guide-to-GitHub-Copilots-agentic-workflows.html"
 tags: ["Agentic AI", "AI", "AI & ML", "Automation", "Chat Modes", "Coding Agents", "Generative AI", "GitHub Copilot", "MCP Server", "News", "Pull Requests", "Software Development"]
 tags_normalized: ["agentic ai", "ai", "ai and ml", "automation", "chat modes", "coding agents", "generative ai", "github copilot", "mcp server", "news", "pull requests", "software development"]
 ---

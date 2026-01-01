@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Developer YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
 date: 2025-10-30 07:00:09 +00:00
-permalink: "/videos/2025-10-30-Optimize-Savings-with-Microsoft-Fabric-Reservations.html"
+permalink: "/2025-10-30-Optimize-Savings-with-Microsoft-Fabric-Reservations.html"
 categories: ["Azure"]
 tags: ["Azure", "Azure Advisor", "Azure Marketplace", "Azure Portal", "Azure Reservations", "Capacity Planning", "Cloud Cost Optimization", "Cloud Purchasing", "Cost Management", "Data Analytics", "Microsoft Fabric", "Microsoft Fabric Capacity", "Videos", "Workload Management"]
 tags_normalized: ["azure", "azure advisor", "azure marketplace", "azure portal", "azure reservations", "capacity planning", "cloud cost optimization", "cloud purchasing", "cost management", "data analytics", "microsoft fabric", "microsoft fabric capacity", "videos", "workload management"]

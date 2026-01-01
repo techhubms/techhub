@@ -9,10 +9,10 @@ viewing_mode: "external"
 feed_name: "Andrew Lock's Blog"
 feed_url: "https://andrewlock.net/rss.xml"
 date: 2025-12-16 10:00:00 +00:00
-permalink: "/blogs/2025-12-16-Creating-a-NET-CLR-profiler-with-C-NativeAOT-and-Silhouette.html"
+permalink: "/2025-12-16-Creating-a-NET-CLR-profiler-with-C-NativeAOT-and-Silhouette.html"
 categories: ["Coding"]
-tags: [".NET CLR Profiler", ".NET Core", "Assembly Loading", "C#", "Class Library", "Coding", "Console Application", "COR PRF MONITOR", "Custom Profiler", "Debugging APIs", "DotTrace", "Entry Points", "HResult", "ICorProfilerCallback", "Metadata APIs", "Native AOT", "NativeAOT", "Performance", "Performance Profiling", "PerfView", "Blogs", "Profiling APIs", "Project Setup", "Silhouette Library", "Source Generators", "Unmanaged APIs", "Visual Studio Profilers", "Win32Exception"]
-tags_normalized: ["dotnet clr profiler", "dotnet core", "assembly loading", "csharp", "class library", "coding", "console application", "cor prf monitor", "custom profiler", "debugging apis", "dottrace", "entry points", "hresult", "icorprofilercallback", "metadata apis", "native aot", "nativeaot", "performance", "performance profiling", "perfview", "blogs", "profiling apis", "project setup", "silhouette library", "source generators", "unmanaged apis", "visual studio profilers", "win32exception"]
+tags: [".NET CLR Profiler", ".NET Core", "Assembly Loading", "Blogs", "C#", "Class Library", "Coding", "Console Application", "COR PRF MONITOR", "Custom Profiler", "Debugging APIs", "DotTrace", "Entry Points", "HResult", "ICorProfilerCallback", "Metadata APIs", "Native AOT", "NativeAOT", "Performance", "Performance Profiling", "PerfView", "Profiling APIs", "Project Setup", "Silhouette Library", "Source Generators", "Unmanaged APIs", "Visual Studio Profilers", "Win32Exception"]
+tags_normalized: ["dotnet clr profiler", "dotnet core", "assembly loading", "blogs", "csharp", "class library", "coding", "console application", "cor prf monitor", "custom profiler", "debugging apis", "dottrace", "entry points", "hresult", "icorprofilercallback", "metadata apis", "native aot", "nativeaot", "performance", "performance profiling", "perfview", "profiling apis", "project setup", "silhouette library", "source generators", "unmanaged apis", "visual studio profilers", "win32exception"]
 ---
 
 Andrew Lock demonstrates how to create a simple .NET CLR profiler using C# and NativeAOT with the Silhouette library, showing how to hook into assembly load events for custom profiling.<!--excerpt_end-->

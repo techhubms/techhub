@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft DevBlog"
 feed_url: "https://devblogs.microsoft.com/engineering-at-microsoft/feed/"
 date: 2025-07-14 15:21:05 +00:00
-permalink: "/news/2025-07-14-Enhancing-Code-Quality-at-Scale-with-AI-Powered-Code-Reviews.html"
+permalink: "/2025-07-14-Enhancing-Code-Quality-at-Scale-with-AI-Powered-Code-Reviews.html"
 categories: ["AI", "Coding", "DevOps", "GitHub Copilot"]
 tags: ["AI", "AI Agent", "AI Apps", "AI in Software Development", "AI Powered Code Review", "Automated Code Reviews", "Best Practices", "Code Quality", "Code Review Assistant", "Code Reviews", "Code Suggestions", "Coding", "Customizable Code Review", "Developer Onboarding", "Developer Productivity", "DevOps", "Engineering Workflow", "Engineering@Microsoft", "GitHub Copilot", "Microsoft", "News", "Pull Requests"]
 tags_normalized: ["ai", "ai agent", "ai apps", "ai in software development", "ai powered code review", "automated code reviews", "best practices", "code quality", "code review assistant", "code reviews", "code suggestions", "coding", "customizable code review", "developer onboarding", "developer productivity", "devops", "engineering workflow", "engineeringatmicrosoft", "github copilot", "microsoft", "news", "pull requests"]

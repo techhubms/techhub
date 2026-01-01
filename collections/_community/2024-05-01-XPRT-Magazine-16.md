@@ -6,7 +6,7 @@ categories: ["AI", "Azure", "Coding", "DevOps", "GitHub Copilot", "Security"]
 date: 2024-05-01 00:00:00 +00:00
 author: "Xebia"
 viewing_mode: "external"
-permalink: "/community/2024-05-01-XPRT-Magazine-16.html"
+permalink: "/2024-05-01-XPRT-Magazine-16.html"
 excerpt_separator: <!--excerpt_end-->
 tags: ["Agents", "AI", "Art", "Azure", "Blazor", "Carbon Measurement", "Coding", "Community", "Container Apps", "DDoS", "DevOps", "EF", "Environmental Impact", "GitHub Copilot", "LLM", "Magazines", "OAuth", "OpenID Connect", "PKCE", "Prompt Engineering", "Security", "SQL Merge"]
 tags_normalized: ["agents", "ai", "art", "azure", "blazor", "carbon measurement", "coding", "community", "container apps", "ddos", "devops", "ef", "environmental impact", "github copilot", "llm", "magazines", "oauth", "openid connect", "pkce", "prompt engineering", "security", "sql merge"]

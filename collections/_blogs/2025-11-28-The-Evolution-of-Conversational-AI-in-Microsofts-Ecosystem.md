@@ -9,10 +9,10 @@ viewing_mode: "external"
 feed_name: "Dellenny's Blog"
 feed_url: "https://dellenny.com/feed/"
 date: 2025-11-28 17:06:32 +00:00
-permalink: "/blogs/2025-11-28-The-Evolution-of-Conversational-AI-in-Microsofts-Ecosystem.html"
+permalink: "/2025-11-28-The-Evolution-of-Conversational-AI-in-Microsofts-Ecosystem.html"
 categories: ["AI"]
-tags: ["AI", "AI Assistants", "Azure Bot Framework", "Azure Cognitive Services", "Azure OpenAI Service", "Conversational AI", "Copilot For Microsoft 365", "Copilot Studio", "Cortana", "Dynamics 365 Copilot", "Enterprise AI", "Generative AI", "M365 Copilot", "Microsoft", "Natural Language Processing", "Blogs", "Productivity AI", "Security Copilot", "Windows Copilot"]
-tags_normalized: ["ai", "ai assistants", "azure bot framework", "azure cognitive services", "azure openai service", "conversational ai", "copilot for microsoft 365", "copilot studio", "cortana", "dynamics 365 copilot", "enterprise ai", "generative ai", "m365 copilot", "microsoft", "natural language processing", "blogs", "productivity ai", "security copilot", "windows copilot"]
+tags: ["AI", "AI Assistants", "Azure Bot Framework", "Azure Cognitive Services", "Azure OpenAI Service", "Blogs", "Conversational AI", "Copilot For Microsoft 365", "Copilot Studio", "Cortana", "Dynamics 365 Copilot", "Enterprise AI", "Generative AI", "M365 Copilot", "Microsoft", "Natural Language Processing", "Productivity AI", "Security Copilot", "Windows Copilot"]
+tags_normalized: ["ai", "ai assistants", "azure bot framework", "azure cognitive services", "azure openai service", "blogs", "conversational ai", "copilot for microsoft 365", "copilot studio", "cortana", "dynamics 365 copilot", "enterprise ai", "generative ai", "m365 copilot", "microsoft", "natural language processing", "productivity ai", "security copilot", "windows copilot"]
 ---
 
 John Edward examines the history and evolution of conversational AI in the Microsoft ecosystem, revealing key developments from Clippy to Copilot Studio and Azure OpenAI Service.<!--excerpt_end-->

@@ -6,7 +6,7 @@ categories: ["Azure", "DevOps"]
 date: 2017-05-01 00:00:00 +00:00
 author: "Xebia"
 viewing_mode: "external"
-permalink: "/community/2017-05-01-XPRT-Magazine-05.html"
+permalink: "/2017-05-01-XPRT-Magazine-05.html"
 excerpt_separator: <!--excerpt_end-->
 tags: ["ARM Templates", "Automation", "Azure", "Best Practices", "Cloud", "Cloud Transition", "Communities", "Community", "Containers", "Deployment Pipelines", "DevOps", "Event Grid", "Magazines", "Scaling", "Scrum", "Testing", "Web Applications"]
 tags_normalized: ["arm templates", "automation", "azure", "best practices", "cloud", "cloud transition", "communities", "community", "containers", "deployment pipelines", "devops", "event grid", "magazines", "scaling", "scrum", "testing", "web applications"]

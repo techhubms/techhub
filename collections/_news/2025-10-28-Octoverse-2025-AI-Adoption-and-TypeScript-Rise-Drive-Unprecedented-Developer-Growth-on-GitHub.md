@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/feed/"
 date: 2025-10-28 16:07:06 +00:00
-permalink: "/news/2025-10-28-Octoverse-2025-AI-Adoption-and-TypeScript-Rise-Drive-Unprecedented-Developer-Growth-on-GitHub.html"
+permalink: "/2025-10-28-Octoverse-2025-AI-Adoption-and-TypeScript-Rise-Drive-Unprecedented-Developer-Growth-on-GitHub.html"
 categories: ["AI", "Coding", "DevOps", "GitHub Copilot", "Security"]
 tags: ["Agents", "AI", "AI Adoption", "CI/CD", "CodeQL", "Coding", "Copilot Autofix", "Dependabot", "Developer Productivity", "DevOps", "DevOps Automation", "Generative AI", "GitHub Copilot", "Global Developer Growth", "Jupyter Notebook", "Language Trends", "LLM SDKs", "News", "News & Insights", "Octoverse", "Open Source", "Pull Requests", "Python", "Security", "Security Automation", "TypeScript"]
 tags_normalized: ["agents", "ai", "ai adoption", "cislashcd", "codeql", "coding", "copilot autofix", "dependabot", "developer productivity", "devops", "devops automation", "generative ai", "github copilot", "global developer growth", "jupyter notebook", "language trends", "llm sdks", "news", "news and insights", "octoverse", "open source", "pull requests", "python", "security", "security automation", "typescript"]

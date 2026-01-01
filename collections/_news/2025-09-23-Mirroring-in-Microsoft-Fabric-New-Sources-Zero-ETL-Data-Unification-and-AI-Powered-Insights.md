@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Fabric Blog"
 feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
 date: 2025-09-23 10:00:00 +00:00
-permalink: "/news/2025-09-23-Mirroring-in-Microsoft-Fabric-New-Sources-Zero-ETL-Data-Unification-and-AI-Powered-Insights.html"
+permalink: "/2025-09-23-Mirroring-in-Microsoft-Fabric-New-Sources-Zero-ETL-Data-Unification-and-AI-Powered-Insights.html"
 categories: ["AI", "Azure", "ML"]
 tags: ["AI", "Analytics", "Azure", "Azure SQL Managed Instance", "Data Agent", "Data Governance", "Data Integration", "Data Unification", "Delta Lake", "Enterprise Data", "Google BigQuery", "Microsoft Fabric", "Mirroring", "ML", "News", "On Premises Gateway", "OneLake", "Open Mirroring", "Oracle", "Power BI", "Preview Features", "Semantic Models", "VNet", "Zero ETL"]
 tags_normalized: ["ai", "analytics", "azure", "azure sql managed instance", "data agent", "data governance", "data integration", "data unification", "delta lake", "enterprise data", "google bigquery", "microsoft fabric", "mirroring", "ml", "news", "on premises gateway", "onelake", "open mirroring", "oracle", "power bi", "preview features", "semantic models", "vnet", "zero etl"]

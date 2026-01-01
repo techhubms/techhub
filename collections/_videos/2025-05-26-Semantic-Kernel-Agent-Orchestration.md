@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Learn Microsoft AI Youtube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCQf_yRJpsfyEiWWpt1MZ6vA"
 date: 2025-05-26 10:48:05 +00:00
-permalink: "/videos/2025-05-26-Semantic-Kernel-Agent-Orchestration.html"
+permalink: "/2025-05-26-Semantic-Kernel-Agent-Orchestration.html"
 categories: ["AI", "Coding"]
 tags: ["Adaptive Solutions", "Agent Coordination", "Agent Orchestration", "AI", "AI Development", "AI Frameworks", "AI Orchestration", "AI Systems", "Coding", "Collaboration Patterns", "Intelligent Agents", "Microsoft", "Microsoft AI", "Multi Agent Systems", "Semantic Kernel", "Videos"]
 tags_normalized: ["adaptive solutions", "agent coordination", "agent orchestration", "ai", "ai development", "ai frameworks", "ai orchestration", "ai systems", "coding", "collaboration patterns", "intelligent agents", "microsoft", "microsoft ai", "multi agent systems", "semantic kernel", "videos"]

@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Developer YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
 date: 2025-09-05 16:54:20 +00:00
-permalink: "/videos/2025-09-05-Understanding-Threat-Modeling-for-Application-Security.html"
+permalink: "/2025-09-05-Understanding-Threat-Modeling-for-Application-Security.html"
 categories: ["Security"]
 tags: ["Application Security", "Authentication", "Data Protection", "Design Time Security", "Microsoft Security", "OneDevQuestion", "Privilege Management", "Security", "Security Assessment", "Security Best Practices", "Security Blueprint", "Threat Modeling", "Videos"]
 tags_normalized: ["application security", "authentication", "data protection", "design time security", "microsoft security", "onedevquestion", "privilege management", "security", "security assessment", "security best practices", "security blueprint", "threat modeling", "videos"]

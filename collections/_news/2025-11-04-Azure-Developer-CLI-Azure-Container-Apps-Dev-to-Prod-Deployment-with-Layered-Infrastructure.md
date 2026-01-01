@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft DevOps Blog"
 feed_url: "https://devblogs.microsoft.com/devops/feed/"
 date: 2025-11-04 22:45:46 +00:00
-permalink: "/news/2025-11-04-Azure-Developer-CLI-Azure-Container-Apps-Dev-to-Prod-Deployment-with-Layered-Infrastructure.html"
+permalink: "/2025-11-04-Azure-Developer-CLI-Azure-Container-Apps-Dev-to-Prod-Deployment-with-Layered-Infrastructure.html"
 categories: ["Azure", "Coding", "DevOps"]
 tags: ["#azure", "#devops", "Application Insights", "Azd", "Azure", "Azure & Cloud", "Azure App Service", "Azure Container Apps", "Azure Container Registry", "Azure Developer CLI", "Azure Developer CLI (azd)", "CI/CD", "Coding", "Container Deployment", "DevOps", "Flask", "GitHub", "GitHub Actions", "IaC", "Key Vault", "Layered Infrastructure", "Managed Identity", "News", "Python", "VNET"]
 tags_normalized: ["sharpazure", "sharpdevops", "application insights", "azd", "azure", "azure and cloud", "azure app service", "azure container apps", "azure container registry", "azure developer cli", "azure developer cli azd", "cislashcd", "coding", "container deployment", "devops", "flask", "github", "github actions", "iac", "key vault", "layered infrastructure", "managed identity", "news", "python", "vnet"]

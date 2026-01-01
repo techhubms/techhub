@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Events YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
 date: 2025-11-21 10:19:24 +00:00
-permalink: "/videos/2025-11-21-Build-Secure-Applications-with-Azure-Policy-and-Service-Groups.html"
+permalink: "/2025-11-21-Build-Secure-Applications-with-Azure-Policy-and-Service-Groups.html"
 categories: ["AI", "Azure", "Security"]
 tags: ["AI", "Azure", "Azure Policy", "Cloud Security", "Compliance", "Copilot Automation", "Database Security", "Linux", "LLM Assisted Policy Creation", "Microsoft Ignite", "Migrateandmodernizeyourestate", "MSIgnite", "Resource Management", "Secure By Default", "Security", "Security Governance", "Service Groups", "Videos", "Windows Workloads"]
 tags_normalized: ["ai", "azure", "azure policy", "cloud security", "compliance", "copilot automation", "database security", "linux", "llm assisted policy creation", "microsoft ignite", "migrateandmodernizeyourestate", "msignite", "resource management", "secure by default", "security", "security governance", "service groups", "videos", "windows workloads"]

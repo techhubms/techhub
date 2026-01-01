@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Community"
 date: 2025-08-15 13:49:08 +00:00
-permalink: "/community/2025-08-15-Troubleshooting-MCC-Phantom-Install-Issues-on-Windows-Server-2022-with-WSL.html"
+permalink: "/2025-08-15-Troubleshooting-MCC-Phantom-Install-Issues-on-Windows-Server-2022-with-WSL.html"
 categories: ["Azure", "DevOps"]
 tags: ["Azure", "Azure Container Registry", "Community", "Container Deployment", "DevOps", "Gmsa", "Install Troubleshooting", "Log Diagnostics", "MCC", "Microsoft Connected Cache", "Port Proxy", "PowerShell", "Symlink Configuration", "TLS Infrastructure", "Ubuntu 24.04", "VHDX", "Windows Server", "Windows Subsystem For Linux", "WSL"]
 tags_normalized: ["azure", "azure container registry", "community", "container deployment", "devops", "gmsa", "install troubleshooting", "log diagnostics", "mcc", "microsoft connected cache", "port proxy", "powershell", "symlink configuration", "tls infrastructure", "ubuntu 24dot04", "vhdx", "windows server", "windows subsystem for linux", "wsl"]

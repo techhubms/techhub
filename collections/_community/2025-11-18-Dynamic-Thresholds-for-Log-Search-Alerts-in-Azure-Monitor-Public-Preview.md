@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-11-18 16:00:00 +00:00
-permalink: "/community/2025-11-18-Dynamic-Thresholds-for-Log-Search-Alerts-in-Azure-Monitor-Public-Preview.html"
+permalink: "/2025-11-18-Dynamic-Thresholds-for-Log-Search-Alerts-in-Azure-Monitor-Public-Preview.html"
 categories: ["AI", "Azure", "DevOps"]
 tags: ["AI", "AKS", "AKS Monitoring", "Alerting Automation", "Anomaly Detection", "Azure", "Azure Monitor", "Cloud Operations", "Community", "DevOps", "DevOps Monitoring", "Dynamic Thresholds", "Kusto Query Language", "Log Search Alerts", "Machine Learning", "Metric Alerts", "Microsoft", "Resource Graph", "Subscription Based Alerting"]
 tags_normalized: ["ai", "aks", "aks monitoring", "alerting automation", "anomaly detection", "azure", "azure monitor", "cloud operations", "community", "devops", "devops monitoring", "dynamic thresholds", "kusto query language", "log search alerts", "machine learning", "metric alerts", "microsoft", "resource graph", "subscription based alerting"]

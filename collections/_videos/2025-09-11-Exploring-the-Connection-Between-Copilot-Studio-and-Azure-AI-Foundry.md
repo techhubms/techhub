@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Developer YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
 date: 2025-09-11 15:35:26 +00:00
-permalink: "/videos/2025-09-11-Exploring-the-Connection-Between-Copilot-Studio-and-Azure-AI-Foundry.html"
+permalink: "/2025-09-11-Exploring-the-Connection-Between-Copilot-Studio-and-Azure-AI-Foundry.html"
 categories: ["AI", "Azure"]
 tags: ["AI", "AI Development", "AI Integration", "AI Platform", "AI Services", "Azure", "Azure AI Foundry", "AzureAIFoundry", "Copilot Studio", "CopilotStudio", "Developer Tools", "Microsoft AI", "Microsoft Developer", "Scott Durow", "Videos"]
 tags_normalized: ["ai", "ai development", "ai integration", "ai platform", "ai services", "azure", "azure ai foundry", "azureaifoundry", "copilot studio", "copilotstudio", "developer tools", "microsoft ai", "microsoft developer", "scott durow", "videos"]

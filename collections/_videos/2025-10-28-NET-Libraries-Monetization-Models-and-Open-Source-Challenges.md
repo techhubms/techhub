@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Nick Chapsas YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrkPsvLGln62OMZRO6K-llg"
 date: 2025-10-28 12:00:14 +00:00
-permalink: "/videos/2025-10-28-NET-Libraries-Monetization-Models-and-Open-Source-Challenges.html"
+permalink: "/2025-10-28-NET-Libraries-Monetization-Models-and-Open-Source-Challenges.html"
 categories: ["Coding"]
 tags: [".NET", ".NET Community", ".NET Libraries", "C#", "Coding", "Community Development", "Developer Tools", "Forking Projects", "Library Ecosystem", "Monetization", "Open Source", "Software Maintenance", "Sustainability", "Videos"]
 tags_normalized: ["dotnet", "dotnet community", "dotnet libraries", "csharp", "coding", "community development", "developer tools", "forking projects", "library ecosystem", "monetization", "open source", "software maintenance", "sustainability", "videos"]

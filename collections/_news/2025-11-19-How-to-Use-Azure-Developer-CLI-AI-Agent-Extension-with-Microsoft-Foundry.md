@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Azure SDK Blog"
 feed_url: "https://devblogs.microsoft.com/azure-sdk/feed/"
 date: 2025-11-19 17:22:31 +00:00
-permalink: "/news/2025-11-19-How-to-Use-Azure-Developer-CLI-AI-Agent-Extension-with-Microsoft-Foundry.html"
+permalink: "/2025-11-19-How-to-Use-Azure-Developer-CLI-AI-Agent-Extension-with-Microsoft-Foundry.html"
 categories: ["AI", "Azure", "Coding", "DevOps"]
 tags: [".NET", "Agent Initialization", "Agents", "AI", "AI Agent", "Azd", "Azure", "Azure Developer CLI", "Azure Resource Manager", "Azure SDK", "Bicep", "CI/CD", "Codespaces", "Coding", "Container Registry", "Declarative Configuration", "DevOps", "Docker", "Environment Variables", "GitHub", "IaC", "Java", "JavaScript", "Kubernetes", "Managed Identity", "Microsoft Foundry", "News", "Project Scaffolding", "Python", "Typescript", "VS Code"]
 tags_normalized: ["dotnet", "agent initialization", "agents", "ai", "ai agent", "azd", "azure", "azure developer cli", "azure resource manager", "azure sdk", "bicep", "cislashcd", "codespaces", "coding", "container registry", "declarative configuration", "devops", "docker", "environment variables", "github", "iac", "java", "javascript", "kubernetes", "managed identity", "microsoft foundry", "news", "project scaffolding", "python", "typescript", "vs code"]

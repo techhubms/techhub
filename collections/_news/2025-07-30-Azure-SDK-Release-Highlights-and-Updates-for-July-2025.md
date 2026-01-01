@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft DevBlog"
 feed_url: "https://devblogs.microsoft.com/azure-sdk/feed/"
 date: 2025-07-30 22:41:00 +00:00
-permalink: "/news/2025-07-30-Azure-SDK-Release-Highlights-and-Updates-for-July-2025.html"
+permalink: "/2025-07-30-Azure-SDK-Release-Highlights-and-Updates-for-July-2025.html"
 categories: ["AI", "Azure", "Coding", "Security"]
 tags: [".NET", "AI", "AI Agents", "Azure", "Azure SDK", "Azure Storage", "Certificate Management", "Cloud Health", "Coding", "Event Grid", "Go", "Java", "JavaScript", "Key Vault", "Lambda Test", "Management Libraries", "MongoDB Atlas", "News", "Playwright", "Python", "Release Notes", "Resource Management", "SDK", "Security", "System Events"]
 tags_normalized: ["dotnet", "ai", "ai agents", "azure", "azure sdk", "azure storage", "certificate management", "cloud health", "coding", "event grid", "go", "java", "javascript", "key vault", "lambda test", "management libraries", "mongodb atlas", "news", "playwright", "python", "release notes", "resource management", "sdk", "security", "system events"]

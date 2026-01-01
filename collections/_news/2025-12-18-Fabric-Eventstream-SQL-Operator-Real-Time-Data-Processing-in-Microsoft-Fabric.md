@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Fabric Blog"
 feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
 date: 2025-12-18 09:59:11 +00:00
-permalink: "/news/2025-12-18-Fabric-Eventstream-SQL-Operator-Real-Time-Data-Processing-in-Microsoft-Fabric.html"
+permalink: "/2025-12-18-Fabric-Eventstream-SQL-Operator-Real-Time-Data-Processing-in-Microsoft-Fabric.html"
 categories: ["Azure", "ML"]
 tags: ["Aggregation", "Anomaly Detection", "Azure", "Azure Stream Analytics", "Data Engineering", "Data Pipeline", "Data Transformation", "Event Driven Architecture", "Eventstream", "Low Code", "Microsoft Fabric", "ML", "News", "Power BI", "Real Time Intelligence", "SQL Operator", "SQL Query", "Streaming Data"]
 tags_normalized: ["aggregation", "anomaly detection", "azure", "azure stream analytics", "data engineering", "data pipeline", "data transformation", "event driven architecture", "eventstream", "low code", "microsoft fabric", "ml", "news", "power bi", "real time intelligence", "sql operator", "sql query", "streaming data"]

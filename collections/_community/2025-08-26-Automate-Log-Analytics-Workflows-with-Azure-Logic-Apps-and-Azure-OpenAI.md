@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-08-26 13:19:57 +00:00
-permalink: "/community/2025-08-26-Automate-Log-Analytics-Workflows-with-Azure-Logic-Apps-and-Azure-OpenAI.html"
+permalink: "/2025-08-26-Automate-Log-Analytics-Workflows-with-Azure-Logic-Apps-and-Azure-OpenAI.html"
 categories: ["AI", "Azure"]
 tags: ["AI", "Application Insights", "Automation", "Azure", "Azure Logic Apps", "Azure Monitor", "Azure OpenAI", "Cloud Monitoring", "Community", "Data Summarization", "Email Reports", "Error Analysis", "GPT 4", "KQL", "LLMs", "Log Analytics", "Microsoft Azure", "Operational Insights", "Workflows"]
 tags_normalized: ["ai", "application insights", "automation", "azure", "azure logic apps", "azure monitor", "azure openai", "cloud monitoring", "community", "data summarization", "email reports", "error analysis", "gpt 4", "kql", "llms", "log analytics", "microsoft azure", "operational insights", "workflows"]

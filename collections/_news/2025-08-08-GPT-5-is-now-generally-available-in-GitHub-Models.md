@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/changelog/feed/"
 date: 2025-08-08 00:00:05 +00:00
-permalink: "/news/2025-08-08-GPT-5-is-now-generally-available-in-GitHub-Models.html"
+permalink: "/2025-08-08-GPT-5-is-now-generally-available-in-GitHub-Models.html"
 categories: ["AI"]
 tags: ["AI", "AI Collaboration", "AI Models", "APIs", "Code Generation", "Coding Assistant", "Conversational AI", "GitHub Models", "GPT 5", "Gpt 5 Chat", "Gpt 5 Mini", "Gpt 5 Nano", "Model Integration", "Model Playground", "Model Variants", "News", "OpenAI", "Software Development"]
 tags_normalized: ["ai", "ai collaboration", "ai models", "apis", "code generation", "coding assistant", "conversational ai", "github models", "gpt 5", "gpt 5 chat", "gpt 5 mini", "gpt 5 nano", "model integration", "model playground", "model variants", "news", "openai", "software development"]

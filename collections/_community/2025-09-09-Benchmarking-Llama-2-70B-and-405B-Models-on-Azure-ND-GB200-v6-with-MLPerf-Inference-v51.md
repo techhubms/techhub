@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-09-09 15:00:00 +00:00
-permalink: "/community/2025-09-09-Benchmarking-Llama-2-70B-and-405B-Models-on-Azure-ND-GB200-v6-with-MLPerf-Inference-v51.html"
+permalink: "/2025-09-09-Benchmarking-Llama-2-70B-and-405B-Models-on-Azure-ND-GB200-v6-with-MLPerf-Inference-v51.html"
 categories: ["AI", "Azure", "ML"]
 tags: ["AI", "AI Benchmarking", "Azure", "Azure HPC", "Azure ND GB200 V6", "Azure Virtual Machines", "Community", "Containerization", "GPU Acceleration", "Large Language Models", "Llama 2 70B", "Llama 3.1 405B", "ML", "ML Workflow", "MLCommons", "MLPerf Inference", "NVIDIA Blackwell B200 GPU", "NVIDIA Grace CPU", "Performance Testing"]
 tags_normalized: ["ai", "ai benchmarking", "azure", "azure hpc", "azure nd gb200 v6", "azure virtual machines", "community", "containerization", "gpu acceleration", "large language models", "llama 2 70b", "llama 3dot1 405b", "ml", "ml workflow", "mlcommons", "mlperf inference", "nvidia blackwell b200 gpu", "nvidia grace cpu", "performance testing"]

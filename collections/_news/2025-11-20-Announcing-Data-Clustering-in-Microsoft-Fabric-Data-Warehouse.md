@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Fabric Blog"
 feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
 date: 2025-11-20 14:00:00 +00:00
-permalink: "/news/2025-11-20-Announcing-Data-Clustering-in-Microsoft-Fabric-Data-Warehouse.html"
+permalink: "/2025-11-20-Announcing-Data-Clustering-in-Microsoft-Fabric-Data-Warehouse.html"
 categories: ["ML"]
 tags: ["Analytics", "Big Data", "CLUSTER BY", "Data Clustering", "Data Engineering", "Data Storage", "Data Warehouse", "Exec Requests History", "Microsoft Fabric", "ML", "News", "Performance Tuning", "Preview Feature", "Query Insights", "Query Optimization", "Resource Optimization", "SQL"]
 tags_normalized: ["analytics", "big data", "cluster by", "data clustering", "data engineering", "data storage", "data warehouse", "exec requests history", "microsoft fabric", "ml", "news", "performance tuning", "preview feature", "query insights", "query optimization", "resource optimization", "sql"]

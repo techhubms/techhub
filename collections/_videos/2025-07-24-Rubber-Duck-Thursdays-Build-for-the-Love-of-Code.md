@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "GitHub's Youtube channel"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ"
 date: 2025-07-24 23:35:30 +00:00
-permalink: "/videos/2025-07-24-Rubber-Duck-Thursdays-Build-for-the-Love-of-Code.html"
+permalink: "/2025-07-24-Rubber-Duck-Thursdays-Build-for-the-Love-of-Code.html"
 categories: ["Coding"]
 tags: ["Coding", "Collaborative Coding", "GitHub", "Idea Generation", "Live Coding", "Open Source", "Programming", "Rubber Duck Thursdays", "Software Projects", "Streaming", "Videos"]
 tags_normalized: ["coding", "collaborative coding", "github", "idea generation", "live coding", "open source", "programming", "rubber duck thursdays", "software projects", "streaming", "videos"]

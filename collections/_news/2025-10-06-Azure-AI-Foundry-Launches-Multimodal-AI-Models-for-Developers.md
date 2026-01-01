@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft News"
 feed_url: "https://news.microsoft.com/source/feed/"
 date: 2025-10-06 20:20:36 +00:00
-permalink: "/news/2025-10-06-Azure-AI-Foundry-Launches-Multimodal-AI-Models-for-Developers.html"
+permalink: "/2025-10-06-Azure-AI-Foundry-Launches-Multimodal-AI-Models-for-Developers.html"
 categories: ["AI", "Azure"]
 tags: ["Agentic AI", "AI", "Audio Generation", "AutoGen", "Azure", "Azure AI Foundry", "Cloud AI", "Company News", "GPT 5", "GPT Audio Mini", "GPT Image 1 Mini", "GPT Realtime Mini", "Microsoft", "Microsoft Agent Framework", "Multimodal AI", "News", "OpenAI", "Responsible AI", "Semantic Kernel", "Text To Image"]
 tags_normalized: ["agentic ai", "ai", "audio generation", "autogen", "azure", "azure ai foundry", "cloud ai", "company news", "gpt 5", "gpt audio mini", "gpt image 1 mini", "gpt realtime mini", "microsoft", "microsoft agent framework", "multimodal ai", "news", "openai", "responsible ai", "semantic kernel", "text to image"]

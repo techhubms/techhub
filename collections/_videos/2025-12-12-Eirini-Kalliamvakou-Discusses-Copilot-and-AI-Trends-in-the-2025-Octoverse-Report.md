@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "GitHub YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ"
 date: 2025-12-12 15:01:50 +00:00
-permalink: "/videos/2025-12-12-Eirini-Kalliamvakou-Discusses-Copilot-and-AI-Trends-in-the-2025-Octoverse-Report.html"
+permalink: "/2025-12-12-Eirini-Kalliamvakou-Discusses-Copilot-and-AI-Trends-in-the-2025-Octoverse-Report.html"
 categories: ["AI", "DevOps", "GitHub Copilot"]
 tags: ["AI", "AI Sentiment", "AI Trends", "Developer Onboarding", "Developer Productivity", "DevOps", "GitHub", "GitHub Copilot", "Octoverse", "Pull Requests", "Research Insights", "Software Development", "Team Dynamics", "Videos"]
 tags_normalized: ["ai", "ai sentiment", "ai trends", "developer onboarding", "developer productivity", "devops", "github", "github copilot", "octoverse", "pull requests", "research insights", "software development", "team dynamics", "videos"]

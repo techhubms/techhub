@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Reddit Azure"
 feed_url: "https://www.reddit.com/r/azure/.rss"
 date: 2025-07-29 03:25:27 +00:00
-permalink: "/community/2025-07-29-Inherited-a-Large-Azure-Environment-Seeking-Guidance-as-a-New-Cloud-Architect.html"
+permalink: "/2025-07-29-Inherited-a-Large-Azure-Environment-Seeking-Guidance-as-a-New-Cloud-Architect.html"
 categories: ["Azure", "Security"]
 tags: ["Azure", "Azure Subscriptions", "Cloud Adoption", "Cloud Architecture", "Cloud Governance", "Community", "Enterprise IT", "IT Operations", "Organizational Change", "Resource Management", "Security", "Subscription Management"]
 tags_normalized: ["azure", "azure subscriptions", "cloud adoption", "cloud architecture", "cloud governance", "community", "enterprise it", "it operations", "organizational change", "resource management", "security", "subscription management"]

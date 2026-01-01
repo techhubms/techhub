@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Visual Studio Code YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SLNwkd3w"
 date: 2025-09-29 07:01:00 +00:00
-permalink: "/videos/2025-09-29-The-Origins-and-Evolution-of-the-GitHub-MCP-Registry-with-Toby-Padilla.html"
+permalink: "/2025-09-29-The-Origins-and-Evolution-of-the-GitHub-MCP-Registry-with-Toby-Padilla.html"
 categories: ["AI", "GitHub Copilot"]
 tags: ["AI", "AI Tooling", "Cross Company Collaboration", "Developer Tools", "GitHub Copilot", "GitHub MCP Registry", "MCP", "MCP Server", "Open Standards", "Registry Standard", "Videos", "VS Code"]
 tags_normalized: ["ai", "ai tooling", "cross company collaboration", "developer tools", "github copilot", "github mcp registry", "mcp", "mcp server", "open standards", "registry standard", "videos", "vs code"]

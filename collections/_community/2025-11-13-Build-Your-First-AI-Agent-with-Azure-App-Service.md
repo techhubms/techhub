@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-11-13 17:43:25 +00:00
-permalink: "/community/2025-11-13-Build-Your-First-AI-Agent-with-Azure-App-Service.html"
+permalink: "/2025-11-13-Build-Your-First-AI-Agent-with-Azure-App-Service.html"
 categories: ["AI", "Azure", "Coding", "DevOps"]
 tags: [".NET", "Agentic Applications", "AI", "AI Agent", "Azure", "Azure AI Foundry", "Azure App Service", "Azure OpenAI", "Codespaces", "Coding", "Community", "DevOps", "GitHub Actions", "Java", "LangGraph", "MCP", "Microsoft Agent Framework", "Network Isolation", "Node.js", "OpenAPI Integration", "PaaS", "Python", "RAG Applications", "Role Based Access Control", "Semantic Kernel", "Web Apps"]
 tags_normalized: ["dotnet", "agentic applications", "ai", "ai agent", "azure", "azure ai foundry", "azure app service", "azure openai", "codespaces", "coding", "community", "devops", "github actions", "java", "langgraph", "mcp", "microsoft agent framework", "network isolation", "nodedotjs", "openapi integration", "paas", "python", "rag applications", "role based access control", "semantic kernel", "web apps"]

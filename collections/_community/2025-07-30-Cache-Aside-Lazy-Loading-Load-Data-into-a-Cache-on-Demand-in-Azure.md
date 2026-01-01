@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-07-30 07:45:07 +00:00
-permalink: "/community/2025-07-30-Cache-Aside-Lazy-Loading-Load-Data-into-a-Cache-on-Demand-in-Azure.html"
+permalink: "/2025-07-30-Cache-Aside-Lazy-Loading-Load-Data-into-a-Cache-on-Demand-in-Azure.html"
 categories: ["Azure"]
 tags: ["Application Design", "Azure", "Azure Cache For Redis", "Cache Aside", "Caching Patterns", "Cloud Architecture", "Community", "Database Optimization", "Lazy Loading", "Performance", "Scalability"]
 tags_normalized: ["application design", "azure", "azure cache for redis", "cache aside", "caching patterns", "cloud architecture", "community", "database optimization", "lazy loading", "performance", "scalability"]

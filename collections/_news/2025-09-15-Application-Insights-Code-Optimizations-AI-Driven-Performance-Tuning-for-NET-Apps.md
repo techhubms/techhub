@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft .NET Blog"
 feed_url: "https://devblogs.microsoft.com/dotnet/feed/"
 date: 2025-09-15 17:05:00 +00:00
-permalink: "/news/2025-09-15-Application-Insights-Code-Optimizations-AI-Driven-Performance-Tuning-for-NET-Apps.html"
+permalink: "/2025-09-15-Application-Insights-Code-Optimizations-AI-Driven-Performance-Tuning-for-NET-Apps.html"
 categories: ["AI", "Azure", "Coding", "DevOps", "GitHub Copilot"]
 tags: [".NET", "AI", "Application Insights", "Azure", "Azure Monitor", "Blocking Insights", "Code Recommendations", "Coding", "Debugging", "DevOps", "GitHub Copilot", "GitHub Issues", "News", "OpenTelemetry", "Performance", "Performance Optimization", "Profiler", "Profiling", "Trace Analysis", "VS", "VS Code", "Work Items"]
 tags_normalized: ["dotnet", "ai", "application insights", "azure", "azure monitor", "blocking insights", "code recommendations", "coding", "debugging", "devops", "github copilot", "github issues", "news", "opentelemetry", "performance", "performance optimization", "profiler", "profiling", "trace analysis", "vs", "vs code", "work items"]

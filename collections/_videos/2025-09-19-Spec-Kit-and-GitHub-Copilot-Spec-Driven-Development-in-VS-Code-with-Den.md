@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Visual Studio Code YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SLNwkd3w"
 date: 2025-09-19 14:37:29 +00:00
-permalink: "/videos/2025-09-19-Spec-Kit-and-GitHub-Copilot-Spec-Driven-Development-in-VS-Code-with-Den.html"
+permalink: "/2025-09-19-Spec-Kit-and-GitHub-Copilot-Spec-Driven-Development-in-VS-Code-with-Den.html"
 categories: ["AI", "Coding", "GitHub Copilot"]
 tags: ["AI", "AI Tools", "Code Generation", "Coding", "Den Delimarsky", "GitHub Copilot", "Live Demo", "Open Source Toolkit", "Software Specifications", "Spec Driven Development", "Spec Kit", "Speckit", "Videos", "VS Code"]
 tags_normalized: ["ai", "ai tools", "code generation", "coding", "den delimarsky", "github copilot", "live demo", "open source toolkit", "software specifications", "spec driven development", "spec kit", "speckit", "videos", "vs code"]

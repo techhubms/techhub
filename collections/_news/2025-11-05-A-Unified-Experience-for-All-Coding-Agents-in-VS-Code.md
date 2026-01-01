@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Visual Studio Code Releases"
 feed_url: "https://code.visualstudio.com/feed.xml"
 date: 2025-11-05 00:00:00 +00:00
-permalink: "/news/2025-11-05-A-Unified-Experience-for-All-Coding-Agents-in-VS-Code.html"
+permalink: "/2025-11-05-A-Unified-Experience-for-All-Coding-Agents-in-VS-Code.html"
 categories: ["AI", "Coding", "GitHub Copilot"]
 tags: ["Agent Sessions", "AI", "Anthropic Claude", "Code Orchestration", "Coding", "Coding Agents", "Context Engineering", "Copilot CLI", "Custom Agents", "Developers", "GitHub Copilot", "Model Integration", "News", "OpenAI Codex", "Plan Agent", "Pro+ Subscription", "Prompt Engineering", "Subagents", "VS Code"]
 tags_normalized: ["agent sessions", "ai", "anthropic claude", "code orchestration", "coding", "coding agents", "context engineering", "copilot cli", "custom agents", "developers", "github copilot", "model integration", "news", "openai codex", "plan agent", "proplus subscription", "prompt engineering", "subagents", "vs code"]

@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Developer YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
 date: 2025-07-29 22:42:02 +00:00
-permalink: "/videos/2025-07-29-MCP-Gets-OAuth-Understanding-the-New-Authorization-Specification.html"
+permalink: "/2025-07-29-MCP-Gets-OAuth-Understanding-the-New-Authorization-Specification.html"
 categories: ["AI", "Azure", "Security"]
 tags: ["AI", "AI Agent", "Authorization", "Azure", "Azure AI Foundry", "Cloud Computing", "Dev", "Development", "Dynamic Client Registration", "Integration", "MCP", "Microsoft", "OAuth 2.1", "Protected Resource Metadata", "Security", "Tech", "Technology", "Videos", "VS Code"]
 tags_normalized: ["ai", "ai agent", "authorization", "azure", "azure ai foundry", "cloud computing", "dev", "development", "dynamic client registration", "integration", "mcp", "microsoft", "oauth 2dot1", "protected resource metadata", "security", "tech", "technology", "videos", "vs code"]

@@ -9,10 +9,10 @@ viewing_mode: "external"
 feed_name: "Dellenny's Blog"
 feed_url: "https://dellenny.com/feed/"
 date: 2025-08-27 07:40:16 +00:00
-permalink: "/blogs/2025-08-27-Service-Mesh-Architecture-Pattern-in-Azure-Managing-Microservices-Communication-Security-and-Observability.html"
+permalink: "/2025-08-27-Service-Mesh-Architecture-Pattern-in-Azure-Managing-Microservices-Communication-Security-and-Observability.html"
 categories: ["Azure", "Security"]
-tags: ["AKS", "Application Insights", "Architecture", "Azure", "Azure Active Directory", "Azure Key Vault", "Azure Monitor", "CI/CD", "Cloud Native", "Consul", "Distributed Tracing", "Istio", "Microservices", "Mtls", "Observability", "Open Service Mesh", "Policy Automation", "Blogs", "RBAC", "Security", "Service Mesh", "Sidecar Proxy", "Solution Architecture", "Traffic Routing", "Zero Trust Security"]
-tags_normalized: ["aks", "application insights", "architecture", "azure", "azure active directory", "azure key vault", "azure monitor", "cislashcd", "cloud native", "consul", "distributed tracing", "istio", "microservices", "mtls", "observability", "open service mesh", "policy automation", "blogs", "rbac", "security", "service mesh", "sidecar proxy", "solution architecture", "traffic routing", "zero trust security"]
+tags: ["AKS", "Application Insights", "Architecture", "Azure", "Azure Active Directory", "Azure Key Vault", "Azure Monitor", "Blogs", "CI/CD", "Cloud Native", "Consul", "Distributed Tracing", "Istio", "Microservices", "Mtls", "Observability", "Open Service Mesh", "Policy Automation", "RBAC", "Security", "Service Mesh", "Sidecar Proxy", "Solution Architecture", "Traffic Routing", "Zero Trust Security"]
+tags_normalized: ["aks", "application insights", "architecture", "azure", "azure active directory", "azure key vault", "azure monitor", "blogs", "cislashcd", "cloud native", "consul", "distributed tracing", "istio", "microservices", "mtls", "observability", "open service mesh", "policy automation", "rbac", "security", "service mesh", "sidecar proxy", "solution architecture", "traffic routing", "zero trust security"]
 ---
 
 Dellenny discusses how Service Mesh architectures on Azure, using options like Istio and Open Service Mesh, streamline microservices communication, enhance security, and expand observability for cloud-native applications.<!--excerpt_end-->

@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Developer YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
 date: 2025-09-23 18:25:56 +00:00
-permalink: "/videos/2025-09-23-Building-a-Resilience-Coach-with-AI-on-Cozy-AI-Kitchen.html"
+permalink: "/2025-09-23-Building-a-Resilience-Coach-with-AI-on-Cozy-AI-Kitchen.html"
 categories: ["AI", "Coding"]
 tags: ["Agent Development", "AI", "AI Coaching", "AI Engineering", "Azure OpenAI", "Cloud Computing", "Coding", "Context Engineering", "Cozy AI Kitchen", "Dev", "Development", "Emotional Adaptation", "Grit", "Kubler Ross Curve", "Microsoft", "Microsoft Developer", "Positive Psychology", "Python", "Resilience", "Tech", "Technology", "Tutorial", "Videos", "VS Code"]
 tags_normalized: ["agent development", "ai", "ai coaching", "ai engineering", "azure openai", "cloud computing", "coding", "context engineering", "cozy ai kitchen", "dev", "development", "emotional adaptation", "grit", "kubler ross curve", "microsoft", "microsoft developer", "positive psychology", "python", "resilience", "tech", "technology", "tutorial", "videos", "vs code"]

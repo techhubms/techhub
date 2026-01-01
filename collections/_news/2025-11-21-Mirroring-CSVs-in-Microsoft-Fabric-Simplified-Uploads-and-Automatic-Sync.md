@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Fabric Blog"
 feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
 date: 2025-11-21 11:30:00 +00:00
-permalink: "/news/2025-11-21-Mirroring-CSVs-in-Microsoft-Fabric-Simplified-Uploads-and-Automatic-Sync.html"
+permalink: "/2025-11-21-Mirroring-CSVs-in-Microsoft-Fabric-Simplified-Uploads-and-Automatic-Sync.html"
 categories: ["Azure", "ML"]
 tags: ["AI", "AI Workflows", "Automatic Synchronization", "Azure", "BI", "Change Tracking", "CSV Upload", "Data Integration", "Data Pipeline", "ETL", "Free Storage", "Microsoft Fabric", "Mirroring", "ML", "News", "OneLake", "Parquet Files", "Primary Key", "SQL Analytics Endpoint"]
 tags_normalized: ["ai", "ai workflows", "automatic synchronization", "azure", "bi", "change tracking", "csv upload", "data integration", "data pipeline", "etl", "free storage", "microsoft fabric", "mirroring", "ml", "news", "onelake", "parquet files", "primary key", "sql analytics endpoint"]

@@ -9,10 +9,10 @@ viewing_mode: "external"
 feed_name: "Dellenny's Blog"
 feed_url: "https://dellenny.com/feed/"
 date: 2025-11-22 08:14:41 +00:00
-permalink: "/blogs/2025-11-22-Windows-11-Security-Features-Protecting-Your-PC-and-Data.html"
+permalink: "/2025-11-22-Windows-11-Security-Features-Protecting-Your-PC-and-Data.html"
 categories: ["Security"]
-tags: ["BitLocker", "Controlled Folder Access", "Core Isolation", "Defender Antivirus", "Dynamic Lock", "Encryption", "Enhanced Phishing Protection", "Memory Integrity", "Microsoft Defender", "Passkeys", "PC Security", "Blogs", "Ransomware Protection", "Secure Boot", "Security", "Smart App Control", "TPM 2.0", "UEFI", "VBS", "Virtualization Based Security", "Windows 11", "Windows Defender Firewall", "Windows Hello"]
-tags_normalized: ["bitlocker", "controlled folder access", "core isolation", "defender antivirus", "dynamic lock", "encryption", "enhanced phishing protection", "memory integrity", "microsoft defender", "passkeys", "pc security", "blogs", "ransomware protection", "secure boot", "security", "smart app control", "tpm 2dot0", "uefi", "vbs", "virtualization based security", "windows 11", "windows defender firewall", "windows hello"]
+tags: ["BitLocker", "Blogs", "Controlled Folder Access", "Core Isolation", "Defender Antivirus", "Dynamic Lock", "Encryption", "Enhanced Phishing Protection", "Memory Integrity", "Microsoft Defender", "Passkeys", "PC Security", "Ransomware Protection", "Secure Boot", "Security", "Smart App Control", "TPM 2.0", "UEFI", "VBS", "Virtualization Based Security", "Windows 11", "Windows Defender Firewall", "Windows Hello"]
+tags_normalized: ["bitlocker", "blogs", "controlled folder access", "core isolation", "defender antivirus", "dynamic lock", "encryption", "enhanced phishing protection", "memory integrity", "microsoft defender", "passkeys", "pc security", "ransomware protection", "secure boot", "security", "smart app control", "tpm 2dot0", "uefi", "vbs", "virtualization based security", "windows 11", "windows defender firewall", "windows hello"]
 ---
 
 John Edward investigates Windows 11’s robust security features, highlighting hardware requirements, identity protection, and real-time defense tools for safeguarding users’ PCs and personal data.<!--excerpt_end-->

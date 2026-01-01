@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Fabric Blog"
 feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
 date: 2025-09-02 11:30:00 +00:00
-permalink: "/news/2025-09-02-Introducing-Schema-Registry-for-Type-Safe-Pipelines-in-Microsoft-Fabric-Eventstreams.html"
+permalink: "/2025-09-02-Introducing-Schema-Registry-for-Type-Safe-Pipelines-in-Microsoft-Fabric-Eventstreams.html"
 categories: ["Azure", "ML"]
 tags: ["Avro", "Azure", "Azure SQL CDC", "Data Governance", "Data Management", "Data Pipeline", "Data Quality", "Event Schema Sets", "Eventhouse", "Eventstream", "Microsoft Fabric", "ML", "News", "Preview Features", "Real Time Intelligence", "Schema Registry", "Schema Validation", "Streaming Analytics", "Versioning"]
 tags_normalized: ["avro", "azure", "azure sql cdc", "data governance", "data management", "data pipeline", "data quality", "event schema sets", "eventhouse", "eventstream", "microsoft fabric", "ml", "news", "preview features", "real time intelligence", "schema registry", "schema validation", "streaming analytics", "versioning"]

@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The Azure Blog"
 feed_url: "https://azure.microsoft.com/en-us/blog/feed/"
 date: 2025-09-15 15:00:00 +00:00
-permalink: "/news/2025-09-15-Accelerating-AI-and-Databases-with-Azure-Container-Storage-v20-7x-Faster-Open-Source-and-Free.html"
+permalink: "/2025-09-15-Accelerating-AI-and-Databases-with-Azure-Container-Storage-v20-7x-Faster-Open-Source-and-Free.html"
 categories: ["AI", "Azure"]
 tags: ["AI", "AKS", "Azure", "Azure Container Storage", "Cloud Storage", "Compute", "Containers", "CSI", "Databases", "IOPS", "KAITO", "Kubernetes", "Latency", "Model Deployment", "News", "NVMe", "Open Source", "Performance Optimization", "Persistent Volumes", "PostgreSQL", "Stateful Workloads", "Storage Orchestration"]
 tags_normalized: ["ai", "aks", "azure", "azure container storage", "cloud storage", "compute", "containers", "csi", "databases", "iops", "kaito", "kubernetes", "latency", "model deployment", "news", "nvme", "open source", "performance optimization", "persistent volumes", "postgresql", "stateful workloads", "storage orchestration"]

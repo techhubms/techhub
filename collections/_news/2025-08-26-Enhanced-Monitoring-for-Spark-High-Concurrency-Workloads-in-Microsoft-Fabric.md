@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Fabric Blog"
 feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
 date: 2025-08-26 12:04:04 +00:00
-permalink: "/news/2025-08-26-Enhanced-Monitoring-for-Spark-High-Concurrency-Workloads-in-Microsoft-Fabric.html"
+permalink: "/2025-08-26-Enhanced-Monitoring-for-Spark-High-Concurrency-Workloads-in-Microsoft-Fabric.html"
 categories: ["Azure", "ML"]
 tags: ["Azure", "Big Data", "Data Engineering", "Debugging", "Developer Productivity", "Distributed Computing", "Execution Model", "High Concurrency", "Job Monitoring", "Logs", "Microsoft Fabric", "ML", "News", "Notebook Monitoring", "Notebook Snapshots", "Observability", "Performance Tuning", "Pipeline Integration", "Spark"]
 tags_normalized: ["azure", "big data", "data engineering", "debugging", "developer productivity", "distributed computing", "execution model", "high concurrency", "job monitoring", "logs", "microsoft fabric", "ml", "news", "notebook monitoring", "notebook snapshots", "observability", "performance tuning", "pipeline integration", "spark"]

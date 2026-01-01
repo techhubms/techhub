@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Reddit Azure"
 feed_url: "https://www.reddit.com/r/azure/.rss"
 date: 2025-08-03 15:34:00 +00:00
-permalink: "/community/2025-08-03-Implementing-NVA-for-Internet-Egress-and-Inter-Subnet-Routing-in-Azure-Hub-Spoke-Topology.html"
+permalink: "/2025-08-03-Implementing-NVA-for-Internet-Egress-and-Inter-Subnet-Routing-in-Azure-Hub-Spoke-Topology.html"
 categories: ["Azure"]
 tags: ["Azure", "Azure Load Balancer", "Cato Networks", "Community", "Hub Spoke Topology", "Inter Subnet Routing", "Internet Egress", "LAN/WAN", "Network Virtual Appliance", "Public IP", "Route Tables", "SASE", "UDR", "Vnet Peering", "VPN Gateway"]
 tags_normalized: ["azure", "azure load balancer", "cato networks", "community", "hub spoke topology", "inter subnet routing", "internet egress", "lanslashwan", "network virtual appliance", "public ip", "route tables", "sase", "udr", "vnet peering", "vpn gateway"]

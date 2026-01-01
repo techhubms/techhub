@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/changelog/feed/"
 date: 2025-09-04 21:07:51 +00:00
-permalink: "/news/2025-09-04-GitHub-Dashboard-Feed-Page-Updated-for-Better-Performance-and-Consistency.html"
+permalink: "/2025-09-04-GitHub-Dashboard-Feed-Page-Updated-for-Better-Performance-and-Consistency.html"
 categories: ["DevOps"]
 tags: ["Dashboard Feed", "DevOps", "Event Feeds", "Feed Upgrades", "GitHub", "GitHub Homepage", "Infrastructure", "News", "Performance Improvements", "Product Update", "Recommendations", "Release Notes", "User Experience"]
 tags_normalized: ["dashboard feed", "devops", "event feeds", "feed upgrades", "github", "github homepage", "infrastructure", "news", "performance improvements", "product update", "recommendations", "release notes", "user experience"]

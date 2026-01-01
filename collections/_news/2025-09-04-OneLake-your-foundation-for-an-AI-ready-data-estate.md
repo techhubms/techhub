@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Fabric Blog"
 feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
 date: 2025-09-04 09:00:00 +00:00
-permalink: "/news/2025-09-04-OneLake-your-foundation-for-an-AI-ready-data-estate.html"
+permalink: "/2025-09-04-OneLake-your-foundation-for-an-AI-ready-data-estate.html"
 categories: ["AI", "Azure", "ML", "Security"]
 tags: ["AI", "Apache Iceberg", "Azure", "Azure AI Foundry", "Data Agents", "Data Catalog", "Data Estate", "Data Governance", "Data Integration", "Data Lake", "Data Mesh", "Data Sharing", "Delta Parquet", "Generative AI", "Microsoft Fabric", "Microsoft OneLake", "Mirroring", "ML", "News", "Power BI", "Purview", "Security", "Shortcuts"]
 tags_normalized: ["ai", "apache iceberg", "azure", "azure ai foundry", "data agents", "data catalog", "data estate", "data governance", "data integration", "data lake", "data mesh", "data sharing", "delta parquet", "generative ai", "microsoft fabric", "microsoft onelake", "mirroring", "ml", "news", "power bi", "purview", "security", "shortcuts"]

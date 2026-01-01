@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-09-30 09:26:23 +00:00
-permalink: "/community/2025-09-30-How-to-Use-Exclude-Prefix-for-Smarter-Blob-Management-in-Azure-Storage-Actions.html"
+permalink: "/2025-09-30-How-to-Use-Exclude-Prefix-for-Smarter-Blob-Management-in-Azure-Storage-Actions.html"
 categories: ["Azure"]
 tags: ["Automation", "Azure", "Azure Portal", "Azure Storage Actions", "Blob Deletion", "Blob Filtering", "Blob Management", "Community", "Condition Filtering", "Data Lake Storage", "Exclude Prefix", "Operational Efficiency", "Role Assignment", "Storage Blob Data Owner", "Task Assignment", "Workflow Automation"]
 tags_normalized: ["automation", "azure", "azure portal", "azure storage actions", "blob deletion", "blob filtering", "blob management", "community", "condition filtering", "data lake storage", "exclude prefix", "operational efficiency", "role assignment", "storage blob data owner", "task assignment", "workflow automation"]

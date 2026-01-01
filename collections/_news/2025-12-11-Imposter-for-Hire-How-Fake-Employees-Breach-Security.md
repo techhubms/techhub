@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Security Blog"
 feed_url: "https://www.microsoft.com/en-us/security/blog/feed/"
 date: 2025-12-11 17:00:00 +00:00
-permalink: "/news/2025-12-11-Imposter-for-Hire-How-Fake-Employees-Breach-Security.html"
+permalink: "/2025-12-11-Imposter-for-Hire-How-Fake-Employees-Breach-Security.html"
 categories: ["Azure", "Security"]
 tags: ["Active Directory", "Azure", "Cloud Security", "Cyberattack", "DART", "Detection And Response", "Endpoint Security", "Incident Investigation", "Insider Risk Management", "Microsoft Defender", "Microsoft Entra ID", "Microsoft Incident Response", "Microsoft Purview", "News", "PiKVM", "Security", "Security Operations", "Threat Intelligence"]
 tags_normalized: ["active directory", "azure", "cloud security", "cyberattack", "dart", "detection and response", "endpoint security", "incident investigation", "insider risk management", "microsoft defender", "microsoft entra id", "microsoft incident response", "microsoft purview", "news", "pikvm", "security", "security operations", "threat intelligence"]

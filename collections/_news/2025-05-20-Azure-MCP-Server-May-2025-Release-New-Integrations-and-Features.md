@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft DevBlog"
 feed_url: "https://devblogs.microsoft.com/azure-sdk/feed/"
 date: 2025-05-20 19:40:20 +00:00
-permalink: "/news/2025-05-20-Azure-MCP-Server-May-2025-Release-New-Integrations-and-Features.html"
+permalink: "/2025-05-20-Azure-MCP-Server-May-2025-Release-New-Integrations-and-Features.html"
 categories: ["AI", "Azure", "Coding", "ML", "DevOps", "GitHub Copilot", "Security"]
 tags: [".NET", "Agents", "AI", "Azure", "Azure AI Search", "Azure Data Explorer", "Azure Key Vault", "Azure MCP Server", "Azure SDK", "Azure Service Bus", "Cloud", "Coding", "Data Analytics", "Developer Best Practices", "DevOps", "Documentation", "GitHub Copilot", "GitHub Copilot For Azure", "Integrations", "Kusto", "MCP", "ML", "News", "PostgreSQL", "Python", "Security", "VS Code"]
 tags_normalized: ["dotnet", "agents", "ai", "azure", "azure ai search", "azure data explorer", "azure key vault", "azure mcp server", "azure sdk", "azure service bus", "cloud", "coding", "data analytics", "developer best practices", "devops", "documentation", "github copilot", "github copilot for azure", "integrations", "kusto", "mcp", "ml", "news", "postgresql", "python", "security", "vs code"]

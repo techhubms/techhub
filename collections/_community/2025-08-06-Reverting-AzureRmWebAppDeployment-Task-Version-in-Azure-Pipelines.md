@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Reddit Azure DevOps"
 feed_url: "https://www.reddit.com/r/azuredevops/.rss"
 date: 2025-08-06 13:45:43 +00:00
-permalink: "/community/2025-08-06-Reverting-AzureRmWebAppDeployment-Task-Version-in-Azure-Pipelines.html"
+permalink: "/2025-08-06-Reverting-AzureRmWebAppDeployment-Task-Version-in-Azure-Pipelines.html"
 categories: ["Azure", "DevOps"]
 tags: ["Azure", "Azure DevOps", "Azure Pipelines", "Azure Pipelines Tasks", "AzureRmWebAppDeployment", "CI/CD", "Community", "Custom Tasks", "Deployment Automation", "DevOps", "npm Packages", "Pipeline Tasks", "PowerShell", "Rollback Strategies", "Task Publishing", "Task Versioning", "Tfx", "YAML Pipelines"]
 tags_normalized: ["azure", "azure devops", "azure pipelines", "azure pipelines tasks", "azurermwebappdeployment", "cislashcd", "community", "custom tasks", "deployment automation", "devops", "npm packages", "pipeline tasks", "powershell", "rollback strategies", "task publishing", "task versioning", "tfx", "yaml pipelines"]

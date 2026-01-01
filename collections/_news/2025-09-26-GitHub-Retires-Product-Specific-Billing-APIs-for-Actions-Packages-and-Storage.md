@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/changelog/feed/"
 date: 2025-09-26 14:10:33 +00:00
-permalink: "/news/2025-09-26-GitHub-Retires-Product-Specific-Billing-APIs-for-Actions-Packages-and-Storage.html"
+permalink: "/2025-09-26-GitHub-Retires-Product-Specific-Billing-APIs-for-Actions-Packages-and-Storage.html"
 categories: ["DevOps"]
 tags: ["Account Management", "API Deprecation", "Billing API", "DevOps", "Endpoint Migration", "Enterprise Cloud", "GitHub", "GitHub Actions", "News", "Packages", "REST API", "Retired", "Shared Storage", "Usage Reporting", "Workflow Automation"]
 tags_normalized: ["account management", "api deprecation", "billing api", "devops", "endpoint migration", "enterprise cloud", "github", "github actions", "news", "packages", "rest api", "retired", "shared storage", "usage reporting", "workflow automation"]

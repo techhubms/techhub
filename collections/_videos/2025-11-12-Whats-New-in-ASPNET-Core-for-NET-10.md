@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "DotNet YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw"
 date: 2025-11-12 19:18:19 +00:00
-permalink: "/videos/2025-11-12-Whats-New-in-ASPNET-Core-for-NET-10.html"
+permalink: "/2025-11-12-Whats-New-in-ASPNET-Core-for-NET-10.html"
 categories: ["Coding"]
 tags: [".NET", ".NET 10", ".NET Aspire", "API Development", "ASP.NET Core", "Blazor", "C#", "Cloud Native", "Coding", "Minimal APIs", "OpenAPI", "Passkey Authentication", "Performance Improvements", "Validation", "Videos", "Web Application Development"]
 tags_normalized: ["dotnet", "dotnet 10", "dotnet aspire", "api development", "aspdotnet core", "blazor", "csharp", "cloud native", "coding", "minimal apis", "openapi", "passkey authentication", "performance improvements", "validation", "videos", "web application development"]

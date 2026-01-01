@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "DotNet YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw"
 date: 2025-11-13 17:40:46 +00:00
-permalink: "/videos/2025-11-13-Whats-New-in-Containers-for-NET-10.html"
+permalink: "/2025-11-13-Whats-New-in-Containers-for-NET-10.html"
 categories: ["Azure", "Coding", "DevOps"]
 tags: [".NET", ".NET 10", ".NET Aspire 13", "ASP.NET Core 10", "Azure", "Azure Container Apps", "C# 14", "Cloud Native", "Coding", "Container Orchestrators", "Containerization", "Debugging", "Deployment", "DevOps", "F# 10", "Kubernetes", "Linux Containers", "Performance Optimization", "SDK Features", "Videos", "VS", "Windows Containers"]
 tags_normalized: ["dotnet", "dotnet 10", "dotnet aspire 13", "aspdotnet core 10", "azure", "azure container apps", "csharp 14", "cloud native", "coding", "container orchestrators", "containerization", "debugging", "deployment", "devops", "fsharp 10", "kubernetes", "linux containers", "performance optimization", "sdk features", "videos", "vs", "windows containers"]

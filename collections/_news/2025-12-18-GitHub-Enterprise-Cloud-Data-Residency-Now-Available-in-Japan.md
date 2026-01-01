@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/changelog/feed/"
 date: 2025-12-18 17:00:58 +00:00
-permalink: "/news/2025-12-18-GitHub-Enterprise-Cloud-Data-Residency-Now-Available-in-Japan.html"
+permalink: "/2025-12-18-GitHub-Enterprise-Cloud-Data-Residency-Now-Available-in-Japan.html"
 categories: ["Azure", "DevOps", "Security"]
 tags: ["Azure", "Cloud Security", "Compliance", "Data Residency", "DevOps", "DevOps Platform", "Enterprise Management Tools", "Enterprise SaaS", "GitHub Enterprise Cloud", "Japan", "Microsoft Azure", "Multi Tenant Hosting", "News", "Regulatory Requirements", "Repository Management", "Security"]
 tags_normalized: ["azure", "cloud security", "compliance", "data residency", "devops", "devops platform", "enterprise management tools", "enterprise saas", "github enterprise cloud", "japan", "microsoft azure", "multi tenant hosting", "news", "regulatory requirements", "repository management", "security"]

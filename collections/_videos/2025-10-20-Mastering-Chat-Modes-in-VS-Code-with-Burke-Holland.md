@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Visual Studio Code YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SLNwkd3w"
 date: 2025-10-20 07:00:04 +00:00
-permalink: "/videos/2025-10-20-Mastering-Chat-Modes-in-VS-Code-with-Burke-Holland.html"
+permalink: "/2025-10-20-Mastering-Chat-Modes-in-VS-Code-with-Burke-Holland.html"
 categories: ["AI", "Coding", "GitHub Copilot"]
 tags: ["AI", "AI Agents", "AI Integration", "Beast Mode", "Burke Holland", "Chat Agent Modes", "Coding", "Copilot Customization", "Developer Tools", "GitHub Copilot", "GPT 4.1", "Productivity", "Programming", "Prompt Engineering", "Videos", "VS Code"]
 tags_normalized: ["ai", "ai agents", "ai integration", "beast mode", "burke holland", "chat agent modes", "coding", "copilot customization", "developer tools", "github copilot", "gpt 4dot1", "productivity", "programming", "prompt engineering", "videos", "vs code"]

@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Events YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
 date: 2025-11-25 12:08:40 +00:00
-permalink: "/videos/2025-11-25-Levis-Global-IT-Transformation-Migration-and-Modernization-with-Azure.html"
+permalink: "/2025-11-25-Levis-Global-IT-Transformation-Migration-and-Modernization-with-Azure.html"
 categories: ["AI", "Azure", "Coding", "DevOps"]
 tags: ["AI", "AI Workflows", "AKS", "Application Modernization", "Azure", "Azure SQL", "Cloud Migration", "Cloud Skills", "Coding", "Cost Savings", "Data Modernization", "DevOps", "Enterprise Modernization", "FinOps", "Infrastructure Re Platforming", "Legacy Data Centers", "Microsoft Ignite", "Migrateandmodernizeyourestate", "MSIgnite", "Oracle", "Public Cloud", "SAP", "SQL Server", "Videos", "Windows Server"]
 tags_normalized: ["ai", "ai workflows", "aks", "application modernization", "azure", "azure sql", "cloud migration", "cloud skills", "coding", "cost savings", "data modernization", "devops", "enterprise modernization", "finops", "infrastructure re platforming", "legacy data centers", "microsoft ignite", "migrateandmodernizeyourestate", "msignite", "oracle", "public cloud", "sap", "sql server", "videos", "windows server"]

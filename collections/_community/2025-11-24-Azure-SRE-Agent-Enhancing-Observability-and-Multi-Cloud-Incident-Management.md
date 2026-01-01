@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-11-24 23:34:13 +00:00
-permalink: "/community/2025-11-24-Azure-SRE-Agent-Enhancing-Observability-and-Multi-Cloud-Incident-Management.html"
+permalink: "/2025-11-24-Azure-SRE-Agent-Enhancing-Observability-and-Multi-Cloud-Incident-Management.html"
 categories: ["Azure", "DevOps"]
 tags: ["Automation", "Azure", "Azure Monitor", "Azure SRE Agent", "Community", "Cross Platform", "Datadog", "DevOps", "Diagnostics", "Dynatrace", "Hybrid Cloud", "Incident Management", "MCP", "MCP Server", "Multi Cloud", "NeuBird", "New Relic", "Observability", "Operational Excellence", "PagerDuty", "Remediation"]
 tags_normalized: ["automation", "azure", "azure monitor", "azure sre agent", "community", "cross platform", "datadog", "devops", "diagnostics", "dynatrace", "hybrid cloud", "incident management", "mcp", "mcp server", "multi cloud", "neubird", "new relic", "observability", "operational excellence", "pagerduty", "remediation"]

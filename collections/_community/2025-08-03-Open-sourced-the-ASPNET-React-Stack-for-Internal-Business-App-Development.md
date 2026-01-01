@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Reddit DotNet"
 feed_url: "https://www.reddit.com/r/dotnet/.rss"
 date: 2025-08-03 14:10:53 +00:00
-permalink: "/community/2025-08-03-Open-sourced-the-ASPNET-React-Stack-for-Internal-Business-App-Development.html"
+permalink: "/2025-08-03-Open-sourced-the-ASPNET-React-Stack-for-Internal-Business-App-Development.html"
 categories: ["Coding"]
 tags: [".NET", "ASP.NET Core", "Business Apps", "Coding", "Community", "CRUD Automation", "Framework", "Full Stack", "Open Source", "React", "Software Development", "User Management", "Xams"]
 tags_normalized: ["dotnet", "aspdotnet core", "business apps", "coding", "community", "crud automation", "framework", "full stack", "open source", "react", "software development", "user management", "xams"]

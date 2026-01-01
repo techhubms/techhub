@@ -6,7 +6,7 @@ author: "Tech Hub Team"
 excerpt_separator: <!--excerpt_end-->
 viewing_mode: "internal"
 date: 2025-09-22 09:00:00 +00:00
-permalink: "/roundups/2025-09-22-Weekly-AI-and-Tech-News-Roundup.html"
+permalink: "/2025-09-22-Weekly-AI-and-Tech-News-Roundup.html"
 categories: ["AI", "GitHub Copilot", "ML", "Azure", "Coding", "DevOps", "Security"]
 tags: ["AI", "AI Agents", "Application Modernization", "Automation", "Azure", "Cloud Migration", "Coding", "Developer Tools", "DevOps", "GitHub Copilot", "Kubernetes", "Large Language Models", "Machine Learning", "MCP (model Context Protocol)", "Microsoft Fabric", "ML", "Quantum Computing", "Roundups", "Security"]
 tags_normalized: ["ai", "ai agents", "application modernization", "automation", "azure", "cloud migration", "coding", "developer tools", "devops", "github copilot", "kubernetes", "large language models", "machine learning", "mcp model context protocol", "microsoft fabric", "ml", "quantum computing", "roundups", "security"]

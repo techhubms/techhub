@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Events YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
 date: 2025-11-24 08:29:58 +00:00
-permalink: "/videos/2025-11-24-Building-Autonomous-Enterprise-Agents-with-Reasoning-in-Microsoft-Foundry.html"
+permalink: "/2025-11-24-Building-Autonomous-Enterprise-Agents-with-Reasoning-in-Microsoft-Foundry.html"
 categories: ["AI", "Azure"]
 tags: ["Advanced AI", "Agentic Workflows", "AI", "Autonomous Agents", "Azure", "Azure AI", "Content Generation", "Customer Support", "Deep Consult", "Demo", "Enterprise Automation", "GPT 5.1", "InnovatewithAzureAIappsandagents", "Lead Scoring", "Microsoft Foundry", "Microsoft Ignite", "Model Router", "MSIgnite", "Multi Agent Collaboration", "NVIDIA Nematron", "Operational Reliability", "Parallel Execution", "Reasoning Models", "Tool Calling", "Videos"]
 tags_normalized: ["advanced ai", "agentic workflows", "ai", "autonomous agents", "azure", "azure ai", "content generation", "customer support", "deep consult", "demo", "enterprise automation", "gpt 5dot1", "innovatewithazureaiappsandagents", "lead scoring", "microsoft foundry", "microsoft ignite", "model router", "msignite", "multi agent collaboration", "nvidia nematron", "operational reliability", "parallel execution", "reasoning models", "tool calling", "videos"]

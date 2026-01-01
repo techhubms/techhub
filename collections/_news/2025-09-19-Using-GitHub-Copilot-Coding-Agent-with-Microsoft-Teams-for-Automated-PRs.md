@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/changelog/feed/"
 date: 2025-09-19 14:07:53 +00:00
-permalink: "/news/2025-09-19-Using-GitHub-Copilot-Coding-Agent-with-Microsoft-Teams-for-Automated-PRs.html"
+permalink: "/2025-09-19-Using-GitHub-Copilot-Coding-Agent-with-Microsoft-Teams-for-Automated-PRs.html"
 categories: ["AI", "Coding", "GitHub Copilot"]
 tags: ["AI", "Async Development", "Automation", "Coding", "Copilot", "Copilot Coding Agent", "Developer Workflow", "GitHub App", "GitHub Business", "GitHub Copilot", "GitHub Enterprise", "Microsoft Teams", "News", "Productivity Tools", "Pull Requests", "Repository Management", "Team Collaboration", "VS Code"]
 tags_normalized: ["ai", "async development", "automation", "coding", "copilot", "copilot coding agent", "developer workflow", "github app", "github business", "github copilot", "github enterprise", "microsoft teams", "news", "productivity tools", "pull requests", "repository management", "team collaboration", "vs code"]

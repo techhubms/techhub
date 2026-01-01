@@ -9,10 +9,10 @@ viewing_mode: "external"
 feed_name: "DevOps Blog"
 feed_url: "https://devops.com/feed/"
 date: 2025-09-09 12:00:08 +00:00
-permalink: "/blogs/2025-09-09-Perforce-Adds-AI-Driven-Synthetic-Data-Generation-to-Delphix-Platform-for-DevOps-Testing.html"
+permalink: "/2025-09-09-Perforce-Adds-AI-Driven-Synthetic-Data-Generation-to-Delphix-Platform-for-DevOps-Testing.html"
 categories: ["AI", "DevOps"]
-tags: ["AI", "AI Automation", "AI in DevOps", "Air Gapped Environments", "Air Gapped IT Environments", "Application Testing", "Compliance", "Compliance Testing AI", "Data Masking", "Data Masking Automation", "Delphix", "DevOps", "DevOps AI", "Llama", "MLOps", "Perforce", "Blogs", "Secure Application Testing", "Secure Testing", "Small Language Model", "Small Language Model (slm)", "Social Facebook", "Social LinkedIn", "Social X", "Synthetic Data", "Synthetic Data Testing"]
-tags_normalized: ["ai", "ai automation", "ai in devops", "air gapped environments", "air gapped it environments", "application testing", "compliance", "compliance testing ai", "data masking", "data masking automation", "delphix", "devops", "devops ai", "llama", "mlops", "perforce", "blogs", "secure application testing", "secure testing", "small language model", "small language model slm", "social facebook", "social linkedin", "social x", "synthetic data", "synthetic data testing"]
+tags: ["AI", "AI Automation", "AI in DevOps", "Air Gapped Environments", "Air Gapped IT Environments", "Application Testing", "Blogs", "Compliance", "Compliance Testing AI", "Data Masking", "Data Masking Automation", "Delphix", "DevOps", "DevOps AI", "Llama", "MLOps", "Perforce", "Secure Application Testing", "Secure Testing", "Small Language Model", "Small Language Model (slm)", "Social Facebook", "Social LinkedIn", "Social X", "Synthetic Data", "Synthetic Data Testing"]
+tags_normalized: ["ai", "ai automation", "ai in devops", "air gapped environments", "air gapped it environments", "application testing", "blogs", "compliance", "compliance testing ai", "data masking", "data masking automation", "delphix", "devops", "devops ai", "llama", "mlops", "perforce", "secure application testing", "secure testing", "small language model", "small language model slm", "social facebook", "social linkedin", "social x", "synthetic data", "synthetic data testing"]
 ---
 
 Mike Vizard examines how Perforce's integration of small language model AI into Delphix enables DevOps teams to securely generate and use synthetic data for testing applications in regulated and air-gapped environments.<!--excerpt_end-->

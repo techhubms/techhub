@@ -9,10 +9,10 @@ viewing_mode: "external"
 feed_name: "Dellenny's Blog"
 feed_url: "https://dellenny.com/feed/"
 date: 2025-08-06 11:19:20 +00:00
-permalink: "/blogs/2025-08-06-GitHub-Copilot-for-Students-How-It-Can-Help-You-Learn-Faster.html"
+permalink: "/2025-08-06-GitHub-Copilot-for-Students-How-It-Can-Help-You-Learn-Faster.html"
 categories: ["AI", "GitHub Copilot"]
-tags: ["AI", "AI Pair Programming", "Bash", "C++", "Code Suggestions", "Coding Assistant", "Debugging", "GitHub Copilot", "Java", "JavaScript", "JetBrains", "Learning To Code", "Blogs", "Productivity", "Programming Education", "Python", "Student Developer Tools", "VS Code"]
-tags_normalized: ["ai", "ai pair programming", "bash", "cplusplus", "code suggestions", "coding assistant", "debugging", "github copilot", "java", "javascript", "jetbrains", "learning to code", "blogs", "productivity", "programming education", "python", "student developer tools", "vs code"]
+tags: ["AI", "AI Pair Programming", "Bash", "Blogs", "C++", "Code Suggestions", "Coding Assistant", "Debugging", "GitHub Copilot", "Java", "JavaScript", "JetBrains", "Learning To Code", "Productivity", "Programming Education", "Python", "Student Developer Tools", "VS Code"]
+tags_normalized: ["ai", "ai pair programming", "bash", "blogs", "cplusplus", "code suggestions", "coding assistant", "debugging", "github copilot", "java", "javascript", "jetbrains", "learning to code", "productivity", "programming education", "python", "student developer tools", "vs code"]
 ---
 
 Dellenny explains how students and self-learners can use GitHub Copilot as an AI-powered pair programmer to accelerate coding education, highlighting its features and offering tips for effective use.<!--excerpt_end-->

@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Events YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
 date: 2025-11-19 13:18:43 +00:00
-permalink: "/videos/2025-11-19-Azure-Local-and-Atos-Migrating-Internal-Services-from-VMware.html"
+permalink: "/2025-11-19-Azure-Local-and-Atos-Migrating-Internal-Services-from-VMware.html"
 categories: ["Azure"]
 tags: ["Atos", "Azure", "Azure Arc", "Azure Local", "Cloud Transformation", "Hybrid Cloud", "Internal IT Services", "Licensing Flexibility", "Microsoft Ignite", "Migrateandmodernizeyourestate", "MSIgnite", "Network Readiness", "NVMe Storage", "On Premises Infrastructure", "Operational Model", "PostgreSQL", "SQL Modernization", "Storage Spaces Direct", "Videos", "VMware Migration"]
 tags_normalized: ["atos", "azure", "azure arc", "azure local", "cloud transformation", "hybrid cloud", "internal it services", "licensing flexibility", "microsoft ignite", "migrateandmodernizeyourestate", "msignite", "network readiness", "nvme storage", "on premises infrastructure", "operational model", "postgresql", "sql modernization", "storage spaces direct", "videos", "vmware migration"]

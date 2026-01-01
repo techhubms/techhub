@@ -9,7 +9,7 @@ categories: ["AI", "GitHub Copilot"]
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/feed/"
 date: 2025-07-14 16:38:03 +00:00
-permalink: "/news/2025-07-14-Code-review-in-the-age-of-AI-Why-developers-will-always-own-the-merge-button.html"
+permalink: "/2025-07-14-Code-review-in-the-age-of-AI-Why-developers-will-always-own-the-merge-button.html"
 viewing_mode: "external"
 tags: ["Agentic Workflows", "AI", "AI & ML", "AI Agents", "AI Assisted Coding", "Automation", "Code Merging", "Code Review", "Coding Workflow", "Collaboration", "Developer Tools", "Generative AI", "GitHub Copilot", "Merge Decisions", "News", "Programming Productivity", "Software Development"]
 tags_normalized: ["agentic workflows", "ai", "ai and ml", "ai agents", "ai assisted coding", "automation", "code merging", "code review", "coding workflow", "collaboration", "developer tools", "generative ai", "github copilot", "merge decisions", "news", "programming productivity", "software development"]

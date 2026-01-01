@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/changelog/feed/"
 date: 2025-11-18 17:30:11 +00:00
-permalink: "/news/2025-11-18-GitHub-Copilot-Next-Edit-Suggestions-NES-Public-Preview-for-Xcode-and-Eclipse.html"
+permalink: "/2025-11-18-GitHub-Copilot-Next-Edit-Suggestions-NES-Public-Preview-for-Xcode-and-Eclipse.html"
 categories: ["AI", "GitHub Copilot"]
 tags: ["AI", "AI Assistance", "Code Suggestions", "Copilot", "Developer Tools", "Eclipse", "GitHub Copilot", "IDE", "Improvement", "NES", "News", "Next Edit Suggestions", "Plugin", "Productivity", "Public Preview", "Xcode"]
 tags_normalized: ["ai", "ai assistance", "code suggestions", "copilot", "developer tools", "eclipse", "github copilot", "ide", "improvement", "nes", "news", "next edit suggestions", "plugin", "productivity", "public preview", "xcode"]

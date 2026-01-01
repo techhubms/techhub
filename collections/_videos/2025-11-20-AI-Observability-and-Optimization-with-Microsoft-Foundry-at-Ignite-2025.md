@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Events YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
 date: 2025-11-20 16:18:44 +00:00
-permalink: "/videos/2025-11-20-AI-Observability-and-Optimization-with-Microsoft-Foundry-at-Ignite-2025.html"
+permalink: "/2025-11-20-AI-Observability-and-Optimization-with-Microsoft-Foundry-at-Ignite-2025.html"
 categories: ["AI", "Azure", "DevOps"]
 tags: ["Agent Fleet Management", "AI", "AI Observability", "AI Optimization", "Azure", "CarMax", "Continuous Evaluation", "Deployment Gates", "DevOps", "Diagnostics", "GitHub Integration", "Human in The Loop", "InnovatewithAzureAIappsandagents", "Microsoft Foundry", "MS Ignite", "MSIgnite", "Partner Case Study", "Production Monitoring", "Risk Assessment", "Safety Evaluation", "Sky Release", "Videos"]
 tags_normalized: ["agent fleet management", "ai", "ai observability", "ai optimization", "azure", "carmax", "continuous evaluation", "deployment gates", "devops", "diagnostics", "github integration", "human in the loop", "innovatewithazureaiappsandagents", "microsoft foundry", "ms ignite", "msignite", "partner case study", "production monitoring", "risk assessment", "safety evaluation", "sky release", "videos"]

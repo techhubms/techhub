@@ -10,7 +10,7 @@ categories: ["AI", "GitHub Copilot"]
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/feed/"
 date: 2025-06-18 16:00:00 +00:00
-permalink: "/news/2025-06-18-GitHub-Copilot-Spaces-Bring-the-right-context-to-every-suggestion.html"
+permalink: "/2025-06-18-GitHub-Copilot-Spaces-Bring-the-right-context-to-every-suggestion.html"
 tags: ["AI", "AI & ML", "Code Style", "Customization", "GitHub Copilot", "GitHub Copilot Spaces", "News", "Space Setup", "Team Workflows"]
 tags_normalized: ["ai", "ai and ml", "code style", "customization", "github copilot", "github copilot spaces", "news", "space setup", "team workflows"]
 ---

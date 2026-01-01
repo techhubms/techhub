@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-08-07 14:50:37 +00:00
-permalink: "/community/2025-08-07-Create-Your-Own-Bicep-Local-Extension-Using-NET.html"
+permalink: "/2025-08-07-Create-Your-Own-Bicep-Local-Extension-Using-NET.html"
 categories: ["Azure", "Coding", "DevOps"]
 tags: [".NET 9", "ARM", "Azure", "Azure Bicep", "Bicep Extension", "Bicep Local", "C#", "CLI", "Coding", "Community", "Custom Extension", "DevOps", "IaC", "Local Deployment", "Main.bicep", "Program.cs", "Project Scaffolding", "Resource Handler", "VS Code"]
 tags_normalized: ["dotnet 9", "arm", "azure", "azure bicep", "bicep extension", "bicep local", "csharp", "cli", "coding", "community", "custom extension", "devops", "iac", "local deployment", "maindotbicep", "programdotcs", "project scaffolding", "resource handler", "vs code"]

@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft News"
 feed_url: "https://news.microsoft.com/source/feed/"
 date: 2025-11-17 14:01:36 +00:00
-permalink: "/news/2025-11-17-Levi-Strauss-and-Co-Partners-with-Microsoft-to-Develop-Next-Gen-Superagent.html"
+permalink: "/2025-11-17-Levi-Strauss-and-Co-Partners-with-Microsoft-to-Develop-Next-Gen-Superagent.html"
 categories: ["AI", "Azure", "Coding", "GitHub Copilot", "Security"]
 tags: ["Agentic AI", "AI", "Automation", "Azure", "Azure AI Foundry", "Cloud Migration", "Coding", "Company News", "Copilot Studio", "GitHub Copilot", "Levi Strauss & Co.", "Microsoft", "Microsoft Intune", "Microsoft Teams", "News", "Observability", "Release Management", "Security", "Semantic Kernel", "Superagent", "Surface Copilot+ PCs", "Windows 11", "Zero Trust Security"]
 tags_normalized: ["agentic ai", "ai", "automation", "azure", "azure ai foundry", "cloud migration", "coding", "company news", "copilot studio", "github copilot", "levi strauss and codot", "microsoft", "microsoft intune", "microsoft teams", "news", "observability", "release management", "security", "semantic kernel", "superagent", "surface copilotplus pcs", "windows 11", "zero trust security"]

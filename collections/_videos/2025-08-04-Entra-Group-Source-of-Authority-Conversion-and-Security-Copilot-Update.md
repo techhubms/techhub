@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "John Savill's Technical Training"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCpIn7ox7j7bH_OFj7tYouOQ"
 date: 2025-08-04 13:59:18 +00:00
-permalink: "/videos/2025-08-04-Entra-Group-Source-of-Authority-Conversion-and-Security-Copilot-Update.html"
+permalink: "/2025-08-04-Entra-Group-Source-of-Authority-Conversion-and-Security-Copilot-Update.html"
 categories: ["Azure", "Security"]
 tags: ["Access Management", "Active Directory", "AD", "Azure", "Azure Active Directory", "Cloud Identity", "Conditional Access", "Entra Id", "Governance", "Graph Explorer", "Group Writeback", "Groups", "Hybrid Identity", "Identity", "Identity Governance", "Identity Management", "Microsoft Entra ID", "Microsoft Security", "Security", "Security Copilot", "SOA Conversion", "Videos"]
 tags_normalized: ["access management", "active directory", "ad", "azure", "azure active directory", "cloud identity", "conditional access", "entra id", "governance", "graph explorer", "group writeback", "groups", "hybrid identity", "identity", "identity governance", "identity management", "microsoft entra id", "microsoft security", "security", "security copilot", "soa conversion", "videos"]

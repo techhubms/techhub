@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/changelog/feed/"
 date: 2025-09-22 23:12:41 +00:00
-permalink: "/news/2025-09-22-GitHub-Copilot-SWE-Model-Launches-in-Visual-Studio-Code-Insiders.html"
+permalink: "/2025-09-22-GitHub-Copilot-SWE-Model-Launches-in-Visual-Studio-Code-Insiders.html"
 categories: ["AI", "GitHub Copilot"]
 tags: ["AI", "AI Assistants", "AI Models", "Code Editing", "Code Refactoring", "Copilot", "Copilot SWE", "Developer Productivity", "GitHub", "GitHub Copilot", "IDE Tools", "News", "Prompt Engineering", "Technical Preview", "VS Code", "VS Code Insiders"]
 tags_normalized: ["ai", "ai assistants", "ai models", "code editing", "code refactoring", "copilot", "copilot swe", "developer productivity", "github", "github copilot", "ide tools", "news", "prompt engineering", "technical preview", "vs code", "vs code insiders"]

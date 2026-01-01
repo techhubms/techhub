@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Events YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
 date: 2025-11-24 13:52:17 +00:00
-permalink: "/videos/2025-11-24-Leading-with-Trust-Building-and-Deploying-Agents-in-a-Regulated-World.html"
+permalink: "/2025-11-24-Leading-with-Trust-Building-and-Deploying-Agents-in-a-Regulated-World.html"
 categories: ["AI", "Security"]
 tags: ["Agent Lifecycle", "AI", "AI Security", "Compliance Automation", "Compliance Manager", "Cyber Resilience", "Defender For Cloud", "DORA", "DPDP India", "EU AI Act", "Microsoft Ignite", "Microsoft Purview", "MSIgnite", "Multi Layer Security", "NIS2", "ProtectcloudAIplatformandapps", "Real Time Compliance Monitoring", "Regulatory Navigator", "Regulatory Templates", "Responsible AI", "Security", "Videos"]
 tags_normalized: ["agent lifecycle", "ai", "ai security", "compliance automation", "compliance manager", "cyber resilience", "defender for cloud", "dora", "dpdp india", "eu ai act", "microsoft ignite", "microsoft purview", "msignite", "multi layer security", "nis2", "protectcloudaiplatformandapps", "real time compliance monitoring", "regulatory navigator", "regulatory templates", "responsible ai", "security", "videos"]

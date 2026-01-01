@@ -8,7 +8,7 @@ canonical_url: "https://www.reddit.com/r/GithubCopilot/comments/1lvekgv/visual_s
 viewing_mode: "external"
 categories: ["AI", "GitHub Copilot"]
 date: 2025-07-09 09:41:14 +00:00
-permalink: "/community/2025-07-09-checkbox-symbols-bug-in-vscode-copilot-agent-mode.html"
+permalink: "/2025-07-09-checkbox-symbols-bug-in-vscode-copilot-agent-mode.html"
 tags: ["AI", "Bug Report", "Checkbox Issue", "Code Editor", "Community", "GitHub Copilot", "PowerShell", "VS Code"]
 tags_normalized: ["ai", "bug report", "checkbox issue", "code editor", "community", "github copilot", "powershell", "vs code"]
 ---

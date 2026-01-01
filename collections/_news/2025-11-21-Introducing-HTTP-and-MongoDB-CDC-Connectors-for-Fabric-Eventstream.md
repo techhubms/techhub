@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Fabric Blog"
 feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
 date: 2025-11-21 12:00:00 +00:00
-permalink: "/news/2025-11-21-Introducing-HTTP-and-MongoDB-CDC-Connectors-for-Fabric-Eventstream.html"
+permalink: "/2025-11-21-Introducing-HTTP-and-MongoDB-CDC-Connectors-for-Fabric-Eventstream.html"
 categories: ["Azure", "ML"]
 tags: ["Azure", "Change Data Capture", "Community Feedback", "Dashboard", "Data Ingestion", "Data Pipeline", "Eventstream", "Fabric Ideas", "HTTP Connector", "Microsoft Fabric", "ML", "MongoDB Atlas", "MongoDB CDC", "News", "No Code Integration", "Public APIs", "Real Time Analytics", "Real Time Intelligence", "Snapshot Mode", "Streaming Data"]
 tags_normalized: ["azure", "change data capture", "community feedback", "dashboard", "data ingestion", "data pipeline", "eventstream", "fabric ideas", "http connector", "microsoft fabric", "ml", "mongodb atlas", "mongodb cdc", "news", "no code integration", "public apis", "real time analytics", "real time intelligence", "snapshot mode", "streaming data"]

@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "GitHub YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ"
 date: 2025-11-07 17:54:56 +00:00
-permalink: "/videos/2025-11-07-The-Download-Highlights-from-GitHub-Universe-2025-Octoverse-and-Game-Off.html"
+permalink: "/2025-11-07-The-Download-Highlights-from-GitHub-Universe-2025-Octoverse-and-Game-Off.html"
 categories: ["DevOps"]
 tags: ["Agent HQ", "Community Events", "Developer News", "DevOps", "GitHub", "GitHub Game Off", "GitHub Universe", "GitHubUniverse", "Octoverse", "Open Source", "Open Source Security", "pip", "Project Spotlight", "Python Tools", "TheDownload", "TypeScript", "Uv", "Videos"]
 tags_normalized: ["agent hq", "community events", "developer news", "devops", "github", "github game off", "github universe", "githubuniverse", "octoverse", "open source", "open source security", "pip", "project spotlight", "python tools", "thedownload", "typescript", "uv", "videos"]

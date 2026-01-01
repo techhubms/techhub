@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Reddit GitHub"
 feed_url: "https://www.reddit.com/r/github/.rss"
 date: 2025-07-28 16:58:05 +00:00
-permalink: "/community/2025-07-28-Bug-Commit-changes-button-remains-active-during-GitHub-file-upload-causes-incomplete-commits.html"
+permalink: "/2025-07-28-Bug-Commit-changes-button-remains-active-during-GitHub-file-upload-causes-incomplete-commits.html"
 categories: ["DevOps"]
 tags: ["Commit Changes", "Community", "Community Feedback", "DevOps", "File Upload", "GitHub", "GitHub Repository", "HTTP 400 Error", "Suggestion", "UI Bug", "User Experience", "Workflow"]
 tags_normalized: ["commit changes", "community", "community feedback", "devops", "file upload", "github", "github repository", "http 400 error", "suggestion", "ui bug", "user experience", "workflow"]

@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft News"
 feed_url: "https://news.microsoft.com/source/feed/"
 date: 2025-07-31 01:44:00 +00:00
-permalink: "/news/2025-07-31-Microsoft-Fiscal-Year-Close-Azure-and-Copilot-Milestones-Announced.html"
+permalink: "/2025-07-31-Microsoft-Fiscal-Year-Close-Azure-and-Copilot-Milestones-Announced.html"
 categories: ["AI", "Azure"]
 tags: ["AI", "Azure", "Azure AI", "Azure Foundry", "Cloud Adoption", "Cloud Revenue", "Company News", "Enterprise AI", "LinkedIn Post", "M365 Copilot", "Microsoft", "Microsoft Copilot", "News", "Platform Diffusion", "Project Red Dog", "Satya Nadella"]
 tags_normalized: ["ai", "azure", "azure ai", "azure foundry", "cloud adoption", "cloud revenue", "company news", "enterprise ai", "linkedin post", "m365 copilot", "microsoft", "microsoft copilot", "news", "platform diffusion", "project red dog", "satya nadella"]

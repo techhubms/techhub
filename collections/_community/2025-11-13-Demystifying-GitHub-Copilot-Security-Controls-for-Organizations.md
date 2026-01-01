@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-11-13 08:00:00 +00:00
-permalink: "/community/2025-11-13-Demystifying-GitHub-Copilot-Security-Controls-for-Organizations.html"
+permalink: "/2025-11-13-Demystifying-GitHub-Copilot-Security-Controls-for-Organizations.html"
 categories: ["AI", "GitHub Copilot", "Security"]
 tags: ["AI", "AI Security", "Application Security", "Community", "Copilot Agent", "Data Retention", "Duplicate Detection Filter", "Enterprise Configuration", "GitHub Copilot", "Intellectual Property", "ISO 27001", "MCP Registry", "Regulatory Compliance", "Security", "SOC2", "Trust Center", "VS Code", "Vulnerability Protection"]
 tags_normalized: ["ai", "ai security", "application security", "community", "copilot agent", "data retention", "duplicate detection filter", "enterprise configuration", "github copilot", "intellectual property", "iso 27001", "mcp registry", "regulatory compliance", "security", "soc2", "trust center", "vs code", "vulnerability protection"]

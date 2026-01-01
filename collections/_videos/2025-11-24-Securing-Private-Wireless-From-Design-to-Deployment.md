@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Events YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
 date: 2025-11-24 07:17:15 +00:00
-permalink: "/videos/2025-11-24-Securing-Private-Wireless-From-Design-to-Deployment.html"
+permalink: "/2025-11-24-Securing-Private-Wireless-From-Design-to-Deployment.html"
 categories: ["AI", "Azure", "Security"]
 tags: ["5G Security", "AI", "AI Powered Defense", "AI Security", "Authentication", "Azure", "Cyber Threat Defense", "Incident Management", "Microsoft Ignite", "ModernizeSecOpswithaunifiedplatform", "MSIgnite", "Network Security", "Private Wireless", "Security", "Security Orchestration", "Telecom Security", "Threat Hunting", "Videos"]
 tags_normalized: ["5g security", "ai", "ai powered defense", "ai security", "authentication", "azure", "cyber threat defense", "incident management", "microsoft ignite", "modernizesecopswithaunifiedplatform", "msignite", "network security", "private wireless", "security", "security orchestration", "telecom security", "threat hunting", "videos"]

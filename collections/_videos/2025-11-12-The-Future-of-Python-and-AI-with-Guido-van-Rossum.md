@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Developer YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
 date: 2025-11-12 15:01:22 +00:00
-permalink: "/videos/2025-11-12-The-Future-of-Python-and-AI-with-Guido-van-Rossum.html"
+permalink: "/2025-11-12-The-Future-of-Python-and-AI-with-Guido-van-Rossum.html"
 categories: ["AI", "Azure", "Coding"]
 tags: ["AI", "AI Era", "AI Programming Tools", "Azure", "Cloud Computing", "Cloud Development", "Coding", "Copilot", "Dev", "Developer", "Developer Community", "Development", "Deverlopercommunity", "Guido Van Rossum", "Inclusivity", "Microsoft", "Microsoft TypeAgent", "Pyright", "Python", "Software Developer", "Tech", "Technology", "TypeAgent", "Typechecking", "TypeScript", "Videos", "VS Code"]
 tags_normalized: ["ai", "ai era", "ai programming tools", "azure", "cloud computing", "cloud development", "coding", "copilot", "dev", "developer", "developer community", "development", "deverlopercommunity", "guido van rossum", "inclusivity", "microsoft", "microsoft typeagent", "pyright", "python", "software developer", "tech", "technology", "typeagent", "typechecking", "typescript", "videos", "vs code"]

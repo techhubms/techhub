@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft All Things Azure Blog"
 feed_url: "https://devblogs.microsoft.com/all-things-azure/feed/"
 date: 2025-10-24 22:38:54 +00:00
-permalink: "/news/2025-10-24-Your-6-Step-Guide-to-Deploying-a-Website-with-GitHub-Codespaces-and-Copilot-Agent-Mode.html"
+permalink: "/2025-10-24-Your-6-Step-Guide-to-Deploying-a-Website-with-GitHub-Codespaces-and-Copilot-Agent-Mode.html"
 categories: ["AI", "Coding", "DevOps", "GitHub Copilot"]
 tags: ["Agents", "AI", "All Things Azure", "App Development", "Coding", "Continuous Deployment", "Copilot Agent Mode", "Developer Productivity", "DevOps", "DevOps Workflow", "GitHub Codespaces", "GitHub Copilot", "GitHub Pages", "News", "Personal Website", "Repository Management", "Site Customization", "Static Website Hosting", "Version Control", "Web Development"]
 tags_normalized: ["agents", "ai", "all things azure", "app development", "coding", "continuous deployment", "copilot agent mode", "developer productivity", "devops", "devops workflow", "github codespaces", "github copilot", "github pages", "news", "personal website", "repository management", "site customization", "static website hosting", "version control", "web development"]

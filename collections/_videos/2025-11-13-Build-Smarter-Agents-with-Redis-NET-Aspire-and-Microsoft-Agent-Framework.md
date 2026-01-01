@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "DotNet YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw"
 date: 2025-11-13 17:40:46 +00:00
-permalink: "/videos/2025-11-13-Build-Smarter-Agents-with-Redis-NET-Aspire-and-Microsoft-Agent-Framework.html"
+permalink: "/2025-11-13-Build-Smarter-Agents-with-Redis-NET-Aspire-and-Microsoft-Agent-Framework.html"
 categories: ["AI", "Azure", "Coding"]
 tags: [".NET", ".NET 10", ".NET Aspire", "Agentic Applications", "AI", "ASP.NET Core 10", "Azure", "C# 14", "Chat History", "Cloud Native", "Coding", "Collaboration", "F# 10", "MAUI", "Microsoft Agent Framework", "Performance Optimization", "Redis", "Semantic Cache", "Session Management", "Vector Store", "Videos", "VS"]
 tags_normalized: ["dotnet", "dotnet 10", "dotnet aspire", "agentic applications", "ai", "aspdotnet core 10", "azure", "csharp 14", "chat history", "cloud native", "coding", "collaboration", "fsharp 10", "maui", "microsoft agent framework", "performance optimization", "redis", "semantic cache", "session management", "vector store", "videos", "vs"]

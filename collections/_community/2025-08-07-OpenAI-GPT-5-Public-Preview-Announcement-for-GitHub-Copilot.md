@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Reddit Github Copilot"
 feed_url: "https://www.reddit.com/r/GithubCopilot.rss"
 date: 2025-08-07 17:22:08 +00:00
-permalink: "/community/2025-08-07-OpenAI-GPT-5-Public-Preview-Announcement-for-GitHub-Copilot.html"
+permalink: "/2025-08-07-OpenAI-GPT-5-Public-Preview-Announcement-for-GitHub-Copilot.html"
 categories: ["AI", "GitHub Copilot"]
 tags: ["AI", "AI Models", "Community", "Community Discussion", "Copilot Settings", "Developer Feedback", "GitHub", "GitHub Copilot", "Model Upgrade", "OpenAI GPT 5", "Premium Pricing", "Public Preview"]
 tags_normalized: ["ai", "ai models", "community", "community discussion", "copilot settings", "developer feedback", "github", "github copilot", "model upgrade", "openai gpt 5", "premium pricing", "public preview"]

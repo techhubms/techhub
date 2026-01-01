@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-10-07 06:25:50 +00:00
-permalink: "/community/2025-10-07-Secure-Medallion-Architecture-Pattern-on-Azure-Databricks-Part-I.html"
+permalink: "/2025-10-07-Secure-Medallion-Architecture-Pattern-on-Azure-Databricks-Part-I.html"
 categories: ["Azure", "ML", "Security"]
 tags: ["ADLS Gen2", "Azure", "Azure Databricks", "Azure Key Vault", "Cluster Policies", "Community", "Data Governance", "Delta Lake", "Lakeflow", "Lakehouse", "Least Privilege", "Managed Identities", "Medallion Architecture", "Microsoft Entra ID", "ML", "Operational Security", "Security", "System Tables", "Unity Catalog"]
 tags_normalized: ["adls gen2", "azure", "azure databricks", "azure key vault", "cluster policies", "community", "data governance", "delta lake", "lakeflow", "lakehouse", "least privilege", "managed identities", "medallion architecture", "microsoft entra id", "ml", "operational security", "security", "system tables", "unity catalog"]

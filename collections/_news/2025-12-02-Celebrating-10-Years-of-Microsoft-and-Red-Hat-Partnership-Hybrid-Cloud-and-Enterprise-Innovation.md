@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The Azure Blog"
 feed_url: "https://azure.microsoft.com/en-us/blog/feed/"
 date: 2025-12-02 16:00:00 +00:00
-permalink: "/news/2025-12-02-Celebrating-10-Years-of-Microsoft-and-Red-Hat-Partnership-Hybrid-Cloud-and-Enterprise-Innovation.html"
+permalink: "/2025-12-02-Celebrating-10-Years-of-Microsoft-and-Red-Hat-Partnership-Hybrid-Cloud-and-Enterprise-Innovation.html"
 categories: ["AI", "Azure", "DevOps", "ML", "Security"]
 tags: ["AI", "AI + Machine Learning", "AI Platform", "Ansible Automation Platform", "Automation", "Azure", "Azure Marketplace", "Azure OpenAI Service", "Azure Red Hat OpenShift", "Cloud Modernization", "Confidential Containers", "Containers", "DevOps", "Enterprise Cloud", "Governance", "Hybrid Cloud", "Kubernetes", "Machine Learning", "Microsoft Foundry", "ML", "News", "Open Source", "Red Hat", "Security", "Virtualization"]
 tags_normalized: ["ai", "ai plus machine learning", "ai platform", "ansible automation platform", "automation", "azure", "azure marketplace", "azure openai service", "azure red hat openshift", "cloud modernization", "confidential containers", "containers", "devops", "enterprise cloud", "governance", "hybrid cloud", "kubernetes", "machine learning", "microsoft foundry", "ml", "news", "open source", "red hat", "security", "virtualization"]

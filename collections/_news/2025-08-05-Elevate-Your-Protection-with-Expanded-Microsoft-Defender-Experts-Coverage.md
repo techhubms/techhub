@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Security Blog"
 feed_url: "https://www.microsoft.com/en-us/security/blog/feed/"
 date: 2025-08-05 16:00:00 +00:00
-permalink: "/news/2025-08-05-Elevate-Your-Protection-with-Expanded-Microsoft-Defender-Experts-Coverage.html"
+permalink: "/2025-08-05-Elevate-Your-Protection-with-Expanded-Microsoft-Defender-Experts-Coverage.html"
 categories: ["Azure", "Security"]
 tags: ["Azure", "Cloud Security", "Hybrid Cloud", "Incident Detection", "Microsoft Defender Experts", "Microsoft Defender For Cloud", "Multicloud", "News", "Security", "Security Monitoring", "Third Party Network Signals", "Threat Response", "XDR"]
 tags_normalized: ["azure", "cloud security", "hybrid cloud", "incident detection", "microsoft defender experts", "microsoft defender for cloud", "multicloud", "news", "security", "security monitoring", "third party network signals", "threat response", "xdr"]

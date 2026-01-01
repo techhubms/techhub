@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Fabric Blog"
 feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
 date: 2025-10-15 10:00:00 +00:00
-permalink: "/news/2025-10-15-Customer-Managed-Keys-for-Microsoft-Fabric-Workspaces-Now-Generally-Available.html"
+permalink: "/2025-10-15-Customer-Managed-Keys-for-Microsoft-Fabric-Workspaces-Now-Generally-Available.html"
 categories: ["Azure", "Security"]
 tags: ["Azure", "Azure Key Vault", "CMK", "Compliance", "Customer Managed Keys", "Data Protection", "Data Security", "Encryption", "Fabric Warehouse", "Governance", "Managed HSM", "Microsoft Fabric", "News", "Security", "SQL Analytics Endpoint", "TLS 1.2", "Workspace Administration"]
 tags_normalized: ["azure", "azure key vault", "cmk", "compliance", "customer managed keys", "data protection", "data security", "encryption", "fabric warehouse", "governance", "managed hsm", "microsoft fabric", "news", "security", "sql analytics endpoint", "tls 1dot2", "workspace administration"]

@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Events YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
 date: 2025-11-21 15:18:42 +00:00
-permalink: "/videos/2025-11-21-Securing-Email-and-Collaboration-with-Microsoft-Defender-for-Office-365-and-Agentic-AI.html"
+permalink: "/2025-11-21-Securing-Email-and-Collaboration-with-Microsoft-Defender-for-Office-365-and-Agentic-AI.html"
 categories: ["AI", "Security"]
 tags: ["Agentic AI", "AI", "Collaboration Security", "Continuous Learning", "Detection Rules", "Email Protection", "Malicious User Response", "Microsoft Defender For Office 365", "Microsoft Ignite", "Microsoft Security", "ModernizeSecOpswithaunifiedplatform", "MSIgnite", "Phishing Detection", "Posture Management", "Security", "Security Automation", "SoC Automation", "Social Engineering", "Threat Remediation", "Videos"]
 tags_normalized: ["agentic ai", "ai", "collaboration security", "continuous learning", "detection rules", "email protection", "malicious user response", "microsoft defender for office 365", "microsoft ignite", "microsoft security", "modernizesecopswithaunifiedplatform", "msignite", "phishing detection", "posture management", "security", "security automation", "soc automation", "social engineering", "threat remediation", "videos"]

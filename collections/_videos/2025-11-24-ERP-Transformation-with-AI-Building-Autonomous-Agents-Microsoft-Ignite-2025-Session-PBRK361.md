@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Events YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
 date: 2025-11-24 13:44:32 +00:00
-permalink: "/videos/2025-11-24-ERP-Transformation-with-AI-Building-Autonomous-Agents-Microsoft-Ignite-2025-Session-PBRK361.html"
+permalink: "/2025-11-24-ERP-Transformation-with-AI-Building-Autonomous-Agents-Microsoft-Ignite-2025-Session-PBRK361.html"
 categories: ["AI"]
 tags: ["Adaptive Experiences", "Agent Framework", "AI", "AI Applications", "Autonomous Agents", "Business Process Automation", "Customer Engagement", "Dynamics 365", "ERP Transformation", "Industry Agents", "LLMs", "MCP Server", "Microsoft AI Cloud Partner Program", "Microsoft Ignite", "MicrosoftAICloudPartnerProgram", "MSIgnite", "Partner Practices", "Structured Data", "Unstructured Data", "Videos"]
 tags_normalized: ["adaptive experiences", "agent framework", "ai", "ai applications", "autonomous agents", "business process automation", "customer engagement", "dynamics 365", "erp transformation", "industry agents", "llms", "mcp server", "microsoft ai cloud partner program", "microsoft ignite", "microsoftaicloudpartnerprogram", "msignite", "partner practices", "structured data", "unstructured data", "videos"]

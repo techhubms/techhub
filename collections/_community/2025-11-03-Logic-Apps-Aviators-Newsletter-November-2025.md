@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-11-03 16:00:00 +00:00
-permalink: "/community/2025-11-03-Logic-Apps-Aviators-Newsletter-November-2025.html"
+permalink: "/2025-11-03-Logic-Apps-Aviators-Newsletter-November-2025.html"
 categories: ["AI", "Azure", "Coding", "DevOps", "Security"]
 tags: ["Agent Loop", "AI", "API Management", "Automation", "Azure", "Azure AI Search", "Azure API Center", "Azure Functions", "Bicep", "CI/CD", "Coding", "Community", "Decision Automation", "DevOps", "Enterprise Integration", "Entra ID", "Event Driven Architecture", "Event Grid", "FinOps", "Hybrid Integration", "KQL", "Logic Apps Standard", "MCP", "Monitoring", "Observability", "OpenAI", "Orchestration Patterns", "RabbitMQ", "RAG", "Rules Engine", "Security", "Service Bus", "VS Code", "Webhook Authentication"]
 tags_normalized: ["agent loop", "ai", "api management", "automation", "azure", "azure ai search", "azure api center", "azure functions", "bicep", "cislashcd", "coding", "community", "decision automation", "devops", "enterprise integration", "entra id", "event driven architecture", "event grid", "finops", "hybrid integration", "kql", "logic apps standard", "mcp", "monitoring", "observability", "openai", "orchestration patterns", "rabbitmq", "rag", "rules engine", "security", "service bus", "vs code", "webhook authentication"]

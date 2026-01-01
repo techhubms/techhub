@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The Azure Blog"
 feed_url: "https://azure.microsoft.com/en-us/blog/feed/"
 date: 2025-08-20 15:00:00 +00:00
-permalink: "/news/2025-08-20-Agent-Factory-Building-Your-First-AI-Agent-with-Azure-AI-Foundry.html"
+permalink: "/2025-08-20-Agent-Factory-Building-Your-First-AI-Agent-with-Azure-AI-Foundry.html"
 categories: ["AI", "Azure", "Security"]
 tags: ["Agent Factory", "Agentic AI", "AI", "AI + Machine Learning", "AI Agents", "API Governance", "APIM", "APIs", "Azure", "Azure AI Foundry", "Azure API Management", "Azure Logic Apps", "Data Connectors", "Enterprise Automation", "Enterprise Toolchain", "Governance", "Identity Management", "Large Language Models (llms)", "MCP", "Microsoft Entra ID", "News", "Observability", "OpenAPI", "Security", "Security Best Practices"]
 tags_normalized: ["agent factory", "agentic ai", "ai", "ai plus machine learning", "ai agents", "api governance", "apim", "apis", "azure", "azure ai foundry", "azure api management", "azure logic apps", "data connectors", "enterprise automation", "enterprise toolchain", "governance", "identity management", "large language models llms", "mcp", "microsoft entra id", "news", "observability", "openapi", "security", "security best practices"]

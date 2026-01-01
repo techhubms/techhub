@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/changelog/feed/"
 date: 2025-10-15 16:40:53 +00:00
-permalink: "/news/2025-10-15-Claude-Haiku-45-Now-Available-in-GitHub-Copilot.html"
+permalink: "/2025-10-15-Claude-Haiku-45-Now-Available-in-GitHub-Copilot.html"
 categories: ["AI", "GitHub Copilot"]
 tags: ["AI", "AI Integration", "AI Model", "Anthropic", "API Key", "Claude Haiku 4.5", "Copilot", "Copilot Business", "Copilot Chat", "Copilot Enterprise", "Copilot Pro", "Copilot Settings", "GitHub Copilot", "Model Picker", "News", "VS Code"]
 tags_normalized: ["ai", "ai integration", "ai model", "anthropic", "api key", "claude haiku 4dot5", "copilot", "copilot business", "copilot chat", "copilot enterprise", "copilot pro", "copilot settings", "github copilot", "model picker", "news", "vs code"]

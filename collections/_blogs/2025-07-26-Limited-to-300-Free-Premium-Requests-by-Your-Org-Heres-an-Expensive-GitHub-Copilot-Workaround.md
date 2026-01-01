@@ -9,10 +9,10 @@ viewing_mode: "external"
 feed_name: "Reinier van Maanen's blog"
 feed_url: "https://r-vm.com/feed.xml"
 date: 2025-07-26 00:00:00 +00:00
-permalink: "/blogs/2025-07-26-Limited-to-300-Free-Premium-Requests-by-Your-Org-Heres-an-Expensive-GitHub-Copilot-Workaround.html"
+permalink: "/2025-07-26-Limited-to-300-Free-Premium-Requests-by-Your-Org-Heres-an-Expensive-GitHub-Copilot-Workaround.html"
 categories: ["AI", "DevOps", "GitHub Copilot"]
-tags: ["AI", "AI Models", "Azure Billing", "Budget", "Claude Opus 4", "Copilot Business", "Copilot Chat", "Copilot Coding Agent", "Cost Analysis", "Developer Productivity", "Developer Tools", "Development Costs", "DevOps", "Enterprise", "Feature Limits", "GitHub Copilot", "GitHub Team Plan", "GPT 4o", "Organization Workaround", "Organizations", "Blogs", "Premium Features", "Premium Requests", "Pricing", "Productivity", "Workarounds"]
-tags_normalized: ["ai", "ai models", "azure billing", "budget", "claude opus 4", "copilot business", "copilot chat", "copilot coding agent", "cost analysis", "developer productivity", "developer tools", "development costs", "devops", "enterprise", "feature limits", "github copilot", "github team plan", "gpt 4o", "organization workaround", "organizations", "blogs", "premium features", "premium requests", "pricing", "productivity", "workarounds"]
+tags: ["AI", "AI Models", "Azure Billing", "Blogs", "Budget", "Claude Opus 4", "Copilot Business", "Copilot Chat", "Copilot Coding Agent", "Cost Analysis", "Developer Productivity", "Developer Tools", "Development Costs", "DevOps", "Enterprise", "Feature Limits", "GitHub Copilot", "GitHub Team Plan", "GPT 4o", "Organization Workaround", "Organizations", "Premium Features", "Premium Requests", "Pricing", "Productivity", "Workarounds"]
+tags_normalized: ["ai", "ai models", "azure billing", "blogs", "budget", "claude opus 4", "copilot business", "copilot chat", "copilot coding agent", "cost analysis", "developer productivity", "developer tools", "development costs", "devops", "enterprise", "feature limits", "github copilot", "github team plan", "gpt 4o", "organization workaround", "organizations", "premium features", "premium requests", "pricing", "productivity", "workarounds"]
 ---
 
 Reinier van Maanen explores how organizations can work around GitHub Copilot’s 300 free premium requests limitation, the hidden costs of such tactics, and provides practical insights into optimizing Copilot and AI productivity in development workflows.<!--excerpt_end-->

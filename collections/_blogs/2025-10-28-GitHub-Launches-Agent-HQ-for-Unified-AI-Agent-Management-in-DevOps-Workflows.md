@@ -9,10 +9,10 @@ viewing_mode: "external"
 feed_name: "DevOps Blog"
 feed_url: "https://devops.com/feed/"
 date: 2025-10-28 18:56:21 +00:00
-permalink: "/blogs/2025-10-28-GitHub-Launches-Agent-HQ-for-Unified-AI-Agent-Management-in-DevOps-Workflows.html"
+permalink: "/2025-10-28-GitHub-Launches-Agent-HQ-for-Unified-AI-Agent-Management-in-DevOps-Workflows.html"
 categories: ["AI", "DevOps"]
-tags: ["Agentic AI", "AI", "AI Agents", "Branch Controls", "Code QL", "Code Review Automation", "Continuous Integration", "Copilot", "DevOps", "DevOps Workflows", "GitHub", "GitHub Agent HQ", "Identity Management", "Linear Integration", "Merge Conflict Resolution", "Blogs", "Slack Integration", "Social Facebook", "Social LinkedIn", "Social X", "Software Development Lifecycle", "Third Party AI Integration", "VS Code"]
-tags_normalized: ["agentic ai", "ai", "ai agents", "branch controls", "code ql", "code review automation", "continuous integration", "copilot", "devops", "devops workflows", "github", "github agent hq", "identity management", "linear integration", "merge conflict resolution", "blogs", "slack integration", "social facebook", "social linkedin", "social x", "software development lifecycle", "third party ai integration", "vs code"]
+tags: ["Agentic AI", "AI", "AI Agents", "Blogs", "Branch Controls", "Code QL", "Code Review Automation", "Continuous Integration", "Copilot", "DevOps", "DevOps Workflows", "GitHub", "GitHub Agent HQ", "Identity Management", "Linear Integration", "Merge Conflict Resolution", "Slack Integration", "Social Facebook", "Social LinkedIn", "Social X", "Software Development Lifecycle", "Third Party AI Integration", "VS Code"]
+tags_normalized: ["agentic ai", "ai", "ai agents", "blogs", "branch controls", "code ql", "code review automation", "continuous integration", "copilot", "devops", "devops workflows", "github", "github agent hq", "identity management", "linear integration", "merge conflict resolution", "slack integration", "social facebook", "social linkedin", "social x", "software development lifecycle", "third party ai integration", "vs code"]
 ---
 
 Mike Vizard details the debut of GitHub Agent HQ, a unified platform for managing AI agents embedded in DevOps workflows, highlighting features that streamline development practices.<!--excerpt_end-->

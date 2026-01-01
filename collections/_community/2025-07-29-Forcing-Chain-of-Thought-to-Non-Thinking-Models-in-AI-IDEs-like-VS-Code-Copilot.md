@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Reddit Github Copilot"
 feed_url: "https://www.reddit.com/r/GithubCopilot.rss"
 date: 2025-07-29 13:33:13 +00:00
-permalink: "/community/2025-07-29-Forcing-Chain-of-Thought-to-Non-Thinking-Models-in-AI-IDEs-like-VS-Code-Copilot.html"
+permalink: "/2025-07-29-Forcing-Chain-of-Thought-to-Non-Thinking-Models-in-AI-IDEs-like-VS-Code-Copilot.html"
 categories: ["AI", "GitHub Copilot"]
 tags: ["AI", "AI IDE", "APM Agent", "Chain Of Thought", "Community", "Cursor IDE", "GitHub Copilot", "Planning", "Project Management", "Prompt Engineering", "Sonnet 4", "VS Code"]
 tags_normalized: ["ai", "ai ide", "apm agent", "chain of thought", "community", "cursor ide", "github copilot", "planning", "project management", "prompt engineering", "sonnet 4", "vs code"]

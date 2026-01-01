@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Events YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
 date: 2025-11-21 07:11:07 +00:00
-permalink: "/videos/2025-11-21-Securing-AI-Agents-in-Microsoft-Foundry-with-Microsoft-Security.html"
+permalink: "/2025-11-21-Securing-AI-Agents-in-Microsoft-Foundry-with-Microsoft-Security.html"
 categories: ["AI", "Security"]
 tags: ["Advanced Security", "Agent ID", "Agent Runtime", "AI", "AI Agents", "Atlas Framework", "Conditional Access", "Data Access", "Defender", "Governance", "Identity Management", "Ignite", "Insider Risk", "Lifecycle Management", "Microsoft Foundry", "Microsoft Security", "MITRE Framework", "MSIgnite", "OWASP", "ProtectcloudAIplatformandapps", "Security", "Security Posture", "Videos"]
 tags_normalized: ["advanced security", "agent id", "agent runtime", "ai", "ai agents", "atlas framework", "conditional access", "data access", "defender", "governance", "identity management", "ignite", "insider risk", "lifecycle management", "microsoft foundry", "microsoft security", "mitre framework", "msignite", "owasp", "protectcloudaiplatformandapps", "security", "security posture", "videos"]

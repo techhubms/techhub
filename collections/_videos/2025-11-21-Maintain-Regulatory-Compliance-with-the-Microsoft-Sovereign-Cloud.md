@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Events YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
 date: 2025-11-21 17:11:09 +00:00
-permalink: "/videos/2025-11-21-Maintain-Regulatory-Compliance-with-the-Microsoft-Sovereign-Cloud.html"
+permalink: "/2025-11-21-Maintain-Regulatory-Compliance-with-the-Microsoft-Sovereign-Cloud.html"
 categories: ["AI", "Azure", "Security"]
 tags: ["AI", "AI Enablement", "Azure", "Compliance Auditing", "Customer Managed Keys", "Data Sovereignty", "Encryption", "Healthcare", "Hybrid Cloud", "Key Management", "Microsoft Sovereign Cloud", "Migrateandmodernizeyourestate", "MSIgnite", "Offline Cloud", "Private Clouds", "Regulatory Compliance", "Security", "Site To Site Recovery", "Videos"]
 tags_normalized: ["ai", "ai enablement", "azure", "compliance auditing", "customer managed keys", "data sovereignty", "encryption", "healthcare", "hybrid cloud", "key management", "microsoft sovereign cloud", "migrateandmodernizeyourestate", "msignite", "offline cloud", "private clouds", "regulatory compliance", "security", "site to site recovery", "videos"]

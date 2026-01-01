@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The Azure Blog"
 feed_url: "https://azure.microsoft.com/en-us/blog/feed/"
 date: 2025-12-01 17:00:00 +00:00
-permalink: "/news/2025-12-01-Azure-Networking-Latest-Updates-for-Security-Reliability-and-AIML-Workloads.html"
+permalink: "/2025-12-01-Azure-Networking-Latest-Updates-for-Security-Reliability-and-AIML-Workloads.html"
 categories: ["AI", "Azure", "Security"]
 tags: ["AI", "AI Workloads", "AKS", "Application Gateway", "Azure", "Azure Bastion", "Azure DDoS Protection", "Azure DNS", "Azure ExpressRoute", "Azure Firewall", "Azure Networking", "Cloud Security", "Container Networking", "Ebpf Host Routing", "JWT Validation", "NAT Gateway V2", "Networking", "News", "Pod CIDR Expansion", "Private Link", "Security", "Threat Intelligence", "Traffic Filtering", "Virtual WAN", "VPN Gateway", "Web Application Firewall", "Zone Redundancy"]
 tags_normalized: ["ai", "ai workloads", "aks", "application gateway", "azure", "azure bastion", "azure ddos protection", "azure dns", "azure expressroute", "azure firewall", "azure networking", "cloud security", "container networking", "ebpf host routing", "jwt validation", "nat gateway v2", "networking", "news", "pod cidr expansion", "private link", "security", "threat intelligence", "traffic filtering", "virtual wan", "vpn gateway", "web application firewall", "zone redundancy"]

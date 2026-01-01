@@ -9,10 +9,10 @@ viewing_mode: "external"
 feed_name: "Andrew Lock's Blog"
 feed_url: "https://andrewlock.net/rss.xml"
 date: 2025-12-02 09:00:00 +00:00
-permalink: "/blogs/2025-12-02-Recent-updates-to-NetEscapadesEnumGenerators-EnumMember-support-analyzers-and-bug-fixes.html"
+permalink: "/2025-12-02-Recent-updates-to-NetEscapadesEnumGenerators-EnumMember-support-analyzers-and-bug-fixes.html"
 categories: ["Coding"]
-tags: [".NET", ".NET Core", "Analyzers", "BenchmarkDotNet", "C#", "Coding", "DescriptionAttribute", "Diagnostics", "DisplayAttribute", "EnumGenerators", "EnumMember", "Extension Methods", "Metadata Attributes", "NuGet", "Performance Optimization", "Blogs", "Roslyn", "Source Generator", "Source Generators"]
-tags_normalized: ["dotnet", "dotnet core", "analyzers", "benchmarkdotnet", "csharp", "coding", "descriptionattribute", "diagnostics", "displayattribute", "enumgenerators", "enummember", "extension methods", "metadata attributes", "nuget", "performance optimization", "blogs", "roslyn", "source generator", "source generators"]
+tags: [".NET", ".NET Core", "Analyzers", "BenchmarkDotNet", "Blogs", "C#", "Coding", "DescriptionAttribute", "Diagnostics", "DisplayAttribute", "EnumGenerators", "EnumMember", "Extension Methods", "Metadata Attributes", "NuGet", "Performance Optimization", "Roslyn", "Source Generator", "Source Generators"]
+tags_normalized: ["dotnet", "dotnet core", "analyzers", "benchmarkdotnet", "blogs", "csharp", "coding", "descriptionattribute", "diagnostics", "displayattribute", "enumgenerators", "enummember", "extension methods", "metadata attributes", "nuget", "performance optimization", "roslyn", "source generator", "source generators"]
 ---
 
 Andrew Lock explains the recent improvements to NetEscapades.EnumGenerators, a .NET source generator package, including support for [EnumMember], additional analyzers, and bug fixes. Developers gain new metadata options and guidance on edge cases.<!--excerpt_end-->

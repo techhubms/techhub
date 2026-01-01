@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Azure SDK Blog"
 feed_url: "https://devblogs.microsoft.com/azure-sdk/feed/"
 date: 2025-11-25 22:56:34 +00:00
-permalink: "/news/2025-11-25-Azure-SDK-November-2025-Release-Storage-Identity-Cosmos-DB-and-New-Libraries.html"
+permalink: "/2025-11-25-Azure-SDK-November-2025-Release-Storage-Identity-Cosmos-DB-and-New-Libraries.html"
 categories: ["Azure", "Coding"]
 tags: [".NET", "Agent Server", "AI", "AI Agents", "AKS", "Azure", "Azure Cosmos DB", "Azure Identity", "Azure SDK", "Azure Storage", "C#", "C++", "Certificate Management", "Coding", "Confidential Ledger", "DNS", "Front Door", "Go", "Java", "JavaScript", "Managed Identity", "News", "Python", "Resource Management", "SDK", "WebPubSub"]
 tags_normalized: ["dotnet", "agent server", "ai", "ai agents", "aks", "azure", "azure cosmos db", "azure identity", "azure sdk", "azure storage", "csharp", "cplusplus", "certificate management", "coding", "confidential ledger", "dns", "front door", "go", "java", "javascript", "managed identity", "news", "python", "resource management", "sdk", "webpubsub"]

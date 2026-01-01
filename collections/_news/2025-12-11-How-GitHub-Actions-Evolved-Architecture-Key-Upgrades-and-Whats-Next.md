@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/feed/"
 date: 2025-12-11 17:40:52 +00:00
-permalink: "/news/2025-12-11-How-GitHub-Actions-Evolved-Architecture-Key-Upgrades-and-Whats-Next.html"
+permalink: "/2025-12-11-How-GitHub-Actions-Evolved-Architecture-Key-Upgrades-and-Whats-Next.html"
 categories: ["DevOps"]
 tags: ["Architecture", "Arm64 Hosted Runners", "Automation", "Caching", "CI/CD", "Community Feedback", "Custom Images", "Developer Experience", "DevOps", "GitHub Actions", "Macos 15", "News", "News & Insights", "Performance Metrics", "Pipeline Scalability", "Product", "Product Feedback", "Reusable Workflows", "Windows", "Workflow Templates", "YAML Anchors"]
 tags_normalized: ["architecture", "arm64 hosted runners", "automation", "caching", "cislashcd", "community feedback", "custom images", "developer experience", "devops", "github actions", "macos 15", "news", "news and insights", "performance metrics", "pipeline scalability", "product", "product feedback", "reusable workflows", "windows", "workflow templates", "yaml anchors"]

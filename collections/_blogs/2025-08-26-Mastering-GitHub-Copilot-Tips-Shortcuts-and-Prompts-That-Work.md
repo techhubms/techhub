@@ -9,10 +9,10 @@ viewing_mode: "external"
 feed_name: "Dellenny's Blog"
 feed_url: "https://dellenny.com/feed/"
 date: 2025-08-26 14:32:26 +00:00
-permalink: "/blogs/2025-08-26-Mastering-GitHub-Copilot-Tips-Shortcuts-and-Prompts-That-Work.html"
+permalink: "/2025-08-26-Mastering-GitHub-Copilot-Tips-Shortcuts-and-Prompts-That-Work.html"
 categories: ["AI", "Coding", "GitHub Copilot"]
-tags: ["AI", "AI Assistant", "AI Code Generation", "Architecture", "Best Practices", "Code Autocomplete", "Coding", "Coding Productivity", "Documentation", "GitHub Copilot", "JetBrains", "Neovim", "Blogs", "Prompt Engineering", "Shortcuts", "Software Development", "Testing", "VS Code"]
-tags_normalized: ["ai", "ai assistant", "ai code generation", "architecture", "best practices", "code autocomplete", "coding", "coding productivity", "documentation", "github copilot", "jetbrains", "neovim", "blogs", "prompt engineering", "shortcuts", "software development", "testing", "vs code"]
+tags: ["AI", "AI Assistant", "AI Code Generation", "Architecture", "Best Practices", "Blogs", "Code Autocomplete", "Coding", "Coding Productivity", "Documentation", "GitHub Copilot", "JetBrains", "Neovim", "Prompt Engineering", "Shortcuts", "Software Development", "Testing", "VS Code"]
+tags_normalized: ["ai", "ai assistant", "ai code generation", "architecture", "best practices", "blogs", "code autocomplete", "coding", "coding productivity", "documentation", "github copilot", "jetbrains", "neovim", "prompt engineering", "shortcuts", "software development", "testing", "vs code"]
 ---
 
 Dellenny shares hands-on advice for mastering GitHub Copilot, focusing on effective prompts, IDE shortcuts, and workflow integration to help developers maximize productivity while maintaining code quality.<!--excerpt_end-->

@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Visual Studio Code Releases"
 feed_url: "https://code.visualstudio.com/feed.xml"
 date: 2024-11-15 00:00:00 +00:00
-permalink: "/news/2024-11-15-Introducing-GitHub-Copilot-for-Azure-Preview.html"
+permalink: "/2024-11-15-Introducing-GitHub-Copilot-for-Azure-Preview.html"
 categories: ["AI", "Azure", "Coding", "DevOps", "GitHub Copilot"]
 tags: ["AI", "Application Deployment", "Azure", "Azure AI Search", "Azure Developer CLI", "Azure OpenAI", "Azure Portal", "Azure SQL", "CI/CD", "Coding", "Container Apps", "DevOps", "Diagnostics", "GitHub Copilot", "GitHub Copilot For Azure", "GPT 4o", "Kubernetes", "News", "RAG", "Resource Management", "Slash Commands", "VS Code", "YAML"]
 tags_normalized: ["ai", "application deployment", "azure", "azure ai search", "azure developer cli", "azure openai", "azure portal", "azure sql", "cislashcd", "coding", "container apps", "devops", "diagnostics", "github copilot", "github copilot for azure", "gpt 4o", "kubernetes", "news", "rag", "resource management", "slash commands", "vs code", "yaml"]

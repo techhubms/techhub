@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-09-15 20:02:36 +00:00
-permalink: "/community/2025-09-15-Azure-Networking-Portfolio-Consolidation-Simplifying-Service-Discovery-and-Management.html"
+permalink: "/2025-09-15-Azure-Networking-Portfolio-Consolidation-Simplifying-Service-Discovery-and-Management.html"
 categories: ["Azure", "Security"]
 tags: ["Azure", "Azure DDoS Protection", "Azure Documentation", "Azure ExpressRoute", "Azure Firewall", "Azure Front Door", "Azure Networking", "Azure Portal", "Azure Virtual Network", "Cloud Infrastructure", "Community", "Content Delivery", "DNS", "Hybrid Connectivity", "Load Balancer", "Network Foundations", "Network Security", "Private Link", "Security", "Service Consolidation", "Web Application Firewall"]
 tags_normalized: ["azure", "azure ddos protection", "azure documentation", "azure expressroute", "azure firewall", "azure front door", "azure networking", "azure portal", "azure virtual network", "cloud infrastructure", "community", "content delivery", "dns", "hybrid connectivity", "load balancer", "network foundations", "network security", "private link", "security", "service consolidation", "web application firewall"]

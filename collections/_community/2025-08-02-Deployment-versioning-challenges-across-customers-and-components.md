@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Reddit DevOps"
 feed_url: "https://www.reddit.com/r/devops/.rss"
 date: 2025-08-02 18:48:29 +00:00
-permalink: "/community/2025-08-02-Deployment-versioning-challenges-across-customers-and-components.html"
+permalink: "/2025-08-02-Deployment-versioning-challenges-across-customers-and-components.html"
 categories: ["DevOps"]
 tags: ["Appversions", "Community", "Component Tracking", "Deployment", "DevOps", "Helm Charts", "Infrastructure", "Multi Customer Deployments", "Project Management Tools", "Release Management", "Versioning", "Visualization"]
 tags_normalized: ["appversions", "community", "component tracking", "deployment", "devops", "helm charts", "infrastructure", "multi customer deployments", "project management tools", "release management", "versioning", "visualization"]

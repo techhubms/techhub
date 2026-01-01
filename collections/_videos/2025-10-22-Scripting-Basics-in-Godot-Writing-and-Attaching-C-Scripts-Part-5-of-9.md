@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "DotNet YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw"
 date: 2025-10-22 16:30:16 +00:00
-permalink: "/videos/2025-10-22-Scripting-Basics-in-Godot-Writing-and-Attaching-C-Scripts-Part-5-of-9.html"
+permalink: "/2025-10-22-Scripting-Basics-in-Godot-Writing-and-Attaching-C-Scripts-Part-5-of-9.html"
 categories: ["Coding"]
 tags: [".NET", "Beginner Tutorial", "C#", "CharacterBody3D", "Coding", "Debugging", "Export Variables", "Game Development", "GameDev Tools", "Godot Engine", "Input Handling", "LerpAngle", "Microsoft", "Physics Process", "Player Movement", "Scripting", "Videos", "VS Code"]
 tags_normalized: ["dotnet", "beginner tutorial", "csharp", "characterbody3d", "coding", "debugging", "export variables", "game development", "gamedev tools", "godot engine", "input handling", "lerpangle", "microsoft", "physics process", "player movement", "scripting", "videos", "vs code"]

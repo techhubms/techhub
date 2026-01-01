@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Blog"
 feed_url: "https://devblogs.microsoft.com/feed"
 date: 2025-10-29 17:00:39 +00:00
-permalink: "/news/2025-10-29-Put-your-AI-to-the-Test-with-MicrosoftExtensionsAIEvaluation.html"
+permalink: "/2025-10-29-Put-your-AI-to-the-Test-with-MicrosoftExtensionsAIEvaluation.html"
 categories: ["AI", "Azure", "Coding", "DevOps"]
 tags: [".NET", "AI", "AI Evaluation", "Azure", "Azure Blob Storage", "Azure DevOps", "Azure OpenAI", "CI/CD", "Coding", "Content Safety", "Custom Evaluators", "DevOps", "Evaluations", "LLM", "Meai", "Microsoft.Extensions.AI.Evaluation", "MSTest", "Natural Language Processing", "News", "NuGet", "NUnit", "Quality Metrics", "Reporting", "Responsible AI", "Test Automation", "VS", "xUnit"]
 tags_normalized: ["dotnet", "ai", "ai evaluation", "azure", "azure blob storage", "azure devops", "azure openai", "cislashcd", "coding", "content safety", "custom evaluators", "devops", "evaluations", "llm", "meai", "microsoftdotextensionsdotaidotevaluation", "mstest", "natural language processing", "news", "nuget", "nunit", "quality metrics", "reporting", "responsible ai", "test automation", "vs", "xunit"]

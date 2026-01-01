@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-11-18 20:29:14 +00:00
-permalink: "/community/2025-11-18-Oracle-DatabaseAzure-Now-Available-in-31-Regions-With-Enhanced-Security-and-AI-Integration.html"
+permalink: "/2025-11-18-Oracle-DatabaseAzure-Now-Available-in-31-Regions-With-Enhanced-Security-and-AI-Integration.html"
 categories: ["AI", "Azure", "Security"]
 tags: ["AI", "AI Integration", "Apache Iceberg", "Autonomous AI Database", "Azure", "Azure Arc", "Azure Key Vault", "Cloud Security", "Community", "Enterprise Data", "Exadata Database", "Governance", "Hybrid Cloud", "Microsoft Defender", "Microsoft Entra ID", "Microsoft Fabric", "Microsoft Purview", "Microsoft Sentinel", "OCI GoldenGate", "OneLake", "Operational Automation", "Oracle Database@Azure", "Power BI", "Security", "Transparent Data Encryption"]
 tags_normalized: ["ai", "ai integration", "apache iceberg", "autonomous ai database", "azure", "azure arc", "azure key vault", "cloud security", "community", "enterprise data", "exadata database", "governance", "hybrid cloud", "microsoft defender", "microsoft entra id", "microsoft fabric", "microsoft purview", "microsoft sentinel", "oci goldengate", "onelake", "operational automation", "oracle databaseatazure", "power bi", "security", "transparent data encryption"]

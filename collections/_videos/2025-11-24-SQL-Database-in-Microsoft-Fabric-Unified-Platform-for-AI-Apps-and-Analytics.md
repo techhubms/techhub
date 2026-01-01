@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Events YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
 date: 2025-11-24 07:19:39 +00:00
-permalink: "/videos/2025-11-24-SQL-Database-in-Microsoft-Fabric-Unified-Platform-for-AI-Apps-and-Analytics.html"
+permalink: "/2025-11-24-SQL-Database-in-Microsoft-Fabric-Unified-Platform-for-AI-Apps-and-Analytics.html"
 categories: ["AI", "Azure", "ML"]
 tags: ["AI", "AI Driven Development", "Analytical Workloads", "Azure", "Azure SQL Database", "Event Streaming", "Fraud Detection", "Microsoft Fabric", "Microsoft Ignite", "ML", "MSIgnite", "OneLake Integration", "Performance Monitoring", "Power BI Dashboards", "Real Time Analytics", "SQL in Fabric", "Transactional Workloads", "Unified Data Platform", "Unifyyourdataplatform", "Vector Search", "Videos"]
 tags_normalized: ["ai", "ai driven development", "analytical workloads", "azure", "azure sql database", "event streaming", "fraud detection", "microsoft fabric", "microsoft ignite", "ml", "msignite", "onelake integration", "performance monitoring", "power bi dashboards", "real time analytics", "sql in fabric", "transactional workloads", "unified data platform", "unifyyourdataplatform", "vector search", "videos"]

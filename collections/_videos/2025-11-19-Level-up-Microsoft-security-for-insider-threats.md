@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Events YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
 date: 2025-11-19 14:45:42 +00:00
-permalink: "/videos/2025-11-19-Level-up-Microsoft-security-for-insider-threats.html"
+permalink: "/2025-11-19-Level-up-Microsoft-security-for-insider-threats.html"
 categories: ["Security"]
 tags: ["Advanced Persistent Threats", "Behavior Analytics", "Credential Theft", "Insider Threats", "Investigation Workflow", "Lateral Movement", "Microsoft Defender", "Microsoft Entra ID", "ModernizeSecOpswithaunifiedplatform", "MS Ignite", "MSIgnite", "OpenText Core", "Security", "Security Analytics", "Security Operations", "Telemetry", "Threat Detection", "Videos"]
 tags_normalized: ["advanced persistent threats", "behavior analytics", "credential theft", "insider threats", "investigation workflow", "lateral movement", "microsoft defender", "microsoft entra id", "modernizesecopswithaunifiedplatform", "ms ignite", "msignite", "opentext core", "security", "security analytics", "security operations", "telemetry", "threat detection", "videos"]

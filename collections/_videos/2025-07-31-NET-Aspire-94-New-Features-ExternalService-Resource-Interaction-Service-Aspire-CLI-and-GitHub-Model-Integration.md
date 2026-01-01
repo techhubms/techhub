@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "DotNet YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw"
 date: 2025-07-31 17:56:27 +00:00
-permalink: "/videos/2025-07-31-NET-Aspire-94-New-Features-ExternalService-Resource-Interaction-Service-Aspire-CLI-and-GitHub-Model-Integration.html"
+permalink: "/2025-07-31-NET-Aspire-94-New-Features-ExternalService-Resource-Interaction-Service-Aspire-CLI-and-GitHub-Model-Integration.html"
 categories: ["Coding", "DevOps"]
 tags: [".NET", ".NET 9.4", ".NET Aspire", "Application Frameworks", "Aspire CLI", "CLI Tools", "Coding", "Demonstrations", "DevOps", "ExternalService Resource", "GitHub Model Integration", "Interaction Service", "Software Development", "Videos"]
 tags_normalized: ["dotnet", "dotnet 9dot4", "dotnet aspire", "application frameworks", "aspire cli", "cli tools", "coding", "demonstrations", "devops", "externalservice resource", "github model integration", "interaction service", "software development", "videos"]

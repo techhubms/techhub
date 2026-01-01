@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft News"
 feed_url: "https://news.microsoft.com/source/feed/"
 date: 2025-11-20 19:57:03 +00:00
-permalink: "/news/2025-11-20-Copilot-Studio-Empowering-Agentic-Business-Transformation-at-Scale.html"
+permalink: "/2025-11-20-Copilot-Studio-Empowering-Agentic-Business-Transformation-at-Scale.html"
 categories: ["AI"]
 tags: ["Agent 365", "Agentic Transformation", "AI", "AI Agents", "Analytics", "Automation", "Business Process Automation", "Cloud Computing", "Company News", "Copilot Studio", "Dynamics 365", "Enterprise IT", "Evaluation Tools", "Governance", "MCP", "Microsoft Defender", "Microsoft Entra", "Microsoft Graph", "News", "Power Platform", "Teams Integration", "Windows 365", "Workflow Automation"]
 tags_normalized: ["agent 365", "agentic transformation", "ai", "ai agents", "analytics", "automation", "business process automation", "cloud computing", "company news", "copilot studio", "dynamics 365", "enterprise it", "evaluation tools", "governance", "mcp", "microsoft defender", "microsoft entra", "microsoft graph", "news", "power platform", "teams integration", "windows 365", "workflow automation"]

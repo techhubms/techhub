@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Events YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
 date: 2025-11-21 16:48:24 +00:00
-permalink: "/videos/2025-11-21-Visual-Studio-Code-Deployment-and-AI-Governance-for-IT-Pros.html"
+permalink: "/2025-11-21-Visual-Studio-Code-Deployment-and-AI-Governance-for-IT-Pros.html"
 categories: ["AI", "DevOps"]
 tags: ["AI", "AI Tools", "Compliance", "Developer Productivity", "DevOps", "Enterprise Deployment", "Entra ID", "Extension Marketplace", "InnovatewithAzureAIappsandagents", "IT Governance", "MCP", "Microsoft Ignite", "MSIgnite", "Policy Enforcement", "Prompt Engineering", "Telemetry Management", "Videos", "VS Code"]
 tags_normalized: ["ai", "ai tools", "compliance", "developer productivity", "devops", "enterprise deployment", "entra id", "extension marketplace", "innovatewithazureaiappsandagents", "it governance", "mcp", "microsoft ignite", "msignite", "policy enforcement", "prompt engineering", "telemetry management", "videos", "vs code"]

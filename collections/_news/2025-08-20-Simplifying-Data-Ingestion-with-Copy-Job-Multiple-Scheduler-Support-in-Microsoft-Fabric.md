@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Fabric Blog"
 feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
 date: 2025-08-20 09:00:00 +00:00
-permalink: "/news/2025-08-20-Simplifying-Data-Ingestion-with-Copy-Job-Multiple-Scheduler-Support-in-Microsoft-Fabric.html"
+permalink: "/2025-08-20-Simplifying-Data-Ingestion-with-Copy-Job-Multiple-Scheduler-Support-in-Microsoft-Fabric.html"
 categories: ["Azure", "ML"]
 tags: ["Azure", "Bulk Copy", "CI/CD", "Copy Job", "Data Engineering", "Data Factory", "Data Ingestion", "Deployment Pipelines", "Git Integration", "Incremental Copy", "Microsoft Fabric", "ML", "Multiple Scheduler", "News", "Orchestration", "Public APIs"]
 tags_normalized: ["azure", "bulk copy", "cislashcd", "copy job", "data engineering", "data factory", "data ingestion", "deployment pipelines", "git integration", "incremental copy", "microsoft fabric", "ml", "multiple scheduler", "news", "orchestration", "public apis"]

@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Events YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
 date: 2025-11-19 17:05:24 +00:00
-permalink: "/videos/2025-11-19-DNS-as-a-Foundational-Element-in-Zero-Trust-Security-on-Windows-11.html"
+permalink: "/2025-11-19-DNS-as-a-Foundational-Element-in-Zero-Trust-Security-on-Windows-11.html"
 categories: ["Security"]
 tags: ["Assume Breach", "Containment Strategies", "Continuous Monitoring", "Data Exfiltration", "Device Level Enforcement", "DNS Security", "DNS Tunneling", "Hybrid Cloud", "Microsoft Ignite", "Microsoft Security", "ModernizeSecOpswithaunifiedplatform", "MSIgnite", "Multi Cloud Security", "Network Segmentation", "Security", "Security Architecture", "Videos", "Windows 11", "Zero Trust", "ZT DNS"]
 tags_normalized: ["assume breach", "containment strategies", "continuous monitoring", "data exfiltration", "device level enforcement", "dns security", "dns tunneling", "hybrid cloud", "microsoft ignite", "microsoft security", "modernizesecopswithaunifiedplatform", "msignite", "multi cloud security", "network segmentation", "security", "security architecture", "videos", "windows 11", "zero trust", "zt dns"]

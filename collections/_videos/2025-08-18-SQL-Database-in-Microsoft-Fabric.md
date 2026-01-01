@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "John Savill's Technical Training"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCpIn7ox7j7bH_OFj7tYouOQ"
 date: 2025-08-18 15:06:40 +00:00
-permalink: "/videos/2025-08-18-SQL-Database-in-Microsoft-Fabric.html"
+permalink: "/2025-08-18-SQL-Database-in-Microsoft-Fabric.html"
 categories: ["Azure", "ML"]
 tags: ["AI", "AI Integration", "Analytics", "Analytics Endpoints", "Azure", "Data Analytics", "Data Integration", "Data Platform", "Database Architecture", "Fabric", "Feature Comparison", "Microsoft Fabric", "ML", "OneLake", "Pricing", "Purview Integration", "Service Selection", "SQL", "SQL Database", "SQL Endpoints", "SQL in Fabric", "SQL Server", "Transactional Databases", "Videos"]
 tags_normalized: ["ai", "ai integration", "analytics", "analytics endpoints", "azure", "data analytics", "data integration", "data platform", "database architecture", "fabric", "feature comparison", "microsoft fabric", "ml", "onelake", "pricing", "purview integration", "service selection", "sql", "sql database", "sql endpoints", "sql in fabric", "sql server", "transactional databases", "videos"]

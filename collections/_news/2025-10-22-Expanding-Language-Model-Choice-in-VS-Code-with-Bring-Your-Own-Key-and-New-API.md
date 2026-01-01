@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Visual Studio Code Releases"
 feed_url: "https://code.visualstudio.com/feed.xml"
 date: 2025-10-22 00:00:00 +00:00
-permalink: "/news/2025-10-22-Expanding-Language-Model-Choice-in-VS-Code-with-Bring-Your-Own-Key-and-New-API.html"
+permalink: "/2025-10-22-Expanding-Language-Model-Choice-in-VS-Code-with-Bring-Your-Own-Key-and-New-API.html"
 categories: ["AI", "Coding", "GitHub Copilot"]
 tags: ["AI", "AI Extensions", "AI Toolkit", "Azure AI Foundry", "BYOK", "Cerebras", "Code Generation", "Coding", "Custom LLM", "Extension Development", "GitHub Copilot", "GitHub Copilot Chat", "Hugging Face", "Language Model Chat Provider API", "LLM Integration", "Model Management", "News", "Ollama", "OpenAI Compatible", "VS Code", "VS Code Extensions"]
 tags_normalized: ["ai", "ai extensions", "ai toolkit", "azure ai foundry", "byok", "cerebras", "code generation", "coding", "custom llm", "extension development", "github copilot", "github copilot chat", "hugging face", "language model chat provider api", "llm integration", "model management", "news", "ollama", "openai compatible", "vs code", "vs code extensions"]

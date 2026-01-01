@@ -6,7 +6,7 @@ author: "Tech Hub Team"
 excerpt_separator: <!--excerpt_end-->
 viewing_mode: "internal"
 date: 2025-09-08 09:00:00 +00:00
-permalink: "/roundups/2025-09-08-Weekly-AI-and-Tech-News-Roundup.html"
+permalink: "/2025-09-08-Weekly-AI-and-Tech-News-Roundup.html"
 categories: ["AI", "GitHub Copilot", "ML", "Azure", "Coding", "DevOps", "Security"]
 tags: [".NET", "AI", "AI Agents", "Azure", "Azure AI", "Blazor", "CI/CD", "Cloud Infrastructure", "Code Review", "Coding", "Compliance", "Data Analytics", "Developer Tooling", "DevOps", "Enterprise Security", "GitHub Copilot", "Identity Management", "Kubernetes", "MCP", "Microsoft Fabric", "ML", "OpenAI", "Roundups", "Security", "VS Code", "Workflow Automation"]
 tags_normalized: ["dotnet", "ai", "ai agents", "azure", "azure ai", "blazor", "cislashcd", "cloud infrastructure", "code review", "coding", "compliance", "data analytics", "developer tooling", "devops", "enterprise security", "github copilot", "identity management", "kubernetes", "mcp", "microsoft fabric", "ml", "openai", "roundups", "security", "vs code", "workflow automation"]

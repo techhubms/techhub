@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft VisualStudio Blog"
 feed_url: "https://devblogs.microsoft.com/visualstudio/feed/"
 date: 2025-09-22 17:26:51 +00:00
-permalink: "/news/2025-09-22-Enhancements-to-XAML-Live-Preview-in-Visual-Studio-for-NET-MAUI.html"
+permalink: "/2025-09-22-Enhancements-to-XAML-Live-Preview-in-Visual-Studio-for-NET-MAUI.html"
 categories: ["AI", "Coding", "GitHub Copilot"]
 tags: ["AI", "AI Assisted Coding", "Android Emulator Support", "Coding", "Copilot Vision", "Cross Platform UI", "Design Time", "Element Inspection", "GitHub Copilot", "Hot Reload", "IDE Tools", "Live Preview", "MAUI", "News", "UI Prototyping", "VS", "XAML"]
 tags_normalized: ["ai", "ai assisted coding", "android emulator support", "coding", "copilot vision", "cross platform ui", "design time", "element inspection", "github copilot", "hot reload", "ide tools", "live preview", "maui", "news", "ui prototyping", "vs", "xaml"]

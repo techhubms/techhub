@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/changelog/feed/"
 date: 2025-12-10 05:27:55 +00:00
-permalink: "/news/2025-12-10-GitHub-Custom-Repository-Properties-GraphQL-API-and-URL-Type-Enhancements.html"
+permalink: "/2025-12-10-GitHub-Custom-Repository-Properties-GraphQL-API-and-URL-Type-Enhancements.html"
 categories: ["DevOps"]
 tags: ["API Integration", "Automation", "Azure Kubernetes Fleet", "DevOps", "Enterprise Management", "Enterprise Management Tools", "GitHub", "GraphQL API", "Improvement", "News", "Platform Governance", "Repository Properties", "URL Property", "Validation", "Workflow Automation"]
 tags_normalized: ["api integration", "automation", "azure kubernetes fleet", "devops", "enterprise management", "enterprise management tools", "github", "graphql api", "improvement", "news", "platform governance", "repository properties", "url property", "validation", "workflow automation"]

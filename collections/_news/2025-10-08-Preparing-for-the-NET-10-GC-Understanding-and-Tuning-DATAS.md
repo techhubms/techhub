@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft .NET Blog"
 feed_url: "https://devblogs.microsoft.com/dotnet/feed/"
 date: 2025-10-08 17:00:00 +00:00
-permalink: "/news/2025-10-08-Preparing-for-the-NET-10-GC-Understanding-and-Tuning-DATAS.html"
+permalink: "/2025-10-08-Preparing-for-the-NET-10-GC-Understanding-and-Tuning-DATAS.html"
 categories: ["Coding"]
 tags: [".NET", ".NET 10", "Application Optimization", "C#", "Coding", "Configuration Settings", "Containerization", "DATAS", "Garbage Collection", "GC", "GCDTargetTCP", "GCDynAdaptationMode", "GCHeapCount", "Kubernetes", "Memory", "Memory Management", "News", "Performance", "Runtime Configuration", "Server GC", "Throughput", "Tuning"]
 tags_normalized: ["dotnet", "dotnet 10", "application optimization", "csharp", "coding", "configuration settings", "containerization", "datas", "garbage collection", "gc", "gcdtargettcp", "gcdynadaptationmode", "gcheapcount", "kubernetes", "memory", "memory management", "news", "performance", "runtime configuration", "server gc", "throughput", "tuning"]

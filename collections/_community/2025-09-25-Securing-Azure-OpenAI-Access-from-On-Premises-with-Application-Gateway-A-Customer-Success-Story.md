@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-09-25 21:12:24 +00:00
-permalink: "/community/2025-09-25-Securing-Azure-OpenAI-Access-from-On-Premises-with-Application-Gateway-A-Customer-Success-Story.html"
+permalink: "/2025-09-25-Securing-Azure-OpenAI-Access-from-On-Premises-with-Application-Gateway-A-Customer-Success-Story.html"
 categories: ["AI", "Azure", "Security"]
 tags: ["AI", "Application Gateway", "Azure", "Azure Networking", "Azure OpenAI", "Cloud Governance", "Community", "Enterprise Security", "Generative AI", "IP Firewall", "Large Language Model", "Network Security Group", "On Premises Integration", "Public IP", "Reverse Proxy", "Security", "SSL Certificate", "SSL Termination", "Virtual Network", "Web Application Firewall"]
 tags_normalized: ["ai", "application gateway", "azure", "azure networking", "azure openai", "cloud governance", "community", "enterprise security", "generative ai", "ip firewall", "large language model", "network security group", "on premises integration", "public ip", "reverse proxy", "security", "ssl certificate", "ssl termination", "virtual network", "web application firewall"]

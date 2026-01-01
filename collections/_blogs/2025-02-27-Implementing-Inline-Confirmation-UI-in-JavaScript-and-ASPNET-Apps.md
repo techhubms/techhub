@@ -9,10 +9,10 @@ viewing_mode: "external"
 feed_name: "Rick Strahl's Blog"
 feed_url: "https://feeds.feedburner.com/rickstrahl"
 date: 2025-02-27 09:02:10 +00:00
-permalink: "/blogs/2025-02-27-Implementing-Inline-Confirmation-UI-in-JavaScript-and-ASPNET-Apps.html"
+permalink: "/2025-02-27-Implementing-Inline-Confirmation-UI-in-JavaScript-and-ASPNET-Apps.html"
 categories: ["Coding"]
-tags: ["ASP.NET", "ASP.NET MVC", "Button State Management", "Client Side Scripting", "CodePen", "Coding", "Dynamic UI", "Event Handling", "Front End Design", "HTML", "Inline Confirmation", "JavaScript", "Blogs", "Reactive Frameworks", "UI/UX Patterns", "Vue.js", "Web Development"]
-tags_normalized: ["aspdotnet", "aspdotnet mvc", "button state management", "client side scripting", "codepen", "coding", "dynamic ui", "event handling", "front end design", "html", "inline confirmation", "javascript", "blogs", "reactive frameworks", "uislashux patterns", "vuedotjs", "web development"]
+tags: ["ASP.NET", "ASP.NET MVC", "Blogs", "Button State Management", "Client Side Scripting", "CodePen", "Coding", "Dynamic UI", "Event Handling", "Front End Design", "HTML", "Inline Confirmation", "JavaScript", "Reactive Frameworks", "UI/UX Patterns", "Vue.js", "Web Development"]
+tags_normalized: ["aspdotnet", "aspdotnet mvc", "blogs", "button state management", "client side scripting", "codepen", "coding", "dynamic ui", "event handling", "front end design", "html", "inline confirmation", "javascript", "reactive frameworks", "uislashux patterns", "vuedotjs", "web development"]
 ---
 
 Rick Strahl shares a simple and effective technique for handling confirmation prompts inline in JavaScript and ASP.NET web applications, providing code examples and UI best practices.<!--excerpt_end-->

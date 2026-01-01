@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-11-03 15:30:00 +00:00
-permalink: "/community/2025-11-03-October-2025-Update-App-Service-Managed-Certificates-Support-for-Non-Publicly-Accessible-Sites.html"
+permalink: "/2025-11-03-October-2025-Update-App-Service-Managed-Certificates-Support-for-Non-Publicly-Accessible-Sites.html"
 categories: ["Azure", "Security"]
 tags: ["App Service Managed Certificates", "ASMC", "Azure", "Azure App Service", "Azure Front Ends", "Azure Security", "Certificate Issuance", "Certificate Renewal", "Community", "DigiCert", "DNS", "Domain Validation", "HTTP Token Validation", "Platform Updates", "Private Endpoints", "Security", "Traffic Manager", "Web Apps"]
 tags_normalized: ["app service managed certificates", "asmc", "azure", "azure app service", "azure front ends", "azure security", "certificate issuance", "certificate renewal", "community", "digicert", "dns", "domain validation", "http token validation", "platform updates", "private endpoints", "security", "traffic manager", "web apps"]

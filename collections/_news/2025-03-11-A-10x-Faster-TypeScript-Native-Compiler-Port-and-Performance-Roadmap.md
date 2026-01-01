@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft TypeScript Blog"
 feed_url: "https://devblogs.microsoft.com/typescript/feed/"
 date: 2025-03-11 14:31:27 +00:00
-permalink: "/news/2025-03-11-A-10x-Faster-TypeScript-Native-Compiler-Port-and-Performance-Roadmap.html"
+permalink: "/2025-03-11-A-10x-Faster-TypeScript-Native-Compiler-Port-and-Performance-Roadmap.html"
 categories: ["Coding"]
 tags: ["Coding", "Developer Experience", "Editor Responsiveness", "Go", "JavaScript Ecosystem", "Language Services", "LSP", "Native Compiler", "News", "Open Source", "Performance Improvement", "Project Roadmap", "Source Code Management", "TypeScript", "TypeScript 7.0", "VS Code"]
 tags_normalized: ["coding", "developer experience", "editor responsiveness", "go", "javascript ecosystem", "language services", "lsp", "native compiler", "news", "open source", "performance improvement", "project roadmap", "source code management", "typescript", "typescript 7dot0", "vs code"]

@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Events YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
 date: 2025-11-19 11:48:33 +00:00
-permalink: "/videos/2025-11-19-Scaling-AI-Innovation-with-KPMG-Workbench-and-Microsoft-Foundry.html"
+permalink: "/2025-11-19-Scaling-AI-Innovation-with-KPMG-Workbench-and-Microsoft-Foundry.html"
 categories: ["AI"]
 tags: ["Agenticbusinessapplications", "AI", "AI Agents", "AI Platform", "Audit Technology", "Casecraft", "Compliance", "Digital Transformation", "Enterprise Automation", "Industry Expertise Integration", "KPMG Workbench", "Microsoft Foundry", "Microsoft Ignite", "MSIgnite", "Scalability", "Service Delivery", "Tax Advisory", "Videos"]
 tags_normalized: ["agenticbusinessapplications", "ai", "ai agents", "ai platform", "audit technology", "casecraft", "compliance", "digital transformation", "enterprise automation", "industry expertise integration", "kpmg workbench", "microsoft foundry", "microsoft ignite", "msignite", "scalability", "service delivery", "tax advisory", "videos"]

@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Build 2025 YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
 date: 2025-07-28 16:00:52 +00:00
-permalink: "/videos/2025-07-28-MCP-Development-Best-Practices.html"
+permalink: "/2025-07-28-MCP-Development-Best-Practices.html"
 categories: ["AI", "Security"]
 tags: ["AI", "Deployment", "Error Handling", "MCP", "Performance Optimization", "Project Structure", "Schema Validation", "Security", "Tool Design", "Videos", "Workflow Patterns"]
 tags_normalized: ["ai", "deployment", "error handling", "mcp", "performance optimization", "project structure", "schema validation", "security", "tool design", "videos", "workflow patterns"]

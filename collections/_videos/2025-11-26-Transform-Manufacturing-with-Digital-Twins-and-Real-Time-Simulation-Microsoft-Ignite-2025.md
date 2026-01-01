@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Events YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
 date: 2025-11-26 20:19:12 +00:00
-permalink: "/videos/2025-11-26-Transform-Manufacturing-with-Digital-Twins-and-Real-Time-Simulation-Microsoft-Ignite-2025.html"
+permalink: "/2025-11-26-Transform-Manufacturing-with-Digital-Twins-and-Real-Time-Simulation-Microsoft-Ignite-2025.html"
 categories: ["AI", "Azure"]
 tags: ["3D Visualization", "AI", "AI Models", "Ansys", "Azure", "Cloud Collaboration", "Data Operations", "Digital Twins", "Emergency Response", "English (us)", "F5n1", "Ignite", "Manufacturing And Mobility", "Manufacturing Optimization", "Microsoft", "Microsoft Ignite", "Ms Ignite", "Msft Ignite", "NVIDIA DeepStream", "Omniverse", "OpenUSD", "Real Time Simulation", "Signal Timing", "STUDIOSP64", "Synopsys", "Technical", "Traffic Data Processing", "Transform Manufacturing With Digital Twins And Real Time Simulation | STUDIOSP64", "Videos"]
 tags_normalized: ["3d visualization", "ai", "ai models", "ansys", "azure", "cloud collaboration", "data operations", "digital twins", "emergency response", "english us", "f5n1", "ignite", "manufacturing and mobility", "manufacturing optimization", "microsoft", "microsoft ignite", "ms ignite", "msft ignite", "nvidia deepstream", "omniverse", "openusd", "real time simulation", "signal timing", "studiosp64", "synopsys", "technical", "traffic data processing", "transform manufacturing with digital twins and real time simulation pipe studiosp64", "videos"]

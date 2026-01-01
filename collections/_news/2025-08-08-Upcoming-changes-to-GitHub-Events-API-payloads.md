@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/changelog/feed/"
 date: 2025-08-08 17:41:32 +00:00
-permalink: "/news/2025-08-08-Upcoming-changes-to-GitHub-Events-API-payloads.html"
+permalink: "/2025-08-08-Upcoming-changes-to-GitHub-Events-API-payloads.html"
 categories: ["DevOps"]
 tags: ["API Changes", "API Migration", "API Performance", "Community Announcements", "Developer Integrations", "DevOps", "Event Delivery", "Feature Rollout", "GitHub", "GitHub Events API", "News", "Payload Optimization", "Pull Request Events", "Push Events", "REST API", "Scalability", "Webhooks"]
 tags_normalized: ["api changes", "api migration", "api performance", "community announcements", "developer integrations", "devops", "event delivery", "feature rollout", "github", "github events api", "news", "payload optimization", "pull request events", "push events", "rest api", "scalability", "webhooks"]

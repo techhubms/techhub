@@ -7,7 +7,7 @@ excerpt_separator: <!--excerpt_end-->
 canonical_url: "https://youtu.be/hFM9gtIzBMI"
 categories: ["AI", "GitHub Copilot"]
 date: 2025-05-02 14:08:17 +00:00
-permalink: "/videos/2025-05-02-Bring-Your-Own-LLM.html"
+permalink: "/2025-05-02-Bring-Your-Own-LLM.html"
 viewing_mode: "internal"
 section: "github-copilot"
 ghes_support: "true"

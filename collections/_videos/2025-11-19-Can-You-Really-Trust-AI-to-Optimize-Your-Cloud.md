@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Events YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
 date: 2025-11-19 12:34:17 +00:00
-permalink: "/videos/2025-11-19-Can-You-Really-Trust-AI-to-Optimize-Your-Cloud.html"
+permalink: "/2025-11-19-Can-You-Really-Trust-AI-to-Optimize-Your-Cloud.html"
 categories: ["AI"]
 tags: ["Agentic Business Applications", "Agenticbusinessapplications", "AI", "AI Automation", "AI Reliability", "Autonomous Systems", "Autopilot", "Availability Management", "Cloud Operations", "Cloud Optimization", "Engineering Leadership", "Enterprise Cloud", "Intelligent Automation", "Microsoft Ignite", "MSIgnite", "Productivity", "Rightsizing", "Session ODSP1433", "Suresh Mathew", "Videos"]
 tags_normalized: ["agentic business applications", "agenticbusinessapplications", "ai", "ai automation", "ai reliability", "autonomous systems", "autopilot", "availability management", "cloud operations", "cloud optimization", "engineering leadership", "enterprise cloud", "intelligent automation", "microsoft ignite", "msignite", "productivity", "rightsizing", "session odsp1433", "suresh mathew", "videos"]

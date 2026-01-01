@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-12-20 15:52:24 +00:00
-permalink: "/community/2025-12-20-Automating-On-Call-Runbooks-with-Azure-SRE-Agent-for-Incident-Response.html"
+permalink: "/2025-12-20-Automating-On-Call-Runbooks-with-Azure-SRE-Agent-for-Incident-Response.html"
 categories: ["AI", "Azure", "DevOps"]
 tags: ["AI", "Application Insights", "Automated Diagnostics", "Az CLI", "Azure", "Azure App Service", "Azure Container Apps", "Azure Monitor", "Azure SRE Agent", "Cloud Operations", "Community", "DevOps", "Email Integration", "Incident Response", "KQL", "Log Analytics", "PagerDuty", "Runbook Automation", "Runbooks", "ServiceNow", "SRE"]
 tags_normalized: ["ai", "application insights", "automated diagnostics", "az cli", "azure", "azure app service", "azure container apps", "azure monitor", "azure sre agent", "cloud operations", "community", "devops", "email integration", "incident response", "kql", "log analytics", "pagerduty", "runbook automation", "runbooks", "servicenow", "sre"]

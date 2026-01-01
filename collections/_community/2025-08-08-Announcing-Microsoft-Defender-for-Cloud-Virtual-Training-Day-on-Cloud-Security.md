@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Community"
 date: 2025-08-08 19:50:59 +00:00
-permalink: "/community/2025-08-08-Announcing-Microsoft-Defender-for-Cloud-Virtual-Training-Day-on-Cloud-Security.html"
+permalink: "/2025-08-08-Announcing-Microsoft-Defender-for-Cloud-Virtual-Training-Day-on-Cloud-Security.html"
 categories: ["Azure", "DevOps", "Security"]
 tags: ["Azure", "Cloud Native Application Protection", "Cloud Security", "Community", "Compliance", "Container Security", "DevOps", "DevOps Security", "Hybrid Cloud", "Incident Response", "Microsoft Certification", "Microsoft Defender For Cloud", "Multicloud Security", "Operational Security", "Security", "Security Posture Management", "Server Security", "Virtual Training", "Workload Protection"]
 tags_normalized: ["azure", "cloud native application protection", "cloud security", "community", "compliance", "container security", "devops", "devops security", "hybrid cloud", "incident response", "microsoft certification", "microsoft defender for cloud", "multicloud security", "operational security", "security", "security posture management", "server security", "virtual training", "workload protection"]

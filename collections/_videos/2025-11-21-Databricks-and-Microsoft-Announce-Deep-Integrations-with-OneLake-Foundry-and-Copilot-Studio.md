@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Events YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
 date: 2025-11-21 12:54:50 +00:00
-permalink: "/videos/2025-11-21-Databricks-and-Microsoft-Announce-Deep-Integrations-with-OneLake-Foundry-and-Copilot-Studio.html"
+permalink: "/2025-11-21-Databricks-and-Microsoft-Announce-Deep-Integrations-with-OneLake-Foundry-and-Copilot-Studio.html"
 categories: ["AI", "Azure", "ML"]
 tags: ["Agent 365", "AI", "AI Integration", "Azure", "Azure Databricks", "Copilot Studio", "Data Analytics", "Data Governance", "Data Security", "Databricks", "Enterprise Data", "Microsoft 365", "Microsoft Entra ID", "Microsoft Foundry", "Microsoft OneLake", "ML", "MSIgnite", "Other", "SAP On Azure", "Unity Catalog", "Videos"]
 tags_normalized: ["agent 365", "ai", "ai integration", "azure", "azure databricks", "copilot studio", "data analytics", "data governance", "data security", "databricks", "enterprise data", "microsoft 365", "microsoft entra id", "microsoft foundry", "microsoft onelake", "ml", "msignite", "other", "sap on azure", "unity catalog", "videos"]

@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "GitHub YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ"
 date: 2025-11-30 15:00:40 +00:00
-permalink: "/videos/2025-11-30-Extending-AI-Agents-Live-Demo-of-GitHub-MCP-Server-Integration.html"
+permalink: "/2025-11-30-Extending-AI-Agents-Live-Demo-of-GitHub-MCP-Server-Integration.html"
 categories: ["AI", "Coding", "GitHub Copilot"]
 tags: ["Agent Architecture", "AI", "AI Agents", "Automation", "Coding", "Copilot Agent Mode", "Developer Workflow", "GitHub", "GitHub Copilot", "GitHub MCP Server", "GitHub Registry", "GitHub Universe", "GitHubUniverse", "MCP", "Mermaid Charts", "Multi Step Workflow", "Prompt Engineering", "Videos", "VS Code"]
 tags_normalized: ["agent architecture", "ai", "ai agents", "automation", "coding", "copilot agent mode", "developer workflow", "github", "github copilot", "github mcp server", "github registry", "github universe", "githubuniverse", "mcp", "mermaid charts", "multi step workflow", "prompt engineering", "videos", "vs code"]

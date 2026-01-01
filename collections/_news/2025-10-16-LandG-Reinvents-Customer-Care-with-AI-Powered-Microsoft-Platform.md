@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft News"
 feed_url: "https://news.microsoft.com/source/feed/"
 date: 2025-10-16 15:55:53 +00:00
-permalink: "/news/2025-10-16-LandG-Reinvents-Customer-Care-with-AI-Powered-Microsoft-Platform.html"
+permalink: "/2025-10-16-LandG-Reinvents-Customer-Care-with-AI-Powered-Microsoft-Platform.html"
 categories: ["AI", "Azure"]
 tags: ["AI", "AI Powered Customer Service", "Azure", "Business Intelligence", "Case Summarization", "Company News", "Contact Centre", "Customer Data Security", "Digital Transformation", "Financial Services", "Microsoft Copilot", "Microsoft Dynamics 365", "Microsoft Ecosystem", "News", "Power Platform", "Process Automation", "Sentiment Analysis", "UK Financial Services"]
 tags_normalized: ["ai", "ai powered customer service", "azure", "business intelligence", "case summarization", "company news", "contact centre", "customer data security", "digital transformation", "financial services", "microsoft copilot", "microsoft dynamics 365", "microsoft ecosystem", "news", "power platform", "process automation", "sentiment analysis", "uk financial services"]

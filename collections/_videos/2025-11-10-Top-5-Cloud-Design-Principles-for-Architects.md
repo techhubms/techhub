@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "John Savill's Technical Training"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCpIn7ox7j7bH_OFj7tYouOQ"
 date: 2025-11-10 15:01:30 +00:00
-permalink: "/videos/2025-11-10-Top-5-Cloud-Design-Principles-for-Architects.html"
+permalink: "/2025-11-10-Top-5-Cloud-Design-Principles-for-Architects.html"
 categories: ["Azure", "DevOps", "Security"]
 tags: ["Architect", "AWS", "Azure", "Cloud", "Cloud Architecture", "Cloud Consulting", "Cloud Engineer", "Consultant", "Design Principles", "DevOps", "Elasticity", "GCP", "Governance", "IaC", "Scale", "Security", "Solution Design", "Videos"]
 tags_normalized: ["architect", "aws", "azure", "cloud", "cloud architecture", "cloud consulting", "cloud engineer", "consultant", "design principles", "devops", "elasticity", "gcp", "governance", "iac", "scale", "security", "solution design", "videos"]

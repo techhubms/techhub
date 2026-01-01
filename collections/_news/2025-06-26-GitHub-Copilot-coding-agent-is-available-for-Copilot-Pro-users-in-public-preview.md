@@ -10,7 +10,7 @@ categories: ["AI", "GitHub Copilot"]
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/changelog/label/copilot/feed/"
 date: 2025-06-26 13:23:05 +00:00
-permalink: "/news/2025-06-26-GitHub-Copilot-coding-agent-is-available-for-Copilot-Pro-users-in-public-preview.html"
+permalink: "/2025-06-26-GitHub-Copilot-coding-agent-is-available-for-Copilot-Pro-users-in-public-preview.html"
 tags: ["AI", "Background Tasks", "Coding Agent", "Copilot Pro", "GitHub Copilot", "News", "Public Preview"]
 tags_normalized: ["ai", "background tasks", "coding agent", "copilot pro", "github copilot", "news", "public preview"]
 ---

@@ -6,7 +6,7 @@ author: "Tech Hub Team"
 excerpt_separator: <!--excerpt_end-->
 viewing_mode: "internal"
 date: 2025-07-14 09:00:00 +00:00
-permalink: "/roundups/2025-07-14-Weekly-AI-and-Tech-News-Roundup.html"
+permalink: "/2025-07-14-Weekly-AI-and-Tech-News-Roundup.html"
 categories: ["AI", "GitHub Copilot", "ML", "Azure", "Coding", "DevOps", "Security"]
 tags: [".NET", "AI", "AI Agents", "AI Ethics", "Automation", "Azure", "CI/CD", "Cloud Migration", "Coding", "DevOps", "GitHub Copilot", "Machine Learning", "Microsoft", "ML", "Model Context Protocol (mcp)", "Prompt Engineering", "Roundups", "Security", "Semantic Kernel", "TypeScript", "Zero Trust"]
 tags_normalized: ["dotnet", "ai", "ai agents", "ai ethics", "automation", "azure", "cislashcd", "cloud migration", "coding", "devops", "github copilot", "machine learning", "microsoft", "ml", "model context protocol mcp", "prompt engineering", "roundups", "security", "semantic kernel", "typescript", "zero trust"]

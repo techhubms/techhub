@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "DotNet YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw"
 date: 2025-10-06 22:41:41 +00:00
-permalink: "/videos/2025-10-06-Infrastructure-as-Code-with-Pulumi-Using-NET-Languages.html"
+permalink: "/2025-10-06-Infrastructure-as-Code-with-Pulumi-Using-NET-Languages.html"
 categories: ["Coding", "DevOps"]
 tags: [".NET", "Beginner", "C#", "Cloud Infrastructure", "Code", "Coding", "Demo", "Developer", "Developer Community", "Developer Tools", "DevOps", "Dotnetdeveloper", "F#", "IaC", "Microsoft", "Open Source", "Programming Languages", "Pulumi", "Software Developer", "Videos"]
 tags_normalized: ["dotnet", "beginner", "csharp", "cloud infrastructure", "code", "coding", "demo", "developer", "developer community", "developer tools", "devops", "dotnetdeveloper", "fsharp", "iac", "microsoft", "open source", "programming languages", "pulumi", "software developer", "videos"]

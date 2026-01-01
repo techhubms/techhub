@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Fabric Blog"
 feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
 date: 2025-12-10 09:00:00 +00:00
-permalink: "/news/2025-12-10-Lakehouse-Schemas-Now-Generally-Available-in-Microsoft-Fabric.html"
+permalink: "/2025-12-10-Lakehouse-Schemas-Now-Generally-Available-in-Microsoft-Fabric.html"
 categories: ["Azure", "ML"]
 tags: ["ADLS Gen2", "Azure", "Data Engineering", "Data Lake", "Data Management", "Fabric Notebooks", "Feature Parity", "Lakehouse", "Materialized Views", "Microsoft Fabric", "Migration Tools", "ML", "News", "OneLake Security", "Schema Lakehouse", "Spark", "Table Organization", "Workspace Private Links"]
 tags_normalized: ["adls gen2", "azure", "data engineering", "data lake", "data management", "fabric notebooks", "feature parity", "lakehouse", "materialized views", "microsoft fabric", "migration tools", "ml", "news", "onelake security", "schema lakehouse", "spark", "table organization", "workspace private links"]

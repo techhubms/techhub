@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-12-15 17:46:43 +00:00
-permalink: "/community/2025-12-15-Secure-Access-with-Managed-Identities-for-Azure-Files-SMB.html"
+permalink: "/2025-12-15-Secure-Access-with-Managed-Identities-for-Azure-Files-SMB.html"
 categories: ["Azure", "DevOps", "Security"]
 tags: ["AKS", "Azure", "Azure DevOps", "Azure Files", "CI/CD", "Cloud Native", "Community", "DevOps", "FIPS Compliance", "Kerberos", "Linux Clients", "Managed Identities", "Microsoft Entra ID", "OAuth Tokens", "Persistent Storage", "RBAC", "Role Based Access Control", "Security", "SMB Shares", "Windows Clients", "Zero Trust"]
 tags_normalized: ["aks", "azure", "azure devops", "azure files", "cislashcd", "cloud native", "community", "devops", "fips compliance", "kerberos", "linux clients", "managed identities", "microsoft entra id", "oauth tokens", "persistent storage", "rbac", "role based access control", "security", "smb shares", "windows clients", "zero trust"]

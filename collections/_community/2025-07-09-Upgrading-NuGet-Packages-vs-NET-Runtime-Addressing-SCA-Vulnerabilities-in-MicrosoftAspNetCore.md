@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=dotnet"
 date: 2025-07-09 05:01:49 +00:00
-permalink: "/community/2025-07-09-Upgrading-NuGet-Packages-vs-NET-Runtime-Addressing-SCA-Vulnerabilities-in-MicrosoftAspNetCore.html"
+permalink: "/2025-07-09-Upgrading-NuGet-Packages-vs-NET-Runtime-Addressing-SCA-Vulnerabilities-in-MicrosoftAspNetCore.html"
 categories: ["Coding"]
 tags: [".NET", ".NET 8", ".NET Runtime", "Authorization", "Best Practices", "Coding", "Community", "Components", "Dependency Management", "Microsoft.AspNetCore", "NuGet Packages", "Package Upgrade", "SCA", "SignalR", "Software Composition Analysis", "Vulnerability Management"]
 tags_normalized: ["dotnet", "dotnet 8", "dotnet runtime", "authorization", "best practices", "coding", "community", "components", "dependency management", "microsoftdotaspnetcore", "nuget packages", "package upgrade", "sca", "signalr", "software composition analysis", "vulnerability management"]

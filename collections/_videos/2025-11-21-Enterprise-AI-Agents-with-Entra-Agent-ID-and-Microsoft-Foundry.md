@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Events YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
 date: 2025-11-21 08:25:11 +00:00
-permalink: "/videos/2025-11-21-Enterprise-AI-Agents-with-Entra-Agent-ID-and-Microsoft-Foundry.html"
+permalink: "/2025-11-21-Enterprise-AI-Agents-with-Entra-Agent-ID-and-Microsoft-Foundry.html"
 categories: ["AI", "Azure", "Security"]
 tags: ["Agent Lifecycle", "AI", "AI Agents", "Azure", "Compliance", "Control Plane", "Enterprise AI", "Entra Agent ID", "Governance", "Identity Management", "InnovatewithAzureAIappsandagents", "Microsoft Entra ID", "Microsoft Foundry", "Microsoft Ignite", "MSIgnite", "Networking", "Security", "Tenant Management", "Tool Integration", "Videos"]
 tags_normalized: ["agent lifecycle", "ai", "ai agents", "azure", "compliance", "control plane", "enterprise ai", "entra agent id", "governance", "identity management", "innovatewithazureaiappsandagents", "microsoft entra id", "microsoft foundry", "microsoft ignite", "msignite", "networking", "security", "tenant management", "tool integration", "videos"]

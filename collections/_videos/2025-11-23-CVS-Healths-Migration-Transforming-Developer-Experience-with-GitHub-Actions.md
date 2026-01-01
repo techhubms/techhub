@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "GitHub YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ"
 date: 2025-11-23 15:01:54 +00:00
-permalink: "/videos/2025-11-23-CVS-Healths-Migration-Transforming-Developer-Experience-with-GitHub-Actions.html"
+permalink: "/2025-11-23-CVS-Healths-Migration-Transforming-Developer-Experience-with-GitHub-Actions.html"
 categories: ["DevOps"]
 tags: ["CI/CD", "Collaboration", "Continuous Deployment", "Continuous Integration", "Developer Experience", "DevOps", "Engineering Productivity", "Enterprise Modernization", "GitHub", "GitHub Actions", "GitHubUniverse", "Legacy Systems", "Platform Engineering", "Repository Management", "Software Engineering", "Tool Migration", "Videos", "Workflow Automation"]
 tags_normalized: ["cislashcd", "collaboration", "continuous deployment", "continuous integration", "developer experience", "devops", "engineering productivity", "enterprise modernization", "github", "github actions", "githubuniverse", "legacy systems", "platform engineering", "repository management", "software engineering", "tool migration", "videos", "workflow automation"]

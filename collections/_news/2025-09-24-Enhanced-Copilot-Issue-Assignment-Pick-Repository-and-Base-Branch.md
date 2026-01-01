@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/changelog/feed/"
 date: 2025-09-24 09:30:06 +00:00
-permalink: "/news/2025-09-24-Enhanced-Copilot-Issue-Assignment-Pick-Repository-and-Base-Branch.html"
+permalink: "/2025-09-24-Enhanced-Copilot-Issue-Assignment-Pick-Repository-and-Base-Branch.html"
 categories: ["AI", "GitHub Copilot"]
 tags: ["AI", "Automation", "Branch Selection", "Coding Assistant", "Copilot", "Copilot Agent", "Developer Tools", "Development Process", "GitHub", "GitHub Copilot", "Improvement", "Issue Assignment", "News", "Project Management", "Projects & Issues", "Public Preview", "Repository", "Workflow Enhancement"]
 tags_normalized: ["ai", "automation", "branch selection", "coding assistant", "copilot", "copilot agent", "developer tools", "development process", "github", "github copilot", "improvement", "issue assignment", "news", "project management", "projects and issues", "public preview", "repository", "workflow enhancement"]

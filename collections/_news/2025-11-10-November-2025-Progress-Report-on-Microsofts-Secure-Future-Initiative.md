@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft News"
 feed_url: "https://news.microsoft.com/source/feed/"
 date: 2025-11-10 17:55:11 +00:00
-permalink: "/news/2025-11-10-November-2025-Progress-Report-on-Microsofts-Secure-Future-Initiative.html"
+permalink: "/2025-11-10-November-2025-Progress-Report-on-Microsofts-Secure-Future-Initiative.html"
 categories: ["AI", "Azure", "Security"]
 tags: ["AI", "AI Powered Cyberattacks", "Azure", "Cloud Security", "Cybersecurity Governance", "Data Security Posture Management", "Defender", "Microsoft 365", "Microsoft Security", "Microsoft Sentinel", "Multifactor Authentication", "News", "Phishing Resistance", "Secure Future Initiative", "Security", "Security Engineering", "Security Operations", "Vulnerability Disclosure", "Zero Trust"]
 tags_normalized: ["ai", "ai powered cyberattacks", "azure", "cloud security", "cybersecurity governance", "data security posture management", "defender", "microsoft 365", "microsoft security", "microsoft sentinel", "multifactor authentication", "news", "phishing resistance", "secure future initiative", "security", "security engineering", "security operations", "vulnerability disclosure", "zero trust"]

@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Events YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
 date: 2025-11-21 07:12:58 +00:00
-permalink: "/videos/2025-11-21-Innovation-in-Microsoft-Databases-AI-Ready-Data-and-Modern-Apps.html"
+permalink: "/2025-11-21-Innovation-in-Microsoft-Databases-AI-Ready-Data-and-Modern-Apps.html"
 categories: ["AI", "Azure", "ML"]
 tags: ["Adobe Platform AI Engineering", "AI", "AI Integration", "Azure", "Azure CosmosDB", "Data Extraction", "Database Innovation", "DocumentDB", "Fabric Integration", "Global Consistency", "GPT 5", "Horizon DB", "Microsoft Ignite", "ML", "MSIgnite", "Multi Cloud", "Open Source", "PostgreSQL", "Semantic Search", "SQL Server", "Unifyyourdataplatform", "Vector Database", "Videos", "VS Code"]
 tags_normalized: ["adobe platform ai engineering", "ai", "ai integration", "azure", "azure cosmosdb", "data extraction", "database innovation", "documentdb", "fabric integration", "global consistency", "gpt 5", "horizon db", "microsoft ignite", "ml", "msignite", "multi cloud", "open source", "postgresql", "semantic search", "sql server", "unifyyourdataplatform", "vector database", "videos", "vs code"]

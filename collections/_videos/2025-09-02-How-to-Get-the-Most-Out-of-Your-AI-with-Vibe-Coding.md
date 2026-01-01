@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "GitHub YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ"
 date: 2025-09-02 14:00:38 +00:00
-permalink: "/videos/2025-09-02-How-to-Get-the-Most-Out-of-Your-AI-with-Vibe-Coding.html"
+permalink: "/2025-09-02-How-to-Get-the-Most-Out-of-Your-AI-with-Vibe-Coding.html"
 categories: ["AI", "GitHub Copilot"]
 tags: ["AI", "AI Assistant", "AI Coding", "AI Productivity", "Context Engineering", "Developer Tools", "GitHub", "GitHub Copilot", "Non Technical Users", "PRD", "Product Requirements Document", "Software Development", "Vibe Coding", "VibeCoding", "Videos"]
 tags_normalized: ["ai", "ai assistant", "ai coding", "ai productivity", "context engineering", "developer tools", "github", "github copilot", "non technical users", "prd", "product requirements document", "software development", "vibe coding", "vibecoding", "videos"]

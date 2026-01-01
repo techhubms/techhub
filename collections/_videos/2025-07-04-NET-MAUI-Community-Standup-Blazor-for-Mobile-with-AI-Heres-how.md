@@ -9,7 +9,7 @@ categories: ["AI", "Azure", "Coding"]
 feed_name: "dotnet"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw"
 date: 2025-07-04 06:10:58 +00:00
-permalink: "/videos/2025-07-04-NET-MAUI-Community-Standup-Blazor-for-Mobile-with-AI-Heres-how.html"
+permalink: "/2025-07-04-NET-MAUI-Community-Standup-Blazor-for-Mobile-with-AI-Heres-how.html"
 viewing_mode: "internal"
 tags: [".NET", "AI", "App Enhancement", "Azure", "Azure AI Foundry", "Beth Massi", "Blazor", "Coding", "Community Links", "David Ortinau", "Dotnetmaui", "MAUI", "Native Mobile Features", "Videos", "Web App"]
 tags_normalized: ["dotnet", "ai", "app enhancement", "azure", "azure ai foundry", "beth massi", "blazor", "coding", "community links", "david ortinau", "dotnetmaui", "maui", "native mobile features", "videos", "web app"]

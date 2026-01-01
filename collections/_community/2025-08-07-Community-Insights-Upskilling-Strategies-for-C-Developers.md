@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Reddit CSharp"
 feed_url: "https://www.reddit.com/r/csharp/.rss"
 date: 2025-08-07 02:45:02 +00:00
-permalink: "/community/2025-08-07-Community-Insights-Upskilling-Strategies-for-C-Developers.html"
+permalink: "/2025-08-07-Community-Insights-Upskilling-Strategies-for-C-Developers.html"
 categories: ["Coding"]
 tags: [".NET", ".NET 8", "Advanced Concepts", "Async/await", "Books", "C#", "Coding", "Community", "Event Driven Architecture", "Framework Design Guide", "Functional Programming", "GitHub Exploration", "Learning Strategies", "Pluralsight", "Practice", "RavenDB", "Side Projects", "The C# Player's Guide", "Upskilling", "Vanilla C#", "YouTube Teaching"]
 tags_normalized: ["dotnet", "dotnet 8", "advanced concepts", "asyncslashawait", "books", "csharp", "coding", "community", "event driven architecture", "framework design guide", "functional programming", "github exploration", "learning strategies", "pluralsight", "practice", "ravendb", "side projects", "the csharp players guide", "upskilling", "vanilla csharp", "youtube teaching"]

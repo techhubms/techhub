@@ -9,10 +9,10 @@ viewing_mode: "external"
 feed_name: "Randy Pagels's Blog"
 feed_url: "https://www.cooknwithcopilot.com/rss.xml"
 date: 2025-05-02 00:00:00 +00:00
-permalink: "/blogs/2025-05-02-Craft-Prompts-That-Get-Better-Results.html"
+permalink: "/2025-05-02-Craft-Prompts-That-Get-Better-Results.html"
 categories: ["AI", "GitHub Copilot"]
-tags: ["AI", "Best Practices", "Code Quality", "Developer Workflow", "GitHub Actions", "GitHub Copilot", "Blogs", "Prompt Engineering", "Python", "React", "Structured Prompts", "Tailwind CSS", "TypeScript"]
-tags_normalized: ["ai", "best practices", "code quality", "developer workflow", "github actions", "github copilot", "blogs", "prompt engineering", "python", "react", "structured prompts", "tailwind css", "typescript"]
+tags: ["AI", "Best Practices", "Blogs", "Code Quality", "Developer Workflow", "GitHub Actions", "GitHub Copilot", "Prompt Engineering", "Python", "React", "Structured Prompts", "Tailwind CSS", "TypeScript"]
+tags_normalized: ["ai", "best practices", "blogs", "code quality", "developer workflow", "github actions", "github copilot", "prompt engineering", "python", "react", "structured prompts", "tailwind css", "typescript"]
 ---
 
 Randy Pagels offers actionable advice for developers on how to write effective prompts that significantly improve GitHub Copilot’s coding suggestions, emphasizing clarity and structure.<!--excerpt_end-->

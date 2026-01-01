@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft News"
 feed_url: "https://news.microsoft.com/source/feed/"
 date: 2025-11-12 16:01:15 +00:00
-permalink: "/news/2025-11-12-Land-OLakes-and-Microsoft-Partner-to-Accelerate-AI-Innovation-in-Agriculture.html"
+permalink: "/2025-11-12-Land-OLakes-and-Microsoft-Partner-to-Accelerate-AI-Innovation-in-Agriculture.html"
 categories: ["AI", "Azure"]
 tags: ["Agribusiness", "Agricultural Technology", "AI", "AI Innovation", "Azure", "Azure AI Foundry", "Cloud Migration", "Company News", "Copilot", "Data Driven Solutions", "Digital Assistant", "Digital Transformation", "Enterprise Copilot", "Land O’Lakes", "Microsoft", "News", "Oz"]
 tags_normalized: ["agribusiness", "agricultural technology", "ai", "ai innovation", "azure", "azure ai foundry", "cloud migration", "company news", "copilot", "data driven solutions", "digital assistant", "digital transformation", "enterprise copilot", "land olakes", "microsoft", "news", "oz"]

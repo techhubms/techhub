@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Events YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
 date: 2025-11-21 11:27:10 +00:00
-permalink: "/videos/2025-11-21-Building-Agents-and-AI-Powered-Apps-for-Software-Companies-MS-Ignite-2025-Breakout.html"
+permalink: "/2025-11-21-Building-Agents-and-AI-Powered-Apps-for-Software-Companies-MS-Ignite-2025-Breakout.html"
 categories: ["AI", "Azure", "Coding", "DevOps", "GitHub Copilot", "Security"]
 tags: ["AI", "AI Agents", "AI Infrastructure", "AI Kit", "AI Powered Apps", "Azure", "Azure AI", "Azure Logic Apps", "Coding", "DevOps", "GitHub", "GitHub Copilot", "Graph Analytics", "Industrial AI Stack", "InnovatewithAzureAIappsandagents", "Local Development", "Microsoft Defender", "Microsoft Marketplace", "MSIgnite", "Open Source", "Pair Programming", "Partner Ecosystem", "Rapid Development", "Security", "Videos"]
 tags_normalized: ["ai", "ai agents", "ai infrastructure", "ai kit", "ai powered apps", "azure", "azure ai", "azure logic apps", "coding", "devops", "github", "github copilot", "graph analytics", "industrial ai stack", "innovatewithazureaiappsandagents", "local development", "microsoft defender", "microsoft marketplace", "msignite", "open source", "pair programming", "partner ecosystem", "rapid development", "security", "videos"]

@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-10-27 07:52:59 +00:00
-permalink: "/community/2025-10-27-Implementing-Security-Headers-in-Azure-App-Service-and-Azure-Container-Apps.html"
+permalink: "/2025-10-27-Implementing-Security-Headers-in-Azure-App-Service-and-Azure-Container-Apps.html"
 categories: ["Azure", "Security"]
 tags: [".NET", "App Security", "Application Gateway", "Azure", "Azure App Service", "Azure Container Apps", "Azure Front Door", "Community", "Configuration", "Content Security Policy", "Express", "HTTP Headers", "Middleware", "Nginx", "Node.js", "Permissions Policy", "Referrer Policy", "Security", "Security Headers", "Strict Transport Security", "Web.config", "X Content Type Options", "X Frame Options"]
 tags_normalized: ["dotnet", "app security", "application gateway", "azure", "azure app service", "azure container apps", "azure front door", "community", "configuration", "content security policy", "express", "http headers", "middleware", "nginx", "nodedotjs", "permissions policy", "referrer policy", "security", "security headers", "strict transport security", "webdotconfig", "x content type options", "x frame options"]

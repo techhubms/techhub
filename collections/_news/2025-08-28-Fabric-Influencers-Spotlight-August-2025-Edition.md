@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Fabric Blog"
 feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
 date: 2025-08-28 09:00:00 +00:00
-permalink: "/news/2025-08-28-Fabric-Influencers-Spotlight-August-2025-Edition.html"
+permalink: "/2025-08-28-Fabric-Influencers-Spotlight-August-2025-Edition.html"
 categories: ["ML"]
 tags: ["Administration", "Analytics", "Calculation Groups", "Certification", "Data Engineering", "Data Science", "Data Transformation", "Data Warehousing", "DP 600", "Fabric Community", "Fabric Lakehouse", "Governance", "Materialized Lake Views", "Microsoft Fabric", "ML", "News", "Pandas", "Power BI", "Translytical Task Flows"]
 tags_normalized: ["administration", "analytics", "calculation groups", "certification", "data engineering", "data science", "data transformation", "data warehousing", "dp 600", "fabric community", "fabric lakehouse", "governance", "materialized lake views", "microsoft fabric", "ml", "news", "pandas", "power bi", "translytical task flows"]

@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft News"
 feed_url: "https://news.microsoft.com/source/feed/"
 date: 2025-10-31 14:03:18 +00:00
-permalink: "/news/2025-10-31-Kenya-Private-Sector-Alliance-and-Microsoft-Launch-KAISA-to-Drive-National-AI-Skilling.html"
+permalink: "/2025-10-31-Kenya-Private-Sector-Alliance-and-Microsoft-Launch-KAISA-to-Drive-National-AI-Skilling.html"
 categories: ["AI"]
 tags: ["Africa AI Adoption", "AI", "AI Ecosystem", "AI Innovation", "AI Skills Development", "AI Training", "Company News", "Digital Skilling", "Education Technology", "Ethical AI", "Inclusive AI", "KAISA", "Kenya Private Sector Alliance", "Microsoft", "News", "Policy Collaboration", "Responsible AI", "Technology Partnerships", "Workforce Development", "Youth Skilling"]
 tags_normalized: ["africa ai adoption", "ai", "ai ecosystem", "ai innovation", "ai skills development", "ai training", "company news", "digital skilling", "education technology", "ethical ai", "inclusive ai", "kaisa", "kenya private sector alliance", "microsoft", "news", "policy collaboration", "responsible ai", "technology partnerships", "workforce development", "youth skilling"]

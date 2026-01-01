@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Community"
 date: 2025-08-15 14:31:39 +00:00
-permalink: "/community/2025-08-15-Using-Entra-ID-Authentication-with-Arc-Enabled-SQL-Server-in-a-NET-Windows-Forms-Application.html"
+permalink: "/2025-08-15-Using-Entra-ID-Authentication-with-Arc-Enabled-SQL-Server-in-a-NET-Windows-Forms-Application.html"
 categories: ["Azure", "Coding", "Security"]
 tags: [".NET Framework", "Access Tokens", "API Permissions", "App Registration", "Arc Enabled SQL Server", "Authentication", "Azure", "Azure Active Directory", "Azure SQL Database", "Client App Registration", "Coding", "Community", "Managed Identity", "Microsoft Entra ID", "Microsoft.Data.SqlClient", "Microsoft.Identity.Client", "MSAL", "Security", "SQL Server", "SSMS", "Token Cache", "Windows Forms"]
 tags_normalized: ["dotnet framework", "access tokens", "api permissions", "app registration", "arc enabled sql server", "authentication", "azure", "azure active directory", "azure sql database", "client app registration", "coding", "community", "managed identity", "microsoft entra id", "microsoftdotdatadotsqlclient", "microsoftdotidentitydotclient", "msal", "security", "sql server", "ssms", "token cache", "windows forms"]

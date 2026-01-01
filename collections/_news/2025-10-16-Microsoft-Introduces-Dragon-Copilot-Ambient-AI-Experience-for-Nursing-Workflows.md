@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft News"
 feed_url: "https://news.microsoft.com/source/feed/"
 date: 2025-10-16 15:11:05 +00:00
-permalink: "/news/2025-10-16-Microsoft-Introduces-Dragon-Copilot-Ambient-AI-Experience-for-Nursing-Workflows.html"
+permalink: "/2025-10-16-Microsoft-Introduces-Dragon-Copilot-Ambient-AI-Experience-for-Nursing-Workflows.html"
 categories: ["AI"]
 tags: ["AI", "AI Automation", "Ambient Clinical Documentation", "Ambient Experience", "Clinical Assistant", "Company News", "Digital Health", "Dragon Copilot", "Healthcare AI", "LinkedIn Post", "Medical Information Retrieval", "Microsoft AI", "News", "Nuance", "Nursing Workflows", "Patient Care", "Patient Data", "Workflow Automation"]
 tags_normalized: ["ai", "ai automation", "ambient clinical documentation", "ambient experience", "clinical assistant", "company news", "digital health", "dragon copilot", "healthcare ai", "linkedin post", "medical information retrieval", "microsoft ai", "news", "nuance", "nursing workflows", "patient care", "patient data", "workflow automation"]

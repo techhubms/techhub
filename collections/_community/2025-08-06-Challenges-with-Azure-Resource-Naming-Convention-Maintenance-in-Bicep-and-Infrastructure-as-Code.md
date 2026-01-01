@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Reddit Azure"
 feed_url: "https://www.reddit.com/r/azure/.rss"
 date: 2025-08-06 18:27:00 +00:00
-permalink: "/community/2025-08-06-Challenges-with-Azure-Resource-Naming-Convention-Maintenance-in-Bicep-and-Infrastructure-as-Code.html"
+permalink: "/2025-08-06-Challenges-with-Azure-Resource-Naming-Convention-Maintenance-in-Bicep-and-Infrastructure-as-Code.html"
 categories: ["Azure", "Coding", "DevOps"]
 tags: ["Automation", "AVM Naming Module", "Azd", "Azure", "Azure Developer CLI", "Azure Naming Tool", "Azure Policy", "Azure Resource Naming", "Best Practices", "Bicep", "Coding", "Community", "DevOps", "IaC", "Module Development", "OpenAPI Spec", "Resource Abbreviations", "Resource Management", "Terraform", "User Defined Functions"]
 tags_normalized: ["automation", "avm naming module", "azd", "azure", "azure developer cli", "azure naming tool", "azure policy", "azure resource naming", "best practices", "bicep", "coding", "community", "devops", "iac", "module development", "openapi spec", "resource abbreviations", "resource management", "terraform", "user defined functions"]

@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "DotNet YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw"
 date: 2025-08-14 14:32:40 +00:00
-permalink: "/videos/2025-08-14-Modernizing-and-Upgrading-Your-NET-Apps-with-Visual-Studio-and-Copilot-Powered-AI-Tools.html"
+permalink: "/2025-08-14-Modernizing-and-Upgrading-Your-NET-Apps-with-Visual-Studio-and-Copilot-Powered-AI-Tools.html"
 categories: ["AI", "Coding"]
 tags: [".NET", "AI", "AI Driven Migrations", "AI Powered Code Fixes", "AI Tools", "Application Upgrade", "Automation", "Code Modernization", "Coding", "Copilot", "Copilot Powered Plans", "Developer Productivity", "Microsoft", "Migration Tools", "Natural Language Programming", "Videos", "VS"]
 tags_normalized: ["dotnet", "ai", "ai driven migrations", "ai powered code fixes", "ai tools", "application upgrade", "automation", "code modernization", "coding", "copilot", "copilot powered plans", "developer productivity", "microsoft", "migration tools", "natural language programming", "videos", "vs"]

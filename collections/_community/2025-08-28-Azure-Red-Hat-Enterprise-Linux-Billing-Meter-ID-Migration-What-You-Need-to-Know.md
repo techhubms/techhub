@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-08-28 23:18:00 +00:00
-permalink: "/community/2025-08-28-Azure-Red-Hat-Enterprise-Linux-Billing-Meter-ID-Migration-What-You-Need-to-Know.html"
+permalink: "/2025-08-28-Azure-Red-Hat-Enterprise-Linux-Billing-Meter-ID-Migration-What-You-Need-to-Know.html"
 categories: ["Azure"]
 tags: ["APIs", "Automation", "Azure", "Billing Meter ID", "Budget Alerts", "Community", "Cost Management", "Cost Optimization", "Meter Migration", "Microsoft Azure", "Power BI", "Red Hat Enterprise Linux", "Reserved Instances", "RHEL", "Vcpu Based Pricing", "Virtual Machines"]
 tags_normalized: ["apis", "automation", "azure", "billing meter id", "budget alerts", "community", "cost management", "cost optimization", "meter migration", "microsoft azure", "power bi", "red hat enterprise linux", "reserved instances", "rhel", "vcpu based pricing", "virtual machines"]

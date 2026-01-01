@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Developer YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
 date: 2025-08-14 19:05:59 +00:00
-permalink: "/videos/2025-08-14-MSBuild-2025-Highlights-Open-Sourcing-WSL-and-Windows-AI-Foundry.html"
+permalink: "/2025-08-14-MSBuild-2025-Highlights-Open-Sourcing-WSL-and-Windows-AI-Foundry.html"
 categories: ["AI"]
 tags: ["AI", "AI On Windows", "Developer Tools", "Local AI Models", "Microsoft Build", "MSBuild", "OneDevQuestion", "Open Source", "Videos", "Windows AI Foundry", "Windows Development", "Windows Subsystem For Linux", "WSL Open Source"]
 tags_normalized: ["ai", "ai on windows", "developer tools", "local ai models", "microsoft build", "msbuild", "onedevquestion", "open source", "videos", "windows ai foundry", "windows development", "windows subsystem for linux", "wsl open source"]

@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft VisualStudio Blog"
 feed_url: "https://devblogs.microsoft.com/visualstudio/feed/"
 date: 2025-11-05 19:32:56 +00:00
-permalink: "/news/2025-11-05-Visual-Studio-AI-Roadmap-Copilot-Chat-Agents-and-Model-Integrations-November.html"
+permalink: "/2025-11-05-Visual-Studio-AI-Roadmap-Copilot-Chat-Agents-and-Model-Integrations-November.html"
 categories: ["AI", "Coding", "GitHub Copilot"]
 tags: ["AI", "AI Agents", "AI Models", "Coding", "Copilot", "Copilot Chat", "Custom Agents", "Debugger Agent", "Developer Experience", "Development Workflow", "Dynamic Tool Calling", "GitHub", "GitHub Copilot", "GPT 5 Codex", "IDE", "MCP", "Model Integrations", "News", "Programming Tools", "Roadmap", "Slash Commands", "Test Agent", "Unit Testing", "VS"]
 tags_normalized: ["ai", "ai agents", "ai models", "coding", "copilot", "copilot chat", "custom agents", "debugger agent", "developer experience", "development workflow", "dynamic tool calling", "github", "github copilot", "gpt 5 codex", "ide", "mcp", "model integrations", "news", "programming tools", "roadmap", "slash commands", "test agent", "unit testing", "vs"]

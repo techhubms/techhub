@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Developer YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
 date: 2025-07-31 18:16:15 +00:00
-permalink: "/videos/2025-07-31-Get-Data-into-Fabric-Eventhouse-with-No-Code-Ingestion-Wizard.html"
+permalink: "/2025-07-31-Get-Data-into-Fabric-Eventhouse-with-No-Code-Ingestion-Wizard.html"
 categories: ["Azure", "ML"]
 tags: ["Amazon S3", "Azure", "Azure Storage", "Cloud Computing", "Continuous Ingestion", "Data Engineering", "Data Exposed", "Data Ingestion", "Data Management", "Data Preview", "Data Processing", "Data Transformation", "Dev", "Development", "EventHub", "Fabric Eventhouse", "Microsoft", "Microsoft Fabric", "ML", "No Code Wizard", "OneLake", "Real Time Analytics", "Schema Inference", "Tech", "Technology", "Videos"]
 tags_normalized: ["amazon s3", "azure", "azure storage", "cloud computing", "continuous ingestion", "data engineering", "data exposed", "data ingestion", "data management", "data preview", "data processing", "data transformation", "dev", "development", "eventhub", "fabric eventhouse", "microsoft", "microsoft fabric", "ml", "no code wizard", "onelake", "real time analytics", "schema inference", "tech", "technology", "videos"]

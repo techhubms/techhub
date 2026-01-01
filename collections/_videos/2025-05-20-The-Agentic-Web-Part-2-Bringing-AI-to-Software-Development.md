@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Events YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
 date: 2025-05-20 20:28:49 +00:00
-permalink: "/videos/2025-05-20-The-Agentic-Web-Part-2-Bringing-AI-to-Software-Development.html"
+permalink: "/2025-05-20-The-Agentic-Web-Part-2-Bringing-AI-to-Software-Development.html"
 categories: ["AI"]
 tags: ["Agentic AI", "AI", "AI Agents", "AI App Factory", "AI in Development", "AI Integration", "AI Platform", "AI Strategy", "Frank Shaw", "Jay Parikh", "Machine Learning", "Microsoft", "Microsoft Build", "Microsoft Events", "Microsoft Ignite", "Software Development Lifecycle", "Videos"]
 tags_normalized: ["agentic ai", "ai", "ai agents", "ai app factory", "ai in development", "ai integration", "ai platform", "ai strategy", "frank shaw", "jay parikh", "machine learning", "microsoft", "microsoft build", "microsoft events", "microsoft ignite", "software development lifecycle", "videos"]

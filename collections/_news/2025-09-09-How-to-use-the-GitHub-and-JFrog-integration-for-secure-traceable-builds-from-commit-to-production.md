@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/feed/"
 date: 2025-09-09 22:00:00 +00:00
-permalink: "/news/2025-09-09-How-to-use-the-GitHub-and-JFrog-integration-for-secure-traceable-builds-from-commit-to-production.html"
+permalink: "/2025-09-09-How-to-use-the-GitHub-and-JFrog-integration-for-secure-traceable-builds-from-commit-to-production.html"
 categories: ["DevOps", "Security"]
 tags: ["Artifact Promotion", "Artifactory", "Attestation", "Compliance", "Continuous Delivery", "Continuous Integration", "Dependabot", "DevOps", "DevSecOps", "Enterprise Software", "GitHub", "GitHub Actions", "JFrog", "News", "OIDC", "Provenance", "Security", "Security Scanning", "Supply Chain Security", "Workflow Automation"]
 tags_normalized: ["artifact promotion", "artifactory", "attestation", "compliance", "continuous delivery", "continuous integration", "dependabot", "devops", "devsecops", "enterprise software", "github", "github actions", "jfrog", "news", "oidc", "provenance", "security", "security scanning", "supply chain security", "workflow automation"]

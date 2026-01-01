@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Developer YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
 date: 2025-11-20 22:37:53 +00:00
-permalink: "/videos/2025-11-20-Whats-New-in-Windows-Settings-for-Developers-Advanced-Settings-Long-File-Paths-and-Git-Integration.html"
+permalink: "/2025-11-20-Whats-New-in-Windows-Settings-for-Developers-Advanced-Settings-Long-File-Paths-and-Git-Integration.html"
 categories: ["Coding"]
 tags: ["Advanced Settings", "Coding", "Developer Tools", "File Explorer", "General Availability", "Git Integration", "Long File Paths", "Microsoft Developer", "Productivity", "Videos", "Windows Development", "Windows Settings", "Windows Updates"]
 tags_normalized: ["advanced settings", "coding", "developer tools", "file explorer", "general availability", "git integration", "long file paths", "microsoft developer", "productivity", "videos", "windows development", "windows settings", "windows updates"]

@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/changelog/feed/"
 date: 2025-09-26 19:28:56 +00:00
-permalink: "/news/2025-09-26-CodeQL-2231-Released-Java-25-TypeScript-59-and-Swift-613-Support.html"
+permalink: "/2025-09-26-CodeQL-2231-Released-Java-25-TypeScript-59-and-Swift-613-Support.html"
 categories: ["DevOps", "Security"]
 tags: ["Application Security", "C#", "Code Scanning", "CodeQL", "DevOps", "GitHub", "GitHub Actions", "GitHub Enterprise Server", "Improvement", "Java 25", "JavaScript", "News", "Observability", "Python", "Query Suite", "Rust", "Security", "Security Queries", "Static Analysis", "Swift 6.1.3", "TypeScript 5.9"]
 tags_normalized: ["application security", "csharp", "code scanning", "codeql", "devops", "github", "github actions", "github enterprise server", "improvement", "java 25", "javascript", "news", "observability", "python", "query suite", "rust", "security", "security queries", "static analysis", "swift 6dot1dot3", "typescript 5dot9"]

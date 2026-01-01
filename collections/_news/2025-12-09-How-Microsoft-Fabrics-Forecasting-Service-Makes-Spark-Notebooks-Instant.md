@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Fabric Blog"
 feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
 date: 2025-12-09 09:00:00 +00:00
-permalink: "/news/2025-12-09-How-Microsoft-Fabrics-Forecasting-Service-Makes-Spark-Notebooks-Instant.html"
+permalink: "/2025-12-09-How-Microsoft-Fabrics-Forecasting-Service-Makes-Spark-Notebooks-Instant.html"
 categories: ["AI", "Azure", "ML"]
 tags: ["AI", "Azure", "Azure Cosmos DB", "Azure Data Explorer", "Big Data Infrastructure", "Cloud Cost Optimization", "Cluster Automation", "Cluster Provisioning", "Data Engineering", "Elastic Compute", "Forecasting Service", "Machine Learning", "Microsoft Fabric", "ML", "News", "Resource Optimization", "Spark", "Time Series Forecasting"]
 tags_normalized: ["ai", "azure", "azure cosmos db", "azure data explorer", "big data infrastructure", "cloud cost optimization", "cluster automation", "cluster provisioning", "data engineering", "elastic compute", "forecasting service", "machine learning", "microsoft fabric", "ml", "news", "resource optimization", "spark", "time series forecasting"]

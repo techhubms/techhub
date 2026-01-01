@@ -10,7 +10,7 @@ categories: ["AI"]
 feed_name: "Microsoft DevBlog"
 feed_url: "https://devblogs.microsoft.com/semantic-kernel/feed/"
 date: 2025-05-21 14:47:05 +00:00
-permalink: "/news/2025-05-21-Semantic-Kernel-and-MicrosoftExtensionsAI-Better-Together-Part-1.html"
+permalink: "/2025-05-21-Semantic-Kernel-and-MicrosoftExtensionsAI-Better-Together-Part-1.html"
 tags: [".NET", "Abstractions", "Agents", "AI", "AI Frameworks", "Extensions AI", "Integration", "Microsoft.Extensions.AI", "News", "Samples", "Semantic Kernel"]
 tags_normalized: ["dotnet", "abstractions", "agents", "ai", "ai frameworks", "extensions ai", "integration", "microsoftdotextensionsdotai", "news", "samples", "semantic kernel"]
 ---

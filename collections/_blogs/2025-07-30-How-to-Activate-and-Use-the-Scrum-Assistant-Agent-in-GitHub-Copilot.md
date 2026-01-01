@@ -9,10 +9,10 @@ viewing_mode: "external"
 feed_name: "Dellenny's Blog"
 feed_url: "https://dellenny.com/feed/"
 date: 2025-07-30 08:08:05 +00:00
-permalink: "/blogs/2025-07-30-How-to-Activate-and-Use-the-Scrum-Assistant-Agent-in-GitHub-Copilot.html"
+permalink: "/2025-07-30-How-to-Activate-and-Use-the-Scrum-Assistant-Agent-in-GitHub-Copilot.html"
 categories: ["AI", "DevOps", "GitHub Copilot"]
-tags: ["Agile", "AI", "AI Agents", "Automation", "Backlog Grooming", "Blocker Tracking", "Copilot Chat", "Copilot Workspace", "DevOps", "GitHub Copilot", "M365 Copilot", "Microsoft 365 Copilot", "Blogs", "Productivity Tools", "Retrospective Summaries", "Scrum", "Scrum Assistant", "Sprint Planning", "Standup Automation", "Team Collaboration", "User Stories", "VS Code"]
-tags_normalized: ["agile", "ai", "ai agents", "automation", "backlog grooming", "blocker tracking", "copilot chat", "copilot workspace", "devops", "github copilot", "m365 copilot", "microsoft 365 copilot", "blogs", "productivity tools", "retrospective summaries", "scrum", "scrum assistant", "sprint planning", "standup automation", "team collaboration", "user stories", "vs code"]
+tags: ["Agile", "AI", "AI Agents", "Automation", "Backlog Grooming", "Blocker Tracking", "Blogs", "Copilot Chat", "Copilot Workspace", "DevOps", "GitHub Copilot", "M365 Copilot", "Microsoft 365 Copilot", "Productivity Tools", "Retrospective Summaries", "Scrum", "Scrum Assistant", "Sprint Planning", "Standup Automation", "Team Collaboration", "User Stories", "VS Code"]
+tags_normalized: ["agile", "ai", "ai agents", "automation", "backlog grooming", "blocker tracking", "blogs", "copilot chat", "copilot workspace", "devops", "github copilot", "m365 copilot", "microsoft 365 copilot", "productivity tools", "retrospective summaries", "scrum", "scrum assistant", "sprint planning", "standup automation", "team collaboration", "user stories", "vs code"]
 ---
 
 Dellenny details how GitHub Copilot’s Scrum Assistant agent can automate and enhance Agile ceremonies, guiding development teams through daily standups, sprint planning, and more with AI-driven workflow support.<!--excerpt_end-->

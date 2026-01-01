@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft VisualStudio Blog"
 feed_url: "https://devblogs.microsoft.com/visualstudio/feed/"
 date: 2025-11-13 15:00:29 +00:00
-permalink: "/news/2025-11-13-A-First-Look-at-the-Refreshed-UX-in-Visual-Studio-2026.html"
+permalink: "/2025-11-13-A-First-Look-at-the-Refreshed-UX-in-Visual-Studio-2026.html"
 categories: ["Coding"]
 tags: ["Accessibility", "Code Editor", "Coding", "Developer Tools", "Extension Development", "IDE", "News", "Performance Improvement", "Personalization", "Settings Management", "Theme Customization", "UI Refresh", "User Experience", "VS", "Windows Development"]
 tags_normalized: ["accessibility", "code editor", "coding", "developer tools", "extension development", "ide", "news", "performance improvement", "personalization", "settings management", "theme customization", "ui refresh", "user experience", "vs", "windows development"]

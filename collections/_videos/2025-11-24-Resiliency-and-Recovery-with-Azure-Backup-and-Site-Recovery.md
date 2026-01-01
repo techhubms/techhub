@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Events YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
 date: 2025-11-24 06:32:15 +00:00
-permalink: "/videos/2025-11-24-Resiliency-and-Recovery-with-Azure-Backup-and-Site-Recovery.html"
+permalink: "/2025-11-24-Resiliency-and-Recovery-with-Azure-Backup-and-Site-Recovery.html"
 categories: ["Azure", "Security"]
 tags: ["AKS", "Azure", "Azure Backup", "Azure Site Recovery", "Backup Orchestration", "Cloud Security", "Compliance", "Data Resiliency", "Disaster Recovery", "Immutable Storage", "Microsoft Defender Integration", "Migrateandmodernizeyourestate", "MSIgnite", "Replication", "Resiliency", "RPO", "RTO", "Security", "SLA", "Threat Aware Backups", "Two Tier Architecture", "Unstructured Data", "Videos", "Virtual Machines", "Workload Protection"]
 tags_normalized: ["aks", "azure", "azure backup", "azure site recovery", "backup orchestration", "cloud security", "compliance", "data resiliency", "disaster recovery", "immutable storage", "microsoft defender integration", "migrateandmodernizeyourestate", "msignite", "replication", "resiliency", "rpo", "rto", "security", "sla", "threat aware backups", "two tier architecture", "unstructured data", "videos", "virtual machines", "workload protection"]

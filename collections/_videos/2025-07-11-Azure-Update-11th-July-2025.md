@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "John Savill's Technical Training"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCpIn7ox7j7bH_OFj7tYouOQ"
 date: 2025-07-11 13:43:48 +00:00
-permalink: "/videos/2025-07-11-Azure-Update-11th-July-2025.html"
+permalink: "/2025-07-11-Azure-Update-11th-July-2025.html"
 categories: ["AI", "Azure", "DevOps"]
 tags: ["AFS", "AI", "AVNM", "AWS S3 Migration", "Azure", "Azure Automation", "Azure Blob Storage", "Azure Cloud", "Azure Firewall", "Azure Learning", "Cloud", "Cloud Migration", "Cloud Updates", "Codex Mini", "Customer Controlled Maintenance", "DevOps", "Granular RBAC", "High Scale PE", "Microsoft", "Microsoft Azure", "O3 Pro", "Phi 4 Mini Flash Reasoning", "PowerShell 7.4", "Python 3.10", "Trusted Launch", "Videos", "VMSS"]
 tags_normalized: ["afs", "ai", "avnm", "aws s3 migration", "azure", "azure automation", "azure blob storage", "azure cloud", "azure firewall", "azure learning", "cloud", "cloud migration", "cloud updates", "codex mini", "customer controlled maintenance", "devops", "granular rbac", "high scale pe", "microsoft", "microsoft azure", "o3 pro", "phi 4 mini flash reasoning", "powershell 7dot4", "python 3dot10", "trusted launch", "videos", "vmss"]

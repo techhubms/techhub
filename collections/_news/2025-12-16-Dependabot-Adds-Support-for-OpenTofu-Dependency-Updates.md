@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/changelog/feed/"
 date: 2025-12-16 16:44:18 +00:00
-permalink: "/news/2025-12-16-Dependabot-Adds-Support-for-OpenTofu-Dependency-Updates.html"
+permalink: "/2025-12-16-Dependabot-Adds-Support-for-OpenTofu-Dependency-Updates.html"
 categories: ["DevOps"]
 tags: ["Automation", "Continuous Integration", "Dependabot", "Dependency Management", "DevOps", "GitHub", "IaC", "News", "Open Source", "OpenTofu", "Supply Chain Security", "Version Updates"]
 tags_normalized: ["automation", "continuous integration", "dependabot", "dependency management", "devops", "github", "iac", "news", "open source", "opentofu", "supply chain security", "version updates"]

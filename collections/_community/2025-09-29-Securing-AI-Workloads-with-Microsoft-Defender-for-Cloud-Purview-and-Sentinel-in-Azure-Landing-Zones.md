@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-09-29 22:14:43 +00:00
-permalink: "/community/2025-09-29-Securing-AI-Workloads-with-Microsoft-Defender-for-Cloud-Purview-and-Sentinel-in-Azure-Landing-Zones.html"
+permalink: "/2025-09-29-Securing-AI-Workloads-with-Microsoft-Defender-for-Cloud-Purview-and-Sentinel-in-Azure-Landing-Zones.html"
 categories: ["AI", "Azure", "Security"]
 tags: ["Access Control", "AI", "AI Security", "AKS Security", "ARM Templates", "Azure", "Azure AI Services", "Azure Blueprints", "Azure Landing Zone", "Azure Policy", "Cloud Security Posture Management", "Community", "Compliance", "Confidential Computing", "Data Governance", "Microsoft Defender For Cloud", "Microsoft Purview", "Microsoft Sentinel", "Security", "SIEM", "SOAR", "Terraform", "Threat Detection", "Zero Trust"]
 tags_normalized: ["access control", "ai", "ai security", "aks security", "arm templates", "azure", "azure ai services", "azure blueprints", "azure landing zone", "azure policy", "cloud security posture management", "community", "compliance", "confidential computing", "data governance", "microsoft defender for cloud", "microsoft purview", "microsoft sentinel", "security", "siem", "soar", "terraform", "threat detection", "zero trust"]

@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The Azure Blog"
 feed_url: "https://azure.microsoft.com/en-us/blog/feed/"
 date: 2025-11-18 16:00:00 +00:00
-permalink: "/news/2025-11-18-Announcing-Azure-Copilot-Agents-and-AI-Infrastructure-Innovations.html"
+permalink: "/2025-11-18-Announcing-Azure-Copilot-Agents-and-AI-Infrastructure-Innovations.html"
 categories: ["AI", "Azure", "DevOps", "Security"]
 tags: ["AI", "AI + Machine Learning", "AI Agents", "AKS", "AKS Automatic", "App Modernization", "Azure", "Azure Boost", "Azure Copilot", "Azure Governance", "Cloud Infrastructure", "Cloud Security", "Compute", "Confidential Computing", "Containers", "DevOps", "Fairwater Datacenter", "GPU Computing", "Management And Governance", "Microsoft Azure", "Microsoft Ignite", "Migration Tools", "Network Security Perimeter", "News", "Operational Excellence", "PostgreSQL", "Security", "SQL Managed Instance"]
 tags_normalized: ["ai", "ai plus machine learning", "ai agents", "aks", "aks automatic", "app modernization", "azure", "azure boost", "azure copilot", "azure governance", "cloud infrastructure", "cloud security", "compute", "confidential computing", "containers", "devops", "fairwater datacenter", "gpu computing", "management and governance", "microsoft azure", "microsoft ignite", "migration tools", "network security perimeter", "news", "operational excellence", "postgresql", "security", "sql managed instance"]

@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-11-05 15:17:40 +00:00
-permalink: "/community/2025-11-05-General-Availability-of-Larger-Container-Sizes-on-Azure-Container-Instances.html"
+permalink: "/2025-11-05-General-Availability-of-Larger-Container-Sizes-on-Azure-Container-Instances.html"
 categories: ["Azure"]
 tags: ["AKS", "ARM Templates", "Azure", "Azure CLI", "Azure Container Instances", "Azure Portal", "Bicep", "Cloud Computing", "Community", "Confidential Containers", "Container SKUs", "Data Inferencing", "High Performance Computing", "Memory Allocation", "PowerShell", "Scalability", "Serverless Containers", "Vcpu Scaling", "Virtual Networks"]
 tags_normalized: ["aks", "arm templates", "azure", "azure cli", "azure container instances", "azure portal", "bicep", "cloud computing", "community", "confidential containers", "container skus", "data inferencing", "high performance computing", "memory allocation", "powershell", "scalability", "serverless containers", "vcpu scaling", "virtual networks"]

@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Events YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
 date: 2025-11-24 07:38:59 +00:00
-permalink: "/videos/2025-11-24-Build-Secure-Applications-with-Defender-and-Azure-Network-Security.html"
+permalink: "/2025-11-24-Build-Secure-Applications-with-Defender-and-Azure-Network-Security.html"
 categories: ["Azure", "Security"]
 tags: ["Audit Logging", "Azure", "Azure Bastion", "Azure Firewall", "Azure Network Security", "Cloud Security", "DDoS Protection", "Defense in Depth", "Microsoft Defender For Cloud", "Microsoft Ignite", "Migrateandmodernizeyourestate", "MSIgnite", "Network Security", "Security", "Security Posture", "Session Recording", "Videos", "Web Application Firewall", "Zero Trust Security"]
 tags_normalized: ["audit logging", "azure", "azure bastion", "azure firewall", "azure network security", "cloud security", "ddos protection", "defense in depth", "microsoft defender for cloud", "microsoft ignite", "migrateandmodernizeyourestate", "msignite", "network security", "security", "security posture", "session recording", "videos", "web application firewall", "zero trust security"]

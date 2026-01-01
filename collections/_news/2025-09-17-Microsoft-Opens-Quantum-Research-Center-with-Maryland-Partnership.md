@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft News"
 feed_url: "https://news.microsoft.com/source/feed/"
 date: 2025-09-17 15:45:54 +00:00
-permalink: "/news/2025-09-17-Microsoft-Opens-Quantum-Research-Center-with-Maryland-Partnership.html"
+permalink: "/2025-09-17-Microsoft-Opens-Quantum-Research-Center-with-Maryland-Partnership.html"
 categories: ["AI"]
 tags: ["AI", "Atom Computing", "Company News", "DARPA", "Hardware Software Co Design", "Majorana 1", "Microsoft Quantum", "News", "On The Issues", "Public Private Partnership", "Quantum Benchmarking Initiative", "Quantum Computing", "Quantum Error Correction", "Quantum Innovation", "Quantum Platform", "Quantum Research", "Research Collaboration", "Topological Qubits", "University Of Maryland"]
 tags_normalized: ["ai", "atom computing", "company news", "darpa", "hardware software co design", "majorana 1", "microsoft quantum", "news", "on the issues", "public private partnership", "quantum benchmarking initiative", "quantum computing", "quantum error correction", "quantum innovation", "quantum platform", "quantum research", "research collaboration", "topological qubits", "university of maryland"]

@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Reddit DevOps"
 feed_url: "https://www.reddit.com/r/devops/.rss"
 date: 2025-08-07 08:20:19 +00:00
-permalink: "/community/2025-08-07-Engineers-Perspectives-on-Jira-Usage-and-Implementation-Challenges.html"
+permalink: "/2025-08-07-Engineers-Perspectives-on-Jira-Usage-and-Implementation-Challenges.html"
 categories: ["DevOps"]
 tags: ["Agile", "Atlassian", "Bitbucket", "Board Configuration", "Community", "DevOps", "DevOps Tools", "Engineering Management", "Integration", "Issue Tracking", "Jira", "Linear", "OpsGenie", "Product Management", "Project Management", "Reporting", "Software Engineering", "Sprint Management", "Workflow Automation", "Workflow Design"]
 tags_normalized: ["agile", "atlassian", "bitbucket", "board configuration", "community", "devops", "devops tools", "engineering management", "integration", "issue tracking", "jira", "linear", "opsgenie", "product management", "project management", "reporting", "software engineering", "sprint management", "workflow automation", "workflow design"]

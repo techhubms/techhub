@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft VisualStudio Blog"
 feed_url: "https://devblogs.microsoft.com/visualstudio/feed/"
 date: 2025-08-27 18:02:11 +00:00
-permalink: "/news/2025-08-27-Roadmap-for-AI-and-GitHub-Copilot-in-Visual-Studio-September-Update.html"
+permalink: "/2025-08-27-Roadmap-for-AI-and-GitHub-Copilot-in-Visual-Studio-September-Update.html"
 categories: ["AI", "Azure", "Coding", "DevOps", "GitHub Copilot"]
 tags: [".NET", "Agent", "Agentic Workflows", "AI", "AI Tools", "Azure", "Azure DevOps", "Azure MCP", "Chat", "CI/CD", "Coding", "Copilot", "Copilot Chat", "Debugger Agent", "Developer Experience", "DevOps", "Editor Improvements", "GitHub Actions", "GitHub Copilot", "MCP", "Models", "News", "Profiler Agent", "Roadmap", "VS"]
 tags_normalized: ["dotnet", "agent", "agentic workflows", "ai", "ai tools", "azure", "azure devops", "azure mcp", "chat", "cislashcd", "coding", "copilot", "copilot chat", "debugger agent", "developer experience", "devops", "editor improvements", "github actions", "github copilot", "mcp", "models", "news", "profiler agent", "roadmap", "vs"]

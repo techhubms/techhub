@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft News"
 feed_url: "https://news.microsoft.com/source/feed/"
 date: 2025-09-02 14:37:57 +00:00
-permalink: "/news/2025-09-02-How-AI-Is-Transforming-Healthcare-in-Kenya-Beyond-Patient-Care.html"
+permalink: "/2025-09-02-How-AI-Is-Transforming-Healthcare-in-Kenya-Beyond-Patient-Care.html"
 categories: ["AI"]
 tags: ["Africa", "AI", "AI Adoption", "Cloud Infrastructure", "Company News", "Connected Care", "Data Driven Insights", "Datacentres", "Digital Skills", "Digital Transformation", "Health", "Health Systems", "Healthcare", "Kenya", "Microsoft", "News", "Public Private Partnerships", "Workforce Development"]
 tags_normalized: ["africa", "ai", "ai adoption", "cloud infrastructure", "company news", "connected care", "data driven insights", "datacentres", "digital skills", "digital transformation", "health", "health systems", "healthcare", "kenya", "microsoft", "news", "public private partnerships", "workforce development"]

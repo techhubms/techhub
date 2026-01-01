@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "John Savill's Technical Training"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCpIn7ox7j7bH_OFj7tYouOQ"
 date: 2025-12-01 15:29:31 +00:00
-permalink: "/videos/2025-12-01-AB-900-Study-Cram-Microsoft-365-Copilot-and-Agent-Administration-Fundamentals.html"
+permalink: "/2025-12-01-AB-900-Study-Cram-Microsoft-365-Copilot-and-Agent-Administration-Fundamentals.html"
 categories: ["AI", "Azure", "Security"]
 tags: ["AB 900", "AI", "AI Agents", "Azure", "Azure Cloud", "Cloud", "Cloud Security", "Copilot", "Copilot Studio", "Data Protection", "Defender", "Defender XDR", "LLM", "Microsoft", "Microsoft 365", "Microsoft 365 Certified", "Microsoft Azure", "Microsoft Entra ID", "Microsoft Graph", "Permissions", "Purview", "Responsible AI", "Security", "Self Service Password Reset", "Semantics Index", "SSO", "Videos", "Zero Trust"]
 tags_normalized: ["ab 900", "ai", "ai agents", "azure", "azure cloud", "cloud", "cloud security", "copilot", "copilot studio", "data protection", "defender", "defender xdr", "llm", "microsoft", "microsoft 365", "microsoft 365 certified", "microsoft azure", "microsoft entra id", "microsoft graph", "permissions", "purview", "responsible ai", "security", "self service password reset", "semantics index", "sso", "videos", "zero trust"]

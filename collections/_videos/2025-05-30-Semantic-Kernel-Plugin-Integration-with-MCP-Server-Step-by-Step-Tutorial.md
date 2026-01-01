@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Learn Microsoft AI Youtube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCQf_yRJpsfyEiWWpt1MZ6vA"
 date: 2025-05-30 07:07:03 +00:00
-permalink: "/videos/2025-05-30-Semantic-Kernel-Plugin-Integration-with-MCP-Server-Step-by-Step-Tutorial.html"
+permalink: "/2025-05-30-Semantic-Kernel-Plugin-Integration-with-MCP-Server-Step-by-Step-Tutorial.html"
 categories: ["AI", "Coding"]
 tags: [".NET", "AI", "AI Agents", "AI Development", "AI Workflows", "C#", "Coding", "CopilotStudio", "Intelligent Plugins", "MCP", "MCP Server", "Microsoft AI", "Microsoft Copilot Studio", "OpenAI", "Plugin Integration", "Real Time Demo", "Semantic Kernel", "Videos"]
 tags_normalized: ["dotnet", "ai", "ai agents", "ai development", "ai workflows", "csharp", "coding", "copilotstudio", "intelligent plugins", "mcp", "mcp server", "microsoft ai", "microsoft copilot studio", "openai", "plugin integration", "real time demo", "semantic kernel", "videos"]

@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft AI Foundry Blog"
 feed_url: "https://devblogs.microsoft.com/foundry/feed/"
 date: 2025-11-25 16:00:24 +00:00
-permalink: "/news/2025-11-25-Azure-Content-Understanding-Now-Generally-Available-in-Foundry-Tools.html"
+permalink: "/2025-11-25-Azure-Content-Understanding-Now-Generally-Available-in-Foundry-Tools.html"
 categories: ["AI", "Azure"]
 tags: ["Agent Ecosystem", "AI", "Audit Automation", "Azure", "Azure AI Search", "Azure AI Services", "Azure Content Understanding", "Content Extraction", "Document Intelligence", "Domain Specific Analyzers", "Field Extraction", "Finance Workflows", "Foundry Tools", "Generative AI", "Layout Analysis", "Microsoft Foundry", "News", "OCR", "Prebuilt Analyzers", "Production Workloads", "RAG", "Retrieval Augmented Generation", "Unstructured Data"]
 tags_normalized: ["agent ecosystem", "ai", "audit automation", "azure", "azure ai search", "azure ai services", "azure content understanding", "content extraction", "document intelligence", "domain specific analyzers", "field extraction", "finance workflows", "foundry tools", "generative ai", "layout analysis", "microsoft foundry", "news", "ocr", "prebuilt analyzers", "production workloads", "rag", "retrieval augmented generation", "unstructured data"]

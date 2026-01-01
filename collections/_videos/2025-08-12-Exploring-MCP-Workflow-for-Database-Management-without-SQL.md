@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Developer YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
 date: 2025-08-12 19:52:53 +00:00
-permalink: "/videos/2025-08-12-Exploring-MCP-Workflow-for-Database-Management-without-SQL.html"
+permalink: "/2025-08-12-Exploring-MCP-Workflow-for-Database-Management-without-SQL.html"
 categories: ["AI", "Azure"]
 tags: ["AI", "Azure", "Azure AI Foundry", "Cloud Computing", "Cloud Tools", "Custom Agents", "Database Management", "Dev", "Development", "Foundry Agent Service", "MCP", "Microsoft", "Microsoft Developer", "Tech", "Technology", "Videos", "VS Code"]
 tags_normalized: ["ai", "azure", "azure ai foundry", "cloud computing", "cloud tools", "custom agents", "database management", "dev", "development", "foundry agent service", "mcp", "microsoft", "microsoft developer", "tech", "technology", "videos", "vs code"]

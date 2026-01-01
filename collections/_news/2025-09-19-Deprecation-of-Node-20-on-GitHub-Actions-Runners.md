@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/changelog/feed/"
 date: 2025-09-19 18:29:59 +00:00
-permalink: "/news/2025-09-19-Deprecation-of-Node-20-on-GitHub-Actions-Runners.html"
+permalink: "/2025-09-19-Deprecation-of-Node-20-on-GitHub-Actions-Runners.html"
 categories: ["DevOps"]
 tags: ["Actions", "Actions Maintenance", "ARM32", "Continuous Integration", "Deprecation", "DevOps", "GitHub Actions", "Macos", "News", "Node20", "Node24", "Operating System Compatibility", "Retired", "Runner", "Self Hosted Runner", "Version Migration", "Workflow"]
 tags_normalized: ["actions", "actions maintenance", "arm32", "continuous integration", "deprecation", "devops", "github actions", "macos", "news", "node20", "node24", "operating system compatibility", "retired", "runner", "self hosted runner", "version migration", "workflow"]

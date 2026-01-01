@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Visual Studio Code Releases"
 feed_url: "https://code.visualstudio.com/feed.xml"
 date: 2025-11-12 17:00:00 +00:00
-permalink: "/news/2025-11-12-Visual-Studio-Code-October-2025-Release-v1106-New-AI-Agents-Copilot-Chat-Terminal-IntelliSense-and-More.html"
+permalink: "/2025-11-12-Visual-Studio-Code-October-2025-Release-v1106-New-AI-Agents-Copilot-Chat-Terminal-IntelliSense-and-More.html"
 categories: ["AI", "Coding", "DevOps", "GitHub Copilot"]
 tags: ["Agent HQ", "AI", "AI Agents", "Code Editing", "Coding", "Copilot Chat", "Copilot CLI", "Custom Agents", "DevOps", "Editor Experience", "Extension Authoring", "GitHub Copilot", "News", "Open Source", "Pylance", "Python", "Source Control", "Terminal IntelliSense", "VS Code", "VS Code 1.106"]
 tags_normalized: ["agent hq", "ai", "ai agents", "code editing", "coding", "copilot chat", "copilot cli", "custom agents", "devops", "editor experience", "extension authoring", "github copilot", "news", "open source", "pylance", "python", "source control", "terminal intellisense", "vs code", "vs code 1dot106"]

@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Reddit Azure"
 feed_url: "https://www.reddit.com/r/azure/.rss"
 date: 2025-07-29 14:29:22 +00:00
-permalink: "/community/2025-07-29-Strategies-for-Migrating-Backup-Data-from-Datto-Cloud-to-Azure.html"
+permalink: "/2025-07-29-Strategies-for-Migrating-Backup-Data-from-Datto-Cloud-to-Azure.html"
 categories: ["Azure"]
 tags: ["Azcopy", "Azure", "Backup Data", "Backup Provider Change", "Cloud Migration", "Community", "Containers", "Data Transfer", "Datto", "Restore Points", "VHDX Compatibility"]
 tags_normalized: ["azcopy", "azure", "backup data", "backup provider change", "cloud migration", "community", "containers", "data transfer", "datto", "restore points", "vhdx compatibility"]

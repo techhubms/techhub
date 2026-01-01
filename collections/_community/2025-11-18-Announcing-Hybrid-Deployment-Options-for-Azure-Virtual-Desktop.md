@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-11-18 16:00:00 +00:00
-permalink: "/community/2025-11-18-Announcing-Hybrid-Deployment-Options-for-Azure-Virtual-Desktop.html"
+permalink: "/2025-11-18-Announcing-Hybrid-Deployment-Options-for-Azure-Virtual-Desktop.html"
 categories: ["Azure", "DevOps"]
 tags: ["Azure", "Azure Arc", "Azure Virtual Desktop", "Cloud Desktop", "Cloud Migration", "Community", "ControlUp", "Datacenter", "DevOps", "Hybrid Cloud", "Identity Management", "LoginVSI", "Nerdio", "Nutanix", "On Premises", "Partner Integrations", "Remote Work", "VDI", "Virtualization", "VM Management", "Windows Virtual Desktop"]
 tags_normalized: ["azure", "azure arc", "azure virtual desktop", "cloud desktop", "cloud migration", "community", "controlup", "datacenter", "devops", "hybrid cloud", "identity management", "loginvsi", "nerdio", "nutanix", "on premises", "partner integrations", "remote work", "vdi", "virtualization", "vm management", "windows virtual desktop"]

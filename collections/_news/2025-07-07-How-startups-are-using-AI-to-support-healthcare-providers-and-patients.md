@@ -10,7 +10,7 @@ categories: ["AI"]
 feed_name: "Microsoft News"
 feed_url: "https://news.microsoft.com/source/feed/"
 date: 2025-07-07 14:27:02 +00:00
-permalink: "/news/2025-07-07-How-startups-are-using-AI-to-support-healthcare-providers-and-patients.html"
+permalink: "/2025-07-07-How-startups-are-using-AI-to-support-healthcare-providers-and-patients.html"
 tags: ["AI", "Company News", "Health", "Healthcare", "Medical Technology", "News", "Patient Care", "Startups"]
 tags_normalized: ["ai", "company news", "health", "healthcare", "medical technology", "news", "patient care", "startups"]
 ---

@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/changelog/feed/"
 date: 2025-08-22 16:00:50 +00:00
-permalink: "/news/2025-08-22-GitHub-Copilot-Business-and-Enterprise-Premium-Request-Overage-Policy-Now-Available.html"
+permalink: "/2025-08-22-GitHub-Copilot-Business-and-Enterprise-Premium-Request-Overage-Policy-Now-Available.html"
 categories: ["AI", "GitHub Copilot"]
 tags: ["AI", "Billing", "Copilot Business", "Copilot Enterprise", "Developer Tools", "Enterprise Software", "GitHub Copilot", "News", "Overage Policy", "Policy Management", "Premium Requests", "Usage Limits"]
 tags_normalized: ["ai", "billing", "copilot business", "copilot enterprise", "developer tools", "enterprise software", "github copilot", "news", "overage policy", "policy management", "premium requests", "usage limits"]

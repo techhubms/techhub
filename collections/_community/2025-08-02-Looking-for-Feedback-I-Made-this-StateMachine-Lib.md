@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Reddit CSharp"
 feed_url: "https://www.reddit.com/r/csharp/.rss"
 date: 2025-08-02 19:53:28 +00:00
-permalink: "/community/2025-08-02-Looking-for-Feedback-I-Made-this-StateMachine-Lib.html"
+permalink: "/2025-08-02-Looking-for-Feedback-I-Made-this-StateMachine-Lib.html"
 categories: ["Coding"]
 tags: ["Agent SDK", "Architecture", "C#", "Coding", "Community", "Feedback", "Library", "LombdaAgentSDK", "Open Source", "Software Design", "State Machine"]
 tags_normalized: ["agent sdk", "architecture", "csharp", "coding", "community", "feedback", "library", "lombdaagentsdk", "open source", "software design", "state machine"]

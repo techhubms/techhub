@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Events YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
 date: 2025-11-19 08:39:18 +00:00
-permalink: "/videos/2025-11-19-Bolster-Your-Data-Security-in-the-AI-Era-with-Microsoft-and-Netskope.html"
+permalink: "/2025-11-19-Bolster-Your-Data-Security-in-the-AI-Era-with-Microsoft-and-Netskope.html"
 categories: ["Security"]
 tags: ["Cloud Security", "Data Classification", "Data Discovery", "Data Security", "IaaS", "Microsoft Ignite", "Microsoft Purview", "MSIgnite", "Netskope", "Network Security", "Policy Enforcement", "Regulatory Compliance", "SaaS Security", "Secureyourdata", "Security", "Security Integration", "SSE", "Unified Security", "Videos"]
 tags_normalized: ["cloud security", "data classification", "data discovery", "data security", "iaas", "microsoft ignite", "microsoft purview", "msignite", "netskope", "network security", "policy enforcement", "regulatory compliance", "saas security", "secureyourdata", "security", "security integration", "sse", "unified security", "videos"]

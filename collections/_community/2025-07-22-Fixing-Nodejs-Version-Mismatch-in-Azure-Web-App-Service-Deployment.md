@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Reddit Azure DevOps"
 feed_url: "https://www.reddit.com/r/azuredevops/.rss"
 date: 2025-07-22 11:41:42 +00:00
-permalink: "/community/2025-07-22-Fixing-Nodejs-Version-Mismatch-in-Azure-Web-App-Service-Deployment.html"
+permalink: "/2025-07-22-Fixing-Nodejs-Version-Mismatch-in-Azure-Web-App-Service-Deployment.html"
 categories: ["Azure", "DevOps"]
 tags: ["Azure", "Azure DevOps", "Azure Web App", "Community", "Container Deployment", "Dependency Management", "DevOps", "Environment Variables", "Linux Container", "Node.js", "Version Management", "YAML", "Yarn"]
 tags_normalized: ["azure", "azure devops", "azure web app", "community", "container deployment", "dependency management", "devops", "environment variables", "linux container", "nodedotjs", "version management", "yaml", "yarn"]

@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/changelog/feed/"
 date: 2025-08-26 21:33:06 +00:00
-permalink: "/news/2025-08-26-Template-URLs-for-Fine-Grained-PATs-and-Updated-Permissions-UI.html"
+permalink: "/2025-08-26-Template-URLs-for-Fine-Grained-PATs-and-Updated-Permissions-UI.html"
 categories: ["DevOps"]
 tags: ["API Integration", "Automation", "Developer Experience", "DevOps", "Fine Grained Tokens", "GitHub", "News", "PAT", "Permissions Management", "Personal Access Tokens", "REST API", "Token Management", "UI/UX Design"]
 tags_normalized: ["api integration", "automation", "developer experience", "devops", "fine grained tokens", "github", "news", "pat", "permissions management", "personal access tokens", "rest api", "token management", "uislashux design"]

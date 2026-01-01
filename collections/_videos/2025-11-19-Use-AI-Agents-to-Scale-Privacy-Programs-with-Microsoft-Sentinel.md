@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Events YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
 date: 2025-11-19 13:34:12 +00:00
-permalink: "/videos/2025-11-19-Use-AI-Agents-to-Scale-Privacy-Programs-with-Microsoft-Sentinel.html"
+permalink: "/2025-11-19-Use-AI-Agents-to-Scale-Privacy-Programs-with-Microsoft-Sentinel.html"
 categories: ["AI", "Security"]
 tags: ["AI", "AI Agents", "Compliance", "Data Governance", "Data Protection", "Microsoft Events", "Microsoft Ignite", "Microsoft Sentinel", "MSIgnite", "OneTrust", "Privacy Program", "Privacy Scalability", "Regulatory Challenges", "Risk Assessment", "Secureyourdata", "Security", "Security Automation", "Videos"]
 tags_normalized: ["ai", "ai agents", "compliance", "data governance", "data protection", "microsoft events", "microsoft ignite", "microsoft sentinel", "msignite", "onetrust", "privacy program", "privacy scalability", "regulatory challenges", "risk assessment", "secureyourdata", "security", "security automation", "videos"]

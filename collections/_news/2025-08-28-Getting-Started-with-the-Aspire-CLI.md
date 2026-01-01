@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft .NET Blog"
 feed_url: "https://devblogs.microsoft.com/dotnet/feed/"
 date: 2025-08-28 17:05:00 +00:00
-permalink: "/news/2025-08-28-Getting-Started-with-the-Aspire-CLI.html"
+permalink: "/2025-08-28-Getting-Started-with-the-Aspire-CLI.html"
 categories: ["Azure", "Coding", "DevOps"]
 tags: [".NET", ".NET Aspire", "AppHost", "Application Templates", "Aspire", "Aspire CLI", "Automation", "Azure", "Azure Integration", "CLI", "Cloud Native", "Coding", "Continuous Deployment", "Cross Platform Tools", "DevOps", "Distributed Applications", "Integration Tests", "Microservices", "News", "NuGet Packages", "Project Orchestration", "Service Defaults"]
 tags_normalized: ["dotnet", "dotnet aspire", "apphost", "application templates", "aspire", "aspire cli", "automation", "azure", "azure integration", "cli", "cloud native", "coding", "continuous deployment", "cross platform tools", "devops", "distributed applications", "integration tests", "microservices", "news", "nuget packages", "project orchestration", "service defaults"]

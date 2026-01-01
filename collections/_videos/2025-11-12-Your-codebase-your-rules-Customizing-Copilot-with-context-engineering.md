@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "GitHub YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ"
 date: 2025-11-12 15:00:02 +00:00
-permalink: "/videos/2025-11-12-Your-codebase-your-rules-Customizing-Copilot-with-context-engineering.html"
+permalink: "/2025-11-12-Your-codebase-your-rules-Customizing-Copilot-with-context-engineering.html"
 categories: ["AI", "Coding", "GitHub Copilot"]
 tags: ["AI", "Codebase Integration", "Coding", "Context Engineering", "Custom Instructions", "Developer Workflow", "Enterprise Scale", "GitHub", "GitHub Copilot", "GitHub Copilot Enterprise", "GitHubUniverse", "Plan Mode", "Project Templates", "Prompt Engineering", "Software Architecture", "Test Driven Development", "Videos", "VS Code"]
 tags_normalized: ["ai", "codebase integration", "coding", "context engineering", "custom instructions", "developer workflow", "enterprise scale", "github", "github copilot", "github copilot enterprise", "githubuniverse", "plan mode", "project templates", "prompt engineering", "software architecture", "test driven development", "videos", "vs code"]

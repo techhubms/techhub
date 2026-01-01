@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Events YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
 date: 2025-11-21 16:31:17 +00:00
-permalink: "/videos/2025-11-21-From-Code-to-Real-Results-AI-Impact-with-Foundry-Models-at-Microsoft-Ignite.html"
+permalink: "/2025-11-21-From-Code-to-Real-Results-AI-Impact-with-Foundry-Models-at-Microsoft-Ignite.html"
 categories: ["AI", "Azure"]
 tags: ["Advanced AI", "AI", "AI Agents", "AI Architecture", "AI Models", "Azure", "Azure AI", "Conversation Relay", "Customer Experience", "Document Processing", "Enterprise AI", "InnovatewithAzureAIappsandagents", "Innovation", "Microsoft Foundry", "Microsoft Ignite", "MSIgnite", "Omnichannel", "Scalability", "Videos"]
 tags_normalized: ["advanced ai", "ai", "ai agents", "ai architecture", "ai models", "azure", "azure ai", "conversation relay", "customer experience", "document processing", "enterprise ai", "innovatewithazureaiappsandagents", "innovation", "microsoft foundry", "microsoft ignite", "msignite", "omnichannel", "scalability", "videos"]

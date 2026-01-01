@@ -9,7 +9,7 @@ categories: ["AI", "Coding"]
 feed_name: "dotnet"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw"
 date: 2025-07-03 06:07:04 +00:00
-permalink: "/videos/2025-07-03-NET-AI-Community-Standup-AI-in-NET-Whats-New-Whats-Next.html"
+permalink: "/2025-07-03-NET-AI-Community-Standup-AI-in-NET-Whats-New-Whats-Next.html"
 viewing_mode: "internal"
 tags: [".NET", ".NET 10", ".NET 9", "AI", "Bruno Capuano", "C#", "Coding", "Machine Learning", "Microsoft", "Tanner Gooding", "Tensor Support", "Videos"]
 tags_normalized: ["dotnet", "dotnet 10", "dotnet 9", "ai", "bruno capuano", "csharp", "coding", "machine learning", "microsoft", "tanner gooding", "tensor support", "videos"]

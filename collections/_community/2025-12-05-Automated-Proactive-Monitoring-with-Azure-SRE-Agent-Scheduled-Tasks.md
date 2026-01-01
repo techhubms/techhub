@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-12-05 06:00:35 +00:00
-permalink: "/community/2025-12-05-Automated-Proactive-Monitoring-with-Azure-SRE-Agent-Scheduled-Tasks.html"
+permalink: "/2025-12-05-Automated-Proactive-Monitoring-with-Azure-SRE-Agent-Scheduled-Tasks.html"
 categories: ["Azure", "DevOps", "Security"]
 tags: ["Application Insights", "Azure", "Azure CLI", "Azure SRE Agent", "Best Practices", "Cloud Operations", "Community", "Compliance", "DevOps", "DevOps Automation", "ICM", "Incident Response", "Kubernetes", "Log Analytics", "MCP Integration", "Microsoft Azure", "Proactive Monitoring", "Scheduled Tasks", "Security", "Security Posture"]
 tags_normalized: ["application insights", "azure", "azure cli", "azure sre agent", "best practices", "cloud operations", "community", "compliance", "devops", "devops automation", "icm", "incident response", "kubernetes", "log analytics", "mcp integration", "microsoft azure", "proactive monitoring", "scheduled tasks", "security", "security posture"]

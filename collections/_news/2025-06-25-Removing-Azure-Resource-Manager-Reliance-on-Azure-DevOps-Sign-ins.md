@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft DevBlog"
 feed_url: "https://devblogs.microsoft.com/devops/feed/"
 date: 2025-06-25 18:24:26 +00:00
-permalink: "/news/2025-06-25-Removing-Azure-Resource-Manager-Reliance-on-Azure-DevOps-Sign-ins.html"
+permalink: "/2025-06-25-Removing-Azure-Resource-Manager-Reliance-on-Azure-DevOps-Sign-ins.html"
 categories: ["Azure", "DevOps", "Security"]
 tags: ["Access Control", "ARM", "Authentication", "Azure", "Azure & Cloud", "Azure DevOps", "Azure Resource Manager", "Cloud Security", "Conditional Access", "DevOps", "Identity Management", "Microsoft Entra", "Microsoft Visual Studio Team Services", "News", "Policy Management", "Security", "Token Management", "User Sign in"]
 tags_normalized: ["access control", "arm", "authentication", "azure", "azure and cloud", "azure devops", "azure resource manager", "cloud security", "conditional access", "devops", "identity management", "microsoft entra", "microsoft visual studio team services", "news", "policy management", "security", "token management", "user sign in"]

@@ -9,7 +9,7 @@ categories: ["AI"]
 feed_name: "Reddit AI Agents"
 feed_url: "https://www.reddit.com/r/AI_Agents/.rss"
 date: 2025-07-21 20:40:28 +00:00
-permalink: "/community/2025-07-21-My-free-AI-Course-on-GitHub-is-now-in-Video-Format.html"
+permalink: "/2025-07-21-My-free-AI-Course-on-GitHub-is-now-in-Video-Format.html"
 viewing_mode: "external"
 tags: ["AI", "AI Agents", "AI Applications", "Community", "Community Feedback", "Education", "Free Course", "Generative AI", "GitHub", "Microsoft", "Production Level AI", "Solution Architect", "Training"]
 tags_normalized: ["ai", "ai agents", "ai applications", "community", "community feedback", "education", "free course", "generative ai", "github", "microsoft", "production level ai", "solution architect", "training"]

@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Events YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
 date: 2025-11-20 07:56:55 +00:00
-permalink: "/videos/2025-11-20-Digital-Defense-2025-Key-Takeaways-on-AI-and-Security-Threats.html"
+permalink: "/2025-11-20-Digital-Defense-2025-Key-Takeaways-on-AI-and-Security-Threats.html"
 categories: ["AI", "Security"]
 tags: ["AI", "AI Security", "Business Email Compromise", "Cybersecurity Trends", "Incident Response", "Information Stealers", "Legal Challenges", "Microsoft Defender", "Microsoft Digital Defense Report", "Microsoft Ignite", "ModernizeSecOpswithaunifiedplatform", "MSIgnite", "Regional Threat Analysis", "Regulatory Compliance", "Security", "Security Operations", "Social Engineering", "Threat Actors", "Threat Intelligence", "Videos"]
 tags_normalized: ["ai", "ai security", "business email compromise", "cybersecurity trends", "incident response", "information stealers", "legal challenges", "microsoft defender", "microsoft digital defense report", "microsoft ignite", "modernizesecopswithaunifiedplatform", "msignite", "regional threat analysis", "regulatory compliance", "security", "security operations", "social engineering", "threat actors", "threat intelligence", "videos"]

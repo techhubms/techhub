@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Developer YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
 date: 2025-09-29 16:00:36 +00:00
-permalink: "/videos/2025-09-29-Azure-SQL-DB-and-OpenAI-Building-Powerful-RAG-Applications.html"
+permalink: "/2025-09-29-Azure-SQL-DB-and-OpenAI-Building-Powerful-RAG-Applications.html"
 categories: ["AI", "Azure", "Coding"]
 tags: ["AI", "AI Integration", "Application Development", "Azure", "Azure Samples", "Azure SQL Database", "Cloud Computing", "Cloud Data", "Coding", "Data Engineering", "Database AI", "Dev", "Developer Demo", "Development", "GPT Models", "Microsoft", "Microsoft Azure", "OpenAI", "RAG", "Retrieval Augmented Generation", "SQL Server", "Step By Step Guide", "Tech", "Technology", "Videos"]
 tags_normalized: ["ai", "ai integration", "application development", "azure", "azure samples", "azure sql database", "cloud computing", "cloud data", "coding", "data engineering", "database ai", "dev", "developer demo", "development", "gpt models", "microsoft", "microsoft azure", "openai", "rag", "retrieval augmented generation", "sql server", "step by step guide", "tech", "technology", "videos"]

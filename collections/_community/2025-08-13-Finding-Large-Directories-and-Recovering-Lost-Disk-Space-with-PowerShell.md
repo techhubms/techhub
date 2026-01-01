@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Community"
 date: 2025-08-13 12:30:08 +00:00
-permalink: "/community/2025-08-13-Finding-Large-Directories-and-Recovering-Lost-Disk-Space-with-PowerShell.html"
+permalink: "/2025-08-13-Finding-Large-Directories-and-Recovering-Lost-Disk-Space-with-PowerShell.html"
 categories: ["Coding"]
 tags: [".NET", "Automation", "Coding", "Community", "Directory Size", "Disk Space Management", "Filesystem Analysis", "Get DirectorySize", "Get DirectoryTreeSize", "Module Development", "PowerShell", "Reparse Points", "Scripting", "System.IO.Directory", "Windows"]
 tags_normalized: ["dotnet", "automation", "coding", "community", "directory size", "disk space management", "filesystem analysis", "get directorysize", "get directorytreesize", "module development", "powershell", "reparse points", "scripting", "systemdotiodotdirectory", "windows"]

@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Developer YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
 date: 2025-10-01 14:00:15 +00:00
-permalink: "/videos/2025-10-01-Agent-Framework-Building-Blocks-for-the-Next-Generation-of-AI-Agents.html"
+permalink: "/2025-10-01-Agent-Framework-Building-Blocks-for-the-Next-Generation-of-AI-Agents.html"
 categories: ["AI", "Coding"]
 tags: ["Agent Framework", "AI", "AI Agents", "AutoGen", "Cloud Computing", "Coding", "Community Standards", "Cross Cloud Orchestration", "Dev", "Developer Tools", "Development", "MCP", "Microsoft", "Microsoft AI", "Multi Agent Systems", "Open Source Software", "Pro Code AI", "SDK", "Semantic Kernel", "Tech", "Technology", "Videos"]
 tags_normalized: ["agent framework", "ai", "ai agents", "autogen", "cloud computing", "coding", "community standards", "cross cloud orchestration", "dev", "developer tools", "development", "mcp", "microsoft", "microsoft ai", "multi agent systems", "open source software", "pro code ai", "sdk", "semantic kernel", "tech", "technology", "videos"]

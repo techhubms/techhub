@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-11-12 15:16:13 +00:00
-permalink: "/community/2025-11-12-Whats-New-for-Python-on-Azure-App-Service-for-Linux-pyprojecttoml-uv-and-Modern-Deployments.html"
+permalink: "/2025-11-12-Whats-New-for-Python-on-Azure-App-Service-for-Linux-pyprojecttoml-uv-and-Modern-Deployments.html"
 categories: ["Azure", "Coding", "DevOps"]
 tags: ["App Service For Linux", "Azure", "Azure App Service", "CI/CD", "Cloud Development", "Coding", "Community", "Continuous Deployment", "Deployment Pipeline", "DevOps", "Flask", "GitHub Actions", "Oryx", "PEP 621", "Poetry", "Pyproject.toml", "Python", "Setup.py", "Setuptools", "Uv", "Virtual Environments"]
 tags_normalized: ["app service for linux", "azure", "azure app service", "cislashcd", "cloud development", "coding", "community", "continuous deployment", "deployment pipeline", "devops", "flask", "github actions", "oryx", "pep 621", "poetry", "pyprojectdottoml", "python", "setupdotpy", "setuptools", "uv", "virtual environments"]

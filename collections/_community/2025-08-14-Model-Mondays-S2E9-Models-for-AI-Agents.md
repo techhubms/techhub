@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Community"
 date: 2025-08-14 10:01:06 +00:00
-permalink: "/community/2025-08-14-Model-Mondays-S2E9-Models-for-AI-Agents.html"
+permalink: "/2025-08-14-Model-Mondays-S2E9-Models-for-AI-Agents.html"
 categories: ["AI", "Azure"]
 tags: ["Agent Catalog", "Agent Workflow", "AI", "Atomic Work", "Azure", "Azure AI Agent Service", "Azure AI Foundry", "Azure AI Services", "Azure Logic Apps", "Browser Automation Tool", "Community", "Discord Community", "Enterprise AI", "Flux Vision Models", "GPT 5", "GPT OSS", "Image Playground", "Integration", "Model Router", "Multi Agent Orchestration", "OpenAI", "Playwright MCP", "Workflow Designer"]
 tags_normalized: ["agent catalog", "agent workflow", "ai", "atomic work", "azure", "azure ai agent service", "azure ai foundry", "azure ai services", "azure logic apps", "browser automation tool", "community", "discord community", "enterprise ai", "flux vision models", "gpt 5", "gpt oss", "image playground", "integration", "model router", "multi agent orchestration", "openai", "playwright mcp", "workflow designer"]

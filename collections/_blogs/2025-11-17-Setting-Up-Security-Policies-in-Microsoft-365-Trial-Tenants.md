@@ -9,10 +9,10 @@ viewing_mode: "external"
 feed_name: "Dellenny's Blog"
 feed_url: "https://dellenny.com/feed/"
 date: 2025-11-17 09:17:43 +00:00
-permalink: "/blogs/2025-11-17-Setting-Up-Security-Policies-in-Microsoft-365-Trial-Tenants.html"
+permalink: "/2025-11-17-Setting-Up-Security-Policies-in-Microsoft-365-Trial-Tenants.html"
 categories: ["Security"]
-tags: ["Admin Roles", "Audit Logs", "Authentication Methods", "Azure Active Directory", "Cloud Security", "Conditional Access", "Defender For Office 365", "Email Security", "Entra ID", "Identity Protection", "Least Privilege", "Malware Protection", "Microsoft 365", "Microsoft 365 Certified: Fundamentals", "Multi Factor Authentication", "Password Policies", "Phishing Protection", "Blogs", "Privileged Identity Management", "Purview", "Security", "Security Defaults", "Threat Protection", "Trial Tenant"]
-tags_normalized: ["admin roles", "audit logs", "authentication methods", "azure active directory", "cloud security", "conditional access", "defender for office 365", "email security", "entra id", "identity protection", "least privilege", "malware protection", "microsoft 365", "microsoft 365 certified fundamentals", "multi factor authentication", "password policies", "phishing protection", "blogs", "privileged identity management", "purview", "security", "security defaults", "threat protection", "trial tenant"]
+tags: ["Admin Roles", "Audit Logs", "Authentication Methods", "Azure Active Directory", "Blogs", "Cloud Security", "Conditional Access", "Defender For Office 365", "Email Security", "Entra ID", "Identity Protection", "Least Privilege", "Malware Protection", "Microsoft 365", "Microsoft 365 Certified: Fundamentals", "Multi Factor Authentication", "Password Policies", "Phishing Protection", "Privileged Identity Management", "Purview", "Security", "Security Defaults", "Threat Protection", "Trial Tenant"]
+tags_normalized: ["admin roles", "audit logs", "authentication methods", "azure active directory", "blogs", "cloud security", "conditional access", "defender for office 365", "email security", "entra id", "identity protection", "least privilege", "malware protection", "microsoft 365", "microsoft 365 certified fundamentals", "multi factor authentication", "password policies", "phishing protection", "privileged identity management", "purview", "security", "security defaults", "threat protection", "trial tenant"]
 ---
 
 Dellenny guides readers through setting up baseline security protections for Microsoft 365 trial tenants, highlighting practical steps to reduce vulnerabilities and secure cloud services.<!--excerpt_end-->

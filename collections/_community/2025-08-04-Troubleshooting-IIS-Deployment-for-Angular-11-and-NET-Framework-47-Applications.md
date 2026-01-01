@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Reddit DotNet"
 feed_url: "https://www.reddit.com/r/dotnet/.rss"
 date: 2025-08-04 17:20:05 +00:00
-permalink: "/community/2025-08-04-Troubleshooting-IIS-Deployment-for-Angular-11-and-NET-Framework-47-Applications.html"
+permalink: "/2025-08-04-Troubleshooting-IIS-Deployment-for-Angular-11-and-NET-Framework-47-Applications.html"
 categories: ["Coding", "DevOps"]
 tags: [".NET", ".NET Framework 4.7", "404 Error", "Angular 11", "Backend Deployment", "Coding", "Community", "DevOps", "Frontend Deployment", "IIS Deployment", "MSBuild", "Production Build", "Site Configuration", "Web.config"]
 tags_normalized: ["dotnet", "dotnet framework 4dot7", "404 error", "angular 11", "backend deployment", "coding", "community", "devops", "frontend deployment", "iis deployment", "msbuild", "production build", "site configuration", "webdotconfig"]

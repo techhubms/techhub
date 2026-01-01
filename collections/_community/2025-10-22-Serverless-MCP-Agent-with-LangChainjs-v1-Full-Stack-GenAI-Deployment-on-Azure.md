@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-10-22 07:29:14 +00:00
-permalink: "/community/2025-10-22-Serverless-MCP-Agent-with-LangChainjs-v1-Full-Stack-GenAI-Deployment-on-Azure.html"
+permalink: "/2025-10-22-Serverless-MCP-Agent-with-LangChainjs-v1-Full-Stack-GenAI-Deployment-on-Azure.html"
 categories: ["AI", "Azure", "Coding"]
 tags: ["AI", "Authentication", "Azure", "Azure Developer CLI", "Azure Functions", "Azure Static Web Apps", "Coding", "Community", "Cosmos DB", "Debugging", "GenAI", "IaC", "JavaScript", "LangChain.js", "LLM Agents", "MCP", "MCP Inspector", "Node.js", "OpenTelemetry", "Production Architecture", "Serverless", "Streaming APIs", "Tool Integration", "Web Components"]
 tags_normalized: ["ai", "authentication", "azure", "azure developer cli", "azure functions", "azure static web apps", "coding", "community", "cosmos db", "debugging", "genai", "iac", "javascript", "langchaindotjs", "llm agents", "mcp", "mcp inspector", "nodedotjs", "opentelemetry", "production architecture", "serverless", "streaming apis", "tool integration", "web components"]

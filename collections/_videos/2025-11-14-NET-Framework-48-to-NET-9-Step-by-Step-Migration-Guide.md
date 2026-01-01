@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "DotNet YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw"
 date: 2025-11-14 03:30:06 +00:00
-permalink: "/videos/2025-11-14-NET-Framework-48-to-NET-9-Step-by-Step-Migration-Guide.html"
+permalink: "/2025-11-14-NET-Framework-48-to-NET-9-Step-by-Step-Migration-Guide.html"
 categories: ["Coding"]
 tags: [".NET", ".NET 9", ".NET Conf", ".NET Framework 4.8", ".NET Standard", "AI", "AI Assistance", "ASP.NET", "Coding", "Dual Compilation", "Legacy Application", "Microsoft.Extensions", "Migration", "Modernization", "MVC", "Upgrade Process", "Videos", "Web API", "Windows Service"]
 tags_normalized: ["dotnet", "dotnet 9", "dotnet conf", "dotnet framework 4dot8", "dotnet standard", "ai", "ai assistance", "aspdotnet", "coding", "dual compilation", "legacy application", "microsoftdotextensions", "migration", "modernization", "mvc", "upgrade process", "videos", "web api", "windows service"]

@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Events YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
 date: 2025-11-19 15:22:41 +00:00
-permalink: "/videos/2025-11-19-AI-Driven-DEX-Tool-Architecture-for-Enhanced-User-Experience.html"
+permalink: "/2025-11-19-AI-Driven-DEX-Tool-Architecture-for-Enhanced-User-Experience.html"
 categories: ["AI", "Azure", "Security"]
 tags: ["AI", "AI Automation", "API First Design", "Azure", "Databricks", "DEX Tool", "Distributed Data Storage", "Edge AI", "Event Response", "Foundational Session", "Microsoft Ignite", "MSIgnite", "Network Dependence", "Secureyourdata", "Security", "System Architecture", "TeamViewer", "User Experience", "Videos", "Window Of Vulnerability"]
 tags_normalized: ["ai", "ai automation", "api first design", "azure", "databricks", "dex tool", "distributed data storage", "edge ai", "event response", "foundational session", "microsoft ignite", "msignite", "network dependence", "secureyourdata", "security", "system architecture", "teamviewer", "user experience", "videos", "window of vulnerability"]

@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Nick Chapsas YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrkPsvLGln62OMZRO6K-llg"
 date: 2025-08-06 11:00:58 +00:00
-permalink: "/videos/2025-08-06-Getting-Started-with-GraphQL-in-NET.html"
+permalink: "/2025-08-06-Getting-Started-with-GraphQL-in-NET.html"
 categories: ["Coding"]
 tags: [".NET", "API Development", "ASP.NET Core", "Backend Development", "C#", "Coding", "GraphQL", "GraphQL API", "HotChocolate", "Michael Staib", "Microsoft", "Nick Chapsas", "Videos"]
 tags_normalized: ["dotnet", "api development", "aspdotnet core", "backend development", "csharp", "coding", "graphql", "graphql api", "hotchocolate", "michael staib", "microsoft", "nick chapsas", "videos"]

@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/changelog/feed/"
 date: 2025-10-29 09:07:43 +00:00
-permalink: "/news/2025-10-29-Enhancements-to-GitHub-MCP-Server-Server-Instructions-and-Multifunctional-Tools.html"
+permalink: "/2025-10-29-Enhancements-to-GitHub-MCP-Server-Server-Instructions-and-Multifunctional-Tools.html"
 categories: ["AI", "DevOps"]
 tags: ["AI", "AI Assisted Development", "Code Security", "Copilot", "Default Toolset", "DevOps", "DevOps Automation", "GitHub MCP Server", "Issue Management", "MCP", "Multitool Workflows", "News", "Pull Request Review", "Repository Configuration", "Server Instructions", "Tool Consolidation"]
 tags_normalized: ["ai", "ai assisted development", "code security", "copilot", "default toolset", "devops", "devops automation", "github mcp server", "issue management", "mcp", "multitool workflows", "news", "pull request review", "repository configuration", "server instructions", "tool consolidation"]

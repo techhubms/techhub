@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Fabric Blog"
 feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
 date: 2025-08-27 10:30:00 +00:00
-permalink: "/news/2025-08-27-Enabling-Healthcare-Compliance-with-Microsoft-Purview-DLP-Policies-in-Fabric.html"
+permalink: "/2025-08-27-Enabling-Healthcare-Compliance-with-Microsoft-Purview-DLP-Policies-in-Fabric.html"
 categories: ["Azure", "Security"]
 tags: ["Access Monitoring", "Audit Trails", "Azure", "Cloud Data Security", "Data Classification", "Data Loss Prevention", "DLP Policies", "Healthcare Compliance", "HIPAA", "Microsoft Fabric", "Microsoft Purview", "News", "PHI Protection", "Power BI", "Privacy", "Regulatory Compliance", "Security", "Security Administration"]
 tags_normalized: ["access monitoring", "audit trails", "azure", "cloud data security", "data classification", "data loss prevention", "dlp policies", "healthcare compliance", "hipaa", "microsoft fabric", "microsoft purview", "news", "phi protection", "power bi", "privacy", "regulatory compliance", "security", "security administration"]

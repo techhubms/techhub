@@ -9,10 +9,10 @@ viewing_mode: "external"
 feed_name: "Dellenny's Blog"
 feed_url: "https://dellenny.com/feed/"
 date: 2025-07-20 11:52:33 +00:00
-permalink: "/blogs/2025-07-20-Agentic-AI-The-Next-Evolution-Beyond-Generative-AI-for-Solution-Architects.html"
+permalink: "/2025-07-20-Agentic-AI-The-Next-Evolution-Beyond-Generative-AI-for-Solution-Architects.html"
 categories: ["AI"]
-tags: ["Agentic AI", "AI", "AI Agents", "AI Architecture", "AI Workflow Orchestration", "API Orchestration", "Architecture", "AutoGen", "Autonomous AI Systems", "Context Aware AI", "Digital Transformation", "Enterprise Automation", "Generative AI", "Intelligent Automation", "LangChain", "Long Term Memory AI", "Microsoft Copilot Studio", "Blogs", "Security in AI Agents", "Self Improving Systems", "Solution Architecture"]
-tags_normalized: ["agentic ai", "ai", "ai agents", "ai architecture", "ai workflow orchestration", "api orchestration", "architecture", "autogen", "autonomous ai systems", "context aware ai", "digital transformation", "enterprise automation", "generative ai", "intelligent automation", "langchain", "long term memory ai", "microsoft copilot studio", "blogs", "security in ai agents", "self improving systems", "solution architecture"]
+tags: ["Agentic AI", "AI", "AI Agents", "AI Architecture", "AI Workflow Orchestration", "API Orchestration", "Architecture", "AutoGen", "Autonomous AI Systems", "Blogs", "Context Aware AI", "Digital Transformation", "Enterprise Automation", "Generative AI", "Intelligent Automation", "LangChain", "Long Term Memory AI", "Microsoft Copilot Studio", "Security in AI Agents", "Self Improving Systems", "Solution Architecture"]
+tags_normalized: ["agentic ai", "ai", "ai agents", "ai architecture", "ai workflow orchestration", "api orchestration", "architecture", "autogen", "autonomous ai systems", "blogs", "context aware ai", "digital transformation", "enterprise automation", "generative ai", "intelligent automation", "langchain", "long term memory ai", "microsoft copilot studio", "security in ai agents", "self improving systems", "solution architecture"]
 ---
 
 Dellenny explores the paradigm shift from generative AI to Agentic AI, describing how autonomous AI agents empower solution architects to build adaptive and intelligent enterprise systems.<!--excerpt_end-->

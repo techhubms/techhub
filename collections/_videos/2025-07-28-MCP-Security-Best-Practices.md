@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Build 2025 YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
 date: 2025-07-28 16:00:13 +00:00
-permalink: "/videos/2025-07-28-MCP-Security-Best-Practices.html"
+permalink: "/2025-07-28-MCP-Security-Best-Practices.html"
 categories: ["AI"]
 tags: ["AI", "AI App Security", "AI System Resilience", "Enterprise AI", "MCP", "Microsoft AI", "Prompt Injection", "Security Best Practices", "Session Hijacking", "Token Passthrough", "Tool Poisoning", "Videos"]
 tags_normalized: ["ai", "ai app security", "ai system resilience", "enterprise ai", "mcp", "microsoft ai", "prompt injection", "security best practices", "session hijacking", "token passthrough", "tool poisoning", "videos"]

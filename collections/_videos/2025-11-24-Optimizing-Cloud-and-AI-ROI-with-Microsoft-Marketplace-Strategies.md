@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Events YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
 date: 2025-11-24 11:28:05 +00:00
-permalink: "/videos/2025-11-24-Optimizing-Cloud-and-AI-ROI-with-Microsoft-Marketplace-Strategies.html"
+permalink: "/2025-11-24-Optimizing-Cloud-and-AI-ROI-with-Microsoft-Marketplace-Strategies.html"
 categories: ["AI", "Azure"]
 tags: ["AI", "AI Strategy", "Azure", "Cloud Adoption", "Cloud Governance", "Compliance", "Cost Optimization", "Cross Functional Teams", "Digital Transformation", "InnovatewithAzureAIappsandagents", "Innovation", "Microsoft Ignite", "Microsoft Marketplace", "MSIgnite", "Partner Tools", "PO Management Service", "Procurement", "Solution Deployment", "Videos"]
 tags_normalized: ["ai", "ai strategy", "azure", "cloud adoption", "cloud governance", "compliance", "cost optimization", "cross functional teams", "digital transformation", "innovatewithazureaiappsandagents", "innovation", "microsoft ignite", "microsoft marketplace", "msignite", "partner tools", "po management service", "procurement", "solution deployment", "videos"]

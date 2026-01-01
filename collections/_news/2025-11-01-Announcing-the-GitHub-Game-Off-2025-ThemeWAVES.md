@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/feed/"
 date: 2025-11-01 20:37:00 +00:00
-permalink: "/news/2025-11-01-Announcing-the-GitHub-Game-Off-2025-ThemeWAVES.html"
+permalink: "/2025-11-01-Announcing-the-GitHub-Game-Off-2025-ThemeWAVES.html"
 categories: ["Coding", "DevOps"]
 tags: ["C#", "Coding", "Company", "Competition", "DevOps", "Game Development", "Game Engines", "Game Jam", "GitHub", "GitHub Game Off", "Godot", "JavaScript", "News", "Open Source", "Phaser", "Programming", "Pygame", "Python", "Unity", "Unreal Engine", "Version Control", "WAVES"]
 tags_normalized: ["csharp", "coding", "company", "competition", "devops", "game development", "game engines", "game jam", "github", "github game off", "godot", "javascript", "news", "open source", "phaser", "programming", "pygame", "python", "unity", "unreal engine", "version control", "waves"]

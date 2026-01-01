@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/changelog/feed/"
 date: 2025-10-31 15:49:41 +00:00
-permalink: "/news/2025-10-31-Deprecation-Notice-Updates-to-GitHub-Models-and-Migration-Guidance.html"
+permalink: "/2025-10-31-Deprecation-Notice-Updates-to-GitHub-Models-and-Migration-Guidance.html"
 categories: ["AI"]
 tags: ["AI", "AI Models", "Azure Machine Learning", "Community Discussions", "Documentation", "Ecosystem & Accessibility", "GitHub", "GitHub Models", "Jais 30b Chat", "Mistral Large 2411", "Mistral Medium 2505", "Mistral Nemo", "Mistral Small 2503", "Model Deprecation", "Model Migration", "News", "Retired"]
 tags_normalized: ["ai", "ai models", "azure machine learning", "community discussions", "documentation", "ecosystem and accessibility", "github", "github models", "jais 30b chat", "mistral large 2411", "mistral medium 2505", "mistral nemo", "mistral small 2503", "model deprecation", "model migration", "news", "retired"]

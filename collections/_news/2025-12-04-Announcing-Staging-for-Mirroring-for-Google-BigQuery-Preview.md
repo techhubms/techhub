@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Fabric Blog"
 feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
 date: 2025-12-04 08:00:00 +00:00
-permalink: "/news/2025-12-04-Announcing-Staging-for-Mirroring-for-Google-BigQuery-Preview.html"
+permalink: "/2025-12-04-Announcing-Staging-for-Mirroring-for-Google-BigQuery-Preview.html"
 categories: ["Azure", "ML"]
 tags: ["Analytics", "Azure", "Bulk Data", "Cloud Data", "Cross Cloud", "Data Engineering", "Data Ingestion", "Data Replication", "ETL", "Google BigQuery", "Microsoft Fabric", "Mirroring", "ML", "News", "Performance Optimization", "Preview Feature", "Staging"]
 tags_normalized: ["analytics", "azure", "bulk data", "cloud data", "cross cloud", "data engineering", "data ingestion", "data replication", "etl", "google bigquery", "microsoft fabric", "mirroring", "ml", "news", "performance optimization", "preview feature", "staging"]

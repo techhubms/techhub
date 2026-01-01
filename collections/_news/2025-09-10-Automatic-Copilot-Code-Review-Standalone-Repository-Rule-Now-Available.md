@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/changelog/feed/"
 date: 2025-09-10 20:08:07 +00:00
-permalink: "/news/2025-09-10-Automatic-Copilot-Code-Review-Standalone-Repository-Rule-Now-Available.html"
+permalink: "/2025-09-10-Automatic-Copilot-Code-Review-Standalone-Repository-Rule-Now-Available.html"
 categories: ["AI", "DevOps", "GitHub Copilot"]
 tags: ["AI", "Automatic Code Review", "Automation", "Code Quality", "Continuous Review", "Copilot", "Developer Tools", "DevOps", "GitHub", "GitHub Copilot", "Improvement", "News", "Pull Requests", "Repository Rules", "Rule Configuration"]
 tags_normalized: ["ai", "automatic code review", "automation", "code quality", "continuous review", "copilot", "developer tools", "devops", "github", "github copilot", "improvement", "news", "pull requests", "repository rules", "rule configuration"]

@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "DotNet YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw"
 date: 2025-12-05 00:20:57 +00:00
-permalink: "/videos/2025-12-05-Deep-Dive-into-Cancellation-Tokens-in-NET-with-Stephen-Toub.html"
+permalink: "/2025-12-05-Deep-Dive-into-Cancellation-Tokens-in-NET-with-Stephen-Toub.html"
 categories: ["Coding"]
 tags: [".NET", "AMPM", "Async Programming", "BackgroundWorker", "C#", "CancellationToken", "Cancellationtokens", "CancellationTokenSource", "Coding", "Cooperative Cancellation", "Demo", "Dotnetdeveloper", "EPM", "Explicit Token Passing", "Lock Free Programming", "Microsoft", "Multi Threading", "Scott Hanselman", "Scotthanselman", "Software Developer", "Stephen Toub", "Stephentoub", "Threading", "Tokens", "Videos", "Volatile"]
 tags_normalized: ["dotnet", "ampm", "async programming", "backgroundworker", "csharp", "cancellationtoken", "cancellationtokens", "cancellationtokensource", "coding", "cooperative cancellation", "demo", "dotnetdeveloper", "epm", "explicit token passing", "lock free programming", "microsoft", "multi threading", "scott hanselman", "scotthanselman", "software developer", "stephen toub", "stephentoub", "threading", "tokens", "videos", "volatile"]

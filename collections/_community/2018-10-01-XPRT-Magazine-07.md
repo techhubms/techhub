@@ -6,7 +6,7 @@ categories: ["AI", "Azure", "Coding", "DevOps", "Security"]
 date: 2018-10-01 00:00:00 +00:00
 author: "Xebia"
 viewing_mode: "external"
-permalink: "/community/2018-10-01-XPRT-Magazine-07.html"
+permalink: "/2018-10-01-XPRT-Magazine-07.html"
 excerpt_separator: <!--excerpt_end-->
 tags: ["AI", "Automation", "Azure", "Azure Security", "Bots", "Cloud", "Coding", "Community", "Containers", "DevOps", "Kubernetes", "Magazines", "Property Based Testing", "Security", "Techorama", "Unit Testing", "Value Stream", "VS Code"]
 tags_normalized: ["ai", "automation", "azure", "azure security", "bots", "cloud", "coding", "community", "containers", "devops", "kubernetes", "magazines", "property based testing", "security", "techorama", "unit testing", "value stream", "vs code"]

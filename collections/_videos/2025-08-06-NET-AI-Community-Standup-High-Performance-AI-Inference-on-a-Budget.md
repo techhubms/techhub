@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "DotNet YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw"
 date: 2025-08-06 20:46:02 +00:00
-permalink: "/videos/2025-08-06-NET-AI-Community-Standup-High-Performance-AI-Inference-on-a-Budget.html"
+permalink: "/2025-08-06-NET-AI-Community-Standup-High-Performance-AI-Inference-on-a-Budget.html"
 categories: ["AI", "Coding", "ML"]
 tags: [".NET", ".NET 10", ".NET 9", "AI", "AI Inference", "AI Library Design", "AI Performance", "AIML", "Coding", "Cost Optimization", "Demo", "Developer", "Developer Community", "Developer Tools", "Dotnetdeveloper", "GPU Utilization", "Hugging Face Models", "Machine Learning", "MachineLearning", "ML", "Onnx", "ONNX Runtime", "Production AI", "Python Integration", "Software Developer", "Videos"]
 tags_normalized: ["dotnet", "dotnet 10", "dotnet 9", "ai", "ai inference", "ai library design", "ai performance", "aiml", "coding", "cost optimization", "demo", "developer", "developer community", "developer tools", "dotnetdeveloper", "gpu utilization", "hugging face models", "machine learning", "machinelearning", "ml", "onnx", "onnx runtime", "production ai", "python integration", "software developer", "videos"]

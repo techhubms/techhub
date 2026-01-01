@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/changelog/feed/"
 date: 2025-12-18 23:03:15 +00:00
-permalink: "/news/2025-12-18-CodeQL-2237-and-2238-Released-Enhanced-Security-Queries-for-Go-and-Rust.html"
+permalink: "/2025-12-18-CodeQL-2237-and-2238-Released-Enhanced-Security-Queries-for-Go-and-Rust.html"
 categories: ["DevOps", "Security"]
 tags: ["Application Security", "Buildless Analysis", "C#", "CI/CD", "Code Quality", "CodeQL", "DevOps", "GitHub Code Scanning", "Go", "Improvement", "Java", "JavaScript", "Kotlin", "News", "Open Source", "Python", "Rust", "Security", "Security Queries", "Static Analysis", "TypeScript"]
 tags_normalized: ["application security", "buildless analysis", "csharp", "cislashcd", "code quality", "codeql", "devops", "github code scanning", "go", "improvement", "java", "javascript", "kotlin", "news", "open source", "python", "rust", "security", "security queries", "static analysis", "typescript"]

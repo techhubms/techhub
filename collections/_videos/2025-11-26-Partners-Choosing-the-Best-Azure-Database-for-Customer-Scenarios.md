@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Events YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
 date: 2025-11-26 20:02:42 +00:00
-permalink: "/videos/2025-11-26-Partners-Choosing-the-Best-Azure-Database-for-Customer-Scenarios.html"
+permalink: "/2025-11-26-Partners-Choosing-the-Best-Azure-Database-for-Customer-Scenarios.html"
 categories: ["AI", "Azure", "ML"]
 tags: ["AI", "AI Integration", "Analytics", "Application Modernization", "Azure", "Azure SQL", "Cloud Migration", "Co Location", "Cosmos DB", "Data Platform", "Databases", "F5n1", "Ignite", "Managed Database", "Microsoft", "Microsoft AI Cloud Partner Program", "Microsoft Fabric", "Microsoft Ignite", "ML", "Ms Ignite", "Msft Ignite", "Partner Solutions", "Partners: Choose The Best Azure DB For Every Customer Scenario | PBRK232", "PBRK232", "Session", "Unify Your Data Platform", "Unify Your Data Platform:microsoft Fabric", "Videos"]
 tags_normalized: ["ai", "ai integration", "analytics", "application modernization", "azure", "azure sql", "cloud migration", "co location", "cosmos db", "data platform", "databases", "f5n1", "ignite", "managed database", "microsoft", "microsoft ai cloud partner program", "microsoft fabric", "microsoft ignite", "ml", "ms ignite", "msft ignite", "partner solutions", "partners choose the best azure db for every customer scenario pipe pbrk232", "pbrk232", "session", "unify your data platform", "unify your data platformmicrosoft fabric", "videos"]

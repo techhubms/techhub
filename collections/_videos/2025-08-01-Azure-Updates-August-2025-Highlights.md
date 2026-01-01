@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "John Savill's Technical Training"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCpIn7ox7j7bH_OFj7tYouOQ"
 date: 2025-08-01 14:54:51 +00:00
-permalink: "/videos/2025-08-01-Azure-Updates-August-2025-Highlights.html"
+permalink: "/2025-08-01-Azure-Updates-August-2025-Highlights.html"
 categories: ["Azure", "ML", "Security"]
 tags: ["AVNM", "Azure", "Azure Arc", "Azure Cloud", "Azure Confidential Ledger", "Azure Data", "Azure Dedicated HSM", "Azure Migration", "Azure SQL", "Azure Updates", "Cloud", "Cloud Security", "Custom Maintenance Windows", "Entra ID Authentication", "Gov Cloud", "Microsoft", "Microsoft Azure", "Microsoft Security", "ML", "MySQL", "PostgreSQL", "Power BI", "SAS Token Expiry Policy", "Security", "SQL Migration", "SSD V2", "Ultra NVMe", "Videos"]
 tags_normalized: ["avnm", "azure", "azure arc", "azure cloud", "azure confidential ledger", "azure data", "azure dedicated hsm", "azure migration", "azure sql", "azure updates", "cloud", "cloud security", "custom maintenance windows", "entra id authentication", "gov cloud", "microsoft", "microsoft azure", "microsoft security", "ml", "mysql", "postgresql", "power bi", "sas token expiry policy", "security", "sql migration", "ssd v2", "ultra nvme", "videos"]

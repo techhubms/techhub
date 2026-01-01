@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Community"
 date: 2025-08-14 20:52:17 +00:00
-permalink: "/community/2025-08-14-Azure-API-Management-Workspaces-Breaking-Changes-Update-Built-in-Gateway-and-Tier-Support.html"
+permalink: "/2025-08-14-Azure-API-Management-Workspaces-Breaking-Changes-Update-Built-in-Gateway-and-Tier-Support.html"
 categories: ["Azure"]
 tags: ["API Limits", "API Management", "Azure", "Azure API Management", "Breaking Changes", "Built in Gateway", "Cloud Integration", "Community", "Developer Tier", "Federated API", "Managed Identities", "Microsoft Azure", "Premium V2", "Service Tiers", "Standard V2", "Workspace Gateways", "Workspaces"]
 tags_normalized: ["api limits", "api management", "azure", "azure api management", "breaking changes", "built in gateway", "cloud integration", "community", "developer tier", "federated api", "managed identities", "microsoft azure", "premium v2", "service tiers", "standard v2", "workspace gateways", "workspaces"]

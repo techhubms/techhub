@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-08-31 15:28:07 +00:00
-permalink: "/community/2025-08-31-Container-Networking-with-Azure-Application-Gateway-for-Containers-AGC-Overlay-vs-Flat-AKS.html"
+permalink: "/2025-08-31-Container-Networking-with-Azure-Application-Gateway-for-Containers-AGC-Overlay-vs-Flat-AKS.html"
 categories: ["Azure", "Coding", "DevOps", "Security"]
 tags: ["AKS", "ALB Controller", "Application Gateway For Containers", "Azure", "Azure CNI", "Azure Firewall", "Calico", "Cilium", "Coding", "Community", "Container Networking", "DevOps", "Gateway API", "Ingress Controller", "Kubernetes Networking", "Network Policies", "NSG", "Overlay Networking", "Security", "Subnet Design", "YAML"]
 tags_normalized: ["aks", "alb controller", "application gateway for containers", "azure", "azure cni", "azure firewall", "calico", "cilium", "coding", "community", "container networking", "devops", "gateway api", "ingress controller", "kubernetes networking", "network policies", "nsg", "overlay networking", "security", "subnet design", "yaml"]

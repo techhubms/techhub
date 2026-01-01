@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/changelog/label/copilot/feed/"
 date: 2025-07-23 16:00:49 +00:00
-permalink: "/news/2025-07-23-GitHub-Spark-in-public-preview-for-Copilot-Pro-subscribers.html"
+permalink: "/2025-07-23-GitHub-Spark-in-Public-Preview-for-Copilot-Pro-Subscribers.html"
 categories: ["AI", "GitHub Copilot"]
 tags: ["AI", "AI Driven Workflows", "Application Deployment", "Automation", "Copilot Pro+", "Developer Productivity", "Full Stack Development", "GitHub", "GitHub Copilot", "GitHub Spark", "News", "Prototyping", "Public Preview", "Software Engineering"]
 tags_normalized: ["ai", "ai driven workflows", "application deployment", "automation", "copilot proplus", "developer productivity", "full stack development", "github", "github copilot", "github spark", "news", "prototyping", "public preview", "software engineering"]

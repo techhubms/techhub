@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-12-05 00:09:20 +00:00
-permalink: "/community/2025-12-05-Deploying-a-Bun-Hono-Vite-App-to-Azure-Linux-Web-App.html"
+permalink: "/2025-12-05-Deploying-a-Bun-Hono-Vite-App-to-Azure-Linux-Web-App.html"
 categories: ["Azure", "Coding", "DevOps"]
 tags: ["Azure", "Azure App Service", "Azure PaaS", "Bun", "CI/CD", "Coding", "Community", "Deployment", "DevOps", "Docker", "Full Stack", "Hono", "JavaScript", "Linux Web App", "Node.js", "Serverless", "TypeScript", "Vite", "VS Code", "Web Development"]
 tags_normalized: ["azure", "azure app service", "azure paas", "bun", "cislashcd", "coding", "community", "deployment", "devops", "docker", "full stack", "hono", "javascript", "linux web app", "nodedotjs", "serverless", "typescript", "vite", "vs code", "web development"]

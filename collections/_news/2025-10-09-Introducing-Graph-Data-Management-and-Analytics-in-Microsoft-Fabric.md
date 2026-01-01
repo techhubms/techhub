@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Fabric Blog"
 feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
 date: 2025-10-09 08:00:00 +00:00
-permalink: "/news/2025-10-09-Introducing-Graph-Data-Management-and-Analytics-in-Microsoft-Fabric.html"
+permalink: "/2025-10-09-Introducing-Graph-Data-Management-and-Analytics-in-Microsoft-Fabric.html"
 categories: ["AI", "Azure", "ML"]
 tags: ["AI", "AI Reasoning", "Azure", "Data Integration", "Data Modeling", "Data Visualization", "Enterprise Data", "Fraud Detection", "Generative AI", "GQL", "Graph Analytics", "Graph Databases", "Microsoft Fabric", "ML", "Multi Hop Queries", "News", "No Code Tools", "OneLake", "Real Time Analytics", "Relationship Data"]
 tags_normalized: ["ai", "ai reasoning", "azure", "data integration", "data modeling", "data visualization", "enterprise data", "fraud detection", "generative ai", "gql", "graph analytics", "graph databases", "microsoft fabric", "ml", "multi hop queries", "news", "no code tools", "onelake", "real time analytics", "relationship data"]

@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Reddit Azure"
 feed_url: "https://www.reddit.com/r/azure/.rss"
 date: 2025-07-29 10:09:33 +00:00
-permalink: "/community/2025-07-29-Is-Azure-Vision-Studio-Dead.html"
+permalink: "/2025-07-29-Is-Azure-Vision-Studio-Dead.html"
 categories: ["AI", "Azure"]
 tags: ["AI", "API Deprecation", "Azure", "Azure Cognitive Services", "Azure Vision Studio", "Cloud AI", "Community", "Custom Datasets", "East US", "Image Analysis", "Machine Learning", "Object Detection", "Vision APIs"]
 tags_normalized: ["ai", "api deprecation", "azure", "azure cognitive services", "azure vision studio", "cloud ai", "community", "custom datasets", "east us", "image analysis", "machine learning", "object detection", "vision apis"]

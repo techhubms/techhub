@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft News"
 feed_url: "https://news.microsoft.com/source/feed/"
 date: 2025-07-24 13:03:35 +00:00
-permalink: "/news/2025-07-24-Microsoft-Research-Asia-launches-Singapore-lab.html"
+permalink: "/2025-07-24-Microsoft-Research-Asia-launches-Singapore-lab.html"
 categories: ["AI"]
 tags: ["AI", "AI Innovation", "Asia Pacific", "Collaboration", "Company News", "Industrial Transformation", "Microsoft", "Microsoft Research Asia", "News", "Research Institution", "Singapore Lab", "Talent Development", "Technology", "Technology Research"]
 tags_normalized: ["ai", "ai innovation", "asia pacific", "collaboration", "company news", "industrial transformation", "microsoft", "microsoft research asia", "news", "research institution", "singapore lab", "talent development", "technology", "technology research"]

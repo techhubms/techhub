@@ -10,7 +10,7 @@ categories: ["AI", "GitHub Copilot"]
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/changelog/label/copilot/feed/"
 date: 2025-07-02 18:02:20 +00:00
-permalink: "/news/2025-07-02-Copilot-code-review-Better-handling-of-large-pull-requests.html"
+permalink: "/2025-07-02-Copilot-code-review-Better-handling-of-large-pull-requests.html"
 tags: ["AI", "Code Review", "Copilot Improvements", "GitHub", "GitHub Copilot", "Large Codebases", "News", "Pull Requests"]
 tags_normalized: ["ai", "code review", "copilot improvements", "github", "github copilot", "large codebases", "news", "pull requests"]
 ---

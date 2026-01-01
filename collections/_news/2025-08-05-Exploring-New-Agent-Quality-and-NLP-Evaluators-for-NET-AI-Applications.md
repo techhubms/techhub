@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft .NET Blog"
 feed_url: "https://devblogs.microsoft.com/dotnet/feed/"
 date: 2025-08-05 17:05:00 +00:00
-permalink: "/news/2025-08-05-Exploring-New-Agent-Quality-and-NLP-Evaluators-for-NET-AI-Applications.html"
+permalink: "/2025-08-05-Exploring-New-Agent-Quality-and-NLP-Evaluators-for-NET-AI-Applications.html"
 categories: ["AI", "Azure", "Coding"]
 tags: [".NET", "Agent Quality", "AI", "AI Evaluation", "Azure", "Azure OpenAI", "BLEU", "C#", "Coding", "Evaluations", "F1 Evaluator", "GLEU", "MEAI", "MEAI.Evaluation", "Microsoft.Extensions.AI", "Microsoft.Extensions.AI.Evaluation", "News", "NLP Metrics", "Testing"]
 tags_normalized: ["dotnet", "agent quality", "ai", "ai evaluation", "azure", "azure openai", "bleu", "csharp", "coding", "evaluations", "f1 evaluator", "gleu", "meai", "meaidotevaluation", "microsoftdotextensionsdotai", "microsoftdotextensionsdotaidotevaluation", "news", "nlp metrics", "testing"]

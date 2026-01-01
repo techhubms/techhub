@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Fabric Blog"
 feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
 date: 2025-10-20 12:00:00 +00:00
-permalink: "/news/2025-10-20-Capacity-Usage-Now-Enabled-for-Test-Capability-in-Fabric-User-Data-Functions.html"
+permalink: "/2025-10-20-Capacity-Usage-Now-Enabled-for-Test-Capability-in-Fabric-User-Data-Functions.html"
 categories: ["Azure", "ML"]
 tags: ["Azure", "Capacity Metrics", "Data Architecture", "Data Engineering", "Develop Mode", "Fabric Integration", "Fabric User Data Functions", "General Availability", "Microsoft Fabric", "ML", "News", "Power BI Integration", "Python Functions", "Service Limits", "Testing"]
 tags_normalized: ["azure", "capacity metrics", "data architecture", "data engineering", "develop mode", "fabric integration", "fabric user data functions", "general availability", "microsoft fabric", "ml", "news", "power bi integration", "python functions", "service limits", "testing"]

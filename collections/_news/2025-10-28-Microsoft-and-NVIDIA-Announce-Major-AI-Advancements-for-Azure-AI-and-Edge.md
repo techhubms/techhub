@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The Azure Blog"
 feed_url: "https://azure.microsoft.com/en-us/blog/feed/"
 date: 2025-10-28 18:30:00 +00:00
-permalink: "/news/2025-10-28-Microsoft-and-NVIDIA-Announce-Major-AI-Advancements-for-Azure-AI-and-Edge.html"
+permalink: "/2025-10-28-Microsoft-and-NVIDIA-Announce-Major-AI-Advancements-for-Azure-AI-and-Edge.html"
 categories: ["AI", "Azure"]
 tags: ["3D Asset Generation", "AI", "AI + Machine Learning", "AI Infrastructure", "AKS", "Azure", "Azure AI Foundry", "Azure Arc", "Azure Local", "Digital Twins", "Edge AI", "Enterprise AI", "GPU Orchestration", "Hybrid + Multicloud", "Hybrid Cloud", "Internet Of Things", "Machine Learning", "Microsoft TRELLIS", "Multimodal Models", "ND GB200 V6 VMs", "News", "NVIDIA", "NVIDIA Blackwell", "NVIDIA RTX PRO 6000", "NVIDIA Run:ai", "Supercomputing"]
 tags_normalized: ["3d asset generation", "ai", "ai plus machine learning", "ai infrastructure", "aks", "azure", "azure ai foundry", "azure arc", "azure local", "digital twins", "edge ai", "enterprise ai", "gpu orchestration", "hybrid plus multicloud", "hybrid cloud", "internet of things", "machine learning", "microsoft trellis", "multimodal models", "nd gb200 v6 vms", "news", "nvidia", "nvidia blackwell", "nvidia rtx pro 6000", "nvidia runai", "supercomputing"]

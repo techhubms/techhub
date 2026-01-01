@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Events YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
 date: 2025-11-20 16:13:07 +00:00
-permalink: "/videos/2025-11-20-AI-Builders-Guide-to-Agent-Development-with-Foundry-Agent-Service.html"
+permalink: "/2025-11-20-AI-Builders-Guide-to-Agent-Development-with-Foundry-Agent-Service.html"
 categories: ["AI", "Azure", "Coding"]
 tags: ["Agent Development", "Agent Memory", "Agent Workflows", "AI", "Azure", "Azure AI", "Coding", "Demo", "Enterprise AI", "Foundry Agent Service", "Governance", "InnovatewithAzureAIappsandagents", "LangGraph", "MCP", "Microsoft Ignite", "MSIgnite", "Multi Agent Systems", "OAuth Integration", "Observability", "OpenAI API", "Personalization", "Videos"]
 tags_normalized: ["agent development", "agent memory", "agent workflows", "ai", "azure", "azure ai", "coding", "demo", "enterprise ai", "foundry agent service", "governance", "innovatewithazureaiappsandagents", "langgraph", "mcp", "microsoft ignite", "msignite", "multi agent systems", "oauth integration", "observability", "openai api", "personalization", "videos"]

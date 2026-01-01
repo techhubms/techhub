@@ -9,10 +9,10 @@ viewing_mode: "external"
 feed_name: "Randy Pagels's Blog"
 feed_url: "https://cooknwithcopilot.com/rss.xml"
 date: 2025-09-05 00:00:00 +00:00
-permalink: "/blogs/2025-09-05-Using-GitHub-Copilot-Chat-to-Write-Better-Regex-Patterns.html"
+permalink: "/2025-09-05-Using-GitHub-Copilot-Chat-to-Write-Better-Regex-Patterns.html"
 categories: ["AI", "Coding", "GitHub Copilot"]
-tags: ["Agent Mode", "AI", "Code Automation", "Code Review", "Coding", "Coding Productivity", "Copilot Chat", "Developer Tools", "GitHub Copilot", "Pattern Matching", "Blogs", "Programming", "Regex", "Regex Testing", "Regular Expressions", "Software Development"]
-tags_normalized: ["agent mode", "ai", "code automation", "code review", "coding", "coding productivity", "copilot chat", "developer tools", "github copilot", "pattern matching", "blogs", "programming", "regex", "regex testing", "regular expressions", "software development"]
+tags: ["Agent Mode", "AI", "Blogs", "Code Automation", "Code Review", "Coding", "Coding Productivity", "Copilot Chat", "Developer Tools", "GitHub Copilot", "Pattern Matching", "Programming", "Regex", "Regex Testing", "Regular Expressions", "Software Development"]
+tags_normalized: ["agent mode", "ai", "blogs", "code automation", "code review", "coding", "coding productivity", "copilot chat", "developer tools", "github copilot", "pattern matching", "programming", "regex", "regex testing", "regular expressions", "software development"]
 ---
 
 Randy Pagels demonstrates how to boost regex productivity in your editor using GitHub Copilot Chat for drafting, explaining, and testing patterns.<!--excerpt_end-->

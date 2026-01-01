@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-11-18 17:00:00 +00:00
-permalink: "/community/2025-11-18-Momentum-for-Azure-Confidential-VMs-with-Intel-TDX.html"
+permalink: "/2025-11-18-Momentum-for-Azure-Confidential-VMs-with-Intel-TDX.html"
 categories: ["AI", "Azure", "Security"]
 tags: ["5th Gen Intel Xeon", "AI", "Azure", "Azure Boost", "Azure Confidential VM", "Cloud Infrastructure", "Community", "Confidential AI", "Confidential Computing", "Data Security", "DCesv6 Series", "ECesv6 Series", "Encryption", "Hardware Security", "Intel TDX", "Intel Trust Domain Extensions", "Memory Encryption", "NVMe SSD", "Open Paravisor", "OpenHCL", "Performance Benchmark", "Remote Storage", "Security", "Trusted Execution", "VM Security"]
 tags_normalized: ["5th gen intel xeon", "ai", "azure", "azure boost", "azure confidential vm", "cloud infrastructure", "community", "confidential ai", "confidential computing", "data security", "dcesv6 series", "ecesv6 series", "encryption", "hardware security", "intel tdx", "intel trust domain extensions", "memory encryption", "nvme ssd", "open paravisor", "openhcl", "performance benchmark", "remote storage", "security", "trusted execution", "vm security"]

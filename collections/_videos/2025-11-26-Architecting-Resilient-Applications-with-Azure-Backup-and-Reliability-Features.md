@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Events YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
 date: 2025-11-26 17:47:15 +00:00
-permalink: "/videos/2025-11-26-Architecting-Resilient-Applications-with-Azure-Backup-and-Reliability-Features.html"
+permalink: "/2025-11-26-Architecting-Resilient-Applications-with-Azure-Backup-and-Reliability-Features.html"
 categories: ["Azure", "Security"]
 tags: ["AKS", "Application Protection", "Architect Resilient Apps With Azure Backup And Reliability Features | BRK148", "Azure", "Azure Backup", "BRK148", "Containers", "Databases", "F5n1", "Ignite", "Immutability", "Infrastructure Security", "Microsoft", "Microsoft Ignite", "Migrate And Modernize Your Estate", "Migrate And Modernize Your Estate:azure Kubernetes Service (aks)", "Migrate And Modernize Your Estate:linux Virtual Machines in Azure", "Ms Ignite", "Msft Ignite", "Ransomware Protection", "Reliability", "Security", "Threat Detection", "Videos", "Virtual Machines", "Workload Coverage", "Zonal Resiliency"]
 tags_normalized: ["aks", "application protection", "architect resilient apps with azure backup and reliability features pipe brk148", "azure", "azure backup", "brk148", "containers", "databases", "f5n1", "ignite", "immutability", "infrastructure security", "microsoft", "microsoft ignite", "migrate and modernize your estate", "migrate and modernize your estateazure kubernetes service aks", "migrate and modernize your estatelinux virtual machines in azure", "ms ignite", "msft ignite", "ransomware protection", "reliability", "security", "threat detection", "videos", "virtual machines", "workload coverage", "zonal resiliency"]

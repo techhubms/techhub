@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/feed/"
 date: 2025-10-30 21:46:07 +00:00
-permalink: "/news/2025-10-30-Measuring-What-Matters-Offline-Evaluation-of-GitHub-MCP-Server.html"
+permalink: "/2025-10-30-Measuring-What-Matters-Offline-Evaluation-of-GitHub-MCP-Server.html"
 categories: ["AI", "DevOps", "GitHub Copilot"]
 tags: ["AI", "AI & ML", "Argument Validation", "Automated Testing", "Benchmarking", "Classification Metrics", "Confusion Matrix", "Developer Tools", "DevOps", "DevOps Pipeline", "F1 Score", "Generative AI", "GitHub Copilot", "GitHub MCP Server", "LLM Evaluation", "Machine Learning", "MCP", "News", "Offline Evaluation", "Tool Selection"]
 tags_normalized: ["ai", "ai and ml", "argument validation", "automated testing", "benchmarking", "classification metrics", "confusion matrix", "developer tools", "devops", "devops pipeline", "f1 score", "generative ai", "github copilot", "github mcp server", "llm evaluation", "machine learning", "mcp", "news", "offline evaluation", "tool selection"]

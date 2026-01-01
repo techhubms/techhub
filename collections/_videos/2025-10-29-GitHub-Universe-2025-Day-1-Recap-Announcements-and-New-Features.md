@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "GitHub YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ"
 date: 2025-10-29 05:47:21 +00:00
-permalink: "/videos/2025-10-29-GitHub-Universe-2025-Day-1-Recap-Announcements-and-New-Features.html"
+permalink: "/2025-10-29-GitHub-Universe-2025-Day-1-Recap-Announcements-and-New-Features.html"
 categories: ["DevOps"]
 tags: ["Agent HQ", "Anthropic", "Coding Agents", "Custom Agents", "Developer Tools", "DevOps", "Enterprise Controls", "GitHub", "GitHub Universe", "GitHubUniverse", "GitHubUniverse2025", "Google", "Mission Control", "Open Ecosystem", "OpenAI", "Plan Mode", "Software Development", "Videos", "Xai"]
 tags_normalized: ["agent hq", "anthropic", "coding agents", "custom agents", "developer tools", "devops", "enterprise controls", "github", "github universe", "githubuniverse", "githubuniverse2025", "google", "mission control", "open ecosystem", "openai", "plan mode", "software development", "videos", "xai"]

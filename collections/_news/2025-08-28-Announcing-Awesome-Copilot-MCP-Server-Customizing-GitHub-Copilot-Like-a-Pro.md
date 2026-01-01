@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Blog"
 feed_url: "https://devblogs.microsoft.com/feed"
 date: 2025-08-28 17:00:18 +00:00
-permalink: "/news/2025-08-28-Announcing-Awesome-Copilot-MCP-Server-Customizing-GitHub-Copilot-Like-a-Pro.html"
+permalink: "/2025-08-28-Announcing-Awesome-Copilot-MCP-Server-Customizing-GitHub-Copilot-Like-a-Pro.html"
 categories: ["AI", "Coding", "GitHub Copilot"]
 tags: ["AI", "AI Customization", "Awesome Copilot", "Chat Modes", "Code Review", "Coding", "Copilot Chat", "Custom Instructions", "Developer Tools", "Docker", "GitHub Copilot", "MCP", "MCP Server", "News", "Prompts", "Repository Management", "VS", "VS Code"]
 tags_normalized: ["ai", "ai customization", "awesome copilot", "chat modes", "code review", "coding", "copilot chat", "custom instructions", "developer tools", "docker", "github copilot", "mcp", "mcp server", "news", "prompts", "repository management", "vs", "vs code"]

@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/changelog/feed/"
 date: 2025-11-04 19:21:06 +00:00
-permalink: "/news/2025-11-04-GitHub-Secret-Scanning-Adds-Base64-Encoded-and-Extended-Metadata-Support.html"
+permalink: "/2025-11-04-GitHub-Secret-Scanning-Adds-Base64-Encoded-and-Extended-Metadata-Support.html"
 categories: ["Azure", "DevOps", "Security"]
 tags: ["API Keys", "Application Security", "AWS", "Azure", "Azure Key Detection", "Base64 Encoded Secrets", "Cloud Security", "Continuous Integration", "DevOps", "GitHub", "GitHub Actions", "Grafana", "Identity Protection", "Metadata Validation", "News", "Notion", "Provider Integration", "Secret Scanning", "Security"]
 tags_normalized: ["api keys", "application security", "aws", "azure", "azure key detection", "base64 encoded secrets", "cloud security", "continuous integration", "devops", "github", "github actions", "grafana", "identity protection", "metadata validation", "news", "notion", "provider integration", "secret scanning", "security"]

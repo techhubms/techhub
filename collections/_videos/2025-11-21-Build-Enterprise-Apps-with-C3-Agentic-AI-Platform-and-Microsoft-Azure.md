@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Events YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
 date: 2025-11-21 12:49:52 +00:00
-permalink: "/videos/2025-11-21-Build-Enterprise-Apps-with-C3-Agentic-AI-Platform-and-Microsoft-Azure.html"
+permalink: "/2025-11-21-Build-Enterprise-Apps-with-C3-Agentic-AI-Platform-and-Microsoft-Azure.html"
 categories: ["AI", "Azure", "Coding"]
 tags: ["AI", "AI Agents", "App Deployment", "Application Canvas", "Azure", "C3 Agentic AI Platform", "Coding", "Copilot Collaboration", "Dashboarding", "Enterprise AI", "Governance", "Low Code Development", "Microsoft Fabric", "Microsoft Ignite", "MSIgnite", "Observability", "Versioning", "Videos", "VS Code", "Workflow Automation"]
 tags_normalized: ["ai", "ai agents", "app deployment", "application canvas", "azure", "c3 agentic ai platform", "coding", "copilot collaboration", "dashboarding", "enterprise ai", "governance", "low code development", "microsoft fabric", "microsoft ignite", "msignite", "observability", "versioning", "videos", "vs code", "workflow automation"]

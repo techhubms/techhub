@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "John Savill's Technical Training"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCpIn7ox7j7bH_OFj7tYouOQ"
 date: 2025-08-27 21:22:32 +00:00
-permalink: "/videos/2025-08-27-Azure-Top-3-Reliability-Actions.html"
+permalink: "/2025-08-27-Azure-Top-3-Reliability-Actions.html"
 categories: ["Azure"]
 tags: ["Availability Zones", "Azure", "Azure Architect", "Azure Availability Zones", "Azure Networking", "Azure Regions", "Azure Resilience", "Cloud", "Cloud Reliability", "Disaster Recovery", "Microsoft Cloud", "Network Connectivity", "Network Gateway SKUs", "Regions", "Reliability", "Resilience", "Videos"]
 tags_normalized: ["availability zones", "azure", "azure architect", "azure availability zones", "azure networking", "azure regions", "azure resilience", "cloud", "cloud reliability", "disaster recovery", "microsoft cloud", "network connectivity", "network gateway skus", "regions", "reliability", "resilience", "videos"]

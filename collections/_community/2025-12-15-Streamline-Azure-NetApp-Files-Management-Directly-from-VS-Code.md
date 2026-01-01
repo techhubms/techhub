@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-12-15 20:17:22 +00:00
-permalink: "/community/2025-12-15-Streamline-Azure-NetApp-Files-Management-Directly-from-VS-Code.html"
+permalink: "/2025-12-15-Streamline-Azure-NetApp-Files-Management-Directly-from-VS-Code.html"
 categories: ["AI", "Azure", "Coding", "DevOps"]
 tags: ["AI", "AI Automation", "ARM Templates", "Azure", "Azure DevOps", "Azure NetApp Files", "Capacity Planning", "Coding", "Community", "Cost Efficiency", "Developer Experience", "DevOps", "IaC", "IDE Tools", "Natural Language Commands", "Performance Optimization", "Resource Validation", "Storage Provisioning", "VS Code Extension"]
 tags_normalized: ["ai", "ai automation", "arm templates", "azure", "azure devops", "azure netapp files", "capacity planning", "coding", "community", "cost efficiency", "developer experience", "devops", "iac", "ide tools", "natural language commands", "performance optimization", "resource validation", "storage provisioning", "vs code extension"]

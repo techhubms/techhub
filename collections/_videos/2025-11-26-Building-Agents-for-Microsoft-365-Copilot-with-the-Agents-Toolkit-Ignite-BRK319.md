@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Events YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
 date: 2025-11-26 10:02:56 +00:00
-permalink: "/videos/2025-11-26-Building-Agents-for-Microsoft-365-Copilot-with-the-Agents-Toolkit-Ignite-BRK319.html"
+permalink: "/2025-11-26-Building-Agents-for-Microsoft-365-Copilot-with-the-Agents-Toolkit-Ignite-BRK319.html"
 categories: ["AI"]
 tags: ["Agent Integration", "Agents Toolkit", "AI", "BRK319", "Build Agents For Copilot With The Microsoft 365 Agents Toolkit | BRK319", "Copilot And Agents At Work:copilot Studio", "Copilot And Agents At Work:microsoft 365 Copilot", "Copilot APIs", "Copilot Retrieval API", "Copilot Studio", "Custom Engine Agents", "Declarative Agents", "F5n1", "Ignite", "Innovate With Low Code AI And Agents", "Low Code AI", "Microsoft", "Microsoft 365", "Microsoft 365 Copilot", "Microsoft Ignite", "Ms Ignite", "Msft Ignite", "SDK", "SharePoint Data", "Videos"]
 tags_normalized: ["agent integration", "agents toolkit", "ai", "brk319", "build agents for copilot with the microsoft 365 agents toolkit pipe brk319", "copilot and agents at workcopilot studio", "copilot and agents at workmicrosoft 365 copilot", "copilot apis", "copilot retrieval api", "copilot studio", "custom engine agents", "declarative agents", "f5n1", "ignite", "innovate with low code ai and agents", "low code ai", "microsoft", "microsoft 365", "microsoft 365 copilot", "microsoft ignite", "ms ignite", "msft ignite", "sdk", "sharepoint data", "videos"]

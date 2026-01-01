@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Reddit DevOps"
 feed_url: "https://www.reddit.com/r/devops/.rss"
 date: 2025-08-02 14:53:52 +00:00
-permalink: "/community/2025-08-02-kubeseal-Built-a-small-tool-to-make-bitnamis-sealed-secrets-less-painful-in-GitOps.html"
+permalink: "/2025-08-02-kubeseal-Built-a-small-tool-to-make-bitnamis-sealed-secrets-less-painful-in-GitOps.html"
 categories: ["DevOps"]
 tags: ["Automation", "Bitnami", "Community", "Configuration Management", "DevOps", "DevOps Tools", "GitOps", "Kubernetes", "Kubeseal", "Sealed Secrets", "Secret Management", "Tooling"]
 tags_normalized: ["automation", "bitnami", "community", "configuration management", "devops", "devops tools", "gitops", "kubernetes", "kubeseal", "sealed secrets", "secret management", "tooling"]

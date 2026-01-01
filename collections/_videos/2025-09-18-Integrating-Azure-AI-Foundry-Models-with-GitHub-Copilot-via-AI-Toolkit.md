@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Visual Studio Code YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SLNwkd3w"
 date: 2025-09-18 23:01:00 +00:00
-permalink: "/videos/2025-09-18-Integrating-Azure-AI-Foundry-Models-with-GitHub-Copilot-via-AI-Toolkit.html"
+permalink: "/2025-09-18-Integrating-Azure-AI-Foundry-Models-with-GitHub-Copilot-via-AI-Toolkit.html"
 categories: ["AI", "Azure", "Coding", "GitHub Copilot"]
 tags: ["AI", "AI Toolkit", "Aitoolkit", "Azure", "Azure AI Foundry", "Cloud AI", "Code", "Coding", "Copilot Custom Models", "Demo", "Developer", "Developer Tools", "Extension", "Foundry Local Models", "GitHub Copilot", "Microsoft", "Model Deployment", "Project Setup", "Sign in Azure", "Software Developer", "Videos", "VS Code"]
 tags_normalized: ["ai", "ai toolkit", "aitoolkit", "azure", "azure ai foundry", "cloud ai", "code", "coding", "copilot custom models", "demo", "developer", "developer tools", "extension", "foundry local models", "github copilot", "microsoft", "model deployment", "project setup", "sign in azure", "software developer", "videos", "vs code"]

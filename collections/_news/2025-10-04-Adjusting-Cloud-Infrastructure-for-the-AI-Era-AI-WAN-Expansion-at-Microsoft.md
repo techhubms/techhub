@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft News"
 feed_url: "https://news.microsoft.com/source/feed/"
 date: 2025-10-04 02:01:00 +00:00
-permalink: "/news/2025-10-04-Adjusting-Cloud-Infrastructure-for-the-AI-Era-AI-WAN-Expansion-at-Microsoft.html"
+permalink: "/2025-10-04-Adjusting-Cloud-Infrastructure-for-the-AI-Era-AI-WAN-Expansion-at-Microsoft.html"
 categories: ["AI", "Azure"]
 tags: ["AI", "AI Era", "AI WAN", "Azure", "Cloud Infrastructure", "Cloud Networking", "Company News", "Digital Transformation", "Infrastructure Automation", "Infrastructure Scaling", "LinkedIn Post", "Microsoft", "Microsoft Azure", "Network Capacity", "Networking Technology", "News", "Optical Fiber Expansion"]
 tags_normalized: ["ai", "ai era", "ai wan", "azure", "cloud infrastructure", "cloud networking", "company news", "digital transformation", "infrastructure automation", "infrastructure scaling", "linkedin post", "microsoft", "microsoft azure", "network capacity", "networking technology", "news", "optical fiber expansion"]

@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Fabric Blog"
 feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
 date: 2025-11-19 12:00:00 +00:00
-permalink: "/news/2025-11-19-Introducing-ArcGIS-Maps-Integration-with-Microsoft-Fabric.html"
+permalink: "/2025-11-19-Introducing-ArcGIS-Maps-Integration-with-Microsoft-Fabric.html"
 categories: ["AI", "Azure", "ML"]
 tags: ["AI", "AI Powered Mapping", "Arcade Assistant", "ArcGIS Maps", "Attribute Table", "Azure", "Clustering", "Data Engineering", "Data Visualization", "GeoAnalytics", "Geospatial Analytics", "Heat Maps", "Interactive Maps", "Living Atlas", "Microsoft Fabric", "ML", "News", "OneLake", "Power BI", "Spark Notebooks"]
 tags_normalized: ["ai", "ai powered mapping", "arcade assistant", "arcgis maps", "attribute table", "azure", "clustering", "data engineering", "data visualization", "geoanalytics", "geospatial analytics", "heat maps", "interactive maps", "living atlas", "microsoft fabric", "ml", "news", "onelake", "power bi", "spark notebooks"]

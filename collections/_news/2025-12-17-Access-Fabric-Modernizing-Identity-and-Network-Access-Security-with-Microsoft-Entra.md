@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Security Blog"
 feed_url: "https://www.microsoft.com/en-us/security/blog/feed/"
 date: 2025-12-17 17:00:00 +00:00
-permalink: "/news/2025-12-17-Access-Fabric-Modernizing-Identity-and-Network-Access-Security-with-Microsoft-Entra.html"
+permalink: "/2025-12-17-Access-Fabric-Modernizing-Identity-and-Network-Access-Security-with-Microsoft-Entra.html"
 categories: ["AI", "Azure", "Security"]
 tags: ["Access Fabric", "Adaptive Security", "AI", "AI Security", "Azure", "Cloud Security", "Continuous Authentication", "Hybrid Work", "Identity Management", "Microsoft Entra", "Network Access", "News", "Phishing Prevention", "Risk Based Access", "Security", "Security Strategy", "Session Management", "Threat Mitigation", "Zero Trust"]
 tags_normalized: ["access fabric", "adaptive security", "ai", "ai security", "azure", "cloud security", "continuous authentication", "hybrid work", "identity management", "microsoft entra", "network access", "news", "phishing prevention", "risk based access", "security", "security strategy", "session management", "threat mitigation", "zero trust"]

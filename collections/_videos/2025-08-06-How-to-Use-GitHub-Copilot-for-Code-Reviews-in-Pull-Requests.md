@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "GitHub YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ"
 date: 2025-08-06 14:01:17 +00:00
-permalink: "/videos/2025-08-06-How-to-Use-GitHub-Copilot-for-Code-Reviews-in-Pull-Requests.html"
+permalink: "/2025-08-06-How-to-Use-GitHub-Copilot-for-Code-Reviews-in-Pull-Requests.html"
 categories: ["AI", "DevOps", "GitHub Copilot"]
 tags: ["AI", "AI Assistant", "Automated Code Review", "Code Quality", "Code Review", "CodeReview", "Developer Workflow", "DevOps", "DevOps Practices", "GitHub", "GitHub Copilot", "Pull Request", "Review Suggestions", "Videos"]
 tags_normalized: ["ai", "ai assistant", "automated code review", "code quality", "code review", "codereview", "developer workflow", "devops", "devops practices", "github", "github copilot", "pull request", "review suggestions", "videos"]

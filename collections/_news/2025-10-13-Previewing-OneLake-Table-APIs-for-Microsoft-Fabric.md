@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Fabric Blog"
 feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
 date: 2025-10-13 07:00:00 +00:00
-permalink: "/news/2025-10-13-Previewing-OneLake-Table-APIs-for-Microsoft-Fabric.html"
+permalink: "/2025-10-13-Previewing-OneLake-Table-APIs-for-Microsoft-Fabric.html"
 categories: ["Azure", "ML"]
 tags: ["Analytics", "Apache Iceberg", "Azure", "Cloud Data", "Data Engineering", "Data Integration", "Data Lake", "Delta Lake", "Iceberg REST Catalog", "Microsoft Fabric", "Microsoft OneLake", "ML", "News", "OneLake Table APIs", "Open Table Formats", "Programmatic Data Access", "REST API"]
 tags_normalized: ["analytics", "apache iceberg", "azure", "cloud data", "data engineering", "data integration", "data lake", "delta lake", "iceberg rest catalog", "microsoft fabric", "microsoft onelake", "ml", "news", "onelake table apis", "open table formats", "programmatic data access", "rest api"]

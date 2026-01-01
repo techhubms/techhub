@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Fabric Blog"
 feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
 date: 2025-11-03 09:00:00 +00:00
-permalink: "/news/2025-11-03-Entity-Diagram-in-Eventhouse-KQL-Database-Preview.html"
+permalink: "/2025-11-03-Entity-Diagram-in-Eventhouse-KQL-Database-Preview.html"
 categories: ["Azure", "ML"]
 tags: ["Azure", "Cross Database Relationships", "Data Engineering", "Data Flow", "Database Development", "Entity Diagram", "Eventhouse", "Eventstreams", "Ingestion Monitoring", "KQL Database", "Materialized Views", "Microsoft Fabric", "ML", "News", "Real Time Analytics", "Schema Validation", "Update Policies", "Visualization Tools"]
 tags_normalized: ["azure", "cross database relationships", "data engineering", "data flow", "database development", "entity diagram", "eventhouse", "eventstreams", "ingestion monitoring", "kql database", "materialized views", "microsoft fabric", "ml", "news", "real time analytics", "schema validation", "update policies", "visualization tools"]

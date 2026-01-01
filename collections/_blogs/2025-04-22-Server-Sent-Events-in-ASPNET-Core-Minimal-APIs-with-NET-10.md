@@ -9,10 +9,10 @@ viewing_mode: "external"
 feed_name: "Khalid Abuhakmeh's Blog"
 feed_url: "https://khalidabuhakmeh.com/feed.xml"
 date: 2025-04-22 00:00:00 +00:00
-permalink: "/blogs/2025-04-22-Server-Sent-Events-in-ASPNET-Core-Minimal-APIs-with-NET-10.html"
+permalink: "/2025-04-22-Server-Sent-Events-in-ASPNET-Core-Minimal-APIs-with-NET-10.html"
 categories: ["Coding"]
-tags: [".NET", ".NET 10", "ASP.NET", "ASP.NET Core", "BackgroundService", "C# 14", "Coding", "EventSource", "IAsyncEnumerable", "INotifyPropertyChanged", "JavaScript", "Minimal APIs", "Blogs", "Real Time", "Server Sent Events", "SignalR", "SSE", "WebSockets"]
-tags_normalized: ["dotnet", "dotnet 10", "aspdotnet", "aspdotnet core", "backgroundservice", "csharp 14", "coding", "eventsource", "iasyncenumerable", "inotifypropertychanged", "javascript", "minimal apis", "blogs", "real time", "server sent events", "signalr", "sse", "websockets"]
+tags: [".NET", ".NET 10", "ASP.NET", "ASP.NET Core", "BackgroundService", "Blogs", "C# 14", "Coding", "EventSource", "IAsyncEnumerable", "INotifyPropertyChanged", "JavaScript", "Minimal APIs", "Real Time", "Server Sent Events", "SignalR", "SSE", "WebSockets"]
+tags_normalized: ["dotnet", "dotnet 10", "aspdotnet", "aspdotnet core", "backgroundservice", "blogs", "csharp 14", "coding", "eventsource", "iasyncenumerable", "inotifypropertychanged", "javascript", "minimal apis", "real time", "server sent events", "signalr", "sse", "websockets"]
 ---
 
 In this post, Khalid Abuhakmeh showcases how to implement Server-Sent Events with ASP.NET Core Minimal APIs in .NET 10, highlighting practical differences with SignalR and providing sample C# and JavaScript code for real-time feeds.<!--excerpt_end-->

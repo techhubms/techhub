@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Security Blog"
 feed_url: "https://www.microsoft.com/en-us/security/blog/feed/"
 date: 2025-10-15 16:00:00 +00:00
-permalink: "/news/2025-10-15-Hardening-Customer-Support-Tools-Against-Cyberattacks-Microsofts-Approach.html"
+permalink: "/2025-10-15-Hardening-Customer-Support-Tools-Against-Cyberattacks-Microsofts-Approach.html"
 categories: ["Security"]
 tags: ["Cloud Security", "Customer Support Security", "Cyberattack Mitigation", "Identity Isolation", "Incident Response", "Just Enough Access", "Just in Time Access", "Lateral Movement", "Microsoft 365", "News", "Privileged Access Management", "RBAC", "Security", "Security Strategy", "Telemetry", "Zero Trust"]
 tags_normalized: ["cloud security", "customer support security", "cyberattack mitigation", "identity isolation", "incident response", "just enough access", "just in time access", "lateral movement", "microsoft 365", "news", "privileged access management", "rbac", "security", "security strategy", "telemetry", "zero trust"]

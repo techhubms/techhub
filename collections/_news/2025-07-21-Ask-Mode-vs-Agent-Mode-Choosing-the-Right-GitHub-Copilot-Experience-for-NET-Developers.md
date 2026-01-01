@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft .NET Blog"
 feed_url: "https://devblogs.microsoft.com/dotnet/feed/"
 date: 2025-07-21 17:05:00 +00:00
-permalink: "/news/2025-07-21-Ask-Mode-vs-Agent-Mode-Choosing-the-Right-GitHub-Copilot-Experience-for-NET-Developers.html"
+permalink: "/2025-07-21-Ask-Mode-vs-Agent-Mode-Choosing-the-Right-GitHub-Copilot-Experience-for-NET-Developers.html"
 categories: ["AI", "Coding", "GitHub Copilot"]
 tags: [".NET", "Agent Mode", "AI", "Ask Mode", "C#", "Code Automation", "Code Refactoring", "Coding", "Copilot", "Copilot Chat", "Developer Productivity", "GitHub Copilot", "News", "Unit Testing", "VS", "VS Code"]
 tags_normalized: ["dotnet", "agent mode", "ai", "ask mode", "csharp", "code automation", "code refactoring", "coding", "copilot", "copilot chat", "developer productivity", "github copilot", "news", "unit testing", "vs", "vs code"]

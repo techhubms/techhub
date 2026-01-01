@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/changelog/feed/"
 date: 2025-08-07 19:22:34 +00:00
-permalink: "/news/2025-08-07-Contributing-Guidelines-Now-Visible-in-GitHub-Repository-Tab-and-Sidebar.html"
+permalink: "/2025-08-07-Contributing-Guidelines-Now-Visible-in-GitHub-Repository-Tab-and-Sidebar.html"
 categories: ["DevOps"]
 tags: ["Collaboration Tools", "Community Growth", "Contributing Guidelines", "Developer Experience", "Developer Onboarding", "DevOps", "GitHub", "GitHub UI Update", "News", "Open Source", "Repository Management", "Repository Overview"]
 tags_normalized: ["collaboration tools", "community growth", "contributing guidelines", "developer experience", "developer onboarding", "devops", "github", "github ui update", "news", "open source", "repository management", "repository overview"]

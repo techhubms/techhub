@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "GitHub YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ"
 date: 2025-12-21 15:00:26 +00:00
-permalink: "/videos/2025-12-21-A-New-Kind-of-Developer-is-Emerging-on-GitHub.html"
+permalink: "/2025-12-21-A-New-Kind-of-Developer-is-Emerging-on-GitHub.html"
 categories: ["AI", "GitHub Copilot"]
 tags: ["AI", "AI Adoption", "AI Fluency", "AI Integration", "AI Judgement", "Copilot Usage", "Developer", "Developer Skills", "Developer Tools", "Eirini Kalliamvakou", "GitHub", "GitHub Copilot", "Programming", "Software Development", "Videos"]
 tags_normalized: ["ai", "ai adoption", "ai fluency", "ai integration", "ai judgement", "copilot usage", "developer", "developer skills", "developer tools", "eirini kalliamvakou", "github", "github copilot", "programming", "software development", "videos"]

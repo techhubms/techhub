@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Visual Studio Code YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SLNwkd3w"
 date: 2025-09-15 22:30:14 +00:00
-permalink: "/videos/2025-09-15-VS-Code-Live-Enhancing-Presentations-and-Live-Coding-with-Demo-Time.html"
+permalink: "/2025-09-15-VS-Code-Live-Enhancing-Presentations-and-Live-Coding-with-Demo-Time.html"
 categories: ["AI", "Coding", "GitHub Copilot"]
 tags: ["AI", "Code Demos", "Coding", "Demo Time", "Developer Presentations", "Development Workflow", "GitHub Copilot", "Live Coding", "Presentation Tools", "Productivity Tools", "Videos", "VS Code", "VS Code Extensions"]
 tags_normalized: ["ai", "code demos", "coding", "demo time", "developer presentations", "development workflow", "github copilot", "live coding", "presentation tools", "productivity tools", "videos", "vs code", "vs code extensions"]

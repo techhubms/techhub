@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Events YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
 date: 2025-11-24 07:40:30 +00:00
-permalink: "/videos/2025-11-24-Building-Secure-AI-Agents-with-Microsofts-Security-Stack.html"
+permalink: "/2025-11-24-Building-Secure-AI-Agents-with-Microsofts-Security-Stack.html"
 categories: ["AI", "Security"]
 tags: ["Agentic AI", "AI", "AI Agents", "AI Risks", "AI Security", "Attack Surface", "Data Leakage", "Data Protection", "Governance", "Guardrails", "Latency Management", "Logging", "Memory Poisoning", "Microsoft Foundry", "Microsoft Security", "Monitoring", "MSIgnite", "Observability", "ProtectcloudAIplatformandapps", "Role Boundaries", "Secure Future Initiative", "Security", "Threat Modeling", "Videos"]
 tags_normalized: ["agentic ai", "ai", "ai agents", "ai risks", "ai security", "attack surface", "data leakage", "data protection", "governance", "guardrails", "latency management", "logging", "memory poisoning", "microsoft foundry", "microsoft security", "monitoring", "msignite", "observability", "protectcloudaiplatformandapps", "role boundaries", "secure future initiative", "security", "threat modeling", "videos"]

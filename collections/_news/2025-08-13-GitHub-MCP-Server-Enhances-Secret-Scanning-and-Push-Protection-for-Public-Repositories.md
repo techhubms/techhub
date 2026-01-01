@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/changelog/feed/"
 date: 2025-08-13 17:31:10 +00:00
-permalink: "/news/2025-08-13-GitHub-MCP-Server-Enhances-Secret-Scanning-and-Push-Protection-for-Public-Repositories.html"
+permalink: "/2025-08-13-GitHub-MCP-Server-Enhances-Secret-Scanning-and-Push-Protection-for-Public-Repositories.html"
 categories: ["DevOps", "Security"]
 tags: ["Agentic Workflows", "CI/CD", "Credential Protection", "DevOps", "Gist Toolset", "GitHub Actions", "GitHub MCP Server", "GraphQL", "News", "Prompt Injection", "Public Repositories", "Push Protection", "Repository Security", "Secret Scanning", "Security", "Tool Call Security", "Workflow Automation"]
 tags_normalized: ["agentic workflows", "cislashcd", "credential protection", "devops", "gist toolset", "github actions", "github mcp server", "graphql", "news", "prompt injection", "public repositories", "push protection", "repository security", "secret scanning", "security", "tool call security", "workflow automation"]

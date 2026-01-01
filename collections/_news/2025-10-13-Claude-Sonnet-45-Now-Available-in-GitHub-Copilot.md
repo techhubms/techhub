@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/changelog/feed/"
 date: 2025-10-13 16:37:10 +00:00
-permalink: "/news/2025-10-13-Claude-Sonnet-45-Now-Available-in-GitHub-Copilot.html"
+permalink: "/2025-10-13-Claude-Sonnet-45-Now-Available-in-GitHub-Copilot.html"
 categories: ["AI", "GitHub Copilot"]
 tags: ["AI", "AI Integration", "AI Models", "Business", "Claude Sonnet 4.5", "Copilot", "Copilot Chat", "Eclipse", "Enterprise", "GitHub Copilot", "IDE", "JetBrains", "News", "Pro", "Pro Plus", "Software Development", "VS", "VS Code", "Xcode"]
 tags_normalized: ["ai", "ai integration", "ai models", "business", "claude sonnet 4dot5", "copilot", "copilot chat", "eclipse", "enterprise", "github copilot", "ide", "jetbrains", "news", "pro", "pro plus", "software development", "vs", "vs code", "xcode"]

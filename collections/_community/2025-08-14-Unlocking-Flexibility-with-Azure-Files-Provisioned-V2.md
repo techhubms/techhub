@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Community"
 date: 2025-08-14 18:47:38 +00:00
-permalink: "/community/2025-08-14-Unlocking-Flexibility-with-Azure-Files-Provisioned-V2.html"
+permalink: "/2025-08-14-Unlocking-Flexibility-with-Azure-Files-Provisioned-V2.html"
 categories: ["Azure"]
 tags: ["Azure", "Azure File Sync", "Azure Files", "Azure Storage", "Billing Models", "Cloud Architecture", "Cloud Storage", "Community", "Cost Optimization", "Enterprise Storage", "Hybrid Storage", "IOPS", "Microsoft Azure", "Performance Scaling", "Predictable Costs", "Provisioned V2", "Throughput"]
 tags_normalized: ["azure", "azure file sync", "azure files", "azure storage", "billing models", "cloud architecture", "cloud storage", "community", "cost optimization", "enterprise storage", "hybrid storage", "iops", "microsoft azure", "performance scaling", "predictable costs", "provisioned v2", "throughput"]

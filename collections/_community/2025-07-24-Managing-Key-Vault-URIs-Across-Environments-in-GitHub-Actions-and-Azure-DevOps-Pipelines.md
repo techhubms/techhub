@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Reddit Azure DevOps"
 feed_url: "https://www.reddit.com/r/azuredevops/.rss"
 date: 2025-07-24 15:56:04 +00:00
-permalink: "/community/2025-07-24-Managing-Key-Vault-URIs-Across-Environments-in-GitHub-Actions-and-Azure-DevOps-Pipelines.html"
+permalink: "/2025-07-24-Managing-Key-Vault-URIs-Across-Environments-in-GitHub-Actions-and-Azure-DevOps-Pipelines.html"
 categories: ["Azure", "DevOps", "Security"]
 tags: ["Access Policy", "ARM Templates", "Azure", "Azure DevOps", "Azure Key Vault", "CI/CD", "Community", "DevOps", "Environment Variables", "GitHub Actions", "OIDC", "Pipeline Parameters", "Secrets Management", "Security", "Service Principal", "YAML Pipelines"]
 tags_normalized: ["access policy", "arm templates", "azure", "azure devops", "azure key vault", "cislashcd", "community", "devops", "environment variables", "github actions", "oidc", "pipeline parameters", "secrets management", "security", "service principal", "yaml pipelines"]

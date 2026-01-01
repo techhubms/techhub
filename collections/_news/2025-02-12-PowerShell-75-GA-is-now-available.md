@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft PowerShell Blog"
 feed_url: "https://devblogs.microsoft.com/powershell/feed/"
 date: 2025-02-12 21:34:13 +00:00
-permalink: "/news/2025-02-12-PowerShell-75-GA-is-now-available.html"
+permalink: "/2025-02-12-PowerShell-75-GA-is-now-available.html"
 categories: ["Coding"]
 tags: ["Automation", "Cmdlets", "Coding", "Community Contributions", "Experimental Features", "News", "Platform Stability", "PowerShell", "PowerShell 7.5", "Quality Improvements", "Scripting"]
 tags_normalized: ["automation", "cmdlets", "coding", "community contributions", "experimental features", "news", "platform stability", "powershell", "powershell 7dot5", "quality improvements", "scripting"]

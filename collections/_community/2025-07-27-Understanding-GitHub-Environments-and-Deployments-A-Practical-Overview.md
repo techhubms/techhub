@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Reddit GitHub"
 feed_url: "https://www.reddit.com/r/github/.rss"
 date: 2025-07-27 04:47:10 +00:00
-permalink: "/community/2025-07-27-Understanding-GitHub-Environments-and-Deployments-A-Practical-Overview.html"
+permalink: "/2025-07-27-Understanding-GitHub-Environments-and-Deployments-A-Practical-Overview.html"
 categories: ["DevOps"]
 tags: ["Action Secrets", "Automation", "CI/CD", "Community", "Deployment Workflow", "DevOps", "GitHub", "GitHub Actions", "GitHub Deployments", "GitHub Environments", "GitHub Package Registry", "npm", "Workflow"]
 tags_normalized: ["action secrets", "automation", "cislashcd", "community", "deployment workflow", "devops", "github", "github actions", "github deployments", "github environments", "github package registry", "npm", "workflow"]

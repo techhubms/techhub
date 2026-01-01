@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Security Blog"
 feed_url: "https://www.microsoft.com/en-us/security/blog/feed/"
 date: 2025-07-09 16:00:00 +00:00
-permalink: "/news/2025-07-09-Microsoft-Expands-Zero-Trust-Workshop-Network-Infrastructure-and-SecOps-Now-Included.html"
+permalink: "/2025-07-09-Microsoft-Expands-Zero-Trust-Workshop-Network-Infrastructure-and-SecOps-Now-Included.html"
 categories: ["Security"]
 tags: ["Access Control", "Data Protection", "Defender For Identity", "Identity Management", "Infrastructure Security", "Micro Segmentation", "Microsoft Security", "Microsoft Sentinel", "Network Security", "News", "SecOps", "Security", "Security Operations", "Security Posture", "Security Workshop", "Threat Detection", "Zero Trust"]
 tags_normalized: ["access control", "data protection", "defender for identity", "identity management", "infrastructure security", "micro segmentation", "microsoft security", "microsoft sentinel", "network security", "news", "secops", "security", "security operations", "security posture", "security workshop", "threat detection", "zero trust"]

@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/changelog/feed/"
 date: 2025-08-13 20:53:55 +00:00
-permalink: "/news/2025-08-13-Spark-Resilience-Improvements-Enhance-Reliability-and-Iteration-Experience.html"
+permalink: "/2025-08-13-Spark-Resilience-Improvements-Enhance-Reliability-and-Iteration-Experience.html"
 categories: ["Coding", "DevOps"]
 tags: ["API Failover", "Application Development", "Coding", "Continuous Improvement", "Data Store", "Developer Experience", "DevOps", "File Filtering", "GitHub", "Iteration Panel", "News", "Open Source", "Reliability", "Spark", "Version Control"]
 tags_normalized: ["api failover", "application development", "coding", "continuous improvement", "data store", "developer experience", "devops", "file filtering", "github", "iteration panel", "news", "open source", "reliability", "spark", "version control"]

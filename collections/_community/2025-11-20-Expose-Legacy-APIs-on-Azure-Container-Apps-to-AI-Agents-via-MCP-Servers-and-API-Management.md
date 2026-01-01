@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-11-20 09:37:41 +00:00
-permalink: "/community/2025-11-20-Expose-Legacy-APIs-on-Azure-Container-Apps-to-AI-Agents-via-MCP-Servers-and-API-Management.html"
+permalink: "/2025-11-20-Expose-Legacy-APIs-on-Azure-Container-Apps-to-AI-Agents-via-MCP-Servers-and-API-Management.html"
 categories: ["AI", "Azure", "DevOps"]
 tags: ["Agent Tooling", "AI", "API Gateway", "API Key", "API Proxy", "Authentication", "Authorization", "Azure", "Azure API Management", "Azure Container Apps", "Centralized Security", "Community", "DevOps", "E Commerce", "Governance", "Legacy API", "MCP", "MCP Server", "Observability", "OpenAPI", "REST API", "Throttling", "VS Code"]
 tags_normalized: ["agent tooling", "ai", "api gateway", "api key", "api proxy", "authentication", "authorization", "azure", "azure api management", "azure container apps", "centralized security", "community", "devops", "e commerce", "governance", "legacy api", "mcp", "mcp server", "observability", "openapi", "rest api", "throttling", "vs code"]

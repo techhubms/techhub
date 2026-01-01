@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Events YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
 date: 2025-11-25 15:49:32 +00:00
-permalink: "/videos/2025-11-25-Building-Multi-Agent-Systems-with-MCP-and-Copilot-Studio.html"
+permalink: "/2025-11-25-Building-Multi-Agent-Systems-with-MCP-and-Copilot-Studio.html"
 categories: ["AI"]
 tags: ["A2A", "Agent Integration", "Agent Protocols", "AI", "Copilot Studio", "Enterprise AI", "Fabric Data Agents", "Innovatewithlow", "Low Code", "M365 Agents SDK", "MCP", "MCP Servers", "Microsoft 365", "Microsoft Foundry", "Microsoft Ignite", "MSIgnite", "Multi Agent Systems", "Videos"]
 tags_normalized: ["a2a", "agent integration", "agent protocols", "ai", "copilot studio", "enterprise ai", "fabric data agents", "innovatewithlow", "low code", "m365 agents sdk", "mcp", "mcp servers", "microsoft 365", "microsoft foundry", "microsoft ignite", "msignite", "multi agent systems", "videos"]

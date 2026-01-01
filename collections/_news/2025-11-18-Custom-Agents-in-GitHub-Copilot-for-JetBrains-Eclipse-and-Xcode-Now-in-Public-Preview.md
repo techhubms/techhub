@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/changelog/feed/"
 date: 2025-11-18 17:30:51 +00:00
-permalink: "/news/2025-11-18-Custom-Agents-in-GitHub-Copilot-for-JetBrains-Eclipse-and-Xcode-Now-in-Public-Preview.html"
+permalink: "/2025-11-18-Custom-Agents-in-GitHub-Copilot-for-JetBrains-Eclipse-and-Xcode-Now-in-Public-Preview.html"
 categories: ["AI", "GitHub Copilot"]
 tags: ["AI", "AI Agents", "Coding Standards", "Copilot", "Copilot Chat", "Custom Agents", "Developer Tools", "Eclipse", "GitHub Copilot", "IDE Extensions", "JetBrains IDEs", "Markdown Configuration", "News", "Workflow Automation", "Xcode"]
 tags_normalized: ["ai", "ai agents", "coding standards", "copilot", "copilot chat", "custom agents", "developer tools", "eclipse", "github copilot", "ide extensions", "jetbrains ides", "markdown configuration", "news", "workflow automation", "xcode"]

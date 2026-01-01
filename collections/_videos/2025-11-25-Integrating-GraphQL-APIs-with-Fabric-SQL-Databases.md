@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Developer YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
 date: 2025-11-25 17:20:49 +00:00
-permalink: "/videos/2025-11-25-Integrating-GraphQL-APIs-with-Fabric-SQL-Databases.html"
+permalink: "/2025-11-25-Integrating-GraphQL-APIs-with-Fabric-SQL-Databases.html"
 categories: ["Azure", "Coding", "ML"]
 tags: ["API Integration", "Authentication", "Azure", "Azure SQL", "Cloud Computing", "Coding", "Data Driven Applications", "Data Engineering", "Data Platform", "Dev", "Development", "Fabric SQL Database", "GraphQL", "Microsoft", "Microsoft Fabric", "Microsoft MVP", "ML", "Power BI", "Query Execution", "Schema Generation", "SQL Server", "Tech", "Technology", "Videos"]
 tags_normalized: ["api integration", "authentication", "azure", "azure sql", "cloud computing", "coding", "data driven applications", "data engineering", "data platform", "dev", "development", "fabric sql database", "graphql", "microsoft", "microsoft fabric", "microsoft mvp", "ml", "power bi", "query execution", "schema generation", "sql server", "tech", "technology", "videos"]

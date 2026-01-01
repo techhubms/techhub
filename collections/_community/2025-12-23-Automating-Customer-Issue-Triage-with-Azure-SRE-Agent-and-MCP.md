@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-12-23 22:08:48 +00:00
-permalink: "/community/2025-12-23-Automating-Customer-Issue-Triage-with-Azure-SRE-Agent-and-MCP.html"
+permalink: "/2025-12-23-Automating-Customer-Issue-Triage-with-Azure-SRE-Agent-and-MCP.html"
 categories: ["AI", "Azure", "DevOps"]
 tags: ["Agent Based Automation", "AI", "Azure", "Azure Portal", "Azure SRE Agent", "Community", "DevOps", "DevOps Workflow", "GitHub", "Incident Management", "Issue Classification", "MCP", "PagerDuty", "Scheduled Tasks", "Subagents", "Support Automation", "Ticket Triage", "Workflow Orchestration"]
 tags_normalized: ["agent based automation", "ai", "azure", "azure portal", "azure sre agent", "community", "devops", "devops workflow", "github", "incident management", "issue classification", "mcp", "pagerduty", "scheduled tasks", "subagents", "support automation", "ticket triage", "workflow orchestration"]

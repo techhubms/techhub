@@ -9,10 +9,10 @@ viewing_mode: "external"
 feed_name: "David Fowler's Blog"
 feed_url: "https://medium.com/feed/@davidfowl"
 date: 2025-03-30 18:44:09 +00:00
-permalink: "/blogs/2025-03-30-Making-Software-Like-LEGO-How-Aspire-Brings-the-Pieces-Together.html"
+permalink: "/2025-03-30-Making-Software-Like-LEGO-How-Aspire-Brings-the-Pieces-Together.html"
 categories: ["Coding", "DevOps"]
-tags: ["AI", "AI Workflows", "Application Lifecycle", "Aspire", "CI/CD", "Cloud Computing", "Coding", "Composability", "Configuration", "Developer Experience", "DevOps", "Infrastructure", "Integration", "Orchestration", "Platform Engineering", "Blogs", "Software Development", "System Modeling", "Vertical Platforms", "Web Development"]
-tags_normalized: ["ai", "ai workflows", "application lifecycle", "aspire", "cislashcd", "cloud computing", "coding", "composability", "configuration", "developer experience", "devops", "infrastructure", "integration", "orchestration", "platform engineering", "blogs", "software development", "system modeling", "vertical platforms", "web development"]
+tags: ["AI", "AI Workflows", "Application Lifecycle", "Aspire", "Blogs", "CI/CD", "Cloud Computing", "Coding", "Composability", "Configuration", "Developer Experience", "DevOps", "Infrastructure", "Integration", "Orchestration", "Platform Engineering", "Software Development", "System Modeling", "Vertical Platforms", "Web Development"]
+tags_normalized: ["ai", "ai workflows", "application lifecycle", "aspire", "blogs", "cislashcd", "cloud computing", "coding", "composability", "configuration", "developer experience", "devops", "infrastructure", "integration", "orchestration", "platform engineering", "software development", "system modeling", "vertical platforms", "web development"]
 ---
 
 In this post by David Fowler, the author discusses how Aspire transforms software development by making systems composable and robust, shifting focus from raw code to orchestration, resources, and extensible platform models for both developers and AI.<!--excerpt_end-->

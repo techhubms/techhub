@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Visual Studio Code Releases"
 feed_url: "https://code.visualstudio.com/feed.xml"
 date: 2025-05-27 00:00:00 +00:00
-permalink: "/news/2025-05-27-Enhancing-Productivity-with-AI-and-Remote-Development-in-VS-Code.html"
+permalink: "/2025-05-27-Enhancing-Productivity-with-AI-and-Remote-Development-in-VS-Code.html"
 categories: ["AI", "Coding", "DevOps", "GitHub Copilot"]
 tags: ["Agent Mode", "AI", "AI Integration", "Codespaces", "Coding", "Copilot Chat", "Custom Instructions", "Dev Containers", "Developer Productivity", "DevOps", "Feature Configuration", "GitHub Copilot", "News", "Python", "Remote Development", "Remote Tunnels", "SSH", "VS Code", "VS Code Extensions", "WSL"]
 tags_normalized: ["agent mode", "ai", "ai integration", "codespaces", "coding", "copilot chat", "custom instructions", "dev containers", "developer productivity", "devops", "feature configuration", "github copilot", "news", "python", "remote development", "remote tunnels", "ssh", "vs code", "vs code extensions", "wsl"]

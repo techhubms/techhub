@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Reddit Azure"
 feed_url: "https://www.reddit.com/r/azure/.rss"
 date: 2025-08-05 06:09:28 +00:00
-permalink: "/community/2025-08-05-Managing-First-Login-Password-Change-for-Hybrid-Users-on-Entra-Joined-Laptops.html"
+permalink: "/2025-08-05-Managing-First-Login-Password-Change-for-Hybrid-Users-on-Entra-Joined-Laptops.html"
 categories: ["Azure", "Security"]
 tags: ["Autopilot V2", "Azure", "Azure Active Directory", "Community", "Device Enrollment", "Entra Join", "First Login", "Hybrid Users", "Identity Management", "IT Support Standards", "Microsoft Entra ID", "Pass Through Authentication", "Password Management", "Security", "User Provisioning"]
 tags_normalized: ["autopilot v2", "azure", "azure active directory", "community", "device enrollment", "entra join", "first login", "hybrid users", "identity management", "it support standards", "microsoft entra id", "pass through authentication", "password management", "security", "user provisioning"]

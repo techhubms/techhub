@@ -9,7 +9,7 @@ categories: ["AI", "GitHub Copilot"]
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/changelog/label/copilot/feed/"
 date: 2025-07-17 02:06:36 +00:00
-permalink: "/news/2025-07-17-Agent-mode-for-JetBrains-Eclipse-and-Xcode-is-now-generally-available.html"
+permalink: "/2025-07-17-Agent-mode-for-JetBrains-Eclipse-and-Xcode-is-now-generally-available.html"
 viewing_mode: "external"
 tags: ["Agent Mode", "AI", "Autonomous Coding", "Code Suggestions", "Developer Tools", "Eclipse", "General Availability", "GitHub Account", "GitHub Copilot", "IDE Integration", "JetBrains", "News", "Xcode"]
 tags_normalized: ["agent mode", "ai", "autonomous coding", "code suggestions", "developer tools", "eclipse", "general availability", "github account", "github copilot", "ide integration", "jetbrains", "news", "xcode"]

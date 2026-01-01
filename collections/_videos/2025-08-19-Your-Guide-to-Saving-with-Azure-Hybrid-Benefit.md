@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Developer YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
 date: 2025-08-19 07:00:05 +00:00
-permalink: "/videos/2025-08-19-Your-Guide-to-Saving-with-Azure-Hybrid-Benefit.html"
+permalink: "/2025-08-19-Your-Guide-to-Saving-with-Azure-Hybrid-Benefit.html"
 categories: ["Azure"]
 tags: ["Azure", "Azure Hybrid Benefit", "Azure Reservations", "AzureEssentialsShow", "AzureHybridBenefit", "Cloud Cost Optimization", "Cloud Migration", "Cloud Savings", "Dual Use Rights", "License Management", "Linux Workloads", "Microsoft Azure", "SQL Server On Azure", "Videos", "Windows Server Migration", "Workload Migration"]
 tags_normalized: ["azure", "azure hybrid benefit", "azure reservations", "azureessentialsshow", "azurehybridbenefit", "cloud cost optimization", "cloud migration", "cloud savings", "dual use rights", "license management", "linux workloads", "microsoft azure", "sql server on azure", "videos", "windows server migration", "workload migration"]

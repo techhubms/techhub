@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-09-23 15:31:29 +00:00
-permalink: "/community/2025-09-23-Connecting-Azure-Logic-Apps-MCP-Server-to-Copilot-Studio-Securely.html"
+permalink: "/2025-09-23-Connecting-Azure-Logic-Apps-MCP-Server-to-Copilot-Studio-Securely.html"
 categories: ["AI", "Azure", "Security"]
 tags: ["AI", "API Center", "Azure", "Azure Connectors", "Azure Logic Apps", "Azure Security", "Community", "Copilot Studio", "EasyAuth", "Enterprise Authentication", "Logic Apps Standard", "Managed Identity", "MCP Server", "Microsoft Entra ID", "Secure Integration", "Security", "Workflow Automation"]
 tags_normalized: ["ai", "api center", "azure", "azure connectors", "azure logic apps", "azure security", "community", "copilot studio", "easyauth", "enterprise authentication", "logic apps standard", "managed identity", "mcp server", "microsoft entra id", "secure integration", "security", "workflow automation"]

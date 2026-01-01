@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "DotNet YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw"
 date: 2025-11-14 19:21:50 +00:00
-permalink: "/videos/2025-11-14-Godot-for-C-Developers-Leveraging-AI-and-GitHub-Copilot-for-Prototyping.html"
+permalink: "/2025-11-14-Godot-for-C-Developers-Leveraging-AI-and-GitHub-Copilot-for-Prototyping.html"
 categories: ["AI", "Coding", "GitHub Copilot"]
 tags: [".NET", ".NET 10", ".NET Aspire", ".NET MAUI 10", "AI", "AI Tools", "ASP.NET Core 10", "C#", "Coding", "Debugging", "Developer Productivity", "F# 10", "Game Development", "GitHub Copilot", "Godot", "Prototyping", "Videos", "VS"]
 tags_normalized: ["dotnet", "dotnet 10", "dotnet aspire", "dotnet maui 10", "ai", "ai tools", "aspdotnet core 10", "csharp", "coding", "debugging", "developer productivity", "fsharp 10", "game development", "github copilot", "godot", "prototyping", "videos", "vs"]

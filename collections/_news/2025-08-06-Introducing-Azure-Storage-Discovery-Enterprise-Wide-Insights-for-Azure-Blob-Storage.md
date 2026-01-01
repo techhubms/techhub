@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The Azure Blog"
 feed_url: "https://azure.microsoft.com/en-us/blog/feed/"
 date: 2025-08-06 15:00:00 +00:00
-permalink: "/news/2025-08-06-Introducing-Azure-Storage-Discovery-Enterprise-Wide-Insights-for-Azure-Blob-Storage.html"
+permalink: "/2025-08-06-Introducing-Azure-Storage-Discovery-Enterprise-Wide-Insights-for-Azure-Blob-Storage.html"
 categories: ["AI", "Azure"]
 tags: ["AI", "Azure", "Azure Blob Storage", "Azure Copilot", "Azure Storage Discovery", "Cloud Storage", "Cost Optimization", "Data Governance", "Data Insights", "Enterprise Data Estate", "Historical Data Analytics", "Interactive Reports", "Microsoft Entra", "News", "Operational Efficiency", "Security Compliance", "Storage", "Storage Management"]
 tags_normalized: ["ai", "azure", "azure blob storage", "azure copilot", "azure storage discovery", "cloud storage", "cost optimization", "data governance", "data insights", "enterprise data estate", "historical data analytics", "interactive reports", "microsoft entra", "news", "operational efficiency", "security compliance", "storage", "storage management"]

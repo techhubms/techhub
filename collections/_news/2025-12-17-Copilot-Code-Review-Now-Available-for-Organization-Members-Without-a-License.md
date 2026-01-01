@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/changelog/feed/"
 date: 2025-12-17 15:30:47 +00:00
-permalink: "/news/2025-12-17-Copilot-Code-Review-Now-Available-for-Organization-Members-Without-a-License.html"
+permalink: "/2025-12-17-Copilot-Code-Review-Now-Available-for-Organization-Members-Without-a-License.html"
 categories: ["AI", "GitHub Copilot"]
 tags: ["Admin Policy", "AI", "Analytics Dashboard", "Billing", "Business Plans", "Code Review Automation", "Copilot", "Copilot Code Review", "Enterprise Plans", "GitHub Copilot", "License Management", "News", "Open Source", "Organization Repository", "Premium Requests", "Pull Requests"]
 tags_normalized: ["admin policy", "ai", "analytics dashboard", "billing", "business plans", "code review automation", "copilot", "copilot code review", "enterprise plans", "github copilot", "license management", "news", "open source", "organization repository", "premium requests", "pull requests"]

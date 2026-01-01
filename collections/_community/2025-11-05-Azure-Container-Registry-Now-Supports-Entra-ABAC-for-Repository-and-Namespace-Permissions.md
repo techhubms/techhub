@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-11-05 00:31:02 +00:00
-permalink: "/community/2025-11-05-Azure-Container-Registry-Now-Supports-Entra-ABAC-for-Repository-and-Namespace-Permissions.html"
+permalink: "/2025-11-05-Azure-Container-Registry-Now-Supports-Entra-ABAC-for-Repository-and-Namespace-Permissions.html"
 categories: ["Azure", "DevOps", "Security"]
 tags: ["ABAC", "AKS", "Azure", "Azure Container Apps", "Azure Container Instances", "Azure Container Registry", "Azure RBAC", "CI/CD", "Community", "DevOps", "Kubernetes", "Least Privilege", "Microsoft Entra ID", "Multi Tenant", "Permission Management", "Registry Administration", "Role Assignments", "Security", "Zero Trust"]
 tags_normalized: ["abac", "aks", "azure", "azure container apps", "azure container instances", "azure container registry", "azure rbac", "cislashcd", "community", "devops", "kubernetes", "least privilege", "microsoft entra id", "multi tenant", "permission management", "registry administration", "role assignments", "security", "zero trust"]

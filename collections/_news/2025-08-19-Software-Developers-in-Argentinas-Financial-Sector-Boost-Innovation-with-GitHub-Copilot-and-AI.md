@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft News"
 feed_url: "https://news.microsoft.com/source/feed/"
 date: 2025-08-19 14:24:43 +00:00
-permalink: "/news/2025-08-19-Software-Developers-in-Argentinas-Financial-Sector-Boost-Innovation-with-GitHub-Copilot-and-AI.html"
+permalink: "/2025-08-19-Software-Developers-in-Argentinas-Financial-Sector-Boost-Innovation-with-GitHub-Copilot-and-AI.html"
 categories: ["AI", "Coding", "GitHub Copilot"]
 tags: ["AI", "AI Developer Tools", "Application Development", "Argentina Financial Sector", "Banking Technology", "Code Assistants", "Coding", "Coding Lifecycle", "Copilot Chat Modes", "Feature Delivery", "Galicia Bank", "GitHub Copilot", "News", "Productivity Tools", "Secure Coding", "Software Development", "Software Innovation"]
 tags_normalized: ["ai", "ai developer tools", "application development", "argentina financial sector", "banking technology", "code assistants", "coding", "coding lifecycle", "copilot chat modes", "feature delivery", "galicia bank", "github copilot", "news", "productivity tools", "secure coding", "software development", "software innovation"]

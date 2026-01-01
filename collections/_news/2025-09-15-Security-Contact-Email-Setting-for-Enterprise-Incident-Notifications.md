@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/changelog/feed/"
 date: 2025-09-15 13:00:02 +00:00
-permalink: "/news/2025-09-15-Security-Contact-Email-Setting-for-Enterprise-Incident-Notifications.html"
+permalink: "/2025-09-15-Security-Contact-Email-Setting-for-Enterprise-Incident-Notifications.html"
 categories: ["Security"]
 tags: ["Admin Tools", "Enterprise Administration", "Enterprise Management Tools", "GitHub", "Improvement", "Incident Response", "News", "Notification Management", "Platform Governance", "Profile Settings", "Security", "Security Alerts", "Security Notifications", "Security Practices"]
 tags_normalized: ["admin tools", "enterprise administration", "enterprise management tools", "github", "improvement", "incident response", "news", "notification management", "platform governance", "profile settings", "security", "security alerts", "security notifications", "security practices"]

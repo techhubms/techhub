@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-11-18 05:27:35 +00:00
-permalink: "/community/2025-11-18-Azure-Functions-on-Azure-Container-Apps-Unified-Platform-for-Event-Driven-and-Finite-Workloads.html"
+permalink: "/2025-11-18-Azure-Functions-on-Azure-Container-Apps-Unified-Platform-for-Event-Driven-and-Finite-Workloads.html"
 categories: ["Azure", "Coding", "DevOps", "ML"]
 tags: ["API", "Azure", "Azure Container Apps", "Azure Functions", "Blob Storage", "Blue/Green Deployment", "CI/CD", "Coding", "Community", "Dapr", "DevOps", "Durable Functions", "Event Driven Architecture", "Event Hubs", "FaaS", "GPU Workloads", "HTTP Triggers", "Machine Learning", "Microservices", "ML", "Queue Storage", "Serverless", "Stream Processing"]
 tags_normalized: ["api", "azure", "azure container apps", "azure functions", "blob storage", "blueslashgreen deployment", "cislashcd", "coding", "community", "dapr", "devops", "durable functions", "event driven architecture", "event hubs", "faas", "gpu workloads", "http triggers", "machine learning", "microservices", "ml", "queue storage", "serverless", "stream processing"]

@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft DevBlog"
 feed_url: "https://devblogs.microsoft.com/azure-sdk/feed/"
 date: 2025-08-19 18:43:38 +00:00
-permalink: "/news/2025-08-19-Azure-SDK-Release-Highlights-for-August-2025.html"
+permalink: "/2025-08-19-Azure-SDK-Release-Highlights-for-August-2025.html"
 categories: ["AI", "Azure", "Coding"]
 tags: [".NET", "AI", "AI Projects", "Azure", "Azure AI Foundry", "Azure OpenAI Service", "Azure SDK", "Carbon Optimization", "Client Libraries", "Coding", "Data Movement", "Go", "JavaScript", "Management Libraries", "Monitor Query Logs", "Monitor Query Metrics", "News", "Python", "Recovery Services", "Release Notes", "Resource Management", "Rust", "SDK", "Storage Discovery"]
 tags_normalized: ["dotnet", "ai", "ai projects", "azure", "azure ai foundry", "azure openai service", "azure sdk", "carbon optimization", "client libraries", "coding", "data movement", "go", "javascript", "management libraries", "monitor query logs", "monitor query metrics", "news", "python", "recovery services", "release notes", "resource management", "rust", "sdk", "storage discovery"]

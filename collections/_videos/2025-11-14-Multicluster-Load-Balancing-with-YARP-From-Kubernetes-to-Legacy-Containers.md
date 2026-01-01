@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "DotNet YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw"
 date: 2025-11-14 19:20:50 +00:00
-permalink: "/videos/2025-11-14-Multicluster-Load-Balancing-with-YARP-From-Kubernetes-to-Legacy-Containers.html"
+permalink: "/2025-11-14-Multicluster-Load-Balancing-with-YARP-From-Kubernetes-to-Legacy-Containers.html"
 categories: ["Coding", "DevOps"]
 tags: [".NET", "Architecture", "Cloud Native", "Coding", "Container Orchestration", "DevOps", "Integration", "Kubernetes", "Legacy Modernization", "Load Balancing", "Microservices", "Production Infrastructure", "Routing", "Traffic Management", "Videos", "Windows Containers", "YARP"]
 tags_normalized: ["dotnet", "architecture", "cloud native", "coding", "container orchestration", "devops", "integration", "kubernetes", "legacy modernization", "load balancing", "microservices", "production infrastructure", "routing", "traffic management", "videos", "windows containers", "yarp"]

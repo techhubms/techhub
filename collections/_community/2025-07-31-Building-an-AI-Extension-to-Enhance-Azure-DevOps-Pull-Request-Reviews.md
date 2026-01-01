@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Reddit Azure DevOps"
 feed_url: "https://www.reddit.com/r/azuredevops/.rss"
 date: 2025-07-31 01:16:09 +00:00
-permalink: "/community/2025-07-31-Building-an-AI-Extension-to-Enhance-Azure-DevOps-Pull-Request-Reviews.html"
+permalink: "/2025-07-31-Building-an-AI-Extension-to-Enhance-Azure-DevOps-Pull-Request-Reviews.html"
 categories: ["AI", "Azure", "DevOps", "Security"]
 tags: ["AI", "AI Extension", "Automation", "Azure", "Azure AI", "Azure DevOps", "BYOLLM", "Code Review Tools", "Community", "Context Windows", "DevOps", "Embedded Systems", "GitHub Style Comments", "Integration", "Jira (planned)", "Large Codebase", "Marketplace Extension", "Natural Language Query", "OpenAI API", "PR Automation", "PR Recommendations", "Pull Request Reviews", "Security", "Security Review", "Work Item Management"]
 tags_normalized: ["ai", "ai extension", "automation", "azure", "azure ai", "azure devops", "byollm", "code review tools", "community", "context windows", "devops", "embedded systems", "github style comments", "integration", "jira planned", "large codebase", "marketplace extension", "natural language query", "openai api", "pr automation", "pr recommendations", "pull request reviews", "security", "security review", "work item management"]

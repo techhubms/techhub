@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/changelog/feed/"
 date: 2025-11-04 17:59:50 +00:00
-permalink: "/news/2025-11-04-GitHub-Copilot-Policy-Update-for-Unconfigured-Enterprise-Policies.html"
+permalink: "/2025-11-04-GitHub-Copilot-Policy-Update-for-Unconfigured-Enterprise-Policies.html"
 categories: ["AI", "GitHub Copilot"]
 tags: ["Access Control", "Admin Tools", "AI", "Configuration", "Copilot", "Developer Tools", "Enterprise Administration", "Enterprise Management Tools", "Enterprise Policy", "Feature Update", "GitHub Copilot", "Improvement", "News", "Organization Policy", "Policy Management"]
 tags_normalized: ["access control", "admin tools", "ai", "configuration", "copilot", "developer tools", "enterprise administration", "enterprise management tools", "enterprise policy", "feature update", "github copilot", "improvement", "news", "organization policy", "policy management"]

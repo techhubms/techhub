@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "John Savill's Technical Training"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCpIn7ox7j7bH_OFj7tYouOQ"
 date: 2025-12-12 16:06:57 +00:00
-permalink: "/videos/2025-12-12-Azure-Update-12th-December-2025.html"
+permalink: "/2025-12-12-Azure-Update-12th-December-2025.html"
 categories: ["Azure"]
 tags: ["App Gateway", "Azure", "Azure Batch", "Azure Cloud", "Azure Databricks", "Azure Files Premium", "Azure Sphere OS", "Certification", "Cloud", "Cloud Updates", "Dashboard Teams", "FIPS Compliance", "GPT 5.2", "Learning Path", "LRS Zonal", "Microsoft", "Microsoft Azure", "PowerShell", "Service Retirement", "Technical Training", "Videos"]
 tags_normalized: ["app gateway", "azure", "azure batch", "azure cloud", "azure databricks", "azure files premium", "azure sphere os", "certification", "cloud", "cloud updates", "dashboard teams", "fips compliance", "gpt 5dot2", "learning path", "lrs zonal", "microsoft", "microsoft azure", "powershell", "service retirement", "technical training", "videos"]

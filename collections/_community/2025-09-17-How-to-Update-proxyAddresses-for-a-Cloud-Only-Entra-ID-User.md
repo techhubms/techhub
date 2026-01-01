@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-09-17 12:42:16 +00:00
-permalink: "/community/2025-09-17-How-to-Update-proxyAddresses-for-a-Cloud-Only-Entra-ID-User.html"
+permalink: "/2025-09-17-How-to-Update-proxyAddresses-for-a-Cloud-Only-Entra-ID-User.html"
 categories: ["Security"]
 tags: ["Azure Active Directory", "Cloud Identity", "Community", "Directory Synchronization", "Exchange Online", "Graph API", "Mailbox Provisioning", "Microsoft Entra ID", "Microsoft Graph Explorer", "PATCH Request", "Permissions", "Proxyaddresses", "Security", "User Management"]
 tags_normalized: ["azure active directory", "cloud identity", "community", "directory synchronization", "exchange online", "graph api", "mailbox provisioning", "microsoft entra id", "microsoft graph explorer", "patch request", "permissions", "proxyaddresses", "security", "user management"]

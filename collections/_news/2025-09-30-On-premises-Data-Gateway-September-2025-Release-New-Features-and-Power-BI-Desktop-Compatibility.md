@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Fabric Blog"
 feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
 date: 2025-09-30 13:30:00 +00:00
-permalink: "/news/2025-09-30-On-premises-Data-Gateway-September-2025-Release-New-Features-and-Power-BI-Desktop-Compatibility.html"
+permalink: "/2025-09-30-On-premises-Data-Gateway-September-2025-Release-New-Features-and-Power-BI-Desktop-Compatibility.html"
 categories: ["Azure", "ML"]
 tags: ["Analytics", "Azure", "BigQuery", "Data Connectivity", "Data Engineering", "Data Integration", "Enterprise Data Gateways", "ETL", "Google BigQuery", "Microsoft Fabric", "Mirroring", "ML", "News", "On Premises Data Gateway", "Power BI", "Power BI Desktop", "Version 3000.286"]
 tags_normalized: ["analytics", "azure", "bigquery", "data connectivity", "data engineering", "data integration", "enterprise data gateways", "etl", "google bigquery", "microsoft fabric", "mirroring", "ml", "news", "on premises data gateway", "power bi", "power bi desktop", "version 3000dot286"]

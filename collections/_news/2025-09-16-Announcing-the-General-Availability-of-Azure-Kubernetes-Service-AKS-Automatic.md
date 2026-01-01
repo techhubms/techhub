@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft News"
 feed_url: "https://news.microsoft.com/source/feed/"
 date: 2025-09-16 18:00:02 +00:00
-permalink: "/news/2025-09-16-Announcing-the-General-Availability-of-Azure-Kubernetes-Service-AKS-Automatic.html"
+permalink: "/2025-09-16-Announcing-the-General-Availability-of-Azure-Kubernetes-Service-AKS-Automatic.html"
 categories: ["AI", "Azure", "DevOps"]
 tags: ["AI", "AKS", "AKS Automatic", "Automation", "Autoscaling", "Azure", "Azure Linux", "Azure Monitor", "CI/CD", "Cloud Infrastructure", "Cloud Native", "Company News", "Container Orchestration", "Developer Tools", "DevOps", "Enterprise IT", "GitHub Actions", "Karpenter", "KEDA", "Kubernetes", "Microsoft Entra ID", "News", "Production Clusters", "Scale", "Technology"]
 tags_normalized: ["ai", "aks", "aks automatic", "automation", "autoscaling", "azure", "azure linux", "azure monitor", "cislashcd", "cloud infrastructure", "cloud native", "company news", "container orchestration", "developer tools", "devops", "enterprise it", "github actions", "karpenter", "keda", "kubernetes", "microsoft entra id", "news", "production clusters", "scale", "technology"]

@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-11-14 20:46:40 +00:00
-permalink: "/community/2025-11-14-Join-Microsoft-at-SC25-HPC-and-AI-Innovations-in-St-Louis.html"
+permalink: "/2025-11-14-Join-Microsoft-at-SC25-HPC-and-AI-Innovations-in-St-Louis.html"
 categories: ["AI", "Azure"]
 tags: ["Agentic AI", "AI", "AI Infrastructure", "AMD", "Azure", "Azure AI", "Azure Arc", "Azure HPC", "Cloud Computing", "Community", "Data Center", "High Performance Computing", "HPC", "Hybrid Cloud", "Hybrid HPC", "LoRA Fine Tuning", "NVIDIA", "Scientific Computing", "Silicon", "Virtual Machines", "Workload Optimization"]
 tags_normalized: ["agentic ai", "ai", "ai infrastructure", "amd", "azure", "azure ai", "azure arc", "azure hpc", "cloud computing", "community", "data center", "high performance computing", "hpc", "hybrid cloud", "hybrid hpc", "lora fine tuning", "nvidia", "scientific computing", "silicon", "virtual machines", "workload optimization"]

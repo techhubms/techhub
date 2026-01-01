@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft .NET Blog"
 feed_url: "https://devblogs.microsoft.com/dotnet/feed/"
 date: 2025-06-17 19:30:00 +00:00
-permalink: "/news/2025-06-17-Multimodal-Vision-Intelligence-with-NET-MAUI.html"
+permalink: "/2025-06-17-Multimodal-Vision-Intelligence-with-NET-MAUI.html"
 categories: ["AI", "Coding"]
 tags: [".NET", "AI", "Azure AI Foundry", "C#", "Coding", "Community Toolkit", "Computer Vision", "Copilot", "IChatClient", "Image Analysis", "MAUI", "MediaPicker", "Microsoft.Extensions.AI", "Mobile Development", "Multimodal", "News", "Prompt Engineering"]
 tags_normalized: ["dotnet", "ai", "azure ai foundry", "csharp", "coding", "community toolkit", "computer vision", "copilot", "ichatclient", "image analysis", "maui", "mediapicker", "microsoftdotextensionsdotai", "mobile development", "multimodal", "news", "prompt engineering"]

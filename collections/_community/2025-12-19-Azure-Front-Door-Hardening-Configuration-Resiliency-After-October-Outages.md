@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-12-19 02:15:12 +00:00
-permalink: "/community/2025-12-19-Azure-Front-Door-Hardening-Configuration-Resiliency-After-October-Outages.html"
+permalink: "/2025-12-19-Azure-Front-Door-Hardening-Configuration-Resiliency-After-October-Outages.html"
 categories: ["Azure", "DevOps", "Security"]
 tags: ["Azure", "Azure Front Door", "Cloud Security", "Community", "Configuration Management", "Content Delivery Network", "Control Plane", "Data Plane", "DevOps", "Edge Networking", "High Availability", "Incident Response", "L7 DDoS Protection", "Multi Tenant Architecture", "Resiliency", "Safe Deployment Practices", "Security", "Service Outage", "Traffic Management", "Web Application Firewall"]
 tags_normalized: ["azure", "azure front door", "cloud security", "community", "configuration management", "content delivery network", "control plane", "data plane", "devops", "edge networking", "high availability", "incident response", "l7 ddos protection", "multi tenant architecture", "resiliency", "safe deployment practices", "security", "service outage", "traffic management", "web application firewall"]

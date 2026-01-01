@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft News"
 feed_url: "https://news.microsoft.com/source/feed/"
 date: 2025-08-13 17:09:05 +00:00
-permalink: "/news/2025-08-13-Connect-with-the-Security-Community-at-Microsoft-Ignite-2025.html"
+permalink: "/2025-08-13-Connect-with-the-Security-Community-at-Microsoft-Ignite-2025.html"
 categories: ["AI", "Security"]
 tags: ["AI", "AI Security", "Career Growth", "Cloud Security", "Company News", "Cybersecurity", "Identity Protection", "Microsoft Defender", "Microsoft Entra ID", "Microsoft Ignite", "Microsoft Security", "Networking", "News", "SecOps", "Secure AI Adoption", "Security", "Security Certifications", "Security Community", "Security Governance", "Security Operations", "Threat Intelligence"]
 tags_normalized: ["ai", "ai security", "career growth", "cloud security", "company news", "cybersecurity", "identity protection", "microsoft defender", "microsoft entra id", "microsoft ignite", "microsoft security", "networking", "news", "secops", "secure ai adoption", "security", "security certifications", "security community", "security governance", "security operations", "threat intelligence"]

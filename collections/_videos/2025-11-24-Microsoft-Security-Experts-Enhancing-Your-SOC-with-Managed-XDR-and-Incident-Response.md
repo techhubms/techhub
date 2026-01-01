@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Events YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
 date: 2025-11-24 05:12:55 +00:00
-permalink: "/videos/2025-11-24-Microsoft-Security-Experts-Enhancing-Your-SOC-with-Managed-XDR-and-Incident-Response.html"
+permalink: "/2025-11-24-Microsoft-Security-Experts-Enhancing-Your-SOC-with-Managed-XDR-and-Incident-Response.html"
 categories: ["Security"]
 tags: ["Cybersecurity", "DART", "Defender Experts For XDR", "Incident Response", "Managed XDR", "Microsoft Defender", "Microsoft Ignite", "Microsoft Security Experts", "ModernizeSecOpswithaunifiedplatform", "MSIgnite", "Proactive Incident Response", "Ransomware", "Security", "Security Operations", "SharePoint Vulnerability", "SOC", "Threat Hunting", "Threat Intelligence", "Videos"]
 tags_normalized: ["cybersecurity", "dart", "defender experts for xdr", "incident response", "managed xdr", "microsoft defender", "microsoft ignite", "microsoft security experts", "modernizesecopswithaunifiedplatform", "msignite", "proactive incident response", "ransomware", "security", "security operations", "sharepoint vulnerability", "soc", "threat hunting", "threat intelligence", "videos"]

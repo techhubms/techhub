@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-11-11 00:19:08 +00:00
-permalink: "/community/2025-11-11-Build-Your-Microsoft-Ignite-Schedule-Top-Sessions-for-Solution-Architects.html"
+permalink: "/2025-11-11-Build-Your-Microsoft-Ignite-Schedule-Top-Sessions-for-Solution-Architects.html"
 categories: ["AI", "Azure", "ML", "Security"]
 tags: ["Agentic AI", "AI", "AI Governance", "Azure", "Azure Databricks", "Cloud Migration", "Community", "Compliance", "Data Architecture", "Infrastructure", "Microsoft Fabric", "Microsoft Ignite", "Microsoft Purview", "ML", "SAP", "Security", "Solution Architecture", "SQL Server", "Windows Server"]
 tags_normalized: ["agentic ai", "ai", "ai governance", "azure", "azure databricks", "cloud migration", "community", "compliance", "data architecture", "infrastructure", "microsoft fabric", "microsoft ignite", "microsoft purview", "ml", "sap", "security", "solution architecture", "sql server", "windows server"]

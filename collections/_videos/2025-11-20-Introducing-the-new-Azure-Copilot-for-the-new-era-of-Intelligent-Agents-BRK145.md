@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Events YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
 date: 2025-11-20 11:16:00 +00:00
-permalink: "/videos/2025-11-20-Introducing-the-new-Azure-Copilot-for-the-new-era-of-Intelligent-Agents-BRK145.html"
+permalink: "/2025-11-20-Introducing-the-new-Azure-Copilot-for-the-new-era-of-Intelligent-Agents-BRK145.html"
 categories: ["AI", "Azure", "DevOps", "Security"]
 tags: ["Agentic AI", "AI", "Azure", "Azure Copilot", "Azure Experiences", "Cloud Operations", "Cloud Security", "Context IQ", "DevOps", "DevOps Automation", "Incident Response", "Infrastructure Provisioning", "IT Management", "Microsoft Ignite", "Migrateandmodernizeyourestate", "MSIgnite", "Multi Agent Orchestration", "Resiliency Agent", "Security", "Security Posture Management", "Videos"]
 tags_normalized: ["agentic ai", "ai", "azure", "azure copilot", "azure experiences", "cloud operations", "cloud security", "context iq", "devops", "devops automation", "incident response", "infrastructure provisioning", "it management", "microsoft ignite", "migrateandmodernizeyourestate", "msignite", "multi agent orchestration", "resiliency agent", "security", "security posture management", "videos"]

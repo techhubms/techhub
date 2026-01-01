@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-11-25 21:19:33 +00:00
-permalink: "/community/2025-11-25-Azure-Logic-Apps-Connectors-Now-Available-as-MCP-Tools-in-Microsoft-Foundry.html"
+permalink: "/2025-11-25-Azure-Logic-Apps-Connectors-Now-Available-as-MCP-Tools-in-Microsoft-Foundry.html"
 categories: ["AI", "Azure", "Coding"]
 tags: ["Agentic Apps", "AI", "API Integration", "Azure", "Azure Logic Apps", "Azure Portal", "Coding", "Community", "Connectors", "Dynamics 365", "Enterprise Integration", "MCP Servers", "Microsoft Foundry", "OAuth Connectors", "SAP Integration", "Secure Connectivity", "ServiceNow", "Workflow Automation", "Workflow Development"]
 tags_normalized: ["agentic apps", "ai", "api integration", "azure", "azure logic apps", "azure portal", "coding", "community", "connectors", "dynamics 365", "enterprise integration", "mcp servers", "microsoft foundry", "oauth connectors", "sap integration", "secure connectivity", "servicenow", "workflow automation", "workflow development"]

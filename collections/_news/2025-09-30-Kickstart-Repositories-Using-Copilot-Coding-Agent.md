@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/changelog/feed/"
 date: 2025-09-30 22:58:07 +00:00
-permalink: "/news/2025-09-30-Kickstart-Repositories-Using-Copilot-Coding-Agent.html"
+permalink: "/2025-09-30-Kickstart-Repositories-Using-Copilot-Coding-Agent.html"
 categories: ["AI", "Coding", "GitHub Copilot"]
 tags: ["Agent Policies", "AI", "AI Development Tools", "Code Generation", "Code Review", "Coding", "Collaboration Tools", "Copilot", "Copilot Business", "Copilot Coding Agent", "Copilot Enterprise", "Copilot Pro", "Developer Productivity", "Documentation", "GitHub", "GitHub Copilot", "GitHub Enterprise", "Improvement", "News", "Prompt Engineering", "Pull Requests", "Repository Automation", "Repository Initialization"]
 tags_normalized: ["agent policies", "ai", "ai development tools", "code generation", "code review", "coding", "collaboration tools", "copilot", "copilot business", "copilot coding agent", "copilot enterprise", "copilot pro", "developer productivity", "documentation", "github", "github copilot", "github enterprise", "improvement", "news", "prompt engineering", "pull requests", "repository automation", "repository initialization"]

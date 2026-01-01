@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The Azure Blog"
 feed_url: "https://azure.microsoft.com/en-us/blog/feed/"
 date: 2025-06-20 15:00:00 +00:00
-permalink: "/news/2025-06-20-IDC-Study-306-ROI-in-3-Years-Migrating-Ubuntu-Linux-Workloads-to-Microsoft-Azure.html"
+permalink: "/2025-06-20-IDC-Study-306-ROI-in-3-Years-Migrating-Ubuntu-Linux-Workloads-to-Microsoft-Azure.html"
 categories: ["Azure", "AI", "Security"]
 tags: ["AI", "AI Readiness", "Azure", "Cloud Migration", "Compute", "Cost Reduction", "IDC Study", "Linux Virtual Machines", "Microsoft Azure", "News", "Operational Efficiency", "ROI", "Scalability", "Security", "Ubuntu"]
 tags_normalized: ["ai", "ai readiness", "azure", "cloud migration", "compute", "cost reduction", "idc study", "linux virtual machines", "microsoft azure", "news", "operational efficiency", "roi", "scalability", "security", "ubuntu"]

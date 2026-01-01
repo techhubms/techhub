@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Fabric Blog"
 feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
 date: 2025-11-19 14:00:00 +00:00
-permalink: "/news/2025-11-19-Mirroring-for-SQL-Server-in-Microsoft-Fabric-Generally-Available.html"
+permalink: "/2025-11-19-Mirroring-for-SQL-Server-in-Microsoft-Fabric-Generally-Available.html"
 categories: ["Azure", "ML"]
 tags: ["Analytics", "Arc Agent", "Azure", "Azure SQL", "Change Data Capture", "Change Feed", "Data Engineering", "Data Warehouse", "Delta Format", "Direct Lake Mode", "KQL Database", "Lakehouse", "Microsoft Fabric", "Mirroring", "ML", "News", "On Premises Data Gateway", "OneLake", "Power BI", "SQL Server", "VNet Data Gateway"]
 tags_normalized: ["analytics", "arc agent", "azure", "azure sql", "change data capture", "change feed", "data engineering", "data warehouse", "delta format", "direct lake mode", "kql database", "lakehouse", "microsoft fabric", "mirroring", "ml", "news", "on premises data gateway", "onelake", "power bi", "sql server", "vnet data gateway"]

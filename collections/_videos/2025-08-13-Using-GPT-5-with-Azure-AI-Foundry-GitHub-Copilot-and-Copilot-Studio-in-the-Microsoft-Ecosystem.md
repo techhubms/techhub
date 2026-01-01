@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "John Savill's Technical Training"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCpIn7ox7j7bH_OFj7tYouOQ"
 date: 2025-08-13 17:48:44 +00:00
-permalink: "/videos/2025-08-13-Using-GPT-5-with-Azure-AI-Foundry-GitHub-Copilot-and-Copilot-Studio-in-the-Microsoft-Ecosystem.html"
+permalink: "/2025-08-13-Using-GPT-5-with-Azure-AI-Foundry-GitHub-Copilot-and-Copilot-Studio-in-the-Microsoft-Ecosystem.html"
 categories: ["AI", "Azure", "GitHub Copilot"]
 tags: ["Agent Development", "Agents", "AI", "AI Integration", "Azure", "Azure AI Foundry", "Copilot Chat", "Copilot Studio", "Copilot Studio Maker", "Developer Tools", "Generative AI", "GitHub Copilot", "GPT 5", "Large Language Models", "LLM", "Microsoft Copilot", "Microsoft Ecosystem", "Videos"]
 tags_normalized: ["agent development", "agents", "ai", "ai integration", "azure", "azure ai foundry", "copilot chat", "copilot studio", "copilot studio maker", "developer tools", "generative ai", "github copilot", "gpt 5", "large language models", "llm", "microsoft copilot", "microsoft ecosystem", "videos"]

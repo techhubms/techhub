@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Developer YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
 date: 2025-10-29 16:01:19 +00:00
-permalink: "/videos/2025-10-29-Upgrade-MSVC-with-GitHub-Copilot-App-Modernization-for-C.html"
+permalink: "/2025-10-29-Upgrade-MSVC-with-GitHub-Copilot-App-Modernization-for-C.html"
 categories: ["AI", "Coding", "GitHub Copilot"]
 tags: ["AI", "App Modernization", "C++", "Cloud Computing", "Code Migration", "Coding", "Copilot", "Copilot Agents", "Dev", "Developer Tools", "Development", "Error Resolution", "GitHub Copilot", "IDE", "Microsoft", "Microsoft C++ Build Tools", "Modernization", "MSVC", "Retargeting", "Source Code Upgrade", "Tech", "Technology", "Videos"]
 tags_normalized: ["ai", "app modernization", "cplusplus", "cloud computing", "code migration", "coding", "copilot", "copilot agents", "dev", "developer tools", "development", "error resolution", "github copilot", "ide", "microsoft", "microsoft cplusplus build tools", "modernization", "msvc", "retargeting", "source code upgrade", "tech", "technology", "videos"]

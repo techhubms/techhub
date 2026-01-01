@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/changelog/feed/"
 date: 2025-09-25 21:23:24 +00:00
-permalink: "/news/2025-09-25-Enhanced-GitHub-Pull-Request-Files-Changed-Page-Comment-Anywhere-in-Changed-Files.html"
+permalink: "/2025-09-25-Enhanced-GitHub-Pull-Request-Files-Changed-Page-Comment-Anywhere-in-Changed-Files.html"
 categories: ["DevOps"]
 tags: ["API", "Bug Fixes", "Change Comments", "Code Review", "Collaboration", "Collaboration Tools", "Developer Workflow", "DevOps", "Diff Viewer", "Feature Preview", "Files Changed", "GitHub", "Improvement", "Keyboard Shortcuts", "Navigation", "News", "Pull Requests", "Single File Mode", "UI Enhancement"]
 tags_normalized: ["api", "bug fixes", "change comments", "code review", "collaboration", "collaboration tools", "developer workflow", "devops", "diff viewer", "feature preview", "files changed", "github", "improvement", "keyboard shortcuts", "navigation", "news", "pull requests", "single file mode", "ui enhancement"]

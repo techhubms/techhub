@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-10-14 17:26:18 +00:00
-permalink: "/community/2025-10-14-From-Timeouts-to-Triumph-Optimizing-GPT-4o-mini-for-Speed-Efficiency-and-Reliability.html"
+permalink: "/2025-10-14-From-Timeouts-to-Triumph-Optimizing-GPT-4o-mini-for-Speed-Efficiency-and-Reliability.html"
 categories: ["AI", "Azure"]
 tags: ["AI", "API Management", "APIM", "Azure", "Azure Front Door", "Azure OpenAI Service", "Community", "Cost Efficiency", "GPT 4o Mini", "High Throughput AI", "Kusto", "Multi Region Routing", "Provisioned Throughput Units", "Scalability", "Streaming", "Telemetry", "Throttling", "Timeout Handling", "Token Optimization"]
 tags_normalized: ["ai", "api management", "apim", "azure", "azure front door", "azure openai service", "community", "cost efficiency", "gpt 4o mini", "high throughput ai", "kusto", "multi region routing", "provisioned throughput units", "scalability", "streaming", "telemetry", "throttling", "timeout handling", "token optimization"]

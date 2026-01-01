@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "DotNet YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw"
 date: 2025-11-14 19:21:44 +00:00
-permalink: "/videos/2025-11-14-Ship-Faster-with-NET-MAUI-Real-World-Pitfalls-and-Solutions.html"
+permalink: "/2025-11-14-Ship-Faster-with-NET-MAUI-Real-World-Pitfalls-and-Solutions.html"
 categories: ["Coding"]
 tags: [".NET", ".NET 10", ".NET Aspire", "Android", "ASP.NET Core", "C#", "Cloud Native", "Coding", "Diagnostics", "F#", "Image Processing", "Ios", "MAUI", "Mobile Development", "Offline First", "Packaging", "PDF Export", "SQLite", "Telemetry", "Third Party Controls", "Troubleshooting", "Videos", "VS"]
 tags_normalized: ["dotnet", "dotnet 10", "dotnet aspire", "android", "aspdotnet core", "csharp", "cloud native", "coding", "diagnostics", "fsharp", "image processing", "ios", "maui", "mobile development", "offline first", "packaging", "pdf export", "sqlite", "telemetry", "third party controls", "troubleshooting", "videos", "vs"]

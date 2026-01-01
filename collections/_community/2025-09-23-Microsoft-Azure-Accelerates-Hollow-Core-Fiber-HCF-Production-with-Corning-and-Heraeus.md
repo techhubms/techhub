@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-09-23 15:00:12 +00:00
-permalink: "/community/2025-09-23-Microsoft-Azure-Accelerates-Hollow-Core-Fiber-HCF-Production-with-Corning-and-Heraeus.html"
+permalink: "/2025-09-23-Microsoft-Azure-Accelerates-Hollow-Core-Fiber-HCF-Production-with-Corning-and-Heraeus.html"
 categories: ["Azure"]
 tags: ["AI", "AI Infrastructure", "Azure", "Azure Networking", "Cloud Networking", "Community", "Corning", "Data Center Infrastructure", "DNANF", "Fiber Manufacturing", "Fiber Optics", "HCF", "Heraeus Covantics", "Hollow Core Fiber", "Latency Reduction", "Microsoft Azure", "Network Performance", "Optical Networking", "Quantum Safe Links"]
 tags_normalized: ["ai", "ai infrastructure", "azure", "azure networking", "cloud networking", "community", "corning", "data center infrastructure", "dnanf", "fiber manufacturing", "fiber optics", "hcf", "heraeus covantics", "hollow core fiber", "latency reduction", "microsoft azure", "network performance", "optical networking", "quantum safe links"]

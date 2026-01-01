@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Security Blog"
 feed_url: "https://www.microsoft.com/en-us/security/blog/feed/"
 date: 2025-12-10 18:00:00 +00:00
-permalink: "/news/2025-12-10-From-Awareness-to-Action-Building-a-Security-First-Culture-for-the-Agentic-AI-Era.html"
+permalink: "/2025-12-10-From-Awareness-to-Action-Building-a-Security-First-Culture-for-the-Agentic-AI-Era.html"
 categories: ["AI", "Security"]
 tags: ["Agentic AI", "AI", "AI Adoption", "AI Agents", "AI Risks", "AI Security", "Cloud Modernization", "Cybersecurity Awareness Month", "Data Governance", "Identity Management", "Microsoft Ignite", "Microsoft Security", "News", "Responsible AI", "Security", "Security First Culture", "Security Training", "Skilling Initiatives"]
 tags_normalized: ["agentic ai", "ai", "ai adoption", "ai agents", "ai risks", "ai security", "cloud modernization", "cybersecurity awareness month", "data governance", "identity management", "microsoft ignite", "microsoft security", "news", "responsible ai", "security", "security first culture", "security training", "skilling initiatives"]

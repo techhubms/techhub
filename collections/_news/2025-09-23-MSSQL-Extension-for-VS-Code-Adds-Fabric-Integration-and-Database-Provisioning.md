@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Fabric Blog"
 feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
 date: 2025-09-23 11:00:00 +00:00
-permalink: "/news/2025-09-23-MSSQL-Extension-for-VS-Code-Adds-Fabric-Integration-and-Database-Provisioning.html"
+permalink: "/2025-09-23-MSSQL-Extension-for-VS-Code-Adds-Fabric-Integration-and-Database-Provisioning.html"
 categories: ["Azure", "Coding"]
 tags: ["Azure", "Azure SQL", "Coding", "Context Switching", "Database Provisioning", "Developer Tools", "Fabric Connectivity", "Microsoft Entra ID", "Microsoft Fabric", "Modern App Development", "MSSQL Extension", "News", "Public Preview", "SQL Database", "SQL Development", "VS Code", "VS Code Extension", "Workspace Authentication"]
 tags_normalized: ["azure", "azure sql", "coding", "context switching", "database provisioning", "developer tools", "fabric connectivity", "microsoft entra id", "microsoft fabric", "modern app development", "mssql extension", "news", "public preview", "sql database", "sql development", "vs code", "vs code extension", "workspace authentication"]

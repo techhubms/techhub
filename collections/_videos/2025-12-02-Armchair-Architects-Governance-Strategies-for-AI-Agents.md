@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Developer YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
 date: 2025-12-02 08:01:12 +00:00
-permalink: "/videos/2025-12-02-Armchair-Architects-Governance-Strategies-for-AI-Agents.html"
+permalink: "/2025-12-02-Armchair-Architects-Governance-Strategies-for-AI-Agents.html"
 categories: ["AI", "Azure", "Security"]
 tags: ["Agent Deployment", "Agent Observability", "Agentic AI", "AI", "AI Evaluation", "AI Governance", "Azure", "Azure Essentials", "Cognitive Monitoring", "Copilot Studio", "Enterprise AI", "Guardrails", "Identity Management", "Implement", "Microsoft Purview", "Model Routing", "Responsible AI", "Security", "Videos"]
 tags_normalized: ["agent deployment", "agent observability", "agentic ai", "ai", "ai evaluation", "ai governance", "azure", "azure essentials", "cognitive monitoring", "copilot studio", "enterprise ai", "guardrails", "identity management", "implement", "microsoft purview", "model routing", "responsible ai", "security", "videos"]

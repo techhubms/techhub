@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft DevBlog"
 feed_url: "https://devblogs.microsoft.com/feed"
 date: 2025-06-11 22:00:21 +00:00
-permalink: "/news/2025-06-11-Security-and-Trust-in-Visual-Studio-Marketplace-Safeguarding-Extensions-for-Developers.html"
+permalink: "/2025-06-11-Security-and-Trust-in-Visual-Studio-Marketplace-Safeguarding-Extensions-for-Developers.html"
 categories: ["Coding", "DevOps", "Security"]
 tags: ["Coding", "DevOps", "Extension Development", "Extension Validation", "Extensions", "Impersonation Prevention", "Malware Prevention", "News", "Package Management", "Publisher Best Practices", "Publisher Verification", "Secret Scanning", "Security", "Supply Chain Security", "Trust Signals", "Visual Studio Marketplace", "VS", "VS Code"]
 tags_normalized: ["coding", "devops", "extension development", "extension validation", "extensions", "impersonation prevention", "malware prevention", "news", "package management", "publisher best practices", "publisher verification", "secret scanning", "security", "supply chain security", "trust signals", "visual studio marketplace", "vs", "vs code"]

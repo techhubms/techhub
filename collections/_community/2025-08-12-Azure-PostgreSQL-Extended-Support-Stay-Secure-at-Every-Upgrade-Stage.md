@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Community"
 date: 2025-08-12 16:17:14 +00:00
-permalink: "/community/2025-08-12-Azure-PostgreSQL-Extended-Support-Stay-Secure-at-Every-Upgrade-Stage.html"
+permalink: "/2025-08-12-Azure-PostgreSQL-Extended-Support-Stay-Secure-at-Every-Upgrade-Stage.html"
 categories: ["Azure", "Security"]
 tags: ["Azure", "Azure Database For PostgreSQL", "Business Continuity", "Cloud Database Management", "Community", "Critical Workloads", "Database Lifecycle", "Database Security", "Downtime Mitigation", "Enterprise Workloads", "Extended Support", "Microsoft Azure", "PostgreSQL Upgrades", "Regulatory Compliance", "Security", "Security Patches", "Technical Support", "Version Retirement"]
 tags_normalized: ["azure", "azure database for postgresql", "business continuity", "cloud database management", "community", "critical workloads", "database lifecycle", "database security", "downtime mitigation", "enterprise workloads", "extended support", "microsoft azure", "postgresql upgrades", "regulatory compliance", "security", "security patches", "technical support", "version retirement"]

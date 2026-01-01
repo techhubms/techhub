@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Events YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
 date: 2025-11-19 14:49:05 +00:00
-permalink: "/videos/2025-11-19-Top-3-AI-Use-Cases-Shaping-Customer-Experience.html"
+permalink: "/2025-11-19-Top-3-AI-Use-Cases-Shaping-Customer-Experience.html"
 categories: ["AI"]
 tags: ["Agenticbusinessapplications", "AI", "AI Automation", "AI Use Cases", "Automated Workflows", "Business Applications", "CSAT", "Customer Experience", "Generative AI", "GPT", "Industry Support", "Measurable ROI", "Microsoft Ignite", "MSIgnite", "Partnerships", "Resolution Engine", "Videos"]
 tags_normalized: ["agenticbusinessapplications", "ai", "ai automation", "ai use cases", "automated workflows", "business applications", "csat", "customer experience", "generative ai", "gpt", "industry support", "measurable roi", "microsoft ignite", "msignite", "partnerships", "resolution engine", "videos"]

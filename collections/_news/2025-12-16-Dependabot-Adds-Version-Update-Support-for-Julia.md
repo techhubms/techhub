@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/changelog/feed/"
 date: 2025-12-16 16:49:19 +00:00
-permalink: "/news/2025-12-16-Dependabot-Adds-Version-Update-Support-for-Julia.html"
+permalink: "/2025-12-16-Dependabot-Adds-Version-Update-Support-for-Julia.html"
 categories: ["DevOps"]
 tags: ["Automated Updates", "Continuous Integration", "Dependabot", "Dependency Management", "DevOps", "GitHub", "Julia", "News", "Open Source", "Package Manager", "Software Maintenance", "Supply Chain Security", "Version Updates"]
 tags_normalized: ["automated updates", "continuous integration", "dependabot", "dependency management", "devops", "github", "julia", "news", "open source", "package manager", "software maintenance", "supply chain security", "version updates"]

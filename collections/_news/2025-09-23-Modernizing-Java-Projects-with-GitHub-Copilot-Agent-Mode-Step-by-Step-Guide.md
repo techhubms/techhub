@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/feed/"
 date: 2025-09-23 13:00:00 +00:00
-permalink: "/news/2025-09-23-Modernizing-Java-Projects-with-GitHub-Copilot-Agent-Mode-Step-by-Step-Guide.html"
+permalink: "/2025-09-23-Modernizing-Java-Projects-with-GitHub-Copilot-Agent-Mode-Step-by-Step-Guide.html"
 categories: ["AI", "Azure", "DevOps", "GitHub Copilot", "Security"]
 tags: ["Agent Mode", "AI", "AI & ML", "AI Assisted Development", "AKS", "App Modernization", "Application Insights", "Automated Migration", "Azure", "Cloud Deployment", "Continuous Integration", "CVE Scanning", "Dependency Upgrades", "DevOps", "GitHub Copilot", "Gradle", "Java", "Log Analytics", "Managed Identity", "Maven", "Microsoft Entra ID", "News", "OpenRewrite", "Security", "Spring Security", "VS Code"]
 tags_normalized: ["agent mode", "ai", "ai and ml", "ai assisted development", "aks", "app modernization", "application insights", "automated migration", "azure", "cloud deployment", "continuous integration", "cve scanning", "dependency upgrades", "devops", "github copilot", "gradle", "java", "log analytics", "managed identity", "maven", "microsoft entra id", "news", "openrewrite", "security", "spring security", "vs code"]

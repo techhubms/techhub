@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "John Savill's Technical Training"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCpIn7ox7j7bH_OFj7tYouOQ"
 date: 2025-11-17 10:53:28 +00:00
-permalink: "/videos/2025-11-17-Azure-Front-Door-Resiliency-Deep-Dive-and-Architecting-for-Mission-Critical-Applications.html"
+permalink: "/2025-11-17-Azure-Front-Door-Resiliency-Deep-Dive-and-Architecting-for-Mission-Critical-Applications.html"
 categories: ["Azure"]
 tags: ["Application Acceleration", "Azure", "Azure Cloud", "Azure Front Door", "Azure Traffic Manager", "CDN", "Cloud", "Cloud Architecture", "Cloud Network", "Cross Tenant Impact", "DNS", "High Availability", "Microsoft", "Microsoft Azure", "Mission Critical", "Mission Criticl", "Networking", "Resiliency", "System Configuration", "Traffic Shield", "Videos"]
 tags_normalized: ["application acceleration", "azure", "azure cloud", "azure front door", "azure traffic manager", "cdn", "cloud", "cloud architecture", "cloud network", "cross tenant impact", "dns", "high availability", "microsoft", "microsoft azure", "mission critical", "mission criticl", "networking", "resiliency", "system configuration", "traffic shield", "videos"]

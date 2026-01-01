@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Fabric Blog"
 feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
 date: 2025-11-18 08:00:00 +00:00
-permalink: "/news/2025-11-18-Partner-Integrations-Boost-Microsoft-Fabric-for-AI-and-Analytics.html"
+permalink: "/2025-11-18-Partner-Integrations-Boost-Microsoft-Fabric-for-AI-and-Analytics.html"
 categories: ["AI", "Azure", "ML"]
 tags: ["AI", "AI Agents", "Apache Iceberg", "Azure", "Business Intelligence", "ClickHouse", "Data Analytics", "Data Governance", "Data Lake", "Data Reliability", "Data Unification", "Databricks", "Delta Lake", "DevRev", "Dremio", "Esri ArcGIS", "Geospatial Analytics", "ISV Integration", "Lakehouse", "Microsoft Fabric", "Microsoft OneLake", "ML", "News", "PuppyGraph", "SAP", "SAS Decision Builder", "Snowflake", "Telmai", "TiDB", "Tonic Textual", "VeloDB", "Zero Copy Integration"]
 tags_normalized: ["ai", "ai agents", "apache iceberg", "azure", "business intelligence", "clickhouse", "data analytics", "data governance", "data lake", "data reliability", "data unification", "databricks", "delta lake", "devrev", "dremio", "esri arcgis", "geospatial analytics", "isv integration", "lakehouse", "microsoft fabric", "microsoft onelake", "ml", "news", "puppygraph", "sap", "sas decision builder", "snowflake", "telmai", "tidb", "tonic textual", "velodb", "zero copy integration"]

@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-11-20 16:00:00 +00:00
-permalink: "/community/2025-11-20-Azure-Functions-Durable-Task-Scheduler-Dedicated-SKU-Now-GA-Consumption-SKU-in-Public-Preview.html"
+permalink: "/2025-11-20-Azure-Functions-Durable-Task-Scheduler-Dedicated-SKU-Now-GA-Consumption-SKU-in-Public-Preview.html"
 categories: ["Azure", "DevOps"]
 tags: ["Autoscaling", "Azure", "Azure Functions", "Azure Resource Management", "Capacity Units", "Cloud Native", "Community", "Consumption SKU", "Dedicated SKU", "DevOps", "Durable Functions", "Durable Task Scheduler", "Fault Tolerance", "Feature Roadmap", "Orchestration", "Stateful Applications", "Workflow Automation"]
 tags_normalized: ["autoscaling", "azure", "azure functions", "azure resource management", "capacity units", "cloud native", "community", "consumption sku", "dedicated sku", "devops", "durable functions", "durable task scheduler", "fault tolerance", "feature roadmap", "orchestration", "stateful applications", "workflow automation"]

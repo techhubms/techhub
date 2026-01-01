@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Security Blog"
 feed_url: "https://www.microsoft.com/en-us/security/blog/feed/"
 date: 2025-10-16 18:00:00 +00:00
-permalink: "/news/2025-10-16-Microsoft-Sentinel-Recognized-as-a-Leader-in-the-2025-Gartner-Magic-Quadrant-for-SIEM.html"
+permalink: "/2025-10-16-Microsoft-Sentinel-Recognized-as-a-Leader-in-the-2025-Gartner-Magic-Quadrant-for-SIEM.html"
 categories: ["AI", "Azure", "Security"]
 tags: ["Agentic AI", "AI", "AI Powered Security", "Automation", "Azure", "Cloud Security", "Cyberthreat Response", "Data Lake", "Gartner Magic Quadrant", "Kusto Query Language", "Machine Learning", "MCP Server", "Microsoft Defender", "Microsoft Sentinel", "News", "Security", "Security Analytics", "Security Operations Center", "SIEM", "SOAR", "SOC", "Threat Detection", "Threat Intelligence", "UEBA"]
 tags_normalized: ["agentic ai", "ai", "ai powered security", "automation", "azure", "cloud security", "cyberthreat response", "data lake", "gartner magic quadrant", "kusto query language", "machine learning", "mcp server", "microsoft defender", "microsoft sentinel", "news", "security", "security analytics", "security operations center", "siem", "soar", "soc", "threat detection", "threat intelligence", "ueba"]

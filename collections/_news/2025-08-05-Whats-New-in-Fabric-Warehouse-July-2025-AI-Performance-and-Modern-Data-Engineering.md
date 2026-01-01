@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Fabric Blog"
 feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
 date: 2025-08-05 11:00:00 +00:00
-permalink: "/news/2025-08-05-Whats-New-in-Fabric-Warehouse-July-2025-AI-Performance-and-Modern-Data-Engineering.html"
+permalink: "/2025-08-05-Whats-New-in-Fabric-Warehouse-July-2025-AI-Performance-and-Modern-Data-Engineering.html"
 categories: ["AI", "Azure", "ML", "DevOps", "Security"]
 tags: ["Agentic AI", "AI", "Audit Logging", "Azure", "Azure AI Foundry", "Copilot Studio", "Cosmos DB", "Data Warehouse", "Databricks", "DevOps", "Governance", "Microsoft Fabric", "ML", "MSSQL Extension", "News", "OneLake", "Performance Tuning", "Python Notebooks", "Security", "SQL Analytics", "Synapse Migration", "Terraform", "VS Code"]
 tags_normalized: ["agentic ai", "ai", "audit logging", "azure", "azure ai foundry", "copilot studio", "cosmos db", "data warehouse", "databricks", "devops", "governance", "microsoft fabric", "ml", "mssql extension", "news", "onelake", "performance tuning", "python notebooks", "security", "sql analytics", "synapse migration", "terraform", "vs code"]

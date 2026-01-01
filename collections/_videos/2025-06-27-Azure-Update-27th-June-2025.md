@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "John Savill's Technical Training"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCpIn7ox7j7bH_OFj7tYouOQ"
 date: 2025-06-27 14:37:18 +00:00
-permalink: "/videos/2025-06-27-Azure-Update-27th-June-2025.html"
+permalink: "/2025-06-27-Azure-Update-27th-June-2025.html"
 categories: ["Azure", "ML", "DevOps", "Security"]
 tags: ["ACM FOCUS", "AFD Managed Certificate", "AVNM IPAM", "Azure", "Azure Advisor", "Azure Cloud", "Azure Firewall", "Azure Monitor Workspace", "Azure SQL Database", "Azure Updates", "Cloud", "Cloud Infrastructure", "Cloud Security", "DevOps", "Draft & Deploy", "FXv2 VMs", "IaaS", "Infrastructure as A Service", "John Savill", "Managed Certificates", "Microsoft", "Microsoft Azure", "ML", "NetApp Migration", "Prem SSD V2", "Security", "Vector Data", "Videos", "WAF Security Copilot", "Workload Optimization"]
 tags_normalized: ["acm focus", "afd managed certificate", "avnm ipam", "azure", "azure advisor", "azure cloud", "azure firewall", "azure monitor workspace", "azure sql database", "azure updates", "cloud", "cloud infrastructure", "cloud security", "devops", "draft and deploy", "fxv2 vms", "iaas", "infrastructure as a service", "john savill", "managed certificates", "microsoft", "microsoft azure", "ml", "netapp migration", "prem ssd v2", "security", "vector data", "videos", "waf security copilot", "workload optimization"]

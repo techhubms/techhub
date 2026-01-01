@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Community"
 date: 2025-08-14 20:57:21 +00:00
-permalink: "/community/2025-08-14-Excel-at-40-Week-1-Days-13.html"
+permalink: "/2025-08-14-Excel-at-40-Week-1-Days-13.html"
 categories: ["ML"]
 tags: ["Analytics", "Audit Automation", "Community", "Conditional Formatting", "Data Analysis", "Excel Formulas", "Financial Modeling", "Macros", "Microsoft Excel", "Microsoft Fabric", "ML", "PivotTables", "Power BI", "Python in Excel", "Timeline"]
 tags_normalized: ["analytics", "audit automation", "community", "conditional formatting", "data analysis", "excel formulas", "financial modeling", "macros", "microsoft excel", "microsoft fabric", "ml", "pivottables", "power bi", "python in excel", "timeline"]

@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Developer YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
 date: 2025-12-15 17:29:32 +00:00
-permalink: "/videos/2025-12-15-Getting-Started-with-Azure-AI-Foundry-A-Beginners-Guide.html"
+permalink: "/2025-12-15-Getting-Started-with-Azure-AI-Foundry-A-Beginners-Guide.html"
 categories: ["AI", "Azure"]
 tags: ["Agent Building", "AI", "AI Agents", "AI Development", "AI Platform", "AIDevelopers", "Azure", "Azure AI", "Azure AI Foundry", "Cloud AI", "Developer Guide", "Microsoft Azure", "Microsoft Developer", "Model Selection", "OneDevQuestion", "Seth Juarez", "Videos"]
 tags_normalized: ["agent building", "ai", "ai agents", "ai development", "ai platform", "aidevelopers", "azure", "azure ai", "azure ai foundry", "cloud ai", "developer guide", "microsoft azure", "microsoft developer", "model selection", "onedevquestion", "seth juarez", "videos"]

@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-12-17 17:55:17 +00:00
-permalink: "/community/2025-12-17-Azure-Arc-Monthly-Forum-Recap-November-2025.html"
+permalink: "/2025-12-17-Azure-Arc-Monthly-Forum-Recap-November-2025.html"
 categories: ["Azure", "Security"]
 tags: ["Auto Agent Upgrade", "AZCM Agent", "Azure", "Azure Arc", "Azure Monitor", "Azure Policy", "Change Tracking", "CIS Baseline Compliance", "Community", "Essential Machine Management", "Hybrid Cloud", "Inventory", "Linux Support", "Log Analytics", "Machine Configuration", "Operations Center", "Preview", "Security", "Security Baseline", "Windows Server"]
 tags_normalized: ["auto agent upgrade", "azcm agent", "azure", "azure arc", "azure monitor", "azure policy", "change tracking", "cis baseline compliance", "community", "essential machine management", "hybrid cloud", "inventory", "linux support", "log analytics", "machine configuration", "operations center", "preview", "security", "security baseline", "windows server"]

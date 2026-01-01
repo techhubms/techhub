@@ -9,10 +9,10 @@ viewing_mode: "external"
 feed_name: "Randy Pagels's Blog"
 feed_url: "https://www.cooknwithcopilot.com/rss.xml"
 date: 2025-10-31 00:00:00 +00:00
-permalink: "/blogs/2025-10-31-Context-Engineering-Recipes-The-Reflection-Pattern-for-GitHub-Copilot.html"
+permalink: "/2025-10-31-Context-Engineering-Recipes-The-Reflection-Pattern-for-GitHub-Copilot.html"
 categories: ["AI", "Coding", "GitHub Copilot"]
-tags: ["AI", "AI Reasoning", "Code Mentoring", "Code Review", "Coding", "Developer Tools", "GitHub Copilot", "Blogs", "Prompt Engineering", "Reflection Pattern", "Self Critique", "Self Explanation", "Teach Back Mode"]
-tags_normalized: ["ai", "ai reasoning", "code mentoring", "code review", "coding", "developer tools", "github copilot", "blogs", "prompt engineering", "reflection pattern", "self critique", "self explanation", "teach back mode"]
+tags: ["AI", "AI Reasoning", "Blogs", "Code Mentoring", "Code Review", "Coding", "Developer Tools", "GitHub Copilot", "Prompt Engineering", "Reflection Pattern", "Self Critique", "Self Explanation", "Teach Back Mode"]
+tags_normalized: ["ai", "ai reasoning", "blogs", "code mentoring", "code review", "coding", "developer tools", "github copilot", "prompt engineering", "reflection pattern", "self critique", "self explanation", "teach back mode"]
 ---
 
 Randy Pagels shares practical advice on the Reflection Pattern, guiding developers on how to prompt GitHub Copilot to explain its code suggestions and logic before accepting or revising them.<!--excerpt_end-->

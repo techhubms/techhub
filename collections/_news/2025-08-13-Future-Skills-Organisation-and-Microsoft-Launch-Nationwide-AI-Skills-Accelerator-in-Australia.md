@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft News"
 feed_url: "https://news.microsoft.com/source/feed/"
 date: 2025-08-13 17:15:39 +00:00
-permalink: "/news/2025-08-13-Future-Skills-Organisation-and-Microsoft-Launch-Nationwide-AI-Skills-Accelerator-in-Australia.html"
+permalink: "/2025-08-13-Future-Skills-Organisation-and-Microsoft-Launch-Nationwide-AI-Skills-Accelerator-in-Australia.html"
 categories: ["AI"]
 tags: ["AI", "AI Education", "AI Skilling", "AI Skills Accelerator", "AI Training", "Australia", "Company News", "Future Skills Organisation", "Generative AI", "Industry Collaboration", "Microsoft", "National AI Centre", "News", "Patrick Kidd", "Rachel Bondi", "VET", "Vocational Education And Training", "Workforce Transformation"]
 tags_normalized: ["ai", "ai education", "ai skilling", "ai skills accelerator", "ai training", "australia", "company news", "future skills organisation", "generative ai", "industry collaboration", "microsoft", "national ai centre", "news", "patrick kidd", "rachel bondi", "vet", "vocational education and training", "workforce transformation"]

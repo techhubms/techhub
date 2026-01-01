@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Events YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
 date: 2025-11-25 12:13:05 +00:00
-permalink: "/videos/2025-11-25-Migration-and-Modernization-Strategies-for-Partners-Azure-Focused-Growth-at-MS-Ignite-2025.html"
+permalink: "/2025-11-25-Migration-and-Modernization-Strategies-for-Partners-Azure-Focused-Growth-at-MS-Ignite-2025.html"
 categories: ["AI", "Azure", "Security"]
 tags: ["Agentic Capabilities", "AI", "AI Transformation", "Automation", "Azure", "Azure Migration", "Cloud Modernization", "Human Agent Collaboration", "Microsoft AI Cloud Partner Program", "Microsoft Ignite", "MicrosoftAICloudPartnerProgram", "Modern Cloud Foundations", "MSIgnite", "Partner Growth", "Security", "Security Compliance", "Technical Debt", "Videos", "VMware Migration"]
 tags_normalized: ["agentic capabilities", "ai", "ai transformation", "automation", "azure", "azure migration", "cloud modernization", "human agent collaboration", "microsoft ai cloud partner program", "microsoft ignite", "microsoftaicloudpartnerprogram", "modern cloud foundations", "msignite", "partner growth", "security", "security compliance", "technical debt", "videos", "vmware migration"]

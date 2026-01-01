@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-08-13 12:05:29 +00:00
-permalink: "/community/2025-08-13-Persistent-Visual-Studio-Enterprise-Access-Level-in-Azure-DevOps-After-License-Removal.html"
+permalink: "/2025-08-13-Persistent-Visual-Studio-Enterprise-Access-Level-in-Azure-DevOps-After-License-Removal.html"
 categories: ["Azure", "DevOps"]
 tags: ["Access Levels", "Azure", "Azure Active Directory", "Azure DevOps", "Community", "DevOps", "Entra ID", "Group Synchronization", "Identity Synchronization", "License Management", "On Premises AD", "Stakeholder Access", "User Permissions", "Visual Studio Enterprise", "Visual Studio Licensing"]
 tags_normalized: ["access levels", "azure", "azure active directory", "azure devops", "community", "devops", "entra id", "group synchronization", "identity synchronization", "license management", "on premises ad", "stakeholder access", "user permissions", "visual studio enterprise", "visual studio licensing"]

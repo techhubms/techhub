@@ -9,10 +9,10 @@ viewing_mode: "external"
 feed_name: "DevClass"
 feed_url: "https://devclass.com/feed/"
 date: 2025-07-08 15:55:00 +00:00
-permalink: "/blogs/2025-07-08-Microsoft-Adds-Telemetry-Collection-to-Its-FIPS-Compliant-Go-Compiler-Build.html"
+permalink: "/2025-07-08-Microsoft-Adds-Telemetry-Collection-to-Its-FIPS-Compliant-Go-Compiler-Build.html"
 categories: ["Azure", "Security"]
-tags: ["Azure", "Azure Linux", "BoringCrypto", "BoringSSL", "Container Images", "Cryptography", "Development", "Development Tools", "FIPS", "FIPS 140 3", "Go", "Go 1.24", "Go 1.25", "Go Compiler", "Microsoft", "Microsoft Artifact Registry", "Microsoft Go Build", "MS GOTOOLCHAIN TELEMETRY ENABLED", "NIST", "Blogs", "Security", "Telemetry"]
-tags_normalized: ["azure", "azure linux", "boringcrypto", "boringssl", "container images", "cryptography", "development", "development tools", "fips", "fips 140 3", "go", "go 1dot24", "go 1dot25", "go compiler", "microsoft", "microsoft artifact registry", "microsoft go build", "ms gotoolchain telemetry enabled", "nist", "blogs", "security", "telemetry"]
+tags: ["Azure", "Azure Linux", "Blogs", "BoringCrypto", "BoringSSL", "Container Images", "Cryptography", "Development", "Development Tools", "FIPS", "FIPS 140 3", "Go", "Go 1.24", "Go 1.25", "Go Compiler", "Microsoft", "Microsoft Artifact Registry", "Microsoft Go Build", "MS GOTOOLCHAIN TELEMETRY ENABLED", "NIST", "Security", "Telemetry"]
+tags_normalized: ["azure", "azure linux", "blogs", "boringcrypto", "boringssl", "container images", "cryptography", "development", "development tools", "fips", "fips 140 3", "go", "go 1dot24", "go 1dot25", "go compiler", "microsoft", "microsoft artifact registry", "microsoft go build", "ms gotoolchain telemetry enabled", "nist", "security", "telemetry"]
 ---
 
 Tim Anderson explores Microsoft's addition of telemetry to its Go compiler build for FIPS compliance, discussing its impact on Azure Linux, cryptographic strategy, and developer workflows.<!--excerpt_end-->

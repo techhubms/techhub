@@ -8,8 +8,8 @@ canonical_url: "https://blog.jesseswart.nl/post/consume-api-copilot"
 viewing_mode: "external"
 categories: ["AI", "Coding", "GitHub Copilot"]
 permalink: "/blogs/2024-06-21-How-to-consume-an-API-without-an-OpenAPI-spec.html"
-tags: ["AI", "API", "Coding", "Development", "GitHub Copilot", "Blogs", "Productivity", "Programming", "Tutorials", "TypeScript"]
-tags_normalized: ["ai", "api", "coding", "development", "github copilot", "blogs", "productivity", "programming", "tutorials", "typescript"]
+tags: ["AI", "API", "Blogs", "Coding", "Development", "GitHub Copilot", "Productivity", "Programming", "Tutorials", "TypeScript"]
+tags_normalized: ["ai", "api", "blogs", "coding", "development", "github copilot", "productivity", "programming", "tutorials", "typescript"]
 ---
 
 When working with external APIs that lack SDKs or OpenAPI specifications, developers often face the tedious task of manually creating typed interfaces. Jesse Swart demonstrates how GitHub Copilot can dramatically simplify this process by generating complete TypeScript code from raw API documentation.<!--excerpt_end-->

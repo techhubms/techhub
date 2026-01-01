@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-11-18 17:00:00 +00:00
-permalink: "/community/2025-11-18-AI-Gateway-in-Azure-API-Management-Now-Integrated-with-Microsoft-Foundry.html"
+permalink: "/2025-11-18-AI-Gateway-in-Azure-API-Management-Now-Integrated-with-Microsoft-Foundry.html"
 categories: ["AI", "Azure", "Security"]
 tags: ["Agent Management", "AI", "AI Gateway", "API Governance", "Application Insights", "Azure", "Azure API Management", "Centralized Control", "Community", "Compliance", "Content Safety", "Enterprise AI", "Governance Policies", "MCP", "Microsoft Foundry", "Microsoft Ignite", "Observability", "Security", "Telemetry", "Token Quotas"]
 tags_normalized: ["agent management", "ai", "ai gateway", "api governance", "application insights", "azure", "azure api management", "centralized control", "community", "compliance", "content safety", "enterprise ai", "governance policies", "mcp", "microsoft foundry", "microsoft ignite", "observability", "security", "telemetry", "token quotas"]

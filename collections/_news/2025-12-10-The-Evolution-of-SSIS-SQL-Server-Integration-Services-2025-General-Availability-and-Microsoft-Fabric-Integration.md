@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Fabric Blog"
 feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
 date: 2025-12-10 13:32:43 +00:00
-permalink: "/news/2025-12-10-The-Evolution-of-SSIS-SQL-Server-Integration-Services-2025-General-Availability-and-Microsoft-Fabric-Integration.html"
+permalink: "/2025-12-10-The-Evolution-of-SSIS-SQL-Server-Integration-Services-2025-General-Availability-and-Microsoft-Fabric-Integration.html"
 categories: ["Azure", "ML", "Security"]
 tags: ["Azure", "Azure Data Factory", "Change Data Capture", "Copy Job", "Data Factory", "Data Integration", "Data Migration", "ETL", "Fabric Data Warehouse", "Hybrid Cloud", "Lakehouse", "Microsoft Entra ID", "Microsoft Fabric", "ML", "News", "Oracle Connector", "Private Preview", "Security", "SQL Server", "SQL Server Integration Services", "SSIS", "T SQL COPY INTO"]
 tags_normalized: ["azure", "azure data factory", "change data capture", "copy job", "data factory", "data integration", "data migration", "etl", "fabric data warehouse", "hybrid cloud", "lakehouse", "microsoft entra id", "microsoft fabric", "ml", "news", "oracle connector", "private preview", "security", "sql server", "sql server integration services", "ssis", "t sql copy into"]

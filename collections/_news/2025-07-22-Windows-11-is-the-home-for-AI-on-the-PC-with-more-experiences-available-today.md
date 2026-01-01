@@ -9,7 +9,7 @@ categories: ["AI"]
 feed_name: "Microsoft News"
 feed_url: "https://news.microsoft.com/source/feed/"
 date: 2025-07-22 18:04:56 +00:00
-permalink: "/news/2025-07-22-Windows-11-is-the-home-for-AI-on-the-PC-with-more-experiences-available-today.html"
+permalink: "/2025-07-22-Windows-11-is-the-home-for-AI-on-the-PC-with-more-experiences-available-today.html"
 viewing_mode: "external"
 page: "news"
 tags: ["AI", "AI Features", "AI Integration", "Company News", "Microsoft", "News", "Operating System", "PC Experiences", "User Experience", "Windows 11"]

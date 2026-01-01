@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Events YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
 date: 2025-11-24 06:33:59 +00:00
-permalink: "/videos/2025-11-24-Building-and-Shipping-Edge-AI-Apps-with-Microsoft-Foundry.html"
+permalink: "/2025-11-24-Building-and-Shipping-Edge-AI-Apps-with-Microsoft-Foundry.html"
 categories: ["AI", "Azure"]
 tags: ["AI", "AI Demonstrations", "AI Workflow", "Android Integration", "Audio Transcription", "Azure", "Azure Arc", "Client Applications", "Cloud To Edge", "Cross Platform Support", "Custom Model Fine Tuning", "Edge AI", "Foundry Local", "GitOps", "InnovatewithAzureAIappsandagents", "Microsoft Foundry", "Microsoft Ignite", "Model Deployment", "Model Versioning", "MSIgnite", "OCI Registry", "On Device AI", "ORAS Tool", "PhonePe Collaboration", "Videos"]
 tags_normalized: ["ai", "ai demonstrations", "ai workflow", "android integration", "audio transcription", "azure", "azure arc", "client applications", "cloud to edge", "cross platform support", "custom model fine tuning", "edge ai", "foundry local", "gitops", "innovatewithazureaiappsandagents", "microsoft foundry", "microsoft ignite", "model deployment", "model versioning", "msignite", "oci registry", "on device ai", "oras tool", "phonepe collaboration", "videos"]

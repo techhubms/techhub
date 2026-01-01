@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "DotNet YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw"
 date: 2025-10-01 18:37:47 +00:00
-permalink: "/videos/2025-10-01-Simplifying-ASPNET-API-Design-with-the-REPR-Pattern-and-FastEndpoints.html"
+permalink: "/2025-10-01-Simplifying-ASPNET-API-Design-with-the-REPR-Pattern-and-FastEndpoints.html"
 categories: ["Coding"]
 tags: [".NET", "API", "API Design", "ASP.NET", "Coding", "Demo", "Developer", "Developer Community", "Developer Tools", "Dotnetdeveloper", "Endpoint Development", "Endpoints", "FastEndpoints", "Maintainability", "Microsoft", "REPR", "REPR Pattern", "Request Endpoint Response", "Request Validation", "Response Structuring", "Software Architecture", "Videos"]
 tags_normalized: ["dotnet", "api", "api design", "aspdotnet", "coding", "demo", "developer", "developer community", "developer tools", "dotnetdeveloper", "endpoint development", "endpoints", "fastendpoints", "maintainability", "microsoft", "repr", "repr pattern", "request endpoint response", "request validation", "response structuring", "software architecture", "videos"]

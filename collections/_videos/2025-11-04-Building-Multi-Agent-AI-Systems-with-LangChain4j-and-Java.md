@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Developer YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
 date: 2025-11-04 17:00:57 +00:00
-permalink: "/videos/2025-11-04-Building-Multi-Agent-AI-Systems-with-LangChain4j-and-Java.html"
+permalink: "/2025-11-04-Building-Multi-Agent-AI-Systems-with-LangChain4j-and-Java.html"
 categories: ["AI"]
 tags: ["Agent Orchestration", "AgentOrchestration", "AI", "AI Agents", "Audio Generation", "Docker", "DockerContainers", "GPT 4o Mini", "Intelligent Applications", "IntelligentSystems", "Java", "JavaAI", "JavaDevelopment", "LangChain4j", "MaryTTS", "Mistral", "Mistral 3B", "Multi Agent Systems", "MultiAgent", "OpenAI", "SequenceBuilder", "Text To Speech", "TextToSpeech", "Videos", "Workflow Automation"]
 tags_normalized: ["agent orchestration", "agentorchestration", "ai", "ai agents", "audio generation", "docker", "dockercontainers", "gpt 4o mini", "intelligent applications", "intelligentsystems", "java", "javaai", "javadevelopment", "langchain4j", "marytts", "mistral", "mistral 3b", "multi agent systems", "multiagent", "openai", "sequencebuilder", "text to speech", "texttospeech", "videos", "workflow automation"]

@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-11-19 17:45:00 +00:00
-permalink: "/community/2025-11-19-Azure-Native-Pure-Storage-Cloud-Expanded-VM-Integration-Announced-at-Ignite.html"
+permalink: "/2025-11-19-Azure-Native-Pure-Storage-Cloud-Expanded-VM-Integration-Announced-at-Ignite.html"
 categories: ["Azure"]
 tags: ["Azure", "Azure Boost", "Azure Resource Manager", "Azure Storage", "Azure VMware Solution", "Cloud Integration", "Community", "Cost Optimization", "Data Migration", "Enterprise Storage", "Linux", "Performance", "Portal Management", "Premium Managed Disks V2", "Pure Storage Cloud", "Storage Management", "Virtual Machines", "Windows"]
 tags_normalized: ["azure", "azure boost", "azure resource manager", "azure storage", "azure vmware solution", "cloud integration", "community", "cost optimization", "data migration", "enterprise storage", "linux", "performance", "portal management", "premium managed disks v2", "pure storage cloud", "storage management", "virtual machines", "windows"]

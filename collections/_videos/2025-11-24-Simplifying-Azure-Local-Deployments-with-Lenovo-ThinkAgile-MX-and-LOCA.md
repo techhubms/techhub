@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Events YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
 date: 2025-11-24 14:28:09 +00:00
-permalink: "/videos/2025-11-24-Simplifying-Azure-Local-Deployments-with-Lenovo-ThinkAgile-MX-and-LOCA.html"
+permalink: "/2025-11-24-Simplifying-Azure-Local-Deployments-with-Lenovo-ThinkAgile-MX-and-LOCA.html"
 categories: ["Azure"]
 tags: ["Automation", "Azure", "Azure Deployment", "Azure Local", "Cluster Deployment", "Cluster Update", "Edge Computing", "Factory Default", "Infrastructure Automation", "IT Operations", "Lenovo ThinkAgile MX", "LOCA", "Microsoft Ignite", "MSIgnite", "Network Configuration", "Open Cloud Automation", "Reliability", "Subscription Management", "Videos"]
 tags_normalized: ["automation", "azure", "azure deployment", "azure local", "cluster deployment", "cluster update", "edge computing", "factory default", "infrastructure automation", "it operations", "lenovo thinkagile mx", "loca", "microsoft ignite", "msignite", "network configuration", "open cloud automation", "reliability", "subscription management", "videos"]

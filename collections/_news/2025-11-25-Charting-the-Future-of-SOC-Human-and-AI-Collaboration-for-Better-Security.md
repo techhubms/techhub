@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft News"
 feed_url: "https://news.microsoft.com/source/feed/"
 date: 2025-11-25 18:53:09 +00:00
-permalink: "/news/2025-11-25-Charting-the-Future-of-SOC-Human-and-AI-Collaboration-for-Better-Security.html"
+permalink: "/2025-11-25-Charting-the-Future-of-SOC-Human-and-AI-Collaboration-for-Better-Security.html"
 categories: ["AI", "Security"]
 tags: ["AI", "AI Engineering", "Autonomous AI Agents", "Case Management", "Company News", "Compliance", "GenAI", "Guardrails", "Human AI Collaboration", "Incident Response", "Malware", "MDR Operations", "Microsoft Defender Experts", "Microsoft Security", "News", "Phishing", "Prompt Engineering", "Remediation", "Security", "Security Automation", "Security Operations Center", "SOC", "Threat Detection"]
 tags_normalized: ["ai", "ai engineering", "autonomous ai agents", "case management", "company news", "compliance", "genai", "guardrails", "human ai collaboration", "incident response", "malware", "mdr operations", "microsoft defender experts", "microsoft security", "news", "phishing", "prompt engineering", "remediation", "security", "security automation", "security operations center", "soc", "threat detection"]

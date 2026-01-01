@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft VisualStudio Blog"
 feed_url: "https://devblogs.microsoft.com/visualstudio/feed/"
 date: 2025-09-17 17:30:37 +00:00
-permalink: "/news/2025-09-17-Enhance-Your-Copilot-Experience-in-Visual-Studio-with-MCP-Prompts-Resources-and-Sampling.html"
+permalink: "/2025-09-17-Enhance-Your-Copilot-Experience-in-Visual-Studio-with-MCP-Prompts-Resources-and-Sampling.html"
 categories: ["AI", "Azure", "Coding", "DevOps", "GitHub Copilot"]
 tags: ["Agentic Behaviors", "AI", "Azure", "Azure DevOps", "Chat", "Coding", "Copilot", "Developer", "Developer Productivity", "DevOps", "DuckDB", "Extensions", "Figma", "GitHub", "GitHub Copilot", "Hugging Face", "IDE Integration", "LLM", "MCP", "MCP Prompts", "MCP Resources", "MCP Sampling", "MongoDB", "News", "Playwright", "Prompt Engineering", "Prompts", "Resource Templates", "Resources", "Sampling", "Server", "VS"]
 tags_normalized: ["agentic behaviors", "ai", "azure", "azure devops", "chat", "coding", "copilot", "developer", "developer productivity", "devops", "duckdb", "extensions", "figma", "github", "github copilot", "hugging face", "ide integration", "llm", "mcp", "mcp prompts", "mcp resources", "mcp sampling", "mongodb", "news", "playwright", "prompt engineering", "prompts", "resource templates", "resources", "sampling", "server", "vs"]

@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Community"
 date: 2025-08-13 03:43:11 +00:00
-permalink: "/community/2025-08-13-End-to-End-Azure-App-Testing-with-Playwright-Workspaces-Local-and-Cloud-Workflows.html"
+permalink: "/2025-08-13-End-to-End-Azure-App-Testing-with-Playwright-Workspaces-Local-and-Cloud-Workflows.html"
 categories: ["Azure", "Coding", "DevOps"]
 tags: ["App Deployment", "Automated Testing", "Azure", "Azure App Testing", "Azure Portal", "Azure Web App", "Browser Automation", "CI/CD", "Cloud Testing", "Coding", "Community", "Continuous Integration", "DevOps", "Express", "Functional Testing", "JavaScript", "Microsoft Azure", "Node.js", "npm Scripts", "Performance Testing", "Playwright", "Playwright Workspaces", "Test Parallelism", "Test Reporting", "Testing Configuration"]
 tags_normalized: ["app deployment", "automated testing", "azure", "azure app testing", "azure portal", "azure web app", "browser automation", "cislashcd", "cloud testing", "coding", "community", "continuous integration", "devops", "express", "functional testing", "javascript", "microsoft azure", "nodedotjs", "npm scripts", "performance testing", "playwright", "playwright workspaces", "test parallelism", "test reporting", "testing configuration"]

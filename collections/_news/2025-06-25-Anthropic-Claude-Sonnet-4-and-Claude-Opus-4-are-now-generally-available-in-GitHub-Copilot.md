@@ -10,7 +10,7 @@ categories: ["AI", "GitHub Copilot"]
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/changelog/label/copilot/feed/"
 date: 2025-06-25 20:19:44 +00:00
-permalink: "/news/2025-06-25-Anthropic-Claude-Sonnet-4-and-Claude-Opus-4-are-now-generally-available-in-GitHub-Copilot.html"
+permalink: "/2025-06-25-Anthropic-Claude-Sonnet-4-and-Claude-Opus-4-are-now-generally-available-in-GitHub-Copilot.html"
 tags: ["AI", "AI Models", "Anthropic", "Claude Opus 4", "Claude Sonnet 4", "GitHub Copilot", "News", "Software Development"]
 tags_normalized: ["ai", "ai models", "anthropic", "claude opus 4", "claude sonnet 4", "github copilot", "news", "software development"]
 ---

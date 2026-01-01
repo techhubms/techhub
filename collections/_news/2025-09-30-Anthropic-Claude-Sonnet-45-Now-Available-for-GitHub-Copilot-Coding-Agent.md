@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/changelog/feed/"
 date: 2025-09-30 22:57:41 +00:00
-permalink: "/news/2025-09-30-Anthropic-Claude-Sonnet-45-Now-Available-for-GitHub-Copilot-Coding-Agent.html"
+permalink: "/2025-09-30-Anthropic-Claude-Sonnet-45-Now-Available-for-GitHub-Copilot-Coding-Agent.html"
 categories: ["AI", "GitHub Copilot"]
 tags: ["AI", "AI Model", "Anthropic", "Claude Sonnet 4.5", "Coding Agent", "Copilot", "Copilot Enterprise", "Copilot Functionality", "Copilot Pro", "Copilot Settings", "Developer Tools", "GitHub Copilot", "Model Integration", "News", "Policy Enablement", "SWE Bench"]
 tags_normalized: ["ai", "ai model", "anthropic", "claude sonnet 4dot5", "coding agent", "copilot", "copilot enterprise", "copilot functionality", "copilot pro", "copilot settings", "developer tools", "github copilot", "model integration", "news", "policy enablement", "swe bench"]

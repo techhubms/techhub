@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Fabric Blog"
 feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
 date: 2025-11-10 08:00:00 +00:00
-permalink: "/news/2025-11-10-Microsoft-Recognized-as-Leader-in-2025-GigaOm-Radar-for-Semantic-Layers-and-Metric-Stores.html"
+permalink: "/2025-11-10-Microsoft-Recognized-as-Leader-in-2025-GigaOm-Radar-for-Semantic-Layers-and-Metric-Stores.html"
 categories: ["AI", "ML"]
 tags: ["AI", "AI Integration", "Analytics", "Business Intelligence", "Data Governance", "Data Science", "Data Strategy", "Enterprise Analytics", "GenAI", "GigaOm Radar", "Metric Stores", "Microsoft Fabric", "Microsoft Ignite", "ML", "News", "Power BI", "Semantic Models"]
 tags_normalized: ["ai", "ai integration", "analytics", "business intelligence", "data governance", "data science", "data strategy", "enterprise analytics", "genai", "gigaom radar", "metric stores", "microsoft fabric", "microsoft ignite", "ml", "news", "power bi", "semantic models"]

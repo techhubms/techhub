@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft DevBlog"
 feed_url: "https://devblogs.microsoft.com/azure-sdk/feed/"
 date: 2025-07-02 15:00:43 +00:00
-permalink: "/news/2025-07-02-Azure-SDK-Release-Highlights-for-June-2025.html"
+permalink: "/2025-07-02-Azure-SDK-Release-Highlights-for-June-2025.html"
 categories: ["AI", "Azure", "Coding", "ML"]
 tags: [".NET", "AI", "AI Agents", "Analytics", "Azure", "Azure AI Search", "Azure Identity", "Azure SDK", "Bing Search", "Bulk API", "Client Library", "Cloud Services", "Coding", "Cosmos DB", "DefaultAzureCredential", "Go", "Hybrid Search", "Java", "JavaScript", "ML", "News", "Online Experimentation", "Python", "Release Notes", "Resource Management", "Resource Manager", "SDK"]
 tags_normalized: ["dotnet", "ai", "ai agents", "analytics", "azure", "azure ai search", "azure identity", "azure sdk", "bing search", "bulk api", "client library", "cloud services", "coding", "cosmos db", "defaultazurecredential", "go", "hybrid search", "java", "javascript", "ml", "news", "online experimentation", "python", "release notes", "resource management", "resource manager", "sdk"]

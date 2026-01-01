@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-11-21 20:51:32 +00:00
-permalink: "/community/2025-11-21-Announcing-Foundry-Control-Plane-Support-for-Logic-Apps-Agent-Loop-Preview.html"
+permalink: "/2025-11-21-Announcing-Foundry-Control-Plane-Support-for-Logic-Apps-Agent-Loop-Preview.html"
 categories: ["AI", "Azure"]
 tags: ["Agent Loop", "Agent Scalability", "Agent Telemetry", "AI", "AI Agent Governance", "Autonomous Agents", "Azure", "Azure Integration Services", "Community", "Enterprise Compliance", "Foundry Control Plane", "Governance", "Logic Apps", "Microsoft AI", "Microsoft Ignite", "Microsoft Integrations", "Preview", "Telemetry", "Token Usage"]
 tags_normalized: ["agent loop", "agent scalability", "agent telemetry", "ai", "ai agent governance", "autonomous agents", "azure", "azure integration services", "community", "enterprise compliance", "foundry control plane", "governance", "logic apps", "microsoft ai", "microsoft ignite", "microsoft integrations", "preview", "telemetry", "token usage"]

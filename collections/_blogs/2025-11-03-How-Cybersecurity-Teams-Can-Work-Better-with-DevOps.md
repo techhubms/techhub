@@ -9,10 +9,10 @@ viewing_mode: "external"
 feed_name: "DevOps Blog"
 feed_url: "https://devops.com/feed/"
 date: 2025-11-03 19:50:57 +00:00
-permalink: "/blogs/2025-11-03-How-Cybersecurity-Teams-Can-Work-Better-with-DevOps.html"
+permalink: "/2025-11-03-How-Cybersecurity-Teams-Can-Work-Better-with-DevOps.html"
 categories: ["DevOps", "Security"]
-tags: ["Automation", "CI/CD", "Cloud Security", "Cloud Security Best Practices", "Continuous Improvement", "Contributed Content", "Cross Training", "Cyber Security", "Cybersecurity", "DevOps", "DevSecOps", "Pipeline Security", "Blogs", "Secure Development", "Security", "Security Automation", "Security Best Practices", "Security Champions", "Security Integration", "Social Facebook", "Social LinkedIn", "Social X", "Team Collaboration"]
-tags_normalized: ["automation", "cislashcd", "cloud security", "cloud security best practices", "continuous improvement", "contributed content", "cross training", "cyber security", "cybersecurity", "devops", "devsecops", "pipeline security", "blogs", "secure development", "security", "security automation", "security best practices", "security champions", "security integration", "social facebook", "social linkedin", "social x", "team collaboration"]
+tags: ["Automation", "Blogs", "CI/CD", "Cloud Security", "Cloud Security Best Practices", "Continuous Improvement", "Contributed Content", "Cross Training", "Cyber Security", "Cybersecurity", "DevOps", "DevSecOps", "Pipeline Security", "Secure Development", "Security", "Security Automation", "Security Best Practices", "Security Champions", "Security Integration", "Social Facebook", "Social LinkedIn", "Social X", "Team Collaboration"]
+tags_normalized: ["automation", "blogs", "cislashcd", "cloud security", "cloud security best practices", "continuous improvement", "contributed content", "cross training", "cyber security", "cybersecurity", "devops", "devsecops", "pipeline security", "secure development", "security", "security automation", "security best practices", "security champions", "security integration", "social facebook", "social linkedin", "social x", "team collaboration"]
 ---
 
 Samuel Ogbonna details how cybersecurity and DevOps teams can enhance collaboration by embedding security throughout the DevOps pipeline, sharing actionable best practices and communication strategies.<!--excerpt_end-->

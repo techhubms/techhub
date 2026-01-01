@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-09-18 17:51:27 +00:00
-permalink: "/community/2025-09-18-Azure-Monitors-Native-Grafana-Dashboards-Simplified-Observability-for-Prometheus-Workloads.html"
+permalink: "/2025-09-18-Azure-Monitors-Native-Grafana-Dashboards-Simplified-Observability-for-Prometheus-Workloads.html"
 categories: ["Azure", "DevOps"]
 tags: ["AKS", "Application Insights", "Azure", "Azure Managed Grafana", "Azure Monitor", "Cloud Native Monitoring", "Community", "Container Insights", "Dashboards", "DevOps", "Grafana", "Kubernetes Monitoring", "Metrics Visualization", "Observability", "OpenTelemetry", "Prometheus", "SaaS Monitoring", "SRE"]
 tags_normalized: ["aks", "application insights", "azure", "azure managed grafana", "azure monitor", "cloud native monitoring", "community", "container insights", "dashboards", "devops", "grafana", "kubernetes monitoring", "metrics visualization", "observability", "opentelemetry", "prometheus", "saas monitoring", "sre"]

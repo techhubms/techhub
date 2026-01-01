@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft News"
 feed_url: "https://news.microsoft.com/source/feed/"
 date: 2025-09-09 13:20:25 +00:00
-permalink: "/news/2025-09-09-Ralph-Laurens-Ask-Ralph-Conversational-Shopping-with-Microsoft-Azure-OpenAI.html"
+permalink: "/2025-09-09-Ralph-Laurens-Ask-Ralph-Conversational-Shopping-with-Microsoft-Azure-OpenAI.html"
 categories: ["AI", "Azure"]
 tags: ["AI", "AI Integration", "Ask Ralph", "Azure", "Azure OpenAI Service", "Cloud AI", "Company News", "Conversational AI", "Customer Experience", "E Commerce", "Machine Learning", "Microsoft Azure", "News", "Ralph Lauren", "Retail Technology"]
 tags_normalized: ["ai", "ai integration", "ask ralph", "azure", "azure openai service", "cloud ai", "company news", "conversational ai", "customer experience", "e commerce", "machine learning", "microsoft azure", "news", "ralph lauren", "retail technology"]

@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Events YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
 date: 2025-11-24 07:24:25 +00:00
-permalink: "/videos/2025-11-24-Driving-Efficiency-and-Cost-Optimization-for-Azure-IaaS-Deployments.html"
+permalink: "/2025-11-24-Driving-Efficiency-and-Cost-Optimization-for-Azure-IaaS-Deployments.html"
 categories: ["Azure"]
 tags: ["AI", "AI Tools", "Azure", "Azure Blob Storage", "Azure IaaS", "Cloud Infrastructure", "Compute Optimization", "Cost Optimization", "Deployments", "ExpressRoute", "Log Filtering", "Microsoft Ignite", "Migrateandmodernizeyourestate", "MSIgnite", "Network Monitoring", "Power BI", "Smart Tiering", "Storage Provisioning", "TCO Reduction", "Videos"]
 tags_normalized: ["ai", "ai tools", "azure", "azure blob storage", "azure iaas", "cloud infrastructure", "compute optimization", "cost optimization", "deployments", "expressroute", "log filtering", "microsoft ignite", "migrateandmodernizeyourestate", "msignite", "network monitoring", "power bi", "smart tiering", "storage provisioning", "tco reduction", "videos"]

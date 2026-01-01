@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/changelog/feed/"
 date: 2025-11-07 01:12:34 +00:00
-permalink: "/news/2025-11-07-GitHub-Pull-Request-Files-Changed-Page-Update-with-Copilot-Grouping-and-Merge-Experience-Improvements.html"
+permalink: "/2025-11-07-GitHub-Pull-Request-Files-Changed-Page-Update-with-Copilot-Grouping-and-Merge-Experience-Improvements.html"
 categories: ["AI", "DevOps", "GitHub Copilot"]
 tags: ["Accessibility", "AI", "Annotations", "Batch Suggested Changes", "CI Tools", "Code Review", "Collaboration", "Collaboration Tools", "Copilot", "Copilot Enterprise", "Copilot Pro+", "DevOps", "Draft Conversion", "GitHub", "GitHub Copilot", "Improvement", "Merge Experience", "News", "Public Preview", "Pull Request", "Status Checks"]
 tags_normalized: ["accessibility", "ai", "annotations", "batch suggested changes", "ci tools", "code review", "collaboration", "collaboration tools", "copilot", "copilot enterprise", "copilot proplus", "devops", "draft conversion", "github", "github copilot", "improvement", "merge experience", "news", "public preview", "pull request", "status checks"]

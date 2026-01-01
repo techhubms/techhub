@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Security Blog"
 feed_url: "https://www.microsoft.com/en-us/security/blog/feed/"
 date: 2025-08-07 16:00:00 +00:00
-permalink: "/news/2025-08-07-Announcing-Public-Preview-of-the-Phishing-Triage-Agent-in-Microsoft-Defender.html"
+permalink: "/2025-08-07-Announcing-Public-Preview-of-the-Phishing-Triage-Agent-in-Microsoft-Defender.html"
 categories: ["AI", "Security"]
 tags: ["AI", "AI Security", "Automated Investigation And Response", "Autonomous Security", "Defender For Office 365", "Incident Response", "Large Language Models", "Microsoft Defender", "News", "Phishing Detection", "Phishing Triage Agent", "Responsible AI", "Security", "Security Copilot", "Security Operations Center", "SOC Automation", "Threat Intelligence", "Zero Trust Security"]
 tags_normalized: ["ai", "ai security", "automated investigation and response", "autonomous security", "defender for office 365", "incident response", "large language models", "microsoft defender", "news", "phishing detection", "phishing triage agent", "responsible ai", "security", "security copilot", "security operations center", "soc automation", "threat intelligence", "zero trust security"]

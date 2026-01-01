@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft News"
 feed_url: "https://news.microsoft.com/source/feed/"
 date: 2025-11-18 17:18:34 +00:00
-permalink: "/news/2025-11-18-AI-Agent-Lifecycle-Security-and-Observability-Highlights-from-Microsoft-Ignite-2025.html"
+permalink: "/2025-11-18-AI-Agent-Lifecycle-Security-and-Observability-Highlights-from-Microsoft-Ignite-2025.html"
 categories: ["AI", "Security"]
 tags: ["Agent Lifecycle", "Agent Observability", "AI", "AI Agents", "Copilot Studio", "Fabric IQ", "Governance", "Microsoft 365", "Microsoft Defender", "Microsoft Entra", "Microsoft Foundry", "Microsoft Ignite", "Microsoft Purview", "News", "Power BI", "Security", "Security Solutions", "Work IQ"]
 tags_normalized: ["agent lifecycle", "agent observability", "ai", "ai agents", "copilot studio", "fabric iq", "governance", "microsoft 365", "microsoft defender", "microsoft entra", "microsoft foundry", "microsoft ignite", "microsoft purview", "news", "power bi", "security", "security solutions", "work iq"]

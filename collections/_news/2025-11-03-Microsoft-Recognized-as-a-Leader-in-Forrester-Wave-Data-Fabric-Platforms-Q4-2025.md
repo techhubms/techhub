@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Fabric Blog"
 feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
 date: 2025-11-03 08:00:00 +00:00
-permalink: "/news/2025-11-03-Microsoft-Recognized-as-a-Leader-in-Forrester-Wave-Data-Fabric-Platforms-Q4-2025.html"
+permalink: "/2025-11-03-Microsoft-Recognized-as-a-Leader-in-Forrester-Wave-Data-Fabric-Platforms-Q4-2025.html"
 categories: ["AI", "Azure", "ML"]
 tags: ["Agentic AI", "AI", "AI Integration", "Analytics", "Azure", "Business Intelligence", "Copilot in Fabric", "Data Engineering", "Data Fabric", "Data Governance", "Data Integration", "Forrester Wave", "Microsoft Fabric", "ML", "News", "OneLake", "Real Time Data", "Unified Data Platform"]
 tags_normalized: ["agentic ai", "ai", "ai integration", "analytics", "azure", "business intelligence", "copilot in fabric", "data engineering", "data fabric", "data governance", "data integration", "forrester wave", "microsoft fabric", "ml", "news", "onelake", "real time data", "unified data platform"]

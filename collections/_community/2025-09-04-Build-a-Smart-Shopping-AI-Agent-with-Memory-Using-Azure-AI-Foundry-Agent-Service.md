@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-09-04 07:00:00 +00:00
-permalink: "/community/2025-09-04-Build-a-Smart-Shopping-AI-Agent-with-Memory-Using-Azure-AI-Foundry-Agent-Service.html"
+permalink: "/2025-09-04-Build-a-Smart-Shopping-AI-Agent-with-Memory-Using-Azure-AI-Foundry-Agent-Service.html"
 categories: ["AI", "Azure", "Coding"]
 tags: ["Agent Development", "AI", "AI Agents", "API Integration", "Azure", "Azure AI Foundry", "Coding", "Community", "FunctionTool", "GPT 4o", "Memori", "Memory Persistence", "Microsoft Azure", "Multi Agent Systems", "OpenAI", "Persistent Storage", "Personalization", "Python", "Recommendation Systems", "SQLite"]
 tags_normalized: ["agent development", "ai", "ai agents", "api integration", "azure", "azure ai foundry", "coding", "community", "functiontool", "gpt 4o", "memori", "memory persistence", "microsoft azure", "multi agent systems", "openai", "persistent storage", "personalization", "python", "recommendation systems", "sqlite"]

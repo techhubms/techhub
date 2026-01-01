@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-12-18 23:20:29 +00:00
-permalink: "/community/2025-12-18-Azure-Networking-2025-Powering-Cloud-Innovation-and-AI-at-Global-Scale.html"
+permalink: "/2025-12-18-Azure-Networking-2025-Powering-Cloud-Innovation-and-AI-at-Global-Scale.html"
 categories: ["AI", "Azure", "Security"]
 tags: ["AI", "AI Supercomputer", "Azure", "Azure Copilot", "Azure Networking", "Azure Route Server", "Cloud Infrastructure", "Community", "DNS Security", "ExpressRoute", "Hybrid Cloud", "Microsoft Azure", "Network Resiliency", "Network Security", "Security", "Traffic Manager", "Virtual WAN", "VPN Gateway", "Zero Trust"]
 tags_normalized: ["ai", "ai supercomputer", "azure", "azure copilot", "azure networking", "azure route server", "cloud infrastructure", "community", "dns security", "expressroute", "hybrid cloud", "microsoft azure", "network resiliency", "network security", "security", "traffic manager", "virtual wan", "vpn gateway", "zero trust"]

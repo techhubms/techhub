@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-10-30 03:47:54 +00:00
-permalink: "/community/2025-10-30-Python-314-Now-Available-on-Azure-App-Service-for-Linux.html"
+permalink: "/2025-10-30-Python-314-Now-Available-on-Azure-App-Service-for-Linux.html"
 categories: ["Azure", "Coding"]
 tags: ["App Service Deployment", "ARM Templates", "Azure", "Azure App Service", "Azure CLI", "Azure Platform", "Bicep Templates", "Coding", "Community", "Developer Experience", "Interpreter Enhancements", "Linux Hosting", "Multi Core Concurrency", "Patching", "Performance Optimization", "Python 3.14", "Runtime Upgrades", "Web Apps"]
 tags_normalized: ["app service deployment", "arm templates", "azure", "azure app service", "azure cli", "azure platform", "bicep templates", "coding", "community", "developer experience", "interpreter enhancements", "linux hosting", "multi core concurrency", "patching", "performance optimization", "python 3dot14", "runtime upgrades", "web apps"]

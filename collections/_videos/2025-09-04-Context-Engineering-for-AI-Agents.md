@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Developer YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
 date: 2025-09-04 16:00:23 +00:00
-permalink: "/videos/2025-09-04-Context-Engineering-for-AI-Agents.html"
+permalink: "/2025-09-04-Context-Engineering-for-AI-Agents.html"
 categories: ["AI"]
 tags: ["Agent Design", "AI", "AI Agents", "AI Development", "AI Engineering", "Best Practices", "Cloud Computing", "Code Samples", "Context Engineering", "Context Management", "Dev", "Development", "Microsoft", "Tech", "Technical Tutorial", "Technology", "Videos"]
 tags_normalized: ["agent design", "ai", "ai agents", "ai development", "ai engineering", "best practices", "cloud computing", "code samples", "context engineering", "context management", "dev", "development", "microsoft", "tech", "technical tutorial", "technology", "videos"]

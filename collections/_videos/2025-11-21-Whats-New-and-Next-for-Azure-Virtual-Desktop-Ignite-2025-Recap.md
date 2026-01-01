@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Events YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
 date: 2025-11-21 14:29:12 +00:00
-permalink: "/videos/2025-11-21-Whats-New-and-Next-for-Azure-Virtual-Desktop-Ignite-2025-Recap.html"
+permalink: "/2025-11-21-Whats-New-and-Next-for-Azure-Virtual-Desktop-Ignite-2025-Recap.html"
 categories: ["Azure", "Security"]
 tags: ["App Attach", "Azure", "Azure Virtual Desktop", "B2B Access", "Cloud Migration", "Dynamic Auto Scale", "Identity Management", "Microsoft Ignite", "MSIgnite", "Multi Factor Authentication", "Pricing", "RDP Multipath", "ScalewithcloudandAIendpoints", "Security", "User Experience", "VDI Migration", "Videos", "Windows 365"]
 tags_normalized: ["app attach", "azure", "azure virtual desktop", "b2b access", "cloud migration", "dynamic auto scale", "identity management", "microsoft ignite", "msignite", "multi factor authentication", "pricing", "rdp multipath", "scalewithcloudandaiendpoints", "security", "user experience", "vdi migration", "videos", "windows 365"]

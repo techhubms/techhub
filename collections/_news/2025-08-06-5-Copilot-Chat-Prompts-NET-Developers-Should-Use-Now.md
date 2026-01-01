@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft .NET Blog"
 feed_url: "https://devblogs.microsoft.com/dotnet/feed/"
 date: 2025-08-06 17:05:00 +00:00
-permalink: "/news/2025-08-06-5-Copilot-Chat-Prompts-NET-Developers-Should-Use-Now.html"
+permalink: "/2025-08-06-5-Copilot-Chat-Prompts-NET-Developers-Should-Use-Now.html"
 categories: ["AI", "GitHub Copilot", "Coding", "Security"]
 tags: [".NET", ".NET Fundamentals", "AI", "Async Await", "C#", "Code Optimization", "Coding", "Copilot", "Copilot Chat", "Debugging", "Development Productivity", "GitHub Copilot", "Mock Data", "MSTest", "News", "NUnit", "Security", "Unit Testing", "VS", "VS Code", "xUnit"]
 tags_normalized: ["dotnet", "dotnet fundamentals", "ai", "async await", "csharp", "code optimization", "coding", "copilot", "copilot chat", "debugging", "development productivity", "github copilot", "mock data", "mstest", "news", "nunit", "security", "unit testing", "vs", "vs code", "xunit"]

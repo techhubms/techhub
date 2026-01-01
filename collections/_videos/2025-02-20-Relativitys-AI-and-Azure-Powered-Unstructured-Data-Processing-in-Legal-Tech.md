@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Events YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
 date: 2025-02-20 14:00:51 +00:00
-permalink: "/videos/2025-02-20-Relativitys-AI-and-Azure-Powered-Unstructured-Data-Processing-in-Legal-Tech.html"
+permalink: "/2025-02-20-Relativitys-AI-and-Azure-Powered-Unstructured-Data-Processing-in-Legal-Tech.html"
 categories: ["AI", "Azure", "ML"]
 tags: ["AI", "AI Innovation", "Azure", "Azure Data Lake Storage", "Data Management", "Document Analysis", "Generative AI", "Legal Industry", "Legal Technology", "Microsoft", "Microsoft Azure", "Microsoft Ignite", "ML", "Relativity", "Unstructured Data", "Video Processing", "Videos"]
 tags_normalized: ["ai", "ai innovation", "azure", "azure data lake storage", "data management", "document analysis", "generative ai", "legal industry", "legal technology", "microsoft", "microsoft azure", "microsoft ignite", "ml", "relativity", "unstructured data", "video processing", "videos"]

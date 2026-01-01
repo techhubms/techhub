@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft DevBlog"
 feed_url: "https://devblogs.microsoft.com/azure-sdk/feed/"
 date: 2025-03-27 17:00:03 +00:00
-permalink: "/news/2025-03-27-Azure-SDK-Release-Highlights-March-2025.html"
+permalink: "/2025-03-27-Azure-SDK-Release-Highlights-March-2025.html"
 categories: ["Azure", "Coding"]
 tags: [".NET", "Azure", "Azure SDK", "C++", "Coding", "Conda", "Cosmos DB", "Database Watcher", "Device Registry", "Event Hubs", "Go", "Identity", "Java", "JavaScript", "Key Vault", "Language Authoring", "Management Library", "News", "Node.js 18", "OpenTelemetry", "Python", "Rust", "SDK", "SDK Release"]
 tags_normalized: ["dotnet", "azure", "azure sdk", "cplusplus", "coding", "conda", "cosmos db", "database watcher", "device registry", "event hubs", "go", "identity", "java", "javascript", "key vault", "language authoring", "management library", "news", "nodedotjs 18", "opentelemetry", "python", "rust", "sdk", "sdk release"]

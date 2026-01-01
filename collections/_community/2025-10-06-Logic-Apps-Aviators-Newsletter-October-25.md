@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-10-06 15:00:00 +00:00
-permalink: "/community/2025-10-06-Logic-Apps-Aviators-Newsletter-October-25.html"
+permalink: "/2025-10-06-Logic-Apps-Aviators-Newsletter-October-25.html"
 categories: ["AI", "Azure", "Coding", "DevOps", "Security"]
 tags: ["Adaptive Cards", "Agent Loop", "AI", "AI Agents", "API Center", "API Management", "Approval Workflows", "Automation", "Azure", "Azure Container Apps", "Azure Logic Apps", "BizTalk Migration", "Cloud Security", "Coding", "Community", "Data Processing", "DevOps", "Enterprise Integration", "Entra ID", "Hybrid Integration", "Integration", "MCP", "Microsoft Teams", "Python Code Interpreter", "Security"]
 tags_normalized: ["adaptive cards", "agent loop", "ai", "ai agents", "api center", "api management", "approval workflows", "automation", "azure", "azure container apps", "azure logic apps", "biztalk migration", "cloud security", "coding", "community", "data processing", "devops", "enterprise integration", "entra id", "hybrid integration", "integration", "mcp", "microsoft teams", "python code interpreter", "security"]

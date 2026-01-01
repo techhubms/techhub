@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/feed/"
 date: 2025-10-22 20:30:35 +00:00
-permalink: "/news/2025-10-22-For-the-Love-of-Code-GitHub-Hackathon-Winners-Showcase-Creative-Projects-with-Copilot.html"
+permalink: "/2025-10-22-For-the-Love-of-Code-GitHub-Hackathon-Winners-Showcase-Creative-Projects-with-Copilot.html"
 categories: ["AI", "Coding", "GitHub Copilot"]
 tags: ["AI", "AI Development", "APIs", "Arduino", "Automation", "Bots", "Coding", "Developer Experience", "Developer Tools", "Express", "Framer Motion", "Game Development", "GitHub Copilot", "Hackathon", "News", "Open Source", "Open Source Community", "Python", "Raspberry Pi", "React", "Rust", "Tailwind CSS", "VS Code", "Web Applications"]
 tags_normalized: ["ai", "ai development", "apis", "arduino", "automation", "bots", "coding", "developer experience", "developer tools", "express", "framer motion", "game development", "github copilot", "hackathon", "news", "open source", "open source community", "python", "raspberry pi", "react", "rust", "tailwind css", "vs code", "web applications"]

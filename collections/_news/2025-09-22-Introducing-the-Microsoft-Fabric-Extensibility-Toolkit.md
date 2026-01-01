@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Fabric Blog"
 feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
 date: 2025-09-22 15:30:00 +00:00
-permalink: "/news/2025-09-22-Introducing-the-Microsoft-Fabric-Extensibility-Toolkit.html"
+permalink: "/2025-09-22-Introducing-the-Microsoft-Fabric-Extensibility-Toolkit.html"
 categories: ["AI", "Azure", "Coding", "ML"]
 tags: ["AI", "API Integration", "Authentication", "Azure", "Coding", "Copilot", "Custom Data Applications", "Data Integration", "Developer Tools", "Fabric Extensibility Toolkit", "Fabric Workspace", "Front End Development", "Item Explorer", "Metadata Management", "Microsoft Entra ID", "Microsoft Fabric", "ML", "News", "OneLake", "Package Installer", "Power BI", "SaaS", "Spark", "Starter Kit", "Workload Development Kit"]
 tags_normalized: ["ai", "api integration", "authentication", "azure", "coding", "copilot", "custom data applications", "data integration", "developer tools", "fabric extensibility toolkit", "fabric workspace", "front end development", "item explorer", "metadata management", "microsoft entra id", "microsoft fabric", "ml", "news", "onelake", "package installer", "power bi", "saas", "spark", "starter kit", "workload development kit"]

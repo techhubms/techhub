@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-09-25 17:10:09 +00:00
-permalink: "/community/2025-09-25-Microsoft-Azure-Introduces-Azure-Integrated-HSM-Secure-Hardware-Backed-Cryptography-for-Virtual-Machines.html"
+permalink: "/2025-09-25-Microsoft-Azure-Introduces-Azure-Integrated-HSM-Secure-Hardware-Backed-Cryptography-for-Virtual-Machines.html"
 categories: ["Azure", "Security"]
 tags: ["AMD V7 Series", "Azure", "Azure Integrated HSM", "Azure Key Vault", "Community", "Crypto Accelerator", "Cryptography", "Encryption", "FIPS 140 3", "Hardware Security Module", "Key Management", "Secure Compute", "Security", "Trusted Launch VMs", "Windows Virtual Machines"]
 tags_normalized: ["amd v7 series", "azure", "azure integrated hsm", "azure key vault", "community", "crypto accelerator", "cryptography", "encryption", "fips 140 3", "hardware security module", "key management", "secure compute", "security", "trusted launch vms", "windows virtual machines"]

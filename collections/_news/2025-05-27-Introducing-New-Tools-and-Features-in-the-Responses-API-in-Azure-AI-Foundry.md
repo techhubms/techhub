@@ -10,7 +10,7 @@ categories: ["AI", "Azure"]
 feed_name: "Microsoft DevBlog"
 feed_url: "https://devblogs.microsoft.com/foundry/feed/"
 date: 2025-05-27 21:51:00 +00:00
-permalink: "/news/2025-05-27-Introducing-New-Tools-and-Features-in-the-Responses-API-in-Azure-AI-Foundry.html"
+permalink: "/2025-05-27-Introducing-New-Tools-and-Features-in-the-Responses-API-in-Azure-AI-Foundry.html"
 tags: ["AI", "AI Development", "Assistants API", "Azure", "Azure AI Foundry", "Chat Completions API", "News", "OpenAI", "Responses API"]
 tags_normalized: ["ai", "ai development", "assistants api", "azure", "azure ai foundry", "chat completions api", "news", "openai", "responses api"]
 ---

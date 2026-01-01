@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Reddit Visual Studio"
 feed_url: "https://www.reddit.com/r/VisualStudio/.rss"
 date: 2025-08-08 14:07:47 +00:00
-permalink: "/community/2025-08-08-Understanding-GitHub-Copilots-Code-Modification-Behavior-in-Visual-Studio.html"
+permalink: "/2025-08-08-Understanding-GitHub-Copilots-Code-Modification-Behavior-in-Visual-Studio.html"
 categories: ["AI", "Coding", "GitHub Copilot"]
 tags: ["AI", "AI Code Assistant", "Best Practices", "Code Modification", "Code Refactoring", "Coding", "Community", "Contextual Code", "Copilot Usage Tips", "Developer Experience", "GitHub Copilot", "LLM Limitations", "Prompt Engineering", "VS", "VS Integration"]
 tags_normalized: ["ai", "ai code assistant", "best practices", "code modification", "code refactoring", "coding", "community", "contextual code", "copilot usage tips", "developer experience", "github copilot", "llm limitations", "prompt engineering", "vs", "vs integration"]

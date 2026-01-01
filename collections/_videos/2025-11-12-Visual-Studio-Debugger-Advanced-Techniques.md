@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "DotNet YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw"
 date: 2025-11-12 19:18:18 +00:00
-permalink: "/videos/2025-11-12-Visual-Studio-Debugger-Advanced-Techniques.html"
+permalink: "/2025-11-12-Visual-Studio-Debugger-Advanced-Techniques.html"
 categories: ["AI", "Coding"]
 tags: [".NET", ".NET 10", ".NET MAUI 10", "AI", "AI Debugging", "ASP.NET Core 10", "Async Code", "C# 14", "Code Troubleshooting", "Coding", "Conditional Breakpoints", "Data Breakpoints", "Debugging", "Developer Productivity", "F# 10", "Immediate Window", "Memory Analysis", "Tracepoints", "Videos", "VS", "Watch Window"]
 tags_normalized: ["dotnet", "dotnet 10", "dotnet maui 10", "ai", "ai debugging", "aspdotnet core 10", "async code", "csharp 14", "code troubleshooting", "coding", "conditional breakpoints", "data breakpoints", "debugging", "developer productivity", "fsharp 10", "immediate window", "memory analysis", "tracepoints", "videos", "vs", "watch window"]

@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Fabric Blog"
 feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
 date: 2025-10-14 10:00:00 +00:00
-permalink: "/news/2025-10-14-Sourcing-Schema-Driven-Events-from-EventHub-into-Fabric-Eventstreams-Preview.html"
+permalink: "/2025-10-14-Sourcing-Schema-Driven-Events-from-EventHub-into-Fabric-Eventstreams-Preview.html"
 categories: ["Azure", "ML"]
 tags: ["Analytics", "Avro Schema", "Azure", "Azure EventHub", "Data Governance", "Data Quality", "Event Processing", "Eventhouse", "Eventstream", "KQL", "Microsoft Fabric", "ML", "News", "Payload Modeling", "Pipeline Validation", "Real Time Intelligence", "Schema Registry", "Type Safety"]
 tags_normalized: ["analytics", "avro schema", "azure", "azure eventhub", "data governance", "data quality", "event processing", "eventhouse", "eventstream", "kql", "microsoft fabric", "ml", "news", "payload modeling", "pipeline validation", "real time intelligence", "schema registry", "type safety"]

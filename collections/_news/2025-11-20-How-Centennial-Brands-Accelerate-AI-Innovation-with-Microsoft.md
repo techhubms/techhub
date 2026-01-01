@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft News"
 feed_url: "https://news.microsoft.com/source/feed/"
 date: 2025-11-20 16:56:02 +00:00
-permalink: "/news/2025-11-20-How-Centennial-Brands-Accelerate-AI-Innovation-with-Microsoft.html"
+permalink: "/2025-11-20-How-Centennial-Brands-Accelerate-AI-Innovation-with-Microsoft.html"
 categories: ["AI", "Azure", "ML"]
 tags: ["Agribusiness Technology", "AI", "AI Agent", "Azure", "Azure OpenAI", "Cloud Migration", "Company News", "Data Analytics", "Digital Assistant", "Digital Transformation", "Enterprise AI", "Financial Services Technology", "Generative AI", "Institutional Knowledge", "Kraft Heinz", "Land O’Lakes", "Levi Strauss & Co.", "Machine Learning", "Microsoft AI", "ML", "News", "Production Optimization", "Retail Innovation", "Supply Chain", "Wells Fargo"]
 tags_normalized: ["agribusiness technology", "ai", "ai agent", "azure", "azure openai", "cloud migration", "company news", "data analytics", "digital assistant", "digital transformation", "enterprise ai", "financial services technology", "generative ai", "institutional knowledge", "kraft heinz", "land olakes", "levi strauss and codot", "machine learning", "microsoft ai", "ml", "news", "production optimization", "retail innovation", "supply chain", "wells fargo"]

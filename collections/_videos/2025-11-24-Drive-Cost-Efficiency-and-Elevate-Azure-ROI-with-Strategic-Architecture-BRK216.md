@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Events YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
 date: 2025-11-24 08:15:56 +00:00
-permalink: "/videos/2025-11-24-Drive-Cost-Efficiency-and-Elevate-Azure-ROI-with-Strategic-Architecture-BRK216.html"
+permalink: "/2025-11-24-Drive-Cost-Efficiency-and-Elevate-Azure-ROI-with-Strategic-Architecture-BRK216.html"
 categories: ["AI", "Azure"]
 tags: ["AI", "AKS", "Architecture Optimization", "Automation", "Azure", "Azure Hybrid Benefit", "Business Value", "Cloud Native Apps", "Cloud Optimization", "Copilot", "Cost Efficiency", "InnovatewithAzureAIappsandagents", "Landing Zone", "Microsoft Ignite", "MSIgnite", "Policy Inheritance", "ROI", "Strategic Investments", "Videos"]
 tags_normalized: ["ai", "aks", "architecture optimization", "automation", "azure", "azure hybrid benefit", "business value", "cloud native apps", "cloud optimization", "copilot", "cost efficiency", "innovatewithazureaiappsandagents", "landing zone", "microsoft ignite", "msignite", "policy inheritance", "roi", "strategic investments", "videos"]

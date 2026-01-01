@@ -9,10 +9,10 @@ viewing_mode: "external"
 feed_name: "René van Osnabrugge's Blog"
 feed_url: "https://roadtoalm.com/feed/"
 date: 2025-12-01 13:45:01 +00:00
-permalink: "/blogs/2025-12-01-The-Software-Crisis-Never-Ended-It-Just-Evolved.html"
+permalink: "/2025-12-01-The-Software-Crisis-Never-Ended-It-Just-Evolved.html"
 categories: ["AI", "DevOps"]
-tags: ["Agile", "AI", "AI in Software Development", "Automation", "Cloud Platforms", "Complexity Management", "Continuous Integration", "DevOps", "Distributed Applications", "IaC", "Lifecycle Management", "Monitoring", "Blogs", "Scrum", "Software Crisis", "Software Engineering", "Spiral Model", "Uncategorized", "Waterfall Model"]
-tags_normalized: ["agile", "ai", "ai in software development", "automation", "cloud platforms", "complexity management", "continuous integration", "devops", "distributed applications", "iac", "lifecycle management", "monitoring", "blogs", "scrum", "software crisis", "software engineering", "spiral model", "uncategorized", "waterfall model"]
+tags: ["Agile", "AI", "AI in Software Development", "Automation", "Blogs", "Cloud Platforms", "Complexity Management", "Continuous Integration", "DevOps", "Distributed Applications", "IaC", "Lifecycle Management", "Monitoring", "Scrum", "Software Crisis", "Software Engineering", "Spiral Model", "Uncategorized", "Waterfall Model"]
+tags_normalized: ["agile", "ai", "ai in software development", "automation", "blogs", "cloud platforms", "complexity management", "continuous integration", "devops", "distributed applications", "iac", "lifecycle management", "monitoring", "scrum", "software crisis", "software engineering", "spiral model", "uncategorized", "waterfall model"]
 ---
 
 Rene van Osnabrugge traces the evolution of the software crisis from the birth of software engineering to the rise of DevOps and the modern challenges that AI now addresses in the development lifecycle.<!--excerpt_end-->

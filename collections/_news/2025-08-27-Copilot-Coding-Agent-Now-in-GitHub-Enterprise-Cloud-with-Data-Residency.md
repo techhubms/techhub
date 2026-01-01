@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/changelog/feed/"
 date: 2025-08-27 14:55:10 +00:00
-permalink: "/news/2025-08-27-Copilot-Coding-Agent-Now-in-GitHub-Enterprise-Cloud-with-Data-Residency.html"
+permalink: "/2025-08-27-Copilot-Coding-Agent-Now-in-GitHub-Enterprise-Cloud-with-Data-Residency.html"
 categories: ["AI", "GitHub Copilot"]
 tags: ["Agent Automation", "AI", "Autonomous Coding", "Copilot Coding Agent", "Data Residency", "Developer Tools", "Enterprise Workflows", "GitHub Copilot", "GitHub Enterprise Cloud", "Issue Assignment", "News", "Pull Requests"]
 tags_normalized: ["agent automation", "ai", "autonomous coding", "copilot coding agent", "data residency", "developer tools", "enterprise workflows", "github copilot", "github enterprise cloud", "issue assignment", "news", "pull requests"]

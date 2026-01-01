@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/changelog/feed/"
 date: 2025-09-16 18:01:54 +00:00
-permalink: "/news/2025-09-16-Dependabot-Adds-Support-for-Conda-Environment-Files.html"
+permalink: "/2025-09-16-Dependabot-Adds-Support-for-Conda-Environment-Files.html"
 categories: ["DevOps", "Security"]
 tags: ["Conda", "Dependabot", "Dependency Graph", "Dependency Management", "Dependency Submission API", "DevOps", "Environment.yml", "GitHub", "GitHub Enterprise Server", "Improvement", "News", "pip", "Python", "Security", "Security Updates", "Software Supply Chain", "Supply Chain Security", "Vulnerability Management"]
 tags_normalized: ["conda", "dependabot", "dependency graph", "dependency management", "dependency submission api", "devops", "environmentdotyml", "github", "github enterprise server", "improvement", "news", "pip", "python", "security", "security updates", "software supply chain", "supply chain security", "vulnerability management"]

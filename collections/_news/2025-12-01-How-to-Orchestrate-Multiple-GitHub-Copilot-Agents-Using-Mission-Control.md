@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/feed/"
 date: 2025-12-01 17:00:00 +00:00
-permalink: "/news/2025-12-01-How-to-Orchestrate-Multiple-GitHub-Copilot-Agents-Using-Mission-Control.html"
+permalink: "/2025-12-01-How-to-Orchestrate-Multiple-GitHub-Copilot-Agents-Using-Mission-Control.html"
 categories: ["AI", "Coding", "GitHub Copilot"]
 tags: ["Agent Orchestration", "AI", "AI & ML", "AI Agents", "Automation", "Code Review", "Coding", "Copilot Mission Control", "Custom Agents", "GitHub Copilot", "GitHub Copilot Coding Agent", "Mission Control", "News", "Parallel Development", "Prompt Engineering", "Pull Requests", "Session Logs", "Software Development", "Task Assignment", "Unit Testing"]
 tags_normalized: ["agent orchestration", "ai", "ai and ml", "ai agents", "automation", "code review", "coding", "copilot mission control", "custom agents", "github copilot", "github copilot coding agent", "mission control", "news", "parallel development", "prompt engineering", "pull requests", "session logs", "software development", "task assignment", "unit testing"]

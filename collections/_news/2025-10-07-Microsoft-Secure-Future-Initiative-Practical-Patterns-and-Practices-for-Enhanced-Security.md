@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft News"
 feed_url: "https://news.microsoft.com/source/feed/"
 date: 2025-10-07 16:56:53 +00:00
-permalink: "/news/2025-10-07-Microsoft-Secure-Future-Initiative-Practical-Patterns-and-Practices-for-Enhanced-Security.html"
+permalink: "/2025-10-07-Microsoft-Secure-Future-Initiative-Practical-Patterns-and-Practices-for-Enhanced-Security.html"
 categories: ["Security"]
 tags: ["Azure AD", "CI/CD Security", "Cloud Security", "Company News", "Conditional Access", "Incident Response", "Log Management", "Microsoft Entra ID", "Microsoft Secure Future Initiative", "Multifactor Authentication", "Network Isolation", "News", "Security", "Security Architecture", "Security Patterns", "Software Supply Chain", "Tenant Security", "Zero Trust"]
 tags_normalized: ["azure ad", "cislashcd security", "cloud security", "company news", "conditional access", "incident response", "log management", "microsoft entra id", "microsoft secure future initiative", "multifactor authentication", "network isolation", "news", "security", "security architecture", "security patterns", "software supply chain", "tenant security", "zero trust"]

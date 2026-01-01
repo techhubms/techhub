@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Learn Microsoft AI Youtube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCQf_yRJpsfyEiWWpt1MZ6vA"
 date: 2025-04-30 02:30:13 +00:00
-permalink: "/videos/2025-04-30-Connecting-to-a-Local-MCP-Server-Using-MicrosoftExtensionsAI.html"
+permalink: "/2025-04-30-Connecting-to-a-Local-MCP-Server-Using-MicrosoftExtensionsAI.html"
 categories: ["AI"]
 tags: ["AI", "AI Integration", "Application Integration", "Client Configuration", "MCP", "Microsoft AI", "Microsoft.Extensions.AI", "Model Context", "Real Time Processing", "Semantic Kernel", "Videos"]
 tags_normalized: ["ai", "ai integration", "application integration", "client configuration", "mcp", "microsoft ai", "microsoftdotextensionsdotai", "model context", "real time processing", "semantic kernel", "videos"]

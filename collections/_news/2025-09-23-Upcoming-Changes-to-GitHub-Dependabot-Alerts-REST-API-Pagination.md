@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/changelog/feed/"
 date: 2025-09-23 15:35:24 +00:00
-permalink: "/news/2025-09-23-Upcoming-Changes-to-GitHub-Dependabot-Alerts-REST-API-Pagination.html"
+permalink: "/2025-09-23-Upcoming-Changes-to-GitHub-Dependabot-Alerts-REST-API-Pagination.html"
 categories: ["DevOps", "Security"]
 tags: ["API Changes", "API Documentation", "Automation", "Cursor Based Pagination", "DevOps", "GitHub Dependabot", "Integration", "News", "Offset Based Pagination", "Pagination", "REST API", "Retired", "Security", "Security API", "Supply Chain Security"]
 tags_normalized: ["api changes", "api documentation", "automation", "cursor based pagination", "devops", "github dependabot", "integration", "news", "offset based pagination", "pagination", "rest api", "retired", "security", "security api", "supply chain security"]

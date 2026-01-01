@@ -9,10 +9,10 @@ viewing_mode: "external"
 feed_name: "Khalid Abuhakmeh's Blog"
 feed_url: "https://khalidabuhakmeh.com/feed.xml"
 date: 2024-09-10 00:00:00 +00:00
-permalink: "/blogs/2024-09-10-Intersperse-Values-for-Enumerable-Collections-in-C.html"
+permalink: "/2024-09-10-Intersperse-Values-for-Enumerable-Collections-in-C.html"
 categories: ["Coding"]
-tags: [".NET", "C#", "Coding", "Collections", "Extension Methods", "Functional Programming", "IEnumerable", "Intersperse", "Blogs", "Separator", "Standard Library", "Yield"]
-tags_normalized: ["dotnet", "csharp", "coding", "collections", "extension methods", "functional programming", "ienumerable", "intersperse", "blogs", "separator", "standard library", "yield"]
+tags: [".NET", "Blogs", "C#", "Coding", "Collections", "Extension Methods", "Functional Programming", "IEnumerable", "Intersperse", "Separator", "Standard Library", "Yield"]
+tags_normalized: ["dotnet", "blogs", "csharp", "coding", "collections", "extension methods", "functional programming", "ienumerable", "intersperse", "separator", "standard library", "yield"]
 ---
 
 In this post, Khalid Abuhakmeh explores how to create an 'intersperse' extension method for IEnumerable in C#, inspired by a JavaScript utility. The article includes code samples, expected outputs, and a detailed explanation of the implementation.<!--excerpt_end-->

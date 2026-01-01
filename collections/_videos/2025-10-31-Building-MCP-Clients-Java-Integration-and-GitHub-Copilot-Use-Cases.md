@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Developer YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
 date: 2025-10-31 00:00:22 +00:00
-permalink: "/videos/2025-10-31-Building-MCP-Clients-Java-Integration-and-GitHub-Copilot-Use-Cases.html"
+permalink: "/2025-10-31-Building-MCP-Clients-Java-Integration-and-GitHub-Copilot-Use-Cases.html"
 categories: ["AI", "Coding", "GitHub Copilot"]
 tags: ["Agent Mode", "AI", "AI Integration", "AIIntegration", "AITools", "Chat Applications", "ChatApplications", "Client Server", "Coding", "Copilot Integration", "Dev Tools", "GitHub Copilot", "Java", "Java Development", "JavaClient", "JavaDevelopment", "LangChain4j", "Llama", "LlamaAI", "Local LLM", "LocalLLM", "MCP", "MCP Inspector", "Videos", "VS Code"]
 tags_normalized: ["agent mode", "ai", "ai integration", "aiintegration", "aitools", "chat applications", "chatapplications", "client server", "coding", "copilot integration", "dev tools", "github copilot", "java", "java development", "javaclient", "javadevelopment", "langchain4j", "llama", "llamaai", "local llm", "localllm", "mcp", "mcp inspector", "videos", "vs code"]

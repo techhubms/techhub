@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Developer YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
 date: 2025-09-05 17:29:28 +00:00
-permalink: "/videos/2025-09-05-From-Issue-to-PR-Asynchronously-Develop-with-GitHub-Copilot-Coding-Agent.html"
+permalink: "/2025-09-05-From-Issue-to-PR-Asynchronously-Develop-with-GitHub-Copilot-Coding-Agent.html"
 categories: ["AI", "Coding", "DevOps", "GitHub Copilot"]
 tags: ["Agent Command Center", "AI", "AI Code Generation", "Automated Testing", "Autonomous Agents", "Azure AI", "Cloud Computing", "Coding", "Coding Agent", "Coding Automation", "Dev", "Developer Productivity", "Development", "DevOps", "GitHub", "GitHub Copilot", "MCP", "Microsoft", "Playwright Integration", "PR Automation", "Software Development", "Tech", "Technology", "Videos"]
 tags_normalized: ["agent command center", "ai", "ai code generation", "automated testing", "autonomous agents", "azure ai", "cloud computing", "coding", "coding agent", "coding automation", "dev", "developer productivity", "development", "devops", "github", "github copilot", "mcp", "microsoft", "playwright integration", "pr automation", "software development", "tech", "technology", "videos"]

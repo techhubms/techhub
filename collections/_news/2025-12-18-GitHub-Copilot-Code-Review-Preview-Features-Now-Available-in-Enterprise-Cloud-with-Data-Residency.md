@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/changelog/feed/"
 date: 2025-12-18 14:51:52 +00:00
-permalink: "/news/2025-12-18-GitHub-Copilot-Code-Review-Preview-Features-Now-Available-in-Enterprise-Cloud-with-Data-Residency.html"
+permalink: "/2025-12-18-GitHub-Copilot-Code-Review-Preview-Features-Now-Available-in-Enterprise-Cloud-with-Data-Residency.html"
 categories: ["AI", "GitHub Copilot"]
 tags: ["Agentic Code Review", "AI", "AI Powered Code Review", "Code Review Automation", "CodeQL", "Copilot", "Copilot Code Review", "Data Residency", "Developer Tools", "ESLint", "GitHub Copilot", "GitHub Enterprise Cloud", "Improvement", "News", "Pull Requests"]
 tags_normalized: ["agentic code review", "ai", "ai powered code review", "code review automation", "codeql", "copilot", "copilot code review", "data residency", "developer tools", "eslint", "github copilot", "github enterprise cloud", "improvement", "news", "pull requests"]

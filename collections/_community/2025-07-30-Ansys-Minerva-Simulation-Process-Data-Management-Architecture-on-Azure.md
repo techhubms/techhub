@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-07-30 21:17:02 +00:00
-permalink: "/community/2025-07-30-Ansys-Minerva-Simulation-Process-Data-Management-Architecture-on-Azure.html"
+permalink: "/2025-07-30-Ansys-Minerva-Simulation-Process-Data-Management-Architecture-on-Azure.html"
 categories: ["Azure", "Security"]
 tags: ["Ansys Minerva", "Azure", "Backup Strategy", "Cloud Architecture", "Community", "Ddv5", "High Availability", "Infrastructure", "Security", "Simulation Data Management", "SQL Server", "Virtual Machines"]
 tags_normalized: ["ansys minerva", "azure", "backup strategy", "cloud architecture", "community", "ddv5", "high availability", "infrastructure", "security", "simulation data management", "sql server", "virtual machines"]

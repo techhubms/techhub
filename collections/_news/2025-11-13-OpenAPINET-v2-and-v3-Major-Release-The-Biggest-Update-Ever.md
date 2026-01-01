@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft OpenAPI Blog"
 feed_url: "https://devblogs.microsoft.com/openapi/feed/"
 date: 2025-11-13 20:53:01 +00:00
-permalink: "/news/2025-11-13-OpenAPINET-v2-and-v3-Major-Release-The-Biggest-Update-Ever.html"
+permalink: "/2025-11-13-OpenAPINET-v2-and-v3-Major-Release-The-Biggest-Update-Ever.html"
 categories: ["Coding"]
 tags: [".NET", "API Documentation", "ASP.NET Core", "Coding", "Microsoft", "News", "NSwag", "Open Source", "OpenAPI", "OpenAPI Specification", "OpenAPI V3.1", "OpenAPI V3.2", "OpenAPI.NET", "Performance Optimization", "Semantic Kernel", "Serialization", "Swashbuckle", "System.Text.Json"]
 tags_normalized: ["dotnet", "api documentation", "aspdotnet core", "coding", "microsoft", "news", "nswag", "open source", "openapi", "openapi specification", "openapi v3dot1", "openapi v3dot2", "openapidotnet", "performance optimization", "semantic kernel", "serialization", "swashbuckle", "systemdottextdotjson"]

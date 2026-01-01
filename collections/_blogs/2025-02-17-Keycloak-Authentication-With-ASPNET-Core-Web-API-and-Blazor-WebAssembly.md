@@ -9,10 +9,10 @@ viewing_mode: "external"
 feed_name: "Code Maze Blog"
 feed_url: "https://code-maze.com/feed/"
 date: 2025-02-17 07:59:06 +00:00
-permalink: "/blogs/2025-02-17-Keycloak-Authentication-with-ASPNET-Core-Web-API-and-Blazor-WebAssembly.html"
+permalink: "/2025-02-17-Keycloak-Authentication-With-ASPNET-Core-Web-API-and-Blazor-WebAssembly.html"
 categories: ["Coding", "Security"]
-tags: [".NET", "ASP.NET Core", "Asp.net Core Web API", "Authentication", "Authorization", "Blazor WebAssembly", "Coding", "Docker", "HttpClientFactory", "Identity And Access Management", "JWT", "Keycloak", "Microsoft.AspNetCore.Authentication.JwtBearer", "Microsoft.AspNetCore.Components.WebAssembly.Authentication", "OAuth2", "OpenID Connect", "Blogs", "Security", "Web API"]
-tags_normalized: ["dotnet", "aspdotnet core", "aspdotnet core web api", "authentication", "authorization", "blazor webassembly", "coding", "docker", "httpclientfactory", "identity and access management", "jwt", "keycloak", "microsoftdotaspnetcoredotauthenticationdotjwtbearer", "microsoftdotaspnetcoredotcomponentsdotwebassemblydotauthentication", "oauth2", "openid connect", "blogs", "security", "web api"]
+tags: [".NET", "ASP.NET Core", "Asp.net Core Web API", "Authentication", "Authorization", "Blazor WebAssembly", "Blogs", "Coding", "Docker", "HttpClientFactory", "Identity And Access Management", "JWT", "Keycloak", "Microsoft.AspNetCore.Authentication.JwtBearer", "Microsoft.AspNetCore.Components.WebAssembly.Authentication", "OAuth2", "OpenID Connect", "Security", "Web API"]
+tags_normalized: ["dotnet", "aspdotnet core", "aspdotnet core web api", "authentication", "authorization", "blazor webassembly", "blogs", "coding", "docker", "httpclientfactory", "identity and access management", "jwt", "keycloak", "microsoftdotaspnetcoredotauthenticationdotjwtbearer", "microsoftdotaspnetcoredotcomponentsdotwebassemblydotauthentication", "oauth2", "openid connect", "security", "web api"]
 ---
 
 In this article, Marinko Spasojević details how to integrate Keycloak authentication with both a Blazor WebAssembly client application and an ASP.NET Core Web API backend, providing step-by-step guidance and sample configurations.<!--excerpt_end-->

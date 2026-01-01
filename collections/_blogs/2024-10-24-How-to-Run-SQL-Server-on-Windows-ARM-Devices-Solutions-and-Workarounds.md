@@ -9,10 +9,10 @@ viewing_mode: "external"
 feed_name: "Rick Strahl's Blog"
 feed_url: "https://feeds.feedburner.com/rickstrahl"
 date: 2024-10-24 21:59:54 +00:00
-permalink: "/blogs/2024-10-24-How-to-Run-SQL-Server-on-Windows-ARM-Devices-Solutions-and-Workarounds.html"
+permalink: "/2024-10-24-How-to-Run-SQL-Server-on-Windows-ARM-Devices-Solutions-and-Workarounds.html"
 categories: ["Azure", "Coding"]
-tags: [".NET", "ARM64", "Azure", "Azure Data Studio", "Azure SQL Edge", "Coding", "Database Development", "Docker", "Emulation", "LocalDb", "Named Pipes", "Blogs", "SnapDragon X Elite", "SQL Server", "SQL Server Express", "VS", "Windows", "Windows 11", "Windows ARM"]
-tags_normalized: ["dotnet", "arm64", "azure", "azure data studio", "azure sql edge", "coding", "database development", "docker", "emulation", "localdb", "named pipes", "blogs", "snapdragon x elite", "sql server", "sql server express", "vs", "windows", "windows 11", "windows arm"]
+tags: [".NET", "ARM64", "Azure", "Azure Data Studio", "Azure SQL Edge", "Blogs", "Coding", "Database Development", "Docker", "Emulation", "LocalDb", "Named Pipes", "SnapDragon X Elite", "SQL Server", "SQL Server Express", "VS", "Windows", "Windows 11", "Windows ARM"]
+tags_normalized: ["dotnet", "arm64", "azure", "azure data studio", "azure sql edge", "blogs", "coding", "database development", "docker", "emulation", "localdb", "named pipes", "snapdragon x elite", "sql server", "sql server express", "vs", "windows", "windows 11", "windows arm"]
 ---
 
 In this post, Rick Strahl shares his journey and solutions for running SQL Server on a Windows ARM device, providing practical techniques, troubleshooting steps, and community-sourced insight relevant for .NET and SQL Server developers.<!--excerpt_end-->

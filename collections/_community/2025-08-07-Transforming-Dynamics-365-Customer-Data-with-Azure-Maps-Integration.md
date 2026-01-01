@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-08-07 17:20:42 +00:00
-permalink: "/community/2025-08-07-Transforming-Dynamics-365-Customer-Data-with-Azure-Maps-Integration.html"
+permalink: "/2025-08-07-Transforming-Dynamics-365-Customer-Data-with-Azure-Maps-Integration.html"
 categories: ["Azure"]
 tags: ["API", "Azure", "Azure Maps", "Bing Maps", "Clustering", "Community", "CRM Data Transformation", "CRM Integration", "Data Visualization", "Dataverse", "Field Planning", "Geo Analytics", "Geocoding", "Location Intelligence", "Maplytics", "Microsoft Dynamics 365", "Power Apps", "Proximity Search", "Route Optimization", "Sales Productivity", "Service Management", "Spatial Analytics"]
 tags_normalized: ["api", "azure", "azure maps", "bing maps", "clustering", "community", "crm data transformation", "crm integration", "data visualization", "dataverse", "field planning", "geo analytics", "geocoding", "location intelligence", "maplytics", "microsoft dynamics 365", "power apps", "proximity search", "route optimization", "sales productivity", "service management", "spatial analytics"]

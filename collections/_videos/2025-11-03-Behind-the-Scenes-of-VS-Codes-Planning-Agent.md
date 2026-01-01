@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Visual Studio Code YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SLNwkd3w"
 date: 2025-11-03 08:00:35 +00:00
-permalink: "/videos/2025-11-03-Behind-the-Scenes-of-VS-Codes-Planning-Agent.html"
+permalink: "/2025-11-03-Behind-the-Scenes-of-VS-Codes-Planning-Agent.html"
 categories: ["AI", "Coding"]
 tags: ["AI", "AI Agents", "Automation", "Bhavya", "Chat Planning", "Coding", "Copilot Chat", "Developer Tools", "Extension", "Productivity Tools", "Software Engineering", "Task Planning", "Videos", "VS Code"]
 tags_normalized: ["ai", "ai agents", "automation", "bhavya", "chat planning", "coding", "copilot chat", "developer tools", "extension", "productivity tools", "software engineering", "task planning", "videos", "vs code"]

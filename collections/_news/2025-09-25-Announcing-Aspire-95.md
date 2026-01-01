@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft .NET Blog"
 feed_url: "https://devblogs.microsoft.com/dotnet/feed/"
 date: 2025-09-25 17:25:00 +00:00
-permalink: "/news/2025-09-25-Announcing-Aspire-95.html"
+permalink: "/2025-09-25-Announcing-Aspire-95.html"
 categories: ["AI", "Coding", "DevOps"]
 tags: [".NET", ".NET 10", ".NET Aspire", "AI", "AI Integrations", "AppHost", "Aspire", "Aspire CLI", "Azure AI Foundry", "CLI", "Cloud Native", "Coding", "Containers", "Dashboards", "DevOps", "DevTunnels", "Distributed Applications", "GitHub Models", "News", "OpenAI", "VS", "YARP"]
 tags_normalized: ["dotnet", "dotnet 10", "dotnet aspire", "ai", "ai integrations", "apphost", "aspire", "aspire cli", "azure ai foundry", "cli", "cloud native", "coding", "containers", "dashboards", "devops", "devtunnels", "distributed applications", "github models", "news", "openai", "vs", "yarp"]

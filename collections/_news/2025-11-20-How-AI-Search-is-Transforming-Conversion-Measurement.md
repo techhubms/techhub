@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft News"
 feed_url: "https://news.microsoft.com/source/feed/"
 date: 2025-11-20 18:05:30 +00:00
-permalink: "/news/2025-11-20-How-AI-Search-is-Transforming-Conversion-Measurement.html"
+permalink: "/2025-11-20-How-AI-Search-is-Transforming-Conversion-Measurement.html"
 categories: ["AI"]
 tags: ["AI", "AI Powered Experiences", "AI Search", "Bing", "Bing Webmaster Tools", "Citations", "Company News", "Conversion Tracking", "Copilot Sessions", "Engagement Signals", "Metrics", "Microsoft Clarity", "Microsoft Copilot", "News", "Schema Markup", "Structured Content", "User Intent", "Visibility Signals", "Zero Click Visibility"]
 tags_normalized: ["ai", "ai powered experiences", "ai search", "bing", "bing webmaster tools", "citations", "company news", "conversion tracking", "copilot sessions", "engagement signals", "metrics", "microsoft clarity", "microsoft copilot", "news", "schema markup", "structured content", "user intent", "visibility signals", "zero click visibility"]

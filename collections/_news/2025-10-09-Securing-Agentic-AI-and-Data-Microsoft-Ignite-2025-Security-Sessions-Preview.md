@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Security Blog"
 feed_url: "https://www.microsoft.com/en-us/security/blog/feed/"
 date: 2025-10-09 16:00:00 +00:00
-permalink: "/news/2025-10-09-Securing-Agentic-AI-and-Data-Microsoft-Ignite-2025-Security-Sessions-Preview.html"
+permalink: "/2025-10-09-Securing-Agentic-AI-and-Data-Microsoft-Ignite-2025-Security-Sessions-Preview.html"
 categories: ["AI", "Azure", "Security"]
 tags: ["Agentic AI", "AI", "Azure", "Certification", "Cloud Security", "Compliance", "Data Protection", "Hands On Labs", "Identity Protection", "Insider Risk Management", "Microsoft Defender", "Microsoft Entra", "Microsoft Ignite", "Microsoft Purview", "Microsoft Security", "Microsoft Sentinel", "MISA", "News", "Security", "Security Copilot", "Security Operations Center", "Security Posture Management", "Threat Detection", "Zero Trust"]
 tags_normalized: ["agentic ai", "ai", "azure", "certification", "cloud security", "compliance", "data protection", "hands on labs", "identity protection", "insider risk management", "microsoft defender", "microsoft entra", "microsoft ignite", "microsoft purview", "microsoft security", "microsoft sentinel", "misa", "news", "security", "security copilot", "security operations center", "security posture management", "threat detection", "zero trust"]

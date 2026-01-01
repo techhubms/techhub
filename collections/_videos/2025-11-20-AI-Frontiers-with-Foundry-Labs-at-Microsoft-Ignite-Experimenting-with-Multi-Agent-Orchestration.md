@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Events YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
 date: 2025-11-20 16:34:55 +00:00
-permalink: "/videos/2025-11-20-AI-Frontiers-with-Foundry-Labs-at-Microsoft-Ignite-Experimenting-with-Multi-Agent-Orchestration.html"
+permalink: "/2025-11-20-AI-Frontiers-with-Foundry-Labs-at-Microsoft-Ignite-Experimenting-with-Multi-Agent-Orchestration.html"
 categories: ["AI", "Azure"]
 tags: ["3D Object Generation", "Agent Factory", "AI", "AI Agents", "Aurora", "Autogen Framework", "Azure", "Azure AI", "Azure AI Search", "Enterprise AI", "Fine Tuning", "InnovatewithAzureAIappsandagents", "Microsoft Foundry Labs", "Microsoft Research", "MMCT Agent", "MSIgnite", "Multi Agent Orchestration", "Planner Critic Architecture", "Trellis", "Videos", "Weather Modeling"]
 tags_normalized: ["3d object generation", "agent factory", "ai", "ai agents", "aurora", "autogen framework", "azure", "azure ai", "azure ai search", "enterprise ai", "fine tuning", "innovatewithazureaiappsandagents", "microsoft foundry labs", "microsoft research", "mmct agent", "msignite", "multi agent orchestration", "planner critic architecture", "trellis", "videos", "weather modeling"]

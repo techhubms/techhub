@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Fabric Blog"
 feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
 date: 2025-10-13 11:00:00 +00:00
-permalink: "/news/2025-10-13-Gain-End-to-End-Visibility-into-Data-Activity-Using-OneLake-Diagnostics.html"
+permalink: "/2025-10-13-Gain-End-to-End-Visibility-into-Data-Activity-Using-OneLake-Diagnostics.html"
 categories: ["Azure", "ML", "Security"]
 tags: ["Azure", "Azure Blob Storage", "Compliance", "Data Activity", "Data Governance", "Data Lake", "Data Management", "Diagnostics", "JSON Logs", "Lakehouse", "Microsoft Fabric", "Microsoft Purview", "ML", "News", "OneLake", "Power BI", "Security", "Security Monitoring", "Spark", "Workspace Monitoring"]
 tags_normalized: ["azure", "azure blob storage", "compliance", "data activity", "data governance", "data lake", "data management", "diagnostics", "json logs", "lakehouse", "microsoft fabric", "microsoft purview", "ml", "news", "onelake", "power bi", "security", "security monitoring", "spark", "workspace monitoring"]

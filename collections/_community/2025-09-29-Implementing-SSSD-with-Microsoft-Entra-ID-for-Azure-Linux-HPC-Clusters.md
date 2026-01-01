@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-09-29 17:50:46 +00:00
-permalink: "/community/2025-09-29-Implementing-SSSD-with-Microsoft-Entra-ID-for-Azure-Linux-HPC-Clusters.html"
+permalink: "/2025-09-29-Implementing-SSSD-with-Microsoft-Entra-ID-for-Azure-Linux-HPC-Clusters.html"
 categories: ["Azure", "Security"]
 tags: ["Ansible", "App Registration", "Azure", "Azure Linux", "Cluster Configuration", "Community", "Graph API", "HPC", "Identity Management", "Linux Authentication", "Microsoft Entra ID", "MPI", "NSSwitch", "OAuth2", "OpenID Connect", "RPM", "Security", "Slurm", "SSSD", "User Provisioning"]
 tags_normalized: ["ansible", "app registration", "azure", "azure linux", "cluster configuration", "community", "graph api", "hpc", "identity management", "linux authentication", "microsoft entra id", "mpi", "nsswitch", "oauth2", "openid connect", "rpm", "security", "slurm", "sssd", "user provisioning"]

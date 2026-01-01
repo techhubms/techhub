@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Visual Studio Code Releases"
 feed_url: "https://code.visualstudio.com/feed.xml"
 date: 2025-10-09 17:00:00 +00:00
-permalink: "/news/2025-10-09-Visual-Studio-Code-September-2025-Release-v1105-AI-MCP-and-Developer-Enhancements.html"
+permalink: "/2025-10-09-Visual-Studio-Code-September-2025-Release-v1105-AI-MCP-and-Developer-Enhancements.html"
 categories: ["AI", "Coding", "DevOps", "GitHub Copilot"]
 tags: ["Accessibility", "Agent Tools", "AI", "AI Assisted Development", "Authentication", "Chat Sessions", "Code Coverage", "Coding", "Developer Productivity", "DevOps", "DevOps Tools", "Extensions", "GitHub Copilot", "MCP", "MCP Marketplace", "Merge Conflict Resolution", "News", "OS Notifications", "Pull Requests", "Python", "Terminal Commands", "Testing", "VS Code", "VS Code 1.105"]
 tags_normalized: ["accessibility", "agent tools", "ai", "ai assisted development", "authentication", "chat sessions", "code coverage", "coding", "developer productivity", "devops", "devops tools", "extensions", "github copilot", "mcp", "mcp marketplace", "merge conflict resolution", "news", "os notifications", "pull requests", "python", "terminal commands", "testing", "vs code", "vs code 1dot105"]

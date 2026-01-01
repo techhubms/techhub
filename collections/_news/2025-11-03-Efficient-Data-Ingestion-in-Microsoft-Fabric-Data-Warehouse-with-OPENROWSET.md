@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Fabric Blog"
 feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
 date: 2025-11-03 10:00:00 +00:00
-permalink: "/news/2025-11-03-Efficient-Data-Ingestion-in-Microsoft-Fabric-Data-Warehouse-with-OPENROWSET.html"
+permalink: "/2025-11-03-Efficient-Data-Ingestion-in-Microsoft-Fabric-Data-Warehouse-with-OPENROWSET.html"
 categories: ["Azure", "ML"]
 tags: ["Auditing", "Azure", "Azure Storage", "COPY INTO", "CSV", "Data Ingestion", "Data Warehouse", "ELT", "ETL", "INSERT Statement", "JSONL", "Metadata Extraction", "Microsoft Fabric", "ML", "News", "OneLake", "OPENROWSET", "Parquet", "Partitioned Data", "Schema Inference", "T SQL", "Table Creation", "Transformation", "TSV"]
 tags_normalized: ["auditing", "azure", "azure storage", "copy into", "csv", "data ingestion", "data warehouse", "elt", "etl", "insert statement", "jsonl", "metadata extraction", "microsoft fabric", "ml", "news", "onelake", "openrowset", "parquet", "partitioned data", "schema inference", "t sql", "table creation", "transformation", "tsv"]

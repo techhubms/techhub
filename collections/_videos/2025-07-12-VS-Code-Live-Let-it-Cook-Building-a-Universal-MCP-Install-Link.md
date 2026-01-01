@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Visual Studio Code YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SLNwkd3w"
 date: 2025-07-12 04:27:01 +00:00
-permalink: "/videos/2025-07-12-VS-Code-Live-Let-it-Cook-Building-a-Universal-MCP-Install-Link.html"
+permalink: "/2025-07-12-VS-Code-Live-Let-it-Cook-Building-a-Universal-MCP-Install-Link.html"
 categories: ["DevOps", "Coding"]
 tags: ["Burke Holland", "Centralized Installation", "Coding", "Deep Linking", "Developer Tools", "DevOps", "Install Link", "Installation Directions", "Microsoft Certified Projects", "Netlify", "Pierce Boggan", "Repository Badges", "Sean Roberts", "Vibecoding", "Videos", "VS Code"]
 tags_normalized: ["burke holland", "centralized installation", "coding", "deep linking", "developer tools", "devops", "install link", "installation directions", "microsoft certified projects", "netlify", "pierce boggan", "repository badges", "sean roberts", "vibecoding", "videos", "vs code"]

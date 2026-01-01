@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Developer YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
 date: 2025-08-05 07:00:27 +00:00
-permalink: "/videos/2025-08-05-Implementing-a-Center-of-Excellence-for-Generative-AI.html"
+permalink: "/2025-08-05-Implementing-a-Center-of-Excellence-for-Generative-AI.html"
 categories: ["AI", "Azure"]
 tags: ["AI", "AI Center Of Excellence", "AI Governance", "AI Resources", "AI Strategy", "Azure", "Azure Essentials", "Azure Well Architected Framework", "Continuous Improvement", "Ethical AI", "Generative AI", "Microsoft Azure", "Microsoft Cloud Adoption Framework", "Organizational Adoption", "Team Structure", "Videos"]
 tags_normalized: ["ai", "ai center of excellence", "ai governance", "ai resources", "ai strategy", "azure", "azure essentials", "azure well architected framework", "continuous improvement", "ethical ai", "generative ai", "microsoft azure", "microsoft cloud adoption framework", "organizational adoption", "team structure", "videos"]

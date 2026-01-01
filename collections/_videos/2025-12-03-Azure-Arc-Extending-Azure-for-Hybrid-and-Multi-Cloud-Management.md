@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Events YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
 date: 2025-12-03 21:32:15 +00:00
-permalink: "/videos/2025-12-03-Azure-Arc-Extending-Azure-for-Hybrid-and-Multi-Cloud-Management.html"
+permalink: "/2025-12-03-Azure-Arc-Extending-Azure-for-Hybrid-and-Multi-Cloud-Management.html"
 categories: ["Azure", "DevOps", "Security"]
 tags: ["Azure", "Azure Arc", "Azure Arc: Extending Azure For Hybrid And Multi Cloud Management | BRK183", "BRK183", "Cloud Agents", "Cloud Governance", "Cloud Management", "Cloud Native", "DevOps", "English (us)", "F5n1", "Hybrid Cloud", "Ignite", "Linux", "Microsoft", "Microsoft Ignite", "Migrate And Modernize Your Estate", "Modernization", "Ms Ignite", "Msft Ignite", "Multi Cloud Management", "Operations", "Security", "System Center", "Technical", "Unified Management", "Videos", "Windows"]
 tags_normalized: ["azure", "azure arc", "azure arc extending azure for hybrid and multi cloud management pipe brk183", "brk183", "cloud agents", "cloud governance", "cloud management", "cloud native", "devops", "english us", "f5n1", "hybrid cloud", "ignite", "linux", "microsoft", "microsoft ignite", "migrate and modernize your estate", "modernization", "ms ignite", "msft ignite", "multi cloud management", "operations", "security", "system center", "technical", "unified management", "videos", "windows"]

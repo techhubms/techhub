@@ -9,10 +9,10 @@ viewing_mode: "external"
 feed_name: "DevOps Blog"
 feed_url: "https://devops.com/feed/"
 date: 2025-10-29 18:26:58 +00:00
-permalink: "/blogs/2025-10-29-Survey-Reveals-Security-Risks-in-AI-Generated-Code.html"
+permalink: "/2025-10-29-Survey-Reveals-Security-Risks-in-AI-Generated-Code.html"
 categories: ["AI", "DevOps", "Security"]
-tags: ["AI", "AI Coding Tools", "AI Generated Code", "AI Security", "Aikido Security", "Alert Fatigue", "Application Security", "DevOps", "DevSecOps", "IT Survey", "Penetration Testing", "Blogs", "Security", "Security Automation", "Security Tools", "Social Facebook", "Social LinkedIn", "Social X", "Software Vulnerabilities", "Technical Debt", "Vulnerabilities"]
-tags_normalized: ["ai", "ai coding tools", "ai generated code", "ai security", "aikido security", "alert fatigue", "application security", "devops", "devsecops", "it survey", "penetration testing", "blogs", "security", "security automation", "security tools", "social facebook", "social linkedin", "social x", "software vulnerabilities", "technical debt", "vulnerabilities"]
+tags: ["AI", "AI Coding Tools", "AI Generated Code", "AI Security", "Aikido Security", "Alert Fatigue", "Application Security", "Blogs", "DevOps", "DevSecOps", "IT Survey", "Penetration Testing", "Security", "Security Automation", "Security Tools", "Social Facebook", "Social LinkedIn", "Social X", "Software Vulnerabilities", "Technical Debt", "Vulnerabilities"]
+tags_normalized: ["ai", "ai coding tools", "ai generated code", "ai security", "aikido security", "alert fatigue", "application security", "blogs", "devops", "devsecops", "it survey", "penetration testing", "security", "security automation", "security tools", "social facebook", "social linkedin", "social x", "software vulnerabilities", "technical debt", "vulnerabilities"]
 ---
 
 Mike Vizard presents insights from a survey of IT professionals, revealing the widespread security vulnerabilities found in AI-generated code, and discussing the implications for DevOps and security teams.<!--excerpt_end-->

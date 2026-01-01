@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft News"
 feed_url: "https://news.microsoft.com/source/feed/"
 date: 2025-10-30 16:45:37 +00:00
-permalink: "/news/2025-10-30-Microsoft-Unveils-Partnership-with-TitletownTech-and-NJ-AI-Hub-to-Advance-Scientific-Discovery-via-AI.html"
+permalink: "/2025-10-30-Microsoft-Unveils-Partnership-with-TitletownTech-and-NJ-AI-Hub-to-Advance-Scientific-Discovery-via-AI.html"
 categories: ["AI", "Azure"]
 tags: ["Agentic AI", "AI", "Azure", "Chemistry", "Collaboration", "Company News", "Data Analysis", "Graph Based Knowledge Engine", "High Performance Computing", "Innovation", "Life Sciences", "Manufacturing", "Microsoft Discovery", "New Jersey AI Hub", "News", "On The Issues", "Princeton University", "Quantum", "Scientific Research", "TechSpark", "TitletownTech"]
 tags_normalized: ["agentic ai", "ai", "azure", "chemistry", "collaboration", "company news", "data analysis", "graph based knowledge engine", "high performance computing", "innovation", "life sciences", "manufacturing", "microsoft discovery", "new jersey ai hub", "news", "on the issues", "princeton university", "quantum", "scientific research", "techspark", "titletowntech"]

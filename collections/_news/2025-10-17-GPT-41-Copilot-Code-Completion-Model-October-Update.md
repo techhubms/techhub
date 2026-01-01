@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/changelog/feed/"
 date: 2025-10-17 15:29:48 +00:00
-permalink: "/news/2025-10-17-GPT-41-Copilot-Code-Completion-Model-October-Update.html"
+permalink: "/2025-10-17-GPT-41-Copilot-Code-Completion-Model-October-Update.html"
 categories: ["AI", "GitHub Copilot"]
 tags: ["AI", "AI Code Suggestions", "AI Models", "Code Completion", "Copilot", "Copilot Update", "Developer Productivity", "GitHub Copilot", "GPT 4.1", "Improvement", "Inline Code Suggestions", "Machine Learning", "News", "Software Development Tools"]
 tags_normalized: ["ai", "ai code suggestions", "ai models", "code completion", "copilot", "copilot update", "developer productivity", "github copilot", "gpt 4dot1", "improvement", "inline code suggestions", "machine learning", "news", "software development tools"]

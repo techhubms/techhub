@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Reddit Machine Learning"
 feed_url: "https://www.reddit.com/r/MachineLearning/.rss"
 date: 2025-08-06 12:50:47 +00:00
-permalink: "/community/2025-08-06-GSPO-vs-GRPO-Sequence-Level-Reinforcement-Learning-for-LLM-Fine-Tuning.html"
+permalink: "/2025-08-06-GSPO-vs-GRPO-Sequence-Level-Reinforcement-Learning-for-LLM-Fine-Tuning.html"
 categories: ["AI", "ML"]
 tags: ["AI", "AIME’24", "CodeForces", "Community", "DeepSeek", "Gradient Stability", "GRPO", "GSPO", "LiveCodeBench", "LLM Fine Tuning", "MachineLearning", "Mixture Of Experts", "ML", "Model Convergence", "Policy Optimization", "PPO", "Qwen3", "Reinforcement Learning", "RFT", "RLHF", "Routing Replay", "Scaling Analysis", "Sequence Level Sampling", "Token Level Sampling", "Variance Reduction"]
 tags_normalized: ["ai", "aime24", "codeforces", "community", "deepseek", "gradient stability", "grpo", "gspo", "livecodebench", "llm fine tuning", "machinelearning", "mixture of experts", "ml", "model convergence", "policy optimization", "ppo", "qwen3", "reinforcement learning", "rft", "rlhf", "routing replay", "scaling analysis", "sequence level sampling", "token level sampling", "variance reduction"]

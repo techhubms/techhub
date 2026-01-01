@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "GitHub YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ"
 date: 2025-11-13 15:00:42 +00:00
-permalink: "/videos/2025-11-13-How-AI-and-TypeScript-Are-Shaping-the-Future-of-Software-Development-Insights-from-GitHub-Octoverse-2025.html"
+permalink: "/2025-11-13-How-AI-and-TypeScript-Are-Shaping-the-Future-of-Software-Development-Insights-from-GitHub-Octoverse-2025.html"
 categories: ["AI", "Coding", "DevOps"]
 tags: ["AI", "AI Adoption", "AI Trends", "Code Generation", "Coding", "Coding Practices", "Developer Tools", "DevOps", "Emerging Markets", "GitHub", "Octoverse", "Programming Languages", "Python", "Software Development", "TypeScript", "Videos"]
 tags_normalized: ["ai", "ai adoption", "ai trends", "code generation", "coding", "coding practices", "developer tools", "devops", "emerging markets", "github", "octoverse", "programming languages", "python", "software development", "typescript", "videos"]

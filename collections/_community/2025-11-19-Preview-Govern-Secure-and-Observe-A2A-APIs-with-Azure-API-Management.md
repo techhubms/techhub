@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-11-19 19:21:35 +00:00
-permalink: "/community/2025-11-19-Preview-Govern-Secure-and-Observe-A2A-APIs-with-Azure-API-Management.html"
+permalink: "/2025-11-19-Preview-Govern-Secure-and-Observe-A2A-APIs-with-Azure-API-Management.html"
 categories: ["AI", "Azure", "Security"]
 tags: ["A2A API", "Agent2Agent", "AI", "AI Agent", "API Gateway", "API Governance", "API Integration", "API Observability", "API Policy", "Application Insights", "Azure", "Azure API Management", "Community", "Enterprise Integration", "GenAI", "JSON RPC", "MCP Tools", "OpenTelemetry", "Security"]
 tags_normalized: ["a2a api", "agent2agent", "ai", "ai agent", "api gateway", "api governance", "api integration", "api observability", "api policy", "application insights", "azure", "azure api management", "community", "enterprise integration", "genai", "json rpc", "mcp tools", "opentelemetry", "security"]

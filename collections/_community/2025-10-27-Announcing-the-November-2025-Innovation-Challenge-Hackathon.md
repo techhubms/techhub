@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-10-27 15:22:36 +00:00
-permalink: "/community/2025-10-27-Announcing-the-November-2025-Innovation-Challenge-Hackathon.html"
+permalink: "/2025-10-27-Announcing-the-November-2025-Innovation-Challenge-Hackathon.html"
 categories: ["AI", "Azure"]
 tags: ["AI", "AI Use Cases", "Azure", "Azure AI", "Cloud Computing", "Community", "Community Event", "Developer Community", "Developer Competition", "Diversity in Tech", "Hackathon", "Innovation Challenge", "Microsoft", "Microsoft Azure", "Technical Challenge", "Underrepresented Groups", "Virtual Event"]
 tags_normalized: ["ai", "ai use cases", "azure", "azure ai", "cloud computing", "community", "community event", "developer community", "developer competition", "diversity in tech", "hackathon", "innovation challenge", "microsoft", "microsoft azure", "technical challenge", "underrepresented groups", "virtual event"]

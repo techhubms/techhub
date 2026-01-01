@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-08-15 08:02:40 +00:00
-permalink: "/community/2025-08-15-Building-a-Dual-Transport-MCP-Server-with-NET-STDIO-and-HTTP-Support.html"
+permalink: "/2025-08-15-Building-a-Dual-Transport-MCP-Server-with-NET-STDIO-and-HTTP-Support.html"
 categories: ["Azure", "Coding"]
 tags: [".NET", ".NET Builder Pattern", "ASP.NET", "Azure", "C#", "Coding", "Command Line Arguments", "Community", "Copilot Studio", "Dependency Injection", "Environment Variables", "Host", "HostApplicationBuilder", "HTTP Transport", "IHost", "MCP", "Sample Applications", "Server Deployment", "STDIO Transport", "WebApplication", "WebApplicationBuilder"]
 tags_normalized: ["dotnet", "dotnet builder pattern", "aspdotnet", "azure", "csharp", "coding", "command line arguments", "community", "copilot studio", "dependency injection", "environment variables", "host", "hostapplicationbuilder", "http transport", "ihost", "mcp", "sample applications", "server deployment", "stdio transport", "webapplication", "webapplicationbuilder"]

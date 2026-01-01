@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "GitHub YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ"
 date: 2025-12-09 13:22:36 +00:00
-permalink: "/videos/2025-12-09-Rubber-Duck-Thursdays-Using-GitHub-Copilot-Custom-Agents-to-Address-Tech-Debt.html"
+permalink: "/2025-12-09-Rubber-Duck-Thursdays-Using-GitHub-Copilot-Custom-Agents-to-Address-Tech-Debt.html"
 categories: ["AI", "DevOps", "GitHub Copilot"]
 tags: ["AI", "Automation", "CI/CD", "Custom Agents", "Developer Tools", "DevOps", "GitHub", "GitHub Actions", "GitHub Copilot", "Live Coding", "Refactoring", "Software Maintenance", "Tech Debt", "Videos", "Workflow Automation"]
 tags_normalized: ["ai", "automation", "cislashcd", "custom agents", "developer tools", "devops", "github", "github actions", "github copilot", "live coding", "refactoring", "software maintenance", "tech debt", "videos", "workflow automation"]

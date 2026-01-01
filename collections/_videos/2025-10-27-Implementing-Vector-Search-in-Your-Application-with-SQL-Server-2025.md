@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Developer YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
 date: 2025-10-27 15:57:28 +00:00
-permalink: "/videos/2025-10-27-Implementing-Vector-Search-in-Your-Application-with-SQL-Server-2025.html"
+permalink: "/2025-10-27-Implementing-Vector-Search-in-Your-Application-with-SQL-Server-2025.html"
 categories: ["AI", "Azure", "ML"]
 tags: ["AI", "AI Applications", "Azure", "Azure SQL", "Cloud Computing", "Cloud Database", "Data Ingestion", "Data Platform", "Database Development", "Demo", "Dev", "Development", "Machine Learning", "Microsoft", "Microsoft Data Platform", "ML", "Performance Tuning", "Semantic Search", "SQL Functions", "SQL Server", "Tech", "Technology", "Transact SQL", "Vector Search", "Videos"]
 tags_normalized: ["ai", "ai applications", "azure", "azure sql", "cloud computing", "cloud database", "data ingestion", "data platform", "database development", "demo", "dev", "development", "machine learning", "microsoft", "microsoft data platform", "ml", "performance tuning", "semantic search", "sql functions", "sql server", "tech", "technology", "transact sql", "vector search", "videos"]

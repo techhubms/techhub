@@ -9,7 +9,7 @@ categories: ["AI", "Coding", "DevOps", "GitHub Copilot"]
 feed_name: "Reddit Github Copilot"
 feed_url: "https://www.reddit.com/r/GithubCopilot.rss"
 date: 2025-07-10 15:43:52 +00:00
-permalink: "/community/2025-07-10-Youre-probably-using-Copilot-the-wrong-way.html"
+permalink: "/2025-07-10-Youre-probably-using-Copilot-the-wrong-way.html"
 viewing_mode: "external"
 tags: ["AI", "AI Tools", "Code Generation", "Coding", "Coding Productivity", "Community", "Comparing", "Developer Workflows", "Development Planning", "DevOps", "File Level Planning", "GitHub Copilot", "Software Development", "Sonnet 4", "Traycer"]
 tags_normalized: ["ai", "ai tools", "code generation", "coding", "coding productivity", "community", "comparing", "developer workflows", "development planning", "devops", "file level planning", "github copilot", "software development", "sonnet 4", "traycer"]

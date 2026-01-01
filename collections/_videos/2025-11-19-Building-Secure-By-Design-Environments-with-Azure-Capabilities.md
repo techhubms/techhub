@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Events YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
 date: 2025-11-19 08:05:37 +00:00
-permalink: "/videos/2025-11-19-Building-Secure-By-Design-Environments-with-Azure-Capabilities.html"
+permalink: "/2025-11-19-Building-Secure-By-Design-Environments-with-Azure-Capabilities.html"
 categories: ["Azure", "Security"]
 tags: ["AWS Security Hub", "Azure", "Azure Native Security", "Azure Policies", "Azure Security", "Cloud Compliance", "Cloud Governance", "Cloud Providers", "Cloud Security", "Cross Cloud Security", "Customer Insights", "Environment Guardrails", "Microsoft Ignite", "MSIgnite", "Preventive Policies", "ProtectcloudAIplatformandapps", "Security", "Security By Design", "Security Standards", "Videos"]
 tags_normalized: ["aws security hub", "azure", "azure native security", "azure policies", "azure security", "cloud compliance", "cloud governance", "cloud providers", "cloud security", "cross cloud security", "customer insights", "environment guardrails", "microsoft ignite", "msignite", "preventive policies", "protectcloudaiplatformandapps", "security", "security by design", "security standards", "videos"]

@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft .NET Blog"
 feed_url: "https://devblogs.microsoft.com/dotnet/feed/"
 date: 2025-08-19 17:05:00 +00:00
-permalink: "/news/2025-08-19-Running-GPT-OSS-Locally-in-C-Using-Ollama-and-MicrosoftExtensionsAI.html"
+permalink: "/2025-08-19-Running-GPT-OSS-Locally-in-C-Using-Ollama-and-MicrosoftExtensionsAI.html"
 categories: ["AI", "Coding"]
 tags: [".NET", ".NET 8", "Agentic Apps", "AI", "AI Chatbot", "C#", "Coding", "Console Application", "Function Calling", "Gpt", "Gpt Oss", "Local LLM", "Microsoft.Extensions.AI", "News", "Offline AI", "Ollama", "OllamaSharp", "OpenAI", "Private AI", "Streaming Response"]
 tags_normalized: ["dotnet", "dotnet 8", "agentic apps", "ai", "ai chatbot", "csharp", "coding", "console application", "function calling", "gpt", "gpt oss", "local llm", "microsoftdotextensionsdotai", "news", "offline ai", "ollama", "ollamasharp", "openai", "private ai", "streaming response"]

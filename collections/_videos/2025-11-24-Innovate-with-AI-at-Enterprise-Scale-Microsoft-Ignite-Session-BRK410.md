@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Events YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
 date: 2025-11-24 11:55:10 +00:00
-permalink: "/videos/2025-11-24-Innovate-with-AI-at-Enterprise-Scale-Microsoft-Ignite-Session-BRK410.html"
+permalink: "/2025-11-24-Innovate-with-AI-at-Enterprise-Scale-Microsoft-Ignite-Session-BRK410.html"
 categories: ["AI"]
 tags: ["AI", "AI Agents", "AI Deployment", "AI Guardrails", "AI Market", "AI Strategy", "Business Innovation", "Digital Transformation", "Dynamo AI", "Emma Fusion", "Enterprise AI", "HR Automation", "Microsoft Ignite", "MSIgnite", "Multi Agent Systems", "Other", "Responsible AI", "Risk Management", "Sky Virtual Agent", "Startup Collaboration", "Videos"]
 tags_normalized: ["ai", "ai agents", "ai deployment", "ai guardrails", "ai market", "ai strategy", "business innovation", "digital transformation", "dynamo ai", "emma fusion", "enterprise ai", "hr automation", "microsoft ignite", "msignite", "multi agent systems", "other", "responsible ai", "risk management", "sky virtual agent", "startup collaboration", "videos"]

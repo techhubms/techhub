@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/feed/"
 date: 2025-10-23 18:31:12 +00:00
-permalink: "/news/2025-10-23-Building-a-Faster-Smarter-GitHub-Copilot-with-Custom-Models.html"
+permalink: "/2025-10-23-Building-a-Faster-Smarter-GitHub-Copilot-with-Custom-Models.html"
 categories: ["AI", "GitHub Copilot"]
 tags: ["AI", "AI & ML", "AI Agents", "AI Coding Tools", "AI Powered Development", "Code Completion", "Custom Models", "Developer Tools", "Editor Integration", "Fine Tuning", "GitHub Copilot", "HumanEval", "LLM", "LLM Judge", "Machine Learning Evaluation", "Model Training", "News", "Offline Evaluation", "Real Time Code Suggestions", "Reinforcement Learning", "Unit Testing"]
 tags_normalized: ["ai", "ai and ml", "ai agents", "ai coding tools", "ai powered development", "code completion", "custom models", "developer tools", "editor integration", "fine tuning", "github copilot", "humaneval", "llm", "llm judge", "machine learning evaluation", "model training", "news", "offline evaluation", "real time code suggestions", "reinforcement learning", "unit testing"]

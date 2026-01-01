@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-11-24 19:13:50 +00:00
-permalink: "/community/2025-11-24-Optimizing-Data-Analytics-Costs-with-Azure-Reservations-for-Microsoft-Fabric.html"
+permalink: "/2025-11-24-Optimizing-Data-Analytics-Costs-with-Azure-Reservations-for-Microsoft-Fabric.html"
 categories: ["Azure", "ML"]
 tags: ["Azure", "Azure Advisor", "Azure Marketplace", "Azure Portal", "Azure Reservations", "Capacity Management", "Community", "Cost Optimization", "Data Analytics", "Data Platform", "Fabric Capacity Units", "Machine Learning", "Microsoft Fabric", "ML", "OneLake", "Pricing Model", "Real Time Analytics", "Reservation Best Practices", "SaaS"]
 tags_normalized: ["azure", "azure advisor", "azure marketplace", "azure portal", "azure reservations", "capacity management", "community", "cost optimization", "data analytics", "data platform", "fabric capacity units", "machine learning", "microsoft fabric", "ml", "onelake", "pricing model", "real time analytics", "reservation best practices", "saas"]

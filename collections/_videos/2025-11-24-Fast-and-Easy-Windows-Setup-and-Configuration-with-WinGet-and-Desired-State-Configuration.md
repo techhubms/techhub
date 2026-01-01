@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Events YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
 date: 2025-11-24 12:43:12 +00:00
-permalink: "/videos/2025-11-24-Fast-and-Easy-Windows-Setup-and-Configuration-with-WinGet-and-Desired-State-Configuration.html"
+permalink: "/2025-11-24-Fast-and-Easy-Windows-Setup-and-Configuration-with-WinGet-and-Desired-State-Configuration.html"
 categories: ["Coding", "DevOps"]
 tags: ["Coding", "Command Line Interface", "Configuration as Code", "Configuration Management", "Desired State Configuration", "Developer Tools", "DevOps", "DSC", "Font Management", "IT Automation", "Microsoft Ignite", "MSIgnite", "Open Source", "PowerShell", "ScalewithcloudandAIendpoints", "Terminal Tools", "UI Modernization", "Videos", "VS Code", "Windows Configuration", "WinGet", "Winget Studio"]
 tags_normalized: ["coding", "command line interface", "configuration as code", "configuration management", "desired state configuration", "developer tools", "devops", "dsc", "font management", "it automation", "microsoft ignite", "msignite", "open source", "powershell", "scalewithcloudandaiendpoints", "terminal tools", "ui modernization", "videos", "vs code", "windows configuration", "winget", "winget studio"]

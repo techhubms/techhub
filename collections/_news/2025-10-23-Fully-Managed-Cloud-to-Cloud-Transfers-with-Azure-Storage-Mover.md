@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The Azure Blog"
 feed_url: "https://azure.microsoft.com/en-us/blog/feed/"
 date: 2025-10-23 16:00:00 +00:00
-permalink: "/news/2025-10-23-Fully-Managed-Cloud-to-Cloud-Transfers-with-Azure-Storage-Mover.html"
+permalink: "/2025-10-23-Fully-Managed-Cloud-to-Cloud-Transfers-with-Azure-Storage-Mover.html"
 categories: ["AI", "Azure"]
 tags: ["AI", "AI Workloads", "AWS S3", "Azure", "Azure Active Directory", "Azure Blob Storage", "Azure Monitor", "Azure Portal", "Azure Storage Mover", "Cloud Migration", "Cloud To Cloud", "Data Analytics", "Data Transfer", "Incremental Sync", "Log Analytics", "Multicloud", "News", "NFS", "RBAC", "SMB", "Storage", "Storage Migration"]
 tags_normalized: ["ai", "ai workloads", "aws s3", "azure", "azure active directory", "azure blob storage", "azure monitor", "azure portal", "azure storage mover", "cloud migration", "cloud to cloud", "data analytics", "data transfer", "incremental sync", "log analytics", "multicloud", "news", "nfs", "rbac", "smb", "storage", "storage migration"]

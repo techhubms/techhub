@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Reddit DotNet"
 feed_url: "https://www.reddit.com/r/dotnet/.rss"
 date: 2025-08-07 16:19:11 +00:00
-permalink: "/community/2025-08-07-High-RAM-Usage-Troubleshooting-in-ASPNET-Core-MVC-8-Application.html"
+permalink: "/2025-08-07-High-RAM-Usage-Troubleshooting-in-ASPNET-Core-MVC-8-Application.html"
 categories: ["Coding"]
 tags: [".NET", ".NET 8", "ASP.NET Core", "Caching", "Coding", "Community", "EF Core", "IIS", "Memory Leaks", "Memory Usage", "MVC", "Performance Profiling", "Production Diagnostics", "Thumbnails", "VS", "WinDbg", "Windows Server"]
 tags_normalized: ["dotnet", "dotnet 8", "aspdotnet core", "caching", "coding", "community", "ef core", "iis", "memory leaks", "memory usage", "mvc", "performance profiling", "production diagnostics", "thumbnails", "vs", "windbg", "windows server"]

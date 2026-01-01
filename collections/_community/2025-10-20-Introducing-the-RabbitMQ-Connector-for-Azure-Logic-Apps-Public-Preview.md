@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-10-20 13:52:07 +00:00
-permalink: "/community/2025-10-20-Introducing-the-RabbitMQ-Connector-for-Azure-Logic-Apps-Public-Preview.html"
+permalink: "/2025-10-20-Introducing-the-RabbitMQ-Connector-for-Azure-Logic-Apps-Public-Preview.html"
 categories: ["Azure"]
 tags: ["Azure", "Azure Logic Apps", "BizTalk Modernization", "Clustering", "Community", "Connector", "Exchange", "High Availability", "Hybrid Integration", "Messaging", "On Premises Integration", "Peek Lock", "Publish", "Queue", "Queue Management", "RabbitMQ", "Triggers"]
 tags_normalized: ["azure", "azure logic apps", "biztalk modernization", "clustering", "community", "connector", "exchange", "high availability", "hybrid integration", "messaging", "on premises integration", "peek lock", "publish", "queue", "queue management", "rabbitmq", "triggers"]

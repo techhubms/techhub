@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Events YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
 date: 2025-11-19 13:00:54 +00:00
-permalink: "/videos/2025-11-19-Practical-PostgreSQL-and-LLM-Observability-on-Azure.html"
+permalink: "/2025-11-19-Practical-PostgreSQL-and-LLM-Observability-on-Azure.html"
 categories: ["AI", "Azure", "DevOps"]
 tags: ["AI", "Azure", "Cloud Deployment", "Code Testing", "Dashboards", "Database Misconfiguration", "Database Performance", "Datadog", "DevOps", "GenAI", "LLM", "Microsoft Ignite", "Monitoring", "MSIgnite", "Observability", "Operational Analytics", "Performance Metrics", "PostgresSQL", "SQL Query Debugging", "Unifyyourdataplatform", "Vector Representation", "Videos"]
 tags_normalized: ["ai", "azure", "cloud deployment", "code testing", "dashboards", "database misconfiguration", "database performance", "datadog", "devops", "genai", "llm", "microsoft ignite", "monitoring", "msignite", "observability", "operational analytics", "performance metrics", "postgressql", "sql query debugging", "unifyyourdataplatform", "vector representation", "videos"]

@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft VisualStudio Blog"
 feed_url: "https://devblogs.microsoft.com/visualstudio/feed/"
 date: 2025-12-03 15:00:13 +00:00
-permalink: "/news/2025-12-03-Making-Sense-of-Keyboard-Shortcuts-in-Visual-Studio-2026.html"
+permalink: "/2025-12-03-Making-Sense-of-Keyboard-Shortcuts-in-Visual-Studio-2026.html"
 categories: ["Coding"]
 tags: ["C# Profile", "Coding", "Ctrl+W", "Customization", "Developer Profiles", "IDE Customization", "IDE Settings", "Keybinding", "Keyboard Schemes", "Keyboard Shortcuts", "News", "Productivity", "Scopes", "Sequenced Shortcuts", "Usability", "VS", "Workflow Management"]
 tags_normalized: ["csharp profile", "coding", "ctrlplusw", "customization", "developer profiles", "ide customization", "ide settings", "keybinding", "keyboard schemes", "keyboard shortcuts", "news", "productivity", "scopes", "sequenced shortcuts", "usability", "vs", "workflow management"]

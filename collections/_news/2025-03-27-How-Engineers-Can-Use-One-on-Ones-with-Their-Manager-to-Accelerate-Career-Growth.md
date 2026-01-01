@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "GitHub Engineering Blog"
 feed_url: "https://github.blog/engineering/feed/"
 date: 2025-03-27 15:31:22 +00:00
-permalink: "/news/2025-03-27-How-Engineers-Can-Use-One-on-Ones-with-Their-Manager-to-Accelerate-Career-Growth.html"
+permalink: "/2025-03-27-How-Engineers-Can-Use-One-on-Ones-with-Their-Manager-to-Accelerate-Career-Growth.html"
 categories: ["DevOps"]
 tags: ["Career Development", "Career Growth", "Collaboration", "Developer Skills", "DevOps", "Engineering", "Engineering Management", "Engineering Principles", "Feedback", "Manager Relationships", "Mentorship", "News", "One On One Meetings", "Problem Solving", "Professional Development", "Software Engineers", "Workplace Communication"]
 tags_normalized: ["career development", "career growth", "collaboration", "developer skills", "devops", "engineering", "engineering management", "engineering principles", "feedback", "manager relationships", "mentorship", "news", "one on one meetings", "problem solving", "professional development", "software engineers", "workplace communication"]

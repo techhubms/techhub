@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-11-25 15:25:08 +00:00
-permalink: "/community/2025-11-25-Announcing-AI-Foundry-Agent-Service-Connector-v2-Preview.html"
+permalink: "/2025-11-25-Announcing-AI-Foundry-Agent-Service-Connector-v2-Preview.html"
 categories: ["AI", "Azure"]
 tags: ["Agent Loop", "Agent Orchestration", "AI", "AI Foundry Agent Service", "API Connector", "Automation", "Azure", "Azure Logic Apps", "Business Process Automation", "Community", "Enterprise Integration", "Event Driven Integration", "Integration Services", "Low Code Design", "Microsoft Azure", "Multi Agent Systems", "Operations Monitoring", "SharePoint Integration"]
 tags_normalized: ["agent loop", "agent orchestration", "ai", "ai foundry agent service", "api connector", "automation", "azure", "azure logic apps", "business process automation", "community", "enterprise integration", "event driven integration", "integration services", "low code design", "microsoft azure", "multi agent systems", "operations monitoring", "sharepoint integration"]

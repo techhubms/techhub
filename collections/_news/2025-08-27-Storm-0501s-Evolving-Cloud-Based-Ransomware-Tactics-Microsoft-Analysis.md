@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft News"
 feed_url: "https://news.microsoft.com/source/feed/"
 date: 2025-08-27 17:43:23 +00:00
-permalink: "/news/2025-08-27-Storm-0501s-Evolving-Cloud-Based-Ransomware-Tactics-Microsoft-Analysis.html"
+permalink: "/2025-08-27-Storm-0501s-Evolving-Cloud-Based-Ransomware-Tactics-Microsoft-Analysis.html"
 categories: ["Azure", "Security"]
 tags: ["AADInternals", "Active Directory", "Azure", "Azure Defender", "Azure Storage", "Cloud Based Ransomware", "Company News", "Conditional Access", "Data Exfiltration", "Entra Connect Sync", "Global Administrator", "Hybrid Cloud Security", "MFA", "Microsoft Defender For Endpoint", "Microsoft Entra ID", "News", "Privilege Escalation", "Ransomware", "Security", "Security Best Practices", "Storm 0501"]
 tags_normalized: ["aadinternals", "active directory", "azure", "azure defender", "azure storage", "cloud based ransomware", "company news", "conditional access", "data exfiltration", "entra connect sync", "global administrator", "hybrid cloud security", "mfa", "microsoft defender for endpoint", "microsoft entra id", "news", "privilege escalation", "ransomware", "security", "security best practices", "storm 0501"]

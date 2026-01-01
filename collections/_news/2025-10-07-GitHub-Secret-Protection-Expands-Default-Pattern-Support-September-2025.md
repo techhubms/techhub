@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/changelog/feed/"
 date: 2025-10-07 16:13:11 +00:00
-permalink: "/news/2025-10-07-GitHub-Secret-Protection-Expands-Default-Pattern-Support-September-2025.html"
+permalink: "/2025-10-07-GitHub-Secret-Protection-Expands-Default-Pattern-Support-September-2025.html"
 categories: ["Azure", "DevOps", "Security"]
 tags: ["API Keys", "Application Security", "Azure", "Azure Communication Services", "Azure IoT Hub", "Azure Management Certificate", "Azure Quantum Key", "CI/CD", "Code Security", "Continuous Integration", "DevOps", "DevSecOps", "GitHub", "Improvement", "News", "OAuth", "Push Protection", "Repository Security", "Secret Scanning", "Security", "Token Detection"]
 tags_normalized: ["api keys", "application security", "azure", "azure communication services", "azure iot hub", "azure management certificate", "azure quantum key", "cislashcd", "code security", "continuous integration", "devops", "devsecops", "github", "improvement", "news", "oauth", "push protection", "repository security", "secret scanning", "security", "token detection"]

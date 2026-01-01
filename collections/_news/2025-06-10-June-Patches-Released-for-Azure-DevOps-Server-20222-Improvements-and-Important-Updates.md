@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft DevBlog"
 feed_url: "https://devblogs.microsoft.com/devops/feed/"
 date: 2025-06-10 19:13:51 +00:00
-permalink: "/news/2025-06-10-June-Patches-Released-for-Azure-DevOps-Server-20222-Improvements-and-Important-Updates.html"
+permalink: "/2025-06-10-June-Patches-Released-for-Azure-DevOps-Server-20222-Improvements-and-Important-Updates.html"
 categories: ["Azure", "DevOps", "Security"]
 tags: ["Azure", "Azure DevOps Server", "Custom Columns", "DevOps", "Installation", "News", "Patches", "Plan Id", "Release Notes", "Security", "Server Upgrade", "Suite Id", "Suite Import", "Test Plans", "XLSX Export"]
 tags_normalized: ["azure", "azure devops server", "custom columns", "devops", "installation", "news", "patches", "plan id", "release notes", "security", "server upgrade", "suite id", "suite import", "test plans", "xlsx export"]

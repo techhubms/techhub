@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Events YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
 date: 2025-11-24 08:25:12 +00:00
-permalink: "/videos/2025-11-24-Accelerating-Migration-and-Modernization-in-Financial-Services-with-Microsoft-Cloud-Accelerate-Factory.html"
+permalink: "/2025-11-24-Accelerating-Migration-and-Modernization-in-Financial-Services-with-Microsoft-Cloud-Accelerate-Factory.html"
 categories: ["AI", "Azure"]
 tags: ["Agentic AI", "AI", "AI Powered Monitoring", "Application Modernization", "Automation", "Azure", "Azure Arc", "Business Agility", "CAF Framework", "Cloud Migration", "Cloud Transformation", "Financial Services", "Microsoft Cloud Accelerate Factory", "Microsoft Ignite", "Migrateandmodernizeyourestate", "Migration Strategies", "Modernization Economics", "MSIgnite", "Resilience", "Videos"]
 tags_normalized: ["agentic ai", "ai", "ai powered monitoring", "application modernization", "automation", "azure", "azure arc", "business agility", "caf framework", "cloud migration", "cloud transformation", "financial services", "microsoft cloud accelerate factory", "microsoft ignite", "migrateandmodernizeyourestate", "migration strategies", "modernization economics", "msignite", "resilience", "videos"]

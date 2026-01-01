@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "DotNet YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw"
 date: 2025-07-30 17:19:49 +00:00
-permalink: "/videos/2025-07-30-NET-Aspire-Adding-Custom-Commands-to-the-Dashboard.html"
+permalink: "/2025-07-30-NET-Aspire-Adding-Custom-Commands-to-the-Dashboard.html"
 categories: ["Coding"]
 tags: [".NET", ".NET Aspire", "Automation", "Coding", "Configuration", "Custom Commands", "Dashboard", "Developer Tools", "Development Environment", "Scripts", "Team Collaboration", "Videos"]
 tags_normalized: ["dotnet", "dotnet aspire", "automation", "coding", "configuration", "custom commands", "dashboard", "developer tools", "development environment", "scripts", "team collaboration", "videos"]

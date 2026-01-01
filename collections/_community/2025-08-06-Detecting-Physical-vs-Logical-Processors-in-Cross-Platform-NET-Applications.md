@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Reddit CSharp"
 feed_url: "https://www.reddit.com/r/csharp/.rss"
 date: 2025-08-06 00:12:38 +00:00
-permalink: "/community/2025-08-06-Detecting-Physical-vs-Logical-Processors-in-Cross-Platform-NET-Applications.html"
+permalink: "/2025-08-06-Detecting-Physical-vs-Logical-Processors-in-Cross-Platform-NET-Applications.html"
 categories: ["Coding"]
 tags: [".NET 9", "C#", "Coding", "Community", "Cross Platform Development", "Environment.ProcessorCount", "HT", "Linux", "Logical Processor", "Macos", "Performance Optimization", "Physical Core", "Platform Invocation", "Processor Detection", "SMT", "Windows API", "WMI"]
 tags_normalized: ["dotnet 9", "csharp", "coding", "community", "cross platform development", "environmentdotprocessorcount", "ht", "linux", "logical processor", "macos", "performance optimization", "physical core", "platform invocation", "processor detection", "smt", "windows api", "wmi"]

@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "GitHub Engineering Blog"
 feed_url: "https://github.blog/engineering/feed/"
 date: 2025-04-11 22:33:30 +00:00
-permalink: "/news/2025-04-11-Introducing-Sub-Issues-Enhancing-Issue-Management-on-GitHub.html"
+permalink: "/2025-04-11-Introducing-Sub-Issues-Enhancing-Issue-Management-on-GitHub.html"
 categories: ["DevOps"]
 tags: ["Accessibility", "Architecture", "Architecture & Optimization", "Beta Feedback", "Development Process", "DevOps", "Dogfooding", "Engineering", "GitHub Issues", "GraphQL", "Hierarchical Tasks", "How GitHub Builds GitHub", "Issue Tracking", "MySQL", "News", "Project Management", "React", "Software Engineering", "Sub Issues", "Workflow Optimization"]
 tags_normalized: ["accessibility", "architecture", "architecture and optimization", "beta feedback", "development process", "devops", "dogfooding", "engineering", "github issues", "graphql", "hierarchical tasks", "how github builds github", "issue tracking", "mysql", "news", "project management", "react", "software engineering", "sub issues", "workflow optimization"]

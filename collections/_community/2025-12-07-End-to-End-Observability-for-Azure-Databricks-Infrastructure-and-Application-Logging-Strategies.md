@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-12-07 09:46:09 +00:00
-permalink: "/community/2025-12-07-End-to-End-Observability-for-Azure-Databricks-Infrastructure-and-Application-Logging-Strategies.html"
+permalink: "/2025-12-07-End-to-End-Observability-for-Azure-Databricks-Infrastructure-and-Application-Logging-Strategies.html"
 categories: ["Azure", "DevOps", "ML"]
 tags: ["Activity Logs", "Azure", "Azure Databricks", "Azure Monitor", "Community", "Compliance", "Compute Log Delivery", "Cost Attribution", "Custom Resource Tags", "Data Quality Monitoring", "DevOps", "Diagnostic Settings", "ETL", "Infrastructure Monitoring", "ML", "Observability", "Performance Tuning", "RBAC", "Spark Monitoring", "SQL Dashboards", "Streaming Pipelines", "System Tables", "Unity Catalog", "Virtual Network Flow Logs"]
 tags_normalized: ["activity logs", "azure", "azure databricks", "azure monitor", "community", "compliance", "compute log delivery", "cost attribution", "custom resource tags", "data quality monitoring", "devops", "diagnostic settings", "etl", "infrastructure monitoring", "ml", "observability", "performance tuning", "rbac", "spark monitoring", "sql dashboards", "streaming pipelines", "system tables", "unity catalog", "virtual network flow logs"]

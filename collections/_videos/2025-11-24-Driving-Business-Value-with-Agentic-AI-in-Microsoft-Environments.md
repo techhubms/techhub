@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Events YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
 date: 2025-11-24 14:29:29 +00:00
-permalink: "/videos/2025-11-24-Driving-Business-Value-with-Agentic-AI-in-Microsoft-Environments.html"
+permalink: "/2025-11-24-Driving-Business-Value-with-Agentic-AI-in-Microsoft-Environments.html"
 categories: ["AI"]
 tags: ["Agentic AI", "AI", "AI Agents", "AI Framework", "AI Production", "AI Services", "Automation", "Business Value", "Collaboration", "Customer Experience", "Generative AI", "Industry Solutions", "Microsoft Ignite", "Microsoft Technologies", "MSIgnite", "NTT DATA", "Secure AI Platform", "Videos"]
 tags_normalized: ["agentic ai", "ai", "ai agents", "ai framework", "ai production", "ai services", "automation", "business value", "collaboration", "customer experience", "generative ai", "industry solutions", "microsoft ignite", "microsoft technologies", "msignite", "ntt data", "secure ai platform", "videos"]

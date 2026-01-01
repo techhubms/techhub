@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Events YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
 date: 2025-11-20 10:23:43 +00:00
-permalink: "/videos/2025-11-20-AI-Powered-Hybrid-DevOps-with-GitHub-Copilot-and-Azure-DevOps.html"
+permalink: "/2025-11-20-AI-Powered-Hybrid-DevOps-with-GitHub-Copilot-and-Azure-DevOps.html"
 categories: ["AI", "Azure", "Coding", "DevOps", "GitHub Copilot"]
 tags: ["Agentic DevOps", "AI", "Automation", "Azure", "Azure Boards", "Azure DevOps", "Azure Pipelines", "Branch Management", "CI/CD", "Code Review", "Coding", "DevOps", "DevOps Strategy", "GitHub", "GitHub Copilot", "Hybrid Adoption", "InnovatewithAzureAIappsandagents", "MCP Servers", "Microsoft Ignite", "MSIgnite", "Playwright", "Sessions", "Videos", "Work Item Traceability", "YAML"]
 tags_normalized: ["agentic devops", "ai", "automation", "azure", "azure boards", "azure devops", "azure pipelines", "branch management", "cislashcd", "code review", "coding", "devops", "devops strategy", "github", "github copilot", "hybrid adoption", "innovatewithazureaiappsandagents", "mcp servers", "microsoft ignite", "msignite", "playwright", "sessions", "videos", "work item traceability", "yaml"]

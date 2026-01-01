@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-11-09 16:42:48 +00:00
-permalink: "/community/2025-11-09-Deploying-and-Syncing-Microsoft-Dev-Box-Catalogs-with-GitHub-using-Terraform.html"
+permalink: "/2025-11-09-Deploying-and-Syncing-Microsoft-Dev-Box-Catalogs-with-GitHub-using-Terraform.html"
 categories: ["Azure", "Coding", "DevOps"]
 tags: ["Azure", "Azure CLI", "Azure Dev Center", "Azure Key Vault", "CI/CD", "Cloud Workstation", "Coding", "Community", "Dev Box Catalog", "Development Environment Automation", "DevOps", "GitHub", "GitHub Integration", "IaC", "Microsoft Dev Box", "Resource Group", "Terraform", "Version Control", "Virtual Network"]
 tags_normalized: ["azure", "azure cli", "azure dev center", "azure key vault", "cislashcd", "cloud workstation", "coding", "community", "dev box catalog", "development environment automation", "devops", "github", "github integration", "iac", "microsoft dev box", "resource group", "terraform", "version control", "virtual network"]

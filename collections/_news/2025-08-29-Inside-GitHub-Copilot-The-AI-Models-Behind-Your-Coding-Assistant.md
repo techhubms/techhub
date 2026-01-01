@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/feed/"
 date: 2025-08-29 16:14:42 +00:00
-permalink: "/news/2025-08-29-Inside-GitHub-Copilot-The-AI-Models-Behind-Your-Coding-Assistant.html"
+permalink: "/2025-08-29-Inside-GitHub-Copilot-The-AI-Models-Behind-Your-Coding-Assistant.html"
 categories: ["AI", "GitHub Copilot"]
 tags: ["Agentic Workflows", "AI", "AI & ML", "AI Models", "Anthropic Claude", "Code Completion", "Code Review", "Coding Agent", "Copilot Chat", "Developer Experience", "Generative AI", "GitHub Copilot", "Google Gemini", "GPT 4.1", "IDE Integration", "LLM", "Model Selection", "News", "OpenAI", "Productivity Tools"]
 tags_normalized: ["agentic workflows", "ai", "ai and ml", "ai models", "anthropic claude", "code completion", "code review", "coding agent", "copilot chat", "developer experience", "generative ai", "github copilot", "google gemini", "gpt 4dot1", "ide integration", "llm", "model selection", "news", "openai", "productivity tools"]

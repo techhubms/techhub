@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-11-17 16:00:00 +00:00
-permalink: "/community/2025-11-17-Defending-the-cloud-Azure-neutralized-a-record-breaking-15-Tbps-DDoS-attack.html"
+permalink: "/2025-11-17-Defending-the-cloud-Azure-neutralized-a-record-breaking-15-Tbps-DDoS-attack.html"
 categories: ["Azure", "Security"]
 tags: ["Aisuru Botnet", "Australia Endpoint", "Azure", "Azure DDoS Protection", "Azure Infrastructure", "Cloud Security", "Community", "Cybersecurity", "Distributed Denial Of Service", "Internet Facing Applications", "IoT Security", "Mitigation Strategies", "Network Protection", "Operational Readiness", "Provider Enforcement", "Security", "Turbo Mirai", "UDP Flood"]
 tags_normalized: ["aisuru botnet", "australia endpoint", "azure", "azure ddos protection", "azure infrastructure", "cloud security", "community", "cybersecurity", "distributed denial of service", "internet facing applications", "iot security", "mitigation strategies", "network protection", "operational readiness", "provider enforcement", "security", "turbo mirai", "udp flood"]

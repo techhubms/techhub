@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/changelog/feed/"
 date: 2025-12-22 15:02:08 +00:00
-permalink: "/news/2025-12-22-Granular-Controls-for-GitHub-App-Requests-Now-in-Public-Preview.html"
+permalink: "/2025-12-22-Granular-Controls-for-GitHub-App-Requests-Now-in-Public-Preview.html"
 categories: ["DevOps", "Security"]
 tags: ["Access Management", "App Access Requests", "App Governance", "DevOps", "Enterprise Management Tools", "Enterprise Security", "GHES 3.21", "GitHub", "Governance Policy", "Improvement", "Member Privileges", "News", "OAuth Apps", "Organization Settings", "Security"]
 tags_normalized: ["access management", "app access requests", "app governance", "devops", "enterprise management tools", "enterprise security", "ghes 3dot21", "github", "governance policy", "improvement", "member privileges", "news", "oauth apps", "organization settings", "security"]

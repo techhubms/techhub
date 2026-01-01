@@ -9,10 +9,10 @@ viewing_mode: "external"
 feed_name: "Dellenny's Blog"
 feed_url: "https://dellenny.com/feed/"
 date: 2025-09-17 10:07:13 +00:00
-permalink: "/blogs/2025-09-17-Azure-for-Beginners-How-to-Launch-Your-First-Cloud-Project-in-30-Minutes.html"
+permalink: "/2025-09-17-Azure-for-Beginners-How-to-Launch-Your-First-Cloud-Project-in-30-Minutes.html"
 categories: ["Azure"]
-tags: ["Azure", "Azure App Service", "Azure Blob Storage", "Azure Deployment", "Azure Free Tier", "Azure Portal", "Beginner Guide", "Cloud Computing", "Cloud Project", "Microsoft Azure", "Blogs", "Remote Desktop", "Resource Group", "Ubuntu Server", "Virtual Machine", "Windows VM"]
-tags_normalized: ["azure", "azure app service", "azure blob storage", "azure deployment", "azure free tier", "azure portal", "beginner guide", "cloud computing", "cloud project", "microsoft azure", "blogs", "remote desktop", "resource group", "ubuntu server", "virtual machine", "windows vm"]
+tags: ["Azure", "Azure App Service", "Azure Blob Storage", "Azure Deployment", "Azure Free Tier", "Azure Portal", "Beginner Guide", "Blogs", "Cloud Computing", "Cloud Project", "Microsoft Azure", "Remote Desktop", "Resource Group", "Ubuntu Server", "Virtual Machine", "Windows VM"]
+tags_normalized: ["azure", "azure app service", "azure blob storage", "azure deployment", "azure free tier", "azure portal", "beginner guide", "blogs", "cloud computing", "cloud project", "microsoft azure", "remote desktop", "resource group", "ubuntu server", "virtual machine", "windows vm"]
 ---
 
 Dellenny provides a clear, practical introduction to Microsoft Azure, guiding beginners through every step to launch their first cloud-based virtual machine project.<!--excerpt_end-->

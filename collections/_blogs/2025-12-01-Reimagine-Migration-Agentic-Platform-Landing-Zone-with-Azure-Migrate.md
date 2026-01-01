@@ -9,10 +9,10 @@ viewing_mode: "external"
 feed_name: "Thomas Maurer's Blog"
 feed_url: "https://www.thomasmaurer.ch/feed/"
 date: 2025-12-01 13:31:20 +00:00
-permalink: "/blogs/2025-12-01-Reimagine-Migration-Agentic-Platform-Landing-Zone-with-Azure-Migrate.html"
+permalink: "/2025-12-01-Reimagine-Migration-Agentic-Platform-Landing-Zone-with-Azure-Migrate.html"
 categories: ["Azure", "DevOps", "Security"]
-tags: ["Agentic", "Agentic Approach", "Automation", "Azure", "Azure Essentials Show", "Azure Landing Zone", "Azure Migrate", "Cloud", "Cloud Governance", "Cloud Migration", "Compliance", "DevOps", "Hybrid Connectivity", "IaC", "Identity Management", "Landing Zone", "Log Analytics", "Microsoft", "Microsoft Azure", "Platform Landing Zone", "Policy Enforcement", "Blogs", "Scalability", "Security", "Subscription Management", "Workload Assessment"]
-tags_normalized: ["agentic", "agentic approach", "automation", "azure", "azure essentials show", "azure landing zone", "azure migrate", "cloud", "cloud governance", "cloud migration", "compliance", "devops", "hybrid connectivity", "iac", "identity management", "landing zone", "log analytics", "microsoft", "microsoft azure", "platform landing zone", "policy enforcement", "blogs", "scalability", "security", "subscription management", "workload assessment"]
+tags: ["Agentic", "Agentic Approach", "Automation", "Azure", "Azure Essentials Show", "Azure Landing Zone", "Azure Migrate", "Blogs", "Cloud", "Cloud Governance", "Cloud Migration", "Compliance", "DevOps", "Hybrid Connectivity", "IaC", "Identity Management", "Landing Zone", "Log Analytics", "Microsoft", "Microsoft Azure", "Platform Landing Zone", "Policy Enforcement", "Scalability", "Security", "Subscription Management", "Workload Assessment"]
+tags_normalized: ["agentic", "agentic approach", "automation", "azure", "azure essentials show", "azure landing zone", "azure migrate", "blogs", "cloud", "cloud governance", "cloud migration", "compliance", "devops", "hybrid connectivity", "iac", "identity management", "landing zone", "log analytics", "microsoft", "microsoft azure", "platform landing zone", "policy enforcement", "scalability", "security", "subscription management", "workload assessment"]
 ---
 
 Thomas Maurer breaks down the agentic approach to cloud migration using Azure Migrate and platform landing zones, providing practical insights for secure, consistent, and scalable Azure deployments.<!--excerpt_end-->

@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The Azure Blog"
 feed_url: "https://azure.microsoft.com/en-us/blog/feed/"
 date: 2025-07-29 15:00:00 +00:00
-permalink: "/news/2025-07-29-Scaling-Generative-AI-in-the-Cloud-Enterprise-Use-Cases-for-Secure-Innovation.html"
+permalink: "/2025-07-29-Scaling-Generative-AI-in-the-Cloud-Enterprise-Use-Cases-for-Secure-Innovation.html"
 categories: ["AI", "Azure"]
 tags: ["AI", "AI + Machine Learning", "AI Agents", "AI Integration", "Azure", "Azure AI Search", "Azure Cognitive Services", "Azure Machine Learning", "Azure OpenAI Service", "Cloud Migration", "Enterprise IT", "Enterprise Workflows", "Generative AI", "Generative Search", "Internet Of Things", "News", "RAG (retrieval Augmented Generation)", "Smart Automation"]
 tags_normalized: ["ai", "ai plus machine learning", "ai agents", "ai integration", "azure", "azure ai search", "azure cognitive services", "azure machine learning", "azure openai service", "cloud migration", "enterprise it", "enterprise workflows", "generative ai", "generative search", "internet of things", "news", "rag retrieval augmented generation", "smart automation"]

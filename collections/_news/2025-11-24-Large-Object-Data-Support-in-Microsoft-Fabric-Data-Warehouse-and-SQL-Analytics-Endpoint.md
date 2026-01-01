@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Fabric Blog"
 feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
 date: 2025-11-24 09:00:00 +00:00
-permalink: "/news/2025-11-24-Large-Object-Data-Support-in-Microsoft-Fabric-Data-Warehouse-and-SQL-Analytics-Endpoint.html"
+permalink: "/2025-11-24-Large-Object-Data-Support-in-Microsoft-Fabric-Data-Warehouse-and-SQL-Analytics-Endpoint.html"
 categories: ["Azure", "ML"]
 tags: ["Azure", "Azure SQL Database", "Binary Data", "Cosmos DB", "Data Engineering", "Data Ingestion", "Data Warehousing", "Fabric Data Warehouse", "JSON", "Large Objects", "Microsoft Fabric", "ML", "News", "Performance", "Schema Mapping", "SQL Analytics Endpoint", "VARBINARY(MAX)", "VARCHAR(MAX)"]
 tags_normalized: ["azure", "azure sql database", "binary data", "cosmos db", "data engineering", "data ingestion", "data warehousing", "fabric data warehouse", "json", "large objects", "microsoft fabric", "ml", "news", "performance", "schema mapping", "sql analytics endpoint", "varbinarymax", "varcharmax"]

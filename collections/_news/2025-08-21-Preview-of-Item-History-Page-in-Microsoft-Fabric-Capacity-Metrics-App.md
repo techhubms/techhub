@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Fabric Blog"
 feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
 date: 2025-08-21 09:00:00 +00:00
-permalink: "/news/2025-08-21-Preview-of-Item-History-Page-in-Microsoft-Fabric-Capacity-Metrics-App.html"
+permalink: "/2025-08-21-Preview-of-Item-History-Page-in-Microsoft-Fabric-Capacity-Metrics-App.html"
 categories: ["Azure", "ML"]
 tags: ["Analytics", "Azure", "Capacity Metrics App", "Capacity Planning", "Capacity Upgrade", "Compute Usage", "CU Consumption", "Data Platform", "Item Level Metrics", "Microsoft", "Microsoft Fabric", "ML", "Monitoring", "News", "Performance Analysis", "Power BI", "Resource Optimization", "Usage Trends", "Workspaces"]
 tags_normalized: ["analytics", "azure", "capacity metrics app", "capacity planning", "capacity upgrade", "compute usage", "cu consumption", "data platform", "item level metrics", "microsoft", "microsoft fabric", "ml", "monitoring", "news", "performance analysis", "power bi", "resource optimization", "usage trends", "workspaces"]

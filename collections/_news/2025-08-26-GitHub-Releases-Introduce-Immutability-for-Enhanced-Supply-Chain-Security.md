@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/changelog/feed/"
 date: 2025-08-26 20:33:53 +00:00
-permalink: "/news/2025-08-26-GitHub-Releases-Introduce-Immutability-for-Enhanced-Supply-Chain-Security.html"
+permalink: "/2025-08-26-GitHub-Releases-Introduce-Immutability-for-Enhanced-Supply-Chain-Security.html"
 categories: ["DevOps", "Security"]
 tags: ["Artifact Verification", "CI/CD", "DevOps", "DevOps Security", "GitHub", "Immutable Releases", "News", "Release Attestation", "Release Automation", "Repository Management", "Security", "Sigstore", "Software Distribution", "Supply Chain Security", "Tag Protection"]
 tags_normalized: ["artifact verification", "cislashcd", "devops", "devops security", "github", "immutable releases", "news", "release attestation", "release automation", "repository management", "security", "sigstore", "software distribution", "supply chain security", "tag protection"]

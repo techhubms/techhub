@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "John Savill's Technical Training"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCpIn7ox7j7bH_OFj7tYouOQ"
 date: 2025-08-22 14:50:10 +00:00
-permalink: "/videos/2025-08-22-Azure-Update-22nd-August-2025.html"
+permalink: "/2025-08-22-Azure-Update-22nd-August-2025.html"
 categories: ["Azure"]
 tags: ["AKS", "Application Gateway", "Azure", "Azure Bastion", "Azure Billing", "Azure Cloud", "Azure Files Premium", "Azure Functions", "Azure NetApp Files", "Azure Updates", "Blob Storage", "Cloud", "Cloud Security", "CNAME Certificate Validation", "DC EC Esv6 VMs", "File Access Logs", "Log Analytics", "Microsoft", "Microsoft Azure", "Microsoft Defender For Cloud", "Microsoft Sentinel", "Videos"]
 tags_normalized: ["aks", "application gateway", "azure", "azure bastion", "azure billing", "azure cloud", "azure files premium", "azure functions", "azure netapp files", "azure updates", "blob storage", "cloud", "cloud security", "cname certificate validation", "dc ec esv6 vms", "file access logs", "log analytics", "microsoft", "microsoft azure", "microsoft defender for cloud", "microsoft sentinel", "videos"]

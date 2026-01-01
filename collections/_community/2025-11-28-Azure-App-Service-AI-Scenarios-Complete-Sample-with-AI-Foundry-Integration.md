@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-11-28 10:42:08 +00:00
-permalink: "/community/2025-11-28-Azure-App-Service-AI-Scenarios-Complete-Sample-with-AI-Foundry-Integration.html"
+permalink: "/2025-11-28-Azure-App-Service-AI-Scenarios-Complete-Sample-with-AI-Foundry-Integration.html"
 categories: ["AI", "Azure", "Coding", "Security"]
 tags: ["AI", "API Integration", "Audio Transcription", "Azure", "Azure AI Foundry", "Azure App Service", "Azure CLI", "Azure Cognitive Services", "Azure Developer CLI", "Coding", "Community", "Conversational AI", "Enterprise Chat", "Flask", "Gpt 35 Turbo", "Gpt 4o Mini", "Image Analysis", "Managed Identity", "Microsoft Defender For Cloud", "Model Deployment", "Multimodal AI", "OpenAI", "Python", "RBAC", "Reasoning Models", "Security", "Security Best Practices"]
 tags_normalized: ["ai", "api integration", "audio transcription", "azure", "azure ai foundry", "azure app service", "azure cli", "azure cognitive services", "azure developer cli", "coding", "community", "conversational ai", "enterprise chat", "flask", "gpt 35 turbo", "gpt 4o mini", "image analysis", "managed identity", "microsoft defender for cloud", "model deployment", "multimodal ai", "openai", "python", "rbac", "reasoning models", "security", "security best practices"]

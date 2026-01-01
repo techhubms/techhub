@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Azure SDK Blog"
 feed_url: "https://devblogs.microsoft.com/azure-sdk/feed/"
 date: 2025-10-30 18:29:56 +00:00
-permalink: "/news/2025-10-30-Integrating-GitHub-Copilot-Coding-Agent-with-Azure-Using-the-azd-Extension.html"
+permalink: "/2025-10-30-Integrating-GitHub-Copilot-Coding-Agent-with-Azure-Using-the-azd-Extension.html"
 categories: ["AI", "Azure", "DevOps", "GitHub Copilot", "Security"]
 tags: [".NET", "AI", "Azd", "Azure", "Azure App Service", "Azure Cosmos DB", "Azure Developer CLI", "Azure Key Vault", "Azure MCP Server", "Azure SDK", "Azure Subscription", "Azure.coding Agent Extension", "CI/CD", "Codespaces", "Copilot", "DevOps", "Docker", "Federated Credentials", "GitHub Copilot", "GitHub Copilot Coding Agent", "IaC", "Java", "JavaScript", "Kubernetes", "Managed Identity", "MCP Configuration", "News", "OpenID Connect", "Python", "RBAC", "Repository Configuration", "Security", "Typescript", "VS Code", "Workflow Automation"]
 tags_normalized: ["dotnet", "ai", "azd", "azure", "azure app service", "azure cosmos db", "azure developer cli", "azure key vault", "azure mcp server", "azure sdk", "azure subscription", "azuredotcoding agent extension", "cislashcd", "codespaces", "copilot", "devops", "docker", "federated credentials", "github copilot", "github copilot coding agent", "iac", "java", "javascript", "kubernetes", "managed identity", "mcp configuration", "news", "openid connect", "python", "rbac", "repository configuration", "security", "typescript", "vs code", "workflow automation"]

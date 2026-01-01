@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Developer YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
 date: 2025-08-14 17:00:05 +00:00
-permalink: "/videos/2025-08-14-Introduction-to-Model-Context-Protocol-MCP-Servers-Building-AI-Integrations.html"
+permalink: "/2025-08-14-Introduction-to-Model-Context-Protocol-MCP-Servers-Building-AI-Integrations.html"
 categories: ["AI"]
 tags: ["AI", "AI Integration", "AI Platforms", "AI Workflows", "API", "Cloud Computing", "Database Integration", "Dev", "Developer Tutorial", "Development", "MCP", "Microsoft", "Microsoft Azure", "Prompts", "Resources And Tools", "Server Lifecycle", "Tech", "Technology", "Videos", "VS"]
 tags_normalized: ["ai", "ai integration", "ai platforms", "ai workflows", "api", "cloud computing", "database integration", "dev", "developer tutorial", "development", "mcp", "microsoft", "microsoft azure", "prompts", "resources and tools", "server lifecycle", "tech", "technology", "videos", "vs"]

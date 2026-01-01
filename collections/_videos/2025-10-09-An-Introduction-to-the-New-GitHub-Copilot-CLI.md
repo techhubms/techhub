@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "GitHub YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ"
 date: 2025-10-09 14:01:23 +00:00
-permalink: "/videos/2025-10-09-An-Introduction-to-the-New-GitHub-Copilot-CLI.html"
+permalink: "/2025-10-09-An-Introduction-to-the-New-GitHub-Copilot-CLI.html"
 categories: ["AI", "GitHub Copilot"]
 tags: ["AI", "AI Assisted Coding", "CLI Tools", "Command Line", "Copilot CLI", "Developer Tools", "GitHub Copilot", "GithubCopilotCLI", "Linux", "Macos", "MCP Servers", "Terminal", "Videos", "Windows", "WSL"]
 tags_normalized: ["ai", "ai assisted coding", "cli tools", "command line", "copilot cli", "developer tools", "github copilot", "githubcopilotcli", "linux", "macos", "mcp servers", "terminal", "videos", "windows", "wsl"]

@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Visual Studio Code YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SLNwkd3w"
 date: 2025-10-06 14:01:17 +00:00
-permalink: "/videos/2025-10-06-Build-a-Responsive-UI-through-Prompt-Driven-Development-with-GitHub-Copilot.html"
+permalink: "/2025-10-06-Build-a-Responsive-UI-through-Prompt-Driven-Development-with-GitHub-Copilot.html"
 categories: ["AI", "Coding", "GitHub Copilot"]
 tags: ["AI", "Code Automation", "Coding", "Custom Chat Modes", "Developer Tools", "GitHub Copilot", "Prompt Driven Development", "Prompt Engineering", "README Generation", "Real Time Search", "Responsive UI", "UI Enhancement", "Videos", "VS Code"]
 tags_normalized: ["ai", "code automation", "coding", "custom chat modes", "developer tools", "github copilot", "prompt driven development", "prompt engineering", "readme generation", "real time search", "responsive ui", "ui enhancement", "videos", "vs code"]

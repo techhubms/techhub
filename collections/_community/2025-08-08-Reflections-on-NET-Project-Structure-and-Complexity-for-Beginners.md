@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Reddit DotNet"
 feed_url: "https://www.reddit.com/r/dotnet/.rss"
 date: 2025-08-08 12:59:42 +00:00
-permalink: "/community/2025-08-08-Reflections-on-NET-Project-Structure-and-Complexity-for-Beginners.html"
+permalink: "/2025-08-08-Reflections-on-NET-Project-Structure-and-Complexity-for-Beginners.html"
 categories: ["Coding"]
 tags: [".NET", "ASP.NET Core", "Backend Development", "Coding", "Community", "Dependency Injection", "DTO", "EF", "Express.js", "Layered Architecture", "Legacy Applications", "NestJS", "Node.js", "OnModelCreating", "Project Structure", "Software Architecture", "Validation"]
 tags_normalized: ["dotnet", "aspdotnet core", "backend development", "coding", "community", "dependency injection", "dto", "ef", "expressdotjs", "layered architecture", "legacy applications", "nestjs", "nodedotjs", "onmodelcreating", "project structure", "software architecture", "validation"]

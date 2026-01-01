@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Events YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
 date: 2025-11-20 11:04:20 +00:00
-permalink: "/videos/2025-11-20-Accelerating-Cloud-ERP-Transformation-with-SAP-and-Microsoft-Cloud.html"
+permalink: "/2025-11-20-Accelerating-Cloud-ERP-Transformation-with-SAP-and-Microsoft-Cloud.html"
 categories: ["AI", "Azure"]
 tags: ["Agent Architecture", "AI", "Azure", "BTP", "Business Context Integration", "Business Data Cloud", "Cloud ERP", "Data Architecture", "Delta Sharing", "Enterprise Transformation", "Invoice Processing", "Joule Agents", "Knowledge Graphs", "Microsoft Cloud", "Microsoft Ignite", "MSIgnite", "Private Link", "S4 HANA", "SAP", "SAP Business Technology Platform", "Teams Integration", "Unifyyourdataplatform", "Videos", "Zero Copy Access"]
 tags_normalized: ["agent architecture", "ai", "azure", "btp", "business context integration", "business data cloud", "cloud erp", "data architecture", "delta sharing", "enterprise transformation", "invoice processing", "joule agents", "knowledge graphs", "microsoft cloud", "microsoft ignite", "msignite", "private link", "s4 hana", "sap", "sap business technology platform", "teams integration", "unifyyourdataplatform", "videos", "zero copy access"]

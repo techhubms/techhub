@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The Azure Blog"
 feed_url: "https://azure.microsoft.com/en-us/blog/feed/"
 date: 2025-09-23 15:00:00 +00:00
-permalink: "/news/2025-09-23-How-Azure-Cobalt-100-VMs-are-Powering-Real-World-Solutions-and-Boosting-Performance.html"
+permalink: "/2025-09-23-How-Azure-Cobalt-100-VMs-are-Powering-Real-World-Solutions-and-Boosting-Performance.html"
 categories: ["Azure"]
 tags: ["AKS", "ARM Architecture", "Azure", "Azure Cobalt 100", "Cloud Infrastructure", "Cloud Native", "Compute", "Compute Workloads", "Data Platforms", "Databricks", "Energy Efficiency", "Microsoft Azure", "Microsoft Defender", "Microsoft Teams", "News", "Performance Optimization", "Snowflake", "Temenos", "Virtual Machines"]
 tags_normalized: ["aks", "arm architecture", "azure", "azure cobalt 100", "cloud infrastructure", "cloud native", "compute", "compute workloads", "data platforms", "databricks", "energy efficiency", "microsoft azure", "microsoft defender", "microsoft teams", "news", "performance optimization", "snowflake", "temenos", "virtual machines"]

@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Reddit Github Copilot"
 feed_url: "https://www.reddit.com/r/GithubCopilot.rss"
 date: 2025-07-28 12:03:27 +00:00
-permalink: "/community/2025-07-28-How-I-Levelled-Up-My-GitHub-Copilot-Prompts-with-Instruction-Files-and-Context-Engineering.html"
+permalink: "/2025-07-28-How-I-Levelled-Up-My-GitHub-Copilot-Prompts-with-Instruction-Files-and-Context-Engineering.html"
 categories: ["AI", "GitHub Copilot"]
 tags: ["AI", "AI Assisted Coding", "Code Generation", "Coding Best Practices", "Community", "Context Engineering", "Copilot Tips", "Developer Productivity", "GitHub Copilot", "Instruction Files", "Prompt Engineering", "Software Development"]
 tags_normalized: ["ai", "ai assisted coding", "code generation", "coding best practices", "community", "context engineering", "copilot tips", "developer productivity", "github copilot", "instruction files", "prompt engineering", "software development"]

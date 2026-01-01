@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-08-08 17:44:53 +00:00
-permalink: "/community/2025-08-08-Securing-Your-Pro-Code-Custom-Engine-Agent-for-Microsoft-365-Copilot-Endpoint-Protection-Guide.html"
+permalink: "/2025-08-08-Securing-Your-Pro-Code-Custom-Engine-Agent-for-Microsoft-365-Copilot-Endpoint-Protection-Guide.html"
 categories: ["Azure", "Coding", "Security"]
 tags: ["Application Security", "ASP.NET Core", "Authentication", "Azure", "Azure App Service", "Azure Bot Service", "Azure Firewall", "Bot Framework", "C#", "Coding", "Community", "Custom Engine Agent", "Entra ID", "JWT Token Validation", "Microsoft 365 Copilot", "Microsoft Teams", "Network Security", "NSG", "Security", "Service Principal", "Tenant Restriction"]
 tags_normalized: ["application security", "aspdotnet core", "authentication", "azure", "azure app service", "azure bot service", "azure firewall", "bot framework", "csharp", "coding", "community", "custom engine agent", "entra id", "jwt token validation", "microsoft 365 copilot", "microsoft teams", "network security", "nsg", "security", "service principal", "tenant restriction"]

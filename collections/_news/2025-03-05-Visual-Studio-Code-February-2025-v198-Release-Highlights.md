@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Visual Studio Code Releases"
 feed_url: "https://code.visualstudio.com/feed.xml"
 date: 2025-03-05 17:00:00 +00:00
-permalink: "/news/2025-03-05-Visual-Studio-Code-February-2025-v198-Release-Highlights.html"
+permalink: "/2025-03-05-Visual-Studio-Code-February-2025-v198-Release-Highlights.html"
 categories: ["AI", "Coding", "DevOps", "GitHub Copilot"]
 tags: ["Accessibility", "AI", "Authentication", "Claude 3.7 Sonnet", "Coding", "Copilot Agent Mode", "Copilot Chat", "Copilot Edits", "DevOps", "GitHub Copilot", "GPT 4.5", "News", "Notebook Editing", "Python", "Release Notes", "Remote Development", "Terminal IntelliSense", "TypeScript 5.8", "V1.98", "VS Code"]
 tags_normalized: ["accessibility", "ai", "authentication", "claude 3dot7 sonnet", "coding", "copilot agent mode", "copilot chat", "copilot edits", "devops", "github copilot", "gpt 4dot5", "news", "notebook editing", "python", "release notes", "remote development", "terminal intellisense", "typescript 5dot8", "v1dot98", "vs code"]

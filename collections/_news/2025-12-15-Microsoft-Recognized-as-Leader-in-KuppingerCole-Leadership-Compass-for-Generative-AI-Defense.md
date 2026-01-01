@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Security Blog"
 feed_url: "https://www.microsoft.com/en-us/security/blog/feed/"
 date: 2025-12-15 18:05:00 +00:00
-permalink: "/news/2025-12-15-Microsoft-Recognized-as-Leader-in-KuppingerCole-Leadership-Compass-for-Generative-AI-Defense.html"
+permalink: "/2025-12-15-Microsoft-Recognized-as-Leader-in-KuppingerCole-Leadership-Compass-for-Generative-AI-Defense.html"
 categories: ["AI", "Security"]
 tags: ["Agent365", "AI", "AI Governance", "AI Protection", "CISO", "Compliance", "Copilot Studio", "Data Loss Prevention", "Enterprise AI", "EU AI Act", "Foundry Control Plane", "Generative AI Defense", "Identity Management", "ISO 42001", "KuppingerCole", "Microsoft Defender", "Microsoft Entra", "Microsoft Purview", "Microsoft Security", "News", "NIST AI RMF", "Security", "Security Architecture", "Threat Intelligence"]
 tags_normalized: ["agent365", "ai", "ai governance", "ai protection", "ciso", "compliance", "copilot studio", "data loss prevention", "enterprise ai", "eu ai act", "foundry control plane", "generative ai defense", "identity management", "iso 42001", "kuppingercole", "microsoft defender", "microsoft entra", "microsoft purview", "microsoft security", "news", "nist ai rmf", "security", "security architecture", "threat intelligence"]

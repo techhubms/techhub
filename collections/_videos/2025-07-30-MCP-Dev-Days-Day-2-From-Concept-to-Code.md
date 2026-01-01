@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Developer YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
 date: 2025-07-30 22:20:09 +00:00
-permalink: "/videos/2025-07-30-MCP-Dev-Days-Day-2-From-Concept-to-Code.html"
+permalink: "/2025-07-30-MCP-Dev-Days-Day-2-From-Concept-to-Code.html"
 categories: ["AI", "Azure", "Coding", "Security"]
 tags: ["AI", "AI Agents", "API Management", "Azure", "Azure Functions", "Cloud Computing", "Coding", "Dev", "Development", "Foundry Agent Service", "MCP", "Microsoft", "Production Deployment", "Prompt Driven Development", "Scalable Architectures", "Security", "Tech", "Technology", "Videos", "VS Code"]
 tags_normalized: ["ai", "ai agents", "api management", "azure", "azure functions", "cloud computing", "coding", "dev", "development", "foundry agent service", "mcp", "microsoft", "production deployment", "prompt driven development", "scalable architectures", "security", "tech", "technology", "videos", "vs code"]

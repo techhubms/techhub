@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Events YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
 date: 2025-11-21 12:56:13 +00:00
-permalink: "/videos/2025-11-21-Innovation-Session-Build-and-Manage-AI-Apps-with-Foundry-Agent-Factory-Microsoft-Ignite-2025.html"
+permalink: "/2025-11-21-Innovation-Session-Build-and-Manage-AI-Apps-with-Foundry-Agent-Factory-Microsoft-Ignite-2025.html"
 categories: ["AI", "Azure", "DevOps", "GitHub Copilot"]
 tags: ["Agent Evaluation", "Agent Factory", "Agent Orchestration", "AI", "AI Agents", "Azure", "CI/CD", "Developer Tools", "DevOps", "Enterprise Security", "GitHub Copilot", "Human in The Loop", "InnovatewithAzureAIappsandagents", "Intelligent Agents", "LangGraph", "Microsoft Foundry", "Model Integration", "MS Ignite", "MSIgnite", "Observability", "Videos", "Workflow Automation"]
 tags_normalized: ["agent evaluation", "agent factory", "agent orchestration", "ai", "ai agents", "azure", "cislashcd", "developer tools", "devops", "enterprise security", "github copilot", "human in the loop", "innovatewithazureaiappsandagents", "intelligent agents", "langgraph", "microsoft foundry", "model integration", "ms ignite", "msignite", "observability", "videos", "workflow automation"]

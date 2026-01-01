@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Events YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
 date: 2025-11-25 12:19:01 +00:00
-permalink: "/videos/2025-11-25-AI-Driven-Governance-for-Nasdaq-Boardvantage-with-Azure-PostgreSQL-and-Microsoft-Foundry.html"
+permalink: "/2025-11-25-AI-Driven-Governance-for-Nasdaq-Boardvantage-with-Azure-PostgreSQL-and-Microsoft-Foundry.html"
 categories: ["AI", "Azure", "Coding", "ML"]
 tags: ["Agentic AI", "AI", "AI Governance", "AKS", "API Management", "Azure", "Azure AI Foundry", "Azure Functions", "Azure PostgreSQL", "Chat Assistant Architecture", "Coding", "Compliance", "Data Security", "Fan in Fan Out Orchestration", "Hybrid Search", "Meeting Minutes Automation", "Microservices", "Microsoft Foundry", "ML", "MSIgnite", "PG Vector", "Prompt Flow", "Smart Document Summarization", "Unifyyourdataplatform", "Videos"]
 tags_normalized: ["agentic ai", "ai", "ai governance", "aks", "api management", "azure", "azure ai foundry", "azure functions", "azure postgresql", "chat assistant architecture", "coding", "compliance", "data security", "fan in fan out orchestration", "hybrid search", "meeting minutes automation", "microservices", "microsoft foundry", "ml", "msignite", "pg vector", "prompt flow", "smart document summarization", "unifyyourdataplatform", "videos"]

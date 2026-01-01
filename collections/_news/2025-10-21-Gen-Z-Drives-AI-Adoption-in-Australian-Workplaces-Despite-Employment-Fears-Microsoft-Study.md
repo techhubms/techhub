@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft News"
 feed_url: "https://news.microsoft.com/source/feed/"
 date: 2025-10-21 13:05:08 +00:00
-permalink: "/news/2025-10-21-Gen-Z-Drives-AI-Adoption-in-Australian-Workplaces-Despite-Employment-Fears-Microsoft-Study.html"
+permalink: "/2025-10-21-Gen-Z-Drives-AI-Adoption-in-Australian-Workplaces-Despite-Employment-Fears-Microsoft-Study.html"
 categories: ["AI"]
 tags: ["AI", "AI Adoption", "AI Skills", "AI Strategy", "AI Tools", "Australia", "Automation", "Company News", "Critical Thinking", "Digital Divide", "Early Career Professionals", "Gen Z", "Microsoft Australia", "News", "Organizational Change", "Survey", "Technology Culture", "Workforce Development", "Workplace Innovation"]
 tags_normalized: ["ai", "ai adoption", "ai skills", "ai strategy", "ai tools", "australia", "automation", "company news", "critical thinking", "digital divide", "early career professionals", "gen z", "microsoft australia", "news", "organizational change", "survey", "technology culture", "workforce development", "workplace innovation"]

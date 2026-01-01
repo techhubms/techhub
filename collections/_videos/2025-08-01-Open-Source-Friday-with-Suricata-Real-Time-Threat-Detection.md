@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "GitHub YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ"
 date: 2025-08-01 20:29:23 +00:00
-permalink: "/videos/2025-08-01-Open-Source-Friday-with-Suricata-Real-Time-Threat-Detection.html"
+permalink: "/2025-08-01-Open-Source-Friday-with-Suricata-Real-Time-Threat-Detection.html"
 categories: ["DevOps", "Security"]
 tags: ["Config Tuning", "DevOps", "ELK Stack", "EVE JSON", "IDS", "Intrusion Detection System", "IPS", "Log Analysis", "Network Security", "Open Source", "Packet Inspection", "Real Time Monitoring", "Rule Management", "Security", "Security Tools", "Suricata", "Suricata Update", "Threat Detection", "Videos"]
 tags_normalized: ["config tuning", "devops", "elk stack", "eve json", "ids", "intrusion detection system", "ips", "log analysis", "network security", "open source", "packet inspection", "real time monitoring", "rule management", "security", "security tools", "suricata", "suricata update", "threat detection", "videos"]

@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft DevBlog"
 feed_url: "https://devblogs.microsoft.com/foundry/feed/"
 date: 2025-06-03 22:20:12 +00:00
-permalink: "/news/2025-06-03-Enhancing-Conversational-Agents-with-Azure-AI-Language-CLU-and-Custom-Question-Answering.html"
+permalink: "/2025-06-03-Enhancing-Conversational-Agents-with-Azure-AI-Language-CLU-and-Custom-Question-Answering.html"
 categories: ["AI", "Azure"]
 tags: ["Agent Development", "AI", "AI Agents", "AI Applications", "Azure", "Azure AI Foundry", "Azure AI Foundry Labs", "Azure AI Language", "Azure AI Services", "CLU", "Conversational AI", "Conversational Language Understanding", "CQA", "Custom Question Answering", "Intent Triage Agent", "Language Model Customization", "LLM", "Microsoft Build", "Model Deployment", "News", "QnA Maker", "Question Answering Agent"]
 tags_normalized: ["agent development", "ai", "ai agents", "ai applications", "azure", "azure ai foundry", "azure ai foundry labs", "azure ai language", "azure ai services", "clu", "conversational ai", "conversational language understanding", "cqa", "custom question answering", "intent triage agent", "language model customization", "llm", "microsoft build", "model deployment", "news", "qna maker", "question answering agent"]

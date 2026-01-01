@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-11-18 16:00:52 +00:00
-permalink: "/community/2025-11-18-Advancing-Full-Stack-Observability-with-Azure-Monitor-at-Ignite-2025.html"
+permalink: "/2025-11-18-Advancing-Full-Stack-Observability-with-Azure-Monitor-at-Ignite-2025.html"
 categories: ["AI", "Azure", "DevOps"]
 tags: ["Agentic Workflows", "AI", "AI Observability", "AKS", "Azure", "Azure Copilot", "Azure Data Explorer", "Azure Monitor", "Azure Red Hat OpenShift", "Cloud Operations", "Community", "Container Insights", "DevOps", "Dynamic Thresholding", "Foundry Control Plane", "Full Stack Troubleshooting", "Grafana", "ITOps", "Log Analytics", "Microsoft Ignite", "Monitoring Coverage", "OpenTelemetry", "Prometheus", "RBAC", "VM Insights"]
 tags_normalized: ["agentic workflows", "ai", "ai observability", "aks", "azure", "azure copilot", "azure data explorer", "azure monitor", "azure red hat openshift", "cloud operations", "community", "container insights", "devops", "dynamic thresholding", "foundry control plane", "full stack troubleshooting", "grafana", "itops", "log analytics", "microsoft ignite", "monitoring coverage", "opentelemetry", "prometheus", "rbac", "vm insights"]

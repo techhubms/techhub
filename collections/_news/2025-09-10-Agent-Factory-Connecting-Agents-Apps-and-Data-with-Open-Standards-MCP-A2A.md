@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The Azure Blog"
 feed_url: "https://azure.microsoft.com/en-us/blog/feed/"
 date: 2025-09-10 15:00:00 +00:00
-permalink: "/news/2025-09-10-Agent-Factory-Connecting-Agents-Apps-and-Data-with-Open-Standards-MCP-A2A.html"
+permalink: "/2025-09-10-Agent-Factory-Connecting-Agents-Apps-and-Data-with-Open-Standards-MCP-A2A.html"
 categories: ["AI", "Azure"]
 tags: ["A2A", "Agent Factory", "Agent2Agent", "AI", "AI + Machine Learning", "AI Agents", "Azure", "Azure AI Foundry", "Connector Libraries", "Enterprise Integration", "Interoperability", "MCP", "Microsoft Azure", "Multi Agent Systems", "News", "Observability", "Open Standards", "Semantic Kernel"]
 tags_normalized: ["a2a", "agent factory", "agent2agent", "ai", "ai plus machine learning", "ai agents", "azure", "azure ai foundry", "connector libraries", "enterprise integration", "interoperability", "mcp", "microsoft azure", "multi agent systems", "news", "observability", "open standards", "semantic kernel"]

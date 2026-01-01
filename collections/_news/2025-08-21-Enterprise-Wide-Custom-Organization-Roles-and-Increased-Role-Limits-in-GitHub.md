@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/changelog/feed/"
 date: 2025-08-21 22:36:21 +00:00
-permalink: "/news/2025-08-21-Enterprise-Wide-Custom-Organization-Roles-and-Increased-Role-Limits-in-GitHub.html"
+permalink: "/2025-08-21-Enterprise-Wide-Custom-Organization-Roles-and-Increased-Role-Limits-in-GitHub.html"
 categories: ["DevOps"]
 tags: ["Access Control", "Compliance", "Custom Roles", "DevOps", "Enterprise Roles", "GHES 3.19", "GitHub Enterprise", "GitHub Roles API", "News", "Organization Administration", "Organization Settings", "Permissions", "Public Preview", "Role Management"]
 tags_normalized: ["access control", "compliance", "custom roles", "devops", "enterprise roles", "ghes 3dot19", "github enterprise", "github roles api", "news", "organization administration", "organization settings", "permissions", "public preview", "role management"]

@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/changelog/feed/"
 date: 2025-08-28 17:40:59 +00:00
-permalink: "/news/2025-08-28-OpenAI-GPT-5-Mini-Available-in-GitHub-Copilot-for-Visual-Studio-and-More.html"
+permalink: "/2025-08-28-OpenAI-GPT-5-Mini-Available-in-GitHub-Copilot-for-Visual-Studio-and-More.html"
 categories: ["AI", "GitHub Copilot"]
 tags: ["AI", "AI Models", "Copilot Business", "Copilot Chat", "Copilot Enterprise", "Eclipse", "GitHub Copilot", "GPT 5 Mini", "IDE Integration", "JetBrains", "News", "OpenAI", "Public Preview", "VS", "Xcode"]
 tags_normalized: ["ai", "ai models", "copilot business", "copilot chat", "copilot enterprise", "eclipse", "github copilot", "gpt 5 mini", "ide integration", "jetbrains", "news", "openai", "public preview", "vs", "xcode"]

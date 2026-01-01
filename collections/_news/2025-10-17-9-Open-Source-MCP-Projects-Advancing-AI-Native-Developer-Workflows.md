@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/feed/"
 date: 2025-10-17 16:00:00 +00:00
-permalink: "/news/2025-10-17-9-Open-Source-MCP-Projects-Advancing-AI-Native-Developer-Workflows.html"
+permalink: "/2025-10-17-9-Open-Source-MCP-Projects-Advancing-AI-Native-Developer-Workflows.html"
 categories: ["AI", "Coding", "GitHub Copilot"]
 tags: ["Agentic Tooling", "AI", "AI Native Workflows", "Automation", "Coding", "Context7", "Developer Productivity", "FastAPI", "Generative AI", "GitHub Copilot", "IDE Assistants", "Inspector", "LLM", "Machine Learning", "MCP", "N8n", "News", "Nuxt", "Open Source", "Orchestration", "Sandbox Execution", "Semantic Code Editing", "Testing", "Unity", "VS Code"]
 tags_normalized: ["agentic tooling", "ai", "ai native workflows", "automation", "coding", "context7", "developer productivity", "fastapi", "generative ai", "github copilot", "ide assistants", "inspector", "llm", "machine learning", "mcp", "n8n", "news", "nuxt", "open source", "orchestration", "sandbox execution", "semantic code editing", "testing", "unity", "vs code"]

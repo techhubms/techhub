@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "GitHub YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ"
 date: 2025-08-27 14:00:09 +00:00
-permalink: "/videos/2025-08-27-AI-Project-Based-Learning-and-the-Future-of-Tech-Careers.html"
+permalink: "/2025-08-27-AI-Project-Based-Learning-and-the-Future-of-Tech-Careers.html"
 categories: ["AI"]
 tags: ["AI", "Automation", "Developer Skills", "Future Of Work", "GitHub", "Learning Strategies", "Programming", "Project Based Learning", "Software Development", "Technology Careers", "Videos"]
 tags_normalized: ["ai", "automation", "developer skills", "future of work", "github", "learning strategies", "programming", "project based learning", "software development", "technology careers", "videos"]

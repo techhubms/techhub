@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft DevOps Blog"
 feed_url: "https://devblogs.microsoft.com/devops/feed/"
 date: 2025-11-11 17:25:03 +00:00
-permalink: "/news/2025-11-11-November-Security-Patches-Released-for-Azure-DevOps-Server.html"
+permalink: "/2025-11-11-November-Security-Patches-Released-for-Azure-DevOps-Server.html"
 categories: ["Azure", "DevOps", "Security"]
 tags: ["Azure", "Azure DevOps Server", "Build Tasks", "DevOps", "Microsoft Azure", "MSBuildV1", "News", "Patch Management", "Patches", "Performance Optimization", "Release Notes", "Security", "Security Update", "Self Hosted DevOps", "Server Administration", "SHA 1", "SHA 256", "TFVC Proxy", "VSBuildV1"]
 tags_normalized: ["azure", "azure devops server", "build tasks", "devops", "microsoft azure", "msbuildv1", "news", "patch management", "patches", "performance optimization", "release notes", "security", "security update", "self hosted devops", "server administration", "sha 1", "sha 256", "tfvc proxy", "vsbuildv1"]

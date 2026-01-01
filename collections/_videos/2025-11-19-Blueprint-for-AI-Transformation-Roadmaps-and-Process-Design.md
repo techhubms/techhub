@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Events YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
 date: 2025-11-19 15:14:30 +00:00
-permalink: "/videos/2025-11-19-Blueprint-for-AI-Transformation-Roadmaps-and-Process-Design.html"
+permalink: "/2025-11-19-Blueprint-for-AI-Transformation-Roadmaps-and-Process-Design.html"
 categories: ["AI", "Azure", "DevOps"]
 tags: ["Agentic AI", "Agenticbusinessapplications", "AI", "AI Transformation", "Architecture Planning", "Azure", "Azure DevOps", "DevOps", "Lucid Suite", "Microsoft Teams", "MSIgnite", "Organizational Clarity", "Process Blueprint", "SharePoint Integration", "Videos", "Workflow Documentation"]
 tags_normalized: ["agentic ai", "agenticbusinessapplications", "ai", "ai transformation", "architecture planning", "azure", "azure devops", "devops", "lucid suite", "microsoft teams", "msignite", "organizational clarity", "process blueprint", "sharepoint integration", "videos", "workflow documentation"]

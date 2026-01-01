@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Fabric Blog"
 feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
 date: 2025-10-02 17:00:00 +00:00
-permalink: "/news/2025-10-02-Mission-Critical-Data-Integration-New-Security-and-Automation-in-Fabric-Data-Factory.html"
+permalink: "/2025-10-02-Mission-Critical-Data-Integration-New-Security-and-Automation-in-Fabric-Data-Factory.html"
 categories: ["Azure", "ML", "Security"]
 tags: ["Azure", "Azure Key Vault", "Compliance", "Data Factory", "Data Integration", "Data Orchestration", "Data Security", "Enterprise Data", "Hybrid Cloud", "Microsoft Fabric", "ML", "Network Isolation", "News", "PowerShell Automation", "Private Link", "REST API", "Security", "VNet Gateway", "Workspace Identity Authentication"]
 tags_normalized: ["azure", "azure key vault", "compliance", "data factory", "data integration", "data orchestration", "data security", "enterprise data", "hybrid cloud", "microsoft fabric", "ml", "network isolation", "news", "powershell automation", "private link", "rest api", "security", "vnet gateway", "workspace identity authentication"]

@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft .NET Blog"
 feed_url: "https://devblogs.microsoft.com/dotnet/feed/"
 date: 2025-10-01 14:05:00 +00:00
-permalink: "/news/2025-10-01-Introducing-Microsoft-Agent-Framework-Simplifying-AI-Agent-Development-for-NET-Developers.html"
+permalink: "/2025-10-01-Introducing-Microsoft-Agent-Framework-Simplifying-AI-Agent-Development-for-NET-Developers.html"
 categories: ["AI", "Coding"]
 tags: [".NET", "Agent Orchestration", "Agents", "AI", "AI Agents", "Aspire", "AutoGen", "Azure Monitor", "C#", "ChatClientAgent", "Coding", "Evaluation", "GitHub Models", "Hosting", "MCP", "Microsoft Agent Framework", "Microsoft.Extensions.AI", "Microsoftagentframework", "News", "NuGet Packages", "Observability", "OpenTelemetry", "Semantic Kernel", "Testing", "Workflow Automation"]
 tags_normalized: ["dotnet", "agent orchestration", "agents", "ai", "ai agents", "aspire", "autogen", "azure monitor", "csharp", "chatclientagent", "coding", "evaluation", "github models", "hosting", "mcp", "microsoft agent framework", "microsoftdotextensionsdotai", "microsoftagentframework", "news", "nuget packages", "observability", "opentelemetry", "semantic kernel", "testing", "workflow automation"]

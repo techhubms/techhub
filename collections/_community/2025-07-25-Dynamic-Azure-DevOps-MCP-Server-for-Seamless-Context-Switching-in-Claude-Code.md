@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Reddit Azure DevOps"
 feed_url: "https://www.reddit.com/r/azuredevops/.rss"
 date: 2025-07-25 15:14:49 +00:00
-permalink: "/community/2025-07-25-Dynamic-Azure-DevOps-MCP-Server-for-Seamless-Context-Switching-in-Claude-Code.html"
+permalink: "/2025-07-25-Dynamic-Azure-DevOps-MCP-Server-for-Seamless-Context-Switching-in-Claude-Code.html"
 categories: ["Azure", "DevOps", "Coding", "Security"]
 tags: [".azure Devops.json", "Authentication Context Switching", "Azure", "Azure DevOps", "Build Management", "Claude Code", "Coding", "Community", "Consulting Workflows", "Credential Isolation", "DevOps", "DevOps Automation", "Directory Detection", "GitHub Secret Scanning", "MCP SDK", "MCP Server", "Multi Project Workflow", "Node.js", "PAT Tokens", "Pipeline Automation", "Repository Management", "Security", "Security Best Practices", "TypeScript", "Workflow Optimization"]
 tags_normalized: ["dotazure devopsdotjson", "authentication context switching", "azure", "azure devops", "build management", "claude code", "coding", "community", "consulting workflows", "credential isolation", "devops", "devops automation", "directory detection", "github secret scanning", "mcp sdk", "mcp server", "multi project workflow", "nodedotjs", "pat tokens", "pipeline automation", "repository management", "security", "security best practices", "typescript", "workflow optimization"]

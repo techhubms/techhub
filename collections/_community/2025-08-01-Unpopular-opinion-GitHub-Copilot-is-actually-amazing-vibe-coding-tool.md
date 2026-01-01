@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Reddit Github Copilot"
 feed_url: "https://www.reddit.com/r/GithubCopilot.rss"
 date: 2025-08-01 18:28:38 +00:00
-permalink: "/community/2025-08-01-Unpopular-opinion-GitHub-Copilot-is-actually-amazing-vibe-coding-tool.html"
+permalink: "/2025-08-01-Unpopular-opinion-GitHub-Copilot-is-actually-amazing-vibe-coding-tool.html"
 categories: ["AI", "GitHub Copilot"]
 tags: ["Agent Workflows", "AI", "AI Code Generation", "CI/CD Integration", "Claude Opus", "Claude Sonnet", "Community", "Copilot Workspace", "Cursor", "GitHub Copilot", "GPT 4.1", "JetBrains IDE", "Microservices", "Software Development", "VS Code"]
 tags_normalized: ["agent workflows", "ai", "ai code generation", "cislashcd integration", "claude opus", "claude sonnet", "community", "copilot workspace", "cursor", "github copilot", "gpt 4dot1", "jetbrains ide", "microservices", "software development", "vs code"]

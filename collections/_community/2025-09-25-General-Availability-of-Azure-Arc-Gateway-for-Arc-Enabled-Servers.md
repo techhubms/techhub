@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-09-25 13:16:23 +00:00
-permalink: "/community/2025-09-25-General-Availability-of-Azure-Arc-Gateway-for-Arc-Enabled-Servers.html"
+permalink: "/2025-09-25-General-Availability-of-Azure-Arc-Gateway-for-Arc-Enabled-Servers.html"
 categories: ["Azure", "DevOps", "Security"]
 tags: ["Arc Enabled Servers", "Arc Gateway", "Azure", "Azure Arc", "Azure CLI", "Azure Extensions", "Azure Security", "Community", "DevOps", "Enterprise Proxy", "Firewall", "Hybrid Cloud", "Log Analytics", "Network Configuration", "Onboarding", "PowerShell", "Security", "Server Management", "Windows Admin Center"]
 tags_normalized: ["arc enabled servers", "arc gateway", "azure", "azure arc", "azure cli", "azure extensions", "azure security", "community", "devops", "enterprise proxy", "firewall", "hybrid cloud", "log analytics", "network configuration", "onboarding", "powershell", "security", "server management", "windows admin center"]

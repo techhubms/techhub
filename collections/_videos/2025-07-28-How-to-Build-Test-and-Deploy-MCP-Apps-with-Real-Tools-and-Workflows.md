@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Build 2025 YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
 date: 2025-07-28 16:01:33 +00:00
-permalink: "/videos/2025-07-28-How-to-Build-Test-and-Deploy-MCP-Apps-with-Real-Tools-and-Workflows.html"
+permalink: "/2025-07-28-How-to-Build-Test-and-Deploy-MCP-Apps-with-Real-Tools-and-Workflows.html"
 categories: ["AI", "Azure", "Coding", "DevOps", "Security"]
 tags: ["AI", "API Management", "App Security", "Azure", "Azure Functions", "C#", "Coding", "Deployment", "DevOps", "Java", "JavaScript", "Live Debugging", "MCP", "MCP Inspector", "Microsoft Entra ID", "Python", "SDK", "Security", "TypeScript", "Videos"]
 tags_normalized: ["ai", "api management", "app security", "azure", "azure functions", "csharp", "coding", "deployment", "devops", "java", "javascript", "live debugging", "mcp", "mcp inspector", "microsoft entra id", "python", "sdk", "security", "typescript", "videos"]

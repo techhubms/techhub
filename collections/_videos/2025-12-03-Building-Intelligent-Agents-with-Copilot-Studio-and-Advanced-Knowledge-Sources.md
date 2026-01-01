@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Events YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
 date: 2025-12-03 21:30:48 +00:00
-permalink: "/videos/2025-12-03-Building-Intelligent-Agents-with-Copilot-Studio-and-Advanced-Knowledge-Sources.html"
+permalink: "/2025-12-03-Building-Intelligent-Agents-with-Copilot-Studio-and-Advanced-Knowledge-Sources.html"
 categories: ["AI"]
 tags: ["Active Directory", "Agent Development", "AI", "Azure AI Search", "BRK318", "Building The Most Intelligent Agents With The Latest Knowledge Sources | BRK318", "Copilot Agents", "Copilot And Agents At Work:copilot Agents", "Copilot And Agents At Work:copilot Studio", "Copilot Studio", "Data Integration", "Document Filtering", "F5n1", "Ignite", "Innovate With Low Code AI And Agents", "Knowledge Source Integration", "Low Code AI", "MCP Servers", "Microsoft", "Microsoft Graph", "Microsoft Ignite", "Ms Ignite", "Msft Ignite", "Personalized Responses", "Session BRK318", "Videos", "Visualization", "Workflow Automation"]
 tags_normalized: ["active directory", "agent development", "ai", "azure ai search", "brk318", "building the most intelligent agents with the latest knowledge sources pipe brk318", "copilot agents", "copilot and agents at workcopilot agents", "copilot and agents at workcopilot studio", "copilot studio", "data integration", "document filtering", "f5n1", "ignite", "innovate with low code ai and agents", "knowledge source integration", "low code ai", "mcp servers", "microsoft", "microsoft graph", "microsoft ignite", "ms ignite", "msft ignite", "personalized responses", "session brk318", "videos", "visualization", "workflow automation"]

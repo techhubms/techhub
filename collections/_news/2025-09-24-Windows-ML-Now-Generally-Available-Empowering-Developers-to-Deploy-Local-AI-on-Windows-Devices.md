@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft News"
 feed_url: "https://news.microsoft.com/source/feed/"
 date: 2025-09-24 16:23:25 +00:00
-permalink: "/news/2025-09-24-Windows-ML-Now-Generally-Available-Empowering-Developers-to-Deploy-Local-AI-on-Windows-Devices.html"
+permalink: "/2025-09-24-Windows-ML-Now-Generally-Available-Empowering-Developers-to-Deploy-Local-AI-on-Windows-Devices.html"
 categories: ["AI", "Coding"]
 tags: ["AI", "AI Dev Gallery", "AI Inference", "AI Toolkit For VS Code", "AMD Ryzen AI", "App Development", "Coding", "Company News", "CPU", "Edge AI", "GPU", "Intel OpenVINO", "Local AI", "Model Deployment", "Model Quantization", "News", "NPU", "NVIDIA TensorRT", "ONNX Runtime", "Qualcomm Snapdragon", "Silicon Partners", "Windows 11", "Windows App SDK", "Windows ML"]
 tags_normalized: ["ai", "ai dev gallery", "ai inference", "ai toolkit for vs code", "amd ryzen ai", "app development", "coding", "company news", "cpu", "edge ai", "gpu", "intel openvino", "local ai", "model deployment", "model quantization", "news", "npu", "nvidia tensorrt", "onnx runtime", "qualcomm snapdragon", "silicon partners", "windows 11", "windows app sdk", "windows ml"]

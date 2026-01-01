@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Visual Studio Code YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SLNwkd3w"
 date: 2025-10-28 17:02:52 +00:00
-permalink: "/videos/2025-10-28-OpenAI-Codex-Now-Available-in-VS-Code-with-GitHub-Copilot-Pro.html"
+permalink: "/2025-10-28-OpenAI-Codex-Now-Available-in-VS-Code-with-GitHub-Copilot-Pro.html"
 categories: ["AI", "Coding", "GitHub Copilot"]
 tags: ["AI", "AI Code Completion", "AI Coding Tools", "Code Agents", "Code Suggestions", "Coding", "Developer Tools", "GitHub Copilot", "GitHub Copilot Pro+", "OpenAI Codex", "Productivity Tools", "Videos", "VS Code"]
 tags_normalized: ["ai", "ai code completion", "ai coding tools", "code agents", "code suggestions", "coding", "developer tools", "github copilot", "github copilot proplus", "openai codex", "productivity tools", "videos", "vs code"]

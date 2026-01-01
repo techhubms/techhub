@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Events YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
 date: 2025-11-19 11:57:24 +00:00
-permalink: "/videos/2025-11-19-Accelerate-Enterprise-Passkey-Deployment-with-HID-and-Microsoft-Entra-ID.html"
+permalink: "/2025-11-19-Accelerate-Enterprise-Passkey-Deployment-with-HID-and-Microsoft-Entra-ID.html"
 categories: ["Azure", "Security"]
 tags: ["Access Management", "Authentication Strategies", "Azure", "Credential Management", "Enterprise Security", "FIDO", "HID", "Identity Management", "Microsoft Entra ID", "Microsoft Ignite", "MSIgnite", "Multi Factor Authentication", "Passkey Deployment", "Passwordless Authentication", "Phishing Resistant MFA", "Secureyourdata", "Security", "Videos"]
 tags_normalized: ["access management", "authentication strategies", "azure", "credential management", "enterprise security", "fido", "hid", "identity management", "microsoft entra id", "microsoft ignite", "msignite", "multi factor authentication", "passkey deployment", "passwordless authentication", "phishing resistant mfa", "secureyourdata", "security", "videos"]

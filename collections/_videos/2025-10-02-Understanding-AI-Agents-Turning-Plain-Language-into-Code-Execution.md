@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Developer YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
 date: 2025-10-02 17:36:29 +00:00
-permalink: "/videos/2025-10-02-Understanding-AI-Agents-Turning-Plain-Language-into-Code-Execution.html"
+permalink: "/2025-10-02-Understanding-AI-Agents-Turning-Plain-Language-into-Code-Execution.html"
 categories: ["AI"]
 tags: ["AI", "AI Agent", "AI Architecture", "AI Development", "AI Tutorial", "Developer Tools", "Microsoft", "Natural Language Processing", "OneDevQuestion", "Plain Language To Code", "Seth Juarez", "Videos"]
 tags_normalized: ["ai", "ai agent", "ai architecture", "ai development", "ai tutorial", "developer tools", "microsoft", "natural language processing", "onedevquestion", "plain language to code", "seth juarez", "videos"]

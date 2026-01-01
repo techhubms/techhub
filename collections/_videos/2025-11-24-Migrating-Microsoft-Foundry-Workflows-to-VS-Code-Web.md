@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Developer YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
 date: 2025-11-24 19:12:09 +00:00
-permalink: "/videos/2025-11-24-Migrating-Microsoft-Foundry-Workflows-to-VS-Code-Web.html"
+permalink: "/2025-11-24-Migrating-Microsoft-Foundry-Workflows-to-VS-Code-Web.html"
 categories: ["AI", "Azure", "Coding"]
 tags: ["Agent Workflow", "AI", "Azure", "Azure AI", "Azure AI Foundry", "Cloud Computing", "Cloud Development", "Code First Development", "Coding", "Dev", "Developer Tools", "Development", "Microsoft", "Microsoft Foundry", "Microsoft Foundry Extension", "Rapid Prototyping", "Tech", "Technical Tutorial", "Technology", "Videos", "VS Code", "VS Code Web", "Workflow Migration"]
 tags_normalized: ["agent workflow", "ai", "azure", "azure ai", "azure ai foundry", "cloud computing", "cloud development", "code first development", "coding", "dev", "developer tools", "development", "microsoft", "microsoft foundry", "microsoft foundry extension", "rapid prototyping", "tech", "technical tutorial", "technology", "videos", "vs code", "vs code web", "workflow migration"]

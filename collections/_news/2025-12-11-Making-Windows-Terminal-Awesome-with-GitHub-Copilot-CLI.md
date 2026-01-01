@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Blog"
 feed_url: "https://devblogs.microsoft.com/feed"
 date: 2025-12-11 17:00:28 +00:00
-permalink: "/news/2025-12-11-Making-Windows-Terminal-Awesome-with-GitHub-Copilot-CLI.html"
+permalink: "/2025-12-11-Making-Windows-Terminal-Awesome-with-GitHub-Copilot-CLI.html"
 categories: ["AI", "Coding", "GitHub Copilot"]
 tags: ["AI", "CLI Development", "Coding", "Command Line Tools", "Customization", "GitHub Copilot", "GitHub Copilot CLI", "Microsoft", "Microsoft For Developers", "Nerd Fonts", "News", "npm", "Oh My Posh", "PowerShell", "Profile Settings", "Prompt Customization", "Retro Terminal Effects", "Terminal Panes", "Terminal Profiles", "Windows Terminal"]
 tags_normalized: ["ai", "cli development", "coding", "command line tools", "customization", "github copilot", "github copilot cli", "microsoft", "microsoft for developers", "nerd fonts", "news", "npm", "oh my posh", "powershell", "profile settings", "prompt customization", "retro terminal effects", "terminal panes", "terminal profiles", "windows terminal"]

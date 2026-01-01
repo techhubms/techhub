@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-11-19 15:56:34 +00:00
-permalink: "/community/2025-11-19-Managing-Multiple-Deployment-Stacks-in-Azure-Bicep-Patterns-and-Best-Practices.html"
+permalink: "/2025-11-19-Managing-Multiple-Deployment-Stacks-in-Azure-Bicep-Patterns-and-Best-Practices.html"
 categories: ["Azure", "DevOps"]
 tags: ["Actiononunmanage", "ARM Templates", "Azure", "Azure Deployment Stacks", "Azure Resource Management", "Bicep", "Cloud Operations", "Community", "Deny Assignments", "DevOps", "Enterprise Infrastructure", "Environment Consistency", "Governance", "IaC", "Lifecycle Management", "Modular Architecture", "Resource Grouping"]
 tags_normalized: ["actiononunmanage", "arm templates", "azure", "azure deployment stacks", "azure resource management", "bicep", "cloud operations", "community", "deny assignments", "devops", "enterprise infrastructure", "environment consistency", "governance", "iac", "lifecycle management", "modular architecture", "resource grouping"]

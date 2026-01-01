@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "DotNet YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw"
 date: 2025-11-05 19:50:05 +00:00
-permalink: "/videos/2025-11-05-NET-MAUI-Community-Standup-10-Years-of-Grial.html"
+permalink: "/2025-11-05-NET-MAUI-Community-Standup-10-Years-of-Grial.html"
 categories: ["Coding"]
 tags: [".NET", ".NET 10", "App Development", "Coding", "Community Standup", "David Ortinau", "Demo", "Desktop Applications", "Developer", "Developer Community", "Dotnetdeveloper", "Dotnetmaui", "Grial", "MAUI", "Microsoft", "Mobile Development", "Software Developer", "UI Design", "UI Toolkit", "UX Divers", "Videos", "Xamarin"]
 tags_normalized: ["dotnet", "dotnet 10", "app development", "coding", "community standup", "david ortinau", "demo", "desktop applications", "developer", "developer community", "dotnetdeveloper", "dotnetmaui", "grial", "maui", "microsoft", "mobile development", "software developer", "ui design", "ui toolkit", "ux divers", "videos", "xamarin"]

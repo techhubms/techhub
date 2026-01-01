@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Reddit DevOps"
 feed_url: "https://www.reddit.com/r/devops/.rss"
 date: 2025-08-02 21:12:15 +00:00
-permalink: "/community/2025-08-02-SchemaNest-A-Fast-Team-Friendly-CICD-Ready-JSON-Schema-Registry.html"
+permalink: "/2025-08-02-SchemaNest-A-Fast-Team-Friendly-CICD-Ready-JSON-Schema-Registry.html"
 categories: ["DevOps", "Security"]
 tags: ["API Keys", "Authentication", "CI/CD", "Community", "DevOps", "Go", "JSON Schema", "Next.js", "PostgreSQL", "Schema Registry", "Security", "SQLite", "Team Collaboration", "Versioning"]
 tags_normalized: ["api keys", "authentication", "cislashcd", "community", "devops", "go", "json schema", "nextdotjs", "postgresql", "schema registry", "security", "sqlite", "team collaboration", "versioning"]

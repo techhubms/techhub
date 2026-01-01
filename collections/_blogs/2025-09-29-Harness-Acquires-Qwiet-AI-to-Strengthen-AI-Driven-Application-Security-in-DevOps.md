@@ -9,10 +9,10 @@ viewing_mode: "external"
 feed_name: "DevOps Blog"
 feed_url: "https://devops.com/feed/"
 date: 2025-09-29 15:00:18 +00:00
-permalink: "/blogs/2025-09-29-Harness-Acquires-Qwiet-AI-to-Strengthen-AI-Driven-Application-Security-in-DevOps.html"
+permalink: "/2025-09-29-Harness-Acquires-Qwiet-AI-to-Strengthen-AI-Driven-Application-Security-in-DevOps.html"
 categories: ["AI", "DevOps", "Security"]
-tags: ["AI", "AI Agents", "API Security", "Application Security", "Code Analysis", "Code Property Graph", "DevOps", "DevSecOps", "Harness", "Blogs", "Qwiet AI", "SDLC", "Security", "Security Automation", "Security Testing", "ShiftLeft", "Social Facebook", "Social LinkedIn", "Social X", "Software Supply Chain", "Traceable", "Vulnerability Remediation"]
-tags_normalized: ["ai", "ai agents", "api security", "application security", "code analysis", "code property graph", "devops", "devsecops", "harness", "blogs", "qwiet ai", "sdlc", "security", "security automation", "security testing", "shiftleft", "social facebook", "social linkedin", "social x", "software supply chain", "traceable", "vulnerability remediation"]
+tags: ["AI", "AI Agents", "API Security", "Application Security", "Blogs", "Code Analysis", "Code Property Graph", "DevOps", "DevSecOps", "Harness", "Qwiet AI", "SDLC", "Security", "Security Automation", "Security Testing", "ShiftLeft", "Social Facebook", "Social LinkedIn", "Social X", "Software Supply Chain", "Traceable", "Vulnerability Remediation"]
+tags_normalized: ["ai", "ai agents", "api security", "application security", "blogs", "code analysis", "code property graph", "devops", "devsecops", "harness", "qwiet ai", "sdlc", "security", "security automation", "security testing", "shiftleft", "social facebook", "social linkedin", "social x", "software supply chain", "traceable", "vulnerability remediation"]
 ---
 
 Mike Vizard details how Harness’s acquisition of Qwiet AI brings AI-powered code testing and native security automation to the DevOps platform, enhancing application security for development teams.<!--excerpt_end-->

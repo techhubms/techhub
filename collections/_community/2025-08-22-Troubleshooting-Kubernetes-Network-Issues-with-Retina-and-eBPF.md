@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-08-22 16:38:59 +00:00
-permalink: "/community/2025-08-22-Troubleshooting-Kubernetes-Network-Issues-with-Retina-and-eBPF.html"
+permalink: "/2025-08-22-Troubleshooting-Kubernetes-Network-Issues-with-Retina-and-eBPF.html"
 categories: ["Azure", "DevOps", "Security"]
 tags: ["AKS", "Azure", "Bpftool", "Cloud Native", "Community", "DevOps", "Distributed Systems", "Ebpf", "Inspektor Gadget", "Kubectl", "Kubernetes", "Network Debugging", "Network Troubleshooting", "Observability", "Packet Capture", "Persistent Volume", "Pwru", "Retina", "Security"]
 tags_normalized: ["aks", "azure", "bpftool", "cloud native", "community", "devops", "distributed systems", "ebpf", "inspektor gadget", "kubectl", "kubernetes", "network debugging", "network troubleshooting", "observability", "packet capture", "persistent volume", "pwru", "retina", "security"]

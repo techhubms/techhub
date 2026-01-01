@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/changelog/feed/"
 date: 2025-09-30 18:05:46 +00:00
-permalink: "/news/2025-09-30-Premium-Requests-Analytics-Dashboard-for-GitHub-Copilot-General-Availability.html"
+permalink: "/2025-09-30-Premium-Requests-Analytics-Dashboard-for-GitHub-Copilot-General-Availability.html"
 categories: ["AI", "DevOps", "GitHub Copilot"]
 tags: ["AI", "Analytics", "API Integration", "Billing", "Copilot", "Cost Tracking", "Data Visualization", "Developer Tools", "DevOps", "Enterprise Reporting", "GitHub", "GitHub Copilot", "News", "Premium Requests", "Subscription Management", "Usage Dashboard"]
 tags_normalized: ["ai", "analytics", "api integration", "billing", "copilot", "cost tracking", "data visualization", "developer tools", "devops", "enterprise reporting", "github", "github copilot", "news", "premium requests", "subscription management", "usage dashboard"]

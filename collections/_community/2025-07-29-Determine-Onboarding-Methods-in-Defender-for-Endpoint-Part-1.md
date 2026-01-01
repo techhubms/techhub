@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Community"
 date: 2025-07-29 14:00:39 +00:00
-permalink: "/community/2025-07-29-Determine-Onboarding-Methods-in-Defender-for-Endpoint-Part-1.html"
+permalink: "/2025-07-29-Determine-Onboarding-Methods-in-Defender-for-Endpoint-Part-1.html"
 categories: ["Azure", "Security"]
 tags: ["Azure", "BKMK EPLog", "Co Management", "Community", "Defender For Endpoint", "Device Onboarding", "EndpointProtectionAgent.log", "GPO", "Group Policy", "Local Script", "MCM", "Microsoft Configuration Manager", "Microsoft Intune", "Onboard", "Registry Keys", "Security", "Troubleshoot", "Troubleshooting", "Understanding", "Windows Endpoint"]
 tags_normalized: ["azure", "bkmk eplog", "co management", "community", "defender for endpoint", "device onboarding", "endpointprotectionagentdotlog", "gpo", "group policy", "local script", "mcm", "microsoft configuration manager", "microsoft intune", "onboard", "registry keys", "security", "troubleshoot", "troubleshooting", "understanding", "windows endpoint"]

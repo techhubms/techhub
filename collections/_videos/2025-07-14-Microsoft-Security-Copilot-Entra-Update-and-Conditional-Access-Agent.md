@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "John Savill's Technical Training"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCpIn7ox7j7bH_OFj7tYouOQ"
 date: 2025-07-14 14:12:06 +00:00
-permalink: "/videos/2025-07-14-Microsoft-Security-Copilot-Entra-Update-and-Conditional-Access-Agent.html"
+permalink: "/2025-07-14-Microsoft-Security-Copilot-Entra-Update-and-Conditional-Access-Agent.html"
 categories: ["AI", "Azure", "Security"]
 tags: ["A2A", "AI", "AI Security", "Azure", "Conditional Access", "Conditional Access Agent", "Copilot", "Generative AI", "Identity Security", "LLM", "MCP", "Microsoft Cloud", "Microsoft Entra", "Microsoft Security Copilot", "Natural Language Processing", "Security", "Security Automation", "Security Monitoring", "Security Operations", "Videos"]
 tags_normalized: ["a2a", "ai", "ai security", "azure", "conditional access", "conditional access agent", "copilot", "generative ai", "identity security", "llm", "mcp", "microsoft cloud", "microsoft entra", "microsoft security copilot", "natural language processing", "security", "security automation", "security monitoring", "security operations", "videos"]

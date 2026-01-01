@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "GitHub YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ"
 date: 2025-10-01 14:01:04 +00:00
-permalink: "/videos/2025-10-01-The-Coding-Buddy-That-Lives-in-Your-Command-Line-GitHub-Copilot-CLI.html"
+permalink: "/2025-10-01-The-Coding-Buddy-That-Lives-in-Your-Command-Line-GitHub-Copilot-CLI.html"
 categories: ["AI", "GitHub Copilot"]
 tags: ["Agentic AI", "AI", "AI in Development", "AI Programming Assistant", "Code Completion", "Command Line Interface", "Developer Tools", "GitHub Copilot", "GitHub Copilot CLI", "GithubCopilotCLI", "Local Development", "Productivity", "Terminal", "Videos"]
 tags_normalized: ["agentic ai", "ai", "ai in development", "ai programming assistant", "code completion", "command line interface", "developer tools", "github copilot", "github copilot cli", "githubcopilotcli", "local development", "productivity", "terminal", "videos"]

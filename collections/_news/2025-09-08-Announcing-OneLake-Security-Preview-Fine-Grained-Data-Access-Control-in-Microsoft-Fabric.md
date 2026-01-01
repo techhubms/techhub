@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Fabric Blog"
 feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
 date: 2025-09-08 08:00:00 +00:00
-permalink: "/news/2025-09-08-Announcing-OneLake-Security-Preview-Fine-Grained-Data-Access-Control-in-Microsoft-Fabric.html"
+permalink: "/2025-09-08-Announcing-OneLake-Security-Preview-Fine-Grained-Data-Access-Control-in-Microsoft-Fabric.html"
 categories: ["Azure", "ML", "Security"]
 tags: ["Access Control", "API", "Azure", "CLS", "Column Level Security", "Data Democratization", "Data Governance", "Data Lake Security", "Fabric Lakehouse", "Microsoft Fabric", "ML", "News", "OneLake", "Power BI", "RLS", "Role Based Access", "Row Level Security", "Security", "Security Roles", "Shortcuts", "Spark", "SQL Analytics Endpoint"]
 tags_normalized: ["access control", "api", "azure", "cls", "column level security", "data democratization", "data governance", "data lake security", "fabric lakehouse", "microsoft fabric", "ml", "news", "onelake", "power bi", "rls", "role based access", "row level security", "security", "security roles", "shortcuts", "spark", "sql analytics endpoint"]

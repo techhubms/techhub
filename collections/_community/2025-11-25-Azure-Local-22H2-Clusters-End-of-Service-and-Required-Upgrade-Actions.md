@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-11-25 15:17:52 +00:00
-permalink: "/community/2025-11-25-Azure-Local-22H2-Clusters-End-of-Service-and-Required-Upgrade-Actions.html"
+permalink: "/2025-11-25-Azure-Local-22H2-Clusters-End-of-Service-and-Required-Upgrade-Actions.html"
 categories: ["Azure", "Security"]
 tags: ["22H2", "24H2", "Azure", "Azure Local", "Azure Stack HCI", "Cluster Management", "Community", "Compliance", "End Of Service", "ESU", "Feature Degradation", "Hybrid Cloud", "Lifecycle Policy", "Microsoft Azure", "Security", "Security Updates", "Upgrade Guidance", "Windows Server Subscription"]
 tags_normalized: ["22h2", "24h2", "azure", "azure local", "azure stack hci", "cluster management", "community", "compliance", "end of service", "esu", "feature degradation", "hybrid cloud", "lifecycle policy", "microsoft azure", "security", "security updates", "upgrade guidance", "windows server subscription"]

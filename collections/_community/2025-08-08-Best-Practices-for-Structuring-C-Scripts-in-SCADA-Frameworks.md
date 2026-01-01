@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Reddit CSharp"
 feed_url: "https://www.reddit.com/r/csharp/.rss"
 date: 2025-08-08 01:55:00 +00:00
-permalink: "/community/2025-08-08-Best-Practices-for-Structuring-C-Scripts-in-SCADA-Frameworks.html"
+permalink: "/2025-08-08-Best-Practices-for-Structuring-C-Scripts-in-SCADA-Frameworks.html"
 categories: ["Coding"]
 tags: ["Algorithmic Complexity", "Best Practices", "C#", "Code Organization", "Coding", "Community", "DLL", "DRY", "Maintainability", "Performance", "Reusability", "SCADA", "Scripting", "Shared Libraries", "SOLID"]
 tags_normalized: ["algorithmic complexity", "best practices", "csharp", "code organization", "coding", "community", "dll", "dry", "maintainability", "performance", "reusability", "scada", "scripting", "shared libraries", "solid"]

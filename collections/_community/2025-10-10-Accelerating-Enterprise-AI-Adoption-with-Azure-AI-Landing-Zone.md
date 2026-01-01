@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-10-10 02:35:21 +00:00
-permalink: "/community/2025-10-10-Accelerating-Enterprise-AI-Adoption-with-Azure-AI-Landing-Zone.html"
+permalink: "/2025-10-10-Accelerating-Enterprise-AI-Adoption-with-Azure-AI-Landing-Zone.html"
 categories: ["AI", "Azure"]
 tags: ["AI", "AI ALZ", "AI Governance", "AI Security", "AKS", "App Service", "AVM", "Azure", "Azure AI Foundry", "Azure AI Landing Zone", "Azure Container Apps", "Azure Functions", "Bicep", "Cloud Adoption Framework", "Community", "Compliance", "Enterprise AI", "IaC", "Reference Architecture", "Terraform", "WAF", "Well Architected Framework"]
 tags_normalized: ["ai", "ai alz", "ai governance", "ai security", "aks", "app service", "avm", "azure", "azure ai foundry", "azure ai landing zone", "azure container apps", "azure functions", "bicep", "cloud adoption framework", "community", "compliance", "enterprise ai", "iac", "reference architecture", "terraform", "waf", "well architected framework"]

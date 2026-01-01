@@ -6,7 +6,7 @@ categories: ["Azure", "Coding", "DevOps", "Security"]
 date: 2017-05-01 00:00:00 +00:00
 author: "Xebia"
 viewing_mode: "external"
-permalink: "/community/2017-05-01-XPRT-Magazine-04.html"
+permalink: "/2017-05-01-XPRT-Magazine-04.html"
 excerpt_separator: <!--excerpt_end-->
 tags: [".NET", "App Delivery", "Auth0", "Azure", "Azure Functions", "Backup", "Change Management", "Cloud Computing", "Cloud Native", "Coding", "Community", "Containers", "DevOps", "IT Transformation", "Magazines", "Security", "Serverless", "Service Fabric", "Technical Introduction", "Windows Containers", "Xamarin"]
 tags_normalized: ["dotnet", "app delivery", "auth0", "azure", "azure functions", "backup", "change management", "cloud computing", "cloud native", "coding", "community", "containers", "devops", "it transformation", "magazines", "security", "serverless", "service fabric", "technical introduction", "windows containers", "xamarin"]

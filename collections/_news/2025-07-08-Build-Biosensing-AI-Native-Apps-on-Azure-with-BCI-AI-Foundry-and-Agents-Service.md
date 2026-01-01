@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft DevBlog"
 feed_url: "https://devblogs.microsoft.com/all-things-azure/feed/"
 date: 2025-07-08 05:57:41 +00:00
-permalink: "/news/2025-07-08-Build-Biosensing-AI-Native-Apps-on-Azure-with-BCI-AI-Foundry-and-Agents-Service.html"
+permalink: "/2025-07-08-Build-Biosensing-AI-Native-Apps-on-Azure-with-BCI-AI-Foundry-and-Agents-Service.html"
 categories: ["AI", "Azure", "Coding"]
 tags: ["Adaptive Systems", "AI", "AI Agents Service", "All Things Azure", "Azure", "Azure AI Foundry", "Azure AI Search", "Azure Container Apps", "Azure Event Grid", "Azure Event Hubs", "Biosensing", "Brain Computer Interface", "Coding", "Cognitive State Monitoring", "Cosmos DB", "Developer Tools", "Fnirs", "Health Technology", "News", "Real Time Applications", "TypeAgent"]
 tags_normalized: ["adaptive systems", "ai", "ai agents service", "all things azure", "azure", "azure ai foundry", "azure ai search", "azure container apps", "azure event grid", "azure event hubs", "biosensing", "brain computer interface", "coding", "cognitive state monitoring", "cosmos db", "developer tools", "fnirs", "health technology", "news", "real time applications", "typeagent"]

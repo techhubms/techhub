@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The Azure Blog"
 feed_url: "https://azure.microsoft.com/en-us/blog/feed/"
 date: 2025-12-10 17:00:00 +00:00
-permalink: "/news/2025-12-10-Agentic-AI-and-Cloud-Innovation-Key-Takeaways-from-Microsoft-Ignite-2025.html"
+permalink: "/2025-12-10-Agentic-AI-and-Cloud-Innovation-Key-Takeaways-from-Microsoft-Ignite-2025.html"
 categories: ["AI", "Azure", "Coding", "DevOps", "ML", "Security"]
 tags: ["Agentic AI", "AI", "AI + Machine Learning", "Azure", "Azure Boost DPU", "Azure Copilot", "Azure HorizonDB", "Claude Models", "Cloud Migration", "Cobalt 200", "Coding", "Data Security", "DevOps", "DevOps Automation", "DiskANN", "Fabric IQ", "Foundry IQ", "GPT", "IaC", "Integrated HSM", "Microsoft Foundry", "Microsoft Ignite", "ML", "News", "NVIDIA Blackwell", "PostgreSQL", "RBAC", "Security", "Semantic Intelligence", "Vector Indexing"]
 tags_normalized: ["agentic ai", "ai", "ai plus machine learning", "azure", "azure boost dpu", "azure copilot", "azure horizondb", "claude models", "cloud migration", "cobalt 200", "coding", "data security", "devops", "devops automation", "diskann", "fabric iq", "foundry iq", "gpt", "iac", "integrated hsm", "microsoft foundry", "microsoft ignite", "ml", "news", "nvidia blackwell", "postgresql", "rbac", "security", "semantic intelligence", "vector indexing"]

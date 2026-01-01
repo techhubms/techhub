@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/changelog/feed/"
 date: 2025-09-15 12:53:46 +00:00
-permalink: "/news/2025-09-15-Auto-Model-Selection-for-GitHub-Copilot-in-VS-Code-Public-Preview.html"
+permalink: "/2025-09-15-Auto-Model-Selection-for-GitHub-Copilot-in-VS-Code-Public-Preview.html"
 categories: ["AI", "GitHub Copilot"]
 tags: ["AI", "AI Models", "Auto Model Selection", "Billing", "Copilot", "Copilot Business", "Copilot Enterprise", "Copilot Free", "Copilot Pro", "Copilot Pro+", "Developer Tools", "GitHub Copilot", "GPT 4.1", "GPT 5", "Model Picker", "News", "Premium Request", "Public Preview", "Sonnet 4", "VS Code", "VS Code Extension"]
 tags_normalized: ["ai", "ai models", "auto model selection", "billing", "copilot", "copilot business", "copilot enterprise", "copilot free", "copilot pro", "copilot proplus", "developer tools", "github copilot", "gpt 4dot1", "gpt 5", "model picker", "news", "premium request", "public preview", "sonnet 4", "vs code", "vs code extension"]

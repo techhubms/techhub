@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-11-08 00:45:49 +00:00
-permalink: "/community/2025-11-08-High-Performance-AI-Networking-on-AKS-eBPF-Host-Routing-with-Azure-CNI-Powered-by-Cilium.html"
+permalink: "/2025-11-08-High-Performance-AI-Networking-on-AKS-eBPF-Host-Routing-with-Azure-CNI-Powered-by-Cilium.html"
 categories: ["AI", "Azure", "DevOps", "Security"]
 tags: ["Advanced Container Networking Services", "AI", "AKS", "Azure", "Azure CNI", "BpfVeth", "Cilium", "Community", "Container Networking", "DevOps", "Ebpf", "Kubernetes 1.33", "Kubernetes Networking", "Latency Reduction", "Network Profile", "Performance Optimization", "Pod Throughput", "Security", "Security Safeguards", "TCP Benchmarking", "Ubuntu 24.04"]
 tags_normalized: ["advanced container networking services", "ai", "aks", "azure", "azure cni", "bpfveth", "cilium", "community", "container networking", "devops", "ebpf", "kubernetes 1dot33", "kubernetes networking", "latency reduction", "network profile", "performance optimization", "pod throughput", "security", "security safeguards", "tcp benchmarking", "ubuntu 24dot04"]

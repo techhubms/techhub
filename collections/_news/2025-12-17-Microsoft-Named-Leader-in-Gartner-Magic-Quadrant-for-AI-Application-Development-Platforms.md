@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The Azure Blog"
 feed_url: "https://azure.microsoft.com/en-us/blog/feed/"
 date: 2025-12-17 19:00:00 +00:00
-permalink: "/news/2025-12-17-Microsoft-Named-Leader-in-Gartner-Magic-Quadrant-for-AI-Application-Development-Platforms.html"
+permalink: "/2025-12-17-Microsoft-Named-Leader-in-Gartner-Magic-Quadrant-for-AI-Application-Development-Platforms.html"
 categories: ["AI", "Azure"]
 tags: ["Agent Based Systems", "Agent Framework", "AI", "AI + Machine Learning", "AI Application Development", "AI Governance", "AI Models", "AI Workflow Integration", "Azure", "Cloud To Edge AI", "Developer Tools", "Distributed AI", "Enterprise AI", "Enterprise Integration", "Gartner Magic Quadrant", "Gartner® Magic Quadrant™", "GenAI Ops", "Microsoft Foundry", "News", "Observability", "Orchestration"]
 tags_normalized: ["agent based systems", "agent framework", "ai", "ai plus machine learning", "ai application development", "ai governance", "ai models", "ai workflow integration", "azure", "cloud to edge ai", "developer tools", "distributed ai", "enterprise ai", "enterprise integration", "gartner magic quadrant", "gartner magic quadrant", "genai ops", "microsoft foundry", "news", "observability", "orchestration"]

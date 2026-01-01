@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Security Blog"
 feed_url: "https://www.microsoft.com/en-us/security/blog/feed/"
 date: 2025-07-16 17:00:00 +00:00
-permalink: "/news/2025-07-16-Microsoft-Named-a-Leader-in-Gartners-2025-Magic-Quadrant-for-Endpoint-Protection.html"
+permalink: "/2025-07-16-Microsoft-Named-a-Leader-in-Gartners-2025-Magic-Quadrant-for-Endpoint-Protection.html"
 categories: ["Security"]
 tags: ["AI", "AI Powered Security", "Cybersecurity", "Defender Suite", "Endpoint Detection And Response", "Endpoint Protection", "Gartner Magic Quadrant", "Microsoft Defender For Endpoint", "Microsoft Security Blog", "Multi Platform Security", "News", "Ransomware", "Rob Lefferts", "Security", "Security Monitoring", "Security Operations", "Security Platform", "Threat Intelligence"]
 tags_normalized: ["ai", "ai powered security", "cybersecurity", "defender suite", "endpoint detection and response", "endpoint protection", "gartner magic quadrant", "microsoft defender for endpoint", "microsoft security blog", "multi platform security", "news", "ransomware", "rob lefferts", "security", "security monitoring", "security operations", "security platform", "threat intelligence"]

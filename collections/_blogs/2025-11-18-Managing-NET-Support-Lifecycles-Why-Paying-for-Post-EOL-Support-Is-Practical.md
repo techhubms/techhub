@@ -9,10 +9,10 @@ viewing_mode: "external"
 feed_name: "Andrew Lock's Blog"
 feed_url: "https://andrewlock.net/rss.xml"
 date: 2025-11-18 10:00:00 +00:00
-permalink: "/blogs/2025-11-18-Managing-NET-Support-Lifecycles-Why-Paying-for-Post-EOL-Support-Is-Practical.html"
+permalink: "/2025-11-18-Managing-NET-Support-Lifecycles-Why-Paying-for-Post-EOL-Support-Is-Practical.html"
 categories: ["Coding", "Security"]
-tags: [".NET", ".NET 10", ".NET 6", ".NET 8", ".NET 9", ".NET Core", "ASP.NET Core", "Coding", "CVE 55315", "End Of Life", "Enterprise Compliance", "EOL Support", "HeroDevs", "LTS", "Never Ending Support", "Patching", "Blogs", "Regulatory Risk", "Request Smuggling", "Runtime", "SDK", "Security", "Security Fixes", "Security Vulnerability", "STS", "Support Lifecycle", "Version Upgrades"]
-tags_normalized: ["dotnet", "dotnet 10", "dotnet 6", "dotnet 8", "dotnet 9", "dotnet core", "aspdotnet core", "coding", "cve 55315", "end of life", "enterprise compliance", "eol support", "herodevs", "lts", "never ending support", "patching", "blogs", "regulatory risk", "request smuggling", "runtime", "sdk", "security", "security fixes", "security vulnerability", "sts", "support lifecycle", "version upgrades"]
+tags: [".NET", ".NET 10", ".NET 6", ".NET 8", ".NET 9", ".NET Core", "ASP.NET Core", "Blogs", "Coding", "CVE 55315", "End Of Life", "Enterprise Compliance", "EOL Support", "HeroDevs", "LTS", "Never Ending Support", "Patching", "Regulatory Risk", "Request Smuggling", "Runtime", "SDK", "Security", "Security Fixes", "Security Vulnerability", "STS", "Support Lifecycle", "Version Upgrades"]
+tags_normalized: ["dotnet", "dotnet 10", "dotnet 6", "dotnet 8", "dotnet 9", "dotnet core", "aspdotnet core", "blogs", "coding", "cve 55315", "end of life", "enterprise compliance", "eol support", "herodevs", "lts", "never ending support", "patching", "regulatory risk", "request smuggling", "runtime", "sdk", "security", "security fixes", "security vulnerability", "sts", "support lifecycle", "version upgrades"]
 ---
 
 Andrew Lock reviews the .NET support lifecycle and demonstrates how organizations can avoid risks from unsupported versions by leveraging HeroDevs' Never Ending Support for .NET 6.<!--excerpt_end-->

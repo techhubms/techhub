@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Developer YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
 date: 2025-09-30 16:24:14 +00:00
-permalink: "/videos/2025-09-30-Securing-AI-Deployments-with-HashiCorp-Vault-and-Azure.html"
+permalink: "/2025-09-30-Securing-AI-Deployments-with-HashiCorp-Vault-and-Azure.html"
 categories: ["AI", "Azure", "DevOps", "Security"]
 tags: ["AI", "AI Deployment", "Auditability", "Automation", "Azure", "Azure Verified Modules", "Cloud Computing", "Confused Deputy", "Dev", "Development", "DevOps", "Dynamic Credential Management", "Governance", "HashiCorp Vault", "IaC", "Kubernetes", "Microsoft", "Multi Agent Systems", "Packer", "Security", "Tech", "Technology", "Terraform", "Traceability", "Vault Radar", "Videos"]
 tags_normalized: ["ai", "ai deployment", "auditability", "automation", "azure", "azure verified modules", "cloud computing", "confused deputy", "dev", "development", "devops", "dynamic credential management", "governance", "hashicorp vault", "iac", "kubernetes", "microsoft", "multi agent systems", "packer", "security", "tech", "technology", "terraform", "traceability", "vault radar", "videos"]

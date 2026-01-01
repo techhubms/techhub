@@ -10,7 +10,7 @@ categories: ["AI", "GitHub Copilot"]
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/feed/"
 date: 2025-06-17 16:00:00 +00:00
-permalink: "/news/2025-06-17-5-tips-for-using-GitHub-Copilot-with-issues-to-boost-your-productivity.html"
+permalink: "/2025-06-17-5-tips-for-using-GitHub-Copilot-with-issues-to-boost-your-productivity.html"
 tags: ["AI", "AI & ML", "AI Features", "Automation", "Context Switching", "Developer Productivity", "Generative AI", "GitHub Copilot", "GitHub Issues", "News", "Resolution Time"]
 tags_normalized: ["ai", "ai and ml", "ai features", "automation", "context switching", "developer productivity", "generative ai", "github copilot", "github issues", "news", "resolution time"]
 ---

@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-11-14 16:52:12 +00:00
-permalink: "/community/2025-11-14-Accelerating-HPC-and-EDA-Innovation-with-Azure-NetApp-Files-Enhancements.html"
+permalink: "/2025-11-14-Accelerating-HPC-and-EDA-Innovation-with-Azure-NetApp-Files-Enhancements.html"
 categories: ["AI", "Azure", "Security"]
 tags: ["AI", "AI Integration", "Azure", "Azure NetApp Files", "Backup And Restore", "Cloud Storage", "Community", "Compliance", "Cost Optimization", "Data Management", "Data Migration", "HPC", "Hybrid Cloud", "Machine Learning", "Object Storage", "Performance Optimization", "Quota Reporting", "S3 Compatible", "Security", "Volume Scalability", "Well Architected"]
 tags_normalized: ["ai", "ai integration", "azure", "azure netapp files", "backup and restore", "cloud storage", "community", "compliance", "cost optimization", "data management", "data migration", "hpc", "hybrid cloud", "machine learning", "object storage", "performance optimization", "quota reporting", "s3 compatible", "security", "volume scalability", "well architected"]

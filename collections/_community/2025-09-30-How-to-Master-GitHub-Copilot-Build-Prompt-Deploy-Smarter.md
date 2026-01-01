@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-09-30 05:00:00 +00:00
-permalink: "/community/2025-09-30-How-to-Master-GitHub-Copilot-Build-Prompt-Deploy-Smarter.html"
+permalink: "/2025-09-30-How-to-Master-GitHub-Copilot-Build-Prompt-Deploy-Smarter.html"
 categories: ["AI", "Azure", "Coding", "GitHub Copilot"]
 tags: ["AI", "AI Assisted Development", "Automation", "Azure", "Best Practices", "C#", "Cloud Deployments", "Code Quality", "Coding", "Community", "Developer Productivity", "GitHub Copilot", "Hands On Workshop", "JavaScript", "Jupyter Notebooks", "Legacy Code Upgrade", "MCP", "Paired Programming", "Prompt Engineering", "Python", "Software Engineering", "SQL"]
 tags_normalized: ["ai", "ai assisted development", "automation", "azure", "best practices", "csharp", "cloud deployments", "code quality", "coding", "community", "developer productivity", "github copilot", "hands on workshop", "javascript", "jupyter notebooks", "legacy code upgrade", "mcp", "paired programming", "prompt engineering", "python", "software engineering", "sql"]

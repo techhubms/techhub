@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "John Savill's Technical Training"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCpIn7ox7j7bH_OFj7tYouOQ"
 date: 2025-11-14 16:32:17 +00:00
-permalink: "/videos/2025-11-14-Azure-Update-14th-November-2025.html"
+permalink: "/2025-11-14-Azure-Update-14th-November-2025.html"
 categories: ["AI", "Azure", "Coding", "DevOps", "Security"]
 tags: [".NET 10", "AI", "AI Superfactory", "AKS", "App Gateway For Containers", "Azure", "Azure Data Lake Storage Gen2", "Azure Firewall", "Azure Functions", "Azure Linux", "Azure Migrate", "Azure Network Manager", "Azure Updates", "Backup", "Cloud", "Cloud Infrastructure", "Coding", "DevOps", "Flatcar Container Linux", "GPT 5.1", "Johnsavillstechnicaltraining", "KQL", "Microsoft", "MySQL Flexible Server", "Object Storage", "Onboard to Azure", "PostgreSQL Flexible Server", "Security", "Videos", "WAF"]
 tags_normalized: ["dotnet 10", "ai", "ai superfactory", "aks", "app gateway for containers", "azure", "azure data lake storage gen2", "azure firewall", "azure functions", "azure linux", "azure migrate", "azure network manager", "azure updates", "backup", "cloud", "cloud infrastructure", "coding", "devops", "flatcar container linux", "gpt 5dot1", "johnsavillstechnicaltraining", "kql", "microsoft", "mysql flexible server", "object storage", "onboard to azure", "postgresql flexible server", "security", "videos", "waf"]

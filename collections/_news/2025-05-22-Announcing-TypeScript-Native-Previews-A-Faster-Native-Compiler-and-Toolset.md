@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft TypeScript Blog"
 feed_url: "https://devblogs.microsoft.com/typescript/feed/"
 date: 2025-05-22 15:04:21 +00:00
-permalink: "/news/2025-05-22-Announcing-TypeScript-Native-Previews-A-Faster-Native-Compiler-and-Toolset.html"
+permalink: "/2025-05-22-Announcing-TypeScript-Native-Previews-A-Faster-Native-Compiler-and-Toolset.html"
 categories: ["Coding"]
 tags: ["API", "Coding", "Go", "JavaScript Type Checking", "JSX", "Language Server", "LSP", "Native Compiler", "News", "Node.js", "Open Source", "Performance", "Project Corsa", "Project Strada", "TypeScript", "TypeScript Native", "VS Code Extension"]
 tags_normalized: ["api", "coding", "go", "javascript type checking", "jsx", "language server", "lsp", "native compiler", "news", "nodedotjs", "open source", "performance", "project corsa", "project strada", "typescript", "typescript native", "vs code extension"]

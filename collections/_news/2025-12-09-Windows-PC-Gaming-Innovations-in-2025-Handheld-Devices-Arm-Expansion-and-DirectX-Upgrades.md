@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft News"
 feed_url: "https://news.microsoft.com/source/feed/"
 date: 2025-12-09 19:17:58 +00:00
-permalink: "/news/2025-12-09-Windows-PC-Gaming-Innovations-in-2025-Handheld-Devices-Arm-Expansion-and-DirectX-Upgrades.html"
+permalink: "/2025-12-09-Windows-PC-Gaming-Innovations-in-2025-Handheld-Devices-Arm-Expansion-and-DirectX-Upgrades.html"
 categories: ["AI", "Azure", "Coding", "ML", "Security"]
 tags: ["Advanced Shader Delivery", "Agility SDK", "AI", "AI Upscaling", "AMD Ryzen Z2", "Anti Cheat", "ARM", "Auto Super Resolution", "Azure", "Bluetooth LE Audio", "Coding", "Company News", "DirectX", "DirectX Raytracing 1.2", "Game Development", "Game Performance", "Gaming", "ML", "Neural Rendering", "News", "PC Gaming", "Prism Emulator", "ROG Xbox Ally", "Security", "TPM 2.0", "Virtualization Based Security", "Windows 11", "Xbox PC App"]
 tags_normalized: ["advanced shader delivery", "agility sdk", "ai", "ai upscaling", "amd ryzen z2", "anti cheat", "arm", "auto super resolution", "azure", "bluetooth le audio", "coding", "company news", "directx", "directx raytracing 1dot2", "game development", "game performance", "gaming", "ml", "neural rendering", "news", "pc gaming", "prism emulator", "rog xbox ally", "security", "tpm 2dot0", "virtualization based security", "windows 11", "xbox pc app"]

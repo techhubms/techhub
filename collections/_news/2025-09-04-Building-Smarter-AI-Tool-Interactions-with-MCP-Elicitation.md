@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/feed/"
 date: 2025-09-04 16:00:00 +00:00
-permalink: "/news/2025-09-04-Building-Smarter-AI-Tool-Interactions-with-MCP-Elicitation.html"
+permalink: "/2025-09-04-Building-Smarter-AI-Tool-Interactions-with-MCP-Elicitation.html"
 categories: ["AI", "Coding", "GitHub Copilot"]
 tags: ["AI", "AI & ML", "AI Tool Integration", "Code Refactoring", "Coding", "Developer Experience", "Elicitation", "Game Development", "Generative AI", "GitHub Copilot", "MCP", "MCP Server", "News", "Rubber Duck Thursdays", "Schema Driven Prompts", "Tool Naming", "Turn Based Games", "TypeScript", "User Experience", "VS Code"]
 tags_normalized: ["ai", "ai and ml", "ai tool integration", "code refactoring", "coding", "developer experience", "elicitation", "game development", "generative ai", "github copilot", "mcp", "mcp server", "news", "rubber duck thursdays", "schema driven prompts", "tool naming", "turn based games", "typescript", "user experience", "vs code"]

@@ -9,10 +9,10 @@ viewing_mode: "external"
 feed_name: "Thomas Maurer's Blog"
 feed_url: "https://www.thomasmaurer.ch/feed/"
 date: 2025-03-25 14:45:56 +00:00
-permalink: "/blogs/2025-03-25-Recover-Your-Azure-Cloud-Environment-with-Commvault-Cloud-Rewind.html"
+permalink: "/2025-03-25-Recover-Your-Azure-Cloud-Environment-with-Commvault-Cloud-Rewind.html"
 categories: ["Azure"]
-tags: ["Azure", "Azure Infrastructure", "Cloud", "Cloud Computing", "Cloud Recovery", "Cloud Rewind", "Commvault", "Cybersecurity", "Data Integrity", "Disaster Recovery", "Microsoft", "Microsoft Azure", "Blogs"]
-tags_normalized: ["azure", "azure infrastructure", "cloud", "cloud computing", "cloud recovery", "cloud rewind", "commvault", "cybersecurity", "data integrity", "disaster recovery", "microsoft", "microsoft azure", "blogs"]
+tags: ["Azure", "Azure Infrastructure", "Blogs", "Cloud", "Cloud Computing", "Cloud Recovery", "Cloud Rewind", "Commvault", "Cybersecurity", "Data Integrity", "Disaster Recovery", "Microsoft", "Microsoft Azure"]
+tags_normalized: ["azure", "azure infrastructure", "blogs", "cloud", "cloud computing", "cloud recovery", "cloud rewind", "commvault", "cybersecurity", "data integrity", "disaster recovery", "microsoft", "microsoft azure"]
 ---
 
 In this detailed post, Thomas Maurer interviews Thomas Bryant from Commvault to explore the recovery and resilience of Azure cloud environments using Commvault Cloud Rewind. This discussion provides crucial insights for IT professionals managing Microsoft Azure infrastructure.<!--excerpt_end-->

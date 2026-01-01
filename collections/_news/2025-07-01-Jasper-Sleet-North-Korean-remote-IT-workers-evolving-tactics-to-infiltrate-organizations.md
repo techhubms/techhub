@@ -10,7 +10,7 @@ categories: ["Security"]
 feed_name: "Microsoft News"
 feed_url: "https://news.microsoft.com/source/feed/"
 date: 2025-07-01 16:30:34 +00:00
-permalink: "/news/2025-07-01-Jasper-Sleet-North-Korean-remote-IT-workers-evolving-tactics-to-infiltrate-organizations.html"
+permalink: "/2025-07-01-Jasper-Sleet-North-Korean-remote-IT-workers-evolving-tactics-to-infiltrate-organizations.html"
 tags: ["Company News", "Cybersecurity", "Insider Threats", "IT Security", "News", "North Korea", "Remote Work", "Security", "Security Tactics"]
 tags_normalized: ["company news", "cybersecurity", "insider threats", "it security", "news", "north korea", "remote work", "security", "security tactics"]
 ---

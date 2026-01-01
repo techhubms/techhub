@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Events YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
 date: 2025-11-20 14:55:21 +00:00
-permalink: "/videos/2025-11-20-AI-Creativity-The-New-Media-Blueprint-BRK378.html"
+permalink: "/2025-11-20-AI-Creativity-The-New-Media-Blueprint-BRK378.html"
 categories: ["AI"]
 tags: ["Agentic AI", "AI", "AI Agents", "AI Transformation", "Automated Workflows", "Brand Building", "Copilotandagentsatwork", "Creative Agencies", "Data Collaboration", "Ethics", "Hypercinema", "Industry", "Kantar", "Le Monde", "Media And Entertainment", "Microsoft Ignite", "Monetization", "MSIgnite", "Premier League", "Session BRK378", "Videos", "Workflow Automation"]
 tags_normalized: ["agentic ai", "ai", "ai agents", "ai transformation", "automated workflows", "brand building", "copilotandagentsatwork", "creative agencies", "data collaboration", "ethics", "hypercinema", "industry", "kantar", "le monde", "media and entertainment", "microsoft ignite", "monetization", "msignite", "premier league", "session brk378", "videos", "workflow automation"]

@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The Azure Blog"
 feed_url: "https://azure.microsoft.com/en-us/blog/feed/"
 date: 2025-07-09 16:00:00 +00:00
-permalink: "/news/2025-07-09-Reasoning-Reimagined-Introducing-Phi-4-mini-flash-reasoning-for-Efficient-Edge-AI.html"
+permalink: "/2025-07-09-Reasoning-Reimagined-Introducing-Phi-4-mini-flash-reasoning-for-Efficient-Edge-AI.html"
 categories: ["AI", "Azure"]
 tags: ["AI", "AI + Machine Learning", "Azure", "Azure AI Foundry", "Copilot", "Deployment", "Developer Tools", "Edge AI", "Gated Memory Unit", "Generative AI", "Math Reasoning", "Microsoft", "Mobile AI", "Model Efficiency", "News", "Phi 4 Mini Flash Reasoning", "Real Time Applications", "Responsible AI", "SambaY Architecture"]
 tags_normalized: ["ai", "ai plus machine learning", "azure", "azure ai foundry", "copilot", "deployment", "developer tools", "edge ai", "gated memory unit", "generative ai", "math reasoning", "microsoft", "mobile ai", "model efficiency", "news", "phi 4 mini flash reasoning", "real time applications", "responsible ai", "sambay architecture"]

@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Developer YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
 date: 2025-08-25 14:01:01 +00:00
-permalink: "/videos/2025-08-25-Why-Did-the-Cost-of-My-AI-Agent-Exceed-the-Set-Budget.html"
+permalink: "/2025-08-25-Why-Did-the-Cost-of-My-AI-Agent-Exceed-the-Set-Budget.html"
 categories: ["AI", "Azure"]
 tags: ["AI", "AI Agent", "AI Deployment", "AI Operations", "Azure", "Azure AI", "Azure AI Foundry", "Budgeting", "Cloud Computing", "Cloud Spending", "Cost Management", "Dev", "Development", "Microsoft", "Microsoft Azure", "Resource Allocation", "Tech", "Tech Community", "Technology", "Videos"]
 tags_normalized: ["ai", "ai agent", "ai deployment", "ai operations", "azure", "azure ai", "azure ai foundry", "budgeting", "cloud computing", "cloud spending", "cost management", "dev", "development", "microsoft", "microsoft azure", "resource allocation", "tech", "tech community", "technology", "videos"]

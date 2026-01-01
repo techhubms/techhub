@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-12-15 19:23:38 +00:00
-permalink: "/community/2025-12-15-Modernizing-Oracle-Workloads-with-Oracle-DatabaseAzure-and-AI-Solutions.html"
+permalink: "/2025-12-15-Modernizing-Oracle-Workloads-with-Oracle-DatabaseAzure-and-AI-Solutions.html"
 categories: ["AI", "Azure", "Security"]
 tags: ["AI", "AI Integration", "Azure", "Azure Defender", "Azure Sentinel", "Cloud Migration", "Community", "Compliance", "Copilot Studio", "Data Sovereignty", "Enterprise Workloads", "Integrated Security", "Microsoft Azure", "Microsoft Foundry", "Modernization", "OCI", "Oracle Database@Azure", "Public Cloud", "Security"]
 tags_normalized: ["ai", "ai integration", "azure", "azure defender", "azure sentinel", "cloud migration", "community", "compliance", "copilot studio", "data sovereignty", "enterprise workloads", "integrated security", "microsoft azure", "microsoft foundry", "modernization", "oci", "oracle databaseatazure", "public cloud", "security"]

@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Developer YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
 date: 2025-11-04 18:19:47 +00:00
-permalink: "/videos/2025-11-04-From-Building-to-Fine-Tuning-Coding-Agents-that-Optimize-AI-Workflows.html"
+permalink: "/2025-11-04-From-Building-to-Fine-Tuning-Coding-Agents-that-Optimize-AI-Workflows.html"
 categories: ["AI", "Azure", "Coding", "DevOps", "ML"]
 tags: ["Agent Orchestration", "AI", "AI Engineering", "Azure", "Azure AI Foundry", "Azure Machine Learning", "Cloud Computing", "Coding", "Dev", "Development", "DevOps", "DevOps Workflows", "GitHub", "GitHub Integration", "Hugging Face", "Math For AI", "Microsoft", "ML", "Model Fine Tuning", "Multi Agent Systems", "Preference Optimization", "Reinforcement Learning", "Self Hosting AI", "Software Engineering Agents", "SpecKit", "SWE Agents", "Tech", "Technology", "Videos"]
 tags_normalized: ["agent orchestration", "ai", "ai engineering", "azure", "azure ai foundry", "azure machine learning", "cloud computing", "coding", "dev", "development", "devops", "devops workflows", "github", "github integration", "hugging face", "math for ai", "microsoft", "ml", "model fine tuning", "multi agent systems", "preference optimization", "reinforcement learning", "self hosting ai", "software engineering agents", "speckit", "swe agents", "tech", "technology", "videos"]

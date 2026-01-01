@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Events YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
 date: 2025-11-21 12:50:52 +00:00
-permalink: "/videos/2025-11-21-Powering-Seamless-and-Secure-Experiences-with-Lenovo-and-Microsoft-AI-Integration.html"
+permalink: "/2025-11-21-Powering-Seamless-and-Secure-Experiences-with-Lenovo-and-Microsoft-AI-Integration.html"
 categories: ["AI", "Azure"]
 tags: ["AI", "AI Integration", "AI Revolution", "Azure", "Cloud Platforms", "Data Centers", "Deployment Acceleration", "Device Security", "Enterprise Solutions", "Industry Innovation", "Integrated Solutions", "Lenovo", "Microsoft 365", "Microsoft Events", "Microsoft Ignite", "MSIgnite", "Videos", "Windows"]
 tags_normalized: ["ai", "ai integration", "ai revolution", "azure", "cloud platforms", "data centers", "deployment acceleration", "device security", "enterprise solutions", "industry innovation", "integrated solutions", "lenovo", "microsoft 365", "microsoft events", "microsoft ignite", "msignite", "videos", "windows"]

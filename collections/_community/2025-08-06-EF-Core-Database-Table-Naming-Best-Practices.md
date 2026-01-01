@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Reddit DotNet"
 feed_url: "https://www.reddit.com/r/dotnet/.rss"
 date: 2025-08-06 19:24:20 +00:00
-permalink: "/community/2025-08-06-EF-Core-Database-Table-Naming-Best-Practices.html"
+permalink: "/2025-08-06-EF-Core-Database-Table-Naming-Best-Practices.html"
 categories: ["Coding"]
 tags: [".NET", "Attributes", "C#", "Coding", "Community", "Custom Conventions", "Database Design", "DbContext", "EF Core", "Fluent API", "Infrastructure Code", "Naming Conventions", "PascalCase", "Snake Case", "Table Naming"]
 tags_normalized: ["dotnet", "attributes", "csharp", "coding", "community", "custom conventions", "database design", "dbcontext", "ef core", "fluent api", "infrastructure code", "naming conventions", "pascalcase", "snake case", "table naming"]

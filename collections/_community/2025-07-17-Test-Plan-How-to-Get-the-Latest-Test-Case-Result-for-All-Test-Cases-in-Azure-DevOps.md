@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Reddit Azure DevOps"
 feed_url: "https://www.reddit.com/r/azuredevops/.rss"
 date: 2025-07-17 12:46:30 +00:00
-permalink: "/community/2025-07-17-Test-Plan-How-to-Get-the-Latest-Test-Case-Result-for-All-Test-Cases-in-Azure-DevOps.html"
+permalink: "/2025-07-17-Test-Plan-How-to-Get-the-Latest-Test-Case-Result-for-All-Test-Cases-in-Azure-DevOps.html"
 categories: ["Azure", "DevOps"]
 tags: ["Automation", "Azure", "Azure DevOps", "Community", "DevOps", "Execution History", "Reporting", "Software Testing", "Test Case", "Test Case ID", "Test Management", "Test Plan", "Test Results"]
 tags_normalized: ["automation", "azure", "azure devops", "community", "devops", "execution history", "reporting", "software testing", "test case", "test case id", "test management", "test plan", "test results"]

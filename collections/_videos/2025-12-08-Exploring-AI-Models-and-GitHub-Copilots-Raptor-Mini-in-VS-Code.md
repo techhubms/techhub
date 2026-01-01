@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Visual Studio Code YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SLNwkd3w"
 date: 2025-12-08 08:01:01 +00:00
-permalink: "/videos/2025-12-08-Exploring-AI-Models-and-GitHub-Copilots-Raptor-Mini-in-VS-Code.html"
+permalink: "/2025-12-08-Exploring-AI-Models-and-GitHub-Copilots-Raptor-Mini-in-VS-Code.html"
 categories: ["AI", "Coding", "GitHub Copilot"]
 tags: ["AI", "AI Models", "Benchmarks", "Coding", "Coding Experience", "Context Complexity", "Developer Workflows", "Evals", "Fine Tuning", "GitHub Copilot", "Model Evaluation", "Model Selection", "Raptor Mini", "Sonnet", "Videos", "VS Code"]
 tags_normalized: ["ai", "ai models", "benchmarks", "coding", "coding experience", "context complexity", "developer workflows", "evals", "fine tuning", "github copilot", "model evaluation", "model selection", "raptor mini", "sonnet", "videos", "vs code"]

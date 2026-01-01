@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-08-21 15:04:06 +00:00
-permalink: "/community/2025-08-21-Enforcing-Angular-Unit-Test-Coverage-in-Azure-DevOps-Pipelines-A-Step-by-Step-Guide.html"
+permalink: "/2025-08-21-Enforcing-Angular-Unit-Test-Coverage-in-Azure-DevOps-Pipelines-A-Step-by-Step-Guide.html"
 categories: ["Azure", "Coding", "DevOps"]
 tags: [".NET Core", "Angular", "Azure", "Azure DevOps", "ChromeHeadless", "CI/CD Pipeline", "Cobertura", "Code Coverage", "Coding", "Community", "Continuous Integration", "DevOps", "JUnit", "Karma", "npm", "Test Automation", "Test Reporting", "Unit Testing", "YAML Pipeline"]
 tags_normalized: ["dotnet core", "angular", "azure", "azure devops", "chromeheadless", "cislashcd pipeline", "cobertura", "code coverage", "coding", "community", "continuous integration", "devops", "junit", "karma", "npm", "test automation", "test reporting", "unit testing", "yaml pipeline"]

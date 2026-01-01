@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "DotNet YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw"
 date: 2025-11-14 04:00:06 +00:00
-permalink: "/videos/2025-11-14-Automating-NET-Aspire-Architecture-Documentation-with-GitHub-Copilot.html"
+permalink: "/2025-11-14-Automating-NET-Aspire-Architecture-Documentation-with-GitHub-Copilot.html"
 categories: ["AI", "Coding", "DevOps", "GitHub Copilot"]
 tags: [".NET 10 Preview", ".NET Aspire", "AI", "AppHost", "Architecture Documentation", "Aspire Dashboard", "Automation", "CI/CD", "Cloud Native", "Coding", "Copilot Chat", "Copilot Coding Agent", "DevOps", "DevOps Workflow", "GitHub Copilot", "Living Documentation", "Markdown", "Mermaid", "Playwright MCP", "Pull Requests", "Videos", "VS Code"]
 tags_normalized: ["dotnet 10 preview", "dotnet aspire", "ai", "apphost", "architecture documentation", "aspire dashboard", "automation", "cislashcd", "cloud native", "coding", "copilot chat", "copilot coding agent", "devops", "devops workflow", "github copilot", "living documentation", "markdown", "mermaid", "playwright mcp", "pull requests", "videos", "vs code"]

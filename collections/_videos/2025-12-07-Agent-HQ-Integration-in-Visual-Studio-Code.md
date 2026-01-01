@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Visual Studio Code YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SLNwkd3w"
 date: 2025-12-07 15:00:56 +00:00
-permalink: "/videos/2025-12-07-Agent-HQ-Integration-in-Visual-Studio-Code.html"
+permalink: "/2025-12-07-Agent-HQ-Integration-in-Visual-Studio-Code.html"
 categories: ["AI", "Coding"]
 tags: ["Agent HQ", "Agent Sessions", "AI", "AI Integration", "Code Agents", "Coding", "Copilot CLI", "Custom Agents", "Developer Productivity", "Development Tools", "Microsoft", "OpenAI Codex", "Plan Agent", "Session Management", "Videos", "VS Code", "Workflow Automation"]
 tags_normalized: ["agent hq", "agent sessions", "ai", "ai integration", "code agents", "coding", "copilot cli", "custom agents", "developer productivity", "development tools", "microsoft", "openai codex", "plan agent", "session management", "videos", "vs code", "workflow automation"]

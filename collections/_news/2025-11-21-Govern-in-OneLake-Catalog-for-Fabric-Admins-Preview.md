@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Fabric Blog"
 feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
 date: 2025-11-21 09:30:00 +00:00
-permalink: "/news/2025-11-21-Govern-in-OneLake-Catalog-for-Fabric-Admins-Preview.html"
+permalink: "/2025-11-21-Govern-in-OneLake-Catalog-for-Fabric-Admins-Preview.html"
 categories: ["Azure", "ML", "Security"]
 tags: ["Admin Tools", "Azure", "Capacity Management", "Compliance", "Copilot", "Data Estate", "Data Governance", "Data Protection", "Data Security", "Fabric Admin", "Fabric Insights", "Governance Dashboard", "Microsoft Fabric", "ML", "News", "OneLake Catalog", "Security", "Sensitivity Labels"]
 tags_normalized: ["admin tools", "azure", "capacity management", "compliance", "copilot", "data estate", "data governance", "data protection", "data security", "fabric admin", "fabric insights", "governance dashboard", "microsoft fabric", "ml", "news", "onelake catalog", "security", "sensitivity labels"]

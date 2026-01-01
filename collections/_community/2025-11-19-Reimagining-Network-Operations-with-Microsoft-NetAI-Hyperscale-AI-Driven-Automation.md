@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-11-19 01:45:22 +00:00
-permalink: "/community/2025-11-19-Reimagining-Network-Operations-with-Microsoft-NetAI-Hyperscale-AI-Driven-Automation.html"
+permalink: "/2025-11-19-Reimagining-Network-Operations-with-Microsoft-NetAI-Hyperscale-AI-Driven-Automation.html"
 categories: ["AI", "Azure", "DevOps"]
 tags: ["Agent Collaboration", "AI", "AI Automation", "Automation Toolkit", "Azure", "Azure Networking", "Cloud Operations", "Community", "Deterministic Workflows", "DevOps", "DWDM", "Hyperscale", "Incident Management", "Microsoft NetAI", "Network Operations", "NOA Framework", "Operational Efficiency", "Telecommunications"]
 tags_normalized: ["agent collaboration", "ai", "ai automation", "automation toolkit", "azure", "azure networking", "cloud operations", "community", "deterministic workflows", "devops", "dwdm", "hyperscale", "incident management", "microsoft netai", "network operations", "noa framework", "operational efficiency", "telecommunications"]

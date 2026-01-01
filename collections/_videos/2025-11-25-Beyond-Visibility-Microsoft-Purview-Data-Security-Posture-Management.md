@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Events YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
 date: 2025-11-25 18:09:25 +00:00
-permalink: "/videos/2025-11-25-Beyond-Visibility-Microsoft-Purview-Data-Security-Posture-Management.html"
+permalink: "/2025-11-25-Beyond-Visibility-Microsoft-Purview-Data-Security-Posture-Management.html"
 categories: ["AI", "Security"]
 tags: ["Advanced Security", "AI", "AI Agents", "Compliance", "Data Governance", "Data Security", "Data Visibility", "DSPM", "Enterprise Security", "Microsoft Ignite", "Microsoft Purview", "MSIgnite", "Nathalia Borges", "Posture Management", "Rudra Mitra", "Secureyourdata", "Security", "Security Risk Mitigation", "Session BRK253", "Talhah Mir", "Threat Protection", "Videos", "Yaki Faitelson"]
 tags_normalized: ["advanced security", "ai", "ai agents", "compliance", "data governance", "data security", "data visibility", "dspm", "enterprise security", "microsoft ignite", "microsoft purview", "msignite", "nathalia borges", "posture management", "rudra mitra", "secureyourdata", "security", "security risk mitigation", "session brk253", "talhah mir", "threat protection", "videos", "yaki faitelson"]

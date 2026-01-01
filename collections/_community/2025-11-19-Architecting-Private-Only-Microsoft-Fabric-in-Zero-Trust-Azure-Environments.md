@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-11-19 03:49:00 +00:00
-permalink: "/community/2025-11-19-Architecting-Private-Only-Microsoft-Fabric-in-Zero-Trust-Azure-Environments.html"
+permalink: "/2025-11-19-Architecting-Private-Only-Microsoft-Fabric-in-Zero-Trust-Azure-Environments.html"
 categories: ["Azure", "ML", "Security"]
 tags: ["ADLS", "AzAPI Provider", "Azure", "CI/CD Validation", "Community", "Data Pipeline", "DNS Security", "Firewall Logs", "Governance", "Hub Spoke Architecture", "Isolation", "Lakehouse", "Managed Private Endpoints", "Microsoft Fabric", "ML", "Network Inspection", "Private Endpoints", "Production Ready", "Security", "Spark", "Terraform", "VNet Data Gateway", "Warehouse", "Zero Trust"]
 tags_normalized: ["adls", "azapi provider", "azure", "cislashcd validation", "community", "data pipeline", "dns security", "firewall logs", "governance", "hub spoke architecture", "isolation", "lakehouse", "managed private endpoints", "microsoft fabric", "ml", "network inspection", "private endpoints", "production ready", "security", "spark", "terraform", "vnet data gateway", "warehouse", "zero trust"]

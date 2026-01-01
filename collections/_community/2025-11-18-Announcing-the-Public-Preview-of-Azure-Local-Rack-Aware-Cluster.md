@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-11-18 16:33:51 +00:00
-permalink: "/community/2025-11-18-Announcing-the-Public-Preview-of-Azure-Local-Rack-Aware-Cluster.html"
+permalink: "/2025-11-18-Announcing-the-Public-Preview-of-Azure-Local-Rack-Aware-Cluster.html"
 categories: ["Azure", "DevOps"]
 tags: ["ARM Templates", "Availability Zones", "Azure", "Azure Arc", "Azure Local", "Azure Portal", "Cluster Deployment", "Community", "Data Resiliency", "DevOps", "Fault Tolerance", "High Availability", "Hybrid Cloud", "Preview Release", "Rack Aware Cluster", "Scale Out", "Storage Spaces Direct", "Version 2510", "VM Provisioning"]
 tags_normalized: ["arm templates", "availability zones", "azure", "azure arc", "azure local", "azure portal", "cluster deployment", "community", "data resiliency", "devops", "fault tolerance", "high availability", "hybrid cloud", "preview release", "rack aware cluster", "scale out", "storage spaces direct", "version 2510", "vm provisioning"]

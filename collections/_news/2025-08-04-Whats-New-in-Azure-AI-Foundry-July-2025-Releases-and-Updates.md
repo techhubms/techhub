@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft DevBlog"
 feed_url: "https://devblogs.microsoft.com/foundry/feed/"
 date: 2025-08-04 15:00:27 +00:00
-permalink: "/news/2025-08-04-Whats-New-in-Azure-AI-Foundry-July-2025-Releases-and-Updates.html"
+permalink: "/2025-08-04-Whats-New-in-Azure-AI-Foundry-July-2025-Releases-and-Updates.html"
 categories: ["AI", "Azure", "Coding", "Security"]
 tags: [".NET", "Agent Monitoring", "AgentOps", "AI", "AI Development", "AI Red Teaming", "Azure", "Azure AI Foundry", "Azure OpenAI", "Azure SDK", "Coding", "Deep Research", "Deep Research Agent", "Entra Agent ID", "Fine Tuning", "Generative AI", "GPT Image 1", "Java", "JavaScript", "MCP", "Model Evaluation", "News", "OpenAI", "Prompt Shields", "Purview", "Python", "Reinforcement Learning", "Security", "TypeScript"]
 tags_normalized: ["dotnet", "agent monitoring", "agentops", "ai", "ai development", "ai red teaming", "azure", "azure ai foundry", "azure openai", "azure sdk", "coding", "deep research", "deep research agent", "entra agent id", "fine tuning", "generative ai", "gpt image 1", "java", "javascript", "mcp", "model evaluation", "news", "openai", "prompt shields", "purview", "python", "reinforcement learning", "security", "typescript"]

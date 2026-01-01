@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Fabric Blog"
 feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
 date: 2025-12-15 10:00:00 +00:00
-permalink: "/news/2025-12-15-Fabric-Environment-Library-Management-Performance-Improvements-for-Developers.html"
+permalink: "/2025-12-15-Fabric-Environment-Library-Management-Performance-Improvements-for-Developers.html"
 categories: ["Azure", "ML"]
 tags: ["Apache Spark", "Azure", "Custom Packages", "Data Engineering", "Developer Experience", "Environment Publishing", "JAR Files", "Library Management", "Microsoft Fabric", "ML", "News", "Performance Improvement", "Python Packages", "Session Startup"]
 tags_normalized: ["apache spark", "azure", "custom packages", "data engineering", "developer experience", "environment publishing", "jar files", "library management", "microsoft fabric", "ml", "news", "performance improvement", "python packages", "session startup"]

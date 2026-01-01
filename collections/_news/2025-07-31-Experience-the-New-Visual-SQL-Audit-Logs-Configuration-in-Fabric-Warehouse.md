@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Fabric Blog"
 feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
 date: 2025-07-31 07:00:00 +00:00
-permalink: "/news/2025-07-31-Experience-the-New-Visual-SQL-Audit-Logs-Configuration-in-Fabric-Warehouse.html"
+permalink: "/2025-07-31-Experience-the-New-Visual-SQL-Audit-Logs-Configuration-in-Fabric-Warehouse.html"
 categories: ["ML", "Security"]
 tags: ["Administration", "Audit Logging", "Auditing", "Compliance", "Data Governance", "Data Platform", "Data Warehouse", "Event Selection", "Fabric Warehouse", "Log Retention", "Microsoft Fabric", "ML", "News", "OneLake", "Security", "SQL Audit Logs", "User Interface"]
 tags_normalized: ["administration", "audit logging", "auditing", "compliance", "data governance", "data platform", "data warehouse", "event selection", "fabric warehouse", "log retention", "microsoft fabric", "ml", "news", "onelake", "security", "sql audit logs", "user interface"]

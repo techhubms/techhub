@@ -6,7 +6,7 @@ categories: ["AI", "Azure", "Coding", "DevOps"]
 date: 2019-10-01 00:00:00 +00:00
 author: "Xebia"
 viewing_mode: "external"
-permalink: "/community/2019-10-01-XPRT-Magazine-09.html"
+permalink: "/2019-10-01-XPRT-Magazine-09.html"
 excerpt_separator: <!--excerpt_end-->
 tags: [".NET Foundation", "AI", "API Management", "Automation", "Azure", "Cloud", "Coding", "Community", "DevOps", "EventStorming", "Healthcare", "High Quality Releases", "Inclusive Education", "IT Future", "Machine Learning", "Magazines", "Observability", "Open Source", "Pod Security"]
 tags_normalized: ["dotnet foundation", "ai", "api management", "automation", "azure", "cloud", "coding", "community", "devops", "eventstorming", "healthcare", "high quality releases", "inclusive education", "it future", "machine learning", "magazines", "observability", "open source", "pod security"]

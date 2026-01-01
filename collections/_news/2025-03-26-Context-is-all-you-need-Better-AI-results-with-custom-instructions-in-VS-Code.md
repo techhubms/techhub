@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Visual Studio Code Releases"
 feed_url: "https://code.visualstudio.com/feed.xml"
 date: 2025-03-26 00:00:00 +00:00
-permalink: "/news/2025-03-26-Context-is-all-you-need-Better-AI-results-with-custom-instructions-in-VS-Code.html"
+permalink: "/2025-03-26-Context-is-all-you-need-Better-AI-results-with-custom-instructions-in-VS-Code.html"
 categories: ["AI", "Coding", "GitHub Copilot"]
 tags: ["AI", "Code Generation", "Coding", "Commit Message Generation", "Copilot Chat", "Custom Instructions", "Development Workflow", "GitHub Copilot", "JavaScript", "News", "Node.js", "Project Configuration", "Prompt Engineering", "Prompt Files", "React", "VS Code", "Workspace Settings"]
 tags_normalized: ["ai", "code generation", "coding", "commit message generation", "copilot chat", "custom instructions", "development workflow", "github copilot", "javascript", "news", "nodedotjs", "project configuration", "prompt engineering", "prompt files", "react", "vs code", "workspace settings"]

@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Developer YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
 date: 2025-12-01 21:00:31 +00:00
-permalink: "/videos/2025-12-01-Adding-Tracing-to-an-Agent-with-AI-Toolkit-and-GitHub-Copilot.html"
+permalink: "/2025-12-01-Adding-Tracing-to-an-Agent-with-AI-Toolkit-and-GitHub-Copilot.html"
 categories: ["AI", "GitHub Copilot"]
 tags: ["Agent Development", "AI", "AI Development", "AI Toolkit", "Cloud Computing", "Code Tracing", "Copilot Agent Mode", "Dev", "Developer Tools", "Development", "GitHub Copilot", "Microsoft", "Microsoft Foundry", "Pet Planner Workshop", "Tech", "Technology", "Tracing", "Tracing Viewer", "Videos"]
 tags_normalized: ["agent development", "ai", "ai development", "ai toolkit", "cloud computing", "code tracing", "copilot agent mode", "dev", "developer tools", "development", "github copilot", "microsoft", "microsoft foundry", "pet planner workshop", "tech", "technology", "tracing", "tracing viewer", "videos"]

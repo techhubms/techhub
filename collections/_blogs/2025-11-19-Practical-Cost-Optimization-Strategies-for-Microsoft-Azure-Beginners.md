@@ -9,10 +9,10 @@ viewing_mode: "external"
 feed_name: "Dellenny's Blog"
 feed_url: "https://dellenny.com/feed/"
 date: 2025-11-19 10:04:11 +00:00
-permalink: "/blogs/2025-11-19-Practical-Cost-Optimization-Strategies-for-Microsoft-Azure-Beginners.html"
+permalink: "/2025-11-19-Practical-Cost-Optimization-Strategies-for-Microsoft-Azure-Beginners.html"
 categories: ["Azure", "DevOps"]
-tags: ["Azure", "Azure Advisor", "Azure Automation", "Azure Cost Management", "Azure Functions", "Azure Portal", "Azure Reservations", "Blob Storage", "Cloud Billing", "Cloud Budgets", "Cost Alerts", "Cost Optimization", "DevOps", "DevOps Practices", "PaaS Services", "Blogs", "PowerShell", "Resource Cleanup", "Resource Tagging", "Serverless Computing", "Storage Tiers", "Virtual Machines"]
-tags_normalized: ["azure", "azure advisor", "azure automation", "azure cost management", "azure functions", "azure portal", "azure reservations", "blob storage", "cloud billing", "cloud budgets", "cost alerts", "cost optimization", "devops", "devops practices", "paas services", "blogs", "powershell", "resource cleanup", "resource tagging", "serverless computing", "storage tiers", "virtual machines"]
+tags: ["Azure", "Azure Advisor", "Azure Automation", "Azure Cost Management", "Azure Functions", "Azure Portal", "Azure Reservations", "Blob Storage", "Blogs", "Cloud Billing", "Cloud Budgets", "Cost Alerts", "Cost Optimization", "DevOps", "DevOps Practices", "PaaS Services", "PowerShell", "Resource Cleanup", "Resource Tagging", "Serverless Computing", "Storage Tiers", "Virtual Machines"]
+tags_normalized: ["azure", "azure advisor", "azure automation", "azure cost management", "azure functions", "azure portal", "azure reservations", "blob storage", "blogs", "cloud billing", "cloud budgets", "cost alerts", "cost optimization", "devops", "devops practices", "paas services", "powershell", "resource cleanup", "resource tagging", "serverless computing", "storage tiers", "virtual machines"]
 ---
 
 John Edward offers actionable, beginner-focused strategies for optimizing cost control in Microsoft Azure, guiding readers through crucial tools and practices to avoid cloud billing surprises.<!--excerpt_end-->

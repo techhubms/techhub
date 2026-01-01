@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Events YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
 date: 2025-11-21 13:03:14 +00:00
-permalink: "/videos/2025-11-21-Partner-Benefits-for-Accelerating-Software-Company-Success-PBRK418.html"
+permalink: "/2025-11-21-Partner-Benefits-for-Accelerating-Software-Company-Success-PBRK418.html"
 categories: ["AI", "Azure"]
 tags: ["AI", "AI Apps", "API Pilot", "Azure", "Azure Credits", "Azure Sponsorship", "Certified Software Designation", "Customer Propensity Scores", "ISV Success", "MAICPP", "Marketplace Integration", "Marketplace Rewards", "Microsoft AI Cloud Partner Program", "Microsoft Ignite", "MicrosoftAICloudPartnerProgram", "MSIgnite", "Partner Benefits", "Skilling Opportunities", "Software Development", "Technical Resources", "Videos"]
 tags_normalized: ["ai", "ai apps", "api pilot", "azure", "azure credits", "azure sponsorship", "certified software designation", "customer propensity scores", "isv success", "maicpp", "marketplace integration", "marketplace rewards", "microsoft ai cloud partner program", "microsoft ignite", "microsoftaicloudpartnerprogram", "msignite", "partner benefits", "skilling opportunities", "software development", "technical resources", "videos"]

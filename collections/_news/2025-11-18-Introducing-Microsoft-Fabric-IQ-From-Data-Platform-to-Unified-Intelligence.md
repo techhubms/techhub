@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Fabric Blog"
 feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
 date: 2025-11-18 08:00:00 +00:00
-permalink: "/news/2025-11-18-Introducing-Microsoft-Fabric-IQ-From-Data-Platform-to-Unified-Intelligence.html"
+permalink: "/2025-11-18-Introducing-Microsoft-Fabric-IQ-From-Data-Platform-to-Unified-Intelligence.html"
 categories: ["AI", "Azure", "ML"]
 tags: ["Agentic AI", "AI", "Azure", "Business Intelligence", "Data Agent", "Data Platform", "Digital Twin", "Enterprise AI", "Fabric Real Time Intelligence", "Foundry IQ", "Governance", "Graph Analytics", "Microsoft Fabric IQ", "Microsoft Ignite", "ML", "News", "No Code Modeling", "OneLake", "Ontology", "Operations Agent", "Power BI", "Real Time Analytics", "Semantic Model"]
 tags_normalized: ["agentic ai", "ai", "azure", "business intelligence", "data agent", "data platform", "digital twin", "enterprise ai", "fabric real time intelligence", "foundry iq", "governance", "graph analytics", "microsoft fabric iq", "microsoft ignite", "ml", "news", "no code modeling", "onelake", "ontology", "operations agent", "power bi", "real time analytics", "semantic model"]

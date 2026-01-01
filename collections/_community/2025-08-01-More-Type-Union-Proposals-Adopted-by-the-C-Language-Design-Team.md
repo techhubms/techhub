@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Reddit DotNet"
 feed_url: "https://www.reddit.com/r/dotnet/.rss"
 date: 2025-08-01 17:39:07 +00:00
-permalink: "/community/2025-08-01-More-Type-Union-Proposals-Adopted-by-the-C-Language-Design-Team.html"
+permalink: "/2025-08-01-More-Type-Union-Proposals-Adopted-by-the-C-Language-Design-Team.html"
 categories: ["Coding"]
 tags: [".NET", "C#", "C# Features", "C# Language", "Coding", "Community", "Language Design", "Language Proposals", "LDM", "Type System", "Type Unions"]
 tags_normalized: ["dotnet", "csharp", "csharp features", "csharp language", "coding", "community", "language design", "language proposals", "ldm", "type system", "type unions"]

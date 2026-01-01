@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-08-19 16:26:20 +00:00
-permalink: "/community/2025-08-19-Generating-Classes-with-Custom-Naming-Conventions-Using-GitHub-Copilot-and-a-Custom-MCP-Server.html"
+permalink: "/2025-08-19-Generating-Classes-with-Custom-Naming-Conventions-Using-GitHub-Copilot-and-a-Custom-MCP-Server.html"
 categories: ["AI", "Azure", "Coding", "GitHub Copilot"]
 tags: [".NET", "AI", "ASP.NET Core", "Azure", "Azure App Service", "Business Logic", "C#", "Class Generation", "Coding", "Community", "Copilot Agent", "Dependency Injection", "Enterprise Compliance", "ExpressRoute", "GitHub Copilot", "GitHub Spark", "MCP", "MCP Server", "Naming Convention", "NuGet", "Virtual Network", "VS", "VS Code", "Workspace Settings"]
 tags_normalized: ["dotnet", "ai", "aspdotnet core", "azure", "azure app service", "business logic", "csharp", "class generation", "coding", "community", "copilot agent", "dependency injection", "enterprise compliance", "expressroute", "github copilot", "github spark", "mcp", "mcp server", "naming convention", "nuget", "virtual network", "vs", "vs code", "workspace settings"]

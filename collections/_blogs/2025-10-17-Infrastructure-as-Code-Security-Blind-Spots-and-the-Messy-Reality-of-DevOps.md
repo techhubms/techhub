@@ -9,10 +9,10 @@ viewing_mode: "external"
 feed_name: "DevOps Blog"
 feed_url: "https://devops.com/feed/"
 date: 2025-10-17 15:19:37 +00:00
-permalink: "/blogs/2025-10-17-Infrastructure-as-Code-Security-Blind-Spots-and-the-Messy-Reality-of-DevOps.html"
+permalink: "/2025-10-17-Infrastructure-as-Code-Security-Blind-Spots-and-the-Messy-Reality-of-DevOps.html"
 categories: ["AI", "DevOps", "Security"]
-tags: ["AI", "AI in Security", "Audit Logging", "Automation", "Cloud Security", "Credential Management", "DevOps", "Federated Identity", "Human Factors", "IaC", "Incident Response", "Policy as Code", "Blogs", "Security", "Social Facebook", "Social LinkedIn", "Social X", "SRE", "Techstrong Council", "Terraform", "Version Control"]
-tags_normalized: ["ai", "ai in security", "audit logging", "automation", "cloud security", "credential management", "devops", "federated identity", "human factors", "iac", "incident response", "policy as code", "blogs", "security", "social facebook", "social linkedin", "social x", "sre", "techstrong council", "terraform", "version control"]
+tags: ["AI", "AI in Security", "Audit Logging", "Automation", "Blogs", "Cloud Security", "Credential Management", "DevOps", "Federated Identity", "Human Factors", "IaC", "Incident Response", "Policy as Code", "Security", "Social Facebook", "Social LinkedIn", "Social X", "SRE", "Techstrong Council", "Terraform", "Version Control"]
+tags_normalized: ["ai", "ai in security", "audit logging", "automation", "blogs", "cloud security", "credential management", "devops", "federated identity", "human factors", "iac", "incident response", "policy as code", "security", "social facebook", "social linkedin", "social x", "sre", "techstrong council", "terraform", "version control"]
 ---
 
 Marcin Wyszynski draws on years of infrastructure and reliability engineering experience to dissect the messy reality of DevOps and security, highlighting the challenges with audits, automation, and the human element.<!--excerpt_end-->

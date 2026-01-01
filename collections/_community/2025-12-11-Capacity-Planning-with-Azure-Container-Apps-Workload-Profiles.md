@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-12-11 05:23:42 +00:00
-permalink: "/community/2025-12-11-Capacity-Planning-with-Azure-Container-Apps-Workload-Profiles.html"
+permalink: "/2025-12-11-Capacity-Planning-with-Azure-Container-Apps-Workload-Profiles.html"
 categories: ["Azure"]
 tags: ["Autoscaling", "Azure", "Azure Container Apps", "Capacity Planning", "Cloud Infrastructure", "Community", "High Availability", "Kubernetes", "Microsoft Azure", "Node Resources", "Replica Placement", "Resource Modeling", "Scaling Strategy", "VM SKU", "Workload Profiles"]
 tags_normalized: ["autoscaling", "azure", "azure container apps", "capacity planning", "cloud infrastructure", "community", "high availability", "kubernetes", "microsoft azure", "node resources", "replica placement", "resource modeling", "scaling strategy", "vm sku", "workload profiles"]

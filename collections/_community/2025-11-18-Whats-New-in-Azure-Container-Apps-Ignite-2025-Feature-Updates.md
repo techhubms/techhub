@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-11-18 16:18:11 +00:00
-permalink: "/community/2025-11-18-Whats-New-in-Azure-Container-Apps-Ignite-2025-Feature-Updates.html"
+permalink: "/2025-11-18-Whats-New-in-Azure-Container-Apps-Ignite-2025-Feature-Updates.html"
 categories: ["AI", "Azure", "Coding", "DevOps", "GitHub Copilot", "ML", "Security"]
 tags: [".NET", "A/B Testing", "Agent Frameworks", "AI", "AI Workloads", "Azure", "Azure Container Apps", "Azure Functions", "Blue Green Deployment", "Cloud Native", "Coding", "Community", "Confidential Computing", "Data Isolation", "Deployment Labels", "DevOps", "Distributed Application Runtime", "Docker Compose", "Durable Task Scheduler", "Flexible Workload Profile", "GitHub Copilot", "Goose AI Agent", "GPU Acceleration", "Java", "LangChain", "MCP", "Microservices", "ML", "N8n", "Networking", "Open Telemetry", "Premium Ingress", "Rule Based Routing", "Security", "Serverless GPUs", "Spring AI", "Workflow Automation"]
 tags_normalized: ["dotnet", "aslashb testing", "agent frameworks", "ai", "ai workloads", "azure", "azure container apps", "azure functions", "blue green deployment", "cloud native", "coding", "community", "confidential computing", "data isolation", "deployment labels", "devops", "distributed application runtime", "docker compose", "durable task scheduler", "flexible workload profile", "github copilot", "goose ai agent", "gpu acceleration", "java", "langchain", "mcp", "microservices", "ml", "n8n", "networking", "open telemetry", "premium ingress", "rule based routing", "security", "serverless gpus", "spring ai", "workflow automation"]

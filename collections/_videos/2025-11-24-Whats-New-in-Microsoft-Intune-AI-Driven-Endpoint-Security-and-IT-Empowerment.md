@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Events YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
 date: 2025-11-24 04:55:05 +00:00
-permalink: "/videos/2025-11-24-Whats-New-in-Microsoft-Intune-AI-Driven-Endpoint-Security-and-IT-Empowerment.html"
+permalink: "/2025-11-24-Whats-New-in-Microsoft-Intune-AI-Driven-Endpoint-Security-and-IT-Empowerment.html"
 categories: ["AI", "Security"]
 tags: ["AI", "AI Capabilities", "App Inventory", "Automation", "Azure Defender Integration", "Copilot Chat", "Copilot Explorer", "Device Compliance", "Endpoint Management", "Endpoint Privilege Management", "IT Empowerment", "Microsoft Ignite", "Microsoft Intune", "MSIgnite", "ScalewithcloudandAIendpoints", "Security", "Videos", "Vulnerability Remediation"]
 tags_normalized: ["ai", "ai capabilities", "app inventory", "automation", "azure defender integration", "copilot chat", "copilot explorer", "device compliance", "endpoint management", "endpoint privilege management", "it empowerment", "microsoft ignite", "microsoft intune", "msignite", "scalewithcloudandaiendpoints", "security", "videos", "vulnerability remediation"]

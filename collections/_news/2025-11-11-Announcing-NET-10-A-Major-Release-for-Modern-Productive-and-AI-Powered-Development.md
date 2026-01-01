@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft .NET Blog"
 feed_url: "https://devblogs.microsoft.com/dotnet/feed/"
 date: 2025-11-11 15:38:00 +00:00
-permalink: "/news/2025-11-11-Announcing-NET-10-A-Major-Release-for-Modern-Productive-and-AI-Powered-Development.html"
+permalink: "/2025-11-11-Announcing-NET-10-A-Major-Release-for-Modern-Productive-and-AI-Powered-Development.html"
 categories: ["AI", "Azure", "Coding", "DevOps"]
 tags: [".NET", ".NET 10", "AI", "AI Integration", "AppHost", "ASP.NET Core", "Azure", "Azure SQL", "Blazor", "C#", "C# 14", "Coding", "Cosmos DB", "DevOps", "Entity Framework Core 10", "F#", "F# 10", "Featured", "Featured Post", "MAUI", "MCP", "Microsoft Agent Framework", "Minimal APIs", "NativeAOT", "News", "NuGet", "OpenAPI", "Performance", "Post Quantum Cryptography", "SLNX", "VS", "VS Code", "WinForms", "WPF"]
 tags_normalized: ["dotnet", "dotnet 10", "ai", "ai integration", "apphost", "aspdotnet core", "azure", "azure sql", "blazor", "csharp", "csharp 14", "coding", "cosmos db", "devops", "entity framework core 10", "fsharp", "fsharp 10", "featured", "featured post", "maui", "mcp", "microsoft agent framework", "minimal apis", "nativeaot", "news", "nuget", "openapi", "performance", "post quantum cryptography", "slnx", "vs", "vs code", "winforms", "wpf"]

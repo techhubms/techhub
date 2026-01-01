@@ -9,10 +9,10 @@ viewing_mode: "external"
 feed_name: "DevOps Blog"
 feed_url: "https://devops.com/feed/"
 date: 2025-09-18 16:10:22 +00:00
-permalink: "/blogs/2025-09-18-Harness-CEO-Advocates-AI-Driven-Transformation-of-CICD-Workflows.html"
+permalink: "/2025-09-18-Harness-CEO-Advocates-AI-Driven-Transformation-of-CICD-Workflows.html"
 categories: ["AI", "DevOps", "Security"]
-tags: ["AI", "AI Agents", "Automation", "Backstage", "CI/CD", "Continuous Delivery", "Continuous Integration", "Developer Portal", "DevOps", "Devsecops", "FinOps", "Harness", "Large Language Models", "Orchestration", "Platform Engineering", "Blogs", "Security", "Security Remediation", "Social Facebook", "Social LinkedIn", "Social X", "Software Engineering", "Traceable Platform", "Unscripted"]
-tags_normalized: ["ai", "ai agents", "automation", "backstage", "cislashcd", "continuous delivery", "continuous integration", "developer portal", "devops", "devsecops", "finops", "harness", "large language models", "orchestration", "platform engineering", "blogs", "security", "security remediation", "social facebook", "social linkedin", "social x", "software engineering", "traceable platform", "unscripted"]
+tags: ["AI", "AI Agents", "Automation", "Backstage", "Blogs", "CI/CD", "Continuous Delivery", "Continuous Integration", "Developer Portal", "DevOps", "Devsecops", "FinOps", "Harness", "Large Language Models", "Orchestration", "Platform Engineering", "Security", "Security Remediation", "Social Facebook", "Social LinkedIn", "Social X", "Software Engineering", "Traceable Platform", "Unscripted"]
+tags_normalized: ["ai", "ai agents", "automation", "backstage", "blogs", "cislashcd", "continuous delivery", "continuous integration", "developer portal", "devops", "devsecops", "finops", "harness", "large language models", "orchestration", "platform engineering", "security", "security remediation", "social facebook", "social linkedin", "social x", "software engineering", "traceable platform", "unscripted"]
 ---
 
 Mike Vizard summarizes Harness CEO Jyoti Bansal’s vision for reimagining CI/CD and DevSecOps workflows using AI. The article explores automation of build, security, and developer operations with emerging AI-driven tools.<!--excerpt_end-->

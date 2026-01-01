@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-10-23 16:01:35 +00:00
-permalink: "/community/2025-10-23-Optimize-Azure-Local-Deployments-with-the-Well-Architected-Review-Assessment.html"
+permalink: "/2025-10-23-Optimize-Azure-Local-Deployments-with-the-Well-Architected-Review-Assessment.html"
 categories: ["Azure", "DevOps", "Security"]
 tags: ["AKS", "Architecture Assessment", "Azure", "Azure Arc", "Azure Local", "Azure Virtual Desktop", "Cloud Security", "Community", "DevOps", "Edge Computing", "Hybrid Cloud", "Infrastructure Best Practices", "On Premises Solutions", "Operational Excellence", "Platform Optimization", "Reliability", "Security", "Well Architected Framework"]
 tags_normalized: ["aks", "architecture assessment", "azure", "azure arc", "azure local", "azure virtual desktop", "cloud security", "community", "devops", "edge computing", "hybrid cloud", "infrastructure best practices", "on premises solutions", "operational excellence", "platform optimization", "reliability", "security", "well architected framework"]

@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-10-30 04:00:28 +00:00
-permalink: "/community/2025-10-30-Ubuntu-Based-Runtimes-Coming-to-Azure-App-Service-for-Linux.html"
+permalink: "/2025-10-30-Ubuntu-Based-Runtimes-Coming-to-Azure-App-Service-for-Linux.html"
 categories: ["Azure", "Coding"]
 tags: [".NET 10", "App Deployment", "Azure", "Azure App Service", "Azure CLI", "Coding", "Community", "Debian", "GitHub Actions", "Java 25", "Linux", "Node 24", "PHP 8.5", "Platform Updates", "Python 3.14", "Runtime Environments", "Ubuntu", "Web Applications"]
 tags_normalized: ["dotnet 10", "app deployment", "azure", "azure app service", "azure cli", "coding", "community", "debian", "github actions", "java 25", "linux", "node 24", "php 8dot5", "platform updates", "python 3dot14", "runtime environments", "ubuntu", "web applications"]

@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Fabric Blog"
 feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
 date: 2025-09-16 00:45:00 +00:00
-permalink: "/news/2025-09-16-AI-Driven-Operations-with-Microsoft-Fabric-Real-Time-Intelligence.html"
+permalink: "/2025-09-16-AI-Driven-Operations-with-Microsoft-Fabric-Real-Time-Intelligence.html"
 categories: ["AI", "Azure", "ML"]
 tags: ["Agentic AI", "AI", "Anomaly Detection", "Azure", "Business Intelligence", "Copilot", "Digital Twin", "Eventhouse", "Eventstream", "Geospatial Analysis", "Graph Analytics", "Industrial AI", "Kusto Query Language", "Microsoft Fabric", "ML", "News", "No Code Tools", "Operational Analytics", "Proactive Operations", "Real Time Intelligence", "Streaming Data"]
 tags_normalized: ["agentic ai", "ai", "anomaly detection", "azure", "business intelligence", "copilot", "digital twin", "eventhouse", "eventstream", "geospatial analysis", "graph analytics", "industrial ai", "kusto query language", "microsoft fabric", "ml", "news", "no code tools", "operational analytics", "proactive operations", "real time intelligence", "streaming data"]

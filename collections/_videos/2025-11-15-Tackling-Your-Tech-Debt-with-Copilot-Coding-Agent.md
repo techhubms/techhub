@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "GitHub YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ"
 date: 2025-11-15 14:12:13 +00:00
-permalink: "/videos/2025-11-15-Tackling-Your-Tech-Debt-with-Copilot-Coding-Agent.html"
+permalink: "/2025-11-15-Tackling-Your-Tech-Debt-with-Copilot-Coding-Agent.html"
 categories: ["AI", "Coding", "GitHub Copilot"]
 tags: ["AI", "AI Agent", "Code Modernization", "Code Refactoring", "Coding", "Copilot Coding Agent", "Developer Workflow", "GitHub", "GitHub Copilot", "GitHub Universe", "GitHubUniverse", "Issue Assignment", "Legacy Modernization", "Programming Tools", "Software Engineering", "Tech Debt", "Videos", "WRAP Strategy"]
 tags_normalized: ["ai", "ai agent", "code modernization", "code refactoring", "coding", "copilot coding agent", "developer workflow", "github", "github copilot", "github universe", "githubuniverse", "issue assignment", "legacy modernization", "programming tools", "software engineering", "tech debt", "videos", "wrap strategy"]

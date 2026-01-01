@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-12-17 22:36:46 +00:00
-permalink: "/community/2025-12-17-Azure-Policy-Required-Actions-for-Docker-Content-Trust-Deprecation-in-Azure-Container-Registry.html"
+permalink: "/2025-12-17-Azure-Policy-Required-Actions-for-Docker-Content-Trust-Deprecation-in-Azure-Container-Registry.html"
 categories: ["Azure", "DevOps", "Security"]
 tags: ["ACR", "API Deprecation", "ARM API", "Azure", "Azure Container Registry", "Azure Policy", "Cloud Governance", "Community", "Container Security", "DevOps", "Docker Content Trust", "Notary Project", "Policy Compliance", "Policy Definition", "Security", "Security Compliance", "Trustpolicy"]
 tags_normalized: ["acr", "api deprecation", "arm api", "azure", "azure container registry", "azure policy", "cloud governance", "community", "container security", "devops", "docker content trust", "notary project", "policy compliance", "policy definition", "security", "security compliance", "trustpolicy"]

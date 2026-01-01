@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-09-22 03:33:28 +00:00
-permalink: "/community/2025-09-22-Introducing-the-Azure-Maps-Geocode-Autocomplete-API.html"
+permalink: "/2025-09-22-Introducing-the-Azure-Maps-Geocode-Autocomplete-API.html"
 categories: ["Azure", "Coding"]
 tags: ["Address Lookup", "API Integration", "Autocomplete", "Azure", "Azure Maps", "Bing Maps Migration", "Coding", "Community", "Entity Suggestions", "Form Autofill", "Geocode Autocomplete API", "Location Intelligence", "Mapping", "Microsoft Azure", "Multilingual Support", "REST API", "Rideshare", "Store Locator", "Web Application"]
 tags_normalized: ["address lookup", "api integration", "autocomplete", "azure", "azure maps", "bing maps migration", "coding", "community", "entity suggestions", "form autofill", "geocode autocomplete api", "location intelligence", "mapping", "microsoft azure", "multilingual support", "rest api", "rideshare", "store locator", "web application"]

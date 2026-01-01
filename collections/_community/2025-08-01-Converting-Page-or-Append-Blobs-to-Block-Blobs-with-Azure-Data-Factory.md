@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-08-01 10:57:37 +00:00
-permalink: "/community/2025-08-01-Converting-Page-or-Append-Blobs-to-Block-Blobs-with-Azure-Data-Factory.html"
+permalink: "/2025-08-01-Converting-Page-or-Append-Blobs-to-Block-Blobs-with-Azure-Data-Factory.html"
 categories: ["Azure", "ML"]
 tags: ["Access Tiers", "Append Blobs", "Archive Tier", "Azure", "Azure Blob Storage", "Azure Data Factory", "Block Blobs", "Community", "Data Pipelines", "Lifecycle Management", "ML", "Page Blobs", "Storage Cost Optimization"]
 tags_normalized: ["access tiers", "append blobs", "archive tier", "azure", "azure blob storage", "azure data factory", "block blobs", "community", "data pipelines", "lifecycle management", "ml", "page blobs", "storage cost optimization"]

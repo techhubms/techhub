@@ -9,10 +9,10 @@ viewing_mode: "external"
 feed_name: "DevOps Blog"
 feed_url: "https://devops.com/feed/"
 date: 2025-10-21 21:31:46 +00:00
-permalink: "/blogs/2025-10-21-Cycode-Unveils-AI-Tool-and-Platform-Detection-for-Application-Security-Teams.html"
+permalink: "/2025-10-21-Cycode-Unveils-AI-Tool-and-Platform-Detection-for-Application-Security-Teams.html"
 categories: ["AI", "DevOps", "ML", "Security"]
-tags: ["AI", "AI Bill Of Materials", "AI Code Generation", "AI Coding Assistants", "AI Inventory", "AIBOM", "Application Security", "ASPM", "Cycode", "DevOps", "DevSecOps", "LLM", "Machine Learning", "MCP", "ML", "Policy Enforcement", "Blogs", "Risk Intelligence Graph", "SBoM", "Security", "Social Facebook", "Social LinkedIn", "Social X", "Software Bill Of Materials", "Vulnerability Assessment"]
-tags_normalized: ["ai", "ai bill of materials", "ai code generation", "ai coding assistants", "ai inventory", "aibom", "application security", "aspm", "cycode", "devops", "devsecops", "llm", "machine learning", "mcp", "ml", "policy enforcement", "blogs", "risk intelligence graph", "sbom", "security", "social facebook", "social linkedin", "social x", "software bill of materials", "vulnerability assessment"]
+tags: ["AI", "AI Bill Of Materials", "AI Code Generation", "AI Coding Assistants", "AI Inventory", "AIBOM", "Application Security", "ASPM", "Blogs", "Cycode", "DevOps", "DevSecOps", "LLM", "Machine Learning", "MCP", "ML", "Policy Enforcement", "Risk Intelligence Graph", "SBoM", "Security", "Social Facebook", "Social LinkedIn", "Social X", "Software Bill Of Materials", "Vulnerability Assessment"]
+tags_normalized: ["ai", "ai bill of materials", "ai code generation", "ai coding assistants", "ai inventory", "aibom", "application security", "aspm", "blogs", "cycode", "devops", "devsecops", "llm", "machine learning", "mcp", "ml", "policy enforcement", "risk intelligence graph", "sbom", "security", "social facebook", "social linkedin", "social x", "software bill of materials", "vulnerability assessment"]
 ---
 
 Mike Vizard covers Cycode’s preview of capabilities to detect and inventory AI tools and platforms in codebases, helping DevSecOps teams enhance application security and governance.<!--excerpt_end-->

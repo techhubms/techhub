@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft News"
 feed_url: "https://news.microsoft.com/source/feed/"
 date: 2025-08-06 01:04:00 +00:00
-permalink: "/news/2025-08-06-OpenAIs-gpt-oss-Models-Now-Available-on-Azure-AI-Foundry-and-Windows-via-Foundry-Local.html"
+permalink: "/2025-08-06-OpenAIs-gpt-oss-Models-Now-Available-on-Azure-AI-Foundry-and-Windows-via-Foundry-Local.html"
 categories: ["AI", "Azure"]
 tags: ["AI", "AI Integration", "AI Models", "Azure", "Azure AI Foundry", "Company News", "Foundry Local", "Gpt Oss", "Hybrid AI", "LinkedIn Post", "Microsoft", "News", "Open Source AI", "OpenAI", "Performance Optimization", "Satya Nadella", "Windows AI"]
 tags_normalized: ["ai", "ai integration", "ai models", "azure", "azure ai foundry", "company news", "foundry local", "gpt oss", "hybrid ai", "linkedin post", "microsoft", "news", "open source ai", "openai", "performance optimization", "satya nadella", "windows ai"]

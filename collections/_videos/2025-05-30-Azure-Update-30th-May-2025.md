@@ -9,7 +9,7 @@ categories: ["AI", "Azure", "ML"]
 feed_name: "John Savill's Technical Training"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCpIn7ox7j7bH_OFj7tYouOQ"
 date: 2025-05-30 14:11:15 +00:00
-permalink: "/videos/2025-05-30-Azure-Update-30th-May-2025.html"
+permalink: "/2025-05-30-Azure-Update-30th-May-2025.html"
 viewing_mode: "internal"
 tags: ["AFD Container Apps", "AI", "API Management", "App Service Hybrid Connection", "Application Gateway SSE", "Azure", "Azure AI Foundry", "Azure Firewall", "Azure Migrate", "Cloud", "Cosmos DB", "DocumentDB", "Elastic SAN", "Johnsavillstechnicaltraining", "Microsoft", "Microsoft Planetary Computer", "ML", "Onboard to Azure", "PostgreSQL", "Videos"]
 tags_normalized: ["afd container apps", "ai", "api management", "app service hybrid connection", "application gateway sse", "azure", "azure ai foundry", "azure firewall", "azure migrate", "cloud", "cosmos db", "documentdb", "elastic san", "johnsavillstechnicaltraining", "microsoft", "microsoft planetary computer", "ml", "onboard to azure", "postgresql", "videos"]

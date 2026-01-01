@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/changelog/feed/"
 date: 2025-09-11 18:42:31 +00:00
-permalink: "/news/2025-09-11-REST-API-Enhancements-for-GitHub-Projects-and-Sub-Issues-Improvements.html"
+permalink: "/2025-09-11-REST-API-Enhancements-for-GitHub-Projects-and-Sub-Issues-Improvements.html"
 categories: ["DevOps"]
 tags: ["API Integration", "Automation", "Collaboration", "Collaboration Tools", "Cross Organization Issues", "Development Workflow", "DevOps", "GitHub", "GitHub Notifications", "Issue Management", "Microsoft Teams", "Milestones", "News", "Project Management", "Projects & Issues", "Projects API", "REST API", "Sub Issues"]
 tags_normalized: ["api integration", "automation", "collaboration", "collaboration tools", "cross organization issues", "development workflow", "devops", "github", "github notifications", "issue management", "microsoft teams", "milestones", "news", "project management", "projects and issues", "projects api", "rest api", "sub issues"]

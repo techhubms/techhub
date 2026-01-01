@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Security Blog"
 feed_url: "https://www.microsoft.com/en-us/security/blog/feed/"
 date: 2025-12-18 17:00:00 +00:00
-permalink: "/news/2025-12-18-Why-Unified-AI-Ready-Security-Platforms-Outperform-Patchwork-Solutions.html"
+permalink: "/2025-12-18-Why-Unified-AI-Ready-Security-Platforms-Outperform-Patchwork-Solutions.html"
 categories: ["AI", "Azure", "Security"]
 tags: ["AI", "AI Security", "Azure", "Cloud Security", "Cybersecurity", "Exposure Management", "Incident Response", "Microsoft Defender", "Microsoft Sentinel", "News", "Ransomware Protection", "Security", "Security Analytics", "Security Copilot", "Security Data Lake", "SIEM", "SOC", "Threat Detection", "Unified Security Platform"]
 tags_normalized: ["ai", "ai security", "azure", "cloud security", "cybersecurity", "exposure management", "incident response", "microsoft defender", "microsoft sentinel", "news", "ransomware protection", "security", "security analytics", "security copilot", "security data lake", "siem", "soc", "threat detection", "unified security platform"]

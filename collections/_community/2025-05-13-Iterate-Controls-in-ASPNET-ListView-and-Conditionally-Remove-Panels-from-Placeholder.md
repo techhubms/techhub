@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=dotnet"
 date: 2025-05-13 03:59:20 +00:00
-permalink: "/community/2025-05-13-Iterate-Controls-in-ASPNET-ListView-and-Conditionally-Remove-Panels-from-Placeholder.html"
+permalink: "/2025-05-13-Iterate-Controls-in-ASPNET-ListView-and-Conditionally-Remove-Panels-from-Placeholder.html"
 categories: ["Coding"]
 tags: ["ASP.NET", "C#", "Coding", "Community", "Conditional Logic", "Control Iteration", "DataTable", "ItemDataBound", "ListView", "Panel", "Placeholder", "Webforms"]
 tags_normalized: ["aspdotnet", "csharp", "coding", "community", "conditional logic", "control iteration", "datatable", "itemdatabound", "listview", "panel", "placeholder", "webforms"]

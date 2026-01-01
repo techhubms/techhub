@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Reddit Azure"
 feed_url: "https://www.reddit.com/r/azure/.rss"
 date: 2025-08-04 16:26:22 +00:00
-permalink: "/community/2025-08-04-Entra-Connect-Cloud-Sync-One-Way-Without-Passwords-for-Separate-Tenant-Access.html"
+permalink: "/2025-08-04-Entra-Connect-Cloud-Sync-One-Way-Without-Passwords-for-Separate-Tenant-Access.html"
 categories: ["Azure"]
 tags: ["Account Disablement", "Account Provisioning", "Active Directory", "Azure", "Cloud Sync", "Community", "Entra Connect", "Password Hash Sync", "Resource Access", "Tenant", "User Management"]
 tags_normalized: ["account disablement", "account provisioning", "active directory", "azure", "cloud sync", "community", "entra connect", "password hash sync", "resource access", "tenant", "user management"]

@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "GitHub Engineering Blog"
 feed_url: "https://github.blog/engineering/feed/"
 date: 2025-05-13 16:00:00 +00:00
-permalink: "/news/2025-05-13-How-GitHub-Issues-Search-Now-Supports-Nested-Queries-and-Boolean-Operators.html"
+permalink: "/2025-05-13-How-GitHub-Issues-Search-Now-Supports-Nested-Queries-and-Boolean-Operators.html"
 categories: ["DevOps"]
 tags: ["Advanced Search", "API", "Application Architecture", "Application Development", "Architecture & Optimization", "Boolean Operators", "Compatibility", "Developer Skills", "Developer Tools", "DevOps", "Elasticsearch", "Engineering", "Engineering Principles", "GitHub Issues", "Issues Search", "Nested Queries", "News", "Parsing", "Performance", "Search", "User Experience"]
 tags_normalized: ["advanced search", "api", "application architecture", "application development", "architecture and optimization", "boolean operators", "compatibility", "developer skills", "developer tools", "devops", "elasticsearch", "engineering", "engineering principles", "github issues", "issues search", "nested queries", "news", "parsing", "performance", "search", "user experience"]

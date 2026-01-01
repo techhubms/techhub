@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-09-02 16:00:00 +00:00
-permalink: "/community/2025-09-02-GA-Enhanced-Audit-in-Azure-Security-Baseline-for-Linux.html"
+permalink: "/2025-09-02-GA-Enhanced-Audit-in-Azure-Security-Baseline-for-Linux.html"
 categories: ["Azure", "Security"]
 tags: ["Audit Only", "Azure", "Azure Arc", "Azure Governance", "Azure Machine Configuration", "Azure Policy", "Azure Security Baseline", "CIS Controls", "Cloud Security", "Community", "Compliance", "Configuration Drift", "Enterprise Security", "Hybrid Cloud", "Industry Benchmarks", "Linux", "Microsoft Defender For Cloud", "OSConfig", "Remediation", "Reporting", "Resource Graph Explorer", "Security", "Security Auditing"]
 tags_normalized: ["audit only", "azure", "azure arc", "azure governance", "azure machine configuration", "azure policy", "azure security baseline", "cis controls", "cloud security", "community", "compliance", "configuration drift", "enterprise security", "hybrid cloud", "industry benchmarks", "linux", "microsoft defender for cloud", "osconfig", "remediation", "reporting", "resource graph explorer", "security", "security auditing"]

@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/changelog/feed/"
 date: 2025-08-08 18:53:03 +00:00
-permalink: "/news/2025-08-08-Dependabot-Reviewers-Option-Removed-in-Favor-of-GitHub-Code-Owners.html"
+permalink: "/2025-08-08-Dependabot-Reviewers-Option-Removed-in-Favor-of-GitHub-Code-Owners.html"
 categories: ["DevOps"]
 tags: ["Automation Tools", "Code Owners", "Configuration Migration", "Dependabot", "DevOps", "GitHub", "GitHub Actions", "News", "Open Source Tools", "Repository Management", "Repository Settings", "Workflow Automation"]
 tags_normalized: ["automation tools", "code owners", "configuration migration", "dependabot", "devops", "github", "github actions", "news", "open source tools", "repository management", "repository settings", "workflow automation"]

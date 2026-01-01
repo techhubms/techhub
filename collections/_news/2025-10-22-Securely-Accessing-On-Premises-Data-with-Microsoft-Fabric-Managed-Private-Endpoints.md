@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Fabric Blog"
 feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
 date: 2025-10-22 10:00:42 +00:00
-permalink: "/news/2025-10-22-Securely-Accessing-On-Premises-Data-with-Microsoft-Fabric-Managed-Private-Endpoints.html"
+permalink: "/2025-10-22-Securely-Accessing-On-Premises-Data-with-Microsoft-Fabric-Managed-Private-Endpoints.html"
 categories: ["Azure", "ML", "Security"]
 tags: ["Azure", "Data Compliance", "Data Connectivity", "Data Engineering", "Enterprise Governance", "FQDN Allowlist", "Managed Private Endpoints", "Microsoft Fabric", "ML", "Network Security", "News", "On Premises Data", "Private Link", "Private Link Service", "REST API", "Security", "Spark Compute", "SQL Server", "VNet Integration"]
 tags_normalized: ["azure", "data compliance", "data connectivity", "data engineering", "enterprise governance", "fqdn allowlist", "managed private endpoints", "microsoft fabric", "ml", "network security", "news", "on premises data", "private link", "private link service", "rest api", "security", "spark compute", "sql server", "vnet integration"]

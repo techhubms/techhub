@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "DotNet YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw"
 date: 2025-11-13 17:40:49 +00:00
-permalink: "/videos/2025-11-13-Modernizing-NET-Applications-for-the-Cloud.html"
+permalink: "/2025-11-13-Modernizing-NET-Applications-for-the-Cloud.html"
 categories: ["Azure", "Coding", "DevOps"]
 tags: [".NET", ".NET 10", ".NET Core", ".NET Framework", "Application Transformation", "ASP.NET Core", "Azure", "C# 14", "Cloud Architecture", "Cloud Native", "Coding", "Containerization", "DevOps", "F# 10", "MAUI", "Microservices", "Migration", "Modernization", "Videos", "VS"]
 tags_normalized: ["dotnet", "dotnet 10", "dotnet core", "dotnet framework", "application transformation", "aspdotnet core", "azure", "csharp 14", "cloud architecture", "cloud native", "coding", "containerization", "devops", "fsharp 10", "maui", "microservices", "migration", "modernization", "videos", "vs"]

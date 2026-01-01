@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "DotNet YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw"
 date: 2025-12-10 00:01:01 +00:00
-permalink: "/videos/2025-12-10-Secure-and-Smart-AI-Agents-with-Azure-Redis-in-NET.html"
+permalink: "/2025-12-10-Secure-and-Smart-AI-Agents-with-Azure-Redis-in-NET.html"
 categories: ["AI", "Azure", "Coding", "Security"]
 tags: [".NET", "Agentic Applications", "AI", "AI Agents", "Application Security", "Authentication", "Azure", "Azure Redis", "Cloud Development", "Coding", "Data Modernization", "MCP Protocol", "Microsoft Azure", "Redis Integration", "Security", "Security Enhancement", "Videos"]
 tags_normalized: ["dotnet", "agentic applications", "ai", "ai agents", "application security", "authentication", "azure", "azure redis", "cloud development", "coding", "data modernization", "mcp protocol", "microsoft azure", "redis integration", "security", "security enhancement", "videos"]

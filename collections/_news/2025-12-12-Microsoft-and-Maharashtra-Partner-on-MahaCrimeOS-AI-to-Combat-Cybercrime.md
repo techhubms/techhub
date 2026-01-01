@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft News"
 feed_url: "https://news.microsoft.com/source/feed/"
 date: 2025-12-12 06:45:00 +00:00
-permalink: "/news/2025-12-12-Microsoft-and-Maharashtra-Partner-on-MahaCrimeOS-AI-to-Combat-Cybercrime.html"
+permalink: "/2025-12-12-Microsoft-and-Maharashtra-Partner-on-MahaCrimeOS-AI-to-Combat-Cybercrime.html"
 categories: ["AI", "Azure", "Security"]
 tags: ["AI", "AI Deployment", "AI in Policing", "Azure", "Azure Collaboration", "Company News", "Cybercrime", "Data Standardization", "Devendra Fadnavis", "Digital Governance", "Financial Fraud", "India", "Law Enforcement Technology", "LinkedIn Post", "MahaCrimeOS AI", "Microsoft Azure", "News", "OpenAI", "Public Safety", "Satya Nadella", "Security", "Security Automation"]
 tags_normalized: ["ai", "ai deployment", "ai in policing", "azure", "azure collaboration", "company news", "cybercrime", "data standardization", "devendra fadnavis", "digital governance", "financial fraud", "india", "law enforcement technology", "linkedin post", "mahacrimeos ai", "microsoft azure", "news", "openai", "public safety", "satya nadella", "security", "security automation"]

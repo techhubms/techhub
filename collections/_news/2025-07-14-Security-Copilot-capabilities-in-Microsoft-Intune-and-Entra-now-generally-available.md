@@ -9,7 +9,7 @@ categories: ["AI", "Security"]
 feed_name: "Microsoft News"
 feed_url: "https://news.microsoft.com/source/feed/"
 date: 2025-07-14 17:23:42 +00:00
-permalink: "/news/2025-07-14-Security-Copilot-capabilities-in-Microsoft-Intune-and-Entra-now-generally-available.html"
+permalink: "/2025-07-14-Security-Copilot-capabilities-in-Microsoft-Intune-and-Entra-now-generally-available.html"
 viewing_mode: "external"
 tags: ["AI", "AI Driven Security", "Compliance", "Endpoint Management", "General Availability", "Microsoft 365", "Microsoft Entra", "Microsoft Intune", "News", "Security", "Security Automation", "Security Copilot", "Threat Management"]
 tags_normalized: ["ai", "ai driven security", "compliance", "endpoint management", "general availability", "microsoft 365", "microsoft entra", "microsoft intune", "news", "security", "security automation", "security copilot", "threat management"]

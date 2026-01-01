@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "DotNet YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw"
 date: 2025-12-03 00:54:20 +00:00
-permalink: "/videos/2025-12-03-Building-Agentic-UI-with-AG-UI-and-Blazor-ASPNET-Community-Standup.html"
+permalink: "/2025-12-03-Building-Agentic-UI-with-AG-UI-and-Blazor-ASPNET-Community-Standup.html"
 categories: ["AI", "Coding"]
 tags: [".NET", "AG UI", "Agent Based Design", "Agentic UI", "Agentmode", "AI", "ASP.NET Core", "Blazor", "C#", "Coding", "CopilotKit", "Demo", "Developer", "Developer Community", "Dotnetdeveloper", "Microsoft", "Software Developer", "UI Development", "Videos", "Web Development"]
 tags_normalized: ["dotnet", "ag ui", "agent based design", "agentic ui", "agentmode", "ai", "aspdotnet core", "blazor", "csharp", "coding", "copilotkit", "demo", "developer", "developer community", "dotnetdeveloper", "microsoft", "software developer", "ui development", "videos", "web development"]

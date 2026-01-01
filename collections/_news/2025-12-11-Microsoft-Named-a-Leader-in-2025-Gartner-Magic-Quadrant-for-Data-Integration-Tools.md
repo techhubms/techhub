@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Fabric Blog"
 feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
 date: 2025-12-11 11:30:00 +00:00
-permalink: "/news/2025-12-11-Microsoft-Named-a-Leader-in-2025-Gartner-Magic-Quadrant-for-Data-Integration-Tools.html"
+permalink: "/2025-12-11-Microsoft-Named-a-Leader-in-2025-Gartner-Magic-Quadrant-for-Data-Integration-Tools.html"
 categories: ["AI", "Azure", "ML"]
 tags: ["AI", "AI Powered Analytics", "Apache Iceberg", "Azure", "Cloud Data", "Cross Cloud Integration", "Data Governance", "Data Integration", "Data Lake", "Data Orchestration", "Delta Lake", "ETL", "Fabric Data Factory", "Gartner Magic Quadrant", "Microsoft Fabric", "ML", "News", "OneLake", "Real Time Intelligence", "SaaS", "Streaming Analytics"]
 tags_normalized: ["ai", "ai powered analytics", "apache iceberg", "azure", "cloud data", "cross cloud integration", "data governance", "data integration", "data lake", "data orchestration", "delta lake", "etl", "fabric data factory", "gartner magic quadrant", "microsoft fabric", "ml", "news", "onelake", "real time intelligence", "saas", "streaming analytics"]

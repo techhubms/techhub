@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Events YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
 date: 2025-11-24 11:52:25 +00:00
-permalink: "/videos/2025-11-24-Agentic-AI-Drives-Innovation-in-Financial-Services-Insights-from-Microsoft-Ignite-Panel.html"
+permalink: "/2025-11-24-Agentic-AI-Drives-Innovation-in-Financial-Services-Insights-from-Microsoft-Ignite-Panel.html"
 categories: ["AI"]
 tags: ["Agentic AI", "AI", "AI Transformation", "Banking Innovation", "Change Management", "Cloud Migration", "Copilot", "Copilotandagentsatwork", "Financial Services", "Generative AI", "Microsoft Ignite", "Microsoft Tools", "MSIgnite", "Operational Resilience", "Panel Discussion", "Risk Intelligence", "Technical Debt", "Unified Experience Strategy", "Videos"]
 tags_normalized: ["agentic ai", "ai", "ai transformation", "banking innovation", "change management", "cloud migration", "copilot", "copilotandagentsatwork", "financial services", "generative ai", "microsoft ignite", "microsoft tools", "msignite", "operational resilience", "panel discussion", "risk intelligence", "technical debt", "unified experience strategy", "videos"]

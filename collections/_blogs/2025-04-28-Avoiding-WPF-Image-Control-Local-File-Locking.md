@@ -9,10 +9,10 @@ viewing_mode: "external"
 feed_name: "Rick Strahl's Blog"
 feed_url: "https://feeds.feedburner.com/rickstrahl"
 date: 2025-04-28 22:01:46 +00:00
-permalink: "/blogs/2025-04-28-Avoiding-WPF-Image-Control-Local-File-Locking.html"
+permalink: "/2025-04-28-Avoiding-WPF-Image-Control-Local-File-Locking.html"
 categories: ["Coding"]
-tags: [".NET", "Binding Converter", "BitmapImage", "Coding", "Desktop Applications", "File Locking", "Image Caching", "Image Control", "Blogs", "TreeView", "Windows", "WPF", "WPF .NET Windows", "XAML"]
-tags_normalized: ["dotnet", "binding converter", "bitmapimage", "coding", "desktop applications", "file locking", "image caching", "image control", "blogs", "treeview", "windows", "wpf", "wpf dotnet windows", "xaml"]
+tags: [".NET", "Binding Converter", "BitmapImage", "Blogs", "Coding", "Desktop Applications", "File Locking", "Image Caching", "Image Control", "TreeView", "Windows", "WPF", "WPF .NET Windows", "XAML"]
+tags_normalized: ["dotnet", "binding converter", "bitmapimage", "blogs", "coding", "desktop applications", "file locking", "image caching", "image control", "treeview", "windows", "wpf", "wpf dotnet windows", "xaml"]
 ---
 
 In this technical post, Rick Strahl discusses how WPF’s Image control locks local image files, the issues it causes, and presents XAML and custom binding converter strategies—including image caching—to solve the problem efficiently for .NET Windows applications.<!--excerpt_end-->

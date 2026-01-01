@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "DotNet YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw"
 date: 2025-10-11 00:09:22 +00:00
-permalink: "/videos/2025-10-11-Upgrading-eShop-with-Blazor-in-NET-10-Using-GitHub-Copilot.html"
+permalink: "/2025-10-11-Upgrading-eShop-with-Blazor-in-NET-10-Using-GitHub-Copilot.html"
 categories: ["AI", "Coding", "GitHub Copilot"]
 tags: [".NET", ".NET 10", "AI", "AI Assisted Development", "Application Upgrade", "ASP.NET Core", "Blazor", "Coding", "Component State Persistence", "Developer Tools", "Eshop", "GitHub Copilot", "Microsoft", "Not Found Handling", "Videos"]
 tags_normalized: ["dotnet", "dotnet 10", "ai", "ai assisted development", "application upgrade", "aspdotnet core", "blazor", "coding", "component state persistence", "developer tools", "eshop", "github copilot", "microsoft", "not found handling", "videos"]

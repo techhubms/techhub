@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-11-18 16:20:32 +00:00
-permalink: "/community/2025-11-18-Optimize-Your-Cloud-Environment-with-Azure-Copilots-Agentic-AI.html"
+permalink: "/2025-11-18-Optimize-Your-Cloud-Environment-with-Azure-Copilots-Agentic-AI.html"
 categories: ["AI", "Azure"]
 tags: ["Agentic Workflows", "AI", "Azure", "Azure Copilot", "Azure Management", "Azure Portal", "Carbon Insights", "CLI Automation", "Cloud Operations", "Community", "Compliance", "Cost Management", "FinOps", "Governance", "Microsoft Ignite", "Operational Excellence", "Optimization Agent", "PowerShell", "Resource Optimization", "Sustainability", "Virtual Machines", "Well Architected Framework"]
 tags_normalized: ["agentic workflows", "ai", "azure", "azure copilot", "azure management", "azure portal", "carbon insights", "cli automation", "cloud operations", "community", "compliance", "cost management", "finops", "governance", "microsoft ignite", "operational excellence", "optimization agent", "powershell", "resource optimization", "sustainability", "virtual machines", "well architected framework"]

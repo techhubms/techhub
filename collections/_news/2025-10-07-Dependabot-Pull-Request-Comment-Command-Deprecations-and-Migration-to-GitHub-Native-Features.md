@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/changelog/feed/"
 date: 2025-10-07 13:14:05 +00:00
-permalink: "/news/2025-10-07-Dependabot-Pull-Request-Comment-Command-Deprecations-and-Migration-to-GitHub-Native-Features.html"
+permalink: "/2025-10-07-Dependabot-Pull-Request-Comment-Command-Deprecations-and-Migration-to-GitHub-Native-Features.html"
 categories: ["DevOps"]
 tags: ["Automation", "CLI", "Dependabot", "Deprecation", "Developer Tools", "DevOps", "GitHub", "News", "PR Management", "Pull Requests", "REST API", "Retired", "Supply Chain Security", "Workflow Migration"]
 tags_normalized: ["automation", "cli", "dependabot", "deprecation", "developer tools", "devops", "github", "news", "pr management", "pull requests", "rest api", "retired", "supply chain security", "workflow migration"]

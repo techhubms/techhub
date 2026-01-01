@@ -10,9 +10,9 @@ categories: ["AI", "GitHub Copilot", "Coding"]
 feed_name: "Jesse Swart's Blog"
 feed_url: "https://blog.jesseswart.nl/index.xml"
 date: 2024-06-19 11:47:56 +00:00
-permalink: "/blogs/2024-06-19-Copilot-Data-Conversion.html"
-tags: ["AI", "Coding", "CSV", "Data Conversion", "GitHub Copilot", "JSON", "Blogs", "SQL", "Table Designer", "Test Automation"]
-tags_normalized: ["ai", "coding", "csv", "data conversion", "github copilot", "json", "blogs", "sql", "table designer", "test automation"]
+permalink: "/2024-06-19-Copilot-Data-Conversion.html"
+tags: ["AI", "Blogs", "Coding", "CSV", "Data Conversion", "GitHub Copilot", "JSON", "SQL", "Table Designer", "Test Automation"]
+tags_normalized: ["ai", "blogs", "coding", "csv", "data conversion", "github copilot", "json", "sql", "table designer", "test automation"]
 ---
 
 In this article, Jesse Swart's Blog discusses the practical use of GitHub Copilot for converting data exported from a table designer tool into working test files. <!--excerpt_end--> The article originates from a real client inquiry, questioning whether Copilot is capable of transforming table data into useful test files. The author points out that Copilot is indeed likely to help, provided the table designer tool can output its tables in a common textual format such as SQL, JSON, or CSV.

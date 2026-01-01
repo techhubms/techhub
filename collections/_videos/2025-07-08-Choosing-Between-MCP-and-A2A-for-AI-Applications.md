@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "John Savill's Technical Training"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCpIn7ox7j7bH_OFj7tYouOQ"
 date: 2025-07-08 15:19:43 +00:00
-permalink: "/videos/2025-07-08-Choosing-Between-MCP-and-A2A-for-AI-Applications.html"
+permalink: "/2025-07-08-Choosing-Between-MCP-and-A2A-for-AI-Applications.html"
 categories: ["AI", "Azure"]
 tags: ["A2A", "Agent Card", "AI", "AI Agents", "AI Application Architecture", "Artifacts", "Azure", "Generative AI", "Integration", "Large Language Models", "LLM", "MCP", "Messaging", "Microsoft AI", "Microsoft Cloud Platform", "Protocols", "Tasks", "Videos"]
 tags_normalized: ["a2a", "agent card", "ai", "ai agents", "ai application architecture", "artifacts", "azure", "generative ai", "integration", "large language models", "llm", "mcp", "messaging", "microsoft ai", "microsoft cloud platform", "protocols", "tasks", "videos"]

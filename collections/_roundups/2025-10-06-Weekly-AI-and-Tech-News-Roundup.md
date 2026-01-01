@@ -6,7 +6,7 @@ author: "Tech Hub Team"
 excerpt_separator: <!--excerpt_end-->
 viewing_mode: "internal"
 date: 2025-10-06 09:00:00 +00:00
-permalink: "/roundups/2025-10-06-Weekly-AI-and-Tech-News-Roundup.html"
+permalink: "/2025-10-06-Weekly-AI-and-Tech-News-Roundup.html"
 categories: ["AI", "GitHub Copilot", "ML", "Azure", "Coding", "DevOps", "Security"]
 tags: ["AI", "AI Agents", "Automation", "Azure", "Coding", "Coding Agents", "Data Transformation", "DevOps", "Enterprise Cloud", "GitHub Copilot", "Machine Learning", "MCP", "Microsoft Fabric", "ML", "Multicloud", "Roundups", "Security", "VS", "Workflow Orchestration"]
 tags_normalized: ["ai", "ai agents", "automation", "azure", "coding", "coding agents", "data transformation", "devops", "enterprise cloud", "github copilot", "machine learning", "mcp", "microsoft fabric", "ml", "multicloud", "roundups", "security", "vs", "workflow orchestration"]

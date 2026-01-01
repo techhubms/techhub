@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft News"
 feed_url: "https://news.microsoft.com/source/feed/"
 date: 2025-11-18 16:13:42 +00:00
-permalink: "/news/2025-11-18-Integrating-Genspark-Agents-with-Microsoft-Agent-365-for-Secure-Enterprise-AI-Workflows.html"
+permalink: "/2025-11-18-Integrating-Genspark-Agents-with-Microsoft-Agent-365-for-Secure-Enterprise-AI-Workflows.html"
 categories: ["AI", "Security"]
 tags: ["AI", "AI Agents", "Automation", "Customers", "Defender", "Digital Agents", "Enterprise AI", "Entra ID", "Genspark", "Governance", "Identity Management", "Mainfunc", "Microsoft 365", "Microsoft Agent 365", "News", "PowerPoint Integration", "Purview", "Security", "Security Controls"]
 tags_normalized: ["ai", "ai agents", "automation", "customers", "defender", "digital agents", "enterprise ai", "entra id", "genspark", "governance", "identity management", "mainfunc", "microsoft 365", "microsoft agent 365", "news", "powerpoint integration", "purview", "security", "security controls"]

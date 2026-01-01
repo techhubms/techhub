@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The Azure Blog"
 feed_url: "https://azure.microsoft.com/en-us/blog/feed/"
 date: 2025-09-03 15:00:00 +00:00
-permalink: "/news/2025-09-03-Agent-Factory-From-Prototype-to-ProductionDeveloper-Tools-and-Rapid-Agent-Development.html"
+permalink: "/2025-09-03-Agent-Factory-From-Prototype-to-ProductionDeveloper-Tools-and-Rapid-Agent-Development.html"
 categories: ["AI", "Azure", "Coding", "DevOps"]
 tags: ["A2A Protocol", "Agent Development", "Agent Factory", "AI", "AI + Machine Learning", "AI Agents", "AutoGen", "Azure", "Azure AI Foundry", "CI/CD", "Coding", "CrewAI", "DevOps", "DevOps Integration", "Enterprise Deployment", "Guardrails", "Interoperability", "LangGraph", "LlamaIndex", "MCP", "Microsoft 365 Agents SDK", "News", "Observability", "Semantic Kernel", "VS Code Extension"]
 tags_normalized: ["a2a protocol", "agent development", "agent factory", "ai", "ai plus machine learning", "ai agents", "autogen", "azure", "azure ai foundry", "cislashcd", "coding", "crewai", "devops", "devops integration", "enterprise deployment", "guardrails", "interoperability", "langgraph", "llamaindex", "mcp", "microsoft 365 agents sdk", "news", "observability", "semantic kernel", "vs code extension"]

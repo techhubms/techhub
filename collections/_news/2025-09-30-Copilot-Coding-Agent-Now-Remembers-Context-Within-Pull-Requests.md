@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/changelog/feed/"
 date: 2025-09-30 16:50:47 +00:00
-permalink: "/news/2025-09-30-Copilot-Coding-Agent-Now-Remembers-Context-Within-Pull-Requests.html"
+permalink: "/2025-09-30-Copilot-Coding-Agent-Now-Remembers-Context-Within-Pull-Requests.html"
 categories: ["AI", "GitHub Copilot"]
 tags: ["AI", "AI Automation", "Code Collaboration", "Code Review", "Copilot", "Copilot Business", "Copilot Coding Agent", "Copilot Enterprise", "Developer Tools", "GitHub", "GitHub Copilot", "Improvement", "News", "Pro+", "Pull Request", "Session Context", "Workflow Automation"]
 tags_normalized: ["ai", "ai automation", "code collaboration", "code review", "copilot", "copilot business", "copilot coding agent", "copilot enterprise", "developer tools", "github", "github copilot", "improvement", "news", "proplus", "pull request", "session context", "workflow automation"]

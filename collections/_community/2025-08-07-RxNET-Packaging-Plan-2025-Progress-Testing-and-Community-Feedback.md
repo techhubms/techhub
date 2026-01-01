@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Reddit DotNet"
 feed_url: "https://www.reddit.com/r/dotnet/.rss"
 date: 2025-08-07 07:47:10 +00:00
-permalink: "/community/2025-08-07-RxNET-Packaging-Plan-2025-Progress-Testing-and-Community-Feedback.html"
+permalink: "/2025-08-07-RxNET-Packaging-Plan-2025-Progress-Testing-and-Community-Feedback.html"
 categories: ["Coding"]
 tags: [".NET", ".NET 10", "AsyncEnumerable", "Automation", "Base Class Library", "Coding", "Community", "IObservable", "NuGet Packages", "Open Source Maintenance", "Power BI", "Rx.NET", "Software Packaging", "System.Linq.Async", "System.Reactive", "Unit Testing"]
 tags_normalized: ["dotnet", "dotnet 10", "asyncenumerable", "automation", "base class library", "coding", "community", "iobservable", "nuget packages", "open source maintenance", "power bi", "rxdotnet", "software packaging", "systemdotlinqdotasync", "systemdotreactive", "unit testing"]

@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "GitHub YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ"
 date: 2025-12-16 20:49:53 +00:00
-permalink: "/videos/2025-12-16-Manage-All-GitHub-Copilot-Agents-with-Mission-Control.html"
+permalink: "/2025-12-16-Manage-All-GitHub-Copilot-Agents-with-Mission-Control.html"
 categories: ["AI", "GitHub Copilot"]
 tags: ["Agent Management", "AI", "Coding Automation", "Copilot Agents", "Custom Agents", "Developer Tools", "GitHub", "GitHub Copilot", "Mission Control", "MissionControl", "Productivity", "Real Time Steering", "Session Logs", "Videos", "VS Code Integration"]
 tags_normalized: ["agent management", "ai", "coding automation", "copilot agents", "custom agents", "developer tools", "github", "github copilot", "mission control", "missioncontrol", "productivity", "real time steering", "session logs", "videos", "vs code integration"]

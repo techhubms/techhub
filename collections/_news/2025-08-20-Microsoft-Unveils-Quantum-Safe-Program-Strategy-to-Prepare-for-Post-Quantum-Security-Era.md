@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft News"
 feed_url: "https://news.microsoft.com/source/feed/"
 date: 2025-08-20 20:57:04 +00:00
-permalink: "/news/2025-08-20-Microsoft-Unveils-Quantum-Safe-Program-Strategy-to-Prepare-for-Post-Quantum-Security-Era.html"
+permalink: "/2025-08-20-Microsoft-Unveils-Quantum-Safe-Program-Strategy-to-Prepare-for-Post-Quantum-Security-Era.html"
 categories: ["Security"]
 tags: ["Company News", "Cryptographic Algorithms", "Cybersecurity", "Digital Infrastructure", "Encryption", "Internet Engineering Task Force", "Linux", "Microsoft Security", "MITRE", "National Security", "News", "NIST", "On The Issues", "Open Quantum Safe Project", "Policy Recommendations", "Post Quantum Cryptography", "PQC Capabilities", "Quantum Computing", "Quantum Safe Program", "Security", "TLS", "Windows", "Workforce Readiness", "X.509"]
 tags_normalized: ["company news", "cryptographic algorithms", "cybersecurity", "digital infrastructure", "encryption", "internet engineering task force", "linux", "microsoft security", "mitre", "national security", "news", "nist", "on the issues", "open quantum safe project", "policy recommendations", "post quantum cryptography", "pqc capabilities", "quantum computing", "quantum safe program", "security", "tls", "windows", "workforce readiness", "xdot509"]

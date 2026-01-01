@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Developer YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
 date: 2025-12-04 00:00:52 +00:00
-permalink: "/videos/2025-12-04-How-AI-Voice-Agents-Transform-Medical-Documentation-in-Real-Time.html"
+permalink: "/2025-12-04-How-AI-Voice-Agents-Transform-Medical-Documentation-in-Real-Time.html"
 categories: ["AI"]
 tags: ["AI", "AI in Healthcare", "Clinical Workflow Automation", "Cloud Computing", "Copilot", "Data Extraction", "Dev", "Development", "Healthcare IT", "Medical Documentation", "Medical Voice Agent", "Microsoft", "Microsoft Model Driven Apps", "Patient Care", "Speech Recognition", "Tech", "Technology", "Videos", "Workflow Optimization"]
 tags_normalized: ["ai", "ai in healthcare", "clinical workflow automation", "cloud computing", "copilot", "data extraction", "dev", "development", "healthcare it", "medical documentation", "medical voice agent", "microsoft", "microsoft model driven apps", "patient care", "speech recognition", "tech", "technology", "videos", "workflow optimization"]

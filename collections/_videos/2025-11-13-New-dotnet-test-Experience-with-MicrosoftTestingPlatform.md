@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "DotNet YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw"
 date: 2025-11-13 17:40:46 +00:00
-permalink: "/videos/2025-11-13-New-dotnet-test-Experience-with-MicrosoftTestingPlatform.html"
+permalink: "/2025-11-13-New-dotnet-test-Experience-with-MicrosoftTestingPlatform.html"
 categories: ["Coding"]
 tags: [".NET", ".NET Aspire", "ASP.NET Core", "C#", "Coding", "F#", "MAUI", "Microsoft.Testing.Platform", "MSTest", "Native AOT", "NUnit", "Self Contained Executables", "Test Architecture", "Test Automation", "Test Deployment", "Testing Frameworks", "Videos", "VS", "VSTest", "xUnit"]
 tags_normalized: ["dotnet", "dotnet aspire", "aspdotnet core", "csharp", "coding", "fsharp", "maui", "microsoftdottestingdotplatform", "mstest", "native aot", "nunit", "self contained executables", "test architecture", "test automation", "test deployment", "testing frameworks", "videos", "vs", "vstest", "xunit"]

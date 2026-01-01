@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Security Blog"
 feed_url: "https://www.microsoft.com/en-us/security/blog/feed/"
 date: 2025-08-04 15:00:00 +00:00
-permalink: "/news/2025-08-04-Microsoft-Entra-Suite-Delivers-131-ROI-Through-Unified-Identity-and-Network-Access.html"
+permalink: "/2025-08-04-Microsoft-Entra-Suite-Delivers-131-ROI-Through-Unified-Identity-and-Network-Access.html"
 categories: ["Security"]
 tags: ["Access Management", "Forrester Total Economic Impact", "Identity Governance", "Identity Protection", "Identity Security", "Least Privilege", "Microsoft Entra Suite", "Microsoft Security", "Network Access", "News", "ROI Study", "Security", "Security Operations", "Zero Trust"]
 tags_normalized: ["access management", "forrester total economic impact", "identity governance", "identity protection", "identity security", "least privilege", "microsoft entra suite", "microsoft security", "network access", "news", "roi study", "security", "security operations", "zero trust"]

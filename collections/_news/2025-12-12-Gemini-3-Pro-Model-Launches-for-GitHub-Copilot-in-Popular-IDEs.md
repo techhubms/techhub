@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/changelog/feed/"
 date: 2025-12-12 20:22:35 +00:00
-permalink: "/news/2025-12-12-Gemini-3-Pro-Model-Launches-for-GitHub-Copilot-in-Popular-IDEs.html"
+permalink: "/2025-12-12-Gemini-3-Pro-Model-Launches-for-GitHub-Copilot-in-Popular-IDEs.html"
 categories: ["AI", "GitHub Copilot"]
 tags: ["Admin Policy", "AI", "AI Development", "AI Model", "Copilot", "Copilot Business", "Copilot Chat", "Copilot Enterprise", "Copilot Pro", "Copilot Pro+", "Eclipse", "Gemini 3 Pro", "GitHub Copilot", "IDE Integration", "JetBrains IDEs", "Model Management", "News", "Software Development Tools", "VS", "Xcode"]
 tags_normalized: ["admin policy", "ai", "ai development", "ai model", "copilot", "copilot business", "copilot chat", "copilot enterprise", "copilot pro", "copilot proplus", "eclipse", "gemini 3 pro", "github copilot", "ide integration", "jetbrains ides", "model management", "news", "software development tools", "vs", "xcode"]

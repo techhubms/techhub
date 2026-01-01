@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-10-01 20:52:54 +00:00
-permalink: "/community/2025-10-01-How-to-Identify-Who-Created-an-Azure-Resource-Using-SystemData.html"
+permalink: "/2025-10-01-How-to-Identify-Who-Created-an-Azure-Resource-Using-SystemData.html"
 categories: ["Azure", "DevOps", "Security"]
 tags: ["Azure", "Azure Resource Manager", "Cloud Auditing", "Community", "Compliance", "Createdby", "DevOps", "Governance", "JSON View", "Metadata", "Resource Group", "Resource Lifecycle", "Resource Ownership", "Resource Provisioning", "Security", "Subscription Management", "Systemdata", "Troubleshooting", "User Identity"]
 tags_normalized: ["azure", "azure resource manager", "cloud auditing", "community", "compliance", "createdby", "devops", "governance", "json view", "metadata", "resource group", "resource lifecycle", "resource ownership", "resource provisioning", "security", "subscription management", "systemdata", "troubleshooting", "user identity"]

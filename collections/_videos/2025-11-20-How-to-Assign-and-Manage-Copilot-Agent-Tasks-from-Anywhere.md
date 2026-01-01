@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "GitHub YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ"
 date: 2025-11-20 15:01:12 +00:00
-permalink: "/videos/2025-11-20-How-to-Assign-and-Manage-Copilot-Agent-Tasks-from-Anywhere.html"
+permalink: "/2025-11-20-How-to-Assign-and-Manage-Copilot-Agent-Tasks-from-Anywhere.html"
 categories: ["AI", "Coding", "GitHub Copilot"]
 tags: ["AI", "AI Tools", "Autonomous Agents", "Coding", "Coding Automation", "CodingAgent", "Copilot Agent", "Copilot CLI", "Custom Agents", "Developer Productivity", "GitHub", "GitHub Copilot", "Programming Workflow", "Slack Integration", "Software Development", "Task Management", "Videos", "VS Code"]
 tags_normalized: ["ai", "ai tools", "autonomous agents", "coding", "coding automation", "codingagent", "copilot agent", "copilot cli", "custom agents", "developer productivity", "github", "github copilot", "programming workflow", "slack integration", "software development", "task management", "videos", "vs code"]

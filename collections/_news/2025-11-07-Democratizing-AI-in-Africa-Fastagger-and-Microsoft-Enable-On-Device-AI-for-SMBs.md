@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft News"
 feed_url: "https://news.microsoft.com/source/feed/"
 date: 2025-11-07 14:02:38 +00:00
-permalink: "/news/2025-11-07-Democratizing-AI-in-Africa-Fastagger-and-Microsoft-Enable-On-Device-AI-for-SMBs.html"
+permalink: "/2025-11-07-Democratizing-AI-in-Africa-Fastagger-and-Microsoft-Enable-On-Device-AI-for-SMBs.html"
 categories: ["AI", "Azure"]
 tags: ["Africa Transformation Office", "AI", "AUNI System", "Azure", "Azure AI", "Company News", "Customer Retention", "Digital Divide", "Edge AI", "Fastagger", "Financial Inclusion", "GitHub", "IoT", "M PESA", "Machine Learning", "Microsoft", "Mobile Money", "Mobile Technology", "News", "NVIDIA GenAI", "On Device AI", "SaaS", "Small Business", "SMB", "Startup", "Work & Life"]
 tags_normalized: ["africa transformation office", "ai", "auni system", "azure", "azure ai", "company news", "customer retention", "digital divide", "edge ai", "fastagger", "financial inclusion", "github", "iot", "m pesa", "machine learning", "microsoft", "mobile money", "mobile technology", "news", "nvidia genai", "on device ai", "saas", "small business", "smb", "startup", "work and life"]

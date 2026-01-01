@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft VisualStudio Blog"
 feed_url: "https://devblogs.microsoft.com/visualstudio/feed/"
 date: 2025-10-21 14:00:36 +00:00
-permalink: "/news/2025-10-21-Effortless-Extension-Migration-in-Visual-Studio-2026-Modern-Compatibility-Model-for-Developers.html"
+permalink: "/2025-10-21-Effortless-Extension-Migration-in-Visual-Studio-2026-Modern-Compatibility-Model-for-Developers.html"
 categories: ["Coding"]
 tags: ["Additive APIs", "API Compatibility", "Backward Compatibility", "Coding", "Developer Experience", "Developer Tools", "Extensibility", "Extension Development", "Extension Migration", "Extensions", "IDE", "Marketplace", "Microsoft", "MSI Installers", "News", "VisualStudio.Extensibility", "VS", "VSIX", "Vsixmanifest"]
 tags_normalized: ["additive apis", "api compatibility", "backward compatibility", "coding", "developer experience", "developer tools", "extensibility", "extension development", "extension migration", "extensions", "ide", "marketplace", "microsoft", "msi installers", "news", "visualstudiodotextensibility", "vs", "vsix", "vsixmanifest"]

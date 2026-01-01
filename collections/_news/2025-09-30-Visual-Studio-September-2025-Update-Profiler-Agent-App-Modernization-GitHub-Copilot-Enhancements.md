@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft VisualStudio Blog"
 feed_url: "https://devblogs.microsoft.com/visualstudio/feed/"
 date: 2025-09-30 13:30:50 +00:00
-permalink: "/news/2025-09-30-Visual-Studio-September-2025-Update-Profiler-Agent-App-Modernization-GitHub-Copilot-Enhancements.html"
+permalink: "/2025-09-30-Visual-Studio-September-2025-Update-Profiler-Agent-App-Modernization-GitHub-Copilot-Enhancements.html"
 categories: ["AI", "Azure", "Coding", "DevOps", "GitHub Copilot"]
 tags: [".NET Modernization", "Agent", "Agent Mode", "AI", "Azure", "Azure Migration", "BenchmarkDotNet", "C#", "Code Review", "Code Reviews", "Coding", "Copilot", "Copilot Chat", "Debug", "Developer Productivity", "DevOps", "GitHub Copilot", "MCP", "Mermaid", "Mermaid Diagrams", "Modernization", "News", "Performance Profiling", "Productivity", "Profiler Agent", "Prompt Engineering", "Source Control", "VS"]
 tags_normalized: ["dotnet modernization", "agent", "agent mode", "ai", "azure", "azure migration", "benchmarkdotnet", "csharp", "code review", "code reviews", "coding", "copilot", "copilot chat", "debug", "developer productivity", "devops", "github copilot", "mcp", "mermaid", "mermaid diagrams", "modernization", "news", "performance profiling", "productivity", "profiler agent", "prompt engineering", "source control", "vs"]

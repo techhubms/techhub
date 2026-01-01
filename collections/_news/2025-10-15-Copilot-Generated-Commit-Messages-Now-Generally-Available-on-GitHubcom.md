@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/changelog/feed/"
 date: 2025-10-15 16:47:01 +00:00
-permalink: "/news/2025-10-15-Copilot-Generated-Commit-Messages-Now-Generally-Available-on-GitHubcom.html"
+permalink: "/2025-10-15-Copilot-Generated-Commit-Messages-Now-Generally-Available-on-GitHubcom.html"
 categories: ["AI", "DevOps", "GitHub Copilot"]
 tags: ["AI", "AI Assistant", "Automation", "Commit Messages", "Commit Metadata", "Copilot", "Developer Workflow", "DevOps", "Documentation", "Feature Release", "GitHub Copilot", "GitHub Enterprise Cloud", "GitHub.com", "News"]
 tags_normalized: ["ai", "ai assistant", "automation", "commit messages", "commit metadata", "copilot", "developer workflow", "devops", "documentation", "feature release", "github copilot", "github enterprise cloud", "githubdotcom", "news"]

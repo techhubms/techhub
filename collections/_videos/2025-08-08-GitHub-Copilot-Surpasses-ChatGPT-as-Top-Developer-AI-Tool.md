@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "GitHub YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ"
 date: 2025-08-08 18:01:03 +00:00
-permalink: "/videos/2025-08-08-GitHub-Copilot-Surpasses-ChatGPT-as-Top-Developer-AI-Tool.html"
+permalink: "/2025-08-08-GitHub-Copilot-Surpasses-ChatGPT-as-Top-Developer-AI-Tool.html"
 categories: ["AI", "GitHub Copilot"]
 tags: ["AI", "AI Assistant", "AI Tools", "ChatGPT", "Coding Tools", "Developer Survey", "Developer Workflow", "GitHub", "GitHub Copilot", "Productivity", "Software Development", "The Pragmatic Engineer", "Videos"]
 tags_normalized: ["ai", "ai assistant", "ai tools", "chatgpt", "coding tools", "developer survey", "developer workflow", "github", "github copilot", "productivity", "software development", "the pragmatic engineer", "videos"]

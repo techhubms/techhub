@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/changelog/feed/"
 date: 2025-09-23 15:21:27 +00:00
-permalink: "/news/2025-09-23-Incremental-Security-Analysis-with-CodeQL-Now-Available-Across-All-Languages.html"
+permalink: "/2025-09-23-Incremental-Security-Analysis-with-CodeQL-Now-Available-Across-All-Languages.html"
 categories: ["Coding", "DevOps", "Security"]
 tags: ["Application Security", "C/C++", "C#", "CodeQL", "CodeQL CLI", "Coding", "DevOps", "GitHub", "GitHub Enterprise Server", "Go", "Incremental Analysis", "News", "Pull Requests", "Security", "Security Scanning", "Static Analysis", "Swift"]
 tags_normalized: ["application security", "cslashcplusplus", "csharp", "codeql", "codeql cli", "coding", "devops", "github", "github enterprise server", "go", "incremental analysis", "news", "pull requests", "security", "security scanning", "static analysis", "swift"]

@@ -9,10 +9,10 @@ viewing_mode: "external"
 feed_name: "Dellenny's Blog"
 feed_url: "https://dellenny.com/feed/"
 date: 2025-08-03 08:24:29 +00:00
-permalink: "/blogs/2025-08-03-A-Comprehensive-Guide-to-Getting-Started-with-GitHub-Copilot.html"
+permalink: "/2025-08-03-A-Comprehensive-Guide-to-Getting-Started-with-GitHub-Copilot.html"
 categories: ["AI", "GitHub Copilot"]
-tags: ["AI", "AI Coding Assistant", "AI Programming", "Code Completion", "Code Productivity", "Code Suggestions", "Coding Best Practices", "Copilot", "Copilot Chat", "Copilot For Business", "Copilot Setup", "Copilot Subscription", "Editor Extensions", "GitHub Copilot", "OpenAI", "Blogs", "Programming Tools", "Software Development", "VS Code"]
-tags_normalized: ["ai", "ai coding assistant", "ai programming", "code completion", "code productivity", "code suggestions", "coding best practices", "copilot", "copilot chat", "copilot for business", "copilot setup", "copilot subscription", "editor extensions", "github copilot", "openai", "blogs", "programming tools", "software development", "vs code"]
+tags: ["AI", "AI Coding Assistant", "AI Programming", "Blogs", "Code Completion", "Code Productivity", "Code Suggestions", "Coding Best Practices", "Copilot", "Copilot Chat", "Copilot For Business", "Copilot Setup", "Copilot Subscription", "Editor Extensions", "GitHub Copilot", "OpenAI", "Programming Tools", "Software Development", "VS Code"]
+tags_normalized: ["ai", "ai coding assistant", "ai programming", "blogs", "code completion", "code productivity", "code suggestions", "coding best practices", "copilot", "copilot chat", "copilot for business", "copilot setup", "copilot subscription", "editor extensions", "github copilot", "openai", "programming tools", "software development", "vs code"]
 ---
 
 Dellenny offers a detailed yet accessible walkthrough on getting started with GitHub Copilot, guiding users from installation to practical usage and best practices.<!--excerpt_end-->

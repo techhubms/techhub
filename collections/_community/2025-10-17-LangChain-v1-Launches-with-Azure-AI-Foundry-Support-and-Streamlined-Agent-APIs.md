@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-10-17 07:25:12 +00:00
-permalink: "/community/2025-10-17-LangChain-v1-Launches-with-Azure-AI-Foundry-Support-and-Streamlined-Agent-APIs.html"
+permalink: "/2025-10-17-LangChain-v1-Launches-with-Azure-AI-Foundry-Support-and-Streamlined-Agent-APIs.html"
 categories: ["AI", "Azure"]
 tags: ["Agent Abstractions", "AI", "AI Agents", "API Migration", "Azure", "Azure AI Foundry", "Azure OpenAI", "Community", "Content Blocks", "Developer API", "JavaScript", "LangChain V1", "LangGraph", "LLMs", "Microsoft Azure", "Microsoft Developer Advocates", "Middleware", "Multimodal AI", "Python"]
 tags_normalized: ["agent abstractions", "ai", "ai agents", "api migration", "azure", "azure ai foundry", "azure openai", "community", "content blocks", "developer api", "javascript", "langchain v1", "langgraph", "llms", "microsoft azure", "microsoft developer advocates", "middleware", "multimodal ai", "python"]

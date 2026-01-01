@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/changelog/feed/"
 date: 2025-09-17 20:00:28 +00:00
-permalink: "/news/2025-09-17-Share-Read-Only-Sparks-with-Controlled-Data-Access.html"
+permalink: "/2025-09-17-Share-Read-Only-Sparks-with-Controlled-Data-Access.html"
 categories: ["DevOps"]
 tags: ["Access Control", "App Sharing", "Bug Fixes", "Code Editor", "Collaboration", "Copilot", "Developer Tools", "DevOps", "GitHub", "JSON", "News", "Read Only Mode", "Release Notes", "Sparks", "Workflow Improvements"]
 tags_normalized: ["access control", "app sharing", "bug fixes", "code editor", "collaboration", "copilot", "developer tools", "devops", "github", "json", "news", "read only mode", "release notes", "sparks", "workflow improvements"]

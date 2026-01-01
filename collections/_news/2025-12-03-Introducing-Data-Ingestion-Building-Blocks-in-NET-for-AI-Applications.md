@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft .NET Blog"
 feed_url: "https://devblogs.microsoft.com/dotnet/feed/"
 date: 2025-12-03 18:05:00 +00:00
-permalink: "/news/2025-12-03-Introducing-Data-Ingestion-Building-Blocks-in-NET-for-AI-Applications.html"
+permalink: "/2025-12-03-Introducing-Data-Ingestion-Building-Blocks-in-NET-for-AI-Applications.html"
 categories: ["AI", "Coding", "ML"]
 tags: [".NET", "AI", "AI Applications", "Aspire", "Coding", "CosmosDB", "Data", "Data Ingestion", "Dataingestion", "Document Chunking", "ElasticSearch", "Embedding Generation", "ETL", "MarkDownReader", "Microsoft.Extensions.DataIngestion", "Microsoft.ML.Tokenizers", "ML", "MongoDB", "News", "Observability", "OpenAI", "OpenTelemetry", "Qdrant", "Rag", "Semantic Kernel", "SummaryEnricher", "Vector Databases"]
 tags_normalized: ["dotnet", "ai", "ai applications", "aspire", "coding", "cosmosdb", "data", "data ingestion", "dataingestion", "document chunking", "elasticsearch", "embedding generation", "etl", "markdownreader", "microsoftdotextensionsdotdataingestion", "microsoftdotmldottokenizers", "ml", "mongodb", "news", "observability", "openai", "opentelemetry", "qdrant", "rag", "semantic kernel", "summaryenricher", "vector databases"]

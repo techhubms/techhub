@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-12-19 15:13:45 +00:00
-permalink: "/community/2025-12-19-Building-and-Deploying-MCP-Servers-with-Python-and-Azure.html"
+permalink: "/2025-12-19-Building-and-Deploying-MCP-Servers-with-Python-and-Azure.html"
 categories: ["AI", "Azure", "Coding", "Security"]
 tags: ["AI", "API Security", "Application Insights", "Authentication", "Azure", "Azure Container Apps", "Azure Functions", "Cloud Deployment", "Coding", "Community", "Docker", "FastMCP", "Langchain", "MCP Server", "Microsoft Agent Framework", "Microsoft Entra ID", "OAuth", "OpenTelemetry", "Python", "Security"]
 tags_normalized: ["ai", "api security", "application insights", "authentication", "azure", "azure container apps", "azure functions", "cloud deployment", "coding", "community", "docker", "fastmcp", "langchain", "mcp server", "microsoft agent framework", "microsoft entra id", "oauth", "opentelemetry", "python", "security"]

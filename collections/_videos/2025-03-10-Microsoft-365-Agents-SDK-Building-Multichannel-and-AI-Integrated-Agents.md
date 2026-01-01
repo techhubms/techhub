@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Learn Microsoft AI Youtube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCQf_yRJpsfyEiWWpt1MZ6vA"
 date: 2025-03-10 08:00:43 +00:00
-permalink: "/videos/2025-03-10-Microsoft-365-Agents-SDK-Building-Multichannel-and-AI-Integrated-Agents.html"
+permalink: "/2025-03-10-Microsoft-365-Agents-SDK-Building-Multichannel-and-AI-Integrated-Agents.html"
 categories: ["AI", "Azure", "Coding"]
 tags: ["Agent Development", "AI", "Azure", "Azure AI SDK", "Coding", "Copilot Studio", "Enterprise Bots", "Facebook Messenger", "Full Stack Development", "Microsoft 365 Agents SDK", "Microsoft Teams", "Multichannel Integration", "SDK", "Semantic Kernel", "Slack", "Twilio", "Videos", "Webchat"]
 tags_normalized: ["agent development", "ai", "azure", "azure ai sdk", "coding", "copilot studio", "enterprise bots", "facebook messenger", "full stack development", "microsoft 365 agents sdk", "microsoft teams", "multichannel integration", "sdk", "semantic kernel", "slack", "twilio", "videos", "webchat"]

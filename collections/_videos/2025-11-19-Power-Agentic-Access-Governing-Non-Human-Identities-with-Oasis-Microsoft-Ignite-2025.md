@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Events YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
 date: 2025-11-19 12:31:45 +00:00
-permalink: "/videos/2025-11-19-Power-Agentic-Access-Governing-Non-Human-Identities-with-Oasis-Microsoft-Ignite-2025.html"
+permalink: "/2025-11-19-Power-Agentic-Access-Governing-Non-Human-Identities-with-Oasis-Microsoft-Ignite-2025.html"
 categories: ["AI", "Azure", "Security"]
 tags: ["Access Control", "AI", "AI Agents", "Audit Evidence", "Automation", "Azure", "Cloud Security", "GitHub", "Identity Governance", "Lifecycle Management", "Managed Identities", "Microsoft Entra", "Microsoft Ignite", "MSIgnite", "Non Human Identities", "Oasis", "Privilege Management", "ProtectcloudAIplatformandapps", "Role Management", "Secrets Rotation", "Security", "Service Principals", "Tokens", "Videos"]
 tags_normalized: ["access control", "ai", "ai agents", "audit evidence", "automation", "azure", "cloud security", "github", "identity governance", "lifecycle management", "managed identities", "microsoft entra", "microsoft ignite", "msignite", "non human identities", "oasis", "privilege management", "protectcloudaiplatformandapps", "role management", "secrets rotation", "security", "service principals", "tokens", "videos"]

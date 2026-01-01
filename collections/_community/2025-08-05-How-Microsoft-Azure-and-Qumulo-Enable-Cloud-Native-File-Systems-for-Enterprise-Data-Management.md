@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-08-05 21:25:58 +00:00
-permalink: "/community/2025-08-05-How-Microsoft-Azure-and-Qumulo-Enable-Cloud-Native-File-Systems-for-Enterprise-Data-Management.html"
+permalink: "/2025-08-05-How-Microsoft-Azure-and-Qumulo-Enable-Cloud-Native-File-Systems-for-Enterprise-Data-Management.html"
 categories: ["AI", "Azure", "ML"]
 tags: ["AI", "AI Workloads", "Azure", "Azure Blob Storage", "Azure Native Qumulo", "Azure Virtual Machines", "Cloud Native Architecture", "Cloud Native Qumulo", "Community", "Data Management", "Data Migration", "Elastic Scalability", "Enterprise Storage", "File System", "HPC", "Komprise", "ML", "Multi Protocol Support", "Object Storage", "Qumulo", "Replication", "Snapshots"]
 tags_normalized: ["ai", "ai workloads", "azure", "azure blob storage", "azure native qumulo", "azure virtual machines", "cloud native architecture", "cloud native qumulo", "community", "data management", "data migration", "elastic scalability", "enterprise storage", "file system", "hpc", "komprise", "ml", "multi protocol support", "object storage", "qumulo", "replication", "snapshots"]

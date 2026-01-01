@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Events YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
 date: 2025-11-20 15:44:34 +00:00
-permalink: "/videos/2025-11-20-How-Sitecore-Built-a-Scalable-Isolated-SaaS-Platform-on-Azure.html"
+permalink: "/2025-11-20-How-Sitecore-Built-a-Scalable-Isolated-SaaS-Platform-on-Azure.html"
 categories: ["Azure", "Coding", "DevOps"]
 tags: ["API Management", "Autoscale Analysis", "Azure", "Circuit Breakers", "Coding", "Compliance", "Cosmos DB", "Cost Management", "Data Isolation", "DB Per Tenant", "Deployment Stamps", "DevOps", "Event Overflow", "Fleet Monitoring", "MSIgnite", "Multi Tenant SaaS", "Partition Key", "SaaS Design Patterns", "Sitecore", "TCO Optimization", "Unifyyourdataplatform", "Videos"]
 tags_normalized: ["api management", "autoscale analysis", "azure", "circuit breakers", "coding", "compliance", "cosmos db", "cost management", "data isolation", "db per tenant", "deployment stamps", "devops", "event overflow", "fleet monitoring", "msignite", "multi tenant saas", "partition key", "saas design patterns", "sitecore", "tco optimization", "unifyyourdataplatform", "videos"]

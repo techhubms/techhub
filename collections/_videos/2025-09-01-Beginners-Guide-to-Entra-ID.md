@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "John Savill's Technical Training"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCpIn7ox7j7bH_OFj7tYouOQ"
 date: 2025-09-01 14:09:40 +00:00
-permalink: "/videos/2025-09-01-Beginners-Guide-to-Entra-ID.html"
+permalink: "/2025-09-01-Beginners-Guide-to-Entra-ID.html"
 categories: ["Security"]
 tags: ["Active Directory", "AD", "Application Integration", "Azure Active Directory", "Azure AD", "Cloud", "Cloud Security", "Conditional Access", "Device Management", "Entra Id", "Identity Management", "John Savill", "MFA", "On Premises Integration", "Security", "Single Sign On", "Technical Training", "User Management", "Videos"]
 tags_normalized: ["active directory", "ad", "application integration", "azure active directory", "azure ad", "cloud", "cloud security", "conditional access", "device management", "entra id", "identity management", "john savill", "mfa", "on premises integration", "security", "single sign on", "technical training", "user management", "videos"]

@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Fabric Blog"
 feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
 date: 2025-12-15 11:59:00 +00:00
-permalink: "/news/2025-12-15-Understanding-Operations-Agent-Capacity-Usage-and-Billing-in-Microsoft-Fabric.html"
+permalink: "/2025-12-15-Understanding-Operations-Agent-Capacity-Usage-and-Billing-in-Microsoft-Fabric.html"
 categories: ["AI", "Azure", "ML"]
 tags: ["AI", "Autonomous Agents", "Autonomous Reasoning", "Azure", "Azure Metrics", "Background Usage", "Billing", "Capacity Metrics App", "Capacity Units", "Compute Meter", "Consumption Rates", "Copilot in Fabric", "Data Monitoring", "Eventhouse", "Fabric Preview", "Microsoft Fabric", "ML", "News", "OneLake Storage", "Operations Agent", "Power Automate", "Real Time Intelligence", "Usage Reporting"]
 tags_normalized: ["ai", "autonomous agents", "autonomous reasoning", "azure", "azure metrics", "background usage", "billing", "capacity metrics app", "capacity units", "compute meter", "consumption rates", "copilot in fabric", "data monitoring", "eventhouse", "fabric preview", "microsoft fabric", "ml", "news", "onelake storage", "operations agent", "power automate", "real time intelligence", "usage reporting"]

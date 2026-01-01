@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Fabric Blog"
 feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
 date: 2025-12-18 07:00:00 +00:00
-permalink: "/news/2025-12-18-2025-SQL-Year-in-Review-SQL-Server-Azure-SQL-and-Fabric-Updates.html"
+permalink: "/2025-12-18-2025-SQL-Year-in-Review-SQL-Server-Azure-SQL-and-Fabric-Updates.html"
 categories: ["AI", "Azure", "Coding", "ML"]
 tags: ["AI", "AI Integration", "Azure", "Azure SQL", "Coding", "Copilot", "Data Migration", "Database Security", "Fabric CLI", "JSON Support", "Microsoft Fabric", "ML", "News", "Python Notebooks", "SQL Database", "SQL Development", "SQL Management Studio", "SQL Server", "Vector Data", "VS Code"]
 tags_normalized: ["ai", "ai integration", "azure", "azure sql", "coding", "copilot", "data migration", "database security", "fabric cli", "json support", "microsoft fabric", "ml", "news", "python notebooks", "sql database", "sql development", "sql management studio", "sql server", "vector data", "vs code"]

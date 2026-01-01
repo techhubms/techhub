@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Alireza Chegini's YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCZSAqzABRmDxDHuPS6YuXZA"
 date: 2025-06-04 19:00:03 +00:00
-permalink: "/videos/2025-06-04-AI-Powered-Email-Sorting-with-n8n-and-OpenAI.html"
+permalink: "/2025-06-04-AI-Powered-Email-Sorting-with-n8n-and-OpenAI.html"
 categories: ["AI"]
 tags: ["AI", "AI Agent", "Automation", "Classification Prompt", "Custom Labels", "Email Management", "Gmail Integration", "Inbox Organization", "Label Logic", "N8n", "No Code", "OpenAI", "Productivity", "Text Classification", "Tutorial", "Videos", "Workflow Automation"]
 tags_normalized: ["ai", "ai agent", "automation", "classification prompt", "custom labels", "email management", "gmail integration", "inbox organization", "label logic", "n8n", "no code", "openai", "productivity", "text classification", "tutorial", "videos", "workflow automation"]

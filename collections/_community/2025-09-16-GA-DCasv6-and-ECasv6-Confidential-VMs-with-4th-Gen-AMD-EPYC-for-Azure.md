@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-09-16 23:00:00 +00:00
-permalink: "/community/2025-09-16-GA-DCasv6-and-ECasv6-Confidential-VMs-with-4th-Gen-AMD-EPYC-for-Azure.html"
+permalink: "/2025-09-16-GA-DCasv6-and-ECasv6-Confidential-VMs-with-4th-Gen-AMD-EPYC-for-Azure.html"
 categories: ["Azure", "Security"]
 tags: ["AES 256", "AKS", "AMD EPYC", "Azure", "Azure Confidential Computing", "Cloud Security", "Community", "Confidential VMs", "Confidential Workloads", "DCasv6", "ECasv6", "Enterprise Performance", "Key Rotation", "Linux Kernel", "Memory Encryption", "Multi Tenant Security", "Secure Cloud", "Security", "SEV SNP", "Virtualization Based Security", "Windows VBS"]
 tags_normalized: ["aes 256", "aks", "amd epyc", "azure", "azure confidential computing", "cloud security", "community", "confidential vms", "confidential workloads", "dcasv6", "ecasv6", "enterprise performance", "key rotation", "linux kernel", "memory encryption", "multi tenant security", "secure cloud", "security", "sev snp", "virtualization based security", "windows vbs"]

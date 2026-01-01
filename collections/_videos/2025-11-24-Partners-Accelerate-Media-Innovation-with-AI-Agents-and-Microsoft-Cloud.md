@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Events YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
 date: 2025-11-24 13:29:35 +00:00
-permalink: "/videos/2025-11-24-Partners-Accelerate-Media-Innovation-with-AI-Agents-and-Microsoft-Cloud.html"
+permalink: "/2025-11-24-Partners-Accelerate-Media-Innovation-with-AI-Agents-and-Microsoft-Cloud.html"
 categories: ["AI", "Azure", "ML"]
 tags: ["AI", "AI Agents", "Audience Engagement", "Azure", "Content Creation", "Data Foundations", "Data Quality", "Distribution", "Generative AI", "Intellectual Property", "Media & Entertainment", "Media Innovation", "Microsoft Fabric", "MicrosoftAICloudPartnerProgram", "ML", "MSIgnite", "Privacy", "Secure Cloud", "Videos", "Workflow Automation"]
 tags_normalized: ["ai", "ai agents", "audience engagement", "azure", "content creation", "data foundations", "data quality", "distribution", "generative ai", "intellectual property", "media and entertainment", "media innovation", "microsoft fabric", "microsoftaicloudpartnerprogram", "ml", "msignite", "privacy", "secure cloud", "videos", "workflow automation"]

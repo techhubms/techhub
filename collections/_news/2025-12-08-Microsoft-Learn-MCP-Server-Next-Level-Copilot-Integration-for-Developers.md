@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft .NET Blog"
 feed_url: "https://devblogs.microsoft.com/dotnet/feed/"
 date: 2025-12-08 20:00:00 +00:00
-permalink: "/news/2025-12-08-Microsoft-Learn-MCP-Server-Next-Level-Copilot-Integration-for-Developers.html"
+permalink: "/2025-12-08-Microsoft-Learn-MCP-Server-Next-Level-Copilot-Integration-for-Developers.html"
 categories: ["AI", "Coding", "GitHub Copilot"]
 tags: [".NET", "AI", "API References", "C#", "Code Suggestions", "Coding", "Copilot", "Copilot CLI", "Copilot Coding Agent", "Developer Experience", "Developer Tools", "Docs", "Documentation Integration", "GitHub Copilot", "Integration Guide", "Learn", "MCP", "MCP Server", "Microsoft Learn", "News", "VS", "VS Code"]
 tags_normalized: ["dotnet", "ai", "api references", "csharp", "code suggestions", "coding", "copilot", "copilot cli", "copilot coding agent", "developer experience", "developer tools", "docs", "documentation integration", "github copilot", "integration guide", "learn", "mcp", "mcp server", "microsoft learn", "news", "vs", "vs code"]

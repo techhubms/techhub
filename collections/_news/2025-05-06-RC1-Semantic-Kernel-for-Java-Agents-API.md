@@ -10,7 +10,7 @@ categories: ["AI"]
 feed_name: "Microsoft DevBlog"
 feed_url: "https://devblogs.microsoft.com/semantic-kernel/feed/"
 date: 2025-05-06 09:11:34 +00:00
-permalink: "/news/2025-05-06-RC1-Semantic-Kernel-for-Java-Agents-API.html"
+permalink: "/2025-05-06-RC1-Semantic-Kernel-for-Java-Agents-API.html"
 tags: ["Agents", "AI", "API", "Framework", "Intelligent Agents", "Java", "Microsoft Semantic Kernel", "News", "Semantic Kernel"]
 tags_normalized: ["agents", "ai", "api", "framework", "intelligent agents", "java", "microsoft semantic kernel", "news", "semantic kernel"]
 ---

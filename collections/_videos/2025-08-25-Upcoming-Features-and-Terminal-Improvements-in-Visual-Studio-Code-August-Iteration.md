@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Visual Studio Code YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SLNwkd3w"
 date: 2025-08-25 07:00:26 +00:00
-permalink: "/videos/2025-08-25-Upcoming-Features-and-Terminal-Improvements-in-Visual-Studio-Code-August-Iteration.html"
+permalink: "/2025-08-25-Upcoming-Features-and-Terminal-Improvements-in-Visual-Studio-Code-August-Iteration.html"
 categories: ["Coding", "DevOps"]
 tags: ["Agent Mode", "Automation", "Code Editing", "Coding", "Continuous Integration", "Daniel Imms", "Developer Tools", "Development Productivity", "DevOps", "Iteration Plan", "Microsoft", "Open Source", "Podcast", "Terminal", "Terminal Improvements", "Videos", "VS Code", "VS Code Extensions"]
 tags_normalized: ["agent mode", "automation", "code editing", "coding", "continuous integration", "daniel imms", "developer tools", "development productivity", "devops", "iteration plan", "microsoft", "open source", "podcast", "terminal", "terminal improvements", "videos", "vs code", "vs code extensions"]

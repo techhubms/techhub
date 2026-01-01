@@ -9,10 +9,10 @@ viewing_mode: "external"
 feed_name: "DevOps Blog"
 feed_url: "https://devops.com/feed/"
 date: 2025-11-13 14:53:34 +00:00
-permalink: "/blogs/2025-11-13-Bridging-the-Gap-Between-ClickOps-and-Infrastructure-as-Code-in-DevOps.html"
+permalink: "/2025-11-13-Bridging-the-Gap-Between-ClickOps-and-Infrastructure-as-Code-in-DevOps.html"
 categories: ["AI", "DevOps"]
-tags: ["AI", "Approval Workflows", "Audit Trails", "Automation", "ClickOps", "Cloud Operations", "DevOps", "Drift Detection", "Experimentation", "GitOps", "Governance", "IaC", "Intent Driven Infrastructure", "LLMs", "MCP", "OpenTofu", "Policy as Code", "Blogs", "Pulumi", "Session Locking", "Shadow IT", "Social Facebook", "Social LinkedIn", "Social X", "Techstrong Council", "Terraform"]
-tags_normalized: ["ai", "approval workflows", "audit trails", "automation", "clickops", "cloud operations", "devops", "drift detection", "experimentation", "gitops", "governance", "iac", "intent driven infrastructure", "llms", "mcp", "opentofu", "policy as code", "blogs", "pulumi", "session locking", "shadow it", "social facebook", "social linkedin", "social x", "techstrong council", "terraform"]
+tags: ["AI", "Approval Workflows", "Audit Trails", "Automation", "Blogs", "ClickOps", "Cloud Operations", "DevOps", "Drift Detection", "Experimentation", "GitOps", "Governance", "IaC", "Intent Driven Infrastructure", "LLMs", "MCP", "OpenTofu", "Policy as Code", "Pulumi", "Session Locking", "Shadow IT", "Social Facebook", "Social LinkedIn", "Social X", "Techstrong Council", "Terraform"]
+tags_normalized: ["ai", "approval workflows", "audit trails", "automation", "blogs", "clickops", "cloud operations", "devops", "drift detection", "experimentation", "gitops", "governance", "iac", "intent driven infrastructure", "llms", "mcp", "opentofu", "policy as code", "pulumi", "session locking", "shadow it", "social facebook", "social linkedin", "social x", "techstrong council", "terraform"]
 ---
 
 Marcin Wyszynski discusses the gap between ClickOps and Infrastructure-as-Code, highlighting how intent-driven, AI-powered approaches can balance developer speed with operational safety in modern DevOps practices.<!--excerpt_end-->

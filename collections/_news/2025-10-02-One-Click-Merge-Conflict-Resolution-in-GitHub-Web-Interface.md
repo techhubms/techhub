@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/changelog/feed/"
 date: 2025-10-02 18:07:10 +00:00
-permalink: "/news/2025-10-02-One-Click-Merge-Conflict-Resolution-in-GitHub-Web-Interface.html"
+permalink: "/2025-10-02-One-Click-Merge-Conflict-Resolution-in-GitHub-Web-Interface.html"
 categories: ["DevOps"]
 tags: ["Code Collaboration", "Collaboration Tools", "DevOps", "DevOps Tools", "GitHub", "Improvement", "Merge Conflicts", "News", "Productivity", "Pull Requests", "Source Control", "VS Code", "Web Interface", "Workflow Automation"]
 tags_normalized: ["code collaboration", "collaboration tools", "devops", "devops tools", "github", "improvement", "merge conflicts", "news", "productivity", "pull requests", "source control", "vs code", "web interface", "workflow automation"]

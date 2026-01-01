@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft News"
 feed_url: "https://news.microsoft.com/source/feed/"
 date: 2025-12-04 19:01:12 +00:00
-permalink: "/news/2025-12-04-Cybersecurity-Strategies-to-Prioritize-Now.html"
+permalink: "/2025-12-04-Cybersecurity-Strategies-to-Prioritize-Now.html"
 categories: ["Azure", "Security"]
 tags: ["Azure", "Azure Front Door", "Company News", "Cyber Hygiene", "Cybersecurity", "Data Loss Prevention", "DMARC", "DNS Security", "Endpoint Detection And Response", "Fingerprinting", "Identity Management", "Incident Response", "Logging And Monitoring", "Microsoft Defender", "Microsoft Entra ID", "Microsoft Intune", "Microsoft Security", "Multifactor Authentication", "Network Segmentation", "News", "Phishing Resistant MFA", "Security", "Security Collaboration", "Security Standards", "VPN"]
 tags_normalized: ["azure", "azure front door", "company news", "cyber hygiene", "cybersecurity", "data loss prevention", "dmarc", "dns security", "endpoint detection and response", "fingerprinting", "identity management", "incident response", "logging and monitoring", "microsoft defender", "microsoft entra id", "microsoft intune", "microsoft security", "multifactor authentication", "network segmentation", "news", "phishing resistant mfa", "security", "security collaboration", "security standards", "vpn"]

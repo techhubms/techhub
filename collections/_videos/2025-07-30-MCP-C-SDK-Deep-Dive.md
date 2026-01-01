@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Developer YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
 date: 2025-07-30 22:24:59 +00:00
-permalink: "/videos/2025-07-30-MCP-C-SDK-Deep-Dive.html"
+permalink: "/2025-07-30-MCP-C-SDK-Deep-Dive.html"
 categories: ["AI", "Coding", "Azure"]
 tags: ["06 18 Spec", "Agent Integration", "AI", "AI Development", "Azure", "Azure AI Foundry", "C#", "Cloud Computing", "Coding", "Custom Agents", "Demo", "Dev", "Dev Tools", "Development", "Foundry Agent Service", "MCP", "Microsoft", "Programming", "SDK", "Tech", "Technology", "Videos", "VS Code"]
 tags_normalized: ["06 18 spec", "agent integration", "ai", "ai development", "azure", "azure ai foundry", "csharp", "cloud computing", "coding", "custom agents", "demo", "dev", "dev tools", "development", "foundry agent service", "mcp", "microsoft", "programming", "sdk", "tech", "technology", "videos", "vs code"]

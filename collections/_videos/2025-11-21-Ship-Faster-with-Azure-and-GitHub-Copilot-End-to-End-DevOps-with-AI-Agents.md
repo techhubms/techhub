@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Events YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
 date: 2025-11-21 17:19:32 +00:00
-permalink: "/videos/2025-11-21-Ship-Faster-with-Azure-and-GitHub-Copilot-End-to-End-DevOps-with-AI-Agents.html"
+permalink: "/2025-11-21-Ship-Faster-with-Azure-and-GitHub-Copilot-End-to-End-DevOps-with-AI-Agents.html"
 categories: ["AI", "Azure", "DevOps", "GitHub Copilot"]
 tags: ["AI", "AI Agents", "App Modernization Agent", "Automation", "Azure", "Azure Container Apps", "Azure MCP Server", "Coding Agent", "Datadog", "DevOps", "GitHub Copilot", "GitHub Copilot For Azure", "Incident Response", "InnovatewithAzureAIappsandagents", "MSIgnite", "PagerDuty", "Production Diagnostics", "Quality Assurance", "SRE Agent", "Testing Agent", "Videos", "VS Code"]
 tags_normalized: ["ai", "ai agents", "app modernization agent", "automation", "azure", "azure container apps", "azure mcp server", "coding agent", "datadog", "devops", "github copilot", "github copilot for azure", "incident response", "innovatewithazureaiappsandagents", "msignite", "pagerduty", "production diagnostics", "quality assurance", "sre agent", "testing agent", "videos", "vs code"]

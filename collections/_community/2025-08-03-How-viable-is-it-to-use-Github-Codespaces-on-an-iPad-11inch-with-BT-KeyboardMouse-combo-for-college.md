@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Reddit GitHub"
 feed_url: "https://www.reddit.com/r/github/.rss"
 date: 2025-08-03 10:42:27 +00:00
-permalink: "/community/2025-08-03-How-viable-is-it-to-use-Github-Codespaces-on-an-iPad-11inch-with-BT-KeyboardMouse-combo-for-college.html"
+permalink: "/2025-08-03-How-viable-is-it-to-use-Github-Codespaces-on-an-iPad-11inch-with-BT-KeyboardMouse-combo-for-college.html"
 categories: ["DevOps"]
 tags: ["Bluetooth Keyboard", "Bluetooth Mouse", "Coding Environment", "Community", "Device Compatibility", "DevOps", "GitHub", "GitHub Codespaces", "Ipad", "Programming Lectures", "Remote Development", "University", "Web Based IDE"]
 tags_normalized: ["bluetooth keyboard", "bluetooth mouse", "coding environment", "community", "device compatibility", "devops", "github", "github codespaces", "ipad", "programming lectures", "remote development", "university", "web based ide"]

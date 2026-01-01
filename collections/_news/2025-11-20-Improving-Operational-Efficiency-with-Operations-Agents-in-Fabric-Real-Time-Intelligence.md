@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Fabric Blog"
 feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
 date: 2025-11-20 08:00:00 +00:00
-permalink: "/news/2025-11-20-Improving-Operational-Efficiency-with-Operations-Agents-in-Fabric-Real-Time-Intelligence.html"
+permalink: "/2025-11-20-Improving-Operational-Efficiency-with-Operations-Agents-in-Fabric-Real-Time-Intelligence.html"
 categories: ["AI", "Azure", "ML"]
 tags: ["Agent Configuration", "Agentic Systems", "AI", "AI Powered Agents", "Azure", "Business Automation", "Business Goals", "Continuous Feedback", "Data Monitoring", "Eventhouse", "Human in The Loop", "LLM Tools", "Machine Learning", "Microsoft Fabric", "ML", "News", "Operational Efficiency", "Operations Agent", "Power Automate", "Real Time Intelligence", "Teams Integration"]
 tags_normalized: ["agent configuration", "agentic systems", "ai", "ai powered agents", "azure", "business automation", "business goals", "continuous feedback", "data monitoring", "eventhouse", "human in the loop", "llm tools", "machine learning", "microsoft fabric", "ml", "news", "operational efficiency", "operations agent", "power automate", "real time intelligence", "teams integration"]

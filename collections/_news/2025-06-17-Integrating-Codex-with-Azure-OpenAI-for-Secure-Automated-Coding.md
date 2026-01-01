@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft All Things Azure Blog"
 feed_url: "https://devblogs.microsoft.com/all-things-azure/feed/"
 date: 2025-06-17 22:54:11 +00:00
-permalink: "/news/2025-06-17-Integrating-Codex-with-Azure-OpenAI-for-Secure-Automated-Coding.html"
+permalink: "/2025-06-17-Integrating-Codex-with-Azure-OpenAI-for-Secure-Automated-Coding.html"
 categories: ["AI", "Azure", "Coding", "DevOps"]
 tags: ["Agents", "AGENTS.md", "AI", "AI Agents", "All Things Azure", "API Integration", "App Development", "Azure", "Azure AI Foundry", "Azure OpenAI", "CI/CD", "CLI Tools", "Code Automation", "Codex", "Codex Mini", "Coding", "Coding Agent", "Developer Productivity", "DevOps", "Enterprise Security", "Entra ID", "GitHub Actions", "News", "OpenAI", "Python", "Token Based Authentication"]
 tags_normalized: ["agents", "agentsdotmd", "ai", "ai agents", "all things azure", "api integration", "app development", "azure", "azure ai foundry", "azure openai", "cislashcd", "cli tools", "code automation", "codex", "codex mini", "coding", "coding agent", "developer productivity", "devops", "enterprise security", "entra id", "github actions", "news", "openai", "python", "token based authentication"]

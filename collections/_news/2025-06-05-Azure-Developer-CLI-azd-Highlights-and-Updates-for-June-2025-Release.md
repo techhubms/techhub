@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft DevBlog"
 feed_url: "https://devblogs.microsoft.com/azure-sdk/feed/"
 date: 2025-06-05 20:20:50 +00:00
-permalink: "/news/2025-06-05-Azure-Developer-CLI-azd-Highlights-and-Updates-for-June-2025-Release.html"
+permalink: "/2025-06-05-Azure-Developer-CLI-azd-Highlights-and-Updates-for-June-2025-Release.html"
 categories: ["AI", "Azure", "Coding", "DevOps"]
 tags: [".NET", "AI", "AI Agents", "Aspire", "Azd", "Azure", "Azure AI Foundry", "Azure Developer CLI", "Azure DevOps", "Azure Functions", "Azure SDK", "Bicep", "CI/CD", "Codespaces", "Coding", "Cosmos DB", "DevOps", "Docker", "Extensions", "GenAI", "GitHub Actions", "Java", "JavaScript", "Kubernetes", "Managed Identities", "MCP", "News", "Pipeline Configuration", "Python", "Templates", "Typescript", "VS Code"]
 tags_normalized: ["dotnet", "ai", "ai agents", "aspire", "azd", "azure", "azure ai foundry", "azure developer cli", "azure devops", "azure functions", "azure sdk", "bicep", "cislashcd", "codespaces", "coding", "cosmos db", "devops", "docker", "extensions", "genai", "github actions", "java", "javascript", "kubernetes", "managed identities", "mcp", "news", "pipeline configuration", "python", "templates", "typescript", "vs code"]

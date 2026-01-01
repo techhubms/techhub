@@ -9,10 +9,10 @@ viewing_mode: "external"
 feed_name: "Dellenny's Blog"
 feed_url: "https://dellenny.com/feed/"
 date: 2025-09-25 08:36:33 +00:00
-permalink: "/blogs/2025-09-25-Scaling-Playwright-End-to-End-Tests-with-Azure-Playwright-Testing.html"
+permalink: "/2025-09-25-Scaling-Playwright-End-to-End-Tests-with-Azure-Playwright-Testing.html"
 categories: ["Azure", "Coding", "DevOps"]
-tags: ["Automation", "Azure", "Azure CLI", "Azure Entra ID", "Azure Playwright Testing", "Browser Automation", "CI/CD Integration", "Cloud Testing", "Coding", "Debugging", "DevOps", "End To End Testing", "Node.js", "Parallel Testing", "Playwright", "Blogs", "Test Automation", "Testing", "Testing Artifacts"]
-tags_normalized: ["automation", "azure", "azure cli", "azure entra id", "azure playwright testing", "browser automation", "cislashcd integration", "cloud testing", "coding", "debugging", "devops", "end to end testing", "nodedotjs", "parallel testing", "playwright", "blogs", "test automation", "testing", "testing artifacts"]
+tags: ["Automation", "Azure", "Azure CLI", "Azure Entra ID", "Azure Playwright Testing", "Blogs", "Browser Automation", "CI/CD Integration", "Cloud Testing", "Coding", "Debugging", "DevOps", "End To End Testing", "Node.js", "Parallel Testing", "Playwright", "Test Automation", "Testing", "Testing Artifacts"]
+tags_normalized: ["automation", "azure", "azure cli", "azure entra id", "azure playwright testing", "blogs", "browser automation", "cislashcd integration", "cloud testing", "coding", "debugging", "devops", "end to end testing", "nodedotjs", "parallel testing", "playwright", "test automation", "testing", "testing artifacts"]
 ---
 
 Dellenny guides readers through running Playwright end-to-end tests at scale with Azure Playwright Testing, covering setup, configuration, artifact storage, CI/CD pipeline integration, and cloud-scale debugging.<!--excerpt_end-->

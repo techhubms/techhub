@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Build 2025 YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
 date: 2025-07-29 13:38:12 +00:00
-permalink: "/videos/2025-07-29-Building-AI-Agent-Workflows-with-Semantic-Kernel.html"
+permalink: "/2025-07-29-Building-AI-Agent-Workflows-with-Semantic-Kernel.html"
 categories: ["AI", "Azure", "Coding"]
 tags: ["Agent Frameworks", "AI", "AI Agents", "Azure", "Azure AI Foundry", "Coding", "Microsoft Developer", "Open Source", "Orchestration Patterns", "Process Frameworks", "Semantic Kernel", "SemantiClip", "Video To Blog", "Videos"]
 tags_normalized: ["agent frameworks", "ai", "ai agents", "azure", "azure ai foundry", "coding", "microsoft developer", "open source", "orchestration patterns", "process frameworks", "semantic kernel", "semanticlip", "video to blog", "videos"]

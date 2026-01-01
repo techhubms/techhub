@@ -9,10 +9,10 @@ viewing_mode: "external"
 feed_name: "Dellenny's Blog"
 feed_url: "https://dellenny.com/feed/"
 date: 2025-09-29 09:10:39 +00:00
-permalink: "/blogs/2025-09-29-How-Azure-AI-is-Revolutionizing-Supply-Chain-Forecasting-and-Inventory.html"
+permalink: "/2025-09-29-How-Azure-AI-is-Revolutionizing-Supply-Chain-Forecasting-and-Inventory.html"
 categories: ["AI", "Azure", "ML"]
-tags: ["AI", "AutoML", "Azure", "Azure AI", "Azure Cognitive Services", "Azure Data Factory", "Azure Digital Twins", "Azure IoT Hub", "Azure Machine Learning", "Azure Stream Analytics", "Azure Synapse Analytics", "Demand Forecasting", "Inventory Management", "ML", "Blogs", "Power BI", "Predictive Analytics", "Real Time Data", "Supply Chain", "Time Series Analysis"]
-tags_normalized: ["ai", "automl", "azure", "azure ai", "azure cognitive services", "azure data factory", "azure digital twins", "azure iot hub", "azure machine learning", "azure stream analytics", "azure synapse analytics", "demand forecasting", "inventory management", "ml", "blogs", "power bi", "predictive analytics", "real time data", "supply chain", "time series analysis"]
+tags: ["AI", "AutoML", "Azure", "Azure AI", "Azure Cognitive Services", "Azure Data Factory", "Azure Digital Twins", "Azure IoT Hub", "Azure Machine Learning", "Azure Stream Analytics", "Azure Synapse Analytics", "Blogs", "Demand Forecasting", "Inventory Management", "ML", "Power BI", "Predictive Analytics", "Real Time Data", "Supply Chain", "Time Series Analysis"]
+tags_normalized: ["ai", "automl", "azure", "azure ai", "azure cognitive services", "azure data factory", "azure digital twins", "azure iot hub", "azure machine learning", "azure stream analytics", "azure synapse analytics", "blogs", "demand forecasting", "inventory management", "ml", "power bi", "predictive analytics", "real time data", "supply chain", "time series analysis"]
 ---
 
 Dellenny explores how Azure AI and related Microsoft cloud services are revolutionizing supply chain forecasting and inventory management by enabling smarter, real-time, and adaptive decision-making.<!--excerpt_end-->

@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft .NET Blog"
 feed_url: "https://devblogs.microsoft.com/dotnet/feed/"
 date: 2025-12-15 18:05:00 +00:00
-permalink: "/news/2025-12-15-Building-iOS-Widgets-with-NET-MAUI-From-Setup-to-Interactive-Features.html"
+permalink: "/2025-12-15-Building-iOS-Widgets-with-NET-MAUI-From-Setup-to-Interactive-Features.html"
 categories: ["Coding"]
 tags: [".NET", ".NET For Ios", "App Groups", "AppIntents", "Apple Developer Console", "Build Pipelines", "C#", "Coding", "Deep Linking", "Entitlements", "Interactive Widgets", "Ios", "Ios Widgets", "MAUI", "Mobile Development", "News", "Preferences", "Release Build", "Swift", "UserDefaults", "VS", "VS Code", "Widget Extension", "WidgetKit", "Widgets", "Xcode", "XReleases"]
 tags_normalized: ["dotnet", "dotnet for ios", "app groups", "appintents", "apple developer console", "build pipelines", "csharp", "coding", "deep linking", "entitlements", "interactive widgets", "ios", "ios widgets", "maui", "mobile development", "news", "preferences", "release build", "swift", "userdefaults", "vs", "vs code", "widget extension", "widgetkit", "widgets", "xcode", "xreleases"]

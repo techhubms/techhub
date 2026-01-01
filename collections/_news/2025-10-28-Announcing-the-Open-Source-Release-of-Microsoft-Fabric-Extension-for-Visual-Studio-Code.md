@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Fabric Blog"
 feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
 date: 2025-10-28 10:00:00 +00:00
-permalink: "/news/2025-10-28-Announcing-the-Open-Source-Release-of-Microsoft-Fabric-Extension-for-Visual-Studio-Code.html"
+permalink: "/2025-10-28-Announcing-the-Open-Source-Release-of-Microsoft-Fabric-Extension-for-Visual-Studio-Code.html"
 categories: ["Azure", "Coding", "DevOps"]
 tags: ["Azure", "Coding", "Community Collaboration", "CRUD Operations", "Developer Tools", "DevOps", "Extension API", "Git Integration", "Microsoft Fabric", "News", "Open Source", "Tenant Management", "VS Code", "VS Code Extension", "Workspace Management"]
 tags_normalized: ["azure", "coding", "community collaboration", "crud operations", "developer tools", "devops", "extension api", "git integration", "microsoft fabric", "news", "open source", "tenant management", "vs code", "vs code extension", "workspace management"]

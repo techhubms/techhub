@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/changelog/feed/"
 date: 2025-11-13 17:10:39 +00:00
-permalink: "/news/2025-11-13-OpenAIs-GPT-51-Family-Now-Available-for-GitHub-Copilot-Users.html"
+permalink: "/2025-11-13-OpenAIs-GPT-51-Family-Now-Available-for-GitHub-Copilot-Users.html"
 categories: ["AI", "GitHub Copilot"]
 tags: ["AI", "AI Models", "API Key Integration", "Copilot", "Copilot Chat", "Copilot CLI", "Copilot Plans", "Eclipse", "GitHub Copilot", "GPT 5.1", "GPT 5.1 Codex", "GPT 5.1 Codex Mini", "IDE Integration", "JetBrains", "Model Selection", "News", "Policy Management", "VS Code", "Xcode"]
 tags_normalized: ["ai", "ai models", "api key integration", "copilot", "copilot chat", "copilot cli", "copilot plans", "eclipse", "github copilot", "gpt 5dot1", "gpt 5dot1 codex", "gpt 5dot1 codex mini", "ide integration", "jetbrains", "model selection", "news", "policy management", "vs code", "xcode"]

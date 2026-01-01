@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Fabric Blog"
 feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
 date: 2025-12-16 10:00:00 +00:00
-permalink: "/news/2025-12-16-Building-a-Petabyte-Scale-Data-Platform-with-Microsoft-Fabric-and-SQL-Telemetry.html"
+permalink: "/2025-12-16-Building-a-Petabyte-Scale-Data-Platform-with-Microsoft-Fabric-and-SQL-Telemetry.html"
 categories: ["Azure", "Coding", "DevOps", "ML"]
 tags: ["AKS", "Anomaly Detection", "Autoscale Billing", "Azure", "Azure Data Lake", "CI/CD", "Coding", "Data Engineering", "Data Platform", "Data Quality", "Delta Lake", "DevOps", "GitOps", "KEDA", "Kimball Dimensional Modeling", "Lakehouse Architecture", "Microsoft Fabric", "ML", "News", "OpenTelemetry", "Petabyte Scale", "Power BI", "SLA Monitoring", "Spark Streaming", "VS Code Devcontainer"]
 tags_normalized: ["aks", "anomaly detection", "autoscale billing", "azure", "azure data lake", "cislashcd", "coding", "data engineering", "data platform", "data quality", "delta lake", "devops", "gitops", "keda", "kimball dimensional modeling", "lakehouse architecture", "microsoft fabric", "ml", "news", "opentelemetry", "petabyte scale", "power bi", "sla monitoring", "spark streaming", "vs code devcontainer"]

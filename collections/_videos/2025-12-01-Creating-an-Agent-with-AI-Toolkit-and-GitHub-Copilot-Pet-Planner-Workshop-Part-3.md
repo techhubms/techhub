@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Developer YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
 date: 2025-12-01 21:00:05 +00:00
-permalink: "/videos/2025-12-01-Creating-an-Agent-with-AI-Toolkit-and-GitHub-Copilot-Pet-Planner-Workshop-Part-3.html"
+permalink: "/2025-12-01-Creating-an-Agent-with-AI-Toolkit-and-GitHub-Copilot-Pet-Planner-Workshop-Part-3.html"
 categories: ["AI", "Azure", "GitHub Copilot"]
 tags: ["Agent Builder", "AI", "AI Agent", "AI Integration", "AI Toolkit", "AI Tools", "Azure", "Cloud Computing", "Custom Agent", "Dev", "Development", "Environment Setup", "GitHub Copilot", "Local Server", "MCP Server", "Microsoft", "Microsoft Developer", "Microsoft Foundry", "Model Mondays", "Pet Planner Workshop", "Tech", "Technology", "Videos"]
 tags_normalized: ["agent builder", "ai", "ai agent", "ai integration", "ai toolkit", "ai tools", "azure", "cloud computing", "custom agent", "dev", "development", "environment setup", "github copilot", "local server", "mcp server", "microsoft", "microsoft developer", "microsoft foundry", "model mondays", "pet planner workshop", "tech", "technology", "videos"]

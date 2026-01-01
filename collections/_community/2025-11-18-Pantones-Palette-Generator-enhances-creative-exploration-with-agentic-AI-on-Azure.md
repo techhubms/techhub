@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-11-18 16:54:22 +00:00
-permalink: "/community/2025-11-18-Pantones-Palette-Generator-enhances-creative-exploration-with-agentic-AI-on-Azure.html"
+permalink: "/2025-11-18-Pantones-Palette-Generator-enhances-creative-exploration-with-agentic-AI-on-Azure.html"
 categories: ["AI", "Azure", "Coding", "GitHub Copilot"]
 tags: ["Agentic RAG", "AI", "AI Orchestration", "Azure", "Azure AI Search", "Azure Cosmos DB", "Azure Functions", "Azure OpenAI", "Coding", "Color Science", "Community", "Data Persistence", "Design Automation", "Developer Tools", "GitHub Copilot", "LLM Integration", "Microsoft Agent Framework", "Microsoft Foundry", "Multi Agent Architecture", "Pantone Palette Generator", "Prompt Engineering", "Serverless Deployment", "Trend Forecasting", "Vector Search"]
 tags_normalized: ["agentic rag", "ai", "ai orchestration", "azure", "azure ai search", "azure cosmos db", "azure functions", "azure openai", "coding", "color science", "community", "data persistence", "design automation", "developer tools", "github copilot", "llm integration", "microsoft agent framework", "microsoft foundry", "multi agent architecture", "pantone palette generator", "prompt engineering", "serverless deployment", "trend forecasting", "vector search"]

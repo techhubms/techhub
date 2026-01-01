@@ -10,7 +10,7 @@ categories: ["AI", "Security"]
 feed_name: "Microsoft News"
 feed_url: "https://news.microsoft.com/source/feed/"
 date: 2025-07-07 16:53:57 +00:00
-permalink: "/news/2025-07-07-New-e-book-teaches-how-to-build-an-AI-powered-security-operations-center.html"
+permalink: "/2025-07-07-New-e-book-teaches-how-to-build-an-AI-powered-security-operations-center.html"
 tags: ["AI", "AI Powered", "Company News", "Cybersecurity", "E Book", "News", "Security", "Security Operations Center", "Threat Detection"]
 tags_normalized: ["ai", "ai powered", "company news", "cybersecurity", "e book", "news", "security", "security operations center", "threat detection"]
 ---

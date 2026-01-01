@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Fabric Blog"
 feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
 date: 2025-11-20 09:00:00 +00:00
-permalink: "/news/2025-11-20-Copilot-Assisted-Real-Time-Data-Exploration-in-Microsoft-Fabric.html"
+permalink: "/2025-11-20-Copilot-Assisted-Real-Time-Data-Exploration-in-Microsoft-Fabric.html"
 categories: ["AI", "ML"]
 tags: ["AI", "Analytics", "Copilot", "Dashboard Tiles", "Data Analysis", "Data Exploration", "Data Insights", "Data Visualization", "KQL Tables", "Machine Learning", "Microsoft Fabric", "ML", "Natural Language Query", "News", "No Code Analytics", "Real Time Dashboard", "Realtime Data"]
 tags_normalized: ["ai", "analytics", "copilot", "dashboard tiles", "data analysis", "data exploration", "data insights", "data visualization", "kql tables", "machine learning", "microsoft fabric", "ml", "natural language query", "news", "no code analytics", "real time dashboard", "realtime data"]

@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/changelog/feed/"
 date: 2025-12-10 17:10:52 +00:00
-permalink: "/news/2025-12-10-GitHub-Spark-Improvements-Dedicated-SKU-and-DPA-Coverage.html"
+permalink: "/2025-12-10-GitHub-Spark-Improvements-Dedicated-SKU-and-DPA-Coverage.html"
 categories: ["AI", "GitHub Copilot"]
 tags: ["Accessibility", "Agent Improvements", "AI", "AI App Generation", "App Preview", "Budget Controls", "Bug Fixes", "Copilot", "DPA Compliance", "GitHub Copilot", "GitHub Spark", "Improvement", "News", "Repository Settings", "Security Improvement", "SKU Billing", "UI Enhancement", "Visual App Quality"]
 tags_normalized: ["accessibility", "agent improvements", "ai", "ai app generation", "app preview", "budget controls", "bug fixes", "copilot", "dpa compliance", "github copilot", "github spark", "improvement", "news", "repository settings", "security improvement", "sku billing", "ui enhancement", "visual app quality"]

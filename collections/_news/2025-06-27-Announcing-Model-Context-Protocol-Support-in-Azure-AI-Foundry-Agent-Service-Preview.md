@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft DevBlog"
 feed_url: "https://devblogs.microsoft.com/foundry/feed/"
 date: 2025-06-27 22:30:03 +00:00
-permalink: "/news/2025-06-27-Announcing-Model-Context-Protocol-Support-in-Azure-AI-Foundry-Agent-Service-Preview.html"
+permalink: "/2025-06-27-Announcing-Model-Context-Protocol-Support-in-Azure-AI-Foundry-Agent-Service-Preview.html"
 categories: ["AI", "Azure", "Coding"]
 tags: ["Agent Integration", "AI", "AI Agent", "AI Agent Tools", "Anthropic", "Azure", "Azure AI Foundry", "Coding", "Generative AI Agents", "JSON RPC", "MCP", "Microsoft Build", "News", "Open By Design", "Python Code Samples", "VS Code"]
 tags_normalized: ["agent integration", "ai", "ai agent", "ai agent tools", "anthropic", "azure", "azure ai foundry", "coding", "generative ai agents", "json rpc", "mcp", "microsoft build", "news", "open by design", "python code samples", "vs code"]

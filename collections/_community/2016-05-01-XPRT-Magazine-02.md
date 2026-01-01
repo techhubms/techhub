@@ -6,7 +6,7 @@ categories: ["Azure", "DevOps", "Coding"]
 date: 2016-05-01 00:00:00 +00:00
 author: "Xebia"
 viewing_mode: "external"
-permalink: "/community/2016-05-01-XPRT-Magazine-02.html"
+permalink: "/2016-05-01-XPRT-Magazine-02.html"
 excerpt_separator: <!--excerpt_end-->
 tags: [".NET Core", "Agile", "Akka.NET", "Azure", "Big Data", "Cloudera", "Coding", "Community", "DevOps", "Distributed Systems", "Docker", "IoT", "Magazines", "Mobile Apps", "Nexus", "Power BI", "Raspberry Pi", "Scrum", "UI Testing", "UWP", "VS", "Windows 10 IoT Core"]
 tags_normalized: ["dotnet core", "agile", "akkadotnet", "azure", "big data", "cloudera", "coding", "community", "devops", "distributed systems", "docker", "iot", "magazines", "mobile apps", "nexus", "power bi", "raspberry pi", "scrum", "ui testing", "uwp", "vs", "windows 10 iot core"]

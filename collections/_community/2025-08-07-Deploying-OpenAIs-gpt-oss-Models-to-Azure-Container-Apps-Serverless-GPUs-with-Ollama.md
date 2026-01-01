@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-08-07 20:23:51 +00:00
-permalink: "/community/2025-08-07-Deploying-OpenAIs-gpt-oss-Models-to-Azure-Container-Apps-Serverless-GPUs-with-Ollama.html"
+permalink: "/2025-08-07-Deploying-OpenAIs-gpt-oss-Models-to-Azure-Container-Apps-Serverless-GPUs-with-Ollama.html"
 categories: ["AI", "Azure"]
 tags: ["A100 GPU", "AI", "API Integration", "Autoscaling", "Azure", "Azure Container Apps", "Cloud AI", "Community", "Containerization", "Cost Optimization", "Docker", "Gpt Oss 120b", "Gpt Oss 20b", "Inference", "LLM Deployment", "Microservices", "Ollama", "OpenAI", "Public Models", "Scalable AI", "Serverless GPU", "T4 GPU"]
 tags_normalized: ["a100 gpu", "ai", "api integration", "autoscaling", "azure", "azure container apps", "cloud ai", "community", "containerization", "cost optimization", "docker", "gpt oss 120b", "gpt oss 20b", "inference", "llm deployment", "microservices", "ollama", "openai", "public models", "scalable ai", "serverless gpu", "t4 gpu"]

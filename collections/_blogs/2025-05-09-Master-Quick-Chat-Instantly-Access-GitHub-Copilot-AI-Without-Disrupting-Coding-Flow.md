@@ -9,10 +9,10 @@ viewing_mode: "external"
 feed_name: "Randy Pagels's Blog"
 feed_url: "https://cooknwithcopilot.com/rss.xml"
 date: 2025-05-09 00:00:00 +00:00
-permalink: "/blogs/2025-05-09-Master-Quick-Chat-Instantly-Access-GitHub-Copilot-AI-Without-Disrupting-Coding-Flow.html"
+permalink: "/2025-05-09-Master-Quick-Chat-Instantly-Access-GitHub-Copilot-AI-Without-Disrupting-Coding-Flow.html"
 categories: ["AI", "Coding", "GitHub Copilot"]
-tags: ["AI", "AI Assistant", "Code Optimization", "Code Suggestions", "Coding", "Coding Workflow", "Developer Productivity", "Error Explanation", "GitHub Copilot", "Inline Chat", "Blogs", "Quick Chat", "Unit Testing"]
-tags_normalized: ["ai", "ai assistant", "code optimization", "code suggestions", "coding", "coding workflow", "developer productivity", "error explanation", "github copilot", "inline chat", "blogs", "quick chat", "unit testing"]
+tags: ["AI", "AI Assistant", "Blogs", "Code Optimization", "Code Suggestions", "Coding", "Coding Workflow", "Developer Productivity", "Error Explanation", "GitHub Copilot", "Inline Chat", "Quick Chat", "Unit Testing"]
+tags_normalized: ["ai", "ai assistant", "blogs", "code optimization", "code suggestions", "coding", "coding workflow", "developer productivity", "error explanation", "github copilot", "inline chat", "quick chat", "unit testing"]
 ---
 
 In this post, Randy Pagels introduces GitHub Copilot Quick Chat—a feature designed to deliver AI-powered coding support instantly and inline, ensuring developers get help without losing focus.<!--excerpt_end-->

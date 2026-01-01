@@ -9,7 +9,7 @@ categories: ["AI", "GitHub Copilot"]
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/changelog/label/copilot/feed/"
 date: 2025-07-18 19:50:29 +00:00
-permalink: "/news/2025-07-18-New-GitHub-Copilot-activity-report-with-enhanced-authentication-and-usage-insights.html"
+permalink: "/2025-07-18-New-GitHub-Copilot-activity-report-with-enhanced-authentication-and-usage-insights.html"
 viewing_mode: "external"
 tags: ["Activity Report", "Administrators", "AI", "Enterprise", "Feature Adoption", "GitHub Copilot", "News", "Organization", "Reporting", "Usage Analytics", "User Authentication", "Visibility"]
 tags_normalized: ["activity report", "administrators", "ai", "enterprise", "feature adoption", "github copilot", "news", "organization", "reporting", "usage analytics", "user authentication", "visibility"]

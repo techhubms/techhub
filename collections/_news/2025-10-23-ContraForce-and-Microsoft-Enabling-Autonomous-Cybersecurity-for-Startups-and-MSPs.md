@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft News"
 feed_url: "https://news.microsoft.com/source/feed/"
 date: 2025-10-23 13:46:00 +00:00
-permalink: "/news/2025-10-23-ContraForce-and-Microsoft-Enabling-Autonomous-Cybersecurity-for-Startups-and-MSPs.html"
+permalink: "/2025-10-23-ContraForce-and-Microsoft-Enabling-Autonomous-Cybersecurity-for-Startups-and-MSPs.html"
 categories: ["AI", "Azure", "Security"]
 tags: ["AI", "AI Agents", "Automation", "Azure", "Azure AI Foundry", "Azure Security", "Company News", "ContraForce", "Cybersecurity Automation", "Incident Response", "Managed Service Providers", "Microsoft Defender XDR", "Microsoft Entra ID", "Microsoft For Startups", "Microsoft Sentinel", "News", "Pegasus Program", "Security", "Security Operations", "SIEM", "XDR"]
 tags_normalized: ["ai", "ai agents", "automation", "azure", "azure ai foundry", "azure security", "company news", "contraforce", "cybersecurity automation", "incident response", "managed service providers", "microsoft defender xdr", "microsoft entra id", "microsoft for startups", "microsoft sentinel", "news", "pegasus program", "security", "security operations", "siem", "xdr"]

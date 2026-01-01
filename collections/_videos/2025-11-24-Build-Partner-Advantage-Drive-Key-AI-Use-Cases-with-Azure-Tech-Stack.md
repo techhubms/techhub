@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Events YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
 date: 2025-11-24 13:23:06 +00:00
-permalink: "/videos/2025-11-24-Build-Partner-Advantage-Drive-Key-AI-Use-Cases-with-Azure-Tech-Stack.html"
+permalink: "/2025-11-24-Build-Partner-Advantage-Drive-Key-AI-Use-Cases-with-Azure-Tech-Stack.html"
 categories: ["AI", "Azure"]
 tags: ["AI", "AI Agents", "App Development", "Automation", "Azure", "Azure AI", "Azure Foundry", "Azure Web Apps", "Campaign in A Box", "Cloud Partners", "Data Platforms", "Engineering Collaboration", "Fabric Data Integration", "Global Deployment", "Microsoft Ignite", "MicrosoftAICloudPartnerProgram", "MSIgnite", "Partner Ecosystem", "Partner Funding", "Specializations", "Videos"]
 tags_normalized: ["ai", "ai agents", "app development", "automation", "azure", "azure ai", "azure foundry", "azure web apps", "campaign in a box", "cloud partners", "data platforms", "engineering collaboration", "fabric data integration", "global deployment", "microsoft ignite", "microsoftaicloudpartnerprogram", "msignite", "partner ecosystem", "partner funding", "specializations", "videos"]

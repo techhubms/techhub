@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Events YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
 date: 2025-11-21 15:23:41 +00:00
-permalink: "/videos/2025-11-21-Preventing-Data-Exfiltration-with-Microsoft-Purviews-Layered-Protection-Strategy.html"
+permalink: "/2025-11-21-Preventing-Data-Exfiltration-with-Microsoft-Purviews-Layered-Protection-Strategy.html"
 categories: ["AI", "Security"]
 tags: ["Adaptive Application Scopes", "AI", "AI Driven Protection", "Cloud Security", "Consumer AI Tools", "Data Exfiltration", "Data Security", "DLP Policies", "Edge Browser", "Enterprise Browser", "Layered Protection", "Microsoft Ignite", "Microsoft Purview", "MSIgnite", "Secureyourdata", "Security", "Security Strategy", "Sensitive Data", "Unified Data Protection", "Unmanaged Devices", "Videos"]
 tags_normalized: ["adaptive application scopes", "ai", "ai driven protection", "cloud security", "consumer ai tools", "data exfiltration", "data security", "dlp policies", "edge browser", "enterprise browser", "layered protection", "microsoft ignite", "microsoft purview", "msignite", "secureyourdata", "security", "security strategy", "sensitive data", "unified data protection", "unmanaged devices", "videos"]

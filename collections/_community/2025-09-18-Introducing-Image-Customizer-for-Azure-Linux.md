@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-09-18 15:00:00 +00:00
-permalink: "/community/2025-09-18-Introducing-Image-Customizer-for-Azure-Linux.html"
+permalink: "/2025-09-18-Introducing-Image-Customizer-for-Azure-Linux.html"
 categories: ["Azure", "DevOps"]
 tags: ["Azure", "Azure Linux", "Base Images", "Chroot", "CI/CD", "Cloud Security", "Community", "Container Tools", "Custom Images", "Declarative API", "DevOps", "Dm Verity", "Image Customization", "Image Customizer", "ISO", "Linux", "Microsoft", "Open Source", "OS Guard", "Production Ready", "QCOW2", "Ubuntu", "VHD", "WSL2"]
 tags_normalized: ["azure", "azure linux", "base images", "chroot", "cislashcd", "cloud security", "community", "container tools", "custom images", "declarative api", "devops", "dm verity", "image customization", "image customizer", "iso", "linux", "microsoft", "open source", "os guard", "production ready", "qcow2", "ubuntu", "vhd", "wsl2"]

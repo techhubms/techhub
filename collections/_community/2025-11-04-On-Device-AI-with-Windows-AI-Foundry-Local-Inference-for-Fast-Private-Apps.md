@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-11-04 08:00:00 +00:00
-permalink: "/community/2025-11-04-On-Device-AI-with-Windows-AI-Foundry-Local-Inference-for-Fast-Private-Apps.html"
+permalink: "/2025-11-04-On-Device-AI-with-Windows-AI-Foundry-Local-Inference-for-Fast-Private-Apps.html"
 categories: ["AI", "Coding"]
 tags: ["AI", "AI Inference", "Application Workflow", "Azure AI Services", "Azure Cognitive Services", "Coding", "Community", "Developer Toolkit", "DirectML", "Edge AI", "Foundry Local", "Hybrid AI", "Local Models", "NPU Acceleration", "Offline AI", "On Device AI", "ONNX Runtime", "Privacy", "Python", "Windows AI Foundry"]
 tags_normalized: ["ai", "ai inference", "application workflow", "azure ai services", "azure cognitive services", "coding", "community", "developer toolkit", "directml", "edge ai", "foundry local", "hybrid ai", "local models", "npu acceleration", "offline ai", "on device ai", "onnx runtime", "privacy", "python", "windows ai foundry"]

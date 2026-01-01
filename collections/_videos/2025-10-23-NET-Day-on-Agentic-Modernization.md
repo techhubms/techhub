@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "DotNet YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw"
 date: 2025-10-23 03:55:17 +00:00
-permalink: "/videos/2025-10-23-NET-Day-on-Agentic-Modernization.html"
+permalink: "/2025-10-23-NET-Day-on-Agentic-Modernization.html"
 categories: ["AI", "Azure", "Coding", "DevOps", "GitHub Copilot"]
 tags: [".NET", "Agentic Applications", "AI", "AI Development", "App Modernization", "Azure", "Azure AI Foundry", "Azure App Service", "Azure MCP", "Azure Migration", "Azure SRE Agent", "Cloud Development", "Coding", "DevOps", "GitHub Copilot", "Managed Instance", "Microsoft Agent Framework", "Videos", "VS"]
 tags_normalized: ["dotnet", "agentic applications", "ai", "ai development", "app modernization", "azure", "azure ai foundry", "azure app service", "azure mcp", "azure migration", "azure sre agent", "cloud development", "coding", "devops", "github copilot", "managed instance", "microsoft agent framework", "videos", "vs"]

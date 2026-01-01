@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "GitHub YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ"
 date: 2025-08-04 14:01:12 +00:00
-permalink: "/videos/2025-08-04-How-to-Use-AI-Models-in-Your-GitHub-Actions-Workflows.html"
+permalink: "/2025-08-04-How-to-Use-AI-Models-in-Your-GitHub-Actions-Workflows.html"
 categories: ["AI", "DevOps"]
 tags: ["AI", "AI Models", "AI Powered Automation", "Automation", "Bug Reproduction Checker", "Changelog Generator", "DevOps", "Documentation Automation", "GitHub", "GitHub Actions", "GitHubModels", "Project Bloom", "Repository Management", "Videos", "Weekly Issue Summaries", "Workflow Automation"]
 tags_normalized: ["ai", "ai models", "ai powered automation", "automation", "bug reproduction checker", "changelog generator", "devops", "documentation automation", "github", "github actions", "githubmodels", "project bloom", "repository management", "videos", "weekly issue summaries", "workflow automation"]

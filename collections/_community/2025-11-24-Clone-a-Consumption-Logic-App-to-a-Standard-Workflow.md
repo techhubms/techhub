@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-11-24 16:00:00 +00:00
-permalink: "/community/2025-11-24-Clone-a-Consumption-Logic-App-to-a-Standard-Workflow.html"
+permalink: "/2025-11-24-Clone-a-Consumption-Logic-App-to-a-Standard-Workflow.html"
 categories: ["Azure"]
 tags: ["Azure", "Azure Functions", "Azure Logic Apps", "Azure Portal", "Community", "Connectors", "Consumption Logic Apps", "Enterprise Integration", "Governance", "Integration", "Logic Apps Standard", "Migration", "Modernization", "Stateful Workflows", "VS Code Integration", "Workflow Cloning"]
 tags_normalized: ["azure", "azure functions", "azure logic apps", "azure portal", "community", "connectors", "consumption logic apps", "enterprise integration", "governance", "integration", "logic apps standard", "migration", "modernization", "stateful workflows", "vs code integration", "workflow cloning"]

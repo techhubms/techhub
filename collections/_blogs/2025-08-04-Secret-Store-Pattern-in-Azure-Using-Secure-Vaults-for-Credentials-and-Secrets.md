@@ -9,10 +9,10 @@ viewing_mode: "external"
 feed_name: "Dellenny's Blog"
 feed_url: "https://dellenny.com/feed/"
 date: 2025-08-04 14:47:40 +00:00
-permalink: "/blogs/2025-08-04-Secret-Store-Pattern-in-Azure-Using-Secure-Vaults-for-Credentials-and-Secrets.html"
+permalink: "/2025-08-04-Secret-Store-Pattern-in-Azure-Using-Secure-Vaults-for-Credentials-and-Secrets.html"
 categories: ["Azure", "Coding", "Security"]
-tags: ["Access Control", "App Configuration", "Application Security", "Architecture", "Audit Logging", "Azure", "Azure CLI", "Azure Key Vault", "Azure SDK", "C#", "Centralized Vault", "Cloud Security", "Coding", "Least Privilege", "Managed Identities", "Blogs", "Runtime Secrets", "Secret Store Pattern", "Secrets Management", "Secure Storage", "Security", "Solution Architecture"]
-tags_normalized: ["access control", "app configuration", "application security", "architecture", "audit logging", "azure", "azure cli", "azure key vault", "azure sdk", "csharp", "centralized vault", "cloud security", "coding", "least privilege", "managed identities", "blogs", "runtime secrets", "secret store pattern", "secrets management", "secure storage", "security", "solution architecture"]
+tags: ["Access Control", "App Configuration", "Application Security", "Architecture", "Audit Logging", "Azure", "Azure CLI", "Azure Key Vault", "Azure SDK", "Blogs", "C#", "Centralized Vault", "Cloud Security", "Coding", "Least Privilege", "Managed Identities", "Runtime Secrets", "Secret Store Pattern", "Secrets Management", "Secure Storage", "Security", "Solution Architecture"]
+tags_normalized: ["access control", "app configuration", "application security", "architecture", "audit logging", "azure", "azure cli", "azure key vault", "azure sdk", "blogs", "csharp", "centralized vault", "cloud security", "coding", "least privilege", "managed identities", "runtime secrets", "secret store pattern", "secrets management", "secure storage", "security", "solution architecture"]
 ---
 
 Dellenny details how to implement the Secret Store Pattern in Azure, guiding developers to use Azure Key Vault for managing credentials and secrets securely in cloud-native applications.<!--excerpt_end-->

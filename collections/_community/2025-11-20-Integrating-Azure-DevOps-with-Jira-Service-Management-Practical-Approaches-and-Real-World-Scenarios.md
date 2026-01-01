@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-11-20 08:22:54 +00:00
-permalink: "/community/2025-11-20-Integrating-Azure-DevOps-with-Jira-Service-Management-Practical-Approaches-and-Real-World-Scenarios.html"
+permalink: "/2025-11-20-Integrating-Azure-DevOps-with-Jira-Service-Management-Practical-Approaches-and-Real-World-Scenarios.html"
 categories: ["Azure", "DevOps"]
 tags: ["Audit Logging", "Azure", "Azure DevOps", "Azure Functions", "Bidirectional Sync", "Community", "Conditional Routing", "Conflict Resolution", "DevOps", "DevOps Integration", "Feature Request Automation", "Field Mapping", "Incident Management", "Jira Service Management", "Logic Apps", "Middleware", "MSP Integration", "REST API", "Scalability", "Security Compliance", "Service Hooks", "Third Party Connectors"]
 tags_normalized: ["audit logging", "azure", "azure devops", "azure functions", "bidirectional sync", "community", "conditional routing", "conflict resolution", "devops", "devops integration", "feature request automation", "field mapping", "incident management", "jira service management", "logic apps", "middleware", "msp integration", "rest api", "scalability", "security compliance", "service hooks", "third party connectors"]

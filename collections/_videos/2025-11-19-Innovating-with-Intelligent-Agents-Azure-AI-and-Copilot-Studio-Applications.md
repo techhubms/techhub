@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Events YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
 date: 2025-11-19 17:09:31 +00:00
-permalink: "/videos/2025-11-19-Innovating-with-Intelligent-Agents-Azure-AI-and-Copilot-Studio-Applications.html"
+permalink: "/2025-11-19-Innovating-with-Intelligent-Agents-Azure-AI-and-Copilot-Studio-Applications.html"
 categories: ["AI", "Azure"]
 tags: ["Admin Configuration", "Agent Efficiency", "Agentic Workflows", "AI", "AI Integration", "AI Summarization", "Autonomous Agents", "Azure", "Azure AI", "Business Impact", "Case 360 Architecture", "Copilot Studio", "InnovatewithAzureAIappsandagents", "Microsoft Ignite", "Microsoft Power Platform", "MSIgnite", "Operational Intelligence", "Recommendations", "User Validation", "Videos"]
 tags_normalized: ["admin configuration", "agent efficiency", "agentic workflows", "ai", "ai integration", "ai summarization", "autonomous agents", "azure", "azure ai", "business impact", "case 360 architecture", "copilot studio", "innovatewithazureaiappsandagents", "microsoft ignite", "microsoft power platform", "msignite", "operational intelligence", "recommendations", "user validation", "videos"]

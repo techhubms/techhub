@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "GitHub's Youtube channel"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ"
 date: 2025-07-25 07:09:39 +00:00
-permalink: "/videos/2025-07-25-Rubber-Duck-Thursday-Building-an-App-with-GitHub-Copilot-Agent-Mode-for-the-Competition.html"
+permalink: "/2025-07-25-Rubber-Duck-Thursday-Building-an-App-with-GitHub-Copilot-Agent-Mode-for-the-Competition.html"
 categories: ["AI", "Coding", "GitHub Copilot"]
 tags: ["Agent Mode", "AI", "AI Powered Development", "App Development", "Automation", "Coding", "Coding Competition", "Collaborative Coding", "Developer Tools", "For The Love Of Code", "GitHub", "GitHub Copilot", "Videos"]
 tags_normalized: ["agent mode", "ai", "ai powered development", "app development", "automation", "coding", "coding competition", "collaborative coding", "developer tools", "for the love of code", "github", "github copilot", "videos"]

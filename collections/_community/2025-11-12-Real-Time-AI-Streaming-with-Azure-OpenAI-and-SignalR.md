@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-11-12 09:38:46 +00:00
-permalink: "/community/2025-11-12-Real-Time-AI-Streaming-with-Azure-OpenAI-and-SignalR.html"
+permalink: "/2025-11-12-Real-Time-AI-Streaming-with-Azure-OpenAI-and-SignalR.html"
 categories: ["AI", "Azure", "Coding", "DevOps"]
 tags: [".NET 8", "AI", "AI Integration", "Angular", "ASP.NET Core", "Azure", "Azure OpenAI", "Azure SignalR Service", "Cloud Scale", "Coding", "Community", "Content Filtering", "DefaultAzureCredential", "DevOps", "Entra ID", "Frontend Integration", "Live Chat", "Real Time UX", "SignalR", "Streaming Responses", "WebSockets"]
 tags_normalized: ["dotnet 8", "ai", "ai integration", "angular", "aspdotnet core", "azure", "azure openai", "azure signalr service", "cloud scale", "coding", "community", "content filtering", "defaultazurecredential", "devops", "entra id", "frontend integration", "live chat", "real time ux", "signalr", "streaming responses", "websockets"]

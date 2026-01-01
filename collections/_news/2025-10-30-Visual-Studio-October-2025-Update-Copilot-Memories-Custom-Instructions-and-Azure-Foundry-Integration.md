@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft VisualStudio Blog"
 feed_url: "https://devblogs.microsoft.com/visualstudio/feed/"
 date: 2025-10-30 12:00:36 +00:00
-permalink: "/news/2025-10-30-Visual-Studio-October-2025-Update-Copilot-Memories-Custom-Instructions-and-Azure-Foundry-Integration.html"
+permalink: "/2025-10-30-Visual-Studio-October-2025-Update-Copilot-Memories-Custom-Instructions-and-Azure-Foundry-Integration.html"
 categories: ["AI", "Azure", "Coding", "GitHub Copilot"]
 tags: ["Agentic Workflows", "AI", "AI Integration", "Azure", "Azure Foundry", "Chat Management", "Claude Haiku 4.5", "Claude Sonnet 4.5", "Coding", "Coding Standards", "Copilot Memories", "Custom Instructions", "Developer Tools", "GitHub Copilot", "Instruction Files", "News", "Planning Feature", "Project Aware AI", "V17.14", "VS"]
 tags_normalized: ["agentic workflows", "ai", "ai integration", "azure", "azure foundry", "chat management", "claude haiku 4dot5", "claude sonnet 4dot5", "coding", "coding standards", "copilot memories", "custom instructions", "developer tools", "github copilot", "instruction files", "news", "planning feature", "project aware ai", "v17dot14", "vs"]

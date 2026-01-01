@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft VisualStudio Blog"
 feed_url: "https://devblogs.microsoft.com/visualstudio/feed/"
 date: 2025-12-22 15:00:38 +00:00
-permalink: "/news/2025-12-22-How-AI-Fixed-My-Procrastination-Using-Copilot-and-AI-Agents-in-Visual-Studio-Projects.html"
+permalink: "/2025-12-22-How-AI-Fixed-My-Procrastination-Using-Copilot-and-AI-Agents-in-Visual-Studio-Projects.html"
 categories: ["AI", "Coding", "DevOps", "GitHub Copilot"]
 tags: [".NET 10", "Agent Mode", "Agentic Development", "AI", "AI Agents", "C#", "CI/CD", "Cloud Agent", "Coding", "Color Themes", "Copilot", "Copilot Chat", "DevOps", "Extension Development", "GitHub Actions", "GitHub Copilot", "Language Service", "News", "NuGet Package", "Parser Development", "Static Website", "TOON Language", "VS"]
 tags_normalized: ["dotnet 10", "agent mode", "agentic development", "ai", "ai agents", "csharp", "cislashcd", "cloud agent", "coding", "color themes", "copilot", "copilot chat", "devops", "extension development", "github actions", "github copilot", "language service", "news", "nuget package", "parser development", "static website", "toon language", "vs"]

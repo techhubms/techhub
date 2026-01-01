@@ -6,7 +6,7 @@ author: "Tech Hub Team"
 excerpt_separator: <!--excerpt_end-->
 viewing_mode: "internal"
 date: 2025-09-01 09:00:00 +00:00
-permalink: "/roundups/2025-09-01-Weekly-AI-and-Tech-News-Roundup.html"
+permalink: "/2025-09-01-Weekly-AI-and-Tech-News-Roundup.html"
 categories: ["AI", "GitHub Copilot", "ML", "Azure", "Coding", "DevOps", "Security"]
 tags: [".NET", "AI", "AI Agents", "Azure", "Cloud Infrastructure", "Coding", "Data Engineering", "Developer Productivity", "DevOps", "GitHub Copilot", "Kubernetes", "LLM Benchmarking", "Machine Learning", "ML", "Open Source", "Platform Automation", "Roundups", "Security", "Semantic Kernel", "Supply Chain Security"]
 tags_normalized: ["dotnet", "ai", "ai agents", "azure", "cloud infrastructure", "coding", "data engineering", "developer productivity", "devops", "github copilot", "kubernetes", "llm benchmarking", "machine learning", "ml", "open source", "platform automation", "roundups", "security", "semantic kernel", "supply chain security"]

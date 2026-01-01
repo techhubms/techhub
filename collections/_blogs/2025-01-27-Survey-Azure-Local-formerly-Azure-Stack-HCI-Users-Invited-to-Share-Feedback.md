@@ -9,10 +9,10 @@ viewing_mode: "external"
 feed_name: "Thomas Maurer's Blog"
 feed_url: "https://www.thomasmaurer.ch/feed/"
 date: 2025-01-27 16:16:53 +00:00
-permalink: "/blogs/2025-01-27-Survey-Azure-Local-formerly-Azure-Stack-HCI-Users-Invited-to-Share-Feedback.html"
+permalink: "/2025-01-27-Survey-Azure-Local-formerly-Azure-Stack-HCI-Users-Invited-to-Share-Feedback.html"
 categories: ["Azure"]
-tags: ["AKS", "AKS Arc", "Azure", "Azure Arc", "Azure Local", "Azure Stack HCI", "Microsoft", "Microsoft Azure", "Blogs", "Survey", "Thomas Maurer", "User Feedback", "Virtualization"]
-tags_normalized: ["aks", "aks arc", "azure", "azure arc", "azure local", "azure stack hci", "microsoft", "microsoft azure", "blogs", "survey", "thomas maurer", "user feedback", "virtualization"]
+tags: ["AKS", "AKS Arc", "Azure", "Azure Arc", "Azure Local", "Azure Stack HCI", "Blogs", "Microsoft", "Microsoft Azure", "Survey", "Thomas Maurer", "User Feedback", "Virtualization"]
+tags_normalized: ["aks", "aks arc", "azure", "azure arc", "azure local", "azure stack hci", "blogs", "microsoft", "microsoft azure", "survey", "thomas maurer", "user feedback", "virtualization"]
 ---
 
 Thomas Maurer invites Azure Local users to take a brief survey about using AKS Arc on the platform, regardless of prior Kubernetes experience.<!--excerpt_end-->

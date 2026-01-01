@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft News"
 feed_url: "https://news.microsoft.com/source/feed/"
 date: 2025-10-22 15:43:25 +00:00
-permalink: "/news/2025-10-22-Building-Persistent-Monitoring-Agents-with-SentinelStep-in-Magentic-UI.html"
+permalink: "/2025-10-22-Building-Persistent-Monitoring-Agents-with-SentinelStep-in-Magentic-UI.html"
 categories: ["AI"]
 tags: ["Agent Workflow", "AI", "AI Evaluation", "AI Governance", "Company News", "Context Management", "GitHub", "LLM Agents", "Magentic UI", "Microsoft Research", "Monitoring Agents", "News", "pip Install", "Polling", "Python", "SentinelBench", "SentinelStep"]
 tags_normalized: ["agent workflow", "ai", "ai evaluation", "ai governance", "company news", "context management", "github", "llm agents", "magentic ui", "microsoft research", "monitoring agents", "news", "pip install", "polling", "python", "sentinelbench", "sentinelstep"]

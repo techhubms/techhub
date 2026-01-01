@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/changelog/feed/"
 date: 2025-09-18 16:19:21 +00:00
-permalink: "/news/2025-09-18-Copilot-Code-Review-Now-Available-in-JetBrains-IDEs-and-Visual-Studio.html"
+permalink: "/2025-09-18-Copilot-Code-Review-Now-Available-in-JetBrains-IDEs-and-Visual-Studio.html"
 categories: ["AI", "GitHub Copilot"]
 tags: ["AI", "AI Development Tools", "Code Review Automation", "Copilot", "Copilot Code Review", "Developer Productivity", "Editor Plugins", "GitHub Copilot", "IntelliJ IDEA", "JetBrains IDEs", "News", "PyCharm", "Self Review", "VS", "WebStorm"]
 tags_normalized: ["ai", "ai development tools", "code review automation", "copilot", "copilot code review", "developer productivity", "editor plugins", "github copilot", "intellij idea", "jetbrains ides", "news", "pycharm", "self review", "vs", "webstorm"]

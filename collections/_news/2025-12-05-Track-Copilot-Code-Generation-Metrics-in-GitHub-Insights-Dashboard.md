@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/changelog/feed/"
 date: 2025-12-05 18:40:33 +00:00
-permalink: "/news/2025-12-05-Track-Copilot-Code-Generation-Metrics-in-GitHub-Insights-Dashboard.html"
+permalink: "/2025-12-05-Track-Copilot-Code-Generation-Metrics-in-GitHub-Insights-Dashboard.html"
 categories: ["AI", "GitHub Copilot"]
 tags: ["Agent Actions", "AI", "AI Insights", "Code Generation", "Completions", "Copilot", "Dashboard", "Data Analysis", "Enterprise", "GitHub", "GitHub Copilot", "Lines Of Code", "Metrics", "NDJSON", "News", "Permissions", "Programming Languages", "Usage Metrics", "User Roles"]
 tags_normalized: ["agent actions", "ai", "ai insights", "code generation", "completions", "copilot", "dashboard", "data analysis", "enterprise", "github", "github copilot", "lines of code", "metrics", "ndjson", "news", "permissions", "programming languages", "usage metrics", "user roles"]

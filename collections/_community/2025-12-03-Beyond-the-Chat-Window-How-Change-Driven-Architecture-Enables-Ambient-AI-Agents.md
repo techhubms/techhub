@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-12-03 23:09:40 +00:00
-permalink: "/community/2025-12-03-Beyond-the-Chat-Window-How-Change-Driven-Architecture-Enables-Ambient-AI-Agents.html"
+permalink: "/2025-12-03-Beyond-the-Chat-Window-How-Change-Driven-Architecture-Enables-Ambient-AI-Agents.html"
 categories: ["AI"]
 tags: ["AI", "AI Agents", "Ambient Agents", "Change Driven Architecture", "Community", "Continuous Queries", "Cosmos DB", "DevOps Automation", "Drasi", "Event Driven AI", "EventHub", "Infrastructure Monitoring", "Kubernetes", "LangChain", "PostgreSQL", "Python", "Real Time Monitoring"]
 tags_normalized: ["ai", "ai agents", "ambient agents", "change driven architecture", "community", "continuous queries", "cosmos db", "devops automation", "drasi", "event driven ai", "eventhub", "infrastructure monitoring", "kubernetes", "langchain", "postgresql", "python", "real time monitoring"]

@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "GitHub Engineering Blog"
 feed_url: "https://github.blog/engineering/feed/"
 date: 2025-03-04 17:00:24 +00:00
-permalink: "/news/2025-03-04-Finding-Leaked-Passwords-with-AI-Building-GitHub-Copilot-Secret-Scanning.html"
+permalink: "/2025-03-04-Finding-Leaked-Passwords-with-AI-Building-GitHub-Copilot-Secret-Scanning.html"
 categories: ["AI", "DevOps", "GitHub Copilot", "Security"]
 tags: ["AI", "Copilot Autofix", "DevOps", "Engineering", "False Positives", "GitHub Advanced Security", "GitHub Copilot", "GitHub Secret Protection", "LLM", "Model Evaluation", "News", "Password Detection", "Platform Security", "Prompt Engineering", "Resource Management", "Secret Scanning", "Security", "Security Alerts"]
 tags_normalized: ["ai", "copilot autofix", "devops", "engineering", "false positives", "github advanced security", "github copilot", "github secret protection", "llm", "model evaluation", "news", "password detection", "platform security", "prompt engineering", "resource management", "secret scanning", "security", "security alerts"]

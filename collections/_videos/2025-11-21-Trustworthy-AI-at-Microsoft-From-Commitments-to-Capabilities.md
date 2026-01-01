@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Events YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
 date: 2025-11-21 10:17:57 +00:00
-permalink: "/videos/2025-11-21-Trustworthy-AI-at-Microsoft-From-Commitments-to-Capabilities.html"
+permalink: "/2025-11-21-Trustworthy-AI-at-Microsoft-From-Commitments-to-Capabilities.html"
 categories: ["AI", "Azure", "Security"]
 tags: ["Agentic Workflow", "AI", "AI Deployment", "AI Governance", "AI Security", "Azure", "Azure AI", "Change Management", "Compliance", "Copilot Studio", "InnovatewithAzureAIappsandagents", "Microsoft Foundry", "Microsoft Ignite", "MSIgnite", "Palo Alto Networks", "Policy as Code", "Pre Deployment Testing", "Responsible AI", "Risk Assessment", "Security", "Sovereignty", "Stanley Black & Decker", "Trustworthy AI", "Videos"]
 tags_normalized: ["agentic workflow", "ai", "ai deployment", "ai governance", "ai security", "azure", "azure ai", "change management", "compliance", "copilot studio", "innovatewithazureaiappsandagents", "microsoft foundry", "microsoft ignite", "msignite", "palo alto networks", "policy as code", "pre deployment testing", "responsible ai", "risk assessment", "security", "sovereignty", "stanley black and decker", "trustworthy ai", "videos"]

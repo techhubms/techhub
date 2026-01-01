@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Visual Studio Code Releases"
 feed_url: "https://code.visualstudio.com/feed.xml"
 date: 2025-07-17 00:00:00 +00:00
-permalink: "/news/2025-07-17-Command-GitHubs-Coding-Agent-from-VS-Code.html"
+permalink: "/2025-07-17-Command-GitHubs-Coding-Agent-from-VS-Code.html"
 categories: ["AI", "Coding", "GitHub Copilot"]
 tags: ["AI", "AI Developer Agent", "Autonomous Development", "Code Review Automation", "Codebase Integration", "Coding", "Coding Agent", "Dev Environment", "GitHub", "GitHub Copilot", "GitHub Pull Requests Extension", "MCP", "MCP Servers", "News", "PR Workflow", "Session Management", "VS Code"]
 tags_normalized: ["ai", "ai developer agent", "autonomous development", "code review automation", "codebase integration", "coding", "coding agent", "dev environment", "github", "github copilot", "github pull requests extension", "mcp", "mcp servers", "news", "pr workflow", "session management", "vs code"]

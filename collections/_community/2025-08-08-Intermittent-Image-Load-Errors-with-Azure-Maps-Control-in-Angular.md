@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-08-08 10:20:30 +00:00
-permalink: "/community/2025-08-08-Intermittent-Image-Load-Errors-with-Azure-Maps-Control-in-Angular.html"
+permalink: "/2025-08-08-Intermittent-Image-Load-Errors-with-Azure-Maps-Control-in-Angular.html"
 categories: ["Azure", "Coding"]
 tags: ["Angular", "Angular Modules", "AuthenticationType.subscriptionKey", "Azure", "Azure Maps", "Azure Maps Control", "Coding", "Community", "Image Load Error", "JavaScript", "JPEG", "Map Initialization", "Ngafterviewinit", "PNG", "SDK 2.3.7", "SVG Not Supported", "TypeScript"]
 tags_normalized: ["angular", "angular modules", "authenticationtypedotsubscriptionkey", "azure", "azure maps", "azure maps control", "coding", "community", "image load error", "javascript", "jpeg", "map initialization", "ngafterviewinit", "png", "sdk 2dot3dot7", "svg not supported", "typescript"]

@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "DotNet YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw"
 date: 2025-11-14 19:20:55 +00:00
-permalink: "/videos/2025-11-14-Generating-Full-Stack-NET-Apps-with-Uno-Platform-and-AI.html"
+permalink: "/2025-11-14-Generating-Full-Stack-NET-Apps-with-Uno-Platform-and-AI.html"
 categories: ["AI", "Coding"]
 tags: [".NET", ".NET 10", ".NET Aspire 13", ".NET MAUI 10", "AI", "AI Integration", "ASP.NET Core 10", "C# 14", "Cloud Native", "Coding", "Cross Platform Development", "F# 10", "Full Stack App", "Hot Design", "Modern Web Development", "Productivity Tools", "Single Codebase", "Uno Platform", "Videos", "VS"]
 tags_normalized: ["dotnet", "dotnet 10", "dotnet aspire 13", "dotnet maui 10", "ai", "ai integration", "aspdotnet core 10", "csharp 14", "cloud native", "coding", "cross platform development", "fsharp 10", "full stack app", "hot design", "modern web development", "productivity tools", "single codebase", "uno platform", "videos", "vs"]

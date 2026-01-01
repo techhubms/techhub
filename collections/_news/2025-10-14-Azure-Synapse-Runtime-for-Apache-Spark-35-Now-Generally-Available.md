@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Fabric Blog"
 feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
 date: 2025-10-14 10:29:13 +00:00
-permalink: "/news/2025-10-14-Azure-Synapse-Runtime-for-Apache-Spark-35-Now-Generally-Available.html"
+permalink: "/2025-10-14-Azure-Synapse-Runtime-for-Apache-Spark-35-Now-Generally-Available.html"
 categories: ["Azure", "ML"]
 tags: ["Apache Spark 3.5", "Azure", "Azure Synapse", "Data Engineering", "Delta Lake 3.2", "Lakehouse", "Materialized Views", "Microsoft Fabric", "Migration", "ML", "Native Execution Engine", "News", "Production Workloads", "Release Notes", "Spark Runtime", "Starter Pools"]
 tags_normalized: ["apache spark 3dot5", "azure", "azure synapse", "data engineering", "delta lake 3dot2", "lakehouse", "materialized views", "microsoft fabric", "migration", "ml", "native execution engine", "news", "production workloads", "release notes", "spark runtime", "starter pools"]

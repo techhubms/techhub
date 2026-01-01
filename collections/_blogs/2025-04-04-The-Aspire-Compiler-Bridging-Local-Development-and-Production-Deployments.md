@@ -9,10 +9,10 @@ viewing_mode: "external"
 feed_name: "David Fowler's Blog"
 feed_url: "https://medium.com/feed/@davidfowl"
 date: 2025-04-04 14:01:15 +00:00
-permalink: "/blogs/2025-04-04-The-Aspire-Compiler-Bridging-Local-Development-and-Production-Deployments.html"
+permalink: "/2025-04-04-The-Aspire-Compiler-Bridging-Local-Development-and-Production-Deployments.html"
 categories: ["Azure", "Coding", "DevOps"]
-tags: [".NET Aspire", "Application Model", "ARM Templates", "Aspire", "Azure", "Bicep", "Cloud Computing", "Cloud Native", "Coding", "Developer Inner Loop", "DevOps", "IaC", "Kubernetes", "Blogs", "Publishing Pipeline", "Software Development", "Terraform"]
-tags_normalized: ["dotnet aspire", "application model", "arm templates", "aspire", "azure", "bicep", "cloud computing", "cloud native", "coding", "developer inner loop", "devops", "iac", "kubernetes", "blogs", "publishing pipeline", "software development", "terraform"]
+tags: [".NET Aspire", "Application Model", "ARM Templates", "Aspire", "Azure", "Bicep", "Blogs", "Cloud Computing", "Cloud Native", "Coding", "Developer Inner Loop", "DevOps", "IaC", "Kubernetes", "Publishing Pipeline", "Software Development", "Terraform"]
+tags_normalized: ["dotnet aspire", "application model", "arm templates", "aspire", "azure", "bicep", "blogs", "cloud computing", "cloud native", "coding", "developer inner loop", "devops", "iac", "kubernetes", "publishing pipeline", "software development", "terraform"]
 ---
 
 In this article, David Fowler introduces Aspire's compiler-inspired approach to application topology, highlighting how it bridges the gap between development and deployment using a resource model and extensible publishing pipeline.<!--excerpt_end-->

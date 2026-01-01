@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Fabric Blog"
 feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
 date: 2025-11-20 08:30:00 +00:00
-permalink: "/news/2025-11-20-Fine-grained-ReadWrite-Access-to-Data-with-OneLake-Security-Preview.html"
+permalink: "/2025-11-20-Fine-grained-ReadWrite-Access-to-Data-with-OneLake-Security-Preview.html"
 categories: ["Azure", "ML", "Security"]
 tags: ["Access Management", "Azure", "Data Access Control", "Data Architecture", "Data Collaboration", "Data Processing", "Fine Grained Access", "Lakehouse Security", "Least Privilege", "Microsoft Fabric", "ML", "News", "OneLake", "OneLakeFileExplorer", "ReadWrite Permissions", "RLS", "Role Based Security", "Security", "Spark Notebooks", "Structured Data", "Unstructured Data"]
 tags_normalized: ["access management", "azure", "data access control", "data architecture", "data collaboration", "data processing", "fine grained access", "lakehouse security", "least privilege", "microsoft fabric", "ml", "news", "onelake", "onelakefileexplorer", "readwrite permissions", "rls", "role based security", "security", "spark notebooks", "structured data", "unstructured data"]

@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Fabric Blog"
 feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
 date: 2025-08-13 09:00:00 +00:00
-permalink: "/news/2025-08-13-Enhancements-to-Microsoft-Fabric-Copy-Job-Reset-Incremental-Copy-Auto-Table-Creation-and-JSON-Support.html"
+permalink: "/2025-08-13-Enhancements-to-Microsoft-Fabric-Copy-Job-Reset-Incremental-Copy-Auto-Table-Creation-and-JSON-Support.html"
 categories: ["Azure", "ML"]
 tags: ["Auto Table Creation", "Azure", "Azure SQL Database", "Change Data Capture", "Cloud Data Integration", "Copy Job", "Data Automation", "Data Engineering", "Data Ingestion", "Data Movement", "Data Pipeline", "Fabric Data Factory", "Fabric Lakehouse", "Incremental Copy", "JSON Format", "Microsoft Fabric", "ML", "News", "SQL Server"]
 tags_normalized: ["auto table creation", "azure", "azure sql database", "change data capture", "cloud data integration", "copy job", "data automation", "data engineering", "data ingestion", "data movement", "data pipeline", "fabric data factory", "fabric lakehouse", "incremental copy", "json format", "microsoft fabric", "ml", "news", "sql server"]

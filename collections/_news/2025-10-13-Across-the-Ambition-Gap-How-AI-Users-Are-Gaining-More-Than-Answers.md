@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft News"
 feed_url: "https://news.microsoft.com/source/feed/"
 date: 2025-10-13 15:45:17 +00:00
-permalink: "/news/2025-10-13-Across-the-Ambition-Gap-How-AI-Users-Are-Gaining-More-Than-Answers.html"
+permalink: "/2025-10-13-Across-the-Ambition-Gap-How-AI-Users-Are-Gaining-More-Than-Answers.html"
 categories: ["AI"]
 tags: ["AI", "AI Adoption", "AI Decision Making", "AI Enthusiasts", "AI Trust", "Ambition Gap", "Collaboration", "Company News", "Consumer AI Report", "Copilot", "Data Insights", "Digital Transformation", "Gen Z", "Generative AI", "Microsoft", "Millennials", "News", "Personalization", "Transparency"]
 tags_normalized: ["ai", "ai adoption", "ai decision making", "ai enthusiasts", "ai trust", "ambition gap", "collaboration", "company news", "consumer ai report", "copilot", "data insights", "digital transformation", "gen z", "generative ai", "microsoft", "millennials", "news", "personalization", "transparency"]

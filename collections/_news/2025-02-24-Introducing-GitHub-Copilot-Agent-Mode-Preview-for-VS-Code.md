@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Visual Studio Code Releases"
 feed_url: "https://code.visualstudio.com/feed.xml"
 date: 2025-02-24 00:00:00 +00:00
-permalink: "/news/2025-02-24-Introducing-GitHub-Copilot-Agent-Mode-Preview-for-VS-Code.html"
+permalink: "/2025-02-24-Introducing-GitHub-Copilot-Agent-Mode-Preview-for-VS-Code.html"
 categories: ["AI", "Coding", "GitHub Copilot"]
 tags: ["Agent Mode", "AI", "AI Assisted Coding", "Autonomous Programming", "Claude Sonnet", "Code Analysis", "Coding", "Copilot Edits", "Developer Productivity", "GitHub Copilot", "GPT 4o", "LLM", "MCP Servers", "News", "Refactoring", "Terminal Commands", "VS Code", "Workspace Tools"]
 tags_normalized: ["agent mode", "ai", "ai assisted coding", "autonomous programming", "claude sonnet", "code analysis", "coding", "copilot edits", "developer productivity", "github copilot", "gpt 4o", "llm", "mcp servers", "news", "refactoring", "terminal commands", "vs code", "workspace tools"]

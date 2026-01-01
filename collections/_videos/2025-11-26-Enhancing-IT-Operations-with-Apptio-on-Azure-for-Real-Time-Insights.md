@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Events YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
 date: 2025-11-26 00:48:56 +00:00
-permalink: "/videos/2025-11-26-Enhancing-IT-Operations-with-Apptio-on-Azure-for-Real-Time-Insights.html"
+permalink: "/2025-11-26-Enhancing-IT-Operations-with-Apptio-on-Azure-for-Real-Time-Insights.html"
 categories: ["AI", "Azure"]
 tags: ["AI", "AI Optimization", "Apptio", "Azure", "Cloud Management", "Cloud Services", "Cost Management", "Enterprise Solutions", "Financial Transparency", "IT Operations", "IT Strategy", "Microsoft Ignite", "Migrateandmodernizeyourestate", "MSIgnite", "Multi Cloud", "Operational Efficiency", "Real Time Insights", "Resource Optimization", "Videos"]
 tags_normalized: ["ai", "ai optimization", "apptio", "azure", "cloud management", "cloud services", "cost management", "enterprise solutions", "financial transparency", "it operations", "it strategy", "microsoft ignite", "migrateandmodernizeyourestate", "msignite", "multi cloud", "operational efficiency", "real time insights", "resource optimization", "videos"]

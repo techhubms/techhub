@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Community"
 date: 2025-08-15 07:50:53 +00:00
-permalink: "/community/2025-08-15-Gpresult-Like-Tool-for-Intune-Policy-Troubleshooting.html"
+permalink: "/2025-08-15-Gpresult-Like-Tool-for-Intune-Policy-Troubleshooting.html"
 categories: ["Azure", "Coding", "Security"]
 tags: ["Administrative Scripts", "Azure", "Coding", "Community", "Defender", "Device Management", "EnterpriseDesktopAppManagement", "Get MDMPolicyReport", "HTML Reporting", "Intune Management Extension", "IntuneDebug", "LAPS", "MDM", "MDMDiagnosticsTool", "MDMDiagReport", "Microsoft Intune", "Policy Troubleshooting", "PolicyScope", "PowerShell", "Registry", "Security", "Win32Apps", "Windows"]
 tags_normalized: ["administrative scripts", "azure", "coding", "community", "defender", "device management", "enterprisedesktopappmanagement", "get mdmpolicyreport", "html reporting", "intune management extension", "intunedebug", "laps", "mdm", "mdmdiagnosticstool", "mdmdiagreport", "microsoft intune", "policy troubleshooting", "policyscope", "powershell", "registry", "security", "win32apps", "windows"]

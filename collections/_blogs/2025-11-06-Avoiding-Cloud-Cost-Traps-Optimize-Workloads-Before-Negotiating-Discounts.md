@@ -9,10 +9,10 @@ viewing_mode: "external"
 feed_name: "DevOps Blog"
 feed_url: "https://devops.com/feed/"
 date: 2025-11-06 14:43:11 +00:00
-permalink: "/blogs/2025-11-06-Avoiding-Cloud-Cost-Traps-Optimize-Workloads-Before-Negotiating-Discounts.html"
+permalink: "/2025-11-06-Avoiding-Cloud-Cost-Traps-Optimize-Workloads-Before-Negotiating-Discounts.html"
 categories: ["DevOps"]
-tags: ["Autoscaling", "Cloud", "Cloud Cost", "Cloud Discounts", "Cloud Economics", "Cloud Infrastructure", "Cloud Optimization", "Containerization", "Contributed Content", "CPU Usage", "DevOps", "DevOps Practices", "Financial Commitment", "FinOps", "Infrastructure Management", "Kubernetes", "Memory Management", "Blogs", "Reserved Capacity", "Resource Allocation", "Right Sizing", "Social Facebook", "Social LinkedIn", "Social X", "Workload Analysis"]
-tags_normalized: ["autoscaling", "cloud", "cloud cost", "cloud discounts", "cloud economics", "cloud infrastructure", "cloud optimization", "containerization", "contributed content", "cpu usage", "devops", "devops practices", "financial commitment", "finops", "infrastructure management", "kubernetes", "memory management", "blogs", "reserved capacity", "resource allocation", "right sizing", "social facebook", "social linkedin", "social x", "workload analysis"]
+tags: ["Autoscaling", "Blogs", "Cloud", "Cloud Cost", "Cloud Discounts", "Cloud Economics", "Cloud Infrastructure", "Cloud Optimization", "Containerization", "Contributed Content", "CPU Usage", "DevOps", "DevOps Practices", "Financial Commitment", "FinOps", "Infrastructure Management", "Kubernetes", "Memory Management", "Reserved Capacity", "Resource Allocation", "Right Sizing", "Social Facebook", "Social LinkedIn", "Social X", "Workload Analysis"]
+tags_normalized: ["autoscaling", "blogs", "cloud", "cloud cost", "cloud discounts", "cloud economics", "cloud infrastructure", "cloud optimization", "containerization", "contributed content", "cpu usage", "devops", "devops practices", "financial commitment", "finops", "infrastructure management", "kubernetes", "memory management", "reserved capacity", "resource allocation", "right sizing", "social facebook", "social linkedin", "social x", "workload analysis"]
 ---
 
 Andrew Hillier reveals why securing cloud discounts before optimizing workloads can lock in inefficiency, especially in Kubernetes environments, and shares actionable collaboration strategies for engineering and finance teams.<!--excerpt_end-->

@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "DotNet YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw"
 date: 2025-11-14 08:00:06 +00:00
-permalink: "/videos/2025-11-14-Orchestrating-GitHub-Actions-Pipelines-in-C-with-Cake-SDK.html"
+permalink: "/2025-11-14-Orchestrating-GitHub-Actions-Pipelines-in-C-with-Cake-SDK.html"
 categories: ["Coding", "DevOps"]
 tags: [".NET 10", "Build Automation", "C#", "Cake SDK", "CI/CD", "Coding", "Configuration as Code", "Continuous Delivery", "Continuous Integration", "Debugging", "Developer Tools", "DevOps", "GitHub Actions", "Pipelines as Code", "Testing", "Videos", "VS Code"]
 tags_normalized: ["dotnet 10", "build automation", "csharp", "cake sdk", "cislashcd", "coding", "configuration as code", "continuous delivery", "continuous integration", "debugging", "developer tools", "devops", "github actions", "pipelines as code", "testing", "videos", "vs code"]

@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Blog"
 feed_url: "https://devblogs.microsoft.com/feed"
 date: 2025-12-08 18:00:54 +00:00
-permalink: "/news/2025-12-08-Host-Your-Nodejs-MCP-Server-on-Azure-Functions-in-3-Simple-Steps.html"
+permalink: "/2025-12-08-Host-Your-Nodejs-MCP-Server-on-Azure-Functions-in-3-Simple-Steps.html"
 categories: ["AI", "Azure", "Coding"]
 tags: ["AI", "Anthropic MCP SDK", "Azure", "Azure Developer CLI", "Azure Functions", "Coding", "Custom Handler", "Express", "HTTP Streaming", "IaC", "LangChain.js", "MCP", "News", "Node.js", "Serverless", "TypeScript"]
 tags_normalized: ["ai", "anthropic mcp sdk", "azure", "azure developer cli", "azure functions", "coding", "custom handler", "express", "http streaming", "iac", "langchaindotjs", "mcp", "news", "nodedotjs", "serverless", "typescript"]

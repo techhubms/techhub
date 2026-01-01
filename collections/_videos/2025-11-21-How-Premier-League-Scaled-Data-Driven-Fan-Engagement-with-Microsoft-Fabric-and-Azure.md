@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Events YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
 date: 2025-11-21 08:26:43 +00:00
-permalink: "/videos/2025-11-21-How-Premier-League-Scaled-Data-Driven-Fan-Engagement-with-Microsoft-Fabric-and-Azure.html"
+permalink: "/2025-11-21-How-Premier-League-Scaled-Data-Driven-Fan-Engagement-with-Microsoft-Fabric-and-Azure.html"
 categories: ["AI", "Azure", "ML"]
 tags: ["AI", "AI Orchestration", "API Architecture", "Azure", "Cloud Scalability", "Containerization", "Data Ingestion", "Data Platform", "Fan Engagement", "Microsoft Fabric", "Microsoft Ignite", "ML", "MSIgnite", "Opta Data", "Personalization", "Premier League", "Real Time Data", "Sports Analytics", "Unifyyourdataplatform", "Videos"]
 tags_normalized: ["ai", "ai orchestration", "api architecture", "azure", "cloud scalability", "containerization", "data ingestion", "data platform", "fan engagement", "microsoft fabric", "microsoft ignite", "ml", "msignite", "opta data", "personalization", "premier league", "real time data", "sports analytics", "unifyyourdataplatform", "videos"]

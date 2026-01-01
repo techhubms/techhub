@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Fabric Blog"
 feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
 date: 2025-10-01 12:00:00 +00:00
-permalink: "/news/2025-10-01-Workspace-Level-Private-Link-in-Microsoft-Fabric-Now-Generally-Available.html"
+permalink: "/2025-10-01-Workspace-Level-Private-Link-in-Microsoft-Fabric-Now-Generally-Available.html"
 categories: ["Azure", "ML", "Security"]
 tags: ["Access Control", "API Management", "Azure", "Azure Networking", "Collaboration", "Data Governance", "Data Security", "Fabric Portal", "Microsoft Fabric", "ML", "Network Isolation", "News", "Private Link", "Security", "Workspace Security"]
 tags_normalized: ["access control", "api management", "azure", "azure networking", "collaboration", "data governance", "data security", "fabric portal", "microsoft fabric", "ml", "network isolation", "news", "private link", "security", "workspace security"]

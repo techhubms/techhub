@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Fabric Blog"
 feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
 date: 2025-11-17 09:00:00 +00:00
-permalink: "/news/2025-11-17-Eventhouse-Endpoint-Arrives-for-Microsoft-Fabric-Data-Warehouse.html"
+permalink: "/2025-11-17-Eventhouse-Endpoint-Arrives-for-Microsoft-Fabric-Data-Warehouse.html"
 categories: ["ML"]
 tags: ["Anomaly Detection", "Business KPIs", "Dashboards", "Data Monitoring", "Data Warehouse", "Eventhouse", "KQL", "Lakehouse", "Microsoft Fabric", "ML", "News", "Operational Metrics", "Real Time Analytics", "Schema Mirroring", "SQL", "Telemetry Data", "Time Series Data", "Unified Architecture"]
 tags_normalized: ["anomaly detection", "business kpis", "dashboards", "data monitoring", "data warehouse", "eventhouse", "kql", "lakehouse", "microsoft fabric", "ml", "news", "operational metrics", "real time analytics", "schema mirroring", "sql", "telemetry data", "time series data", "unified architecture"]

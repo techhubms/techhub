@@ -9,10 +9,10 @@ viewing_mode: "external"
 feed_name: "Dellenny's Blog"
 feed_url: "https://dellenny.com/feed/"
 date: 2025-10-07 09:45:12 +00:00
-permalink: "/blogs/2025-10-07-How-Agentic-AI-Works-and-How-to-Build-It-in-Azure.html"
+permalink: "/2025-10-07-How-Agentic-AI-Works-and-How-to-Build-It-in-Azure.html"
 categories: ["AI", "Azure"]
-tags: ["Agentic AI", "AI", "AI Architecture", "AI Orchestration", "API Integration", "Application Insights", "Autonomous Agents", "Azure", "Azure Cognitive Search", "Azure Functions", "Azure Monitor", "Azure OpenAI Service", "Cosmos DB", "Event Grid", "Large Language Models", "Logic Apps", "Machine Learning", "Blogs", "Responsible AI", "Semantic Kernel"]
-tags_normalized: ["agentic ai", "ai", "ai architecture", "ai orchestration", "api integration", "application insights", "autonomous agents", "azure", "azure cognitive search", "azure functions", "azure monitor", "azure openai service", "cosmos db", "event grid", "large language models", "logic apps", "machine learning", "blogs", "responsible ai", "semantic kernel"]
+tags: ["Agentic AI", "AI", "AI Architecture", "AI Orchestration", "API Integration", "Application Insights", "Autonomous Agents", "Azure", "Azure Cognitive Search", "Azure Functions", "Azure Monitor", "Azure OpenAI Service", "Blogs", "Cosmos DB", "Event Grid", "Large Language Models", "Logic Apps", "Machine Learning", "Responsible AI", "Semantic Kernel"]
+tags_normalized: ["agentic ai", "ai", "ai architecture", "ai orchestration", "api integration", "application insights", "autonomous agents", "azure", "azure cognitive search", "azure functions", "azure monitor", "azure openai service", "blogs", "cosmos db", "event grid", "large language models", "logic apps", "machine learning", "responsible ai", "semantic kernel"]
 ---
 
 Dellenny explains the core concepts of agentic AI and provides Azure-centric guidance for building autonomous, adaptive agents using Microsoft's AI ecosystem.<!--excerpt_end-->

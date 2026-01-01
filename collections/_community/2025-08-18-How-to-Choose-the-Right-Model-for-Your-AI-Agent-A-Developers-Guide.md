@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-08-18 21:56:23 +00:00
-permalink: "/community/2025-08-18-How-to-Choose-the-Right-Model-for-Your-AI-Agent-A-Developers-Guide.html"
+permalink: "/2025-08-18-How-to-Choose-the-Right-Model-for-Your-AI-Agent-A-Developers-Guide.html"
 categories: ["AI", "Azure"]
 tags: ["Agent Support", "AI", "AI Agent Development", "API Hosting", "Azure", "Azure AI Foundry", "Community", "Cost Analysis", "Licensing", "Model Capabilities", "Model Cards", "Model Catalog", "Model Deployment", "Model Selection", "Multimodal Models", "Performance Optimization", "Self Hosted Models", "Token Costs"]
 tags_normalized: ["agent support", "ai", "ai agent development", "api hosting", "azure", "azure ai foundry", "community", "cost analysis", "licensing", "model capabilities", "model cards", "model catalog", "model deployment", "model selection", "multimodal models", "performance optimization", "self hosted models", "token costs"]

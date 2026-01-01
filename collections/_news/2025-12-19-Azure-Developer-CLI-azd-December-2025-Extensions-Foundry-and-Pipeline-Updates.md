@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Azure SDK Blog"
 feed_url: "https://devblogs.microsoft.com/azure-sdk/feed/"
 date: 2025-12-19 19:57:26 +00:00
-permalink: "/news/2025-12-19-Azure-Developer-CLI-azd-December-2025-Extensions-Foundry-and-Pipeline-Updates.html"
+permalink: "/2025-12-19-Azure-Developer-CLI-azd-December-2025-Extensions-Foundry-and-Pipeline-Updates.html"
 categories: ["AI", "Azure", "Coding", "DevOps"]
 tags: [".NET", "Agent Extensions", "AI", "Azd", "Azure", "Azure Developer CLI", "Azure Pipelines", "Azure SDK", "Bicep CLI", "CI/CD", "Codespaces", "Coding", "Command Line Tools", "Container Apps", "DevOps", "Docker", "Error Handling", "Extensions", "GitHub", "Interactive CLI", "Java", "JavaScript", "Kubernetes", "Microsoft Foundry", "News", "Python", "Static Web Apps", "Template Gallery", "Terraform", "Typescript", "VS Code"]
 tags_normalized: ["dotnet", "agent extensions", "ai", "azd", "azure", "azure developer cli", "azure pipelines", "azure sdk", "bicep cli", "cislashcd", "codespaces", "coding", "command line tools", "container apps", "devops", "docker", "error handling", "extensions", "github", "interactive cli", "java", "javascript", "kubernetes", "microsoft foundry", "news", "python", "static web apps", "template gallery", "terraform", "typescript", "vs code"]

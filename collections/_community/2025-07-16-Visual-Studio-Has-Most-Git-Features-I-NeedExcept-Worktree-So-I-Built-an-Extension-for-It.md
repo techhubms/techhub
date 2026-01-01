@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Reddit Visual Studio"
 feed_url: "https://www.reddit.com/r/VisualStudio/.rss"
 date: 2025-07-16 18:50:36 +00:00
-permalink: "/community/2025-07-16-Visual-Studio-Has-Most-Git-Features-I-NeedExcept-Worktree-So-I-Built-an-Extension-for-It.html"
+permalink: "/2025-07-16-Visual-Studio-Has-Most-Git-Features-I-NeedExcept-Worktree-So-I-Built-an-Extension-for-It.html"
 categories: ["Coding", "DevOps"]
 tags: [".NET", "Branch Management", "C#", "Coding", "Community", "DevOps", "Extension", "Git Integration", "Git Worktree", "Productivity", "Version Control", "VS", "VS Extensibility SDK"]
 tags_normalized: ["dotnet", "branch management", "csharp", "coding", "community", "devops", "extension", "git integration", "git worktree", "productivity", "version control", "vs", "vs extensibility sdk"]

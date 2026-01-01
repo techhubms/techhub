@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-08-18 22:45:01 +00:00
-permalink: "/community/2025-08-18-Optimizing-Large-Scale-AI-Performance-with-Pretraining-Validation-on-a-Single-Azure-ND-GB200-v6.html"
+permalink: "/2025-08-18-Optimizing-Large-Scale-AI-Performance-with-Pretraining-Validation-on-a-Single-Azure-ND-GB200-v6.html"
 categories: ["AI", "Azure", "ML"]
 tags: ["AI", "Azure", "Azure AI Benchmarking Guide", "Azure ND GB200 V6", "Benchmarking", "Bf16", "Cloud Infrastructure", "Community", "Context Parallelism", "Data Parallelism", "Fp16", "Fp8 Mixed Precision", "GPU Utilization", "GPUs", "Large Language Models", "Llama3", "LLM Architecture", "Machine Learning", "Memory Usage", "Micro Batch Size", "ML", "Model Validation", "NVIDIA NeMo", "Parallelism", "Performance Tuning", "Pipeline Parallelism", "Pretraining", "Scalable AI Workloads", "SM Clock Speed", "Telemetry", "Tensor Parallelism"]
 tags_normalized: ["ai", "azure", "azure ai benchmarking guide", "azure nd gb200 v6", "benchmarking", "bf16", "cloud infrastructure", "community", "context parallelism", "data parallelism", "fp16", "fp8 mixed precision", "gpu utilization", "gpus", "large language models", "llama3", "llm architecture", "machine learning", "memory usage", "micro batch size", "ml", "model validation", "nvidia nemo", "parallelism", "performance tuning", "pipeline parallelism", "pretraining", "scalable ai workloads", "sm clock speed", "telemetry", "tensor parallelism"]

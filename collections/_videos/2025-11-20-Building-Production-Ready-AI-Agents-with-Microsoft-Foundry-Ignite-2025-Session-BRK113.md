@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Events YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
 date: 2025-11-20 16:20:43 +00:00
-permalink: "/videos/2025-11-20-Building-Production-Ready-AI-Agents-with-Microsoft-Foundry-Ignite-2025-Session-BRK113.html"
+permalink: "/2025-11-20-Building-Production-Ready-AI-Agents-with-Microsoft-Foundry-Ignite-2025-Session-BRK113.html"
 categories: ["AI", "Azure", "Coding"]
 tags: ["Agentic Applications", "AI", "AI Development", "AI Gateway", "Azure", "Azure AI", "Business Process Automation", "Code Based Workflows", "Coding", "Developer Tools", "Enterprise Integration", "Governance", "InnovatewithAzureAIappsandagents", "KPMG", "Microsoft Foundry", "MSIgnite", "Multi Agent Systems", "Policy Management", "Python", "Real Time Context", "Videos"]
 tags_normalized: ["agentic applications", "ai", "ai development", "ai gateway", "azure", "azure ai", "business process automation", "code based workflows", "coding", "developer tools", "enterprise integration", "governance", "innovatewithazureaiappsandagents", "kpmg", "microsoft foundry", "msignite", "multi agent systems", "policy management", "python", "real time context", "videos"]

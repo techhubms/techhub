@@ -9,10 +9,10 @@ viewing_mode: "external"
 feed_name: "DevOps Blog"
 feed_url: "https://devops.com/feed/"
 date: 2025-10-23 19:12:39 +00:00
-permalink: "/blogs/2025-10-23-Opsera-Introduces-AI-Agent-for-Analyzing-Code-Quality-from-AI-Coding-Tools.html"
+permalink: "/2025-10-23-Opsera-Introduces-AI-Agent-for-Analyzing-Code-Quality-from-AI-Coding-Tools.html"
 categories: ["AI", "DevOps"]
-tags: ["Agentic AI", "AI", "AI Adoption", "AI Coding Tools", "AI Reasoning Agent", "Code Quality Analysis", "DevOps", "DevOps Automation", "DevOps KPIs", "DORA Metrics", "GitHub MCP", "Hummingbird AI", "LLM Integration", "MCP", "On Premises DevOps", "Opsera", "Blogs", "Productivity Optimization", "Social Facebook", "Social LinkedIn", "Social X", "Software Development Lifecycle"]
-tags_normalized: ["agentic ai", "ai", "ai adoption", "ai coding tools", "ai reasoning agent", "code quality analysis", "devops", "devops automation", "devops kpis", "dora metrics", "github mcp", "hummingbird ai", "llm integration", "mcp", "on premises devops", "opsera", "blogs", "productivity optimization", "social facebook", "social linkedin", "social x", "software development lifecycle"]
+tags: ["Agentic AI", "AI", "AI Adoption", "AI Coding Tools", "AI Reasoning Agent", "Blogs", "Code Quality Analysis", "DevOps", "DevOps Automation", "DevOps KPIs", "DORA Metrics", "GitHub MCP", "Hummingbird AI", "LLM Integration", "MCP", "On Premises DevOps", "Opsera", "Productivity Optimization", "Social Facebook", "Social LinkedIn", "Social X", "Software Development Lifecycle"]
+tags_normalized: ["agentic ai", "ai", "ai adoption", "ai coding tools", "ai reasoning agent", "blogs", "code quality analysis", "devops", "devops automation", "devops kpis", "dora metrics", "github mcp", "hummingbird ai", "llm integration", "mcp", "on premises devops", "opsera", "productivity optimization", "social facebook", "social linkedin", "social x", "software development lifecycle"]
 ---
 
 Mike Vizard reports on Opsera's launch of an AI-powered reasoning agent for assessing the quality of code produced by AI tools, with integration into DevOps workflows and GitHub MCP.<!--excerpt_end-->

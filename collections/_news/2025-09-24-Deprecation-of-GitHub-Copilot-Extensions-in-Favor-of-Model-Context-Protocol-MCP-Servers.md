@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/changelog/feed/"
 date: 2025-09-24 15:00:18 +00:00
-permalink: "/news/2025-09-24-Deprecation-of-GitHub-Copilot-Extensions-in-Favor-of-Model-Context-Protocol-MCP-Servers.html"
+permalink: "/2025-09-24-Deprecation-of-GitHub-Copilot-Extensions-in-Favor-of-Model-Context-Protocol-MCP-Servers.html"
 categories: ["AI", "DevOps", "GitHub Copilot"]
 tags: ["AI", "AI Agent Integration", "Copilot", "Copilot Marketplace", "Cross Platform Compatibility", "Developer Workflow", "DevOps", "GitHub Apps", "GitHub Copilot", "GitHub Copilot Extensions", "IDE Integration", "MCP", "News", "Open Standard", "Plugin Architecture", "Retired", "Server Side Extensions", "Sunset Notice", "Tool Invocation", "VS Code"]
 tags_normalized: ["ai", "ai agent integration", "copilot", "copilot marketplace", "cross platform compatibility", "developer workflow", "devops", "github apps", "github copilot", "github copilot extensions", "ide integration", "mcp", "news", "open standard", "plugin architecture", "retired", "server side extensions", "sunset notice", "tool invocation", "vs code"]

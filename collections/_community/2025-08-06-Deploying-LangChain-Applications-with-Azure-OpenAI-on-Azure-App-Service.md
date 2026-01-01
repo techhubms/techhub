@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-08-06 11:42:32 +00:00
-permalink: "/community/2025-08-06-Deploying-LangChain-Applications-with-Azure-OpenAI-on-Azure-App-Service.html"
+permalink: "/2025-08-06-Deploying-LangChain-Applications-with-Azure-OpenAI-on-Azure-App-Service.html"
 categories: ["AI", "Azure", "Coding"]
 tags: ["AI", "AI Application Deployment", "App Service", "Authentication", "Azd", "Azure", "Azure AI Foundry", "Azure Developer CLI", "Azure OpenAI Service", "Coding", "Community", "Deployment Automation", "FastAPI", "GPT 4o", "LangChain", "Managed Identity", "Prompt Engineering", "Python", "Streaming Response", "Summarization", "Token Management"]
 tags_normalized: ["ai", "ai application deployment", "app service", "authentication", "azd", "azure", "azure ai foundry", "azure developer cli", "azure openai service", "coding", "community", "deployment automation", "fastapi", "gpt 4o", "langchain", "managed identity", "prompt engineering", "python", "streaming response", "summarization", "token management"]

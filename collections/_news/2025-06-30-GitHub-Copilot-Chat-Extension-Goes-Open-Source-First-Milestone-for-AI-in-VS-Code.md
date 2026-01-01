@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Visual Studio Code Releases"
 feed_url: "https://code.visualstudio.com/feed.xml"
 date: 2025-06-30 00:00:00 +00:00
-permalink: "/news/2025-06-30-GitHub-Copilot-Chat-Extension-Goes-Open-Source-First-Milestone-for-AI-in-VS-Code.html"
+permalink: "/2025-06-30-GitHub-Copilot-Chat-Extension-Goes-Open-Source-First-Milestone-for-AI-in-VS-Code.html"
 categories: ["AI", "Coding", "GitHub Copilot"]
 tags: ["Agent Mode", "AI", "AI Editor", "Coding", "Community Contribution", "GitHub Copilot", "GitHub Copilot Chat", "LLM", "Microsoft", "MIT License", "News", "Open Source", "Prompt Engineering", "Pull Requests", "Telemetry", "Transparency", "VS Code", "VS Code Extensions"]
 tags_normalized: ["agent mode", "ai", "ai editor", "coding", "community contribution", "github copilot", "github copilot chat", "llm", "microsoft", "mit license", "news", "open source", "prompt engineering", "pull requests", "telemetry", "transparency", "vs code", "vs code extensions"]

@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Events YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
 date: 2025-11-21 11:45:08 +00:00
-permalink: "/videos/2025-11-21-Scaling-AI-Agents-in-Enterprises-Lessons-from-Microsoft-Ignite-BRK411.html"
+permalink: "/2025-11-21-Scaling-AI-Agents-in-Enterprises-Lessons-from-Microsoft-Ignite-BRK411.html"
 categories: ["AI", "Azure"]
 tags: ["Agent Scaling", "Agentic Stack", "AI", "AI Agents", "AI Democratization", "Azure", "Azure AI Foundry", "Business Value", "Compliance", "Copilot Ready", "Data Governance", "Enterprise Adoption", "Enterprise AI", "Enterprise Automation", "Microsoft Ignite", "MSIgnite", "Other", "User Trust", "Videos"]
 tags_normalized: ["agent scaling", "agentic stack", "ai", "ai agents", "ai democratization", "azure", "azure ai foundry", "business value", "compliance", "copilot ready", "data governance", "enterprise adoption", "enterprise ai", "enterprise automation", "microsoft ignite", "msignite", "other", "user trust", "videos"]

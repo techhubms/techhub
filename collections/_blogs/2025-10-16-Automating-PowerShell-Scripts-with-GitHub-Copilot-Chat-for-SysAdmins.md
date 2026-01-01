@@ -9,10 +9,10 @@ viewing_mode: "external"
 feed_name: "Dellenny's Blog"
 feed_url: "https://dellenny.com/feed/"
 date: 2025-10-16 06:12:17 +00:00
-permalink: "/blogs/2025-10-16-Automating-PowerShell-Scripts-with-GitHub-Copilot-Chat-for-SysAdmins.html"
+permalink: "/2025-10-16-Automating-PowerShell-Scripts-with-GitHub-Copilot-Chat-for-SysAdmins.html"
 categories: ["AI", "Azure", "Coding", "GitHub Copilot"]
-tags: ["AI", "Automation", "Azure", "Azure AD", "Best Practices", "Coding", "Error Handling", "GitHub Copilot", "GitHub Copilot Chat", "IT Administration", "M365 Copilot", "Microsoft 365", "Microsoft Graph PowerShell", "On Prem Active Directory", "Blogs", "PowerShell", "Script Generation", "SharePoint", "SysAdmin", "Tenant Maintenance", "User Provisioning"]
-tags_normalized: ["ai", "automation", "azure", "azure ad", "best practices", "coding", "error handling", "github copilot", "github copilot chat", "it administration", "m365 copilot", "microsoft 365", "microsoft graph powershell", "on prem active directory", "blogs", "powershell", "script generation", "sharepoint", "sysadmin", "tenant maintenance", "user provisioning"]
+tags: ["AI", "Automation", "Azure", "Azure AD", "Best Practices", "Blogs", "Coding", "Error Handling", "GitHub Copilot", "GitHub Copilot Chat", "IT Administration", "M365 Copilot", "Microsoft 365", "Microsoft Graph PowerShell", "On Prem Active Directory", "PowerShell", "Script Generation", "SharePoint", "SysAdmin", "Tenant Maintenance", "User Provisioning"]
+tags_normalized: ["ai", "automation", "azure", "azure ad", "best practices", "blogs", "coding", "error handling", "github copilot", "github copilot chat", "it administration", "m365 copilot", "microsoft 365", "microsoft graph powershell", "on prem active directory", "powershell", "script generation", "sharepoint", "sysadmin", "tenant maintenance", "user provisioning"]
 ---
 
 Dellenny demonstrates how sysadmins can use GitHub Copilot Chat to generate and refine PowerShell scripts from natural language prompts, enhancing automation in Microsoft 365 and Azure tasks.<!--excerpt_end-->

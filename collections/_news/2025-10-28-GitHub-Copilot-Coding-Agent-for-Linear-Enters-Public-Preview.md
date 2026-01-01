@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/changelog/feed/"
 date: 2025-10-28 15:25:36 +00:00
-permalink: "/news/2025-10-28-GitHub-Copilot-Coding-Agent-for-Linear-Enters-Public-Preview.html"
+permalink: "/2025-10-28-GitHub-Copilot-Coding-Agent-for-Linear-Enters-Public-Preview.html"
 categories: ["AI", "DevOps", "GitHub Copilot"]
 tags: ["Agent Integration", "AI", "Automation", "Autonomous Agents", "Code Review", "Continuous Integration", "Copilot", "Developer Tools", "DevOps", "GitHub Actions", "GitHub Copilot", "Linear", "News", "Pull Requests", "Universe25", "Workflow Automation"]
 tags_normalized: ["agent integration", "ai", "automation", "autonomous agents", "code review", "continuous integration", "copilot", "developer tools", "devops", "github actions", "github copilot", "linear", "news", "pull requests", "universe25", "workflow automation"]

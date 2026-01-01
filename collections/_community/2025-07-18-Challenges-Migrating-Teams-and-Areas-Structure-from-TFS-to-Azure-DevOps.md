@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Reddit Azure DevOps"
 feed_url: "https://www.reddit.com/r/azuredevops/.rss"
 date: 2025-07-18 13:45:18 +00:00
-permalink: "/community/2025-07-18-Challenges-Migrating-Teams-and-Areas-Structure-from-TFS-to-Azure-DevOps.html"
+permalink: "/2025-07-18-Challenges-Migrating-Teams-and-Areas-Structure-from-TFS-to-Azure-DevOps.html"
 categories: ["Azure", "DevOps"]
 tags: ["Areas", "Azure", "Azure DevOps", "Community", "DevOps", "Migration", "Modules", "Organizational Structure", "Process Template", "Sprints", "Teams", "TFS", "Work Item Tracking"]
 tags_normalized: ["areas", "azure", "azure devops", "community", "devops", "migration", "modules", "organizational structure", "process template", "sprints", "teams", "tfs", "work item tracking"]

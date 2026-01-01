@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-11-25 08:00:00 +00:00
-permalink: "/community/2025-11-25-From-Concept-to-Code-Building-Production-Ready-Multi-Agent-Systems-with-Microsoft-Foundry.html"
+permalink: "/2025-11-25-From-Concept-to-Code-Building-Production-Ready-Multi-Agent-Systems-with-Microsoft-Foundry.html"
 categories: ["AI", "Azure", "Coding"]
 tags: ["Agent Framework", "Agent V2 SDK", "AI", "AI Orchestration", "Azure", "Azure AI Foundry", "Coding", "Community", "Declarative Workflows", "Enterprise AI", "Foundry Workflows", "Low Code Development", "Microsoft Foundry", "Multi Agent Systems", "Process Automation", "Recruitment Automation", "Task Orchestration", "VS Code", "VS Code Extension", "YAML Configuration"]
 tags_normalized: ["agent framework", "agent v2 sdk", "ai", "ai orchestration", "azure", "azure ai foundry", "coding", "community", "declarative workflows", "enterprise ai", "foundry workflows", "low code development", "microsoft foundry", "multi agent systems", "process automation", "recruitment automation", "task orchestration", "vs code", "vs code extension", "yaml configuration"]

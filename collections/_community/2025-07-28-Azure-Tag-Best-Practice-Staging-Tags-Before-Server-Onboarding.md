@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Reddit Azure"
 feed_url: "https://www.reddit.com/r/azure/.rss"
 date: 2025-07-28 20:43:49 +00:00
-permalink: "/community/2025-07-28-Azure-Tag-Best-Practice-Staging-Tags-Before-Server-Onboarding.html"
+permalink: "/2025-07-28-Azure-Tag-Best-Practice-Staging-Tags-Before-Server-Onboarding.html"
 categories: ["Azure", "Security"]
 tags: ["Azure", "Azure Arc", "Best Practices", "Community", "Maintenance Configurations", "Onboarding", "Patching", "POC", "Resource Management", "Resource Tagging", "Schedules", "Security"]
 tags_normalized: ["azure", "azure arc", "best practices", "community", "maintenance configurations", "onboarding", "patching", "poc", "resource management", "resource tagging", "schedules", "security"]

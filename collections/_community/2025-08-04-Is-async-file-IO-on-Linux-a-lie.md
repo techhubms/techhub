@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Reddit DotNet"
 feed_url: "https://www.reddit.com/r/dotnet/.rss"
 date: 2025-08-04 02:19:06 +00:00
-permalink: "/community/2025-08-04-Is-async-file-IO-on-Linux-a-lie.html"
+permalink: "/2025-08-04-Is-async-file-IO-on-Linux-a-lie.html"
 categories: ["Coding"]
 tags: [".NET", "Async IO", "Coding", "Community", "F GETFL", "Fcntl", "File.OpenHandle", "FileOptions.Asynchronous", "FileStream", "Linux", "O ASYNC", "O NONBLOCK", "SafeFileHandle", "Useasync"]
 tags_normalized: ["dotnet", "async io", "coding", "community", "f getfl", "fcntl", "filedotopenhandle", "fileoptionsdotasynchronous", "filestream", "linux", "o async", "o nonblock", "safefilehandle", "useasync"]

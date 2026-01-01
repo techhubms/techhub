@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Reddit CSharp"
 feed_url: "https://www.reddit.com/r/csharp/.rss"
 date: 2025-08-01 08:13:28 +00:00
-permalink: "/community/2025-08-01-C-15-Wishlist-What-Features-Do-Developers-Hope-For.html"
+permalink: "/2025-08-01-C-15-Wishlist-What-Features-Do-Developers-Hope-For.html"
 categories: ["Coding"]
 tags: ["C#", "C# 15", "Coding", "Community", "Community Discussion", "Developer Feedback", "Extension Properties", "Future Development", "Language Evolution", "Language Features", "Programming", "Wishlist"]
 tags_normalized: ["csharp", "csharp 15", "coding", "community", "community discussion", "developer feedback", "extension properties", "future development", "language evolution", "language features", "programming", "wishlist"]

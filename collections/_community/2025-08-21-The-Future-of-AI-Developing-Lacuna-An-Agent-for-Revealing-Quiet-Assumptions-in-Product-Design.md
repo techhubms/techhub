@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=AI"
 date: 2025-08-21 19:08:20 +00:00
-permalink: "/community/2025-08-21-The-Future-of-AI-Developing-Lacuna-An-Agent-for-Revealing-Quiet-Assumptions-in-Product-Design.html"
+permalink: "/2025-08-21-The-Future-of-AI-Developing-Lacuna-An-Agent-for-Revealing-Quiet-Assumptions-in-Product-Design.html"
 categories: ["AI", "Azure"]
 tags: ["AI", "AI Powered Tools", "Assumption Analysis", "Azure", "Azure AI Foundry", "Community", "Conversational Agents", "Copilot Studio", "Design Risk", "Generative AI", "Human AI Collaboration", "Large Language Models", "LLM", "Microsoft Teams", "Product Design", "Prompt Engineering", "Risk Assessment", "UX Engineering"]
 tags_normalized: ["ai", "ai powered tools", "assumption analysis", "azure", "azure ai foundry", "community", "conversational agents", "copilot studio", "design risk", "generative ai", "human ai collaboration", "large language models", "llm", "microsoft teams", "product design", "prompt engineering", "risk assessment", "ux engineering"]

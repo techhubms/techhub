@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/changelog/feed/"
 date: 2025-08-07 19:40:45 +00:00
-permalink: "/news/2025-08-07-GitHub-Changes-Default-Tab-Size-from-Eight-to-Four-Spaces.html"
+permalink: "/2025-08-07-GitHub-Changes-Default-Tab-Size-from-Eight-to-Four-Spaces.html"
 categories: ["DevOps"]
 tags: ["Code Display", "Code Formatting", "Coding Practices", "Developer Experience", "DevOps", "GitHub", "GitHub UI", "News", "Platform Update", "Tab Size", "User Preferences", "User Settings"]
 tags_normalized: ["code display", "code formatting", "coding practices", "developer experience", "devops", "github", "github ui", "news", "platform update", "tab size", "user preferences", "user settings"]

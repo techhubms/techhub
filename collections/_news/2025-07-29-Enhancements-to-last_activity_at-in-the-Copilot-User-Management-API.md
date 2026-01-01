@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/changelog/label/copilot/feed/"
 date: 2025-07-29 16:05:17 +00:00
-permalink: "/news/2025-07-29-Enhancements-to-last_activity_at-in-the-Copilot-User-Management-API.html"
+permalink: "/2025-07-29-Enhancements-to-last_activity_at-in-the-Copilot-User-Management-API.html"
 categories: ["AI", "GitHub Copilot"]
 tags: ["Activity Tracking", "AI", "API Durability", "API Updates", "Copilot API", "Feature Usage", "GitHub Copilot", "Last Activity At", "Metrics", "News", "Pipeline Resilience", "User Management"]
 tags_normalized: ["activity tracking", "ai", "api durability", "api updates", "copilot api", "feature usage", "github copilot", "last activity at", "metrics", "news", "pipeline resilience", "user management"]

@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-09-12 20:31:23 +00:00
-permalink: "/community/2025-09-12-Revolutionizing-Learning-with-Immersive-AI-Avatar-Powered-Education-on-Azure.html"
+permalink: "/2025-09-12-Revolutionizing-Learning-with-Immersive-AI-Avatar-Powered-Education-on-Azure.html"
 categories: ["AI", "Azure", "Security"]
 tags: ["AI", "Avatar Engine", "Azure", "Azure Data Lake Storage", "Azure Key Vault", "Azure Speech Studio", "CI/CD", "Community", "Data Loss Prevention", "Defender For Storage", "Identity Management", "Low Code Solutions", "Microsoft Entra ID", "Neural Voice", "Private Link", "Security", "Security Best Practices", "SSML", "Text To Speech"]
 tags_normalized: ["ai", "avatar engine", "azure", "azure data lake storage", "azure key vault", "azure speech studio", "cislashcd", "community", "data loss prevention", "defender for storage", "identity management", "low code solutions", "microsoft entra id", "neural voice", "private link", "security", "security best practices", "ssml", "text to speech"]

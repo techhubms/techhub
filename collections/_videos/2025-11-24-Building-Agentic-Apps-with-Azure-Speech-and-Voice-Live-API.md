@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Events YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
 date: 2025-11-24 10:30:56 +00:00
-permalink: "/videos/2025-11-24-Building-Agentic-Apps-with-Azure-Speech-and-Voice-Live-API.html"
+permalink: "/2025-11-24-Building-Agentic-Apps-with-Azure-Speech-and-Voice-Live-API.html"
 categories: ["AI", "Azure"]
 tags: ["Adaptive Conversation", "AI", "AI Agents", "Audio Enhancements", "Azure", "Azure AI", "Azure Speech", "Branded Voices", "Custom Avatars", "Custom Speech Models", "InnovatewithAzureAIappsandagents", "Large Language Models", "LLM Speech API", "Microsoft Ignite", "MSIgnite", "Multimodal Translation", "Neural HD Voices", "Prompt Engineering", "Real Time Voice", "Videos", "Voice Assistant", "Voice Live API"]
 tags_normalized: ["adaptive conversation", "ai", "ai agents", "audio enhancements", "azure", "azure ai", "azure speech", "branded voices", "custom avatars", "custom speech models", "innovatewithazureaiappsandagents", "large language models", "llm speech api", "microsoft ignite", "msignite", "multimodal translation", "neural hd voices", "prompt engineering", "real time voice", "videos", "voice assistant", "voice live api"]

@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Developer YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
 date: 2025-10-22 16:49:13 +00:00
-permalink: "/videos/2025-10-22-What-is-Azure-AI-Foundry-Local.html"
+permalink: "/2025-10-22-What-is-Azure-AI-Foundry-Local.html"
 categories: ["AI", "Azure"]
 tags: ["AI", "AI Infrastructure", "AI Model Deployment", "Azure", "Azure AI Foundry Local", "Dona Sarkar", "Edge Computing", "Microsoft Azure", "Offline AI", "On Premises AI", "Privacy", "Videos"]
 tags_normalized: ["ai", "ai infrastructure", "ai model deployment", "azure", "azure ai foundry local", "dona sarkar", "edge computing", "microsoft azure", "offline ai", "on premises ai", "privacy", "videos"]

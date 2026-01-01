@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "DotNet YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw"
 date: 2025-10-22 16:30:14 +00:00
-permalink: "/videos/2025-10-22-Building-Responsive-UI-in-Godot-C-with-Control-Nodes.html"
+permalink: "/2025-10-22-Building-Responsive-UI-in-Godot-C-with-Control-Nodes.html"
 categories: ["Coding"]
 tags: [".NET", "C#", "Coding", "Control Nodes", "Crafting System", "Dynamic UI", "Game Development", "GameDev", "Godot Engine", "Indie Development", "Microsoft Developer", "Reusable Components", "Signals", "Sprite Atlas", "UI Design", "UI Programming", "User Interface", "Videos", "VS Code"]
 tags_normalized: ["dotnet", "csharp", "coding", "control nodes", "crafting system", "dynamic ui", "game development", "gamedev", "godot engine", "indie development", "microsoft developer", "reusable components", "signals", "sprite atlas", "ui design", "ui programming", "user interface", "videos", "vs code"]

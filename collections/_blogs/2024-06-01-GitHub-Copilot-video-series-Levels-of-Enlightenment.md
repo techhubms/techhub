@@ -8,8 +8,8 @@ canonical_url: "https://www.youtube.com/playlist?list=PLXVVwOM8uv2y0Yo6H8qu9giWW
 viewing_mode: "external"
 categories: ["AI", "GitHub Copilot"]
 permalink: "/blogs/2024-06-01-GitHub-Copilot-video-series-Levels-of-Enlightenment.html"
-tags: ["AI", "GitHub Copilot", "Blogs", "Programming", "Software Development", "Tutorials", "Video Series"]
-tags_normalized: ["ai", "github copilot", "blogs", "programming", "software development", "tutorials", "video series"]
+tags: ["AI", "Blogs", "GitHub Copilot", "Programming", "Software Development", "Tutorials", "Video Series"]
+tags_normalized: ["ai", "blogs", "github copilot", "programming", "software development", "tutorials", "video series"]
 ---
 
 Become more proficient with GitHub Copilot through Rob Bos's comprehensive "Levels of Enlightenment" video series. This 10-part collection shares valuable insights and lessons learned from extensive experience with the tool, helping developers progress from basic usage to advanced techniques.<!--excerpt_end-->

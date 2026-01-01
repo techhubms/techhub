@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/feed/"
 date: 2025-07-16 21:06:17 +00:00
-permalink: "/news/2025-07-16-GitHub-Availability-Report-June-2025.html"
+permalink: "/2025-07-16-GitHub-Availability-Report-June-2025.html"
 categories: ["AI", "DevOps", "GitHub Copilot"]
 tags: ["AI", "Claude Models", "Company News", "Copilot Chat", "Copilot Coding Agent", "DevOps", "Error Rates", "Gemini Models", "GitHub Actions", "GitHub Availability Report", "GitHub Copilot", "Incident Report", "JetBrains IDEs", "Mitigation", "Network Routing", "News", "News & Insights", "Service Outage", "Site Reliability", "VS Code"]
 tags_normalized: ["ai", "claude models", "company news", "copilot chat", "copilot coding agent", "devops", "error rates", "gemini models", "github actions", "github availability report", "github copilot", "incident report", "jetbrains ides", "mitigation", "network routing", "news", "news and insights", "service outage", "site reliability", "vs code"]

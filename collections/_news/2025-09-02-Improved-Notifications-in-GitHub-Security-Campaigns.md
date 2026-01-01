@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/changelog/feed/"
 date: 2025-09-02 09:29:30 +00:00
-permalink: "/news/2025-09-02-Improved-Notifications-in-GitHub-Security-Campaigns.html"
+permalink: "/2025-09-02-Improved-Notifications-in-GitHub-Security-Campaigns.html"
 categories: ["AI", "DevOps", "GitHub Copilot", "Security"]
 tags: ["AI", "Application Security", "Code Security", "Developer Collaboration", "DevOps", "GitHub Copilot", "GitHub Copilot Autofix", "GitHub Enterprise Cloud", "GitHub Security Campaigns", "News", "Notification System", "Security", "Security Alerts", "Security Automation"]
 tags_normalized: ["ai", "application security", "code security", "developer collaboration", "devops", "github copilot", "github copilot autofix", "github enterprise cloud", "github security campaigns", "news", "notification system", "security", "security alerts", "security automation"]

@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Reddit Visual Studio"
 feed_url: "https://www.reddit.com/r/VisualStudio/.rss"
 date: 2025-07-29 02:09:39 +00:00
-permalink: "/community/2025-07-29-Unlocking-Hidden-AcrylicMica-Style-UI-in-Visual-Studio-2022.html"
+permalink: "/2025-07-29-Unlocking-Hidden-AcrylicMica-Style-UI-in-Visual-Studio-2022.html"
 categories: ["Coding"]
 tags: ["Acrylic UI", "Coding", "Community", "Developer Tools", "Extension", "Feature Flags", "IDE", "Mica Style", "Shell.ExperimentalSyles", "Shell.Material.Acrylic", "UI Customization", "VS"]
 tags_normalized: ["acrylic ui", "coding", "community", "developer tools", "extension", "feature flags", "ide", "mica style", "shelldotexperimentalsyles", "shelldotmaterialdotacrylic", "ui customization", "vs"]

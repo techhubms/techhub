@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Reddit Azure"
 feed_url: "https://www.reddit.com/r/azure/.rss"
 date: 2025-08-04 14:06:29 +00:00
-permalink: "/community/2025-08-04-Group-Source-of-Authority-Conversion-Shifting-from-AD-to-Entra-ID.html"
+permalink: "/2025-08-04-Group-Source-of-Authority-Conversion-Shifting-from-AD-to-Entra-ID.html"
 categories: ["Azure", "Security"]
 tags: ["Active Directory", "Azure", "Cloud Identity", "Community", "Entra Capabilities", "Entra ID", "Graph Explorer", "Group Management", "Group Writeback", "Hybrid Identity", "Identity Governance", "Mail Enabled Groups", "Security", "SOA Conversion"]
 tags_normalized: ["active directory", "azure", "cloud identity", "community", "entra capabilities", "entra id", "graph explorer", "group management", "group writeback", "hybrid identity", "identity governance", "mail enabled groups", "security", "soa conversion"]

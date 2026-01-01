@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Fabric Blog"
 feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
 date: 2025-08-11 09:00:00 +00:00
-permalink: "/news/2025-08-11-How-Microsoft-OneLake-Seamlessly-Provides-Apache-Iceberg-Support-for-All-Fabric-Data.html"
+permalink: "/2025-08-11-How-Microsoft-OneLake-Seamlessly-Provides-Apache-Iceberg-Support-for-All-Fabric-Data.html"
 categories: ["ML"]
 tags: ["Apache Iceberg", "Apache XTable", "Cloud Data Platforms", "Data Engineering", "Data Governance", "Data Lake", "Delta Lake", "Dremio", "ETL", "Fabric Lakehouse", "Interoperability", "Lakehouse", "Metadata Conversion", "Microsoft Fabric", "ML", "News", "OneLake", "Open Table Formats", "Snowflake", "Table Format Virtualization", "Table Formats", "Trino", "Virtualization"]
 tags_normalized: ["apache iceberg", "apache xtable", "cloud data platforms", "data engineering", "data governance", "data lake", "delta lake", "dremio", "etl", "fabric lakehouse", "interoperability", "lakehouse", "metadata conversion", "microsoft fabric", "ml", "news", "onelake", "open table formats", "snowflake", "table format virtualization", "table formats", "trino", "virtualization"]

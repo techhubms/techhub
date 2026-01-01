@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Nick Chapsas YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrkPsvLGln62OMZRO6K-llg"
 date: 2025-07-16 11:00:23 +00:00
-permalink: "/videos/2025-07-16-Writing-and-Running-Python-in-NET.html"
+permalink: "/2025-07-16-Writing-and-Running-Python-in-NET.html"
 categories: ["Coding", "ML"]
 tags: [".NET", "AI", "AI Workflows", "C#", "Coding", "Cross Language", "Interoperability", "ML", "Nick Chapsas", "Python Integration", "Python Libraries", "Python.NET", "Video Tutorial", "Videos"]
 tags_normalized: ["dotnet", "ai", "ai workflows", "csharp", "coding", "cross language", "interoperability", "ml", "nick chapsas", "python integration", "python libraries", "pythondotnet", "video tutorial", "videos"]

@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-11-18 08:22:12 +00:00
-permalink: "/community/2025-11-18-Assess-Security-Risks-with-Insights-in-Azure-Migrate.html"
+permalink: "/2025-11-18-Assess-Security-Risks-with-Insights-in-Azure-Migrate.html"
 categories: ["Azure", "Security"]
 tags: ["Azure", "Azure Migrate", "Azure Update Manager", "Cloud Migration", "Community", "Compliance", "Datacenter Security", "Defender For Cloud", "End Of Support Software", "Microsoft Azure", "On Premises Migration", "Patch Management", "Risk Mitigation", "Security", "Security Dashboard", "Security Insights", "Server Discovery", "Vulnerability Assessment"]
 tags_normalized: ["azure", "azure migrate", "azure update manager", "cloud migration", "community", "compliance", "datacenter security", "defender for cloud", "end of support software", "microsoft azure", "on premises migration", "patch management", "risk mitigation", "security", "security dashboard", "security insights", "server discovery", "vulnerability assessment"]

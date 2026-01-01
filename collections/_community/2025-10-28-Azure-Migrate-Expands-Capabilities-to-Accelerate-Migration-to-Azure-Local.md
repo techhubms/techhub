@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-10-28 20:23:03 +00:00
-permalink: "/community/2025-10-28-Azure-Migrate-Expands-Capabilities-to-Accelerate-Migration-to-Azure-Local.html"
+permalink: "/2025-10-28-Azure-Migrate-Expands-Capabilities-to-Accelerate-Migration-to-Azure-Local.html"
 categories: ["Azure", "DevOps", "Security"]
 tags: ["Agentless Migration", "Azure", "Azure Arc", "Azure Local", "Azure Migrate", "Azure VMware Solution", "Cloud Migration", "Community", "Compliance", "Data Residency", "DevOps", "Edge Computing", "Governance", "Hybrid Cloud", "Infrastructure Modernization", "PowerShell Automation", "Security", "Unified Management", "VMware"]
 tags_normalized: ["agentless migration", "azure", "azure arc", "azure local", "azure migrate", "azure vmware solution", "cloud migration", "community", "compliance", "data residency", "devops", "edge computing", "governance", "hybrid cloud", "infrastructure modernization", "powershell automation", "security", "unified management", "vmware"]

@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Reddit Azure DevOps"
 feed_url: "https://www.reddit.com/r/azuredevops/.rss"
 date: 2025-08-07 18:24:01 +00:00
-permalink: "/community/2025-08-07-Tokenization-Task-Alternatives-for-Cross-Platform-Azure-App-Service-Deployments.html"
+permalink: "/2025-08-07-Tokenization-Task-Alternatives-for-Cross-Platform-Azure-App-Service-Deployments.html"
 categories: ["Azure", "Coding", "DevOps"]
 tags: [".NET 8", "Azure", "Azure App Service", "Azure DevOps", "CI/CD", "Coding", "Community", "Cross Platform", "Deployment Pipelines", "DevOps", "Environment Variables", "Linux Agents", "Runtime Configuration", "Secrets Management", "Solidify", "Tokenization", "Umbraco 13", "Variable Substitution", "Windows Agents", "ZIP Deploy"]
 tags_normalized: ["dotnet 8", "azure", "azure app service", "azure devops", "cislashcd", "coding", "community", "cross platform", "deployment pipelines", "devops", "environment variables", "linux agents", "runtime configuration", "secrets management", "solidify", "tokenization", "umbraco 13", "variable substitution", "windows agents", "zip deploy"]

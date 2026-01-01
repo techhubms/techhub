@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft DevBlog"
 feed_url: "https://devblogs.microsoft.com/azure-sdk/feed/"
 date: 2025-08-18 18:44:14 +00:00
-permalink: "/news/2025-08-18-Azure-Developer-CLI-azd-August-2025-Release-Overview.html"
+permalink: "/2025-08-18-Azure-Developer-CLI-azd-August-2025-Release-Overview.html"
 categories: ["AI", "Azure", "Coding", "DevOps", "ML", "Security"]
 tags: [".NET", "AI", "API Management", "Azd", "Azure", "Azure AI", "Azure Aspire", "Azure Developer CLI", "Azure DevOps", "Azure Monitor", "Azure SDK", "CI/CD", "Codespaces", "Coding", "Container Apps", "DevOps", "Docker", "Environment Variables", "Java", "JavaScript", "Kubernetes", "LangChain.js", "Log Analytics", "Microsoft Entra ID", "Microsoft Sentinel", "ML", "News", "OAuth2", "PostgreSQL", "PowerShell", "Purview", "Python", "Resource Group Deployment", "Security", "Threat Detection", "Typescript", "VS Code"]
 tags_normalized: ["dotnet", "ai", "api management", "azd", "azure", "azure ai", "azure aspire", "azure developer cli", "azure devops", "azure monitor", "azure sdk", "cislashcd", "codespaces", "coding", "container apps", "devops", "docker", "environment variables", "java", "javascript", "kubernetes", "langchaindotjs", "log analytics", "microsoft entra id", "microsoft sentinel", "ml", "news", "oauth2", "postgresql", "powershell", "purview", "python", "resource group deployment", "security", "threat detection", "typescript", "vs code"]

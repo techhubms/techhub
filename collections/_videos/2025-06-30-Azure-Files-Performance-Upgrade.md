@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "John Savill's Technical Training"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCpIn7ox7j7bH_OFj7tYouOQ"
 date: 2025-06-30 12:49:42 +00:00
-permalink: "/videos/2025-06-30-Azure-Files-Performance-Upgrade.html"
+permalink: "/2025-06-30-Azure-Files-Performance-Upgrade.html"
 categories: ["Azure"]
 tags: ["Azure", "Azure Cloud", "Azure Files", "Azure Storage", "Cloud", "Cloud Storage", "Directory Lease", "File Shares", "Files", "Handles", "Linux", "Metadata Cache", "Microsoft", "Microsoft Azure", "Performance Optimization", "Roadmap", "Scalability", "SMB", "SMB Multi Channel", "Storage", "Storage Limits", "Videos", "Workload Interaction"]
 tags_normalized: ["azure", "azure cloud", "azure files", "azure storage", "cloud", "cloud storage", "directory lease", "file shares", "files", "handles", "linux", "metadata cache", "microsoft", "microsoft azure", "performance optimization", "roadmap", "scalability", "smb", "smb multi channel", "storage", "storage limits", "videos", "workload interaction"]

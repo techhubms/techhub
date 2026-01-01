@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Developer YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
 date: 2025-11-24 19:12:06 +00:00
-permalink: "/videos/2025-11-24-Creating-Multi-Agent-Workflows-in-Microsoft-Foundry-Adding-Agents-with-Tools.html"
+permalink: "/2025-11-24-Creating-Multi-Agent-Workflows-in-Microsoft-Foundry-Adding-Agents-with-Tools.html"
 categories: ["AI", "Azure"]
 tags: ["Agent Creation", "Agent Tools", "AI", "Azure", "Azure AI Foundry", "Cloud AI", "Cloud Computing", "Dev", "Development", "File Search", "Microsoft", "Microsoft Developer", "Microsoft Foundry", "Model Mondays", "Multi Agent Workflow", "Sequential Workflow", "Tech", "Technical Tutorial", "Technology", "Videos", "Workflow Automation", "Workflow Tracing"]
 tags_normalized: ["agent creation", "agent tools", "ai", "azure", "azure ai foundry", "cloud ai", "cloud computing", "dev", "development", "file search", "microsoft", "microsoft developer", "microsoft foundry", "model mondays", "multi agent workflow", "sequential workflow", "tech", "technical tutorial", "technology", "videos", "workflow automation", "workflow tracing"]

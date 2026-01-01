@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/feed/"
 date: 2025-09-18 16:00:00 +00:00
-permalink: "/news/2025-09-18-5-Powerful-Ways-to-Integrate-GitHub-Copilot-Coding-Agent-into-Your-Workflow.html"
+permalink: "/2025-09-18-5-Powerful-Ways-to-Integrate-GitHub-Copilot-Coding-Agent-into-Your-Workflow.html"
 categories: ["AI", "Coding", "DevOps", "GitHub Copilot"]
 tags: ["Agent Mode", "Agents Panel", "AI", "AI & ML", "AI Development", "Automation", "Branch Strategies", "Coding", "Copilot Coding Agent", "Developer Tools", "Development Workflow", "DevOps", "GitHub", "GitHub Copilot", "MCP", "MCP Server", "News", "Playwright MCP", "Pull Requests", "Tech Debt", "UI Testing", "VS Code"]
 tags_normalized: ["agent mode", "agents panel", "ai", "ai and ml", "ai development", "automation", "branch strategies", "coding", "copilot coding agent", "developer tools", "development workflow", "devops", "github", "github copilot", "mcp", "mcp server", "news", "playwright mcp", "pull requests", "tech debt", "ui testing", "vs code"]

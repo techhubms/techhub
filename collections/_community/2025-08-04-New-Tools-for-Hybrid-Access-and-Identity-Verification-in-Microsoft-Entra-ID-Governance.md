@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Community"
 date: 2025-08-04 17:10:48 +00:00
-permalink: "/community/2025-08-04-New-Tools-for-Hybrid-Access-and-Identity-Verification-in-Microsoft-Entra-ID-Governance.html"
+permalink: "/2025-08-04-New-Tools-for-Hybrid-Access-and-Identity-Verification-in-Microsoft-Entra-ID-Governance.html"
 categories: ["Azure", "Security"]
 tags: ["Access Management", "Active Directory", "Azure", "Cloud Security", "Community", "Compliance", "Entitlement Management", "Entra ID Governance", "Face Check", "Group Source Of Authority", "Group Writeback", "Hybrid Access", "Identity Governance", "Microsoft Entra", "On Premises Applications", "Security", "Verified ID"]
 tags_normalized: ["access management", "active directory", "azure", "cloud security", "community", "compliance", "entitlement management", "entra id governance", "face check", "group source of authority", "group writeback", "hybrid access", "identity governance", "microsoft entra", "on premises applications", "security", "verified id"]

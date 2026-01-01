@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Events YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
 date: 2025-11-19 12:44:52 +00:00
-permalink: "/videos/2025-11-19-AI-based-Data-Discovery-and-Threat-Detection-with-Veeam-on-Azure.html"
+permalink: "/2025-11-19-AI-based-Data-Discovery-and-Threat-Detection-with-Veeam-on-Azure.html"
 categories: ["AI", "Azure", "Security"]
 tags: ["AI", "AI Driven Security", "Azure", "Azure AI", "Blast Radius Analysis", "Data Discovery", "Incident Response", "InnovatewithAzureAIappsandagents", "Malware Detection", "MCP", "MCP Server", "Microsoft 365", "Microsoft Teams", "MSIgnite", "Natural Language Query", "Ransomware Detection", "Security", "Security Operations", "Signal Analysis", "SOC", "Threat Evaluation", "Veeam Data Cloud", "Videos"]
 tags_normalized: ["ai", "ai driven security", "azure", "azure ai", "blast radius analysis", "data discovery", "incident response", "innovatewithazureaiappsandagents", "malware detection", "mcp", "mcp server", "microsoft 365", "microsoft teams", "msignite", "natural language query", "ransomware detection", "security", "security operations", "signal analysis", "soc", "threat evaluation", "veeam data cloud", "videos"]

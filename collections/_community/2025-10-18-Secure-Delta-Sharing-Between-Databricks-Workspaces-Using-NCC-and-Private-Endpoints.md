@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-10-18 00:44:26 +00:00
-permalink: "/community/2025-10-18-Secure-Delta-Sharing-Between-Databricks-Workspaces-Using-NCC-and-Private-Endpoints.html"
+permalink: "/2025-10-18-Secure-Delta-Sharing-Between-Databricks-Workspaces-Using-NCC-and-Private-Endpoints.html"
 categories: ["Azure", "ML", "Security"]
 tags: ["Azure", "Azure Blob Storage", "Azure Databricks", "Azure DFS", "Azure Storage Account", "Cloud Networking", "Community", "Data Engineering", "Delta Lake", "Delta Sharing", "ML", "Network Connectivity Configuration", "Partitioning Data", "Private Endpoint", "Secure Data Sharing", "Security", "Serverless Warehouse", "SQL", "Unity Catalog", "Workspace Metastore"]
 tags_normalized: ["azure", "azure blob storage", "azure databricks", "azure dfs", "azure storage account", "cloud networking", "community", "data engineering", "delta lake", "delta sharing", "ml", "network connectivity configuration", "partitioning data", "private endpoint", "secure data sharing", "security", "serverless warehouse", "sql", "unity catalog", "workspace metastore"]

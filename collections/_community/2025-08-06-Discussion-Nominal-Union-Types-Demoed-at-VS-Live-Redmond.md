@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Reddit CSharp"
 feed_url: "https://www.reddit.com/r/csharp/.rss"
 date: 2025-08-06 16:22:18 +00:00
-permalink: "/community/2025-08-06-Discussion-Nominal-Union-Types-Demoed-at-VS-Live-Redmond.html"
+permalink: "/2025-08-06-Discussion-Nominal-Union-Types-Demoed-at-VS-Live-Redmond.html"
 categories: ["Coding"]
 tags: [".NET", ".NET 11", "C#", "C# 15", "Coding", "Community", "Discriminated Unions", "Language Design", "Language Features", "Mads Torgerson", "Nominal Union Types", "TypeScript", "Union Types", "VS Live"]
 tags_normalized: ["dotnet", "dotnet 11", "csharp", "csharp 15", "coding", "community", "discriminated unions", "language design", "language features", "mads torgerson", "nominal union types", "typescript", "union types", "vs live"]

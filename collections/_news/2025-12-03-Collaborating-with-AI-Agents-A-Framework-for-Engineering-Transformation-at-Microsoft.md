@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Engineering Blog"
 feed_url: "https://devblogs.microsoft.com/engineering-at-microsoft/feed/"
 date: 2025-12-03 01:46:50 +00:00
-permalink: "/news/2025-12-03-Collaborating-with-AI-Agents-A-Framework-for-Engineering-Transformation-at-Microsoft.html"
+permalink: "/2025-12-03-Collaborating-with-AI-Agents-A-Framework-for-Engineering-Transformation-at-Microsoft.html"
 categories: ["AI"]
 tags: ["AI", "AI Agent", "AI Agents", "AI Transformation", "Code Migration", "Collaboration", "Developer Productivity", "Developer Workflow", "Engineering Productivity", "Engineering@Microsoft", "Entra SDK", "Human AI Partnership", "Microsoft Entra", "Migration Framework", "News", "Prompt Engineering", "Prompt Template", "Security Boundaries"]
 tags_normalized: ["ai", "ai agent", "ai agents", "ai transformation", "code migration", "collaboration", "developer productivity", "developer workflow", "engineering productivity", "engineeringatmicrosoft", "entra sdk", "human ai partnership", "microsoft entra", "migration framework", "news", "prompt engineering", "prompt template", "security boundaries"]

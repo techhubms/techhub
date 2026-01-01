@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-11-18 17:33:43 +00:00
-permalink: "/community/2025-11-18-Integrating-Azure-Application-Gateway-v2-with-Azure-API-Management-for-Secure-and-Scalable-API-Delivery.html"
+permalink: "/2025-11-18-Integrating-Azure-Application-Gateway-v2-with-Azure-API-Management-for-Secure-and-Scalable-API-Delivery.html"
 categories: ["Azure", "Coding", "DevOps", "Security"]
 tags: ["API Security", "Azure", "Azure API Management", "Azure Application Gateway", "Azure DevOps", "Certificates", "CI/CD", "Coding", "Community", "DevOps", "Key Vault", "Layer 7 Routing", "Log Analytics", "Mtls", "Networking", "OWASP", "Private Endpoint", "Rate Limiting", "Security", "Terraform", "VNet", "WAF", "Zero Trust"]
 tags_normalized: ["api security", "azure", "azure api management", "azure application gateway", "azure devops", "certificates", "cislashcd", "coding", "community", "devops", "key vault", "layer 7 routing", "log analytics", "mtls", "networking", "owasp", "private endpoint", "rate limiting", "security", "terraform", "vnet", "waf", "zero trust"]

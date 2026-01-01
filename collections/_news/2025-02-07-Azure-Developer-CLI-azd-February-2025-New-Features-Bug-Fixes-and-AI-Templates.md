@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft DevBlog"
 feed_url: "https://devblogs.microsoft.com/azure-sdk/feed/"
 date: 2025-02-07 20:43:29 +00:00
-permalink: "/news/2025-02-07-Azure-Developer-CLI-azd-February-2025-New-Features-Bug-Fixes-and-AI-Templates.html"
+permalink: "/2025-02-07-Azure-Developer-CLI-azd-February-2025-New-Features-Bug-Fixes-and-AI-Templates.html"
 categories: ["AI", "Azure", "Coding", "DevOps"]
 tags: [".NET", "AI", "AI App Deployment", "AI Templates", "Azd", "Azure", "Azure Developer CLI", "Azure SDK", "Bicep", "CLI Tools", "Cloud Development", "Codespaces", "Coding", "DevOps", "Docker", "GitHub Codespaces", "Java", "JavaScript", "Key Vault", "Kubernetes", "News", "OpenAI", "Python", "Semantic Kernel", "Typescript", "VS Code"]
 tags_normalized: ["dotnet", "ai", "ai app deployment", "ai templates", "azd", "azure", "azure developer cli", "azure sdk", "bicep", "cli tools", "cloud development", "codespaces", "coding", "devops", "docker", "github codespaces", "java", "javascript", "key vault", "kubernetes", "news", "openai", "python", "semantic kernel", "typescript", "vs code"]

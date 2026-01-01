@@ -9,10 +9,10 @@ viewing_mode: "external"
 feed_name: "Rick Strahl's Blog"
 feed_url: "https://feeds.feedburner.com/rickstrahl"
 date: 2025-08-21 03:17:34 +00:00
-permalink: "/blogs/2025-08-21-Handling-Keyboard-Mapping-in-WebView2-with-AllowHostInputProcessing.html"
+permalink: "/2025-08-21-Handling-Keyboard-Mapping-in-WebView2-with-AllowHostInputProcessing.html"
 categories: ["Coding"]
-tags: [".NET", "AllowHostInputProcessing", "C# Code Samples", "Coding", "CoreWebView2ControllerOptions", "Hybrid Apps", "JavaScript Interop", "Key Bindings", "Keyboard Mapping", "Markdown Monster", "Blogs", "UI Automation", "WebView", "WebView2", "Windows Desktop Development", "WinForms", "WPF"]
-tags_normalized: ["dotnet", "allowhostinputprocessing", "csharp code samples", "coding", "corewebview2controlleroptions", "hybrid apps", "javascript interop", "key bindings", "keyboard mapping", "markdown monster", "blogs", "ui automation", "webview", "webview2", "windows desktop development", "winforms", "wpf"]
+tags: [".NET", "AllowHostInputProcessing", "Blogs", "C# Code Samples", "Coding", "CoreWebView2ControllerOptions", "Hybrid Apps", "JavaScript Interop", "Key Bindings", "Keyboard Mapping", "Markdown Monster", "UI Automation", "WebView", "WebView2", "Windows Desktop Development", "WinForms", "WPF"]
+tags_normalized: ["dotnet", "allowhostinputprocessing", "blogs", "csharp code samples", "coding", "corewebview2controlleroptions", "hybrid apps", "javascript interop", "key bindings", "keyboard mapping", "markdown monster", "ui automation", "webview", "webview2", "windows desktop development", "winforms", "wpf"]
 ---
 
 Rick Strahl examines the implementation of keyboard mapping and menu accelerator key support in Microsoft WebView2 for .NET and WPF applications, using practical examples from Markdown Monster.<!--excerpt_end-->

@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/changelog/feed/"
 date: 2025-09-15 15:29:58 +00:00
-permalink: "/news/2025-09-15-GitHub-Enterprise-License-History-Tracking-Public-Preview.html"
+permalink: "/2025-09-15-GitHub-Enterprise-License-History-Tracking-Public-Preview.html"
 categories: ["DevOps"]
 tags: ["Account Management", "Admin Tools", "Billing", "Cloud Platform", "DevOps", "Enterprise Management", "Enterprise Management Tools", "GitHub Enterprise", "License History", "License Management", "News", "Release Preview", "Usage Tracking"]
 tags_normalized: ["account management", "admin tools", "billing", "cloud platform", "devops", "enterprise management", "enterprise management tools", "github enterprise", "license history", "license management", "news", "release preview", "usage tracking"]

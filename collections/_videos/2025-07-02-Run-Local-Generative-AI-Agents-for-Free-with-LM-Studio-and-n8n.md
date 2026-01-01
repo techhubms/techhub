@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Alireza Chegini's YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCZSAqzABRmDxDHuPS6YuXZA"
 date: 2025-07-02 16:01:27 +00:00
-permalink: "/videos/2025-07-02-Run-Local-Generative-AI-Agents-for-Free-with-LM-Studio-and-n8n.html"
+permalink: "/2025-07-02-Run-Local-Generative-AI-Agents-for-Free-with-LM-Studio-and-n8n.html"
 categories: ["AI", "Coding"]
 tags: ["AI", "AI Agents", "AI Automation", "AIautomation", "API Integration", "Chatbots", "Coding", "DeepSeek", "Docker", "DockerNetworking", "Linux", "Llama", "LM Studio", "LMStudio", "Local LLM", "LocalLLM", "MacOS", "Memory in Agents", "Mistral", "N8n", "N8ntutorial", "No Code AI", "NoCodeAI", "Open Source AI", "OpenAIalternative", "OpenSourceAI", "RunLLMLocally", "Self Hosted AI", "SelfHostedAI", "Videos", "Windows", "Workflow Automation"]
 tags_normalized: ["ai", "ai agents", "ai automation", "aiautomation", "api integration", "chatbots", "coding", "deepseek", "docker", "dockernetworking", "linux", "llama", "lm studio", "lmstudio", "local llm", "localllm", "macos", "memory in agents", "mistral", "n8n", "n8ntutorial", "no code ai", "nocodeai", "open source ai", "openaialternative", "opensourceai", "runllmlocally", "self hosted ai", "selfhostedai", "videos", "windows", "workflow automation"]

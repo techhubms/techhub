@@ -9,10 +9,10 @@ viewing_mode: "external"
 feed_name: "Dellenny's Blog"
 feed_url: "https://dellenny.com/feed/"
 date: 2025-11-01 08:12:56 +00:00
-permalink: "/blogs/2025-11-01-Understanding-Azure-Resource-Organization-Management-Groups-Subscriptions-and-Resource-Groups.html"
+permalink: "/2025-11-01-Understanding-Azure-Resource-Organization-Management-Groups-Subscriptions-and-Resource-Groups.html"
 categories: ["Azure"]
-tags: ["Azure", "Azure Policy", "Billing Segmentation", "Cloud Architecture", "Cloud Governance", "Compliance", "Lifecycle Management", "Management Groups", "Blogs", "Resource Groups", "Role Based Access Control", "Subscriptions", "Tagging"]
-tags_normalized: ["azure", "azure policy", "billing segmentation", "cloud architecture", "cloud governance", "compliance", "lifecycle management", "management groups", "blogs", "resource groups", "role based access control", "subscriptions", "tagging"]
+tags: ["Azure", "Azure Policy", "Billing Segmentation", "Blogs", "Cloud Architecture", "Cloud Governance", "Compliance", "Lifecycle Management", "Management Groups", "Resource Groups", "Role Based Access Control", "Subscriptions", "Tagging"]
+tags_normalized: ["azure", "azure policy", "billing segmentation", "blogs", "cloud architecture", "cloud governance", "compliance", "lifecycle management", "management groups", "resource groups", "role based access control", "subscriptions", "tagging"]
 ---
 
 Dellenny offers a practical breakdown of Azure’s resource organization, including Management Groups, Subscriptions, and Resource Groups, guiding readers on cloud governance, access management, and effective Azure administration.<!--excerpt_end-->

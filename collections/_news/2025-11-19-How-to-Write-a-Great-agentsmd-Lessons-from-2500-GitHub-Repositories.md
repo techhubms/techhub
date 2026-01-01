@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/feed/"
 date: 2025-11-19 17:00:00 +00:00
-permalink: "/news/2025-11-19-How-to-Write-a-Great-agentsmd-Lessons-from-2500-GitHub-Repositories.html"
+permalink: "/2025-11-19-How-to-Write-a-Great-agentsmd-Lessons-from-2500-GitHub-Repositories.html"
 categories: ["AI", "Coding", "GitHub Copilot"]
 tags: ["Agentic AI", "Agents.md", "AI", "AI & ML", "AI Development", "Coding", "Copilot Agents", "Devops Workflow", "Generative AI", "GitHub Copilot", "Linting", "Markdownlint", "News", "Persona Definition", "Quality Assurance", "React 18", "Security Analysis", "Software Engineering", "Tailwind CSS", "Technical Writing", "TypeScript", "Unit Testing", "Vite"]
 tags_normalized: ["agentic ai", "agentsdotmd", "ai", "ai and ml", "ai development", "coding", "copilot agents", "devops workflow", "generative ai", "github copilot", "linting", "markdownlint", "news", "persona definition", "quality assurance", "react 18", "security analysis", "software engineering", "tailwind css", "technical writing", "typescript", "unit testing", "vite"]

@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/changelog/feed/"
 date: 2025-11-12 21:27:42 +00:00
-permalink: "/news/2025-11-12-Agent-Specific-Custom-Instructions-Now-Supported-in-Copilot-Code-Review-and-Coding-Agent.html"
+permalink: "/2025-11-12-Agent-Specific-Custom-Instructions-Now-Supported-in-Copilot-Code-Review-and-Coding-Agent.html"
 categories: ["AI", "GitHub Copilot"]
 tags: [".instructions.md", "Agent Specific Configuration", "AI", "Applyto Property", "Bug Fixes", "Code Automation", "Copilot", "Copilot Agents", "Copilot Code Review", "Copilot Coding Agent", "Custom Instructions", "Developer Workflow", "Documentation", "Excludeagent Property", "GitHub Copilot", "GitHub Repository", "Improvement", "News", "Path Globs"]
 tags_normalized: ["dotinstructionsdotmd", "agent specific configuration", "ai", "applyto property", "bug fixes", "code automation", "copilot", "copilot agents", "copilot code review", "copilot coding agent", "custom instructions", "developer workflow", "documentation", "excludeagent property", "github copilot", "github repository", "improvement", "news", "path globs"]

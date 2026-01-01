@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Events YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
 date: 2025-11-21 14:26:07 +00:00
-permalink: "/videos/2025-11-21-Resilient-by-Design-New-Windows-Recovery-Tools-and-Security-Integrations.html"
+permalink: "/2025-11-21-Resilient-by-Design-New-Windows-Recovery-Tools-and-Security-Integrations.html"
 categories: ["Security"]
 tags: ["Device Rollback", "Driver Ecosystem", "Driver Resiliency", "Enterprise Security", "Incident Response", "Intune", "Microsoft Ignite", "MSIgnite", "Prevention Planning", "ScalewithcloudandAIendpoints", "Secure Remote Recovery", "Security", "Security Partners", "Trend Micro", "Videos", "Windows Kernel", "Windows Recovery Tools", "Windows Resiliency", "WinRE"]
 tags_normalized: ["device rollback", "driver ecosystem", "driver resiliency", "enterprise security", "incident response", "intune", "microsoft ignite", "msignite", "prevention planning", "scalewithcloudandaiendpoints", "secure remote recovery", "security", "security partners", "trend micro", "videos", "windows kernel", "windows recovery tools", "windows resiliency", "winre"]

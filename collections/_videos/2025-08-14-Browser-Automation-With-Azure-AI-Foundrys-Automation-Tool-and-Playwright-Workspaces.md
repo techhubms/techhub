@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Developer YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
 date: 2025-08-14 15:59:53 +00:00
-permalink: "/videos/2025-08-14-Browser-Automation-With-Azure-AI-Foundrys-Automation-Tool-and-Playwright-Workspaces.html"
+permalink: "/2025-08-14-Browser-Automation-With-Azure-AI-Foundrys-Automation-Tool-and-Playwright-Workspaces.html"
 categories: ["AI", "Azure"]
 tags: ["AI", "AI Agents", "Automation", "Azure", "Azure AI Foundry", "Browser Automation Tool", "Cloud Computing", "Cloud Development", "Dev", "Development", "Microsoft", "Microsoft Developer", "Natural Language Automation", "Playwright Workspaces", "Secure Session Isolation", "Tech", "Technology", "Videos", "VS Code", "Web Automation"]
 tags_normalized: ["ai", "ai agents", "automation", "azure", "azure ai foundry", "browser automation tool", "cloud computing", "cloud development", "dev", "development", "microsoft", "microsoft developer", "natural language automation", "playwright workspaces", "secure session isolation", "tech", "technology", "videos", "vs code", "web automation"]

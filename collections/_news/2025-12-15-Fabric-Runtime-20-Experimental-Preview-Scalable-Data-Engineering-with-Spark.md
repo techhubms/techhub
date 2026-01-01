@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Fabric Blog"
 feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
 date: 2025-12-15 09:00:00 +00:00
-permalink: "/news/2025-12-15-Fabric-Runtime-20-Experimental-Preview-Scalable-Data-Engineering-with-Spark.html"
+permalink: "/2025-12-15-Fabric-Runtime-20-Experimental-Preview-Scalable-Data-Engineering-with-Spark.html"
 categories: ["Azure", "ML"]
 tags: ["Apache Spark 4.0", "Azure", "Azure Linux 3.0", "Big Data", "Data Engineering", "Data Science", "Delta Lake 4.0", "Experimental Public Preview", "Fabric Runtime 2.0", "Java 21", "Microsoft Fabric", "ML", "News", "Preview Features", "Python 3.12", "Scala 2.13", "Scalable Analytics", "Spark Based Workloads"]
 tags_normalized: ["apache spark 4dot0", "azure", "azure linux 3dot0", "big data", "data engineering", "data science", "delta lake 4dot0", "experimental public preview", "fabric runtime 2dot0", "java 21", "microsoft fabric", "ml", "news", "preview features", "python 3dot12", "scala 2dot13", "scalable analytics", "spark based workloads"]

@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Reddit Github Copilot"
 feed_url: "https://www.reddit.com/r/GithubCopilot.rss"
 date: 2025-08-07 23:41:48 +00:00
-permalink: "/community/2025-08-07-First-Impressions-of-GPT-5-Integration-in-Visual-Studio-Code-Copilot.html"
+permalink: "/2025-08-07-First-Impressions-of-GPT-5-Integration-in-Visual-Studio-Code-Copilot.html"
 categories: ["AI", "GitHub Copilot"]
 tags: ["AI", "AI Assistant", "AI Integration", "AI Model Comparison", "Claude 4", "Code Summarization", "Community", "Copilot Settings", "Developer Experience", "GitHub Copilot", "GPT 4.1", "GPT 5", "Microsoft", "Pricing", "Prompt Engineering", "VS Code", "VS Code Extensions"]
 tags_normalized: ["ai", "ai assistant", "ai integration", "ai model comparison", "claude 4", "code summarization", "community", "copilot settings", "developer experience", "github copilot", "gpt 4dot1", "gpt 5", "microsoft", "pricing", "prompt engineering", "vs code", "vs code extensions"]

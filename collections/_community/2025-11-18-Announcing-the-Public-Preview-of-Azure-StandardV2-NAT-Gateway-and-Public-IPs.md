@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-11-18 17:30:00 +00:00
-permalink: "/community/2025-11-18-Announcing-the-Public-Preview-of-Azure-StandardV2-NAT-Gateway-and-Public-IPs.html"
+permalink: "/2025-11-18-Announcing-the-Public-Preview-of-Azure-StandardV2-NAT-Gateway-and-Public-IPs.html"
 categories: ["Azure"]
 tags: ["ARM Template", "Azure", "Azure NAT Gateway", "Bicep", "CLI", "Cloud Networking", "Community", "Flow Logs", "High Availability", "IPv6", "Network Security", "Outbound Connectivity", "PowerShell", "Public IP", "Resiliency", "StandardV2", "Virtual Network", "Zone Redundancy"]
 tags_normalized: ["arm template", "azure", "azure nat gateway", "bicep", "cli", "cloud networking", "community", "flow logs", "high availability", "ipv6", "network security", "outbound connectivity", "powershell", "public ip", "resiliency", "standardv2", "virtual network", "zone redundancy"]

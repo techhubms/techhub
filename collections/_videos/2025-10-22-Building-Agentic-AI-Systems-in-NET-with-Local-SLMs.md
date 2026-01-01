@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "DotNet YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw"
 date: 2025-10-22 23:08:25 +00:00
-permalink: "/videos/2025-10-22-Building-Agentic-AI-Systems-in-NET-with-Local-SLMs.html"
+permalink: "/2025-10-22-Building-Agentic-AI-Systems-in-NET-with-Local-SLMs.html"
 categories: ["AI", "Coding"]
 tags: [".NET", "Agentic AI", "Agents", "AI", "Autonomous Agents", "C#", "Coding", "Demo", "Developer", "Developer Community", "Developer Tools", "Dotnet10", "Dotnetdeveloper", "Edge Deployment", "Embeddings", "Human in The Loop", "in Memory Vector Store", "LLamaSharp", "Microsoft", "Microsoft.Extensions.AI.Evaluation", "Observability", "OllamaSharp", "On Prem Deployment", "Retrieval Augmented Generation", "Semantic Kernel", "SLM", "Small Language Models", "Smalllanguagemodels", "Software Developer", "State Management", "Videos"]
 tags_normalized: ["dotnet", "agentic ai", "agents", "ai", "autonomous agents", "csharp", "coding", "demo", "developer", "developer community", "developer tools", "dotnet10", "dotnetdeveloper", "edge deployment", "embeddings", "human in the loop", "in memory vector store", "llamasharp", "microsoft", "microsoftdotextensionsdotaidotevaluation", "observability", "ollamasharp", "on prem deployment", "retrieval augmented generation", "semantic kernel", "slm", "small language models", "smalllanguagemodels", "software developer", "state management", "videos"]

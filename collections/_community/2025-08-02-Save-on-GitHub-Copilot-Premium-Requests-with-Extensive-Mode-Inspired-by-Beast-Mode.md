@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Reddit Github Copilot"
 feed_url: "https://www.reddit.com/r/GithubCopilot.rss"
 date: 2025-08-02 06:09:33 +00:00
-permalink: "/community/2025-08-02-Save-on-GitHub-Copilot-Premium-Requests-with-Extensive-Mode-Inspired-by-Beast-Mode.html"
+permalink: "/2025-08-02-Save-on-GitHub-Copilot-Premium-Requests-with-Extensive-Mode-Inspired-by-Beast-Mode.html"
 categories: ["AI", "GitHub Copilot"]
 tags: ["AI", "Automation", "Beast Mode", "Best Practices", "Bug Testing", "Community", "Extensive Mode", "GitHub Copilot", "GPT 4.1", "Memory System", "Prompt Engineering", "Refactoring"]
 tags_normalized: ["ai", "automation", "beast mode", "best practices", "bug testing", "community", "extensive mode", "github copilot", "gpt 4dot1", "memory system", "prompt engineering", "refactoring"]

@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/changelog/feed/"
 date: 2025-12-09 15:54:48 +00:00
-permalink: "/news/2025-12-09-Dependabot-Based-Dependency-Graphs-Enhance-Supply-Chain-Security-for-Go-Projects.html"
+permalink: "/2025-12-09-Dependabot-Based-Dependency-Graphs-Enhance-Supply-Chain-Security-for-Go-Projects.html"
 categories: ["DevOps", "Security"]
 tags: ["Configuration", "Dependabot", "Dependency Graph", "Dependency Submission API", "Dependency Trees", "DevOps", "DevOps Tools", "GitHub", "Go", "Improvement", "News", "Package Management", "Private Registry", "Project Ecosystem", "SBOM", "Security", "Software Bill Of Materials", "Supply Chain Security", "Transitive Dependencies"]
 tags_normalized: ["configuration", "dependabot", "dependency graph", "dependency submission api", "dependency trees", "devops", "devops tools", "github", "go", "improvement", "news", "package management", "private registry", "project ecosystem", "sbom", "security", "software bill of materials", "supply chain security", "transitive dependencies"]

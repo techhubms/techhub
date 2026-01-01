@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft DevBlog"
 feed_url: "https://devblogs.microsoft.com/foundry/feed/"
 date: 2025-06-20 16:23:00 +00:00
-permalink: "/news/2025-06-20-codex-mini-Fast-Scalable-Code-Generation-for-the-CLI-Era.html"
+permalink: "/2025-06-20-codex-mini-Fast-Scalable-Code-Generation-for-the-CLI-Era.html"
 categories: ["AI", "Azure", "Coding"]
 tags: ["AI", "API Access", "Azure", "Azure AI Foundry", "Azure OpenAI", "CLI Workflows", "Code Generation", "Codex CLI", "Codex Mini", "Coding", "Command Line Automation", "Cost Efficiency", "Developer Productivity", "Function Calling", "GitHub Actions Integration", "Instruction Following AI", "News", "O4 Mini Model", "Streaming Outputs", "Terminal Tools", "Token Context"]
 tags_normalized: ["ai", "api access", "azure", "azure ai foundry", "azure openai", "cli workflows", "code generation", "codex cli", "codex mini", "coding", "command line automation", "cost efficiency", "developer productivity", "function calling", "github actions integration", "instruction following ai", "news", "o4 mini model", "streaming outputs", "terminal tools", "token context"]

@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Fabric Blog"
 feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
 date: 2025-09-29 17:00:00 +00:00
-permalink: "/news/2025-09-29-Mirroring-Oracle-Data-into-Microsoft-Fabric-Real-Time-Integration-without-ETL.html"
+permalink: "/2025-09-29-Mirroring-Oracle-Data-into-Microsoft-Fabric-Real-Time-Integration-without-ETL.html"
 categories: ["Azure", "ML"]
 tags: ["Azure", "Cross Cloud Analytics", "Data Integration", "Data Lake", "Data Mirroring", "Data Modernization", "Data Warehouse", "ETL Replacement", "Exadata", "Google BigQuery", "Machine Learning", "Microsoft Fabric", "ML", "News", "OneLake", "Oracle Cloud Infrastructure", "Oracle Database", "Power BI", "Predictive Analytics", "Real Time Data", "Replication", "Semantic Models", "Snowflake", "SQL Server"]
 tags_normalized: ["azure", "cross cloud analytics", "data integration", "data lake", "data mirroring", "data modernization", "data warehouse", "etl replacement", "exadata", "google bigquery", "machine learning", "microsoft fabric", "ml", "news", "onelake", "oracle cloud infrastructure", "oracle database", "power bi", "predictive analytics", "real time data", "replication", "semantic models", "snowflake", "sql server"]

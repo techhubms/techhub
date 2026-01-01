@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "John Savill's Technical Training"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCpIn7ox7j7bH_OFj7tYouOQ"
 date: 2025-09-12 14:44:04 +00:00
-permalink: "/videos/2025-09-12-Azure-Update-Announcements-and-Service-Changes-12-September-2025.html"
+permalink: "/2025-09-12-Azure-Update-Announcements-and-Service-Changes-12-September-2025.html"
 categories: ["Azure", "DevOps"]
 tags: ["Azure", "Azure Cloud", "Azure Databricks", "Azure File Share", "Azure Files", "Azure MySQL", "Azure PostgreSQL", "Azure Red Hat OpenShift", "Azure Services", "Certification", "Cloud", "Cloud Updates", "Cosmos DB", "DevOps", "GQL in KQL", "Microsoft", "Microsoft Azure", "Multi Tenant Container Insights", "PowerShell", "Resource Migration", "Standard HDD Retirement", "Videos", "VM SKU Updates"]
 tags_normalized: ["azure", "azure cloud", "azure databricks", "azure file share", "azure files", "azure mysql", "azure postgresql", "azure red hat openshift", "azure services", "certification", "cloud", "cloud updates", "cosmos db", "devops", "gql in kql", "microsoft", "microsoft azure", "multi tenant container insights", "powershell", "resource migration", "standard hdd retirement", "videos", "vm sku updates"]

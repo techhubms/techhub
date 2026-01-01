@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "DotNet YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw"
 date: 2025-10-21 15:15:54 +00:00
-permalink: "/videos/2025-10-21-ASPNET-Community-Standup-Understanding-the-MCP-Authorization-Flow.html"
+permalink: "/2025-10-21-ASPNET-Community-Standup-Understanding-the-MCP-Authorization-Flow.html"
 categories: ["Coding", "Security"]
 tags: [".NET", "Asp.net", "ASP.NET Core", "Authentication", "Authorization", "C#", "Coding", "Daniel Roth", "Demo", "Developer", "Developer Community", "Developer Tools", "GitHub", "HTTP Requests", "Mcp", "Microsoft", "Mike Kistler", "Open Specification", "Polyglot Notebook", "Security", "Software Developer", "Videos"]
 tags_normalized: ["dotnet", "aspdotnet", "aspdotnet core", "authentication", "authorization", "csharp", "coding", "daniel roth", "demo", "developer", "developer community", "developer tools", "github", "http requests", "mcp", "microsoft", "mike kistler", "open specification", "polyglot notebook", "security", "software developer", "videos"]

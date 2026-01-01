@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Reddit Github Copilot"
 feed_url: "https://www.reddit.com/r/GithubCopilot.rss"
 date: 2025-08-07 22:18:20 +00:00
-permalink: "/community/2025-08-07-Differences-Between-GitHub-Copilot-GPT-5-Premium-and-Free-Copilot-Microsoft-GPT-5.html"
+permalink: "/2025-08-07-Differences-Between-GitHub-Copilot-GPT-5-Premium-and-Free-Copilot-Microsoft-GPT-5.html"
 categories: ["AI", "GitHub Copilot"]
 tags: ["AI", "Code Generation", "Coding Productivity", "Community", "Copilot.microsoft.com", "GitHub Copilot", "GPT 5", "IDE Integration", "Microsoft", "Model Comparison", "OpenAI", "Premium Requests", "Rate Limits", "Repo Awareness", "VS Code Integration"]
 tags_normalized: ["ai", "code generation", "coding productivity", "community", "copilotdotmicrosoftdotcom", "github copilot", "gpt 5", "ide integration", "microsoft", "model comparison", "openai", "premium requests", "rate limits", "repo awareness", "vs code integration"]

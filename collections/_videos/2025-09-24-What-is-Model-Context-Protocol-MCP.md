@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Developer YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
 date: 2025-09-24 15:59:03 +00:00
-permalink: "/videos/2025-09-24-What-is-Model-Context-Protocol-MCP.html"
+permalink: "/2025-09-24-What-is-Model-Context-Protocol-MCP.html"
 categories: ["AI", "GitHub Copilot"]
 tags: ["AI", "AI Development", "Automation", "Developer Tools", "GitHub Copilot", "Intelligent Agents", "MCP", "Microsoft", "Programming", "Software Engineering", "Videos"]
 tags_normalized: ["ai", "ai development", "automation", "developer tools", "github copilot", "intelligent agents", "mcp", "microsoft", "programming", "software engineering", "videos"]

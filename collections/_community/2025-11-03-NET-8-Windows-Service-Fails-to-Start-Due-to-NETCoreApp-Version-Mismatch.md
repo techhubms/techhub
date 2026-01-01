@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=dotnet"
 date: 2025-11-03 11:28:20 +00:00
-permalink: "/community/2025-11-03-NET-8-Windows-Service-Fails-to-Start-Due-to-NETCoreApp-Version-Mismatch.html"
+permalink: "/2025-11-03-NET-8-Windows-Service-Fails-to-Start-Due-to-NETCoreApp-Version-Mismatch.html"
 categories: ["Coding"]
 tags: [".NET", ".NET 8", "Application Failure", "Coding", "Community", "Dependency Resolution", "Event Viewer", "Framework Dependency", "Microsoft.NETCore.App", "Microsoft.WindowsDesktop.App", "Publishing", "Runtime Installation", "Runtimeconfig.json", "Version Mismatch", "Windows Runtime", "Windows Service"]
 tags_normalized: ["dotnet", "dotnet 8", "application failure", "coding", "community", "dependency resolution", "event viewer", "framework dependency", "microsoftdotnetcoredotapp", "microsoftdotwindowsdesktopdotapp", "publishing", "runtime installation", "runtimeconfigdotjson", "version mismatch", "windows runtime", "windows service"]

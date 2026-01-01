@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-12-18 18:35:34 +00:00
-permalink: "/community/2025-12-18-Building-Reliable-AI-Travel-Agents-with-the-Durable-Task-Extension-for-Microsoft-Agent-Framework.html"
+permalink: "/2025-12-18-Building-Reliable-AI-Travel-Agents-with-the-Durable-Task-Extension-for-Microsoft-Agent-Framework.html"
 categories: ["AI", "Azure", "Coding"]
 tags: [".NET 9", "Agent Patterns", "AI", "Automated Workflows", "Azure", "Azure Functions", "Azure OpenAI Service", "Azure Static Web Apps", "Blob Storage", "C#", "Coding", "Community", "Durable Task Extension", "Durable Task Scheduler", "GPT 4o Mini", "Human in The Loop", "Microsoft Agent Framework", "Multi Agent Systems", "Orchestration", "Python", "Reactive Programming", "Serverless", "State Persistence"]
 tags_normalized: ["dotnet 9", "agent patterns", "ai", "automated workflows", "azure", "azure functions", "azure openai service", "azure static web apps", "blob storage", "csharp", "coding", "community", "durable task extension", "durable task scheduler", "gpt 4o mini", "human in the loop", "microsoft agent framework", "multi agent systems", "orchestration", "python", "reactive programming", "serverless", "state persistence"]

@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft DevBlog"
 feed_url: "https://devblogs.microsoft.com/semantic-kernel/feed/"
 date: 2025-06-25 00:40:21 +00:00
-permalink: "/news/2025-06-25-Semantic-Kernel-Python-134-Major-Vector-Store-Overhaul-Simplifies-AI-Workflows.html"
+permalink: "/2025-06-25-Semantic-Kernel-Python-134-Major-Vector-Store-Overhaul-Simplifies-AI-Workflows.html"
 categories: ["AI", "Coding"]
 tags: ["AI", "API", "Automatic Embedding", "Coding", "Dataclass", "Developer Experience", "Embedding", "Filtering", "Hybrid Search", "Memory Collection", "Migration", "News", "OpenAITextEmbedding", "Python", "Semantic Kernel", "Vector Store"]
 tags_normalized: ["ai", "api", "automatic embedding", "coding", "dataclass", "developer experience", "embedding", "filtering", "hybrid search", "memory collection", "migration", "news", "openaitextembedding", "python", "semantic kernel", "vector store"]

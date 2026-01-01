@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Build 2025 YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
 date: 2025-07-29 07:00:24 +00:00
-permalink: "/videos/2025-07-29-Design-AI-Workloads-with-the-Azure-Well-Architected-Framework.html"
+permalink: "/2025-07-29-Design-AI-Workloads-with-the-Azure-Well-Architected-Framework.html"
 categories: ["AI", "Azure"]
 tags: ["AI", "AI Workload Design", "Azure", "Azure Essentials Show", "Azure PaaS", "Azure SaaS", "Azure Well Architected Framework", "AzureEssentialsShow", "Cost Optimization", "Ethical AI", "Explainable AI", "Model Decay", "Operational Excellence", "Performance Efficiency", "Reliability", "Videos"]
 tags_normalized: ["ai", "ai workload design", "azure", "azure essentials show", "azure paas", "azure saas", "azure well architected framework", "azureessentialsshow", "cost optimization", "ethical ai", "explainable ai", "model decay", "operational excellence", "performance efficiency", "reliability", "videos"]

@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft News"
 feed_url: "https://news.microsoft.com/source/feed/"
 date: 2025-08-27 17:48:20 +00:00
-permalink: "/news/2025-08-27-BrainKey-Leverages-Microsoft-Azure-and-AI-to-Advance-Brain-Health-Research.html"
+permalink: "/2025-08-27-BrainKey-Leverages-Microsoft-Azure-and-AI-to-Advance-Brain-Health-Research.html"
 categories: ["AI", "Azure"]
 tags: ["AI", "AI in Healthcare", "AKS", "Azure", "Azure Blob Storage", "Azure Marketplace", "BrainKey", "Cloud Infrastructure", "Company News", "Data Security", "Digital Health", "Healthcare Technology", "HIPAA Compliance", "Medical Imaging", "Microsoft Azure", "Microsoft For Startups", "MRI Analysis", "News", "Nuance PowerShare", "Terraform"]
 tags_normalized: ["ai", "ai in healthcare", "aks", "azure", "azure blob storage", "azure marketplace", "brainkey", "cloud infrastructure", "company news", "data security", "digital health", "healthcare technology", "hipaa compliance", "medical imaging", "microsoft azure", "microsoft for startups", "mri analysis", "news", "nuance powershare", "terraform"]

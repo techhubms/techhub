@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Security Blog"
 feed_url: "https://www.microsoft.com/en-us/security/blog/feed/"
 date: 2025-11-18 16:00:00 +00:00
-permalink: "/news/2025-11-18-Ambient-and-Autonomous-Security-for-the-Agentic-AI-Era.html"
+permalink: "/2025-11-18-Ambient-and-Autonomous-Security-for-the-Agentic-AI-Era.html"
 categories: ["AI", "Azure", "DevOps", "Security"]
 tags: ["Access Control", "Agent 365", "Agentic AI", "AI", "AI Agents", "Azure", "Baseline Security Mode", "Cloud Security", "Compliance", "Data Loss Prevention", "DevOps", "Incident Response", "Microsoft Defender", "Microsoft Entra", "Microsoft Foundry", "Microsoft Intune", "Microsoft Purview", "Microsoft Sentinel", "News", "Predictive Shielding", "Security", "Security Copilot", "SIEM", "Threat Intelligence", "Zero Trust"]
 tags_normalized: ["access control", "agent 365", "agentic ai", "ai", "ai agents", "azure", "baseline security mode", "cloud security", "compliance", "data loss prevention", "devops", "incident response", "microsoft defender", "microsoft entra", "microsoft foundry", "microsoft intune", "microsoft purview", "microsoft sentinel", "news", "predictive shielding", "security", "security copilot", "siem", "threat intelligence", "zero trust"]

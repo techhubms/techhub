@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-11-08 14:39:53 +00:00
-permalink: "/community/2025-11-08-Simplifying-Microservice-Reliability-with-Dapr.html"
+permalink: "/2025-11-08-Simplifying-Microservice-Reliability-with-Dapr.html"
 categories: ["Azure", "Coding", "DevOps"]
 tags: [".NET Core", "Azure", "Azure Container Apps", "Azure Key Vault", "Azure Service Bus", "Coding", "Community", "Configuration Management", "Cosmos DB", "Dapr", "Developer Tools", "DevOps", "Event Driven Architecture", "Microservices", "Pub/Sub", "Resilient Applications", "Secret Stores", "Service Bindings", "Sidecar Pattern", "State Management"]
 tags_normalized: ["dotnet core", "azure", "azure container apps", "azure key vault", "azure service bus", "coding", "community", "configuration management", "cosmos db", "dapr", "developer tools", "devops", "event driven architecture", "microservices", "pubslashsub", "resilient applications", "secret stores", "service bindings", "sidecar pattern", "state management"]

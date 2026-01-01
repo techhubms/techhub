@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-11-04 15:35:47 +00:00
-permalink: "/community/2025-11-04-Client-Side-Multi-Agent-Orchestration-with-ChatClientAgent-on-Azure-App-Service.html"
+permalink: "/2025-11-04-Client-Side-Multi-Agent-Orchestration-with-ChatClientAgent-on-Azure-App-Service.html"
 categories: ["AI", "Azure", "Coding"]
 tags: [".NET 9", "AI", "AIFunctionFactory", "Azure", "Azure AI Foundry", "Azure App Service", "Azure OpenAI", "C#", "ChatClientAgent", "Cloud Architecture", "Coding", "Community", "Cosmos DB", "Function Calling", "Microsoft Agent Framework", "Multi Agent Systems", "Service Bus", "WebJob", "Workflow Orchestration"]
 tags_normalized: ["dotnet 9", "ai", "aifunctionfactory", "azure", "azure ai foundry", "azure app service", "azure openai", "csharp", "chatclientagent", "cloud architecture", "coding", "community", "cosmos db", "function calling", "microsoft agent framework", "multi agent systems", "service bus", "webjob", "workflow orchestration"]

@@ -9,10 +9,10 @@ viewing_mode: "external"
 feed_name: "Andrew Lock's Blog"
 feed_url: "https://andrewlock.net/rss.xml"
 date: 2025-04-01 09:00:00 +00:00
-permalink: "/blogs/2025-04-01-Creating-SBOM-Attestations-for-NuGet-Packages-Using-GitHub-Actions.html"
+permalink: "/2025-04-01-Creating-SBOM-Attestations-for-NuGet-Packages-Using-GitHub-Actions.html"
 categories: ["DevOps", "Security", "Coding"]
-tags: [".NET", "Attestations", "Coding", "CycloneDX", "DevOps", "GitHub", "GitHub Actions", "NuGet", "Blogs", "Provenance", "SBOM", "Security", "Sigstore", "SPDX", "Supply Chain Security", "YAML Workflows"]
-tags_normalized: ["dotnet", "attestations", "coding", "cyclonedx", "devops", "github", "github actions", "nuget", "blogs", "provenance", "sbom", "security", "sigstore", "spdx", "supply chain security", "yaml workflows"]
+tags: [".NET", "Attestations", "Blogs", "Coding", "CycloneDX", "DevOps", "GitHub", "GitHub Actions", "NuGet", "Provenance", "SBOM", "Security", "Sigstore", "SPDX", "Supply Chain Security", "YAML Workflows"]
+tags_normalized: ["dotnet", "attestations", "blogs", "coding", "cyclonedx", "devops", "github", "github actions", "nuget", "provenance", "sbom", "security", "sigstore", "spdx", "supply chain security", "yaml workflows"]
 ---
 
 In this blog post, Andrew Lock demonstrates how to create SBOM attestations for your .NET applications or NuGet packages using GitHub Actions, enhancing supply chain security.<!--excerpt_end-->

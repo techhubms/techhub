@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-12-20 13:03:51 +00:00
-permalink: "/community/2025-12-20-Minimizing-Downtime-When-Migrating-Azure-Storage-Account-Replication.html"
+permalink: "/2025-12-20-Minimizing-Downtime-When-Migrating-Azure-Storage-Account-Replication.html"
 categories: ["Azure"]
 tags: ["Availability Zones", "Azure", "Azure Storage", "Bicep", "Community", "Downtime", "Geo Redundant Storage", "GZRS", "High Availability", "IaC", "LRS", "Migration", "RA GZRS", "Redundancy", "Replication", "Storage Account", "Terraform", "UK South", "UK West"]
 tags_normalized: ["availability zones", "azure", "azure storage", "bicep", "community", "downtime", "geo redundant storage", "gzrs", "high availability", "iac", "lrs", "migration", "ra gzrs", "redundancy", "replication", "storage account", "terraform", "uk south", "uk west"]

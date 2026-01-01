@@ -9,10 +9,10 @@ viewing_mode: "external"
 feed_name: "Steve Gordon's Blog"
 feed_url: "https://www.stevejgordon.co.uk/feed"
 date: 2024-11-08 10:11:59 +00:00
-permalink: "/blogs/2024-11-08-How-dotnetexe-Resolves-and-Loads-the-hostfxr-Library-Exploring-the-NET-Muxer.html"
+permalink: "/2024-11-08-How-dotnetexe-resolves-and-loads-the-hostfxr-library-Exploring-the-NET-muxer.html"
 categories: ["Coding"]
-tags: [".NET", "CLR", "Coding", "Corehost", "Diagnostics", "Dotnet.exe", "Framework Resolution", "Hostfxr", "Internals", "Linux", "Macos", "Muxer", "Platform Abstraction", "Blogs", "Runtime", "Version Selection", "Windows"]
-tags_normalized: ["dotnet", "clr", "coding", "corehost", "diagnostics", "dotnetdotexe", "framework resolution", "hostfxr", "internals", "linux", "macos", "muxer", "platform abstraction", "blogs", "runtime", "version selection", "windows"]
+tags: [".NET", "Blogs", "CLR", "Coding", "Corehost", "Diagnostics", "Dotnet.exe", "Framework Resolution", "Hostfxr", "Internals", "Linux", "Macos", "Muxer", "Platform Abstraction", "Runtime", "Version Selection", "Windows"]
+tags_normalized: ["dotnet", "blogs", "clr", "coding", "corehost", "diagnostics", "dotnetdotexe", "framework resolution", "hostfxr", "internals", "linux", "macos", "muxer", "platform abstraction", "runtime", "version selection", "windows"]
 ---
 
 In this article, Steve Gordon explores how dotnet.exe resolves and loads the hostfxr library, shedding light on the .NET muxer's internal steps. The discussion is a part of his deep dive series into the .NET hosting architecture.<!--excerpt_end-->

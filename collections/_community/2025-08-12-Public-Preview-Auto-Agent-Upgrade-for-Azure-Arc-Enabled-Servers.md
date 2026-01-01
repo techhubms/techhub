@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Community"
 date: 2025-08-12 15:30:41 +00:00
-permalink: "/community/2025-08-12-Public-Preview-Auto-Agent-Upgrade-for-Azure-Arc-Enabled-Servers.html"
+permalink: "/2025-08-12-Public-Preview-Auto-Agent-Upgrade-for-Azure-Arc-Enabled-Servers.html"
 categories: ["Azure", "DevOps"]
 tags: ["Agent Lifecycle Management", "Auto Agent Upgrade", "Automatic Upgrades", "Azure", "Azure Arc", "Azure CLI", "Azure Portal", "Community", "Connected Machine Agent", "DevOps", "Hybrid Cloud", "Hybrid Servers", "Infrastructure Automation", "Operational Consistency", "PowerShell", "Server Management"]
 tags_normalized: ["agent lifecycle management", "auto agent upgrade", "automatic upgrades", "azure", "azure arc", "azure cli", "azure portal", "community", "connected machine agent", "devops", "hybrid cloud", "hybrid servers", "infrastructure automation", "operational consistency", "powershell", "server management"]

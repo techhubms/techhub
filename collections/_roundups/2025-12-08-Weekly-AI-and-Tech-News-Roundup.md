@@ -6,7 +6,7 @@ author: "Tech Hub Team"
 excerpt_separator: <!--excerpt_end-->
 viewing_mode: "internal"
 date: 2025-12-08 09:00:00 +00:00
-permalink: "/roundups/2025-12-08-Weekly-AI-and-Tech-News-Roundup.html"
+permalink: "/2025-12-08-Weekly-AI-and-Tech-News-Roundup.html"
 categories: ["AI", "GitHub Copilot", "ML", "Azure", "Coding", "DevOps", "Security"]
 tags: [".NET 10", "Agent Framework", "AI", "AI Agents", "Automation", "Azure", "Cloud Native", "Coding", "DevOps", "Enterprise AI", "GitHub Copilot", "Governance", "Machine Learning", "Microsoft Azure", "Microsoft Fabric", "ML", "OpenAI", "Roundups", "Security", "TypeScript", "VS"]
 tags_normalized: ["dotnet 10", "agent framework", "ai", "ai agents", "automation", "azure", "cloud native", "coding", "devops", "enterprise ai", "github copilot", "governance", "machine learning", "microsoft azure", "microsoft fabric", "ml", "openai", "roundups", "security", "typescript", "vs"]

@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Events YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
 date: 2025-11-21 13:04:53 +00:00
-permalink: "/videos/2025-11-21-Empowering-Healthcare-Through-Scalable-AI-for-Trusted-Partners.html"
+permalink: "/2025-11-21-Empowering-Healthcare-Through-Scalable-AI-for-Trusted-Partners.html"
 categories: ["AI", "Azure"]
 tags: ["Agentic AI", "AI", "AI in Healthcare", "Ambient AI", "Azure", "Clinical Applications", "Data Platforms", "Dragon Copilot", "Generative AI", "Healthcare Solutions", "ISV", "Marketplace", "Microsoft AI Cloud Partner Program", "Microsoft Azure", "Microsoft Ignite", "MicrosoftAICloudPartnerProgram", "MSIgnite", "Partner Ecosystem", "Responsible AI", "Videos", "Workflow Migration"]
 tags_normalized: ["agentic ai", "ai", "ai in healthcare", "ambient ai", "azure", "clinical applications", "data platforms", "dragon copilot", "generative ai", "healthcare solutions", "isv", "marketplace", "microsoft ai cloud partner program", "microsoft azure", "microsoft ignite", "microsoftaicloudpartnerprogram", "msignite", "partner ecosystem", "responsible ai", "videos", "workflow migration"]

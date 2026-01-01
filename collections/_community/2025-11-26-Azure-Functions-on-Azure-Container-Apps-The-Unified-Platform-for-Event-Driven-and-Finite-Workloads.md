@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-11-26 05:04:27 +00:00
-permalink: "/community/2025-11-26-Azure-Functions-on-Azure-Container-Apps-The-Unified-Platform-for-Event-Driven-and-Finite-Workloads.html"
+permalink: "/2025-11-26-Azure-Functions-on-Azure-Container-Apps-The-Unified-Platform-for-Event-Driven-and-Finite-Workloads.html"
 categories: ["AI", "Azure", "Coding", "DevOps", "ML"]
 tags: ["AI", "Azure", "Azure Container Apps", "Azure Functions", "Batch Processing", "Blob Trigger", "Blue/Green Deployment", "CI/CD", "Coding", "Community", "Dapr", "DevOps", "Durable Functions", "Event Driven Architecture", "Event Hubs", "FaaS", "GPU Workloads", "HTTP Trigger", "Ingress", "Machine Learning Inference", "Microservices", "ML", "Queue Trigger", "Serverless", "Service Bus", "Timer Trigger", "Traffic Splitting"]
 tags_normalized: ["ai", "azure", "azure container apps", "azure functions", "batch processing", "blob trigger", "blueslashgreen deployment", "cislashcd", "coding", "community", "dapr", "devops", "durable functions", "event driven architecture", "event hubs", "faas", "gpu workloads", "http trigger", "ingress", "machine learning inference", "microservices", "ml", "queue trigger", "serverless", "service bus", "timer trigger", "traffic splitting"]

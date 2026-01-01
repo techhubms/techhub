@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Security Blog"
 feed_url: "https://www.microsoft.com/en-us/security/blog/feed/"
 date: 2025-12-05 20:00:00 +00:00
-permalink: "/news/2025-12-05-Microsoft-Leads-Gartner-2025-Email-Security-Quadrant-with-Defender-for-Office-365-and-Agentic-AI.html"
+permalink: "/2025-12-05-Microsoft-Leads-Gartner-2025-Email-Security-Quadrant-with-Defender-for-Office-365-and-Agentic-AI.html"
 categories: ["AI", "Security"]
 tags: ["Agentic AI", "AI", "Benchmarking", "Business Email Compromise", "Cybersecurity", "Email Security", "Gartner Magic Quadrant", "Integrated Cloud Email Security", "Microsoft Defender For Office 365", "Microsoft Teams Security", "News", "Phishing Attacks", "Secure Email Gateway", "Security", "Security Copilot", "Security Operations Center", "Threat Detection", "Transparency Reports", "Triage Automation"]
 tags_normalized: ["agentic ai", "ai", "benchmarking", "business email compromise", "cybersecurity", "email security", "gartner magic quadrant", "integrated cloud email security", "microsoft defender for office 365", "microsoft teams security", "news", "phishing attacks", "secure email gateway", "security", "security copilot", "security operations center", "threat detection", "transparency reports", "triage automation"]

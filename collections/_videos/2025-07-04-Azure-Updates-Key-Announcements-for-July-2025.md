@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "John Savill's Technical Training"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCpIn7ox7j7bH_OFj7tYouOQ"
 date: 2025-07-04 14:16:55 +00:00
-permalink: "/videos/2025-07-04-Azure-Updates-Key-Announcements-for-July-2025.html"
+permalink: "/2025-07-04-Azure-Updates-Key-Announcements-for-July-2025.html"
 categories: ["Azure", "Coding", "ML", "DevOps", "Security"]
 tags: ["Audit", "Azure", "Azure App Service", "Azure Cloud", "Azure DNS", "Azure Files", "Azure Firewall", "Azure Monitor", "Azure SQL Database", "Azure Stack Hub", "Azure Update", "Certification", "Cloud", "Cloud Data", "Cloud Platform", "Cloud Security", "Coding", "Cosmos DB", "DevOps", "DNAT", "Entra Domain Services", "FQDN Filtering", "Hyperscale Migration", "Metrics Query Editor", "Microsoft", "Microsoft Azure", "ML", "MongoDB", "Mssql Python", "NFS Encryption", "PostgreSQL", "Security", "Security Policy", "Videos", "VM Dependency Agent", "VS Code Extension"]
 tags_normalized: ["audit", "azure", "azure app service", "azure cloud", "azure dns", "azure files", "azure firewall", "azure monitor", "azure sql database", "azure stack hub", "azure update", "certification", "cloud", "cloud data", "cloud platform", "cloud security", "coding", "cosmos db", "devops", "dnat", "entra domain services", "fqdn filtering", "hyperscale migration", "metrics query editor", "microsoft", "microsoft azure", "ml", "mongodb", "mssql python", "nfs encryption", "postgresql", "security", "security policy", "videos", "vm dependency agent", "vs code extension"]

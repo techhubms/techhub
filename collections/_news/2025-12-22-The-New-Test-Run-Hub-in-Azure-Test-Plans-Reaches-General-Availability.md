@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft DevOps Blog"
 feed_url: "https://devblogs.microsoft.com/devops/feed/"
 date: 2025-12-22 13:06:01 +00:00
-permalink: "/news/2025-12-22-The-New-Test-Run-Hub-in-Azure-Test-Plans-Reaches-General-Availability.html"
+permalink: "/2025-12-22-The-New-Test-Run-Hub-in-Azure-Test-Plans-Reaches-General-Availability.html"
 categories: ["Azure", "DevOps"]
 tags: ["Agile", "Azure", "Azure DevOps", "Azure Test Plans", "Collaboration", "Continuous Integration", "Dashboards", "Development Tools", "DevOps", "Manual Testing", "News", "Pipeline Integration", "Release Management", "REST API", "Software Quality", "Test", "Test Analytics", "Test Automation", "Test Management", "Test Points", "Test Run Hub", "Test Runs"]
 tags_normalized: ["agile", "azure", "azure devops", "azure test plans", "collaboration", "continuous integration", "dashboards", "development tools", "devops", "manual testing", "news", "pipeline integration", "release management", "rest api", "software quality", "test", "test analytics", "test automation", "test management", "test points", "test run hub", "test runs"]

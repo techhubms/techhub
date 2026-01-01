@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft DevBlog"
 feed_url: "https://devblogs.microsoft.com/visualstudio/tag/copilot/feed/"
 date: 2025-04-16 18:24:10 +00:00
-permalink: "/news/2025-04-16-GitHub-Copilot-Highlights-in-Visual-Studio-1714-Preview-3-New-Features-and-Improvements.html"
+permalink: "/2025-04-16-GitHub-Copilot-Highlights-in-Visual-Studio-1714-Preview-3-New-Features-and-Improvements.html"
 categories: ["AI", "Coding", "GitHub Copilot"]
 tags: ["Adaptive Paste", "AI", "AI Assisted Development", "Code Completion", "Code Mapping", "Coding", "Copilot", "Copilot Chat", "Developer Tools", "GitHub Copilot", "Guided Walkthrough", "Model Selection", "Multi File Editing", "News", "Next Edit Suggestions", "Preview Release", "VS"]
 tags_normalized: ["adaptive paste", "ai", "ai assisted development", "code completion", "code mapping", "coding", "copilot", "copilot chat", "developer tools", "github copilot", "guided walkthrough", "model selection", "multi file editing", "news", "next edit suggestions", "preview release", "vs"]

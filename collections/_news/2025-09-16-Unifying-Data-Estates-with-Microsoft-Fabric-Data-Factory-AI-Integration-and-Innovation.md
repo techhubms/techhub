@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Fabric Blog"
 feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
 date: 2025-09-16 01:00:00 +00:00
-permalink: "/news/2025-09-16-Unifying-Data-Estates-with-Microsoft-Fabric-Data-Factory-AI-Integration-and-Innovation.html"
+permalink: "/2025-09-16-Unifying-Data-Estates-with-Microsoft-Fabric-Data-Factory-AI-Integration-and-Innovation.html"
 categories: ["AI", "Azure", "ML"]
 tags: ["AI", "AI Copilot", "Azure", "Azure Key Vault", "Azure SQL", "Change Data Capture", "CI/CD", "Copy Job", "Data Integration", "Data Mirroring", "Data Orchestration", "Database Replication", "Dataflow Gen2", "Fabric Data Factory", "Lakehouse", "Managed Airflow", "Microsoft Fabric", "ML", "Natural Language Transformation", "News", "On Premises Gateway", "OneLake", "Pipelines", "Power Query", "Semantic Models", "VNet Gateway", "Zero ETL"]
 tags_normalized: ["ai", "ai copilot", "azure", "azure key vault", "azure sql", "change data capture", "cislashcd", "copy job", "data integration", "data mirroring", "data orchestration", "database replication", "dataflow gen2", "fabric data factory", "lakehouse", "managed airflow", "microsoft fabric", "ml", "natural language transformation", "news", "on premises gateway", "onelake", "pipelines", "power query", "semantic models", "vnet gateway", "zero etl"]

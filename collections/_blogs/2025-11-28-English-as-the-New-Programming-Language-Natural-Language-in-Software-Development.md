@@ -9,10 +9,10 @@ viewing_mode: "external"
 feed_name: "René van Osnabrugge's Blog"
 feed_url: "https://roadtoalm.com/feed/"
 date: 2025-11-28 13:27:50 +00:00
-permalink: "/blogs/2025-11-28-English-as-the-New-Programming-Language-Natural-Language-in-Software-Development.html"
+permalink: "/2025-11-28-English-as-the-New-Programming-Language-Natural-Language-in-Software-Development.html"
 categories: ["AI", "Coding", "GitHub Copilot"]
-tags: ["AI", "AI Coding Assistant", "AI SDLC", "Architecture", "C#", "Chatgpt", "Code Generation", "Coding", "Development Skills", "Development Workflow", "GitHub Copilot", "Natural Language Programming", "Blogs", "Programming", "Prompt Engineering", "Python", "Software Development", "Team Collaboration", "Technology", "TypeScript"]
-tags_normalized: ["ai", "ai coding assistant", "ai sdlc", "architecture", "csharp", "chatgpt", "code generation", "coding", "development skills", "development workflow", "github copilot", "natural language programming", "blogs", "programming", "prompt engineering", "python", "software development", "team collaboration", "technology", "typescript"]
+tags: ["AI", "AI Coding Assistant", "AI SDLC", "Architecture", "Blogs", "C#", "Chatgpt", "Code Generation", "Coding", "Development Skills", "Development Workflow", "GitHub Copilot", "Natural Language Programming", "Programming", "Prompt Engineering", "Python", "Software Development", "Team Collaboration", "Technology", "TypeScript"]
+tags_normalized: ["ai", "ai coding assistant", "ai sdlc", "architecture", "blogs", "csharp", "chatgpt", "code generation", "coding", "development skills", "development workflow", "github copilot", "natural language programming", "programming", "prompt engineering", "python", "software development", "team collaboration", "technology", "typescript"]
 ---
 
 Rene van Osnabrugge explores how English and AI coding assistants like GitHub Copilot and ChatGPT are changing software development, lowering barriers for teams and reshaping collaboration.<!--excerpt_end-->

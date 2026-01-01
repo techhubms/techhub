@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-12-09 13:51:03 +00:00
-permalink: "/community/2025-12-09-Challenges-with-Custom-Script-Extensions-Authentication-in-Azure-Session-Host-Configuration.html"
+permalink: "/2025-12-09-Challenges-with-Custom-Script-Extensions-Authentication-in-Azure-Session-Host-Configuration.html"
 categories: ["Azure", "Security"]
 tags: ["Authentication", "Azure", "Azure Key Vault", "Azure Portal", "Azure Security", "Azure Virtual Desktop", "Community", "Credential Management", "Custom Script Extension", "Managed Identity", "SAS Token", "Security", "Session Host Configuration", "Storage Account"]
 tags_normalized: ["authentication", "azure", "azure key vault", "azure portal", "azure security", "azure virtual desktop", "community", "credential management", "custom script extension", "managed identity", "sas token", "security", "session host configuration", "storage account"]

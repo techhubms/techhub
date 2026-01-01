@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Developer YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
 date: 2025-12-10 22:07:54 +00:00
-permalink: "/videos/2025-12-10-Building-AI-Agents-with-VS-Code-GitHub-Copilot-and-Azure.html"
+permalink: "/2025-12-10-Building-AI-Agents-with-VS-Code-GitHub-Copilot-and-Azure.html"
 categories: ["AI", "Azure", "Coding", "GitHub Copilot"]
 tags: ["Agent Deployment", "AI", "AI Agents", "AI Toolkit", "Azure", "Azure Free Trial", "Cloud Computing", "Cloud Deployment", "Code Tracing", "Coding", "Dev", "Developer", "Developer Workflow", "Development", "GitHub Copilot", "Instrumenting Code", "MCP", "MCP Lab", "Microsoft", "Microsoft Foundry", "Model Playground", "Tech", "Technology", "Videos", "VS Code"]
 tags_normalized: ["agent deployment", "ai", "ai agents", "ai toolkit", "azure", "azure free trial", "cloud computing", "cloud deployment", "code tracing", "coding", "dev", "developer", "developer workflow", "development", "github copilot", "instrumenting code", "mcp", "mcp lab", "microsoft", "microsoft foundry", "model playground", "tech", "technology", "videos", "vs code"]

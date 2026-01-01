@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-09-29 17:37:37 +00:00
-permalink: "/community/2025-09-29-Maximizing-Cost-Efficiency-with-Azure-Essentials-for-Cloud-and-AI-Investments.html"
+permalink: "/2025-09-29-Maximizing-Cost-Efficiency-with-Azure-Essentials-for-Cloud-and-AI-Investments.html"
 categories: ["AI", "Azure"]
 tags: ["AI", "AI Center Of Excellence", "AI Ops", "Azure", "Azure Accelerate", "Azure Advisor", "Azure AI Foundry", "Azure Architecture Center", "Azure Cost Management", "Azure Essentials", "Azure Hybrid Benefit", "Azure Landing Zones", "Azure Migrate", "Azure Monitor", "Azure Policy", "Azure Pricing Calculator", "Azure Reservations", "Azure Savings Plan", "Business Value", "Cloud Adoption Framework", "Cloud Governance", "Community", "Copilot in Azure", "Cost Efficiency", "FinOps", "Microsoft Azure", "Microsoft Fabric", "ROI", "Well Architected Framework"]
 tags_normalized: ["ai", "ai center of excellence", "ai ops", "azure", "azure accelerate", "azure advisor", "azure ai foundry", "azure architecture center", "azure cost management", "azure essentials", "azure hybrid benefit", "azure landing zones", "azure migrate", "azure monitor", "azure policy", "azure pricing calculator", "azure reservations", "azure savings plan", "business value", "cloud adoption framework", "cloud governance", "community", "copilot in azure", "cost efficiency", "finops", "microsoft azure", "microsoft fabric", "roi", "well architected framework"]

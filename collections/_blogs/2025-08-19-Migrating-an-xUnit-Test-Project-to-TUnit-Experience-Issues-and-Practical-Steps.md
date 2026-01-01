@@ -9,10 +9,10 @@ viewing_mode: "external"
 feed_name: "Andrew Lock's Blog"
 feed_url: "https://andrewlock.net/rss.xml"
 date: 2025-08-19 10:00:00 +00:00
-permalink: "/blogs/2025-08-19-Migrating-an-xUnit-Test-Project-to-TUnit-Experience-Issues-and-Practical-Steps.html"
+permalink: "/2025-08-19-Migrating-an-xUnit-Test-Project-to-TUnit-Experience-Issues-and-Practical-Steps.html"
 categories: ["Coding"]
-tags: [".NET", ".NET Core", ".NET Standard", "CI/CD", "Coding", "FluentAssertions", "IDE Support", "Microsoft.Testing.Platform", "MSTest", "NativeAOT", "Nuke Build System", "NUnit", "Blogs", "Snapshot Testing", "Source Generators", "Test Automation", "Test Migration", "Testing", "Testing Frameworks", "TRX Test Reports", "TUnit", "Verify", "xUnit"]
-tags_normalized: ["dotnet", "dotnet core", "dotnet standard", "cislashcd", "coding", "fluentassertions", "ide support", "microsoftdottestingdotplatform", "mstest", "nativeaot", "nuke build system", "nunit", "blogs", "snapshot testing", "source generators", "test automation", "test migration", "testing", "testing frameworks", "trx test reports", "tunit", "verify", "xunit"]
+tags: [".NET", ".NET Core", ".NET Standard", "Blogs", "CI/CD", "Coding", "FluentAssertions", "IDE Support", "Microsoft.Testing.Platform", "MSTest", "NativeAOT", "Nuke Build System", "NUnit", "Snapshot Testing", "Source Generators", "Test Automation", "Test Migration", "Testing", "Testing Frameworks", "TRX Test Reports", "TUnit", "Verify", "xUnit"]
+tags_normalized: ["dotnet", "dotnet core", "dotnet standard", "blogs", "cislashcd", "coding", "fluentassertions", "ide support", "microsoftdottestingdotplatform", "mstest", "nativeaot", "nuke build system", "nunit", "snapshot testing", "source generators", "test automation", "test migration", "testing", "testing frameworks", "trx test reports", "tunit", "verify", "xunit"]
 ---
 
 Andrew Lock shares his experience porting a .NET library to TUnit, a next-gen C# testing framework, explaining benefits versus xUnit, migration steps, and practical challenges faced.<!--excerpt_end-->

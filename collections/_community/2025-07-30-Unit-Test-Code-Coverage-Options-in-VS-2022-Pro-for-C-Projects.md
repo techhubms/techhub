@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Reddit Visual Studio"
 feed_url: "https://www.reddit.com/r/VisualStudio/.rss"
 date: 2025-07-30 12:12:49 +00:00
-permalink: "/community/2025-07-30-Unit-Test-Code-Coverage-Options-in-VS-2022-Pro-for-C-Projects.html"
+permalink: "/2025-07-30-Unit-Test-Code-Coverage-Options-in-VS-2022-Pro-for-C-Projects.html"
 categories: ["DevOps"]
 tags: ["C Programming", "Clang", "Code Coverage", "Community", "Continuous Integration", "Coverlet", "DevOps", "Eclipse IDE", "Fine Code Coverage", "GCC", "Gcov", "Makefile", "MSBuild", "MSTest", "Static Analysis", "Test Automation", "Unit Testing", "VS"]
 tags_normalized: ["c programming", "clang", "code coverage", "community", "continuous integration", "coverlet", "devops", "eclipse ide", "fine code coverage", "gcc", "gcov", "makefile", "msbuild", "mstest", "static analysis", "test automation", "unit testing", "vs"]

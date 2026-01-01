@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Semantic Kernel Blog"
 feed_url: "https://devblogs.microsoft.com/semantic-kernel/feed/"
 date: 2025-10-08 06:51:06 +00:00
-permalink: "/news/2025-10-08-Semantic-Kernel-and-Microsoft-Agent-Framework-Evolution-and-Future-Support.html"
+permalink: "/2025-10-08-Semantic-Kernel-and-Microsoft-Agent-Framework-Evolution-and-Future-Support.html"
 categories: ["AI", "Azure", "Coding"]
 tags: [".NET", "Agentic AI", "AI", "AI Agents", "AI Application Development", "AI Framework", "AutoGen", "Azure", "Azure AI", "C#", "Coding", "Community Support", "Enterprise AI", "Microsoft Agent Framework", "Migration", "News", "Open Source", "Python", "Semantic Kernel"]
 tags_normalized: ["dotnet", "agentic ai", "ai", "ai agents", "ai application development", "ai framework", "autogen", "azure", "azure ai", "csharp", "coding", "community support", "enterprise ai", "microsoft agent framework", "migration", "news", "open source", "python", "semantic kernel"]

@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-10-14 15:00:00 +00:00
-permalink: "/community/2025-10-14-How-Azure-NetApp-Files-Object-REST-API-Powers-Azure-Data-and-AI-Solutions.html"
+permalink: "/2025-10-14-How-Azure-NetApp-Files-Object-REST-API-Powers-Azure-Data-and-AI-Solutions.html"
 categories: ["AI", "Azure", "ML"]
 tags: ["AI", "Azure", "Azure AI", "Azure Databricks", "Azure NetApp Files", "Azure OpenAI", "Community", "Compliance", "Data Lake", "Data Science", "Data Security", "Enterprise Analytics", "Microsoft Fabric", "ML", "Object REST API", "OneLake", "Power BI", "Real Time Data Integration", "S3 Compatibility"]
 tags_normalized: ["ai", "azure", "azure ai", "azure databricks", "azure netapp files", "azure openai", "community", "compliance", "data lake", "data science", "data security", "enterprise analytics", "microsoft fabric", "ml", "object rest api", "onelake", "power bi", "real time data integration", "s3 compatibility"]

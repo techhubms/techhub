@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-11-20 17:22:02 +00:00
-permalink: "/community/2025-11-20-Azure-Monitor-Private-Link-Scope-AMPLS-Scale-Limits-Increased-by-10x-General-Availability-Overview.html"
+permalink: "/2025-11-20-Azure-Monitor-Private-Link-Scope-AMPLS-Scale-Limits-Increased-by-10x-General-Availability-Overview.html"
 categories: ["Azure", "DevOps", "Security"]
 tags: ["AMPLS", "Application Insights", "Azure", "Azure Monitor", "Azure Private Link", "Azure Telemetry", "Community", "Compliance", "Data Exfiltration", "DevOps", "DevOps Teams", "Log Analytics Workspace", "Microsoft Backbone Network", "Monitoring Architecture", "Network Isolation", "Operational Efficiency", "Pagination", "Private Endpoint", "Resource Management", "Scalability", "Security", "Sovereign Cloud", "Zero Trust"]
 tags_normalized: ["ampls", "application insights", "azure", "azure monitor", "azure private link", "azure telemetry", "community", "compliance", "data exfiltration", "devops", "devops teams", "log analytics workspace", "microsoft backbone network", "monitoring architecture", "network isolation", "operational efficiency", "pagination", "private endpoint", "resource management", "scalability", "security", "sovereign cloud", "zero trust"]

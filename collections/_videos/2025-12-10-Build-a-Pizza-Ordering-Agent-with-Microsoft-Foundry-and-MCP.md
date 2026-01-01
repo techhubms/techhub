@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Developer YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
 date: 2025-12-10 23:58:13 +00:00
-permalink: "/videos/2025-12-10-Build-a-Pizza-Ordering-Agent-with-Microsoft-Foundry-and-MCP.html"
+permalink: "/2025-12-10-Build-a-Pizza-Ordering-Agent-with-Microsoft-Foundry-and-MCP.html"
 categories: ["AI", "Azure"]
 tags: ["AI", "AI Agent", "Azure", "Azure Free Trial", "Cloud Computing", "Contoso PizzaBot", "Custom Tools", "Dev", "Developer", "Development", "Domain Specific AI", "External Data Integration", "Live Data Integration", "MCP Integration", "Microsoft", "Microsoft Foundry Agent Service", "Order Management", "RAG", "Retrieval Augmented Generation", "System Prompts", "Tech", "Technology", "Videos", "Workshop"]
 tags_normalized: ["ai", "ai agent", "azure", "azure free trial", "cloud computing", "contoso pizzabot", "custom tools", "dev", "developer", "development", "domain specific ai", "external data integration", "live data integration", "mcp integration", "microsoft", "microsoft foundry agent service", "order management", "rag", "retrieval augmented generation", "system prompts", "tech", "technology", "videos", "workshop"]

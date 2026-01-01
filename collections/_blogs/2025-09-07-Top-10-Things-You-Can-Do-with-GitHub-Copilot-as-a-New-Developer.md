@@ -9,10 +9,10 @@ viewing_mode: "external"
 feed_name: "Dellenny's Blog"
 feed_url: "https://dellenny.com/feed/"
 date: 2025-09-07 07:03:54 +00:00
-permalink: "/blogs/2025-09-07-Top-10-Things-You-Can-Do-with-GitHub-Copilot-as-a-New-Developer.html"
+permalink: "/2025-09-07-Top-10-Things-You-Can-Do-with-GitHub-Copilot-as-a-New-Developer.html"
 categories: ["AI", "Coding", "GitHub Copilot"]
-tags: ["AI", "Beginner Developer", "Boilerplate Code", "Code Completion", "Code Documentation", "Coding", "Coding Productivity", "Debugging", "Developer Workflow", "GitHub Copilot", "Learning Programming", "Pair Programming", "Blogs", "Programming Education", "Programming Languages", "Software Development Tools", "Unit Testing"]
-tags_normalized: ["ai", "beginner developer", "boilerplate code", "code completion", "code documentation", "coding", "coding productivity", "debugging", "developer workflow", "github copilot", "learning programming", "pair programming", "blogs", "programming education", "programming languages", "software development tools", "unit testing"]
+tags: ["AI", "Beginner Developer", "Blogs", "Boilerplate Code", "Code Completion", "Code Documentation", "Coding", "Coding Productivity", "Debugging", "Developer Workflow", "GitHub Copilot", "Learning Programming", "Pair Programming", "Programming Education", "Programming Languages", "Software Development Tools", "Unit Testing"]
+tags_normalized: ["ai", "beginner developer", "blogs", "boilerplate code", "code completion", "code documentation", "coding", "coding productivity", "debugging", "developer workflow", "github copilot", "learning programming", "pair programming", "programming education", "programming languages", "software development tools", "unit testing"]
 ---
 
 Dellenny presents a list of the top ten ways new developers can use GitHub Copilot to boost productivity and accelerate the learning curve, sharing practical tips and insights.<!--excerpt_end-->

@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/changelog/feed/"
 date: 2025-09-10 20:59:55 +00:00
-permalink: "/news/2025-09-10-Secret-Scanning-Validity-Checks-Now-Available-for-GitHub-Enterprise-Cloud-with-Data-Residency.html"
+permalink: "/2025-09-10-Secret-Scanning-Validity-Checks-Now-Available-for-GitHub-Enterprise-Cloud-with-Data-Residency.html"
 categories: ["DevOps", "Security"]
 tags: ["Application Security", "Data Residency", "DevOps", "Enterprise Server", "GitHub", "GitHub Advanced Security", "GitHub Enterprise Cloud", "News", "Secret Protection", "Secret Scanning", "Security", "Security Automation", "SSLmate", "Token Validation", "Typeform"]
 tags_normalized: ["application security", "data residency", "devops", "enterprise server", "github", "github advanced security", "github enterprise cloud", "news", "secret protection", "secret scanning", "security", "security automation", "sslmate", "token validation", "typeform"]

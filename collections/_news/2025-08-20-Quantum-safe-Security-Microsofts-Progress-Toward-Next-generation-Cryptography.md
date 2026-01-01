@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Security Blog"
 feed_url: "https://www.microsoft.com/en-us/security/blog/feed/"
 date: 2025-08-20 16:00:00 +00:00
-permalink: "/news/2025-08-20-Quantum-safe-Security-Microsofts-Progress-Toward-Next-generation-Cryptography.html"
+permalink: "/2025-08-20-Quantum-safe-Security-Microsofts-Progress-Toward-Next-generation-Cryptography.html"
 categories: ["Azure", "Security"]
 tags: ["Adams Bridge Accelerator", "Azure", "Caliptra", "Cryptographic Standards", "Cybersecurity", "Hybrid Key Exchange", "Linux", "Microsoft Entra", "Microsoft Quantum Safe Program", "ML DSA", "ML KEM", "News", "NIST", "Open Quantum Safe Project", "Post Quantum Cryptography", "PQC", "Quantum Computing", "Security", "SymCrypt", "TLS 1.3", "Windows Insiders"]
 tags_normalized: ["adams bridge accelerator", "azure", "caliptra", "cryptographic standards", "cybersecurity", "hybrid key exchange", "linux", "microsoft entra", "microsoft quantum safe program", "ml dsa", "ml kem", "news", "nist", "open quantum safe project", "post quantum cryptography", "pqc", "quantum computing", "security", "symcrypt", "tls 1dot3", "windows insiders"]

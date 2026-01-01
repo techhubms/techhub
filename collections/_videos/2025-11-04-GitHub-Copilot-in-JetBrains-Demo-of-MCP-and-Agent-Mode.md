@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "GitHub YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ"
 date: 2025-11-04 22:41:29 +00:00
-permalink: "/videos/2025-11-04-GitHub-Copilot-in-JetBrains-Demo-of-MCP-and-Agent-Mode.html"
+permalink: "/2025-11-04-GitHub-Copilot-in-JetBrains-Demo-of-MCP-and-Agent-Mode.html"
 categories: ["AI", "Coding", "GitHub Copilot"]
 tags: ["Agent Mode", "AI", "Autonomous Issue Management", "Code Planning", "Coding", "Coding Assistant", "Developer Tools", "GitHub", "GitHub Copilot", "IDE Integration", "JetBrains", "MCP", "MCP Elicitation", "Programming Workflow", "Software Development", "Videos", "Workflow Automation"]
 tags_normalized: ["agent mode", "ai", "autonomous issue management", "code planning", "coding", "coding assistant", "developer tools", "github", "github copilot", "ide integration", "jetbrains", "mcp", "mcp elicitation", "programming workflow", "software development", "videos", "workflow automation"]

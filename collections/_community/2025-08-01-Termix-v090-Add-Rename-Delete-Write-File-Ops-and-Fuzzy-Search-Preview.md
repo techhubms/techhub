@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Reddit DotNet"
 feed_url: "https://www.reddit.com/r/dotnet/.rss"
 date: 2025-08-01 16:55:30 +00:00
-permalink: "/community/2025-08-01-Termix-v090-Add-Rename-Delete-Write-File-Ops-and-Fuzzy-Search-Preview.html"
+permalink: "/2025-08-01-Termix-v090-Add-Rename-Delete-Write-File-Ops-and-Fuzzy-Search-Preview.html"
 categories: ["Coding"]
 tags: [".NET", "Coding", "Community", "Delete", "File Navigator", "File Operations", "Fuzzy Search", "Keyboard Shortcuts", "Open Source", "Performance", "Rename", "Terminal", "Termix", "User Experience"]
 tags_normalized: ["dotnet", "coding", "community", "delete", "file navigator", "file operations", "fuzzy search", "keyboard shortcuts", "open source", "performance", "rename", "terminal", "termix", "user experience"]

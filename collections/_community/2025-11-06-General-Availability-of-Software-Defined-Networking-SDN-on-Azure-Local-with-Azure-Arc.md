@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-11-06 16:24:37 +00:00
-permalink: "/community/2025-11-06-General-Availability-of-Software-Defined-Networking-SDN-on-Azure-Local-with-Azure-Arc.html"
+permalink: "/2025-11-06-General-Availability-of-Software-Defined-Networking-SDN-on-Azure-Local-with-Azure-Arc.html"
 categories: ["Azure", "Security"]
 tags: ["Azure", "Azure Arc", "Azure CLI", "Azure Local", "Azure Portal", "Azure Resource Manager", "Community", "Disaster Recovery", "Failover Cluster", "Hybrid Cloud", "Network Controller", "Network Policy", "Network Security Groups", "NSG", "SDN", "Security", "Software Defined Networking", "Virtual Networks", "VLAN"]
 tags_normalized: ["azure", "azure arc", "azure cli", "azure local", "azure portal", "azure resource manager", "community", "disaster recovery", "failover cluster", "hybrid cloud", "network controller", "network policy", "network security groups", "nsg", "sdn", "security", "software defined networking", "virtual networks", "vlan"]

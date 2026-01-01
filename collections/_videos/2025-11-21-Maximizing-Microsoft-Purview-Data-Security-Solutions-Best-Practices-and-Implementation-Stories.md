@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Events YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
 date: 2025-11-21 15:19:45 +00:00
-permalink: "/videos/2025-11-21-Maximizing-Microsoft-Purview-Data-Security-Solutions-Best-Practices-and-Implementation-Stories.html"
+permalink: "/2025-11-21-Maximizing-Microsoft-Purview-Data-Security-Solutions-Best-Practices-and-Implementation-Stories.html"
 categories: ["Security"]
 tags: ["AI", "AI Security Risks", "Change Management", "Classification", "Cross Functional Collaboration", "Data Loss Prevention", "Data Security", "DLP", "Information Protection", "Labeling", "Legacy Systems Modernization", "Microsoft Ignite", "Microsoft Purview", "MSIgnite", "Secureyourdata", "Security", "Security Best Practices", "Security Frameworks", "User Training", "Videos"]
 tags_normalized: ["ai", "ai security risks", "change management", "classification", "cross functional collaboration", "data loss prevention", "data security", "dlp", "information protection", "labeling", "legacy systems modernization", "microsoft ignite", "microsoft purview", "msignite", "secureyourdata", "security", "security best practices", "security frameworks", "user training", "videos"]

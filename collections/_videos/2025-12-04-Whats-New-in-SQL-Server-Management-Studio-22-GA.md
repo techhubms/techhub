@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Developer YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
 date: 2025-12-04 21:00:34 +00:00
-permalink: "/videos/2025-12-04-Whats-New-in-SQL-Server-Management-Studio-22-GA.html"
+permalink: "/2025-12-04-Whats-New-in-SQL-Server-Management-Studio-22-GA.html"
 categories: ["Azure", "Coding"]
 tags: ["Azure", "Azure SQL", "Cloud Computing", "Coding", "Data Exposed", "Database Development", "DBA Tools", "Dev", "Development", "GA Release", "Installation Guide", "Microsoft", "Microsoft SQL", "Release Notes", "Roadmap", "Side By Side Installation", "SQL Server", "SQL Server Management Studio", "SSMS 22", "System Requirements", "Tech", "Technology", "Videos", "Workload Management"]
 tags_normalized: ["azure", "azure sql", "cloud computing", "coding", "data exposed", "database development", "dba tools", "dev", "development", "ga release", "installation guide", "microsoft", "microsoft sql", "release notes", "roadmap", "side by side installation", "sql server", "sql server management studio", "ssms 22", "system requirements", "tech", "technology", "videos", "workload management"]

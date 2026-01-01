@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft .NET Blog"
 feed_url: "https://devblogs.microsoft.com/dotnet/feed/"
 date: 2025-11-05 18:05:00 +00:00
-permalink: "/news/2025-11-05-How-Copilot-Studio-Uses-NET-and-WebAssembly-for-Performance-and-Innovation.html"
+permalink: "/2025-11-05-How-Copilot-Studio-Uses-NET-and-WebAssembly-for-Performance-and-Innovation.html"
 categories: ["AI", "Coding"]
 tags: [".NET", ".NET 8", "AI", "AI Agents", "AOT Compilation", "Bot Framework", "C#", "Coding", "Conversational AI", "Copilot Studio", "Debugging Tools", "Developer Stories", "JavaScript Interoperability", "JIT Compilation", "Low Code", "News", "Performance", "Performance Optimization", "Power Fx", "WASM", "WebAssembly"]
 tags_normalized: ["dotnet", "dotnet 8", "ai", "ai agents", "aot compilation", "bot framework", "csharp", "coding", "conversational ai", "copilot studio", "debugging tools", "developer stories", "javascript interoperability", "jit compilation", "low code", "news", "performance", "performance optimization", "power fx", "wasm", "webassembly"]

@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft News"
 feed_url: "https://news.microsoft.com/source/feed/"
 date: 2025-12-12 17:20:21 +00:00
-permalink: "/news/2025-12-12-Agent-Lightning-Making-AI-Agents-Smarter-Without-Rewriting-Code.html"
+permalink: "/2025-12-12-Agent-Lightning-Making-AI-Agents-Smarter-Without-Rewriting-Code.html"
 categories: ["AI"]
 tags: ["Agent Development", "Agent Lightning", "AI", "AI Agents", "AutoGen", "Company News", "LangChain", "LightningRL", "LLM", "Mathematical QA", "Microsoft", "Microsoft Research", "Middleware Architecture", "News", "Open Source", "OpenAI Agents SDK", "Reinforcement Learning", "Retrieval Augmented Generation", "Reward Assignment", "RL Algorithms", "Scalable Systems", "Text To SQL"]
 tags_normalized: ["agent development", "agent lightning", "ai", "ai agents", "autogen", "company news", "langchain", "lightningrl", "llm", "mathematical qa", "microsoft", "microsoft research", "middleware architecture", "news", "open source", "openai agents sdk", "reinforcement learning", "retrieval augmented generation", "reward assignment", "rl algorithms", "scalable systems", "text to sql"]

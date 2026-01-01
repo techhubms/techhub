@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Security Blog"
 feed_url: "https://www.microsoft.com/en-us/security/blog/feed/"
 date: 2025-09-05 15:00:00 +00:00
-permalink: "/news/2025-09-05-Azure-Mandatory-Multifactor-Authentication-Phase-2-Launches-October-2025.html"
+permalink: "/2025-09-05-Azure-Mandatory-Multifactor-Authentication-Phase-2-Launches-October-2025.html"
 categories: ["Azure", "Security"]
 tags: ["Azure", "Azure CLI", "Azure Policy", "Azure Portal", "Azure PowerShell", "Azure Resource Manager", "Cloud Security", "Identity Management", "MFA", "Microsoft Entra ID", "Multifactor Authentication", "News", "Resource Management", "Safe Deployment", "Security"]
 tags_normalized: ["azure", "azure cli", "azure policy", "azure portal", "azure powershell", "azure resource manager", "cloud security", "identity management", "mfa", "microsoft entra id", "multifactor authentication", "news", "resource management", "safe deployment", "security"]

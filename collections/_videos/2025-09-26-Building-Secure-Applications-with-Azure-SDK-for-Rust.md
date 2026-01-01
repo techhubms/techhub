@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Developer YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
 date: 2025-09-26 22:29:01 +00:00
-permalink: "/videos/2025-09-26-Building-Secure-Applications-with-Azure-SDK-for-Rust.html"
+permalink: "/2025-09-26-Building-Secure-Applications-with-Azure-SDK-for-Rust.html"
 categories: ["Azure", "Coding", "Security"]
 tags: ["Azure", "Azure Key Vault", "Azure SDK", "Cloud Development", "Coding", "Developer Tools", "High Performance Computing", "Memory Safety", "Microsoft Build", "MSBuild", "Programming Languages", "Rust", "Secrets Management", "Secure Applications", "Security", "Security Best Practices", "Videos"]
 tags_normalized: ["azure", "azure key vault", "azure sdk", "cloud development", "coding", "developer tools", "high performance computing", "memory safety", "microsoft build", "msbuild", "programming languages", "rust", "secrets management", "secure applications", "security", "security best practices", "videos"]

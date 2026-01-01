@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-11-12 16:42:12 +00:00
-permalink: "/community/2025-11-12-Announcing-BizTalk-Server-2020-Cumulative-Update-7-Platform-Support-and-Upgrade-Guidance.html"
+permalink: "/2025-11-12-Announcing-BizTalk-Server-2020-Cumulative-Update-7-Platform-Support-and-Upgrade-Guidance.html"
 categories: ["Azure", "Coding", "DevOps"]
 tags: ["Azure", "Azure Logic Apps", "BizTalk Migration", "BizTalk Modernization", "BizTalk Server", "Coding", "Community", "Cumulative Update 7", "DevOps", "Infrastructure", "Integration", "Microsoft Knowledgebase", "Software Update", "SQL Server", "Upgrade Guidance", "VS", "Windows 11", "Windows Server"]
 tags_normalized: ["azure", "azure logic apps", "biztalk migration", "biztalk modernization", "biztalk server", "coding", "community", "cumulative update 7", "devops", "infrastructure", "integration", "microsoft knowledgebase", "software update", "sql server", "upgrade guidance", "vs", "windows 11", "windows server"]

@@ -10,7 +10,7 @@ categories: ["AI"]
 feed_name: "Microsoft News"
 feed_url: "https://news.microsoft.com/source/feed/"
 date: 2025-07-09 16:46:18 +00:00
-permalink: "/news/2025-07-09-Microsoft-unveils-Elevate-putting-people-first-in-AI-transformation.html"
+permalink: "/2025-07-09-Microsoft-unveils-Elevate-putting-people-first-in-AI-transformation.html"
 tags: ["Accessibility", "AI", "AI Initiatives", "AI Transformation", "Business Innovation", "Company News", "Digital Transformation", "Ethical AI", "Microsoft Elevate", "News", "People Centric AI", "Productivity", "Technology Adoption", "Workforce"]
 tags_normalized: ["accessibility", "ai", "ai initiatives", "ai transformation", "business innovation", "company news", "digital transformation", "ethical ai", "microsoft elevate", "news", "people centric ai", "productivity", "technology adoption", "workforce"]
 ---

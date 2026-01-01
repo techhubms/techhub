@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft DevBlog"
 feed_url: "https://devblogs.microsoft.com/azure-sdk/feed/"
 date: 2025-02-12 17:34:48 +00:00
-permalink: "/news/2025-02-12-Simplify-Your-NET-Data-Transfers-with-the-New-Azure-Storage-Data-Movement-Library.html"
+permalink: "/2025-02-12-Simplify-Your-NET-Data-Transfers-with-the-New-Azure-Storage-Data-Movement-Library.html"
 categories: ["Azure", "Coding"]
 tags: [".NET", "Azure", "Azure Files", "Azure Identity", "Azure SDK", "Azure Storage", "Blob Storage", "C#", "Coding", "Data Movement", "Data Transfer", "Library Migration", "Microsoft Entra", "News", "NuGet Packages", "Storage", "TransferManager"]
 tags_normalized: ["dotnet", "azure", "azure files", "azure identity", "azure sdk", "azure storage", "blob storage", "csharp", "coding", "data movement", "data transfer", "library migration", "microsoft entra", "news", "nuget packages", "storage", "transfermanager"]

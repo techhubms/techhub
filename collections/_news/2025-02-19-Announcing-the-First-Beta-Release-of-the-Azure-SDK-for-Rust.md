@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft DevBlog"
 feed_url: "https://devblogs.microsoft.com/azure-sdk/feed/"
 date: 2025-02-19 18:19:05 +00:00
-permalink: "/news/2025-02-19-Announcing-the-First-Beta-Release-of-the-Azure-SDK-for-Rust.html"
+permalink: "/2025-02-19-Announcing-the-First-Beta-Release-of-the-Azure-SDK-for-Rust.html"
 categories: ["Azure", "Coding"]
 tags: ["Azure", "Azure SDK", "Beta Release", "Cloud Development", "Coding", "Cosmos DB", "Developer Tools", "Event Hubs", "Identity", "Key Vault", "Memory Safety", "Microsoft", "News", "Open Source", "Rust", "Secure Coding"]
 tags_normalized: ["azure", "azure sdk", "beta release", "cloud development", "coding", "cosmos db", "developer tools", "event hubs", "identity", "key vault", "memory safety", "microsoft", "news", "open source", "rust", "secure coding"]

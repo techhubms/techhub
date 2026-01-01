@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Reddit CSharp"
 feed_url: "https://www.reddit.com/r/csharp/.rss"
 date: 2025-08-02 19:05:44 +00:00
-permalink: "/community/2025-08-02-SpotifyLikeButton-Global-Hotkey-Utility-to-LikeUnlike-Songs-on-Spotify.html"
+permalink: "/2025-08-02-SpotifyLikeButton-Global-Hotkey-Utility-to-LikeUnlike-Songs-on-Spotify.html"
 categories: ["Coding"]
 tags: ["C#", "Coding", "Community", "Dotfiles", "Global Hotkeys", "Hyprland", "Linux Scripts", "Music", "Open Source", "Spotify API", "Waybar", "Windows"]
 tags_normalized: ["csharp", "coding", "community", "dotfiles", "global hotkeys", "hyprland", "linux scripts", "music", "open source", "spotify api", "waybar", "windows"]

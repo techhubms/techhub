@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=dotnet"
 date: 2025-08-22 09:39:46 +00:00
-permalink: "/community/2025-08-22-Tools-and-Approaches-for-Migrating-Obsolete-NET-Framework-APIs-to-NET-8.html"
+permalink: "/2025-08-22-Tools-and-Approaches-for-Migrating-Obsolete-NET-Framework-APIs-to-NET-8.html"
 categories: ["Coding"]
 tags: [".NET 8", ".NET Framework 4.8", "API Migration", "Code Modernization", "Coding", "Community", "Dependency Analysis", "Multi Project Solutions", "Obsolete APIs", "Portability Analyzer", "Project Migration", "Upgrade Assistant"]
 tags_normalized: ["dotnet 8", "dotnet framework 4dot8", "api migration", "code modernization", "coding", "community", "dependency analysis", "multi project solutions", "obsolete apis", "portability analyzer", "project migration", "upgrade assistant"]

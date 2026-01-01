@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-09-25 07:00:00 +00:00
-permalink: "/community/2025-09-25-Securing-Your-MCP-Server-with-JWT-Authentication-and-Authorization.html"
+permalink: "/2025-09-25-Securing-Your-MCP-Server-with-JWT-Authentication-and-Authorization.html"
 categories: ["Azure", "Coding", "Security"]
 tags: ["API Security", "Authentication", "Authorization", "Azure", "Azure Samples", "Coding", "Community", "Express.js", "JSON Web Tokens", "JWT", "LLM", "MCP", "Microservices", "Middleware", "Node.js", "RBAC", "Role Based Access Control", "Security", "Token Based Security"]
 tags_normalized: ["api security", "authentication", "authorization", "azure", "azure samples", "coding", "community", "expressdotjs", "json web tokens", "jwt", "llm", "mcp", "microservices", "middleware", "nodedotjs", "rbac", "role based access control", "security", "token based security"]

@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft .NET Blog"
 feed_url: "https://devblogs.microsoft.com/dotnet/feed/"
 date: 2025-11-26 21:00:00 +00:00
-permalink: "/news/2025-11-26-NET-Day-Modernize-Apps-with-Azure-AI-and-Agentic-Tooling.html"
+permalink: "/2025-11-26-NET-Day-Modernize-Apps-with-Azure-AI-and-Agentic-Tooling.html"
 categories: ["AI", "Azure", "Coding", "DevOps", "GitHub Copilot", "Security"]
 tags: [".NET", "Agent Framework", "Agentic Modernization", "AI", "AI Agents", "App Service", "Application Modernization", "Azure", "Azure Redis", "Azure SQL", "Azure SRE Agent", "Cloud Native", "Coding", "Developer Tools", "DevOps", "Durable Task Extension", "GitHub Actions", "GitHub Copilot", "IaC", "Lifecycle", "MCP", "Modernization", "News", "Performance Monitoring", "Security", "SQL Server", "VS"]
 tags_normalized: ["dotnet", "agent framework", "agentic modernization", "ai", "ai agents", "app service", "application modernization", "azure", "azure redis", "azure sql", "azure sre agent", "cloud native", "coding", "developer tools", "devops", "durable task extension", "github actions", "github copilot", "iac", "lifecycle", "mcp", "modernization", "news", "performance monitoring", "security", "sql server", "vs"]

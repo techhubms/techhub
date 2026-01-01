@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/feed/"
 date: 2025-11-20 18:02:21 +00:00
-permalink: "/news/2025-11-20-Enhancing-GitHub-Copilots-Next-Edit-Suggestions-with-Custom-Model-Training.html"
+permalink: "/2025-11-20-Enhancing-GitHub-Copilots-Next-Edit-Suggestions-with-Custom-Model-Training.html"
 categories: ["AI", "Coding", "GitHub Copilot"]
 tags: ["A/B Testing", "AI", "AI & ML", "AI Model Training", "Coding", "Coding Assistant", "Data Pipeline", "Developer Experience", "Developer Tools", "GitHub Copilot", "IDE Enhancements", "IDE Integration", "LLMs", "Machine Learning", "Model Evaluation", "Model Training", "NES", "News", "Next Edit Suggestions", "Next Edit Suggestions (nes)", "Prompt Engineering", "Reinforcement Learning", "Supervised Fine Tuning", "Synthetic Data", "VS Code"]
 tags_normalized: ["aslashb testing", "ai", "ai and ml", "ai model training", "coding", "coding assistant", "data pipeline", "developer experience", "developer tools", "github copilot", "ide enhancements", "ide integration", "llms", "machine learning", "model evaluation", "model training", "nes", "news", "next edit suggestions", "next edit suggestions nes", "prompt engineering", "reinforcement learning", "supervised fine tuning", "synthetic data", "vs code"]

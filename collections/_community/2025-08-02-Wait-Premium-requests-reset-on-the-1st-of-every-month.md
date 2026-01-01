@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Reddit Github Copilot"
 feed_url: "https://www.reddit.com/r/GithubCopilot.rss"
 date: 2025-08-02 03:08:35 +00:00
-permalink: "/community/2025-08-02-Wait-Premium-requests-reset-on-the-1st-of-every-month.html"
+permalink: "/2025-08-02-Wait-Premium-requests-reset-on-the-1st-of-every-month.html"
 categories: ["AI", "GitHub Copilot"]
 tags: ["AI", "Billing Cycle", "Community", "Copilot Pro+", "Fairness", "Feature Clarity", "GitHub Copilot", "Monthly Reset", "Premium Requests", "Request Limits", "Subscription", "User Experience"]
 tags_normalized: ["ai", "billing cycle", "community", "copilot proplus", "fairness", "feature clarity", "github copilot", "monthly reset", "premium requests", "request limits", "subscription", "user experience"]

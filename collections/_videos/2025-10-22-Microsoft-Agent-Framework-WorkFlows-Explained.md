@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Developer YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
 date: 2025-10-22 22:55:56 +00:00
-permalink: "/videos/2025-10-22-Microsoft-Agent-Framework-WorkFlows-Explained.html"
+permalink: "/2025-10-22-Microsoft-Agent-Framework-WorkFlows-Explained.html"
 categories: ["AI", "Azure", "Coding"]
 tags: ["Agent Framework Demo", "Agent Framework Workflows", "AI", "AI Agents", "Automation Framework", "Azure", "Business Process Orchestration", "Cloud Automation", "Cloud Computing", "Coding", "Dev", "Developer Tools", "Development", "Evan Mattson", "Intelligent Automation", "Microsoft", "Microsoft Agent Framework", "Microsoft AI", "Tech", "Technology", "Type Safe Architecture", "Victor Dibia", "Videos", "Web UI", "Workflow Automation"]
 tags_normalized: ["agent framework demo", "agent framework workflows", "ai", "ai agents", "automation framework", "azure", "business process orchestration", "cloud automation", "cloud computing", "coding", "dev", "developer tools", "development", "evan mattson", "intelligent automation", "microsoft", "microsoft agent framework", "microsoft ai", "tech", "technology", "type safe architecture", "victor dibia", "videos", "web ui", "workflow automation"]

@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/changelog/feed/"
 date: 2025-11-10 16:15:49 +00:00
-permalink: "/news/2025-11-10-Raptor-Mini-Model-Public-Preview-Available-in-GitHub-Copilot.html"
+permalink: "/2025-11-10-Raptor-Mini-Model-Public-Preview-Available-in-GitHub-Copilot.html"
 categories: ["AI", "GitHub Copilot"]
 tags: ["AI", "AI Development", "AI Model", "Copilot", "Copilot Chat", "Experimental Model", "GitHub Copilot", "Model Picker", "News", "Pro Plan", "Public Preview", "Raptor Mini", "Software Release", "VS Code"]
 tags_normalized: ["ai", "ai development", "ai model", "copilot", "copilot chat", "experimental model", "github copilot", "model picker", "news", "pro plan", "public preview", "raptor mini", "software release", "vs code"]

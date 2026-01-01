@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Developer YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
 date: 2025-07-30 22:32:10 +00:00
-permalink: "/videos/2025-07-30-MCP-In-Production-Building-Secure-and-Agent-Ready-Model-Context-Protocol-Servers.html"
+permalink: "/2025-07-30-MCP-In-Production-Building-Secure-and-Agent-Ready-Model-Context-Protocol-Servers.html"
 categories: ["AI", "Azure", "Security"]
 tags: ["Agentic AI", "AI", "AI Security", "Azure", "Azure AI Foundry", "Cloud Computing", "Cloud Security", "Confused Deputy Attack", "Dev", "Development", "Foundry Agent Service", "MCP", "MCP Server", "Microsoft", "OAuth 2.1", "Security", "Session Hijacking", "Tech", "Technology", "Token Passthrough Vulnerability", "Token Validation", "Videos", "VS Code Integration"]
 tags_normalized: ["agentic ai", "ai", "ai security", "azure", "azure ai foundry", "cloud computing", "cloud security", "confused deputy attack", "dev", "development", "foundry agent service", "mcp", "mcp server", "microsoft", "oauth 2dot1", "security", "session hijacking", "tech", "technology", "token passthrough vulnerability", "token validation", "videos", "vs code integration"]

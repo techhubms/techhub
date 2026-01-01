@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-12-12 17:31:50 +00:00
-permalink: "/community/2025-12-12-AI-Upskilling-Framework-Level-3-Building-Agentic-Workflows-from-Microsoft-Ignite.html"
+permalink: "/2025-12-12-AI-Upskilling-Framework-Level-3-Building-Agentic-Workflows-from-Microsoft-Ignite.html"
 categories: ["AI", "Azure"]
 tags: ["Agentic Workflows", "AI", "AI Agents", "AI Demos", "AI Development", "AI Training", "AI Upskilling Framework", "Azure", "Claims Workflow", "Community", "Community Resources", "Developer Skills", "Fraud Detection", "LinkedIn Learning", "MAF", "Microsoft Agentic Framework", "Microsoft Foundry", "Microsoft Ignite", "Workflow Automation"]
 tags_normalized: ["agentic workflows", "ai", "ai agents", "ai demos", "ai development", "ai training", "ai upskilling framework", "azure", "claims workflow", "community", "community resources", "developer skills", "fraud detection", "linkedin learning", "maf", "microsoft agentic framework", "microsoft foundry", "microsoft ignite", "workflow automation"]

@@ -9,10 +9,10 @@ viewing_mode: "external"
 feed_name: "Scott Hanselman's Blog"
 feed_url: "https://www.hanselman.com/blog/SyndicationService.asmx/GetRss"
 date: 2025-11-28 19:31:25 +00:00
-permalink: "/blogs/2025-11-28-Automatically-Signing-Windows-Executables-with-Azure-Trusted-Signing-dotnet-sign-and-GitHub-Actions.html"
+permalink: "/2025-11-28-Automatically-Signing-Windows-Executables-with-Azure-Trusted-Signing-dotnet-sign-and-GitHub-Actions.html"
 categories: ["Azure", "Coding", "DevOps", "Security"]
-tags: [".NET", ".NET Sign", "Azure", "Azure CLI", "Azure Trusted Signing", "Certificate Profile", "CI/CD Pipeline", "Code Signing Certificate", "Coding", "DevOps", "Digital Signature", "DotNetCore", "GitHub Actions", "Identity Validation", "Blogs", "Role Based Access Control", "Security", "Service Principal", "SmartScreen Reputation", "Windows Executable Signing", "YAML Workflow"]
-tags_normalized: ["dotnet", "dotnet sign", "azure", "azure cli", "azure trusted signing", "certificate profile", "cislashcd pipeline", "code signing certificate", "coding", "devops", "digital signature", "dotnetcore", "github actions", "identity validation", "blogs", "role based access control", "security", "service principal", "smartscreen reputation", "windows executable signing", "yaml workflow"]
+tags: [".NET", ".NET Sign", "Azure", "Azure CLI", "Azure Trusted Signing", "Blogs", "Certificate Profile", "CI/CD Pipeline", "Code Signing Certificate", "Coding", "DevOps", "Digital Signature", "DotNetCore", "GitHub Actions", "Identity Validation", "Role Based Access Control", "Security", "Service Principal", "SmartScreen Reputation", "Windows Executable Signing", "YAML Workflow"]
+tags_normalized: ["dotnet", "dotnet sign", "azure", "azure cli", "azure trusted signing", "blogs", "certificate profile", "cislashcd pipeline", "code signing certificate", "coding", "devops", "digital signature", "dotnetcore", "github actions", "identity validation", "role based access control", "security", "service principal", "smartscreen reputation", "windows executable signing", "yaml workflow"]
 ---
 
 Scott Hanselman guides developers through the full process of signing Windows executables using Azure Trusted Signing, dotnet sign, and GitHub Actions. The tutorial blends practical, real-world experience with detailed step-by-step instructions and security insights.<!--excerpt_end-->

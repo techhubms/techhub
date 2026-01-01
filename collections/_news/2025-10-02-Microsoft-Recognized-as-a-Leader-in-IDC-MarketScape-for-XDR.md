@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Security Blog"
 feed_url: "https://www.microsoft.com/en-us/security/blog/feed/"
 date: 2025-10-02 17:00:00 +00:00
-permalink: "/news/2025-10-02-Microsoft-Recognized-as-a-Leader-in-IDC-MarketScape-for-XDR.html"
+permalink: "/2025-10-02-Microsoft-Recognized-as-a-Leader-in-IDC-MarketScape-for-XDR.html"
 categories: ["AI", "Security"]
 tags: ["AI", "AI in Security", "Attack Disruption", "Automation", "Cybersecurity", "Exposure Management", "Extended Detection And Response", "IDC MarketScape", "Incident Response", "Kusto Query Language", "Microsoft Defender XDR", "Microsoft Security Copilot", "News", "Security", "Security Operations", "SIEM", "Threat Hunting", "XDR"]
 tags_normalized: ["ai", "ai in security", "attack disruption", "automation", "cybersecurity", "exposure management", "extended detection and response", "idc marketscape", "incident response", "kusto query language", "microsoft defender xdr", "microsoft security copilot", "news", "security", "security operations", "siem", "threat hunting", "xdr"]

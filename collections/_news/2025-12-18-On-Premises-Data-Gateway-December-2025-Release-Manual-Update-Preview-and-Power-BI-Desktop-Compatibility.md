@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Fabric Blog"
 feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
 date: 2025-12-18 09:00:00 +00:00
-permalink: "/news/2025-12-18-On-Premises-Data-Gateway-December-2025-Release-Manual-Update-Preview-and-Power-BI-Desktop-Compatibility.html"
+permalink: "/2025-12-18-On-Premises-Data-Gateway-December-2025-Release-Manual-Update-Preview-and-Power-BI-Desktop-Compatibility.html"
 categories: ["Azure", "ML"]
 tags: ["API", "Azure", "Connector Updates", "Data Integration", "Data Platform", "Enterprise Data", "Gateway Maintenance", "Manual Update", "Microsoft Fabric", "ML", "News", "On Premises Data Gateway", "Power BI", "Power BI Desktop", "Release Notes", "Scripted Updates"]
 tags_normalized: ["api", "azure", "connector updates", "data integration", "data platform", "enterprise data", "gateway maintenance", "manual update", "microsoft fabric", "ml", "news", "on premises data gateway", "power bi", "power bi desktop", "release notes", "scripted updates"]

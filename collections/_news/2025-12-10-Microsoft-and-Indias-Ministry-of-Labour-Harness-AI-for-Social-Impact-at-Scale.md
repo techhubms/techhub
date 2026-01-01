@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft News"
 feed_url: "https://news.microsoft.com/source/feed/"
 date: 2025-12-10 02:11:00 +00:00
-permalink: "/news/2025-12-10-Microsoft-and-Indias-Ministry-of-Labour-Harness-AI-for-Social-Impact-at-Scale.html"
+permalink: "/2025-12-10-Microsoft-and-Indias-Ministry-of-Labour-Harness-AI-for-Social-Impact-at-Scale.html"
 categories: ["AI", "Azure"]
 tags: ["AI", "AI Adoption", "Azure", "Azure Services", "Cloud Security", "Company News", "Digital Identity", "E Shram", "Inclusive Innovation", "India", "Job Platform", "Language Translation", "LinkedIn Post", "Microsoft", "Ministry Of Labour And Employment", "NCS", "News", "Resume Builder", "Social Security", "Workforce Analytics"]
 tags_normalized: ["ai", "ai adoption", "azure", "azure services", "cloud security", "company news", "digital identity", "e shram", "inclusive innovation", "india", "job platform", "language translation", "linkedin post", "microsoft", "ministry of labour and employment", "ncs", "news", "resume builder", "social security", "workforce analytics"]

@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/changelog/feed/"
 date: 2025-08-15 22:52:35 +00:00
-permalink: "/news/2025-08-15-GitHub-Copilot-Text-Completion-for-Pull-Request-Descriptions-to-Be-Deprecated.html"
+permalink: "/2025-08-15-GitHub-Copilot-Text-Completion-for-Pull-Request-Descriptions-to-Be-Deprecated.html"
 categories: ["AI", "GitHub Copilot"]
 tags: ["AI", "AI Assistance", "Beta Features", "Copilot Enterprise", "Developer Tools", "Feature Deprecation", "GitHub", "GitHub Copilot", "News", "PR Summaries", "Product Update", "Pull Requests", "Text Completion"]
 tags_normalized: ["ai", "ai assistance", "beta features", "copilot enterprise", "developer tools", "feature deprecation", "github", "github copilot", "news", "pr summaries", "product update", "pull requests", "text completion"]

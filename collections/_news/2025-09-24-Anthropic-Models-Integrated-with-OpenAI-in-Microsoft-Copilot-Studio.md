@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft News"
 feed_url: "https://news.microsoft.com/source/feed/"
 date: 2025-09-24 16:48:15 +00:00
-permalink: "/news/2025-09-24-Anthropic-Models-Integrated-with-OpenAI-in-Microsoft-Copilot-Studio.html"
+permalink: "/2025-09-24-Anthropic-Models-Integrated-with-OpenAI-in-Microsoft-Copilot-Studio.html"
 categories: ["AI"]
 tags: ["Admin Controls", "Agent Deployment", "AI", "AI Tools", "Anthropic", "Claude Opus 4.1", "Claude Sonnet 4", "Company News", "GPT 4o", "HR Onboarding Agent", "Microsoft Copilot Studio", "Model Orchestration", "Multi Agent Orchestration", "News", "OpenAI", "Power Platform Admin Center", "Prompt Engineering", "Workflow Automation"]
 tags_normalized: ["admin controls", "agent deployment", "ai", "ai tools", "anthropic", "claude opus 4dot1", "claude sonnet 4", "company news", "gpt 4o", "hr onboarding agent", "microsoft copilot studio", "model orchestration", "multi agent orchestration", "news", "openai", "power platform admin center", "prompt engineering", "workflow automation"]

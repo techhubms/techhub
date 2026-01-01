@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-10-14 04:39:47 +00:00
-permalink: "/community/2025-10-14-Transition-to-Azure-Functions-V2-on-Azure-Container-Apps-Migration-Guide-and-Feature-Overview.html"
+permalink: "/2025-10-14-Transition-to-Azure-Functions-V2-on-Azure-Container-Apps-Migration-Guide-and-Feature-Overview.html"
 categories: ["Azure", "Coding", "DevOps"]
 tags: ["Alerting", "Application Insights", "Azure", "Azure Container Apps", "Azure Functions", "Azure Pipelines", "CI/CD", "Coding", "Community", "Containerization", "Custom Domains", "DAPR Integration", "Deployment Best Practices", "DevOps", "DevOps Automation", "Diagnostics", "Feature Comparison", "Function App", "GitHub Actions", "Health Probes", "Metrics", "Microsoft.App RP", "Microsoft.Web RP", "Private Endpoints", "Scaling", "Secrets Management", "Serverless", "V1 To V2 Migration"]
 tags_normalized: ["alerting", "application insights", "azure", "azure container apps", "azure functions", "azure pipelines", "cislashcd", "coding", "community", "containerization", "custom domains", "dapr integration", "deployment best practices", "devops", "devops automation", "diagnostics", "feature comparison", "function app", "github actions", "health probes", "metrics", "microsoftdotapp rp", "microsoftdotweb rp", "private endpoints", "scaling", "secrets management", "serverless", "v1 to v2 migration"]

@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "DotNet YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw"
 date: 2025-09-04 18:35:48 +00:00
-permalink: "/videos/2025-09-04-Blazor-Internship-Demo-Fest-New-Components-and-Enhanced-Navigation.html"
+permalink: "/2025-09-04-Blazor-Internship-Demo-Fest-New-Components-and-Enhanced-Navigation.html"
 categories: ["Coding"]
 tags: [".NET", "ASP.NET Core", "Blazor", "Coding", "Community Demo", "Components", "Daniel Roth", "Developer Showcase", "Internship", "Javier Calvarro Nelson", "Media Handling", "Navigation", "Roland Vizner", "State Persistence", "Videos"]
 tags_normalized: ["dotnet", "aspdotnet core", "blazor", "coding", "community demo", "components", "daniel roth", "developer showcase", "internship", "javier calvarro nelson", "media handling", "navigation", "roland vizner", "state persistence", "videos"]

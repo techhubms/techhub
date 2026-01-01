@@ -9,10 +9,10 @@ viewing_mode: "external"
 feed_name: "Harald Binkle's blog"
 feed_url: "https://harrybin.de/rss.xml"
 date: 2025-10-01 23:51:00 +00:00
-permalink: "/blogs/2025-10-01-Using-GitHub-Copilot-for-Multiple-Tasks-in-Parallel.html"
+permalink: "/2025-10-01-Using-GitHub-Copilot-for-Multiple-Tasks-in-Parallel.html"
 categories: ["AI", "Coding", "GitHub Copilot"]
-tags: ["AI", "Asynchronous Development", "Automation", "Coding", "Coding Agent", "Copilot Chat", "Copilot CLI", "Copilot Coding Agent", "Developer Productivity", "Developer Tools", "GitHub Actions", "GitHub Copilot", "Parallel Tasks", "Blogs", "Project Bootstrapping", "Terminal Workflow", "VS Code"]
-tags_normalized: ["ai", "asynchronous development", "automation", "coding", "coding agent", "copilot chat", "copilot cli", "copilot coding agent", "developer productivity", "developer tools", "github actions", "github copilot", "parallel tasks", "blogs", "project bootstrapping", "terminal workflow", "vs code"]
+tags: ["AI", "Asynchronous Development", "Automation", "Blogs", "Coding", "Coding Agent", "Copilot Chat", "Copilot CLI", "Copilot Coding Agent", "Developer Productivity", "Developer Tools", "GitHub Actions", "GitHub Copilot", "Parallel Tasks", "Project Bootstrapping", "Terminal Workflow", "VS Code"]
+tags_normalized: ["ai", "asynchronous development", "automation", "blogs", "coding", "coding agent", "copilot chat", "copilot cli", "copilot coding agent", "developer productivity", "developer tools", "github actions", "github copilot", "parallel tasks", "project bootstrapping", "terminal workflow", "vs code"]
 ---
 
 Harald Binkle explores how developers can use GitHub Copilot, Copilot CLI, and the Copilot coding agent in parallel, unlocking greater productivity by handling multiple independent tasks simultaneously.<!--excerpt_end-->

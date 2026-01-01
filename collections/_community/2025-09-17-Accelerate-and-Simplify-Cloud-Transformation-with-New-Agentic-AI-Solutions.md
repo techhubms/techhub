@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-09-17 21:32:31 +00:00
-permalink: "/community/2025-09-17-Accelerate-and-Simplify-Cloud-Transformation-with-New-Agentic-AI-Solutions.html"
+permalink: "/2025-09-17-Accelerate-and-Simplify-Cloud-Transformation-with-New-Agentic-AI-Solutions.html"
 categories: ["AI", "Azure", "DevOps"]
 tags: ["Agentic AI", "AI", "AI Assisted Tooling", "Azure", "Azure Accelerate", "Azure VMware Solution", "Cloud Migration", "Cloud Modernization", "Community", "Developer Experience", "DevOps", "Intelligent Automation", "IT Transformation", "Java Modernization", "Linux Migration", "Migrate And Modernize Summit", "Modernization Strategy", "Windows Server Migration"]
 tags_normalized: ["agentic ai", "ai", "ai assisted tooling", "azure", "azure accelerate", "azure vmware solution", "cloud migration", "cloud modernization", "community", "developer experience", "devops", "intelligent automation", "it transformation", "java modernization", "linux migration", "migrate and modernize summit", "modernization strategy", "windows server migration"]

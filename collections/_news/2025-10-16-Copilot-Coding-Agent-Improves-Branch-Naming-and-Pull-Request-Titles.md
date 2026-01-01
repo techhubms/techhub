@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/changelog/feed/"
 date: 2025-10-16 20:32:39 +00:00
-permalink: "/news/2025-10-16-Copilot-Coding-Agent-Improves-Branch-Naming-and-Pull-Request-Titles.html"
+permalink: "/2025-10-16-Copilot-Coding-Agent-Improves-Branch-Naming-and-Pull-Request-Titles.html"
 categories: ["AI", "GitHub Copilot"]
 tags: ["AI", "Automation", "Background Agent", "Branch Naming", "CI/CD", "Copilot", "Copilot Coding Agent", "Developer Tools", "Enterprise Subscribers", "GitHub Actions", "GitHub Copilot", "Improvement", "News", "Pro Subscribers", "Pull Request Titles", "Workflow Improvement"]
 tags_normalized: ["ai", "automation", "background agent", "branch naming", "cislashcd", "copilot", "copilot coding agent", "developer tools", "enterprise subscribers", "github actions", "github copilot", "improvement", "news", "pro subscribers", "pull request titles", "workflow improvement"]

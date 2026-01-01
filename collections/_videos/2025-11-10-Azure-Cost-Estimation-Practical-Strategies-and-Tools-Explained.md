@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Developer YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
 date: 2025-11-10 18:23:11 +00:00
-permalink: "/videos/2025-11-10-Azure-Cost-Estimation-Practical-Strategies-and-Tools-Explained.html"
+permalink: "/2025-11-10-Azure-Cost-Estimation-Practical-Strategies-and-Tools-Explained.html"
 categories: ["Azure"]
 tags: ["Azure", "Azure Advisor", "Azure Architecture", "Azure Cost Management", "Azure Essentials", "Azure Migrate", "Azure Monitor", "Azure Pricing Calculator", "Cloud Cost Estimation", "Cloud Optimization", "Cloud Usage Estimation", "Cost Management Tools", "Microsoft Copilot", "Resource Configuration", "Videos"]
 tags_normalized: ["azure", "azure advisor", "azure architecture", "azure cost management", "azure essentials", "azure migrate", "azure monitor", "azure pricing calculator", "cloud cost estimation", "cloud optimization", "cloud usage estimation", "cost management tools", "microsoft copilot", "resource configuration", "videos"]

@@ -6,7 +6,7 @@ author: "Tech Hub Team"
 excerpt_separator: <!--excerpt_end-->
 viewing_mode: "internal"
 date: 2025-08-18 09:00:00 +00:00
-permalink: "/roundups/2025-08-18-Weekly-AI-and-Tech-News-Roundup.html"
+permalink: "/2025-08-18-Weekly-AI-and-Tech-News-Roundup.html"
 categories: ["AI", "GitHub Copilot", "ML", "Azure", "Coding", "DevOps", "Security"]
 tags: [".NET", "Agentic AI", "AI", "AI Tools", "Application Security", "Azure", "Cloud Security", "Coding", "Copilot Studio", "Data Analytics", "DevOps", "Enterprise Automation", "GitHub Copilot", "GPT 5", "LLMs", "Machine Learning", "MCP", "Microsoft Fabric", "ML", "Open Source", "Roundups", "Security", "VS Code"]
 tags_normalized: ["dotnet", "agentic ai", "ai", "ai tools", "application security", "azure", "cloud security", "coding", "copilot studio", "data analytics", "devops", "enterprise automation", "github copilot", "gpt 5", "llms", "machine learning", "mcp", "microsoft fabric", "ml", "open source", "roundups", "security", "vs code"]

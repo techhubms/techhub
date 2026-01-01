@@ -9,10 +9,10 @@ viewing_mode: "external"
 feed_name: "Dellenny's Blog"
 feed_url: "https://dellenny.com/feed/"
 date: 2025-11-18 15:28:44 +00:00
-permalink: "/blogs/2025-11-18-Setting-Up-Security-Alerts-for-Unusual-GitHub-Copilot-Activity.html"
+permalink: "/2025-11-18-Setting-Up-Security-Alerts-for-Unusual-GitHub-Copilot-Activity.html"
 categories: ["AI", "GitHub Copilot", "Security"]
-tags: ["AI", "AI Security", "Audit Logging", "Automation Bias", "Azure Sentinel", "Code Scanning", "CodeQL", "Copilot Metrics", "Data Exfiltration", "Developer Productivity", "Enterprise Security", "GitHub Copilot", "Blogs", "Prompt Injection", "Secret Scanning", "Security", "Security Alerts", "SIEM", "Unusual Activity Detection"]
-tags_normalized: ["ai", "ai security", "audit logging", "automation bias", "azure sentinel", "code scanning", "codeql", "copilot metrics", "data exfiltration", "developer productivity", "enterprise security", "github copilot", "blogs", "prompt injection", "secret scanning", "security", "security alerts", "siem", "unusual activity detection"]
+tags: ["AI", "AI Security", "Audit Logging", "Automation Bias", "Azure Sentinel", "Blogs", "Code Scanning", "CodeQL", "Copilot Metrics", "Data Exfiltration", "Developer Productivity", "Enterprise Security", "GitHub Copilot", "Prompt Injection", "Secret Scanning", "Security", "Security Alerts", "SIEM", "Unusual Activity Detection"]
+tags_normalized: ["ai", "ai security", "audit logging", "automation bias", "azure sentinel", "blogs", "code scanning", "codeql", "copilot metrics", "data exfiltration", "developer productivity", "enterprise security", "github copilot", "prompt injection", "secret scanning", "security", "security alerts", "siem", "unusual activity detection"]
 ---
 
 John Edward presents a practical guide for enabling security alerts on unusual GitHub Copilot activity, detailing the risks, monitoring strategies, and key technical steps to help organizations secure their AI-powered developer workflows.<!--excerpt_end-->

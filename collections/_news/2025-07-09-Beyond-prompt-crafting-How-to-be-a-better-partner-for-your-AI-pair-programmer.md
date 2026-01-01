@@ -10,7 +10,7 @@ categories: ["AI", "GitHub Copilot"]
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/feed/"
 date: 2025-07-09 16:00:00 +00:00
-permalink: "/news/2025-07-09-Beyond-prompt-crafting-How-to-be-a-better-partner-for-your-AI-pair-programmer.html"
+permalink: "/2025-07-09-Beyond-prompt-crafting-How-to-be-a-better-partner-for-your-AI-pair-programmer.html"
 tags: ["AI", "AI & ML", "AI Pair Programming", "Code Quality", "Coding Context", "Developer Tools", "GitHub Copilot", "News"]
 tags_normalized: ["ai", "ai and ml", "ai pair programming", "code quality", "coding context", "developer tools", "github copilot", "news"]
 ---

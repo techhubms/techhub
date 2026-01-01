@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/changelog/feed/"
 date: 2025-09-18 18:37:50 +00:00
-permalink: "/news/2025-09-18-GitHub-Actions-Adds-YAML-Anchors-and-Workflow-Templates-from-Non-Public-Repositories.html"
+permalink: "/2025-09-18-GitHub-Actions-Adds-YAML-Anchors-and-Workflow-Templates-from-Non-Public-Repositories.html"
 categories: ["DevOps"]
 tags: [".github Repositories", "Actions", "Automation", "Check Run Id", "CI/CD", "Continuous Deployment", "Continuous Integration", "DevOps", "GitHub", "GitHub Actions", "Improvement", "Job Context", "News", "Workflow Configuration", "Workflow Templates", "YAML Anchors"]
 tags_normalized: ["dotgithub repositories", "actions", "automation", "check run id", "cislashcd", "continuous deployment", "continuous integration", "devops", "github", "github actions", "improvement", "job context", "news", "workflow configuration", "workflow templates", "yaml anchors"]

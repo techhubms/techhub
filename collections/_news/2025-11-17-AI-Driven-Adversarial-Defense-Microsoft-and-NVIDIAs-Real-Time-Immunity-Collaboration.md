@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Security Blog"
 feed_url: "https://www.microsoft.com/en-us/security/blog/feed/"
 date: 2025-11-17 17:03:54 +00:00
-permalink: "/news/2025-11-17-AI-Driven-Adversarial-Defense-Microsoft-and-NVIDIAs-Real-Time-Immunity-Collaboration.html"
+permalink: "/2025-11-17-AI-Driven-Adversarial-Defense-Microsoft-and-NVIDIAs-Real-Time-Immunity-Collaboration.html"
 categories: ["AI", "Security"]
 tags: ["Adversarial Learning", "AI", "AI Security", "CUDA Kernels", "Cybersecurity", "GPU Acceleration", "Latency Optimization", "Microsoft Security", "Model Distillation", "News", "NVIDIA H100", "Real Time Detection", "Security", "TensorRT", "Threat Detection", "Tokenization", "Transformer Models", "Triton Inference Server"]
 tags_normalized: ["adversarial learning", "ai", "ai security", "cuda kernels", "cybersecurity", "gpu acceleration", "latency optimization", "microsoft security", "model distillation", "news", "nvidia h100", "real time detection", "security", "tensorrt", "threat detection", "tokenization", "transformer models", "triton inference server"]

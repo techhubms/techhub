@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Events YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
 date: 2025-11-20 10:39:16 +00:00
-permalink: "/videos/2025-11-20-SQL-Server-2025-Developer-First-and-AI-Integrated-Data-Platform.html"
+permalink: "/2025-11-20-SQL-Server-2025-Developer-First-and-AI-Integrated-Data-Platform.html"
 categories: ["AI", "Azure", "Coding", "ML"]
 tags: ["AI", "AI Integration", "Application Availability", "Azure", "Azure SQL", "Coding", "Copilot", "Data Platform", "Developer Features", "Fabric Mirroring", "JSON Native Data", "Migrateandmodernizeyourestate", "ML", "MSIgnite", "Prompt Programming", "Real Time Analytics", "REST API", "SQL AI Certification", "SQL Server", "T SQL", "Vector Search", "Videos"]
 tags_normalized: ["ai", "ai integration", "application availability", "azure", "azure sql", "coding", "copilot", "data platform", "developer features", "fabric mirroring", "json native data", "migrateandmodernizeyourestate", "ml", "msignite", "prompt programming", "real time analytics", "rest api", "sql ai certification", "sql server", "t sql", "vector search", "videos"]

@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Events YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
 date: 2025-11-24 07:14:51 +00:00
-permalink: "/videos/2025-11-24-Drive-Growth-Profitability-and-Resilience-with-Agentic-Supply-Chains.html"
+permalink: "/2025-11-24-Drive-Growth-Profitability-and-Resilience-with-Agentic-Supply-Chains.html"
 categories: ["AI", "Azure", "ML"]
 tags: ["AI", "AI Agents", "Autonomous Networks", "Azure", "Azure AI", "Blue Yonder", "Connected Supply Chain", "Cummins", "Data Engineering", "Data Platform", "Logistics Optimization", "Manufacturing Technology", "Microsoft Fabric", "Microsoft Ignite", "ML", "MSIgnite", "Operational Resilience", "Predictive Analytics", "Supply Chain", "Unifyyourdataplatform", "Videos"]
 tags_normalized: ["ai", "ai agents", "autonomous networks", "azure", "azure ai", "blue yonder", "connected supply chain", "cummins", "data engineering", "data platform", "logistics optimization", "manufacturing technology", "microsoft fabric", "microsoft ignite", "ml", "msignite", "operational resilience", "predictive analytics", "supply chain", "unifyyourdataplatform", "videos"]

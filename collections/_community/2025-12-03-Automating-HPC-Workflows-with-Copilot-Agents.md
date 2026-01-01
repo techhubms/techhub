@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-12-03 10:43:26 +00:00
-permalink: "/community/2025-12-03-Automating-HPC-Workflows-with-Copilot-Agents.html"
+permalink: "/2025-12-03-Automating-HPC-Workflows-with-Copilot-Agents.html"
 categories: ["AI"]
 tags: ["AI", "AI Powered Automation", "AI Workflow", "Bash Scripting", "Community", "Copilot Agents", "Error Reduction", "GPT 5", "High Performance Computing", "HPC Automation", "Iterative Development", "Job Submission", "OpenFOAM", "Resource Management", "Scaling", "Script Generation", "Slurm", "Validation"]
 tags_normalized: ["ai", "ai powered automation", "ai workflow", "bash scripting", "community", "copilot agents", "error reduction", "gpt 5", "high performance computing", "hpc automation", "iterative development", "job submission", "openfoam", "resource management", "scaling", "script generation", "slurm", "validation"]

@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/changelog/feed/"
 date: 2025-11-05 19:49:17 +00:00
-permalink: "/news/2025-11-05-GitHub-Introduces-enterprise-Qualifier-for-Enhanced-Code-Search.html"
+permalink: "/2025-11-05-GitHub-Introduces-enterprise-Qualifier-for-Enhanced-Code-Search.html"
 categories: ["DevOps"]
 tags: ["Boolean Operators", "Code Search", "Codebase Management", "Collaboration Tools", "DevOps", "Documentation", "Enterprise Qualifier", "GitHub", "GitHub Enterprise Cloud", "Improvement", "News", "Query Operators", "Search Syntax"]
 tags_normalized: ["boolean operators", "code search", "codebase management", "collaboration tools", "devops", "documentation", "enterprise qualifier", "github", "github enterprise cloud", "improvement", "news", "query operators", "search syntax"]

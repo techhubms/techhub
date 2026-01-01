@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-10-20 07:00:00 +00:00
-permalink: "/community/2025-10-20-AMA-Spotlight-Build-Smarter-with-Azure-Developer-CLI-AZD.html"
+permalink: "/2025-10-20-AMA-Spotlight-Build-Smarter-with-Azure-Developer-CLI-AZD.html"
 categories: ["AI", "Azure", "DevOps"]
 tags: ["AI", "Azd", "Azure", "Azure AI Foundry", "Azure Developer CLI", "CI/CD", "Community", "Debugging", "Deployment", "Developer Experience", "DevOps", "Enterprise AI", "Infrastructure Automation", "Live AMA", "LLM Deployment", "Multi Agent Systems", "Templates", "Workflow Reproducibility"]
 tags_normalized: ["ai", "azd", "azure", "azure ai foundry", "azure developer cli", "cislashcd", "community", "debugging", "deployment", "developer experience", "devops", "enterprise ai", "infrastructure automation", "live ama", "llm deployment", "multi agent systems", "templates", "workflow reproducibility"]

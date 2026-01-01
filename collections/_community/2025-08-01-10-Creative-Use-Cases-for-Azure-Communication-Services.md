@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-08-01 13:06:56 +00:00
-permalink: "/community/2025-08-01-10-Creative-Use-Cases-for-Azure-Communication-Services.html"
+permalink: "/2025-08-01-10-Creative-Use-Cases-for-Azure-Communication-Services.html"
 categories: ["AI", "Azure", "Coding", "Security"]
 tags: ["AI", "Azure", "Azure Communication Services", "Azure OpenAI", "Bot Framework", "Coding", "Community", "Cost Estimation", "Developer Workflow", "Dynamics 365", "Event Grid", "HIPAA Compliance", "Natural Language Processing", "Real Time Messaging", "Security", "SMS Scheduling", "Teams Interop", "Video Calling", "Voice Assistant", "WhatsApp Integration", "Zammo.ai"]
 tags_normalized: ["ai", "azure", "azure communication services", "azure openai", "bot framework", "coding", "community", "cost estimation", "developer workflow", "dynamics 365", "event grid", "hipaa compliance", "natural language processing", "real time messaging", "security", "sms scheduling", "teams interop", "video calling", "voice assistant", "whatsapp integration", "zammodotai"]

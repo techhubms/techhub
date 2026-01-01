@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The Azure Blog"
 feed_url: "https://azure.microsoft.com/en-us/blog/feed/"
 date: 2025-08-27 15:00:00 +00:00
-permalink: "/news/2025-08-27-Agent-Factory-Top-5-Agent-Observability-Best-Practices-for-Reliable-AI.html"
+permalink: "/2025-08-27-Agent-Factory-Top-5-Agent-Observability-Best-Practices-for-Reliable-AI.html"
 categories: ["AI", "Azure", "DevOps", "Security"]
 tags: ["Agent Benchmarking", "Agent Factory", "Agent Observability", "AI", "AI + Machine Learning", "AI Agents", "AI Governance", "Azure", "Azure AI Foundry", "Azure Monitor", "CI/CD Pipelines", "Compliance", "DevOps", "Enterprise AI", "Evaluation Metrics", "Microsoft Purview", "News", "Performance Monitoring", "Red Teaming", "Security"]
 tags_normalized: ["agent benchmarking", "agent factory", "agent observability", "ai", "ai plus machine learning", "ai agents", "ai governance", "azure", "azure ai foundry", "azure monitor", "cislashcd pipelines", "compliance", "devops", "enterprise ai", "evaluation metrics", "microsoft purview", "news", "performance monitoring", "red teaming", "security"]

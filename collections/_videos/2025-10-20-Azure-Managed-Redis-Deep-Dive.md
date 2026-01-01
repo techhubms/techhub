@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "John Savill's Technical Training"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCpIn7ox7j7bH_OFj7tYouOQ"
 date: 2025-10-20 12:00:52 +00:00
-permalink: "/videos/2025-10-20-Azure-Managed-Redis-Deep-Dive.html"
+permalink: "/2025-10-20-Azure-Managed-Redis-Deep-Dive.html"
 categories: ["Azure"]
 tags: ["Authentication", "Azure", "Azure Cloud", "Azure Managed Redis", "Cloud", "Cloud Architecture", "Cluster Policy", "Data Durability", "Deployment Strategies", "High Availability", "in Memory", "in Memory Databases", "Microsoft", "Microsoft Azure", "Networking", "Redis", "Replication", "Scaling", "Sharding", "Videos"]
 tags_normalized: ["authentication", "azure", "azure cloud", "azure managed redis", "cloud", "cloud architecture", "cluster policy", "data durability", "deployment strategies", "high availability", "in memory", "in memory databases", "microsoft", "microsoft azure", "networking", "redis", "replication", "scaling", "sharding", "videos"]

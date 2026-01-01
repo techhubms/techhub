@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-11-07 23:55:58 +00:00
-permalink: "/community/2025-11-07-Announcing-Local-Identity-with-Azure-Key-Vault-AD-Free-Cluster-Deployment-and-Management.html"
+permalink: "/2025-11-07-Announcing-Local-Identity-with-Azure-Key-Vault-AD-Free-Cluster-Deployment-and-Management.html"
 categories: ["Azure", "Security"]
 tags: ["Active Directory", "Azure", "Azure Key Vault", "Azure Local Portal", "Backup Integration", "Cluster Deployment", "Community", "Commvault", "Dell", "Internal DNS", "Key Management", "Lenovo", "Local Identity", "Management Toolkit", "Partner Ecosystem", "Security", "Veeam"]
 tags_normalized: ["active directory", "azure", "azure key vault", "azure local portal", "backup integration", "cluster deployment", "community", "commvault", "dell", "internal dns", "key management", "lenovo", "local identity", "management toolkit", "partner ecosystem", "security", "veeam"]

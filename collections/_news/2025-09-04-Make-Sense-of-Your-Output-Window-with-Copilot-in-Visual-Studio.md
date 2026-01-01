@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft VisualStudio Blog"
 feed_url: "https://devblogs.microsoft.com/visualstudio/feed/"
 date: 2025-09-04 12:00:38 +00:00
-permalink: "/news/2025-09-04-Make-Sense-of-Your-Output-Window-with-Copilot-in-Visual-Studio.html"
+permalink: "/2025-09-04-Make-Sense-of-Your-Output-Window-with-Copilot-in-Visual-Studio.html"
 categories: ["AI", "Coding", "GitHub Copilot"]
 tags: ["AI", "Build Logs", "Coding", "Context", "Copilot Chat", "Debug", "Debugging", "Developer Tools", "Development Productivity", "Error Resolution", "GitHub Copilot", "GitHub Copilot Chat", "IDE Features", "Log Analysis", "Microsoft", "News", "Output Window", "Visual Studio 17.14", "VS"]
 tags_normalized: ["ai", "build logs", "coding", "context", "copilot chat", "debug", "debugging", "developer tools", "development productivity", "error resolution", "github copilot", "github copilot chat", "ide features", "log analysis", "microsoft", "news", "output window", "visual studio 17dot14", "vs"]

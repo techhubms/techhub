@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "John Savill's Technical Training"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCpIn7ox7j7bH_OFj7tYouOQ"
 date: 2025-12-09 16:58:26 +00:00
-permalink: "/videos/2025-12-09-Using-Logic-Apps-as-Model-Context-Protocol-MCP-Servers-for-AI-Applications.html"
+permalink: "/2025-12-09-Using-Logic-Apps-as-Model-Context-Protocol-MCP-Servers-for-AI-Applications.html"
 categories: ["AI", "Azure"]
 tags: ["Agent Integration", "Agents", "AI", "AI Application", "Authentication", "Azure", "Azure Cloud", "Azure Tools", "Cloud", "Connectors", "Integration", "Logic Apps", "MCP", "MCP Server", "Microsoft", "Microsoft Azure", "Microsoft Docs", "Technical Training", "Tools", "Videos", "Workflow Automation", "Workflow Design"]
 tags_normalized: ["agent integration", "agents", "ai", "ai application", "authentication", "azure", "azure cloud", "azure tools", "cloud", "connectors", "integration", "logic apps", "mcp", "mcp server", "microsoft", "microsoft azure", "microsoft docs", "technical training", "tools", "videos", "workflow automation", "workflow design"]

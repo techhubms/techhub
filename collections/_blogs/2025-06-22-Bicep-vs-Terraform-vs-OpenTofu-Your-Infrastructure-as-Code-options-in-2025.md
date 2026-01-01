@@ -9,10 +9,10 @@ viewing_mode: "external"
 feed_name: "Hidde de Smet's Blog"
 feed_url: "https://hiddedesmet.com/feed.xml"
 date: 2025-06-22 09:00:00 +00:00
-permalink: "/blogs/2025-06-22-Bicep-vs-Terraform-vs-OpenTofu-Your-Infrastructure-as-Code-Options-in-2025.html"
+permalink: "/2025-06-22-Bicep-vs-Terraform-vs-OpenTofu-Your-Infrastructure-as-Code-options-in-2025.html"
 categories: ["Azure", "DevOps"]
-tags: ["ARM Templates", "Azure", "Bicep", "Cloud", "Cloud Automation", "DevOps", "GitHub Actions", "Hashicorp", "IaC", "Ibm", "Infrastructure", "Linux Foundation", "Multi Cloud", "Opentofu", "Blogs", "State Management", "Terraform"]
-tags_normalized: ["arm templates", "azure", "bicep", "cloud", "cloud automation", "devops", "github actions", "hashicorp", "iac", "ibm", "infrastructure", "linux foundation", "multi cloud", "opentofu", "blogs", "state management", "terraform"]
+tags: ["ARM Templates", "Azure", "Bicep", "Blogs", "Cloud", "Cloud Automation", "DevOps", "GitHub Actions", "Hashicorp", "IaC", "Ibm", "Infrastructure", "Linux Foundation", "Multi Cloud", "Opentofu", "State Management", "Terraform"]
+tags_normalized: ["arm templates", "azure", "bicep", "blogs", "cloud", "cloud automation", "devops", "github actions", "hashicorp", "iac", "ibm", "infrastructure", "linux foundation", "multi cloud", "opentofu", "state management", "terraform"]
 ---
 
 Hidde de Smet offers an expert comparison of Azure Bicep, Terraform, and OpenTofu for Infrastructure as Code. This comprehensive post supports infrastructure and DevOps professionals in selecting tools for Azure, multi-cloud, and open-source strategies.<!--excerpt_end-->

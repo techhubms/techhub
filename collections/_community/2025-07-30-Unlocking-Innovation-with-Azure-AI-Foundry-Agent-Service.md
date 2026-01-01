@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-07-30 17:41:02 +00:00
-permalink: "/community/2025-07-30-Unlocking-Innovation-with-Azure-AI-Foundry-Agent-Service.html"
+permalink: "/2025-07-30-Unlocking-Innovation-with-Azure-AI-Foundry-Agent-Service.html"
 categories: ["AI", "Azure"]
 tags: ["Agent Orchestration", "AI", "AI Operationalization", "AI Orchestration", "AI Platforms", "AI Studio", "Azure", "Azure AI Foundry", "Community", "Enterprise AI", "Intelligent Agents", "Microsoft", "Multi Agent Systems"]
 tags_normalized: ["agent orchestration", "ai", "ai operationalization", "ai orchestration", "ai platforms", "ai studio", "azure", "azure ai foundry", "community", "enterprise ai", "intelligent agents", "microsoft", "multi agent systems"]

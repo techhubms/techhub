@@ -9,10 +9,10 @@ viewing_mode: "external"
 feed_name: "DevOps Blog"
 feed_url: "https://devops.com/feed/"
 date: 2025-08-26 14:00:07 +00:00
-permalink: "/blogs/2025-08-26-Harness-AI-Powered-DevOps-Platform-Launches-to-Automate-Software-Delivery.html"
+permalink: "/2025-08-26-Harness-AI-Powered-DevOps-Platform-Launches-to-Automate-Software-Delivery.html"
 categories: ["AI", "DevOps"]
-tags: ["AI", "AI Agents", "AI Platforms", "Business Of DevOps", "Chaos Engineering", "Cloud Cost Optimization", "Cloud Operations", "DevOps", "DevOps Automation", "DevOps Innovation", "Harness AI", "Knowledge Graph", "Pipeline Automation", "Pipelines", "Blogs", "Root Cause Analysis", "Sdlc", "Social Facebook", "Social LinkedIn", "Social X", "Software Delivery", "Testing Automation", "Workflow Orchestration"]
-tags_normalized: ["ai", "ai agents", "ai platforms", "business of devops", "chaos engineering", "cloud cost optimization", "cloud operations", "devops", "devops automation", "devops innovation", "harness ai", "knowledge graph", "pipeline automation", "pipelines", "blogs", "root cause analysis", "sdlc", "social facebook", "social linkedin", "social x", "software delivery", "testing automation", "workflow orchestration"]
+tags: ["AI", "AI Agents", "AI Platforms", "Blogs", "Business Of DevOps", "Chaos Engineering", "Cloud Cost Optimization", "Cloud Operations", "DevOps", "DevOps Automation", "DevOps Innovation", "Harness AI", "Knowledge Graph", "Pipeline Automation", "Pipelines", "Root Cause Analysis", "Sdlc", "Social Facebook", "Social LinkedIn", "Social X", "Software Delivery", "Testing Automation", "Workflow Orchestration"]
+tags_normalized: ["ai", "ai agents", "ai platforms", "blogs", "business of devops", "chaos engineering", "cloud cost optimization", "cloud operations", "devops", "devops automation", "devops innovation", "harness ai", "knowledge graph", "pipeline automation", "pipelines", "root cause analysis", "sdlc", "social facebook", "social linkedin", "social x", "software delivery", "testing automation", "workflow orchestration"]
 ---
 
 Mike Vizard covers how Harness has launched an AI-powered DevOps platform that uses knowledge graph–driven agents to automate a wide variety of tasks across the software delivery lifecycle, aimed at reducing manual effort and streamlining DevOps workflows.<!--excerpt_end-->

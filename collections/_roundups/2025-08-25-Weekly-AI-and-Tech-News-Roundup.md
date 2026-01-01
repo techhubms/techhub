@@ -6,7 +6,7 @@ author: "Tech Hub Team"
 excerpt_separator: <!--excerpt_end-->
 viewing_mode: "internal"
 date: 2025-08-25 09:00:00 +00:00
-permalink: "/roundups/2025-08-25-Weekly-AI-and-Tech-News-Roundup.html"
+permalink: "/2025-08-25-Weekly-AI-and-Tech-News-Roundup.html"
 categories: ["AI", "GitHub Copilot", "ML", "Azure", "Coding", "DevOps", "Security"]
 tags: [".NET Modernization", "AI", "AI Agents", "Azure", "Azure Updates", "CI/CD Pipelines", "Cloud Infrastructure", "Coding", "Developer Productivity", "DevOps", "DevOps Automation", "Enterprise Security", "Git", "GitHub Copilot", "MCP", "ML", "ML Optimization", "Quantum Safe Security", "Roundups", "Security", "VS", "Workflow Automation"]
 tags_normalized: ["dotnet modernization", "ai", "ai agents", "azure", "azure updates", "cislashcd pipelines", "cloud infrastructure", "coding", "developer productivity", "devops", "devops automation", "enterprise security", "git", "github copilot", "mcp", "ml", "ml optimization", "quantum safe security", "roundups", "security", "vs", "workflow automation"]

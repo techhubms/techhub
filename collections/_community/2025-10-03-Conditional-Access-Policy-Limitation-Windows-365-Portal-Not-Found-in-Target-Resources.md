@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-10-03 14:06:51 +00:00
-permalink: "/community/2025-10-03-Conditional-Access-Policy-Limitation-Windows-365-Portal-Not-Found-in-Target-Resources.html"
+permalink: "/2025-10-03-Conditional-Access-Policy-Limitation-Windows-365-Portal-Not-Found-in-Target-Resources.html"
 categories: ["Azure", "Security"]
 tags: ["Access Control", "Application ID", "Azure", "Azure Active Directory", "Azure Virtual Desktop", "Community", "Conditional Access", "Entra ID", "External Users", "MFA", "Microsoft 365", "Resource ID", "Security", "Windows 365", "Windows App"]
 tags_normalized: ["access control", "application id", "azure", "azure active directory", "azure virtual desktop", "community", "conditional access", "entra id", "external users", "mfa", "microsoft 365", "resource id", "security", "windows 365", "windows app"]

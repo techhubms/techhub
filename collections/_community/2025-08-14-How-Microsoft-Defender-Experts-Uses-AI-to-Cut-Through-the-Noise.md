@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Community"
 date: 2025-08-14 17:33:20 +00:00
-permalink: "/community/2025-08-14-How-Microsoft-Defender-Experts-Uses-AI-to-Cut-Through-the-Noise.html"
+permalink: "/2025-08-14-How-Microsoft-Defender-Experts-Uses-AI-to-Cut-Through-the-Noise.html"
 categories: ["AI", "Security"]
 tags: ["AI", "AI Based Incident Classification", "Community", "Expert Guided AI", "False Positive Filtering", "Feedback Loops", "Incident Response", "Managed XDR", "Microsoft Defender Experts", "Microsoft Security", "Noise Reduction", "Risk Scoring", "Security", "Security Operations", "Similarity Algorithm", "SOC Automation", "Threat Detection", "Tiered Decisioning"]
 tags_normalized: ["ai", "ai based incident classification", "community", "expert guided ai", "false positive filtering", "feedback loops", "incident response", "managed xdr", "microsoft defender experts", "microsoft security", "noise reduction", "risk scoring", "security", "security operations", "similarity algorithm", "soc automation", "threat detection", "tiered decisioning"]

@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "GitHub YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ"
 date: 2025-08-19 14:01:23 +00:00
-permalink: "/videos/2025-08-19-Enhancing-Code-Security-with-GitHub-Tools.html"
+permalink: "/2025-08-19-Enhancing-Code-Security-with-GitHub-Tools.html"
 categories: ["DevOps", "Security"]
 tags: ["Code Vulnerability Detection", "CodeQL", "CodeSecurity", "Copilot Autofix", "Dependency Review", "Developer Security Tools", "DevOps", "DevSecOps", "GitHub", "GitHub Code Security", "Open Source Security", "Secure Development Workflow", "Security", "Security Campaigns", "Static Code Analysis", "Videos", "Vulnerability Management"]
 tags_normalized: ["code vulnerability detection", "codeql", "codesecurity", "copilot autofix", "dependency review", "developer security tools", "devops", "devsecops", "github", "github code security", "open source security", "secure development workflow", "security", "security campaigns", "static code analysis", "videos", "vulnerability management"]

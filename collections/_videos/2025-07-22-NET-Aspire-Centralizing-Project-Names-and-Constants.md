@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "DotNet YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw"
 date: 2025-07-22 18:49:25 +00:00
-permalink: "/videos/2025-07-22-NET-Aspire-Centralizing-Project-Names-and-Constants.html"
+permalink: "/2025-07-22-NET-Aspire-Centralizing-Project-Names-and-Constants.html"
 categories: ["Coding"]
 tags: [".NET", "AppHost", "Aspire", "Cloud Apps", "Coding", "Constants", "Magic Strings", "Microsoft", "Project Naming", "Service References", "Shared Libraries", "Videos"]
 tags_normalized: ["dotnet", "apphost", "aspire", "cloud apps", "coding", "constants", "magic strings", "microsoft", "project naming", "service references", "shared libraries", "videos"]

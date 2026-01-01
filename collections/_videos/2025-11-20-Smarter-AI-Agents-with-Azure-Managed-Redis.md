@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Events YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
 date: 2025-11-20 15:58:08 +00:00
-permalink: "/videos/2025-11-20-Smarter-AI-Agents-with-Azure-Managed-Redis.html"
+permalink: "/2025-11-20-Smarter-AI-Agents-with-Azure-Managed-Redis.html"
 categories: ["AI", "Azure"]
 tags: ["Agent Framework", "AI", "AI Agents", "Azure", "Azure Managed Redis", "Cache Management", "Knowledge Management", "MCP Server", "Mem0", "Microsoft Ignite", "MSIgnite", "Multi Agent Systems", "Persistent Memory", "Real Time Collaboration", "Semantic Routing", "Session Persistence", "Unifyyourdataplatform", "Videos"]
 tags_normalized: ["agent framework", "ai", "ai agents", "azure", "azure managed redis", "cache management", "knowledge management", "mcp server", "mem0", "microsoft ignite", "msignite", "multi agent systems", "persistent memory", "real time collaboration", "semantic routing", "session persistence", "unifyyourdataplatform", "videos"]

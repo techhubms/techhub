@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft News"
 feed_url: "https://news.microsoft.com/source/feed/"
 date: 2025-10-24 14:56:02 +00:00
-permalink: "/news/2025-10-24-AI-Skilling-Initiatives-and-Africas-230-Million-Job-Opportunity.html"
+permalink: "/2025-10-24-AI-Skilling-Initiatives-and-Africas-230-Million-Job-Opportunity.html"
 categories: ["AI"]
 tags: ["Africa", "AI", "AI Curriculum", "AI Skilling", "AINSI", "Civil Society", "Company News", "Digital Jobs", "Digital Transformation", "Education Innovation", "Government Collaboration", "Inclusive Growth", "Industry Partnerships", "Kenya", "Microsoft AI", "Microsoft AI Skills Director", "News", "Workforce Development"]
 tags_normalized: ["africa", "ai", "ai curriculum", "ai skilling", "ainsi", "civil society", "company news", "digital jobs", "digital transformation", "education innovation", "government collaboration", "inclusive growth", "industry partnerships", "kenya", "microsoft ai", "microsoft ai skills director", "news", "workforce development"]

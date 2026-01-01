@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-11-13 20:33:42 +00:00
-permalink: "/community/2025-11-13-Building-Resilient-AI-Agents-with-the-Durable-Task-Extension-for-Microsoft-Agent-Framework.html"
+permalink: "/2025-11-13-Building-Resilient-AI-Agents-with-the-Durable-Task-Extension-for-Microsoft-Agent-Framework.html"
 categories: ["AI", "Azure", "Coding"]
 tags: ["AI", "AI Agents", "Azure", "Azure Durable Functions", "Azure Functions", "C#", "Coding", "Community", "Distributed Systems", "Durable Task Extension", "Human in The Loop", "Microsoft Agent Framework", "Multi Agent Systems", "Orchestration", "Production Grade Reliability", "Python", "Serverless Architecture", "Session Management", "State Management"]
 tags_normalized: ["ai", "ai agents", "azure", "azure durable functions", "azure functions", "csharp", "coding", "community", "distributed systems", "durable task extension", "human in the loop", "microsoft agent framework", "multi agent systems", "orchestration", "production grade reliability", "python", "serverless architecture", "session management", "state management"]

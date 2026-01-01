@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "John Savill's Technical Training"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCpIn7ox7j7bH_OFj7tYouOQ"
 date: 2025-08-20 14:56:24 +00:00
-permalink: "/videos/2025-08-20-Azure-File-Sync-Managed-Identity-Enhanced-Security-and-Simplified-Operations.html"
+permalink: "/2025-08-20-Azure-File-Sync-Managed-Identity-Enhanced-Security-and-Simplified-Operations.html"
 categories: ["Azure", "Security"]
 tags: ["Access Keys", "Azure", "Azure AD", "Azure Certification", "Azure File Sync", "Azure Storage", "Certificates", "Cloud", "Cloud Security", "Entra Id", "File Share", "Managed Identity", "Microsoft Docs", "Microsoft Entra ID", "Migration", "Operational Overhead Reduction", "Permissions Management", "PowerShell", "Security", "SMB", "Storage Account", "Storage Services", "Storage Sync Service", "System Assigned Identity", "Videos"]
 tags_normalized: ["access keys", "azure", "azure ad", "azure certification", "azure file sync", "azure storage", "certificates", "cloud", "cloud security", "entra id", "file share", "managed identity", "microsoft docs", "microsoft entra id", "migration", "operational overhead reduction", "permissions management", "powershell", "security", "smb", "storage account", "storage services", "storage sync service", "system assigned identity", "videos"]

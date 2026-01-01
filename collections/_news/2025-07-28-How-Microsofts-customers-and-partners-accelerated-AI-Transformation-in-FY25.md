@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft News"
 feed_url: "https://news.microsoft.com/source/feed/"
 date: 2025-07-28 14:11:23 +00:00
-permalink: "/news/2025-07-28-How-Microsofts-customers-and-partners-accelerated-AI-Transformation-in-FY25.html"
+permalink: "/2025-07-28-How-Microsofts-customers-and-partners-accelerated-AI-Transformation-in-FY25.html"
 categories: ["AI"]
 tags: ["AI", "AI Technologies", "AI Transformation", "Business Growth", "Company News", "Customers", "Digital Transformation", "FY25", "Innovation", "Microsoft", "News", "Partners", "Success Stories"]
 tags_normalized: ["ai", "ai technologies", "ai transformation", "business growth", "company news", "customers", "digital transformation", "fy25", "innovation", "microsoft", "news", "partners", "success stories"]

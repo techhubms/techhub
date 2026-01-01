@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Developer YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
 date: 2025-11-19 23:05:55 +00:00
-permalink: "/videos/2025-11-19-Building-an-AI-Agent-with-Microsoft-Foundry-Models-in-Python.html"
+permalink: "/2025-11-19-Building-an-AI-Agent-with-Microsoft-Foundry-Models-in-Python.html"
 categories: ["AI", "Azure", "Coding"]
 tags: ["Agent Tracing", "AI", "AI Agent", "AI Development", "Azure", "Azure AI Foundry", "Cloud AI", "Cloud Computing", "Coding", "Dev", "Development", "Microsoft", "Microsoft Foundry", "Model Deployment", "Model Mondays", "Python", "Sample Code", "Tech", "Technology", "Videos", "VS Code"]
 tags_normalized: ["agent tracing", "ai", "ai agent", "ai development", "azure", "azure ai foundry", "cloud ai", "cloud computing", "coding", "dev", "development", "microsoft", "microsoft foundry", "model deployment", "model mondays", "python", "sample code", "tech", "technology", "videos", "vs code"]

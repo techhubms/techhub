@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft News"
 feed_url: "https://news.microsoft.com/source/feed/"
 date: 2025-10-28 15:12:03 +00:00
-permalink: "/news/2025-10-28-The-Next-Chapter-of-the-MicrosoftOpenAI-Partnership.html"
+permalink: "/2025-10-28-The-Next-Chapter-of-the-MicrosoftOpenAI-Partnership.html"
 categories: ["AI", "Azure"]
 tags: ["AGI", "Agreement", "AI", "AI Partnership", "AI Strategy", "API Exclusivity", "Azure", "Azure API", "Cloud Services", "Company News", "Intellectual Property", "Microsoft", "Model Development", "News", "OpenAI", "Public Benefit Corporation", "Research Collaboration"]
 tags_normalized: ["agi", "agreement", "ai", "ai partnership", "ai strategy", "api exclusivity", "azure", "azure api", "cloud services", "company news", "intellectual property", "microsoft", "model development", "news", "openai", "public benefit corporation", "research collaboration"]

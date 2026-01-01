@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft News"
 feed_url: "https://news.microsoft.com/source/feed/"
 date: 2025-12-11 04:10:00 +00:00
-permalink: "/news/2025-12-11-Swiggys-Real-Time-Data-Processing-with-Microsoft-Fabric.html"
+permalink: "/2025-12-11-Swiggys-Real-Time-Data-Processing-with-Microsoft-Fabric.html"
 categories: ["Azure", "ML"]
 tags: ["Azure", "Azure Data", "Batch Processing", "Big Data", "Cloud Data", "Company News", "Data Architecture", "Data Platform", "Digital Logistics", "Enterprise Analytics", "Innovation", "LinkedIn Post", "Microsoft Fabric", "ML", "Near Real Time", "News", "Operational Intelligence", "Real Time Data Processing", "Streaming Analytics", "Swiggy"]
 tags_normalized: ["azure", "azure data", "batch processing", "big data", "cloud data", "company news", "data architecture", "data platform", "digital logistics", "enterprise analytics", "innovation", "linkedin post", "microsoft fabric", "ml", "near real time", "news", "operational intelligence", "real time data processing", "streaming analytics", "swiggy"]

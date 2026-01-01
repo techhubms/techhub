@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Events YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
 date: 2025-11-21 10:53:42 +00:00
-permalink: "/videos/2025-11-21-Voices-You-Cant-Trust-Stopping-AI-Powered-Impersonation-Attacks-with-Microsoft-Verified-ID.html"
+permalink: "/2025-11-21-Voices-You-Cant-Trust-Stopping-AI-Powered-Impersonation-Attacks-with-Microsoft-Verified-ID.html"
 categories: ["AI", "Security"]
 tags: ["AI", "AI Deepfakes", "Decentralized Identity", "Enterprise Security", "Fraud Prevention", "Impersonation Attacks", "Microsoft Ignite", "MSIgnite", "Organizational Change Management", "ProtectcloudAIplatformandapps", "Security", "Social Engineering", "Threat Protection", "Verified ID", "Videos"]
 tags_normalized: ["ai", "ai deepfakes", "decentralized identity", "enterprise security", "fraud prevention", "impersonation attacks", "microsoft ignite", "msignite", "organizational change management", "protectcloudaiplatformandapps", "security", "social engineering", "threat protection", "verified id", "videos"]

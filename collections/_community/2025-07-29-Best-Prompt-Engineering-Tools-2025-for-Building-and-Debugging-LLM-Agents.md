@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Reddit AI Agents"
 feed_url: "https://www.reddit.com/r/AI_Agents/.rss"
 date: 2025-07-29 07:06:40 +00:00
-permalink: "/community/2025-07-29-Best-Prompt-Engineering-Tools-2025-for-building-and-debugging-LLM-agents.html"
+permalink: "/2025-07-29-Best-Prompt-Engineering-Tools-2025-for-Building-and-Debugging-LLM-Agents.html"
 categories: ["AI", "Azure"]
 tags: ["Agent Systems", "AgentMark", "AI", "AI Agents", "Azure", "Community", "CrewAI", "Databutton", "Debugging", "DSPy", "Flowise", "LangSmith", "LLM Agents", "Maxim AI", "Musebox.io", "Prompt Engineering", "PromptFlow", "PromptLayer", "PromptOps", "PromptTools", "Secondisc.com", "Vellum"]
 tags_normalized: ["agent systems", "agentmark", "ai", "ai agents", "azure", "community", "crewai", "databutton", "debugging", "dspy", "flowise", "langsmith", "llm agents", "maxim ai", "museboxdotio", "prompt engineering", "promptflow", "promptlayer", "promptops", "prompttools", "secondiscdotcom", "vellum"]

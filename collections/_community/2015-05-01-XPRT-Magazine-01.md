@@ -6,7 +6,7 @@ categories: ["Azure", "DevOps", "Coding", "Security"]
 date: 2015-05-01 00:00:00 +00:00
 author: "Xebia"
 viewing_mode: "external"
-permalink: "/community/2015-05-01-XPRT-Magazine-01.html"
+permalink: "/2015-05-01-XPRT-Magazine-01.html"
 excerpt_separator: <!--excerpt_end-->
 tags: ["API Management", "Application Insights", "Azure", "Coding", "Community", "DevOps", "HoloLens", "Ionic", "Magazines", "Microservices", "Mobile Apps", "Security", "Service Fabric", "Version Control", "VS"]
 tags_normalized: ["api management", "application insights", "azure", "coding", "community", "devops", "hololens", "ionic", "magazines", "microservices", "mobile apps", "security", "service fabric", "version control", "vs"]

@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft VisualStudio Blog"
 feed_url: "https://devblogs.microsoft.com/visualstudio/feed/"
 date: 2025-08-12 17:10:52 +00:00
-permalink: "/news/2025-08-12-GPT-5-Comes-to-GitHub-Copilot-in-Visual-Studio.html"
+permalink: "/2025-08-12-GPT-5-Comes-to-GitHub-Copilot-in-Visual-Studio.html"
 categories: ["AI", "GitHub Copilot"]
 tags: ["Agent Mode", "AI", "AI Code Completion", "AI Development Tools", "Copilot Business", "Copilot Chat", "Copilot Enterprise", "GitHub Copilot", "GPT 5", "IDE Integration", "Model Deprecation", "Model Picker", "News", "OpenAI", "Software Engineering Productivity", "VS"]
 tags_normalized: ["agent mode", "ai", "ai code completion", "ai development tools", "copilot business", "copilot chat", "copilot enterprise", "github copilot", "gpt 5", "ide integration", "model deprecation", "model picker", "news", "openai", "software engineering productivity", "vs"]

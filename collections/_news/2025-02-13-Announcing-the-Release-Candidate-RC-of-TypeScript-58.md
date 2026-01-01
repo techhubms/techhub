@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft TypeScript Blog"
 feed_url: "https://devblogs.microsoft.com/typescript/feed/"
 date: 2025-02-13 22:27:05 +00:00
-permalink: "/news/2025-02-13-Announcing-the-Release-Candidate-RC-of-TypeScript-58.html"
+permalink: "/2025-02-13-Announcing-the-Release-Candidate-RC-of-TypeScript-58.html"
 categories: ["Coding"]
 tags: ["Coding", "CommonJS", "Compiler Flags", "Computed Properties", "Declaration Files", "ECMAScript Modules", "Import Assertions", "JavaScript", "Library Replacement", "Module Resolution", "News", "Nightly Builds", "Node.js", "Performance Optimization", "Release Candidate", "TypeScript"]
 tags_normalized: ["coding", "commonjs", "compiler flags", "computed properties", "declaration files", "ecmascript modules", "import assertions", "javascript", "library replacement", "module resolution", "news", "nightly builds", "nodedotjs", "performance optimization", "release candidate", "typescript"]

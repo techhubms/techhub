@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Developer YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
 date: 2025-10-01 15:52:33 +00:00
-permalink: "/videos/2025-10-01-Why-is-everyone-suddenly-talking-about-AI-agents.html"
+permalink: "/2025-10-01-Why-is-everyone-suddenly-talking-about-AI-agents.html"
 categories: ["AI"]
 tags: ["AI", "AI Agents", "AI Development", "AI Model Costs", "AI Trends", "Azure AI Foundry", "John Maeda", "Microsoft AI", "Onedevquestion", "Tech Shifts", "Videos"]
 tags_normalized: ["ai", "ai agents", "ai development", "ai model costs", "ai trends", "azure ai foundry", "john maeda", "microsoft ai", "onedevquestion", "tech shifts", "videos"]

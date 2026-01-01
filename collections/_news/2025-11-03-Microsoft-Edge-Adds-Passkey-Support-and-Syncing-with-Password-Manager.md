@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft News"
 feed_url: "https://news.microsoft.com/source/feed/"
 date: 2025-11-03 21:32:08 +00:00
-permalink: "/news/2025-11-03-Microsoft-Edge-Adds-Passkey-Support-and-Syncing-with-Password-Manager.html"
+permalink: "/2025-11-03-Microsoft-Edge-Adds-Passkey-Support-and-Syncing-with-Password-Manager.html"
 categories: ["Azure", "Security"]
 tags: ["Azure", "Azure Confidential Ledger", "Biometric Security", "Cloud Security", "Company News", "Cryptography", "Device Authentication", "FIDO2", "Microsoft Account", "Microsoft Edge", "Microsoft Password Manager", "News", "Passkey", "Passwordless Authentication", "PIN Authentication", "Security", "Windows 10", "Windows 11"]
 tags_normalized: ["azure", "azure confidential ledger", "biometric security", "cloud security", "company news", "cryptography", "device authentication", "fido2", "microsoft account", "microsoft edge", "microsoft password manager", "news", "passkey", "passwordless authentication", "pin authentication", "security", "windows 10", "windows 11"]

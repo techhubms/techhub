@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Reddit Azure DevOps"
 feed_url: "https://www.reddit.com/r/azuredevops/.rss"
 date: 2025-07-31 10:06:16 +00:00
-permalink: "/community/2025-07-31-Integrating-PMO-Project-and-Operational-Backlogs-with-Azure-DevOps-Boards.html"
+permalink: "/2025-07-31-Integrating-PMO-Project-and-Operational-Backlogs-with-Azure-DevOps-Boards.html"
 categories: ["Azure", "DevOps"]
 tags: ["API Task Feed", "Azure", "Azure Boards", "Azure DevOps", "Community", "Cross Team Collaboration", "DevOps", "DevOps Best Practices", "Hierarchical Teams", "ITSM Integration", "Operational Backlog", "PMO Integration", "Project Management", "Project View", "Task Assignment", "Team Boards", "Work Item Visibility"]
 tags_normalized: ["api task feed", "azure", "azure boards", "azure devops", "community", "cross team collaboration", "devops", "devops best practices", "hierarchical teams", "itsm integration", "operational backlog", "pmo integration", "project management", "project view", "task assignment", "team boards", "work item visibility"]

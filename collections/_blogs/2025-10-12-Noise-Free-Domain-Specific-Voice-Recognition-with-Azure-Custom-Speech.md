@@ -9,10 +9,10 @@ viewing_mode: "external"
 feed_name: "Dellenny's Blog"
 feed_url: "https://dellenny.com/feed/"
 date: 2025-10-12 08:14:12 +00:00
-permalink: "/blogs/2025-10-12-Noise-Free-Domain-Specific-Voice-Recognition-with-Azure-Custom-Speech.html"
+permalink: "/2025-10-12-Noise-Free-Domain-Specific-Voice-Recognition-with-Azure-Custom-Speech.html"
 categories: ["AI", "Azure"]
-tags: ["Acoustic Adaptation", "AI", "Application Integration", "Azure", "Azure AI Speech", "Azure Custom Speech", "Custom Model Training", "Domain Specific Vocabulary", "Healthcare IT", "Industrial Applications", "Language Adaptation", "Machine Learning", "Noise Reduction", "Blogs", "REST API", "Speech Models", "Speech SDK", "Speech To Text", "Voice Recognition"]
-tags_normalized: ["acoustic adaptation", "ai", "application integration", "azure", "azure ai speech", "azure custom speech", "custom model training", "domain specific vocabulary", "healthcare it", "industrial applications", "language adaptation", "machine learning", "noise reduction", "blogs", "rest api", "speech models", "speech sdk", "speech to text", "voice recognition"]
+tags: ["Acoustic Adaptation", "AI", "Application Integration", "Azure", "Azure AI Speech", "Azure Custom Speech", "Blogs", "Custom Model Training", "Domain Specific Vocabulary", "Healthcare IT", "Industrial Applications", "Language Adaptation", "Machine Learning", "Noise Reduction", "REST API", "Speech Models", "Speech SDK", "Speech To Text", "Voice Recognition"]
+tags_normalized: ["acoustic adaptation", "ai", "application integration", "azure", "azure ai speech", "azure custom speech", "blogs", "custom model training", "domain specific vocabulary", "healthcare it", "industrial applications", "language adaptation", "machine learning", "noise reduction", "rest api", "speech models", "speech sdk", "speech to text", "voice recognition"]
 ---
 
 Dellenny details how Azure Custom Speech enables developers to build noise-resilient, domain-specific speech recognition solutions, focusing on customization for real-world environments and technical vocabularies.<!--excerpt_end-->

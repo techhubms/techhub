@@ -9,10 +9,10 @@ viewing_mode: "external"
 feed_name: "Randy Pagels's Blog"
 feed_url: "https://cooknwithcopilot.com/rss.xml"
 date: 2025-05-23 00:00:00 +00:00
-permalink: "/blogs/2025-05-23-Use-Copilot-in-VS-Code-to-Summarize-Pull-Requests-Efficiently.html"
+permalink: "/2025-05-23-Use-Copilot-in-VS-Code-to-Summarize-Pull-Requests-Efficiently.html"
 categories: ["AI", "Coding", "DevOps", "GitHub Copilot"]
-tags: ["AI", "Best Practices", "Code Review", "Coding", "Copilot Chat", "Developer Workflow", "DevOps", "GitHub Copilot", "Blogs", "PR Description", "Productivity", "Pull Requests", "Summarization", "VS Code"]
-tags_normalized: ["ai", "best practices", "code review", "coding", "copilot chat", "developer workflow", "devops", "github copilot", "blogs", "pr description", "productivity", "pull requests", "summarization", "vs code"]
+tags: ["AI", "Best Practices", "Blogs", "Code Review", "Coding", "Copilot Chat", "Developer Workflow", "DevOps", "GitHub Copilot", "PR Description", "Productivity", "Pull Requests", "Summarization", "VS Code"]
+tags_normalized: ["ai", "best practices", "blogs", "code review", "coding", "copilot chat", "developer workflow", "devops", "github copilot", "pr description", "productivity", "pull requests", "summarization", "vs code"]
 ---
 
 Randy Pagels outlines actionable techniques for using GitHub Copilot Chat in Visual Studio Code to create effective pull request summaries, accelerating and clarifying the code review process for developers.<!--excerpt_end-->

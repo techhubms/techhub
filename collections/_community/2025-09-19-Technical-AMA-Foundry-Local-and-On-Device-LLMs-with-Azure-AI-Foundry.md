@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-09-19 07:00:00 +00:00
-permalink: "/community/2025-09-19-Technical-AMA-Foundry-Local-and-On-Device-LLMs-with-Azure-AI-Foundry.html"
+permalink: "/2025-09-19-Technical-AMA-Foundry-Local-and-On-Device-LLMs-with-Azure-AI-Foundry.html"
 categories: ["AI", "Azure"]
 tags: ["AI", "AI Frameworks", "AI Workflow", "API Integration", "Azure", "Azure AI Foundry", "CLI Tools", "Cloud Transition", "Community", "Cost Efficiency", "Edge AI", "Foundry Local", "Large Language Models", "LLM", "Local Development", "Microsoft", "Model Customization", "On Device Inference", "Private AI", "Prompt Engineering", "SDK"]
 tags_normalized: ["ai", "ai frameworks", "ai workflow", "api integration", "azure", "azure ai foundry", "cli tools", "cloud transition", "community", "cost efficiency", "edge ai", "foundry local", "large language models", "llm", "local development", "microsoft", "model customization", "on device inference", "private ai", "prompt engineering", "sdk"]

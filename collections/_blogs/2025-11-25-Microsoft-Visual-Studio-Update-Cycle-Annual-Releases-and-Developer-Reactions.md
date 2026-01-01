@@ -9,10 +9,10 @@ viewing_mode: "external"
 feed_name: "DevClass"
 feed_url: "https://devclass.com/feed/"
 date: 2025-11-25 17:35:38 +00:00
-permalink: "/blogs/2025-11-25-Microsoft-Visual-Studio-Update-Cycle-Annual-Releases-and-Developer-Reactions.html"
+permalink: "/2025-11-25-Microsoft-Visual-Studio-Update-Cycle-Annual-Releases-and-Developer-Reactions.html"
 categories: ["Coding", "DevOps"]
-tags: [".NET", "Annual Releases", "Build Tools", "Coding", "Community Edition", "Developer Tools", "DevOps", "Enterprise Support", "License Management", "Long Term Servicing Channel", "Monthly Updates", "MSVC", "Blogs", "Release Cadence", "Security Compliance", "UI Themes", "Uncategorized", "VS"]
-tags_normalized: ["dotnet", "annual releases", "build tools", "coding", "community edition", "developer tools", "devops", "enterprise support", "license management", "long term servicing channel", "monthly updates", "msvc", "blogs", "release cadence", "security compliance", "ui themes", "uncategorized", "vs"]
+tags: [".NET", "Annual Releases", "Blogs", "Build Tools", "Coding", "Community Edition", "Developer Tools", "DevOps", "Enterprise Support", "License Management", "Long Term Servicing Channel", "Monthly Updates", "MSVC", "Release Cadence", "Security Compliance", "UI Themes", "Uncategorized", "VS"]
+tags_normalized: ["dotnet", "annual releases", "blogs", "build tools", "coding", "community edition", "developer tools", "devops", "enterprise support", "license management", "long term servicing channel", "monthly updates", "msvc", "release cadence", "security compliance", "ui themes", "uncategorized", "vs"]
 ---
 
 Tim Anderson details Microsoft’s shift to annual Visual Studio releases, monthly updates, and the impact on developers' costs and workflows, alongside community feedback on licensing and usability.<!--excerpt_end-->

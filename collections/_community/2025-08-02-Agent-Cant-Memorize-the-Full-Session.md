@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Reddit Github Copilot"
 feed_url: "https://www.reddit.com/r/GithubCopilot.rss"
 date: 2025-08-02 16:05:40 +00:00
-permalink: "/community/2025-08-02-Agent-Cant-Memorize-the-Full-Session.html"
+permalink: "/2025-08-02-Agent-Cant-Memorize-the-Full-Session.html"
 categories: ["AI", "GitHub Copilot"]
 tags: ["Agent Behavior", "AI", "Claude", "Code Execution", "Community", "Context Retention", "Contextual Consistency", "Docker Compose", "GitHub Copilot", "Python Execution", "Session Memory", "User Experience"]
 tags_normalized: ["agent behavior", "ai", "claude", "code execution", "community", "context retention", "contextual consistency", "docker compose", "github copilot", "python execution", "session memory", "user experience"]

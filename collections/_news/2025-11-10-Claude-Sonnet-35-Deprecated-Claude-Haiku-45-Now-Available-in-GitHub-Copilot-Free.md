@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/changelog/feed/"
 date: 2025-11-10 17:19:46 +00:00
-permalink: "/news/2025-11-10-Claude-Sonnet-35-Deprecated-Claude-Haiku-45-Now-Available-in-GitHub-Copilot-Free.html"
+permalink: "/2025-11-10-Claude-Sonnet-35-Deprecated-Claude-Haiku-45-Now-Available-in-GitHub-Copilot-Free.html"
 categories: ["AI", "GitHub Copilot"]
 tags: ["AI", "AI Models", "Anthropic", "Claude Haiku 4.5", "Claude Sonnet 3.5", "Copilot", "Copilot Chat", "Copilot Enterprise", "Copilot Free", "GitHub Copilot", "Model Deprecation", "Model Policies", "News", "Retired", "VS Code"]
 tags_normalized: ["ai", "ai models", "anthropic", "claude haiku 4dot5", "claude sonnet 3dot5", "copilot", "copilot chat", "copilot enterprise", "copilot free", "github copilot", "model deprecation", "model policies", "news", "retired", "vs code"]

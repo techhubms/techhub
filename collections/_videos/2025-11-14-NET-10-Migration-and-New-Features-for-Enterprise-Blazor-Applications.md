@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "DotNet YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw"
 date: 2025-11-14 19:21:30 +00:00
-permalink: "/videos/2025-11-14-NET-10-Migration-and-New-Features-for-Enterprise-Blazor-Applications.html"
+permalink: "/2025-11-14-NET-10-Migration-and-New-Features-for-Enterprise-Blazor-Applications.html"
 categories: ["Coding"]
 tags: [".NET", ".NET 10", ".NET Aspire", "ASP.NET Core", "ASP.NET Core Identity", "Blazor", "C# 14", "Cloud Native Apps", "Coding", "Enterprise Migration", "F# 10", "Full Stack Development", "MAUI", "Passkeys", "Performance Optimization", "Secure Authentication", "Videos", "VS", "Web Development"]
 tags_normalized: ["dotnet", "dotnet 10", "dotnet aspire", "aspdotnet core", "aspdotnet core identity", "blazor", "csharp 14", "cloud native apps", "coding", "enterprise migration", "fsharp 10", "full stack development", "maui", "passkeys", "performance optimization", "secure authentication", "videos", "vs", "web development"]

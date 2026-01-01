@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Reddit CSharp"
 feed_url: "https://www.reddit.com/r/csharp/.rss"
 date: 2025-08-01 13:50:31 +00:00
-permalink: "/community/2025-08-01-AspNetCoreSecurityKey-API-Key-Authentication-for-ASPNET-Core-Applications.html"
+permalink: "/2025-08-01-AspNetCoreSecurityKey-API-Key-Authentication-for-ASPNET-Core-Applications.html"
 categories: ["Coding", "Security"]
 tags: ["API Key Authentication", "ASP.NET Core", "Attribute Based Security", "C#", "Coding", "Community", "Custom Validation", "ISecurityKeyValidator", "Middleware", "Minimal APIs", "NuGet Package", "OpenAPI", "Security", "Swagger"]
 tags_normalized: ["api key authentication", "aspdotnet core", "attribute based security", "csharp", "coding", "community", "custom validation", "isecuritykeyvalidator", "middleware", "minimal apis", "nuget package", "openapi", "security", "swagger"]

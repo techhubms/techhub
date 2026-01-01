@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Events YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
 date: 2025-11-21 10:47:15 +00:00
-permalink: "/videos/2025-11-21-Envision-Next-Generation-DLP-with-Microsoft-Purview-and-Copilot.html"
+permalink: "/2025-11-21-Envision-Next-Generation-DLP-with-Microsoft-Purview-and-Copilot.html"
 categories: ["AI", "Security"]
 tags: ["AI", "Automated Security", "Compliance", "Copilotandagentsatwork", "Cybersecurity", "Data Loss Prevention", "Data Protection", "DLP", "Governance", "Incident Response", "Microsoft Ignite", "Microsoft Purview", "MSIgnite", "Policy Enforcement", "Security", "Security Automation", "Security Copilot", "Videos"]
 tags_normalized: ["ai", "automated security", "compliance", "copilotandagentsatwork", "cybersecurity", "data loss prevention", "data protection", "dlp", "governance", "incident response", "microsoft ignite", "microsoft purview", "msignite", "policy enforcement", "security", "security automation", "security copilot", "videos"]

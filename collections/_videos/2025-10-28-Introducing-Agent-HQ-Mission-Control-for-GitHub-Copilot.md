@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "GitHub YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ"
 date: 2025-10-28 16:05:02 +00:00
-permalink: "/videos/2025-10-28-Introducing-Agent-HQ-Mission-Control-for-GitHub-Copilot.html"
+permalink: "/2025-10-28-Introducing-Agent-HQ-Mission-Control-for-GitHub-Copilot.html"
 categories: ["AI", "GitHub Copilot"]
 tags: ["Agent HQ", "AgentHQ", "AI", "AI Agents", "AI Driven Workflow", "Automation", "CLI", "Developer Tools", "GitHub", "GitHub Copilot", "Mission Control", "Parallel Tasks", "Software Development", "Videos", "VS Code"]
 tags_normalized: ["agent hq", "agenthq", "ai", "ai agents", "ai driven workflow", "automation", "cli", "developer tools", "github", "github copilot", "mission control", "parallel tasks", "software development", "videos", "vs code"]

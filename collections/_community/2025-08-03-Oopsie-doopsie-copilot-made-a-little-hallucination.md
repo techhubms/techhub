@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Reddit Github Copilot"
 feed_url: "https://www.reddit.com/r/GithubCopilot.rss"
 date: 2025-08-03 00:29:28 +00:00
-permalink: "/community/2025-08-03-Oopsie-doopsie-copilot-made-a-little-hallucination.html"
+permalink: "/2025-08-03-Oopsie-doopsie-copilot-made-a-little-hallucination.html"
 categories: ["AI", "GitHub Copilot"]
 tags: ["AI", "Automation", "Community", "Developer Tools", "Feature Testing", "GitHub Copilot", "Hallucination", "Misinformation", "Opus 4", "Pull Request", "User Experience"]
 tags_normalized: ["ai", "automation", "community", "developer tools", "feature testing", "github copilot", "hallucination", "misinformation", "opus 4", "pull request", "user experience"]

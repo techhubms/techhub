@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Events YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
 date: 2025-11-24 08:05:46 +00:00
-permalink: "/videos/2025-11-24-Lumen-Defender-and-Microsoft-Security-Enhancing-SOC-Threat-Detection-and-Response.html"
+permalink: "/2025-11-24-Lumen-Defender-and-Microsoft-Security-Enhancing-SOC-Threat-Detection-and-Response.html"
 categories: ["Security"]
 tags: ["Black Lotus Labs", "Compliance", "Early Warning Systems", "Endpoint Protection", "Incident Response", "Lumen Defender", "Microsoft Ignite", "Microsoft Security", "MSIgnite", "Network Visibility", "Secureyourdata", "Security", "Security Connectors", "Security Platform", "Security Store", "SOC Operations", "Threat Detection", "Threat Intelligence", "Videos"]
 tags_normalized: ["black lotus labs", "compliance", "early warning systems", "endpoint protection", "incident response", "lumen defender", "microsoft ignite", "microsoft security", "msignite", "network visibility", "secureyourdata", "security", "security connectors", "security platform", "security store", "soc operations", "threat detection", "threat intelligence", "videos"]

@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft News"
 feed_url: "https://news.microsoft.com/source/feed/"
 date: 2025-10-31 16:40:39 +00:00
-permalink: "/news/2025-10-31-Microsoft-Edge-Expands-Scareware-Blocker-to-Boost-Real-Time-Scam-Protection.html"
+permalink: "/2025-10-31-Microsoft-Edge-Expands-Scareware-Blocker-to-Boost-Real-Time-Scam-Protection.html"
 categories: ["Security"]
 tags: ["AI", "AI Powered Security", "Browser Security", "Company News", "Computer Vision", "Cybersecurity", "Enterprise Policy", "IT Pro", "Mac", "Microsoft Edge", "News", "Phishing Protection", "Real Time Protection", "Scareware Blocker", "Security", "SmartScreen", "Threat Intelligence", "User Feedback", "Windows"]
 tags_normalized: ["ai", "ai powered security", "browser security", "company news", "computer vision", "cybersecurity", "enterprise policy", "it pro", "mac", "microsoft edge", "news", "phishing protection", "real time protection", "scareware blocker", "security", "smartscreen", "threat intelligence", "user feedback", "windows"]

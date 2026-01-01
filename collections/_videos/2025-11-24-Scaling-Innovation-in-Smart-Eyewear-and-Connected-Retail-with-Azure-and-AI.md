@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Events YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
 date: 2025-11-24 12:47:53 +00:00
-permalink: "/videos/2025-11-24-Scaling-Innovation-in-Smart-Eyewear-and-Connected-Retail-with-Azure-and-AI.html"
+permalink: "/2025-11-24-Scaling-Innovation-in-Smart-Eyewear-and-Connected-Retail-with-Azure-and-AI.html"
 categories: ["AI", "Azure"]
 tags: ["AI", "Azure", "Beamforming", "Cloud Connectivity", "Connected Retail", "Customer Experience", "Device Management", "EssilorLuxottica", "Global Innovation", "Hearing Enhancement", "Microsoft Ignite", "MSIgnite", "Nuance Audio", "Remote Operations", "Retail Technology", "ScalewithcloudandAIendpoints", "Smart Eyewear", "TeamViewer", "Videos"]
 tags_normalized: ["ai", "azure", "beamforming", "cloud connectivity", "connected retail", "customer experience", "device management", "essilorluxottica", "global innovation", "hearing enhancement", "microsoft ignite", "msignite", "nuance audio", "remote operations", "retail technology", "scalewithcloudandaiendpoints", "smart eyewear", "teamviewer", "videos"]

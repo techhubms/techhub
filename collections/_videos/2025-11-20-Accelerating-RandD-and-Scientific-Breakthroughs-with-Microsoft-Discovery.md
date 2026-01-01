@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Events YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
 date: 2025-11-20 14:57:10 +00:00
-permalink: "/videos/2025-11-20-Accelerating-RandD-and-Scientific-Breakthroughs-with-Microsoft-Discovery.html"
+permalink: "/2025-11-20-Accelerating-RandD-and-Scientific-Breakthroughs-with-Microsoft-Discovery.html"
 categories: ["AI", "Azure", "ML"]
 tags: ["Agentic AI", "AI", "AI Agents", "Azure", "Azure AI", "Data Challenges", "Foundry", "GraphRAG", "Internal Chatbot", "Microsoft Discovery", "Microsoft Ignite", "Migrateandmodernizeyourestate", "ML", "MSIgnite", "Product Design", "Quantum Computing", "R&D", "Sales Tools", "Scientific Research", "Simulation", "Videos"]
 tags_normalized: ["agentic ai", "ai", "ai agents", "azure", "azure ai", "data challenges", "foundry", "graphrag", "internal chatbot", "microsoft discovery", "microsoft ignite", "migrateandmodernizeyourestate", "ml", "msignite", "product design", "quantum computing", "randd", "sales tools", "scientific research", "simulation", "videos"]

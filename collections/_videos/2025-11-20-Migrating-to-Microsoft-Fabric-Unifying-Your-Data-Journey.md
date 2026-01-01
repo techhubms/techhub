@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Events YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
 date: 2025-11-20 10:28:39 +00:00
-permalink: "/videos/2025-11-20-Migrating-to-Microsoft-Fabric-Unifying-Your-Data-Journey.html"
+permalink: "/2025-11-20-Migrating-to-Microsoft-Fabric-Unifying-Your-Data-Journey.html"
 categories: ["Azure", "ML"]
 tags: ["Azure", "Azure Data Factory", "Azure Synapse Gen 2", "Cloud Data Warehouse", "Copy Job", "Data Analytics", "Data Integration", "Data Migration", "Data Transformation", "Fabric Warehouse", "Ignite2025", "Microsoft Fabric", "Migration Best Practices", "Migration Pathways", "ML", "Modern Data Estate", "MSIgnite", "Spark Engineering", "Statsig", "Unifyyourdataplatform", "Videos", "Warehouse Native"]
 tags_normalized: ["azure", "azure data factory", "azure synapse gen 2", "cloud data warehouse", "copy job", "data analytics", "data integration", "data migration", "data transformation", "fabric warehouse", "ignite2025", "microsoft fabric", "migration best practices", "migration pathways", "ml", "modern data estate", "msignite", "spark engineering", "statsig", "unifyyourdataplatform", "videos", "warehouse native"]

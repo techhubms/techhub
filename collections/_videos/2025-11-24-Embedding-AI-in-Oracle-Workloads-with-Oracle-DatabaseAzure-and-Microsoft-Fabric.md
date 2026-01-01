@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Events YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
 date: 2025-11-24 11:54:01 +00:00
-permalink: "/videos/2025-11-24-Embedding-AI-in-Oracle-Workloads-with-Oracle-DatabaseAzure-and-Microsoft-Fabric.html"
+permalink: "/2025-11-24-Embedding-AI-in-Oracle-Workloads-with-Oracle-DatabaseAzure-and-Microsoft-Fabric.html"
 categories: ["AI", "Azure", "Coding", "ML"]
 tags: ["AI", "AI Agents", "AI Integration", "Azure", "Azure AI Search", "Coding", "Copilot Studio", "Custom Copilots", "Data Analytics", "Data Governance", "Database Mirroring", "Microsoft Fabric", "Microsoft Foundry", "Microsoft Purview", "Migrateandmodernizeyourestate", "ML", "MSIgnite", "Operational Analytics", "Oracle Database@Azure", "Vectorization", "Videos"]
 tags_normalized: ["ai", "ai agents", "ai integration", "azure", "azure ai search", "coding", "copilot studio", "custom copilots", "data analytics", "data governance", "database mirroring", "microsoft fabric", "microsoft foundry", "microsoft purview", "migrateandmodernizeyourestate", "ml", "msignite", "operational analytics", "oracle databaseatazure", "vectorization", "videos"]

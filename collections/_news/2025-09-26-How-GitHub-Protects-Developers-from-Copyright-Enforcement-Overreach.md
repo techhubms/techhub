@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/feed/"
 date: 2025-09-26 17:06:17 +00:00
-permalink: "/news/2025-09-26-How-GitHub-Protects-Developers-from-Copyright-Enforcement-Overreach.html"
+permalink: "/2025-09-26-How-GitHub-Protects-Developers-from-Copyright-Enforcement-Overreach.html"
 categories: ["DevOps"]
 tags: ["Acceptable Use Policy", "Content Moderation", "Copyright", "Cox V. Sony", "Developer Community", "DevOps", "DMCA", "DMCA Takedown", "GitHub", "GitHub Policy", "Government Takedowns", "News", "News & Insights", "Open Source", "Platform Liability", "Policy", "Safe Harbor", "Terms Of Service", "Transparency", "U.S. Supreme Court"]
 tags_normalized: ["acceptable use policy", "content moderation", "copyright", "cox vdot sony", "developer community", "devops", "dmca", "dmca takedown", "github", "github policy", "government takedowns", "news", "news and insights", "open source", "platform liability", "policy", "safe harbor", "terms of service", "transparency", "udotsdot supreme court"]

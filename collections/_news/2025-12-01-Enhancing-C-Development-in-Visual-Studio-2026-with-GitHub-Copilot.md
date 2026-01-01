@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft VisualStudio Blog"
 feed_url: "https://devblogs.microsoft.com/visualstudio/feed/"
 date: 2025-12-01 16:24:40 +00:00
-permalink: "/news/2025-12-01-Enhancing-C-Development-in-Visual-Studio-2026-with-GitHub-Copilot.html"
+permalink: "/2025-12-01-Enhancing-C-Development-in-Visual-Studio-2026-with-GitHub-Copilot.html"
 categories: ["AI", "Coding", "GitHub Copilot"]
 tags: ["AI", "App Modernization", "Build Insights", "Build Performance", "C++", "Code Editing", "Code Refactoring", "Coding", "Copilot", "Developer Tools", "GitHub Copilot", "IntelliSense", "Microsoft", "MSVC Build Tools", "News", "Private Preview", "VS", "Windows Development"]
 tags_normalized: ["ai", "app modernization", "build insights", "build performance", "cplusplus", "code editing", "code refactoring", "coding", "copilot", "developer tools", "github copilot", "intellisense", "microsoft", "msvc build tools", "news", "private preview", "vs", "windows development"]

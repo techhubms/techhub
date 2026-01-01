@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-11-11 16:46:02 +00:00
-permalink: "/community/2025-11-11-Accelerate-Cloud-Migration-with-Wave-Planning-in-Azure-Migrate.html"
+permalink: "/2025-11-11-Accelerate-Cloud-Migration-with-Wave-Planning-in-Azure-Migrate.html"
 categories: ["Azure"]
 tags: ["Application Grouping", "Application Modernization", "Azure", "Azure Database Migration Service", "Azure Migrate", "Azure Migration Tools", "Azure Virtual Machines", "Cloud Adoption Framework", "Cloud Migration", "Community", "Dependency Analysis", "Enterprise Migration", "Infrastructure Migration", "Migration Planning", "Migration Tracking", "Server Migration", "Wave Planning"]
 tags_normalized: ["application grouping", "application modernization", "azure", "azure database migration service", "azure migrate", "azure migration tools", "azure virtual machines", "cloud adoption framework", "cloud migration", "community", "dependency analysis", "enterprise migration", "infrastructure migration", "migration planning", "migration tracking", "server migration", "wave planning"]

@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "DotNet YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw"
 date: 2025-12-10 00:00:37 +00:00
-permalink: "/videos/2025-12-10-Proactive-NET-Reliability-with-Azure-SRE-Agent.html"
+permalink: "/2025-12-10-Proactive-NET-Reliability-with-Azure-SRE-Agent.html"
 categories: ["Azure", "Coding", "DevOps"]
 tags: [".NET", "Application Insights", "ASP.NET Core", "Azure", "Azure SRE Agent", "Cloud Development", "Coding", "Custom Sub Agent", "DevOps", "Health Checks", "Incident Response", "Performance Monitoring", "Proactive Monitoring", "Real Time Detection", "Reliability Engineering", "Root Cause Analysis", "Safe Rollback", "Teams Integration", "Videos"]
 tags_normalized: ["dotnet", "application insights", "aspdotnet core", "azure", "azure sre agent", "cloud development", "coding", "custom sub agent", "devops", "health checks", "incident response", "performance monitoring", "proactive monitoring", "real time detection", "reliability engineering", "root cause analysis", "safe rollback", "teams integration", "videos"]

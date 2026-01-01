@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/changelog/feed/"
 date: 2025-09-30 16:15:02 +00:00
-permalink: "/news/2025-09-30-GitHub-Spark-Public-Preview-Now-Available-for-Copilot-Enterprise-Subscribers.html"
+permalink: "/2025-09-30-GitHub-Spark-Public-Preview-Now-Available-for-Copilot-Enterprise-Subscribers.html"
 categories: ["AI", "DevOps", "GitHub Copilot"]
 tags: ["AI", "AI Development", "App Deployment", "Codespaces", "Copilot", "Copilot Agent", "Copilot Enterprise", "Developer Tools", "DevOps", "Enterprise Administration", "GitHub", "GitHub Copilot", "GitHub Spark", "LLM", "Natural Language Programming", "News", "No Code", "Prototyping", "Rapid Application Development", "Team Collaboration"]
 tags_normalized: ["ai", "ai development", "app deployment", "codespaces", "copilot", "copilot agent", "copilot enterprise", "developer tools", "devops", "enterprise administration", "github", "github copilot", "github spark", "llm", "natural language programming", "news", "no code", "prototyping", "rapid application development", "team collaboration"]

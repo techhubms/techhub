@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Nick Chapsas YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrkPsvLGln62OMZRO6K-llg"
 date: 2025-09-22 11:00:16 +00:00
-permalink: "/videos/2025-09-22-Understanding-Microsofts-LTSSTS-Changes-for-NET-Support.html"
+permalink: "/2025-09-22-Understanding-Microsofts-LTSSTS-Changes-for-NET-Support.html"
 categories: ["Coding"]
 tags: [".NET", ".NET Support Policy", "C#", "Coding", "Development Best Practices", "Lifecycle Support", "LTS", "Microsoft", "Release Cycle", "Software Maintenance", "STS", "Versioning", "Videos"]
 tags_normalized: ["dotnet", "dotnet support policy", "csharp", "coding", "development best practices", "lifecycle support", "lts", "microsoft", "release cycle", "software maintenance", "sts", "versioning", "videos"]

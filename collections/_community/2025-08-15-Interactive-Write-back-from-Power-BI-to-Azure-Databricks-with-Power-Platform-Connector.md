@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-08-15 00:12:37 +00:00
-permalink: "/community/2025-08-15-Interactive-Write-back-from-Power-BI-to-Azure-Databricks-with-Power-Platform-Connector.html"
+permalink: "/2025-08-15-Interactive-Write-back-from-Power-BI-to-Azure-Databricks-with-Power-Platform-Connector.html"
 categories: ["Azure", "ML"]
 tags: ["Analytics", "Azure", "Azure Databricks", "Community", "Connector Integration", "Copilot Studio", "Data Governance", "Data Warehousing", "Data Write Back", "Delta Lake", "Embedded Power Apps", "Microsoft", "ML", "Operational Analytics", "Power Apps", "Power Automate", "Power BI", "Power Platform", "Real Time Data", "Spark", "Workflows"]
 tags_normalized: ["analytics", "azure", "azure databricks", "community", "connector integration", "copilot studio", "data governance", "data warehousing", "data write back", "delta lake", "embedded power apps", "microsoft", "ml", "operational analytics", "power apps", "power automate", "power bi", "power platform", "real time data", "spark", "workflows"]

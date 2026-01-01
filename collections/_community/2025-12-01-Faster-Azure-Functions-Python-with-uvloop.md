@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-12-01 19:58:50 +00:00
-permalink: "/community/2025-12-01-Faster-Azure-Functions-Python-with-uvloop.html"
+permalink: "/2025-12-01-Faster-Azure-Functions-Python-with-uvloop.html"
 categories: ["Azure", "Coding"]
 tags: ["Asynchronous Workloads", "AsyncIO", "Azure", "Azure App Service", "Azure Functions", "Benchmarking", "Cloud Scalability", "Coding", "Community", "Concurrency", "Event Loop", "Flex Consumption", "Libuv", "Performance Optimization", "Python 3.13", "Python Worker", "Serverless", "Uvloop"]
 tags_normalized: ["asynchronous workloads", "asyncio", "azure", "azure app service", "azure functions", "benchmarking", "cloud scalability", "coding", "community", "concurrency", "event loop", "flex consumption", "libuv", "performance optimization", "python 3dot13", "python worker", "serverless", "uvloop"]

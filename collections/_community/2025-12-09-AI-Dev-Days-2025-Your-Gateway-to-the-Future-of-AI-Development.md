@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-12-09 08:00:00 +00:00
-permalink: "/community/2025-12-09-AI-Dev-Days-2025-Your-Gateway-to-the-Future-of-AI-Development.html"
+permalink: "/2025-12-09-AI-Dev-Days-2025-Your-Gateway-to-the-Future-of-AI-Development.html"
 categories: ["AI", "Azure", "Coding", "DevOps", "GitHub Copilot"]
 tags: ["Agent HQ", "Agentic DevOps", "AI", "AI Dev Days", "App Modernisation", "Azure", "Azure SRE Agent", "Coding", "Community", "Developer Productivity", "DevOps", "GitHub", "GitHub Copilot", "GitHub Universe", "Hands On Labs", "MCP", "Microsoft Foundry", "Microsoft Ignite", "VS", "VS Code"]
 tags_normalized: ["agent hq", "agentic devops", "ai", "ai dev days", "app modernisation", "azure", "azure sre agent", "coding", "community", "developer productivity", "devops", "github", "github copilot", "github universe", "hands on labs", "mcp", "microsoft foundry", "microsoft ignite", "vs", "vs code"]

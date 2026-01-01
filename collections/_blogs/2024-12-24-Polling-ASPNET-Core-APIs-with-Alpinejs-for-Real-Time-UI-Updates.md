@@ -9,10 +9,10 @@ viewing_mode: "external"
 feed_name: "Khalid Abuhakmeh's Blog"
 feed_url: "https://khalidabuhakmeh.com/feed.xml"
 date: 2024-12-24 00:00:00 +00:00
-permalink: "/blogs/2024-12-24-Polling-ASPNET-Core-APIs-with-Alpinejs-for-Real-Time-UI-Updates.html"
+permalink: "/2024-12-24-Polling-ASPNET-Core-APIs-with-Alpinejs-for-Real-Time-UI-Updates.html"
 categories: ["Coding"]
-tags: ["Alpine.js", "API Integration", "ASP.NET Core", "C#", "Coding", "Front End Frameworks", "JavaScript", "Minimal JavaScript", "Blogs", "Reactivity", "UI Updates", "Web Development"]
-tags_normalized: ["alpinedotjs", "api integration", "aspdotnet core", "csharp", "coding", "front end frameworks", "javascript", "minimal javascript", "blogs", "reactivity", "ui updates", "web development"]
+tags: ["Alpine.js", "API Integration", "ASP.NET Core", "Blogs", "C#", "Coding", "Front End Frameworks", "JavaScript", "Minimal JavaScript", "Reactivity", "UI Updates", "Web Development"]
+tags_normalized: ["alpinedotjs", "api integration", "aspdotnet core", "blogs", "csharp", "coding", "front end frameworks", "javascript", "minimal javascript", "reactivity", "ui updates", "web development"]
 ---
 
 In this post, Khalid Abuhakmeh guides readers through building a real-time updating UI by combining Alpine.js and ASP.NET Core APIs. The article demonstrates effective API design, data polling, and integration best practices.<!--excerpt_end-->

@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/changelog/feed/"
 date: 2025-09-04 18:41:12 +00:00
-permalink: "/news/2025-09-04-Improved-File-Navigation-and-Editing-in-the-GitHub-Web-UI.html"
+permalink: "/2025-09-04-Improved-File-Navigation-and-Editing-in-the-GitHub-Web-UI.html"
 categories: ["DevOps"]
 tags: ["Branch Management", "Contributor Workflow", "Default Branch", "DevOps", "Editing", "File Navigation", "GitHub", "News", "Open Source", "Search Improvements", "User Experience", "Web UI"]
 tags_normalized: ["branch management", "contributor workflow", "default branch", "devops", "editing", "file navigation", "github", "news", "open source", "search improvements", "user experience", "web ui"]

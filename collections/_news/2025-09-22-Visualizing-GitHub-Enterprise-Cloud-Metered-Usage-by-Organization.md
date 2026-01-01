@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/changelog/feed/"
 date: 2025-09-22 14:22:35 +00:00
-permalink: "/news/2025-09-22-Visualizing-GitHub-Enterprise-Cloud-Metered-Usage-by-Organization.html"
+permalink: "/2025-09-22-Visualizing-GitHub-Enterprise-Cloud-Metered-Usage-by-Organization.html"
 categories: ["DevOps"]
 tags: ["Account Management", "Billing", "Cost Centers", "DevOps", "Enterprise Administration", "Enterprise Management Tools", "Enterprise Reporting", "GitHub Enterprise Cloud", "Improvement", "License Management", "Metered Usage", "News", "Organization Management", "Reporting Tools", "Usage API", "Usage Visualization"]
 tags_normalized: ["account management", "billing", "cost centers", "devops", "enterprise administration", "enterprise management tools", "enterprise reporting", "github enterprise cloud", "improvement", "license management", "metered usage", "news", "organization management", "reporting tools", "usage api", "usage visualization"]

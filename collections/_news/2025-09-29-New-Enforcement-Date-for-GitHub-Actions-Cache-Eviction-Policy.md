@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/changelog/feed/"
 date: 2025-09-29 22:02:07 +00:00
-permalink: "/news/2025-09-29-New-Enforcement-Date-for-GitHub-Actions-Cache-Eviction-Policy.html"
+permalink: "/2025-09-29-New-Enforcement-Date-for-GitHub-Actions-Cache-Eviction-Policy.html"
 categories: ["DevOps"]
 tags: ["Actions", "Automation", "Cache Eviction", "Cache Management", "CI/CD", "Continuous Integration", "DevOps", "GitHub Actions", "News", "Policy Change", "Repository Management", "Retired", "Workflow Optimization"]
 tags_normalized: ["actions", "automation", "cache eviction", "cache management", "cislashcd", "continuous integration", "devops", "github actions", "news", "policy change", "repository management", "retired", "workflow optimization"]

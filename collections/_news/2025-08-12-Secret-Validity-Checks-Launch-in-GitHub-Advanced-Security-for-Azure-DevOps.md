@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft DevBlog"
 feed_url: "https://devblogs.microsoft.com/devops/feed/"
 date: 2025-08-12 16:08:45 +00:00
-permalink: "/news/2025-08-12-Secret-Validity-Checks-Launch-in-GitHub-Advanced-Security-for-Azure-DevOps.html"
+permalink: "/2025-08-12-Secret-Validity-Checks-Launch-in-GitHub-Advanced-Security-for-Azure-DevOps.html"
 categories: ["Azure", "DevOps", "Security"]
 tags: ["Active Secrets", "Alert Prioritization", "Azure", "Azure & Cloud", "Azure DevOps", "Cloud Security", "Credential Management", "DevOps", "DevOps Security", "GitHub Advanced Security", "Microsoft Azure", "News", "Open Source", "Provider Patterns", "Remediation", "Secret Protection", "Secret Scanning", "Security", "Security Alerts", "Unknown Secrets", "YAML"]
 tags_normalized: ["active secrets", "alert prioritization", "azure", "azure and cloud", "azure devops", "cloud security", "credential management", "devops", "devops security", "github advanced security", "microsoft azure", "news", "open source", "provider patterns", "remediation", "secret protection", "secret scanning", "security", "security alerts", "unknown secrets", "yaml"]

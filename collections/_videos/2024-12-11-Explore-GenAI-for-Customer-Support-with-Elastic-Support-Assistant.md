@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Events YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
 date: 2024-12-11 18:06:10 +00:00
-permalink: "/videos/2024-12-11-Explore-GenAI-for-Customer-Support-with-Elastic-Support-Assistant.html"
+permalink: "/2024-12-11-Explore-GenAI-for-Customer-Support-with-Elastic-Support-Assistant.html"
 categories: ["AI", "Azure"]
 tags: ["AI", "AI Driven Support", "Azure", "Azure OpenAI", "Chatbot", "Customer Support", "Elastic Support Assistant", "Elasticsearch", "Generative AI", "Microsoft Azure", "Microsoft Ignite", "MSIgnite", "RAG Architecture", "Support Automation", "Videos"]
 tags_normalized: ["ai", "ai driven support", "azure", "azure openai", "chatbot", "customer support", "elastic support assistant", "elasticsearch", "generative ai", "microsoft azure", "microsoft ignite", "msignite", "rag architecture", "support automation", "videos"]

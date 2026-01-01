@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft DevOps Blog"
 feed_url: "https://devblogs.microsoft.com/devops/feed/"
 date: 2025-12-12 14:15:06 +00:00
-permalink: "/news/2025-12-12-Azure-DevOps-Retires-Global-Personal-Access-Tokens-Key-Dates-and-Security-Impact.html"
+permalink: "/2025-12-12-Azure-DevOps-Retires-Global-Personal-Access-Tokens-Key-Dates-and-Security-Impact.html"
 categories: ["Azure", "DevOps", "Security"]
 tags: ["Authentication", "Azure", "Azure DevOps", "Credential Migration", "DevOps", "DevOps Workflows", "Identity Management", "Microsoft Entra", "News", "Organizational Policies", "PAT Retirement", "PATs", "Personal Access Tokens", "Release Management", "Security", "Token Decommission", "Token Governance"]
 tags_normalized: ["authentication", "azure", "azure devops", "credential migration", "devops", "devops workflows", "identity management", "microsoft entra", "news", "organizational policies", "pat retirement", "pats", "personal access tokens", "release management", "security", "token decommission", "token governance"]

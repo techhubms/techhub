@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Developer YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
 date: 2025-09-23 15:28:19 +00:00
-permalink: "/videos/2025-09-23-Modernize-Java-Apps-in-Days-with-GitHub-Copilot.html"
+permalink: "/2025-09-23-Modernize-Java-Apps-in-Days-with-GitHub-Copilot.html"
 categories: ["AI", "GitHub Copilot"]
 tags: ["Accelerated Development", "AI", "App Modernization", "Cloud Computing", "Cloud Migration", "Code Automation", "Code Security", "Compliance", "Copilot", "Dev", "Developer Tools", "Development", "Enterprise Security", "GitHub", "GitHub Copilot", "Java", "Microsoft", "Modernize", "Software Updates", "Tech", "Technology", "Videos", "Vulnerability Fixing"]
 tags_normalized: ["accelerated development", "ai", "app modernization", "cloud computing", "cloud migration", "code automation", "code security", "compliance", "copilot", "dev", "developer tools", "development", "enterprise security", "github", "github copilot", "java", "microsoft", "modernize", "software updates", "tech", "technology", "videos", "vulnerability fixing"]

@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-10-31 19:02:54 +00:00
-permalink: "/community/2025-10-31-Azure-Failure-Prediction-and-Detection-AFPD-Preventing-Downtime-with-Proactive-Reliability.html"
+permalink: "/2025-10-31-Azure-Failure-Prediction-and-Detection-AFPD-Preventing-Downtime-with-Proactive-Reliability.html"
 categories: ["Azure", "DevOps"]
 tags: ["A/B Testing", "AFPD", "Azure", "Azure Compute", "Azure Failure Prediction & Detection", "Azure Notifications", "Azure Resource Graph", "Cloud Monitoring", "Cloud Reliability", "Community", "Contextual Bandit Models", "DevOps", "Event Grid", "Failure Mitigation", "Fleet Health", "Live Migration", "Operational Resilience", "Project Flash", "Project Narya", "Resource Health", "Scheduled Events", "Virtual Machines", "VM Watch"]
 tags_normalized: ["aslashb testing", "afpd", "azure", "azure compute", "azure failure prediction and detection", "azure notifications", "azure resource graph", "cloud monitoring", "cloud reliability", "community", "contextual bandit models", "devops", "event grid", "failure mitigation", "fleet health", "live migration", "operational resilience", "project flash", "project narya", "resource health", "scheduled events", "virtual machines", "vm watch"]

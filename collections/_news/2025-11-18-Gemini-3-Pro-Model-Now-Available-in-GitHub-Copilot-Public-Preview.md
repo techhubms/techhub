@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/changelog/feed/"
 date: 2025-11-18 16:15:31 +00:00
-permalink: "/news/2025-11-18-Gemini-3-Pro-Model-Now-Available-in-GitHub-Copilot-Public-Preview.html"
+permalink: "/2025-11-18-Gemini-3-Pro-Model-Now-Available-in-GitHub-Copilot-Public-Preview.html"
 categories: ["AI", "GitHub Copilot"]
 tags: ["Agent Mode", "AI", "AI Development", "AI Model", "API Key", "Copilot", "Copilot Chat", "Copilot Settings", "Edit Mode", "Enterprise Subscription", "Gemini 3 Pro", "GitHub CLI", "GitHub Copilot", "GitHub Mobile", "Model Picker", "News", "Pro+ Business Plan", "VS Code"]
 tags_normalized: ["agent mode", "ai", "ai development", "ai model", "api key", "copilot", "copilot chat", "copilot settings", "edit mode", "enterprise subscription", "gemini 3 pro", "github cli", "github copilot", "github mobile", "model picker", "news", "proplus business plan", "vs code"]

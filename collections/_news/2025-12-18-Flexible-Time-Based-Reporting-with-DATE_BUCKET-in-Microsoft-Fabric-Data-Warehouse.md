@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Fabric Blog"
 feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
 date: 2025-12-18 09:00:00 +00:00
-permalink: "/news/2025-12-18-Flexible-Time-Based-Reporting-with-DATE_BUCKET-in-Microsoft-Fabric-Data-Warehouse.html"
+permalink: "/2025-12-18-Flexible-Time-Based-Reporting-with-DATE_BUCKET-in-Microsoft-Fabric-Data-Warehouse.html"
 categories: ["Azure", "ML"]
 tags: ["Azure", "Custom Aggregation", "Data Analytics", "Data Grouping", "Data Warehouse", "DATE BUCKET", "Date Functions", "Interval Bucketing", "Microsoft Fabric", "ML", "News", "Reporting", "Sales Order Analysis", "SQL Functions", "T SQL", "Time Based Reporting"]
 tags_normalized: ["azure", "custom aggregation", "data analytics", "data grouping", "data warehouse", "date bucket", "date functions", "interval bucketing", "microsoft fabric", "ml", "news", "reporting", "sales order analysis", "sql functions", "t sql", "time based reporting"]

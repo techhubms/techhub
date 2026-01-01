@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Reddit CSharp"
 feed_url: "https://www.reddit.com/r/csharp/.rss"
 date: 2025-08-08 01:38:42 +00:00
-permalink: "/community/2025-08-08-WPF-XAML-Design-Preview-Issues-with-Dependency-Injection-in-MVVM.html"
+permalink: "/2025-08-08-WPF-XAML-Design-Preview-Issues-with-Dependency-Injection-in-MVVM.html"
 categories: ["Coding"]
 tags: [".NET", "C#", "Coding", "Community", "DataContext", "Dependency Injection", "Design Time Data", "IsDesignTimeCreatable", "Microsoft Docs", "Mock Data", "MVVM", "Parameterless Constructor", "StackOverflow", "UserControl", "ViewModel", "VS", "WPF", "XAML"]
 tags_normalized: ["dotnet", "csharp", "coding", "community", "datacontext", "dependency injection", "design time data", "isdesigntimecreatable", "microsoft docs", "mock data", "mvvm", "parameterless constructor", "stackoverflow", "usercontrol", "viewmodel", "vs", "wpf", "xaml"]

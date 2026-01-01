@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Developer YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
 date: 2025-10-28 07:00:24 +00:00
-permalink: "/videos/2025-10-28-Optimize-Azure-Costs-with-Reserved-VM-Instances.html"
+permalink: "/2025-10-28-Optimize-Azure-Costs-with-Reserved-VM-Instances.html"
 categories: ["Azure"]
 tags: ["Auto Renewal", "Azure", "Azure Advisor", "Azure Pricing", "Azure Reserved Instances", "Azure Virtual Machines", "AzureEssentialsShow", "Best Practices", "Cloud Billing", "Cloud Cost Optimization", "Cloud Scalability", "Cost Management", "Microsoft Azure", "Priyanshi Mittal", "Reserved VM Utilization", "Thomas Maurer", "Videos", "VM Reservations"]
 tags_normalized: ["auto renewal", "azure", "azure advisor", "azure pricing", "azure reserved instances", "azure virtual machines", "azureessentialsshow", "best practices", "cloud billing", "cloud cost optimization", "cloud scalability", "cost management", "microsoft azure", "priyanshi mittal", "reserved vm utilization", "thomas maurer", "videos", "vm reservations"]

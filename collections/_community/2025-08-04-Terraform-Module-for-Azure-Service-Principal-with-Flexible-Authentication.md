@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Reddit Azure"
 feed_url: "https://www.reddit.com/r/azure/.rss"
 date: 2025-08-04 23:04:18 +00:00
-permalink: "/community/2025-08-04-Terraform-Module-for-Azure-Service-Principal-with-Flexible-Authentication.html"
+permalink: "/2025-08-04-Terraform-Module-for-Azure-Service-Principal-with-Flexible-Authentication.html"
 categories: ["Azure", "Coding", "DevOps", "Security"]
 tags: ["Authentication", "Azure", "Certificate", "Client Secret", "Coding", "Community", "DevOps", "IaC", "Key Vault", "OIDC", "Role Assignment", "Security", "Service Principal", "Storage Account", "Terraform"]
 tags_normalized: ["authentication", "azure", "certificate", "client secret", "coding", "community", "devops", "iac", "key vault", "oidc", "role assignment", "security", "service principal", "storage account", "terraform"]

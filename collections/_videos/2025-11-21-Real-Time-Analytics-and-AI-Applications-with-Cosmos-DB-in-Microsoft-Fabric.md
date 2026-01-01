@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Events YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
 date: 2025-11-21 16:45:53 +00:00
-permalink: "/videos/2025-11-21-Real-Time-Analytics-and-AI-Applications-with-Cosmos-DB-in-Microsoft-Fabric.html"
+permalink: "/2025-11-21-Real-Time-Analytics-and-AI-Applications-with-Cosmos-DB-in-Microsoft-Fabric.html"
 categories: ["AI", "Azure", "ML"]
 tags: ["AI", "AI Driven Applications", "Apache Spark", "Azure", "Blue Green Deployment", "Collaborative Filtering", "Cosmos DB", "Medallion Architecture", "Microsoft Fabric", "Microsoft Ignite", "ML", "MSIgnite", "Notebooks", "Personalization", "Real Time Intelligence", "Recommendation Engines", "Unifyyourdataplatform", "User Data Functions", "Vector Search", "Videos", "Zero ETL"]
 tags_normalized: ["ai", "ai driven applications", "apache spark", "azure", "blue green deployment", "collaborative filtering", "cosmos db", "medallion architecture", "microsoft fabric", "microsoft ignite", "ml", "msignite", "notebooks", "personalization", "real time intelligence", "recommendation engines", "unifyyourdataplatform", "user data functions", "vector search", "videos", "zero etl"]

@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Fabric Blog"
 feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
 date: 2025-09-22 09:30:00 +00:00
-permalink: "/news/2025-09-22-Microsoft-Fabric-Spark-Applications-Comparison-Feature-Preview.html"
+permalink: "/2025-09-22-Microsoft-Fabric-Spark-Applications-Comparison-Feature-Preview.html"
 categories: ["Azure", "ML"]
 tags: ["Apache Spark", "Application Comparison", "Azure", "Data Engineering", "Debugging", "L2 Monitoring", "Microsoft Fabric", "ML", "Monitoring Tools", "News", "Performance Monitoring", "Regression Analysis", "Resource Optimization", "Run Metrics", "Spark Applications"]
 tags_normalized: ["apache spark", "application comparison", "azure", "data engineering", "debugging", "l2 monitoring", "microsoft fabric", "ml", "monitoring tools", "news", "performance monitoring", "regression analysis", "resource optimization", "run metrics", "spark applications"]

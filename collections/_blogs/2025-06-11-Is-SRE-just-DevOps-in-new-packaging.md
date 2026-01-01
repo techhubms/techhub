@@ -9,10 +9,10 @@ viewing_mode: "external"
 feed_name: "René van Osnabrugge's Blog"
 feed_url: "https://roadtoalm.com/feed/"
 date: 2025-06-11 08:33:40 +00:00
-permalink: "/blogs/2025-06-11-Is-SRE-Just-DevOps-in-New-Packaging.html"
+permalink: "/2025-06-11-Is-SRE-just-DevOps-in-new-packaging.html"
 categories: ["DevOps"]
-tags: ["DevOps", "Engineering Culture", "Incident Management", "Lead Podcast", "Operations", "Podcast", "Blogs", "Site Reliability Engineering", "SLAs", "SLIs", "SLOs", "Software Reliability", "SRE", "Team Structure", "Xebia"]
-tags_normalized: ["devops", "engineering culture", "incident management", "lead podcast", "operations", "podcast", "blogs", "site reliability engineering", "slas", "slis", "slos", "software reliability", "sre", "team structure", "xebia"]
+tags: ["Blogs", "DevOps", "Engineering Culture", "Incident Management", "Lead Podcast", "Operations", "Podcast", "Site Reliability Engineering", "SLAs", "SLIs", "SLOs", "Software Reliability", "SRE", "Team Structure", "Xebia"]
+tags_normalized: ["blogs", "devops", "engineering culture", "incident management", "lead podcast", "operations", "podcast", "site reliability engineering", "slas", "slis", "slos", "software reliability", "sre", "team structure", "xebia"]
 ---
 
 Rene van Osnabrugge shares insights from the LEAD podcast, co-hosted with Geert van der Cruijsen, examining the real meaning of SRE and its interplay with DevOps in engineering organizations.<!--excerpt_end-->

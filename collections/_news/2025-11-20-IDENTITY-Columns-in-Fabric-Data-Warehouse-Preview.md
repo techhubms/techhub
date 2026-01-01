@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Fabric Blog"
 feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
 date: 2025-11-20 02:30:00 +00:00
-permalink: "/news/2025-11-20-IDENTITY-Columns-in-Fabric-Data-Warehouse-Preview.html"
+permalink: "/2025-11-20-IDENTITY-Columns-in-Fabric-Data-Warehouse-Preview.html"
 categories: ["Azure", "ML"]
 tags: ["Azure", "BIGINT", "Cloud Analytics", "Data Integrity", "Data Modeling", "Data Warehouse", "Distributed Architecture", "ETL", "Fabric Data Warehouse", "IDENTITY Column", "Ingestion Pipeline", "Microsoft Fabric", "ML", "News", "Parallel Ingestion", "Preview Features", "SQL Server", "Surrogate Key", "T SQL"]
 tags_normalized: ["azure", "bigint", "cloud analytics", "data integrity", "data modeling", "data warehouse", "distributed architecture", "etl", "fabric data warehouse", "identity column", "ingestion pipeline", "microsoft fabric", "ml", "news", "parallel ingestion", "preview features", "sql server", "surrogate key", "t sql"]

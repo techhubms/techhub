@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/feed/"
 date: 2025-08-14 16:00:00 +00:00
-permalink: "/news/2025-08-14-Q1-2025-GitHub-Innovation-Graph-Update-Trends-in-Data-Visualization-and-AI-Development.html"
+permalink: "/2025-08-14-Q1-2025-GitHub-Innovation-Graph-Update-Trends-in-Data-Visualization-and-AI-Development.html"
 categories: ["AI"]
 tags: ["AI", "AI Development", "AI Index Report", "Bar Chart Race", "Data Visualization", "Generative AI", "GitHub Innovation Graph", "Global Tech Trends", "Innovation Graph", "LLM", "Machine Learning", "News", "News & Insights", "Open Source Analytics", "Policy", "Programming Languages", "Public Developer Data", "Python", "Repository Metrics", "Research Insights", "Software Trends"]
 tags_normalized: ["ai", "ai development", "ai index report", "bar chart race", "data visualization", "generative ai", "github innovation graph", "global tech trends", "innovation graph", "llm", "machine learning", "news", "news and insights", "open source analytics", "policy", "programming languages", "public developer data", "python", "repository metrics", "research insights", "software trends"]

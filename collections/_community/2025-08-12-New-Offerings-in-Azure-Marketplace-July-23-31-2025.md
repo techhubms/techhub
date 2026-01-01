@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Community"
 date: 2025-08-12 13:00:00 +00:00
-permalink: "/community/2025-08-12-New-Offerings-in-Azure-Marketplace-July-23-31-2025.html"
+permalink: "/2025-08-12-New-Offerings-in-Azure-Marketplace-July-23-31-2025.html"
 categories: ["AI", "Azure", "ML", "Security"]
 tags: ["AI", "AI Solutions", "Archiving", "Automation", "Azure", "Azure Integration", "Azure Marketplace", "Backup Solutions", "Cloud Migration", "Community", "Compliance", "Data Analytics", "Databricks", "Endpoint Management", "Generative AI", "Governance", "Microsoft Azure", "ML", "Partner Solutions", "Power Platform", "Remote Monitoring", "Security", "Security Platforms", "Workflows"]
 tags_normalized: ["ai", "ai solutions", "archiving", "automation", "azure", "azure integration", "azure marketplace", "backup solutions", "cloud migration", "community", "compliance", "data analytics", "databricks", "endpoint management", "generative ai", "governance", "microsoft azure", "ml", "partner solutions", "power platform", "remote monitoring", "security", "security platforms", "workflows"]

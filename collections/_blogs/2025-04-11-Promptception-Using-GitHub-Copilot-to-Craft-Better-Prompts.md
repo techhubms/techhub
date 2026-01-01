@@ -9,10 +9,10 @@ viewing_mode: "external"
 feed_name: "Randy Pagels's Blog"
 feed_url: "https://www.cooknwithcopilot.com/rss.xml"
 date: 2025-04-11 00:00:00 +00:00
-permalink: "/blogs/2025-04-11-Promptception-Using-GitHub-Copilot-to-Craft-Better-Prompts.html"
+permalink: "/2025-04-11-Promptception-Using-GitHub-Copilot-to-Craft-Better-Prompts.html"
 categories: ["AI", "Coding", "GitHub Copilot"]
-tags: ["AI", "Async Await", "Code Review", "Coding", "Copilot Agent Mode", "Copilot Chat", "Copilot Edit", "Developer Tools", "GitHub Copilot", "IDE Tools", "Meta Prompt", "Playwright", "Blogs", "Prompt Engineering", "Prompt Optimization", "Readme Generation", "Software Development"]
-tags_normalized: ["ai", "async await", "code review", "coding", "copilot agent mode", "copilot chat", "copilot edit", "developer tools", "github copilot", "ide tools", "meta prompt", "playwright", "blogs", "prompt engineering", "prompt optimization", "readme generation", "software development"]
+tags: ["AI", "Async Await", "Blogs", "Code Review", "Coding", "Copilot Agent Mode", "Copilot Chat", "Copilot Edit", "Developer Tools", "GitHub Copilot", "IDE Tools", "Meta Prompt", "Playwright", "Prompt Engineering", "Prompt Optimization", "Readme Generation", "Software Development"]
+tags_normalized: ["ai", "async await", "blogs", "code review", "coding", "copilot agent mode", "copilot chat", "copilot edit", "developer tools", "github copilot", "ide tools", "meta prompt", "playwright", "prompt engineering", "prompt optimization", "readme generation", "software development"]
 ---
 
 Randy Pagels explores 'Promptception'—how to use GitHub Copilot itself to create, rewrite, and optimize prompts for Copilot Chat, Edit, and Agent Mode, sharing actionable examples for developers.<!--excerpt_end-->

@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-09-17 12:52:18 +00:00
-permalink: "/community/2025-09-17-Practical-Ways-to-Use-AI-in-Your-Data-Science-and-ML-Journey.html"
+permalink: "/2025-09-17-Practical-Ways-to-Use-AI-in-Your-Data-Science-and-ML-Journey.html"
 categories: ["AI", "GitHub Copilot", "ML"]
 tags: ["AI", "AI Agents", "Azure AI Foundry", "Community", "Curriculum", "Data Science", "Data Wrangler", "GitHub Copilot", "Hands On Workshop", "Jupyter Notebooks", "Learning Community", "Machine Learning", "Microsoft", "ML", "Practical AI", "Python", "Study Plans", "VS Code"]
 tags_normalized: ["ai", "ai agents", "azure ai foundry", "community", "curriculum", "data science", "data wrangler", "github copilot", "hands on workshop", "jupyter notebooks", "learning community", "machine learning", "microsoft", "ml", "practical ai", "python", "study plans", "vs code"]

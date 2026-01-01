@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Fabric Blog"
 feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
 date: 2025-07-23 10:00:00 +00:00
-permalink: "/news/2025-07-23-Fabric-Data-Agents-Microsoft-Copilot-Studio-Multi-Agent-Orchestration-Preview-Released.html"
+permalink: "/2025-07-23-Fabric-Data-Agents-Microsoft-Copilot-Studio-Multi-Agent-Orchestration-Preview-Released.html"
 categories: ["AI", "ML"]
 tags: ["Agent Interoperability", "AI", "Automation", "Data Environments", "Enterprise Automation", "Extensibility", "Fabric Data Agents", "Intelligent Agents", "Microsoft Copilot Studio", "Microsoft Fabric", "ML", "Multi Agent Orchestration", "News"]
 tags_normalized: ["agent interoperability", "ai", "automation", "data environments", "enterprise automation", "extensibility", "fabric data agents", "intelligent agents", "microsoft copilot studio", "microsoft fabric", "ml", "multi agent orchestration", "news"]

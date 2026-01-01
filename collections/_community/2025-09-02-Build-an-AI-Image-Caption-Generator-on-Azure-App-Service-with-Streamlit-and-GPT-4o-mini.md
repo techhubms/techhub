@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-09-02 10:08:03 +00:00
-permalink: "/community/2025-09-02-Build-an-AI-Image-Caption-Generator-on-Azure-App-Service-with-Streamlit-and-GPT-4o-mini.html"
+permalink: "/2025-09-02-Build-an-AI-Image-Caption-Generator-on-Azure-App-Service-with-Streamlit-and-GPT-4o-mini.html"
 categories: ["AI", "Azure", "Coding"]
 tags: ["AI", "App Service Samples", "Azd", "Azure", "Azure AI Vision", "Azure App Service", "Azure OpenAI", "Bicep", "Cloud Deployment", "Coding", "Community", "Computer Vision", "GPT 4o Mini", "IaC", "Image Captioning", "Managed Identity", "Natural Language Generation", "Python", "RBAC", "REST API", "Streamlit"]
 tags_normalized: ["ai", "app service samples", "azd", "azure", "azure ai vision", "azure app service", "azure openai", "bicep", "cloud deployment", "coding", "community", "computer vision", "gpt 4o mini", "iac", "image captioning", "managed identity", "natural language generation", "python", "rbac", "rest api", "streamlit"]

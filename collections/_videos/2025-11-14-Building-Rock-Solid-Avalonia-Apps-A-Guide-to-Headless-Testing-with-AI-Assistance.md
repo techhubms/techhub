@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "DotNet YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw"
 date: 2025-11-14 06:30:06 +00:00
-permalink: "/videos/2025-11-14-Building-Rock-Solid-Avalonia-Apps-A-Guide-to-Headless-Testing-with-AI-Assistance.html"
+permalink: "/2025-11-14-Building-Rock-Solid-Avalonia-Apps-A-Guide-to-Headless-Testing-with-AI-Assistance.html"
 categories: ["AI", "Coding", "DevOps", "GitHub Copilot"]
 tags: [".NET", "AI", "AI Pair Programming", "Application Quality", "Avalonia", "Coding", "Continuous Integration", "Developer Productivity", "DevOps", "GitHub Copilot", "Headless Testing", "Test Automation", "Testing Strategy", "UI Automation", "UI Testing", "Videos"]
 tags_normalized: ["dotnet", "ai", "ai pair programming", "application quality", "avalonia", "coding", "continuous integration", "developer productivity", "devops", "github copilot", "headless testing", "test automation", "testing strategy", "ui automation", "ui testing", "videos"]

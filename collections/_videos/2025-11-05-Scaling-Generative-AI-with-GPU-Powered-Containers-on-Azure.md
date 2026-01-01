@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Developer YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
 date: 2025-11-05 01:00:52 +00:00
-permalink: "/videos/2025-11-05-Scaling-Generative-AI-with-GPU-Powered-Containers-on-Azure.html"
+permalink: "/2025-11-05-Scaling-Generative-AI-with-GPU-Powered-Containers-on-Azure.html"
 categories: ["AI", "Azure", "Coding", "GitHub Copilot", "ML"]
 tags: ["Agent Mode", "AI", "AI Development", "AIContainers", "Architecture", "Azure", "Azure Container Apps", "AzureContainerApps", "Claude Sonnet", "Coding", "CUDA", "Docker Containers", "DockerContainers", "Generative AI", "GenerativeAI", "GitHub Copilot", "GPU", "GPU Acceleration", "Hugging Face", "Image Generation", "ImageGeneration", "Java", "JavaAI", "ML", "Model Inference", "ONNX", "ONNX Runtime", "Performance Optimization", "SD4J", "Spring Boot", "SpringBoot", "Stable Diffusion", "StableDiffusion", "Version Compatibility", "Videos"]
 tags_normalized: ["agent mode", "ai", "ai development", "aicontainers", "architecture", "azure", "azure container apps", "azurecontainerapps", "claude sonnet", "coding", "cuda", "docker containers", "dockercontainers", "generative ai", "generativeai", "github copilot", "gpu", "gpu acceleration", "hugging face", "image generation", "imagegeneration", "java", "javaai", "ml", "model inference", "onnx", "onnx runtime", "performance optimization", "sd4j", "spring boot", "springboot", "stable diffusion", "stablediffusion", "version compatibility", "videos"]

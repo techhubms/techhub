@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/changelog/feed/"
 date: 2025-11-06 17:50:59 +00:00
-permalink: "/news/2025-11-06-Improved-Onboarding-Flow-for-GitHub-Projects.html"
+permalink: "/2025-11-06-Improved-Onboarding-Flow-for-GitHub-Projects.html"
 categories: ["DevOps"]
 tags: ["DevOps", "DevOps Tools", "GitHub Projects", "GraphQL API", "Improvement", "Issue Management", "News", "Onboarding", "Project Templates", "Projects & Issues", "Pull Requests", "Repository Integration", "Software Development", "Team Planning", "Workflow Automation"]
 tags_normalized: ["devops", "devops tools", "github projects", "graphql api", "improvement", "issue management", "news", "onboarding", "project templates", "projects and issues", "pull requests", "repository integration", "software development", "team planning", "workflow automation"]

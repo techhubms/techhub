@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft News"
 feed_url: "https://news.microsoft.com/source/feed/"
 date: 2025-07-24 13:46:56 +00:00
-permalink: "/news/2025-07-24-AI-for-business-impact-starts-here-Proven-AI-use-cases-by-industry.html"
+permalink: "/2025-07-24-AI-for-business-impact-starts-here-Proven-AI-use-cases-by-industry.html"
 categories: ["AI", "Azure"]
 tags: ["AI", "AI Adoption", "AI Impact", "AI Solutions", "Azure", "Business Transformation", "Cloud Services", "Company News", "Digital Transformation", "Enterprise AI", "Industry Use Cases", "Microsoft AI", "News", "Sector Specific AI"]
 tags_normalized: ["ai", "ai adoption", "ai impact", "ai solutions", "azure", "business transformation", "cloud services", "company news", "digital transformation", "enterprise ai", "industry use cases", "microsoft ai", "news", "sector specific ai"]

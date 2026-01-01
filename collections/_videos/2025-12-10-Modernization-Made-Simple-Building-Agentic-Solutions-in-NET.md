@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "DotNet YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw"
 date: 2025-12-10 00:00:47 +00:00
-permalink: "/videos/2025-12-10-Modernization-Made-Simple-Building-Agentic-Solutions-in-NET.html"
+permalink: "/2025-12-10-Modernization-Made-Simple-Building-Agentic-Solutions-in-NET.html"
 categories: ["AI", "Coding"]
 tags: [".NET", "Agent Framework", "AI", "AI Agents", "Application Development", "Coding", "Enterprise Application Modernization", "Integration", "Memory Persistence", "Microsoft", "Multi Agent Collaboration", "Programming Demo", "Software Modernization", "Tool Orchestration", "Videos"]
 tags_normalized: ["dotnet", "agent framework", "ai", "ai agents", "application development", "coding", "enterprise application modernization", "integration", "memory persistence", "microsoft", "multi agent collaboration", "programming demo", "software modernization", "tool orchestration", "videos"]

@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Events YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
 date: 2025-11-19 13:17:27 +00:00
-permalink: "/videos/2025-11-19-Advancing-Mainframe-Modernization-with-Slingshot-and-Microsoft-Azure.html"
+permalink: "/2025-11-19-Advancing-Mainframe-Modernization-with-Slingshot-and-Microsoft-Azure.html"
 categories: ["AI", "Azure"]
 tags: ["AI", "AI Powered Migration", "Azure", "Azure Infrastructure", "Cloud Transformation", "COBOL Migration", "Efficiency Gains", "FastAPI", "Healthcare Technology", "Legacy Systems", "Mainframe Modernization", "Microsoft Azure", "Microsoft Ignite", "Migrateandmodernizeyourestate", "Modernization Process", "MSIgnite", "Sapient Slingshot", "Slingshot", "System Architecture", "Technical Specification", "Videos"]
 tags_normalized: ["ai", "ai powered migration", "azure", "azure infrastructure", "cloud transformation", "cobol migration", "efficiency gains", "fastapi", "healthcare technology", "legacy systems", "mainframe modernization", "microsoft azure", "microsoft ignite", "migrateandmodernizeyourestate", "modernization process", "msignite", "sapient slingshot", "slingshot", "system architecture", "technical specification", "videos"]

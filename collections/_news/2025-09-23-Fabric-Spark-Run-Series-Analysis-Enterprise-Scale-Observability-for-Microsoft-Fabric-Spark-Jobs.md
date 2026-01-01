@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Fabric Blog"
 feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
 date: 2025-09-23 09:00:00 +00:00
-permalink: "/news/2025-09-23-Fabric-Spark-Run-Series-Analysis-Enterprise-Scale-Observability-for-Microsoft-Fabric-Spark-Jobs.html"
+permalink: "/2025-09-23-Fabric-Spark-Run-Series-Analysis-Enterprise-Scale-Observability-for-Microsoft-Fabric-Spark-Jobs.html"
 categories: ["Azure", "ML"]
 tags: ["Anomaly Detection", "Autotune", "Azure", "Data Engineering", "Enterprise Data", "Microsoft Fabric", "ML", "Monitoring", "News", "Notebook Executions", "Observability", "Performance Tuning", "Pipeline Monitoring", "Run Series Analysis", "Spark", "Spark Job Definitions", "Spark SQL"]
 tags_normalized: ["anomaly detection", "autotune", "azure", "data engineering", "enterprise data", "microsoft fabric", "ml", "monitoring", "news", "notebook executions", "observability", "performance tuning", "pipeline monitoring", "run series analysis", "spark", "spark job definitions", "spark sql"]

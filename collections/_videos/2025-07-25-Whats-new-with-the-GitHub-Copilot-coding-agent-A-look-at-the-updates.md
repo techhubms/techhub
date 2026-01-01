@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "GitHub's Youtube channel"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ"
 date: 2025-07-25 14:01:34 +00:00
-permalink: "/videos/2025-07-25-Whats-new-with-the-GitHub-Copilot-coding-agent-A-look-at-the-updates.html"
+permalink: "/2025-07-25-Whats-new-with-the-GitHub-Copilot-coding-agent-A-look-at-the-updates.html"
 categories: ["AI", "GitHub Copilot"]
 tags: ["AI", "Coding Agent", "CodingAgent", "Copilot Business", "Copilot Pro", "Developer Tools", "GitHub", "GitHub Copilot", "Playwright MCP", "Remote MCP Servers", "Screenshot Validation", "Session Tracking", "UI Validation", "Videos"]
 tags_normalized: ["ai", "coding agent", "codingagent", "copilot business", "copilot pro", "developer tools", "github", "github copilot", "playwright mcp", "remote mcp servers", "screenshot validation", "session tracking", "ui validation", "videos"]

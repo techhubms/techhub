@@ -13,6 +13,7 @@ The Tech Hub uses multiple filtering mechanisms that work together to help users
 **Purpose**: Helps users find recent content or content from specific time periods.
 
 **How it works**:
+
 - Filter items by date ranges (e.g., "Last 30 days", "Last 6 months")
 - Dynamically update displayed content without page reload
 - Combine with other filters for refined searches
@@ -26,6 +27,7 @@ The Tech Hub uses multiple filtering mechanisms that work together to help users
 **Purpose**: Enables users to focus on content from specific topical areas (AI vs GitHub Copilot).
 
 **How it works**:
+
 - Filter items using normalized section tags ("ai", "github copilot")
 - Available only on the main index page (/)
 - Uses the same tag matching logic as all other filters
@@ -41,6 +43,7 @@ The Tech Hub uses multiple filtering mechanisms that work together to help users
 **Purpose**: Enables users to focus on specific content formats (News, Videos, Community) within a section.
 
 **How it works**:
+
 - Filter items using normalized collection tags ("news", "blogs", "videos")
 - Available only on section index pages (/ai, /github-copilot)
 - Uses the same tag matching logic as all other filters
@@ -56,6 +59,7 @@ The Tech Hub uses multiple filtering mechanisms that work together to help users
 **Purpose**: Enables users to find content related to specific technologies, concepts, or themes.
 
 **How it works**:
+
 - Filter items using normalized content tags from front matter
 - Support multiple tag selection for intersection filtering (AND logic)
 - Available only on individual collection pages
@@ -71,6 +75,7 @@ The Tech Hub uses multiple filtering mechanisms that work together to help users
 **Purpose**: Enables users to quickly find content by searching across titles, descriptions, metadata, and tags using free-form text input.
 
 **How it works**:
+
 - Real-time filtering as user types with debounced input (300ms delay)
 - Searches across multiple content areas: titles, descriptions, author info, and tags
 - Case-insensitive and partial word matching

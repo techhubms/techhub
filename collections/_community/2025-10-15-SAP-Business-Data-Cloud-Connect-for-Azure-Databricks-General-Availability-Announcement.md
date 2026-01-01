@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-10-15 16:00:00 +00:00
-permalink: "/community/2025-10-15-SAP-Business-Data-Cloud-Connect-for-Azure-Databricks-General-Availability-Announcement.html"
+permalink: "/2025-10-15-SAP-Business-Data-Cloud-Connect-for-Azure-Databricks-General-Availability-Announcement.html"
 categories: ["AI", "Azure", "ML"]
 tags: ["AI", "Analytics", "Azure", "Azure Databricks", "Bi Directional Data", "Community", "Data Governance", "Data Integration", "Data Security", "Data Warehousing", "Delta Sharing", "Enterprise Data", "Machine Learning", "Microsoft", "ML", "SAP Business Data Cloud", "Unified Data Estate"]
 tags_normalized: ["ai", "analytics", "azure", "azure databricks", "bi directional data", "community", "data governance", "data integration", "data security", "data warehousing", "delta sharing", "enterprise data", "machine learning", "microsoft", "ml", "sap business data cloud", "unified data estate"]

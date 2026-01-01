@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft All Things Azure Blog"
 feed_url: "https://devblogs.microsoft.com/all-things-azure/feed/"
 date: 2025-10-03 06:47:00 +00:00
-permalink: "/news/2025-10-03-Building-a-Real-Time-Voice-Powered-AI-Sales-Coach-Using-Azure-Voice-Live-API.html"
+permalink: "/2025-10-03-Building-a-Real-Time-Voice-Powered-AI-Sales-Coach-Using-Azure-Voice-Live-API.html"
 categories: ["AI", "Azure", "Coding"]
 tags: ["AI", "AI Sales Coach", "All Things Azure", "Audio Processing", "Avatar Simulation", "Azure", "Azure AI", "Azure Developer CLI", "Azure Voice Live API", "C#", "Coding", "Feedback System", "LLM as Judge", "Model Integration", "News", "Prompt Engineering", "Real Time Speech", "Session Configuration", "Speech To Speech", "Voice AI"]
 tags_normalized: ["ai", "ai sales coach", "all things azure", "audio processing", "avatar simulation", "azure", "azure ai", "azure developer cli", "azure voice live api", "csharp", "coding", "feedback system", "llm as judge", "model integration", "news", "prompt engineering", "real time speech", "session configuration", "speech to speech", "voice ai"]

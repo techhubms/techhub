@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Developer YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
 date: 2025-10-29 00:00:14 +00:00
-permalink: "/videos/2025-10-29-GenAI-for-Java-Developers-2-Core-Techniques-Explained.html"
+permalink: "/2025-10-29-GenAI-for-Java-Developers-2-Core-Techniques-Explained.html"
 categories: ["AI"]
 tags: ["AI", "AI Applications", "AI Tutorial", "AITechniques", "Chatbot Development", "ChatGPT", "Function Calling", "FunctionCalling", "Generative AI", "GenerativeAI", "GitHub Codespaces", "GitHubModels", "Interactive Chat", "Java", "Java Development", "JavaDevelopment", "JavaTutorial", "LLM", "Machine Learning", "MachineLearning", "Multi Turn Chat", "OpenAI", "RAG", "Retrieval Augmented Generation", "Videos"]
 tags_normalized: ["ai", "ai applications", "ai tutorial", "aitechniques", "chatbot development", "chatgpt", "function calling", "functioncalling", "generative ai", "generativeai", "github codespaces", "githubmodels", "interactive chat", "java", "java development", "javadevelopment", "javatutorial", "llm", "machine learning", "machinelearning", "multi turn chat", "openai", "rag", "retrieval augmented generation", "videos"]

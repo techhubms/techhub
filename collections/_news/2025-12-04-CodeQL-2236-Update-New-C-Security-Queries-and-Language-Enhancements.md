@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/changelog/feed/"
 date: 2025-12-04 16:42:39 +00:00
-permalink: "/news/2025-12-04-CodeQL-2236-Update-New-C-Security-Queries-and-Language-Enhancements.html"
+permalink: "/2025-12-04-CodeQL-2236-Update-New-C-Security-Queries-and-Language-Enhancements.html"
 categories: ["Coding", "DevOps", "Security"]
 tags: ["Application Security", "Automated Security", "C#", "Code Scanning", "CodeQL", "Coding", "DevOps", "GHES", "GitHub", "Improvement", "Java", "JavaScript", "Kotlin", "News", "Precision Improvement", "Python", "Query Pack", "Ruby", "Rust", "Security", "Security Queries", "Software Security", "Static Analysis", "Swift 6.2.1", "TypeScript"]
 tags_normalized: ["application security", "automated security", "csharp", "code scanning", "codeql", "coding", "devops", "ghes", "github", "improvement", "java", "javascript", "kotlin", "news", "precision improvement", "python", "query pack", "ruby", "rust", "security", "security queries", "software security", "static analysis", "swift 6dot2dot1", "typescript"]

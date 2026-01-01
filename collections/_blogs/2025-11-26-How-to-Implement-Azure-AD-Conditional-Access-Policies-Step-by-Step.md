@@ -9,10 +9,10 @@ viewing_mode: "external"
 feed_name: "Dellenny's Blog"
 feed_url: "https://dellenny.com/feed/"
 date: 2025-11-26 11:17:16 +00:00
-permalink: "/blogs/2025-11-26-How-to-Implement-Azure-AD-Conditional-Access-Policies-Step-by-Step.html"
+permalink: "/2025-11-26-How-to-Implement-Azure-AD-Conditional-Access-Policies-Step-by-Step.html"
 categories: ["Azure", "Security"]
-tags: ["Access Control", "Azure", "Azure AD", "Azure Portal", "Break Glass Account", "Cloud Security", "Conditional Access", "Device Compliance", "Identity Security", "MFA", "Microsoft 365", "Microsoft Entra ID", "Policy Configuration", "Blogs", "Security", "Security Administrator", "Session Controls", "Sign in Risk", "Zero Trust"]
-tags_normalized: ["access control", "azure", "azure ad", "azure portal", "break glass account", "cloud security", "conditional access", "device compliance", "identity security", "mfa", "microsoft 365", "microsoft entra id", "policy configuration", "blogs", "security", "security administrator", "session controls", "sign in risk", "zero trust"]
+tags: ["Access Control", "Azure", "Azure AD", "Azure Portal", "Blogs", "Break Glass Account", "Cloud Security", "Conditional Access", "Device Compliance", "Identity Security", "MFA", "Microsoft 365", "Microsoft Entra ID", "Policy Configuration", "Security", "Security Administrator", "Session Controls", "Sign in Risk", "Zero Trust"]
+tags_normalized: ["access control", "azure", "azure ad", "azure portal", "blogs", "break glass account", "cloud security", "conditional access", "device compliance", "identity security", "mfa", "microsoft 365", "microsoft entra id", "policy configuration", "security", "security administrator", "session controls", "sign in risk", "zero trust"]
 ---
 
 John Edward provides a practical walkthrough for implementing Azure AD Conditional Access policies, offering technical insights and best practices for securing Microsoft cloud identities.<!--excerpt_end-->

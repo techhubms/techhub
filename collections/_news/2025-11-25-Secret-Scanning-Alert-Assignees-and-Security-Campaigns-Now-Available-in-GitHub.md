@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/changelog/feed/"
 date: 2025-11-25 17:51:00 +00:00
-permalink: "/news/2025-11-25-Secret-Scanning-Alert-Assignees-and-Security-Campaigns-Now-Available-in-GitHub.html"
+permalink: "/2025-11-25-Secret-Scanning-Alert-Assignees-and-Security-Campaigns-Now-Available-in-GitHub.html"
 categories: ["DevOps", "Security"]
 tags: ["Alert Assignees", "Application Security", "Bulk Actions", "CI/CD", "DevOps", "GitHub", "News", "Remediation", "Repository Security", "REST API", "Secret Scanning", "Security", "Security Alerts", "Security Automation", "Security Campaigns", "Security Dashboard", "Webhooks"]
 tags_normalized: ["alert assignees", "application security", "bulk actions", "cislashcd", "devops", "github", "news", "remediation", "repository security", "rest api", "secret scanning", "security", "security alerts", "security automation", "security campaigns", "security dashboard", "webhooks"]

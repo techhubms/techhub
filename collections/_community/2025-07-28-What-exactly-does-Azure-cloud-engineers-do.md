@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Reddit Azure"
 feed_url: "https://www.reddit.com/r/azure/.rss"
 date: 2025-07-28 18:59:43 +00:00
-permalink: "/community/2025-07-28-What-exactly-does-Azure-cloud-engineers-do.html"
+permalink: "/2025-07-28-What-exactly-does-Azure-cloud-engineers-do.html"
 categories: ["Azure", "Coding", "DevOps"]
 tags: [".NET", "APIs", "Azure", "Azure Certification", "Azure Functions", "C#", "Career Transition", "Cloud Development", "Cloud Engineer", "Cloud Migration", "Coding", "Community", "DevOps"]
 tags_normalized: ["dotnet", "apis", "azure", "azure certification", "azure functions", "csharp", "career transition", "cloud development", "cloud engineer", "cloud migration", "coding", "community", "devops"]

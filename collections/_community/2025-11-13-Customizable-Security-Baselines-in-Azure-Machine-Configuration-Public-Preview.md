@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-11-13 17:20:06 +00:00
-permalink: "/community/2025-11-13-Customizable-Security-Baselines-in-Azure-Machine-Configuration-Public-Preview.html"
+permalink: "/2025-11-13-Customizable-Security-Baselines-in-Azure-Machine-Configuration-Public-Preview.html"
 categories: ["Azure", "DevOps", "Security"]
 tags: ["ARM Templates", "Audit Policy", "Azure", "Azure Arc", "Azure CLI", "Azure Machine Configuration", "Azure Policy", "Bicep", "CI/CD", "CIS Benchmark", "Community", "Compliance", "Configuration Management", "DevOps", "Governance", "Linux Server", "Policy as Code", "Security", "Security Baseline", "Windows Server"]
 tags_normalized: ["arm templates", "audit policy", "azure", "azure arc", "azure cli", "azure machine configuration", "azure policy", "bicep", "cislashcd", "cis benchmark", "community", "compliance", "configuration management", "devops", "governance", "linux server", "policy as code", "security", "security baseline", "windows server"]

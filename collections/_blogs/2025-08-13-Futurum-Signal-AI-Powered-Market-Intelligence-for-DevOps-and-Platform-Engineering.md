@@ -9,10 +9,10 @@ viewing_mode: "external"
 feed_name: "DevOps Blog"
 feed_url: "https://devops.com/feed/"
 date: 2025-08-13 17:49:16 +00:00
-permalink: "/blogs/2025-08-13-Futurum-Signal-AI-Powered-Market-Intelligence-for-DevOps-and-Platform-Engineering.html"
+permalink: "/2025-08-13-Futurum-Signal-AI-Powered-Market-Intelligence-for-DevOps-and-Platform-Engineering.html"
 categories: ["AI", "DevOps"]
-tags: ["Agentic AI", "AI", "AI Powered Analytics", "Continuous Delivery", "Continuous Integration", "Data Platforms", "DevOps", "Ecosystem Alignment", "Futurum Signal", "Google Gemini", "Market Intelligence", "Platform Engineering", "Blogs", "Product Innovation", "RAG Pipelines", "Social Facebook", "Social LinkedIn", "Social X", "Software Delivery", "Toolchain Integrations"]
-tags_normalized: ["agentic ai", "ai", "ai powered analytics", "continuous delivery", "continuous integration", "data platforms", "devops", "ecosystem alignment", "futurum signal", "google gemini", "market intelligence", "platform engineering", "blogs", "product innovation", "rag pipelines", "social facebook", "social linkedin", "social x", "software delivery", "toolchain integrations"]
+tags: ["Agentic AI", "AI", "AI Powered Analytics", "Blogs", "Continuous Delivery", "Continuous Integration", "Data Platforms", "DevOps", "Ecosystem Alignment", "Futurum Signal", "Google Gemini", "Market Intelligence", "Platform Engineering", "Product Innovation", "RAG Pipelines", "Social Facebook", "Social LinkedIn", "Social X", "Software Delivery", "Toolchain Integrations"]
+tags_normalized: ["agentic ai", "ai", "ai powered analytics", "blogs", "continuous delivery", "continuous integration", "data platforms", "devops", "ecosystem alignment", "futurum signal", "google gemini", "market intelligence", "platform engineering", "product innovation", "rag pipelines", "social facebook", "social linkedin", "social x", "software delivery", "toolchain integrations"]
 ---
 
 Alan Shimel introduces Futurum Signal, an AI-powered market intelligence platform designed to keep DevOps and platform engineering teams informed about rapid industry changes, using real-time analytics and predictive insights.<!--excerpt_end-->

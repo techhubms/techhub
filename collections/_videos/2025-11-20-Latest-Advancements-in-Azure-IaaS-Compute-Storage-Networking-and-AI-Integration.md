@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Events YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
 date: 2025-11-20 10:13:27 +00:00
-permalink: "/videos/2025-11-20-Latest-Advancements-in-Azure-IaaS-Compute-Storage-Networking-and-AI-Integration.html"
+permalink: "/2025-11-20-Latest-Advancements-in-Azure-IaaS-Compute-Storage-Networking-and-AI-Integration.html"
 categories: ["AI", "Azure", "Security"]
 tags: ["AI", "AI Transformation", "AKS", "Automation", "Azure", "Azure Cobalt 100", "Azure Copilot", "Azure IaaS", "Cloud Native", "Compute", "Confidential Compute", "Cost Efficiency", "Databricks", "Disk Instant Access", "Managed System Node Pools", "Microsoft Ignite", "Migrateandmodernizeyourestate", "MSIgnite", "Networking", "Resiliency", "Security", "Snapshots", "Storage", "Videos", "Workload Optimization"]
 tags_normalized: ["ai", "ai transformation", "aks", "automation", "azure", "azure cobalt 100", "azure copilot", "azure iaas", "cloud native", "compute", "confidential compute", "cost efficiency", "databricks", "disk instant access", "managed system node pools", "microsoft ignite", "migrateandmodernizeyourestate", "msignite", "networking", "resiliency", "security", "snapshots", "storage", "videos", "workload optimization"]

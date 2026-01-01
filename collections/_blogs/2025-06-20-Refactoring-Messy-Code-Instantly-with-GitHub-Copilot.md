@@ -9,10 +9,10 @@ viewing_mode: "external"
 feed_name: "Randy Pagels's Blog"
 feed_url: "https://cooknwithcopilot.com/rss.xml"
 date: 2025-06-20 00:00:00 +00:00
-permalink: "/blogs/2025-06-20-Refactoring-Messy-Code-Instantly-with-GitHub-Copilot.html"
+permalink: "/2025-06-20-Refactoring-Messy-Code-Instantly-with-GitHub-Copilot.html"
 categories: ["AI", "GitHub Copilot"]
-tags: ["AI", "AI Assisted Coding", "Automation", "Clean Code", "Code Quality", "Code Refactoring", "Copilot Chat", "Developer Productivity", "GitHub Copilot", "Blogs", "Software Engineering", "Workflow Optimization"]
-tags_normalized: ["ai", "ai assisted coding", "automation", "clean code", "code quality", "code refactoring", "copilot chat", "developer productivity", "github copilot", "blogs", "software engineering", "workflow optimization"]
+tags: ["AI", "AI Assisted Coding", "Automation", "Blogs", "Clean Code", "Code Quality", "Code Refactoring", "Copilot Chat", "Developer Productivity", "GitHub Copilot", "Software Engineering", "Workflow Optimization"]
+tags_normalized: ["ai", "ai assisted coding", "automation", "blogs", "clean code", "code quality", "code refactoring", "copilot chat", "developer productivity", "github copilot", "software engineering", "workflow optimization"]
 ---
 
 Randy Pagels demonstrates how GitHub Copilot can transform messy legacy code into clean, maintainable solutions in seconds. This guide walks you through using Copilot Chat for quick and efficient code refactoring.<!--excerpt_end-->

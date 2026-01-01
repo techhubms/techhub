@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-11-13 08:44:41 +00:00
-permalink: "/community/2025-11-13-Elastic-APM-Setup-with-OTEL-Sidecar-Extension-on-Azure-App-Service-for-Linux.html"
+permalink: "/2025-11-13-Elastic-APM-Setup-with-OTEL-Sidecar-Extension-on-Azure-App-Service-for-Linux.html"
 categories: ["Azure", "Coding", "DevOps"]
 tags: [".NET", "APM Server", "Application Monitoring", "Azure", "Azure App Service", "Azure Monitor", "Coding", "Community", "Container Deployment", "DevOps", "Elastic APM", "Environment Variables", "Kibana", "Linux", "Node.js", "Observability", "OpenTelemetry", "OTEL Sidecar", "PHP", "Python", "Sample Repository", "Secret Token", "Telemetry"]
 tags_normalized: ["dotnet", "apm server", "application monitoring", "azure", "azure app service", "azure monitor", "coding", "community", "container deployment", "devops", "elastic apm", "environment variables", "kibana", "linux", "nodedotjs", "observability", "opentelemetry", "otel sidecar", "php", "python", "sample repository", "secret token", "telemetry"]

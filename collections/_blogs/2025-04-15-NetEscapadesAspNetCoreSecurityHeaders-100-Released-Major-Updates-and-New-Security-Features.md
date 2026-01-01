@@ -9,10 +9,10 @@ viewing_mode: "external"
 feed_name: "Andrew Lock's Blog"
 feed_url: "https://andrewlock.net/rss.xml"
 date: 2025-04-15 09:00:00 +00:00
-permalink: "/blogs/2025-04-15-NetEscapadesAspNetCoreSecurityHeaders-100-Released-Major-Updates-and-New-Security-Features.html"
+permalink: "/2025-04-15-NetEscapadesAspNetCoreSecurityHeaders-100-Released-Major-Updates-and-New-Security-Features.html"
 categories: ["Coding", "Security"]
-tags: [".NET Core", "API Security", "ASP.NET Core", "Coding", "Content Security Policy", "HTTP Headers", "Middleware", "NetEscapades.AspNetCore.SecurityHeaders", "Nonce Generation", "OWASP", "Permissions Policy", "Blogs", "Security", "Security Headers", "Trusted Types"]
-tags_normalized: ["dotnet core", "api security", "aspdotnet core", "coding", "content security policy", "http headers", "middleware", "netescapadesdotaspnetcoredotsecurityheaders", "nonce generation", "owasp", "permissions policy", "blogs", "security", "security headers", "trusted types"]
+tags: [".NET Core", "API Security", "ASP.NET Core", "Blogs", "Coding", "Content Security Policy", "HTTP Headers", "Middleware", "NetEscapades.AspNetCore.SecurityHeaders", "Nonce Generation", "OWASP", "Permissions Policy", "Security", "Security Headers", "Trusted Types"]
+tags_normalized: ["dotnet core", "api security", "aspdotnet core", "blogs", "coding", "content security policy", "http headers", "middleware", "netescapadesdotaspnetcoredotsecurityheaders", "nonce generation", "owasp", "permissions policy", "security", "security headers", "trusted types"]
 ---
 
 Andrew Lock introduces NetEscapades.AspNetCore.SecurityHeaders 1.0.0, outlining extensive new features, updates, and best practices for integrating enhanced security headers in ASP.NET Core applications.<!--excerpt_end-->

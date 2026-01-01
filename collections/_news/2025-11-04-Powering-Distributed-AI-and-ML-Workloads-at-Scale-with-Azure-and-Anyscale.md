@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft All Things Azure Blog"
 feed_url: "https://devblogs.microsoft.com/all-things-azure/feed/"
 date: 2025-11-04 12:30:11 +00:00
-permalink: "/news/2025-11-04-Powering-Distributed-AI-and-ML-Workloads-at-Scale-with-Azure-and-Anyscale.html"
+permalink: "/2025-11-04-Powering-Distributed-AI-and-ML-Workloads-at-Scale-with-Azure-and-Anyscale.html"
 categories: ["AI", "Azure", "ML"]
 tags: ["AI", "AI Apps", "AI Workloads", "AKS", "All Things Azure", "Anyscale", "App Development", "Appdev", "Azure", "Azure Monitor", "Cloud Scale", "Containers", "Distributed Computing", "Kubernetes", "Machine Learning", "Microsoft Entra ID", "ML", "Model Training", "News", "Python", "Ray", "RayTurbo"]
 tags_normalized: ["ai", "ai apps", "ai workloads", "aks", "all things azure", "anyscale", "app development", "appdev", "azure", "azure monitor", "cloud scale", "containers", "distributed computing", "kubernetes", "machine learning", "microsoft entra id", "ml", "model training", "news", "python", "ray", "rayturbo"]

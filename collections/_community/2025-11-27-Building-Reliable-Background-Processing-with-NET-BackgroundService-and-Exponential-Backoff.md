@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-11-27 08:00:00 +00:00
-permalink: "/community/2025-11-27-Building-Reliable-Background-Processing-with-NET-BackgroundService-and-Exponential-Backoff.html"
+permalink: "/2025-11-27-Building-Reliable-Background-Processing-with-NET-BackgroundService-and-Exponential-Backoff.html"
 categories: ["Azure", "Coding"]
 tags: [".NET", "API Reliability", "ASP.NET Core", "Azure", "Backend Development", "BackgroundService", "C#", "Cloud Architecture", "Coding", "Community", "Dependency Resilience", "Exponential Backoff", "Hosted Services", "in Memory Store", "Microservices", "REST API", "Retry Logic"]
 tags_normalized: ["dotnet", "api reliability", "aspdotnet core", "azure", "backend development", "backgroundservice", "csharp", "cloud architecture", "coding", "community", "dependency resilience", "exponential backoff", "hosted services", "in memory store", "microservices", "rest api", "retry logic"]

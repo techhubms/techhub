@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Events YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
 date: 2025-11-24 12:45:11 +00:00
-permalink: "/videos/2025-11-24-Cloud-Native-Innovations-with-Mark-Russinovich-Ignite-2025-Breakout.html"
+permalink: "/2025-11-24-Cloud-Native-Innovations-with-Mark-Russinovich-Ignite-2025-Breakout.html"
 categories: ["Azure", "Coding", "Security"]
 tags: ["Azure", "Azure Container Instances", "CADA", "Cloud Native", "Coding", "Confidential Containers", "Containers", "Dapper", "Distributed Cache", "DRASI", "Ebpf", "Event Driven Architecture", "Hardware Based Security", "Mark Russinovich", "Microsoft Ignite", "Migrateandmodernizeyourestate", "MSIgnite", "Multi Cloud", "RADIUS", "Security", "Serverless Containers", "Videos"]
 tags_normalized: ["azure", "azure container instances", "cada", "cloud native", "coding", "confidential containers", "containers", "dapper", "distributed cache", "drasi", "ebpf", "event driven architecture", "hardware based security", "mark russinovich", "microsoft ignite", "migrateandmodernizeyourestate", "msignite", "multi cloud", "radius", "security", "serverless containers", "videos"]

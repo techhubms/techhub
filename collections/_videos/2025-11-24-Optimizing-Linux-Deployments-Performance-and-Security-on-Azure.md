@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Events YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
 date: 2025-11-24 12:01:44 +00:00
-permalink: "/videos/2025-11-24-Optimizing-Linux-Deployments-Performance-and-Security-on-Azure.html"
+permalink: "/2025-11-24-Optimizing-Linux-Deployments-Performance-and-Security-on-Azure.html"
 categories: ["Azure", "DevOps", "Security"]
 tags: ["Azure", "Azure Best Practices", "Azure Monitor", "Cloud Security", "Compliance", "Defender For Linux", "DevOps", "Ebpf", "Inspector Gadget", "Linux On Azure", "Microsoft Ignite", "Migrateandmodernizeyourestate", "MSIgnite", "Open Source", "Performance Tuning", "PostgreSQL On Azure", "Red Hat", "Rocky Linux", "Security", "Security Hardened Images", "SLES", "Ubuntu", "Videos", "VM Deployment"]
 tags_normalized: ["azure", "azure best practices", "azure monitor", "cloud security", "compliance", "defender for linux", "devops", "ebpf", "inspector gadget", "linux on azure", "microsoft ignite", "migrateandmodernizeyourestate", "msignite", "open source", "performance tuning", "postgresql on azure", "red hat", "rocky linux", "security", "security hardened images", "sles", "ubuntu", "videos", "vm deployment"]

@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Community"
 date: 2025-08-14 13:13:08 +00:00
-permalink: "/community/2025-08-14-Data-Intelligence-at-Your-Fingertips-Fabrics-AI-Functions-and-Data-Agents.html"
+permalink: "/2025-08-14-Data-Intelligence-at-Your-Fingertips-Fabrics-AI-Functions-and-Data-Agents.html"
 categories: ["AI", "ML"]
 tags: ["AI", "AI Functions", "Analytics Automation", "Business Intelligence", "Community", "Conversational AI", "Dashboarding", "Data Agents", "Data Analytics", "Data Workflows", "Keyword Extraction", "Microsoft Fabric", "ML", "Natural Language Processing", "No Code AI", "Productivity Tools", "Sentiment Analysis", "Text Summarization"]
 tags_normalized: ["ai", "ai functions", "analytics automation", "business intelligence", "community", "conversational ai", "dashboarding", "data agents", "data analytics", "data workflows", "keyword extraction", "microsoft fabric", "ml", "natural language processing", "no code ai", "productivity tools", "sentiment analysis", "text summarization"]

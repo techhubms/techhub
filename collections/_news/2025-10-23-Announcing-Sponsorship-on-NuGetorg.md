@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft .NET Blog"
 feed_url: "https://devblogs.microsoft.com/dotnet/feed/"
 date: 2025-10-23 22:18:00 +00:00
-permalink: "/news/2025-10-23-Announcing-Sponsorship-on-NuGetorg.html"
+permalink: "/2025-10-23-Announcing-Sponsorship-on-NuGetorg.html"
 categories: ["Coding"]
 tags: [".NET", "Coding", "Developer Tools", "GitHub Sponsors", "Ko Fi", "Liberapay", "News", "NuGet", "NuGet.org", "Open Collective", "Open Source", "Package Maintainers", "Package Management", "Patreon", "Software Ecosystem", "Sponsorship", "Tidelift"]
 tags_normalized: ["dotnet", "coding", "developer tools", "github sponsors", "ko fi", "liberapay", "news", "nuget", "nugetdotorg", "open collective", "open source", "package maintainers", "package management", "patreon", "software ecosystem", "sponsorship", "tidelift"]

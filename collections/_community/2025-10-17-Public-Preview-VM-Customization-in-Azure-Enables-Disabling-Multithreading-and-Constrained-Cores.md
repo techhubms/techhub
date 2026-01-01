@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-10-17 21:52:05 +00:00
-permalink: "/community/2025-10-17-Public-Preview-VM-Customization-in-Azure-Enables-Disabling-Multithreading-and-Constrained-Cores.html"
+permalink: "/2025-10-17-Public-Preview-VM-Customization-in-Azure-Enables-Disabling-Multithreading-and-Constrained-Cores.html"
 categories: ["Azure"]
 tags: ["ARM Templates", "Azure", "Azure CLI", "Bring Your Own License", "Community", "Compliance", "Constrained Cores", "HPC", "Hyperthreading", "Performance Optimization", "PowerShell", "Simultaneous Multithreading", "SMT", "SQL Server", "Vcpu", "Virtual Machines", "VM Customization"]
 tags_normalized: ["arm templates", "azure", "azure cli", "bring your own license", "community", "compliance", "constrained cores", "hpc", "hyperthreading", "performance optimization", "powershell", "simultaneous multithreading", "smt", "sql server", "vcpu", "virtual machines", "vm customization"]

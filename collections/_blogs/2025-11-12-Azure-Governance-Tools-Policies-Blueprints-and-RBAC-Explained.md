@@ -9,10 +9,10 @@ viewing_mode: "external"
 feed_name: "Dellenny's Blog"
 feed_url: "https://dellenny.com/feed/"
 date: 2025-11-12 15:50:33 +00:00
-permalink: "/blogs/2025-11-12-Azure-Governance-Tools-Policies-Blueprints-and-RBAC-Explained.html"
+permalink: "/2025-11-12-Azure-Governance-Tools-Policies-Blueprints-and-RBAC-Explained.html"
 categories: ["Azure", "Security"]
-tags: ["Access Control", "Azure", "Azure Automation", "Azure Blueprints", "Azure Management", "Azure Policy", "Cloud Governance", "Compliance", "Cost Management", "IaC", "Management Groups", "Policy as Code", "Blogs", "RBAC", "Resource Tagging", "Role Based Access Control", "Security", "Security Best Practices"]
-tags_normalized: ["access control", "azure", "azure automation", "azure blueprints", "azure management", "azure policy", "cloud governance", "compliance", "cost management", "iac", "management groups", "policy as code", "blogs", "rbac", "resource tagging", "role based access control", "security", "security best practices"]
+tags: ["Access Control", "Azure", "Azure Automation", "Azure Blueprints", "Azure Management", "Azure Policy", "Blogs", "Cloud Governance", "Compliance", "Cost Management", "IaC", "Management Groups", "Policy as Code", "RBAC", "Resource Tagging", "Role Based Access Control", "Security", "Security Best Practices"]
+tags_normalized: ["access control", "azure", "azure automation", "azure blueprints", "azure management", "azure policy", "blogs", "cloud governance", "compliance", "cost management", "iac", "management groups", "policy as code", "rbac", "resource tagging", "role based access control", "security", "security best practices"]
 ---
 
 Dellenny presents a thorough guide covering Azure Policy, Blueprints, and RBAC—core tools for managing governance, security, and compliance in Microsoft Azure environments.<!--excerpt_end-->

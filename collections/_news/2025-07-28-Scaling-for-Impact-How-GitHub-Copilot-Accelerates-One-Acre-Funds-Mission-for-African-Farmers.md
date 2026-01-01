@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/feed/"
 date: 2025-07-28 19:53:32 +00:00
-permalink: "/news/2025-07-28-Scaling-for-Impact-How-GitHub-Copilot-Accelerates-One-Acre-Funds-Mission-for-African-Farmers.html"
+permalink: "/2025-07-28-Scaling-for-Impact-How-GitHub-Copilot-Accelerates-One-Acre-Funds-Mission-for-African-Farmers.html"
 categories: ["AI", "DevOps", "GitHub Copilot"]
 tags: ["Africa", "Agricultural Empowerment", "AI", "AI Assisted Development", "Community Impact", "DevOps", "Digital Transformation", "GitHub Copilot", "News", "Nonprofit Technology", "One Acre Fund", "Open Source", "Smallholder Farmers", "Social Impact", "Software Development", "Technology Adoption"]
 tags_normalized: ["africa", "agricultural empowerment", "ai", "ai assisted development", "community impact", "devops", "digital transformation", "github copilot", "news", "nonprofit technology", "one acre fund", "open source", "smallholder farmers", "social impact", "software development", "technology adoption"]

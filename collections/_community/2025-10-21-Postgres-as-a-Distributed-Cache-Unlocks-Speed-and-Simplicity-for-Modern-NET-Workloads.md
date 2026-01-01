@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-10-21 07:00:00 +00:00
-permalink: "/community/2025-10-21-Postgres-as-a-Distributed-Cache-Unlocks-Speed-and-Simplicity-for-Modern-NET-Workloads.html"
+permalink: "/2025-10-21-Postgres-as-a-Distributed-Cache-Unlocks-Speed-and-Simplicity-for-Modern-NET-Workloads.html"
 categories: ["Coding"]
 tags: [".NET", "ASP.NET Core", "Cache Expiration", "Caching", "Coding", "Community", "Database", "Distributed Cache", "HybridCache", "Microsoft.Extensions.Caching.Postgres", "NuGet Packages", "Performance Optimization", "Postgres", "Redis", "SQL Server", "UNLOGGED Tables", "Write Ahead Logging"]
 tags_normalized: ["dotnet", "aspdotnet core", "cache expiration", "caching", "coding", "community", "database", "distributed cache", "hybridcache", "microsoftdotextensionsdotcachingdotpostgres", "nuget packages", "performance optimization", "postgres", "redis", "sql server", "unlogged tables", "write ahead logging"]

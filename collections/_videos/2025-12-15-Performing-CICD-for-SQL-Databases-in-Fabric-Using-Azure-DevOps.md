@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Developer YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
 date: 2025-12-15 17:00:39 +00:00
-permalink: "/videos/2025-12-15-Performing-CICD-for-SQL-Databases-in-Fabric-Using-Azure-DevOps.html"
+permalink: "/2025-12-15-Performing-CICD-for-SQL-Databases-in-Fabric-Using-Azure-DevOps.html"
 categories: ["Azure", "DevOps"]
 tags: ["Automation", "Azure", "Azure DevOps", "Azure SQL", "CI/CD", "Cloud", "Cloud Computing", "Continuous Deployment", "Data Exposed", "Database Projects", "Dev", "Development", "DevOps", "Microsoft", "Microsoft Developer", "Microsoft Fabric", "MVP", "SQL Database", "SQL Server", "SqlPackage", "Tech", "Technology", "Videos"]
 tags_normalized: ["automation", "azure", "azure devops", "azure sql", "cislashcd", "cloud", "cloud computing", "continuous deployment", "data exposed", "database projects", "dev", "development", "devops", "microsoft", "microsoft developer", "microsoft fabric", "mvp", "sql database", "sql server", "sqlpackage", "tech", "technology", "videos"]

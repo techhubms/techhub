@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Visual Studio Code YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SLNwkd3w"
 date: 2025-12-12 20:58:38 +00:00
-permalink: "/videos/2025-12-12-A-Unified-Agent-Experience-in-Visual-Studio-Code.html"
+permalink: "/2025-12-12-A-Unified-Agent-Experience-in-Visual-Studio-Code.html"
 categories: ["Azure", "Coding", "DevOps"]
 tags: ["Agent Fleet", "Azure", "Background Agents", "Cloud Agents", "Coding", "Developer Experience", "Developer Tools", "DevOps", "Local Agents", "Microsoft Azure", "Task Management", "Videos", "VS Code", "VS Code Extensions"]
 tags_normalized: ["agent fleet", "azure", "background agents", "cloud agents", "coding", "developer experience", "developer tools", "devops", "local agents", "microsoft azure", "task management", "videos", "vs code", "vs code extensions"]

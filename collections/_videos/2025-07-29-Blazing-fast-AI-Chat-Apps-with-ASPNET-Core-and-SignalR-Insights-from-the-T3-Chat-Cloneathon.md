@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "DotNet YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw"
 date: 2025-07-29 18:12:29 +00:00
-permalink: "/videos/2025-07-29-Blazing-fast-AI-Chat-Apps-with-ASPNET-Core-and-SignalR-Insights-from-the-T3-Chat-Cloneathon.html"
+permalink: "/2025-07-29-Blazing-fast-AI-Chat-Apps-with-ASPNET-Core-and-SignalR-Insights-from-the-T3-Chat-Cloneathon.html"
 categories: ["AI", "Coding"]
 tags: [".NET", "AI", "AI Chat", "Aichat", "ASP.NET Core", "C#", "Coding", "Connection Resumption", "Deep Learning", "Demo", "Developer", "Developer Community", "Dotnetdeveloper", "Microsoft", "Real Time Applications", "Safe Streaming", "SignalR", "Software Developer", "Synchronization", "T3 Chat Cloneathon", "Videos", "Web Development"]
 tags_normalized: ["dotnet", "ai", "ai chat", "aichat", "aspdotnet core", "csharp", "coding", "connection resumption", "deep learning", "demo", "developer", "developer community", "dotnetdeveloper", "microsoft", "real time applications", "safe streaming", "signalr", "software developer", "synchronization", "t3 chat cloneathon", "videos", "web development"]

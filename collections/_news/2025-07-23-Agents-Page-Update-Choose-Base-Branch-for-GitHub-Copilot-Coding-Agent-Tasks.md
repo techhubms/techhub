@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/changelog/label/copilot/feed/"
 date: 2025-07-23 16:12:28 +00:00
-permalink: "/news/2025-07-23-Agents-Page-Update-Choose-Base-Branch-for-GitHub-Copilot-Coding-Agent-Tasks.html"
+permalink: "/2025-07-23-Agents-Page-Update-Choose-Base-Branch-for-GitHub-Copilot-Coding-Agent-Tasks.html"
 categories: ["AI", "DevOps", "GitHub Copilot"]
 tags: ["Agents Page", "AI", "Automation", "Base Branch", "Branching Model", "Coding Agent", "DevOps", "Feature Branch", "GitHub CLI", "GitHub Copilot", "News", "Pull Requests", "VS Code"]
 tags_normalized: ["agents page", "ai", "automation", "base branch", "branching model", "coding agent", "devops", "feature branch", "github cli", "github copilot", "news", "pull requests", "vs code"]

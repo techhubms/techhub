@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Fabric Blog"
 feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
 date: 2025-11-21 10:30:00 +00:00
-permalink: "/news/2025-11-21-Natural-Language-to-Generate-and-Explain-Pipeline-Expressions-with-Copilot-Preview.html"
+permalink: "/2025-11-21-Natural-Language-to-Generate-and-Explain-Pipeline-Expressions-with-Copilot-Preview.html"
 categories: ["AI", "ML"]
 tags: ["AI", "AI Productivity Tools", "Automated Code Generation", "Conversational AI", "Copilot Studio", "Data Engineering", "Data Factory", "Data Transformation", "Dynamic Expressions", "Machine Learning", "Microsoft Fabric", "ML", "Natural Language Processing", "News", "Pipeline Expression Builder", "Preview Features"]
 tags_normalized: ["ai", "ai productivity tools", "automated code generation", "conversational ai", "copilot studio", "data engineering", "data factory", "data transformation", "dynamic expressions", "machine learning", "microsoft fabric", "ml", "natural language processing", "news", "pipeline expression builder", "preview features"]

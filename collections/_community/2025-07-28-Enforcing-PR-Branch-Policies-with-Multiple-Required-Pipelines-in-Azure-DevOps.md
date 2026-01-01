@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Reddit Azure DevOps"
 feed_url: "https://www.reddit.com/r/azuredevops/.rss"
 date: 2025-07-28 13:56:17 +00:00
-permalink: "/community/2025-07-28-Enforcing-PR-Branch-Policies-with-Multiple-Required-Pipelines-in-Azure-DevOps.html"
+permalink: "/2025-07-28-Enforcing-PR-Branch-Policies-with-Multiple-Required-Pipelines-in-Azure-DevOps.html"
 categories: ["Azure", "DevOps"]
 tags: ["Azure", "Azure DevOps", "Azure Pipelines", "Azure Repos", "Branch Policies", "Build Definitions", "Build Validation", "CI/CD", "Community", "DevOps", "Inner Source", "Pipeline Configuration", "Pipeline Requirements", "PR Approval", "PR Automation", "Pull Requests", "Terraform", "YAML Pipelines"]
 tags_normalized: ["azure", "azure devops", "azure pipelines", "azure repos", "branch policies", "build definitions", "build validation", "cislashcd", "community", "devops", "inner source", "pipeline configuration", "pipeline requirements", "pr approval", "pr automation", "pull requests", "terraform", "yaml pipelines"]

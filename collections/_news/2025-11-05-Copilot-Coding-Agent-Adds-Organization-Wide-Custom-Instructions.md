@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/changelog/feed/"
 date: 2025-11-05 18:19:03 +00:00
-permalink: "/news/2025-11-05-Copilot-Coding-Agent-Adds-Organization-Wide-Custom-Instructions.html"
+permalink: "/2025-11-05-Copilot-Coding-Agent-Adds-Organization-Wide-Custom-Instructions.html"
 categories: ["AI", "GitHub Copilot"]
 tags: ["AI", "Automation", "Best Practices", "Coding Agent", "Configuration Files", "Copilot", "Copilot Coding Agent", "Custom Instructions", "GitHub Copilot", "Improvement", "News", "Organizational Settings", "Software Development"]
 tags_normalized: ["ai", "automation", "best practices", "coding agent", "configuration files", "copilot", "copilot coding agent", "custom instructions", "github copilot", "improvement", "news", "organizational settings", "software development"]

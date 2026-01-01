@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-12-01 23:35:11 +00:00
-permalink: "/community/2025-12-01-General-Availability-of-AI-and-RAG-Connectors-in-Azure-Logic-Apps-Standard.html"
+permalink: "/2025-12-01-General-Availability-of-AI-and-RAG-Connectors-in-Azure-Logic-Apps-Standard.html"
 categories: ["AI", "Azure"]
 tags: ["AgentLoop", "AI", "AI Connectors", "AI Search", "Azure", "Azure Logic Apps", "Azure OpenAI", "Chunking", "Community", "Document Intelligence", "Document Processing", "Embeddings", "Enterprise Integration", "Integration Pipelines", "Metadata Extraction", "Natural Language Processing", "Retrieval Augmented Generation", "Semantic Search", "Workflow Automation"]
 tags_normalized: ["agentloop", "ai", "ai connectors", "ai search", "azure", "azure logic apps", "azure openai", "chunking", "community", "document intelligence", "document processing", "embeddings", "enterprise integration", "integration pipelines", "metadata extraction", "natural language processing", "retrieval augmented generation", "semantic search", "workflow automation"]

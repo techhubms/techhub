@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft News"
 feed_url: "https://news.microsoft.com/source/feed/"
 date: 2025-12-19 14:34:22 +00:00
-permalink: "/news/2025-12-19-NZ-North-One-Year-of-Building-New-Zealands-AI-Future-with-Microsoft-Cloud.html"
+permalink: "/2025-12-19-NZ-North-One-Year-of-Building-New-Zealands-AI-Future-with-Microsoft-Cloud.html"
 categories: ["AI", "Azure"]
 tags: ["AI", "AI Adoption", "AI Agents", "AI Innovation", "AI Productivity", "Azure", "Azure Cloud", "Azure Data Center", "Cloud Migration", "Cloud Region", "Company News", "Copilot", "Digital Skills", "Digital Transformation", "Health Tech", "Microsoft Azure", "New Zealand", "News", "Public Sector", "Sustainability"]
 tags_normalized: ["ai", "ai adoption", "ai agents", "ai innovation", "ai productivity", "azure", "azure cloud", "azure data center", "cloud migration", "cloud region", "company news", "copilot", "digital skills", "digital transformation", "health tech", "microsoft azure", "new zealand", "news", "public sector", "sustainability"]

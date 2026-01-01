@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-12-08 21:58:27 +00:00
-permalink: "/community/2025-12-08-Microsoft-Agent-Pre-Purchase-Plan-Unified-AI-Procurement-for-Foundry-and-Copilot-Studio.html"
+permalink: "/2025-12-08-Microsoft-Agent-Pre-Purchase-Plan-Unified-AI-Procurement-for-Foundry-and-Copilot-Studio.html"
 categories: ["AI", "Azure"]
 tags: ["ACU", "Agent Commit Units", "Agent Deployment", "Agent Factory", "AI", "AI Agent Architecture", "Azure", "Azure AI Search", "Azure Cognitive Services", "Azure Procurement", "Community", "Copilot Credit", "Copilot Studio", "Cost Optimization", "Enterprise AI", "Fabric IQ", "Foundry IQ", "Ignite", "Microsoft Agent Pre Purchase Plan", "Microsoft Foundry", "Orchestration Tools", "Private Preview", "Provisioned Throughput Unit", "PTU", "Reservations", "Work IQ"]
 tags_normalized: ["acu", "agent commit units", "agent deployment", "agent factory", "ai", "ai agent architecture", "azure", "azure ai search", "azure cognitive services", "azure procurement", "community", "copilot credit", "copilot studio", "cost optimization", "enterprise ai", "fabric iq", "foundry iq", "ignite", "microsoft agent pre purchase plan", "microsoft foundry", "orchestration tools", "private preview", "provisioned throughput unit", "ptu", "reservations", "work iq"]

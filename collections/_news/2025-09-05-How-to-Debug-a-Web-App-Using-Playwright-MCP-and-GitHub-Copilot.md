@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/feed/"
 date: 2025-09-05 16:00:00 +00:00
-permalink: "/news/2025-09-05-How-to-Debug-a-Web-App-Using-Playwright-MCP-and-GitHub-Copilot.html"
+permalink: "/2025-09-05-How-to-Debug-a-Web-App-Using-Playwright-MCP-and-GitHub-Copilot.html"
 categories: ["AI", "Coding", "GitHub Copilot"]
 tags: ["Agent Mode", "AI", "AI & ML", "AI Assisted Testing", "AI Debugging", "Automation", "Bug Reproduction", "Coding", "Configuration", "End To End Testing", "GitHub Copilot", "JavaScript", "MCP", "News", "Playwright MCP", "Testing Frameworks", "VS Code", "VS Code Extensions", "Web App Debugging"]
 tags_normalized: ["agent mode", "ai", "ai and ml", "ai assisted testing", "ai debugging", "automation", "bug reproduction", "coding", "configuration", "end to end testing", "github copilot", "javascript", "mcp", "news", "playwright mcp", "testing frameworks", "vs code", "vs code extensions", "web app debugging"]

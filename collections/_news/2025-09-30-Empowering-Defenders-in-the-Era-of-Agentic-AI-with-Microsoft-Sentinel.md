@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft News"
 feed_url: "https://news.microsoft.com/source/feed/"
 date: 2025-09-30 14:18:32 +00:00
-permalink: "/news/2025-09-30-Empowering-Defenders-in-the-Era-of-Agentic-AI-with-Microsoft-Sentinel.html"
+permalink: "/2025-09-30-Empowering-Defenders-in-the-Era-of-Agentic-AI-with-Microsoft-Sentinel.html"
 categories: ["AI", "Azure", "Security"]
 tags: ["Agentic AI", "AI", "Automation", "Azure", "Azure AI Foundry", "Cloud Security", "Company News", "Entra ID", "Graph Powered Security", "Incident Response", "MCP Server", "Microsoft Defender", "Microsoft Purview", "Microsoft Sentinel", "Multicloud", "News", "Security", "Security Agents", "Security Copilot", "Security Copilot Agents", "Security Data Lake", "Security Governance", "Security Operations Center", "Security Platform", "SIEM"]
 tags_normalized: ["agentic ai", "ai", "automation", "azure", "azure ai foundry", "cloud security", "company news", "entra id", "graph powered security", "incident response", "mcp server", "microsoft defender", "microsoft purview", "microsoft sentinel", "multicloud", "news", "security", "security agents", "security copilot", "security copilot agents", "security data lake", "security governance", "security operations center", "security platform", "siem"]

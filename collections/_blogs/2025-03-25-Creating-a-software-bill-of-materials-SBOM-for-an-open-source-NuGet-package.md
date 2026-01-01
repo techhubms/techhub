@@ -9,10 +9,10 @@ viewing_mode: "external"
 feed_name: "Andrew Lock's Blog"
 feed_url: "https://andrewlock.net/rss.xml"
 date: 2025-03-25 09:00:00 +00:00
-permalink: "/blogs/2025-03-25-Creating-a-Software-Bill-of-Materials-SBOM-for-an-Open-Source-NuGet-Package.html"
+permalink: "/2025-03-25-Creating-a-software-bill-of-materials-SBOM-for-an-open-source-NuGet-package.html"
 categories: ["Coding", "DevOps", "Security"]
-tags: [".NET", "Application Security", "CI/CD", "Coding", "Compliance", "CycloneDX", "Dependency Management", "DevOps", "GitHub", "GitHub Actions", "NuGet", "Open Source", "Blogs", "SBOM", "Sbom Tool", "Security", "Software Supply Chain", "SPDX", "Syft"]
-tags_normalized: ["dotnet", "application security", "cislashcd", "coding", "compliance", "cyclonedx", "dependency management", "devops", "github", "github actions", "nuget", "open source", "blogs", "sbom", "sbom tool", "security", "software supply chain", "spdx", "syft"]
+tags: [".NET", "Application Security", "Blogs", "CI/CD", "Coding", "Compliance", "CycloneDX", "Dependency Management", "DevOps", "GitHub", "GitHub Actions", "NuGet", "Open Source", "SBOM", "Sbom Tool", "Security", "Software Supply Chain", "SPDX", "Syft"]
+tags_normalized: ["dotnet", "application security", "blogs", "cislashcd", "coding", "compliance", "cyclonedx", "dependency management", "devops", "github", "github actions", "nuget", "open source", "sbom", "sbom tool", "security", "software supply chain", "spdx", "syft"]
 ---
 
 In this comprehensive guide, Andrew Lock demonstrates how to generate SBOMs for .NET NuGet packages using tools like GitHub's SBOM export, Microsoft's sbom-tool, anchore/sbom-action, and CycloneDX, highlighting practical considerations for developers and operators.<!--excerpt_end-->

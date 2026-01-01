@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-08-31 14:59:26 +00:00
-permalink: "/community/2025-08-31-Multi-Agent-Orchestration-with-Azure-AI-Foundry-From-Idea-to-Production.html"
+permalink: "/2025-08-31-Multi-Agent-Orchestration-with-Azure-AI-Foundry-From-Idea-to-Production.html"
 categories: ["AI", "Azure"]
 tags: ["A2A", "Agent Orchestration", "AI", "AI Architecture", "Azure", "Azure AI Foundry", "Azure AI Search", "Community", "Compliance", "Connected Agents", "Enterprise AI", "Functions", "Human in The Loop", "Logic Apps", "MCP", "Multi Agent Systems", "Observability", "OpenAPI", "Policy Engine", "SDK Integration", "Stateful Workflows", "Workflow Automation"]
 tags_normalized: ["a2a", "agent orchestration", "ai", "ai architecture", "azure", "azure ai foundry", "azure ai search", "community", "compliance", "connected agents", "enterprise ai", "functions", "human in the loop", "logic apps", "mcp", "multi agent systems", "observability", "openapi", "policy engine", "sdk integration", "stateful workflows", "workflow automation"]

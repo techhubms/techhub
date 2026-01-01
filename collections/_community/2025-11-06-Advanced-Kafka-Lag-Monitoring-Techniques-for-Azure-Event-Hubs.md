@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-11-06 06:37:46 +00:00
-permalink: "/community/2025-11-06-Advanced-Kafka-Lag-Monitoring-Techniques-for-Azure-Event-Hubs.html"
+permalink: "/2025-11-06-Advanced-Kafka-Lag-Monitoring-Techniques-for-Azure-Event-Hubs.html"
 categories: ["Azure", "Coding", "DevOps"]
 tags: ["Azure", "Azure Event Hubs", "Azure Monitor", "Blob Storage", "CLI Tools", "Coding", "Commit Frequency", "Community", "Consumer Lag", "Cosmos DB", "DevOps", "Durable Storage", "Event Hubs Premium", "Kafka", "Multi Partition", "Offset Management", "Partition Monitoring", "Prometheus", "Python SDK", "SKU Awareness", "Streaming Data", "Troubleshooting"]
 tags_normalized: ["azure", "azure event hubs", "azure monitor", "blob storage", "cli tools", "coding", "commit frequency", "community", "consumer lag", "cosmos db", "devops", "durable storage", "event hubs premium", "kafka", "multi partition", "offset management", "partition monitoring", "prometheus", "python sdk", "sku awareness", "streaming data", "troubleshooting"]

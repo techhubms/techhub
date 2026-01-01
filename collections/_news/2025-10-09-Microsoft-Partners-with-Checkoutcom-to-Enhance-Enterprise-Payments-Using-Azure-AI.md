@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft News"
 feed_url: "https://news.microsoft.com/source/feed/"
 date: 2025-10-09 17:15:42 +00:00
-permalink: "/news/2025-10-09-Microsoft-Partners-with-Checkoutcom-to-Enhance-Enterprise-Payments-Using-Azure-AI.html"
+permalink: "/2025-10-09-Microsoft-Partners-with-Checkoutcom-to-Enhance-Enterprise-Payments-Using-Azure-AI.html"
 categories: ["AI", "Azure"]
 tags: ["Agentic Commerce", "AI", "AI Powered Payments", "Azure", "Checkout.com", "Cloud", "Cloud Infrastructure", "Collaborative Innovation", "Company News", "Digital Payments", "Enterprise Payments", "Financial Technology", "Intelligent Acceptance", "Machine Learning", "Microsoft Azure", "News", "Payment Optimization", "Payment Platform", "Trust And Security"]
 tags_normalized: ["agentic commerce", "ai", "ai powered payments", "azure", "checkoutdotcom", "cloud", "cloud infrastructure", "collaborative innovation", "company news", "digital payments", "enterprise payments", "financial technology", "intelligent acceptance", "machine learning", "microsoft azure", "news", "payment optimization", "payment platform", "trust and security"]

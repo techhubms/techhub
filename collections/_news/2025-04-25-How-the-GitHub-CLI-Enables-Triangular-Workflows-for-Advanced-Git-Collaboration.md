@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "GitHub Engineering Blog"
 feed_url: "https://github.blog/engineering/feed/"
 date: 2025-04-25 16:00:37 +00:00
-permalink: "/news/2025-04-25-How-the-GitHub-CLI-Enables-Triangular-Workflows-for-Advanced-Git-Collaboration.html"
+permalink: "/2025-04-25-How-the-GitHub-CLI-Enables-Triangular-Workflows-for-Advanced-Git-Collaboration.html"
 categories: ["DevOps"]
 tags: ["Branch Management", "CLI Tools", "Configuration", "DevOps", "Engineering", "Git", "Git Remotes", "GitHub CLI", "News", "Open Source", "Open Source Collaboration", "Pull Requests", "Pullref", "Pushref", "Triangular Workflows", "Workflow Automation"]
 tags_normalized: ["branch management", "cli tools", "configuration", "devops", "engineering", "git", "git remotes", "github cli", "news", "open source", "open source collaboration", "pull requests", "pullref", "pushref", "triangular workflows", "workflow automation"]

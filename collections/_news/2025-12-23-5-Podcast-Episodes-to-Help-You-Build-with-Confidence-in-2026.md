@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/feed/"
 date: 2025-12-23 00:15:00 +00:00
-permalink: "/news/2025-12-23-5-Podcast-Episodes-to-Help-You-Build-with-Confidence-in-2026.html"
+permalink: "/2025-12-23-5-Podcast-Episodes-to-Help-You-Build-with-Confidence-in-2026.html"
 categories: ["AI", "Coding", "DevOps"]
 tags: ["AI", "Coding", "Community Contribution", "Developer Trends", "DevOps", "DIY Tools", "GitHub Podcast", "Home Assistant", "Maintainers", "MCP", "News", "Octoverse", "Open Source", "Open Standards", "Privacy", "Software Development", "Software Sustainability", "TypeScript"]
 tags_normalized: ["ai", "coding", "community contribution", "developer trends", "devops", "diy tools", "github podcast", "home assistant", "maintainers", "mcp", "news", "octoverse", "open source", "open standards", "privacy", "software development", "software sustainability", "typescript"]

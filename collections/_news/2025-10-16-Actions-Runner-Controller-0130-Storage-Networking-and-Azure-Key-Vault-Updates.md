@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/changelog/feed/"
 date: 2025-10-16 14:01:35 +00:00
-permalink: "/news/2025-10-16-Actions-Runner-Controller-0130-Storage-Networking-and-Azure-Key-Vault-Updates.html"
+permalink: "/2025-10-16-Actions-Runner-Controller-0130-Storage-Networking-and-Azure-Key-Vault-Updates.html"
 categories: ["Azure", "DevOps", "Security"]
 tags: ["Actions", "Actions Runner Controller", "ARC", "Azure", "Azure Key Vault", "CI/CD", "Container Lifecycle Hooks", "CSI Driver", "DevOps", "GitHub Actions", "Kubernetes", "Managed Identity", "Metrics", "Networking", "News", "Observability", "Red Hat OpenShift", "Secrets Management", "Security", "Vault Integration"]
 tags_normalized: ["actions", "actions runner controller", "arc", "azure", "azure key vault", "cislashcd", "container lifecycle hooks", "csi driver", "devops", "github actions", "kubernetes", "managed identity", "metrics", "networking", "news", "observability", "red hat openshift", "secrets management", "security", "vault integration"]

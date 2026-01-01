@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-11-08 08:29:35 +00:00
-permalink: "/community/2025-11-08-Azure-VNet-Flow-Logs-Migration-and-Traffic-Analytics-with-Terraform.html"
+permalink: "/2025-11-08-Azure-VNet-Flow-Logs-Migration-and-Traffic-Analytics-with-Terraform.html"
 categories: ["Azure", "Coding", "DevOps", "Security"]
 tags: ["AVNM", "Azure", "Azure CLI", "Azure Policy", "Azure Security", "Azure Storage", "Azure VNet Flow Logs", "Coding", "Community", "Cost Optimization", "DevOps", "IaC", "KQL", "Log Analytics", "Network Monitoring", "Network Watcher", "NSG Flow Logs", "Resource Management", "Security", "Terraform", "Traffic Analytics"]
 tags_normalized: ["avnm", "azure", "azure cli", "azure policy", "azure security", "azure storage", "azure vnet flow logs", "coding", "community", "cost optimization", "devops", "iac", "kql", "log analytics", "network monitoring", "network watcher", "nsg flow logs", "resource management", "security", "terraform", "traffic analytics"]

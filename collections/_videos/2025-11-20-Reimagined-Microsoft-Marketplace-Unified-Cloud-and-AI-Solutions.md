@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Events YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
 date: 2025-11-20 17:05:21 +00:00
-permalink: "/videos/2025-11-20-Reimagined-Microsoft-Marketplace-Unified-Cloud-and-AI-Solutions.html"
+permalink: "/2025-11-20-Reimagined-Microsoft-Marketplace-Unified-Cloud-and-AI-Solutions.html"
 categories: ["AI", "Azure"]
 tags: ["Agentic AI", "AI", "AI Solutions", "Azure", "Azure Consumption Commitment", "Azure Marketplace", "Channel Partners", "Cloud Applications", "Cloud Portfolio Management", "Fine Tuned Models", "InnovatewithAzureAIappsandagents", "Microsoft AppSource", "Microsoft Ignite", "Microsoft Marketplace", "MSIgnite", "Partner Ecosystem", "Spend Optimization", "Tech Procurement", "Videos", "Voice Infrastructure"]
 tags_normalized: ["agentic ai", "ai", "ai solutions", "azure", "azure consumption commitment", "azure marketplace", "channel partners", "cloud applications", "cloud portfolio management", "fine tuned models", "innovatewithazureaiappsandagents", "microsoft appsource", "microsoft ignite", "microsoft marketplace", "msignite", "partner ecosystem", "spend optimization", "tech procurement", "videos", "voice infrastructure"]

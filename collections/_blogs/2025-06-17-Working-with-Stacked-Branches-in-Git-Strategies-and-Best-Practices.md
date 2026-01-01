@@ -9,10 +9,10 @@ viewing_mode: "external"
 feed_name: "Andrew Lock's Blog"
 feed_url: "https://andrewlock.net/rss.xml"
 date: 2025-06-17 09:00:00 +00:00
-permalink: "/blogs/2025-06-17-Working-with-Stacked-Branches-in-Git-Strategies-and-Best-Practices.html"
+permalink: "/2025-06-17-Working-with-Stacked-Branches-in-Git-Strategies-and-Best-Practices.html"
 categories: ["DevOps"]
-tags: ["Automation", "Branch Management", "Code Review", "DevOps", "Git", "Git Absorb", "Interactive Rebase", "JetBrains Rider", "Modular Commits", "Blogs", "Pull Requests", "Software Development", "Stacked Branches", "Workflow"]
-tags_normalized: ["automation", "branch management", "code review", "devops", "git", "git absorb", "interactive rebase", "jetbrains rider", "modular commits", "blogs", "pull requests", "software development", "stacked branches", "workflow"]
+tags: ["Automation", "Blogs", "Branch Management", "Code Review", "DevOps", "Git", "Git Absorb", "Interactive Rebase", "JetBrains Rider", "Modular Commits", "Pull Requests", "Software Development", "Stacked Branches", "Workflow"]
+tags_normalized: ["automation", "blogs", "branch management", "code review", "devops", "git", "git absorb", "interactive rebase", "jetbrains rider", "modular commits", "pull requests", "software development", "stacked branches", "workflow"]
 ---
 
 In this post, Andrew Lock delves into the use of stacked branches and PRs in Git, outlining practical workflows and tools for managing complex feature development efficiently.<!--excerpt_end-->

@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Events YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
 date: 2025-11-21 10:37:23 +00:00
-permalink: "/videos/2025-11-21-From-Legacy-to-Modern-NET-on-Azure-with-Visual-Studio-2026-Azure-App-Service-and-GitHub-Copilot.html"
+permalink: "/2025-11-21-From-Legacy-to-Modern-NET-on-Azure-with-Visual-Studio-2026-Azure-App-Service-and-GitHub-Copilot.html"
 categories: ["AI", "Azure", "Coding", "DevOps", "GitHub Copilot"]
 tags: [".NET", "AI", "AI Powered Development", "App Compatibility", "Azure", "Azure App Service", "Azure Key Vault", "Azure Managed Instance", "Cloud Deployment", "Coding", "Cost Efficiency", "DevOps", "GitHub Copilot", "Legacy Modernization", "Migrateandmodernizeyourestate", "MSIgnite", "MVC Music Store", "Observability", "Secure Deployments", "Videos", "VS", "WinForms"]
 tags_normalized: ["dotnet", "ai", "ai powered development", "app compatibility", "azure", "azure app service", "azure key vault", "azure managed instance", "cloud deployment", "coding", "cost efficiency", "devops", "github copilot", "legacy modernization", "migrateandmodernizeyourestate", "msignite", "mvc music store", "observability", "secure deployments", "videos", "vs", "winforms"]

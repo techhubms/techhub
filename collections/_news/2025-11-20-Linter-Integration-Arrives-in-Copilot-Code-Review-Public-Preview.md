@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/changelog/feed/"
 date: 2025-11-20 19:29:29 +00:00
-permalink: "/news/2025-11-20-Linter-Integration-Arrives-in-Copilot-Code-Review-Public-Preview.html"
+permalink: "/2025-11-20-Linter-Integration-Arrives-in-Copilot-Code-Review-Public-Preview.html"
 categories: ["AI", "DevOps", "GitHub Copilot"]
 tags: ["AI", "Automation", "Code Quality", "CodeQL", "Configuration", "Copilot", "Copilot Code Review", "DevOps", "Enterprise", "ESLint", "GitHub", "GitHub Copilot", "Linters", "News", "PMD", "Pull Requests", "Repository Rulesets", "Static Analysis"]
 tags_normalized: ["ai", "automation", "code quality", "codeql", "configuration", "copilot", "copilot code review", "devops", "enterprise", "eslint", "github", "github copilot", "linters", "news", "pmd", "pull requests", "repository rulesets", "static analysis"]

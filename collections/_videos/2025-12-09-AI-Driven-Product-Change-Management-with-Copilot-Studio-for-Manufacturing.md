@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Cloud YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCSgzRJMqIiCNtoM6Q7Q9Lqw"
 date: 2025-12-09 16:01:36 +00:00
-permalink: "/videos/2025-12-09-AI-Driven-Product-Change-Management-with-Copilot-Studio-for-Manufacturing.html"
+permalink: "/2025-12-09-AI-Driven-Product-Change-Management-with-Copilot-Studio-for-Manufacturing.html"
 categories: ["AI"]
 tags: ["AI", "AI Change Management", "AI Solutions", "Automated Workflow", "Change Management", "Change Management Manufacturing", "Copilot Studio", "Manufacturing", "Manufacturing With AI", "Microsoft Cloud", "Process Automation", "Product Change Management", "Videos", "Workflow Automation"]
 tags_normalized: ["ai", "ai change management", "ai solutions", "automated workflow", "change management", "change management manufacturing", "copilot studio", "manufacturing", "manufacturing with ai", "microsoft cloud", "process automation", "product change management", "videos", "workflow automation"]

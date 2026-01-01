@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft .NET Blog"
 feed_url: "https://devblogs.microsoft.com/dotnet/feed/"
 date: 2025-12-16 18:05:00 +00:00
-permalink: "/news/2025-12-16-Azure-DevOps-Gains-Full-Support-for-MicrosoftTestingPlatform.html"
+permalink: "/2025-12-16-Azure-DevOps-Gains-Full-Support-for-MicrosoftTestingPlatform.html"
 categories: ["Azure", "Coding", "DevOps"]
 tags: [".NET", ".NET 10 SDK", "Azure", "Azure DevOps", "C#", "CI/CD Pipelines", "Coding", "DevOps", "DotNetCoreCLI", "F#", "Microsoft.Testing.Platform", "News", "PublishTestResults", "Retry Extension", "Test Automation", "Test Frameworks", "Test Results", "Testing", "TRX Files", "Unit Testing", "Visual Basic", "VSTest", "YAML Pipelines"]
 tags_normalized: ["dotnet", "dotnet 10 sdk", "azure", "azure devops", "csharp", "cislashcd pipelines", "coding", "devops", "dotnetcorecli", "fsharp", "microsoftdottestingdotplatform", "news", "publishtestresults", "retry extension", "test automation", "test frameworks", "test results", "testing", "trx files", "unit testing", "visual basic", "vstest", "yaml pipelines"]

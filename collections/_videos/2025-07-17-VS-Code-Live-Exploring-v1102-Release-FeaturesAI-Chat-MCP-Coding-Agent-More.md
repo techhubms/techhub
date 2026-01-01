@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Visual Studio Code YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SLNwkd3w"
 date: 2025-07-17 16:48:30 +00:00
-permalink: "/videos/2025-07-17-VS-Code-Live-Exploring-v1102-Release-FeaturesAI-Chat-MCP-Coding-Agent-More.html"
+permalink: "/2025-07-17-VS-Code-Live-Exploring-v1102-Release-FeaturesAI-Chat-MCP-Coding-Agent-More.html"
 categories: ["AI", "Coding"]
 tags: ["AI", "AI Editor", "Chat Improvements", "Coding", "Coding Agent Integration", "Custom Modes", "Development Tools", "Edit Chat", "MCP Support", "Open Source", "Videos", "VS Code", "VS Code V1.102"]
 tags_normalized: ["ai", "ai editor", "chat improvements", "coding", "coding agent integration", "custom modes", "development tools", "edit chat", "mcp support", "open source", "videos", "vs code", "vs code v1dot102"]

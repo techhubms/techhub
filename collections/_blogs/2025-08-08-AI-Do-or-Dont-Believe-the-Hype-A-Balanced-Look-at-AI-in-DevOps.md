@@ -9,10 +9,10 @@ viewing_mode: "external"
 feed_name: "DevOps Blog"
 feed_url: "https://devops.com/feed/"
 date: 2025-08-08 19:43:40 +00:00
-permalink: "/blogs/2025-08-08-AI-Do-or-Dont-Believe-the-Hype-A-Balanced-Look-at-AI-in-DevOps.html"
+permalink: "/2025-08-08-AI-Do-or-Dont-Believe-the-Hype-A-Balanced-Look-at-AI-in-DevOps.html"
 categories: ["AI", "DevOps"]
-tags: ["AI", "AI Powered Development Tools", "Claude Sonnet", "Code Review", "Code Scaffolding", "Cursor Pro", "Developer Productivity", "DevOps", "Documentation Automation", "GitLab–Harris Poll", "METR Study", "MTTR", "Platform Engineering", "Blogs", "QA Automation", "Security Concerns", "Social Facebook", "Social LinkedIn", "Social X", "Software Lifecycle", "SRE", "Stack Overflow Survey", "Test Generation"]
-tags_normalized: ["ai", "ai powered development tools", "claude sonnet", "code review", "code scaffolding", "cursor pro", "developer productivity", "devops", "documentation automation", "gitlabharris poll", "metr study", "mttr", "platform engineering", "blogs", "qa automation", "security concerns", "social facebook", "social linkedin", "social x", "software lifecycle", "sre", "stack overflow survey", "test generation"]
+tags: ["AI", "AI Powered Development Tools", "Blogs", "Claude Sonnet", "Code Review", "Code Scaffolding", "Cursor Pro", "Developer Productivity", "DevOps", "Documentation Automation", "GitLab–Harris Poll", "METR Study", "MTTR", "Platform Engineering", "QA Automation", "Security Concerns", "Social Facebook", "Social LinkedIn", "Social X", "Software Lifecycle", "SRE", "Stack Overflow Survey", "Test Generation"]
+tags_normalized: ["ai", "ai powered development tools", "blogs", "claude sonnet", "code review", "code scaffolding", "cursor pro", "developer productivity", "devops", "documentation automation", "gitlabharris poll", "metr study", "mttr", "platform engineering", "qa automation", "security concerns", "social facebook", "social linkedin", "social x", "software lifecycle", "sre", "stack overflow survey", "test generation"]
 ---
 
 Alan Shimel examines the current state of AI in the DevOps world, analyzing business hype, empirical studies, and ground-level developer experiences.<!--excerpt_end-->

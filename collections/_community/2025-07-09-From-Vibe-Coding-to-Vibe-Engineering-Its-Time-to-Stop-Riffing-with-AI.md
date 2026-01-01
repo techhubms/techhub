@@ -10,7 +10,7 @@ categories: ["AI", "Security"]
 feed_name: "The New Stack"
 feed_url: "https://thenewstack.io/feed/"
 date: 2025-07-09 10:00:00 +00:00
-permalink: "/community/2025-07-09-From-Vibe-Coding-to-Vibe-Engineering-Its-Time-to-Stop-Riffing-with-AI.html"
+permalink: "/2025-07-09-From-Vibe-Coding-to-Vibe-Engineering-Its-Time-to-Stop-Riffing-with-AI.html"
 tags: ["AI", "AI Assisted Development", "Architecture", "Code Quality", "Community", "Development Practices", "Engineering Standards", "Security", "Software Engineering", "TDD", "Technical Debt", "Testing"]
 tags_normalized: ["ai", "ai assisted development", "architecture", "code quality", "community", "development practices", "engineering standards", "security", "software engineering", "tdd", "technical debt", "testing"]
 ---

@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Fabric Blog"
 feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
 date: 2025-08-05 09:00:00 +00:00
-permalink: "/news/2025-08-05-Unlocking-Flexibility-in-Fabric-Introducing-Multiple-Scheduler-and-CICD-Support.html"
+permalink: "/2025-08-05-Unlocking-Flexibility-in-Fabric-Introducing-Multiple-Scheduler-and-CICD-Support.html"
 categories: ["Azure", "ML", "DevOps"]
 tags: ["Automation", "Azure", "CI/CD", "Data Engineering", "Data Pipelines", "Deployment Pipelines", "DevOps", "Git Integration", "Job Types", "Microsoft Fabric", "ML", "Monitoring", "Multiple Scheduler", "News", "Scheduler API", "Version Control"]
 tags_normalized: ["automation", "azure", "cislashcd", "data engineering", "data pipelines", "deployment pipelines", "devops", "git integration", "job types", "microsoft fabric", "ml", "monitoring", "multiple scheduler", "news", "scheduler api", "version control"]

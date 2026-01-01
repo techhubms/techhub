@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Events YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
 date: 2025-11-21 12:58:10 +00:00
-permalink: "/videos/2025-11-21-Innovation-Session-Microsoft-Fabric-and-Azure-Databases-the-Data-Estate-for-AI.html"
+permalink: "/2025-11-21-Innovation-Session-Microsoft-Fabric-and-Azure-Databases-the-Data-Estate-for-AI.html"
 categories: ["AI", "Azure", "ML"]
 tags: ["AI", "AI Transformation", "Azure", "Azure PostgreSQL", "Azure SQL", "Customer Success", "Data Engineering", "DocumentDB", "Fabric IQ", "Microsoft Fabric", "Microsoft Ignite", "ML", "MSIgnite", "OneLake", "Power BI", "Real Time Analytics", "Semantic Models", "Unified Data Platform", "Unifyyourdataplatform", "Videos", "VS Code Extension"]
 tags_normalized: ["ai", "ai transformation", "azure", "azure postgresql", "azure sql", "customer success", "data engineering", "documentdb", "fabric iq", "microsoft fabric", "microsoft ignite", "ml", "msignite", "onelake", "power bi", "real time analytics", "semantic models", "unified data platform", "unifyyourdataplatform", "videos", "vs code extension"]

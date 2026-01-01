@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Fabric Blog"
 feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
 date: 2025-11-19 08:00:00 +00:00
-permalink: "/news/2025-11-19-Using-Customer-Managed-Keys-with-Microsoft-Fabric-SQL-Database.html"
+permalink: "/2025-11-19-Using-Customer-Managed-Keys-with-Microsoft-Fabric-SQL-Database.html"
 categories: ["Azure", "ML", "Security"]
 tags: ["Access Management", "AI", "AI Projects", "Asymmetric Key", "Auditability", "Azure", "Azure Key Vault", "Compliance", "Customer Managed Keys", "Data Governance", "Data Security", "DEK", "Encryption", "Encryption Query", "Fabric Integration", "Microsoft Fabric", "ML", "News", "Regulatory Standards", "Secure Development", "Security", "SQL Database", "Transparent Data Encryption", "Workspaces"]
 tags_normalized: ["access management", "ai", "ai projects", "asymmetric key", "auditability", "azure", "azure key vault", "compliance", "customer managed keys", "data governance", "data security", "dek", "encryption", "encryption query", "fabric integration", "microsoft fabric", "ml", "news", "regulatory standards", "secure development", "security", "sql database", "transparent data encryption", "workspaces"]

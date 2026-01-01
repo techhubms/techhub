@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Reddit Azure"
 feed_url: "https://www.reddit.com/r/azure/.rss"
 date: 2025-08-07 02:26:59 +00:00
-permalink: "/community/2025-08-07-Understanding-Hyper-V-and-Azure-Host-OS-Architecture.html"
+permalink: "/2025-08-07-Understanding-Hyper-V-and-Azure-Host-OS-Architecture.html"
 categories: ["Azure"]
 tags: ["Azure", "Azure Host OS", "Child Partition", "Community", "Hardware Virtualization", "Hyper V", "Hypervisor Architecture", "Microsoft Azure", "Protection Rings", "Root Partition", "Server Core", "Type 1 Hypervisor", "Virtual Machines", "Virtualization", "VMCS", "Windows Server", "X86 Virtualization"]
 tags_normalized: ["azure", "azure host os", "child partition", "community", "hardware virtualization", "hyper v", "hypervisor architecture", "microsoft azure", "protection rings", "root partition", "server core", "type 1 hypervisor", "virtual machines", "virtualization", "vmcs", "windows server", "x86 virtualization"]

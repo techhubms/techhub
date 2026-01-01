@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Reddit Github Copilot"
 feed_url: "https://www.reddit.com/r/GithubCopilot.rss"
 date: 2025-08-07 17:12:55 +00:00
-permalink: "/community/2025-08-07-AMA-GPT-5-Launch-and-GitHub-Copilot-Community-Questions-Answered.html"
+permalink: "/2025-08-07-AMA-GPT-5-Launch-and-GitHub-Copilot-Community-Questions-Answered.html"
 categories: ["AI", "Coding", "GitHub Copilot"]
 tags: ["Agent Mode", "AI", "AI Integration", "Auto Completion", "Beast Mode", "Coding", "Community", "Community AMA", "Copilot Enterprise", "Copilot Models", "Developer Tools", "GitHub Copilot", "GPT 5", "MCP", "Microsoft", "Model Pricing", "OpenAI", "Opus 4.1", "Sonnet 4", "VS Code"]
 tags_normalized: ["agent mode", "ai", "ai integration", "auto completion", "beast mode", "coding", "community", "community ama", "copilot enterprise", "copilot models", "developer tools", "github copilot", "gpt 5", "mcp", "microsoft", "model pricing", "openai", "opus 4dot1", "sonnet 4", "vs code"]

@@ -9,10 +9,10 @@ viewing_mode: "external"
 feed_name: "Dellenny's Blog"
 feed_url: "https://dellenny.com/feed/"
 date: 2025-09-22 08:40:58 +00:00
-permalink: "/blogs/2025-09-22-Generative-AI-in-Azure-A-Practical-Guide-to-Getting-Started.html"
+permalink: "/2025-09-22-Generative-AI-in-Azure-A-Practical-Guide-to-Getting-Started.html"
 categories: ["AI", "Azure"]
-tags: ["AI", "AI Governance", "API Integration", "Azure", "Azure AI Studio", "Azure Cognitive Services", "Azure Machine Learning", "Azure OpenAI Service", "Cloud Development", "Computer Vision", "Content Generation", "DALL·E", "Enterprise AI", "GenAI", "Generative AI", "GPT", "Large Language Models", "Model Fine Tuning", "Blogs", "Prompt Engineering", "Python", "Responsible AI", "REST API", "Speech Services"]
-tags_normalized: ["ai", "ai governance", "api integration", "azure", "azure ai studio", "azure cognitive services", "azure machine learning", "azure openai service", "cloud development", "computer vision", "content generation", "dalle", "enterprise ai", "genai", "generative ai", "gpt", "large language models", "model fine tuning", "blogs", "prompt engineering", "python", "responsible ai", "rest api", "speech services"]
+tags: ["AI", "AI Governance", "API Integration", "Azure", "Azure AI Studio", "Azure Cognitive Services", "Azure Machine Learning", "Azure OpenAI Service", "Blogs", "Cloud Development", "Computer Vision", "Content Generation", "DALL·E", "Enterprise AI", "GenAI", "Generative AI", "GPT", "Large Language Models", "Model Fine Tuning", "Prompt Engineering", "Python", "Responsible AI", "REST API", "Speech Services"]
+tags_normalized: ["ai", "ai governance", "api integration", "azure", "azure ai studio", "azure cognitive services", "azure machine learning", "azure openai service", "blogs", "cloud development", "computer vision", "content generation", "dalle", "enterprise ai", "genai", "generative ai", "gpt", "large language models", "model fine tuning", "prompt engineering", "python", "responsible ai", "rest api", "speech services"]
 ---
 
 Dellenny presents a practical overview of using generative AI in Azure, outlining essential services and actionable steps for developers and organizations to harness powerful AI capabilities in their applications.<!--excerpt_end-->

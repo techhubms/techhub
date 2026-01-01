@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/changelog/feed/"
 date: 2025-09-06 02:56:23 +00:00
-permalink: "/news/2025-09-06-New-Features-in-GitHub-Copilot-for-Eclipse-Empower-Developer-Experience.html"
+permalink: "/2025-09-06-New-Features-in-GitHub-Copilot-for-Eclipse-Empower-Developer-Experience.html"
 categories: ["AI", "Coding", "GitHub Copilot"]
 tags: ["Agent Mode", "AI", "API Integration", "Code Generation", "Coding", "Copilot Chat", "Custom Instructions", "Developer Tools", "Eclipse", "GitHub Copilot", "IDE Integration", "Java Development", "News", "Plugin Development", "Programming Productivity", "Spring Tools", "User Experience", "Workflow Enhancement"]
 tags_normalized: ["agent mode", "ai", "api integration", "code generation", "coding", "copilot chat", "custom instructions", "developer tools", "eclipse", "github copilot", "ide integration", "java development", "news", "plugin development", "programming productivity", "spring tools", "user experience", "workflow enhancement"]

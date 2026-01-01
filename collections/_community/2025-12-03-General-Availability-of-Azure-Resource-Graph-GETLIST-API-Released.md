@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-12-03 04:39:28 +00:00
-permalink: "/community/2025-12-03-General-Availability-of-Azure-Resource-Graph-GETLIST-API-Released.html"
+permalink: "/2025-12-03-General-Availability-of-Azure-Resource-Graph-GETLIST-API-Released.html"
 categories: ["Azure"]
 tags: ["API Contract", "API Throttling", "ARG GET/LIST API", "ARM API", "Azure", "Azure Governance", "Azure Resource Graph", "Azure Subscription", "Cloud Operations", "Cloud Scalability", "Community", "Control Plane Routing", "Feedback", "InstanceView", "Kusto Query Language", "Microsoft Learn", "Performance Optimization", "Quota Management", "Resilient Architecture", "Resource Group", "Resource Management", "Virtual Machines"]
 tags_normalized: ["api contract", "api throttling", "arg getslashlist api", "arm api", "azure", "azure governance", "azure resource graph", "azure subscription", "cloud operations", "cloud scalability", "community", "control plane routing", "feedback", "instanceview", "kusto query language", "microsoft learn", "performance optimization", "quota management", "resilient architecture", "resource group", "resource management", "virtual machines"]

@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Events YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
 date: 2025-11-20 16:02:21 +00:00
-permalink: "/videos/2025-11-20-Orchestrating-Customer-Experiences-with-Adobe-AI-Agents-and-Microsoft-Foundry.html"
+permalink: "/2025-11-20-Orchestrating-Customer-Experiences-with-Adobe-AI-Agents-and-Microsoft-Foundry.html"
 categories: ["AI", "Azure"]
 tags: ["Adobe", "AI", "AI Agents", "AI Collaboration", "Azure", "Azure AI", "Customer Experience", "Dashboard Analytics", "Data Pipeline", "Enterprise AI", "Governance Framework", "InnovatewithAzureAIappsandagents", "Microsoft Foundry", "Microsoft Ignite", "MSIgnite", "Personalization", "Real Time Data", "Responsible AI", "Videos"]
 tags_normalized: ["adobe", "ai", "ai agents", "ai collaboration", "azure", "azure ai", "customer experience", "dashboard analytics", "data pipeline", "enterprise ai", "governance framework", "innovatewithazureaiappsandagents", "microsoft foundry", "microsoft ignite", "msignite", "personalization", "real time data", "responsible ai", "videos"]

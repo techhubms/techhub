@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/changelog/feed/"
 date: 2025-11-13 13:46:13 +00:00
-permalink: "/news/2025-11-13-Manage-Copilot-Coding-Agent-Tasks-in-Visual-Studio-Code.html"
+permalink: "/2025-11-13-Manage-Copilot-Coding-Agent-Tasks-in-Visual-Studio-Code.html"
 categories: ["AI", "Coding", "GitHub Copilot"]
 tags: ["Agent Sessions", "AI", "Codespaces", "Coding", "Copilot", "Copilot Chat", "Copilot Coding Agent", "Developer Tools", "GitHub CLI", "GitHub Copilot", "GitHub Pull Requests", "Improvement", "News", "Productivity", "Session Logs", "Task Management", "VS Code", "Workflow"]
 tags_normalized: ["agent sessions", "ai", "codespaces", "coding", "copilot", "copilot chat", "copilot coding agent", "developer tools", "github cli", "github copilot", "github pull requests", "improvement", "news", "productivity", "session logs", "task management", "vs code", "workflow"]

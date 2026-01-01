@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Visual Studio Code YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SLNwkd3w"
 date: 2025-09-09 22:00:46 +00:00
-permalink: "/videos/2025-09-09-Introduction-to-Prompt-Driven-Development-in-VS-Code.html"
+permalink: "/2025-09-09-Introduction-to-Prompt-Driven-Development-in-VS-Code.html"
 categories: ["AI", "Coding", "GitHub Copilot"]
 tags: ["Agent Mode", "Agentmode", "AI", "AI Assisted Coding", "Beginner", "Coding", "Copilot", "Copilot Vision", "Demo", "Developer", "Developer Tools", "Extension", "GitHub Copilot", "IDE", "Prompt Driven Development", "Prompt Engineering", "Promptdrivendevelopment", "Software Developer", "Software Development", "Testing Workflows", "Videos", "Voice Chat", "VS Code", "VS Code Features", "Web Development"]
 tags_normalized: ["agent mode", "agentmode", "ai", "ai assisted coding", "beginner", "coding", "copilot", "copilot vision", "demo", "developer", "developer tools", "extension", "github copilot", "ide", "prompt driven development", "prompt engineering", "promptdrivendevelopment", "software developer", "software development", "testing workflows", "videos", "voice chat", "vs code", "vs code features", "web development"]

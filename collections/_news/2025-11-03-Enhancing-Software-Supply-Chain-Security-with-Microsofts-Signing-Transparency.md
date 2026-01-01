@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The Azure Blog"
 feed_url: "https://azure.microsoft.com/en-us/blog/feed/"
 date: 2025-11-03 17:00:00 +00:00
-permalink: "/news/2025-11-03-Enhancing-Software-Supply-Chain-Security-with-Microsofts-Signing-Transparency.html"
+permalink: "/2025-11-03-Enhancing-Software-Supply-Chain-Security-with-Microsofts-Signing-Transparency.html"
 categories: ["Azure", "Security"]
 tags: ["Auditing", "Azure", "Azure Built in Security", "Azure Confidential Computing", "Code Signing", "Compliance", "Confidential Computing", "Confidential Ledger", "COSE", "Cryptographic Ledger", "Merkle Tree", "Microsoft Azure", "News", "SCITT", "Security", "Signing Transparency", "Software Supply Chain Security", "Transparency Logs", "Trusted Execution Environments", "Zero Trust"]
 tags_normalized: ["auditing", "azure", "azure built in security", "azure confidential computing", "code signing", "compliance", "confidential computing", "confidential ledger", "cose", "cryptographic ledger", "merkle tree", "microsoft azure", "news", "scitt", "security", "signing transparency", "software supply chain security", "transparency logs", "trusted execution environments", "zero trust"]

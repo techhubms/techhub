@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Reddit CSharp"
 feed_url: "https://www.reddit.com/r/csharp/.rss"
 date: 2025-08-02 19:23:25 +00:00
-permalink: "/community/2025-08-02-NetLoom-my-new-WPF-C-network-analyzer-project.html"
+permalink: "/2025-08-02-NetLoom-my-new-WPF-C-network-analyzer-project.html"
 categories: ["Coding"]
 tags: [".NET", "C#", "Coding", "Community", "Interface Monitoring", "NetLoom", "Network Analyzer", "Network Connections", "Network Monitoring", "Real Time Analytics", "WPF"]
 tags_normalized: ["dotnet", "csharp", "coding", "community", "interface monitoring", "netloom", "network analyzer", "network connections", "network monitoring", "real time analytics", "wpf"]

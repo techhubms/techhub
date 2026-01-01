@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Reddit Azure"
 feed_url: "https://www.reddit.com/r/azure/.rss"
 date: 2025-08-04 11:01:26 +00:00
-permalink: "/community/2025-08-04-InvalidAuthenticationToken-in-CI-CD-Pipeline-But-Working-Fine-in-Postman.html"
+permalink: "/2025-08-04-InvalidAuthenticationToken-in-CI-CD-Pipeline-But-Working-Fine-in-Postman.html"
 categories: ["Azure", "DevOps", "Security"]
 tags: ["Access Token", "Authentication", "Azure", "Azure REST API", "CI/CD", "Community", "DevOps", "Get AzAccessToken", "Invoke RestMethod", "Pipeline", "Postman", "PowerShell", "Security"]
 tags_normalized: ["access token", "authentication", "azure", "azure rest api", "cislashcd", "community", "devops", "get azaccesstoken", "invoke restmethod", "pipeline", "postman", "powershell", "security"]

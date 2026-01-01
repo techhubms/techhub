@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "DotNet YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw"
 date: 2025-11-05 20:28:35 +00:00
-permalink: "/videos/2025-11-05-Beyond-Chat-Building-Smarter-AI-Agents-in-NET-with-AiGen.html"
+permalink: "/2025-11-05-Beyond-Chat-Building-Smarter-AI-Agents-in-NET-with-AiGen.html"
 categories: ["AI", "Coding"]
 tags: [".NET", "Agents", "AI", "AI Agents", "AI Integration", "AiGen", "C#", "Code Assistant", "Coding", "Demo", "Developer", "Developer Community", "Developer Tools", "Dotnetdeveloper", "Microsoft", "Pair Programming", "Software Developer", "Software Development", "User Experience", "Videos", "VS"]
 tags_normalized: ["dotnet", "agents", "ai", "ai agents", "ai integration", "aigen", "csharp", "code assistant", "coding", "demo", "developer", "developer community", "developer tools", "dotnetdeveloper", "microsoft", "pair programming", "software developer", "software development", "user experience", "videos", "vs"]

@@ -9,10 +9,10 @@ viewing_mode: "external"
 feed_name: "DevOps Blog"
 feed_url: "https://devops.com/feed/"
 date: 2025-08-18 07:57:21 +00:00
-permalink: "/blogs/2025-08-18-Why-Human-Oversight-Remains-Essential-in-an-AI-Driven-DevOps-Landscape.html"
+permalink: "/2025-08-18-Why-Human-Oversight-Remains-Essential-in-an-AI-Driven-DevOps-Landscape.html"
 categories: ["AI", "DevOps", "Security"]
-tags: ["Agentic AI", "AI", "AI DevOps Risks", "AI in Software Delivery", "AI Oversight", "AI Risk Management", "Business Of DevOps", "CI/CD", "CI/CD Automation", "DevOps", "DevOps Automation", "DevOps Guardrails", "Error Propagation", "Ethics in AI", "Explainability", "Human AI Collaboration", "Human in The Loop", "Microsoft Azure DevOps", "Observability", "Pipeline Oversight", "Blogs", "Regulatory Compliance", "Responsible AI", "Security", "Security Compliance", "Social Facebook", "Social LinkedIn", "Social X"]
-tags_normalized: ["agentic ai", "ai", "ai devops risks", "ai in software delivery", "ai oversight", "ai risk management", "business of devops", "cislashcd", "cislashcd automation", "devops", "devops automation", "devops guardrails", "error propagation", "ethics in ai", "explainability", "human ai collaboration", "human in the loop", "microsoft azure devops", "observability", "pipeline oversight", "blogs", "regulatory compliance", "responsible ai", "security", "security compliance", "social facebook", "social linkedin", "social x"]
+tags: ["Agentic AI", "AI", "AI DevOps Risks", "AI in Software Delivery", "AI Oversight", "AI Risk Management", "Blogs", "Business Of DevOps", "CI/CD", "CI/CD Automation", "DevOps", "DevOps Automation", "DevOps Guardrails", "Error Propagation", "Ethics in AI", "Explainability", "Human AI Collaboration", "Human in The Loop", "Microsoft Azure DevOps", "Observability", "Pipeline Oversight", "Regulatory Compliance", "Responsible AI", "Security", "Security Compliance", "Social Facebook", "Social LinkedIn", "Social X"]
+tags_normalized: ["agentic ai", "ai", "ai devops risks", "ai in software delivery", "ai oversight", "ai risk management", "blogs", "business of devops", "cislashcd", "cislashcd automation", "devops", "devops automation", "devops guardrails", "error propagation", "ethics in ai", "explainability", "human ai collaboration", "human in the loop", "microsoft azure devops", "observability", "pipeline oversight", "regulatory compliance", "responsible ai", "security", "security compliance", "social facebook", "social linkedin", "social x"]
 ---
 
 Alan Shimel discusses the critical need for human oversight in AI-driven DevOps environments, emphasizing collaboration models and the risks of unchecked automation.<!--excerpt_end-->

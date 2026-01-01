@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Events YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
 date: 2025-11-19 15:05:04 +00:00
-permalink: "/videos/2025-11-19-Active-Directory-Disaster-Recovery-Modern-Approaches-for-Secure-Forest-Restoration.html"
+permalink: "/2025-11-19-Active-Directory-Disaster-Recovery-Modern-Approaches-for-Secure-Forest-Restoration.html"
 categories: ["Azure", "Security"]
 tags: ["Active Directory", "Alerting", "Azure", "Cayosoft", "Change Monitoring", "Disaster Recovery", "Enterprise Backup", "Forest Recovery", "Identity Layer Security", "Identity Management", "Isolated Standby Environment", "Microsoft Ignite", "MSIgnite", "ProtectcloudAIplatformandapps", "Recovery Plan", "Security", "Threat Detection", "Videos", "Windows Server Backup"]
 tags_normalized: ["active directory", "alerting", "azure", "cayosoft", "change monitoring", "disaster recovery", "enterprise backup", "forest recovery", "identity layer security", "identity management", "isolated standby environment", "microsoft ignite", "msignite", "protectcloudaiplatformandapps", "recovery plan", "security", "threat detection", "videos", "windows server backup"]

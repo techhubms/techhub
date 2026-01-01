@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Community"
 date: 2025-08-12 17:02:41 +00:00
-permalink: "/community/2025-08-12-Build-the-Future-of-AI-Driven-Apps-with-SharePoint-Embedded.html"
+permalink: "/2025-08-12-Build-the-Future-of-AI-Driven-Apps-with-SharePoint-Embedded.html"
 categories: ["AI", "Coding"]
 tags: ["AI", "AI Apps", "API Development", "Coding", "Community", "Compliance", "Content Services", "Copilot Integration", "Custom UX", "Document Centric Apps", "Headless Platform", "ISV Solutions", "Microsoft 365", "Microsoft Mechanics", "Scalable Architecture", "SharePoint Development", "SharePoint Embedded", "TechCon ATL"]
 tags_normalized: ["ai", "ai apps", "api development", "coding", "community", "compliance", "content services", "copilot integration", "custom ux", "document centric apps", "headless platform", "isv solutions", "microsoft 365", "microsoft mechanics", "scalable architecture", "sharepoint development", "sharepoint embedded", "techcon atl"]

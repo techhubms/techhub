@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=dotnet"
 date: 2025-10-07 18:38:42 +00:00
-permalink: "/community/2025-10-07-WPF-Apps-Becoming-Unresponsive-after-USB-Pen-Device-Hotplug.html"
+permalink: "/2025-10-07-WPF-Apps-Becoming-Unresponsive-after-USB-Pen-Device-Hotplug.html"
 categories: ["Coding"]
 tags: [".NET Framework", "AppContext Switch", "Coding", "Community", "Input Devices", "PenThreadWorker", "Stylus", "Tablet Events", "Unresponsive Application", "USB", "VS", "Windows 10", "Windows 11", "WM DEVICECHANGE", "WM TABLET ADDED", "WM TABLET DELETED", "WPF", "WPF Performance"]
 tags_normalized: ["dotnet framework", "appcontext switch", "coding", "community", "input devices", "penthreadworker", "stylus", "tablet events", "unresponsive application", "usb", "vs", "windows 10", "windows 11", "wm devicechange", "wm tablet added", "wm tablet deleted", "wpf", "wpf performance"]

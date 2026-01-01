@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft DevBlog"
 feed_url: "https://devblogs.microsoft.com/azure-sdk/feed/"
 date: 2025-04-03 18:38:43 +00:00
-permalink: "/news/2025-04-03-Azure-Developer-CLI-azd-April-2025-Release-New-Features-Templates-and-Enhancements.html"
+permalink: "/2025-04-03-Azure-Developer-CLI-azd-April-2025-Release-New-Features-Templates-and-Enhancements.html"
 categories: ["AI", "Azure", "DevOps"]
 tags: [".NET", ".NET Aspire", "AI", "Azd", "Azure", "Azure AI Search", "Azure Container Apps", "Azure Developer CLI", "Azure OpenAI", "Azure SDK", "Bicep", "Codespaces", "DevOps", "Docker", "GitHub Codespaces", "Java", "JavaScript", "Key Vault", "Kubernetes", "News", "Python", "Templates", "Typescript", "VS Code"]
 tags_normalized: ["dotnet", "dotnet aspire", "ai", "azd", "azure", "azure ai search", "azure container apps", "azure developer cli", "azure openai", "azure sdk", "bicep", "codespaces", "devops", "docker", "github codespaces", "java", "javascript", "key vault", "kubernetes", "news", "python", "templates", "typescript", "vs code"]

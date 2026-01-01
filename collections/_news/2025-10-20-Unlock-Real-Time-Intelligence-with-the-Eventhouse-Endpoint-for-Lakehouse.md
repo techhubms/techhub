@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Fabric Blog"
 feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
 date: 2025-10-20 11:00:00 +00:00
-permalink: "/news/2025-10-20-Unlock-Real-Time-Intelligence-with-the-Eventhouse-Endpoint-for-Lakehouse.html"
+permalink: "/2025-10-20-Unlock-Real-Time-Intelligence-with-the-Eventhouse-Endpoint-for-Lakehouse.html"
 categories: ["Azure", "ML"]
 tags: ["Advanced Analytics", "Anomaly Detection", "Azure", "Data Engineering", "Dynamic Data Types", "Eventhouse Endpoint", "KQL", "Lakehouse", "Microsoft Fabric", "ML", "News", "OneLake", "Python Integration", "Query Acceleration Policy", "Real Time Analytics", "Schema Synchronization", "SQL", "Time Series Analysis"]
 tags_normalized: ["advanced analytics", "anomaly detection", "azure", "data engineering", "dynamic data types", "eventhouse endpoint", "kql", "lakehouse", "microsoft fabric", "ml", "news", "onelake", "python integration", "query acceleration policy", "real time analytics", "schema synchronization", "sql", "time series analysis"]

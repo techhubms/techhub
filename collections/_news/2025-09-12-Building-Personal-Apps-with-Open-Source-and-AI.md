@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/feed/"
 date: 2025-09-12 16:00:00 +00:00
-permalink: "/news/2025-09-12-Building-Personal-Apps-with-Open-Source-and-AI.html"
+permalink: "/2025-09-12-Building-Personal-Apps-with-Open-Source-and-AI.html"
 categories: ["AI", "Coding", "GitHub Copilot"]
 tags: ["AI", "Automation", "Coding", "Community Collaboration", "Developer Tools", "GitHub", "GitHub Copilot", "GitHub Podcast", "Maintainers", "Markdown Tools", "News", "Open Source", "Open Source Community", "Personal Apps", "Productivity", "Project Sharing", "Scripting", "Workflow Improvement"]
 tags_normalized: ["ai", "automation", "coding", "community collaboration", "developer tools", "github", "github copilot", "github podcast", "maintainers", "markdown tools", "news", "open source", "open source community", "personal apps", "productivity", "project sharing", "scripting", "workflow improvement"]

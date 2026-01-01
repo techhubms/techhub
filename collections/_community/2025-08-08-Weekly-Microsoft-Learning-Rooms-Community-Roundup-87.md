@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Community"
 date: 2025-08-08 18:40:34 +00:00
-permalink: "/community/2025-08-08-Weekly-Microsoft-Learning-Rooms-Community-Roundup-87.html"
+permalink: "/2025-08-08-Weekly-Microsoft-Learning-Rooms-Community-Roundup-87.html"
 categories: ["AI", "Azure", "Coding", "ML", "Security"]
 tags: ["Access Control", "AI", "APIM Integration", "Azure", "Azure AI Foundry", "Azure APIM", "Cloud Security", "Coding", "Community", "Dev Community", "Domain Controller", "Event Sourcing", "Microsoft Community Hub", "Microsoft Fabric", "Microsoft Learning Rooms", "ML", "Multi Agent Systems", "Power BI", "Purview", "Real Time Data", "Security", "Tech Events"]
 tags_normalized: ["access control", "ai", "apim integration", "azure", "azure ai foundry", "azure apim", "cloud security", "coding", "community", "dev community", "domain controller", "event sourcing", "microsoft community hub", "microsoft fabric", "microsoft learning rooms", "ml", "multi agent systems", "power bi", "purview", "real time data", "security", "tech events"]

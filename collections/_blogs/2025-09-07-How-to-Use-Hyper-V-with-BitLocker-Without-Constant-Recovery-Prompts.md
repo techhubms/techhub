@@ -9,10 +9,10 @@ viewing_mode: "external"
 feed_name: "Dellenny's Blog"
 feed_url: "https://dellenny.com/feed/"
 date: 2025-09-07 11:36:30 +00:00
-permalink: "/blogs/2025-09-07-How-to-Use-Hyper-V-with-BitLocker-Without-Constant-Recovery-Prompts.html"
+permalink: "/2025-09-07-How-to-Use-Hyper-V-with-BitLocker-Without-Constant-Recovery-Prompts.html"
 categories: ["Security"]
-tags: ["BitLocker", "Credential Guard", "Device Guard", "Encryption", "Hyper V", "Manage Bde", "Microsoft Security", "PCR", "Blogs", "Secure Boot", "Security", "TPM", "Trusted Platform Module", "Virtual Machine Platform", "Virtualization", "Windows 11", "WSL2"]
-tags_normalized: ["bitlocker", "credential guard", "device guard", "encryption", "hyper v", "manage bde", "microsoft security", "pcr", "blogs", "secure boot", "security", "tpm", "trusted platform module", "virtual machine platform", "virtualization", "windows 11", "wsl2"]
+tags: ["BitLocker", "Blogs", "Credential Guard", "Device Guard", "Encryption", "Hyper V", "Manage Bde", "Microsoft Security", "PCR", "Secure Boot", "Security", "TPM", "Trusted Platform Module", "Virtual Machine Platform", "Virtualization", "Windows 11", "WSL2"]
+tags_normalized: ["bitlocker", "blogs", "credential guard", "device guard", "encryption", "hyper v", "manage bde", "microsoft security", "pcr", "secure boot", "security", "tpm", "trusted platform module", "virtual machine platform", "virtualization", "windows 11", "wsl2"]
 ---
 
 Dellenny provides a practical guide on resolving repeated BitLocker recovery prompts when using Hyper-V on Windows, detailing secure setup and TPM configuration strategies.<!--excerpt_end-->

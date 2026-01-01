@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "John Savill's Technical Training"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCpIn7ox7j7bH_OFj7tYouOQ"
 date: 2025-10-22 16:32:44 +00:00
-permalink: "/videos/2025-10-22-Understanding-Azure-Availability-Zone-Mappings-for-Subscriptions.html"
+permalink: "/2025-10-22-Understanding-Azure-Availability-Zone-Mappings-for-Subscriptions.html"
 categories: ["Azure"]
 tags: ["Availability Zone", "AZ Alignment", "Azure", "Azure Availability Zones", "Azure Capacity", "Azure Cloud", "Azure Scripting", "Capacity", "Cloud", "Cloud Architecture", "Disaster Recovery", "High Availability", "Logical Zones", "Microsoft", "Microsoft Azure", "Physical Datacenters", "PowerShell", "Read AzureAZs.ps1", "Regional Mapping", "Subscriptions", "Videos"]
 tags_normalized: ["availability zone", "az alignment", "azure", "azure availability zones", "azure capacity", "azure cloud", "azure scripting", "capacity", "cloud", "cloud architecture", "disaster recovery", "high availability", "logical zones", "microsoft", "microsoft azure", "physical datacenters", "powershell", "read azureazsdotps1", "regional mapping", "subscriptions", "videos"]

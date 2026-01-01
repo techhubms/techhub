@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Fabric Blog"
 feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
 date: 2025-08-19 11:00:00 +00:00
-permalink: "/news/2025-08-19-Test-and-Validate-Functions-with-Develop-Mode-in-Fabric-User-Data-Functions.html"
+permalink: "/2025-08-19-Test-and-Validate-Functions-with-Develop-Mode-in-Fabric-User-Data-Functions.html"
 categories: ["ML"]
 tags: ["Code Publishing", "Data Engineering", "Develop Mode", "Fabric Portal", "Function Validation", "Library Management", "Microsoft Fabric", "ML", "News", "Preview Features", "Python", "Region Availability", "Testing", "User Data Functions"]
 tags_normalized: ["code publishing", "data engineering", "develop mode", "fabric portal", "function validation", "library management", "microsoft fabric", "ml", "news", "preview features", "python", "region availability", "testing", "user data functions"]

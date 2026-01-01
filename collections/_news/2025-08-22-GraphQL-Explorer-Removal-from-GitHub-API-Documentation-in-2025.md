@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/changelog/feed/"
 date: 2025-08-22 13:00:00 +00:00
-permalink: "/news/2025-08-22-GraphQL-Explorer-Removal-from-GitHub-API-Documentation-in-2025.html"
+permalink: "/2025-08-22-GraphQL-Explorer-Removal-from-GitHub-API-Documentation-in-2025.html"
 categories: ["DevOps"]
 tags: ["API Development", "API Documentation", "API Lifecycle", "Developer Tools", "DevOps", "GitHub", "GraphQL API", "GraphQL Clients", "GraphQL Explorer", "News", "Platform Update", "Schema Introspection"]
 tags_normalized: ["api development", "api documentation", "api lifecycle", "developer tools", "devops", "github", "graphql api", "graphql clients", "graphql explorer", "news", "platform update", "schema introspection"]

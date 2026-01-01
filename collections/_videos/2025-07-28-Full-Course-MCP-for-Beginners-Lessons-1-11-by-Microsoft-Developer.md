@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Build 2025 YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
 date: 2025-07-28 16:00:51 +00:00
-permalink: "/videos/2025-07-28-Full-Course-MCP-for-Beginners-Lessons-1-11-by-Microsoft-Developer.html"
+permalink: "/2025-07-28-Full-Course-MCP-for-Beginners-Lessons-1-11-by-Microsoft-Developer.html"
 categories: ["AI", "Coding", "Security"]
 tags: ["AI", "AI Agents", "AI Development", "AI Toolkit", "Best Practices", "Coding", "Deployment", "MCP", "Real World Case Studies", "Scalability", "Security", "Videos", "VS Code"]
 tags_normalized: ["ai", "ai agents", "ai development", "ai toolkit", "best practices", "coding", "deployment", "mcp", "real world case studies", "scalability", "security", "videos", "vs code"]

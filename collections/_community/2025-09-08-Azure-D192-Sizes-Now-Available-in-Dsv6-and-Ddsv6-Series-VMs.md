@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-09-08 23:49:26 +00:00
-permalink: "/community/2025-09-08-Azure-D192-Sizes-Now-Available-in-Dsv6-and-Ddsv6-Series-VMs.html"
+permalink: "/2025-09-08-Azure-D192-Sizes-Now-Available-in-Dsv6-and-Ddsv6-Series-VMs.html"
 categories: ["Azure"]
 tags: ["Azure", "Azure Boost", "Azure Ddsv6 Series", "Azure Dsv6 Series", "Azure Pricing", "Cloud Infrastructure", "Community", "D192 VM Size", "Data Center", "Enterprise Workloads", "in Memory Analytics", "Intel Xeon Platinum 8573C", "Large Databases", "Managed Disks", "NVMe Storage", "Regional Availability", "SAP", "SQL Server", "Total Memory Encryption", "Virtual Machines", "Virtualization"]
 tags_normalized: ["azure", "azure boost", "azure ddsv6 series", "azure dsv6 series", "azure pricing", "cloud infrastructure", "community", "d192 vm size", "data center", "enterprise workloads", "in memory analytics", "intel xeon platinum 8573c", "large databases", "managed disks", "nvme storage", "regional availability", "sap", "sql server", "total memory encryption", "virtual machines", "virtualization"]

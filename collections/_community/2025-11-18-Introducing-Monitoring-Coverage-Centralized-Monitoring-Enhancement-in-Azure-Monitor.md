@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-11-18 16:00:00 +00:00
-permalink: "/community/2025-11-18-Introducing-Monitoring-Coverage-Centralized-Monitoring-Enhancement-in-Azure-Monitor.html"
+permalink: "/2025-11-18-Introducing-Monitoring-Coverage-Centralized-Monitoring-Enhancement-in-Azure-Monitor.html"
 categories: ["Azure", "DevOps"]
 tags: ["AKS", "Azure", "Azure Advisor", "Azure Monitor", "Centralized Monitoring", "Community", "Configuration Management", "DevOps", "Log Analytics", "Monitoring Coverage", "Monitoring Recommendations", "Observability", "Preview Features", "Resource Monitoring", "Virtual Machines"]
 tags_normalized: ["aks", "azure", "azure advisor", "azure monitor", "centralized monitoring", "community", "configuration management", "devops", "log analytics", "monitoring coverage", "monitoring recommendations", "observability", "preview features", "resource monitoring", "virtual machines"]

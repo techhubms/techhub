@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-07-30 17:46:12 +00:00
-permalink: "/community/2025-07-30-Build-Secure-Launch-Your-Private-MCP-Registry-with-Azure-API-Center.html"
+permalink: "/2025-07-30-Build-Secure-Launch-Your-Private-MCP-Registry-with-Azure-API-Center.html"
 categories: ["AI", "Azure", "Security"]
 tags: ["Agentic Tools", "AI", "AI Adoption", "API Governance", "Authentication", "Authorization", "Azure", "Azure API Center", "Azure API Management", "Cloud Infrastructure", "Community", "Enterprise AI", "MCP Center", "Private Registry", "Security", "Tool Discovery"]
 tags_normalized: ["agentic tools", "ai", "ai adoption", "api governance", "authentication", "authorization", "azure", "azure api center", "azure api management", "cloud infrastructure", "community", "enterprise ai", "mcp center", "private registry", "security", "tool discovery"]

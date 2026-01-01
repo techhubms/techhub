@@ -9,10 +9,10 @@ viewing_mode: "external"
 feed_name: "Dellenny's Blog"
 feed_url: "https://dellenny.com/feed/"
 date: 2025-10-23 08:41:37 +00:00
-permalink: "/blogs/2025-10-23-Unlocking-Smarter-Search-Integrating-Azure-AI-Search-and-Azure-OpenAI-Service.html"
+permalink: "/2025-10-23-Unlocking-Smarter-Search-Integrating-Azure-AI-Search-and-Azure-OpenAI-Service.html"
 categories: ["AI", "Azure"]
-tags: ["AI", "Azure", "Azure AI Search", "Azure OpenAI Service", "Cognitive Search", "Data Enrichment", "Embeddings", "Enterprise Search", "GPT 4", "Hybrid Search", "Indexing", "Keyword Search", "Natural Language Processing", "Blogs", "Prompt Engineering", "Retrieval Augmented Generation", "Vector Search"]
-tags_normalized: ["ai", "azure", "azure ai search", "azure openai service", "cognitive search", "data enrichment", "embeddings", "enterprise search", "gpt 4", "hybrid search", "indexing", "keyword search", "natural language processing", "blogs", "prompt engineering", "retrieval augmented generation", "vector search"]
+tags: ["AI", "Azure", "Azure AI Search", "Azure OpenAI Service", "Blogs", "Cognitive Search", "Data Enrichment", "Embeddings", "Enterprise Search", "GPT 4", "Hybrid Search", "Indexing", "Keyword Search", "Natural Language Processing", "Prompt Engineering", "Retrieval Augmented Generation", "Vector Search"]
+tags_normalized: ["ai", "azure", "azure ai search", "azure openai service", "blogs", "cognitive search", "data enrichment", "embeddings", "enterprise search", "gpt 4", "hybrid search", "indexing", "keyword search", "natural language processing", "prompt engineering", "retrieval augmented generation", "vector search"]
 ---
 
 Dellenny presents a hands-on walkthrough of how to combine Azure AI Search and Azure OpenAI Service, showing developers and architects how to build smarter, context-aware search applications using Microsoft’s AI ecosystem.<!--excerpt_end-->

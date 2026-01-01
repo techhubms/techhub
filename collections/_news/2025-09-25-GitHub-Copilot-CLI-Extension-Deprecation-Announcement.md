@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/changelog/feed/"
 date: 2025-09-25 20:32:31 +00:00
-permalink: "/news/2025-09-25-GitHub-Copilot-CLI-Extension-Deprecation-Announcement.html"
+permalink: "/2025-09-25-GitHub-Copilot-CLI-Extension-Deprecation-Announcement.html"
 categories: ["AI", "GitHub Copilot"]
 tags: ["Agentic AI", "AI", "AI Coding Assistant", "CLI Extension", "Client Apps", "Copilot", "Copilot Integration", "Deprecation Notice", "Enterprise Policy", "Gh Copilot", "GitHub Copilot", "GitHub Copilot CLI", "Migration Guide", "News", "Retired", "VS Code"]
 tags_normalized: ["agentic ai", "ai", "ai coding assistant", "cli extension", "client apps", "copilot", "copilot integration", "deprecation notice", "enterprise policy", "gh copilot", "github copilot", "github copilot cli", "migration guide", "news", "retired", "vs code"]

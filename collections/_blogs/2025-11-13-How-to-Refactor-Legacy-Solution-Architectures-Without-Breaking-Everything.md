@@ -9,10 +9,10 @@ viewing_mode: "external"
 feed_name: "Dellenny's Blog"
 feed_url: "https://dellenny.com/feed/"
 date: 2025-11-13 09:44:47 +00:00
-permalink: "/blogs/2025-11-13-How-to-Refactor-Legacy-Solution-Architectures-Without-Breaking-Everything.html"
+permalink: "/2025-11-13-How-to-Refactor-Legacy-Solution-Architectures-Without-Breaking-Everything.html"
 categories: ["Coding", "DevOps"]
-tags: ["Architecture", "CI/CD", "Codebase Modernization", "Coding", "Deployment Automation", "DevOps", "DevOps Practices", "Incremental Refactoring", "Legacy Systems", "Microservices", "Modular Monoliths", "Blogs", "Refactoring", "Regression Testing", "Solution Architecture", "Stakeholder Management", "Strangler Fig Pattern", "Testing Strategies"]
-tags_normalized: ["architecture", "cislashcd", "codebase modernization", "coding", "deployment automation", "devops", "devops practices", "incremental refactoring", "legacy systems", "microservices", "modular monoliths", "blogs", "refactoring", "regression testing", "solution architecture", "stakeholder management", "strangler fig pattern", "testing strategies"]
+tags: ["Architecture", "Blogs", "CI/CD", "Codebase Modernization", "Coding", "Deployment Automation", "DevOps", "DevOps Practices", "Incremental Refactoring", "Legacy Systems", "Microservices", "Modular Monoliths", "Refactoring", "Regression Testing", "Solution Architecture", "Stakeholder Management", "Strangler Fig Pattern", "Testing Strategies"]
+tags_normalized: ["architecture", "blogs", "cislashcd", "codebase modernization", "coding", "deployment automation", "devops", "devops practices", "incremental refactoring", "legacy systems", "microservices", "modular monoliths", "refactoring", "regression testing", "solution architecture", "stakeholder management", "strangler fig pattern", "testing strategies"]
 ---
 
 Dellenny shares actionable advice on refactoring legacy solution architectures without causing system failures. The article offers developers practical steps to modernize, test, and evolve existing codebases with minimal disruption.<!--excerpt_end-->

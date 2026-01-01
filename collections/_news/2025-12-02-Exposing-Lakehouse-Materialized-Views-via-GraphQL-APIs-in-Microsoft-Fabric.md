@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Fabric Blog"
 feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
 date: 2025-12-02 14:00:00 +00:00
-permalink: "/news/2025-12-02-Exposing-Lakehouse-Materialized-Views-via-GraphQL-APIs-in-Microsoft-Fabric.html"
+permalink: "/2025-12-02-Exposing-Lakehouse-Materialized-Views-via-GraphQL-APIs-in-Microsoft-Fabric.html"
 categories: ["Azure", "Coding", "ML"]
 tags: ["Analytics", "API Development", "Azure", "Coding", "Data Engineering", "Data Integration", "Data Platform", "Fabric Runtime", "GraphQL API", "Lakehouse", "Materialized View", "Microsoft Fabric", "ML", "News", "Retail Data", "Schema Support", "Spark SQL"]
 tags_normalized: ["analytics", "api development", "azure", "coding", "data engineering", "data integration", "data platform", "fabric runtime", "graphql api", "lakehouse", "materialized view", "microsoft fabric", "ml", "news", "retail data", "schema support", "spark sql"]

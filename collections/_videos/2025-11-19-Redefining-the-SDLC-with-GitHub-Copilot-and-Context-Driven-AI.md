@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Events YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
 date: 2025-11-19 14:51:59 +00:00
-permalink: "/videos/2025-11-19-Redefining-the-SDLC-with-GitHub-Copilot-and-Context-Driven-AI.html"
+permalink: "/2025-11-19-Redefining-the-SDLC-with-GitHub-Copilot-and-Context-Driven-AI.html"
 categories: ["AI", "Azure", "Coding", "DevOps", "GitHub Copilot"]
 tags: ["AI", "AI Driven Development", "Angular", "Azure", "Azure DevOps", "Code Quality", "Coding", "Coding Consistency", "Context Framework", "Copilotandagentsatwork", "DevOps", "Enterprise Practices", "Figma", "GitHub Copilot", "Jira Integration", "MCP Server", "Mermaid Diagrams", "MSIgnite", "Project Standards", "React", "SDLC", "Slalom Accelerator", "Videos"]
 tags_normalized: ["ai", "ai driven development", "angular", "azure", "azure devops", "code quality", "coding", "coding consistency", "context framework", "copilotandagentsatwork", "devops", "enterprise practices", "figma", "github copilot", "jira integration", "mcp server", "mermaid diagrams", "msignite", "project standards", "react", "sdlc", "slalom accelerator", "videos"]

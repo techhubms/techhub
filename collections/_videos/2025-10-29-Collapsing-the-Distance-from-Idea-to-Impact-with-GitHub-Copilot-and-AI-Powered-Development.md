@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "GitHub YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ"
 date: 2025-10-29 22:06:44 +00:00
-permalink: "/videos/2025-10-29-Collapsing-the-Distance-from-Idea-to-Impact-with-GitHub-Copilot-and-AI-Powered-Development.html"
+permalink: "/2025-10-29-Collapsing-the-Distance-from-Idea-to-Impact-with-GitHub-Copilot-and-AI-Powered-Development.html"
 categories: ["AI", "GitHub Copilot"]
 tags: ["AI", "AI Powered Development", "Ascii Motion", "ASOS", "Braillearn", "Community Development", "CrisisLens", "Digital Public Goods", "GitHub", "GitHub Copilot", "GitHub Universe", "GitHubUniverse", "Hackathon Projects", "Innovation", "Open Source", "PyFluff Furby", "Python", "Software Engineering", "Videos"]
 tags_normalized: ["ai", "ai powered development", "ascii motion", "asos", "braillearn", "community development", "crisislens", "digital public goods", "github", "github copilot", "github universe", "githubuniverse", "hackathon projects", "innovation", "open source", "pyfluff furby", "python", "software engineering", "videos"]

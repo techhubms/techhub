@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft News"
 feed_url: "https://news.microsoft.com/source/feed/"
 date: 2025-09-17 16:52:54 +00:00
-permalink: "/news/2025-09-17-Microsoft-DCU-Disrupts-RaccoonO365-Phishing-Tool-338-Malicious-Sites-Seized.html"
+permalink: "/2025-09-17-Microsoft-DCU-Disrupts-RaccoonO365-Phishing-Tool-338-Malicious-Sites-Seized.html"
 categories: ["Security"]
 tags: ["Blockchain Analysis", "Chainalysis Reactor", "Cloudflare", "Company News", "Credential Theft", "Cybercrime", "Cybersecurity", "DCU", "Healthcare Security", "Law Enforcement", "Malware", "Microsoft 365", "Microsoft Digital Crimes Unit", "Multi Factor Authentication", "News", "On The Issues", "Phishing", "RaccoonO365", "Ransomware", "Security", "Threat Intelligence"]
 tags_normalized: ["blockchain analysis", "chainalysis reactor", "cloudflare", "company news", "credential theft", "cybercrime", "cybersecurity", "dcu", "healthcare security", "law enforcement", "malware", "microsoft 365", "microsoft digital crimes unit", "multi factor authentication", "news", "on the issues", "phishing", "raccoono365", "ransomware", "security", "threat intelligence"]

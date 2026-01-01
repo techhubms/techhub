@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft VisualStudio Blog"
 feed_url: "https://devblogs.microsoft.com/visualstudio/feed/"
 date: 2025-11-18 17:00:27 +00:00
-permalink: "/news/2025-11-18-Effortless-Upgrades-and-Coding-Productivity-in-Visual-Studio-2026.html"
+permalink: "/2025-11-18-Effortless-Upgrades-and-Coding-Productivity-in-Visual-Studio-2026.html"
 categories: ["AI", "Azure", "Coding", "DevOps", "GitHub Copilot"]
 tags: [".NET Development", ".vsconfig", ".vssettings", "AI", "Azure", "Azure Migration", "C++ Development", "Coding", "Copilot", "Dependency Management", "DevOps", "GitHub Copilot", "Global.json", "IDE Updates", "Installation And Updates", "Modernization", "Modernization Agent", "Monthly Releases", "MSVC Build Tools", "News", "Productivity", "Repair", "Rollback", "Setup", "Setup Assistant", "Side By Side Installation", "Update On Close", "Visual Studio Installer", "VS", "Windows SDK"]
 tags_normalized: ["dotnet development", "dotvsconfig", "dotvssettings", "ai", "azure", "azure migration", "cplusplus development", "coding", "copilot", "dependency management", "devops", "github copilot", "globaldotjson", "ide updates", "installation and updates", "modernization", "modernization agent", "monthly releases", "msvc build tools", "news", "productivity", "repair", "rollback", "setup", "setup assistant", "side by side installation", "update on close", "visual studio installer", "vs", "windows sdk"]

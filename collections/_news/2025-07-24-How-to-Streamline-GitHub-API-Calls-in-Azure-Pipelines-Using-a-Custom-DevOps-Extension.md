@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/feed/"
 date: 2025-07-24 16:00:00 +00:00
-permalink: "/news/2025-07-24-How-to-Streamline-GitHub-API-Calls-in-Azure-Pipelines-Using-a-Custom-DevOps-Extension.html"
+permalink: "/2025-07-24-How-to-Streamline-GitHub-API-Calls-in-Azure-Pipelines-Using-a-Custom-DevOps-Extension.html"
 categories: ["DevOps", "Azure", "Security"]
 tags: ["Automation", "Azure", "Azure DevOps", "Azure DevOps Extension", "Azure Pipelines", "CI/CD", "Company", "Custom Task", "DevOps", "Enterprise Software", "GitHub API", "GitHub Apps", "Integrations", "JWT Authentication", "News", "Security", "Service Connection", "Token Management", "YAML Pipeline"]
 tags_normalized: ["automation", "azure", "azure devops", "azure devops extension", "azure pipelines", "cislashcd", "company", "custom task", "devops", "enterprise software", "github api", "github apps", "integrations", "jwt authentication", "news", "security", "service connection", "token management", "yaml pipeline"]

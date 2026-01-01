@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-10-01 16:12:36 +00:00
-permalink: "/community/2025-10-01-Announcing-Public-Preview-Outbound-Network-Segmentation-for-ASEv3.html"
+permalink: "/2025-10-01-Announcing-Public-Preview-Outbound-Network-Segmentation-for-ASEv3.html"
 categories: ["Azure", "Security"]
 tags: ["App Service Environment V3", "ARM Template", "ASEv3", "Azure", "Azure App Service", "Azure CLI", "Azure Networking", "Bicep Template", "Community", "Compliance", "Egress Control", "Firewall", "NAT Gateway", "Network Security Groups", "Outbound Network Segmentation", "Security", "Subnet", "Virtual Network Integration"]
 tags_normalized: ["app service environment v3", "arm template", "asev3", "azure", "azure app service", "azure cli", "azure networking", "bicep template", "community", "compliance", "egress control", "firewall", "nat gateway", "network security groups", "outbound network segmentation", "security", "subnet", "virtual network integration"]

@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/changelog/feed/"
 date: 2025-12-03 22:06:59 +00:00
-permalink: "/news/2025-12-03-GitHub-Copilot-and-Visual-Studio-2026-November-Update-Highlights.html"
+permalink: "/2025-12-03-GitHub-Copilot-and-Visual-Studio-2026-November-Update-Highlights.html"
 categories: ["AI", "Coding", "GitHub Copilot"]
 tags: ["AI", "AI Assisted Development", "Cloud Coding Agent", "Code Comments", "Code Generation", "Coding", "Context Menu Features", "Copilot", "Copilot Actions", "Copilot Cloud Agent", "Developer Productivity", "GitHub Copilot", "Intent Detection", "News", "Refactoring", "Release Notes", "UI Cleanup", "Visual Studio Blog", "VS"]
 tags_normalized: ["ai", "ai assisted development", "cloud coding agent", "code comments", "code generation", "coding", "context menu features", "copilot", "copilot actions", "copilot cloud agent", "developer productivity", "github copilot", "intent detection", "news", "refactoring", "release notes", "ui cleanup", "visual studio blog", "vs"]

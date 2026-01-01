@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Fabric Blog"
 feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
 date: 2025-10-21 10:00:00 +00:00
-permalink: "/news/2025-10-21-SSMS-22-Meets-Fabric-Data-Warehouse-Evolving-the-Developer-Experiences.html"
+permalink: "/2025-10-21-SSMS-22-Meets-Fabric-Data-Warehouse-Evolving-the-Developer-Experiences.html"
 categories: ["Azure", "Coding", "ML"]
 tags: ["Azure", "Azure Data Platform", "Coding", "Data Warehouse", "Database Projects", "Developer Tools", "Fabric Web Editor", "IntelliSense", "Microsoft Fabric", "ML", "News", "Query Management", "Schema Grouping", "SQL Analytics Endpoint", "SQL Server Management Studio", "SSMS 22", "T SQL", "Warehouse Snapshots"]
 tags_normalized: ["azure", "azure data platform", "coding", "data warehouse", "database projects", "developer tools", "fabric web editor", "intellisense", "microsoft fabric", "ml", "news", "query management", "schema grouping", "sql analytics endpoint", "sql server management studio", "ssms 22", "t sql", "warehouse snapshots"]

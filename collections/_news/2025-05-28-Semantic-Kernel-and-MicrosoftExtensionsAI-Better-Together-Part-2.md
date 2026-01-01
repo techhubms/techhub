@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft DevBlog"
 feed_url: "https://devblogs.microsoft.com/semantic-kernel/feed/"
 date: 2025-05-28 13:18:24 +00:00
-permalink: "/news/2025-05-28-Semantic-Kernel-and-MicrosoftExtensionsAI-Better-Together-Part-2.html"
+permalink: "/2025-05-28-Semantic-Kernel-and-MicrosoftExtensionsAI-Better-Together-Part-2.html"
 categories: ["AI", "Coding"]
 tags: [".NET", ".NET AI Extensions", "Agents", "AI", "AIFunction", "Azure OpenAI", "C#", "Chat Completion", "Coding", "Dependency Injection", "Embeddings", "Extensions AI", "Function Calling", "IChatClient", "IEmbeddingGenerator", "KernelFunction", "MCP", "Microsoft.Extensions.AI", "News", "Plugins", "Prompt Templates", "Samples", "Semantic Kernel", "Tools"]
 tags_normalized: ["dotnet", "dotnet ai extensions", "agents", "ai", "aifunction", "azure openai", "csharp", "chat completion", "coding", "dependency injection", "embeddings", "extensions ai", "function calling", "ichatclient", "iembeddinggenerator", "kernelfunction", "mcp", "microsoftdotextensionsdotai", "news", "plugins", "prompt templates", "samples", "semantic kernel", "tools"]

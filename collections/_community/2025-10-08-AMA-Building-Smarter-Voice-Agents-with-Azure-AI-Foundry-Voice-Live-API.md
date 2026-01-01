@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-10-08 17:54:26 +00:00
-permalink: "/community/2025-10-08-AMA-Building-Smarter-Voice-Agents-with-Azure-AI-Foundry-Voice-Live-API.html"
+permalink: "/2025-10-08-AMA-Building-Smarter-Voice-Agents-with-Azure-AI-Foundry-Voice-Live-API.html"
 categories: ["AI", "Azure"]
 tags: ["AI", "AI Agent Development", "AMA Event", "API Integration", "Avatar Integration", "Azure", "Azure AI Foundry", "Community", "Conversational AI", "CoreAI Speech", "Developer Event", "Generative AI", "Latency Optimization", "Production Deployment", "Speech To Text", "Text To Speech", "Voice Enabled Applications", "Voice Live API"]
 tags_normalized: ["ai", "ai agent development", "ama event", "api integration", "avatar integration", "azure", "azure ai foundry", "community", "conversational ai", "coreai speech", "developer event", "generative ai", "latency optimization", "production deployment", "speech to text", "text to speech", "voice enabled applications", "voice live api"]

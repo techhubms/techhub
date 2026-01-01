@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-11-18 16:00:00 +00:00
-permalink: "/community/2025-11-18-Microsoft-365-Local-Launches-for-Sovereign-Cloud-Deployments.html"
+permalink: "/2025-11-18-Microsoft-365-Local-Launches-for-Sovereign-Cloud-Deployments.html"
 categories: ["Azure", "Security"]
 tags: ["Azure", "Azure Arc", "Azure Local", "Azure Monitor", "Community", "Compliance", "Data Sovereignty", "Exchange Server", "Identity Management", "Infrastructure Management", "Microsoft 365 Local", "Microsoft Defender For Cloud", "Network Security Groups", "Privileged Access", "Security", "Security Baseline", "SharePoint Server", "Skype For Business Server", "Software Defined Networking", "Sovereign Cloud"]
 tags_normalized: ["azure", "azure arc", "azure local", "azure monitor", "community", "compliance", "data sovereignty", "exchange server", "identity management", "infrastructure management", "microsoft 365 local", "microsoft defender for cloud", "network security groups", "privileged access", "security", "security baseline", "sharepoint server", "skype for business server", "software defined networking", "sovereign cloud"]

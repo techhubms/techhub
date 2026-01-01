@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "John Savill's Technical Training"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCpIn7ox7j7bH_OFj7tYouOQ"
 date: 2025-07-07 13:45:44 +00:00
-permalink: "/videos/2025-07-07-Multi-Cloud-Storage-Migration-with-Azure-Storage-Mover.html"
+permalink: "/2025-07-07-Multi-Cloud-Storage-Migration-with-Azure-Storage-Mover.html"
 categories: ["Azure"]
 tags: ["AWS", "AWS S3", "Azure", "Azure Arc", "Azure Cloud", "Azure Costs", "Azure Portal", "Azure Storage", "Azure Storage Mover", "Cloud", "Cloud Migration", "Cloud Storage", "Data Migration", "Hybrid Cloud", "Microsoft", "Microsoft Azure", "Migration Project", "Monitoring", "Multi Cloud", "S3", "SMB", "Storage", "Videos"]
 tags_normalized: ["aws", "aws s3", "azure", "azure arc", "azure cloud", "azure costs", "azure portal", "azure storage", "azure storage mover", "cloud", "cloud migration", "cloud storage", "data migration", "hybrid cloud", "microsoft", "microsoft azure", "migration project", "monitoring", "multi cloud", "s3", "smb", "storage", "videos"]

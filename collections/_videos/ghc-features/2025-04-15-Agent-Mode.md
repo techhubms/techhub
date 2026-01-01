@@ -7,7 +7,7 @@ excerpt_separator: <!--excerpt_end-->
 canonical_url: "https://youtu.be/JtJ3_ATBsTY"
 categories: ["AI", "GitHub Copilot"]
 date: 2025-04-15 14:14:07 +00:00
-permalink: "/videos/2025-04-15-Agent-Mode.html"
+permalink: "/2025-04-15-Agent-Mode.html"
 viewing_mode: "internal"
 section: "github-copilot"
 ghes_support: "true"

@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft .NET Blog"
 feed_url: "https://devblogs.microsoft.com/dotnet/feed/"
 date: 2025-08-27 17:05:00 +00:00
-permalink: "/news/2025-08-27-EFCoreVisualizer-Analyze-Entity-Framework-Core-Query-Plans-in-Visual-Studio.html"
+permalink: "/2025-08-27-EFCoreVisualizer-Analyze-Entity-Framework-Core-Query-Plans-in-Visual-Studio.html"
 categories: ["Coding"]
 tags: [".NET", ".NET Data", "Coding", "Database Indexes", "Debugger Visualizer", "EF", "EF Core", "EFCore.Visualizer", "LINQ", "MySQL", "News", "Oracle", "ORM", "Performance Tuning", "PostgreSQL", "Query Execution Plan", "RDBMS", "SQL Server", "SQLite", "Visual Studio Extension", "VS"]
 tags_normalized: ["dotnet", "dotnet data", "coding", "database indexes", "debugger visualizer", "ef", "ef core", "efcoredotvisualizer", "linq", "mysql", "news", "oracle", "orm", "performance tuning", "postgresql", "query execution plan", "rdbms", "sql server", "sqlite", "visual studio extension", "vs"]

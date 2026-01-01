@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "John Savill's Technical Training"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCpIn7ox7j7bH_OFj7tYouOQ"
 date: 2025-10-03 10:51:11 +00:00
-permalink: "/videos/2025-10-03-Azure-Update-October-2025-Announcements-and-Retirements.html"
+permalink: "/2025-10-03-Azure-Update-October-2025-Announcements-and-Retirements.html"
 categories: ["AI", "Azure", "ML", "Security"]
 tags: ["ACA Connector", "AI", "AKS", "ARM Metrics", "AVS AV36", "Azure", "Azure AI Foundry", "Azure Cloud", "Azure Compute Gallery", "Azure Functions", "Azure Machine Learning", "Azure Update", "BlobFuse", "Cloud", "Cloud Security", "Data Labelling", "Data Lake", "Deprecation", "Grok 4", "Linux Consumption", "Microsoft", "Microsoft Agent Framework", "Microsoft Azure", "Microsoft Fabric", "Microsoft Sentinel", "ML", "MSSQL Extension", "NVv4 VM", "Security", "SQL Database", "Traffic Manager", "Videos"]
 tags_normalized: ["aca connector", "ai", "aks", "arm metrics", "avs av36", "azure", "azure ai foundry", "azure cloud", "azure compute gallery", "azure functions", "azure machine learning", "azure update", "blobfuse", "cloud", "cloud security", "data labelling", "data lake", "deprecation", "grok 4", "linux consumption", "microsoft", "microsoft agent framework", "microsoft azure", "microsoft fabric", "microsoft sentinel", "ml", "mssql extension", "nvv4 vm", "security", "sql database", "traffic manager", "videos"]

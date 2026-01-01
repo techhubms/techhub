@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-11-19 19:36:55 +00:00
-permalink: "/community/2025-11-19-Metadata-Security-Protocol-MSP-General-Availability-Secures-Azure-VM-Metadata.html"
+permalink: "/2025-11-19-Metadata-Security-Protocol-MSP-General-Availability-Secures-Azure-VM-Metadata.html"
 categories: ["Azure", "Security"]
 tags: ["Allowlisting", "Audit Mode", "Authentication", "Authorization", "Azure", "Azure Virtual Machines", "Cloud Security", "Community", "Ebpf", "Guest Proxy Agent", "HMAC", "IMDS", "Instance Metadata Service", "Metadata Security Protocol", "MSP", "RBAC", "Role Based Access Control", "Security", "Security Best Practices", "Server Side Request Forgery", "SSRF", "WireServer", "Zero Trust"]
 tags_normalized: ["allowlisting", "audit mode", "authentication", "authorization", "azure", "azure virtual machines", "cloud security", "community", "ebpf", "guest proxy agent", "hmac", "imds", "instance metadata service", "metadata security protocol", "msp", "rbac", "role based access control", "security", "security best practices", "server side request forgery", "ssrf", "wireserver", "zero trust"]

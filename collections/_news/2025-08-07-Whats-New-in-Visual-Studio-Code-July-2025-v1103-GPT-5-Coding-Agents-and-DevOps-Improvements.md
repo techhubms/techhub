@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Visual Studio Code Releases"
 feed_url: "https://code.visualstudio.com/feed.xml"
 date: 2025-08-07 17:00:00 +00:00
-permalink: "/news/2025-08-07-Whats-New-in-Visual-Studio-Code-July-2025-v1103-GPT-5-Coding-Agents-and-DevOps-Improvements.html"
+permalink: "/2025-08-07-Whats-New-in-Visual-Studio-Code-July-2025-v1103-GPT-5-Coding-Agents-and-DevOps-Improvements.html"
 categories: ["AI", "Azure", "Coding", "DevOps", "GitHub Copilot"]
 tags: ["Accessibility", "Agent Mode", "AI", "AI Chat", "Azure", "Azure DevOps", "Chat Checkpoints", "Coding", "Coding Agent", "DevOps", "Editor Updates", "Extension Authoring", "GitHub Copilot", "GPT 5", "MCP Server", "Model Management", "News", "Notebook", "Pull Requests", "Python", "Source Control", "Task Automation", "Terminal Tools", "TypeScript 5.9", "VS Code"]
 tags_normalized: ["accessibility", "agent mode", "ai", "ai chat", "azure", "azure devops", "chat checkpoints", "coding", "coding agent", "devops", "editor updates", "extension authoring", "github copilot", "gpt 5", "mcp server", "model management", "news", "notebook", "pull requests", "python", "source control", "task automation", "terminal tools", "typescript 5dot9", "vs code"]

@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Visual Studio Code YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SLNwkd3w"
 date: 2025-10-07 22:12:38 +00:00
-permalink: "/videos/2025-10-07-VS-Code-Live-Leveraging-GitHub-Copilot-and-Agents-in-Jupyter-Notebooks.html"
+permalink: "/2025-10-07-VS-Code-Live-Leveraging-GitHub-Copilot-and-Agents-in-Jupyter-Notebooks.html"
 categories: ["AI", "Coding", "GitHub Copilot"]
 tags: ["AI", "AI Agents", "Code", "Code Integration", "Codeeditor", "Coding", "Data Science", "Datascience", "Demo", "Developer", "Developer Community", "Developer Tools", "GitHub Copilot", "Jupyter", "Jupyter Notebooks", "Live Demo", "Microsoft", "Python", "Videos", "VS Code"]
 tags_normalized: ["ai", "ai agents", "code", "code integration", "codeeditor", "coding", "data science", "datascience", "demo", "developer", "developer community", "developer tools", "github copilot", "jupyter", "jupyter notebooks", "live demo", "microsoft", "python", "videos", "vs code"]

@@ -9,10 +9,10 @@ viewing_mode: "external"
 feed_name: "David Fowler's Blog"
 feed_url: "https://medium.com/feed/@davidfowl"
 date: 2025-04-02 15:02:15 +00:00
-permalink: "/blogs/2025-04-02-Aspire-Bringing-Reusable-Strongly-Typed-Infrastructure-Modeling-to-Application-Lifecycles.html"
+permalink: "/2025-04-02-Aspire-Bringing-Reusable-Strongly-Typed-Infrastructure-Modeling-to-Application-Lifecycles.html"
 categories: ["Coding", "DevOps"]
-tags: ["Application Lifecycle", "Aspire", "Automation", "CI/CD", "Cloud Computing", "Cloud Services", "Coding", "Deployment", "DevOps", "Encapsulation", "Hosting Integrations", "IaC", "Blogs", "Resources", "Reusability", "Software Development", "Software Engineering", "Strong Typing"]
-tags_normalized: ["application lifecycle", "aspire", "automation", "cislashcd", "cloud computing", "cloud services", "coding", "deployment", "devops", "encapsulation", "hosting integrations", "iac", "blogs", "resources", "reusability", "software development", "software engineering", "strong typing"]
+tags: ["Application Lifecycle", "Aspire", "Automation", "Blogs", "CI/CD", "Cloud Computing", "Cloud Services", "Coding", "Deployment", "DevOps", "Encapsulation", "Hosting Integrations", "IaC", "Resources", "Reusability", "Software Development", "Software Engineering", "Strong Typing"]
+tags_normalized: ["application lifecycle", "aspire", "automation", "blogs", "cislashcd", "cloud computing", "cloud services", "coding", "deployment", "devops", "encapsulation", "hosting integrations", "iac", "resources", "reusability", "software development", "software engineering", "strong typing"]
 ---
 
 In this insightful post, David Fowler shares how Aspire brings the discipline and reusability of software engineering to infrastructure, enabling scalable and composable deployment with strongly-typed resources and hosting integrations.<!--excerpt_end-->

@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Reddit Azure"
 feed_url: "https://www.reddit.com/r/azure/.rss"
 date: 2025-08-08 11:12:45 +00:00
-permalink: "/community/2025-08-08-Deploying-Azure-Foundry-AI-Agents-via-API-for-Web-Integration.html"
+permalink: "/2025-08-08-Deploying-Azure-Foundry-AI-Agents-via-API-for-Web-Integration.html"
 categories: ["AI", "Azure", "ML"]
 tags: ["Agent Deployment", "AI", "API Integration", "Azure", "Azure AI Foundry", "Azure API", "Azure Foundry AI", "CI/CD", "Community", "Connector Configuration", "Conversational Agents", "Fabric Data Agent", "IaC", "Laravel", "Microsoft Fabric", "ML", "Tenant Management", "Terraform"]
 tags_normalized: ["agent deployment", "ai", "api integration", "azure", "azure ai foundry", "azure api", "azure foundry ai", "cislashcd", "community", "connector configuration", "conversational agents", "fabric data agent", "iac", "laravel", "microsoft fabric", "ml", "tenant management", "terraform"]

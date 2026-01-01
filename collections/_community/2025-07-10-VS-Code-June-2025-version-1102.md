@@ -9,7 +9,7 @@ categories: ["AI", "GitHub Copilot"]
 feed_name: "Reddit Github Copilot"
 feed_url: "https://www.reddit.com/r/GithubCopilot.rss"
 date: 2025-07-10 18:25:27 +00:00
-permalink: "/community/2025-07-10-VS-Code-June-2025-version-1102.html"
+permalink: "/2025-07-10-VS-Code-June-2025-version-1102.html"
 viewing_mode: "external"
 tags: ["AI", "Chat", "Community", "Copilot Coding Agent", "Custom Instructions", "Custom Modes", "Edit", "Editor Features", "Generate", "GitHub Copilot", "GitHub Copilot Chat", "Mcp", "MCP Support", "Open Source", "Scroll", "Settings Sync", "Start", "Terminal", "Terminal Commands", "VS Code"]
 tags_normalized: ["ai", "chat", "community", "copilot coding agent", "custom instructions", "custom modes", "edit", "editor features", "generate", "github copilot", "github copilot chat", "mcp", "mcp support", "open source", "scroll", "settings sync", "start", "terminal", "terminal commands", "vs code"]

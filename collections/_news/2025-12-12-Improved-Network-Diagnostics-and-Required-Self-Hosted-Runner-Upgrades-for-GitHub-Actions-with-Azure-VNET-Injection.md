@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/changelog/feed/"
 date: 2025-12-12 14:12:05 +00:00
-permalink: "/news/2025-12-12-Improved-Network-Diagnostics-and-Required-Self-Hosted-Runner-Upgrades-for-GitHub-Actions-with-Azure-VNET-Injection.html"
+permalink: "/2025-12-12-Improved-Network-Diagnostics-and-Required-Self-Hosted-Runner-Upgrades-for-GitHub-Actions-with-Azure-VNET-Injection.html"
 categories: ["Azure", "DevOps"]
 tags: ["Actions", "Azure", "Azure VNET Injection", "CI/CD", "Connectivity Issues", "Developer Automation", "DevOps", "Docker", "GitHub Actions", "Improvement", "Infrastructure", "Linux", "Network Diagnostics", "News", "Runner Architecture", "Self Hosted Runner", "System Upgrade", "Ubuntu 24.04", "Version Requirement", "Workflow Reliability"]
 tags_normalized: ["actions", "azure", "azure vnet injection", "cislashcd", "connectivity issues", "developer automation", "devops", "docker", "github actions", "improvement", "infrastructure", "linux", "network diagnostics", "news", "runner architecture", "self hosted runner", "system upgrade", "ubuntu 24dot04", "version requirement", "workflow reliability"]

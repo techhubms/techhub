@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Fabric Blog"
 feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
 date: 2025-09-25 09:00:00 +00:00
-permalink: "/news/2025-09-25-Innovations-in-Fabric-Data-Factory-Orchestration-Announced-at-Fabric-Conference-Europe-2025.html"
+permalink: "/2025-09-25-Innovations-in-Fabric-Data-Factory-Orchestration-Announced-at-Fabric-Conference-Europe-2025.html"
 categories: ["AI", "Azure", "DevOps", "ML"]
 tags: ["AI", "AI Assistant", "Airflow", "Azure", "CI/CD", "Copilot", "Copy Job Activity", "Data Integration", "Data Pipelines", "DevOps", "Fabric Data Factory", "Metadata Driven Pipelines", "Microsoft Fabric", "ML", "News", "Notebook Integration", "Orchestration", "Pipeline Expression Editor", "Pipeline Monitoring", "Pipeline Scheduling", "Service Principal Name"]
 tags_normalized: ["ai", "ai assistant", "airflow", "azure", "cislashcd", "copilot", "copy job activity", "data integration", "data pipelines", "devops", "fabric data factory", "metadata driven pipelines", "microsoft fabric", "ml", "news", "notebook integration", "orchestration", "pipeline expression editor", "pipeline monitoring", "pipeline scheduling", "service principal name"]

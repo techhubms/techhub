@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Reddit CSharp"
 feed_url: "https://www.reddit.com/r/csharp/.rss"
 date: 2025-08-08 10:28:57 +00:00
-permalink: "/community/2025-08-08-Developer-Discussion-Most-Impactful-Low-Effort-C-Helper-Methods.html"
+permalink: "/2025-08-08-Developer-Discussion-Most-Impactful-Low-Effort-C-Helper-Methods.html"
 categories: ["Coding"]
 tags: [".NET", "Async/await", "C#", "Choose", "Code Readability", "Coding", "Community", "DateTime Helpers", "Developer Tips", "Extension Methods", "Helper Methods", "IEnumerable", "IsIn", "IsNullOrWhiteSpace", "LINQ", "String.join", "Task Parallelism", "Utilities"]
 tags_normalized: ["dotnet", "asyncslashawait", "csharp", "choose", "code readability", "coding", "community", "datetime helpers", "developer tips", "extension methods", "helper methods", "ienumerable", "isin", "isnullorwhitespace", "linq", "stringdotjoin", "task parallelism", "utilities"]

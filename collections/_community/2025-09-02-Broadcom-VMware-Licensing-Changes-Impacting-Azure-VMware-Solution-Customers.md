@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-09-02 17:41:37 +00:00
-permalink: "/community/2025-09-02-Broadcom-VMware-Licensing-Changes-Impacting-Azure-VMware-Solution-Customers.html"
+permalink: "/2025-09-02-Broadcom-VMware-Licensing-Changes-Impacting-Azure-VMware-Solution-Customers.html"
 categories: ["Azure"]
 tags: ["AVS", "Azure", "Azure VMware Solution", "Broadcom", "BYOL", "Cloud Deployment", "Cloud Licensing", "Community", "Hyperscaler Platforms", "Infrastructure Management", "Licensing", "Microsoft", "Microsoft Azure", "Reserved Instance", "VCF", "VMware Cloud Foundation"]
 tags_normalized: ["avs", "azure", "azure vmware solution", "broadcom", "byol", "cloud deployment", "cloud licensing", "community", "hyperscaler platforms", "infrastructure management", "licensing", "microsoft", "microsoft azure", "reserved instance", "vcf", "vmware cloud foundation"]

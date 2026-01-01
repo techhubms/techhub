@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Visual Studio Code Releases"
 feed_url: "https://code.visualstudio.com/feed.xml"
 date: 2025-07-09 17:00:00 +00:00
-permalink: "/news/2025-07-09-Whats-New-in-Visual-Studio-Code-June-2025-v1102-Copilot-Chat-MCP-and-More.html"
+permalink: "/2025-07-09-Whats-New-in-Visual-Studio-Code-June-2025-v1102-Copilot-Chat-MCP-and-More.html"
 categories: ["AI", "Coding", "DevOps", "GitHub Copilot"]
 tags: ["Accessibility", "Agent Mode", "AI", "AI Tools", "Chat Mode", "Coding", "Custom Instructions", "DevOps", "Extension Development", "GitHub Copilot", "GitHub Copilot Chat", "MCP Servers", "News", "Open Source", "Pull Requests", "Pylance", "Python", "Release Notes", "Settings Sync", "Terminal Automation", "TypeScript", "VS Code", "VS Code 1.102"]
 tags_normalized: ["accessibility", "agent mode", "ai", "ai tools", "chat mode", "coding", "custom instructions", "devops", "extension development", "github copilot", "github copilot chat", "mcp servers", "news", "open source", "pull requests", "pylance", "python", "release notes", "settings sync", "terminal automation", "typescript", "vs code", "vs code 1dot102"]

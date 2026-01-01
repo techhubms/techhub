@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/feed/"
 date: 2025-10-24 16:00:00 +00:00
-permalink: "/news/2025-10-24-How-to-Find-Install-and-Manage-MCP-Servers-with-the-GitHub-MCP-Registry.html"
+permalink: "/2025-10-24-How-to-Find-Install-and-Manage-MCP-Servers-with-the-GitHub-MCP-Registry.html"
 categories: ["AI", "Coding", "DevOps"]
 tags: ["Agentic Workflows", "AI", "AI & ML", "AI Tools", "Authentication", "Automation", "Coding", "Developer Productivity", "DevOps", "Generative AI", "GitHub", "GitHub Actions", "Governance", "MCP", "MCP Registry", "News", "OAuth", "Playwright", "Registry Allow Lists", "Server Publishing", "VS Code"]
 tags_normalized: ["agentic workflows", "ai", "ai and ml", "ai tools", "authentication", "automation", "coding", "developer productivity", "devops", "generative ai", "github", "github actions", "governance", "mcp", "mcp registry", "news", "oauth", "playwright", "registry allow lists", "server publishing", "vs code"]

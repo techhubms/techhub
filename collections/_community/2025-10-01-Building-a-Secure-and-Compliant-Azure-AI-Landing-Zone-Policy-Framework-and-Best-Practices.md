@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-10-01 04:36:49 +00:00
-permalink: "/community/2025-10-01-Building-a-Secure-and-Compliant-Azure-AI-Landing-Zone-Policy-Framework-and-Best-Practices.html"
+permalink: "/2025-10-01-Building-a-Secure-and-Compliant-Azure-AI-Landing-Zone-Policy-Framework-and-Best-Practices.html"
 categories: ["AI", "Azure", "DevOps", "Security"]
 tags: ["AI", "AKS", "Azure", "Azure AI Landing Zone", "Azure Blueprints", "Azure Cognitive Services", "Azure DevOps", "Azure Key Vault", "Azure Machine Learning", "Azure OpenAI", "Azure Policy", "CI/CD", "Community", "Compliance", "Data Protection", "DevOps", "EPAC", "Governance", "IaC", "Identity Management", "Microsoft Entra ID", "Monitoring", "Networking", "Policy as Code", "Security"]
 tags_normalized: ["ai", "aks", "azure", "azure ai landing zone", "azure blueprints", "azure cognitive services", "azure devops", "azure key vault", "azure machine learning", "azure openai", "azure policy", "cislashcd", "community", "compliance", "data protection", "devops", "epac", "governance", "iac", "identity management", "microsoft entra id", "monitoring", "networking", "policy as code", "security"]

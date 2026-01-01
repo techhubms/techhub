@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-11-26 18:19:58 +00:00
-permalink: "/community/2025-11-26-Chart-your-AI-App-and-Agent-Strategy-with-Microsoft-Marketplace.html"
+permalink: "/2025-11-26-Chart-your-AI-App-and-Agent-Strategy-with-Microsoft-Marketplace.html"
 categories: ["AI", "Azure"]
 tags: ["AI", "AI Agents", "AI Applications", "AI Strategy", "Azure", "Azure AI", "Build VS Buy", "Cloud Marketplace", "Community", "Cost Control", "Enterprise AI", "Governance", "Microsoft Marketplace", "Model Catalog", "Procurement", "Time To Value"]
 tags_normalized: ["ai", "ai agents", "ai applications", "ai strategy", "azure", "azure ai", "build vs buy", "cloud marketplace", "community", "cost control", "enterprise ai", "governance", "microsoft marketplace", "model catalog", "procurement", "time to value"]

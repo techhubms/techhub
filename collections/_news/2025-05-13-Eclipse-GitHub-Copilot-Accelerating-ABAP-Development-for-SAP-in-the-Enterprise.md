@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft DevBlog"
 feed_url: "https://devblogs.microsoft.com/all-things-azure/feed/"
 date: 2025-05-13 21:17:28 +00:00
-permalink: "/news/2025-05-13-Eclipse-GitHub-Copilot-Accelerating-ABAP-Development-for-SAP-in-the-Enterprise.html"
+permalink: "/2025-05-13-Eclipse-GitHub-Copilot-Accelerating-ABAP-Development-for-SAP-in-the-Enterprise.html"
 categories: ["AI", "GitHub Copilot"]
 tags: ["ABAP", "AI", "AI Integration", "AI Powered Development", "All Things Azure", "Code Quality", "Code Suggestions", "Copilot", "Copilot For Business", "Eclipse", "Enterprise Workflows", "GitHub Copilot", "GitHub Copilot Business", "News", "Plugin Setup", "Productivity", "SAP", "SAP Development"]
 tags_normalized: ["abap", "ai", "ai integration", "ai powered development", "all things azure", "code quality", "code suggestions", "copilot", "copilot for business", "eclipse", "enterprise workflows", "github copilot", "github copilot business", "news", "plugin setup", "productivity", "sap", "sap development"]

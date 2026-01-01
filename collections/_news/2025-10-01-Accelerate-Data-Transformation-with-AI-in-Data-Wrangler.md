@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Fabric Blog"
 feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
 date: 2025-10-01 13:00:00 +00:00
-permalink: "/news/2025-10-01-Accelerate-Data-Transformation-with-AI-in-Data-Wrangler.html"
+permalink: "/2025-10-01-Accelerate-Data-Transformation-with-AI-in-Data-Wrangler.html"
 categories: ["AI", "ML"]
 tags: ["AI", "AI Functions", "Big Data", "Classification", "Code Generation", "Copilot", "Data Transformation", "Data Wrangler", "Microsoft Fabric", "ML", "Natural Language Processing", "News", "Pandas", "Prompt Engineering", "PROSE", "PySpark", "Real Time Preview", "Sentiment Analysis", "Text Summarization", "Translation"]
 tags_normalized: ["ai", "ai functions", "big data", "classification", "code generation", "copilot", "data transformation", "data wrangler", "microsoft fabric", "ml", "natural language processing", "news", "pandas", "prompt engineering", "prose", "pyspark", "real time preview", "sentiment analysis", "text summarization", "translation"]

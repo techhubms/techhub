@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-11-18 17:35:49 +00:00
-permalink: "/community/2025-11-18-Announcing-Preview-of-Azure-Ebsv6-and-Ebdsv6-VMs-Powered-by-5th-Gen-Intel-Xeon-Processors.html"
+permalink: "/2025-11-18-Announcing-Preview-of-Azure-Ebsv6-and-Ebdsv6-VMs-Powered-by-5th-Gen-Intel-Xeon-Processors.html"
 categories: ["Azure"]
 tags: ["Azure", "Azure Boost", "Azure Virtual Machines", "Cloud Infrastructure", "Community", "Data Warehousing", "Ebdsv6", "Ebsv6", "Emerald Rapids", "High Performance Computing", "Intel Xeon", "Memory Intensive Workloads", "NVMe", "OLAP", "OLTP", "Performance Optimization", "Premium SSD V2", "Public Preview", "Ultra Disk", "Virtualization"]
 tags_normalized: ["azure", "azure boost", "azure virtual machines", "cloud infrastructure", "community", "data warehousing", "ebdsv6", "ebsv6", "emerald rapids", "high performance computing", "intel xeon", "memory intensive workloads", "nvme", "olap", "oltp", "performance optimization", "premium ssd v2", "public preview", "ultra disk", "virtualization"]

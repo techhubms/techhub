@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/changelog/feed/"
 date: 2025-10-10 20:41:42 +00:00
-permalink: "/news/2025-10-10-GitHub-Copilot-CLI-Faster-More-Concise-Streamlined-Developer-Experience.html"
+permalink: "/2025-10-10-GitHub-Copilot-CLI-Faster-More-Concise-Streamlined-Developer-Experience.html"
 categories: ["AI", "Coding", "DevOps", "GitHub Copilot"]
 tags: ["AI", "AI Coding Assistant", "Bugfixes", "CLI", "Client Apps", "Coding", "Copilot", "Copilot Updates", "Developer Tools", "DevOps", "GitHub Copilot", "GitHub Copilot CLI", "Improvement", "Kitty Protocol", "Linux", "MacOS", "Markdown Rendering", "News", "Node.js", "Performance", "PowerShell", "Prompt Engineering", "Terminal", "Usability", "Windows Support"]
 tags_normalized: ["ai", "ai coding assistant", "bugfixes", "cli", "client apps", "coding", "copilot", "copilot updates", "developer tools", "devops", "github copilot", "github copilot cli", "improvement", "kitty protocol", "linux", "macos", "markdown rendering", "news", "nodedotjs", "performance", "powershell", "prompt engineering", "terminal", "usability", "windows support"]

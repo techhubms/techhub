@@ -9,7 +9,7 @@ categories: ["AI", "GitHub Copilot"]
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/changelog/label/copilot/feed/"
 date: 2025-07-14 16:32:15 +00:00
-permalink: "/news/2025-07-14-Model-Context-Protocol-MCP-support-in-VS-Code-is-generally-available.html"
+permalink: "/2025-07-14-Model-Context-Protocol-MCP-support-in-VS-Code-is-generally-available.html"
 viewing_mode: "external"
 tags: ["AI", "AI Assistant", "Data Sources", "External Tools", "GitHub Copilot", "Integration", "MCP", "News", "Production Environments", "Software Development", "VS Code"]
 tags_normalized: ["ai", "ai assistant", "data sources", "external tools", "github copilot", "integration", "mcp", "news", "production environments", "software development", "vs code"]

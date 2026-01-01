@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Community"
 date: 2025-08-12 04:15:00 +00:00
-permalink: "/community/2025-08-12-Modernizing-Legacy-Java-Applications-with-GitHub-Copilot-App-Modernization-Upgrade.html"
+permalink: "/2025-08-12-Modernizing-Legacy-Java-Applications-with-GitHub-Copilot-App-Modernization-Upgrade.html"
 categories: ["AI", "Coding", "GitHub Copilot"]
 tags: ["AI", "AI Powered Refactoring", "CI/CD", "Claude Sonnet 4", "Code Automation", "Coding", "Community", "CVE Security Validation", "GitHub Copilot", "GitHub Copilot App Modernization", "GitHub Copilot Chat", "Gradle", "Jakarta EE Upgrade", "Java 21", "Java 8", "Java Application Modernization", "Legacy Code Upgrade", "Maven", "Maven Wrapper", "OpenRewrite", "PetClinic Example", "Spring Boot Upgrade", "Unit Test Generation", "Upgrade For Java", "Visual Studio Code Extension"]
 tags_normalized: ["ai", "ai powered refactoring", "cislashcd", "claude sonnet 4", "code automation", "coding", "community", "cve security validation", "github copilot", "github copilot app modernization", "github copilot chat", "gradle", "jakarta ee upgrade", "java 21", "java 8", "java application modernization", "legacy code upgrade", "maven", "maven wrapper", "openrewrite", "petclinic example", "spring boot upgrade", "unit test generation", "upgrade for java", "visual studio code extension"]

@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-11-18 16:23:35 +00:00
-permalink: "/community/2025-11-18-Public-Preview-Multicloud-Connector-Support-for-GCP-via-Azure-Arc.html"
+permalink: "/2025-11-18-Public-Preview-Multicloud-Connector-Support-for-GCP-via-Azure-Arc.html"
 categories: ["Azure", "DevOps", "Security"]
 tags: ["Agentless Inventory", "Arc Enabled", "AWS", "Azure", "Azure Arc", "Azure Monitor", "Cloud Operations", "Community", "DevOps", "GCP", "Google Cloud", "Inventory", "Kubernetes", "Microsoft Defender For Cloud", "Microsoft Services", "Multicloud", "OIDC Federation", "Preview", "Resource Graph", "Security", "Security Monitoring", "VM Management"]
 tags_normalized: ["agentless inventory", "arc enabled", "aws", "azure", "azure arc", "azure monitor", "cloud operations", "community", "devops", "gcp", "google cloud", "inventory", "kubernetes", "microsoft defender for cloud", "microsoft services", "multicloud", "oidc federation", "preview", "resource graph", "security", "security monitoring", "vm management"]

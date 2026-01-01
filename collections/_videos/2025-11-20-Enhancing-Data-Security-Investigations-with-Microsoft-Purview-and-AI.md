@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Events YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
 date: 2025-11-20 07:50:27 +00:00
-permalink: "/videos/2025-11-20-Enhancing-Data-Security-Investigations-with-Microsoft-Purview-and-AI.html"
+permalink: "/2025-11-20-Enhancing-Data-Security-Investigations-with-Microsoft-Purview-and-AI.html"
 categories: ["AI", "Security"]
 tags: ["Advanced Threat Detection", "AI", "AI Based Security", "AI Integration", "Customer Story", "Data Observability", "Data Security Investigations", "DSI", "DSPM", "Enterprise Security", "Intent Mapping", "Microsoft Defender", "Microsoft Ignite", "Microsoft Purview", "MSIgnite", "Risk Assessment", "Secureyourdata", "Security", "Security Operations Center", "Vector Search", "Videos"]
 tags_normalized: ["advanced threat detection", "ai", "ai based security", "ai integration", "customer story", "data observability", "data security investigations", "dsi", "dspm", "enterprise security", "intent mapping", "microsoft defender", "microsoft ignite", "microsoft purview", "msignite", "risk assessment", "secureyourdata", "security", "security operations center", "vector search", "videos"]

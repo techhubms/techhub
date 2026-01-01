@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft PowerShell Blog"
 feed_url: "https://devblogs.microsoft.com/powershell/feed/"
 date: 2025-08-05 18:40:38 +00:00
-permalink: "/news/2025-08-05-AI-Shell-Preview-6-Enhanced-MCP-Integration-Built-in-Tools-and-Improved-Error-Resolution.html"
+permalink: "/2025-08-05-AI-Shell-Preview-6-Enhanced-MCP-Integration-Built-in-Tools-and-Improved-Error-Resolution.html"
 categories: ["AI", "Coding"]
 tags: ["AI", "AI Agent", "AI Shell", "Automation", "Azure OpenAI", "Coding", "Command Line", "Copilot in Azure", "Error Handling", "MCP", "News", "OpenAI", "PowerShell", "Resolve Error", "Terminal Tools"]
 tags_normalized: ["ai", "ai agent", "ai shell", "automation", "azure openai", "coding", "command line", "copilot in azure", "error handling", "mcp", "news", "openai", "powershell", "resolve error", "terminal tools"]

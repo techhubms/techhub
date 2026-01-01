@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft VisualStudio Blog"
 feed_url: "https://devblogs.microsoft.com/visualstudio/feed/"
 date: 2025-10-02 16:00:38 +00:00
-permalink: "/news/2025-10-02-VS-Live-Orlando-2025-Deep-Dive-into-Visual-Studio-AI-DevOps-and-Beyond.html"
+permalink: "/2025-10-02-VS-Live-Orlando-2025-Deep-Dive-into-Visual-Studio-AI-DevOps-and-Beyond.html"
 categories: ["AI", "Azure", "Coding", "DevOps", "GitHub Copilot", "ML", "Security"]
 tags: [".NET Aspire", "Agentic DevOps", "AI", "AI Integration", "ASP.NET Core", "Azure", "Cloud Engineering", "Coding", "Cybersecurity", "Data Platform", "Debugging", "DevOps", "DevOps Automation", "Distributed Applications", "GitHub Copilot", "IDE Productivity", "Kubernetes", "Live 360", "Machine Learning", "Microsoft Azure", "ML", "News", "Performance Engineering", "Security", "VS", "VS Live!", "Vslive", "Workshops"]
 tags_normalized: ["dotnet aspire", "agentic devops", "ai", "ai integration", "aspdotnet core", "azure", "cloud engineering", "coding", "cybersecurity", "data platform", "debugging", "devops", "devops automation", "distributed applications", "github copilot", "ide productivity", "kubernetes", "live 360", "machine learning", "microsoft azure", "ml", "news", "performance engineering", "security", "vs", "vs livebang", "vslive", "workshops"]

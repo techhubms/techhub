@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "DotNet YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw"
 date: 2025-11-14 03:00:06 +00:00
-permalink: "/videos/2025-11-14-Taking-NET-out-of-NET-Aspire-Working-with-Non-NET-Applications.html"
+permalink: "/2025-11-14-Taking-NET-out-of-NET-Aspire-Working-with-Non-NET-Applications.html"
 categories: ["Coding"]
 tags: [".NET Aspire", "Application Deployment", "Coding", "Cross Platform Development", "Debugging", "Developer Dashboard", "Distributed Applications", "Microservices", "Microsoft", "Node.js Integration", "Observability", "Production Readiness", "Python Integration", "Service Orchestration", "Videos"]
 tags_normalized: ["dotnet aspire", "application deployment", "coding", "cross platform development", "debugging", "developer dashboard", "distributed applications", "microservices", "microsoft", "nodedotjs integration", "observability", "production readiness", "python integration", "service orchestration", "videos"]

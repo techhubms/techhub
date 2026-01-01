@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft News"
 feed_url: "https://news.microsoft.com/source/feed/"
 date: 2025-11-12 16:23:01 +00:00
-permalink: "/news/2025-11-12-MMCTAgent-Microsofts-Multimodal-Critical-Thinking-Agent-for-Image-and-Video-Reasoning.html"
+permalink: "/2025-11-12-MMCTAgent-Microsofts-Multimodal-Critical-Thinking-Agent-for-Image-and-Video-Reasoning.html"
 categories: ["AI", "Azure"]
 tags: ["AI", "AutoGen", "Azure", "Azure AI Foundry Labs", "Azure AI Search", "Company News", "GPT 4V", "GPT4o", "Image Reasoning", "ImageAgent", "Knowledge Base", "Microsoft Research", "MMCTAgent", "Modular Agents", "Multimodal AI", "News", "Object Detection", "OCR", "Open Source Tools", "Performance Evaluation", "Planner–Critic Architecture", "Semantic Retrieval", "Video Reasoning", "VideoAgent", "Visual Question Answering"]
 tags_normalized: ["ai", "autogen", "azure", "azure ai foundry labs", "azure ai search", "company news", "gpt 4v", "gpt4o", "image reasoning", "imageagent", "knowledge base", "microsoft research", "mmctagent", "modular agents", "multimodal ai", "news", "object detection", "ocr", "open source tools", "performance evaluation", "plannercritic architecture", "semantic retrieval", "video reasoning", "videoagent", "visual question answering"]

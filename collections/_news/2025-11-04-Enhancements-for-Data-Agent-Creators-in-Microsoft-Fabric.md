@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Fabric Blog"
 feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
 date: 2025-11-04 11:00:00 +00:00
-permalink: "/news/2025-11-04-Enhancements-for-Data-Agent-Creators-in-Microsoft-Fabric.html"
+permalink: "/2025-11-04-Enhancements-for-Data-Agent-Creators-in-Microsoft-Fabric.html"
 categories: ["AI", "Azure", "ML"]
 tags: ["Agent Authoring", "Agent Configuration", "AI", "Azure", "Data Agent", "Data Science", "Debugging", "Development Tools", "Example Queries", "Few Shot Learning", "KQL", "Markdown", "Microsoft Fabric", "ML", "Multi Tasking", "News", "SDK", "SQL Validation"]
 tags_normalized: ["agent authoring", "agent configuration", "ai", "azure", "data agent", "data science", "debugging", "development tools", "example queries", "few shot learning", "kql", "markdown", "microsoft fabric", "ml", "multi tasking", "news", "sdk", "sql validation"]

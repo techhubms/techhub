@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The Azure Blog"
 feed_url: "https://azure.microsoft.com/en-us/blog/feed/"
 date: 2025-07-01 15:00:00 +00:00
-permalink: "/news/2025-07-01-Building-Secure-Scalable-Generative-AI-in-the-Cloud-with-Microsoft-Azure.html"
+permalink: "/2025-07-01-Building-Secure-Scalable-Generative-AI-in-the-Cloud-with-Microsoft-Azure.html"
 categories: ["AI", "Azure", "ML", "Security"]
 tags: ["AI", "AI + Machine Learning", "AI Security", "Analytics", "Azure", "Azure Databricks", "Azure Key Vault", "Azure Synapse Analytics", "Cloud Infrastructure", "Compliance", "Compute", "Containers", "Data Governance", "Enterprise AI", "Generative AI", "Hybrid + Multicloud", "Hybrid Cloud", "Machine Learning", "Management And Governance", "Microsoft Azure", "Microsoft Defender For Cloud", "Microsoft Fabric", "Microsoft Sentinel", "ML", "News", "Security"]
 tags_normalized: ["ai", "ai plus machine learning", "ai security", "analytics", "azure", "azure databricks", "azure key vault", "azure synapse analytics", "cloud infrastructure", "compliance", "compute", "containers", "data governance", "enterprise ai", "generative ai", "hybrid plus multicloud", "hybrid cloud", "machine learning", "management and governance", "microsoft azure", "microsoft defender for cloud", "microsoft fabric", "microsoft sentinel", "ml", "news", "security"]

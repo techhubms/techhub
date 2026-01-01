@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/changelog/feed/"
 date: 2025-12-11 16:10:17 +00:00
-permalink: "/news/2025-12-11-Repository-Dashboard-Preview-Centralized-Search-Filtering-and-Saved-Queries-on-GitHub.html"
+permalink: "/2025-12-11-Repository-Dashboard-Preview-Centralized-Search-Filtering-and-Saved-Queries-on-GitHub.html"
 categories: ["DevOps"]
 tags: ["Collaboration Tools", "Collaborative Development", "Custom Views", "Developer Tools", "DevOps", "Enterprise Codebases", "Filtering", "GitHub", "News", "Relevance Sorting", "Repository Dashboard", "Saved Queries", "Search Optimization", "Workflow Management"]
 tags_normalized: ["collaboration tools", "collaborative development", "custom views", "developer tools", "devops", "enterprise codebases", "filtering", "github", "news", "relevance sorting", "repository dashboard", "saved queries", "search optimization", "workflow management"]

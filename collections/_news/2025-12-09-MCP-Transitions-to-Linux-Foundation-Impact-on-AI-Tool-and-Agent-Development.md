@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/feed/"
 date: 2025-12-09 21:00:13 +00:00
-permalink: "/news/2025-12-09-MCP-Transitions-to-Linux-Foundation-Impact-on-AI-Tool-and-Agent-Development.html"
+permalink: "/2025-12-09-MCP-Transitions-to-Linux-Foundation-Impact-on-AI-Tool-and-Agent-Development.html"
 categories: ["AI", "Coding", "DevOps", "GitHub Copilot"]
 tags: ["Agentic AI", "Agentic AI Foundation", "Agentic Workflows", "AI", "AI Tooling", "Anthropic", "API Design", "CI/CD", "Coding", "Developer Workflows", "DevOps", "Distributed Systems", "GitHub Copilot", "Linux Foundation", "LLM SDK", "Maintainers", "MCP", "News", "OAuth", "Octoverse", "Open Source", "Schema Driven Interfaces", "Secure Integrations"]
 tags_normalized: ["agentic ai", "agentic ai foundation", "agentic workflows", "ai", "ai tooling", "anthropic", "api design", "cislashcd", "coding", "developer workflows", "devops", "distributed systems", "github copilot", "linux foundation", "llm sdk", "maintainers", "mcp", "news", "oauth", "octoverse", "open source", "schema driven interfaces", "secure integrations"]

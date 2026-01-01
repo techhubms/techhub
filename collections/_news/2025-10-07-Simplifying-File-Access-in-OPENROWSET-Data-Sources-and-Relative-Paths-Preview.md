@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Fabric Blog"
 feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
 date: 2025-10-07 10:00:00 +00:00
-permalink: "/news/2025-10-07-Simplifying-File-Access-in-OPENROWSET-Data-Sources-and-Relative-Paths-Preview.html"
+permalink: "/2025-10-07-Simplifying-File-Access-in-OPENROWSET-Data-Sources-and-Relative-Paths-Preview.html"
 categories: ["Azure", "ML"]
 tags: ["ADLS", "Azure", "Azure Data Lake Storage", "Data Analytics", "Data Engineering", "Data Integration", "Data Platform", "External Data Source", "GUID Based URI", "Lakehouse", "Microsoft Fabric", "ML", "News", "OPENROWSET", "Relative Paths", "SQL", "SQL Endpoint", "T SQL"]
 tags_normalized: ["adls", "azure", "azure data lake storage", "data analytics", "data engineering", "data integration", "data platform", "external data source", "guid based uri", "lakehouse", "microsoft fabric", "ml", "news", "openrowset", "relative paths", "sql", "sql endpoint", "t sql"]

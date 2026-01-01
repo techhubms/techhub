@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Fabric Blog"
 feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
 date: 2025-11-19 12:30:00 +00:00
-permalink: "/news/2025-11-19-Expanded-CDC-Support-and-Data-Ingestion-Enhancements-in-Microsoft-Fabric-Copy-Job.html"
+permalink: "/2025-11-19-Expanded-CDC-Support-and-Data-Ingestion-Enhancements-in-Microsoft-Fabric-Copy-Job.html"
 categories: ["Azure", "ML"]
 tags: ["Azure", "Bulk Copy", "Change Data Capture", "Cloud Data Integration", "Copy Job", "Data Engineering", "Data Factory", "Data Ingestion", "Data Movement", "Data Pipeline", "Google BigQuery", "Hybrid Cloud", "Incremental Copy", "Lakehouse", "Microsoft Fabric", "ML", "Monitoring", "News", "Observability", "Oracle", "SAP", "Snowflake"]
 tags_normalized: ["azure", "bulk copy", "change data capture", "cloud data integration", "copy job", "data engineering", "data factory", "data ingestion", "data movement", "data pipeline", "google bigquery", "hybrid cloud", "incremental copy", "lakehouse", "microsoft fabric", "ml", "monitoring", "news", "observability", "oracle", "sap", "snowflake"]

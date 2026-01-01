@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "DotNet YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw"
 date: 2025-08-14 14:18:49 +00:00
-permalink: "/videos/2025-08-14-Build-Next-Gen-AI-Apps-with-NET-and-Azure.html"
+permalink: "/2025-08-14-Build-Next-Gen-AI-Apps-with-NET-and-Azure.html"
 categories: ["AI", "Azure", "Coding"]
 tags: [".NET", "AI", "AI Applications", "AI Development", "Azure", "C#", "Cloud Development", "Coding", "End To End Development", "Frameworks", "Microsoft AI", "Production Deployment", "Samples And Templates", "Scalability", "Videos", "VS"]
 tags_normalized: ["dotnet", "ai", "ai applications", "ai development", "azure", "csharp", "cloud development", "coding", "end to end development", "frameworks", "microsoft ai", "production deployment", "samples and templates", "scalability", "videos", "vs"]

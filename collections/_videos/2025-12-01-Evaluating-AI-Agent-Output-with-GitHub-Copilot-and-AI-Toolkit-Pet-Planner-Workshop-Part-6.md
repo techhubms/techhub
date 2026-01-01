@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Developer YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
 date: 2025-12-01 21:00:16 +00:00
-permalink: "/videos/2025-12-01-Evaluating-AI-Agent-Output-with-GitHub-Copilot-and-AI-Toolkit-Pet-Planner-Workshop-Part-6.html"
+permalink: "/2025-12-01-Evaluating-AI-Agent-Output-with-GitHub-Copilot-and-AI-Toolkit-Pet-Planner-Workshop-Part-6.html"
 categories: ["AI", "Azure", "Coding", "GitHub Copilot"]
 tags: ["Agent Evaluation", "Agent Mode", "Agent Output", "AI", "AI Development", "AI Toolkit", "Azure", "Cloud Computing", "Cloud Tools", "Coding", "Dataset Creation", "Dev", "Developer Workshop", "Development", "Evaluation Script", "GitHub Copilot", "Microsoft", "Microsoft Foundry", "Pet Planner", "Tech", "Technology", "Videos"]
 tags_normalized: ["agent evaluation", "agent mode", "agent output", "ai", "ai development", "ai toolkit", "azure", "cloud computing", "cloud tools", "coding", "dataset creation", "dev", "developer workshop", "development", "evaluation script", "github copilot", "microsoft", "microsoft foundry", "pet planner", "tech", "technology", "videos"]

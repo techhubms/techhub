@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-08-28 19:58:12 +00:00
-permalink: "/community/2025-08-28-Implementing-Siemens-Teamcenter-Simulation-Process-Data-Management-on-Azure-CycleCloud-with-Slurm.html"
+permalink: "/2025-08-28-Implementing-Siemens-Teamcenter-Simulation-Process-Data-Management-on-Azure-CycleCloud-with-Slurm.html"
 categories: ["Azure", "Security"]
 tags: ["Azure", "Azure Application Gateway", "Azure CycleCloud", "Azure Entra ID", "Azure Firewall", "Community", "Cost Governance", "HPC", "Hybrid Cloud", "PLM", "Product Validation", "RBAC", "SAML", "Security", "Simulation Management", "Simulation Workflow", "Slurm", "SPDM", "StarCCM+", "Teamcenter", "Virtual Network", "VNet Peering"]
 tags_normalized: ["azure", "azure application gateway", "azure cyclecloud", "azure entra id", "azure firewall", "community", "cost governance", "hpc", "hybrid cloud", "plm", "product validation", "rbac", "saml", "security", "simulation management", "simulation workflow", "slurm", "spdm", "starccmplus", "teamcenter", "virtual network", "vnet peering"]

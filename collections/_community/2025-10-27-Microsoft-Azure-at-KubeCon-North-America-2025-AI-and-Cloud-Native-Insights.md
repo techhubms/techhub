@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-10-27 18:00:00 +00:00
-permalink: "/community/2025-10-27-Microsoft-Azure-at-KubeCon-North-America-2025-AI-and-Cloud-Native-Insights.html"
+permalink: "/2025-10-27-Microsoft-Azure-at-KubeCon-North-America-2025-AI-and-Cloud-Native-Insights.html"
 categories: ["AI", "Azure", "DevOps", "Security"]
 tags: ["Agentic AI", "AI", "AI Workloads", "AKS", "Azure", "Cloud Native", "Community", "Container Security", "DevOps", "GitHub Actions", "Hybrid Deployments", "IaC", "KAITO", "KubeFleet", "Kubernetes", "LLMs", "Microsoft Azure", "Multicluster", "Open Source", "Security", "Supply Chain Security"]
 tags_normalized: ["agentic ai", "ai", "ai workloads", "aks", "azure", "cloud native", "community", "container security", "devops", "github actions", "hybrid deployments", "iac", "kaito", "kubefleet", "kubernetes", "llms", "microsoft azure", "multicluster", "open source", "security", "supply chain security"]

@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft .NET Blog"
 feed_url: "https://devblogs.microsoft.com/dotnet/feed/"
 date: 2025-10-14 22:50:29 +00:00
-permalink: "/news/2025-10-14-NET-and-NET-Framework-October-2025-Servicing-Updates-Security-Fixes-and-Release-Details.html"
+permalink: "/2025-10-14-NET-and-NET-Framework-October-2025-Servicing-Updates-Security-Fixes-and-Release-Details.html"
 categories: ["Coding", "Security"]
 tags: [".NET", ".NET 8.0", ".NET 9.0", ".NET Framework", "Arcade", "ASP.NET Core", "Coding", "CVE", "Installer", "Maintenance & Updates", "Microsoft", "News", "Patching", "Release Notes", "Runtime", "SDK", "Security", "Security Update", "Servicing", "Vulnerability Management"]
 tags_normalized: ["dotnet", "dotnet 8dot0", "dotnet 9dot0", "dotnet framework", "arcade", "aspdotnet core", "coding", "cve", "installer", "maintenance and updates", "microsoft", "news", "patching", "release notes", "runtime", "sdk", "security", "security update", "servicing", "vulnerability management"]

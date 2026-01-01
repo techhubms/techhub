@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-09-25 05:00:00 +00:00
-permalink: "/community/2025-09-25-Boost-Productivity-with-the-PostgreSQL-Extension-and-GitHub-Copilot-in-VS-Code.html"
+permalink: "/2025-09-25-Boost-Productivity-with-the-PostgreSQL-Extension-and-GitHub-Copilot-in-VS-Code.html"
 categories: ["AI", "Azure", "Coding", "GitHub Copilot"]
 tags: ["AI", "Azure", "Azure Database For PostgreSQL", "Coding", "Community", "Copilot Chat", "Database Development", "Developer Productivity", "Docker", "Extension Marketplace", "GitHub Copilot", "IntelliSense", "Microsoft Entra ID", "PostgreSQL", "Semantic Kernel", "SQL Optimization", "VS Code"]
 tags_normalized: ["ai", "azure", "azure database for postgresql", "coding", "community", "copilot chat", "database development", "developer productivity", "docker", "extension marketplace", "github copilot", "intellisense", "microsoft entra id", "postgresql", "semantic kernel", "sql optimization", "vs code"]

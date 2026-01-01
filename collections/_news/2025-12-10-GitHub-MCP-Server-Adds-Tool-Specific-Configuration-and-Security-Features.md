@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/changelog/feed/"
 date: 2025-12-10 11:01:02 +00:00
-permalink: "/news/2025-12-10-GitHub-MCP-Server-Adds-Tool-Specific-Configuration-and-Security-Features.html"
+permalink: "/2025-12-10-GitHub-MCP-Server-Adds-Tool-Specific-Configuration-and-Security-Features.html"
 categories: ["AI", "DevOps", "Security"]
 tags: ["AI", "AI Workflows", "Content Sanitization", "Context Window", "Copilot", "DevOps", "GitHub", "GitHub MCP Server", "Go SDK", "Granular Permissions", "Lockdown Mode", "MCP", "News", "Prompt Injection Mitigation", "Public Repositories", "Security", "Security Hardening", "Server Configuration", "Tool Configuration", "X MCP Tools"]
 tags_normalized: ["ai", "ai workflows", "content sanitization", "context window", "copilot", "devops", "github", "github mcp server", "go sdk", "granular permissions", "lockdown mode", "mcp", "news", "prompt injection mitigation", "public repositories", "security", "security hardening", "server configuration", "tool configuration", "x mcp tools"]

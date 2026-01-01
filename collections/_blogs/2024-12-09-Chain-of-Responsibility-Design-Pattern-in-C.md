@@ -9,10 +9,10 @@ viewing_mode: "external"
 feed_name: "Code Maze Blog"
 feed_url: "https://code-maze.com/feed/"
 date: 2024-12-09 06:56:56 +00:00
-permalink: "/blogs/2024-12-09-Chain-of-Responsibility-Design-Pattern-in-C.html"
+permalink: "/2024-12-09-Chain-of-Responsibility-Design-Pattern-in-C.html"
 categories: ["Coding"]
-tags: [".NET", "C#", "Chain Of Responsibility", "Coding", "Design Pattern", "Design Patterns", "Loose Coupling", "Middleware", "Blogs", "Refactoring", "Request Handling", "Single Responsibility Principle", "Software Architecture"]
-tags_normalized: ["dotnet", "csharp", "chain of responsibility", "coding", "design pattern", "design patterns", "loose coupling", "middleware", "blogs", "refactoring", "request handling", "single responsibility principle", "software architecture"]
+tags: [".NET", "Blogs", "C#", "Chain Of Responsibility", "Coding", "Design Pattern", "Design Patterns", "Loose Coupling", "Middleware", "Refactoring", "Request Handling", "Single Responsibility Principle", "Software Architecture"]
+tags_normalized: ["dotnet", "blogs", "csharp", "chain of responsibility", "coding", "design pattern", "design patterns", "loose coupling", "middleware", "refactoring", "request handling", "single responsibility principle", "software architecture"]
 ---
 
 Ahsan Ullah explores the Chain of Responsibility design pattern in this in-depth article, demonstrating how to implement and leverage it for flexible, maintainable C# applications.<!--excerpt_end-->

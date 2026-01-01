@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/changelog/feed/"
 date: 2025-09-23 16:47:00 +00:00
-permalink: "/news/2025-09-23-Accelerate-Remediation-with-GitHub-Security-Campaigns-and-Assignable-Alerts.html"
+permalink: "/2025-09-23-Accelerate-Remediation-with-GitHub-Security-Campaigns-and-Assignable-Alerts.html"
 categories: ["DevOps", "Security"]
 tags: ["Alert Assignment", "Application Security", "Assignable Alerts", "Code Scanning", "Developer Workflow", "DevOps", "GitHub Advanced Security", "GitHub Secret Protection", "News", "Public Preview", "Secret Scanning", "Security", "Security Campaigns", "Security Debt", "Security Operations", "Vulnerability Remediation"]
 tags_normalized: ["alert assignment", "application security", "assignable alerts", "code scanning", "developer workflow", "devops", "github advanced security", "github secret protection", "news", "public preview", "secret scanning", "security", "security campaigns", "security debt", "security operations", "vulnerability remediation"]

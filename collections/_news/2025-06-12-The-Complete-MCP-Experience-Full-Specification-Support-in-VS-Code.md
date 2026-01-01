@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Visual Studio Code Releases"
 feed_url: "https://code.visualstudio.com/feed.xml"
 date: 2025-06-12 00:00:00 +00:00
-permalink: "/news/2025-06-12-The-Complete-MCP-Experience-Full-Specification-Support-in-VS-Code.html"
+permalink: "/2025-06-12-The-Complete-MCP-Experience-Full-Specification-Support-in-VS-Code.html"
 categories: ["AI", "Coding", "DevOps"]
 tags: ["AI", "AI Agent Integration", "Authorization", "Coding", "Developer Tools", "DevOps", "GitHub MCP Server", "Identity Providers", "MCP", "Microsoft", "News", "OAuth", "Prompts", "Remote Servers", "Resources", "Sampling", "VS Code", "Workspace Automation"]
 tags_normalized: ["ai", "ai agent integration", "authorization", "coding", "developer tools", "devops", "github mcp server", "identity providers", "mcp", "microsoft", "news", "oauth", "prompts", "remote servers", "resources", "sampling", "vs code", "workspace automation"]

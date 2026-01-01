@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Community"
 date: 2025-08-11 16:00:00 +00:00
-permalink: "/community/2025-08-11-Whats-New-in-Microsoft-Purview-eDiscovery.html"
+permalink: "/2025-08-11-Whats-New-in-Microsoft-Purview-eDiscovery.html"
 categories: ["Security"]
 tags: ["Audit Readiness", "Case Management", "Community", "Compliance", "Compliance Boundary", "Condition Builder", "Data Sources", "Decryption Settings", "Ediscovery", "Export Controls", "Legal Hold", "Logical Operators", "Microsoft 365 Compliance", "Microsoft Purview", "Modern Ediscovery", "Premium Features", "Reporting", "Search Duplication", "Security"]
 tags_normalized: ["audit readiness", "case management", "community", "compliance", "compliance boundary", "condition builder", "data sources", "decryption settings", "ediscovery", "export controls", "legal hold", "logical operators", "microsoft 365 compliance", "microsoft purview", "modern ediscovery", "premium features", "reporting", "search duplication", "security"]

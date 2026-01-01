@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "DotNet YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw"
 date: 2025-12-10 00:00:52 +00:00
-permalink: "/videos/2025-12-10-Bulletproof-Agents-with-the-Durable-Task-Extension-for-Microsoft-Agent-Framework.html"
+permalink: "/2025-12-10-Bulletproof-Agents-with-the-Durable-Task-Extension-for-Microsoft-Agent-Framework.html"
 categories: ["AI", "Azure", "Coding"]
 tags: [".NET", "Agentic Workflows", "AI", "AI Agents", "Azure", "Azure Functions", "Coding", "Debugging", "Determinism", "Distributed Systems", "Durable Task Extension", "Microsoft Agent Framework", "Observability", "Production Ready AI", "Scaling", "Serverless Architecture", "Session Management", "Stateful Agents", "Videos"]
 tags_normalized: ["dotnet", "agentic workflows", "ai", "ai agents", "azure", "azure functions", "coding", "debugging", "determinism", "distributed systems", "durable task extension", "microsoft agent framework", "observability", "production ready ai", "scaling", "serverless architecture", "session management", "stateful agents", "videos"]

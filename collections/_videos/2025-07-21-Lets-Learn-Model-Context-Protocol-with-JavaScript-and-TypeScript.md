@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Visual Studio Code YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SLNwkd3w"
 date: 2025-07-21 19:11:17 +00:00
-permalink: "/videos/2025-07-21-Lets-Learn-Model-Context-Protocol-with-JavaScript-and-TypeScript.html"
+permalink: "/2025-07-21-Lets-Learn-Model-Context-Protocol-with-JavaScript-and-TypeScript.html"
 categories: ["AI", "Coding"]
 tags: [".NET", "AI", "AI Development", "AI Frameworks", "AI Integration", "Beginner", "Beginner Workshop", "Coding", "Demo", "Developer", "Developer Community", "Develpercommunity", "Dotnetdeveloper", "FileSystem MCP", "JavaScript", "Live Coding", "Mcp", "Microsoft", "Microsoft Docs MCP", "Playwright", "Typescript", "Videos"]
 tags_normalized: ["dotnet", "ai", "ai development", "ai frameworks", "ai integration", "beginner", "beginner workshop", "coding", "demo", "developer", "developer community", "develpercommunity", "dotnetdeveloper", "filesystem mcp", "javascript", "live coding", "mcp", "microsoft", "microsoft docs mcp", "playwright", "typescript", "videos"]

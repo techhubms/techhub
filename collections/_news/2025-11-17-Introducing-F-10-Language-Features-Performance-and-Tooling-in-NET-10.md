@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft .NET Blog"
 feed_url: "https://devblogs.microsoft.com/dotnet/feed/"
 date: 2025-11-17 18:05:00 +00:00
-permalink: "/news/2025-11-17-Introducing-F-10-Language-Features-Performance-and-Tooling-in-NET-10.html"
+permalink: "/2025-11-17-Introducing-F-10-Language-Features-Performance-and-Tooling-in-NET-10.html"
 categories: ["Coding"]
 tags: [".NET", ".NET 10", "Auto Properties", "Coding", "Compiler", "Computation Expressions", "F#", "F# 10", "Language Features", "News", "Parallel Compilation", "Performance", "Scoped Warning Suppression", "Scripting", "Tooling", "Type Subsumption Cache", "ValueOption", "VS"]
 tags_normalized: ["dotnet", "dotnet 10", "auto properties", "coding", "compiler", "computation expressions", "fsharp", "fsharp 10", "language features", "news", "parallel compilation", "performance", "scoped warning suppression", "scripting", "tooling", "type subsumption cache", "valueoption", "vs"]

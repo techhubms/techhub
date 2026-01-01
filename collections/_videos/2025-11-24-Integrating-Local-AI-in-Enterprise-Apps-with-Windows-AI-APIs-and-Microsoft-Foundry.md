@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Events YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
 date: 2025-11-24 12:06:23 +00:00
-permalink: "/videos/2025-11-24-Integrating-Local-AI-in-Enterprise-Apps-with-Windows-AI-APIs-and-Microsoft-Foundry.html"
+permalink: "/2025-11-24-Integrating-Local-AI-in-Enterprise-Apps-with-Windows-AI-APIs-and-Microsoft-Foundry.html"
 categories: ["AI", "Coding"]
 tags: ["Administrative Controls", "AI", "App Content Search", "Coding", "Copilot+ PCs", "Enterprise Apps", "Image Understanding", "Language Models", "LoRA Fine Tuning", "Microsoft Foundry", "MSIgnite", "On Device AI", "Performance Optimization", "Phi Silica", "Retrieval Augmented Generation", "ScalewithcloudandAIendpoints", "Summarization", "Videos", "Vision Models", "Windows AI APIs"]
 tags_normalized: ["administrative controls", "ai", "app content search", "coding", "copilotplus pcs", "enterprise apps", "image understanding", "language models", "lora fine tuning", "microsoft foundry", "msignite", "on device ai", "performance optimization", "phi silica", "retrieval augmented generation", "scalewithcloudandaiendpoints", "summarization", "videos", "vision models", "windows ai apis"]

@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Developer YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
 date: 2025-11-24 19:12:14 +00:00
-permalink: "/videos/2025-11-24-Microsoft-Foundry-Workflows-Migrating-to-Code-First-Development-in-VS-Code.html"
+permalink: "/2025-11-24-Microsoft-Foundry-Workflows-Migrating-to-Code-First-Development-in-VS-Code.html"
 categories: ["AI", "Azure", "Coding", "GitHub Copilot"]
 tags: ["AI", "Azure", "Azure AI Foundry", "Azure Cloud", "Cloud Computing", "Code First Development", "Coding", "Copilot Agent Mode", "Dev", "Development", "Development Tools", "Environment Setup", "Extension Integration", "GitHub Copilot", "Local Development", "Microsoft", "Microsoft AI", "Microsoft Foundry", "Model Mondays", "Tech", "Technology", "Videos", "VS Code", "Workflow Migration", "Workflows"]
 tags_normalized: ["ai", "azure", "azure ai foundry", "azure cloud", "cloud computing", "code first development", "coding", "copilot agent mode", "dev", "development", "development tools", "environment setup", "extension integration", "github copilot", "local development", "microsoft", "microsoft ai", "microsoft foundry", "model mondays", "tech", "technology", "videos", "vs code", "workflow migration", "workflows"]

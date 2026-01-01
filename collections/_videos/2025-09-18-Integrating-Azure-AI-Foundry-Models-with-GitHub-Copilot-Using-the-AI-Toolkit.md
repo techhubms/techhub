@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Developer YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
 date: 2025-09-18 17:45:00 +00:00
-permalink: "/videos/2025-09-18-Integrating-Azure-AI-Foundry-Models-with-GitHub-Copilot-Using-the-AI-Toolkit.html"
+permalink: "/2025-09-18-Integrating-Azure-AI-Foundry-Models-with-GitHub-Copilot-Using-the-AI-Toolkit.html"
 categories: ["AI", "Azure", "GitHub Copilot"]
 tags: ["AI", "AI Integration", "AI Toolkit", "AI Workflows", "Azure", "Azure AI Foundry", "Azure Cloud", "Cloud Computing", "Custom Models", "Dev", "Dev Tools", "Development", "Enterprise AI", "GitHub Copilot", "LLM", "Microsoft", "Microsoft Developer", "Model Deployment", "Tech", "Technology", "Videos", "VS Code", "VS Code Extensions"]
 tags_normalized: ["ai", "ai integration", "ai toolkit", "ai workflows", "azure", "azure ai foundry", "azure cloud", "cloud computing", "custom models", "dev", "dev tools", "development", "enterprise ai", "github copilot", "llm", "microsoft", "microsoft developer", "model deployment", "tech", "technology", "videos", "vs code", "vs code extensions"]

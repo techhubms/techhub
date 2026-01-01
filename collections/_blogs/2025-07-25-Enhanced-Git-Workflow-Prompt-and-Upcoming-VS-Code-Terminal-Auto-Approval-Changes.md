@@ -9,10 +9,10 @@ viewing_mode: "external"
 feed_name: "Reinier van Maanen's blog"
 feed_url: "https://r-vm.com/feed.xml"
 date: 2025-07-25 00:00:00 +00:00
-permalink: "/blogs/2025-07-25-Enhanced-Git-Workflow-Prompt-and-Upcoming-VS-Code-Terminal-Auto-Approval-Changes.html"
+permalink: "/2025-07-25-Enhanced-Git-Workflow-Prompt-and-Upcoming-VS-Code-Terminal-Auto-Approval-Changes.html"
 categories: ["AI", "Coding", "DevOps", "GitHub Copilot"]
-tags: ["AI", "Automation", "Branch Protection", "Coding", "Configuration", "Configuration Changes", "Custom Prompts", "Developer Tools", "DevOps", "Git", "Git Workflow", "GitHub Copilot", "GitHub Copilot Chat", "MCP Server", "Blogs", "PowerShell Scripts", "Progress Bars", "Prompt Engineering", "Pull Requests", "Regex Support", "Terminal", "Terminal Auto Approval", "Version Control", "Visual Studio Code Extensions", "VS Code", "Workflow", "Workflow Automation"]
-tags_normalized: ["ai", "automation", "branch protection", "coding", "configuration", "configuration changes", "custom prompts", "developer tools", "devops", "git", "git workflow", "github copilot", "github copilot chat", "mcp server", "blogs", "powershell scripts", "progress bars", "prompt engineering", "pull requests", "regex support", "terminal", "terminal auto approval", "version control", "visual studio code extensions", "vs code", "workflow", "workflow automation"]
+tags: ["AI", "Automation", "Blogs", "Branch Protection", "Coding", "Configuration", "Configuration Changes", "Custom Prompts", "Developer Tools", "DevOps", "Git", "Git Workflow", "GitHub Copilot", "GitHub Copilot Chat", "MCP Server", "PowerShell Scripts", "Progress Bars", "Prompt Engineering", "Pull Requests", "Regex Support", "Terminal", "Terminal Auto Approval", "Version Control", "Visual Studio Code Extensions", "VS Code", "Workflow", "Workflow Automation"]
+tags_normalized: ["ai", "automation", "blogs", "branch protection", "coding", "configuration", "configuration changes", "custom prompts", "developer tools", "devops", "git", "git workflow", "github copilot", "github copilot chat", "mcp server", "powershell scripts", "progress bars", "prompt engineering", "pull requests", "regex support", "terminal", "terminal auto approval", "version control", "visual studio code extensions", "vs code", "workflow", "workflow automation"]
 ---
 
 In this post, Reinier van Maanen details his improved Git workflow prompt, VS Code and GitHub Copilot Chat integration, and provides a warning about breaking changes to the terminal auto-approval configuration coming to VS Code.<!--excerpt_end-->

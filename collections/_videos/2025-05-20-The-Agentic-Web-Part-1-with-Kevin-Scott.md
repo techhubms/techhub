@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Events YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
 date: 2025-05-20 20:01:23 +00:00
-permalink: "/videos/2025-05-20-The-Agentic-Web-Part-1-with-Kevin-Scott.html"
+permalink: "/2025-05-20-The-Agentic-Web-Part-1-with-Kevin-Scott.html"
 categories: ["AI"]
 tags: ["Agentic Web", "AI", "AI Agents", "AI Integration", "AI Strategy", "Developer Productivity", "Future Of AI", "Kevin Scott", "Microsoft", "Microsoft Build", "Microsoft Ignite", "Technology Trends", "Videos"]
 tags_normalized: ["agentic web", "ai", "ai agents", "ai integration", "ai strategy", "developer productivity", "future of ai", "kevin scott", "microsoft", "microsoft build", "microsoft ignite", "technology trends", "videos"]

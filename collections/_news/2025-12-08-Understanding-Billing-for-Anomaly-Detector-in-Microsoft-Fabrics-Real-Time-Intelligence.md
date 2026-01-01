@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Fabric Blog"
 feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
 date: 2025-12-08 10:00:00 +00:00
-permalink: "/news/2025-12-08-Understanding-Billing-for-Anomaly-Detector-in-Microsoft-Fabrics-Real-Time-Intelligence.html"
+permalink: "/2025-12-08-Understanding-Billing-for-Anomaly-Detector-in-Microsoft-Fabrics-Real-Time-Intelligence.html"
 categories: ["Azure", "ML"]
 tags: ["Anomaly Detector", "Azure", "Billing", "Capacity Metrics", "Capacity Units", "Data Monitoring", "Eventhouse", "Microsoft Fabric", "ML", "News", "Operational Analytics", "Real Time Intelligence", "Streaming Data"]
 tags_normalized: ["anomaly detector", "azure", "billing", "capacity metrics", "capacity units", "data monitoring", "eventhouse", "microsoft fabric", "ml", "news", "operational analytics", "real time intelligence", "streaming data"]

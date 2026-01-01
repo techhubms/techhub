@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-11-21 18:39:06 +00:00
-permalink: "/community/2025-11-21-Preview-and-Export-Azure-Changes-with-What-If-and-Bicep-in-Azure-CLI-and-PowerShell.html"
+permalink: "/2025-11-21-Preview-and-Export-Azure-Changes-with-What-If-and-Bicep-in-Azure-CLI-and-PowerShell.html"
 categories: ["AI", "Azure", "DevOps"]
 tags: ["AI", "AI Translation", "Azure", "Azure CLI", "Azure Networking", "Azure PowerShell", "Azure Storage Account", "Azure VM", "Bicep Templates", "Change Preview", "Cloud Automation", "Community", "DevOps", "DryRun", "Export Bicep", "IaC", "Private Preview", "Resource Deployment", "What If"]
 tags_normalized: ["ai", "ai translation", "azure", "azure cli", "azure networking", "azure powershell", "azure storage account", "azure vm", "bicep templates", "change preview", "cloud automation", "community", "devops", "dryrun", "export bicep", "iac", "private preview", "resource deployment", "what if"]

@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-11-10 20:41:35 +00:00
-permalink: "/community/2025-11-10-Your-Guide-to-Azure-Compute-at-Microsoft-Ignite-2025.html"
+permalink: "/2025-11-10-Your-Guide-to-Azure-Compute-at-Microsoft-Ignite-2025.html"
 categories: ["Azure", "Security"]
 tags: ["Azure", "Azure Backup", "Azure Boost", "Azure Compute", "Azure IaaS", "Azure Monitor", "Azure Networking", "Cloud Architecture", "Cloud Security", "Community", "Cost Optimization", "Disaster Recovery", "Hybrid Cloud", "Infrastructure as A Service", "Microsoft Ignite", "Observability", "Performance Tuning", "Resiliency", "Security", "Virtual Machines"]
 tags_normalized: ["azure", "azure backup", "azure boost", "azure compute", "azure iaas", "azure monitor", "azure networking", "cloud architecture", "cloud security", "community", "cost optimization", "disaster recovery", "hybrid cloud", "infrastructure as a service", "microsoft ignite", "observability", "performance tuning", "resiliency", "security", "virtual machines"]

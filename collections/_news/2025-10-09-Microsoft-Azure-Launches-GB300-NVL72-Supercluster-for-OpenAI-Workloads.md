@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The Azure Blog"
 feed_url: "https://azure.microsoft.com/en-us/blog/feed/"
 date: 2025-10-09 16:00:00 +00:00
-permalink: "/news/2025-10-09-Microsoft-Azure-Launches-GB300-NVL72-Supercluster-for-OpenAI-Workloads.html"
+permalink: "/2025-10-09-Microsoft-Azure-Launches-GB300-NVL72-Supercluster-for-OpenAI-Workloads.html"
 categories: ["AI", "Azure"]
 tags: ["AI", "AI Datacenter", "AI Infrastructure", "Azure", "Blackwell Ultra GPUs", "Collective Operations", "Compute", "Data Center Cooling", "Datacenter", "FP4 Performance", "Frontier AI", "Grace CPU", "InfiniBand", "Microsoft Azure", "ND GB300 V6", "News", "NVIDIA GB300", "NVIDIA Quantum X800", "NVL72", "OpenAI", "Performance Benchmarking", "Supercomputing", "Tensor Core", "Virtual Machines"]
 tags_normalized: ["ai", "ai datacenter", "ai infrastructure", "azure", "blackwell ultra gpus", "collective operations", "compute", "data center cooling", "datacenter", "fp4 performance", "frontier ai", "grace cpu", "infiniband", "microsoft azure", "nd gb300 v6", "news", "nvidia gb300", "nvidia quantum x800", "nvl72", "openai", "performance benchmarking", "supercomputing", "tensor core", "virtual machines"]

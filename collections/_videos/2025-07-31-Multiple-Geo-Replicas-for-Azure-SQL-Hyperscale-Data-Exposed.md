@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Developer YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
 date: 2025-07-31 16:01:20 +00:00
-permalink: "/videos/2025-07-31-Multiple-geo-replicas-for-Azure-SQL-Hyperscale-Data-Exposed.html"
+permalink: "/2025-07-31-Multiple-Geo-Replicas-for-Azure-SQL-Hyperscale-Data-Exposed.html"
 categories: ["Azure", "ML"]
 tags: ["Azure", "Azure SQL Database", "Azure SQL Hyperscale", "Cloud Computing", "Cloud Development", "Cloud Scalability", "Data Replication", "Database Architecture", "Dev", "Development", "Disaster Recovery", "Geo Replication", "High Availability", "Microsoft", "Microsoft Azure", "ML", "Public Preview", "Secondary Replicas", "SQL Server", "Tech", "Technical Demo", "Technology", "Videos"]
 tags_normalized: ["azure", "azure sql database", "azure sql hyperscale", "cloud computing", "cloud development", "cloud scalability", "data replication", "database architecture", "dev", "development", "disaster recovery", "geo replication", "high availability", "microsoft", "microsoft azure", "ml", "public preview", "secondary replicas", "sql server", "tech", "technical demo", "technology", "videos"]

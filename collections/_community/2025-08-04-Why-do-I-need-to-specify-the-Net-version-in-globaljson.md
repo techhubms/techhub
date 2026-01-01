@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Reddit CSharp"
 feed_url: "https://www.reddit.com/r/csharp/.rss"
 date: 2025-08-04 16:19:57 +00:00
-permalink: "/community/2025-08-04-Why-do-I-need-to-specify-the-Net-version-in-globaljson.html"
+permalink: "/2025-08-04-Why-do-I-need-to-specify-the-Net-version-in-globaljson.html"
 categories: ["Coding"]
 tags: [".NET", ".NET CLI", "C#", "Coding", "Community", "Csproj", "Debugging", "EF Core", "Global.json", "Project Configuration", "SDK Version", "Target Framework"]
 tags_normalized: ["dotnet", "dotnet cli", "csharp", "coding", "community", "csproj", "debugging", "ef core", "globaldotjson", "project configuration", "sdk version", "target framework"]

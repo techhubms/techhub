@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Fabric Blog"
 feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
 date: 2025-11-20 11:00:00 +00:00
-permalink: "/news/2025-11-20-Whats-New-in-Fabric-User-Data-Functions-Ignite-2025-Edition.html"
+permalink: "/2025-11-20-Whats-New-in-Fabric-User-Data-Functions-Ignite-2025-Edition.html"
 categories: ["Azure", "Coding", "ML"]
 tags: ["API Integration", "Azure", "Azure Key Vault", "Business Logic", "Centralized Logic", "Coding", "Configuration Management", "Cosmos DB", "Data Engineering", "Event Processing", "Fabric Activator", "Managed Functions", "Microsoft Fabric", "ML", "News", "NoSQL", "Python", "User Data Functions", "Variable Library"]
 tags_normalized: ["api integration", "azure", "azure key vault", "business logic", "centralized logic", "coding", "configuration management", "cosmos db", "data engineering", "event processing", "fabric activator", "managed functions", "microsoft fabric", "ml", "news", "nosql", "python", "user data functions", "variable library"]

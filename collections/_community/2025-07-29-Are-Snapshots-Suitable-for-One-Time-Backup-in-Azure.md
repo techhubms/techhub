@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Reddit Azure"
 feed_url: "https://www.reddit.com/r/azure/.rss"
 date: 2025-07-29 10:22:58 +00:00
-permalink: "/community/2025-07-29-Are-Snapshots-Suitable-for-One-Time-Backup-in-Azure.html"
+permalink: "/2025-07-29-Are-Snapshots-Suitable-for-One-Time-Backup-in-Azure.html"
 categories: ["Azure"]
 tags: ["Archival", "Azure", "Azure Snapshot", "Cloud Backup", "Community", "Disk Copy", "On Premises", "One Time Backup", "Snapshot", "Virtual Machine", "VM Backup"]
 tags_normalized: ["archival", "azure", "azure snapshot", "cloud backup", "community", "disk copy", "on premises", "one time backup", "snapshot", "virtual machine", "vm backup"]

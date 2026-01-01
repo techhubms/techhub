@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "John Savill's Technical Training"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCpIn7ox7j7bH_OFj7tYouOQ"
 date: 2025-08-29 14:45:05 +00:00
-permalink: "/videos/2025-08-29-Azure-Weekly-Update-29th-August-2025.html"
+permalink: "/2025-08-29-Azure-Weekly-Update-29th-August-2025.html"
 categories: ["AI", "Azure", "Coding", "DevOps", "ML", "Security"]
 tags: ["AGC", "AGIC", "AI", "ANF", "App Gateway", "Application Gateway", "Azure", "Azure Arc", "Azure Cloud", "Azure CNI Overlay", "Azure Functions", "Azure Migrate", "Azure OpenAI", "Azure Security", "Azure SQL", "Azure Updates", "Cloud", "Cloud Infrastructure", "Coding", "Cosmos DB", "DevOps", "Durable Functions", "Entra ID", "Hyper V", "MAI Voice 1", "Microsoft", "Microsoft Azure", "Migration", "ML", "MongoDB", "Monitoring", "Node.js 22", "PostgreSQL", "Provisioned Spillover", "RBAC", "Replication Lag", "Roslyn Analyzer", "Schema Migration", "Security", "SQL Server", "Videos", "VMware", "WAF", "ZRS Disk"]
 tags_normalized: ["agc", "agic", "ai", "anf", "app gateway", "application gateway", "azure", "azure arc", "azure cloud", "azure cni overlay", "azure functions", "azure migrate", "azure openai", "azure security", "azure sql", "azure updates", "cloud", "cloud infrastructure", "coding", "cosmos db", "devops", "durable functions", "entra id", "hyper v", "mai voice 1", "microsoft", "microsoft azure", "migration", "ml", "mongodb", "monitoring", "nodedotjs 22", "postgresql", "provisioned spillover", "rbac", "replication lag", "roslyn analyzer", "schema migration", "security", "sql server", "videos", "vmware", "waf", "zrs disk"]

@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Community"
 date: 2025-08-12 21:10:22 +00:00
-permalink: "/community/2025-08-12-Building-a-Teams-App-with-Azure-Databricks-Genie-and-Azure-AI-Agent-Service.html"
+permalink: "/2025-08-12-Building-a-Teams-App-with-Azure-Databricks-Genie-and-Azure-AI-Agent-Service.html"
 categories: ["AI", "Azure", "Coding", "ML"]
 tags: ["AI", "AI Agents", "Azure", "Azure AI Agent Service", "Azure AI Foundry", "Azure App Service", "Azure Databricks", "Bot Service", "Coding", "Community", "Conversational AI", "Data Intelligence", "Data Visualization", "DevTunnel", "Enterprise AI Integration", "Genie API", "GitHub", "Kubernetes", "LLM Integration", "Microsoft Teams App", "ML", "Natural Language Analytics", "On Behalf Of Authentication", "Python", "Sample Code", "Secure Data Access"]
 tags_normalized: ["ai", "ai agents", "azure", "azure ai agent service", "azure ai foundry", "azure app service", "azure databricks", "bot service", "coding", "community", "conversational ai", "data intelligence", "data visualization", "devtunnel", "enterprise ai integration", "genie api", "github", "kubernetes", "llm integration", "microsoft teams app", "ml", "natural language analytics", "on behalf of authentication", "python", "sample code", "secure data access"]

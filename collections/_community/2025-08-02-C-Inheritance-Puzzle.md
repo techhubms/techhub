@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Reddit CSharp"
 feed_url: "https://www.reddit.com/r/csharp/.rss"
 date: 2025-08-02 20:00:17 +00:00
-permalink: "/community/2025-08-02-C-Inheritance-Puzzle.html"
+permalink: "/2025-08-02-C-Inheritance-Puzzle.html"
 categories: ["Coding"]
 tags: ["Base Class", "C#", "Code Puzzle", "Coding", "Community", "Console Output", "Constructor", "Derived Class", "Inheritance", "Method Overriding", "Object Oriented Programming", "Virtual Methods"]
 tags_normalized: ["base class", "csharp", "code puzzle", "coding", "community", "console output", "constructor", "derived class", "inheritance", "method overriding", "object oriented programming", "virtual methods"]

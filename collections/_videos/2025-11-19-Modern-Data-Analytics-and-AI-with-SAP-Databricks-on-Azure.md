@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Events YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
 date: 2025-11-19 14:03:01 +00:00
-permalink: "/videos/2025-11-19-Modern-Data-Analytics-and-AI-with-SAP-Databricks-on-Azure.html"
+permalink: "/2025-11-19-Modern-Data-Analytics-and-AI-with-SAP-Databricks-on-Azure.html"
 categories: ["AI", "Azure", "ML"]
 tags: ["AI", "AI Applications", "Automated Forecasting", "Azure", "Azure Databricks", "Business Intelligence", "Data Agents", "Data Analytics", "Data Collaboration", "Delta Sharing", "Enterprise Data", "Feature Importance", "Machine Learning", "Microsoft Ignite", "ML", "Model Diagnostics", "MSIgnite", "Power BI Integration", "SAP Business Data Cloud", "Unifyyourdataplatform", "Videos"]
 tags_normalized: ["ai", "ai applications", "automated forecasting", "azure", "azure databricks", "business intelligence", "data agents", "data analytics", "data collaboration", "delta sharing", "enterprise data", "feature importance", "machine learning", "microsoft ignite", "ml", "model diagnostics", "msignite", "power bi integration", "sap business data cloud", "unifyyourdataplatform", "videos"]

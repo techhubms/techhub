@@ -9,10 +9,10 @@ viewing_mode: "external"
 feed_name: "DevOps Blog"
 feed_url: "https://devops.com/feed/"
 date: 2025-08-22 02:45:22 +00:00
-permalink: "/blogs/2025-08-22-Tackling-the-DevSecOps-Gap-in-Software-Understanding.html"
+permalink: "/2025-08-22-Tackling-the-DevSecOps-Gap-in-Software-Understanding.html"
 categories: ["DevOps", "Security"]
-tags: ["Artifact Traceability", "Build Pipeline", "CI/CD", "CISA", "Component Provenance", "DevOps", "DevSecOps", "Lifecycle Management", "Policy Collaboration", "Blogs", "SBOM", "SBOMs", "Secure Software Development", "Security", "Security Automation", "Social Facebook", "Social LinkedIn", "Social X", "Software Bill Of Materials", "Software Visibility", "Supply Chain Security", "Zero Trust"]
-tags_normalized: ["artifact traceability", "build pipeline", "cislashcd", "cisa", "component provenance", "devops", "devsecops", "lifecycle management", "policy collaboration", "blogs", "sbom", "sboms", "secure software development", "security", "security automation", "social facebook", "social linkedin", "social x", "software bill of materials", "software visibility", "supply chain security", "zero trust"]
+tags: ["Artifact Traceability", "Blogs", "Build Pipeline", "CI/CD", "CISA", "Component Provenance", "DevOps", "DevSecOps", "Lifecycle Management", "Policy Collaboration", "SBOM", "SBOMs", "Secure Software Development", "Security", "Security Automation", "Social Facebook", "Social LinkedIn", "Social X", "Software Bill Of Materials", "Software Visibility", "Supply Chain Security", "Zero Trust"]
+tags_normalized: ["artifact traceability", "blogs", "build pipeline", "cislashcd", "cisa", "component provenance", "devops", "devsecops", "lifecycle management", "policy collaboration", "sbom", "sboms", "secure software development", "security", "security automation", "social facebook", "social linkedin", "social x", "software bill of materials", "software visibility", "supply chain security", "zero trust"]
 ---
 
 Alan Shimel analyzes the importance of closing the software visibility gap for DevSecOps, exploring issues like SBOMs, traceability, and collaboration among security teams to strengthen both software and supply chain security.<!--excerpt_end-->

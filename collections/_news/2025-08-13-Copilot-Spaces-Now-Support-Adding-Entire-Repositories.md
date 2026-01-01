@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/changelog/feed/"
 date: 2025-08-13 17:26:04 +00:00
-permalink: "/news/2025-08-13-Copilot-Spaces-Now-Support-Adding-Entire-Repositories.html"
+permalink: "/2025-08-13-Copilot-Spaces-Now-Support-Adding-Entire-Repositories.html"
 categories: ["AI", "GitHub Copilot"]
 tags: ["AI", "AI Coding Assistant", "AI Integration", "Codebase Exploration", "Copilot Spaces", "Developer Productivity", "Developer Tools", "Feature Update", "GitHub", "GitHub Copilot", "Navigation Improvements", "News", "Repository Management"]
 tags_normalized: ["ai", "ai coding assistant", "ai integration", "codebase exploration", "copilot spaces", "developer productivity", "developer tools", "feature update", "github", "github copilot", "navigation improvements", "news", "repository management"]

@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The Azure Blog"
 feed_url: "https://azure.microsoft.com/en-us/blog/feed/"
 date: 2025-11-05 18:00:00 +00:00
-permalink: "/news/2025-11-05-Driving-ROI-with-Azure-AI-Foundry-and-UiPath-Intelligent-Agents-in-Healthcare-Workflows.html"
+permalink: "/2025-11-05-Driving-ROI-with-Azure-AI-Foundry-and-UiPath-Intelligent-Agents-in-Healthcare-Workflows.html"
 categories: ["AI", "Azure"]
 tags: ["Agentic Automation", "AI", "AI + Machine Learning", "Automation", "Azure", "Azure AI Foundry", "Business Process Automation", "DICOMweb API", "EMR Data", "FHIR", "Healthcare AI", "Medical Imaging", "Microsoft Azure", "News", "Operational AI", "Process Orchestration", "Radiology Workflow", "UiPath", "UiPath Maestro"]
 tags_normalized: ["agentic automation", "ai", "ai plus machine learning", "automation", "azure", "azure ai foundry", "business process automation", "dicomweb api", "emr data", "fhir", "healthcare ai", "medical imaging", "microsoft azure", "news", "operational ai", "process orchestration", "radiology workflow", "uipath", "uipath maestro"]

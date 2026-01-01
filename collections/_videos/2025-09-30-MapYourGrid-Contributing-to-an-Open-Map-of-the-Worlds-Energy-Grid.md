@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "GitHub YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ"
 date: 2025-09-30 20:06:00 +00:00
-permalink: "/videos/2025-09-30-MapYourGrid-Contributing-to-an-Open-Map-of-the-Worlds-Energy-Grid.html"
+permalink: "/2025-09-30-MapYourGrid-Contributing-to-an-Open-Map-of-the-Worlds-Energy-Grid.html"
 categories: ["DevOps"]
 tags: ["Climate Action", "Code", "Community Projects", "Developer", "Developer Collaboration", "DevOps", "Environmental Sustainability", "Git", "Git And GitHub", "GitHub", "GitHub For Beginners", "GitHub Tutorial", "How To Use GitHub", "MapYourGrid", "Open Source", "Programming", "Software", "Software Development", "Version Control", "Videos"]
 tags_normalized: ["climate action", "code", "community projects", "developer", "developer collaboration", "devops", "environmental sustainability", "git", "git and github", "github", "github for beginners", "github tutorial", "how to use github", "mapyourgrid", "open source", "programming", "software", "software development", "version control", "videos"]

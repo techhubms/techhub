@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "DotNet YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw"
 date: 2025-11-14 19:21:39 +00:00
-permalink: "/videos/2025-11-14-Practical-AI-Applications-for-Improved-User-Experience-with-NET.html"
+permalink: "/2025-11-14-Practical-AI-Applications-for-Improved-User-Experience-with-NET.html"
 categories: ["AI", "Coding"]
 tags: [".NET", ".NET 10", ".NET Aspire", "AI", "AI Development", "ASP.NET Core 10", "C# 14", "Cloud Native Apps", "Coding", "F# 10", "MAUI", "Microsoft", "MLLM", "Multi Modal Language Models", "Natural Language Processing", "UI Simplification", "User Experience", "Videos", "VS"]
 tags_normalized: ["dotnet", "dotnet 10", "dotnet aspire", "ai", "ai development", "aspdotnet core 10", "csharp 14", "cloud native apps", "coding", "fsharp 10", "maui", "microsoft", "mllm", "multi modal language models", "natural language processing", "ui simplification", "user experience", "videos", "vs"]

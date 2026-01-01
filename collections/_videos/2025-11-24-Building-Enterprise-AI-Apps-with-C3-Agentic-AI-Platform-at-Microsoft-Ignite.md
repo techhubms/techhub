@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Events YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
 date: 2025-11-24 10:36:33 +00:00
-permalink: "/videos/2025-11-24-Building-Enterprise-AI-Apps-with-C3-Agentic-AI-Platform-at-Microsoft-Ignite.html"
+permalink: "/2025-11-24-Building-Enterprise-AI-Apps-with-C3-Agentic-AI-Platform-at-Microsoft-Ignite.html"
 categories: ["AI"]
 tags: ["Agentic AI", "Agenticbusinessapplications", "AI", "AI Agents", "Application Canvas", "C3 AI Studio", "Data APIs", "Enterprise AI", "Governance", "Low Code", "Microsoft Ignite", "MSIgnite", "Object Modeling", "Observability", "Ontology Modeling", "Orchestration Framework", "Versioning", "Videos", "VS Code", "Workflow Automation"]
 tags_normalized: ["agentic ai", "agenticbusinessapplications", "ai", "ai agents", "application canvas", "c3 ai studio", "data apis", "enterprise ai", "governance", "low code", "microsoft ignite", "msignite", "object modeling", "observability", "ontology modeling", "orchestration framework", "versioning", "videos", "vs code", "workflow automation"]

@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-10-06 12:38:16 +00:00
-permalink: "/community/2025-10-06-Introducing-Cross-Resource-Metrics-and-Alerts-Support-for-Azure-Storage.html"
+permalink: "/2025-10-06-Introducing-Cross-Resource-Metrics-and-Alerts-Support-for-Azure-Storage.html"
 categories: ["Azure", "DevOps"]
 tags: ["Action Groups", "Azure", "Azure Monitor", "Azure Storage", "Blob Storage", "Cloud Operations", "Community", "Cross Resource Metrics", "Dashboard", "DevOps", "File Storage", "Fleet Management", "Operational Monitoring", "Queue Storage", "ResourceId", "Storage Metrics", "Table Storage"]
 tags_normalized: ["action groups", "azure", "azure monitor", "azure storage", "blob storage", "cloud operations", "community", "cross resource metrics", "dashboard", "devops", "file storage", "fleet management", "operational monitoring", "queue storage", "resourceid", "storage metrics", "table storage"]

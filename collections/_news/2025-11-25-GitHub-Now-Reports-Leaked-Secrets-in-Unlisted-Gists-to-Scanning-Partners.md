@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/changelog/feed/"
 date: 2025-11-25 17:50:17 +00:00
-permalink: "/news/2025-11-25-GitHub-Now-Reports-Leaked-Secrets-in-Unlisted-Gists-to-Scanning-Partners.html"
+permalink: "/2025-11-25-GitHub-Now-Reports-Leaked-Secrets-in-Unlisted-Gists-to-Scanning-Partners.html"
 categories: ["DevOps", "Security"]
 tags: ["Application Security", "AWS", "Code Leaks", "Code Sharing", "DevOps", "DevOps Best Practices", "GitHub", "GitHub Gists", "Improvement", "Incident Response", "News", "OpenAI", "Partner Program", "Repository Security", "Secret Scanning", "Secrets Management", "Security", "Security Alert", "Stripe"]
 tags_normalized: ["application security", "aws", "code leaks", "code sharing", "devops", "devops best practices", "github", "github gists", "improvement", "incident response", "news", "openai", "partner program", "repository security", "secret scanning", "secrets management", "security", "security alert", "stripe"]

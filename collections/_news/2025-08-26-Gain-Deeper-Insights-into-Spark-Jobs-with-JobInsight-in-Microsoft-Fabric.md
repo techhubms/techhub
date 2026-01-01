@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Fabric Blog"
 feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
 date: 2025-08-26 12:20:07 +00:00
-permalink: "/news/2025-08-26-Gain-Deeper-Insights-into-Spark-Jobs-with-JobInsight-in-Microsoft-Fabric.html"
+permalink: "/2025-08-26-Gain-Deeper-Insights-into-Spark-Jobs-with-JobInsight-in-Microsoft-Fabric.html"
 categories: ["Azure", "ML"]
 tags: ["ADLS Gen2", "Automation", "Azure", "Big Data", "Data Analysis", "Data Engineering", "Event Logs", "Java", "JobInsight", "Lakehouse", "Microsoft Fabric", "ML", "News", "Notebook", "Performance Monitoring", "Resource Tuning", "Spark", "Spark Diagnostics"]
 tags_normalized: ["adls gen2", "automation", "azure", "big data", "data analysis", "data engineering", "event logs", "java", "jobinsight", "lakehouse", "microsoft fabric", "ml", "news", "notebook", "performance monitoring", "resource tuning", "spark", "spark diagnostics"]

@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/changelog/label/copilot/feed/"
 date: 2025-08-07 23:17:25 +00:00
-permalink: "/news/2025-08-07-Asynchronous-Generation-of-the-Copilot-Activity-Report-CSV.html"
+permalink: "/2025-08-07-Asynchronous-Generation-of-the-Copilot-Activity-Report-CSV.html"
 categories: ["AI", "GitHub Copilot"]
 tags: ["Admin Tools", "AI", "Asynchronous Processing", "Copilot Activity Report", "CSV Export", "Email Notification", "GitHub Copilot", "GitHub Enterprise", "News", "Reliability", "Report Generation", "Scalability"]
 tags_normalized: ["admin tools", "ai", "asynchronous processing", "copilot activity report", "csv export", "email notification", "github copilot", "github enterprise", "news", "reliability", "report generation", "scalability"]

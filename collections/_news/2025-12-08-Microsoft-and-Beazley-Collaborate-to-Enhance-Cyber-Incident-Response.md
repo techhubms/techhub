@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Security Blog"
 feed_url: "https://www.microsoft.com/en-us/security/blog/feed/"
 date: 2025-12-08 17:00:00 +00:00
-permalink: "/news/2025-12-08-Microsoft-and-Beazley-Collaborate-to-Enhance-Cyber-Incident-Response.html"
+permalink: "/2025-12-08-Microsoft-and-Beazley-Collaborate-to-Enhance-Cyber-Incident-Response.html"
 categories: ["Security"]
 tags: ["Beazley", "Claims Process", "Cyber Insurance", "Cyber Resilience", "Cyber Risk Management", "Cyberthreat Landscape", "Financial Recovery", "Incident Response", "Insurance Partnership", "Legal Compliance", "Microsoft Incident Response", "Microsoft Security", "News", "Security", "Security Operations", "Security Services", "Threat Intelligence"]
 tags_normalized: ["beazley", "claims process", "cyber insurance", "cyber resilience", "cyber risk management", "cyberthreat landscape", "financial recovery", "incident response", "insurance partnership", "legal compliance", "microsoft incident response", "microsoft security", "news", "security", "security operations", "security services", "threat intelligence"]

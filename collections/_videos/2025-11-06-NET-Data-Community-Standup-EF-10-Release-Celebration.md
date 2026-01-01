@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "DotNet YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw"
 date: 2025-11-06 19:41:56 +00:00
-permalink: "/videos/2025-11-06-NET-Data-Community-Standup-EF-10-Release-Celebration.html"
+permalink: "/2025-11-06-NET-Data-Community-Standup-EF-10-Release-Celebration.html"
 categories: ["Coding"]
 tags: [".NET", ".NET Developer", "Coding", "Data", "Data Access", "Database", "Demo", "Developer", "Development", "Dotnetdeveloper", "EF", "EF Core", "EF10", "Microsoft", "Modern .NET", "ORM", "Q&A", "Videos"]
 tags_normalized: ["dotnet", "dotnet developer", "coding", "data", "data access", "database", "demo", "developer", "development", "dotnetdeveloper", "ef", "ef core", "ef10", "microsoft", "modern dotnet", "orm", "qanda", "videos"]

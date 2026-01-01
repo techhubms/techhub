@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Fabric Blog"
 feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
 date: 2025-09-23 13:00:00 +00:00
-permalink: "/news/2025-09-23-Unlocking-Enterprise-Ready-SQL-Database-Features-in-Microsoft-Fabric-ALM-Backups-and-Copilot-Enhancements.html"
+permalink: "/2025-09-23-Unlocking-Enterprise-Ready-SQL-Database-Features-in-Microsoft-Fabric-ALM-Backups-and-Copilot-Enhancements.html"
 categories: ["AI", "Azure", "Coding", "ML", "Security"]
 tags: ["AI", "ALM", "Application Lifecycle Management", "Azure", "Coding", "Copilot", "Data Platform", "Database Recovery", "Developer Productivity", "Microsoft Entra ID", "Microsoft Fabric", "ML", "News", "Performance Dashboard", "Point in Time Restore", "Query Management", "Replication", "REST API", "Security", "SQL Auditing", "SQL Database", "VS Code Integration"]
 tags_normalized: ["ai", "alm", "application lifecycle management", "azure", "coding", "copilot", "data platform", "database recovery", "developer productivity", "microsoft entra id", "microsoft fabric", "ml", "news", "performance dashboard", "point in time restore", "query management", "replication", "rest api", "security", "sql auditing", "sql database", "vs code integration"]

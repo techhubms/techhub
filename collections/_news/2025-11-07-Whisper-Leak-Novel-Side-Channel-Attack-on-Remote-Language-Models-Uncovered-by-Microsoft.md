@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Security Blog"
 feed_url: "https://www.microsoft.com/en-us/security/blog/feed/"
 date: 2025-11-07 17:00:00 +00:00
-permalink: "/news/2025-11-07-Whisper-Leak-Novel-Side-Channel-Attack-on-Remote-Language-Models-Uncovered-by-Microsoft.html"
+permalink: "/2025-11-07-Whisper-Leak-Novel-Side-Channel-Attack-on-Remote-Language-Models-Uncovered-by-Microsoft.html"
 categories: ["AI", "Security"]
 tags: ["AI", "AI Security", "BERT", "Cyberattack Mitigation", "Data Confidentiality", "Defender Security Research", "Encryption", "Language Models", "LightGBM", "LSTM", "Machine Learning", "Microsoft Azure", "Network Security", "News", "Obfuscation", "OpenAI", "Packet Size Analysis", "Privacy", "Security", "Side Channel Attack", "Streaming Model", "TLS", "Whisper Leak"]
 tags_normalized: ["ai", "ai security", "bert", "cyberattack mitigation", "data confidentiality", "defender security research", "encryption", "language models", "lightgbm", "lstm", "machine learning", "microsoft azure", "network security", "news", "obfuscation", "openai", "packet size analysis", "privacy", "security", "side channel attack", "streaming model", "tls", "whisper leak"]

@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Developer YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
 date: 2025-12-16 08:01:04 +00:00
-permalink: "/videos/2025-12-16-Best-Practices-for-Architecting-AI-Agents-in-Enterprise-Systems.html"
+permalink: "/2025-12-16-Best-Practices-for-Architecting-AI-Agents-in-Enterprise-Systems.html"
 categories: ["AI", "Azure", "Security"]
 tags: ["A2A Communication", "Agent Framework", "Agent Identity Management", "AI", "AI Agents", "Architecture Best Practices", "Azure", "Canary Deployment", "Enterprise Security", "Guardrails", "MCP", "Microsoft Entra", "Observability", "OpenTelemetry", "Security", "Videos"]
 tags_normalized: ["a2a communication", "agent framework", "agent identity management", "ai", "ai agents", "architecture best practices", "azure", "canary deployment", "enterprise security", "guardrails", "mcp", "microsoft entra", "observability", "opentelemetry", "security", "videos"]

@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Developer YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
 date: 2025-12-16 17:00:10 +00:00
-permalink: "/videos/2025-12-16-Developing-Social-Media-Commander-Real-World-NET-App-with-GitHub-Copilot-and-Agent-Instructions.html"
+permalink: "/2025-12-16-Developing-Social-Media-Commander-Real-World-NET-App-with-GitHub-Copilot-and-Agent-Instructions.html"
 categories: ["AI", "Azure", "Coding", "DevOps", "GitHub Copilot"]
 tags: [".NET", "Agent Instructions", "AI", "AI Powered Development", "Avalonia", "Azure", "Blue Sky Integration", "CI/CD Automation", "Cloud", "Cloud Computing", "Coding", "Copilot Integration", "Cross Platform App", "Dev", "Developer Workflow", "Development", "DevOps", "GitHub Copilot", "GitHub Spark", "Live Coding", "MCP Server", "Microsoft", "Microsoft Azure", "Microsoft Learn", "OpenAI", "Prompt Engineering", "Tech", "Technology", "Videos", "VS"]
 tags_normalized: ["dotnet", "agent instructions", "ai", "ai powered development", "avalonia", "azure", "blue sky integration", "cislashcd automation", "cloud", "cloud computing", "coding", "copilot integration", "cross platform app", "dev", "developer workflow", "development", "devops", "github copilot", "github spark", "live coding", "mcp server", "microsoft", "microsoft azure", "microsoft learn", "openai", "prompt engineering", "tech", "technology", "videos", "vs"]

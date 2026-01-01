@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-08-14 07:00:00 +00:00
-permalink: "/community/2025-08-14-Red-teaming-a-RAG-Application-with-Azure-AI-Evaluation-SDK.html"
+permalink: "/2025-08-14-Red-teaming-a-RAG-Application-with-Azure-AI-Evaluation-SDK.html"
 categories: ["AI", "Azure", "Security"]
 tags: ["Adversarial Testing", "AI", "AI Content Safety API", "Automated Red Teaming", "Azure", "Azure AI Evaluation SDK", "Azure AI Foundry", "Azure OpenAI Service", "Community", "Content Safety", "GPT 4o", "Hermes3", "LLM Security", "Microsoft", "Model Evaluation", "Model Hosting", "Ollama", "Prompt Engineering", "Pyrit", "Python", "RAG App", "Red Teaming", "Retrieval Augmented Generation", "RLHF", "Security"]
 tags_normalized: ["adversarial testing", "ai", "ai content safety api", "automated red teaming", "azure", "azure ai evaluation sdk", "azure ai foundry", "azure openai service", "community", "content safety", "gpt 4o", "hermes3", "llm security", "microsoft", "model evaluation", "model hosting", "ollama", "prompt engineering", "pyrit", "python", "rag app", "red teaming", "retrieval augmented generation", "rlhf", "security"]

@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-08-06 18:41:57 +00:00
-permalink: "/community/2025-08-06-Decoding-On-Premises-ADC-Rules-Migration-to-Azure-Application-Gateway.html"
+permalink: "/2025-08-06-Decoding-On-Premises-ADC-Rules-Migration-to-Azure-Application-Gateway.html"
 categories: ["Azure", "DevOps", "Security"]
 tags: ["ADC Migration", "Application Security", "ARM Templates", "Azure", "Azure Application Gateway", "Azure Front Door", "Azure Monitor", "Citrix Policy Expressions", "Cloud Networking", "Community", "DevOps", "Geo Blocking", "Header Rewrite", "IaC", "Irules", "Load Balancing", "Security", "Terraform", "Traffic Management", "WAF", "Web Application Firewall", "Zone Redundancy"]
 tags_normalized: ["adc migration", "application security", "arm templates", "azure", "azure application gateway", "azure front door", "azure monitor", "citrix policy expressions", "cloud networking", "community", "devops", "geo blocking", "header rewrite", "iac", "irules", "load balancing", "security", "terraform", "traffic management", "waf", "web application firewall", "zone redundancy"]

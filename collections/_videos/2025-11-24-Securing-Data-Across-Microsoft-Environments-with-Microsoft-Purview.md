@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Events YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
 date: 2025-11-24 05:11:39 +00:00
-permalink: "/videos/2025-11-24-Securing-Data-Across-Microsoft-Environments-with-Microsoft-Purview.html"
+permalink: "/2025-11-24-Securing-Data-Across-Microsoft-Environments-with-Microsoft-Purview.html"
 categories: ["Azure", "Security"]
 tags: ["Agent Driven Security", "Auto Labeling", "Azure", "Compliance", "Data Protection", "Data Security", "Data Security Posture Management", "DLP", "DSPM", "Information Protection", "Microsoft 365", "Microsoft Fabric", "Microsoft Purview", "MSIgnite", "OneLake Catalog", "Prompt DLP", "Secureyourdata", "Security", "Security Insights", "Videos"]
 tags_normalized: ["agent driven security", "auto labeling", "azure", "compliance", "data protection", "data security", "data security posture management", "dlp", "dspm", "information protection", "microsoft 365", "microsoft fabric", "microsoft purview", "msignite", "onelake catalog", "prompt dlp", "secureyourdata", "security", "security insights", "videos"]

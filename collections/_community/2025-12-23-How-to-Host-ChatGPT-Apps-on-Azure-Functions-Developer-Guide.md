@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-12-23 19:14:38 +00:00
-permalink: "/community/2025-12-23-How-to-Host-ChatGPT-Apps-on-Azure-Functions-Developer-Guide.html"
+permalink: "/2025-12-23-How-to-Host-ChatGPT-Apps-on-Azure-Functions-Developer-Guide.html"
 categories: ["AI", "Azure", "Coding"]
 tags: ["AI", "App Deployment", "Authentication", "Azure", "Azure Developer CLI", "Azure Functions", "ChatGPT Apps", "Cloud Hosting", "Coding", "Community", "Developer Tools", "FastMCP", "MCP Server", "OpenAI", "Python", "REST API", "Serverless Infrastructure", "Streamable HTTP"]
 tags_normalized: ["ai", "app deployment", "authentication", "azure", "azure developer cli", "azure functions", "chatgpt apps", "cloud hosting", "coding", "community", "developer tools", "fastmcp", "mcp server", "openai", "python", "rest api", "serverless infrastructure", "streamable http"]

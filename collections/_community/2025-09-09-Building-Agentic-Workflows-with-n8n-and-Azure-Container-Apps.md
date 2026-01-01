@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-09-09 05:55:41 +00:00
-permalink: "/community/2025-09-09-Building-Agentic-Workflows-with-n8n-and-Azure-Container-Apps.html"
+permalink: "/2025-09-09-Building-Agentic-Workflows-with-n8n-and-Azure-Container-Apps.html"
 categories: ["AI", "Azure"]
 tags: ["AI", "AI Integration", "Automation Templates", "Azure", "Azure Container Apps", "Azure OpenAI Service", "Cloud Infrastructure", "Community", "Containerization", "Intelligent Workflows", "N8n", "OpenAI Models", "Production Deployment", "Scaling", "Summarization", "Workflow Automation"]
 tags_normalized: ["ai", "ai integration", "automation templates", "azure", "azure container apps", "azure openai service", "cloud infrastructure", "community", "containerization", "intelligent workflows", "n8n", "openai models", "production deployment", "scaling", "summarization", "workflow automation"]

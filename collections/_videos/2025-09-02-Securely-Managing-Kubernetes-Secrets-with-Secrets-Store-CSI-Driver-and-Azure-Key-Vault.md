@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Developer YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
 date: 2025-09-02 16:39:25 +00:00
-permalink: "/videos/2025-09-02-Securely-Managing-Kubernetes-Secrets-with-Secrets-Store-CSI-Driver-and-Azure-Key-Vault.html"
+permalink: "/2025-09-02-Securely-Managing-Kubernetes-Secrets-with-Secrets-Store-CSI-Driver-and-Azure-Key-Vault.html"
 categories: ["Azure", "DevOps", "Security"]
 tags: ["Azure", "Azure Key Vault", "Cloud Computing", "Cloud Security", "Compliance", "Container Security", "Dev", "Development", "DevOps", "External Secrets", "Kubernetes", "Kubernetes SIG Auth", "Microsoft", "Microsoft Azure", "Secret Management", "Secrets Rotation", "Secrets Store CSI Driver", "Security", "Tech", "Technology", "Videos"]
 tags_normalized: ["azure", "azure key vault", "cloud computing", "cloud security", "compliance", "container security", "dev", "development", "devops", "external secrets", "kubernetes", "kubernetes sig auth", "microsoft", "microsoft azure", "secret management", "secrets rotation", "secrets store csi driver", "security", "tech", "technology", "videos"]

@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-11-14 13:57:25 +00:00
-permalink: "/community/2025-11-14-Delivering-Web-Applications-Over-IPv6-Using-Azure-Networking-Services.html"
+permalink: "/2025-11-14-Delivering-Web-Applications-Over-IPv6-Using-Azure-Networking-Services.html"
 categories: ["Azure", "DevOps", "Security"]
 tags: ["Anycast", "Application Gateway", "Azure", "Azure DDoS Protection", "Azure DNS", "Azure Front Door", "Azure Virtual Network", "Cloud Networking", "Community", "DevOps", "Dual Stack Networking", "ExpressRoute", "External Load Balancer", "Global Load Balancer", "IPv4 Exhaustion", "IPv6", "Layer 4 Load Balancer", "Layer 7 Load Balancer", "Network Security Group", "Private Link", "Public IP", "Security", "Traffic Manager", "VNET Peering", "Web Application Firewall"]
 tags_normalized: ["anycast", "application gateway", "azure", "azure ddos protection", "azure dns", "azure front door", "azure virtual network", "cloud networking", "community", "devops", "dual stack networking", "expressroute", "external load balancer", "global load balancer", "ipv4 exhaustion", "ipv6", "layer 4 load balancer", "layer 7 load balancer", "network security group", "private link", "public ip", "security", "traffic manager", "vnet peering", "web application firewall"]

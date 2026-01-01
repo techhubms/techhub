@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-11-07 02:53:43 +00:00
-permalink: "/community/2025-11-07-Efficient-Azure-Firewall-and-NSG-Rule-Management-with-Terraform-and-CSV.html"
+permalink: "/2025-11-07-Efficient-Azure-Firewall-and-NSG-Rule-Management-with-Terraform-and-CSV.html"
 categories: ["Azure", "DevOps", "Security"]
 tags: ["Azure", "Azure Firewall", "Azure Infrastructure", "Azure Route Table", "Cloud Security", "Community", "CSV Integration", "DevOps", "Edit CSV", "Firewall Rules", "IaC", "Network Security Group", "NSG", "Rainbow CSV", "Resource Automation", "Rule Management", "Security", "Terraform", "VS Code Extensions"]
 tags_normalized: ["azure", "azure firewall", "azure infrastructure", "azure route table", "cloud security", "community", "csv integration", "devops", "edit csv", "firewall rules", "iac", "network security group", "nsg", "rainbow csv", "resource automation", "rule management", "security", "terraform", "vs code extensions"]

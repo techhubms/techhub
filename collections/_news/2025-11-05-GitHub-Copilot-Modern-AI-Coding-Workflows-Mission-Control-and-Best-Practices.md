@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/feed/"
 date: 2025-11-05 17:00:00 +00:00
-permalink: "/news/2025-11-05-GitHub-Copilot-Modern-AI-Coding-Workflows-Mission-Control-and-Best-Practices.html"
+permalink: "/2025-11-05-GitHub-Copilot-Modern-AI-Coding-Workflows-Mission-Control-and-Best-Practices.html"
 categories: ["AI", "Coding", "DevOps", "GitHub Copilot"]
 tags: ["AI", "AI & ML", "AI Coding Assistant", "Automated Testing", "Code Refactoring", "Coding", "Continuous Integration", "Copilot Agent Mode", "Copilot CLI", "Developer Productivity", "DevOps", "GitHub Copilot", "Mission Control", "News", "Prompt Engineering", "Pull Request Review", "Python", "TypeScript", "VS Code", "Workflow Automation"]
 tags_normalized: ["ai", "ai and ml", "ai coding assistant", "automated testing", "code refactoring", "coding", "continuous integration", "copilot agent mode", "copilot cli", "developer productivity", "devops", "github copilot", "mission control", "news", "prompt engineering", "pull request review", "python", "typescript", "vs code", "workflow automation"]

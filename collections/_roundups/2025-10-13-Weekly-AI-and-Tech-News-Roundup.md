@@ -6,7 +6,7 @@ author: "Tech Hub Team"
 excerpt_separator: <!--excerpt_end-->
 viewing_mode: "internal"
 date: 2025-10-13 09:00:00 +00:00
-permalink: "/roundups/2025-10-13-Weekly-AI-and-Tech-News-Roundup.html"
+permalink: "/2025-10-13-Weekly-AI-and-Tech-News-Roundup.html"
 categories: ["AI", "GitHub Copilot", "ML", "Azure", "Coding", "DevOps", "Security"]
 tags: ["AI", "AI Agents", "Azure", "Azure AI", "CI/CD", "Cloud Infrastructure", "Coding", "Data Engineering", "Developer Tools", "DevOps", "GitHub Copilot", "Machine Learning", "ML", "Multimodal Models", "Observability", "Open Source", "Roundups", "Security", "Serverless Computing", "Zero Trust"]
 tags_normalized: ["ai", "ai agents", "azure", "azure ai", "cislashcd", "cloud infrastructure", "coding", "data engineering", "developer tools", "devops", "github copilot", "machine learning", "ml", "multimodal models", "observability", "open source", "roundups", "security", "serverless computing", "zero trust"]

@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/feed/"
 date: 2025-12-08 18:15:17 +00:00
-permalink: "/news/2025-12-08-The-New-Identity-of-a-Developer-in-the-AI-Era.html"
+permalink: "/2025-12-08-The-New-Identity-of-a-Developer-in-the-AI-Era.html"
 categories: ["AI", "Coding", "GitHub Copilot"]
 tags: ["Agentic Workflow", "AI", "AI Adoption", "AI Assisted Development", "AI Fluency", "AI Strategy", "Architecture", "Coding", "Delegation", "Developer Experience", "Developer Tools", "Developer Workflow", "GitHub Copilot", "IDE Integration", "News", "News & Insights", "Octoverse", "Quality Control", "Software Engineering", "TypeScript", "Verification"]
 tags_normalized: ["agentic workflow", "ai", "ai adoption", "ai assisted development", "ai fluency", "ai strategy", "architecture", "coding", "delegation", "developer experience", "developer tools", "developer workflow", "github copilot", "ide integration", "news", "news and insights", "octoverse", "quality control", "software engineering", "typescript", "verification"]

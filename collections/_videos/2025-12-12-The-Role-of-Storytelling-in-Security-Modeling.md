@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Developer YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
 date: 2025-12-12 18:38:32 +00:00
-permalink: "/videos/2025-12-12-The-Role-of-Storytelling-in-Security-Modeling.html"
+permalink: "/2025-12-12-The-Role-of-Storytelling-in-Security-Modeling.html"
 categories: ["Security"]
 tags: ["Incident Response", "Michael Howard", "Microsoft Security", "OneDevQuestion", "Risk Assessment", "Security", "Security Awareness", "Security Modeling", "Storytelling", "Team Communication", "Threat Modeling", "Videos"]
 tags_normalized: ["incident response", "michael howard", "microsoft security", "onedevquestion", "risk assessment", "security", "security awareness", "security modeling", "storytelling", "team communication", "threat modeling", "videos"]

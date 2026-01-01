@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-09-07 08:45:14 +00:00
-permalink: "/community/2025-09-07-Implementing-Zero-Trust-Network-Security-for-Azure-Web-Apps-Using-Private-Endpoints.html"
+permalink: "/2025-09-07-Implementing-Zero-Trust-Network-Security-for-Azure-Web-Apps-Using-Private-Endpoints.html"
 categories: ["Azure", "Security"]
 tags: ["Access Restriction", "App Service", "Azure", "Azure Web Apps", "Cloud Security", "Community", "Enterprise Security", "Network Isolation", "Network Security", "Private DNS", "Private Endpoint", "Resource Group", "Security", "Virtual Network", "Zero Trust", "Zero Trust Architecture"]
 tags_normalized: ["access restriction", "app service", "azure", "azure web apps", "cloud security", "community", "enterprise security", "network isolation", "network security", "private dns", "private endpoint", "resource group", "security", "virtual network", "zero trust", "zero trust architecture"]

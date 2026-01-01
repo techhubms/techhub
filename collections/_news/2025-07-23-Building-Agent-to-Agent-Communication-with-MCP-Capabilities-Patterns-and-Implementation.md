@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft DevBlog"
 feed_url: "https://devblogs.microsoft.com/feed"
 date: 2025-07-23 17:00:19 +00:00
-permalink: "/news/2025-07-23-Building-Agent-to-Agent-Communication-with-MCP-Capabilities-Patterns-and-Implementation.html"
+permalink: "/2025-07-23-Building-Agent-to-Agent-Communication-with-MCP-Capabilities-Patterns-and-Implementation.html"
 categories: ["AI"]
 tags: ["Agent Communication", "AI", "AI Agent", "Elicitation", "MCP", "Microsoft AI", "Multi Turn Interaction", "News", "Progress Updates", "Resumable Streams", "Sampling", "Session Resumption"]
 tags_normalized: ["agent communication", "ai", "ai agent", "elicitation", "mcp", "microsoft ai", "multi turn interaction", "news", "progress updates", "resumable streams", "sampling", "session resumption"]

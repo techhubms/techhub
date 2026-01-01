@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-11-18 16:09:25 +00:00
-permalink: "/community/2025-11-18-Troubleshoot-with-OTLP-Signals-in-Azure-Monitor-Limited-Public-Preview.html"
+permalink: "/2025-11-18-Troubleshoot-with-OTLP-Signals-in-Azure-Monitor-Limited-Public-Preview.html"
 categories: ["Azure", "Coding", "DevOps"]
 tags: [".NET", "AKS", "Application Insights", "Auto Instrumentation", "Azure", "Azure Arc", "Azure Monitor", "Azure Monitor Agent", "Coding", "Community", "Container Insights", "DevOps", "Distributed Tracing", "Grafana", "Java", "Log Analytics", "Node.js", "OpenTelemetry", "OTLP", "Prometheus", "Python", "Telemetry", "VMSS"]
 tags_normalized: ["dotnet", "aks", "application insights", "auto instrumentation", "azure", "azure arc", "azure monitor", "azure monitor agent", "coding", "community", "container insights", "devops", "distributed tracing", "grafana", "java", "log analytics", "nodedotjs", "opentelemetry", "otlp", "prometheus", "python", "telemetry", "vmss"]

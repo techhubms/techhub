@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "DotNet YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw"
 date: 2025-11-14 04:30:06 +00:00
-permalink: "/videos/2025-11-14-High-Performance-Terrain-Simulations-in-NET.html"
+permalink: "/2025-11-14-High-Performance-Terrain-Simulations-in-NET.html"
 categories: ["Coding"]
 tags: [".NET", "Architecture", "Coding", "Custom Memory Pool", "Gaea", "High Performance Computing", "Managed Code", "Memory Management", "Modular Engine Design", "Parallel Processing", "Simulation", "SPMD", "Terrain Simulation", "Videos"]
 tags_normalized: ["dotnet", "architecture", "coding", "custom memory pool", "gaea", "high performance computing", "managed code", "memory management", "modular engine design", "parallel processing", "simulation", "spmd", "terrain simulation", "videos"]

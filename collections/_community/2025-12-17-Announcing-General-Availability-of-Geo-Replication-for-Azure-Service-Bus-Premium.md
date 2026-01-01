@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-12-17 17:00:00 +00:00
-permalink: "/community/2025-12-17-Announcing-General-Availability-of-Geo-Replication-for-Azure-Service-Bus-Premium.html"
+permalink: "/2025-12-17-Announcing-General-Availability-of-Geo-Replication-for-Azure-Service-Bus-Premium.html"
 categories: ["Azure"]
 tags: ["Asynchronous Replication", "Availability Zones", "Azure", "Azure Messaging", "Azure Regions", "Azure Service Bus", "Business Continuity", "Cloud Architecture", "Community", "Disaster Recovery", "Geo Replication", "High Availability", "Messaging Unit", "Metadata Replication", "Namespace Replication", "Premium Tier", "Synchronous Replication"]
 tags_normalized: ["asynchronous replication", "availability zones", "azure", "azure messaging", "azure regions", "azure service bus", "business continuity", "cloud architecture", "community", "disaster recovery", "geo replication", "high availability", "messaging unit", "metadata replication", "namespace replication", "premium tier", "synchronous replication"]

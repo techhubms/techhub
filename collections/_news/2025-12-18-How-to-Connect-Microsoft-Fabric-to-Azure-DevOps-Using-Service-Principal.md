@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Fabric Blog"
 feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
 date: 2025-12-18 10:30:00 +00:00
-permalink: "/news/2025-12-18-How-to-Connect-Microsoft-Fabric-to-Azure-DevOps-Using-Service-Principal.html"
+permalink: "/2025-12-18-How-to-Connect-Microsoft-Fabric-to-Azure-DevOps-Using-Service-Principal.html"
 categories: ["Azure", "DevOps", "ML"]
 tags: ["Azure", "Azure DevOps", "CI/CD", "Cloud Development", "Configured Credential", "Continuous Deployment", "Cross Tenant Authentication", "DevOps", "Enterprise Security", "Git Integration", "GitHub Integration", "Microsoft Fabric", "ML", "News", "OAuth 2.0", "Service Principal", "Workspace Automation"]
 tags_normalized: ["azure", "azure devops", "cislashcd", "cloud development", "configured credential", "continuous deployment", "cross tenant authentication", "devops", "enterprise security", "git integration", "github integration", "microsoft fabric", "ml", "news", "oauth 2dot0", "service principal", "workspace automation"]

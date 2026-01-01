@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "GitHub YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ"
 date: 2025-08-13 14:00:33 +00:00
-permalink: "/videos/2025-08-13-How-to-Chat-with-Your-Repo-and-Create-PRs-with-Copilot-on-GitHub.html"
+permalink: "/2025-08-13-How-to-Chat-with-Your-Repo-and-Create-PRs-with-Copilot-on-GitHub.html"
 categories: ["AI", "GitHub Copilot"]
 tags: ["AI", "AI Chat", "AI Control Center", "AI Models", "AI Native Development", "Code Collaboration", "Conversational AI", "Developer Tools", "GitHub", "GitHub Copilot", "GitHub Web Features", "IDE Integration", "Issue Management", "Prototyping", "Pull Requests", "Repository Q&A", "Software Engineering", "Videos"]
 tags_normalized: ["ai", "ai chat", "ai control center", "ai models", "ai native development", "code collaboration", "conversational ai", "developer tools", "github", "github copilot", "github web features", "ide integration", "issue management", "prototyping", "pull requests", "repository qanda", "software engineering", "videos"]

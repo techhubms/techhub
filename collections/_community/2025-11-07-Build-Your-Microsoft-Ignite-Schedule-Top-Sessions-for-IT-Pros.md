@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-11-07 18:46:27 +00:00
-permalink: "/community/2025-11-07-Build-Your-Microsoft-Ignite-Schedule-Top-Sessions-for-IT-Pros.html"
+permalink: "/2025-11-07-Build-Your-Microsoft-Ignite-Schedule-Top-Sessions-for-IT-Pros.html"
 categories: ["AI", "Azure", "Security"]
 tags: ["AI", "AI Agents", "Automation", "Azure", "Azure CLI", "Cloud Infrastructure", "Community", "Compliance", "Enterprise Workloads", "Governance", "Hybrid Management", "IT Pro", "Microsoft Ignite", "Migration", "PowerShell", "Resiliency", "Security"]
 tags_normalized: ["ai", "ai agents", "automation", "azure", "azure cli", "cloud infrastructure", "community", "compliance", "enterprise workloads", "governance", "hybrid management", "it pro", "microsoft ignite", "migration", "powershell", "resiliency", "security"]

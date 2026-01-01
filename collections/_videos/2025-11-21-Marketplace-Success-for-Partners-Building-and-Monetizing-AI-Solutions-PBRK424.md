@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Events YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
 date: 2025-11-21 13:01:21 +00:00
-permalink: "/videos/2025-11-21-Marketplace-Success-for-Partners-Building-and-Monetizing-AI-Solutions-PBRK424.html"
+permalink: "/2025-11-21-Marketplace-Success-for-Partners-Building-and-Monetizing-AI-Solutions-PBRK424.html"
 categories: ["AI"]
 tags: ["AI", "AI Powered Solutions", "Arrow AI Platform", "Cloud Offerings", "Enterprise", "Intelligent Applications", "Marketplace Strategy", "Microsoft Ignite", "Microsoft Marketplace", "MicrosoftAICloudPartnerProgram", "Monetization", "MSIgnite", "Our Sphere AI 360", "Our Sphere Assistant", "Partner Ecosystem", "Partner Success Stories", "Revenue Opportunities", "SMB", "Videos"]
 tags_normalized: ["ai", "ai powered solutions", "arrow ai platform", "cloud offerings", "enterprise", "intelligent applications", "marketplace strategy", "microsoft ignite", "microsoft marketplace", "microsoftaicloudpartnerprogram", "monetization", "msignite", "our sphere ai 360", "our sphere assistant", "partner ecosystem", "partner success stories", "revenue opportunities", "smb", "videos"]

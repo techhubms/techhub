@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/changelog/feed/"
 date: 2025-09-12 18:31:57 +00:00
-permalink: "/news/2025-09-12-Configuring-Internal-MCP-Registries-and-Allowlists-for-Copilot-in-VS-Code-Insiders.html"
+permalink: "/2025-09-12-Configuring-Internal-MCP-Registries-and-Allowlists-for-Copilot-in-VS-Code-Insiders.html"
 categories: ["AI", "DevOps", "GitHub Copilot"]
 tags: ["AI", "Allowlist Enforcement", "Azure API Center", "Copilot", "Copilot Business", "Copilot Enterprise", "DevOps", "Eclipse", "Enterprise Policy", "GitHub Copilot", "Improvement", "JetBrains", "MCP Registry", "News", "Platform Governance", "Policy Governance", "Registry Only Policy", "VS", "VS Code", "VS Code Insiders", "Xcode"]
 tags_normalized: ["ai", "allowlist enforcement", "azure api center", "copilot", "copilot business", "copilot enterprise", "devops", "eclipse", "enterprise policy", "github copilot", "improvement", "jetbrains", "mcp registry", "news", "platform governance", "policy governance", "registry only policy", "vs", "vs code", "vs code insiders", "xcode"]

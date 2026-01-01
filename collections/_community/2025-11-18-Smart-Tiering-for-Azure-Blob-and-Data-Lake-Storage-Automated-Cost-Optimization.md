@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-11-18 18:53:55 +00:00
-permalink: "/community/2025-11-18-Smart-Tiering-for-Azure-Blob-and-Data-Lake-Storage-Automated-Cost-Optimization.html"
+permalink: "/2025-11-18-Smart-Tiering-for-Azure-Blob-and-Data-Lake-Storage-Automated-Cost-Optimization.html"
 categories: ["Azure"]
 tags: ["API Configuration", "Automated Tiering", "Azure", "Azure Blob Storage", "Azure Data Lake Storage", "Azure Portal", "Billing Model", "Block Blob", "Capacity Management", "Cloud Storage", "Cold Tier", "Community", "Cool Tier", "Cost Savings", "Data Tiering", "Hot Tier", "Lifecycle Management", "Qumulo", "Smart Tier", "Storage Optimization", "Zonal Redundancy"]
 tags_normalized: ["api configuration", "automated tiering", "azure", "azure blob storage", "azure data lake storage", "azure portal", "billing model", "block blob", "capacity management", "cloud storage", "cold tier", "community", "cool tier", "cost savings", "data tiering", "hot tier", "lifecycle management", "qumulo", "smart tier", "storage optimization", "zonal redundancy"]

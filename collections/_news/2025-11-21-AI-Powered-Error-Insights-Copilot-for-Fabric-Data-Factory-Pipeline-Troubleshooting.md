@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Fabric Blog"
 feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
 date: 2025-11-21 11:00:00 +00:00
-permalink: "/news/2025-11-21-AI-Powered-Error-Insights-Copilot-for-Fabric-Data-Factory-Pipeline-Troubleshooting.html"
+permalink: "/2025-11-21-AI-Powered-Error-Insights-Copilot-for-Fabric-Data-Factory-Pipeline-Troubleshooting.html"
 categories: ["AI", "ML"]
 tags: ["Actionable Recommendations", "Activity Error Analysis", "AI", "AI Powered Development", "Automation", "Copilot", "Data Engineering", "Data Factory Workload", "Data Pipelines", "Error Categorization", "Error Insights Copilot", "Fabric Data Factory", "Microsoft Fabric", "ML", "News", "Pipeline Monitoring", "Pipeline Troubleshooting", "Root Cause Analysis"]
 tags_normalized: ["actionable recommendations", "activity error analysis", "ai", "ai powered development", "automation", "copilot", "data engineering", "data factory workload", "data pipelines", "error categorization", "error insights copilot", "fabric data factory", "microsoft fabric", "ml", "news", "pipeline monitoring", "pipeline troubleshooting", "root cause analysis"]

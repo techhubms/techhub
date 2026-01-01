@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Events YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
 date: 2025-11-21 17:11:56 +00:00
-permalink: "/videos/2025-11-21-Azure-HorizonDB-Deep-Dive-into-a-New-Enterprise-Scale-PostgreSQL.html"
+permalink: "/2025-11-21-Azure-HorizonDB-Deep-Dive-into-a-New-Enterprise-Scale-PostgreSQL.html"
 categories: ["AI", "Azure"]
 tags: ["AI", "AI Features", "Azure", "Azure HorizonDB", "Cloud Database", "Cloud Native", "Database Architecture", "Elastic Scaling", "High Availability", "InnovatewithAzureAIappsandagents", "KNN Vector Indexing", "Microsoft Azure", "Microsoft Ignite", "MSIgnite", "Performance Optimization", "PostgreSQL", "Read Replicas", "Rust Runtime", "Videos", "Write Ahead Log"]
 tags_normalized: ["ai", "ai features", "azure", "azure horizondb", "cloud database", "cloud native", "database architecture", "elastic scaling", "high availability", "innovatewithazureaiappsandagents", "knn vector indexing", "microsoft azure", "microsoft ignite", "msignite", "performance optimization", "postgresql", "read replicas", "rust runtime", "videos", "write ahead log"]

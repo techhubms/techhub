@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/changelog/feed/"
 date: 2025-11-12 18:15:01 +00:00
-permalink: "/news/2025-11-12-Secret-Scanning-Enhancements-Improved-Private-Key-Detection-and-Sentry-Token-Updates.html"
+permalink: "/2025-11-12-Secret-Scanning-Enhancements-Improved-Private-Key-Detection-and-Sentry-Token-Updates.html"
 categories: ["DevOps", "Security"]
 tags: ["Application Security", "Code Security", "Credential Protection", "DevOps", "Elliptic Curve", "GitHub", "Improvement", "News", "Pattern Detection", "PKCS#8", "Private Keys", "Repository Security", "RSA", "Secret Scanning", "Security", "Sentry", "Token Renaming"]
 tags_normalized: ["application security", "code security", "credential protection", "devops", "elliptic curve", "github", "improvement", "news", "pattern detection", "pkcssharp8", "private keys", "repository security", "rsa", "secret scanning", "security", "sentry", "token renaming"]

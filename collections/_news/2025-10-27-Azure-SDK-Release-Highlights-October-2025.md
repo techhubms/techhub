@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Azure SDK Blog"
 feed_url: "https://devblogs.microsoft.com/azure-sdk/feed/"
 date: 2025-10-27 18:59:41 +00:00
-permalink: "/news/2025-10-27-Azure-SDK-Release-Highlights-October-2025.html"
+permalink: "/2025-10-27-Azure-SDK-Release-Highlights-October-2025.html"
 categories: ["AI", "Azure", "Coding"]
 tags: [".NET", "AI", "AI Agents", "AI Model Deployment", "API Improvements", "Azure", "Azure AI Foundry", "Azure AI Search", "Azure Identity", "Azure SDK", "Coding", "Document Intelligence", "Go", "Java", "JavaScript", "Microsoft Entra ID", "News", "Python", "Resource Management", "SDK", "SDK Release", "Search Indexes", "Vector Search"]
 tags_normalized: ["dotnet", "ai", "ai agents", "ai model deployment", "api improvements", "azure", "azure ai foundry", "azure ai search", "azure identity", "azure sdk", "coding", "document intelligence", "go", "java", "javascript", "microsoft entra id", "news", "python", "resource management", "sdk", "sdk release", "search indexes", "vector search"]

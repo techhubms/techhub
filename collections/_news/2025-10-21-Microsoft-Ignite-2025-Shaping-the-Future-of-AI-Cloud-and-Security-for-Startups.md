@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft News"
 feed_url: "https://news.microsoft.com/source/feed/"
 date: 2025-10-21 14:32:59 +00:00
-permalink: "/news/2025-10-21-Microsoft-Ignite-2025-Shaping-the-Future-of-AI-Cloud-and-Security-for-Startups.html"
+permalink: "/2025-10-21-Microsoft-Ignite-2025-Shaping-the-Future-of-AI-Cloud-and-Security-for-Startups.html"
 categories: ["AI", "Azure", "Security"]
 tags: ["AI", "AI Agents", "AI Startups", "Azure", "Azure AI Foundry", "Azure Build", "Azure Marketplace", "Cloud Security", "Co Sell Readiness", "Company News", "Compliance Automation", "Copilot Studio", "Enterprise AI", "GTM Strategy", "Microsoft Copilot", "Microsoft For Startups", "Microsoft Ignite", "News", "Robotic AI", "Security"]
 tags_normalized: ["ai", "ai agents", "ai startups", "azure", "azure ai foundry", "azure build", "azure marketplace", "cloud security", "co sell readiness", "company news", "compliance automation", "copilot studio", "enterprise ai", "gtm strategy", "microsoft copilot", "microsoft for startups", "microsoft ignite", "news", "robotic ai", "security"]

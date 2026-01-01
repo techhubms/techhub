@@ -9,10 +9,10 @@ viewing_mode: "external"
 feed_name: "Andrew Lock's Blog"
 feed_url: "https://andrewlock.net/rss.xml"
 date: 2025-08-26 10:00:00 +00:00
-permalink: "/blogs/2025-08-26-Solving-Native-Library-Loading-Issues-for-NET-Core-on-Alpine-Linux.html"
+permalink: "/2025-08-26-Solving-Native-Library-Loading-Issues-for-NET-Core-on-Alpine-Linux.html"
 categories: ["Coding"]
-tags: [".NET 3.1", ".NET 5", ".NET Core", "Alpine Linux", "CI/CD", "Coding", "Containerization", "Cross Platform Development", "Datadog .NET Tracer", "Environment Variables", "LD DEBUG", "LD LIBRARY PATH", "Libe Sqlite3", "Linux Musl X64", "Microsoft.Data.Sqlite", "Native Library Loading", "Blogs", "Runtime ID", "Strace", "System.DllNotFoundException", "Troubleshooting"]
-tags_normalized: ["dotnet 3dot1", "dotnet 5", "dotnet core", "alpine linux", "cislashcd", "coding", "containerization", "cross platform development", "datadog dotnet tracer", "environment variables", "ld debug", "ld library path", "libe sqlite3", "linux musl x64", "microsoftdotdatadotsqlite", "native library loading", "blogs", "runtime id", "strace", "systemdotdllnotfoundexception", "troubleshooting"]
+tags: [".NET 3.1", ".NET 5", ".NET Core", "Alpine Linux", "Blogs", "CI/CD", "Coding", "Containerization", "Cross Platform Development", "Datadog .NET Tracer", "Environment Variables", "LD DEBUG", "LD LIBRARY PATH", "Libe Sqlite3", "Linux Musl X64", "Microsoft.Data.Sqlite", "Native Library Loading", "Runtime ID", "Strace", "System.DllNotFoundException", "Troubleshooting"]
+tags_normalized: ["dotnet 3dot1", "dotnet 5", "dotnet core", "alpine linux", "blogs", "cislashcd", "coding", "containerization", "cross platform development", "datadog dotnet tracer", "environment variables", "ld debug", "ld library path", "libe sqlite3", "linux musl x64", "microsoftdotdatadotsqlite", "native library loading", "runtime id", "strace", "systemdotdllnotfoundexception", "troubleshooting"]
 ---
 
 Andrew Lock walks through the real-world debugging process for a library loading failure on Alpine Linux when running older .NET Core apps, clearly explaining the steps and ultimate resolution.<!--excerpt_end-->

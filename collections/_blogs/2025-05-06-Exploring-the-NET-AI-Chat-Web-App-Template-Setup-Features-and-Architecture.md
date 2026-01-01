@@ -9,10 +9,10 @@ viewing_mode: "external"
 feed_name: "Andrew Lock's Blog"
 feed_url: "https://andrewlock.net/rss.xml"
 date: 2025-05-06 09:00:00 +00:00
-permalink: "/blogs/2025-05-06-Exploring-the-NET-AI-Chat-Web-App-Template-Setup-Features-and-Architecture.html"
+permalink: "/2025-05-06-Exploring-the-NET-AI-Chat-Web-App-Template-Setup-Features-and-Architecture.html"
 categories: ["AI", "Coding"]
-tags: [".NET", ".NET Core", "AI", "AI Chat Web App", "ASP.NET Core", "Aspire", "Azure OpenAI Service", "Blazor", "C#", "Chat Applications", "Coding", "EF Core", "Embeddings", "GitHub Models", "LLM", "Microsoft.Extensions.AI", "PDF Ingestion", "Blogs", "Vector Store"]
-tags_normalized: ["dotnet", "dotnet core", "ai", "ai chat web app", "aspdotnet core", "aspire", "azure openai service", "blazor", "csharp", "chat applications", "coding", "ef core", "embeddings", "github models", "llm", "microsoftdotextensionsdotai", "pdf ingestion", "blogs", "vector store"]
+tags: [".NET", ".NET Core", "AI", "AI Chat Web App", "ASP.NET Core", "Aspire", "Azure OpenAI Service", "Blazor", "Blogs", "C#", "Chat Applications", "Coding", "EF Core", "Embeddings", "GitHub Models", "LLM", "Microsoft.Extensions.AI", "PDF Ingestion", "Vector Store"]
+tags_normalized: ["dotnet", "dotnet core", "ai", "ai chat web app", "aspdotnet core", "aspire", "azure openai service", "blazor", "blogs", "csharp", "chat applications", "coding", "ef core", "embeddings", "github models", "llm", "microsoftdotextensionsdotai", "pdf ingestion", "vector store"]
 ---
 
 In this blog post, Andrew Lock introduces the new .NET AI Chat Web App template, discussing its setup, integration with GitHub Models and Azure OpenAI, and the technical components that enable document-powered chat applications.<!--excerpt_end-->

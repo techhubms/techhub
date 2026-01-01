@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-09-09 19:03:03 +00:00
-permalink: "/community/2025-09-09-Introducing-a-File-Share-Centric-Management-Model-for-Azure-Files.html"
+permalink: "/2025-09-09-Introducing-a-File-Share-Centric-Management-Model-for-Azure-Files.html"
 categories: ["Azure"]
 tags: ["Access Control", "Automation", "Azure", "Azure Files", "Billing", "Cloud Storage", "Community", "Cost Management", "File Share Management", "Granular Security", "Microsoft Azure", "NFS", "Resource Provisioning", "Scalability", "Storage Accounts"]
 tags_normalized: ["access control", "automation", "azure", "azure files", "billing", "cloud storage", "community", "cost management", "file share management", "granular security", "microsoft azure", "nfs", "resource provisioning", "scalability", "storage accounts"]

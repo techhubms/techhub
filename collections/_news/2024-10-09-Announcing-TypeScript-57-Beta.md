@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft TypeScript Blog"
 feed_url: "https://devblogs.microsoft.com/typescript/feed/"
 date: 2024-10-09 20:59:51 +00:00
-permalink: "/news/2024-10-09-Announcing-TypeScript-57-Beta.html"
+permalink: "/2024-10-09-Announcing-TypeScript-57-Beta.html"
 categories: ["Coding"]
 tags: ["Beta Release", "Coding", "JavaScript", "Microsoft", "Never Initialized Variables", "News", "npm", "Programming Languages", "Static Analysis", "Type Checking", "TypeScript", "TypeScript 5.7"]
 tags_normalized: ["beta release", "coding", "javascript", "microsoft", "never initialized variables", "news", "npm", "programming languages", "static analysis", "type checking", "typescript", "typescript 5dot7"]

@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Security Blog"
 feed_url: "https://www.microsoft.com/en-us/security/blog/feed/"
 date: 2025-10-01 16:00:00 +00:00
-permalink: "/news/2025-10-01-Cybersecurity-Awareness-Month-Elevating-Security-Culture-with-Microsoft-Resources.html"
+permalink: "/2025-10-01-Cybersecurity-Awareness-Month-Elevating-Security-Culture-with-Microsoft-Resources.html"
 categories: ["AI", "Security"]
 tags: ["AI", "AI Governance", "Be Cybersmart Kit", "Cybersecurity Awareness Month", "Employee Education", "Identity And Access Management", "Microsoft Security", "Multifactor Authentication", "News", "Phishing Simulations", "Risk Management", "Secure Future Initiative", "Security", "Security Best Practices", "Security Culture", "Security Resources", "Security Training", "SFI"]
 tags_normalized: ["ai", "ai governance", "be cybersmart kit", "cybersecurity awareness month", "employee education", "identity and access management", "microsoft security", "multifactor authentication", "news", "phishing simulations", "risk management", "secure future initiative", "security", "security best practices", "security culture", "security resources", "security training", "sfi"]

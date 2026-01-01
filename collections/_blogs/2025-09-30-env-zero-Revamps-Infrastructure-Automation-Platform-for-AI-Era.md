@@ -9,10 +9,10 @@ viewing_mode: "external"
 feed_name: "DevOps Blog"
 feed_url: "https://devops.com/feed/"
 date: 2025-09-30 14:06:39 +00:00
-permalink: "/blogs/2025-09-30-env-zero-Revamps-Infrastructure-Automation-Platform-for-AI-Era.html"
+permalink: "/2025-09-30-env-zero-Revamps-Infrastructure-Automation-Platform-for-AI-Era.html"
 categories: ["AI", "DevOps"]
-tags: ["AI", "AI Agents", "Anthropic", "Automation", "Cloud Compliance", "Cloud Computing", "Cloud Governance Platform", "Cloud Security", "CloudFormation", "Compliance", "DevOps", "DevOps Automation", "IaC", "Infrastructure Automation", "Kubernetes", "MCP", "Policy as Code", "Blogs", "Pulumi", "Social Facebook", "Social LinkedIn", "Social X", "Static Code Analyzer Agent", "Terraform", "Terragrunt"]
-tags_normalized: ["ai", "ai agents", "anthropic", "automation", "cloud compliance", "cloud computing", "cloud governance platform", "cloud security", "cloudformation", "compliance", "devops", "devops automation", "iac", "infrastructure automation", "kubernetes", "mcp", "policy as code", "blogs", "pulumi", "social facebook", "social linkedin", "social x", "static code analyzer agent", "terraform", "terragrunt"]
+tags: ["AI", "AI Agents", "Anthropic", "Automation", "Blogs", "Cloud Compliance", "Cloud Computing", "Cloud Governance Platform", "Cloud Security", "CloudFormation", "Compliance", "DevOps", "DevOps Automation", "IaC", "Infrastructure Automation", "Kubernetes", "MCP", "Policy as Code", "Pulumi", "Social Facebook", "Social LinkedIn", "Social X", "Static Code Analyzer Agent", "Terraform", "Terragrunt"]
+tags_normalized: ["ai", "ai agents", "anthropic", "automation", "blogs", "cloud compliance", "cloud computing", "cloud governance platform", "cloud security", "cloudformation", "compliance", "devops", "devops automation", "iac", "infrastructure automation", "kubernetes", "mcp", "policy as code", "pulumi", "social facebook", "social linkedin", "social x", "static code analyzer agent", "terraform", "terragrunt"]
 ---
 
 Mike Vizard examines how env zero has reimagined its Cloud Governance Platform by introducing AI-powered capabilities that enhance automation, compliance, and security for DevOps teams managing infrastructure as code.<!--excerpt_end-->

@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Developer YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
 date: 2025-12-17 17:00:47 +00:00
-permalink: "/videos/2025-12-17-Next-Level-SQL-in-VS-Code-GitHub-Copilot-GA-and-AI-Ready-SQL.html"
+permalink: "/2025-12-17-Next-Level-SQL-in-VS-Code-GitHub-Copilot-GA-and-AI-Ready-SQL.html"
 categories: ["AI", "Azure", "Coding", "GitHub Copilot"]
 tags: ["AI", "AI Ready Schema", "Ask And Agent Mode", "Azure", "Azure SQL", "Cloud Computing", "Code Workflow Automation", "Coding", "Database Development", "Dev", "Development", "GitHub Copilot", "Intelligent Applications", "Microsoft", "MSSQL Extension", "Python Integration", "Semantic Search", "SQL Development", "SQL Server", "Tech", "Technology", "Vector Data Types", "Videos", "VS Code", "VS Code Extensions"]
 tags_normalized: ["ai", "ai ready schema", "ask and agent mode", "azure", "azure sql", "cloud computing", "code workflow automation", "coding", "database development", "dev", "development", "github copilot", "intelligent applications", "microsoft", "mssql extension", "python integration", "semantic search", "sql development", "sql server", "tech", "technology", "vector data types", "videos", "vs code", "vs code extensions"]

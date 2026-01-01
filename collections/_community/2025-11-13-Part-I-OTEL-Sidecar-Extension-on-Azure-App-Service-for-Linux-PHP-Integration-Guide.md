@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-11-13 06:28:27 +00:00
-permalink: "/community/2025-11-13-Part-I-OTEL-Sidecar-Extension-on-Azure-App-Service-for-Linux-PHP-Integration-Guide.html"
+permalink: "/2025-11-13-Part-I-OTEL-Sidecar-Extension-on-Azure-App-Service-for-Linux-PHP-Integration-Guide.html"
 categories: ["Azure", "Coding", "DevOps"]
 tags: ["Application Insights", "Azure", "Azure App Service", "Azure Monitor", "Coding", "Community", "Composer", "Containerization", "Deployment", "DevOps", "Environment Variables", "Linux", "Monitoring", "Observability", "OpenTelemetry", "PHP", "Portal Configuration", "Sidecar Extension", "Startup Script", "Telemetry"]
 tags_normalized: ["application insights", "azure", "azure app service", "azure monitor", "coding", "community", "composer", "containerization", "deployment", "devops", "environment variables", "linux", "monitoring", "observability", "opentelemetry", "php", "portal configuration", "sidecar extension", "startup script", "telemetry"]

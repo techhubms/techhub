@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-11-11 17:38:14 +00:00
-permalink: "/community/2025-11-11-Generational-Performance-Leap-for-Azure-Confidential-Computing-VMs.html"
+permalink: "/2025-11-11-Generational-Performance-Leap-for-Azure-Confidential-Computing-VMs.html"
 categories: ["Azure", "Security"]
 tags: ["AMD EPYC", "Azure", "Azure Confidential Computing", "Cloud Security", "Community", "Compliance", "Confidential VMs", "CPU Throughput", "DDR5", "GDPR", "HIPAA", "Memory Bandwidth", "Performance Benchmark", "Prowess Consulting", "Redis", "Security", "SEV SNP", "Virtual Machines"]
 tags_normalized: ["amd epyc", "azure", "azure confidential computing", "cloud security", "community", "compliance", "confidential vms", "cpu throughput", "ddr5", "gdpr", "hipaa", "memory bandwidth", "performance benchmark", "prowess consulting", "redis", "security", "sev snp", "virtual machines"]

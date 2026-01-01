@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "DotNet YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw"
 date: 2025-11-12 19:18:18 +00:00
-permalink: "/videos/2025-11-12-Model-Context-Protocol-MCP-for-NET-Developers.html"
+permalink: "/2025-11-12-Model-Context-Protocol-MCP-for-NET-Developers.html"
 categories: ["AI", "Coding"]
 tags: [".NET", ".NET 10", "AI", "AI Assistants", "AI Integration", "Application Architecture", "ASP.NET Core", "C#", "Cloud Native Apps", "Coding", "F#", "Integration Patterns", "MAUI", "MCP", "Orchestration", "Videos", "VS"]
 tags_normalized: ["dotnet", "dotnet 10", "ai", "ai assistants", "ai integration", "application architecture", "aspdotnet core", "csharp", "cloud native apps", "coding", "fsharp", "integration patterns", "maui", "mcp", "orchestration", "videos", "vs"]

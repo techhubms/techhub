@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Visual Studio Code YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SLNwkd3w"
 date: 2025-07-26 04:19:42 +00:00
-permalink: "/videos/2025-07-26-Vibe-Coding-PromptBoostdev-with-GitHub-Copilot-in-VS-Code.html"
+permalink: "/2025-07-26-Vibe-Coding-PromptBoostdev-with-GitHub-Copilot-in-VS-Code.html"
 categories: ["AI", "Coding", "GitHub Copilot"]
 tags: ["AI", "AI Development", "Code Collaboration", "Coding", "Copilot Integration", "Development Workflow", "GitHub Copilot", "Live Coding", "Productivity Tools", "Prompt Engineering", "Promptboost.dev", "Software Engineering", "Videos", "VS Code", "VS Code Extensions"]
 tags_normalized: ["ai", "ai development", "code collaboration", "coding", "copilot integration", "development workflow", "github copilot", "live coding", "productivity tools", "prompt engineering", "promptboostdotdev", "software engineering", "videos", "vs code", "vs code extensions"]

@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Fabric Blog"
 feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
 date: 2025-08-07 07:00:00 +00:00
-permalink: "/news/2025-08-07-Terraform-Provider-for-Microsoft-Fabric-Deploying-Fabric-Configs-with-GitHub-Actions.html"
+permalink: "/2025-08-07-Terraform-Provider-for-Microsoft-Fabric-Deploying-Fabric-Configs-with-GitHub-Actions.html"
 categories: ["Azure", "Coding", "ML", "DevOps"]
 tags: ["Automation", "Azure", "Azure AD", "Azure Managed Identity", "Azure Resource Management", "Azure Storage", "CI/CD", "Cloud Deployment", "Coding", "Declarative Automation", "DevOps", "Environment Variables", "Federated Credential", "GitHub Actions", "GitHub CLI", "IaC", "Microsoft Fabric", "ML", "News", "OpenID Connect", "RBAC", "Terraform", "Terraform Provider", "Terraform Workflow", "YAML Pipelines"]
 tags_normalized: ["automation", "azure", "azure ad", "azure managed identity", "azure resource management", "azure storage", "cislashcd", "cloud deployment", "coding", "declarative automation", "devops", "environment variables", "federated credential", "github actions", "github cli", "iac", "microsoft fabric", "ml", "news", "openid connect", "rbac", "terraform", "terraform provider", "terraform workflow", "yaml pipelines"]

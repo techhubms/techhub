@@ -9,10 +9,10 @@ viewing_mode: "external"
 feed_name: "Khalid Abuhakmeh's Blog"
 feed_url: "https://khalidabuhakmeh.com/feed.xml"
 date: 2024-08-27 00:00:00 +00:00
-permalink: "/blogs/2024-08-27-Checked-and-Unchecked-Arithmetic-Operations-in-NET.html"
+permalink: "/2024-08-27-Checked-and-Unchecked-Arithmetic-Operations-in-NET.html"
 categories: ["Coding"]
-tags: [".NET", "Arithmetic Overflow", "Best Practices", "C#", "Checked Keyword", "Coding", "Fibonacci", "Integer Types", "INumber", "OverflowException", "Blogs", "Project Settings", "Spectre.Console", "System.Numerics", "Unchecked Keyword"]
-tags_normalized: ["dotnet", "arithmetic overflow", "best practices", "csharp", "checked keyword", "coding", "fibonacci", "integer types", "inumber", "overflowexception", "blogs", "project settings", "spectredotconsole", "systemdotnumerics", "unchecked keyword"]
+tags: [".NET", "Arithmetic Overflow", "Best Practices", "Blogs", "C#", "Checked Keyword", "Coding", "Fibonacci", "Integer Types", "INumber", "OverflowException", "Project Settings", "Spectre.Console", "System.Numerics", "Unchecked Keyword"]
+tags_normalized: ["dotnet", "arithmetic overflow", "best practices", "blogs", "csharp", "checked keyword", "coding", "fibonacci", "integer types", "inumber", "overflowexception", "project settings", "spectredotconsole", "systemdotnumerics", "unchecked keyword"]
 ---
 
 In this post, Khalid Abuhakmeh demonstrates how easily integer overflow can occur in .NET when generating the Fibonacci sequence, and provides practical strategies to avoid overflow errors in critical .NET applications.<!--excerpt_end-->

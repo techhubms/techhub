@@ -9,10 +9,10 @@ viewing_mode: "external"
 feed_name: "Khalid Abuhakmeh's Blog"
 feed_url: "https://khalidabuhakmeh.com/feed.xml"
 date: 2024-12-17 00:00:00 +00:00
-permalink: "/blogs/2024-12-17-Building-a-Persistent-Counter-with-Alpinejs-and-ASPNET-Core.html"
+permalink: "/2024-12-17-Building-a-Persistent-Counter-with-Alpinejs-and-ASPNET-Core.html"
 categories: ["Coding"]
-tags: ["Alpine.js", "ASP.NET Core", "Blazor", "Client Side", "Coding", "Counter Example", "DOM Manipulation", "Front End", "HTML", "Htmx", "JavaScript", "Local Storage", "Persistence", "Blogs", "State Management", "Store Pattern", "Web Development"]
-tags_normalized: ["alpinedotjs", "aspdotnet core", "blazor", "client side", "coding", "counter example", "dom manipulation", "front end", "html", "htmx", "javascript", "local storage", "persistence", "blogs", "state management", "store pattern", "web development"]
+tags: ["Alpine.js", "ASP.NET Core", "Blazor", "Blogs", "Client Side", "Coding", "Counter Example", "DOM Manipulation", "Front End", "HTML", "Htmx", "JavaScript", "Local Storage", "Persistence", "State Management", "Store Pattern", "Web Development"]
+tags_normalized: ["alpinedotjs", "aspdotnet core", "blazor", "blogs", "client side", "coding", "counter example", "dom manipulation", "front end", "html", "htmx", "javascript", "local storage", "persistence", "state management", "store pattern", "web development"]
 ---
 
 Khalid Abuhakmeh explains how to build a persistent counter with Alpine.js, demonstrating concepts similar to Blazor's counter sample and showcasing ASP.NET Core integration.<!--excerpt_end-->

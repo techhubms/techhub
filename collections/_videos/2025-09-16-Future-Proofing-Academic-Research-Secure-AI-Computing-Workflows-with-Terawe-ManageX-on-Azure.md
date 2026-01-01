@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Cloud YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCSgzRJMqIiCNtoM6Q7Q9Lqw"
 date: 2025-09-16 00:28:01 +00:00
-permalink: "/videos/2025-09-16-Future-Proofing-Academic-Research-Secure-AI-Computing-Workflows-with-Terawe-ManageX-on-Azure.html"
+permalink: "/2025-09-16-Future-Proofing-Academic-Research-Secure-AI-Computing-Workflows-with-Terawe-ManageX-on-Azure.html"
 categories: ["AI", "Azure"]
 tags: ["#academia", "#azure", "#compliance #microsoftcloud", "#research", "#sres", "#terawe", "#tres", "Academic Research", "AI", "AI Models", "Automated Data Pipelines", "Azure", "Cloud Computing", "Compliance", "Data Driven Projects", "High Performance Computing", "Institutional Policy", "Real World Case Studies", "Research Infrastructure", "Secure Enclaves", "Self Service Workspaces", "Terawe ManageX", "University IT", "Videos"]
 tags_normalized: ["sharpacademia", "sharpazure", "sharpcompliance sharpmicrosoftcloud", "sharpresearch", "sharpsres", "sharpterawe", "sharptres", "academic research", "ai", "ai models", "automated data pipelines", "azure", "cloud computing", "compliance", "data driven projects", "high performance computing", "institutional policy", "real world case studies", "research infrastructure", "secure enclaves", "self service workspaces", "terawe managex", "university it", "videos"]

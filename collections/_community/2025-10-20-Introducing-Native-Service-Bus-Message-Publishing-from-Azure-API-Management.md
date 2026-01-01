@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-10-20 01:22:49 +00:00
-permalink: "/community/2025-10-20-Introducing-Native-Service-Bus-Message-Publishing-from-Azure-API-Management.html"
+permalink: "/2025-10-20-Introducing-Native-Service-Bus-Message-Publishing-from-Azure-API-Management.html"
 categories: ["Azure", "DevOps", "Security"]
 tags: ["API Gateway", "APIM", "Asynchronous Systems", "Azure", "Azure API Management", "Azure Functions", "Azure Service Bus", "Community", "DevOps", "Enterprise Integration", "Event Driven Architecture", "Event Processing", "Integration", "Logging", "Logic Apps", "Managed Identity", "Messaging", "Microservices", "Policy", "RBAC", "Secure API", "Security", "Service Bus", "Throttling"]
 tags_normalized: ["api gateway", "apim", "asynchronous systems", "azure", "azure api management", "azure functions", "azure service bus", "community", "devops", "enterprise integration", "event driven architecture", "event processing", "integration", "logging", "logic apps", "managed identity", "messaging", "microservices", "policy", "rbac", "secure api", "security", "service bus", "throttling"]

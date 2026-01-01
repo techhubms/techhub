@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft PowerShell Blog"
 feed_url: "https://devblogs.microsoft.com/powershell/feed/"
 date: 2025-03-12 17:59:51 +00:00
-permalink: "/news/2025-03-12-Get-Started-with-Microsoft-Desired-State-Configuration-v300.html"
+permalink: "/2025-03-12-Get-Started-with-Microsoft-Desired-State-Configuration-v300.html"
 categories: ["Coding", "DevOps"]
 tags: ["Automation", "CLI", "Coding", "Configuration Management", "Cross Platform", "Desired State Configuration", "DevOps", "DSC", "Dsc Command", "IaC", "IIS", "News", "PowerShell", "PowerShell DSC", "PSDSC", "Resource Adapters", "System Configuration", "V3.0.0", "Windows Server", "YAML"]
 tags_normalized: ["automation", "cli", "coding", "configuration management", "cross platform", "desired state configuration", "devops", "dsc", "dsc command", "iac", "iis", "news", "powershell", "powershell dsc", "psdsc", "resource adapters", "system configuration", "v3dot0dot0", "windows server", "yaml"]

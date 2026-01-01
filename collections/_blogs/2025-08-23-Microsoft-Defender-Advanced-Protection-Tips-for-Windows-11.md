@@ -9,10 +9,10 @@ viewing_mode: "external"
 feed_name: "Dellenny's Blog"
 feed_url: "https://dellenny.com/feed/"
 date: 2025-08-23 07:39:27 +00:00
-permalink: "/blogs/2025-08-23-Microsoft-Defender-Advanced-Protection-Tips-for-Windows-11.html"
+permalink: "/2025-08-23-Microsoft-Defender-Advanced-Protection-Tips-for-Windows-11.html"
 categories: ["Security"]
-tags: ["Antivirus", "BitLocker", "Controlled Folder Access", "Data Backup", "Device Health", "Exploit Protection", "Microsoft Defender", "Network Protection", "Offline Scan", "Phishing Protection", "Blogs", "Ransomware Protection", "Security", "SmartScreen", "Tamper Protection", "Windows 11", "Windows Security"]
-tags_normalized: ["antivirus", "bitlocker", "controlled folder access", "data backup", "device health", "exploit protection", "microsoft defender", "network protection", "offline scan", "phishing protection", "blogs", "ransomware protection", "security", "smartscreen", "tamper protection", "windows 11", "windows security"]
+tags: ["Antivirus", "BitLocker", "Blogs", "Controlled Folder Access", "Data Backup", "Device Health", "Exploit Protection", "Microsoft Defender", "Network Protection", "Offline Scan", "Phishing Protection", "Ransomware Protection", "Security", "SmartScreen", "Tamper Protection", "Windows 11", "Windows Security"]
+tags_normalized: ["antivirus", "bitlocker", "blogs", "controlled folder access", "data backup", "device health", "exploit protection", "microsoft defender", "network protection", "offline scan", "phishing protection", "ransomware protection", "security", "smartscreen", "tamper protection", "windows 11", "windows security"]
 ---
 
 Dellenny shares advanced tips for configuring Microsoft Defender Antivirus in Windows 11, empowering users to harden their PCs against evolving security threats using built-in protection features.<!--excerpt_end-->

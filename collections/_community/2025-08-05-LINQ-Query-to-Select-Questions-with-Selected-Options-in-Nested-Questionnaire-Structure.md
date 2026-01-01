@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Reddit CSharp"
 feed_url: "https://www.reddit.com/r/csharp/.rss"
 date: 2025-08-05 20:46:37 +00:00
-permalink: "/community/2025-08-05-LINQ-Query-to-Select-Questions-with-Selected-Options-in-Nested-Questionnaire-Structure.html"
+permalink: "/2025-08-05-LINQ-Query-to-Select-Questions-with-Selected-Options-in-Nested-Questionnaire-Structure.html"
 categories: ["Coding"]
 tags: [".NET", "C#", "Coding", "Community", "Data Query", "Functional Programming", "LINQ", "Nested Collections", "Options Pattern", "Query Optimization", "Questionnaire", "Questions Filtering", "SelectMany"]
 tags_normalized: ["dotnet", "csharp", "coding", "community", "data query", "functional programming", "linq", "nested collections", "options pattern", "query optimization", "questionnaire", "questions filtering", "selectmany"]

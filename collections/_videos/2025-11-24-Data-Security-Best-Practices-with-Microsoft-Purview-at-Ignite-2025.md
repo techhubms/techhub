@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Events YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
 date: 2025-11-24 13:45:39 +00:00
-permalink: "/videos/2025-11-24-Data-Security-Best-Practices-with-Microsoft-Purview-at-Ignite-2025.html"
+permalink: "/2025-11-24-Data-Security-Best-Practices-with-Microsoft-Purview-at-Ignite-2025.html"
 categories: ["AI", "Security"]
 tags: ["Advisory Services", "AI", "AI Security Training", "Cloud Security", "Co Sell Journey", "Compliance", "Copilot Investments", "Data", "Data Protection", "Data Security", "Generative AI", "Microsoft Ignite", "Microsoft Purview", "MicrosoftAICloudPartnerProgram", "MSIgnite", "On Premises Security", "Partner Engagement", "Power Platform", "Security", "Skilling Hub", "Videos"]
 tags_normalized: ["advisory services", "ai", "ai security training", "cloud security", "co sell journey", "compliance", "copilot investments", "data", "data protection", "data security", "generative ai", "microsoft ignite", "microsoft purview", "microsoftaicloudpartnerprogram", "msignite", "on premises security", "partner engagement", "power platform", "security", "skilling hub", "videos"]

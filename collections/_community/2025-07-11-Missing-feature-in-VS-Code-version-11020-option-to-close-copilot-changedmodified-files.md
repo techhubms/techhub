@@ -10,7 +10,7 @@ categories: ["AI", "GitHub Copilot"]
 feed_name: "Reddit Github Copilot"
 feed_url: "https://www.reddit.com/r/GithubCopilot.rss"
 date: 2025-07-11 02:30:28 +00:00
-permalink: "/community/2025-07-11-Missing-feature-in-VS-Code-version-11020-option-to-close-copilot-changedmodified-files.html"
+permalink: "/2025-07-11-Missing-feature-in-VS-Code-version-11020-option-to-close-copilot-changedmodified-files.html"
 tags: ["AI", "Community", "Development Tools", "Extension Updates", "File List", "File Management", "GitHub Copilot", "Plugin Issues", "UI Changes", "User Feedback", "User Interface", "VS Code"]
 tags_normalized: ["ai", "community", "development tools", "extension updates", "file list", "file management", "github copilot", "plugin issues", "ui changes", "user feedback", "user interface", "vs code"]
 ---

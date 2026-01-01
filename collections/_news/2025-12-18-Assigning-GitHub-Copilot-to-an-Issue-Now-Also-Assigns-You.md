@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/changelog/feed/"
 date: 2025-12-18 17:46:17 +00:00
-permalink: "/news/2025-12-18-Assigning-GitHub-Copilot-to-an-Issue-Now-Also-Assigns-You.html"
+permalink: "/2025-12-18-Assigning-GitHub-Copilot-to-an-Issue-Now-Also-Assigns-You.html"
 categories: ["AI", "DevOps", "GitHub Copilot"]
 tags: ["AI", "AI Assistant", "Assignee", "Automation", "Collaboration", "Copilot", "DevOps", "DevOps Workflow", "GitHub", "GitHub Copilot", "GitHub Issues", "Improvement", "Issue Assignment", "News", "Project Management", "Projects & Issues", "Task Tracking", "Workflow Improvement"]
 tags_normalized: ["ai", "ai assistant", "assignee", "automation", "collaboration", "copilot", "devops", "devops workflow", "github", "github copilot", "github issues", "improvement", "issue assignment", "news", "project management", "projects and issues", "task tracking", "workflow improvement"]

@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Fabric Blog"
 feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
 date: 2025-11-19 01:30:00 +00:00
-permalink: "/news/2025-11-19-Microsoft-Fabric-AI-Functions-Enhanced-Features-Now-Generally-Available.html"
+permalink: "/2025-11-19-Microsoft-Fabric-AI-Functions-Enhanced-Features-Now-Generally-Available.html"
 categories: ["AI", "Azure", "ML"]
 tags: ["AI", "AI Functions", "Ai.analyze Sentiment", "Ai.classify", "Ai.embed", "Ai.extract", "Ai.fix Grammar", "Ai.generate Response", "Ai.similarity", "Ai.summarize", "Ai.translate", "Azure", "Azure AI Foundry", "Azure OpenAI", "Claude", "Concurrency", "Data Science", "GPT 5", "LLaMA", "Machine Learning", "Microsoft Fabric", "ML", "Model Configuration", "News", "Pandas", "PySpark", "Vector Embeddings"]
 tags_normalized: ["ai", "ai functions", "aidotanalyze sentiment", "aidotclassify", "aidotembed", "aidotextract", "aidotfix grammar", "aidotgenerate response", "aidotsimilarity", "aidotsummarize", "aidottranslate", "azure", "azure ai foundry", "azure openai", "claude", "concurrency", "data science", "gpt 5", "llama", "machine learning", "microsoft fabric", "ml", "model configuration", "news", "pandas", "pyspark", "vector embeddings"]

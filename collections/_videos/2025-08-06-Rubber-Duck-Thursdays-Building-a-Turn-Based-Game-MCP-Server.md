@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "GitHub YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ"
 date: 2025-08-06 09:04:39 +00:00
-permalink: "/videos/2025-08-06-Rubber-Duck-Thursdays-Building-a-Turn-Based-Game-MCP-Server.html"
+permalink: "/2025-08-06-Rubber-Duck-Thursdays-Building-a-Turn-Based-Game-MCP-Server.html"
 categories: ["AI", "Coding", "GitHub Copilot"]
 tags: ["AI", "AI Powered Coding", "Code Collaboration", "Coding", "Developer Tools", "GitHub", "GitHub Copilot", "Live Coding", "MCP Server", "Programming", "Server Development", "Software Development", "Turn Based Game", "Videos"]
 tags_normalized: ["ai", "ai powered coding", "code collaboration", "coding", "developer tools", "github", "github copilot", "live coding", "mcp server", "programming", "server development", "software development", "turn based game", "videos"]

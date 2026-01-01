@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft DevBlog"
 feed_url: "https://devblogs.microsoft.com/feed"
 date: 2025-07-01 22:00:46 +00:00
-permalink: "/news/2025-07-01-Join-Us-for-MCP-Dev-Days-July-29-30-Deep-Dive-into-the-Model-Context-Protocol.html"
+permalink: "/2025-07-01-Join-Us-for-MCP-Dev-Days-July-29-30-Deep-Dive-into-the-Model-Context-Protocol.html"
 categories: ["AI", "GitHub Copilot", "Coding", "DevOps", "Azure", "Security"]
 tags: ["Agent Experiences", "AI", "AI Models", "API Management", "Azure", "Coding", "Developer Events", "Developer Tools", "DevOps", "GitHub Copilot", "MCP", "MCP Dev Days", "Microsoft Developer", "News", "Prompt Driven Development", "Security", "Security Best Practices", "VS", "VS Code", "Workshops"]
 tags_normalized: ["agent experiences", "ai", "ai models", "api management", "azure", "coding", "developer events", "developer tools", "devops", "github copilot", "mcp", "mcp dev days", "microsoft developer", "news", "prompt driven development", "security", "security best practices", "vs", "vs code", "workshops"]

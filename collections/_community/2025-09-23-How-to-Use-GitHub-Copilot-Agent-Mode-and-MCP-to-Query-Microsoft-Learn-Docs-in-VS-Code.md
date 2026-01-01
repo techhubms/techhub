@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-09-23 07:00:00 +00:00
-permalink: "/community/2025-09-23-How-to-Use-GitHub-Copilot-Agent-Mode-and-MCP-to-Query-Microsoft-Learn-Docs-in-VS-Code.html"
+permalink: "/2025-09-23-How-to-Use-GitHub-Copilot-Agent-Mode-and-MCP-to-Query-Microsoft-Learn-Docs-in-VS-Code.html"
 categories: ["AI", "Azure", "Coding", "GitHub Copilot"]
 tags: ["Agent Mode", "AI", "AI Assistant", "API Integration", "Azure", "Coding", "Community", "Copilot Studio", "Developer Productivity", "Extension Installation", "GitHub Copilot", "Grounded Answers", "MCP", "Microsoft Documentation", "Microsoft Learn Docs", "Prompt Engineering", "Python", "VS Code"]
 tags_normalized: ["agent mode", "ai", "ai assistant", "api integration", "azure", "coding", "community", "copilot studio", "developer productivity", "extension installation", "github copilot", "grounded answers", "mcp", "microsoft documentation", "microsoft learn docs", "prompt engineering", "python", "vs code"]

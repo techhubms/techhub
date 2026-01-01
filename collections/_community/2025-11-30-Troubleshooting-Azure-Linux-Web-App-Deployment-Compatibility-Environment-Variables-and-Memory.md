@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-11-30 09:14:23 +00:00
-permalink: "/community/2025-11-30-Troubleshooting-Azure-Linux-Web-App-Deployment-Compatibility-Environment-Variables-and-Memory.html"
+permalink: "/2025-11-30-Troubleshooting-Azure-Linux-Web-App-Deployment-Compatibility-Environment-Variables-and-Memory.html"
 categories: ["AI", "Azure", "Coding", "DevOps"]
 tags: ["AI", "App Service SKU", "Azure", "Azure App Service", "Azure Portal", "Build Troubleshooting", "Coding", "Community", "Compatibility", "Container Startup", "Deployment Center", "DevOps", "Environment Variables", "Exit Code 137", "Flask", "Gunicorn", "Linux Web App", "Memory Scaling", "Numpy", "Oryx Build", "pip", "Python", "PyTorch", "Requirements.txt", "Scikit Learn", "Sklearn", "Startup Script", "Streamlit"]
 tags_normalized: ["ai", "app service sku", "azure", "azure app service", "azure portal", "build troubleshooting", "coding", "community", "compatibility", "container startup", "deployment center", "devops", "environment variables", "exit code 137", "flask", "gunicorn", "linux web app", "memory scaling", "numpy", "oryx build", "pip", "python", "pytorch", "requirementsdottxt", "scikit learn", "sklearn", "startup script", "streamlit"]

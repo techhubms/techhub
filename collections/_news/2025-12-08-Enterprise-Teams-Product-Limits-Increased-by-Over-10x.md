@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/changelog/feed/"
 date: 2025-12-08 19:40:44 +00:00
-permalink: "/news/2025-12-08-Enterprise-Teams-Product-Limits-Increased-by-Over-10x.html"
+permalink: "/2025-12-08-Enterprise-Teams-Product-Limits-Increased-by-Over-10x.html"
 categories: ["DevOps"]
 tags: ["Access Management", "DevOps", "Enterprise Cloud", "Enterprise Management Tools", "Enterprise Server", "Enterprise Teams", "GitHub Enterprise", "Improvement", "Licensing", "News", "Organizational Management", "Public Preview", "Team Scalability", "User Governance"]
 tags_normalized: ["access management", "devops", "enterprise cloud", "enterprise management tools", "enterprise server", "enterprise teams", "github enterprise", "improvement", "licensing", "news", "organizational management", "public preview", "team scalability", "user governance"]

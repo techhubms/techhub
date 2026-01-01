@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/changelog/feed/"
 date: 2025-10-28 15:20:57 +00:00
-permalink: "/news/2025-10-28-Ask-Copilot-Coding-Agent-to-Make-Changes-in-Any-Pull-Request-with-copilot.html"
+permalink: "/2025-10-28-Ask-Copilot-Coding-Agent-to-Make-Changes-in-Any-Pull-Request-with-copilot.html"
 categories: ["AI", "GitHub Copilot"]
 tags: ["@copilot", "AI", "Automation", "Code Review", "Copilot", "Copilot Business", "Copilot Coding Agent", "Feature Update", "GitHub", "GitHub Copilot", "GitHub Enterprise", "GitHub Pro", "Improvement", "News", "Pull Requests", "Software Development", "Universe25", "Version Control"]
 tags_normalized: ["atcopilot", "ai", "automation", "code review", "copilot", "copilot business", "copilot coding agent", "feature update", "github", "github copilot", "github enterprise", "github pro", "improvement", "news", "pull requests", "software development", "universe25", "version control"]

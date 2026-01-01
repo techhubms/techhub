@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Visual Studio Code Releases"
 feed_url: "https://code.visualstudio.com/feed.xml"
 date: 2025-08-26 00:00:00 +00:00
-permalink: "/news/2025-08-26-VS-Code-Dev-Days-Explore-AI-Assisted-Development-with-GitHub-Copilot.html"
+permalink: "/2025-08-26-VS-Code-Dev-Days-Explore-AI-Assisted-Development-with-GitHub-Copilot.html"
 categories: ["AI", "Coding", "GitHub Copilot"]
 tags: ["Agent Mode", "AI", "AI Assisted Development", "AI Productivity", "Coding", "Coding Workshop", "Developer Community", "Developer Events", "Developer Tools", "GitHub Copilot", "MCP", "Microsoft", "News", "Next Edit Suggestions", "VS Code", "VS Code Dev Days"]
 tags_normalized: ["agent mode", "ai", "ai assisted development", "ai productivity", "coding", "coding workshop", "developer community", "developer events", "developer tools", "github copilot", "mcp", "microsoft", "news", "next edit suggestions", "vs code", "vs code dev days"]

@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft PowerShell Blog"
 feed_url: "https://devblogs.microsoft.com/powershell/feed/"
 date: 2025-05-21 15:16:13 +00:00
-permalink: "/news/2025-05-21-AI-Shell-Preview-4-Enhanced-MacOS-Support-Entra-ID-Authentication-and-More.html"
+permalink: "/2025-05-21-AI-Shell-Preview-4-Enhanced-MacOS-Support-Entra-ID-Authentication-and-More.html"
 categories: ["AI", "Azure", "Coding"]
 tags: ["AI", "AI Integration", "AI Shell", "Authentication", "Azure", "Azure OpenAI", "Coding", "Command Line Tools", "Copilot in Azure", "Entra ID", "Invoke AIShell", "Macos", "News", "OllamaAgent", "Phi Silica", "PowerShell", "Predictive IntelliSense"]
 tags_normalized: ["ai", "ai integration", "ai shell", "authentication", "azure", "azure openai", "coding", "command line tools", "copilot in azure", "entra id", "invoke aishell", "macos", "news", "ollamaagent", "phi silica", "powershell", "predictive intellisense"]

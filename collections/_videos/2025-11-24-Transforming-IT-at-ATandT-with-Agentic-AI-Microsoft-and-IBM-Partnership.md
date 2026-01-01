@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Events YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
 date: 2025-11-24 10:35:17 +00:00
-permalink: "/videos/2025-11-24-Transforming-IT-at-ATandT-with-Agentic-AI-Microsoft-and-IBM-Partnership.html"
+permalink: "/2025-11-24-Transforming-IT-at-ATandT-with-Agentic-AI-Microsoft-and-IBM-Partnership.html"
 categories: ["AI", "Azure"]
 tags: ["Agentic AI", "Agenticbusinessapplications", "AI", "AI Performance Optimization", "AT&T", "Automation", "Azure", "Cloud Migration", "Collaboration", "Enterprise AI", "IBM Consulting", "IT Transformation", "Microsoft Ignite", "MSIgnite", "Multi Agent Systems", "No Code Development", "Productivity Improvement", "Resilient Infrastructure", "Videos"]
 tags_normalized: ["agentic ai", "agenticbusinessapplications", "ai", "ai performance optimization", "atandt", "automation", "azure", "cloud migration", "collaboration", "enterprise ai", "ibm consulting", "it transformation", "microsoft ignite", "msignite", "multi agent systems", "no code development", "productivity improvement", "resilient infrastructure", "videos"]

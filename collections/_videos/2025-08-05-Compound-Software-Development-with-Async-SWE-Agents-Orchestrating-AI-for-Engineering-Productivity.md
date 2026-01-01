@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Developer YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
 date: 2025-08-05 15:02:29 +00:00
-permalink: "/videos/2025-08-05-Compound-Software-Development-with-Async-SWE-Agents-Orchestrating-AI-for-Engineering-Productivity.html"
+permalink: "/2025-08-05-Compound-Software-Development-with-Async-SWE-Agents-Orchestrating-AI-for-Engineering-Productivity.html"
 categories: ["AI", "Azure", "DevOps", "GitHub Copilot"]
 tags: ["Agent Monitoring", "Agent Unlock", "Agent Workflows", "AI", "AI Agent Orchestration", "Aifoundry.app", "Async Loom", "Asyncloom.com", "Automated Testing", "Azure", "Azure AI Foundry", "Cloud Computing", "Cloud Development", "Context Engineering", "Dev", "Development", "DevOps", "GitHub Actions", "GitHub Copilot", "Govind Kamtamneni", "M365 Copilot", "Microsoft", "Microsoft Teams Integration", "Priyanka Vergadia", "SDLC Automation", "Sip And Sync", "Software Engineering", "Tech", "Technology", "Videos"]
 tags_normalized: ["agent monitoring", "agent unlock", "agent workflows", "ai", "ai agent orchestration", "aifoundrydotapp", "async loom", "asyncloomdotcom", "automated testing", "azure", "azure ai foundry", "cloud computing", "cloud development", "context engineering", "dev", "development", "devops", "github actions", "github copilot", "govind kamtamneni", "m365 copilot", "microsoft", "microsoft teams integration", "priyanka vergadia", "sdlc automation", "sip and sync", "software engineering", "tech", "technology", "videos"]

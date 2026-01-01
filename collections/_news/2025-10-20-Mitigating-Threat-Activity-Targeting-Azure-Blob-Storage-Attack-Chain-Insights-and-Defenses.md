@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Security Blog"
 feed_url: "https://www.microsoft.com/en-us/security/blog/feed/"
 date: 2025-10-20 16:00:00 +00:00
-permalink: "/news/2025-10-20-Mitigating-Threat-Activity-Targeting-Azure-Blob-Storage-Attack-Chain-Insights-and-Defenses.html"
+permalink: "/2025-10-20-Mitigating-Threat-Activity-Targeting-Azure-Blob-Storage-Attack-Chain-Insights-and-Defenses.html"
 categories: ["Azure", "Security"]
 tags: ["Attack Chain", "Azure", "Azure Blob Storage", "Cloud Monitoring", "Cloud Security", "Credential Access", "Data Exfiltration", "Data Protection", "Immutability", "Incident Response", "Lateral Movement", "Malware Scanning", "Microsoft Defender For Cloud", "Microsoft Entra ID", "MITRE ATT&CK", "News", "Role Based Access Control", "SAS Tokens", "Security", "Security Recommendations", "Threat Detection", "Zero Trust"]
 tags_normalized: ["attack chain", "azure", "azure blob storage", "cloud monitoring", "cloud security", "credential access", "data exfiltration", "data protection", "immutability", "incident response", "lateral movement", "malware scanning", "microsoft defender for cloud", "microsoft entra id", "mitre attandck", "news", "role based access control", "sas tokens", "security", "security recommendations", "threat detection", "zero trust"]

@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Events YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
 date: 2025-02-27 14:00:47 +00:00
-permalink: "/videos/2025-02-27-CSXs-Digital-Transformation-with-Azure-AI-and-Microsoft-Fabric.html"
+permalink: "/2025-02-27-CSXs-Digital-Transformation-with-Azure-AI-and-Microsoft-Fabric.html"
 categories: ["AI", "Azure", "ML"]
 tags: ["AI", "Azure", "Cloud Innovation", "Cloud Migration", "Copilot Studio", "CSX", "Customer Service", "Data Analytics", "Digital Transformation", "Microsoft", "Microsoft Azure", "Microsoft Fabric", "Microsoft Ignite", "Migration Challenges", "ML", "Operational Excellence", "Predictive Maintenance", "Rail Industry", "Safety", "Videos"]
 tags_normalized: ["ai", "azure", "cloud innovation", "cloud migration", "copilot studio", "csx", "customer service", "data analytics", "digital transformation", "microsoft", "microsoft azure", "microsoft fabric", "microsoft ignite", "migration challenges", "ml", "operational excellence", "predictive maintenance", "rail industry", "safety", "videos"]

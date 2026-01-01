@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft DevBlog"
 feed_url: "https://devblogs.microsoft.com/feed"
 date: 2025-08-14 17:00:24 +00:00
-permalink: "/news/2025-08-14-GPT-5-Integrations-for-Microsoft-Developers-GitHub-Copilot-Azure-AI-and-VS-Code.html"
+permalink: "/2025-08-14-GPT-5-Integrations-for-Microsoft-Developers-GitHub-Copilot-Azure-AI-and-VS-Code.html"
 categories: ["AI", "Azure", "Coding", "DevOps", "GitHub Copilot"]
 tags: ["AI", "AI Toolkit", "API Integration", "Azure", "Azure AI Foundry", "Azure OpenAI Service", "C#", "Coding", "Copilot Studio", "DevOps", "GitHub Copilot", "GitHub Models", "GPT 5", "JavaScript", "LLM", "Model Evaluation", "News", "OpenAI .NET SDK", "Python", "RAG", "Reasoning Models", "VS", "VS Code"]
 tags_normalized: ["ai", "ai toolkit", "api integration", "azure", "azure ai foundry", "azure openai service", "csharp", "coding", "copilot studio", "devops", "github copilot", "github models", "gpt 5", "javascript", "llm", "model evaluation", "news", "openai dotnet sdk", "python", "rag", "reasoning models", "vs", "vs code"]

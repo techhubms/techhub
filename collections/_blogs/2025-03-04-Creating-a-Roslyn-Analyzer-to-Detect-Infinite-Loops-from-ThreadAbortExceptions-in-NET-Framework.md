@@ -9,10 +9,10 @@ viewing_mode: "external"
 feed_name: "Andrew Lock's Blog"
 feed_url: "https://andrewlock.net/rss.xml"
 date: 2025-03-04 09:00:00 +00:00
-permalink: "/blogs/2025-03-04-Creating-a-Roslyn-Analyzer-to-Detect-Infinite-Loops-from-ThreadAbortExceptions-in-NET-Framework.html"
+permalink: "/2025-03-04-Creating-a-Roslyn-Analyzer-to-Detect-Infinite-Loops-from-ThreadAbortExceptions-in-NET-Framework.html"
 categories: ["Coding"]
-tags: [".NET Framework", "C#", "Code Fix Provider", "Coding", "Concurrency", "Configuration", "Hosting", "Infinite Loops", "Parallel Programming", "Blogs", "Roslyn Analyzer", "Runtime Bugs", "Static Analysis", "ThreadAbortException"]
-tags_normalized: ["dotnet framework", "csharp", "code fix provider", "coding", "concurrency", "configuration", "hosting", "infinite loops", "parallel programming", "blogs", "roslyn analyzer", "runtime bugs", "static analysis", "threadabortexception"]
+tags: [".NET Framework", "Blogs", "C#", "Code Fix Provider", "Coding", "Concurrency", "Configuration", "Hosting", "Infinite Loops", "Parallel Programming", "Roslyn Analyzer", "Runtime Bugs", "Static Analysis", "ThreadAbortException"]
+tags_normalized: ["dotnet framework", "blogs", "csharp", "code fix provider", "coding", "concurrency", "configuration", "hosting", "infinite loops", "parallel programming", "roslyn analyzer", "runtime bugs", "static analysis", "threadabortexception"]
 ---
 
 Andrew Lock presents an in-depth guide on identifying and mitigating infinite loops caused by ThreadAbortExceptions in .NET Framework applications, illustrating the problem with examples and sharing a custom Roslyn Analyzer solution.<!--excerpt_end-->

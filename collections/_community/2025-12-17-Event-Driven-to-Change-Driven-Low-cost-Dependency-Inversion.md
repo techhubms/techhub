@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-12-17 22:22:37 +00:00
-permalink: "/community/2025-12-17-Event-Driven-to-Change-Driven-Low-cost-Dependency-Inversion.html"
+permalink: "/2025-12-17-Event-Driven-to-Change-Driven-Low-cost-Dependency-Inversion.html"
 categories: ["Azure"]
 tags: ["Anti Corruption Layer", "Azure", "Azure SQL", "Change Driven Architecture", "Community", "Continuous Queries", "Cosmos DB", "CQRS", "Database Integration", "Declarative Queries", "Dependency Inversion", "Drasi", "Event Driven Architecture", "Event Sourcing", "Microservices", "Reactive Systems", "Real Time Data"]
 tags_normalized: ["anti corruption layer", "azure", "azure sql", "change driven architecture", "community", "continuous queries", "cosmos db", "cqrs", "database integration", "declarative queries", "dependency inversion", "drasi", "event driven architecture", "event sourcing", "microservices", "reactive systems", "real time data"]

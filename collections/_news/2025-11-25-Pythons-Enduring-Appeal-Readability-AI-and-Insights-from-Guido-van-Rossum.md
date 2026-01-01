@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/feed/"
 date: 2025-11-25 17:00:00 +00:00
-permalink: "/news/2025-11-25-Pythons-Enduring-Appeal-Readability-AI-and-Insights-from-Guido-van-Rossum.html"
+permalink: "/2025-11-25-Pythons-Enduring-Appeal-Readability-AI-and-Insights-from-Guido-van-Rossum.html"
 categories: ["AI", "Coding"]
 tags: ["AI", "AI Development", "Code Clarity", "Coding", "Data Science", "Developer Experience", "Developer Skills", "Education", "Guido Van Rossum", "Hugging Face", "LLM Agents", "Machine Learning", "News", "News & Insights", "NumPy", "Octoverse", "Open Source", "Programming Languages", "Programming Languages & Frameworks", "Python", "PyTorch", "Readability", "Software Engineering", "Static Typing", "TypeScript"]
 tags_normalized: ["ai", "ai development", "code clarity", "coding", "data science", "developer experience", "developer skills", "education", "guido van rossum", "hugging face", "llm agents", "machine learning", "news", "news and insights", "numpy", "octoverse", "open source", "programming languages", "programming languages and frameworks", "python", "pytorch", "readability", "software engineering", "static typing", "typescript"]

@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Events YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
 date: 2025-11-20 17:12:14 +00:00
-permalink: "/videos/2025-11-20-Innovating-with-MongoDB-Compatible-Azure-DocumentDB-AI-Multicloud-and-Cost-Efficiency.html"
+permalink: "/2025-11-20-Innovating-with-MongoDB-Compatible-Azure-DocumentDB-AI-Multicloud-and-Cost-Efficiency.html"
 categories: ["AI", "Azure", "ML"]
 tags: ["AI", "AI Query Optimization", "Azure", "Azure Cosmos DB", "Azure DocumentDB", "Cosmos AI Graph", "Cost Optimization", "Data Migration", "Enterprise Security", "Hybrid Cloud", "JSON", "KNN", "Linux Foundation", "LLM Index Advisor", "Microsoft Ignite", "ML", "MongoDB Compatibility", "MSIgnite", "Multicloud", "Open Source", "Portability", "Semantic Search", "Turnkey Scaling", "Unifyyourdataplatform", "Videos", "VS Code Extension"]
 tags_normalized: ["ai", "ai query optimization", "azure", "azure cosmos db", "azure documentdb", "cosmos ai graph", "cost optimization", "data migration", "enterprise security", "hybrid cloud", "json", "knn", "linux foundation", "llm index advisor", "microsoft ignite", "ml", "mongodb compatibility", "msignite", "multicloud", "open source", "portability", "semantic search", "turnkey scaling", "unifyyourdataplatform", "videos", "vs code extension"]

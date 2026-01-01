@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-10-07 07:13:47 +00:00
-permalink: "/community/2025-10-07-Building-Smarter-Edge-AI-with-Windows-AI-PCs-The-Edge-AI-for-Beginners-Curriculum.html"
+permalink: "/2025-10-07-Building-Smarter-Edge-AI-with-Windows-AI-PCs-The-Edge-AI-for-Beginners-Curriculum.html"
 categories: ["AI", "Azure", "ML"]
 tags: ["AI", "AI Agent Framework", "Azure", "Azure AI Foundry", "Community", "Cross Platform AI", "DirectML", "Edge AI", "Edge Deployment", "Intel NPU", "IoT", "Jupyter Notebooks", "Local AI", "Microsoft Olive", "ML", "Model Optimization", "Model Quantization", "ONNX Runtime", "Privacy Preserving AI", "Production AI", "Qualcomm NPU", "SLM", "Windows AI PC", "Windows Development"]
 tags_normalized: ["ai", "ai agent framework", "azure", "azure ai foundry", "community", "cross platform ai", "directml", "edge ai", "edge deployment", "intel npu", "iot", "jupyter notebooks", "local ai", "microsoft olive", "ml", "model optimization", "model quantization", "onnx runtime", "privacy preserving ai", "production ai", "qualcomm npu", "slm", "windows ai pc", "windows development"]

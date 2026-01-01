@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/changelog/label/copilot/feed/"
 date: 2025-08-08 16:05:36 +00:00
-permalink: "/news/2025-08-08-Indemnity-and-Liability-Updates-for-GitHub-Enterprise-Pre-release-Software.html"
+permalink: "/2025-08-08-Indemnity-and-Liability-Updates-for-GitHub-Enterprise-Pre-release-Software.html"
 categories: ["DevOps"]
 tags: ["DevOps", "Enterprise Licensing", "GitHub", "Indemnity", "Legal Update", "License Terms", "Microsoft Volume Licensing", "News", "Pre Release Software", "Risk Management", "Software Agreements", "Volume Licensing"]
 tags_normalized: ["devops", "enterprise licensing", "github", "indemnity", "legal update", "license terms", "microsoft volume licensing", "news", "pre release software", "risk management", "software agreements", "volume licensing"]

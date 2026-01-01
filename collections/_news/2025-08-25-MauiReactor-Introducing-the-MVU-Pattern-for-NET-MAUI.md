@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft .NET Blog"
 feed_url: "https://devblogs.microsoft.com/dotnet/feed/"
 date: 2025-08-25 17:15:00 +00:00
-permalink: "/news/2025-08-25-MauiReactor-Introducing-the-MVU-Pattern-for-NET-MAUI.html"
+permalink: "/2025-08-25-MauiReactor-Introducing-the-MVU-Pattern-for-NET-MAUI.html"
 categories: ["Coding"]
 tags: [".NET", "App Architecture", "C#", "Coding", "Component Integration", "Cross Platform", "Hot Reload", "MAUI", "MauiReactor", "MVU", "MVU Pattern", "MVVM", "News", "Open Source", "Performance", "State Management", "Testing", "UI Development", "XAML"]
 tags_normalized: ["dotnet", "app architecture", "csharp", "coding", "component integration", "cross platform", "hot reload", "maui", "mauireactor", "mvu", "mvu pattern", "mvvm", "news", "open source", "performance", "state management", "testing", "ui development", "xaml"]

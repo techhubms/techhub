@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Fabric Blog"
 feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
 date: 2025-12-18 14:00:00 +00:00
-permalink: "/news/2025-12-18-Run-Spark-Job-Definitions-in-Pipelines-with-Service-Principal-or-Workspace-Identity.html"
+permalink: "/2025-12-18-Run-Spark-Job-Definitions-in-Pipelines-with-Service-Principal-or-Workspace-Identity.html"
 categories: ["Azure", "ML", "Security"]
 tags: ["Authentication", "Automated Workflows", "Azure", "Data Engineering", "Data Factory", "Enterprise Security", "Identity Management", "Microsoft Fabric", "ML", "News", "Notebook Automation", "Pipeline Orchestration", "Production Pipelines", "Security", "Service Principal", "Spark Job Definition", "Workspace Identity"]
 tags_normalized: ["authentication", "automated workflows", "azure", "data engineering", "data factory", "enterprise security", "identity management", "microsoft fabric", "ml", "news", "notebook automation", "pipeline orchestration", "production pipelines", "security", "service principal", "spark job definition", "workspace identity"]

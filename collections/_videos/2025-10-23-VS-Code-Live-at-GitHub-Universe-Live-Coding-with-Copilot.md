@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Visual Studio Code YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SLNwkd3w"
 date: 2025-10-23 18:14:40 +00:00
-permalink: "/videos/2025-10-23-VS-Code-Live-at-GitHub-Universe-Live-Coding-with-Copilot.html"
+permalink: "/2025-10-23-VS-Code-Live-at-GitHub-Universe-Live-Coding-with-Copilot.html"
 categories: ["AI", "Coding", "GitHub Copilot"]
 tags: ["AI", "Code", "Code Collaboration", "Coding", "Coding Workflow", "Community Event", "Copilot Integration", "Developer", "Developer Community", "Developer Tools", "Figma", "GitHub Copilot", "GitHub Universe", "Live Coding", "Mcp", "Mcpserver", "Microsoft", "Software Developer", "Videos", "VS Code"]
 tags_normalized: ["ai", "code", "code collaboration", "coding", "coding workflow", "community event", "copilot integration", "developer", "developer community", "developer tools", "figma", "github copilot", "github universe", "live coding", "mcp", "mcpserver", "microsoft", "software developer", "videos", "vs code"]

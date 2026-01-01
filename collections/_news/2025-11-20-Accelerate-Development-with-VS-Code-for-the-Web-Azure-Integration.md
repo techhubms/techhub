@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft All Things Azure Blog"
 feed_url: "https://devblogs.microsoft.com/all-things-azure/feed/"
 date: 2025-11-20 16:40:49 +00:00
-permalink: "/news/2025-11-20-Accelerate-Development-with-VS-Code-for-the-Web-Azure-Integration.html"
+permalink: "/2025-11-20-Accelerate-Development-with-VS-Code-for-the-Web-Azure-Integration.html"
 categories: ["AI", "Azure", "Coding", "DevOps", "GitHub Copilot"]
 tags: ["AI", "AI Assisted Coding", "All Things Azure", "Application Development", "Azure", "Azure Copilot", "Azure Developer CLI", "Azure Portal", "Browser Based Development", "C#", "Cloud Deployment", "Code Editing", "Coding", "DevOps", "DevOps Workflow", "Git Integration", "GitHub Copilot", "Java", "Microsoft Foundry", "News", "Node.js", "Pre Configured Workspaces", "Python", "Rapid Onboarding", "VS Code For The Web"]
 tags_normalized: ["ai", "ai assisted coding", "all things azure", "application development", "azure", "azure copilot", "azure developer cli", "azure portal", "browser based development", "csharp", "cloud deployment", "code editing", "coding", "devops", "devops workflow", "git integration", "github copilot", "java", "microsoft foundry", "news", "nodedotjs", "pre configured workspaces", "python", "rapid onboarding", "vs code for the web"]

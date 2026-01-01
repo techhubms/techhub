@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft News"
 feed_url: "https://news.microsoft.com/source/feed/"
 date: 2025-09-18 16:31:52 +00:00
-permalink: "/news/2025-09-18-Building-the-Worlds-Most-Powerful-AI-Datacenter-in-Wisconsin.html"
+permalink: "/2025-09-18-Building-the-Worlds-Most-Powerful-AI-Datacenter-in-Wisconsin.html"
 categories: ["AI", "Azure"]
 tags: ["AI", "AI Datacenter", "AI Training", "Azure", "Broadband Access", "Closed Loop Cooling", "Company News", "Data Center Infrastructure", "Datacenter Academy", "Economic Development", "Frontier AI", "Green Technology", "Innovation", "Microsoft", "News", "NVIDIA GPUs", "Partnerships", "Solar Energy", "Supercomputing", "Sustainability", "Technical Workforce", "Wisconsin"]
 tags_normalized: ["ai", "ai datacenter", "ai training", "azure", "broadband access", "closed loop cooling", "company news", "data center infrastructure", "datacenter academy", "economic development", "frontier ai", "green technology", "innovation", "microsoft", "news", "nvidia gpus", "partnerships", "solar energy", "supercomputing", "sustainability", "technical workforce", "wisconsin"]

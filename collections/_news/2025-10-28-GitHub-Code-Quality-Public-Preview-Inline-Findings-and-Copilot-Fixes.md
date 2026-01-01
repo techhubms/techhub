@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/changelog/feed/"
 date: 2025-10-28 15:28:45 +00:00
-permalink: "/news/2025-10-28-GitHub-Code-Quality-Public-Preview-Inline-Findings-and-Copilot-Fixes.html"
+permalink: "/2025-10-28-GitHub-Code-Quality-Public-Preview-Inline-Findings-and-Copilot-Fixes.html"
 categories: ["AI", "Coding", "DevOps", "GitHub Copilot", "Security"]
 tags: ["AI", "Application Security", "Automated Fixes", "C#", "Code Review", "CodeQL", "Coding", "Copilot", "DevOps", "GitHub Code Quality", "GitHub Copilot", "Go", "Java", "JavaScript", "Maintainability", "News", "Platform Governance", "Pull Requests", "Python", "Reliability", "Ruby", "Security", "Software Quality", "Static Analysis", "Technical Debt", "Universe25"]
 tags_normalized: ["ai", "application security", "automated fixes", "csharp", "code review", "codeql", "coding", "copilot", "devops", "github code quality", "github copilot", "go", "java", "javascript", "maintainability", "news", "platform governance", "pull requests", "python", "reliability", "ruby", "security", "software quality", "static analysis", "technical debt", "universe25"]

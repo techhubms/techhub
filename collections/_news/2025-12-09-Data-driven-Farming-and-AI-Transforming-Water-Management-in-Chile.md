@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft News"
 feed_url: "https://news.microsoft.com/source/feed/"
 date: 2025-12-09 14:10:47 +00:00
-permalink: "/news/2025-12-09-Data-driven-Farming-and-AI-Transforming-Water-Management-in-Chile.html"
+permalink: "/2025-12-09-Data-driven-Farming-and-AI-Transforming-Water-Management-in-Chile.html"
 categories: ["AI"]
 tags: ["Agriculture Technology", "AI", "Analytics", "Automation", "Chile", "Data Driven Farming", "Irrigation", "Microsoft", "News", "Sustainable Agriculture", "Water Management"]
 tags_normalized: ["agriculture technology", "ai", "analytics", "automation", "chile", "data driven farming", "irrigation", "microsoft", "news", "sustainable agriculture", "water management"]

@@ -9,7 +9,7 @@ categories: ["AI", "Azure", "GitHub Copilot"]
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/changelog/label/copilot/feed/"
 date: 2025-07-22 02:36:29 +00:00
-permalink: "/news/2025-07-22-GitHub-Copilot-app-modernization-for-NET-enters-public-preview.html"
+permalink: "/2025-07-22-GitHub-Copilot-app-modernization-for-NET-enters-public-preview.html"
 viewing_mode: "external"
 tags: [".NET", "AI", "AI Tools", "App Modernization", "Assessment", "Azure", "Cloud Migration", "Code Remediation", "Enterprise Migration", "GitHub Copilot", "News", "Validation"]
 tags_normalized: ["dotnet", "ai", "ai tools", "app modernization", "assessment", "azure", "cloud migration", "code remediation", "enterprise migration", "github copilot", "news", "validation"]

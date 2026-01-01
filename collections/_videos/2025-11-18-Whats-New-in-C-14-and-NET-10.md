@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Nick Chapsas YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrkPsvLGln62OMZRO6K-llg"
 date: 2025-11-18 12:01:01 +00:00
-permalink: "/videos/2025-11-18-Whats-New-in-C-14-and-NET-10.html"
+permalink: "/2025-11-18-Whats-New-in-C-14-and-NET-10.html"
 categories: ["Coding"]
 tags: [".NET", ".NET 10", "C#", "C# 14", "C# Features", "Coding", "Development", "Framework Updates", "Language Features", "Microsoft", "Programming Languages", "Release Highlights", "Videos"]
 tags_normalized: ["dotnet", "dotnet 10", "csharp", "csharp 14", "csharp features", "coding", "development", "framework updates", "language features", "microsoft", "programming languages", "release highlights", "videos"]

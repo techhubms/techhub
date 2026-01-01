@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Nick Chapsas YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrkPsvLGln62OMZRO6K-llg"
 date: 2025-08-27 11:01:26 +00:00
-permalink: "/videos/2025-08-27-Exploring-Discriminated-Unions-Coming-to-C-15-and-16.html"
+permalink: "/2025-08-27-Exploring-Discriminated-Unions-Coming-to-C-15-and-16.html"
 categories: ["Coding"]
 tags: [".NET", "C#", "C# 15", "C# 16", "Coding", "Discriminated Unions", "Feature Proposal", "Language Features", "Nick Chapsas", "Preview Features", "Programming", "Software Development", "Union Types", "Videos"]
 tags_normalized: ["dotnet", "csharp", "csharp 15", "csharp 16", "coding", "discriminated unions", "feature proposal", "language features", "nick chapsas", "preview features", "programming", "software development", "union types", "videos"]

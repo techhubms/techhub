@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-12-11 22:01:17 +00:00
-permalink: "/community/2025-12-11-Private-Preview-Azure-Managed-Prometheus-for-VM-and-VMSS-Monitoring.html"
+permalink: "/2025-12-11-Private-Preview-Azure-Managed-Prometheus-for-VM-and-VMSS-Monitoring.html"
 categories: ["Azure", "DevOps"]
 tags: ["AKS", "Alerting", "Azure", "Azure Arc", "Azure Managed Grafana", "Azure Monitor", "Community", "DevOps", "GPU Monitoring", "HPC", "IaaS", "InfiniBand", "Metric Collection", "Observability", "Private Preview", "Prometheus", "PromQL", "Virtual Machines", "VMSS"]
 tags_normalized: ["aks", "alerting", "azure", "azure arc", "azure managed grafana", "azure monitor", "community", "devops", "gpu monitoring", "hpc", "iaas", "infiniband", "metric collection", "observability", "private preview", "prometheus", "promql", "virtual machines", "vmss"]

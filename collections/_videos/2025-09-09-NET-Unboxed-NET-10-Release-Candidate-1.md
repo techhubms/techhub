@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "DotNet YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw"
 date: 2025-09-09 17:26:23 +00:00
-permalink: "/videos/2025-09-09-NET-Unboxed-NET-10-Release-Candidate-1.html"
+permalink: "/2025-09-09-NET-Unboxed-NET-10-Release-Candidate-1.html"
 categories: ["Coding"]
 tags: [".NET", ".NET 10", ".NET RC1", "C#", "Coding", "Development Tools", "Dotnet10", "Microsoft", "Programming", "Release Candidate", "Software Release", "Videos", "Visualstudio2026", "VS"]
 tags_normalized: ["dotnet", "dotnet 10", "dotnet rc1", "csharp", "coding", "development tools", "dotnet10", "microsoft", "programming", "release candidate", "software release", "videos", "visualstudio2026", "vs"]

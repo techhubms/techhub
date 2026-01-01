@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Fabric Blog"
 feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
 date: 2025-09-10 09:00:00 +00:00
-permalink: "/news/2025-09-10-OneLake-File-Explorer-10140-Enhanced-Integration-with-Microsoft-Fabric.html"
+permalink: "/2025-09-10-OneLake-File-Explorer-10140-Enhanced-Integration-with-Microsoft-Fabric.html"
 categories: ["Azure", "ML"]
 tags: [".NET 8", "Azure", "Data Engineering", "Data Upload", "Data Workflow", "Diagnostic Logging", "File Management", "Lakehouse", "Lakehouse Integration", "Microsoft Ecosystem", "Microsoft Fabric", "ML", "News", "OneLake File Explorer", "Sync Reliability", "Windows Integration", "Workspace Management"]
 tags_normalized: ["dotnet 8", "azure", "data engineering", "data upload", "data workflow", "diagnostic logging", "file management", "lakehouse", "lakehouse integration", "microsoft ecosystem", "microsoft fabric", "ml", "news", "onelake file explorer", "sync reliability", "windows integration", "workspace management"]

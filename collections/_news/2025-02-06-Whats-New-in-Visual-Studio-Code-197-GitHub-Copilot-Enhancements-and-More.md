@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Visual Studio Code Releases"
 feed_url: "https://code.visualstudio.com/feed.xml"
 date: 2025-02-06 17:00:00 +00:00
-permalink: "/news/2025-02-06-Whats-New-in-Visual-Studio-Code-197-GitHub-Copilot-Enhancements-and-More.html"
+permalink: "/2025-02-06-Whats-New-in-Visual-Studio-Code-197-GitHub-Copilot-Enhancements-and-More.html"
 categories: ["AI", "Coding", "DevOps", "GitHub Copilot"]
 tags: ["Accessibility", "Agent Mode", "AI", "Code Completion", "Coding", "Command Palette", "Compound Logs", "Copilot Edits", "Copilot Next Edit Suggestions", "Copilot Vision", "Debugging", "DevOps", "Extension Security", "Git Blame", "GitHub Copilot", "Logs Export", "Microsoft Authentication", "MSAL", "News", "Notebooks", "Python", "Remote Development", "REPL", "Settings Search", "Source Control", "Terminal", "TypeScript", "Version 1.97", "VS Code", "Workspace Index"]
 tags_normalized: ["accessibility", "agent mode", "ai", "code completion", "coding", "command palette", "compound logs", "copilot edits", "copilot next edit suggestions", "copilot vision", "debugging", "devops", "extension security", "git blame", "github copilot", "logs export", "microsoft authentication", "msal", "news", "notebooks", "python", "remote development", "repl", "settings search", "source control", "terminal", "typescript", "version 1dot97", "vs code", "workspace index"]

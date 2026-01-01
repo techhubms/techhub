@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft All Things Azure Blog"
 feed_url: "https://devblogs.microsoft.com/all-things-azure/feed/"
 date: 2025-12-02 01:37:40 +00:00
-permalink: "/news/2025-12-02-Enterprise-AI-Coding-Agent-Setup-Claude-Code-Microsoft-Foundry-Spec-Kit-and-GitHub-Actions.html"
+permalink: "/2025-12-02-Enterprise-AI-Coding-Agent-Setup-Claude-Code-Microsoft-Foundry-Spec-Kit-and-GitHub-Actions.html"
 categories: ["AI", "Azure", "Coding", "DevOps", "Security"]
 tags: ["Agent Framework", "AI", "All Things Azure", "Azure", "Azure AI Foundry", "Azure CLI", "Claude Code", "Coding", "DevOps", "Enterprise AI", "Entra ID", "Fabric Connector", "GitHub Actions", "MCP Tools", "Microsoft Foundry", "Multi Agent System", "News", "Node.js", "Project Context", "Python", "RAG Grounding", "Security", "Security Authentication", "Spec Kit", "Structured Development", "Unit Testing", "VS Code Extension"]
 tags_normalized: ["agent framework", "ai", "all things azure", "azure", "azure ai foundry", "azure cli", "claude code", "coding", "devops", "enterprise ai", "entra id", "fabric connector", "github actions", "mcp tools", "microsoft foundry", "multi agent system", "news", "nodedotjs", "project context", "python", "rag grounding", "security", "security authentication", "spec kit", "structured development", "unit testing", "vs code extension"]

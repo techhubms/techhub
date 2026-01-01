@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/feed/"
 date: 2025-09-10 20:52:28 +00:00
-permalink: "/news/2025-09-10-Your-Guide-to-GitHub-Universe-2025-Event-Schedule-Learning-and-Certifications-Announced.html"
+permalink: "/2025-09-10-Your-Guide-to-GitHub-Universe-2025-Event-Schedule-Learning-and-Certifications-Announced.html"
 categories: ["AI", "DevOps", "GitHub Copilot", "Security"]
 tags: ["Advanced Security", "AI", "AI Powered Development", "Automation", "Career Mentoring", "Certification", "CI/CD", "Coding Agent", "Company News", "DevOps", "GitHub Actions", "GitHub Copilot", "GitHub Universe", "Learning Experience", "Microsoft Azure", "News", "News & Insights", "Security", "Software Development"]
 tags_normalized: ["advanced security", "ai", "ai powered development", "automation", "career mentoring", "certification", "cislashcd", "coding agent", "company news", "devops", "github actions", "github copilot", "github universe", "learning experience", "microsoft azure", "news", "news and insights", "security", "software development"]

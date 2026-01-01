@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Developer YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
 date: 2025-12-11 23:09:57 +00:00
-permalink: "/videos/2025-12-11-How-I-shipped-more-code-and-products-than-ever-before-with-GitHub-Copilot.html"
+permalink: "/2025-12-11-How-I-shipped-more-code-and-products-than-ever-before-with-GitHub-Copilot.html"
 categories: ["AI", "Coding", "GitHub Copilot"]
 tags: ["AI", "AI Coding Assistant", "App Development", "Automation", "Cloud Computing", "Code Migration", "Code Prototyping", "Coding", "Dev", "Developer", "Developer Productivity", "Development", "GitHub", "GitHub Copilot", "Microsoft", "Production Deployment", "Programming Tools", "Tech", "Technology", "Videos", "VS", "VS Code", "Workflow Optimization"]
 tags_normalized: ["ai", "ai coding assistant", "app development", "automation", "cloud computing", "code migration", "code prototyping", "coding", "dev", "developer", "developer productivity", "development", "github", "github copilot", "microsoft", "production deployment", "programming tools", "tech", "technology", "videos", "vs", "vs code", "workflow optimization"]

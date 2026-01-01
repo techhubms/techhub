@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/changelog/feed/"
 date: 2025-09-26 09:00:02 +00:00
-permalink: "/news/2025-09-26-Kick-off-and-Track-Copilot-Coding-Agent-Sessions-from-the-GitHub-CLI.html"
+permalink: "/2025-09-26-Kick-off-and-Track-Copilot-Coding-Agent-Sessions-from-the-GitHub-CLI.html"
 categories: ["AI", "Coding", "DevOps", "GitHub Copilot"]
 tags: ["AI", "Automation", "Background Tasks", "CLI Tools", "Client Apps", "Code Review", "Coding", "Command Line", "Copilot", "Copilot Coding Agent", "Developer Productivity", "DevOps", "Gh Agent Task", "GitHub", "GitHub CLI", "GitHub Copilot", "News", "Pull Request", "Release V2.80.0", "Workflow Automation"]
 tags_normalized: ["ai", "automation", "background tasks", "cli tools", "client apps", "code review", "coding", "command line", "copilot", "copilot coding agent", "developer productivity", "devops", "gh agent task", "github", "github cli", "github copilot", "news", "pull request", "release v2dot80dot0", "workflow automation"]

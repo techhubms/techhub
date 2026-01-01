@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Developer YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
 date: 2025-12-01 08:00:07 +00:00
-permalink: "/videos/2025-12-01-Reimagine-Migration-Agentic-Platform-Landing-Zone-with-Azure-Migrate-Video.html"
+permalink: "/2025-12-01-Reimagine-Migration-Agentic-Platform-Landing-Zone-with-Azure-Migrate.html"
 categories: ["Azure", "DevOps", "Security"]
 tags: ["Agentic Approach", "Automation", "Azure", "Azure Essentials", "Azure Landing Zone", "Azure Migrate", "Best Practices", "Cloud Migration", "Cloud Modernization", "Compliance", "DevOps", "Microsoft Azure", "Secure Deployment", "Security", "Shiva Shastri", "Thomas Maurer", "Videos", "Workload Migration"]
 tags_normalized: ["agentic approach", "automation", "azure", "azure essentials", "azure landing zone", "azure migrate", "best practices", "cloud migration", "cloud modernization", "compliance", "devops", "microsoft azure", "secure deployment", "security", "shiva shastri", "thomas maurer", "videos", "workload migration"]

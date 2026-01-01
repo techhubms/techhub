@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Cloud YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCSgzRJMqIiCNtoM6Q7Q9Lqw"
 date: 2025-09-15 14:00:04 +00:00
-permalink: "/videos/2025-09-15-Tutch-Partners-with-Microsoft-to-Transform-Retail-with-Agentic-AI.html"
+permalink: "/2025-09-15-Tutch-Partners-with-Microsoft-to-Transform-Retail-with-Agentic-AI.html"
 categories: ["AI", "Azure"]
 tags: ["Agentic AI", "AI", "Azure", "Azure AI", "Beacon Lighting", "Business Transformation", "Cloud Solutions", "Data Insights", "Data Platforms", "Dynamic Recommendations", "Microsoft Cloud", "Microsoft For Retail", "OpenAI", "Product Recommendations", "Retail Technology", "Tutch", "Videos"]
 tags_normalized: ["agentic ai", "ai", "azure", "azure ai", "beacon lighting", "business transformation", "cloud solutions", "data insights", "data platforms", "dynamic recommendations", "microsoft cloud", "microsoft for retail", "openai", "product recommendations", "retail technology", "tutch", "videos"]

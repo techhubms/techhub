@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Cloud YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCSgzRJMqIiCNtoM6Q7Q9Lqw"
 date: 2025-05-19 15:45:07 +00:00
-permalink: "/videos/2025-05-19-Microsoft-Discovery-Platform-Overview-AI-Driven-RandD-on-Azure.html"
+permalink: "/2025-05-19-Microsoft-Discovery-Platform-Overview-AI-Driven-RandD-on-Azure.html"
 categories: ["AI", "Azure"]
 tags: ["Agentic R&D", "AI", "AI Agents", "AI Orchestration", "AI Science", "Azure", "Azure AI Foundry", "Azure HPC", "Azure Infrastructure", "Enterprise AI", "Iterative R&D", "Microsoft", "Microsoft Cloud", "Microsoft Discovery Platform", "Platform Overview", "R&D Acceleration", "Research Automation", "Scientific Computing", "Scientific Discovery", "Specialized AI Agents", "Videos"]
 tags_normalized: ["agentic randd", "ai", "ai agents", "ai orchestration", "ai science", "azure", "azure ai foundry", "azure hpc", "azure infrastructure", "enterprise ai", "iterative randd", "microsoft", "microsoft cloud", "microsoft discovery platform", "platform overview", "randd acceleration", "research automation", "scientific computing", "scientific discovery", "specialized ai agents", "videos"]

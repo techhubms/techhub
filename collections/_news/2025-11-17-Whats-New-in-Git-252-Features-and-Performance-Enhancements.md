@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/feed/"
 date: 2025-11-17 17:54:31 +00:00
-permalink: "/news/2025-11-17-Whats-New-in-Git-252-Features-and-Performance-Enhancements.html"
+permalink: "/2025-11-17-Whats-New-in-Git-252-Features-and-Performance-Enhancements.html"
 categories: ["Coding", "DevOps"]
 tags: ["Bloom Filters", "Branch Management", "Coding", "Commit History", "DevOps", "Geometric Repacking", "Git", "Git 2.52", "Git Last Modified", "Git Maintenance", "Git Refs", "News", "Open Source", "Performance Benchmark", "Reference Backends", "Repository Maintenance", "Rust Integration", "SHA 256", "Sparse Checkout", "Version Control"]
 tags_normalized: ["bloom filters", "branch management", "coding", "commit history", "devops", "geometric repacking", "git", "git 2dot52", "git last modified", "git maintenance", "git refs", "news", "open source", "performance benchmark", "reference backends", "repository maintenance", "rust integration", "sha 256", "sparse checkout", "version control"]

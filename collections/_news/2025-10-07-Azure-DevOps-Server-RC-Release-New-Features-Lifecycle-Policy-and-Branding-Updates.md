@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft DevOps Blog"
 feed_url: "https://devblogs.microsoft.com/devops/feed/"
 date: 2025-10-07 20:14:45 +00:00
-permalink: "/news/2025-10-07-Azure-DevOps-Server-RC-Release-New-Features-Lifecycle-Policy-and-Branding-Updates.html"
+permalink: "/2025-10-07-Azure-DevOps-Server-RC-Release-New-Features-Lifecycle-Policy-and-Branding-Updates.html"
 categories: ["Azure", "DevOps"]
 tags: ["Azure", "Azure DevOps Server", "Continuous Delivery", "DevOps", "Microsoft Azure", "Modern Lifecycle Policy", "News", "Product Branding", "Release Candidate", "REST API", "Security Updates", "Software Licensing", "Team Foundation Server", "Test Plan Recovery", "TFX Validation", "Upgrade Path"]
 tags_normalized: ["azure", "azure devops server", "continuous delivery", "devops", "microsoft azure", "modern lifecycle policy", "news", "product branding", "release candidate", "rest api", "security updates", "software licensing", "team foundation server", "test plan recovery", "tfx validation", "upgrade path"]

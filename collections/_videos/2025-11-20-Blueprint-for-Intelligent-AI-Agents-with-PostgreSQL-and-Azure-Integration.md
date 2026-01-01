@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Events YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
 date: 2025-11-20 16:01:00 +00:00
-permalink: "/videos/2025-11-20-Blueprint-for-Intelligent-AI-Agents-with-PostgreSQL-and-Azure-Integration.html"
+permalink: "/2025-11-20-Blueprint-for-Intelligent-AI-Agents-with-PostgreSQL-and-Azure-Integration.html"
 categories: ["AI", "Azure", "GitHub Copilot", "ML"]
 tags: ["AI", "AI Agents", "AI Model Management", "AZD Up Command", "Azure", "Azure Database For PostgreSQL", "Database Performance", "GitHub Copilot", "GPT 5", "Intelligent Agents", "Knowledge Graphs", "Live Demo", "Metrics Intelligence", "Microsoft Foundry", "Microsoft Ignite", "ML", "MSIgnite", "Semantic Ranking", "Unifyyourdataplatform", "Vector Search", "Videos"]
 tags_normalized: ["ai", "ai agents", "ai model management", "azd up command", "azure", "azure database for postgresql", "database performance", "github copilot", "gpt 5", "intelligent agents", "knowledge graphs", "live demo", "metrics intelligence", "microsoft foundry", "microsoft ignite", "ml", "msignite", "semantic ranking", "unifyyourdataplatform", "vector search", "videos"]

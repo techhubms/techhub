@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/feed/"
 date: 2025-11-06 17:00:00 +00:00
-permalink: "/news/2025-11-06-TypeScripts-Dominance-in-the-AI-Era-Insights-from-Lead-Architect-Anders-Hejlsberg.html"
+permalink: "/2025-11-06-TypeScripts-Dominance-in-the-AI-Era-Insights-from-Lead-Architect-Anders-Hejlsberg.html"
 categories: ["AI", "Coding"]
 tags: ["AI", "AI Assisted Coding", "Code Reliability", "Coding", "Compiler Performance", "Developer Skills", "Developer Tools", "GitHub", "JavaScript", "Language Evolution", "MCP", "News", "Octoverse", "Open Source", "Programming Languages", "Programming Languages & Frameworks", "Static Typing", "Typescript"]
 tags_normalized: ["ai", "ai assisted coding", "code reliability", "coding", "compiler performance", "developer skills", "developer tools", "github", "javascript", "language evolution", "mcp", "news", "octoverse", "open source", "programming languages", "programming languages and frameworks", "static typing", "typescript"]

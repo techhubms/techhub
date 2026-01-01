@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-11-18 20:30:56 +00:00
-permalink: "/community/2025-11-18-Deploying-Agentic-Applications-on-Azure-Container-Apps-with-Microsoft-Foundry.html"
+permalink: "/2025-11-18-Deploying-Agentic-Applications-on-Azure-Container-Apps-with-Microsoft-Foundry.html"
 categories: ["AI", "Azure"]
 tags: ["AI", "AI Agent", "Application Insights", "Automated Deployment", "Azure", "Azure Container Apps", "Azure Developer CLI", "Azure Monitor", "Cloud Native", "Community", "Distributed Tracing", "FastAPI", "GenAI", "MAF", "Microservices", "Microsoft Agent Framework", "Microsoft Foundry", "Observability", "OpenTelemetry", "Serverless", "Telemetry"]
 tags_normalized: ["ai", "ai agent", "application insights", "automated deployment", "azure", "azure container apps", "azure developer cli", "azure monitor", "cloud native", "community", "distributed tracing", "fastapi", "genai", "maf", "microservices", "microsoft agent framework", "microsoft foundry", "observability", "opentelemetry", "serverless", "telemetry"]

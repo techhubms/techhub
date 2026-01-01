@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-10-22 20:06:09 +00:00
-permalink: "/community/2025-10-22-Preparing-for-Azure-Relay-IP-Address-and-DNS-Changes.html"
+permalink: "/2025-10-22-Preparing-for-Azure-Relay-IP-Address-and-DNS-Changes.html"
 categories: ["Azure"]
 tags: ["Automation", "Azure", "Azure Relay", "Community", "DNS", "Firewall", "Hybrid Cloud", "Hybrid Connections", "IP Address Management", "Microsoft Azure", "Namespace", "Network Configuration", "PowerShell", "Service Bus", "WCF Relay"]
 tags_normalized: ["automation", "azure", "azure relay", "community", "dns", "firewall", "hybrid cloud", "hybrid connections", "ip address management", "microsoft azure", "namespace", "network configuration", "powershell", "service bus", "wcf relay"]

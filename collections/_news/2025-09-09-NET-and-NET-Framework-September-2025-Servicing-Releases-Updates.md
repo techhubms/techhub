@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft .NET Blog"
 feed_url: "https://devblogs.microsoft.com/dotnet/feed/"
 date: 2025-09-09 17:45:00 +00:00
-permalink: "/news/2025-09-09-NET-and-NET-Framework-September-2025-Servicing-Releases-Updates.html"
+permalink: "/2025-09-09-NET-and-NET-Framework-September-2025-Servicing-Releases-Updates.html"
 categories: ["Coding"]
 tags: [".NET", ".NET 8.0", ".NET 9.0", ".NET Framework", "ASP.NET Core", "Coding", "Container Images", "Linux Packages", "Maintenance", "Maintenance & Updates", "Microsoft", "News", "Release Notes", "Runtime", "SDK", "Servicing Release", "Software Updates", "Windows"]
 tags_normalized: ["dotnet", "dotnet 8dot0", "dotnet 9dot0", "dotnet framework", "aspdotnet core", "coding", "container images", "linux packages", "maintenance", "maintenance and updates", "microsoft", "news", "release notes", "runtime", "sdk", "servicing release", "software updates", "windows"]

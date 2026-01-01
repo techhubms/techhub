@@ -9,10 +9,10 @@ viewing_mode: "external"
 feed_name: ".NET Foundation's Blog"
 feed_url: "https://dotnetfoundation.org/feeds/blog"
 date: 2025-10-12 02:22:03 +00:00
-permalink: "/blogs/2025-10-12-NET-Foundation-License-Compatibility-Guide.html"
+permalink: "/2025-10-12-NET-Foundation-License-Compatibility-Guide.html"
 categories: ["Coding"]
-tags: [".NET Foundation", "Apache License 2.0", "AutoMapper", "BSD License", "Coding", "Commercial Services", "Contributor License Agreement", "Copyleft License", "Dual Licensing", "GitHub Sponsors", "GPL", "Licensing Policy", "MIT License", "Open Source", "Permissive License", "Blogs", "Project Maintainers", "RPL", "Software Business Models"]
-tags_normalized: ["dotnet foundation", "apache license 2dot0", "automapper", "bsd license", "coding", "commercial services", "contributor license agreement", "copyleft license", "dual licensing", "github sponsors", "gpl", "licensing policy", "mit license", "open source", "permissive license", "blogs", "project maintainers", "rpl", "software business models"]
+tags: [".NET Foundation", "Apache License 2.0", "AutoMapper", "Blogs", "BSD License", "Coding", "Commercial Services", "Contributor License Agreement", "Copyleft License", "Dual Licensing", "GitHub Sponsors", "GPL", "Licensing Policy", "MIT License", "Open Source", "Permissive License", "Project Maintainers", "RPL", "Software Business Models"]
+tags_normalized: ["dotnet foundation", "apache license 2dot0", "automapper", "blogs", "bsd license", "coding", "commercial services", "contributor license agreement", "copyleft license", "dual licensing", "github sponsors", "gpl", "licensing policy", "mit license", "open source", "permissive license", "project maintainers", "rpl", "software business models"]
 ---
 
 This .NET Foundation guide, authored by .NET Foundation News and Blog, explains which licenses are compatible, clarifies common licensing myths, and outlines supported commercial strategies for project maintainers.<!--excerpt_end-->

@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Fabric Blog"
 feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
 date: 2025-11-20 12:00:00 +00:00
-permalink: "/news/2025-11-20-Integrating-Azure-Monitor-Virtual-Machine-Telemetry-with-Fabric-Eventhouse-Preview.html"
+permalink: "/2025-11-20-Integrating-Azure-Monitor-Virtual-Machine-Telemetry-with-Fabric-Eventhouse-Preview.html"
 categories: ["Azure", "ML"]
 tags: ["AD Hoc Query", "Azure", "Azure Data Explorer", "Azure Monitor", "Azure Monitor Agent", "Data Collection Rules", "Data Visualization", "Event Logs", "Fabric Eventhouse", "Grafana", "Infrastructure Monitoring", "ML", "News", "OneLake", "Operational Insights", "Power BI Integration", "Prometheus", "Python Analytics", "Real Time Analytics", "Schema Management", "Tableau", "Telemetry Aggregation", "Virtual Machine Telemetry"]
 tags_normalized: ["ad hoc query", "azure", "azure data explorer", "azure monitor", "azure monitor agent", "data collection rules", "data visualization", "event logs", "fabric eventhouse", "grafana", "infrastructure monitoring", "ml", "news", "onelake", "operational insights", "power bi integration", "prometheus", "python analytics", "real time analytics", "schema management", "tableau", "telemetry aggregation", "virtual machine telemetry"]

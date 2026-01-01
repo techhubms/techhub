@@ -9,10 +9,10 @@ viewing_mode: "external"
 feed_name: "Hidde de Smet's Blog"
 feed_url: "https://hiddedesmet.com/feed.xml"
 date: 2025-05-26 07:00:00 +00:00
-permalink: "/blogs/2025-05-26-Is-AI-the-Right-Solution-Part-1-A-Decision-Framework-for-Validating-AI-Projects.html"
+permalink: "/2025-05-26-Is-AI-the-Right-Solution-Part-1-A-Decision-Framework-for-Validating-AI-Projects.html"
 categories: ["AI"]
-tags: ["AI", "AI Feasibility", "AI Operational Costs", "AI Project Validation", "Business Impact", "Data Readiness", "Decision Tree", "IASA", "Blogs", "Project Management", "Project Validation", "ROI Assessment", "Series", "Strategic Alignment"]
-tags_normalized: ["ai", "ai feasibility", "ai operational costs", "ai project validation", "business impact", "data readiness", "decision tree", "iasa", "blogs", "project management", "project validation", "roi assessment", "series", "strategic alignment"]
+tags: ["AI", "AI Feasibility", "AI Operational Costs", "AI Project Validation", "Blogs", "Business Impact", "Data Readiness", "Decision Tree", "IASA", "Project Management", "Project Validation", "ROI Assessment", "Series", "Strategic Alignment"]
+tags_normalized: ["ai", "ai feasibility", "ai operational costs", "ai project validation", "blogs", "business impact", "data readiness", "decision tree", "iasa", "project management", "project validation", "roi assessment", "series", "strategic alignment"]
 ---
 
 Hidde de Smet shares Part 1 of a 3-part series on validating AI initiatives, focusing on a decision tree framework that helps organizations determine if AI is the best fit for solving their business problems.<!--excerpt_end-->

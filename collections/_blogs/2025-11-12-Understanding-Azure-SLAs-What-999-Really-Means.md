@@ -9,10 +9,10 @@ viewing_mode: "external"
 feed_name: "Dellenny's Blog"
 feed_url: "https://dellenny.com/feed/"
 date: 2025-11-12 16:11:15 +00:00
-permalink: "/blogs/2025-11-12-Understanding-Azure-SLAs-What-999-Really-Means.html"
+permalink: "/2025-11-12-Understanding-Azure-SLAs-What-999-Really-Means.html"
 categories: ["Azure"]
-tags: ["Application Architecture", "Application Insights", "Auto Scaling", "Availability Zones", "Azure", "Azure Monitor", "Cloud Downtime", "Cloud Planning", "Cloud Reliability", "Composite SLA", "Failover Strategies", "Load Balancer", "Blogs", "Redundancy", "Service Level Agreement", "SLA"]
-tags_normalized: ["application architecture", "application insights", "auto scaling", "availability zones", "azure", "azure monitor", "cloud downtime", "cloud planning", "cloud reliability", "composite sla", "failover strategies", "load balancer", "blogs", "redundancy", "service level agreement", "sla"]
+tags: ["Application Architecture", "Application Insights", "Auto Scaling", "Availability Zones", "Azure", "Azure Monitor", "Blogs", "Cloud Downtime", "Cloud Planning", "Cloud Reliability", "Composite SLA", "Failover Strategies", "Load Balancer", "Redundancy", "Service Level Agreement", "SLA"]
+tags_normalized: ["application architecture", "application insights", "auto scaling", "availability zones", "azure", "azure monitor", "blogs", "cloud downtime", "cloud planning", "cloud reliability", "composite sla", "failover strategies", "load balancer", "redundancy", "service level agreement", "sla"]
 ---
 
 Dellenny explores the reality behind Azure’s SLA numbers, helping developers and businesses interpret uptime percentages and plan more reliable cloud architectures.<!--excerpt_end-->

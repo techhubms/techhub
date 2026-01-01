@@ -9,10 +9,10 @@ viewing_mode: "external"
 feed_name: "DevOps Blog"
 feed_url: "https://devops.com/feed/"
 date: 2025-11-06 08:19:39 +00:00
-permalink: "/blogs/2025-11-06-Building-AI-Apps-That-Earn-User-Trust-Human-Centered-Testing-and-Continuous-Feedback.html"
+permalink: "/2025-11-06-Building-AI-Apps-That-Earn-User-Trust-Human-Centered-Testing-and-Continuous-Feedback.html"
 categories: ["AI", "DevOps"]
-tags: ["AI", "AI Bias", "AI Ethics", "AI Governance", "AI Quality Assurance", "AI Testing", "AI Trust", "Applause", "Bias Detection", "Business Of DevOps", "Continuous Testing", "Contributed Content", "DevOps", "Explainable AI", "Fairness", "Feedback Loops", "Human Centered AI", "Inclusive Testing", "MLOps", "Model Transparency", "Blogs", "Responsible AI", "Social Facebook", "Social LinkedIn", "Social X", "Trust Metrics", "Trustworthy AI", "User Confidence", "User Experience"]
-tags_normalized: ["ai", "ai bias", "ai ethics", "ai governance", "ai quality assurance", "ai testing", "ai trust", "applause", "bias detection", "business of devops", "continuous testing", "contributed content", "devops", "explainable ai", "fairness", "feedback loops", "human centered ai", "inclusive testing", "mlops", "model transparency", "blogs", "responsible ai", "social facebook", "social linkedin", "social x", "trust metrics", "trustworthy ai", "user confidence", "user experience"]
+tags: ["AI", "AI Bias", "AI Ethics", "AI Governance", "AI Quality Assurance", "AI Testing", "AI Trust", "Applause", "Bias Detection", "Blogs", "Business Of DevOps", "Continuous Testing", "Contributed Content", "DevOps", "Explainable AI", "Fairness", "Feedback Loops", "Human Centered AI", "Inclusive Testing", "MLOps", "Model Transparency", "Responsible AI", "Social Facebook", "Social LinkedIn", "Social X", "Trust Metrics", "Trustworthy AI", "User Confidence", "User Experience"]
+tags_normalized: ["ai", "ai bias", "ai ethics", "ai governance", "ai quality assurance", "ai testing", "ai trust", "applause", "bias detection", "blogs", "business of devops", "continuous testing", "contributed content", "devops", "explainable ai", "fairness", "feedback loops", "human centered ai", "inclusive testing", "mlops", "model transparency", "responsible ai", "social facebook", "social linkedin", "social x", "trust metrics", "trustworthy ai", "user confidence", "user experience"]
 ---
 
 Chris Sheehan discusses practical techniques for developers to build trustworthy AI applications, emphasizing the importance of human-centered testing, bias detection, and real-time feedback in fostering user trust.<!--excerpt_end-->

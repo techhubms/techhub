@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-10-01 14:14:57 +00:00
-permalink: "/community/2025-10-01-Introducing-the-Microsoft-Agent-Framework-Unified-SDK-for-AI-Agents-and-Workflows.html"
+permalink: "/2025-10-01-Introducing-the-Microsoft-Agent-Framework-Unified-SDK-for-AI-Agents-and-Workflows.html"
 categories: ["AI", "Azure", "Coding"]
 tags: [".NET", "A2A SDK", "Agent Orchestration", "Agentic AI", "AI", "AutoGen", "Azure", "Azure OpenAI", "Coding", "Community", "Context Providers", "Foundry SDK", "Graph Based Workflows", "Human in The Loop", "LLM Integration", "M365 Copilot Agents", "MCP SDK", "Microsoft Agent Framework", "Middleware", "Migration Guides", "Multi Agent Systems", "Python", "Semantic Kernel", "State Management", "Workflow Automation"]
 tags_normalized: ["dotnet", "a2a sdk", "agent orchestration", "agentic ai", "ai", "autogen", "azure", "azure openai", "coding", "community", "context providers", "foundry sdk", "graph based workflows", "human in the loop", "llm integration", "m365 copilot agents", "mcp sdk", "microsoft agent framework", "middleware", "migration guides", "multi agent systems", "python", "semantic kernel", "state management", "workflow automation"]

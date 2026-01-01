@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/changelog/label/copilot/feed/"
 date: 2025-07-23 16:11:38 +00:00
-permalink: "/news/2025-07-23-GitHub-Copilot-Coding-Agent-Now-Supports-instructionsmd-Custom-Instructions.html"
+permalink: "/2025-07-23-GitHub-Copilot-coding-agent-now-supports-instructionsmd-custom-instructions.html"
 categories: ["AI", "GitHub Copilot"]
 tags: [".instructions.md", "AI", "Automation", "Copilot Coding Agent", "Custom Instructions", "Enterprise", "GitHub CLI", "GitHub Copilot", "IDE Integration", "News", "Pro+", "Pull Requests", "Repository Automation", "Task Delegation", "YAML Frontmatter"]
 tags_normalized: ["dotinstructionsdotmd", "ai", "automation", "copilot coding agent", "custom instructions", "enterprise", "github cli", "github copilot", "ide integration", "news", "proplus", "pull requests", "repository automation", "task delegation", "yaml frontmatter"]

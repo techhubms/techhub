@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The Azure Blog"
 feed_url: "https://azure.microsoft.com/en-us/blog/feed/"
 date: 2025-11-05 07:00:00 +00:00
-permalink: "/news/2025-11-05-Microsoft-Expands-Sovereign-Cloud-Capabilities-with-New-Services-and-AI-Integration.html"
+permalink: "/2025-11-05-Microsoft-Expands-Sovereign-Cloud-Capabilities-with-New-Services-and-AI-Integration.html"
 categories: ["AI", "Azure", "Security"]
 tags: ["AI", "AI Models", "Azure", "Azure Key Vault", "Azure Local", "Azure Policy", "Data Residency", "Digital Sovereignty", "Disaster Recovery", "EU Data Boundary", "Hybrid + Multicloud", "Management And Governance", "Microsoft 365 Copilot", "News", "NVIDIA GPUs", "Private Cloud", "Public Cloud", "SAP On Azure", "Security", "Security Compliance", "Sovereign Cloud", "Sovereign Landing Zone"]
 tags_normalized: ["ai", "ai models", "azure", "azure key vault", "azure local", "azure policy", "data residency", "digital sovereignty", "disaster recovery", "eu data boundary", "hybrid plus multicloud", "management and governance", "microsoft 365 copilot", "news", "nvidia gpus", "private cloud", "public cloud", "sap on azure", "security", "security compliance", "sovereign cloud", "sovereign landing zone"]

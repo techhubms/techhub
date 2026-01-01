@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft AI Foundry Blog"
 feed_url: "https://devblogs.microsoft.com/foundry/feed/"
 date: 2025-11-12 20:00:12 +00:00
-permalink: "/news/2025-11-12-Developer-Focused-Azure-AI-Foundry-Sessions-at-Microsoft-Ignite-2025.html"
+permalink: "/2025-11-12-Developer-Focused-Azure-AI-Foundry-Sessions-at-Microsoft-Ignite-2025.html"
 categories: ["AI", "Azure"]
 tags: ["Agent Factory", "Agentic AI", "AI", "AI Agents", "AI Orchestration", "AI Red Teaming", "Automation", "Azure", "Azure AI Foundry", "Azure AI Search", "Azure OpenAI", "Developer Tools", "Enterprise Security", "GitHub", "Microsoft Ignite", "MSIgnite", "Multi Agent Systems", "News", "Responsible AI", "VS Code"]
 tags_normalized: ["agent factory", "agentic ai", "ai", "ai agents", "ai orchestration", "ai red teaming", "automation", "azure", "azure ai foundry", "azure ai search", "azure openai", "developer tools", "enterprise security", "github", "microsoft ignite", "msignite", "multi agent systems", "news", "responsible ai", "vs code"]

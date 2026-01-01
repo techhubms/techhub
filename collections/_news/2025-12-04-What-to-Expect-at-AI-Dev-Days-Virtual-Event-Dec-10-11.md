@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft News"
 feed_url: "https://news.microsoft.com/source/feed/"
 date: 2025-12-04 19:05:59 +00:00
-permalink: "/news/2025-12-04-What-to-Expect-at-AI-Dev-Days-Virtual-Event-Dec-10-11.html"
+permalink: "/2025-12-04-What-to-Expect-at-AI-Dev-Days-Virtual-Event-Dec-10-11.html"
 categories: ["AI", "Azure", "Coding", "DevOps", "GitHub Copilot"]
 tags: ["Agentic Workflows", "AI", "AI Dev Days", "AutoGen", "Azure", "Cloud Agent", "Coding", "Company News", "Developer Conference", "Developer Productivity", "DevOps", "GitHub", "GitHub Copilot", "MCP", "Microsoft", "Microsoft Foundry", "News", "Semantic Kernel", "VS Code"]
 tags_normalized: ["agentic workflows", "ai", "ai dev days", "autogen", "azure", "cloud agent", "coding", "company news", "developer conference", "developer productivity", "devops", "github", "github copilot", "mcp", "microsoft", "microsoft foundry", "news", "semantic kernel", "vs code"]

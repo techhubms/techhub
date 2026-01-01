@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Visual Studio Code YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SLNwkd3w"
 date: 2025-09-15 14:00:03 +00:00
-permalink: "/videos/2025-09-15-Refactor-an-Existing-Codebase-Using-Prompt-Driven-Development-with-GitHub-Copilot.html"
+permalink: "/2025-09-15-Refactor-an-Existing-Codebase-Using-Prompt-Driven-Development-with-GitHub-Copilot.html"
 categories: ["AI", "Azure", "Coding", "GitHub Copilot"]
 tags: ["Agent Mode", "Agentmode", "AI", "AI Assisted Refactoring", "Azure", "Azure Cosmos DB", "Code", "Code Smells", "Coding", "Copilot", "Demo", "Developer", "Development Best Practices", "E Commerce", "Ecommerce", "FastAPI", "GitHub Copilot", "Microsoft", "Prompt Engineering", "Python", "Refactoring", "Software Developer", "Videos", "VS Code"]
 tags_normalized: ["agent mode", "agentmode", "ai", "ai assisted refactoring", "azure", "azure cosmos db", "code", "code smells", "coding", "copilot", "demo", "developer", "development best practices", "e commerce", "ecommerce", "fastapi", "github copilot", "microsoft", "prompt engineering", "python", "refactoring", "software developer", "videos", "vs code"]

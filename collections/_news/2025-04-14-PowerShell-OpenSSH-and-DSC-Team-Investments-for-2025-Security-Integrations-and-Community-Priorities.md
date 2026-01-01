@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft PowerShell Blog"
 feed_url: "https://devblogs.microsoft.com/powershell/feed/"
 date: 2025-04-14 13:40:29 +00:00
-permalink: "/news/2025-04-14-PowerShell-OpenSSH-and-DSC-Team-Investments-for-2025-Security-Integrations-and-Community-Priorities.html"
+permalink: "/2025-04-14-PowerShell-OpenSSH-and-DSC-Team-Investments-for-2025-Security-Integrations-and-Community-Priorities.html"
 categories: ["AI", "Azure", "Coding", "DevOps", "Security"]
 tags: ["AI", "AI Shell", "Azure", "Coding", "Community Contributions", "Desired State Configuration", "DevOps", "DSC", "EntraID", "MCP", "Microsoft Artifact Registry", "News", "OpenSSH", "PowerShell", "PowerShell Gallery", "PSResourceGet", "Script Analyzer", "Security", "VS Code Extension", "WinGet"]
 tags_normalized: ["ai", "ai shell", "azure", "coding", "community contributions", "desired state configuration", "devops", "dsc", "entraid", "mcp", "microsoft artifact registry", "news", "openssh", "powershell", "powershell gallery", "psresourceget", "script analyzer", "security", "vs code extension", "winget"]

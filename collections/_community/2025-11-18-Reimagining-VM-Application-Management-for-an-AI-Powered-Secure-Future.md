@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-11-18 16:00:00 +00:00
-permalink: "/community/2025-11-18-Reimagining-VM-Application-Management-for-an-AI-Powered-Secure-Future.html"
+permalink: "/2025-11-18-Reimagining-VM-Application-Management-for-an-AI-Powered-Secure-Future.html"
 categories: ["AI", "Azure", "DevOps", "Security"]
 tags: ["AI", "AI Workflow", "Application Lifecycle", "Application Packaging", "ARM Templates", "Azure", "Azure DevOps", "Azure Policy", "Azure Resource Graph", "Azure VM Applications", "Community", "DevOps", "DevOps CI/CD", "GitHub Actions", "Governance", "Monitoring", "PowerShell Automation", "Regional Resiliency", "Secure Deployment", "Security", "Version Control", "Virtual Machines", "VM Scale Sets"]
 tags_normalized: ["ai", "ai workflow", "application lifecycle", "application packaging", "arm templates", "azure", "azure devops", "azure policy", "azure resource graph", "azure vm applications", "community", "devops", "devops cislashcd", "github actions", "governance", "monitoring", "powershell automation", "regional resiliency", "secure deployment", "security", "version control", "virtual machines", "vm scale sets"]

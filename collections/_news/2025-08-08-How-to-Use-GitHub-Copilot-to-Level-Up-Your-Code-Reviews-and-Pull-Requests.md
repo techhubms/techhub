@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/feed/"
 date: 2025-08-08 16:00:00 +00:00
-permalink: "/news/2025-08-08-How-to-Use-GitHub-Copilot-to-Level-Up-Your-Code-Reviews-and-Pull-Requests.html"
+permalink: "/2025-08-08-How-to-Use-GitHub-Copilot-to-Level-Up-Your-Code-Reviews-and-Pull-Requests.html"
 categories: ["AI", "Coding", "DevOps", "GitHub Copilot"]
 tags: ["Agentic Workflows", "AI", "AI & ML", "AI Coding Tools", "Best Practices", "Code Review", "Coding", "Developer Productivity", "Development Lifecycle", "DevOps", "GitHub Actions", "GitHub Copilot", "Go", "Markdown Formatting", "News", "Pull Requests", "Refactoring Suggestions", "Ruby", "Software Development", "TypeScript", "VS Code", "Workflow Automation"]
 tags_normalized: ["agentic workflows", "ai", "ai and ml", "ai coding tools", "best practices", "code review", "coding", "developer productivity", "development lifecycle", "devops", "github actions", "github copilot", "go", "markdown formatting", "news", "pull requests", "refactoring suggestions", "ruby", "software development", "typescript", "vs code", "workflow automation"]

@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Reddit Azure"
 feed_url: "https://www.reddit.com/r/azure/.rss"
 date: 2025-08-07 10:00:00 +00:00
-permalink: "/community/2025-08-07-Evaluating-Azure-Application-Gateway-and-WAF-Placement-in-API-Architectures.html"
+permalink: "/2025-08-07-Evaluating-Azure-Application-Gateway-and-WAF-Placement-in-API-Architectures.html"
 categories: ["Azure", "Security"]
 tags: ["AKS", "API Management", "API Ops", "API Security", "APIM", "Azure", "Azure Application Gateway", "Azure Front Door", "Cloudflare", "Community", "Cost Optimization", "Firewall", "Landing Zone", "Networking", "Private Link", "Security", "WAF Policy", "Web Application Firewall"]
 tags_normalized: ["aks", "api management", "api ops", "api security", "apim", "azure", "azure application gateway", "azure front door", "cloudflare", "community", "cost optimization", "firewall", "landing zone", "networking", "private link", "security", "waf policy", "web application firewall"]

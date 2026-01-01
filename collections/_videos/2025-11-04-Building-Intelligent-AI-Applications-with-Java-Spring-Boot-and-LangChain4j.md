@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Developer YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
 date: 2025-11-04 01:00:50 +00:00
-permalink: "/videos/2025-11-04-Building-Intelligent-AI-Applications-with-Java-Spring-Boot-and-LangChain4j.html"
+permalink: "/2025-11-04-Building-Intelligent-AI-Applications-with-Java-Spring-Boot-and-LangChain4j.html"
 categories: ["AI", "Azure", "Coding", "GitHub Copilot"]
 tags: ["AI", "AI Integration", "AIApplications", "AIIntegration", "API Integration", "Application Development", "Azure", "Azure AI", "Azure AI Foundry", "Chat Models", "ChatModels", "Coding", "Dependency Management", "GitHub Copilot", "GPT 4o Mini", "IntelligentApps", "Java", "Java 24", "Java24", "JavaAI", "JavaDevelopment", "LangChain4j", "LLM Providers", "Maven", "Microsoft", "OpenAI", "OpenAI Java SDK", "Spring Boot", "SpringBoot", "Videos"]
 tags_normalized: ["ai", "ai integration", "aiapplications", "aiintegration", "api integration", "application development", "azure", "azure ai", "azure ai foundry", "chat models", "chatmodels", "coding", "dependency management", "github copilot", "gpt 4o mini", "intelligentapps", "java", "java 24", "java24", "javaai", "javadevelopment", "langchain4j", "llm providers", "maven", "microsoft", "openai", "openai java sdk", "spring boot", "springboot", "videos"]

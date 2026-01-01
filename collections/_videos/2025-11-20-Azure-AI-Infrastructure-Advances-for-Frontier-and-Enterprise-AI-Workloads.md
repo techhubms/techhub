@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Events YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
 date: 2025-11-20 17:20:56 +00:00
-permalink: "/videos/2025-11-20-Azure-AI-Infrastructure-Advances-for-Frontier-and-Enterprise-AI-Workloads.html"
+permalink: "/2025-11-20-Azure-AI-Infrastructure-Advances-for-Frontier-and-Enterprise-AI-Workloads.html"
 categories: ["AI", "Azure"]
 tags: ["Agent Mode", "AI", "AI Infrastructure", "AI Model Deployment", "Azure", "Azure AI", "Cooling Systems", "Datacenter Optimization", "Enterprise AI", "Enterprise Inferencing", "Exascale Performance", "GB300 VM", "Hardware Software Codesign", "LLAMA 70B", "Microsoft Ignite", "Migrateandmodernizeyourestate", "MSIgnite", "NC H100 VM", "NC RTX Blackwell VM", "ND GB200 VM", "Network Security", "NVIDIA Grace Blackwell", "Quantum 2 InfiniBand", "Silicon Optimization", "Videos"]
 tags_normalized: ["agent mode", "ai", "ai infrastructure", "ai model deployment", "azure", "azure ai", "cooling systems", "datacenter optimization", "enterprise ai", "enterprise inferencing", "exascale performance", "gb300 vm", "hardware software codesign", "llama 70b", "microsoft ignite", "migrateandmodernizeyourestate", "msignite", "nc h100 vm", "nc rtx blackwell vm", "nd gb200 vm", "network security", "nvidia grace blackwell", "quantum 2 infiniband", "silicon optimization", "videos"]

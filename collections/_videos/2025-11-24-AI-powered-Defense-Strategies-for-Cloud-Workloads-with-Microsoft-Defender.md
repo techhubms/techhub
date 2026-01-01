@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Events YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
 date: 2025-11-24 07:34:52 +00:00
-permalink: "/videos/2025-11-24-AI-powered-Defense-Strategies-for-Cloud-Workloads-with-Microsoft-Defender.html"
+permalink: "/2025-11-24-AI-powered-Defense-Strategies-for-Cloud-Workloads-with-Microsoft-Defender.html"
 categories: ["AI", "Azure", "Security"]
 tags: ["AI", "AI Security", "Attack Response", "Automation", "Azure", "Cloud Security", "Cloud Storage Security", "CNAPP", "Container Security", "Defender Portal", "Lateral Movement", "Microsoft Defender For Cloud", "Microsoft Ignite", "MSIgnite", "ProtectcloudAIplatformandapps", "Security", "Security Monitoring", "Threat Detection", "Threat Hunting", "Videos", "XDR"]
 tags_normalized: ["ai", "ai security", "attack response", "automation", "azure", "cloud security", "cloud storage security", "cnapp", "container security", "defender portal", "lateral movement", "microsoft defender for cloud", "microsoft ignite", "msignite", "protectcloudaiplatformandapps", "security", "security monitoring", "threat detection", "threat hunting", "videos", "xdr"]

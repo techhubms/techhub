@@ -9,10 +9,10 @@ viewing_mode: "external"
 feed_name: "Reinier van Maanen's blog"
 feed_url: "https://r-vm.com/feed.xml"
 date: 2025-07-11 00:00:00 +00:00
-permalink: "/blogs/2025-07-11-Automating-My-Git-Workflow-in-VS-Code-with-Copilot-Chat-Custom-Prompts-and-Terminal-Auto-Approval.html"
+permalink: "/2025-07-11-Automating-my-Git-workflow-in-VS-Code-with-Copilot-Chat-Custom-Prompts-and-Terminal-Auto-Approval.html"
 categories: ["AI", "Coding", "DevOps", "GitHub Copilot"]
-tags: ["AI", "Automation", "Code Review", "Coding", "Configuration", "Copilot Chat", "Custom Prompts", "Developer Tools", "Development", "DevOps", "Git", "GitHub Copilot", "Blogs", "PowerShell", "Productivity", "Python", "Software Engineering", "Terminal", "Terminal Auto Approval", "Version Control", "VS Code", "Workflow"]
-tags_normalized: ["ai", "automation", "code review", "coding", "configuration", "copilot chat", "custom prompts", "developer tools", "development", "devops", "git", "github copilot", "blogs", "powershell", "productivity", "python", "software engineering", "terminal", "terminal auto approval", "version control", "vs code", "workflow"]
+tags: ["AI", "Automation", "Blogs", "Code Review", "Coding", "Configuration", "Copilot Chat", "Custom Prompts", "Developer Tools", "Development", "DevOps", "Git", "GitHub Copilot", "PowerShell", "Productivity", "Python", "Software Engineering", "Terminal", "Terminal Auto Approval", "Version Control", "VS Code", "Workflow"]
+tags_normalized: ["ai", "automation", "blogs", "code review", "coding", "configuration", "copilot chat", "custom prompts", "developer tools", "development", "devops", "git", "github copilot", "powershell", "productivity", "python", "software engineering", "terminal", "terminal auto approval", "version control", "vs code", "workflow"]
 ---
 
 In this detailed post, Reinier van Maanen demonstrates how to automate Git workflows in Visual Studio Code using GitHub Copilot Chat, custom prompts, and the experimental terminal auto-approval feature, providing practical configuration steps and benefits.<!--excerpt_end-->

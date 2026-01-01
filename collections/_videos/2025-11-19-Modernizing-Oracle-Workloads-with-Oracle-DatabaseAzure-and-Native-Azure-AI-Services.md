@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Events YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
 date: 2025-11-19 11:21:00 +00:00
-permalink: "/videos/2025-11-19-Modernizing-Oracle-Workloads-with-Oracle-DatabaseAzure-and-Native-Azure-AI-Services.html"
+permalink: "/2025-11-19-Modernizing-Oracle-Workloads-with-Oracle-DatabaseAzure-and-Native-Azure-AI-Services.html"
 categories: ["AI", "Azure"]
 tags: ["AI", "AI Driven Analytics", "Autonomous Database", "Azure", "Azure AI", "Cloud Migration", "Data Lakehouse", "Database Modernization", "Enterprise Architecture", "High Availability", "Ignite", "InnovatewithAzureAIappsandagents", "Microsoft Azure", "MSIgnite", "OCI", "Operational Insights", "Oracle Database@Azure", "Oracle Exadata", "Videos"]
 tags_normalized: ["ai", "ai driven analytics", "autonomous database", "azure", "azure ai", "cloud migration", "data lakehouse", "database modernization", "enterprise architecture", "high availability", "ignite", "innovatewithazureaiappsandagents", "microsoft azure", "msignite", "oci", "operational insights", "oracle databaseatazure", "oracle exadata", "videos"]

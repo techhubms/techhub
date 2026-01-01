@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/changelog/feed/"
 date: 2025-11-07 16:18:15 +00:00
-permalink: "/news/2025-11-07-Important-Changes-to-GitHub-Actions-pull_request_target-and-Environment-Branch-Protection-Rules.html"
+permalink: "/2025-11-07-Important-Changes-to-GitHub-Actions-pull_request_target-and-Environment-Branch-Protection-Rules.html"
 categories: ["DevOps", "Security"]
 tags: ["Actions", "Branch Protection Rules", "CI/CD", "Code Scanning", "CodeQL", "Default Branch", "DevOps", "Environment Branch Protection", "GitHub Actions", "Improvement", "Merge Commit", "News", "Permissions", "Pull Request Target", "Secrets Management", "Security", "Security Best Practices", "Workflow Security"]
 tags_normalized: ["actions", "branch protection rules", "cislashcd", "code scanning", "codeql", "default branch", "devops", "environment branch protection", "github actions", "improvement", "merge commit", "news", "permissions", "pull request target", "secrets management", "security", "security best practices", "workflow security"]

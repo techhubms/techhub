@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "DotNet YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw"
 date: 2025-10-22 16:30:14 +00:00
-permalink: "/videos/2025-10-22-Debugging-Godot-C-Games-with-Visual-Studio-Code-Godot-Series-Part-6.html"
+permalink: "/2025-10-22-Debugging-Godot-C-Games-with-Visual-Studio-Code-Godot-Series-Part-6.html"
 categories: ["Coding"]
 tags: [".NET", "Breakpoints", "C#", "Call Stack", "Coding", "Collision Shapes", "Conditional Breakpoints", "Debugging", "Game Development", "GameDev Tools", "Godot Engine", "Live Scene Data", "Microsoft Developer", "Remote Tab", "Videos", "VS Code", "Watch Expressions"]
 tags_normalized: ["dotnet", "breakpoints", "csharp", "call stack", "coding", "collision shapes", "conditional breakpoints", "debugging", "game development", "gamedev tools", "godot engine", "live scene data", "microsoft developer", "remote tab", "videos", "vs code", "watch expressions"]

@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-10-28 20:54:43 +00:00
-permalink: "/community/2025-10-28-Accelerating-Cloud-Native-Development-with-AI-Powered-Azure-NetApp-Files-VS-Code-Extension.html"
+permalink: "/2025-10-28-Accelerating-Cloud-Native-Development-with-AI-Powered-Azure-NetApp-Files-VS-Code-Extension.html"
 categories: ["AI", "Azure", "Coding", "DevOps"]
 tags: ["AI", "AI Automation", "ARM Templates", "Azure", "Azure NetApp Files", "Cloud Storage", "Coding", "Community", "Developer Productivity", "DevOps", "Enterprise Cloud", "IaC", "Microsoft Entra ID", "Multi Subscription Management", "Operational Excellence", "Storage Provisioning", "Template Generation", "VS Code", "VS Code Extension"]
 tags_normalized: ["ai", "ai automation", "arm templates", "azure", "azure netapp files", "cloud storage", "coding", "community", "developer productivity", "devops", "enterprise cloud", "iac", "microsoft entra id", "multi subscription management", "operational excellence", "storage provisioning", "template generation", "vs code", "vs code extension"]

@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Events YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
 date: 2025-11-24 04:50:49 +00:00
-permalink: "/videos/2025-11-24-Demystifying-Zero-Trust-Endpoint-Management-with-Microsoft-Intune.html"
+permalink: "/2025-11-24-Demystifying-Zero-Trust-Endpoint-Management-with-Microsoft-Intune.html"
 categories: ["Security"]
 tags: ["AI", "AI Security", "Android", "App Management", "Cloud Security", "Compliance", "Device Management", "Endpoint Management", "Ios", "Macos", "Microsoft Ignite", "Microsoft Intune", "MSIgnite", "ScalewithcloudandAIendpoints", "Security", "Threat Protection", "Videos", "Windows 365", "Zero Trust"]
 tags_normalized: ["ai", "ai security", "android", "app management", "cloud security", "compliance", "device management", "endpoint management", "ios", "macos", "microsoft ignite", "microsoft intune", "msignite", "scalewithcloudandaiendpoints", "security", "threat protection", "videos", "windows 365", "zero trust"]

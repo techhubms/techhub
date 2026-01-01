@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Tech Community"
 feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
 date: 2025-10-14 01:37:14 +00:00
-permalink: "/community/2025-10-14-Validating-Scalable-EDA-Storage-Performance-Azure-NetApp-Files-and-SPECstorage-Solution-2020.html"
+permalink: "/2025-10-14-Validating-Scalable-EDA-Storage-Performance-Azure-NetApp-Files-and-SPECstorage-Solution-2020.html"
 categories: ["Azure", "DevOps"]
 tags: ["Azure", "Azure Architecture", "Azure NetApp Files", "Benchmarking", "Cloud File Storage", "Cloud Storage", "Community", "Data Management", "DevOps", "Electronic Design Automation", "Global Collaboration", "High Performance Computing", "HPC", "Hybrid Cloud", "IaC", "Latency Optimization", "Performance Engineering", "Resilience", "Scalability", "SPECstorage Solution", "Storage Optimization", "Virtual Networks"]
 tags_normalized: ["azure", "azure architecture", "azure netapp files", "benchmarking", "cloud file storage", "cloud storage", "community", "data management", "devops", "electronic design automation", "global collaboration", "high performance computing", "hpc", "hybrid cloud", "iac", "latency optimization", "performance engineering", "resilience", "scalability", "specstorage solution", "storage optimization", "virtual networks"]

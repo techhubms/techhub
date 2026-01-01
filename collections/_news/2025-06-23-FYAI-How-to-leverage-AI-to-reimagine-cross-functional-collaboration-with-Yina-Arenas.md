@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The Azure Blog"
 feed_url: "https://azure.microsoft.com/en-us/blog/feed/"
 date: 2025-06-23 21:10:28 +00:00
-permalink: "/news/2025-06-23-FYAI-How-to-leverage-AI-to-reimagine-cross-functional-collaboration-with-Yina-Arenas.html"
+permalink: "/2025-06-23-FYAI-How-to-leverage-AI-to-reimagine-cross-functional-collaboration-with-Yina-Arenas.html"
 categories: ["AI", "Azure"]
 tags: ["AI", "AI + Machine Learning", "AI Empowerment", "AI Strategies", "Azure", "Azure AI Foundry", "Copilot", "Cross Functional Collaboration", "Developer Tools", "Enterprise Productivity", "Microsoft AI", "News", "Teamwork", "Yina Arenas"]
 tags_normalized: ["ai", "ai plus machine learning", "ai empowerment", "ai strategies", "azure", "azure ai foundry", "copilot", "cross functional collaboration", "developer tools", "enterprise productivity", "microsoft ai", "news", "teamwork", "yina arenas"]

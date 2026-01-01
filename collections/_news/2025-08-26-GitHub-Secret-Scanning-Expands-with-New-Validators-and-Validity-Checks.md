@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/changelog/feed/"
 date: 2025-08-26 17:49:15 +00:00
-permalink: "/news/2025-08-26-GitHub-Secret-Scanning-Expands-with-New-Validators-and-Validity-Checks.html"
+permalink: "/2025-08-26-GitHub-Secret-Scanning-Expands-with-New-Validators-and-Validity-Checks.html"
 categories: ["DevOps", "Security"]
 tags: ["Bitrise", "Credential Management", "DevOps", "GitHub", "Groq", "News", "Secret Scanning", "Security", "Siemens", "Square", "Token Validation", "Uniwise", "Validity Checks", "Wakatime", "WorkOS", "Yandex"]
 tags_normalized: ["bitrise", "credential management", "devops", "github", "groq", "news", "secret scanning", "security", "siemens", "square", "token validation", "uniwise", "validity checks", "wakatime", "workos", "yandex"]

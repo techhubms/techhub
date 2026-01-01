@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "DotNet YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw"
 date: 2025-11-14 05:00:06 +00:00
-permalink: "/videos/2025-11-14-Windows-365-Meets-NET-Aspire-Boosting-Multi-Repo-Microservice-Productivity.html"
+permalink: "/2025-11-14-Windows-365-Meets-NET-Aspire-Boosting-Multi-Repo-Microservice-Productivity.html"
 categories: ["Coding", "DevOps"]
 tags: [".NET Aspire", "AddMicroservice Extension", "Cloud Native", "Coding", "DevOps", "Engineering Productivity", "F5 Development", "HTTP File Templates", "Local Testing", "Microservice Emulator", "Microservices", "Multi Repository", "Onboarding", "RunAsEmulator Extension", "Seed Data", "Videos", "Windows 365"]
 tags_normalized: ["dotnet aspire", "addmicroservice extension", "cloud native", "coding", "devops", "engineering productivity", "f5 development", "http file templates", "local testing", "microservice emulator", "microservices", "multi repository", "onboarding", "runasemulator extension", "seed data", "videos", "windows 365"]

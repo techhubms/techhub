@@ -9,7 +9,7 @@ viewing_mode: "internal"
 feed_name: "Microsoft Events YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
 date: 2025-11-24 11:51:07 +00:00
-permalink: "/videos/2025-11-24-Transforming-Enterprise-Workflows-with-C3-AI-Agentic-Process-Automation.html"
+permalink: "/2025-11-24-Transforming-Enterprise-Workflows-with-C3-AI-Agentic-Process-Automation.html"
 categories: ["AI"]
 tags: ["Agentic Process Automation", "AI", "AI Integration", "Banking Ontology", "C3 AI", "Data Fusion", "Enterprise Automation", "Financial Services Application", "Human in The Loop", "Innovatewithlow", "Intelligent Workflows", "Microsoft Ignite", "MSIgnite", "Ontology", "RPA Alternative", "Studio Interface", "Supply Chain Analytics", "Videos", "Workflow Automation", "Workflow Monitoring"]
 tags_normalized: ["agentic process automation", "ai", "ai integration", "banking ontology", "c3 ai", "data fusion", "enterprise automation", "financial services application", "human in the loop", "innovatewithlow", "intelligent workflows", "microsoft ignite", "msignite", "ontology", "rpa alternative", "studio interface", "supply chain analytics", "videos", "workflow automation", "workflow monitoring"]

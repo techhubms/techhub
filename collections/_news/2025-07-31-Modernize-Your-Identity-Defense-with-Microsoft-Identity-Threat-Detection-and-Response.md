@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "Microsoft Security Blog"
 feed_url: "https://www.microsoft.com/en-us/security/blog/feed/"
 date: 2025-07-31 17:00:00 +00:00
-permalink: "/news/2025-07-31-Modernize-Your-Identity-Defense-with-Microsoft-Identity-Threat-Detection-and-Response.html"
+permalink: "/2025-07-31-Modernize-Your-Identity-Defense-with-Microsoft-Identity-Threat-Detection-and-Response.html"
 categories: ["Security"]
 tags: ["Adversary in The Middle Phishing", "Cloud Security", "Cybersecurity", "Identity Based Attacks", "Identity Security", "ITDR", "Microsoft Identity Threat Detection And Response", "Microsoft Security Operations", "News", "Security", "SOC", "Threat Detection"]
 tags_normalized: ["adversary in the middle phishing", "cloud security", "cybersecurity", "identity based attacks", "identity security", "itdr", "microsoft identity threat detection and response", "microsoft security operations", "news", "security", "soc", "threat detection"]

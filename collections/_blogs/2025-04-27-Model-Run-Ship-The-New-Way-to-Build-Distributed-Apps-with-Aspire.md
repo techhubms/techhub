@@ -9,10 +9,10 @@ viewing_mode: "external"
 feed_name: "David Fowler's Blog"
 feed_url: "https://medium.com/feed/@davidfowl"
 date: 2025-04-27 22:27:35 +00:00
-permalink: "/blogs/2025-04-27-Model-Run-Ship-The-New-Way-to-Build-Distributed-Apps-with-Aspire.html"
+permalink: "/2025-04-27-Model-Run-Ship-The-New-Way-to-Build-Distributed-Apps-with-Aspire.html"
 categories: ["Coding", "DevOps"]
-tags: [".NET", "Application Modeling", "Aspire", "Automation", "C#", "Ci/cd", "Cloud Native", "Coding", "Deployment", "DevOps", "Distributed Applications", "Docker Compose", "GitHub Actions", "IaC", "Microservices", "Blogs", "Pulumi", "Software Development", "Terraform", "Web Development"]
-tags_normalized: ["dotnet", "application modeling", "aspire", "automation", "csharp", "cislashcd", "cloud native", "coding", "deployment", "devops", "distributed applications", "docker compose", "github actions", "iac", "microservices", "blogs", "pulumi", "software development", "terraform", "web development"]
+tags: [".NET", "Application Modeling", "Aspire", "Automation", "Blogs", "C#", "Ci/cd", "Cloud Native", "Coding", "Deployment", "DevOps", "Distributed Applications", "Docker Compose", "GitHub Actions", "IaC", "Microservices", "Pulumi", "Software Development", "Terraform", "Web Development"]
+tags_normalized: ["dotnet", "application modeling", "aspire", "automation", "blogs", "csharp", "cislashcd", "cloud native", "coding", "deployment", "devops", "distributed applications", "docker compose", "github actions", "iac", "microservices", "pulumi", "software development", "terraform", "web development"]
 ---
 
 In this post, David Fowler discusses how Aspire streamlines the modeling and deployment of distributed applications, making connections between services explicit and repeatable.<!--excerpt_end-->

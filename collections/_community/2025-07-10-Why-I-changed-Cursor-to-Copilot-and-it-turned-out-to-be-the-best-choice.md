@@ -9,7 +9,7 @@ categories: ["AI", "GitHub Copilot"]
 feed_name: "Reddit Github Copilot"
 feed_url: "https://www.reddit.com/r/GithubCopilot.rss"
 date: 2025-07-10 21:28:42 +00:00
-permalink: "/community/2025-07-10-Why-I-changed-Cursor-to-Copilot-and-it-turned-out-to-be-the-best-choice.html"
+permalink: "/2025-07-10-Why-I-changed-Cursor-to-Copilot-and-it-turned-out-to-be-the-best-choice.html"
 viewing_mode: "external"
 tags: ["Agentic Behavior", "AI", "AI Assistants", "APM", "Billing Changes", "Claude Code", "Community", "Copilot Pro", "Cursor", "Developer Tools", "GitHub Copilot", "LLM", "Open Source", "Request Limits", "Student Subscriptions", "VS Code"]
 tags_normalized: ["agentic behavior", "ai", "ai assistants", "apm", "billing changes", "claude code", "community", "copilot pro", "cursor", "developer tools", "github copilot", "llm", "open source", "request limits", "student subscriptions", "vs code"]

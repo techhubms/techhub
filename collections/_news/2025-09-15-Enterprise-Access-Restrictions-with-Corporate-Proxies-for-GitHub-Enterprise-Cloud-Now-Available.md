@@ -9,7 +9,7 @@ viewing_mode: "external"
 feed_name: "The GitHub Blog"
 feed_url: "https://github.blog/changelog/feed/"
 date: 2025-09-15 20:49:25 +00:00
-permalink: "/news/2025-09-15-Enterprise-Access-Restrictions-with-Corporate-Proxies-for-GitHub-Enterprise-Cloud-Now-Available.html"
+permalink: "/2025-09-15-Enterprise-Access-Restrictions-with-Corporate-Proxies-for-GitHub-Enterprise-Cloud-Now-Available.html"
 categories: ["DevOps", "Security"]
 tags: ["Access Control", "Authentication Security", "Copilot Network Policy", "Corporate Proxy", "Data Residency", "DevOps", "Enterprise Managed Users", "Enterprise Management Tools", "Firewall", "GitHub Enterprise Cloud", "Improvement", "Network Restrictions", "News", "Platform Governance", "Proxy Configuration", "Security"]
 tags_normalized: ["access control", "authentication security", "copilot network policy", "corporate proxy", "data residency", "devops", "enterprise managed users", "enterprise management tools", "firewall", "github enterprise cloud", "improvement", "network restrictions", "news", "platform governance", "proxy configuration", "security"]
