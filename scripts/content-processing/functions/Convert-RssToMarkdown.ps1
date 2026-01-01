@@ -294,19 +294,26 @@ function Convert-RssToMarkdown {
                 Set-Content -Path $filePath -Value $markdownContent -Encoding UTF8 -Force
                 Write-Host "✅ Created file: $filePath" -ForegroundColor Green
 
-                # Add to processed entries
-                $explanation = if ($response.PSObject.Properties.Name -contains 'explanation') { $response.explanation } else { "" }
-                $finalReason = if ($explanation -and $explanation.Trim() -ne "") {
-                    "Succesfully added: $explanation"
-                }
-                else {
-                    "Succesfully added"
-                }
-                Add-TrackingEntry -EntriesPath $processedEntriesPath -CanonicalUrl $item.Link -Collection $collection_value -Reason $finalReason
-
                 # Fix markdown immediately
                 Repair-MarkdownJekyll -FilePath $filePath
                 Repair-MarkdownFormatting -FilePath $filePath
+                
+                # Verify file was created successfully before adding to processed entries
+                if (Test-Path $filePath) {
+                    # Add to processed entries ONLY after successful file creation and repair
+                    $explanation = if ($response.PSObject.Properties.Name -contains 'explanation') { $response.explanation } else { "" }
+                    $finalReason = if ($explanation -and $explanation.Trim() -ne "") {
+                        "Succesfully added: $explanation"
+                    }
+                    else {
+                        "Succesfully added"
+                    }
+                    Add-TrackingEntry -EntriesPath $processedEntriesPath -CanonicalUrl $item.Link -Collection $collection_value -Reason $finalReason
+                }
+                else {
+                    Write-Host "⚠️  File creation verification failed, not adding to processed entries" -ForegroundColor Yellow
+                    throw "File was not created at expected path: $filePath"
+                }
             }
             else {
                 Write-Host "What if: Would save markdown file to $filePath"

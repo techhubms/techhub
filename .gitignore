@@ -94,3 +94,5 @@ $RECYCLE.BIN/
 *.dmg
 *.app
 *.DS_Store
+
+.playwright-mcp/
