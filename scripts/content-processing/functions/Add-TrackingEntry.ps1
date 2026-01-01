@@ -21,6 +21,10 @@ function Add-TrackingEntry {
     $entries += $entry
     $entries = @($entries)
     if ($PSCmdlet.ShouldProcess($EntriesPath, "Add entry to tracking file")) {
+        # DEBUG: Log all add operations to detect duplicates
+        $hasReason = if ($entry.ContainsKey("reason")) { "WITH reason" } else { "WITHOUT reason" }
+        Write-Host "🔍 DEBUG: Adding entry $hasReason to $(Split-Path $EntriesPath -Leaf): $($entry.canonical_url)" -ForegroundColor Cyan
+        
         $entries | ConvertTo-Json -Depth 10 | Set-Content -Path $EntriesPath -Encoding UTF8 -Force
         #Write-Host "Added entry to $($EntriesPath): $($entry.canonical_url)"
     }

@@ -78,7 +78,7 @@ jobs:
             "scripts/data/skipped-entries.json"
             "scripts/data/rss-cache/*/*/*.json"
             "scripts/data/airesults/*.json"
-            "_*/*.md"
+            "collections/_*/*.md"
           )
           
           # Filter changed files to only include RSS-managed files
@@ -311,7 +311,7 @@ jobs:
               "scripts/data/skipped-entries.json"
               "scripts/data/rss-cache/*/*/*.json"
               "scripts/data/airesults/*.json"
-              "_*/*.md"
+              "collections/_*/*.md"
             )
             
             # Collect files to copy (additions and modifications)

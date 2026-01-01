@@ -52,14 +52,6 @@ function Repair-MarkdownJekyll {
     # These keys have special handling or should remain unquoted for proper Jekyll processing
     $frontmatterSkipKeys = @('excerpt_separator', 'tags', 'categories', 'date')
 
-    $processedFile = Join-Path (Get-SourceRoot) "scripts/data/processed-entries.json"
-    
-    $processed = @()
-    if ($processedFile -and (Test-Path $processedFile)) {
-        $processed = @(Get-Content $processedFile | ConvertFrom-Json)
-    }
-
-    $newCanonicalEntries = @()
     $fixedFilesCount = 0
     
     foreach ($file in $markdownFiles) {
@@ -349,18 +341,6 @@ function Repair-MarkdownJekyll {
                     }
                 }
 
-                # Canonical URL extraction: collect new canonical_url entries for processed-entries.json
-                if ($line -match '^canonical_url:[\s]*"([^"]+)"') {
-                    $url = $matches[1]
-                    if (-not ($processed | Where-Object { $_.canonical_url -eq $url }) -and -not ($newCanonicalEntries | Where-Object { $_.canonical_url -eq $url })) {
-                        $entry = @{ 
-                            canonical_url = $url
-                            collection = $collection_value
-                            timestamp = ((Get-Date).ToString("yyyy-MM-dd HH:mm:ss zzz"))
-                        }
-                        $newCanonicalEntries += $entry
-                    }
-                }
 
                 # Remove quotes from skipKeys entries: ensure certain keys are never quoted
                 if ($line -match '^([a-zA-Z0-9_-]+):\s*(.+)$') {
@@ -564,13 +544,6 @@ function Repair-MarkdownJekyll {
                 Write-Warning "Failed to rename file $($file.FullName) to $new_filename`: $_"
             }
         }
-    }
-
-    $newCanonicalCount = $newCanonicalEntries.Count
-    if ($newCanonicalCount -gt 0 -and $processedFile -and $processedFile.Trim() -ne "") {
-        $processed += $newCanonicalEntries
-        Set-Content -Path $processedFile -Value ($processed | ConvertTo-Json -Depth 5)
-        Write-Host "Added $newCanonicalCount new entries to processed-entries."
     }
 
     Write-Host "Fixed Jekyll frontmatter in $fixedFilesCount file(s) out of $($markdownFiles.Count) total files."    
