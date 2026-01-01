@@ -41,15 +41,31 @@ Install-Module Pester -Force -SkipPublisherCheck -MinimumVersion "5.0.0" -Scope 
 
 # Install .NET global tools
 Write-Host "Installing .NET global tools..."
-dotnet tool install --global dotnet-ef 2>$null
-dotnet tool install --global dotnet-aspire 2>$null
+$installedTools = dotnet tool list --global | Select-Object -Skip 2 | ForEach-Object { ($_ -split '\s+')[0] }
+
+if ($installedTools -notcontains 'dotnet-ef') {
+    Write-Host "  Installing dotnet-ef..."
+    dotnet tool install --global dotnet-ef
+} else {
+    Write-Host "  dotnet-ef already installed"
+}
+
+if ($installedTools -notcontains 'dotnet-aspire') {
+    Write-Host "  Installing dotnet-aspire..."
+    dotnet tool install --global dotnet-aspire
+} else {
+    Write-Host "  dotnet-aspire already installed"
+}
 
 # Install Playwright browsers for E2E tests and MCP
+Write-Host "Installing latest Playwright globally..."
+sudo npm install -g playwright@latest
+
 Write-Host "Installing Playwright system dependencies..."
 sudo npx -y playwright install-deps
 
 Write-Host "Installing Playwright browsers..."
-npx -y playwright@latest install chromium chrome --force
+npx -y playwright@latest install chromium --force
 
 # Restore .NET packages (only if solution exists)
 if (Test-Path "TechHub.sln") {
@@ -57,16 +73,14 @@ if (Test-Path "TechHub.sln") {
     dotnet restore
 }
 
-# Trust development certificates (skip on Linux as it requires GUI)
+# Setup development certificates (container environment)
 Write-Host "Setting up development certificates..."
-if ($IsWindows) {
-    dotnet dev-certs https --trust 2>$null
+$certCheck = dotnet dev-certs https --check
+if ($LASTEXITCODE -ne 0) {
+    Write-Host "  Creating development certificate..."
+    dotnet dev-certs https
 } else {
-    # On Linux, just ensure cert exists but don't try to trust (no GUI)
-    dotnet dev-certs https --check 2>$null
-    if ($LASTEXITCODE -ne 0) {
-        dotnet dev-certs https 2>$null
-    }
+    Write-Host "  Development certificate already exists"
 }
 
 Write-Host ""

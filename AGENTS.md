@@ -88,6 +88,8 @@ These are the **non-negotiable rules** that apply to ALL development tasks. ALWA
 - **Never use emojis unless explicitly requested**: Keep communication professional
 - **Never leave files incomplete or broken**: Ensure all changes are complete
 - **Never assume UTC**: Always use configured timezone (`Europe/Brussels`)
+- **Never include Windows support**: This project is Linux-only (DevContainer environment)
+- **Never suppress errors for resiliency**: Prevent errors by checking conditions first, don't hide failures with error suppression (e.g., `2>$null`)
 
 ### 1. Gather Context
 
