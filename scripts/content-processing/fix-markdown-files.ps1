@@ -18,7 +18,7 @@
     pwsh scripts/content-processing/fix-markdown-files.ps1 -FilePath "docs/site-overview.md"
 .EXAMPLE
     # Process a file with full path
-    pwsh scripts/content-processing/fix-markdown-files.ps1 -FilePath "_blogs/2025-01-01-example-item.md"
+    pwsh scripts/content-processing/fix-markdown-files.ps1 -FilePath "collections/_blogs/2025-01-01-example-item.md"
 .EXAMPLE
     # Run from GitHub Actions with workspace directory
     pwsh scripts/content-processing/fix-markdown-files.ps1 -WorkspaceDirectory ${{ github.workspace }}

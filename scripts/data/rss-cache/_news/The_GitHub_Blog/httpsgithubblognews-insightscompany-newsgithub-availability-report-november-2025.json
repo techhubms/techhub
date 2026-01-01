@@ -1,0 +1,18 @@
+{
+  "Link": "https://github.blog/news-insights/company-news/github-availability-report-november-2025/",
+  "Author": "Jakub Oleksy",
+  "PubDate": "2025-12-11T16:03:53+00:00",
+  "FeedLevelAuthor": "The GitHub Blog",
+  "Title": "GitHub Availability Report: November 2025",
+  "Description": "In November, we experienced three incidents that resulted in degraded performance across GitHub services.\n\nThe post [GitHub Availability Report: November 2025](https://github.blog/news-insights/company-news/github-availability-report-november-2025/) appeared first on [The GitHub Blog](https://github.blog).",
+  "EnhancedContent": "In November, we experienced three incidents that resulted in degraded performance across GitHub services.\n\n**November 17 16:52 UTC (lasting 2 hours and 16 minutes)**\n\nOn November 17, 2025, from 16:52 to 19:08 UTC, Dependabot was hitting a rate limit in GitHub Container Registry (GHCR) and was unable to complete about 57% of jobs within SLO.\n\nTo mitigate the issue, we lowered the rate at which Dependabot started jobs and increased the GHCR rate limit. This mitigated the circumstances and led to the resolution of the incident.\n\nLonger term, we’re adding new monitors and alerts to help prevent this in the future.\n\n**November 18 20:30 UTC (lasting 1 hour and 4 minutes)**\n\nOn November 18, 2025, from 20:30 to 21:34 UTC, we experienced failures on all Git operations, including both SSH and HTTP Git client interactions, as well as raw file access. These failures also impacted products that rely on Git operations.\n\nThe root cause was an expired TLS certificate used for internal service-to-service communication. We mitigated the incident by replacing the expired certificate and restarting impacted services. Once those services were restarted we saw a full recovery.\n\nWe have updated our alerting to cover the expired certificate, and we are performing an audit of other certificates in this area to ensure they also have the proper alerting and automation before expiration. In parallel, we are accelerating efforts to eliminate our remaining manually managed certificates, ensuring all service-to-service communication is fully automated.\n\n**November 28 05:59 UTC (lasting 2 hours and 24 minutes)**\n\nOn November 28, 2025, between approximately 05:59 and 08:24 UTC, Copilot experienced an outage affecting the Claude Sonnet 4.5 model. Users attempting to use this model received an HTTP 400 error indicating no model was available until an alternative model was selected. Other models were not impacted.\n\nThe issue was caused by a misconfiguration deployed to an internal service, which made Claude Sonnet 4.5 erroneously listed as unavailable. The problem was identified and mitigated by reverting the configuration change. We are working to improve cross-service deploy safeguards to prevent similar incidents in the future.\n\nFollow our [status page](https://www.githubstatus.com/) for real-time updates on status changes and post-incident recaps. To learn more about what we’re working on, check out the engineering section on the [GitHub Blog](https://github.blog/category/engineering/).\n\n## Tags:\n\n- [GitHub Availability Report](https://github.blog/tag/github-availability-report/)\n\n## Written by\n\n![Jakub Oleksy](https://avatars.githubusercontent.com/u/6147691?v=4&#038;s=200)",
+  "FeedUrl": "https://github.blog/feed/",
+  "OutputDir": "_news",
+  "FeedName": "The GitHub Blog",
+  "Tags": [
+    "Company news",
+    "GitHub Availability Report",
+    "News & insights"
+  ],
+  "ProcessedDate": "2026-01-01 15:27:25"
+}

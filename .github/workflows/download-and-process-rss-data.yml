@@ -78,7 +78,7 @@ jobs:
             "scripts/data/skipped-entries.json"
             "scripts/data/rss-cache/*/*/*.json"
             "scripts/data/airesults/*.json"
-            "_*/*.md"
+            "collections/_*/*.md"
           )
           
           # Filter changed files to only include RSS-managed files
@@ -137,7 +137,7 @@ jobs:
                     echo "Skipping deleted file: $file (was removed from main)"
                   else
                     # File never existed on main - check if it's RSS-managed
-                    if [[ "$file" == _*/*.md ]]; then
+                    if [[ "$file" == collections/_*/*.md ]]; then
                       # NEW markdown file from RSS processing - always restore
                       echo "Restoring NEW markdown file: $file (from RSS processing)"
                       mkdir -p "$(dirname "$file")"
@@ -311,7 +311,7 @@ jobs:
               "scripts/data/skipped-entries.json"
               "scripts/data/rss-cache/*/*/*.json"
               "scripts/data/airesults/*.json"
-              "_*/*.md"
+              "collections/_*/*.md"
             )
             
             # Collect files to copy (additions and modifications)

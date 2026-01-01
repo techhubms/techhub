@@ -10899,5 +10899,23 @@
     "timestamp": "2025-12-31 18:02:14 +00:00",
     "reason": "No categories found: No categories assigned because the content is too vague and lacks substantive technical detail. The provided title and description do not contain enough information to determine if Microsoft development technologies or any of the predefined categories are substantially covered. Without detailed content text, I cannot confirm if the video presents technical implementation, development practices, or specific Microsoft technologies meeting inclusion requirements. Per the guidelines, when in doubt or when the content is insufficient to evaluate against category rules, no categories are assigned.",
     "collection": "videos"
+  },
+  {
+    "collection": "news",
+    "canonical_url": "https://devblogs.microsoft.com/all-things-azure/visualizing-github-audit-log-in-microsoft-defender/",
+    "reason": "API call retries failed: All API call retries failed - no response received",
+    "timestamp": "2026-01-01 15:36:53 +00:00"
+  },
+  {
+    "collection": "videos",
+    "canonical_url": "https://www.youtube.com/shorts/mLxAtz98h_4",
+    "reason": "No categories found: No categories assigned. The content, based on the title and description, is a news/discussion video analysing recent language popularity trends in GitHub's Octoverse report. It discusses TypeScript overtaking Python and JavaScript, mentions the language's strengths and future industry directions, and contains general commentary. There is no substantive coverage of Microsoft technologies, developer tools, or coding practices within the Microsoft ecosystem as required by AI, Coding, Azure, DevOps, ML, Security, or GitHub Copilot categories. Although TypeScript is a Microsoft-created language, the content here focuses on popularity and ecosystem trends, not technical implementation, development with Microsoft frameworks/tools, or detailed instructions relevant to Microsoft developer consulting. This falls outside the inclusion rules for all categories.",
+    "timestamp": "2026-01-01 15:43:31 +00:00"
+  },
+  {
+    "collection": "videos",
+    "canonical_url": "https://www.youtube.com/shorts/zztkA8cJaCs",
+    "reason": "No categories found: No categories assigned. The content specifically covers basic Git commands (git status and git add) for beginners. While it is produced by GitHub, the material focuses solely on Git fundamentals and does not address any Microsoft-specific technologies, nor does it discuss DevOps, GitHub Actions, AI, Coding with Microsoft frameworks, or other qualifying themes as outlined in the inclusion rules. There is no discussion of developer experience topics as they relate to Microsoft tools or services (DevOps rule 9), and no central Microsoft architecture or integration is present. Therefore, none of the categories apply.",
+    "timestamp": "2026-01-01 15:43:43 +00:00"
   }
 ]
