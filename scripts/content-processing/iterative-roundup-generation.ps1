@@ -1724,7 +1724,7 @@ $step6Response
     }
     
     # Read the writing style guidelines using the established WorkspaceRoot variable
-    $guidelinesPath = Join-Path $WorkspaceRoot "docs" "writing-style-guidelines.md"
+    $guidelinesPath = Join-Path $WorkspaceRoot "collections" "writing-style-guidelines.md"
     if (-not (Test-Path $guidelinesPath)) {
         throw "⚠️ Writing style guidelines not found at $guidelinesPath"
     }
