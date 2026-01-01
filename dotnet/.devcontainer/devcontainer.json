@@ -1,0 +1,114 @@
+{
+  "name": "Tech Hub .NET",
+  "image": "mcr.microsoft.com/devcontainers/dotnet",
+  "workspaceFolder": "/workspaces/techhub",
+  "features": {
+    "ghcr.io/devcontainers/features/powershell:1": {},
+    "ghcr.io/devcontainers/features/azure-cli:1": {
+      "installBicep": true
+    },
+    "ghcr.io/devcontainers/features/github-cli:1": {},
+    "ghcr.io/azure/azure-dev/azd:latest": {},
+    "ghcr.io/devcontainers/features/node:1": {}
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        // .NET Development
+        "ms-dotnettools.csharp",
+        "ms-dotnettools.csdevkit",
+        "ms-dotnettools.vscode-dotnet-runtime",
+        "ms-dotnettools.dotnet-interactive-vscode",
+        
+        // Azure & Infrastructure
+        "ms-azuretools.vscode-bicep",
+        "ms-azuretools.vscode-azurecontainerapps",
+        "ms-azuretools.vscode-azureresourcegroups",
+        "ms-azuretools.vscode-azure-github-copilot",
+        "ms-vscode.vscode-node-azure-pack",
+        
+        // GitHub & Copilot
+        "github.copilot",
+        "github.copilot-chat",
+        "github.vscode-pull-request-github",
+        
+        // Testing & Quality
+        "ms-playwright.playwright",
+        "DavidAnson.vscode-markdownlint",
+        "humao.rest-client",
+        
+        // PowerShell
+        "ms-vscode.powershell"
+      ],
+      "settings": {
+        // ==================== .NET Settings ====================
+        "dotnet.defaultSolution": "TechHub.sln",
+        "dotnet.server.useOmnisharp": false,
+        "csharp.semanticHighlighting.enabled": true,
+        
+        // ==================== GitHub Copilot Settings ====================
+        "chat.agent.maxRequests": 100,
+        "chat.agent.thinking.collapsedTools": "off",
+        "chat.useAgentSkills": true,
+        "chat.useNestedAgentsMdFiles": true,
+        "github.copilot.chat.agent.thinkingTool": true,
+        "github.copilot.chat.codesearch.enabled": true,
+        
+        // ==================== Extension Settings ====================
+        "playwright.reuseBrowser": true,
+        "playwright.showTrace": true,
+        "powershell.integratedConsole.showOnStartup": false,
+        "terminal.integrated.defaultProfile.linux": "pwsh",
+        
+        "terminal.integrated.env.linux": {
+          "POWERSHELL_UPDATECHECK": "Off",
+          "POWERSHELL_TELEMETRY_OPTOUT": "1",
+          "DOTNET_CLI_TELEMETRY_OPTOUT": "1"
+        },
+        
+        "files.associations": {
+          "*.ps1": "powershell",
+          "*.bicep": "bicep",
+          "*.json": "jsonc"
+        }
+      },
+      "mcp": {
+        "servers": {
+          "github": {
+            "type": "http",
+            "url": "https://api.githubcopilot.com/mcp/"
+          },
+          "playwright": {
+            "type": "stdio",
+            "command": "npx",
+            "args": [
+              "-y",
+              "@playwright/mcp@latest",
+              "--vision",
+              "--headless",
+              "--isolated",
+              "--no-sandbox"
+            ]
+          },
+          "context7": {
+            "type": "http",
+            "url": "https://mcp.context7.com/mcp"
+          }
+        }
+      }
+    }
+  },
+  "postCreateCommand": "/bin/bash -c 'POWERSHELL_UPDATECHECK=Off POWERSHELL_TELEMETRY_OPTOUT=1 DOTNET_CLI_TELEMETRY_OPTOUT=1 pwsh -NoProfile -NonInteractive -File dotnet/.devcontainer/post-create.ps1'",
+  "remoteEnv": {
+    "POWERSHELL_UPDATECHECK": "Off",
+    "POWERSHELL_TELEMETRY_OPTOUT": "1",
+    "DOTNET_CLI_TELEMETRY_OPTOUT": "1"
+  },
+  "forwardPorts": [5000, 5001, 15888, 5173],
+  "portsAttributes": {
+    "5000": { "label": "API HTTP" },
+    "5001": { "label": "API HTTPS" },
+    "5173": { "label": "Blazor Dev Server" },
+    "15888": { "label": "Aspire Dashboard" }
+  }
+}
