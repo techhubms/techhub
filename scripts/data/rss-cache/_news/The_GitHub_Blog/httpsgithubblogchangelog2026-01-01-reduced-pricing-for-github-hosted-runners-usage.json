@@ -1,0 +1,17 @@
+{
+  "Description": "Reduced costs for GitHub-hosted runners are now in effect. We announced this update on December 16, 2025. GitHub users will see price reductions of up to 39% for GitHub-hosted runners,…\n\nThe post [Reduced pricing for GitHub-hosted runners usage](https://github.blog/changelog/2026-01-01-reduced-pricing-for-github-hosted-runners-usage) appeared first on [The GitHub Blog](https://github.blog).",
+  "FeedUrl": "https://github.blog/changelog/feed/",
+  "Title": "Reduced pricing for GitHub-hosted runners usage",
+  "PubDate": "2026-01-01T17:00:03+00:00",
+  "Tags": [
+    "actions",
+    "Release"
+  ],
+  "ProcessedDate": "2026-01-01 18:02:04",
+  "FeedName": "The GitHub Blog",
+  "EnhancedContent": "Reduced costs for GitHub-hosted runners are now in effect. We [announced this update](https://github.blog/changelog/2025-12-16-coming-soon-simpler-pricing-and-a-better-experience-for-github-actions/) on December 16, 2025. GitHub users will see price reductions of up to 39% for GitHub-hosted runners, [depending on the machines](https://docs.github.com/billing/reference/actions-runner-pricing) they use.\n\nStandard hosted runner usage in public repositories remains free.\n\n### Recommended resources\n\n- For full details regarding GitHub Actions pricing changes, see the [Executive Insights post](https://resources.github.com/actions/2026-pricing-changes-for-github-actions).\n- See [runner pricing documentation](https://docs.github.com/billing/reference/actions-runner-pricing) for adjusted GitHub-hosted runner rates.\n- For help estimating your expected Actions usage cost, see the [Actions pricing calculator](https://github.com/pricing/calculator#actions).\n- For more details on upcoming GitHub Actions releases, see the [GitHub public roadmap](https://github.com/orgs/github/projects/4247).",
+  "FeedLevelAuthor": "Archive: 2026 - GitHub Changelog",
+  "OutputDir": "_news",
+  "Link": "https://github.blog/changelog/2026-01-01-reduced-pricing-for-github-hosted-runners-usage",
+  "Author": "Allison"
+}

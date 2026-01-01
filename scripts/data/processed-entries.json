@@ -22870,5 +22870,11 @@
     "canonical_url": "https://techcommunity.microsoft.com/t5/tools/your-guide-to-debugging-and-reviewing-copilot-generated-code/m-p/4472116#M182",
     "reason": "Succesfully added: Added GitHub Copilot and AI categories based on the explicit focus on Copilot as an AI coding assistant (AI rules 1, 2, and GitHub Copilot rules 1, 2, 4). Assigned Coding category because the content centers on code review, debugging, and developer best practices (Coding rule 4). No DevOps, Azure, ML, or Security categories because while quality and security are discussed, they are not deeply technical or product-specific with respect to Microsoft security tools or processes.",
     "timestamp": "2026-01-01 16:47:40 +00:00"
+  },
+  {
+    "reason": "Succesfully added: DevOps category is assigned because the announcement details cost changes for GitHub-hosted runners, which are core infrastructure for CI/CD workflows (DevOps rule 2 and 5). The content directly addresses automation and billing for GitHub Actions, a widely used DevOps tool. No other categories such as Coding, AI, or Security are included, as there is no technical coding guidance, AI product usage, or security discussion present. The rules for DevOps category inclusion are met by the focus on GitHub Actions and workflow runner infrastructure.",
+    "collection": "news",
+    "timestamp": "2026-01-01 18:03:23 +00:00",
+    "canonical_url": "https://github.blog/changelog/2026-01-01-reduced-pricing-for-github-hosted-runners-usage"
   }
 ]
