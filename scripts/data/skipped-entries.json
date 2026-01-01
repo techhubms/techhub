@@ -10857,5 +10857,59 @@
     "reason": "Insufficient content length",
     "canonical_url": "https://techcommunity.microsoft.com/t5/azure-virtual-desktop/azure-virtual-desktop-not-functioning/m-p/4480528#M13976",
     "timestamp": "2025-12-24 09:21:57 +00:00"
+  },
+  {
+    "canonical_url": "https://www.linkedin.com/posts/satyanadella_looking-ahead-to-2026-activity-7411490079984250880-Vb5v",
+    "timestamp": "2025-12-31 17:54:29 +00:00",
+    "reason": "No categories found: Content excluded according to generic exclusion rules. The provided 'news' content consists primarily of an industry reflection, executive commentary, and LinkedIn interactions focused on business strategy, leadership, and high-level vision for the year ahead. There is no substantive technical content, technical implementation detail, hands-on guidance, or Microsoft technology description that qualifies for any predefined category. The discussion is abstract, focused on industry trajectory, workplace trends, organizational impact, and does not meet requirements for coding, DevOps, Azure, security, AI, ML, or any other technical developer-focused category. Exclusion rule: Business Strategy and Executive Content applies. No categories assigned.",
+    "collection": "news"
+  },
+  {
+    "canonical_url": "https://dellenny.com/how-microsoft-365-and-copilot-empower-people-and-businesses-during-the-holiday-season/",
+    "timestamp": "2025-12-31 17:56:31 +00:00",
+    "reason": "No categories found: Content excluded under generic exclusion rules. The post focuses on how Microsoft 365 and Copilot enhance productivity and work-life balance during the holiday season for general users and business leaders, with emphasis on document creation, communication, and automation features. As per exclusion rules, Microsoft 365 Copilot, Copilot for Microsoft 365, and Office Copilot are considered business productivity tools, not developer tools; the content does not address development, coding, architecture, or technical implementation of Microsoft technologies. Therefore, no categories apply.",
+    "collection": "blogs"
+  },
+  {
+    "canonical_url": "https://zure.com/blog/boosting-your-app-store-ratings",
+    "timestamp": "2025-12-31 17:57:12 +00:00",
+    "reason": "No categories found: Content excluded due to generic exclusion rules. This blog post focuses primarily on user experience (UX), customer feedback, and design patterns for improving app store ratings. There is no substantive coverage of Microsoft development technologies, programming, Azure, or related tools per the inclusion rules. The article revolves around digital service design, UX research, and business application ratings methodology, which do not qualify for any technical categories. No development frameworks, coding practices, DevOps, security, AI, ML, or Azure implementation details are present. Additionally, the title, description, and tags emphasize app store ratings and user experience—not technical implementation relevant to Tech Hub's category structure.",
+    "collection": "blogs"
+  },
+  {
+    "canonical_url": "https://www.youtube.com/shorts/1ckVnvo-qcw",
+    "timestamp": "2025-12-31 18:00:22 +00:00",
+    "reason": "No categories found: Content excluded as per generic exclusion rules: This is an end-of-year highlight focused on general open source projects, with no substantive technical depth or focus on Microsoft technologies. There is no detailed discussion of Microsoft-specific development, implementation, or platforms. The content is a general round-up rather than offering actionable developer insights, technical implementation, or Microsoft-centric educational value. Thus, no categories apply.",
+    "collection": "videos"
+  },
+  {
+    "canonical_url": "https://www.youtube.com/shorts/e6Oz331Rauc",
+    "timestamp": "2025-12-31 18:00:33 +00:00",
+    "reason": "No categories found: Content excluded due to generic exclusion rule: This video is primarily biographical, focusing on Guido van Rossum's personal motivation for creating Python and sharing Python's origin story. It does not provide technical implementation details or actionable information about Microsoft technologies or development practices as required by the category inclusion rules.",
+    "collection": "videos"
+  },
+  {
+    "canonical_url": "https://www.youtube.com/shorts/m1duSN3xRwY",
+    "timestamp": "2025-12-31 18:00:46 +00:00",
+    "reason": "No categories found: No categories assigned. The content is focused on the evolution of Python language features and parser redesign, which does not center on Microsoft technologies nor developer tools specific to the Microsoft ecosystem. While GitHub distribution is mentioned, the substance of the video is about Python (a general language topic), and there is no technical detail about Microsoft platforms, products, or services (Azure, .NET, DevOps, etc.). Therefore, the generic exclusion applies: 'Microsoft content must be central or ≥40%.'",
+    "collection": "videos"
+  },
+  {
+    "canonical_url": "https://www.youtube.com/shorts/0yG4ei9U3UI",
+    "timestamp": "2025-12-31 18:01:51 +00:00",
+    "reason": "No categories found: Content was excluded according to generic exclusion rules. The provided data consists only of a title 'Thinking of starting a tech channel? 🤔', an author name, vague tags referencing Visual Studio Code, and no substantive content or description. There is no technical information, tutorial, or actionable developer content. Generic exclusion rules require exclusion for content that is missing meaningful technical depth or is primarily an announcement, social post, or advertising without educational value. Additionally, with no substantive 'content' field, technical category inclusion cannot be assessed.",
+    "collection": "videos"
+  },
+  {
+    "canonical_url": "https://www.youtube.com/shorts/2RzKDrOBw5s",
+    "timestamp": "2025-12-31 18:02:03 +00:00",
+    "reason": "No categories found: Content excluded due to generic exclusion rule – the content does not provide any substantive technical details (“content” field is null and no description). There is only a title suggesting someone built something impressive with Copilot, but without main content, description, or technical explanation, none of the inclusion rules can be applied. Additionally, the title itself is non-technical and focuses on a personal achievement, which aligns with the 'Biographical Focus' exclusion. No categories are assigned.",
+    "collection": "videos"
+  },
+  {
+    "canonical_url": "https://www.youtube.com/shorts/BeLtZZJSGRY",
+    "timestamp": "2025-12-31 18:02:14 +00:00",
+    "reason": "No categories found: No categories assigned because the content is too vague and lacks substantive technical detail. The provided title and description do not contain enough information to determine if Microsoft development technologies or any of the predefined categories are substantially covered. Without detailed content text, I cannot confirm if the video presents technical implementation, development practices, or specific Microsoft technologies meeting inclusion requirements. Per the guidelines, when in doubt or when the content is insufficient to evaluate against category rules, no categories are assigned.",
+    "collection": "videos"
   }
 ]
