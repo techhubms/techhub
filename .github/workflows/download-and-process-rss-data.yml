@@ -137,7 +137,7 @@ jobs:
                     echo "Skipping deleted file: $file (was removed from main)"
                   else
                     # File never existed on main - check if it's RSS-managed
-                    if [[ "$file" == _*/*.md ]]; then
+                    if [[ "$file" == collections/_*/*.md ]]; then
                       # NEW markdown file from RSS processing - always restore
                       echo "Restoring NEW markdown file: $file (from RSS processing)"
                       mkdir -p "$(dirname "$file")"
