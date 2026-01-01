@@ -284,8 +284,9 @@ jobs:
           DELETED_FILES=$(git diff --name-only --diff-filter=D origin/main...HEAD || true)
           
           # Check markdown files in _* directories (this determines whether to copy to main)
-          CHANGED_MD_FILES=$(echo "$ALL_DIFF_FILES" | grep -E '^_[^/]+/.*\.(md|markdown)$' || true)
-          DELETED_MD_FILES=$(echo "$DELETED_FILES" | grep -E '^_[^/]+/.*\.(md|markdown)$' || true)
+          # Pattern matches both root-level (_videos/) and collections subdirectory (collections/_videos/)
+          CHANGED_MD_FILES=$(echo "$ALL_DIFF_FILES" | grep -E '^(collections/)?_[^/]+/.*\.(md|markdown)$' || true)
+          DELETED_MD_FILES=$(echo "$DELETED_FILES" | grep -E '^(collections/)?_[^/]+/.*\.(md|markdown)$' || true)
           
           if [ -n "$CHANGED_MD_FILES" ]; then
             echo "Found markdown changes to copy:"
