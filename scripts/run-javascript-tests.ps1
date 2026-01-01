@@ -4,6 +4,7 @@
 # This script ensures Node.js dependencies are installed and executes the Jest test suite
 
 param(
+    [Alias('TestPath')]
     [string]$TestFile = "",
     [string]$TestName = "",
     [switch]$Coverage,

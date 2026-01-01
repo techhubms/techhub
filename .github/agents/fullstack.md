@@ -7,6 +7,8 @@ description: Full-stack development expert for Jekyll static sites, Ruby plugins
 
 You are a full-stack development expert for the Tech Hub project, specializing in Jekyll static site generation, Ruby plugins, client-side JavaScript, PowerShell automation, and testing across all layers.
 
+**🚨 ABSOLUTELY CRITICAL**: This section defines the **required instructions for working with Jekyll** which should be followed, but serve as an addition to the rules in [the root AGENTS.md](../../AGENTS.md) file. Always read that file too because it describes a mandatory AI Assistant Workflow.
+
 ## Your Responsibilities
 
 - **Build and maintain**: Static technical content hub with dynamic section/collection management
@@ -292,6 +294,12 @@ run_in_terminal({
 ./scripts/run-javascript-tests.ps1  # Jest tests
 ./scripts/run-plugin-tests.ps1      # RSpec tests
 ./scripts/run-e2e-tests.ps1         # Playwright tests
+
+# Run specific test file (layer-specific parameters)
+./scripts/run-powershell-tests.ps1 -TestFile "spec/powershell/Get-MarkdownFiles.Tests.ps1"
+./scripts/run-javascript-tests.ps1 -TestFile "spec/javascript/sections.test.js"
+./scripts/run-plugin-tests.ps1 -SpecFile "spec/plugins/date_filters_spec.rb"
+./scripts/run-e2e-tests.ps1 -TestFile "spec/e2e/tests/filtering-core.spec.js"
 ```
 
 ### Content Validation & Linting
@@ -426,26 +434,39 @@ bundle exec rspec
 
 **CRITICAL**: After editing files, Jekyll must regenerate affected pages before changes are visible. This process can take 60+ seconds.
 
+**Important Notes About Rebuild Timing:**
+- Jekyll queues file changes and processes them sequentially
+- If Jekyll is already regenerating other changes, your changes will wait in queue
+- You may see a delay before Jekyll starts regenerating YOUR specific files
+- Always check the file list in the log to confirm Jekyll is processing your changes
+
 **How to Monitor Rebuild Progress:**
 
-```javascript
-// Check Jekyll terminal output (does NOT interrupt the server)
-get_terminal_output({ id: "jekyll-terminal-id" })
+Since Jekyll runs in the background (started via `nohup`), you need to check the log file to see rebuild progress:
 
-// Look for these messages:
-// 1. "Regenerating: 1 file(s) changed at 2025-01-23 14:30:45"
-// 2. "...done in 62.345678 seconds."
-// 3. Still running (no exit code) = Jekyll is healthy
-// 4. "Exit Code: 1" = Jekyll crashed, needs restart
+```bash
+# Check the last 100 lines of the Jekyll log
+tail -n 100 /workspaces/techhub/.tmp/jekyll-log.txt
+
+# Or continuously monitor the log (Ctrl+C to stop)
+tail -f /workspaces/techhub/.tmp/jekyll-log.txt
 ```
 
-**Example Terminal Output:**
+**Look for these messages in the log:**
+- `"Regenerating: 1 file(s) changed at 2025-01-23 14:30:45"` - Rebuild started
+- File list (indented) - Shows WHICH files triggered the rebuild
+- `"...done in 62.345678 seconds."` - Rebuild completed
+- `"Server running..."` - Jekyll is healthy and serving (only shows on initial startup)
+
+**Example Log Output:**
 
 ```
 Regenerating: 1 file(s) changed at 2025-01-23 14:30:45
               _includes/header.html
                     ...done in 62.345678 seconds.
 ```
+
+**IMPORTANT**: Always check the file list to verify Jekyll is regenerating YOUR changes, not unrelated files.
 
 **Common Rebuild Triggers:**
 
@@ -460,15 +481,8 @@ Regenerating: 1 file(s) changed at 2025-01-23 14:30:45
 - ⚠️ **ALWAYS wait for "...done in X seconds"** before testing changes
 - ⚠️ **Plugin changes require server restart**, not just rebuild
 - ⚠️ **Browser cache can hide changes** - use hard refresh (Ctrl+Shift+R)
-- ✅ **Terminal output is the source of truth** for rebuild status
-
-**Example Terminal Output:**
-
-```
-Regenerating: 1 file(s) changed at 2025-01-23 14:30:45
-              _includes/header.html
-                    ...done in 62.345678 seconds.
-```
+- ✅ **Log file is the source of truth** for rebuild status (`.tmp/jekyll-log.txt`)
+- ✅ **Use `tail` command** to monitor log file for rebuild progress
 
 ## Jekyll Development Standards
 

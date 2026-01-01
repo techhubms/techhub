@@ -65,7 +65,10 @@ This directory contains the content collections for the Tech Hub site. Each coll
 
 **Purpose**: Serves as a logical introduction to the main content and provides users with a quick overview of what to expect.
 
+> **See also**: [Root AGENTS.md - Site Terminology](../AGENTS.md#site-terminology) for complete content organization concepts and structure definitions.
+
 **Requirements**:
+
 - Must appear directly after the frontmatter
 - Maximum 200 words
 - Must be immediately followed by the `<!--excerpt_end-->` code
@@ -73,6 +76,7 @@ This directory contains the content collections for the Tech Hub site. Each coll
 - Must mention the author's name
 
 **Example**:
+
 ```markdown
 ---
 title: Example Post
@@ -94,6 +98,7 @@ John Smith introduces the latest updates to GitHub Copilot, including new featur
 **Purpose**: Delivers the full information following logically from the excerpt.
 
 **Requirements**:
+
 - Always comes after the excerpt and the `<!--excerpt_end-->` marker
 - Can be as long as needed
 - Must follow the excerpt logically

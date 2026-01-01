@@ -146,9 +146,15 @@ function executeFilterToggle(tag, filterType) {
 
 ### logo-manager.js
 
-**Purpose**: Manages logo variant switching based on context.
+**Purpose**: Manages logo visibility for Xebia-specific deployments.
 
-**Pattern**: Swaps between standard and monochrome logo versions.
+**Behavior**:
+
+- **Default (server-side)**: Tech Hub logo and About link are visible
+- **Xebia override**: When `?xebia=true` query parameter is present OR hostname is `xebia.ms`/`*.xebia.ms`, JavaScript hides Tech Hub logo and shows Xebia + GitHub Copilot logos instead
+- **No action**: Script does nothing when no Xebia override is detected (relies on server-side rendering)
+
+**Pattern**: Conditional logo switching with hide-first-then-show to prevent flickering.
 
 ## JavaScript Development Standards
 

@@ -731,7 +731,7 @@ Each of the three filter modes is expected to display both filter types under no
 
 **Critical Rule**: Restart Jekyll after tag data changes to ensure proper filter synchronization.
 
-For complete Jekyll server management rules, restart commands, and troubleshooting, see [Jekyll Development - Server Management Rules](./jekyll-development.md#server-management-rules).
+For complete Jekyll server management rules, restart commands, and troubleshooting, see [.github/agents/fullstack.md](../.github/agents/fullstack.md).
 
 **Filter-Specific Restart Triggers**:
 

@@ -8,6 +8,7 @@ param(
     [switch]$Debug,
     [switch]$UI,
     [string]$Grep = "",
+    [Alias('TestPath')]
     [string]$TestFile = "",
     [int]$MaxFailures = 10,
     [switch]$Verbose

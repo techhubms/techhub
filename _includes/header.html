@@ -1,7 +1,7 @@
 {%- comment -%}
-Determine current section and page from URL
-Example: /ai/news/ -> section: "ai", page: "news"
-Also handle URL parameters: ?section=ai
+Determine current section and collection from URL path and frontmatter
+Example: /ai/news/ -> section: "ai", collection: "news"
+Querystring parameters (?section=ai) are handled client-side by sections.js
 {%- endcomment -%}
 
 {%- assign current_section = "" -%}
@@ -29,19 +29,6 @@ Also handle URL parameters: ?section=ai
 {%- comment -%} Fallback: if section not found in URL, check page.section frontmatter {%- endcomment -%}
 {%- if current_section == "" and page.section -%}
   {%- assign current_section = page.section -%}
-{%- endif -%}
-
-{%- comment -%} Fallback: if still no section, check page.categories in priority order {%- endcomment -%}
-{%- if current_section == "" and page.categories -%}
-  {%- assign priority_categories = "GitHub Copilot,Azure,AI,Coding,ML,Security,DevOps" | split: "," -%}
-  {%- for priority_cat in priority_categories -%}
-    {%- if page.categories contains priority_cat -%}
-      {%- comment -%} Convert category to section format (lowercase with hyphens) {%- endcomment -%}
-      {%- assign temp_section = priority_cat | downcase | replace: " ", "-" -%}
-      {%- assign current_section = temp_section -%}
-      {%- break -%}
-    {%- endif -%}
-  {%- endfor -%}
 {%- endif -%}
 
 {%- assign current_collection = "" -%}
@@ -85,7 +72,7 @@ Also handle URL parameters: ?section=ai
             d="M14.5 14.25a1 1 0 0 1 1 1v2a1 1 0 0 1-2 0v-2a1 1 0 0 1 1-1Zm-5 0a1 1 0 0 1 1 1v2a1 1 0 0 1-2 0v-2a1 1 0 0 1 1-1Z" />
         </svg>
       </a>
-      <a class="site-title" href="{{ "/" | relative_url }}" id="techhub-logo" style="display: none">
+      <a class="site-title" href="{{ "/" | relative_url }}" id="techhub-logo">
         <svg class="techhub-logo" viewBox="0 0 76 66" xmlns="http://www.w3.org/2000/svg" height="100%" role="img" aria-label="Tech Hub Logo">
           <defs>
             <!-- Muted Copilot-style gradient -->
@@ -147,7 +134,7 @@ Also handle URL parameters: ?section=ai
             href="{{ section_data[1].url | relative_url }}">{{ section_data[1].title }}</a>
         {%- endfor -%}
         <a id="xebia-contact" style="display: none" class="page-link contact" href="https://xebia.com/about-us/contact/" target="_blank">Contact</a>
-        <a id="techhub-about" style="display: none" class="page-link contact" href="{{ '/about' | relative_url }}">About</a>
+        <a id="techhub-about" class="page-link contact" href="{{ '/about' | relative_url }}">About</a>
       </div>
     </nav>
   </div>
@@ -163,20 +150,20 @@ Also handle URL parameters: ?section=ai
       <div id="section-collections-{{ section_data[1].section }}" class="section-collections{% if current_section == '' or current_section != section_data[1].section %} hidden{% endif %}">
         {%- for collection_data in section_data[1].collections -%}
           {%- assign is_active = false -%}
-          {%- if collection_data.collection and current_collection == collection_data.collection -%}
-            {%- assign is_active = true -%}
-          {%- elsif collection_data.collection == null or collection_data.collection == '' -%}
-            {%- comment -%} For non-standard collections (like Features, VS Code Updates), match by URL path component {%- endcomment -%}
-            {%- assign collection_url_path = collection_data.url | relative_url -%}
-            {%- if page.url == collection_url_path -%}
+          
+          {%- comment -%} Match against current_collection (which already prioritizes alt-collection > collection > URL-based) {%- endcomment -%}
+          {%- if current_collection != "" -%}
+            {%- if collection_data.collection and collection_data.collection == current_collection -%}
               {%- assign is_active = true -%}
-            {%- elsif current_collection != "" -%}
-              {%- comment -%} Check if URL contains the current_collection identifier (e.g., "features" or "vscode-updates") {%- endcomment -%}
+            {%- elsif collection_data.collection == null or collection_data.collection == '' -%}
+              {%- comment -%} For collections without explicit collection field, match by URL {%- endcomment -%}
+              {%- assign collection_url_path = collection_data.url | relative_url -%}
               {%- if collection_url_path contains current_collection -%}
                 {%- assign is_active = true -%}
               {%- endif -%}
             {%- endif -%}
           {%- endif -%}
+          
           <a class="collection-link{% if is_active %} active{% endif %}" href="{{ collection_data.url | relative_url }}">{{ collection_data.title | escape }}</a>
         {%- endfor -%}
       </div>
@@ -192,8 +179,8 @@ Also handle URL parameters: ?section=ai
   }
 </script>
 
-{%- comment -%} Load sections.js when section was not found in URL path, allowing query params to override {%- endcomment -%}
-{%- if section_in_url_path == false and isHomepage == false -%}
+{%- comment -%} Load sections.js when no section was determined server-side, allowing querystring to activate a section {%- endcomment -%}
+{%- if current_section == "" and isHomepage == false -%}
 <script src="{{ '/assets/js/sections.js' | relative_url }}"></script>
 <script>
   if (document.readyState === 'loading') {

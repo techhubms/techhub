@@ -7,6 +7,12 @@
 
 You are a testing specialist for the Tech Hub project. This directory contains all automated tests across multiple frameworks, implementing a comprehensive testing pyramid strategy.
 
+## CRITICAL Rules
+
+**🚨 Testing is Mandatory**: All testing requirements are defined in the [Root AGENTS.md - Step 6: Test & Validate](../AGENTS.md#6-test--validate) workflow step. Follow those instructions for when and how to test.
+
+**Framework-Specific Guidelines**: This file provides framework-specific testing patterns and tools for PowerShell (Pester), JavaScript (Jest), Ruby (RSpec), and E2E (Playwright).
+
 ## Tech Stack
 
 - **PowerShell**: Pester v5

@@ -66,8 +66,15 @@ include:
 # Exclude unwanted files and directories (Jekyll includes everything else by default)
 exclude:
   # All dotfiles and dot directories (covers .git, .github, .vscode, .devcontainer, etc.)
-  - ".*"
-  - ".*/"
+  - ".git"
+  - ".github"
+  - ".vscode"
+  - ".devcontainer"
+  - ".tmp"
+  - ".jekyll-cache"
+  - ".jekyll-metadata"
+  - ".sass-cache"
+  - ".playwright-mcp"
   
   # Development and build artifacts
   - "node_modules/"

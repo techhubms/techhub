@@ -4,6 +4,7 @@
 # This script ensures dependencies are installed and executes the RSpec test suite
 
 param(
+    [Alias('TestFile', 'TestPath')]
     [string]$SpecFile = "",
     [string]$Line = "",
     [switch]$Documentation,

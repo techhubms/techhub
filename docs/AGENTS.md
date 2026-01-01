@@ -250,6 +250,30 @@ Each functional documentation file should explain:
 - **Why**: Why it works this way  
 - **How**: High-level workflow (framework-agnostic)
 
+## Framework Mentions in Functional Documentation
+
+**When Framework References Are Appropriate**:
+
+Functional documentation files in `docs/` may reference specific frameworks (Jekyll, Ruby, Liquid, etc.) when the mention is **contextual and topical** to the system behavior being described.
+
+**Examples of Appropriate Framework Mentions**:
+
+- ✅ "Restart Jekyll after tag data changes" - Describes filtering system-specific behavior
+- ✅ "The limit_with_same_day filter applies during Jekyll build" - Explains when filtering occurs
+- ✅ "Content limiting uses the Liquid filter" - Shows implementation point for the feature
+
+**Examples of Inappropriate Framework Mentions**:
+
+- ❌ "Jekyll uses Liquid templating" - Generic Jekyll information (belongs in fullstack.md)
+- ❌ "To start Jekyll server, run..." - Generic server management (belongs in fullstack.md)
+- ❌ "Liquid syntax is..." - Generic language tutorial (belongs in fullstack.md)
+
+**Why This Approach**:
+
+When migrating to a new framework (e.g., Jekyll → .NET/Blazor), contextual framework mentions serve as **indicators that documentation may need updating**. Rather than hiding the implementation details, these references help identify which sections describe framework-specific behavior that may work differently in the new stack.
+
+**Rule of Thumb**: If removing the framework name would make the sentence unclear or less useful for understanding the system behavior, the mention is appropriate.
+
 ## Documentation Quality Standards
 
 ### Writing Standards

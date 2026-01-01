@@ -5,6 +5,7 @@
 # Cross-platform compatible for Windows, Linux, and devcontainers
 
 param(
+    [Alias('TestPath')]
     [string]$TestFile = "",
     [string]$TestName = "",
     [switch]$Coverage,

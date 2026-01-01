@@ -16,6 +16,7 @@
   z-index: 10000;
   align-items: center;
   align-content: center;
+  min-height: 70px; // Fixed height on desktop to prevent jerk during load
 
   // Positioning context for the mobile navigation icon
   .wrapper {
@@ -27,6 +28,7 @@
     justify-content: space-between;
     flex-wrap: nowrap;
     height: 60px;
+    min-height: 60px; // Maintain height even when logos are hidden
   }
 
   a {
@@ -46,6 +48,11 @@
 
   // Mobile responsive styling for header wrapper
   @include settings.media-query(settings.$on-mobile) {
+    &,
+    .wrapper {
+      min-height: unset; // Allow natural height on mobile with hamburger menu
+    }
+
     .wrapper {
       max-width: 100%;
       justify-content: unset;
@@ -62,16 +69,12 @@
 }
 
 .site-title {
-  @include settings.relative-font-size(1.625);
-  font-weight: 300;
-  line-height: settings.$base-line-height * settings.$base-font-size * 2.25;
-  letter-spacing: -1px;
   margin-bottom: 0;
   color: colors.$light-gray;
   text-decoration: none;
+  display: flex;
   align-items: center;
-  align-content: center;
-  gap: 0;
+  justify-content: center;
 
   &,
   &:visited {
@@ -85,7 +88,7 @@
     transform: translateZ(0);
     fill: colors.$light-gray;
     transition: fill 0.2s ease;
-    margin: 3px 0 0 0;
+    margin: 0;
     padding: 0;
     display: block;
   }
@@ -98,16 +101,27 @@
 
 #xebia-logo {
   height: 45px;
+  width: 134px; // SVG aspect ratio: 85:29 -> 45px * (85/29) = 132px
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 #github-copilot-logo {
   height: 45px;
+  width: 45px; // SVG is square 24:24
   margin-left: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 #techhub-logo {
-  height: 55px;
-  margin-right: 40px;
+  height: 60px;
+  width: 69px; // SVG aspect ratio: 76:66 -> 60px * (76/66) = 69px
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .site-nav {

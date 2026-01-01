@@ -3,13 +3,9 @@
 module Jekyll
   # Hooks to generate sitemap.xml and robots.txt after site is written
   Jekyll::Hooks.register :site, :post_write do |site|
-    Jekyll.logger.info 'SitemapGenerator:', 'Generating sitemap.xml and robots.txt'
-    
     generator = SitemapWriter.new(site)
     generator.generate_sitemap
     generator.generate_robots_txt
-    
-    Jekyll.logger.info 'SitemapGenerator:', 'Files generated successfully'
   end
 
   # Writer class that creates sitemap.xml and robots.txt files
@@ -117,14 +113,10 @@ module Jekyll
     def write_file(filename, content)
       file_path = File.join(@site.dest, filename)
       
-      Jekyll.logger.info 'SitemapGenerator:', "Writing #{filename} to #{file_path}"
-      
       # Ensure the destination directory exists
       FileUtils.mkdir_p(@site.dest) unless Dir.exist?(@site.dest)
       
       File.write(file_path, content)
-      
-      Jekyll.logger.info 'SitemapGenerator:', "Successfully wrote #{filename} (#{content.bytesize} bytes)"
     end
   end
 end
