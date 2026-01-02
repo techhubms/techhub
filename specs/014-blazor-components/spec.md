@@ -508,5 +508,5 @@ public class ItemCardTests : TestContext
 
 - bUnit documentation: https://bunit.dev/
 - Blazor documentation: https://learn.microsoft.com/aspnet/core/blazor
-- `/specs/008-api-endpoints/spec.md` - API client integration
+- `/specs/013-api-endpoints/spec.md` - API client integration
 

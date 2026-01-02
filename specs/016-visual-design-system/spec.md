@@ -446,7 +446,6 @@ None - design system is well-defined based on current Jekyll implementation
 
 ## References
 
-- [Current Site Analysis](../current-site-analysis.md) - Current SCSS structure
 - `_sass/_colors.scss` - Current color definitions
 - `_sass/_dx-space.scss` - Current spacing system
 - [WCAG 2.1 Guidelines](https://www.w3.org/WAI/WCAG21/quickref/) - Accessibility standards

@@ -414,7 +414,7 @@ public class SectionEndpointsTests : IClassFixture<WebApplicationFactory<Program
 
 ## References
 
-- `/specs/006-domain-models/spec.md` - DTOs and models
-- `/specs/007-repository-pattern/spec.md` - Data access
-- `/specs/016-rss-feeds/spec.md` - RSS generation
+- `/specs/011-domain-models/spec.md` - DTOs and models
+- `/specs/012-repository-pattern/spec.md` - Data access
+- `/specs/021-rss-feeds/spec.md` - RSS generation
 

@@ -45,7 +45,7 @@ Must cover:
 
 ## References
 
-- `/docs/migration/current-site-analysis.md` - Current site responsive breakpoints
+
 - `_sass/` directory - Current SCSS architecture
 - Root `AGENTS.md` - Accessibility standards section
 

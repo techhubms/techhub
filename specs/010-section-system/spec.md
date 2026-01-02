@@ -536,7 +536,6 @@ app.MapGet("/api/sections/{url}", async (string url, ISectionRepository repo) =>
 
 ## References
 
-- [Current Site Analysis](../current-site-analysis.md)
 - [Filtering System Spec](/specs/019-filtering-system/spec.md)
 - [RSS Feeds Spec](/specs/021-rss-feeds/spec.md)
 

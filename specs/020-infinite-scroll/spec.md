@@ -1,4 +1,4 @@
-# Infinite Scroll Specification
+# 020-infinite-scroll
 
 > **Feature**: Progressive content loading using Intersection Observer API with loading indicators, error handling, and filter compatibility
 

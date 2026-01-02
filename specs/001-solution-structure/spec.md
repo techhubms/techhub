@@ -753,6 +753,6 @@ dotnet test --logger "console;verbosity=detailed"
 - [.NET Project Structure Best Practices](https://learn.microsoft.com/en-us/dotnet/core/tutorials/libraries)
 - [.NET Aspire Documentation](https://learn.microsoft.com/en-us/dotnet/aspire/)
 - [Clean Architecture in .NET](https://learn.microsoft.com/en-us/dotnet/architecture/modern-web-apps-azure/common-web-application-architectures)
-- `/specs/.speckit/constitution.md` - Project principles
-- `/specs/006-domain-models/spec.md` - Domain layer
-- `/specs/007-repository-pattern/spec.md` - Infrastructure layer
+- `/.specify/memory/constitution.md` - Project principles
+- `/specs/011-domain-models/spec.md` - Domain layer
+- `/specs/012-repository-pattern/spec.md` - Infrastructure layer

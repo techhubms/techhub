@@ -71,7 +71,7 @@ Must cover:
 
 ## References
 
-- `/docs/migration/current-site-analysis.md` - Page types and structure
+
 - `/docs/content-management.md` - GitHub Copilot features special frontmatter
 - `/github-copilot/features.md` - Current features page implementation
 - `/github-copilot/levels-of-enlightenment.md` - Current learning path page

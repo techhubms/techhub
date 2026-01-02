@@ -537,6 +537,6 @@ public class SqlContentRepository : IContentRepository
 
 ## References
 
-- `/specs/006-domain-models/spec.md` - Domain model definitions
-- `/specs/.speckit/constitution.md` - Architecture principles
+- `/specs/011-domain-models/spec.md` - Domain model definitions
+- `/.specify/memory/constitution.md` - Architecture principles
 - `/AGENTS.md` - Development guidelines

@@ -1,4 +1,4 @@
-# Page Components Specification
+# 017-page-components
 
 > **Feature**: Blazor page components for Home, Section Index, Collection, Item Detail, and custom pages with special frontmatter handling
 
@@ -738,7 +738,6 @@ None - all page requirements are clearly defined
 - [016-visual-design-system Spec](../016-visual-design-system/spec.md) - Design tokens and styling
 - [018-content-rendering Spec](../018-content-rendering/spec.md) - Markdown rendering
 - [019-filtering-system Spec](../019-filtering-system/spec.md) - Filtering logic
-- [Current Site Analysis](../current-site-analysis.md) - Jekyll page structure
 - `/github-copilot/features.md` - Current features page
 - `/github-copilot/levels-of-enlightenment.md` - Current learning path page
 

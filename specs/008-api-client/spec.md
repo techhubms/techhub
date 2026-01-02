@@ -1,6 +1,5 @@
 # Feature Specification: API Client (Blazor ↔ API Communication)
 
-**Feature Number**: 025
 **Status**: Placeholder - To Be Detailed
 **Priority**: CRITICAL (Required for MVP)
 
@@ -62,7 +61,7 @@ A typed API client provides compile-time safety and consistent communication pat
 
 ## Dependencies
 
-- `/specs/008-api-endpoints/spec.md` - API contract definitions
+- `/specs/013-api-endpoints/spec.md` - API contract definitions
 - `/specs/003-resilience-error-handling/spec.md` - Retry policies
 - `/specs/002-configuration-management/spec.md` - API URL configuration
 - `/specs/014-blazor-components/spec.md` - Components using API client

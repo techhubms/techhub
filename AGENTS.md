@@ -717,8 +717,7 @@ When working on the .NET migration (future state), refer to:
 - **[/dotnet/AGENTS.md](dotnet/AGENTS.md)** - Root .NET development guide with solution structure and patterns
 - **[/.github/agents/dotnet.md](.github/agents/dotnet.md)** - `@dotnet` agent for .NET-specific development
 - **[/specs/](specs/)** - Specifications directory with constitution and feature specs:
-  - [constitution.md](specs/.speckit/constitution.md) - Project principles and constraints
-  - [current-site-analysis.md](specs/current-site-analysis.md) - Jekyll behavior reference
+  - [constitution.md](.specify/memory/constitution.md) - Project principles and constraints
   - Numbered feature directories (001-026) - Individual feature specifications in `specs/NNN-feature-name/spec.md` format
 
 **Key Migration Principles**:

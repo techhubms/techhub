@@ -1030,6 +1030,6 @@ dotnet test tests/TechHub.Api.Tests --collect:"XPlat Code Coverage"
 - [Integration Tests in ASP.NET Core](https://learn.microsoft.com/en-us/aspnet/core/test/integration-tests)
 - [WebApplicationFactory](https://learn.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.mvc.testing.webapplicationfactory-1)
 - `/specs/004-unit-testing/spec.md` - Unit testing strategy
-- `/specs/008-api-endpoints/spec.md` - Endpoints to test
-- `/specs/007-repository-pattern/spec.md` - Repository integration
+- `/specs/013-api-endpoints/spec.md` - Endpoints to test
+- `/specs/012-repository-pattern/spec.md` - Repository integration
 

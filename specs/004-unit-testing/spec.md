@@ -1100,5 +1100,5 @@ dotnet test --logger "console;verbosity=detailed"
 - [Moq Documentation](https://github.com/moq/moq4)
 - [.NET Testing Best Practices](https://learn.microsoft.com/en-us/dotnet/core/testing/unit-testing-best-practices)
 - `/specs/001-solution-structure/spec.md` - Test project setup
-- `/specs/006-domain-models/spec.md` - Models to test
-- `/specs/007-repository-pattern/spec.md` - Repositories to test
+- `/specs/011-domain-models/spec.md` - Models to test
+- `/specs/012-repository-pattern/spec.md` - Repositories to test

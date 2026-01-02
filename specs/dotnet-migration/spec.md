@@ -235,6 +235,8 @@ As a site administrator, I want to track user behavior, performance metrics, and
 - How does the system handle concurrent filter changes? (Debounce input, cancel in-flight requests, show latest results)
 - What happens when a user has JavaScript disabled? (Server-side rendered content works, filters require JavaScript - progressive enhancement)
 - How does the site handle very old browsers? (Modern browsers only - IE not supported, graceful degradation for older Chrome/Firefox)
+- What happens when content is updated via Git push? (Container redeploy clears IMemoryCache automatically, fresh content loads on next request)
+- How does telemetry sampling affect error debugging? (All errors traced at 100%, successful requests sampled at 10% to balance observability with cost)
 
 ## Requirements *(mandatory)*
 
@@ -265,15 +267,15 @@ As a site administrator, I want to track user behavior, performance metrics, and
 - **FR-015**: System MUST generate a combined RSS feed for all content (/feed.xml)
 - **FR-016**: System MUST include RSS feed links in section page headers
 - **FR-017**: RSS feeds MUST include title, description, link, author, pubDate, and category elements
-- **FR-018**: RSS feeds MUST cache for 30 minutes to reduce server load
+- **FR-018**: RSS feeds MUST cache using IMemoryCache with 30-minute absolute expiration
 
 **Performance & UX**
 
 - **FR-019**: System MUST server-side render all initial page content (Blazor SSR) for SEO and fast first paint
-- **FR-020**: System MUST use Blazor WebAssembly for client-side interactivity (filtering, infinite scroll)
+- **FR-020**: System MUST use Blazor .NET 8+ unified model with auto-upgrade to WebAssembly for client-side interactivity (filtering, infinite scroll)
 - **FR-021**: System MUST implement infinite scroll pagination with 20-item batches
 - **FR-022**: System MUST lazy-load images below the fold
-- **FR-023**: System MUST cache API responses in-memory for 1 hour
+- **FR-023**: System MUST cache API responses using IMemoryCache with 1-hour absolute expiration
 - **FR-024**: System MUST implement output caching for static content pages
 
 **Accessibility & SEO**
@@ -291,12 +293,12 @@ As a site administrator, I want to track user behavior, performance metrics, and
 - **FR-032**: System MUST parse YAML frontmatter for metadata (title, author, date, categories, tags)
 - **FR-033**: System MUST store dates as Unix epoch timestamps internally
 - **FR-034**: System MUST handle Europe/Brussels timezone for all date operations
-- **FR-035**: System MUST support repository pattern with file-based implementation (database-ready architecture)
+- **FR-035**: System MUST implement repository pattern with file-based implementation for MVP (database migration planned when content volume exceeds ~1000 items)
 
 **Monitoring & Analytics**
 
 - **FR-036**: System MUST integrate Google Analytics 4 with Core Web Vitals tracking
-- **FR-037**: System MUST integrate OpenTelemetry for distributed tracing
+- **FR-037**: System MUST integrate OpenTelemetry for distributed tracing of HTTP requests, repository operations, and cache operations with adaptive sampling (100% errors, 10% success)
 - **FR-038**: System MUST send telemetry to Application Insights
 - **FR-039**: System MUST implement cookie consent banner for GDPR compliance
 
@@ -353,7 +355,7 @@ As a site administrator, I want to track user behavior, performance metrics, and
 
 **Operational Metrics**
 
-- **SC-025**: System auto-scales to handle 10,000 concurrent users without degradation
+- **SC-025**: System auto-scales to handle 10,000 concurrent users without degradation (Azure Container Apps: min 1, max 10 instances, scale on HTTP requests + CPU/memory at 80% threshold)
 - **SC-026**: Deployment completes in < 10 minutes with zero downtime
 - **SC-027**: Error rate < 0.1% of all requests
 - **SC-028**: Mean time to recovery (MTTR) < 5 minutes for any incidents
@@ -423,9 +425,9 @@ This master spec is supported by detailed feature specifications in `/specs/`:
 
 **Core Architecture**:
 
-- 006-domain-models - DTOs and models ✅
-- 007-repository-pattern - Data access ✅
-- 008-api-endpoints - REST API definitions ✅
+- 011-domain-models - DTOs and models ✅
+- 012-repository-pattern - Data access ✅
+- 013-api-endpoints - REST API definitions ✅
 - 025-api-client - Typed HttpClient for Blazor frontend 📝
 - 004-url-routing - URL structure and routing ✅
 - 005-section-system - Section/collection architecture ✅
@@ -442,7 +444,7 @@ This master spec is supported by detailed feature specifications in `/specs/`:
 - 013-content-rendering - Markdown to HTML ✅
 - 014-filtering-system - Client-side filtering ✅
 - 015-infinite-scroll - Progressive loading ✅
-- 016-rss-feeds - RSS generation ✅
+- 021-rss-feeds - RSS generation ✅
 - 017-search - Text search ✅
 - 018-seo - SEO optimization ✅
 - 019-google-analytics - GA4 integration ✅
@@ -454,10 +456,19 @@ This master spec is supported by detailed feature specifications in `/specs/`:
 
 **Legend**: ✅ Complete | 📝 Placeholder (needs detailed requirements)
 
+## Clarifications
+
+### Session 2026-01-02
+
+- Q: Data persistence strategy for MVP - file-based vs. database? → A: Start with file-based storage for MVP, repository pattern allows seamless database swap when content volume demands it (e.g., >1000 items)
+- Q: Blazor deployment model - SSR + WASM architecture? → A: Use Blazor .NET 8+ unified model (SSR for initial render, auto-upgrade to WebAssembly for interactivity) in a single project
+- Q: Caching mechanism and invalidation strategy? → A: In-memory cache (IMemoryCache) with sliding/absolute expiration - cache cleared on container restart (acceptable for Git-based content updates)
+- Q: Auto-scaling strategy and resource limits? → A: Azure Container Apps auto-scale: min 1, max 10 instances, scale on HTTP requests + CPU/memory (80% threshold)
+- Q: OpenTelemetry tracing scope and sampling strategy? → A: Trace HTTP requests, repository operations, cache hits/misses with adaptive sampling (100% errors, 10% success in production)
+
 ## References
 
 - [Tech Hub Constitution](/.specify/memory/constitution.md)
-- [Current Site Analysis](/specs/current-site-analysis.md)
 - [Blazor Documentation](https://learn.microsoft.com/aspnet/core/blazor/)
 - [.NET Aspire Documentation](https://learn.microsoft.com/dotnet/aspire/)
 - [Schema.org Article](https://schema.org/Article)

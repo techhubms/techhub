@@ -487,6 +487,5 @@ None - domain models are well-defined based on existing Jekyll structure.
 ## References
 
 - `/AGENTS.md` - Root development guide
-- `/specs/.speckit/constitution.md` - Project principles
-- `/specs/current-site-analysis.md` - Current Jekyll behavior
+- `/.specify/memory/constitution.md` - Project principles
 
