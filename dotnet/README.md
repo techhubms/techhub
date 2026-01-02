@@ -43,7 +43,7 @@ This is a modern .NET application with **separate frontend and backend**:
 - **TechHub.Infrastructure** - Data access implementations
 - **TechHub.AppHost** - .NET Aspire orchestration
 
-See [Migration Plan](../docs/dotnet-migration-plan.md) for complete architecture details.
+See [/specs/](../specs/) for detailed feature specifications.
 
 ## Development Workflow
 
@@ -60,10 +60,10 @@ Follow the [8-step workflow](../AGENTS.md#ai-assistant-workflow) defined in the 
 
 ## Documentation
 
-- **[Migration Plan](../docs/dotnet-migration-plan.md)** - Complete step-by-step migration plan
+- **[Feature Specifications](../specs/)** - Complete feature requirements and specifications
 - **[Root AGENTS.md](../AGENTS.md)** - Framework-agnostic principles
-- **[.NET AGENTS.md](AGENTS.md)** - .NET-specific development guide (to be created)
-- **[@dotnet Agent](../.github/agents/dotnet.md)** - Custom agent for .NET development (to be created)
+- **[.NET AGENTS.md](AGENTS.md)** - .NET-specific development guide
+- **[@dotnet Agent](../.github/agents/dotnet.md)** - Custom agent for .NET development
 
 ## Current Status
 
@@ -79,13 +79,13 @@ Following the migration plan phases:
 - [ ] Phase 7: CI/CD Pipeline
 - [ ] Phase 8: Migration & Cutover
 
-See [Migration Plan Progress](../docs/dotnet-migration-plan.md#progress-tracking) for detailed status.
+See [/specs/](../specs/) for detailed feature specifications and implementation status.
 
 ## Contributing
 
 This is a migration project. All changes should:
 
-1. Follow the [Migration Plan](../docs/dotnet-migration-plan.md)
+1. Follow the [feature specifications](../specs/)
 2. Use spec-driven development methodology
 3. Maintain feature parity with Jekyll site
 4. Include tests for all code changes

@@ -169,8 +169,8 @@ mcp_context7_query-docs(context7CompatibleLibraryID: "/bunit/bunit", query: "com
 
 **Tech Hub-Specific Documentation**:
 
-- **Migration Plan**: `/docs/dotnet-migration-plan.md` - Complete migration strategy
-- **Root .NET AGENTS.md**: `/dotnet/AGENTS.md` - High-level .NET guidance (to be created)
+- **Feature Specifications**: `/specs/` - Complete feature requirements and specifications
+- **Root .NET AGENTS.md**: `/dotnet/AGENTS.md` - High-level .NET guidance
 - **Domain AGENTS.md Files**:
   - `/dotnet/src/TechHub.Api/AGENTS.md` - API development patterns
   - `/dotnet/src/TechHub.Web/AGENTS.md` - Blazor component patterns
@@ -848,8 +848,8 @@ public class NavigationTests : IAsyncLifetime
 
 ### Task: Add New API Endpoint
 
-1. Read `/docs/dotnet-migration-plan.md` for context
-2. Create specification in `/dotnet/specs/features/`
+1. Check `/specs/` for relevant feature specifications
+2. Create or update spec in appropriate numbered directory
 3. Define endpoint in `TechHub.Api/Endpoints/`
 4. Register in `Program.cs`
 5. Write integration tests in `TechHub.Api.Tests/`
@@ -949,7 +949,7 @@ Current phase as of this agent creation:
 
 - ✅ Phase 0: Planning & Research - IN PROGRESS
 - ✅ Phase 1: Environment Setup - DevContainer created
-- ⏳ Remaining phases: See `/docs/dotnet-migration-plan.md`
+- ⏳ Remaining phases: See `/specs/dotnet-migration/spec.md` for complete migration overview
 
 ## Documentation Map
 
@@ -968,7 +968,7 @@ See each domain AGENTS.md for specific patterns and rules.
 
 ## Additional Resources
 
-- **Migration Plan**: `/docs/dotnet-migration-plan.md`
+- **Feature Specifications**: `/specs/` - All feature requirements and implementation guides
 - **Root AGENTS.md**: `/AGENTS.md` (architecture principles)
 - **Jekyll Site**: Reference implementation for behavior matching
 - **Functional Specs**: `/docs/filtering-system.md`, `/docs/content-management.md`

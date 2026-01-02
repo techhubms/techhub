@@ -100,6 +100,94 @@ As a content creator or marketer, I want the site to be optimized for search eng
 
 ---
 
+## Migration Cutover Plan
+
+### Pre-Migration Checklist
+
+- [ ] All specs completed and reviewed
+- [ ] Staging environment deployed and tested
+- [ ] Performance benchmarks met (Lighthouse > 95)
+- [ ] UAT completed successfully
+- [ ] Backup of Jekyll site created
+- [ ] DNS records prepared (not yet updated)
+- [ ] Monitoring and alerts configured
+
+### Deployment Window
+
+**Preferred Schedule**: Saturday 2:00 AM - 4:00 AM CET (low traffic period)
+
+**Content Freeze**: 2 hours before deployment start (Saturday 12:00 AM - 4:00 AM CET)
+- No new content published during this window
+- Jekyll site remains accessible (read-only)
+
+**Maximum Downtime**: 1 hour (acceptable for hobby project)
+
+### Deployment Steps
+
+1. **T-2h (12:00 AM)**: Announce content freeze, final Jekyll backup
+2. **T-0h (2:00 AM)**: Begin deployment
+   - Deploy .NET containers to Azure Container Apps
+   - Verify health checks pass
+   - Test critical paths (home, sections, content rendering)
+3. **T+15m (2:15 AM)**: Update DNS records to point to Container Apps
+4. **T+30m (2:30 AM)**: Verify DNS propagation, test site from multiple locations
+5. **T+45m (2:45 AM)**: Monitor for errors, validate analytics tracking
+6. **T+1h (3:00 AM)**: Deployment complete, announce site live
+7. **T+1h (3:00 AM - 4:00 AM)**: Extended monitoring period
+
+### Rollback Plan
+
+**Automatic Rollback Triggers**:
+- Container Apps health checks fail
+- Error rate > 10% for 5+ minutes
+- Site unreachable after DNS update
+
+**Rollback Process**:
+1. Revert DNS records to Jekyll hosting
+2. Verify Jekyll site accessible
+3. Troubleshoot .NET deployment offline
+4. Schedule retry deployment
+
+**Jekyll Backup Retention**: 30 days post-migration
+- Keep Jekyll site deployable as fallback
+- Decommission Jekyll infrastructure after 30 days of stable .NET operation
+
+### Post-Migration
+
+**First 24 Hours**:
+- Active monitoring of error rates and performance
+- Quick response to any critical issues (best effort, no SLA)
+
+**First 7 Days**:
+- Daily review of Application Insights metrics
+- Gather user feedback
+- Address high-priority bugs
+
+**First 30 Days**:
+- Weekly performance reviews
+- Content parity validation
+- Plan Jekyll decommissioning
+
+---
+
+## Support & Maintenance
+
+**Issue Reporting**: GitHub Issues on techhubms/techhub repository
+
+**Priority Levels**:
+- **P0 (Site Down)**: Entire site unreachable → Notification sent immediately, fixed best effort
+- **P1 (Critical Bug)**: Major functionality broken (e.g., all videos not loading) → Fixed best effort
+- **P2 (High Bug)**: Specific feature broken (e.g., one section not loading) → Fixed when available
+- **P3 (Low Bug)**: Minor issues, visual glitches → Backlog
+
+**Important Note**: This is a hobby project maintained in spare time. There are **NO guaranteed SLAs** for issue resolution. Alerts provide awareness, not commitments.
+
+**Bug Triage**: Site owner reviews and prioritizes GitHub Issues
+
+**Monitoring**: Azure Monitor alerts configured to notify site owner immediately of critical issues
+
+---
+
 ### User Story 6 - Performance and Responsiveness (Priority: P1)
 
 As a content consumer, I want pages to load instantly and interactions to feel immediate, so I have a smooth browsing experience on any device or connection speed.
@@ -280,18 +368,31 @@ As a site administrator, I want to track user behavior, performance metrics, and
 - No user authentication or authorization required for MVP
 - All content is public and does not require access control
 - Content publishing workflow remains file-based (no CMS required for MVP)
+- Production domain is tech.hub.ms with Azure-managed SSL certificates
+- Site owner performs UAT testing using production content
+- Modern browsers only (no IE11 support)
+- This is a hobby project with no formal SLAs for issue resolution
 
 ## Out of Scope
 
-- User authentication and authorization
-- Content management UI (content remains file-based)
-- Comments or user-generated content
-- Multi-language support (English only)
-- Email notifications for new content
-- Social media integration beyond Open Graph meta tags
-- Advanced search features (fuzzy matching, autocomplete, search suggestions)
-- A/B testing or experimentation framework
-- Real-time content updates (webhook-based cache invalidation)
+1. **Authentication**: No user authentication or admin login for MVP (future enhancement when needed)
+2. **Content CMS**: No content management UI - maintain Git-based markdown workflow for MVP
+3. **Comments System**: No commenting or user-generated content
+4. **Multilingual Support**: English only (no i18n/l10n)
+5. **Legacy URL Redirects**: Greenfield deployment, no backwards compatibility with Jekyll URLs required
+6. **Advanced Search**: No full-text search with Azure AI Search or Elasticsearch for MVP (client-side filtering sufficient)
+7. **Real-time Updates**: No WebSockets or SignalR for live content updates
+8. **CDN**: No Azure Front Door or CDN initially (can add if traffic demands)
+9. **Email Notifications**: No email alerts for new content
+10. **Social Media Integration**: Beyond Open Graph meta tags
+11. **A/B Testing**: No experimentation framework for MVP
+
+### Future Enhancements (No Specific Timeline)
+
+- **Authentication**: Design API auth-ready with Microsoft Entra ID (Azure AD), implement when use cases arise (admin editing, private content, etc.)
+- **Headless CMS**: Consider Contentful/Strapi integration if Git workflow becomes limiting
+- **Advanced Search**: Add Azure AI Search if content library grows significantly (1000+ items)
+- **CDN**: Add Azure Front Door if global traffic demands improve latency
 
 ## Dependencies
 
@@ -306,37 +407,57 @@ As a site administrator, I want to track user behavior, performance metrics, and
 
 This master spec is supported by detailed feature specifications in `/specs/`:
 
+**Foundation** (Implement Phase 1-2, BEFORE major development):
+
+- 001-solution-structure - .NET solution organization ✅
+- 021-configuration-management - appsettings.json and environment config 📝
+- 022-resilience-error-handling - Polly retry policies, circuit breakers, logging 📝
+
+**Testing Strategy** (Implement Phase 2, alongside foundation):
+
+- 002-unit-testing - xUnit for domain/services ✅
+- 003-integration-testing - WebApplicationFactory for API ✅
+- 023-component-testing - bUnit for Blazor components 📝
+- 024-e2e-testing - Playwright end-to-end tests 📝
+- 026-ci-cd-pipeline - GitHub Actions automation 📝
+
 **Core Architecture**:
-- api-endpoints - REST API endpoint definitions
-- blazor-components - Reusable UI components
-- content-rendering - Markdown to HTML rendering
-- dependency-injection - Service registration patterns
-- domain-models - Data structures and entities
-- markdown-processing - Markdig configuration
-- repository-pattern - Data access layer
+
+- 006-domain-models - DTOs and models ✅
+- 007-repository-pattern - Data access ✅
+- 008-api-endpoints - REST API definitions ✅
+- 025-api-client - Typed HttpClient for Blazor frontend 📝
+- 004-url-routing - URL structure and routing ✅
+- 005-section-system - Section/collection architecture ✅
+
+**User Interface**:
+
+- 010-nlweb-semantic-html - Semantic HTML and accessibility ✅
+- 011-visual-design-system - Design tokens and styling ✅
+- 009-blazor-components - Reusable UI components ✅
+- 012-page-components - Page-level Blazor components ✅
 
 **Features**:
-- filtering-system - Client-side filtering logic
-- google-analytics - GA4 integration
-- rss-feeds - RSS generation
-- search - Text search implementation
-- section-system - Section/collection architecture
-- seo - SEO optimization features
+
+- 013-content-rendering - Markdown to HTML ✅
+- 014-filtering-system - Client-side filtering ✅
+- 015-infinite-scroll - Progressive loading ✅
+- 016-rss-feeds - RSS generation ✅
+- 017-search - Text search ✅
+- 018-seo - SEO optimization ✅
+- 019-google-analytics - GA4 integration ✅
 
 **Infrastructure**:
-- azure-resources - Azure Container Apps deployment
-- solution-structure - .NET project organization
 
-**Testing**:
-- integration-testing - API integration tests
-- unit-testing - xUnit test strategies
+- 020-azure-resources - Container Apps deployment ✅
+- dotnet-migration - This overall migration spec ✅
+
+**Legend**: ✅ Complete | 📝 Placeholder (needs detailed requirements)
 
 ## References
 
 - [Tech Hub Constitution](/.specify/memory/constitution.md)
-- [.NET Migration Plan](/docs/migration/dotnet-migration-plan.md)
 - [Current Site Analysis](/specs/current-site-analysis.md)
-- [Clarifications Needed](/docs/migration/clarification-needed.md)
 - [Blazor Documentation](https://learn.microsoft.com/aspnet/core/blazor/)
 - [.NET Aspire Documentation](https://learn.microsoft.com/dotnet/aspire/)
 - [Schema.org Article](https://schema.org/Article)

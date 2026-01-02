@@ -715,12 +715,11 @@ All user interface components and interactions must be accessible to users with 
 When working on the .NET migration (future state), refer to:
 
 - **[/dotnet/AGENTS.md](dotnet/AGENTS.md)** - Root .NET development guide with solution structure and patterns
-- **[/docs/dotnet-migration-plan.md](docs/dotnet-migration-plan.md)** - Complete step-by-step migration roadmap
 - **[/.github/agents/dotnet.md](.github/agents/dotnet.md)** - `@dotnet` agent for .NET-specific development
 - **[/specs/](specs/)** - Specifications directory with constitution and feature specs:
   - [constitution.md](specs/.speckit/constitution.md) - Project principles and constraints
   - [current-site-analysis.md](specs/current-site-analysis.md) - Jekyll behavior reference
-  - [features/](specs/features/) - Individual feature specifications
+  - Numbered feature directories (001-026) - Individual feature specifications in `specs/NNN-feature-name/spec.md` format
 
 **Key Migration Principles**:
 

@@ -723,7 +723,7 @@ dotnet add tests/TechHub.Web.Tests/TechHub.Web.Tests.csproj reference src/TechHu
 
 ## Testing Strategy
 
-See `/specs/testing/unit-testing.md` for comprehensive testing approach.
+See `/specs/004-unit-testing/spec.md` for comprehensive testing approach.
 
 **Test Execution**:
 
@@ -754,5 +754,5 @@ dotnet test --logger "console;verbosity=detailed"
 - [.NET Aspire Documentation](https://learn.microsoft.com/en-us/dotnet/aspire/)
 - [Clean Architecture in .NET](https://learn.microsoft.com/en-us/dotnet/architecture/modern-web-apps-azure/common-web-application-architectures)
 - `/specs/.speckit/constitution.md` - Project principles
-- `/specs/features/domain-models.md` - Domain layer
-- `/specs/features/repository-pattern.md` - Infrastructure layer
+- `/specs/006-domain-models/spec.md` - Domain layer
+- `/specs/007-repository-pattern/spec.md` - Infrastructure layer

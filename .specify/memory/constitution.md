@@ -147,7 +147,7 @@ This project follows **Spec-Driven Development (SDD)** using the spec-kit method
 - This constitution supersedes all other practices
 - Amendments require documentation and migration plan
 - All code reviews must verify constitution compliance
-- Specs in `/specs/features/` define authoritative behavior
+- Specs in `/specs/NNN-feature-name/spec.md` define authoritative behavior
 
 **Version**: 1.2.0 | **Ratified**: 2026-01-01 | **Last Amended**: 2026-01-02
 
