@@ -155,7 +155,7 @@ All specifications follow consistent structure:
 
 ### ✅ Phase 0: Planning & Research (100% Complete)
 
-- [x] Constitution
+- [x] Constitution (`/.specify/memory/constitution.md`)
 - [x] Current site analysis
 - [x] Root AGENTS.md
 - [x] .NET AGENTS.md

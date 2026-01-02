@@ -9,6 +9,24 @@ You are a .NET development expert for the Tech Hub .NET migration project, speci
 
 **🚨 ABSOLUTELY CRITICAL**: This agent provides framework-specific guidance for .NET development. These instructions work in conjunction with [the root AGENTS.md](../../AGENTS.md) which defines the mandatory AI Assistant Workflow that must be followed for all development tasks.
 
+## Index
+
+- [Your Responsibilities](#your-responsibilities)
+- [Your Expertise](#your-expertise)
+- [AI Assistant Workflow](#ai-assistant-workflow)
+- [Tech Stack Overview](#tech-stack-overview)
+- [Critical Rules](#critical-rules)
+- [Documentation Resources](#documentation-resources)
+- [Project Structure](#project-structure)
+- [Development Commands](#development-commands)
+- [Key Patterns & Examples](#key-patterns--examples)
+- [Testing Patterns](#testing-patterns)
+- [Common Tasks & Solutions](#common-tasks--solutions)
+- [Development Workflow](#development-workflow)
+- [Troubleshooting](#troubleshooting)
+- [Migration Progress](#migration-progress)
+- [Documentation Map](#documentation-map)
+
 ## Your Responsibilities
 
 - **Build modern .NET architecture**: Separate frontend (Blazor) and backend (REST API) with clean separation of concerns
@@ -18,6 +36,19 @@ You are a .NET development expert for the Tech Hub .NET migration project, speci
 - **Follow spec-driven development**: Document specifications before implementation
 - **Maintain test coverage**: Unit, integration, component (bUnit), and E2E (Playwright) tests
 - **Prepare for future capabilities**: MCP server support and authentication integration
+
+## AI Assistant Workflow
+
+Follow the 8-step workflow defined in the root AGENTS.md:
+
+1. **Gather Context** - Read AGENTS.md files for the domain you're modifying
+2. **Create a Plan** - Break down tasks into steps
+3. **Research & Validate** - Use context7 MCP for .NET/Blazor docs
+4. **Verify Behavior** - Use Playwright MCP for testing
+5. **Implement Changes** - Follow patterns in domain AGENTS.md
+6. **Test & Validate** - Run appropriate test suites
+7. **Update Documentation** - Keep AGENTS.md files current
+8. **Report Completion** - Summarize changes
 
 ## Your Expertise
 
@@ -94,6 +125,9 @@ You are a .NET development expert for the Tech Hub .NET migration project, speci
 ✅ **Minimal APIs**: Use static methods for endpoint handlers  
 ✅ **Async/await**: All I/O operations must be asynchronous  
 ✅ **Dependency injection**: Constructor injection for all dependencies  
+✅ **Service lifetimes**: Singleton (stateless/cached), Scoped (per-request), Transient (lightweight)  
+✅ **Options pattern**: Use `IOptions<T>` for configuration, never direct access  
+✅ **Typed HttpClient**: Register with `AddHttpClient<TInterface, TImplementation>`  
 
 **Architecture Decisions**:
 
@@ -427,6 +461,95 @@ public class FileSectionRepository : ISectionRepository
     // ... other methods
 }
 ```
+
+### Dependency Injection Service Lifetimes
+
+**Singleton** - Service has no state or state is shared across all requests:
+- `ISectionRepository` (FileSectionRepository with caching)
+- `IContentRepository` (FileContentRepository with caching)
+- `IMarkdownProcessor` (stateless)
+- `IMemoryCache`, `TimeProvider` (built-in)
+
+**Scoped** - Service lifetime matches HTTP request:
+- `IRssGenerator` (generates per-request)
+- `IStructuredDataService` (generates per-request)
+- `ITechHubApiClient` (typed HttpClient)
+
+**Transient** - Lightweight, stateless, new instance each time:
+- Rarely needed (most services fit Singleton or Scoped)
+
+**Options Pattern for Configuration**:
+
+```csharp
+// Configuration class
+public class ContentOptions
+{
+    public required string SectionsJsonPath { get; init; }
+    public required string CollectionsRootPath { get; init; }
+    public string Timezone { get; init; } = "Europe/Brussels";
+}
+
+// Registration in Program.cs
+builder.Services.Configure<ContentOptions>(
+    builder.Configuration.GetSection("Content"));
+
+// Injection in service
+public class FileSectionRepository : ISectionRepository
+{
+    private readonly ContentOptions _options;
+    
+    public FileSectionRepository(IOptions<ContentOptions> options)
+    {
+        _options = options.Value;
+    }
+}
+```
+
+**Typed HttpClient Pattern**:
+
+```csharp
+// Interface
+public interface ITechHubApiClient
+{
+    Task<IReadOnlyList<SectionDto>> GetAllSectionsAsync(CancellationToken ct = default);
+}
+
+// Registration with resilience
+builder.Services.AddHttpClient<ITechHubApiClient, TechHubApiClient>(client =>
+{
+    client.BaseAddress = new Uri("https+http://api"); // Aspire service discovery
+})
+.AddStandardResilienceHandler(); // Retry + Circuit Breaker
+
+// Implementation
+public class TechHubApiClient : ITechHubApiClient
+{
+    private readonly HttpClient _httpClient;
+    
+    public TechHubApiClient(HttpClient httpClient)
+    {
+        _httpClient = httpClient;
+    }
+    
+    public async Task<IReadOnlyList<SectionDto>> GetAllSectionsAsync(
+        CancellationToken ct = default)
+    {
+        var response = await _httpClient.GetAsync("/api/sections", ct);
+        response.EnsureSuccessStatusCode();
+        return await response.Content.ReadFromJsonAsync<List<SectionDto>>(ct) ?? [];
+    }
+}
+```
+
+**Common DI Pitfalls**:
+
+❌ **WRONG**: Singleton with scoped dependency (e.g., HttpContext)  
+❌ **WRONG**: Transient for heavy objects (creates too many instances)  
+❌ **WRONG**: Direct configuration access (`builder.Configuration["Key"]`)  
+
+✅ **CORRECT**: Match lifetime to dependency requirements  
+✅ **CORRECT**: Singleton for stateless services  
+✅ **CORRECT**: Use Options pattern for configuration
 
 ### Domain Models with Records
 
@@ -762,6 +885,34 @@ public class NavigationTests : IAsyncLifetime
 5. Test API at https://localhost:5001/swagger
 6. Test Web at https://localhost:5173
 
+## Development Workflow
+
+### Initial Setup
+
+1. Ensure .NET 10 SDK installed: `dotnet --version`
+2. Restore dependencies: `dotnet restore`
+3. Build solution: `dotnet build`
+4. Run tests: `dotnet test`
+5. Start Aspire: `dotnet run --project src/TechHub.AppHost`
+
+### Making Changes
+
+1. Read domain AGENTS.md for the area you're modifying
+2. Create/update tests FIRST (TDD)
+3. Implement changes following patterns
+4. Run tests: `dotnet test`
+5. Check for errors: `dotnet build`
+6. Start Aspire to verify manually
+7. Update documentation if behavior changed
+
+### Before Committing
+
+- [ ] All tests pass: `dotnet test`
+- [ ] No build warnings: `dotnet build`
+- [ ] Code coverage >= 80%
+- [ ] AGENTS.md files updated if needed
+- [ ] No secrets in code or config
+
 ## Troubleshooting
 
 **Build Errors**:
@@ -799,6 +950,21 @@ Current phase as of this agent creation:
 - ✅ Phase 0: Planning & Research - IN PROGRESS
 - ✅ Phase 1: Environment Setup - DevContainer created
 - ⏳ Remaining phases: See `/docs/dotnet-migration-plan.md`
+
+## Documentation Map
+
+| Area | AGENTS.md Location | Purpose |
+|------|-------------------|---------|
+| Root .NET | `/dotnet/AGENTS.md` | High-level .NET guidance |
+| API | `/dotnet/src/TechHub.Api/AGENTS.md` | API development patterns |
+| Web | `/dotnet/src/TechHub.Web/AGENTS.md` | Blazor component patterns |
+| Core | `/dotnet/src/TechHub.Core/AGENTS.md` | Domain model patterns |
+| Infrastructure | `/dotnet/src/TechHub.Infrastructure/AGENTS.md` | Data access patterns |
+| Tests | `/dotnet/tests/AGENTS.md` | Testing strategy |
+| Infra | `/dotnet/infra/AGENTS.md` | Bicep/Azure patterns |
+| Scripts | `/dotnet/scripts/AGENTS.md` | Automation scripts |
+
+See each domain AGENTS.md for specific patterns and rules.
 
 ## Additional Resources
 

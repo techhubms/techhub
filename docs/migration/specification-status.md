@@ -14,7 +14,7 @@
 
 ## Phase 0: Planning & Research ✅ COMPLETE
 
-- [x] `/specs/.speckit/constitution.md` - Project constitution ✅
+- [x] `/.specify/memory/constitution.md` - Project constitution ✅
 - [x] `/specs/current-site-analysis.md` - Jekyll behavior documentation ✅
 - [x] `/ AGENTS.md` - Root development guide (updated with .NET references) ✅
 - [x] `/dotnet/AGENTS.md` - Root .NET development guide ✅

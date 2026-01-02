@@ -1,3 +1,42 @@
+<!--
+SYNC IMPACT REPORT - Constitution Amendment (2026-01-02)
+=========================================================
+
+VERSION CHANGE: 1.1.0 → 1.2.0 (MINOR bump)
+
+REASON FOR MINOR BUMP:
+- Removed backwards compatibility constraints
+- Clarified this is a greenfield-style optimal solution
+- Removed URL preservation and RSS format requirements
+- Removed Jekyll visual replication requirement
+- No principles removed, but constraints significantly relaxed for optimal design
+
+MODIFIED SECTIONS:
+- Constraints section → Removed backwards compatibility requirements:
+  - REMOVED: "Must support RSS feed URLs (content can differ)"
+  - REMOVED: "Must modernize visual design (not replicate Jekyll)"
+  - REMOVED: "Must support URL redirects from old Jekyll URLs if structure changes"
+  - ADDED: "No backwards compatibility required - design optimal modern solution as if greenfield"
+  - ADDED: "No requirement to preserve Jekyll URL structure or RSS feed formats"
+  - ADDED: "No requirement to replicate Jekyll visual design - create modern optimal UX"
+
+TEMPLATE CONSISTENCY STATUS:
+✅ plan-template.md: No template changes needed
+✅ spec-template.md: Specs should focus on optimal design, not Jekyll compatibility
+✅ tasks-template.md: Quality standards enhanced by freedom to optimize
+⚠️ Migration plan should be updated to remove URL redirect requirements
+
+FOLLOW-UP ACTIONS:
+✅ Constitution updated with greenfield approach
+✅ Version bumped to 1.2.0 (MINOR)
+✅ Last Amended date updated to 2026-01-02
+⚠️ TODO: Update migration plan to remove backwards compatibility tasks
+⚠️ TODO: Review all feature specs to remove Jekyll compatibility constraints
+
+LAST REVIEW: 2026-01-02
+NEXT AMENDMENT: When additional principles or constraints need definition
+-->
+
 # Tech Hub .NET Migration Constitution
 
 ## Project Identity
@@ -31,11 +70,30 @@
 ## Constraints
 
 - Must not modify Jekyll source (documentation reference only)
-- Must support RSS feed URLs (content can differ)
-- Must modernize visual design (not replicate Jekyll)
 - Must use repository pattern (file-based initially, database-ready)
-- Must support URL redirects from old Jekyll URLs if structure changes
 - Must implement progressive enhancement (works without JavaScript)
+- No backwards compatibility required - design optimal modern solution as if greenfield
+- No requirement to preserve Jekyll URL structure or RSS feed formats
+- No requirement to replicate Jekyll visual design - create modern optimal UX
+
+### Directory Structure Requirements
+
+**All .NET implementation code MUST reside in the `dotnet/` directory**, including:
+
+- .NET solution and project files
+- Source code (`src/`, `apps/`, etc.)
+- .NET-specific tests
+- .NET-specific DevContainer configuration (`.devcontainer/`)
+- .NET-specific README.md
+- .NET-specific AGENTS.md documentation
+
+**Repository-level infrastructure MUST remain in repository root**, including:
+
+- `.github/` - GitHub workflows, actions, and agents
+- `.specify/` - Spec-kit templates and memory
+- `.vscode/` - VS Code workspace settings
+- Other dotfile configurations (`.gitignore`, `.editorconfig`, etc.)
+- Root-level AGENTS.md (framework-agnostic principles)
 
 ## Development Methodology
 
@@ -91,5 +149,5 @@ This project follows **Spec-Driven Development (SDD)** using the spec-kit method
 - All code reviews must verify constitution compliance
 - Specs in `/specs/features/` define authoritative behavior
 
-**Version**: 1.0.0 | **Ratified**: 2026-01-01 | **Last Amended**: 2026-01-01
+**Version**: 1.2.0 | **Ratified**: 2026-01-01 | **Last Amended**: 2026-01-02
 

@@ -217,7 +217,7 @@ This migration follows **Spec-Driven Development (SDD)** using the [spec-kit](ht
 
 ### 0.1 Create Project Constitution
 
-- [x] Create `/specs/.speckit/constitution.md` with modern .NET principles:
+- [x] Create `/.specify/memory/constitution.md` with modern .NET principles:
 
 **Core Principles**:
 

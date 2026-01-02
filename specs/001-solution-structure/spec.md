@@ -4,7 +4,255 @@
 
 Defines the .NET solution structure, project organization, and dependencies for the Tech Hub migration. This specification establishes the foundation for all development work.
 
-## Constitution Alignment
+## Functional Requirements
+
+### FR-001: Solution File Organization
+
+The solution must be organized with clear separation between source code, tests, infrastructure, and scripts.
+
+**Required Structure**:
+
+- `src/` - All production code projects
+- `tests/` - All test projects
+- `infra/` - Bicep infrastructure as code
+- `scripts/` - Build and deployment automation
+- `specs/` - Feature specifications
+
+### FR-002: Source Projects
+
+The solution must contain exactly six source projects:
+
+1. **TechHub.Api** - ASP.NET Core Minimal API backend
+2. **TechHub.Web** - Blazor SSR + WASM frontend
+3. **TechHub.Core** - Domain models and interfaces (pure, no dependencies)
+4. **TechHub.Infrastructure** - Repository implementations and services
+5. **TechHub.ServiceDefaults** - Shared .NET Aspire configuration
+6. **TechHub.AppHost** - .NET Aspire orchestration host
+
+### FR-003: Test Projects
+
+The solution must contain exactly five test projects:
+
+1. **TechHub.Core.Tests** - Unit tests for domain models
+2. **TechHub.Api.Tests** - Integration tests for API endpoints
+3. **TechHub.Infrastructure.Tests** - Tests for repositories and services
+4. **TechHub.Web.Tests** - bUnit component tests for Blazor
+5. **TechHub.E2E.Tests** - Playwright end-to-end tests
+
+### FR-004: Target Framework
+
+All projects must target .NET 10 (`net10.0`) with C# 13 language features.
+
+### FR-005: Project References
+
+Projects must follow clean architecture dependency rules:
+
+- **TechHub.Core**: No project dependencies (pure domain)
+- **TechHub.Infrastructure**: References only TechHub.Core
+- **TechHub.Api**: References Core, Infrastructure, ServiceDefaults
+- **TechHub.Web**: References Core, ServiceDefaults (NOT Infrastructure)
+- **TechHub.AppHost**: References Api, Web
+- **Test Projects**: Reference only projects they test
+
+### FR-006: Code Quality Standards
+
+All projects must enforce:
+
+- Nullable reference types enabled (`<Nullable>enable</Nullable>`)
+- Implicit usings enabled (`<ImplicitUsings>enable</ImplicitUsings>`)
+- File-scoped namespaces (not block-scoped)
+- Warnings treated as errors (`<TreatWarningsAsErrors>true</TreatWarningsAsErrors>`)
+
+### FR-007: Testing Framework
+
+All test projects must use:
+
+- xUnit as test framework (v2.9.3+)
+- FluentAssertions for assertions (v7.0.0+)
+- Moq for mocking (v4.20.72+) where applicable
+- Coverlet for code coverage (v6.0.2+)
+
+### FR-008: Package Management
+
+All package references must:
+
+- Use specific versions (no wildcards)
+- Be compatible with .NET 10
+- Follow quarterly update cadence unless security patches required
+
+### FR-009: Build Configuration
+
+The solution must support:
+
+- Debug builds with symbols and no optimization
+- Release builds with optimization and no symbols
+- Single command build: `dotnet build`
+- Single command test: `dotnet test`
+
+### FR-010: Local Development
+
+Developers must be able to:
+
+- Run `dotnet restore` to restore all packages
+- Run `dotnet build` to compile all projects
+- Run `dotnet test` to execute all tests
+- Run `dotnet run --project src/TechHub.AppHost` to start Aspire dashboard
+- Access API at <https://localhost:5001>
+- Access Web at <https://localhost:5173>
+- Access Aspire dashboard at <https://localhost:15888>
+
+## Success Criteria
+
+### Build Performance
+
+- Clean build completes in under 30 seconds on standard development hardware
+- Incremental builds complete in under 5 seconds for single file changes
+- Package restore completes in under 10 seconds with warm NuGet cache
+
+### Code Quality
+
+- Zero compiler warnings across all projects
+- Zero nullable reference warnings
+- All projects compile successfully on first checkout
+
+### Developer Experience
+
+- New developer can clone repository and build successfully within 5 minutes
+- All test frameworks integrate with VS Code Test Explorer
+- Aspire dashboard provides unified view of all services
+
+### Test Coverage
+
+- All test projects discovered by `dotnet test`
+- Test execution completes in under 60 seconds for all unit tests
+- Code coverage data generated automatically with `--collect:"XPlat Code Coverage"`
+
+## User Scenarios
+
+### Scenario 1: New Developer Onboarding
+
+**Actor**: New developer joining the team
+
+**Goal**: Set up local development environment and verify everything works
+
+**Steps**:
+
+1. Clone repository: `git clone https://github.com/techhubms/techhub.git`
+2. Navigate to .NET directory: `cd dotnet`
+3. Restore packages: `dotnet restore`
+4. Build solution: `dotnet build`
+5. Run tests: `dotnet test`
+6. Start Aspire: `dotnet run --project src/TechHub.AppHost`
+
+**Expected Outcome**:
+
+- All steps complete without errors
+- Build shows "Build succeeded. 0 Warning(s)"
+- All tests pass
+- Aspire dashboard opens showing API and Web running
+
+### Scenario 2: Adding New Dependency
+
+**Actor**: Developer adding new NuGet package
+
+**Goal**: Add package to correct project with proper version
+
+**Steps**:
+
+1. Identify target project (e.g., TechHub.Api)
+2. Add package: `dotnet add src/TechHub.Api package PackageName --version X.Y.Z`
+3. Verify build: `dotnet build`
+4. Verify tests: `dotnet test`
+
+**Expected Outcome**:
+
+- Package added to correct `.csproj` file
+- No version conflicts with existing packages
+- Build succeeds with zero warnings
+- All tests still pass
+
+### Scenario 3: Creating New Test Project
+
+**Actor**: Developer needing to test new component
+
+**Goal**: Add test project with proper configuration and references
+
+**Steps**:
+
+1. Create test project: `dotnet new xunit -n TechHub.NewFeature.Tests -o tests/TechHub.NewFeature.Tests`
+2. Add to solution: `dotnet sln add tests/TechHub.NewFeature.Tests`
+3. Add project reference: `dotnet add tests/TechHub.NewFeature.Tests reference src/TechHub.NewFeature`
+4. Add test dependencies: FluentAssertions, Moq, Coverlet
+5. Run tests: `dotnet test`
+
+**Expected Outcome**:
+
+- New test project appears in solution
+- Test project discovered by `dotnet test`
+- Can run tests from VS Code Test Explorer
+- Coverage collection works
+
+## Acceptance Criteria
+
+### Build System
+
+- [ ] `dotnet restore` exits with code 0
+- [ ] `dotnet build` exits with code 0
+- [ ] `dotnet build -c Release` exits with code 0
+- [ ] Build produces zero warnings
+- [ ] Build log shows all 11 projects compiled successfully
+
+### Test Discovery
+
+- [ ] `dotnet test` discovers all 5 test projects
+- [ ] All test projects show in VS Code Test Explorer
+- [ ] Running tests from command line works
+- [ ] Running tests from VS Code works
+- [ ] Code coverage collector runs successfully
+
+### Project Structure
+
+- [ ] Solution file lists all 11 projects
+- [ ] `src/` contains exactly 6 projects
+- [ ] `tests/` contains exactly 5 projects
+- [ ] All projects target `net10.0`
+- [ ] All projects have nullable reference types enabled
+- [ ] All projects use file-scoped namespaces
+
+### Dependencies
+
+- [ ] TechHub.Core has zero project references
+- [ ] TechHub.Infrastructure references only TechHub.Core
+- [ ] TechHub.Web does NOT reference TechHub.Infrastructure
+- [ ] All dependency rules from FR-005 satisfied
+- [ ] No circular dependencies exist
+
+### Aspire Integration
+
+- [ ] `dotnet run --project src/TechHub.AppHost` starts successfully
+- [ ] Aspire dashboard accessible at <https://localhost:15888>
+- [ ] API service registered and running
+- [ ] Web service registered and running
+- [ ] Environment variables propagate to services
+
+### Build Standards
+
+- [ ] No compiler warnings in any project
+- [ ] No nullable reference warnings
+- [ ] StyleCop or similar analyzer passes (if configured)
+- [ ] EditorConfig rules enforced
+
+### Documentation
+
+- [ ] All projects have AGENTS.md files (where applicable)
+- [ ] README exists explaining how to build and run
+- [ ] Package versions documented in this spec
+
+---
+
+## Implementation Guide
+
+### Constitution Alignment
 
 - **Modern UX First**: Separate frontend (Blazor) and backend (API) projects
 - **Clean Architecture**: Domain models, infrastructure, and application layers
@@ -16,6 +264,7 @@ Defines the .NET solution structure, project organization, and dependencies for 
 **Location**: `/dotnet/TechHub.sln`
 
 **Structure**:
+
 ```text
 TechHub.sln
 ├── src/
@@ -53,6 +302,7 @@ TechHub.sln
 **Framework**: `net10.0`
 
 **Package References**:
+
 ```xml
 <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="10.0.0" />
 <PackageReference Include="Swashbuckle.AspNetCore" Version="7.2.0" />
@@ -63,11 +313,13 @@ TechHub.sln
 ```
 
 **Project References**:
+
 - `TechHub.Core`
 - `TechHub.Infrastructure`
 - `TechHub.ServiceDefaults`
 
 **Key Files**:
+
 - `Program.cs` - Entry point, DI setup, middleware pipeline
 - `Endpoints/*.cs` - Minimal API endpoint groups
 - `appsettings.json` - Configuration
@@ -83,6 +335,7 @@ TechHub.sln
 **Framework**: `net10.0`
 
 **Package References**:
+
 ```xml
 <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly" Version="10.0.0" />
 <PackageReference Include="Microsoft.Extensions.Http.Resilience" Version="10.0.0" />
@@ -90,10 +343,12 @@ TechHub.sln
 ```
 
 **Project References**:
+
 - `TechHub.Core`
 - `TechHub.ServiceDefaults`
 
 **Key Files**:
+
 - `Program.cs` - Entry point, DI, HttpClient configuration
 - `Components/Layout/*.razor` - MainLayout, Header, Footer
 - `Components/Pages/*.razor` - Routable page components
@@ -113,6 +368,7 @@ TechHub.sln
 **Package References**: None (pure domain layer)
 
 **Key Files**:
+
 - `Models/Section.cs` - Section record
 - `Models/ContentItem.cs` - ContentItem record
 - `Models/DateUtils.cs` - Date conversion utilities
@@ -133,6 +389,7 @@ TechHub.sln
 **Framework**: `net10.0`
 
 **Package References**:
+
 ```xml
 <PackageReference Include="Markdig" Version="0.40.0" />
 <PackageReference Include="YamlDotNet" Version="16.2.0" />
@@ -140,9 +397,11 @@ TechHub.sln
 ```
 
 **Project References**:
+
 - `TechHub.Core`
 
 **Key Files**:
+
 - `Repositories/FileSectionRepository.cs`
 - `Repositories/FileContentRepository.cs`
 - `Services/MarkdownProcessor.cs`
@@ -160,6 +419,7 @@ TechHub.sln
 **Framework**: `net10.0`
 
 **Package References**:
+
 ```xml
 <PackageReference Include="Microsoft.Extensions.ServiceDiscovery" Version="10.0.0" />
 <PackageReference Include="Microsoft.Extensions.Http.Resilience" Version="10.0.0" />
@@ -171,6 +431,7 @@ TechHub.sln
 ```
 
 **Key Files**:
+
 - `Extensions.cs` - `AddServiceDefaults()` extension method
 
 **References**: See [.NET Aspire docs](https://learn.microsoft.com/en-us/dotnet/aspire/)
@@ -184,18 +445,22 @@ TechHub.sln
 **Framework**: `net10.0`
 
 **Package References**:
+
 ```xml
 <PackageReference Include="Aspire.Hosting.AppHost" Version="10.0.0" />
 ```
 
 **Project References**:
+
 - `TechHub.Api`
 - `TechHub.Web`
 
 **Key Files**:
+
 - `Program.cs` - Service discovery, environment variables
 
 **Example**:
+
 ```csharp
 var builder = DistributedApplication.CreateBuilder(args);
 
@@ -214,6 +479,7 @@ builder.Build().Run();
 ### Test Projects
 
 All test projects use:
+
 - **Framework**: `net10.0`
 - **Test SDK**: `Microsoft.NET.Test.Sdk` v18.2.0
 - **Test Framework**: `xUnit` v2.9.3 with `xunit.runner.visualstudio` v3.0.0
@@ -237,6 +503,7 @@ All test projects use:
 **Purpose**: API integration tests
 
 **Additional Packages**:
+
 ```xml
 <PackageReference Include="Microsoft.AspNetCore.Mvc.Testing" Version="10.0.0" />
 <PackageReference Include="Moq" Version="4.20.72" />
@@ -251,6 +518,7 @@ All test projects use:
 **Purpose**: Infrastructure layer tests
 
 **Additional Packages**:
+
 ```xml
 <PackageReference Include="Moq" Version="4.20.72" />
 ```
@@ -264,6 +532,7 @@ All test projects use:
 **Purpose**: Blazor component tests
 
 **Additional Packages**:
+
 ```xml
 <PackageReference Include="bunit" Version="1.35.3" />
 <PackageReference Include="Moq" Version="4.20.72" />
@@ -278,6 +547,7 @@ All test projects use:
 **Purpose**: End-to-end browser tests
 
 **Additional Packages**:
+
 ```xml
 <PackageReference Include="Microsoft.Playwright" Version="1.50.0" />
 ```
@@ -300,6 +570,7 @@ public static class SectionEndpoints
 ```
 
 **NOT**:
+
 ```csharp
 namespace TechHub.Api.Endpoints
 {
@@ -337,6 +608,7 @@ All projects share:
 ## Global Usings
 
 **TechHub.Core/GlobalUsings.cs**:
+
 ```csharp
 global using System;
 global using System.Collections.Generic;
@@ -346,6 +618,7 @@ global using System.Threading.Tasks;
 ```
 
 **TechHub.Api/GlobalUsings.cs**:
+
 ```csharp
 global using Microsoft.AspNetCore.Builder;
 global using Microsoft.AspNetCore.Http;
@@ -357,6 +630,7 @@ global using TechHub.Core.DTOs;
 ```
 
 **TechHub.Web/GlobalUsings.cs**:
+
 ```csharp
 global using Microsoft.AspNetCore.Components;
 global using Microsoft.AspNetCore.Components.Web;
@@ -366,6 +640,7 @@ global using TechHub.Core.DTOs;
 ## Directory Structure Commands
 
 **Create Projects**:
+
 ```powershell
 # Navigate to /workspaces/techhub/dotnet
 cd /workspaces/techhub/dotnet
@@ -433,11 +708,13 @@ dotnet add tests/TechHub.Web.Tests/TechHub.Web.Tests.csproj reference src/TechHu
 ## Build Configuration
 
 **Debug Build** (default):
+
 - Symbol generation enabled
 - Optimizations disabled
 - DEBUG constant defined
 
 **Release Build**:
+
 - Symbol generation disabled
 - Optimizations enabled
 - No DEBUG constant
@@ -449,6 +726,7 @@ dotnet add tests/TechHub.Web.Tests/TechHub.Web.Tests.csproj reference src/TechHu
 See `/specs/testing/unit-testing.md` for comprehensive testing approach.
 
 **Test Execution**:
+
 ```powershell
 # Run all tests
 dotnet test
@@ -466,9 +744,9 @@ dotnet test --logger "console;verbosity=detailed"
 ## Development Workflow
 
 1. **Start Aspire**: `dotnet run --project src/TechHub.AppHost`
-2. **API**: https://localhost:5001/swagger
-3. **Web**: https://localhost:5173
-4. **Aspire Dashboard**: https://localhost:15888
+2. **API**: <https://localhost:5001/swagger>
+3. **Web**: <https://localhost:5173>
+4. **Aspire Dashboard**: <https://localhost:15888>
 
 ## References
 

@@ -20,9 +20,6 @@ The section system organizes all content into logical topic areas (sections) and
 **FR-8**: The system MUST implement infinite scroll pagination (20 items per batch)  
 **FR-9**: The system MUST prefetch next batch at 80% scroll position  
 **FR-10**: The system MUST preserve pagination state in URL parameters  
-**FR-8**: The system MUST implement infinite scroll pagination (20 items per batch)  
-**FR-9**: The system MUST prefetch next batch at 80% scroll position  
-**FR-10**: The system MUST preserve pagination state in URL parameters  
 
 ### Non-Functional Requirements
 
@@ -30,9 +27,6 @@ The section system organizes all content into logical topic areas (sections) and
 **NFR-2**: Page generation MUST complete in < 5 seconds for all sections  
 **NFR-3**: Navigation MUST be keyboard accessible  
 **NFR-4**: Section pages MUST be mobile-responsive  
-**NFR-5**: Pagination API requests MUST complete in < 200ms (p95)  
-**NFR-6**: Cache hit rate MUST exceed 90% for repeated requests  
-**NFR-7**: System MUST support 1000+ concurrent users without degradation  
 **NFR-5**: Pagination API requests MUST complete in < 200ms (p95)  
 **NFR-6**: Cache hit rate MUST exceed 90% for repeated requests  
 **NFR-7**: System MUST support 1000+ concurrent users without degradation  
