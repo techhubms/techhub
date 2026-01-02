@@ -96,3 +96,83 @@ $RECYCLE.BIN/
 *.DS_Store
 
 .playwright-mcp/
+
+## .NET Core
+
+# Build results
+[Dd]ebug/
+[Dd]ebugPublic/
+[Rr]elease/
+[Rr]eleases/
+x64/
+x86/
+[Ww][Ii][Nn]32/
+[Aa][Rr][Mm]/
+[Aa][Rr][Mm]64/
+bld/
+[Bb]in/
+[Oo]bj/
+[Ll]og/
+[Ll]ogs/
+
+# Visual Studio cache/options
+.vs/
+.vscode/settings.json
+
+# User-specific files
+*.rsuser
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Test Results
+[Tt]est[Rr]esult*/
+[Bb]uild[Ll]og.*
+*.trx
+*.coverage
+*.coveragexml
+
+# .NET Core
+project.lock.json
+project.fragment.lock.json
+artifacts/
+
+# ASP.NET Scaffolding
+ScaffoldingReadMe.txt
+
+# Rider
+.idea/
+*.sln.iml
+
+# Publish profiles
+*.pubxml
+*.publishsettings
+
+# Node.js (for Playwright)
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Playwright
+playwright-report/
+test-results/
+.playwright/
+
+# Environment files
+.env
+.env.local
+.env.*.local
+
+# Temporary files
+*.tmp
+.tmp/
+*.cache
+
+# Azure
+*.azurewebsites.net.pubxml
+PublishProfiles/
+
+# Aspire
+.aspire/

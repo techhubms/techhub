@@ -89,11 +89,14 @@ Tech Hub is a Jekyll-based static site with:
 
 Modern .NET application with **separate frontend and backend**:
 
-**Frontend (Blazor WebAssembly + Server)**:
+**Frontend (Blazor Hybrid: SSR + WASM)**:
 
-- **Blazor** with Server-Side Rendering for SEO, WebAssembly for interactivity
+- **Blazor SSR** for SEO-optimized initial render
+- **Blazor WASM** for rich client-side interactivity (infinite scroll, filtering, search)
 - **.NET Aspire** for cloud-native orchestration
-- **NLWeb compatible** semantic HTML with Schema.org
+- **NLWeb compatible** semantic HTML with Schema.org structured data
+- **Modern UX features**: Infinite scroll pagination, search-as-you-type, faceted filtering, dark mode
+- **Performance**: Output Caching + Redis, Lighthouse > 95, Core Web Vitals optimized
 
 **Backend (REST API)**:
 
@@ -101,18 +104,31 @@ Modern .NET application with **separate frontend and backend**:
 - **MCP Server ready** - designed to expose Model Context Protocol in future
 - **Authentication ready** - prepared for IdentityServer/Duende integration
 - **OpenAPI/Swagger** documentation
+- **Repository pattern** with file-based storage (database-ready architecture)
 
 **Analytics & Monitoring**:
 
-- **Google Analytics 4** (GA4) - client tracking (existing: `G-95LLB67KJV`)
+- **Google Analytics 4** (GA4) - client tracking with Core Web Vitals (existing: `G-95LLB67KJV`)
 - **OpenTelemetry** + **App Insights** - server-side monitoring
+- **Cookie consent** banner (GDPR/CCPA compliant)
 
 **Infrastructure**:
 
 - **.NET 10** (latest LTS)
 - **Azure Container Apps** deployment (separate containers for frontend/API)
+- **Azure AI Search** or **Elasticsearch** for full-text search
+- **Redis** for distributed caching
 - **Bicep** Infrastructure as Code
 - **GitHub Actions** with PowerShell scripts
+
+**Migration Approach**:
+
+- Preserve overall visual look and feel (modern enhancements welcome)
+- Main section URLs (`/ai/`, `/github-copilot/`, etc.) should be preserved where practical
+- Collection URLs (`/github-copilot/news.html`) nice to have but not mandatory
+- Use 301 redirects for any URL structure changes
+- NO requirement for pixel-perfect Jekyll compatibility
+- Focus on optimal modern web architecture
 
 ### Key Architectural Decisions
 
@@ -173,25 +189,27 @@ This migration follows **Spec-Driven Development (SDD)** using the [spec-kit](ht
 - [ ] Use spec-kit commands for each feature: `/speckit.specify` → `/speckit.plan` → `/speckit.implement`
 - [ ] Write tests BEFORE or DURING implementation (TDD)
 - [ ] Use repository pattern for all data access
-- [ ] Server-side render ALL visible content (Blazor SSR)
+- [ ] Server-side render ALL visible content (Blazor SSR + WASM hybrid)
 - [ ] Use semantic HTML elements (article, section, nav, main, header, footer, time, figure)
 - [ ] Include Schema.org structured data for NLWeb compatibility
 - [ ] Use Europe/Brussels timezone for all date operations
 - [ ] Store dates as Unix epoch timestamps internally
-- [ ] Follow existing URL structure exactly (SEO preservation)
-- [ ] Maintain identical visual styling
+- [ ] Create clean, optimal URL structure (main section/collection URLs nice to preserve but not mandatory)
+- [ ] Use 301 redirects for any changed URLs
+- [ ] Preserve overall visual look with modern design enhancements (not pixel-perfect matching)
+- [ ] Implement state-of-the-art modern features (infinite scroll, caching, search, etc.)
 - [ ] Test on mobile and desktop viewports
 - [ ] Document all specifications in `/specs/` directory
 
 ### 🚫 Never Do
 
 - [ ] Never modify the Jekyll site (except documentation that stays)
-- [ ] Never use JavaScript for initial content rendering (SSR only)
-- [ ] Never hardcode section/collection configuration
+- [ ] Never use JavaScript for initial content rendering (Blazor SSR required for SEO)
+- [ ] Never hardcode section/collection configuration (sections.json is single source of truth)
 - [ ] Never skip writing specifications before coding
 - [ ] Never deploy without all tests passing
 - [ ] Never expose secrets in configuration or code
-- [ ] Create clean, optimal URL structure (no legacy compatibility required)
+- [ ] Never sacrifice modern UX for backwards compatibility
 
 ---
 
@@ -199,59 +217,57 @@ This migration follows **Spec-Driven Development (SDD)** using the [spec-kit](ht
 
 ### 0.1 Create Project Constitution
 
-- [ ] Create `/specs/.speckit/constitution.md` with:
+- [x] Create `/specs/.speckit/constitution.md` with modern .NET principles:
 
-```markdown
-# Tech Hub .NET Migration Constitution
+**Core Principles**:
 
-## Project Identity
-- **Name**: Tech Hub .NET
-- **Purpose**: Modern .NET implementation of Tech Hub content platform
-- **Repository**: [current repository]/dotnet
-
-## Core Principles
-1. **SEO Preservation**: All existing URLs must work identically
+1. **Modern UX First**: State-of-the-art user experience with infinite scroll, modern caching, search
 2. **Configuration-Driven**: sections.json remains single source of truth
-3. **Server-Side First**: All content rendered server-side
-4. **Semantic HTML**: NLWeb-compatible markup with Schema.org
-5. **Performance**: Sub-second page loads, efficient caching
+3. **Hybrid Rendering**: Blazor SSR for SEO + WASM for rich interactivity
+4. **Semantic HTML**: NLWeb-compatible markup with Schema.org structured data
+5. **Performance Excellence**: Lighthouse > 95, Core Web Vitals targets (LCP < 2.5s, FID < 100ms, CLS < 0.1)
 6. **Accessibility**: WCAG 2.1 Level AA compliance
 
-## Technology Stack
-- Runtime: .NET 10 (latest)
-- Web Framework: Blazor (Interactive Server)
+**Technology Stack**:
+
+- Runtime: .NET 10 (LTS), C# 13
+- Web Framework: Blazor SSR + WASM hybrid
 - Orchestration: .NET Aspire
-- Markdown: Markdig
+- Markdown: Markdig (modern .NET native)
+- Caching: Output Caching + Redis distributed cache
+- Search: Azure AI Search or Elasticsearch
 - Testing: xUnit, bUnit, Playwright
 - Infrastructure: Azure Container Apps, Bicep
-- Monitoring: OpenTelemetry, Application Insights
+- Monitoring: OpenTelemetry, Application Insights, GA4
 
-## Constraints
+**Constraints**:
+
 - Must not modify Jekyll source (except shared docs)
-- Must support all existing RSS feed URLs
-- Must maintain identical visual appearance
+- Must use sections.json as single source of truth
+- Must preserve overall visual look (modern enhancements encouraged)
 - Must use repository pattern (file-based initially, database-ready)
-```
+- Should preserve main section/collection URLs where practical (301 redirects acceptable)
+- No requirement for backwards compatibility with Jekyll behavior
 
-- [ ] Review and finalize constitution
+- [x] Review and finalize constitution
 
 ### 0.2 Document Current Site Behavior
 
-- [ ] Create `/specs/current-site-analysis.md` documenting:
-  - [ ] All page types (home, section index, collection, item detail)
-  - [ ] URL structure patterns
-  - [ ] Filtering behavior (date, tags, text search)
-  - [ ] RSS feed formats
-  - [ ] Mobile responsiveness behavior
-  - [ ] Navigation patterns
+- [x] Create `/specs/current-site-analysis.md` documenting:
+  - [x] All page types (home, section index, collection, item detail)
+  - [x] URL structure patterns
+  - [x] Filtering behavior (date, tags, text search)
+  - [x] RSS feed formats
+  - [x] Mobile responsiveness behavior
+  - [x] Navigation patterns
 
 ### 0.3 Create Feature Specifications
 
 For each major feature, create a specification using `/speckit.specify`:
 
-- [ ] `/specs/features/content-rendering.md` - Markdown to HTML pipeline
-- [ ] `/specs/features/section-system.md` - Section/collection architecture
-- [ ] `/specs/features/filtering-system.md` - Client-side filtering
+- [x] `/specs/features/content-rendering.md` - Markdown to HTML pipeline
+- [x] `/specs/features/section-system.md` - Section/collection architecture
+- [x] `/specs/features/filtering-system.md` - Client-side filtering
 - [ ] `/specs/features/rss-feeds.md` - RSS generation
 - [ ] `/specs/features/search.md` - Text search functionality
 - [ ] `/specs/features/seo.md` - SEO and Schema.org markup
@@ -261,7 +277,7 @@ For each major feature, create a specification using `/speckit.specify`:
 
 > **CRITICAL**: Follow the documentation strategy defined in `/docs/AGENTS.md`. The .NET solution requires its own AGENTS.md files for AI agent context.
 
-- [ ] Create `/dotnet/AGENTS.md` (Root .NET AGENTS.md):
+- [x] Create `/dotnet/AGENTS.md` (Root .NET AGENTS.md):
 
 ```markdown
 # Tech Hub .NET Development Guide
@@ -350,7 +366,7 @@ See each domain AGENTS.md for specific patterns and rules.
   - [ ] `/dotnet/infra/AGENTS.md` - Bicep modules, Azure resource patterns
   - [ ] `/dotnet/scripts/AGENTS.md` - PowerShell script conventions
 
-- [ ] Update root `/AGENTS.md` to reference .NET documentation:
+- [x] Update root `/AGENTS.md` to reference .NET documentation:
 
 ```markdown
 ## .NET Migration Documentation
@@ -361,7 +377,7 @@ When working on the .NET migration, refer to:
 - **[/dotnet/src/TechHub.Web/AGENTS.md](dotnet/src/TechHub.Web/AGENTS.md)** - Blazor patterns
 ```
 
-- [ ] Create `.github/agents/dotnet.md` (Custom Agent):
+- [x] Create `.github/agents/dotnet.md` (Custom Agent):
 
 ```markdown
 # @dotnet Agent - .NET Development Expert
@@ -462,7 +478,7 @@ See `/dotnet/AGENTS.md` for complete documentation structure.
 
 ### 1.1 Create .NET DevContainer
 
-- [ ] Create `/dotnet/.devcontainer/devcontainer.json`:
+- [x] Create `/dotnet/.devcontainer/devcontainer.json`:
 
 ```jsonc
 {
@@ -571,7 +587,7 @@ See `/dotnet/AGENTS.md` for complete documentation structure.
 }
 ```
 
-- [ ] Create `/dotnet/.devcontainer/post-create.ps1`:
+- [x] Create `/dotnet/.devcontainer/post-create.ps1`:
 
 ```powershell
 #!/usr/bin/env pwsh
@@ -2507,8 +2523,8 @@ Mark phases complete as work progresses:
 
 | Phase | Status | Completion Date |
 | ------- | -------- | ----------------- |
-| Phase 0: Planning | ⬜ Not Started | |
-| Phase 1: Environment | ⬜ Not Started | |
+| Phase 0: Planning | ✅ Complete | 2026-01-01 |
+| Phase 1: Environment | 🟡 In Progress | |
 | Phase 2: Core Architecture | ⬜ Not Started | |
 | Phase 3: Content System | ⬜ Not Started | |
 | Phase 4: Features | ⬜ Not Started | |

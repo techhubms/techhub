@@ -58,6 +58,7 @@ These are the **non-negotiable rules** that apply to ALL development tasks. ALWA
 - **ALWAYS be direct and concise**: Avoid exaggerated language
 - **ALWAYS maintain professional yet approachable tone**: Clear and authoritative without being overly formal
 - **ALWAYS avoid filler phrases**: Don't use "Sure!" or "You're right!"
+- **DevContainer dependencies**: ALWAYS install dependencies in the appropriate `.devcontainer/post-create.sh` script (e.g., `/workspaces/techhub/.devcontainer/post-create.sh` for Jekyll project, `dotnet/.devcontainer/post-create.sh` for .NET migration), NEVER install in PowerShell or other scripts
 
 #### ⚠️ Ask First
 
@@ -708,6 +709,27 @@ All user interface components and interactions must be accessible to users with 
 - Build system configuration file - See [.github/agents/fullstack.md](.github/agents/fullstack.md) for framework-specific details
 
 > **See "Documentation Structure" section above for complete documentation map and navigation guide**
+
+## .NET Migration Documentation
+
+When working on the .NET migration (future state), refer to:
+
+- **[/dotnet/AGENTS.md](dotnet/AGENTS.md)** - Root .NET development guide with solution structure and patterns
+- **[/docs/dotnet-migration-plan.md](docs/dotnet-migration-plan.md)** - Complete step-by-step migration roadmap
+- **[/.github/agents/dotnet.md](.github/agents/dotnet.md)** - `@dotnet` agent for .NET-specific development
+- **[/specs/](specs/)** - Specifications directory with constitution and feature specs:
+  - [constitution.md](specs/.speckit/constitution.md) - Project principles and constraints
+  - [current-site-analysis.md](specs/current-site-analysis.md) - Jekyll behavior reference
+  - [features/](specs/features/) - Individual feature specifications
+
+**Key Migration Principles**:
+
+- Preserve all existing URLs for SEO
+- Maintain identical visual appearance
+- Use `sections.json` as single source of truth
+- Server-side render all content (Blazor SSR)
+- Follow spec-driven development methodology
+- Keep Jekyll and .NET documentation separate
 
 ## Site Terminology
 
