@@ -14,4 +14,9 @@
     <PackageReference Include="OpenTelemetry.Instrumentation.Http" Version="1.14.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\TechHub.Core\TechHub.Core.csproj" />
+    <ProjectReference Include="..\TechHub.Infrastructure\TechHub.Infrastructure.csproj" />
+  </ItemGroup>
+
 </Project>

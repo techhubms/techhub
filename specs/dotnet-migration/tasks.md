@@ -99,8 +99,8 @@ All .NET code resides in `dotnet/` directory per constitution requirements:
 
 ### File-Based Repositories
 
-- [ ] T037 Implement FileBasedContentRepository in dotnet/src/TechHub.Infrastructure/Repositories/FileBasedContentRepository.cs
-- [ ] T038 Implement FileBasedSectionRepository in dotnet/src/TechHub.Infrastructure/Repositories/FileBasedSectionRepository.cs
+- [X] T037 Implement FileBasedContentRepository in dotnet/src/TechHub.Infrastructure/Repositories/FileBasedContentRepository.cs
+- [X] T038 Implement FileBasedSectionRepository in dotnet/src/TechHub.Infrastructure/Repositories/FileBasedSectionRepository.cs
 - [X] T039 Add YAML frontmatter parser in dotnet/src/TechHub.Infrastructure/Services/FrontMatterParser.cs
 
 ### Markdown Processing
