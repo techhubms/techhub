@@ -10923,5 +10923,17 @@
     "collection": "blogs",
     "timestamp": "2026-01-01 18:03:47 +00:00",
     "canonical_url": "https://medium.com/@davidfowl/tally-52f4b257b32a?source=rss-8163234c98f0------2"
+  },
+  {
+    "collection": "videos",
+    "canonical_url": "https://www.youtube.com/shorts/Sp3OVsyHQvo",
+    "reason": "No categories found: All categories were excluded due to the content being primarily historical and non-technical. The description and title indicate that the video is a story about 'Windows 95 Special Edition' shared as part of a retrospective series ('100 Years of Microsoft Stories'), with no evidence of technical depth, development, coding, modern Azure services, or actionable implementation guidance. As per the generic exclusion rules, content that is biographical or historical without substantial technical content does not qualify for any category.",
+    "timestamp": "2026-01-01 22:03:54 +00:00"
+  },
+  {
+    "timestamp": "2026-01-02 08:03:24 +00:00",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure/unable-to-delete-foundry-agent-identity-entra-app-in-azure/m-p/4482418#M22397",
+    "reason": "Insufficient content length",
+    "collection": "community"
   }
 ]

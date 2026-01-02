@@ -22876,5 +22876,11 @@
     "collection": "news",
     "timestamp": "2026-01-01 18:03:23 +00:00",
     "canonical_url": "https://github.blog/changelog/2026-01-01-reduced-pricing-for-github-hosted-runners-usage"
+  },
+  {
+    "timestamp": "2026-01-02 16:03:33 +00:00",
+    "collection": "videos",
+    "canonical_url": "https://www.youtube.com/shorts/pzF4D7juXbM",
+    "reason": "Succesfully added: Assigned AI category because the video explicitly discusses the impact of artificial intelligence on programming language adoption and code generation, which meets AI inclusion rule 5 (high-level AI usage) and AI rule 4 (AI development with Microsoft tech, as GitHub is part of Microsoft). Assigned Coding because the core subject is programming languages, static typing, and their relationship with AI, aligning with Coding rule 1 (Microsoft programming languages) and rule 4 (coding practices). Did not assign 'GitHub Copilot' or 'DevOps' as the focus is on broad AI trends and language choices, not specific to Copilot usage or DevOps tooling."
   }
 ]
