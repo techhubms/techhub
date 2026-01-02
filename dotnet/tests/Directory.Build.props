@@ -1,0 +1,13 @@
+<Project>
+  <!-- Test-specific settings -->
+  <PropertyGroup>
+    <!-- Suppress test naming conventions - underscores are standard in xUnit test names -->
+    <NoWarn>$(NoWarn);CA1707</NoWarn>
+    <!-- Suppress HttpClient URI warnings in tests - string paths are more readable for API tests -->
+    <NoWarn>$(NoWarn);CA2234</NoWarn>
+    <!-- Suppress async method naming conventions in tests -->
+    <NoWarn>$(NoWarn);CA1711</NoWarn>
+    <!-- Suppress IDisposable warnings for test fixtures -->
+    <NoWarn>$(NoWarn);CA1001</NoWarn>
+  </PropertyGroup>
+</Project>

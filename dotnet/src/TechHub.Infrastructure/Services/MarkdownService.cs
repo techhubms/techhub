@@ -93,11 +93,11 @@ public class MarkdownService : IMarkdownService
     /// Process YouTube embeds in markdown
     /// Converts [YouTube: VIDEO_ID] tags to iframe embeds
     /// </summary>
-    /// <param name="markdown">Raw markdown content</param>
-    /// <returns>Markdown with YouTube embeds replaced with iframe HTML</returns>
-    public string ProcessYouTubeEmbeds(string markdown)
+    /// <param name="html">HTML content that may contain YouTube embed markers</param>
+    /// <returns>HTML with YouTube embeds replaced with iframe HTML</returns>
+    public string ProcessYouTubeEmbeds(string html)
     {
-        if (string.IsNullOrWhiteSpace(markdown))
+        if (string.IsNullOrWhiteSpace(html))
         {
             return string.Empty;
         }
@@ -106,7 +106,7 @@ public class MarkdownService : IMarkdownService
         var pattern = @"\[YouTube:\s*([a-zA-Z0-9_-]+)\]";
         
         return System.Text.RegularExpressions.Regex.Replace(
-            markdown,
+            html,
             pattern,
             match =>
             {

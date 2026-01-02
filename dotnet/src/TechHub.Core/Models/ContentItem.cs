@@ -79,7 +79,7 @@ public class ContentItem
     /// <summary>
     /// Computed property: Date in ISO format (YYYY-MM-DD)
     /// </summary>
-    public string DateIso => DateUtc.ToString("yyyy-MM-dd");
+    public string DateIso => DateUtc.ToString("yyyy-MM-dd", System.Globalization.CultureInfo.InvariantCulture);
 
     /// <summary>
     /// Get the URL for this content item within a specific section

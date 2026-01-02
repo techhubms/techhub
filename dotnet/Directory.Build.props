@@ -1,0 +1,73 @@
+<Project>
+  <PropertyGroup>
+    <!-- Target framework -->
+    <LangVersion>latest</LangVersion>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    
+    <!-- Code analysis -->
+    <AnalysisLevel>latest-all</AnalysisLevel>
+    <EnforceCodeStyleInBuild>true</EnforceCodeStyleInBuild>
+    <EnableNETAnalyzers>true</EnableNETAnalyzers>
+    <AnalysisMode>All</AnalysisMode>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    
+    <!-- Assembly information -->
+    <Authors>Tech Hub Team</Authors>
+    <Company>Tech Hub</Company>
+    <Copyright>Copyright © Tech Hub 2026</Copyright>
+    <Product>Tech Hub</Product>
+    
+    <!-- Deterministic builds -->
+    <Deterministic>true</Deterministic>
+    <ContinuousIntegrationBuild Condition="'$(GITHUB_ACTIONS)' == 'true'">true</ContinuousIntegrationBuild>
+    
+    <!-- Code quality -->
+    <CodeAnalysisTreatWarningsAsErrors>false</CodeAnalysisTreatWarningsAsErrors>
+  </PropertyGroup>
+
+  <!-- Global package references -->
+  <ItemGroup>
+    <!-- Use latest stable version of analyzers (10.x for .NET 10) -->
+    <PackageReference Include="Microsoft.CodeAnalysis.NetAnalyzers" Version="10.*">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
+
+  <!-- Suppress specific warnings -->
+  <PropertyGroup>
+    <!-- CA1031: Catch-all exceptions - intentional in middleware and error handling code -->
+    <NoWarn>$(NoWarn);CA1031</NoWarn>
+    <!-- CA1054: URI parameters should be System.Uri - we use strings for URLs for JSON serialization -->
+    <NoWarn>$(NoWarn);CA1054</NoWarn>
+    <!-- CA1055: URI return values should be System.Uri - we use strings for URLs for JSON serialization -->
+    <NoWarn>$(NoWarn);CA1055</NoWarn>
+    <!-- CA1056: URI properties should be System.Uri - we use strings for URLs for JSON serialization -->
+    <NoWarn>$(NoWarn);CA1056</NoWarn>
+    <!-- CA1308: ToLowerInvariant - intentional for tag/search normalization (lowercase is conventional) -->
+    <NoWarn>$(NoWarn);CA1308</NoWarn>
+    <!-- CA1720: Identifier contains type name - 'Guid' in RSS feeds is the RSS standard, not System.Guid -->
+    <NoWarn>$(NoWarn);CA1720</NoWarn>
+    <!-- CA1805: Do not initialize unnecessarily - explicit initialization improves clarity -->
+    <NoWarn>$(NoWarn);CA1805</NoWarn>
+    <!-- CA1812: Internal class never instantiated - DTOs are instantiated by JSON deserializer -->
+    <NoWarn>$(NoWarn);CA1812</NoWarn>
+    <!-- CA1822: Member does not access instance data - we prefer instance methods for consistency and testability -->
+    <NoWarn>$(NoWarn);CA1822</NoWarn>
+    <!-- CA1852: Seal internal types - JSON DTOs need to be non-sealed for deserialization -->
+    <NoWarn>$(NoWarn);CA1852</NoWarn>
+    <!-- CA1002: List vs Collection - internal API, List is more practical for LINQ operations -->
+    <NoWarn>$(NoWarn);CA1002</NoWarn>
+    <!-- CA1848: LoggerMessage - performance optimization not critical, traditional logging is clearer -->
+    <NoWarn>$(NoWarn);CA1848</NoWarn>
+    <!-- CA2007: ConfigureAwait - not necessary for ASP.NET Core (no SynchronizationContext) -->
+    <NoWarn>$(NoWarn);CA2007</NoWarn>
+    <!-- IDE0011: Add braces - enforced by editorconfig, will auto-fix on format -->
+    <NoWarn>$(NoWarn);IDE0011</NoWarn>
+    <!-- IDE0060: Unused parameter - sometimes needed for interface/signature compatibility -->
+    <NoWarn>$(NoWarn);IDE0060</NoWarn>
+    <!-- IDE0211: Top-level statements vs Program.Main - we prefer explicit Program class -->
+    <NoWarn>$(NoWarn);IDE0211</NoWarn>
+  </PropertyGroup>
+</Project>

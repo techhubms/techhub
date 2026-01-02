@@ -21,25 +21,25 @@ public class FileBasedSectionRepository : ISectionRepository
     /// </summary>
     private class SectionJsonDto
     {
-        [JsonPropertyName("section")]
-        public string? Section { get; set; }
+        [JsonPropertyName("Id")]
+        public required string Id { get; set; }
         
-        [JsonPropertyName("title")]
+        [JsonPropertyName("Title")]
         public required string Title { get; set; }
         
-        [JsonPropertyName("description")]
+        [JsonPropertyName("Description")]
         public required string Description { get; set; }
         
-        [JsonPropertyName("url")]
+        [JsonPropertyName("Url")]
         public required string Url { get; set; }
         
-        [JsonPropertyName("image")]
-        public required string Image { get; set; }
+        [JsonPropertyName("BackgroundImage")]
+        public required string BackgroundImage { get; set; }
         
-        [JsonPropertyName("category")]
+        [JsonPropertyName("Category")]
         public required string Category { get; set; }
         
-        [JsonPropertyName("collections")]
+        [JsonPropertyName("Collections")]
         public required List<CollectionJsonDto> Collections { get; set; }
     }
 
@@ -48,21 +48,25 @@ public class FileBasedSectionRepository : ISectionRepository
     /// </summary>
     private class CollectionJsonDto
     {
-        [JsonPropertyName("title")]
+        [JsonPropertyName("Title")]
         public required string Title { get; set; }
         
-        [JsonPropertyName("collection")]
+        [JsonPropertyName("Collection")]
         public string? Collection { get; set; } // Nullable for custom pages that don't have a collection
         
-        [JsonPropertyName("url")]
+        [JsonPropertyName("Url")]
         public required string Url { get; set; }
         
-        [JsonPropertyName("description")]
+        [JsonPropertyName("Description")]
         public required string Description { get; set; }
+        
+        [JsonPropertyName("IsCustom")]
+        public bool IsCustom { get; set; }
     }
 
     public FileBasedSectionRepository(IOptions<AppSettings> settings)
     {
+        ArgumentNullException.ThrowIfNull(settings);
         var sectionsPath = settings.Value.Content.SectionsConfigPath;
         _sectionsFilePath = sectionsPath;
         
@@ -86,21 +90,17 @@ public class FileBasedSectionRepository : ISectionRepository
 
         var json = await File.ReadAllTextAsync(_sectionsFilePath, cancellationToken);
         
-        // sections.json structure: { "all": {...}, "ai": {...}, "github-copilot": {...} }
-        // Parse as dictionary where keys are section IDs
-        var sectionsDict = JsonSerializer.Deserialize<Dictionary<string, SectionJsonDto>>(json, _jsonOptions);
+        // sections.json structure: Array of section objects
+        var sectionDtos = JsonSerializer.Deserialize<List<SectionJsonDto>>(json, _jsonOptions);
         
-        if (sectionsDict == null || sectionsDict.Count == 0)
+        if (sectionDtos == null || sectionDtos.Count == 0)
         {
             return new List<Section>();
         }
 
-        // Convert DTOs to Section models, using dictionary key as ID
-        var sections = sectionsDict.Select(kvp =>
+        // Convert DTOs to Section models
+        var sections = sectionDtos.Select(dto =>
         {
-            var dto = kvp.Value;
-            var sectionId = dto.Section ?? kvp.Key; // Use "section" field if present, otherwise use key
-            
             // Map collection DTOs to CollectionReference models
             // Filter out custom pages (those without a collection field) for now
             var collections = dto.Collections
@@ -111,17 +111,17 @@ public class FileBasedSectionRepository : ISectionRepository
                     Collection = c.Collection!,
                     Url = c.Url,
                     Description = c.Description,
-                    IsCustom = false // Default to false (auto-generated)
+                    IsCustom = c.IsCustom
                 })
                 .ToList();
             
             return new Section
             {
-                Id = sectionId,
+                Id = dto.Id,
                 Title = dto.Title,
                 Description = dto.Description,
                 Url = dto.Url,
-                BackgroundImage = dto.Image, // Map "image" to "BackgroundImage"
+                BackgroundImage = dto.BackgroundImage,
                 Category = dto.Category,
                 Collections = collections
             };

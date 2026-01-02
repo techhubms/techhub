@@ -7,8 +7,11 @@ namespace TechHub.Api.Middleware;
 /// Global exception handler middleware that catches all unhandled exceptions
 /// and returns consistent error responses
 /// </summary>
-public class ExceptionHandlerMiddleware
-{
+internal sealed class ExceptionHandlerMiddleware
+{    private static readonly JsonSerializerOptions JsonOptions = new()
+    {
+        PropertyNamingPolicy = JsonNamingPolicy.CamelCase
+    };
     private readonly RequestDelegate _next;
     private readonly ILogger<ExceptionHandlerMiddleware> _logger;
     private readonly IHostEnvironment _environment;
@@ -56,12 +59,7 @@ public class ExceptionHandlerMiddleware
             Timestamp = DateTimeOffset.UtcNow
         };
 
-        var options = new JsonSerializerOptions
-        {
-            PropertyNamingPolicy = JsonNamingPolicy.CamelCase
-        };
-
-        await context.Response.WriteAsync(JsonSerializer.Serialize(response, options));
+        await context.Response.WriteAsync(JsonSerializer.Serialize(response, JsonOptions));
     }
 
     private record ErrorResponse

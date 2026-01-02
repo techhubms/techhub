@@ -30,6 +30,8 @@ public class FileBasedContentRepository : IContentRepository
         IOptions<AppSettings> settings,
         IMarkdownService markdownService)
     {
+        ArgumentNullException.ThrowIfNull(settings);
+        ArgumentNullException.ThrowIfNull(markdownService);
         _basePath = settings.Value.Content.CollectionsPath;
         _frontMatterParser = new FrontMatterParser();
         _markdownService = markdownService;
@@ -58,6 +60,7 @@ public class FileBasedContentRepository : IContentRepository
         string collection,
         CancellationToken cancellationToken = default)
     {
+        ArgumentNullException.ThrowIfNull(collection);
         // Normalize collection name (add _ prefix if missing)
         var normalizedCollection = collection.StartsWith('_') ? collection : $"_{collection}";
         

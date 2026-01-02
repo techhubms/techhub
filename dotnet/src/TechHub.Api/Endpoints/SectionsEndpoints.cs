@@ -7,7 +7,7 @@ namespace TechHub.Api.Endpoints;
 /// <summary>
 /// API endpoints for sections - top-level organizational units
 /// </summary>
-public static class SectionsEndpoints
+internal static class SectionsEndpoints
 {
     /// <summary>
     /// Maps all section-related endpoints to the application

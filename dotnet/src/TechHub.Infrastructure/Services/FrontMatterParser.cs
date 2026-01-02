@@ -32,7 +32,7 @@ public class FrontMatterParser
         }
 
         // Frontmatter must start with ---
-        if (!markdownContent.TrimStart().StartsWith("---"))
+        if (!markdownContent.TrimStart().StartsWith("---", StringComparison.Ordinal))
         {
             return (new Dictionary<string, object>(), markdownContent);
         }
@@ -46,14 +46,14 @@ public class FrontMatterParser
         foreach (var line in lines)
         {
             // First --- starts frontmatter
-            if (!inFrontMatter && line.TrimStart().StartsWith("---"))
+            if (!inFrontMatter && line.TrimStart().StartsWith("---", StringComparison.Ordinal))
             {
                 inFrontMatter = true;
                 continue;
             }
 
             // Second --- ends frontmatter
-            if (inFrontMatter && !frontMatterClosed && line.TrimStart().StartsWith("---"))
+            if (inFrontMatter && !frontMatterClosed && line.TrimStart().StartsWith("---", StringComparison.Ordinal))
             {
                 frontMatterClosed = true;
                 inFrontMatter = false;
@@ -98,6 +98,7 @@ public class FrontMatterParser
     /// </summary>
     public T GetValue<T>(Dictionary<string, object> frontMatter, string key, T defaultValue = default!)
     {
+        ArgumentNullException.ThrowIfNull(frontMatter);
         if (!frontMatter.TryGetValue(key, out var value))
         {
             return defaultValue;
@@ -105,7 +106,7 @@ public class FrontMatterParser
 
         try
         {
-            return (T)Convert.ChangeType(value, typeof(T));
+            return (T)Convert.ChangeType(value, typeof(T), System.Globalization.CultureInfo.InvariantCulture);
         }
         catch
         {
@@ -118,6 +119,7 @@ public class FrontMatterParser
     /// </summary>
     public List<string> GetListValue(Dictionary<string, object> frontMatter, string key)
     {
+        ArgumentNullException.ThrowIfNull(frontMatter);
         if (!frontMatter.TryGetValue(key, out var value))
         {
             return new List<string>();

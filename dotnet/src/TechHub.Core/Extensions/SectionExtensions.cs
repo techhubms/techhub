@@ -13,6 +13,8 @@ public static class SectionExtensions
     /// </summary>
     public static SectionDto ToDto(this Section section)
     {
+        ArgumentNullException.ThrowIfNull(section);
+
         return new SectionDto
         {
             Id = section.Id,
@@ -30,6 +32,8 @@ public static class SectionExtensions
     /// </summary>
     public static CollectionReferenceDto ToDto(this CollectionReference collection)
     {
+        ArgumentNullException.ThrowIfNull(collection);
+
         return new CollectionReferenceDto
         {
             Title = collection.Title,

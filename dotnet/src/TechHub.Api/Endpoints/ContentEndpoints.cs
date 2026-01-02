@@ -8,7 +8,7 @@ namespace TechHub.Api.Endpoints;
 /// <summary>
 /// API endpoints for advanced content filtering and search
 /// </summary>
-public static class ContentEndpoints
+internal static class ContentEndpoints
 {
     /// <summary>
     /// Maps all content-related endpoints to the application

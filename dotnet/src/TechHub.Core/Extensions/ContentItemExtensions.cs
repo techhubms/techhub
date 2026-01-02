@@ -13,6 +13,8 @@ public static class ContentItemExtensions
     /// </summary>
     public static ContentItemDto ToDto(this ContentItem item, string sectionUrl)
     {
+        ArgumentNullException.ThrowIfNull(item);
+
         return new ContentItemDto
         {
             Id = item.Id,
@@ -37,6 +39,8 @@ public static class ContentItemExtensions
     /// </summary>
     public static ContentItemDetailDto ToDetailDto(this ContentItem item, string sectionUrl)
     {
+        ArgumentNullException.ThrowIfNull(item);
+
         return new ContentItemDetailDto
         {
             Id = item.Id,
