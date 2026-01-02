@@ -1,0 +1,16 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/TechHub.Api/TechHub.Api.csproj" />
+    <Project Path="src/TechHub.AppHost/TechHub.AppHost.csproj" />
+    <Project Path="src/TechHub.Core/TechHub.Core.csproj" />
+    <Project Path="src/TechHub.Infrastructure/TechHub.Infrastructure.csproj" />
+    <Project Path="src/TechHub.Web/TechHub.Web.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/TechHub.Api.Tests/TechHub.Api.Tests.csproj" />
+    <Project Path="tests/TechHub.Core.Tests/TechHub.Core.Tests.csproj" />
+    <Project Path="tests/TechHub.E2E.Tests/TechHub.E2E.Tests.csproj" />
+    <Project Path="tests/TechHub.Infrastructure.Tests/TechHub.Infrastructure.Tests.csproj" />
+    <Project Path="tests/TechHub.Web.Tests/TechHub.Web.Tests.csproj" />
+  </Folder>
+</Solution>
