@@ -1,0 +1,47 @@
+@using TechHub.Core.DTOs
+@using TechHub.Web.Services
+@inject TechHubApiClient ApiClient
+@inject NavigationManager Navigation
+
+<header class="site-header">
+    <div class="header-content">
+        <a href="/" class="site-logo">
+            <h1>Tech Hub</h1>
+        </a>
+        
+        @if (sections != null && sections.Any())
+        {
+            <nav class="main-nav">
+                @foreach (var item in sections.Take(7))
+                {
+                    <a href="/@item.Id" class="nav-link @(IsActiveSection(item.Id) ? "active" : "")">
+                        @item.Title
+                    </a>
+                }
+            </nav>
+        }
+    </div>
+</header>
+
+@code {
+    private IEnumerable<SectionDto>? sections;
+
+    protected override async Task OnInitializedAsync()
+    {
+        try
+        {
+            sections = await ApiClient.GetAllSectionsAsync();
+        }
+        catch
+        {
+            // Silently fail - navigation will just not show sections
+            sections = Array.Empty<SectionDto>();
+        }
+    }
+
+    private bool IsActiveSection(string sectionId)
+    {
+        var currentPath = Navigation.ToBaseRelativePath(Navigation.Uri);
+        return currentPath.StartsWith(sectionId, StringComparison.OrdinalIgnoreCase);
+    }
+}

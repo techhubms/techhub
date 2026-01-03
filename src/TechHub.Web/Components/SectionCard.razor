@@ -1,44 +1,36 @@
 @using TechHub.Core.DTOs
 @inject NavigationManager Navigation
 
-<div class="section-card" @onclick="@(() => NavigateToSection())">
-    <div class="section-header" style="background-image: url('@Section.BackgroundImage')">
-        <div class="section-overlay">
-            <h2>@Section.Title</h2>
+<a href="/@Section.Id" class="section-card-link">
+    <div class="section-card">
+        <div class="section-header" style="background-image: url('@Section.BackgroundImage')">
+            <div class="section-overlay">
+                <h2>@Section.Title</h2>
+            </div>
+        </div>
+        <div class="section-body">
+            <p class="section-description">@Section.Description</p>
+            @if (Section.Collections.Any())
+            {
+                <div class="section-collections">
+                    @foreach (var collection in Section.Collections.Where(c => !string.IsNullOrEmpty(c.Collection)).Take(4))
+                    {
+                        <span class="collection-badge">
+                            @collection.Title
+                        </span>
+                    }
+                    @if (Section.Collections.Count(c => !string.IsNullOrEmpty(c.Collection)) > 4)
+                    {
+                        <span class="collection-badge">+@(Section.Collections.Count(c => !string.IsNullOrEmpty(c.Collection)) - 4) more</span>
+                    }
+                </div>
+            }
         </div>
     </div>
-    <div class="section-body">
-        <p class="section-description">@Section.Description</p>
-        @if (Section.Collections.Any())
-        {
-            <div class="section-collections">
-                @foreach (var collection in Section.Collections.Where(c => !string.IsNullOrEmpty(c.Collection)))
-                {
-                    <a href="/@Section.Id" 
-                       class="collection-badge" 
-                       @onclick="@((e) => NavigateToCollection(collection.Collection, e))"
-                       @onclick:stopPropagation="true">
-                        @collection.Title
-                    </a>
-                }
-            </div>
-        }
-    </div>
-</div>
+</a>
 
 @code {
     [Parameter, EditorRequired]
     public SectionDto Section { get; set; } = null!;
-
-    private void NavigateToSection()
-    {
-        Navigation.NavigateTo($"/{Section.Id}");
-    }
-
-    private void NavigateToCollection(string collectionName, MouseEventArgs e)
-    {
-        // stopPropagation prevents the card click from firing
-        Navigation.NavigateTo($"/{Section.Id}#{collectionName}");
-    }
 }
 

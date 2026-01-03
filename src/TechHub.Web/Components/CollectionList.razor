@@ -6,7 +6,7 @@
         <div class="content-grid">
             @foreach (var item in Items)
             {
-                <ContentItemCard Item="@item" />
+                <ContentItemCard Item="@item" ShowCollectionBadge="@ShowCollectionBadge" />
             }
         </div>
     }
@@ -30,4 +30,7 @@
 
     [Parameter]
     public bool IsLoading { get; set; }
+
+    [Parameter]
+    public bool ShowCollectionBadge { get; set; } = true;
 }

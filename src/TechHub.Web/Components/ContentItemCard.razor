@@ -25,9 +25,13 @@
         <p class="content-description">@Item.Description</p>
     }
     
-    @if (Item.Tags.Any())
+    @if (Item.Tags.Any() || (ShowCollectionBadge && !string.IsNullOrWhiteSpace(Item.Collection)))
     {
         <div class="content-tags">
+            @if (ShowCollectionBadge && !string.IsNullOrWhiteSpace(Item.Collection))
+            {
+                <span class="collection-badge-white">@CapitalizeCollection(Item.Collection)</span>
+            }
             @foreach (var tag in Item.Tags.Take(5))
             {
                 <span class="tag">@tag</span>
@@ -39,22 +43,27 @@
         </div>
     }
     
-    <div class="content-footer">
-        <span class="collection-badge">@Item.Collection</span>
-        @if (!string.IsNullOrWhiteSpace(Item.VideoId))
-        {
-            <span class="video-indicator">🎥 Video</span>
-        }
-        @if (!string.IsNullOrWhiteSpace(Item.ExternalUrl))
-        {
-            <span class="external-indicator">🔗 External</span>
-        }
-    </div>
+    @if (!string.IsNullOrWhiteSpace(Item.VideoId) || !string.IsNullOrWhiteSpace(Item.ExternalUrl))
+    {
+        <div class="content-footer">
+            @if (!string.IsNullOrWhiteSpace(Item.VideoId))
+            {
+                <span class="video-indicator">🎥 Video</span>
+            }
+            @if (!string.IsNullOrWhiteSpace(Item.ExternalUrl))
+            {
+                <span class="external-indicator">🔗 External</span>
+            }
+        </div>
+    }
 </article>
 
 @code {
     [Parameter, EditorRequired]
     public ContentItemDto Item { get; set; } = null!;
+
+    [Parameter]
+    public bool ShowCollectionBadge { get; set; } = true;
 
     private string FormatDate(long epochSeconds)
     {
@@ -72,5 +81,14 @@
             return $"{(int)(diff.TotalDays / 7)} weeks ago";
         
         return dateTime.ToString("MMM d, yyyy");
+    }
+
+    private string CapitalizeCollection(string collection)
+    {
+        if (string.IsNullOrWhiteSpace(collection))
+            return collection;
+        
+        // Capitalize first letter of each word
+        return System.Globalization.CultureInfo.CurrentCulture.TextInfo.ToTitleCase(collection.ToLower());
     }
 }

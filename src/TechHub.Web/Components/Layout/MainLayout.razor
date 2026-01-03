@@ -2,7 +2,20 @@
 
 <link href="styles.css" rel="stylesheet" />
 
-@Body
+<NavHeader />
+
+<main class="main-content">
+    @Body
+</main>
+
+<footer class="site-footer">
+    <div class="footer-content">
+        <p>&copy; @DateTime.Now.Year Microsoft Tech Hub. All rights reserved.</p>
+        <nav class="footer-nav">
+            <a href="/">Home</a>
+        </nav>
+    </div>
+</footer>
 
 <div id="blazor-error-ui" data-nosnippet>
     An unhandled error has occurred.

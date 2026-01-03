@@ -17,9 +17,22 @@ public sealed class ConfigurationBasedSectionRepository : ISectionRepository
     {
         ArgumentNullException.ThrowIfNull(settings);
         
-        // Convert configuration to Section models at construction time
-        _sections = settings.Value.Content.Sections
+        // Define section display order (matches live site - starts with "all")
+        var sectionOrder = new[] 
+        { 
+            "all", "github-copilot", "ai", "ml", "devops", "azure", "coding", "security"
+        };
+        
+        // Convert configuration to Section models and apply ordering
+        var sectionsDict = settings.Value.Content.Sections
             .Select(kvp => ConvertToSection(kvp.Key, kvp.Value))
+            .ToDictionary(s => s.Id);
+        
+        // Order sections according to defined order, then any remaining alphabetically
+        _sections = sectionOrder
+            .Where(id => sectionsDict.ContainsKey(id))
+            .Select(id => sectionsDict[id])
+            .Concat(sectionsDict.Values.Where(s => !sectionOrder.Contains(s.Id)).OrderBy(s => s.Title))
             .ToList()
             .AsReadOnly();
     }
