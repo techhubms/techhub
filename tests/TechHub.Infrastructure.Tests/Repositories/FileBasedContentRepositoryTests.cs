@@ -31,7 +31,7 @@ public class FileBasedContentRepositoryTests : IDisposable
             Content = new ContentSettings
             {
                 CollectionsPath = _collectionsPath,
-                SectionsConfigPath = Path.Combine(_tempDirectory, "sections.json"),
+                Sections = new Dictionary<string, SectionConfig>(), // Empty for content tests
                 Timezone = "Europe/Brussels"
             },
             Caching = new CachingSettings(),

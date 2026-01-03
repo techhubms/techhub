@@ -22,9 +22,9 @@ public class ContentSettings
     public required string CollectionsPath { get; init; }
     
     /// <summary>
-    /// Path to sections.json configuration file
+    /// Sections configuration (replaces sections.json file)
     /// </summary>
-    public required string SectionsConfigPath { get; init; }
+    public required Dictionary<string, SectionConfig> Sections { get; init; }
     
     /// <summary>
     /// Timezone for date handling (e.g., "Europe/Brussels")
@@ -35,6 +35,32 @@ public class ContentSettings
     /// Maximum excerpt length in characters
     /// </summary>
     public int MaxExcerptLength { get; init; } = 1000;
+}
+
+/// <summary>
+/// Section configuration from appsettings.json
+/// </summary>
+public class SectionConfig
+{
+    public required string Title { get; init; }
+    public required string Description { get; init; }
+    public required string Url { get; init; }
+    public required string Section { get; init; }
+    public required string Image { get; init; }
+    public required string Category { get; init; }
+    public required List<CollectionConfig> Collections { get; init; }
+}
+
+/// <summary>
+/// Collection configuration from appsettings.json
+/// </summary>
+public class CollectionConfig
+{
+    public required string Title { get; init; }
+    public required string Url { get; init; }
+    public string? Collection { get; init; }
+    public required string Description { get; init; }
+    public bool Custom { get; init; }
 }
 
 /// <summary>

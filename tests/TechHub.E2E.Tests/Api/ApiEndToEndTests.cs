@@ -296,7 +296,7 @@ public class ApiEndToEndTests : IClassFixture<ApiTestFactory>
     public async Task SearchContent_ByQuery_ReturnsMatchingItems()
     {
         // Act
-        var response = await _client.GetAsync("/api/content?q=copilot");
+        var response = await _client.GetAsync("/api/content/filter?q=copilot");
 
         // Assert
         response.StatusCode.Should().Be(HttpStatusCode.OK);
@@ -446,62 +446,42 @@ public class ApiEndToEndTests : IClassFixture<ApiTestFactory>
 
 /// <summary>
 /// Custom WebApplicationFactory for E2E tests with real file system
+/// Uses workspace root for content files instead of bin/Debug/net10.0
 /// </summary>
 public class ApiTestFactory : WebApplicationFactory<Program>
 {
+    private readonly string _workspaceRoot;
+
+    public ApiTestFactory()
+    {
+        // Find workspace root by walking up from test assembly location
+        // From: /workspaces/techhub/tests/TechHub.E2E.Tests/bin/Debug/net10.0
+        // To:   /workspaces/techhub (5 levels up)
+        _workspaceRoot = Path.GetFullPath(
+            Path.Combine(Directory.GetCurrentDirectory(), "..", "..", "..", "..", "..")
+        );
+    }
+
     protected override void ConfigureWebHost(IWebHostBuilder builder)
     {
-        // Set content root to workspace directory
-        var workspaceRoot = Path.GetFullPath(Path.Combine(Directory.GetCurrentDirectory(), "..", "..", "..", ".."));
+        // Set content root to workspace for file-based content loading
+        builder.UseContentRoot(_workspaceRoot);
         
-        // CRITICAL: Change working directory for File.* APIs to match content root
-        Directory.SetCurrentDirectory(workspaceRoot);
-        
-        builder.UseContentRoot(workspaceRoot);
-        
-        // Configure AppSettings directly in DI with object initializer
-        builder.ConfigureServices((context, services) =>
+        // Configure test-specific settings via in-memory configuration
+        builder.ConfigureAppConfiguration((context, config) =>
         {
-            // Remove any existing AppSettings configuration
-            var descriptor = services.FirstOrDefault(d => d.ServiceType == typeof(IOptions<AppSettings>));
-            if (descriptor != null)
-            {
-                services.Remove(descriptor);
-            }
+            // Keep existing configuration sources but add test overrides
+            config.AddJsonFile(Path.Combine(_workspaceRoot, "src", "TechHub.Api", "appsettings.json"), optional: false);
             
-            // Configure with test-specific settings using object initializer
-            var testSettings = new AppSettings
+            // Override only the paths that need adjustment for test environment
+            var testOverrides = new Dictionary<string, string?>
             {
-                Content = new ContentSettings
-                {
-                    CollectionsPath = "collections",
-                    SectionsConfigPath = "_data/sections.json",
-                    Timezone = "Europe/Brussels",
-                    MaxExcerptLength = 1000
-                },
-                Caching = new CachingSettings
-                {
-                    ContentAbsoluteExpirationMinutes = 60,
-                    ContentSlidingExpirationMinutes = 30,
-                    ApiResponseAbsoluteExpirationMinutes = 60,
-                    EnableOutputCaching = true
-                },
-                Seo = new SeoSettings
-                {
-                    BaseUrl = "https://tech.hub.ms",
-                    SiteTitle = "Microsoft Tech Hub",
-                    SiteDescription = "Your central hub for Microsoft technology updates, tutorials, and community content"
-                },
-                Performance = new PerformanceSettings
-                {
-                    EnableCompression = true,
-                    EnableHttp2 = true,
-                    EnableHttp3 = false,
-                    MaxConcurrentRequests = 10000
-                }
+                ["AppSettings:Content:CollectionsPath"] = Path.Combine(_workspaceRoot, "collections"),
+                ["AppSettings:Caching:ContentAbsoluteExpirationMinutes"] = "60",
+                ["AppSettings:Caching:ApiResponseAbsoluteExpirationMinutes"] = "60"
             };
             
-            services.AddSingleton(Options.Create(testSettings));
+            config.AddInMemoryCollection(testOverrides);
         });
         
         // Suppress verbose logging during tests

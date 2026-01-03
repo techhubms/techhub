@@ -31,7 +31,7 @@ builder.Services.Configure<AppSettings>(builder.Configuration.GetSection("AppSet
 
 // Register repositories and services
 builder.Services.AddSingleton<IMarkdownService, MarkdownService>();
-builder.Services.AddSingleton<ISectionRepository, FileBasedSectionRepository>();
+builder.Services.AddSingleton<ISectionRepository, ConfigurationBasedSectionRepository>();
 builder.Services.AddSingleton<IContentRepository, FileBasedContentRepository>();
 
 // Add data cache warmer to load all data at startup

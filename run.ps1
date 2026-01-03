@@ -147,6 +147,9 @@ function Test-Prerequisites {
     # Check .NET SDK
     try {
         $dotnetVersion = dotnet --version
+        if ($LASTEXITCODE -ne 0) {
+            throw "dotnet command failed with exit code $LASTEXITCODE"
+        }
         Write-Info ".NET SDK version: $dotnetVersion"
     }
     catch {
@@ -167,42 +170,36 @@ function Test-Prerequisites {
 function Invoke-Clean {
     Write-Step "Cleaning build artifacts"
     
-    try {
-        dotnet clean $solutionPath --configuration $configuration --verbosity $verbosityLevel
-        Write-Success "Clean completed"
-    }
-    catch {
-        Write-Error "Clean failed: $($_.Exception.Message)"
+    dotnet clean $solutionPath --configuration $configuration --verbosity $verbosityLevel
+    if ($LASTEXITCODE -ne 0) {
+        Write-Error "Clean failed with exit code $LASTEXITCODE"
         exit 1
     }
+    Write-Success "Clean completed"
 }
 
 # Build solution
 function Invoke-Build {
     Write-Step "Building solution ($configuration)"
     
-    try {
-        dotnet build $solutionPath --configuration $configuration --verbosity $verbosityLevel
-        Write-Success "Build completed"
-    }
-    catch {
-        Write-Error "Build failed: $($_.Exception.Message)"
+    dotnet build $solutionPath --configuration $configuration --verbosity $verbosityLevel
+    if ($LASTEXITCODE -ne 0) {
+        Write-Error "Build failed with exit code $LASTEXITCODE"
         exit 1
     }
+    Write-Success "Build completed"
 }
 
 # Run tests
 function Invoke-Tests {
     Write-Step "Running tests"
     
-    try {
-        dotnet test $solutionPath --configuration $configuration --no-build --verbosity $verbosityLevel
-        Write-Success "All tests passed"
-    }
-    catch {
-        Write-Error "Tests failed: $($_.Exception.Message)"
+    dotnet test $solutionPath --configuration $configuration --no-build --verbosity $verbosityLevel
+    if ($LASTEXITCODE -ne 0) {
+        Write-Error "Tests failed with exit code $LASTEXITCODE"
         exit 1
     }
+    Write-Success "All tests passed"
 }
 
 # Kill existing processes on ports
@@ -379,6 +376,9 @@ function Start-BothProjects {
 
 # Main execution
 try {
+    # Ensure we're in the workspace root
+    Set-Location $workspaceRoot
+    
     Write-Host "`n╔════════════════════════════════════════╗" -ForegroundColor Cyan
     Write-Host "║      Tech Hub Development Runner      ║" -ForegroundColor Cyan
     Write-Host "╚════════════════════════════════════════╝`n" -ForegroundColor Cyan
@@ -431,4 +431,8 @@ catch {
     Write-Error "`nScript failed: $($_.Exception.Message)"
     Write-Host $_.ScriptStackTrace -ForegroundColor DarkGray
     exit 1
+}
+finally {
+    # Always return to workspace root
+    Set-Location $workspaceRoot
 }

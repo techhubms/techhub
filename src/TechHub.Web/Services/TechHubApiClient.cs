@@ -174,20 +174,25 @@ internal class TechHubApiClient
     }
 
     /// <summary>
-    /// Get content items by category and collection
+    /// Get content items by category and collection.
+    /// Pass null for category to get all items in the collection regardless of category.
     /// </summary>
     public async Task<IEnumerable<ContentItemDto>?> GetContentAsync(
-        string category,
+        string? category,
         string collection,
         CancellationToken cancellationToken = default)
     {
         try
         {
             _logger.LogInformation("Fetching content for category: {Category}, collection: {Collection}", 
-                category, collection);
+                category ?? "(all)", collection);
+            
+            var url = string.IsNullOrWhiteSpace(category)
+                ? $"/api/content?collection={Uri.EscapeDataString(collection)}"
+                : $"/api/content?category={Uri.EscapeDataString(category)}&collection={Uri.EscapeDataString(collection)}";
             
             var items = await _httpClient.GetFromJsonAsync<IEnumerable<ContentItemDto>>(
-                $"/api/content?category={Uri.EscapeDataString(category)}&collection={Uri.EscapeDataString(collection)}",
+                url,
                 cancellationToken);
             
             _logger.LogInformation("Successfully fetched {Count} items", items?.Count() ?? 0);
@@ -196,7 +201,7 @@ internal class TechHubApiClient
         catch (HttpRequestException ex)
         {
             _logger.LogError(ex, "Failed to fetch content for category {Category}, collection {Collection}", 
-                category, collection);
+                category ?? "(all)", collection);
             throw;
         }
     }

@@ -9,11 +9,12 @@
   - [1. Gather Context](#1-gather-context)
   - [2. Create a Plan](#2-create-a-plan)
   - [3. Research & Validate](#3-research--validate)
-  - [4. Verify Behavior (Optional)](#4-verify-behavior-optional)
-  - [5. Implement Changes](#5-implement-changes)
-  - [6. Test & Validate](#6-test--validate)
-  - [7. Update Documentation](#7-update-documentation)
-  - [8. Report Completion](#8-report-completion)
+  - [4. Verify Current Behavior (Optional)](#4-verify-current-behavior-optional)
+  - [5. Write Tests First (TDD)](#5-write-tests-first-tdd)
+  - [6. Implement Changes](#6-implement-changes)
+  - [7. Validate & Fix](#7-validate--fix)
+  - [8. Update Documentation](#8-update-documentation)
+  - [9. Report Completion](#9-report-completion)
 - [Project Overview](#project-overview)
 - [Documentation Architecture](#documentation-architecture)
   - [Documentation Hierarchy](#documentation-hierarchy)
@@ -36,7 +37,7 @@
 
 ## AI Assistant Workflow
 
-**🚨 ABSOLUTELY CRITICAL**: This section defines the **required step-by-step process** for all development tasks. Follow these steps in order for every request.
+**🚨 ABSOLUTELY CRITICAL**: This section defines the **required 9-step process** for all development tasks. Follow these steps in order for every request. This workflow follows **Test-Driven Development (TDD)** principles - write tests BEFORE implementation.
 
 ### 0. Core Rules & Boundaries
 
@@ -44,7 +45,8 @@ These are the **non-negotiable rules** that apply to ALL development tasks. ALWA
 
 #### ✅ Always Do
 
-- **ALWAYS follow the 8-step workflow**: Complete all steps in order for every request
+- **ALWAYS follow the 9-step workflow**: Complete all steps in order for every request
+- **ALWAYS write tests BEFORE implementation**: Test-Driven Development (TDD) is mandatory
 - **Prefer higher-level tools**: ALWAYS use MCP tools > Built-in tools > CLI commands
   - **MCP tools** (highest priority): Playwright MCP (web testing), GitHub MCP (GitHub operations), context7 MCP (documentation)
   - **Built-in tools**: `replace_string_in_file` (with 5-10 lines context), `read_file`, `grep_search`, `file_search`
@@ -57,7 +59,7 @@ These are the **non-negotiable rules** that apply to ALL development tasks. ALWA
 - **Store temp files in `.tmp/`**: ALL temporary/one-off scripts in `.tmp/` (e.g., quick tests, debugging scripts), permanent/reusable automation goes in `scripts/`
 - **Use PowerShell for scripts**: If script is required, it MUST be `.ps1` file in `.tmp/` directory, then execute it
 - **Follow timezone standards**: `Europe/Brussels` for all date operations
-- **Use configuration-driven design**: Update `_data/sections.json`, not hardcoded values
+- **Use configuration-driven design**: Update configuration in `appsettings.json`, not hardcoded values
 - **Server-side render all content**: Initial page load must show complete content
 - **Add tests for new functionality**: According to domain-specific AGENTS.md files
 - **Follow markdown guidelines**: See [collections/markdown-guidelines.md](collections/markdown-guidelines.md) and [collections/writing-style-guidelines.md](collections/writing-style-guidelines.md)
@@ -72,11 +74,12 @@ These are the **non-negotiable rules** that apply to ALL development tasks. ALWA
 - **Breaking changes to public APIs**: Changes that affect existing functionality (e.g., modifying endpoint signatures, changing data structures)
 - **Adding new dependencies**: To dependency management files or any config (e.g., new NuGet packages, npm packages, PowerShell modules)
 - **Cross-domain changes**: Modifications affecting multiple areas (e.g., API + Blazor + Infrastructure, or content structure + build system)
-- **Significant refactoring**: That touches many files or core architecture (e.g., restructuring `_data/sections.json`, changing domain models)
+- **Significant refactoring**: That touches many files or core architecture (e.g., modifying section configuration in `appsettings.json`, changing domain models)
 
 #### 🚫 Never Do
 
-- **Never skip the 8-step workflow**: All steps are required for quality work
+- **Never skip the 9-step workflow**: All steps are required for quality work
+- **Never write implementation before tests**: TDD is mandatory for code changes
 - **Never use lower-level tools unnecessarily**: Don't use CLI when MCP or built-in tools are available
 - **Never dissect GitHub URLs**: Always extract IDs from URLs before passing to GitHub MCP tools
 - **Never paste scripts into terminal**: Always save as `.ps1` file in `.tmp/` and execute
@@ -86,7 +89,7 @@ These are the **non-negotiable rules** that apply to ALL development tasks. ALWA
 - **Never commit secrets or API keys**: Check all files before committing
 - **Never modify generated directories**: Build outputs (e.g., `bin/`, `obj/`, `node_modules/`, `.tmp/`)
 - **Never create content without frontmatter**: All markdown must have proper YAML front matter
-- **Never hardcode section/collection data**: Always use `_data/sections.json`
+- **Never hardcode section/collection data**: Always use configuration in `appsettings.json`
 - **Never let JavaScript create initial content**: Server-side render everything, JS only enhances
 - **Never add wrapper methods just for tests**: Test real implementation
 - **Never make code backwards compatible unless requested**: Prefer clean, modern code
@@ -189,9 +192,9 @@ When renaming ANY identifier, you **MUST** verify and update ALL occurrences acr
 - Never fabricate or invent information
 - Prefer official documentation over Stack Overflow
 
-### 4. Verify Behavior (Optional)
+### 4. Verify Current Behavior (Optional)
 
-**If needed**, understand current behavior BEFORE making changes:
+**If needed**, understand current behavior BEFORE writing tests or making changes:
 
 **Use Playwright MCP Server**:
 
@@ -214,12 +217,66 @@ When renaming ANY identifier, you **MUST** verify and update ALL occurrences acr
 - Document unexpected behaviors you discover
 - Report any discrepancies between observed behavior and documentation
 
-### 5. Implement Changes
+### 5. Write Tests First (TDD)
 
-**Deep dive into the code** and make necessary modifications:
+**CRITICAL**: Write tests BEFORE implementing changes to ensure proper validation:
+
+**Test-First Development**:
+
+- **For bug fixes**: Write a failing test that reproduces the bug FIRST
+- **For new features**: Write tests that define expected behavior BEFORE implementation
+- **For refactoring**: Ensure existing tests pass, add tests for edge cases if missing
+- **Run tests**: Verify tests fail for the right reasons (proving they test the right thing)
+
+**Test Coverage Requirements**:
+
+- **Unit tests**: Test individual components in isolation (Core, Infrastructure layers)
+- **Integration tests**: Test API endpoints and data access (API, Repository layers)
+- **Component tests**: Test Blazor components with bUnit (Web layer)
+- **E2E tests**: Test complete user workflows with Playwright (critical paths only)
+- See [tests/AGENTS.md](tests/AGENTS.md) for comprehensive testing strategies
+
+**When to Write Tests**:
+
+- **ALWAYS** for bug fixes - reproduce the bug first
+- **ALWAYS** for new features - define expected behavior first
+- **ALWAYS** for API changes - test contracts and responses
+- **SKIP** for documentation-only changes
+- **SKIP** for trivial UI tweaks (but test business logic behind them)
+
+**Key Benefits of Test-First**:
+
+- Forces clear thinking about requirements and edge cases
+- Prevents writing tests that just validate what you coded (confirmation bias)
+- Ensures tests actually catch bugs (proven by initial failure)
+- Makes refactoring safer with confidence
+- Documents intended behavior clearly
+
+**Example Workflow**:
+
+1. **Understand the requirement**: Read specs, understand expected behavior
+2. **Write failing test**: Test should fail because feature doesn't exist yet
+3. **Run test**: Verify it fails for the right reason (not syntax errors)
+4. **Implement**: Write minimal code to make test pass
+5. **Run tests**: Verify test now passes
+6. **Refactor**: Improve code quality while keeping tests green
+7. **Repeat**: For next scenario/edge case
+
+**Test Organization**:
+
+- Place tests in corresponding test projects (TechHub.Core.Tests, TechHub.Api.Tests, etc.)
+- Use descriptive test names: `MethodName_Scenario_ExpectedResult`
+- Group related tests in same test class
+- Use `[Theory]` for testing multiple similar scenarios
+- See domain-specific AGENTS.md for test patterns
+
+### 6. Implement Changes
+
+**NOW implement** to make your tests pass:
 
 **Implementation Guidelines**:
 
+- **Write MINIMAL code** to make tests pass - avoid over-engineering
 - Follow tool calling strategy: MCP → Built-in → CLI
 - Use `replace_string_in_file` or `multi_replace_string_in_file` for code edits
 - Use `get_errors` on modified files to check for VS Code diagnostics
@@ -228,64 +285,89 @@ When renaming ANY identifier, you **MUST** verify and update ALL occurrences acr
 - Use meaningful variable names and proper error handling
 - Prefer clarity over cleverness
 - Make parameters required unless they can be null
-- Test real implementation, never duplicate logic in tests
+- **Run tests frequently** during implementation to catch issues early
 
 **Critical Requirements**:
 
 - **Ask for clarification** on ANYTHING unclear - NEVER assume
 - **For bigger changes**: ALWAYS ask before proceeding
 - **Check for errors** after every file modification
+- **Run tests** after each logical change to verify progress
 - **Fix all issues** before moving to next step
 - **DevContainer Dependencies**: Always install in `/workspaces/techhub/.devcontainer/post-create.sh`, never in PowerShell or other scripts
 
+**Implementation Strategy**:
+
+1. **Red**: Tests fail (Step 5 verified this)
+2. **Green**: Write minimal code to make tests pass
+3. **Refactor**: Improve code quality while keeping tests green
+4. **Repeat**: For each test case / scenario
+
 **Files to Update**:
 
-- Code files (Ruby, JavaScript, PowerShell, templates, etc.)
+- Code files (C#, JavaScript, PowerShell, Razor, etc.)
 - Configuration files if needed
 - Any related includes, layouts, or components
 
+**Cleanup and Removal**:
+
+- **ALWAYS clean up after changes** - Remove outdated files, code, and dependencies
+- **No backwards compatibility unless requested** - Don't keep old implementations "just in case"
+- **Remove unused files immediately** - Don't leave lingering code that's no longer referenced
+- **Check documentation before removing critical files** - Update all references (e.g., when removing `sections.json`, update all docs mentioning it)
+- **Delete deprecated code** - Remove old implementations after migration is complete
+- **Clean up test code** - Remove obsolete test helpers, fixtures, or data files
+- **Update configuration** - Remove unused settings, dependencies, and build artifacts
+
 **Key Rules**:
 
+- Write production code ONLY to make tests pass
+- Don't add features not covered by tests
 - Follow existing patterns and conventions
+- Clean up outdated code and files immediately
 - See [Core Rules & Boundaries](#0-core-rules--boundaries) for complete rule list
 
-### 6. Test & Validate
+### 7. Validate & Fix
 
-**Ensure your changes work correctly**:
+**Ensure all tests pass and code quality is high**:
 
-**Start Jekyll (If Needed)**:
+**Run Full Test Suite**:
 
-- Use framework-specific scripts to start development servers
-- Wait for server readiness messages
-- Monitor rebuild progress with appropriate logs
-- Wait for completion messages before testing
-
-**Run Automated Tests**:
-
-- **CRITICAL**: Run tests after ANY code changes (C#, JavaScript, PowerShell, templates)
-- **Test-first workflow**: When fixing bugs, write a regression test FIRST that reproduces the issue
+- Run ALL affected tests (unit, integration, component, E2E as appropriate)
+- Tests should NOW PASS (they failed in step 5, you fixed in step 6)
 - Use test scripts appropriate for the domain you're working in
-- Fix any regression issues immediately
 - See [tests/AGENTS.md](tests/AGENTS.md) for comprehensive testing strategy
 
-**Extend Tests**:
+**Check for Regressions**:
 
-- **Add new tests** for new functionality BEFORE or DURING implementation
-- **Update existing tests** if behavior changed
-- Ensure edge cases are covered
-- Test real implementation, not mocks
-- Use appropriate testing frameworks for each language (see [tests/AGENTS.md](tests/AGENTS.md))
-- Never add wrapper methods in production code just for tests
+- Run full test suite to ensure no existing functionality broke
+- Pay special attention to integration tests
+- Verify E2E tests pass for critical user workflows
+- All tests MUST pass before proceeding
+
+**Code Quality Checks**:
+
+- Use `get_errors` to check for linting/compilation errors
+- Fix all warnings and errors
+- Verify code follows project conventions
+- Check for proper error handling
+- Ensure logging is appropriate
+
+**Performance Validation** (if applicable):
+
+- Check that changes don't introduce performance regressions
+- Verify caching still works correctly
+- Test with realistic data volumes
 
 **Key Rules**:
 
-- Documentation-only changes do not require testing
-- All code changes MUST be tested
-- Write regression tests for bugs BEFORE fixing them
-- Fix all test failures before proceeding
-- Never skip tests to save time
+- ALL tests must pass before moving forward
+- Zero tolerance for failing tests
+- Fix issues immediately, don't postpone
+- If tests fail, return to step 6 and fix implementation
+- Never commit code with failing tests
 
-### 7. Update Documentation
+### 8. Update Documentation
 
 **Keep documentation in sync with code changes**:
 
@@ -319,7 +401,7 @@ When renaming ANY identifier, you **MUST** verify and update ALL occurrences acr
 - Fix any MD032 or other markdown issues
 - Documentation is part of "task complete"
 
-### 8. Report Completion
+### 9. Report Completion
 
 **Tell the user you're done** with a clear summary:
 
@@ -361,7 +443,7 @@ The Tech Hub is a technical content hub with configuration-driven section and co
 **Key Repositories**:
 
 - **Content Collections**: `collections/` directory with markdown files
-- **Data Configuration**: `_data/sections.json` for site structure
+- **Data Configuration**: `appsettings.json` for site structure (sections and collections)
 - **.NET Projects**: `src/` directory with API, Web, Core, Infrastructure
 - **Tests**: `tests/` directory with unit, integration, and E2E tests
 - **Infrastructure**: `infra/` directory with Bicep templates

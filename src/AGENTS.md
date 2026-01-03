@@ -315,46 +315,53 @@ public record ContentItem
 
 ### Repository Pattern
 
-File-based repository with caching:
+Configuration-based repository (sections loaded from appsettings.json):
 
 ```csharp
 namespace TechHub.Infrastructure.Repositories;
 
-public class FileSectionRepository : ISectionRepository
+public sealed class ConfigurationBasedSectionRepository : ISectionRepository
 {
-    private readonly string _sectionsJsonPath;
-    private readonly IMemoryCache _cache;
-    private readonly ILogger<FileSectionRepository> _logger;
+    private readonly IReadOnlyList<Section> _sections;
     
-    public FileSectionRepository(
-        IOptions<ContentOptions> options,
-        IMemoryCache cache,
-        ILogger<FileSectionRepository> logger)
+    public ConfigurationBasedSectionRepository(IOptions<AppSettings> settings)
     {
-        _sectionsJsonPath = options.Value.SectionsJsonPath;
-        _cache = cache;
-        _logger = logger;
+        ArgumentNullException.ThrowIfNull(settings);
+        _sections = settings.Value.Content.Sections
+            .Select(kvp => ConvertToSection(kvp.Key, kvp.Value))
+            .ToList()
+            .AsReadOnly();
     }
     
-    public async Task<IReadOnlyList<Section>> GetAllSectionsAsync(
-        CancellationToken ct = default)
+    public Task<IReadOnlyList<Section>> InitializeAsync(CancellationToken ct = default)
     {
-        const string cacheKey = "all_sections";
-        
-        if (_cache.TryGetValue<IReadOnlyList<Section>>(cacheKey, out var cached))
+        return Task.FromResult(_sections);
+    }
+    
+    public Task<IReadOnlyList<Section>> GetAllAsync(CancellationToken ct = default)
+    {
+        return Task.FromResult(_sections);
+    }
+    
+    private static Section ConvertToSection(string key, SectionConfig config)
+    {
+        return new Section
         {
-            return cached!;
-        }
-        
-        var json = await File.ReadAllTextAsync(_sectionsJsonPath, ct);
-        var sections = JsonSerializer.Deserialize<List<Section>>(json)
-            ?? throw new InvalidOperationException("Failed to parse sections.json");
-        
-        _cache.Set(cacheKey, sections, TimeSpan.FromHours(1));
-        
-        _logger.LogInformation("Loaded {Count} sections", sections.Count);
-        
-        return sections;
+            Id = key,
+            Title = config.Title,
+            Description = config.Description,
+            Url = config.Url,
+            Category = config.Category,
+            BackgroundImage = config.Image,
+            Collections = config.Collections.Select(c => new Collection
+            {
+                Title = c.Title,
+                Collection = c.Collection,
+                Url = c.Url,
+                Description = c.Description,
+                IsCustom = c.IsCustom
+            }).ToList()
+        };
     }
 }
 ```
@@ -365,9 +372,9 @@ public class FileSectionRepository : ISectionRepository
 
 **Singleton** - Service has no state or state is shared across all requests:
 
-- `ISectionRepository` (FileSectionRepository with caching)
-- `IContentRepository` (FileContentRepository with caching)
-- `IMarkdownProcessor` (stateless)
+- `ISectionRepository` (ConfigurationBasedSectionRepository - loads from appsettings.json)
+- `IContentRepository` (FileBasedContentRepository with caching)
+- `IMarkdownService` (stateless)
 - `IMemoryCache`, `TimeProvider` (built-in)
 
 **Scoped** - Service lifetime matches HTTP request:

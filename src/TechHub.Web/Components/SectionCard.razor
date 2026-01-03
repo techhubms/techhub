@@ -1,6 +1,7 @@
 @using TechHub.Core.DTOs
+@inject NavigationManager Navigation
 
-<div class="section-card">
+<div class="section-card" @onclick="@(() => NavigateToSection())">
     <div class="section-header" style="background-image: url('@Section.BackgroundImage')">
         <div class="section-overlay">
             <h2>@Section.Title</h2>
@@ -8,19 +9,36 @@
     </div>
     <div class="section-body">
         <p class="section-description">@Section.Description</p>
-        <div class="section-collections">
-            @foreach (var collection in Section.Collections)
-            {
-                <span class="collection-badge">@collection.Title</span>
-            }
-        </div>
-        <a href="/@Section.Id" class="section-link">
-            View @Section.Title →
-        </a>
+        @if (Section.Collections.Any())
+        {
+            <div class="section-collections">
+                @foreach (var collection in Section.Collections.Where(c => !string.IsNullOrEmpty(c.Collection)))
+                {
+                    <a href="/@Section.Id" 
+                       class="collection-badge" 
+                       @onclick="@((e) => NavigateToCollection(collection.Collection, e))"
+                       @onclick:stopPropagation="true">
+                        @collection.Title
+                    </a>
+                }
+            </div>
+        }
     </div>
 </div>
 
 @code {
     [Parameter, EditorRequired]
     public SectionDto Section { get; set; } = null!;
+
+    private void NavigateToSection()
+    {
+        Navigation.NavigateTo($"/{Section.Id}");
+    }
+
+    private void NavigateToCollection(string collectionName, MouseEventArgs e)
+    {
+        // stopPropagation prevents the card click from firing
+        Navigation.NavigateTo($"/{Section.Id}#{collectionName}");
+    }
 }
+

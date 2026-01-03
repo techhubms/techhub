@@ -44,6 +44,8 @@ if (!app.Environment.IsDevelopment())
 app.UseStatusCodePagesWithReExecute("/not-found", createScopeForStatusCodePages: true);
 app.UseHttpsRedirection();
 
+app.UseStaticFiles(); // Serve static files from wwwroot (including favicon.ico)
+
 app.UseAntiforgery();
 
 app.MapStaticAssets();

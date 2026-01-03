@@ -41,8 +41,13 @@
                         {
                             <li>
                                 <button @onclick="() => SelectCollection(collection.Collection)" 
-                                        class="@(selectedCollection == collection.Collection ? "active" : "")">
+                                        class="@(selectedCollection == collection.Collection ? "active" : "")"
+                                        disabled="@isLoadingContent">
                                     @collection.Title
+                                    @if (selectedCollection == collection.Collection && isLoadingContent)
+                                    {
+                                        <span class="loading-indicator">Loading...</span>
+                                    }
                                 </button>
                             </li>
                         }
@@ -131,10 +136,19 @@
         if (string.IsNullOrEmpty(selectedCollection) || section == null) return;
 
         isLoadingContent = true;
+        StateHasChanged(); // Show loading state for collection content
         
         try
         {
-            contentItems = await ApiClient.GetContentAsync(section.Category, selectedCollection);
+            // Special handling for "All" section - get all items in collection regardless of category
+            if (section.Category.Equals("All", StringComparison.OrdinalIgnoreCase))
+            {
+                contentItems = await ApiClient.GetContentAsync(null, selectedCollection);
+            }
+            else
+            {
+                contentItems = await ApiClient.GetContentAsync(section.Category, selectedCollection);
+            }
         }
         catch (Exception ex)
         {
@@ -143,6 +157,7 @@
         finally
         {
             isLoadingContent = false;
+            StateHasChanged(); // Update UI with results
         }
     }
 
