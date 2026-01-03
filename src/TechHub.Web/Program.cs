@@ -1,10 +1,19 @@
 using TechHub.Web.Components;
+using TechHub.Web.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddRazorComponents()
     .AddInteractiveServerComponents();
+
+// Configure HTTP client for API
+var apiBaseUrl = builder.Configuration["ApiBaseUrl"] ?? "http://localhost:5029";
+builder.Services.AddHttpClient<TechHubApiClient>(client =>
+{
+    client.BaseAddress = new Uri(apiBaseUrl);
+    client.Timeout = TimeSpan.FromSeconds(30);
+});
 
 var app = builder.Build();
 

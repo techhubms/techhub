@@ -1,0 +1,26 @@
+@using TechHub.Core.DTOs
+
+<div class="section-card">
+    <div class="section-header" style="background-image: url('@Section.BackgroundImage')">
+        <div class="section-overlay">
+            <h2>@Section.Title</h2>
+        </div>
+    </div>
+    <div class="section-body">
+        <p class="section-description">@Section.Description</p>
+        <div class="section-collections">
+            @foreach (var collection in Section.Collections)
+            {
+                <span class="collection-badge">@collection.Title</span>
+            }
+        </div>
+        <a href="/@Section.Id" class="section-link">
+            View @Section.Title →
+        </a>
+    </div>
+</div>
+
+@code {
+    [Parameter, EditorRequired]
+    public SectionDto Section { get; set; } = null!;
+}

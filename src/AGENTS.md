@@ -64,12 +64,16 @@ src/
 │   ├── appsettings.json
 │   └── TechHub.Api.csproj
 ├── TechHub.Web/                       # Blazor Frontend
+│   ├── AGENTS.md                      # Blazor component patterns (READ THIS for Web development)
 │   ├── Program.cs                     # Web entry point
 │   ├── Components/                    # Blazor components
 │   │   ├── Layout/
 │   │   ├── Pages/
 │   │   └── Shared/
+│   ├── Services/                      # Frontend services (TechHubApiClient)
 │   ├── wwwroot/                       # Static assets
+│   │   ├── styles.css                # Global CSS with Tech Hub design system
+│   │   └── images/                   # Images (/images/ convention, NOT /assets/)
 │   └── TechHub.Web.csproj
 ├── TechHub.Core/                      # Domain Models & Interfaces
 │   ├── Models/                        # Domain entities
@@ -558,26 +562,55 @@ public static class SectionEndpoints
 
 **Purpose**: Blazor components, pages, client-side interactions
 
-**Patterns** (Future):
+**CRITICAL**: Read [TechHub.Web/AGENTS.md](TechHub.Web/AGENTS.md) for complete Blazor component patterns, design system colors, and styling conventions.
 
-- Use code-behind for complex components
-- Inject services with `[Inject]`
-- Use parameters with `[Parameter]`
-- Server-Side Rendering (SSR) by default
-- WebAssembly for enhanced interactivity
+**Key Patterns**:
 
-**Example** (Future):
+- **Design System**: Use Tech Hub colors from `jekyll/_sass/_colors.scss` (primary: #1f6feb, purple: #bd93f9, navy: #1a1a2e)
+- **Image Paths**: Use `/images/` convention (NOT `/assets/`) - e.g., `/images/section-backgrounds/ai.jpg`
+- **TechHubApiClient**: Use typed HTTP client for all API calls
+- **Server-Side Rendering**: Initial content must be SSR for SEO
+- **Progressive Enhancement**: Core functionality works without JavaScript
+
+**Example**:
 
 ```razor
-@page "/{SectionUrl}"
-@inherits SectionIndexBase
+@page "/sections/{id}"
+@inject TechHubApiClient ApiClient
+@inject ILogger<SectionPage> Logger
 
-<PageTitle>@Section?.Title | Tech Hub</PageTitle>
-
-@if (Section is not null)
+@if (section == null)
 {
-    <SectionHeader Section="@Section" />
-    <ContentList Items="@FilteredItems" />
+    <p>Loading...</p>
+}
+else if (errorMessage != null)
+{
+    <div class="error">@errorMessage</div>
+}
+else
+{
+    <SectionCard Section="@section" />
+}
+
+@code {
+    [Parameter]
+    public string Id { get; set; } = string.Empty;
+    
+    private SectionDto? section;
+    private string? errorMessage;
+    
+    protected override async Task OnInitializedAsync()
+    {
+        try
+        {
+            section = await ApiClient.GetSectionAsync(Id);
+        }
+        catch (Exception ex)
+        {
+            Logger.LogError(ex, "Failed to load section {SectionId}", Id);
+            errorMessage = "Unable to load section. Please try again.";
+        }
+    }
 }
 ```
 

@@ -379,12 +379,13 @@ The Tech Hub is a static technical content hub with configuration-driven section
 
 ### Overview
 
-The Tech Hub uses a three-tier documentation system:
+The Tech Hub uses a multi-tier documentation system:
 
-1. **This file (AGENTS.md)**: High-level principles, architecture, and navigation
-2. **Domain-Specific AGENTS.md**: Development patterns for specific code areas
-3. **Custom Agents**: Framework-specific implementation guides
-4. **Functional Docs**: What the system does (not how to code it)
+1. **[README.md](README.md)**: Project overview, quick start, current status, and navigation
+2. **This file (AGENTS.md)**: High-level principles, architecture, and workflow
+3. **Domain-Specific AGENTS.md**: Development patterns for specific code areas
+4. **Custom Agents**: Framework-specific implementation guides
+5. **Functional Docs**: What the system does (not how to code it)
 
 ### Documentation Placement Strategy
 
@@ -412,6 +413,10 @@ This is a **permanent architectural principle**, not just a temporary measure. B
 **Framework Mentions in Documentation**: Functional documentation may reference specific implementations (API endpoints, service names, etc.) when essential to understanding the system behavior. These mentions describe WHAT the system does (behavior, contracts, rules), not HOW to build it (code patterns, commands, frameworks). See [docs/AGENTS.md - Implementation Mentions](docs/AGENTS.md#implementation-mentions-in-functional-documentation) for complete guidelines.
 
 ### Complete Documentation Map
+
+**Project Overview**:
+
+- **[README.md](README.md)** - Project overview, quick start guide, architecture summary, current implementation status, and navigation to all other documentation
 
 **Custom Agents** (in `.github/agents/`):
 
@@ -474,6 +479,12 @@ This is a **permanent architectural principle**, not just a temporary measure. B
 - Business logic documentation
 
 ### Quick Reference Guide
+
+**New to the project?**
+
+1. Start with [README.md](README.md) for overview and quick start
+2. Read this file (AGENTS.md) for development workflow
+3. Review domain-specific AGENTS.md before coding
 
 **Working on JavaScript?**
 

@@ -4,7 +4,7 @@
         "description": "Browse all content across every section and collection. Your comprehensive hub for Microsoft technology resources, from AI and coding to security and DevOps.",
         "url": "/all",
         "section": "all",
-        "image": "/assets/section-backgrounds/all.jpg",
+        "image": "/images/section-backgrounds/all.jpg",
         "category": "All",
         "collections": [
             {
@@ -38,7 +38,7 @@
         "description": "Master GitHub Copilot, your AI coding companion. Discover features, tips, and real-world insights to supercharge your development workflow.",
         "url": "/github-copilot",
         "section": "github-copilot",
-        "image": "/assets/section-backgrounds/github-copilot.jpg",
+        "image": "/images/section-backgrounds/github-copilot.jpg",
         "category": "GitHub Copilot",
         "collections": [
             {
@@ -92,7 +92,7 @@
         "description": "Your gateway to the AI revolution. From breakthrough announcements to practical tutorials, explore how artificial intelligence is reshaping the way we work and create.",
         "url": "/ai",
         "section": "ai",
-        "image": "/assets/section-backgrounds/ai.jpg",
+        "image": "/images/section-backgrounds/ai.jpg",
         "category": "AI",
         "collections": [
             {
@@ -146,7 +146,7 @@
         "description": "Master machine learning and data science with Microsoft's platform ecosystem. Explore custom model development, MLOps pipelines, and the tools that power intelligent applications.",
         "url": "/ml",
         "section": "ml",
-        "image": "/assets/section-backgrounds/ml.jpg",
+        "image": "/images/section-backgrounds/ml.jpg",
         "category": "ML",
         "collections": [
             {
@@ -180,7 +180,7 @@
         "description": "Transform your development lifecycle with proven DevOps methodologies. Explore automation, collaboration tools, CI/CD pipelines, and agile practices that streamline software delivery.",
         "url": "/devops",
         "section": "devops",
-        "image": "/assets/section-backgrounds/devops.jpg",
+        "image": "/images/section-backgrounds/devops.jpg",
         "category": "DevOps",
         "collections": [
             {
@@ -219,7 +219,7 @@
         "description": "Navigate Microsoft's cloud universe. From infrastructure essentials to advanced deployment strategies, find the resources you need to build and scale on Azure.",
         "url": "/azure",
         "section": "azure",
-        "image": "/assets/section-backgrounds/azure.jpg",
+        "image": "/images/section-backgrounds/azure.jpg",
         "category": "Azure",
         "collections": [
             {
@@ -253,7 +253,7 @@
         "description": "Dive into the .NET ecosystem with curated content that actually matters. From framework updates to battle-tested patterns, find what you need to build better software.",
         "url": "/coding",
         "section": "coding",
-        "image": "/assets/section-backgrounds/coding.jpg",
+        "image": "/images/section-backgrounds/coding.jpg",
         "category": "Coding",
         "collections": [
             {
@@ -287,7 +287,7 @@
         "description": "Navigate Microsoft's comprehensive security landscape. From identity management to threat protection, discover the tools and practices that keep your organization secure.",
         "url": "/security",
         "section": "security",
-        "image": "/assets/section-backgrounds/security.jpg",
+        "image": "/images/section-backgrounds/security.jpg",
         "category": "Security",
         "collections": [
             {

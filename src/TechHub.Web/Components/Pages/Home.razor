@@ -1,7 +1,77 @@
 ﻿@page "/"
+@using TechHub.Core.DTOs
+@using TechHub.Web.Services
+@inject TechHubApiClient ApiClient
 
-<PageTitle>Home</PageTitle>
+<PageTitle>Tech Hub - Microsoft Technology News & Resources</PageTitle>
 
-<h1>Hello, world!</h1>
+<div class="home-container">
+    <header class="home-header">
+        <h1>Tech Hub</h1>
+        <p class="tagline">Your source for Microsoft technology news, tutorials, and community content</p>
+    </header>
 
-Welcome to your new app.
+    @if (isLoading)
+    {
+        <div class="loading">
+            <p>Loading sections...</p>
+        </div>
+    }
+    else if (errorMessage != null)
+    {
+        <div class="error">
+            <h2>Error Loading Content</h2>
+            <p>@errorMessage</p>
+            <button @onclick="LoadSections">Retry</button>
+        </div>
+    }
+    else if (sections != null && sections.Any())
+    {
+        <div class="sections-grid">
+            <h2 class="section-grid-title">Browse by Topic</h2>
+            <div class="grid">
+                @foreach (var item in sections)
+                {
+                    <SectionCard Section="@item" />
+                }
+            </div>
+        </div>
+    }
+    else
+    {
+        <div class="no-content">
+            <p>No sections available.</p>
+        </div>
+    }
+</div>
+
+@code {
+    private IEnumerable<SectionDto>? sections;
+    private bool isLoading = true;
+    private string? errorMessage;
+
+    protected override async Task OnInitializedAsync()
+    {
+        await LoadSections();
+    }
+
+    private async Task LoadSections()
+    {
+        isLoading = true;
+        errorMessage = null;
+        
+        try
+        {
+            sections = await ApiClient.GetAllSectionsAsync();
+        }
+        catch (Exception ex)
+        {
+            errorMessage = $"Failed to load sections: {ex.Message}";
+        }
+        finally
+        {
+            isLoading = false;
+        }
+    }
+}
+

@@ -100,76 +100,6 @@ As a content creator or marketer, I want the site to be optimized for search eng
 
 ---
 
-## Migration Cutover Plan
-
-### Pre-Migration Checklist
-
-- [ ] All specs completed and reviewed
-- [ ] Staging environment deployed and tested
-- [ ] Performance benchmarks met (Lighthouse > 95)
-- [ ] UAT completed successfully
-- [ ] Backup of Jekyll site created
-- [ ] DNS records prepared (not yet updated)
-- [ ] Monitoring and alerts configured
-
-### Deployment Window
-
-**Preferred Schedule**: Saturday 2:00 AM - 4:00 AM CET (low traffic period)
-
-**Content Freeze**: 2 hours before deployment start (Saturday 12:00 AM - 4:00 AM CET)
-- No new content published during this window
-- Jekyll site remains accessible (read-only)
-
-**Maximum Downtime**: 1 hour (acceptable for hobby project)
-
-### Deployment Steps
-
-1. **T-2h (12:00 AM)**: Announce content freeze, final Jekyll backup
-2. **T-0h (2:00 AM)**: Begin deployment
-   - Deploy .NET containers to Azure Container Apps
-   - Verify health checks pass
-   - Test critical paths (home, sections, content rendering)
-3. **T+15m (2:15 AM)**: Update DNS records to point to Container Apps
-4. **T+30m (2:30 AM)**: Verify DNS propagation, test site from multiple locations
-5. **T+45m (2:45 AM)**: Monitor for errors, validate analytics tracking
-6. **T+1h (3:00 AM)**: Deployment complete, announce site live
-7. **T+1h (3:00 AM - 4:00 AM)**: Extended monitoring period
-
-### Rollback Plan
-
-**Automatic Rollback Triggers**:
-- Container Apps health checks fail
-- Error rate > 10% for 5+ minutes
-- Site unreachable after DNS update
-
-**Rollback Process**:
-1. Revert DNS records to Jekyll hosting
-2. Verify Jekyll site accessible
-3. Troubleshoot .NET deployment offline
-4. Schedule retry deployment
-
-**Jekyll Backup Retention**: 30 days post-migration
-- Keep Jekyll site deployable as fallback
-- Decommission Jekyll infrastructure after 30 days of stable .NET operation
-
-### Post-Migration
-
-**First 24 Hours**:
-- Active monitoring of error rates and performance
-- Quick response to any critical issues (best effort, no SLA)
-
-**First 7 Days**:
-- Daily review of Application Insights metrics
-- Gather user feedback
-- Address high-priority bugs
-
-**First 30 Days**:
-- Weekly performance reviews
-- Content parity validation
-- Plan Jekyll decommissioning
-
----
-
 ## Support & Maintenance
 
 **Issue Reporting**: GitHub Issues on techhubms/techhub repository
@@ -302,6 +232,20 @@ As a site administrator, I want to track user behavior, performance metrics, and
 - **FR-038**: System MUST send telemetry to Application Insights
 - **FR-039**: System MUST implement cookie consent banner for GDPR compliance
 
+**Visual Design & Layout**
+
+- **FR-040**: System MUST use full-width responsive grid layout for content listings (home page, section pages) with 1-3 columns based on viewport width
+- **FR-041**: System MUST constrain article/content detail pages to 800px width (matching Jekyll $content-width) for optimal reading experience
+- **FR-042**: System MUST implement two-column layout on article detail pages: left sidebar (25-30% width) and main content area (70-75% width)
+- **FR-043**: System MUST include in left sidebar (in priority order): quick navigation (table of contents from headings), author information, article metadata (date, tags, category), related articles, social share/back-to-section links
+- **FR-044**: System MUST support custom sidebar content for special pages (e.g., GenAI Basics, GenAI Advanced) with page-specific navigation and metadata
+- **FR-045**: System MUST maintain visual parity with Jekyll site for top navigation bar (section links + subnavigation dropdowns)
+- **FR-046**: System MUST keep section background images with hover highlight effects on home page section cards
+- **FR-047**: System MUST use softer, more muted purple backgrounds (darker shades like #7f56d9, #6b4fb8) instead of bright purple (#bd93f9) to reduce visual strain
+- **FR-048**: System MUST use soft dark gray text (#333) on off-white backgrounds (#fafafa) for better readability and reduced eye strain
+- **FR-049**: System MUST maintain purple accents for interactive elements (links, buttons, hover states) but tone down background usage
+- **FR-050**: System MUST implement responsive sidebar behavior on mobile: essential metadata and quick navigation above article, supplementary content (author, related articles) below article
+
 ### Key Entities *(include if feature involves data)*
 
 - **Section**: Represents a topic area (AI, GitHub Copilot, etc.) with title, description, URL, category, background image, and collection references
@@ -360,6 +304,16 @@ As a site administrator, I want to track user behavior, performance metrics, and
 - **SC-027**: Error rate < 0.1% of all requests
 - **SC-028**: Mean time to recovery (MTTR) < 5 minutes for any incidents
 
+**Visual Design & Usability Metrics**
+
+- **SC-029**: Article content width is exactly 800px on desktop viewports (matching Jekyll $content-width for reading comfort)
+- **SC-030**: Sidebar occupies 25-30% of layout width on article pages with clear visual separation from main content
+- **SC-031**: Color contrast ratios between purple backgrounds and text meet WCAG AA standards (4.5:1 minimum for normal text, 3:1 for large text)
+- **SC-032**: Purple usage is primarily for accents and interactive elements, not dominant background color (measured by pixel count analysis showing <20% bright purple backgrounds)
+- **SC-033**: Mobile article pages show metadata and quick navigation above content, supplementary sidebar content below content
+- **SC-034**: Table of contents (quick navigation) links scroll smoothly to corresponding article sections with proper offset for fixed headers
+- **SC-035**: Hover states on section cards produce visible highlight effect (brightness increase or overlay opacity change) within 100ms
+
 ## Assumptions
 
 - Content will continue to be authored as markdown files with YAML frontmatter
@@ -412,46 +366,47 @@ This master spec is supported by detailed feature specifications in `/specs/`:
 **Foundation** (Implement Phase 1-2, BEFORE major development):
 
 - 001-solution-structure - .NET solution organization ✅
-- 021-configuration-management - appsettings.json and environment config 📝
-- 022-resilience-error-handling - Polly retry policies, circuit breakers, logging 📝
+- 002-configuration-management - appsettings.json and environment config 📝
+- 003-resilience-error-handling - Polly retry policies, circuit breakers, logging 📝
 
 **Testing Strategy** (Implement Phase 2, alongside foundation):
 
-- 002-unit-testing - xUnit for domain/services ✅
-- 003-integration-testing - WebApplicationFactory for API ✅
-- 023-component-testing - bUnit for Blazor components 📝
-- 024-e2e-testing - Playwright end-to-end tests 📝
+- 004-unit-testing - xUnit for domain/services ✅
+- 005-integration-testing - WebApplicationFactory for API ✅
+- 006-component-testing - bUnit for Blazor components 📝
+- 007-e2e-testing - Playwright end-to-end tests 📝
 - 026-ci-cd-pipeline - GitHub Actions automation 📝
 
 **Core Architecture**:
 
+- 008-api-client - Typed HttpClient for Blazor frontend 📝
+- 009-url-routing - URL structure and routing ✅
+- 010-section-system - Section/collection architecture ✅
 - 011-domain-models - DTOs and models ✅
 - 012-repository-pattern - Data access ✅
 - 013-api-endpoints - REST API definitions ✅
-- 025-api-client - Typed HttpClient for Blazor frontend 📝
-- 004-url-routing - URL structure and routing ✅
-- 005-section-system - Section/collection architecture ✅
 
 **User Interface**:
 
-- 010-nlweb-semantic-html - Semantic HTML and accessibility ✅
-- 011-visual-design-system - Design tokens and styling ✅
-- 009-blazor-components - Reusable UI components ✅
-- 012-page-components - Page-level Blazor components ✅
+- 014-blazor-components - Reusable UI components ✅
+- 015-nlweb-semantic-html - Semantic HTML and accessibility ✅
+- 016-visual-design-system - Design tokens and styling ✅
+- 017-page-components - Page-level Blazor components ✅
 
 **Features**:
 
-- 013-content-rendering - Markdown to HTML ✅
-- 014-filtering-system - Client-side filtering ✅
-- 015-infinite-scroll - Progressive loading ✅
+- 018-content-rendering - Markdown to HTML ✅
+- 019-filtering-system - Client-side filtering ✅
+- 020-infinite-scroll - Progressive loading ✅
 - 021-rss-feeds - RSS generation ✅
-- 017-search - Text search ✅
-- 018-seo - SEO optimization ✅
-- 019-google-analytics - GA4 integration ✅
+- 022-search - Text search ✅
+- 023-seo - SEO optimization ✅
+- 024-google-analytics - GA4 integration ✅
 
 **Infrastructure**:
 
-- 020-azure-resources - Container Apps deployment ✅
+- 025-azure-resources - Container Apps deployment ✅
+- 026-ci-cd-pipeline - GitHub Actions automation 📝
 - dotnet-migration - This overall migration spec ✅
 
 **Legend**: ✅ Complete | 📝 Placeholder (needs detailed requirements)

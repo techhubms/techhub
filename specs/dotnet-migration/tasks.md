@@ -142,31 +142,31 @@ All .NET code resides in repository root per constitution requirements:
 
 ### API Endpoints for User Story 1
 
-- [ ] T054 [P] [US1] Implement GET /api/sections endpoint in src/TechHub.Api/Endpoints/SectionsEndpoints.cs
-- [ ] T055 [P] [US1] Implement GET /api/sections/{sectionName} endpoint in src/TechHub.Api/Endpoints/SectionsEndpoints.cs
-- [ ] T056 [P] [US1] Implement GET /api/content/{sectionName}/{collection}/{itemId} endpoint in src/TechHub.Api/Endpoints/ContentEndpoints.cs
-- [ ] T057 [US1] Configure dependency injection for repositories and services in src/TechHub.Api/Program.cs
-- [ ] T058 [US1] Configure CORS policy for TechHub.Web in src/TechHub.Api/Program.cs
+- [X] T054 [P] [US1] Implement GET /api/sections endpoint in src/TechHub.Api/Endpoints/SectionsEndpoints.cs
+- [X] T055 [P] [US1] Implement GET /api/sections/{sectionName} endpoint in src/TechHub.Api/Endpoints/SectionsEndpoints.cs
+- [X] T056 [P] [US1] Implement GET /api/content (filter) endpoint in src/TechHub.Api/Endpoints/ContentEndpoints.cs
+- [X] T057 [US1] Configure dependency injection for repositories and services in src/TechHub.Api/Program.cs
+- [X] T058 [US1] Configure CORS policy for TechHub.Web in src/TechHub.Api/Program.cs
 
 ### Blazor Components for User Story 1
 
-- [ ] T059 [P] [US1] Create SectionCard component in src/TechHub.Web/Components/SectionCard.razor
+- [X] T060 [P] [US1] Create SectionCard component in src/TechHub.Web/Components/SectionCard.razor
 - [ ] T060 [P] [US1] Create CollectionList component in src/TechHub.Web/Components/CollectionList.razor
-- [ ] T061 [P] [US1] Create ContentItemCard component in src/TechHub.Web/Components/ContentItemCard.razor
+- [X] T061 [P] [US1] Create ContentItemCard component in src/TechHub.Web/Components/ContentItemCard.razor
 - [ ] T062 [P] [US1] Create ContentDetail component in src/TechHub.Web/Components/ContentDetail.razor
 - [ ] T063 [P] [US1] Create YouTubeEmbed component in src/TechHub.Web/Components/YouTubeEmbed.razor
 
 ### Page Components for User Story 1
 
-- [ ] T064 [US1] Create Home page (section grid) in src/TechHub.Web/Pages/Index.razor
+- [X] T064 [US1] Create Home page (section grid) in src/TechHub.Web/Components/Pages/Home.razor
 - [ ] T065 [US1] Create Section page (collections + items) in src/TechHub.Web/Pages/Section.razor
 - [ ] T066 [US1] Create Content detail page in src/TechHub.Web/Pages/Content.razor
 
 ### API Client for User Story 1
 
-- [ ] T067 [US1] Create typed HttpClient for API in src/TechHub.Web/Services/TechHubApiClient.cs
+- [X] T067 [US1] Create typed HttpClient for API in src/TechHub.Web/Services/TechHubApiClient.cs
 - [ ] T068 [US1] Add Polly retry policies to API client in src/TechHub.Web/Services/TechHubApiClient.cs
-- [ ] T069 [US1] Configure dependency injection for API client in src/TechHub.Web/Program.cs
+- [X] T069 [US1] Configure dependency injection for API client in src/TechHub.Web/Program.cs
 
 ### Semantic HTML & Accessibility for User Story 1
 
@@ -177,7 +177,15 @@ All .NET code resides in repository root per constitution requirements:
 
 ### Responsive Design for User Story 1
 
-- [ ] T074 [P] [US1] Create responsive layout CSS in src/TechHub.Web/wwwroot/css/site.css
+- [ ] T074 [P] [US1] Create responsive layout CSS in src/TechHub.Web/wwwroot/styles.css
+  - [X] Import Google Fonts and base styles (completed)
+  - [X] Define color variables from Jekyll design system (completed)
+  - [X] Implement responsive grid system (completed)
+  - [ ] **NEW VISUAL REQUIREMENTS** (see T088-T099 for details):
+    - [ ] Add muted purple colors (#7f56d9, #6b4fb8) - FR-047, T088
+    - [ ] Add soft text colors (#333 on #fafafa) - FR-048, T089
+    - [ ] Add 800px max-width for article content - FR-041, T095
+    - [ ] Add two-column layout styles - FR-042, T096
 - [ ] T075 [P] [US1] Add mobile breakpoints and grid layout in src/TechHub.Web/wwwroot/css/responsive.css
 - [ ] T076 [P] [US1] Implement responsive images with lazy loading in src/TechHub.Web/Components/ContentItemCard.razor
 
@@ -201,7 +209,22 @@ All .NET code resides in repository root per constitution requirements:
 - [ ] T086 [P] [US1] Playwright test for mobile responsive layout in tests/TechHub.E2E.Tests/Tests/ResponsiveDesignTests.cs
 - [ ] T087 [P] [US1] Playwright test for accessibility (keyboard navigation, screen reader) in tests/TechHub.E2E.Tests/Tests/AccessibilityTests.cs
 
-**Checkpoint**: User Story 1 complete - users can browse and consume content with full accessibility and responsive design
+### Visual Design Polish for User Story 1
+
+- [ ] T088 [P] [US1] Update styles.css with muted purple color variables (--muted-purple: #6b4fb8, --darker-purple: #7f56d9) in src/TechHub.Web/wwwroot/styles.css
+- [ ] T089 [P] [US1] Update styles.css with soft text colors (--text-primary: #333, --background-primary: #fafafa) in src/TechHub.Web/wwwroot/styles.css
+- [ ] T090 [P] [US1] Reduce bright purple backgrounds (<20% of background usage, use muted variants) in src/TechHub.Web/wwwroot/styles.css
+- [ ] T091 [P] [US1] Verify WCAG AA color contrast ratios (4.5:1 normal text, 3:1 large/UI) for new color palette using contrast checker tool
+- [ ] T092 [P] [US1] Create ArticleSidebar component with 5-priority structure (quick nav, author, metadata, related, share) in src/TechHub.Web/Components/ArticleSidebar.razor
+- [ ] T093 [P] [US1] Implement table of contents generation from article headings in ArticleSidebar component
+- [ ] T094 [P] [US1] Implement smooth scroll with header offset for TOC links in ArticleSidebar component
+- [ ] T095 [P] [US1] Create article container with 800px max-width constraint in src/TechHub.Web/wwwroot/styles.css
+- [ ] T096 [P] [US1] Implement two-column article layout (25-30% sidebar, 70-75% content) in src/TechHub.Web/Components/Pages/Content.razor
+- [ ] T097 [P] [US1] Implement responsive mobile sidebar layout (essentials above, supplementary below) in src/TechHub.Web/wwwroot/css/responsive.css
+- [ ] T098 [P] [US1] Update section card background images with hover effects (brightness increase, smooth transition) in src/TechHub.Web/Components/SectionCard.razor
+- [ ] T099 [P] [US1] Verify full-width grid layout for section/collection listing pages (no max-width constraint) in src/TechHub.Web/wwwroot/styles.css
+
+**Checkpoint**: User Story 1 complete - users can browse and consume content with full accessibility, responsive design, and polished visual design matching Jekyll quality
 
 ---
 
@@ -213,38 +236,38 @@ All .NET code resides in repository root per constitution requirements:
 
 ### Client-Side Filtering Service
 
-- [ ] T088 [US2] Create FilterStateService for Blazor in src/TechHub.Web/Services/FilterStateService.cs
-- [ ] T089 [US2] Implement URL query parameter sync in FilterStateService
-- [ ] T090 [US2] Add browser history integration (back/forward support) in FilterStateService
+- [ ] T100 [US2] Create FilterStateService for Blazor in src/TechHub.Web/Services/FilterStateService.cs
+- [ ] T101 [US2] Implement URL query parameter sync in FilterStateService
+- [ ] T102 [US2] Add browser history integration (back/forward support) in FilterStateService
 
 ### Filter Components
 
-- [ ] T091 [P] [US2] Create DateRangeFilter component in src/TechHub.Web/Components/Filters/DateRangeFilter.razor
-- [ ] T092 [P] [US2] Create TagFilter component in src/TechHub.Web/Components/Filters/TagFilter.razor
-- [ ] T093 [P] [US2] Create SearchFilter component (debounced input) in src/TechHub.Web/Components/Filters/SearchFilter.razor
-- [ ] T094 [US2] Create FilterPanel component (aggregates all filters) in src/TechHub.Web/Components/Filters/FilterPanel.razor
+- [ ] T103 [P] [US2] Create DateRangeFilter component in src/TechHub.Web/Components/Filters/DateRangeFilter.razor
+- [ ] T104 [P] [US2] Create TagFilter component in src/TechHub.Web/Components/Filters/TagFilter.razor
+- [ ] T105 [P] [US2] Create SearchFilter component (debounced input) in src/TechHub.Web/Components/Filters/SearchFilter.razor
+- [ ] T106 [US2] Create FilterPanel component (aggregates all filters) in src/TechHub.Web/Components/Filters/FilterPanel.razor
 
 ### Filtering Logic
 
-- [ ] T095 [US2] Implement date range filtering logic (20 + Same-Day rule) in src/TechHub.Web/Services/ContentFilterService.cs
-- [ ] T096 [P] [US2] Implement tag filtering logic (OR logic) in src/TechHub.Web/Services/ContentFilterService.cs
-- [ ] T097 [P] [US2] Implement text search filtering (title, description, tags) in src/TechHub.Web/Services/ContentFilterService.cs
-- [ ] T098 [US2] Integrate filtering with Section page component in src/TechHub.Web/Pages/Section.razor
+- [ ] T107 [US2] Implement date range filtering logic (20 + Same-Day rule) in src/TechHub.Web/Services/ContentFilterService.cs
+- [ ] T108 [P] [US2] Implement tag filtering logic (OR logic) in src/TechHub.Web/Services/ContentFilterService.cs
+- [ ] T109 [P] [US2] Implement text search filtering (title, description, tags) in src/TechHub.Web/Services/ContentFilterService.cs
+- [ ] T110 [US2] Integrate filtering with Section page component in src/TechHub.Web/Pages/Section.razor
 
 ### Component Tests for User Story 2
 
-- [ ] T099 [P] [US2] bUnit tests for DateRangeFilter component in tests/TechHub.Web.Tests/Components/Filters/DateRangeFilterTests.cs
-- [ ] T100 [P] [US2] bUnit tests for TagFilter component in tests/TechHub.Web.Tests/Components/Filters/TagFilterTests.cs
-- [ ] T101 [P] [US2] bUnit tests for SearchFilter component in tests/TechHub.Web.Tests/Components/Filters/SearchFilterTests.cs
-- [ ] T102 [US2] Unit tests for ContentFilterService in tests/TechHub.Web.Tests/Services/ContentFilterServiceTests.cs
+- [ ] T111 [P] [US2] bUnit tests for DateRangeFilter component in tests/TechHub.Web.Tests/Components/Filters/DateRangeFilterTests.cs
+- [ ] T112 [P] [US2] bUnit tests for TagFilter component in tests/TechHub.Web.Tests/Components/Filters/TagFilterTests.cs
+- [ ] T113 [P] [US2] bUnit tests for SearchFilter component in tests/TechHub.Web.Tests/Components/Filters/SearchFilterTests.cs
+- [ ] T114 [US2] Unit tests for ContentFilterService in tests/TechHub.Web.Tests/Services/ContentFilterServiceTests.cs
 
 ### E2E Tests for User Story 2
 
-- [ ] T103 [P] [US2] Playwright test for date filtering in tests/TechHub.E2E.Tests/Tests/FilteringTests.cs
-- [ ] T104 [P] [US2] Playwright test for tag filtering in tests/TechHub.E2E.Tests/Tests/FilteringTests.cs
-- [ ] T105 [P] [US2] Playwright test for text search in tests/TechHub.E2E.Tests/Tests/FilteringTests.cs
-- [ ] T106 [US2] Playwright test for URL state synchronization (copy URL, paste in new tab) in tests/TechHub.E2E.Tests/Tests/FilteringTests.cs
-- [ ] T107 [US2] Playwright test for browser back/forward navigation in tests/TechHub.E2E.Tests/Tests/FilteringTests.cs
+- [ ] T115 [P] [US2] Playwright test for date filtering in tests/TechHub.E2E.Tests/Tests/FilteringTests.cs
+- [ ] T116 [P] [US2] Playwright test for tag filtering in tests/TechHub.E2E.Tests/Tests/FilteringTests.cs
+- [ ] T117 [P] [US2] Playwright test for text search in tests/TechHub.E2E.Tests/Tests/FilteringTests.cs
+- [ ] T118 [US2] Playwright test for URL state synchronization (copy URL, paste in new tab) in tests/TechHub.E2E.Tests/Tests/FilteringTests.cs
+- [ ] T119 [US2] Playwright test for browser back/forward navigation in tests/TechHub.E2E.Tests/Tests/FilteringTests.cs
 
 **Checkpoint**: User Story 2 complete - users can filter content interactively with instant updates and shareable URLs
 

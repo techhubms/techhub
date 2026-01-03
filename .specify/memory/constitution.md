@@ -125,10 +125,11 @@ This project follows **Spec-Driven Development (SDD)** using the spec-kit method
 
 ## Documentation Requirements
 
+- **README.md at repository root** - Project overview, quick start, and navigation to other docs
 - AGENTS.md files for all major directories (see [docs/AGENTS.md](../../docs/AGENTS.md) for structure)
 - Functional documentation in `docs/` directory (system behavior, not implementation)
 - XML documentation comments for public APIs
-- README.md for each project
+- README.md for each project subdirectory
 - Inline comments for complex logic only
 
 ## Security Requirements

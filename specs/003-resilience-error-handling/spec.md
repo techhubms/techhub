@@ -40,6 +40,17 @@ Define resilience patterns (retry policies, circuit breakers, timeouts) and comp
 - External HTTP request times out → Retry with exponential backoff
 - Application Insights unavailable → Continue logging to console/file
 
+**OpenTelemetry Integration**:
+- Distributed tracing for HTTP requests across API and Web layers
+- Repository operation tracing (file reads, cache operations)
+- Cache hit/miss metrics for performance monitoring
+- Adaptive sampling strategy:
+  - **100% trace errors** - All exceptions and failures traced completely
+  - **10% trace success** - Successful requests sampled at 10% to reduce telemetry volume
+- Custom spans for business operations (content parsing, filter operations, RSS generation)
+- Correlation IDs propagated across all service boundaries
+- Integration with Application Insights for centralized telemetry
+
 ## Implementation Note
 
 ⚠️ **This spec is numbered 022 but should be implemented in Phase 2**, before implementing API endpoints and services. All services should use these resilience patterns from the start.

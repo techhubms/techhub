@@ -34,6 +34,27 @@ Define configuration structure for appsettings.json across dev/staging/productio
 - Performance settings (cache timeouts, batch sizes)
 - Monitoring and instrumentation (Application Insights key)
 
+**Caching Configuration** (IMemoryCache):
+- **Strategy**: In-memory cache with sliding/absolute expiration
+- **RSS Feeds**: 30-minute absolute expiration (balance freshness vs load)
+- **API Responses**: 1-hour absolute expiration (sections, content lists)
+- **Static Content**: Output caching for rendered pages
+- **Invalidation**: Cache cleared automatically on container restart (acceptable for Git-based content updates)
+- **Memory Limits**: Configure max cache size to prevent memory exhaustion
+- **Cache Keys**: Consistent naming convention for different content types
+
+**Configuration Example**:
+```json
+{
+  "Caching": {
+    "RssFeedCacheDuration": "00:30:00",
+    "ApiResponseCacheDuration": "01:00:00",
+    "MaxCacheSizeInMB": 100,
+    "SlidingExpirationEnabled": false
+  }
+}
+```
+
 ## Implementation Note
 
 ⚠️ **This spec is numbered 021 but should be implemented in Phase 1**, right after 001-solution-structure and before most other specs. The number is sequential, not priority-based.

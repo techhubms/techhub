@@ -126,13 +126,38 @@ Following the migration plan phases:
 
 **Performance**: Sections ~25ms, Content first load 5-9s (2251 markdown files)
 
+### What's Working Now
+
+✅ **Frontend** (User Story 1 ~90% Complete):
+
+- Home page displaying 8 sections in responsive grid (<http://localhost:5184>)
+- SectionCard component with background images
+- ContentItemCard component ready for section pages
+- TechHubApiClient with typed HTTP methods
+- Complete Tech Hub design system (colors from Jekyll _sass)
+- All 8 section background images (ai.jpg, azure.jpg, coding.jpg, devops.jpg, github-copilot.jpg, ml.jpg, security.jpg, all.jpg)
+
+**Running the Application**:
+
+```bash
+# Terminal 1: API Server
+cd src/TechHub.Api
+dotnet run --urls http://localhost:5029
+
+# Terminal 2: Web Server  
+cd src/TechHub.Web
+dotnet run
+```
+
+**Access**: Web UI at <http://localhost:5184>, API at <http://localhost:5029/api/sections>
+
 ### Next Steps
 
-1. Complete Phase 2: RssService, Caching, Entity tests
-2. Continue Phase 3: Blazor components and pages
-3. Begin Phase 4: Features implementation (filtering, search, etc.)
+1. Complete Phase 2: RssService, Caching, Entity tests (T045-T051)
+2. Continue Phase 3: Section/content detail pages, filtering, accessibility (T062-T087)
+3. Begin Phase 4: Features implementation (filtering, search, infinite scroll)
 
-See [tasks.md](.specify/tasks.md) for complete task breakdown.
+See [specs/dotnet-migration/tasks.md](specs/dotnet-migration/tasks.md) for complete task breakdown.
 
 ## Contributing
 
