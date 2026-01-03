@@ -38,7 +38,7 @@ The solution must integrate coverlet.collector 6.0.2 for code coverage collectio
 
 ### FR-005: Test Project Organization
 
-Each source project (TechHub.Core, TechHub.Infrastructure, TechHub.Api, TechHub.Web) must have a corresponding test project in `/dotnet/tests/` directory with `.Tests` suffix.
+Each source project (TechHub.Core, TechHub.Infrastructure, TechHub.Api, TechHub.Web) must have a corresponding test project in `/tests/` directory with `.Tests` suffix.
 
 **Rationale**: Parallel project structure ensures clear test organization, easy navigation, and maintains separation of concerns between production and test code.
 
@@ -244,7 +244,7 @@ All unit tests in TechHub.Core.Tests project must execute in under 60 seconds to
 
 ### Test Project Structure
 
-- [ ] All test projects located in `/dotnet/tests/` directory
+- [ ] All test projects located in `/tests/` directory
 - [ ] Test projects named with `.Tests` suffix (e.g., `TechHub.Core.Tests`)
 - [ ] Test projects reference corresponding source projects
 - [ ] Test files organized in folders matching source structure (e.g., `Models/`, `DTOs/`)
@@ -358,7 +358,7 @@ All unit tests in TechHub.Core.Tests project must execute in under 60 seconds to
 
 ## Test Project Organization
 
-**Location**: `/dotnet/tests/TechHub.Core.Tests/`
+**Location**: `/tests/TechHub.Core.Tests/`
 
 **Organization**:
 

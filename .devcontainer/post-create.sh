@@ -4,7 +4,6 @@ set -e
 echo "Setting up Tech Hub .NET development environment..."
 
 # ==================== .NET Dev Certificates ====================
-echo "Updating .NET workloads..."
 sudo dotnet workload update
 
 echo "Setting up development certificates..."
@@ -21,6 +20,9 @@ else
 fi
 
 # ==================== Aspire ====================
+
+#DO NOT INSTALL THE ASPIRE WORKLOAD VIA DOTNET NEW ANYMORE: The Aspire workload is deprecated and no longer necessary. Aspire is now available as NuGet packages that you can add directly to your projects. For more information, see https://aka.ms/aspire/support-policy
+
 if ! command -v aspire &> /dev/null; then
     echo "Installing Aspire CLI..."
     curl -fsSL https://aspire.dev/install.sh | bash

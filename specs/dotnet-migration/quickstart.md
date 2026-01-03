@@ -280,7 +280,7 @@ lsof -ti:5001 | xargs kill -9
 ## Documentation
 
 - **[Root AGENTS.md](../AGENTS.md)** - Framework-agnostic principles
-- **[.NET AGENTS.md](dotnet/AGENTS.md)** - .NET-specific development guide
+- **[.NET AGENTS.md](AGENTS.md)** - .NET-specific development guide
 - **[Feature Specs](specs/)** - Detailed feature specifications
 - **[API Contracts](specs/dotnet-migration/contracts/)** - REST API documentation
 - **[Data Model](specs/dotnet-migration/data-model.md)** - Entity definitions

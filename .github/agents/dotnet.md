@@ -95,14 +95,14 @@ Follow the 8-step workflow defined in the root AGENTS.md:
 
 **Key Directories**:
 
-- `/dotnet/src/TechHub.Api/` - REST API backend
-- `/dotnet/src/TechHub.Web/` - Blazor frontend
-- `/dotnet/src/TechHub.Core/` - Domain models and interfaces
-- `/dotnet/src/TechHub.Infrastructure/` - Data access implementations
-- `/dotnet/src/TechHub.AppHost/` - .NET Aspire orchestration
-- `/dotnet/tests/` - All test projects
-- `/dotnet/infra/` - Bicep infrastructure
-- `/dotnet/scripts/` - PowerShell automation
+- `/src/TechHub.Api/` - REST API backend
+- `/src/TechHub.Web/` - Blazor frontend
+- `/src/TechHub.Core/` - Domain models and interfaces
+- `/src/TechHub.Infrastructure/` - Data access implementations
+- `/src/TechHub.AppHost/` - .NET Aspire orchestration
+- `/tests/` - All test projects
+- `/infra/` - Bicep infrastructure
+- `/scripts/` - PowerShell automation
 
 ## Critical Rules
 
@@ -190,15 +190,15 @@ mcp_context7_query-docs(context7CompatibleLibraryID: "/bunit/bunit", query: "com
 **Tech Hub-Specific Documentation**:
 
 - **Feature Specifications**: `/specs/` - Complete feature requirements and specifications
-- **Root .NET AGENTS.md**: `/dotnet/AGENTS.md` - High-level .NET guidance
+- **Root .NET AGENTS.md**: `/AGENTS.md` - High-level .NET guidance
 - **Domain AGENTS.md Files**:
-  - `/dotnet/src/TechHub.Api/AGENTS.md` - API development patterns
-  - `/dotnet/src/TechHub.Web/AGENTS.md` - Blazor component patterns
-  - `/dotnet/src/TechHub.Core/AGENTS.md` - Domain model design
-  - `/dotnet/src/TechHub.Infrastructure/AGENTS.md` - Data access patterns
-  - `/dotnet/tests/AGENTS.md` - Testing strategies
-  - `/dotnet/infra/AGENTS.md` - Infrastructure patterns
-  - `/dotnet/scripts/AGENTS.md` - PowerShell script conventions
+  - `/src/TechHub.Api/AGENTS.md` - API development patterns
+  - `/src/TechHub.Web/AGENTS.md` - Blazor component patterns
+  - `/src/TechHub.Core/AGENTS.md` - Domain model design
+  - `/src/TechHub.Infrastructure/AGENTS.md` - Data access patterns
+  - `/tests/AGENTS.md` - Testing strategies
+  - `/infra/AGENTS.md` - Infrastructure patterns
+  - `/scripts/AGENTS.md` - PowerShell script conventions
 
 **Framework-Agnostic Docs** (shared with Jekyll):
 
@@ -898,7 +898,7 @@ public class NavigationTests : IAsyncLifetime
 
 ### Task: Create New Blazor Component
 
-1. Read `/dotnet/src/TechHub.Web/AGENTS.md`
+1. Read `/src/TechHub.Web/AGENTS.md`
 2. Create `.razor` file in `Components/`
 3. Create `.razor.cs` code-behind if complex
 4. Add parameters with `[Parameter]` attribute
@@ -908,7 +908,7 @@ public class NavigationTests : IAsyncLifetime
 
 ### Task: Implement Repository
 
-1. Read `/dotnet/src/TechHub.Infrastructure/AGENTS.md`
+1. Read `/src/TechHub.Infrastructure/AGENTS.md`
 2. Define interface in `TechHub.Core/Interfaces/`
 3. Implement in `TechHub.Infrastructure/Repositories/`
 4. Add caching with `IMemoryCache`
@@ -995,14 +995,14 @@ Current phase as of this agent creation:
 
 | Area | AGENTS.md Location | Purpose |
 |------|-------------------|---------|
-| Root .NET | `/dotnet/AGENTS.md` | High-level .NET guidance |
-| API | `/dotnet/src/TechHub.Api/AGENTS.md` | API development patterns |
-| Web | `/dotnet/src/TechHub.Web/AGENTS.md` | Blazor component patterns |
-| Core | `/dotnet/src/TechHub.Core/AGENTS.md` | Domain model patterns |
-| Infrastructure | `/dotnet/src/TechHub.Infrastructure/AGENTS.md` | Data access patterns |
-| Tests | `/dotnet/tests/AGENTS.md` | Testing strategy |
-| Infra | `/dotnet/infra/AGENTS.md` | Bicep/Azure patterns |
-| Scripts | `/dotnet/scripts/AGENTS.md` | Automation scripts |
+| Root .NET | `/AGENTS.md` | High-level .NET guidance |
+| API | `/src/TechHub.Api/AGENTS.md` | API development patterns |
+| Web | `/src/TechHub.Web/AGENTS.md` | Blazor component patterns |
+| Core | `/src/TechHub.Core/AGENTS.md` | Domain model patterns |
+| Infrastructure | `/src/TechHub.Infrastructure/AGENTS.md` | Data access patterns |
+| Tests | `/tests/AGENTS.md` | Testing strategy |
+| Infra | `/infra/AGENTS.md` | Bicep/Azure patterns |
+| Scripts | `/scripts/AGENTS.md` | Automation scripts |
 
 See each domain AGENTS.md for specific patterns and rules.
 

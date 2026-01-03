@@ -58,7 +58,7 @@ These are the **non-negotiable rules** that apply to ALL development tasks. ALWA
 - **ALWAYS be direct and concise**: Avoid exaggerated language
 - **ALWAYS maintain professional yet approachable tone**: Clear and authoritative without being overly formal
 - **ALWAYS avoid filler phrases**: Don't use "Sure!" or "You're right!"
-- **DevContainer dependencies**: ALWAYS install dependencies in the appropriate `.devcontainer/post-create.sh` script (e.g., `/workspaces/techhub/.devcontainer/post-create.sh` for Jekyll project, `dotnet/.devcontainer/post-create.sh` for .NET migration), NEVER install in PowerShell or other scripts
+- **DevContainer dependencies**: ALWAYS install dependencies in the appropriate `.devcontainer/post-create.sh` script (e.g., `/workspaces/techhub/.devcontainer/post-create.sh` for Jekyll project, `.devcontainer/post-create.sh` for .NET migration), NEVER install in PowerShell or other scripts
 
 #### ⚠️ Ask First
 
@@ -727,7 +727,7 @@ All user interface components and interactions must be accessible to users with 
 
 When working on the .NET migration (future state), refer to:
 
-- **[/dotnet/AGENTS.md](dotnet/AGENTS.md)** - Root .NET development guide with solution structure and patterns
+- **[/AGENTS.md](AGENTS.md)** - Root .NET development guide with solution structure and patterns
 - **[/.github/agents/dotnet.md](.github/agents/dotnet.md)** - `@dotnet` agent for .NET-specific development
 - **[/specs/](specs/)** - Specifications directory with constitution and feature specs:
   - [constitution.md](.specify/memory/constitution.md) - Project principles and constraints

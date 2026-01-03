@@ -46,7 +46,7 @@ Defines Azure infrastructure for Tech Hub .NET deployment using Azure Container 
 
 ## Bicep Structure
 
-**Location**: `/dotnet/infra/`
+**Location**: `/infra/`
 
 **Organization**:
 
@@ -73,7 +73,7 @@ infra/
 
 ## Main Bicep File
 
-**File**: `/dotnet/infra/main.bicep`
+**File**: `/infra/main.bicep`
 
 ```bicep
 targetScope = 'subscription'
@@ -197,7 +197,7 @@ output containerRegistryLoginServer string = registry.outputs.loginServer
 
 ## Container Apps Environment Module
 
-**File**: `/dotnet/infra/modules/containerApps.bicep`
+**File**: `/infra/modules/containerApps.bicep`
 
 ```bicep
 param location string
@@ -237,7 +237,7 @@ output defaultDomain string = containerAppsEnvironment.properties.defaultDomain
 
 ## API Container App Module
 
-**File**: `/dotnet/infra/modules/api.bicep`
+**File**: `/infra/modules/api.bicep`
 
 ```bicep
 param location string
@@ -341,7 +341,7 @@ output id string = api.id
 
 ## Web Container App Module
 
-**File**: `/dotnet/infra/modules/web.bicep`
+**File**: `/infra/modules/web.bicep`
 
 ```bicep
 param location string
@@ -425,7 +425,7 @@ output id string = web.id
 
 ## Monitoring Module
 
-**File**: `/dotnet/infra/modules/monitoring.bicep`
+**File**: `/infra/modules/monitoring.bicep`
 
 ```bicep
 param location string
@@ -464,7 +464,7 @@ output logAnalyticsWorkspaceId string = logAnalyticsWorkspace.id
 
 ## Container Registry Module
 
-**File**: `/dotnet/infra/modules/registry.bicep`
+**File**: `/infra/modules/registry.bicep`
 
 ```bicep
 param location string
@@ -493,7 +493,7 @@ output name string = containerRegistry.name
 
 ## Environment Parameters
 
-**File**: `/dotnet/infra/parameters/prod.bicepparam`
+**File**: `/infra/parameters/prod.bicepparam`
 
 ```bicep
 using '../main.bicep'
@@ -510,7 +510,7 @@ param apiImageTag = 'v1.0.0' // Specific version for production
 param webImageTag = 'v1.0.0'
 ```
 
-**File**: `/dotnet/infra/parameters/dev.bicepparam`
+**File**: `/infra/parameters/dev.bicepparam`
 
 ```bicep
 using '../main.bicep'
@@ -531,7 +531,7 @@ param webImageTag = 'latest'
 
 ## Deployment Scripts
 
-**File**: `/dotnet/infra/scripts/deploy.ps1`
+**File**: `/infra/scripts/deploy.ps1`
 
 ```powershell
 #!/usr/bin/env pwsh

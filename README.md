@@ -1,123 +1,148 @@
-# Tech Hub
+# Tech Hub .NET Migration
 
-Welcome to the Tech Hub ([tech.hub.ms](https://tech.hub.ms)) - an automated content aggregation and curation platform for Microsoft and technology sources.
+> **Status**: 🚧 In Development
 
-## About This Project
-
-The Tech Hub provides:
-
-- **Automated Content Aggregation**: RSS feed processing with AI-powered categorization
-- **Dynamic Sections**: Configuration-driven hubs defined in `_data/sections.json` (e.g., AI, GitHub Copilot, Azure, .NET)
-- **Advanced Filtering**: Tag-based and date-based content filtering
-- **Multiple Content Types**: News, blogs, videos, community discussions
+This directory contains the .NET/Blazor implementation of Tech Hub, migrating from the Jekyll-based static site.
 
 ## Quick Start
 
-Get the Tech Hub running in just a few minutes using containers.
+### Option 1: Open in DevContainer (Recommended)
 
-### Prerequisites
+1. In VS Code, open the Command Palette (`Ctrl+Shift+P` or `Cmd+Shift+P`)
+2. Select **"Dev Containers: Reopen in Container"**
+3. Choose the **"Tech Hub .NET"** container
+4. Wait for the container to build and initialize
 
-#### Dev Container (Recommended)
+### Option 2: Local Development
 
-- Docker: For running the dev container
-- VS Code: With the Dev Containers extension
-- Git: For version control
+Requirements:
 
-#### GitHub Codespaces
+- .NET 10 SDK
+- Node.js LTS
+- PowerShell 7+
+- Azure CLI (optional)
 
-- GitHub Account: With access to the repository
+```powershell
+# Install .NET Aspire workload
+dotnet workload install aspire
 
-### Setup Options
+# Restore packages (when solution exists)
+dotnet restore
 
-#### Option 1: Dev Container (Recommended)
+# Run with Aspire (when solution exists)
+dotnet run --project src/TechHub.AppHost
+```
 
-1. **Open in VS Code**:
+## Architecture
 
-   ```bash
-   code /path/to/repo
-   ```
+This is a modern .NET application with **separate frontend and backend**:
 
-2. **Reopen in Container**:
+- **TechHub.Api** - REST API backend (ASP.NET Core Minimal API)
+- **TechHub.Web** - Blazor frontend (SSR + WebAssembly)
+- **TechHub.Core** - Domain models and interfaces
+- **TechHub.Infrastructure** - Data access implementations
+- **TechHub.AppHost** - .NET Aspire orchestration
 
-   - VS Code will prompt to reopen in dev container
-   - Or use Command Palette: "Dev Containers: Reopen in Container"
+See [/specs/](../specs/) for detailed feature specifications.
 
-3. **Start the Site**:
+## Development Workflow
 
-   ```powershell
-   pwsh /workspaces/techhub/scripts/jekyll-start.ps1
-   ```
+Follow the [8-step workflow](../AGENTS.md#ai-assistant-workflow) defined in the root AGENTS.md:
 
-4. **Access the Site**: Open browser to `http://localhost:4000`
-
-#### Option 2: GitHub Codespaces
-
-1. **Create Codespace**: Go to [GitHub repository](https://github.com/techhubms/techhub) → "Code" → "Codespaces" → "Create codespace on main"
-2. **Start the Site**:
-
-   ```powershell
-   pwsh /workspaces/techhub/scripts/jekyll-start.ps1
-   ```
-
-3. **Access the Site**: Codespace will provide a URL, usually accessible through the "Ports" panel
+1. **Gather Context** - Read AGENTS.md files for the domain you're modifying
+2. **Create a Plan** - Break down tasks into steps
+3. **Research & Validate** - Use context7 MCP for .NET/Blazor docs
+4. **Verify Behavior** - Use Playwright MCP for testing
+5. **Implement Changes** - Follow patterns in domain AGENTS.md
+6. **Test & Validate** - Run appropriate test suites
+7. **Update Documentation** - Keep AGENTS.md files current
+8. **Report Completion** - Summarize changes
 
 ## Documentation
 
-### Development & AI Agents
+- **[Feature Specifications](../specs/)** - Complete feature requirements and specifications
+- **[Root AGENTS.md](../AGENTS.md)** - Framework-agnostic principles
+- **[.NET AGENTS.md](AGENTS.md)** - .NET-specific development guide
+- **[@dotnet Agent](../.github/agents/dotnet.md)** - Custom agent for .NET development
 
-For comprehensive development guides, architecture, and AI agent instructions, please refer to **[AGENTS.md](AGENTS.md)**.
+## Current Status
 
-This file serves as the primary entry point for understanding the codebase, development standards, and domain-specific guidelines.
+**Phase 3: User Story 1 MVP - API Implementation** ✅ (Partially Complete)
 
-**Custom Agents**: Use the `@fullstack` agent for all Jekyll, Liquid templating, Ruby plugins, JavaScript, PowerShell, and testing work. See [.github/agents/fullstack.md](.github/agents/fullstack.md) for details.
+### What's Working
 
-### Functional Documentation
+✅ **RESTful API** with nested routes (14 endpoints, all tested and working):
 
-Framework-agnostic functional documentation is available in the **[docs/](docs/)** directory:
+**Section Endpoints**:
 
-- **[Filtering System](docs/filtering-system.md)**: Tag and date filtering logic
-- **[Content Management](docs/content-management.md)**: Creating content and RSS processing
-- **[Documentation Guidelines](docs/AGENTS.md)**: Documentation structure and maintenance
+- `GET /api/sections` - Get all sections (8 sections)
+- `GET /api/sections/{sectionName}` - Get specific section
+- `GET /api/sections/{sectionName}/items` - All items in section (e.g., 1378 AI items)
+- `GET /api/sections/{sectionName}/collections` - Collections in section
+- `GET /api/sections/{sectionName}/collections/{collectionName}` - Collection details
+- `GET /api/sections/{sectionName}/collections/{collectionName}/items` - Items in collection
 
-### Content Writing
+**Content Endpoints**:
 
-For content creation and writing guidelines:
+- `GET /api/content/filter?sections={s}&collections={c}&tags={t}&q={query}` - Advanced filtering
+- `GET /api/content/tags` - All unique tags (12,524 tags)
 
-- **[Collections Guide](collections/AGENTS.md)**: Content management overview
-- **[Markdown Guidelines](collections/markdown-guidelines.md)**: Formatting and structure standards
-- **[Writing Style Guide](collections/writing-style-guidelines.md)**: Tone and style standards
+**Examples**:
+
+```bash
+# Get AI section with collections
+curl http://localhost:5029/api/sections/ai
+
+# Get all AI news items
+curl http://localhost:5029/api/sections/ai/collections/news/items
+
+# Complex filter: Copilot-tagged items in AI/ML news/blogs
+curl "http://localhost:5029/api/content/filter?sections=ai,ml&collections=news,blogs&tags=copilot"
+```
+
+See [API Specification](docs/api-specification.md) for complete reference.
+
+### Implementation Progress
+
+Following the migration plan phases:
+
+- [x] Phase 1: Foundation (36/36 tasks) ✅
+  - All projects, domain models, DTOs, interfaces, extensions
+- [x] Phase 2: Data Access (8/17 tasks) 🔄
+  - ✅ FrontMatterParser (11 tests passing)
+  - ✅ MarkdownService (19 tests passing)
+  - ✅ FileBasedSectionRepository (7 tests passing)
+  - ✅ FileBasedContentRepository (15 tests passing)
+  - ⏳ RssService, Caching, Entity tests (not started)
+- [x] Phase 3: API Endpoints (5/70 tasks) 🔄
+  - ✅ All section endpoints (6 endpoints, 8 tests)
+  - ✅ Advanced filtering (2 endpoints, 6 tests)
+  - ⏳ Blazor components, pages, client (not started)
+
+**Test Results**: 52/52 tests passing (100% pass rate)
+
+**Performance**: Sections ~25ms, Content first load 5-9s (2251 markdown files)
+
+### Next Steps
+
+1. Complete Phase 2: RssService, Caching, Entity tests
+2. Continue Phase 3: Blazor components and pages
+3. Begin Phase 4: Features implementation (filtering, search, etc.)
+
+See [tasks.md](.specify/tasks.md) for complete task breakdown.
 
 ## Contributing
 
-We welcome contributions! Please feel free to:
+This is a migration project. All changes should:
 
-- Submit pull requests
-- Report issues
-- Suggest improvements
-- Fork the repository for your own projects
+1. Follow the [feature specifications](../specs/)
+2. Use spec-driven development methodology
+3. Maintain feature parity with Jekyll site
+4. Include tests for all code changes
 
-## Commercial Use & Partnerships
+## Related Resources
 
-This project is licensed under the MIT License, which allows commercial use. If you're using this project commercially, we'd love to hear from you! Consider:
-
-- **Sponsoring the project** to support ongoing development
-- **Partnering with us** for feature development or customization
-- **Contributing back** improvements that benefit the community
-
-For commercial partnerships or sponsorship opportunities, please contact [Reinier van Maanen](mailto:reinier.vanmaanen@xebia.com).
-
-## Support
-
-For questions or issues:
-
-1. Check the [AGENTS.md](AGENTS.md) file for development guidance
-2. Review the [docs/](docs/) folder for functional documentation
-3. Look at existing content files for examples
-4. Report problems via GitHub Issues
-5. Contact Reinier van Maanen or Rob Bos
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-Copyright (c) 2025 Reinier van Maanen
+- [Current Jekyll Site](../) - Source implementation
+- [Filtering System Docs](../docs/filtering-system.md) - Current filtering behavior
+- [Content Management Docs](../docs/content-management.md) - Content workflows
+- [spec-kit](https://github.com/github/spec-kit) - Development methodology

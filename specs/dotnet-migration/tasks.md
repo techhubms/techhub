@@ -19,8 +19,8 @@
 
 All .NET code resides in `dotnet/` directory per constitution requirements:
 
-- Projects: `dotnet/src/`
-- Tests: `dotnet/tests/`
+- Projects: `src/`
+- Tests: `tests/`
 - Content files: `collections/` (unchanged)
 - Configuration: `_data/sections.json` (unchanged)
 
@@ -35,59 +35,59 @@ All .NET code resides in `dotnet/` directory per constitution requirements:
 ### Project Setup
 
 - [X] T001 Create .NET solution structure per [research.md](research.md#implementation-sequence) Phase 1
-- [X] T002 Initialize TechHub.Core class library in dotnet/src/TechHub.Core/TechHub.Core.csproj
-- [X] T003 [P] Initialize TechHub.Infrastructure class library in dotnet/src/TechHub.Infrastructure/TechHub.Infrastructure.csproj
-- [X] T004 [P] Initialize TechHub.Api web API project in dotnet/src/TechHub.Api/TechHub.Api.csproj
-- [X] T005 [P] Initialize TechHub.Web Blazor project in dotnet/src/TechHub.Web/TechHub.Web.csproj
-- [X] T006 [P] Initialize TechHub.AppHost .NET Aspire project in dotnet/src/TechHub.AppHost/TechHub.AppHost.csproj
+- [X] T002 Initialize TechHub.Core class library in src/TechHub.Core/TechHub.Core.csproj
+- [X] T003 [P] Initialize TechHub.Infrastructure class library in src/TechHub.Infrastructure/TechHub.Infrastructure.csproj
+- [X] T004 [P] Initialize TechHub.Api web API project in src/TechHub.Api/TechHub.Api.csproj
+- [X] T005 [P] Initialize TechHub.Web Blazor project in src/TechHub.Web/TechHub.Web.csproj
+- [X] T006 [P] Initialize TechHub.AppHost .NET Aspire project in src/TechHub.AppHost/TechHub.AppHost.csproj
 
 ### Testing Infrastructure
 
-- [X] T007 [P] Initialize TechHub.Core.Tests xUnit project in dotnet/tests/TechHub.Core.Tests/TechHub.Core.Tests.csproj
-- [X] T008 [P] Initialize TechHub.Infrastructure.Tests xUnit project in dotnet/tests/TechHub.Infrastructure.Tests/TechHub.Infrastructure.Tests.csproj
-- [X] T009 [P] Initialize TechHub.Api.Tests xUnit project in dotnet/tests/TechHub.Api.Tests/TechHub.Api.Tests.csproj
-- [X] T010 [P] Initialize TechHub.Web.Tests bUnit project in dotnet/tests/TechHub.Web.Tests/TechHub.Web.Tests.csproj
-- [X] T011 [P] Initialize TechHub.E2E.Tests Playwright project in dotnet/tests/TechHub.E2E.Tests/TechHub.E2E.Tests.csproj
+- [X] T007 [P] Initialize TechHub.Core.Tests xUnit project in tests/TechHub.Core.Tests/TechHub.Core.Tests.csproj
+- [X] T008 [P] Initialize TechHub.Infrastructure.Tests xUnit project in tests/TechHub.Infrastructure.Tests/TechHub.Infrastructure.Tests.csproj
+- [X] T009 [P] Initialize TechHub.Api.Tests xUnit project in tests/TechHub.Api.Tests/TechHub.Api.Tests.csproj
+- [X] T010 [P] Initialize TechHub.Web.Tests bUnit project in tests/TechHub.Web.Tests/TechHub.Web.Tests.csproj
+- [X] T011 [P] Initialize TechHub.E2E.Tests Playwright project in tests/TechHub.E2E.Tests/TechHub.E2E.Tests.csproj
 
 ### Configuration Management
 
-- [X] T012 Add configuration classes in dotnet/src/TechHub.Core/Configuration/AppSettings.cs
-- [X] T013 [P] Create appsettings.json for TechHub.Api in dotnet/src/TechHub.Api/appsettings.json
-- [X] T014 [P] Create appsettings.Development.json for TechHub.Api in dotnet/src/TechHub.Api/appsettings.Development.json
-- [X] T015 [P] Create appsettings.json for TechHub.Web in dotnet/src/TechHub.Web/appsettings.json
-- [X] T016 [P] Create appsettings.Development.json for TechHub.Web in dotnet/src/TechHub.Web/appsettings.Development.json
+- [X] T012 Add configuration classes in src/TechHub.Core/Configuration/AppSettings.cs
+- [X] T013 [P] Create appsettings.json for TechHub.Api in src/TechHub.Api/appsettings.json
+- [X] T014 [P] Create appsettings.Development.json for TechHub.Api in src/TechHub.Api/appsettings.Development.json
+- [X] T015 [P] Create appsettings.json for TechHub.Web in src/TechHub.Web/appsettings.json
+- [X] T016 [P] Create appsettings.Development.json for TechHub.Web in src/TechHub.Web/appsettings.Development.json
 
 ### Resilience & Error Handling
 
-- [X] T017 Configure Polly retry policies in dotnet/src/TechHub.Infrastructure/Resilience/PollyPolicies.cs
-- [X] T018 [P] Implement global exception handler middleware in dotnet/src/TechHub.Api/Middleware/ExceptionHandlerMiddleware.cs
-- [X] T019 [P] ~~Configure structured logging with Serilog~~ SKIPPED - Using ASP.NET Core default logging (see dotnet/docs/decisions/no-serilog.md)
-- [X] T020 [P] Configure OpenTelemetry tracing in dotnet/src/TechHub.Api/Extensions/TelemetryExtensions.cs
+- [X] T017 Configure Polly retry policies in src/TechHub.Infrastructure/Resilience/PollyPolicies.cs
+- [X] T018 [P] Implement global exception handler middleware in src/TechHub.Api/Middleware/ExceptionHandlerMiddleware.cs
+- [X] T019 [P] ~~Configure structured logging with Serilog~~ SKIPPED - Using ASP.NET Core default logging (see docs/decisions/no-serilog.md)
+- [X] T020 [P] Configure OpenTelemetry tracing in src/TechHub.Api/Extensions/TelemetryExtensions.cs
 
 ### Domain Models & Interfaces
 
-- [X] T021 [P] Create Section entity in dotnet/src/TechHub.Core/Models/Section.cs
-- [X] T022 [P] Create CollectionReference entity in dotnet/src/TechHub.Core/Models/CollectionReference.cs
-- [X] T023 [P] Create ContentItem entity in dotnet/src/TechHub.Core/Models/ContentItem.cs
-- [X] T024 [P] Create FilterState entity in dotnet/src/TechHub.Core/Models/FilterState.cs
-- [X] T025 [P] Create SectionDto in dotnet/src/TechHub.Core/DTOs/SectionDto.cs
-- [X] T026 [P] Create CollectionReferenceDto in dotnet/src/TechHub.Core/DTOs/CollectionReferenceDto.cs
-- [X] T027 [P] Create ContentItemDto in dotnet/src/TechHub.Core/DTOs/ContentItemDto.cs
-- [X] T028 [P] Create ContentItemDetailDto in dotnet/src/TechHub.Core/DTOs/ContentItemDetailDto.cs
-- [X] T029 [P] Create PagedResultDto in dotnet/src/TechHub.Core/DTOs/PagedResultDto.cs
-- [X] T030 [P] Create RssChannelDto and RssItemDto in dotnet/src/TechHub.Core/DTOs/RssDtos.cs
+- [X] T021 [P] Create Section entity in src/TechHub.Core/Models/Section.cs
+- [X] T022 [P] Create CollectionReference entity in src/TechHub.Core/Models/CollectionReference.cs
+- [X] T023 [P] Create ContentItem entity in src/TechHub.Core/Models/ContentItem.cs
+- [X] T024 [P] Create FilterState entity in src/TechHub.Core/Models/FilterState.cs
+- [X] T025 [P] Create SectionDto in src/TechHub.Core/DTOs/SectionDto.cs
+- [X] T026 [P] Create CollectionReferenceDto in src/TechHub.Core/DTOs/CollectionReferenceDto.cs
+- [X] T027 [P] Create ContentItemDto in src/TechHub.Core/DTOs/ContentItemDto.cs
+- [X] T028 [P] Create ContentItemDetailDto in src/TechHub.Core/DTOs/ContentItemDetailDto.cs
+- [X] T029 [P] Create PagedResultDto in src/TechHub.Core/DTOs/PagedResultDto.cs
+- [X] T030 [P] Create RssChannelDto and RssItemDto in src/TechHub.Core/DTOs/RssDtos.cs
 
 ### Repository Pattern Interfaces
 
-- [X] T031 Define IContentRepository interface in dotnet/src/TechHub.Core/Interfaces/IContentRepository.cs
-- [X] T032 [P] Define ISectionRepository interface in dotnet/src/TechHub.Core/Interfaces/ISectionRepository.cs
-- [X] T033 [P] Define IRssService interface in dotnet/src/TechHub.Core/Interfaces/IRssService.cs
-- [X] T034 [P] Define IMarkdownService interface in dotnet/src/TechHub.Core/Interfaces/IMarkdownService.cs
+- [X] T031 Define IContentRepository interface in src/TechHub.Core/Interfaces/IContentRepository.cs
+- [X] T032 [P] Define ISectionRepository interface in src/TechHub.Core/Interfaces/ISectionRepository.cs
+- [X] T033 [P] Define IRssService interface in src/TechHub.Core/Interfaces/IRssService.cs
+- [X] T034 [P] Define IMarkdownService interface in src/TechHub.Core/Interfaces/IMarkdownService.cs
 
 ### Extension Methods
 
-- [X] T035 [P] Implement ContentItem extension methods (ToDto, ToDetailDto) in dotnet/src/TechHub.Core/Extensions/ContentItemExtensions.cs
-- [X] T036 [P] Implement Section extension methods (ToDto) in dotnet/src/TechHub.Core/Extensions/SectionExtensions.cs
+- [X] T035 [P] Implement ContentItem extension methods (ToDto, ToDetailDto) in src/TechHub.Core/Extensions/ContentItemExtensions.cs
+- [X] T036 [P] Implement Section extension methods (ToDto) in src/TechHub.Core/Extensions/SectionExtensions.cs
 
 **Checkpoint**: Foundation ready - domain models, DTOs, interfaces, configuration, and testing infrastructure complete
 
@@ -99,35 +99,35 @@ All .NET code resides in `dotnet/` directory per constitution requirements:
 
 ### File-Based Repositories
 
-- [X] T037 Implement FileBasedContentRepository in dotnet/src/TechHub.Infrastructure/Repositories/FileBasedContentRepository.cs
-- [X] T038 Implement FileBasedSectionRepository in dotnet/src/TechHub.Infrastructure/Repositories/FileBasedSectionRepository.cs
-- [X] T039 Add YAML frontmatter parser in dotnet/src/TechHub.Infrastructure/Services/FrontMatterParser.cs
+- [X] T037 Implement FileBasedContentRepository in src/TechHub.Infrastructure/Repositories/FileBasedContentRepository.cs
+- [X] T038 Implement FileBasedSectionRepository in src/TechHub.Infrastructure/Repositories/FileBasedSectionRepository.cs
+- [X] T039 Add YAML frontmatter parser in src/TechHub.Infrastructure/Services/FrontMatterParser.cs
 
 ### Markdown Processing
 
-- [X] T040 Implement MarkdownService with Markdig in dotnet/src/TechHub.Infrastructure/Services/MarkdownService.cs
+- [X] T040 Implement MarkdownService with Markdig in src/TechHub.Infrastructure/Services/MarkdownService.cs
 - [X] T041 [P] Add excerpt extraction logic (<!--excerpt_end--> marker) in MarkdownService
 - [X] T042 [P] Add YouTube embed processing in MarkdownService
 
 ### RSS Feed Generation
 
-- [ ] T043 Implement RssService for feed generation in dotnet/src/TechHub.Infrastructure/Services/RssService.cs
-- [ ] T044 Add RSS XML serialization helpers in dotnet/src/TechHub.Infrastructure/Services/RssXmlHelpers.cs
+- [ ] T043 Implement RssService for feed generation in src/TechHub.Infrastructure/Services/RssService.cs
+- [ ] T044 Add RSS XML serialization helpers in src/TechHub.Infrastructure/Services/RssXmlHelpers.cs
 
 ### Caching Strategy
 
-- [ ] T045 Configure IMemoryCache in dotnet/src/TechHub.Infrastructure/Caching/CacheConfiguration.cs
-- [ ] T046 [P] Implement cache keys and expiration policies in dotnet/src/TechHub.Infrastructure/Caching/CacheKeys.cs
-- [ ] T047 [P] Add cache warming on application startup in dotnet/src/TechHub.Api/HostedServices/CacheWarmingService.cs
+- [ ] T045 Configure IMemoryCache in src/TechHub.Infrastructure/Caching/CacheConfiguration.cs
+- [ ] T046 [P] Implement cache keys and expiration policies in src/TechHub.Infrastructure/Caching/CacheKeys.cs
+- [ ] T047 [P] Add cache warming on application startup in src/TechHub.Api/HostedServices/CacheWarmingService.cs
 
 ### Unit Tests for Core Services
 
-- [ ] T048 [P] Unit tests for Section entity validation in dotnet/tests/TechHub.Core.Tests/Models/SectionTests.cs
-- [ ] T049 [P] Unit tests for ContentItem entity validation in dotnet/tests/TechHub.Core.Tests/Models/ContentItemTests.cs
-- [ ] T050 [P] Unit tests for extension methods in dotnet/tests/TechHub.Core.Tests/Extensions/ContentItemExtensionsTests.cs
-- [ ] T051 [P] Unit tests for MarkdownService in dotnet/tests/TechHub.Infrastructure.Tests/Services/MarkdownServiceTests.cs
-- [ ] T052 [P] Unit tests for RssService in dotnet/tests/TechHub.Infrastructure.Tests/Services/RssServiceTests.cs
-- [ ] T053 [P] Unit tests for FileBasedContentRepository in dotnet/tests/TechHub.Infrastructure.Tests/Repositories/FileBasedContentRepositoryTests.cs
+- [ ] T048 [P] Unit tests for Section entity validation in tests/TechHub.Core.Tests/Models/SectionTests.cs
+- [ ] T049 [P] Unit tests for ContentItem entity validation in tests/TechHub.Core.Tests/Models/ContentItemTests.cs
+- [ ] T050 [P] Unit tests for extension methods in tests/TechHub.Core.Tests/Extensions/ContentItemExtensionsTests.cs
+- [ ] T051 [P] Unit tests for MarkdownService in tests/TechHub.Infrastructure.Tests/Services/MarkdownServiceTests.cs
+- [ ] T052 [P] Unit tests for RssService in tests/TechHub.Infrastructure.Tests/Services/RssServiceTests.cs
+- [ ] T053 [P] Unit tests for FileBasedContentRepository in tests/TechHub.Infrastructure.Tests/Repositories/FileBasedContentRepositoryTests.cs
 
 **Checkpoint**: Data access layer complete - repositories can load content from markdown files, parse YAML, render markdown, and generate RSS feeds
 
@@ -141,31 +141,31 @@ All .NET code resides in `dotnet/` directory per constitution requirements:
 
 ### API Endpoints for User Story 1
 
-- [ ] T054 [P] [US1] Implement GET /api/sections endpoint in dotnet/src/TechHub.Api/Endpoints/SectionsEndpoints.cs
-- [ ] T055 [P] [US1] Implement GET /api/sections/{sectionName} endpoint in dotnet/src/TechHub.Api/Endpoints/SectionsEndpoints.cs
-- [ ] T056 [P] [US1] Implement GET /api/content/{sectionName}/{collection}/{itemId} endpoint in dotnet/src/TechHub.Api/Endpoints/ContentEndpoints.cs
-- [ ] T057 [US1] Configure dependency injection for repositories and services in dotnet/src/TechHub.Api/Program.cs
-- [ ] T058 [US1] Configure CORS policy for TechHub.Web in dotnet/src/TechHub.Api/Program.cs
+- [ ] T054 [P] [US1] Implement GET /api/sections endpoint in src/TechHub.Api/Endpoints/SectionsEndpoints.cs
+- [ ] T055 [P] [US1] Implement GET /api/sections/{sectionName} endpoint in src/TechHub.Api/Endpoints/SectionsEndpoints.cs
+- [ ] T056 [P] [US1] Implement GET /api/content/{sectionName}/{collection}/{itemId} endpoint in src/TechHub.Api/Endpoints/ContentEndpoints.cs
+- [ ] T057 [US1] Configure dependency injection for repositories and services in src/TechHub.Api/Program.cs
+- [ ] T058 [US1] Configure CORS policy for TechHub.Web in src/TechHub.Api/Program.cs
 
 ### Blazor Components for User Story 1
 
-- [ ] T059 [P] [US1] Create SectionCard component in dotnet/src/TechHub.Web/Components/SectionCard.razor
-- [ ] T060 [P] [US1] Create CollectionList component in dotnet/src/TechHub.Web/Components/CollectionList.razor
-- [ ] T061 [P] [US1] Create ContentItemCard component in dotnet/src/TechHub.Web/Components/ContentItemCard.razor
-- [ ] T062 [P] [US1] Create ContentDetail component in dotnet/src/TechHub.Web/Components/ContentDetail.razor
-- [ ] T063 [P] [US1] Create YouTubeEmbed component in dotnet/src/TechHub.Web/Components/YouTubeEmbed.razor
+- [ ] T059 [P] [US1] Create SectionCard component in src/TechHub.Web/Components/SectionCard.razor
+- [ ] T060 [P] [US1] Create CollectionList component in src/TechHub.Web/Components/CollectionList.razor
+- [ ] T061 [P] [US1] Create ContentItemCard component in src/TechHub.Web/Components/ContentItemCard.razor
+- [ ] T062 [P] [US1] Create ContentDetail component in src/TechHub.Web/Components/ContentDetail.razor
+- [ ] T063 [P] [US1] Create YouTubeEmbed component in src/TechHub.Web/Components/YouTubeEmbed.razor
 
 ### Page Components for User Story 1
 
-- [ ] T064 [US1] Create Home page (section grid) in dotnet/src/TechHub.Web/Pages/Index.razor
-- [ ] T065 [US1] Create Section page (collections + items) in dotnet/src/TechHub.Web/Pages/Section.razor
-- [ ] T066 [US1] Create Content detail page in dotnet/src/TechHub.Web/Pages/Content.razor
+- [ ] T064 [US1] Create Home page (section grid) in src/TechHub.Web/Pages/Index.razor
+- [ ] T065 [US1] Create Section page (collections + items) in src/TechHub.Web/Pages/Section.razor
+- [ ] T066 [US1] Create Content detail page in src/TechHub.Web/Pages/Content.razor
 
 ### API Client for User Story 1
 
-- [ ] T067 [US1] Create typed HttpClient for API in dotnet/src/TechHub.Web/Services/TechHubApiClient.cs
-- [ ] T068 [US1] Add Polly retry policies to API client in dotnet/src/TechHub.Web/Services/TechHubApiClient.cs
-- [ ] T069 [US1] Configure dependency injection for API client in dotnet/src/TechHub.Web/Program.cs
+- [ ] T067 [US1] Create typed HttpClient for API in src/TechHub.Web/Services/TechHubApiClient.cs
+- [ ] T068 [US1] Add Polly retry policies to API client in src/TechHub.Web/Services/TechHubApiClient.cs
+- [ ] T069 [US1] Configure dependency injection for API client in src/TechHub.Web/Program.cs
 
 ### Semantic HTML & Accessibility for User Story 1
 
@@ -176,29 +176,29 @@ All .NET code resides in `dotnet/` directory per constitution requirements:
 
 ### Responsive Design for User Story 1
 
-- [ ] T074 [P] [US1] Create responsive layout CSS in dotnet/src/TechHub.Web/wwwroot/css/site.css
-- [ ] T075 [P] [US1] Add mobile breakpoints and grid layout in dotnet/src/TechHub.Web/wwwroot/css/responsive.css
-- [ ] T076 [P] [US1] Implement responsive images with lazy loading in dotnet/src/TechHub.Web/Components/ContentItemCard.razor
+- [ ] T074 [P] [US1] Create responsive layout CSS in src/TechHub.Web/wwwroot/css/site.css
+- [ ] T075 [P] [US1] Add mobile breakpoints and grid layout in src/TechHub.Web/wwwroot/css/responsive.css
+- [ ] T076 [P] [US1] Implement responsive images with lazy loading in src/TechHub.Web/Components/ContentItemCard.razor
 
 ### Integration Tests for User Story 1
 
-- [ ] T077 [P] [US1] Integration test for GET /api/sections in dotnet/tests/TechHub.Api.Tests/Endpoints/SectionsEndpointsTests.cs
-- [ ] T078 [P] [US1] Integration test for GET /api/sections/{sectionName} in dotnet/tests/TechHub.Api.Tests/Endpoints/SectionsEndpointsTests.cs
-- [ ] T079 [P] [US1] Integration test for GET /api/content/{sectionName}/{collection}/{itemId} in dotnet/tests/TechHub.Api.Tests/Endpoints/ContentEndpointsTests.cs
+- [ ] T077 [P] [US1] Integration test for GET /api/sections in tests/TechHub.Api.Tests/Endpoints/SectionsEndpointsTests.cs
+- [ ] T078 [P] [US1] Integration test for GET /api/sections/{sectionName} in tests/TechHub.Api.Tests/Endpoints/SectionsEndpointsTests.cs
+- [ ] T079 [P] [US1] Integration test for GET /api/content/{sectionName}/{collection}/{itemId} in tests/TechHub.Api.Tests/Endpoints/ContentEndpointsTests.cs
 
 ### Component Tests for User Story 1
 
-- [ ] T080 [P] [US1] bUnit tests for SectionCard component in dotnet/tests/TechHub.Web.Tests/Components/SectionCardTests.cs
-- [ ] T081 [P] [US1] bUnit tests for ContentItemCard component in dotnet/tests/TechHub.Web.Tests/Components/ContentItemCardTests.cs
-- [ ] T082 [P] [US1] bUnit tests for ContentDetail component in dotnet/tests/TechHub.Web.Tests/Components/ContentDetailTests.cs
+- [ ] T080 [P] [US1] bUnit tests for SectionCard component in tests/TechHub.Web.Tests/Components/SectionCardTests.cs
+- [ ] T081 [P] [US1] bUnit tests for ContentItemCard component in tests/TechHub.Web.Tests/Components/ContentItemCardTests.cs
+- [ ] T082 [P] [US1] bUnit tests for ContentDetail component in tests/TechHub.Web.Tests/Components/ContentDetailTests.cs
 
 ### E2E Tests for User Story 1
 
-- [ ] T083 [P] [US1] Playwright test for home page navigation in dotnet/tests/TechHub.E2E.Tests/Tests/HomePageTests.cs
-- [ ] T084 [P] [US1] Playwright test for section browsing in dotnet/tests/TechHub.E2E.Tests/Tests/SectionBrowsingTests.cs
-- [ ] T085 [P] [US1] Playwright test for content detail viewing in dotnet/tests/TechHub.E2E.Tests/Tests/ContentViewingTests.cs
-- [ ] T086 [P] [US1] Playwright test for mobile responsive layout in dotnet/tests/TechHub.E2E.Tests/Tests/ResponsiveDesignTests.cs
-- [ ] T087 [P] [US1] Playwright test for accessibility (keyboard navigation, screen reader) in dotnet/tests/TechHub.E2E.Tests/Tests/AccessibilityTests.cs
+- [ ] T083 [P] [US1] Playwright test for home page navigation in tests/TechHub.E2E.Tests/Tests/HomePageTests.cs
+- [ ] T084 [P] [US1] Playwright test for section browsing in tests/TechHub.E2E.Tests/Tests/SectionBrowsingTests.cs
+- [ ] T085 [P] [US1] Playwright test for content detail viewing in tests/TechHub.E2E.Tests/Tests/ContentViewingTests.cs
+- [ ] T086 [P] [US1] Playwright test for mobile responsive layout in tests/TechHub.E2E.Tests/Tests/ResponsiveDesignTests.cs
+- [ ] T087 [P] [US1] Playwright test for accessibility (keyboard navigation, screen reader) in tests/TechHub.E2E.Tests/Tests/AccessibilityTests.cs
 
 **Checkpoint**: User Story 1 complete - users can browse and consume content with full accessibility and responsive design
 
@@ -212,38 +212,38 @@ All .NET code resides in `dotnet/` directory per constitution requirements:
 
 ### Client-Side Filtering Service
 
-- [ ] T088 [US2] Create FilterStateService for Blazor in dotnet/src/TechHub.Web/Services/FilterStateService.cs
+- [ ] T088 [US2] Create FilterStateService for Blazor in src/TechHub.Web/Services/FilterStateService.cs
 - [ ] T089 [US2] Implement URL query parameter sync in FilterStateService
 - [ ] T090 [US2] Add browser history integration (back/forward support) in FilterStateService
 
 ### Filter Components
 
-- [ ] T091 [P] [US2] Create DateRangeFilter component in dotnet/src/TechHub.Web/Components/Filters/DateRangeFilter.razor
-- [ ] T092 [P] [US2] Create TagFilter component in dotnet/src/TechHub.Web/Components/Filters/TagFilter.razor
-- [ ] T093 [P] [US2] Create SearchFilter component (debounced input) in dotnet/src/TechHub.Web/Components/Filters/SearchFilter.razor
-- [ ] T094 [US2] Create FilterPanel component (aggregates all filters) in dotnet/src/TechHub.Web/Components/Filters/FilterPanel.razor
+- [ ] T091 [P] [US2] Create DateRangeFilter component in src/TechHub.Web/Components/Filters/DateRangeFilter.razor
+- [ ] T092 [P] [US2] Create TagFilter component in src/TechHub.Web/Components/Filters/TagFilter.razor
+- [ ] T093 [P] [US2] Create SearchFilter component (debounced input) in src/TechHub.Web/Components/Filters/SearchFilter.razor
+- [ ] T094 [US2] Create FilterPanel component (aggregates all filters) in src/TechHub.Web/Components/Filters/FilterPanel.razor
 
 ### Filtering Logic
 
-- [ ] T095 [US2] Implement date range filtering logic (20 + Same-Day rule) in dotnet/src/TechHub.Web/Services/ContentFilterService.cs
-- [ ] T096 [P] [US2] Implement tag filtering logic (OR logic) in dotnet/src/TechHub.Web/Services/ContentFilterService.cs
-- [ ] T097 [P] [US2] Implement text search filtering (title, description, tags) in dotnet/src/TechHub.Web/Services/ContentFilterService.cs
-- [ ] T098 [US2] Integrate filtering with Section page component in dotnet/src/TechHub.Web/Pages/Section.razor
+- [ ] T095 [US2] Implement date range filtering logic (20 + Same-Day rule) in src/TechHub.Web/Services/ContentFilterService.cs
+- [ ] T096 [P] [US2] Implement tag filtering logic (OR logic) in src/TechHub.Web/Services/ContentFilterService.cs
+- [ ] T097 [P] [US2] Implement text search filtering (title, description, tags) in src/TechHub.Web/Services/ContentFilterService.cs
+- [ ] T098 [US2] Integrate filtering with Section page component in src/TechHub.Web/Pages/Section.razor
 
 ### Component Tests for User Story 2
 
-- [ ] T099 [P] [US2] bUnit tests for DateRangeFilter component in dotnet/tests/TechHub.Web.Tests/Components/Filters/DateRangeFilterTests.cs
-- [ ] T100 [P] [US2] bUnit tests for TagFilter component in dotnet/tests/TechHub.Web.Tests/Components/Filters/TagFilterTests.cs
-- [ ] T101 [P] [US2] bUnit tests for SearchFilter component in dotnet/tests/TechHub.Web.Tests/Components/Filters/SearchFilterTests.cs
-- [ ] T102 [US2] Unit tests for ContentFilterService in dotnet/tests/TechHub.Web.Tests/Services/ContentFilterServiceTests.cs
+- [ ] T099 [P] [US2] bUnit tests for DateRangeFilter component in tests/TechHub.Web.Tests/Components/Filters/DateRangeFilterTests.cs
+- [ ] T100 [P] [US2] bUnit tests for TagFilter component in tests/TechHub.Web.Tests/Components/Filters/TagFilterTests.cs
+- [ ] T101 [P] [US2] bUnit tests for SearchFilter component in tests/TechHub.Web.Tests/Components/Filters/SearchFilterTests.cs
+- [ ] T102 [US2] Unit tests for ContentFilterService in tests/TechHub.Web.Tests/Services/ContentFilterServiceTests.cs
 
 ### E2E Tests for User Story 2
 
-- [ ] T103 [P] [US2] Playwright test for date filtering in dotnet/tests/TechHub.E2E.Tests/Tests/FilteringTests.cs
-- [ ] T104 [P] [US2] Playwright test for tag filtering in dotnet/tests/TechHub.E2E.Tests/Tests/FilteringTests.cs
-- [ ] T105 [P] [US2] Playwright test for text search in dotnet/tests/TechHub.E2E.Tests/Tests/FilteringTests.cs
-- [ ] T106 [US2] Playwright test for URL state synchronization (copy URL, paste in new tab) in dotnet/tests/TechHub.E2E.Tests/Tests/FilteringTests.cs
-- [ ] T107 [US2] Playwright test for browser back/forward navigation in dotnet/tests/TechHub.E2E.Tests/Tests/FilteringTests.cs
+- [ ] T103 [P] [US2] Playwright test for date filtering in tests/TechHub.E2E.Tests/Tests/FilteringTests.cs
+- [ ] T104 [P] [US2] Playwright test for tag filtering in tests/TechHub.E2E.Tests/Tests/FilteringTests.cs
+- [ ] T105 [P] [US2] Playwright test for text search in tests/TechHub.E2E.Tests/Tests/FilteringTests.cs
+- [ ] T106 [US2] Playwright test for URL state synchronization (copy URL, paste in new tab) in tests/TechHub.E2E.Tests/Tests/FilteringTests.cs
+- [ ] T107 [US2] Playwright test for browser back/forward navigation in tests/TechHub.E2E.Tests/Tests/FilteringTests.cs
 
 **Checkpoint**: User Story 2 complete - users can filter content interactively with instant updates and shareable URLs
 
@@ -257,29 +257,29 @@ All .NET code resides in `dotnet/` directory per constitution requirements:
 
 ### Performance Optimizations
 
-- [ ] T108 [P] [US6] Enable response compression (Brotli/Gzip) in dotnet/src/TechHub.Api/Program.cs
-- [ ] T109 [P] [US6] Configure output caching for static content in dotnet/src/TechHub.Api/Program.cs
-- [ ] T110 [P] [US6] Add HTTP/2 and HTTP/3 support in dotnet/src/TechHub.Api/Program.cs
-- [ ] T111 [US6] Implement IMemoryCache with sliding/absolute expiration in dotnet/src/TechHub.Api/Program.cs
+- [ ] T108 [P] [US6] Enable response compression (Brotli/Gzip) in src/TechHub.Api/Program.cs
+- [ ] T109 [P] [US6] Configure output caching for static content in src/TechHub.Api/Program.cs
+- [ ] T110 [P] [US6] Add HTTP/2 and HTTP/3 support in src/TechHub.Api/Program.cs
+- [ ] T111 [US6] Implement IMemoryCache with sliding/absolute expiration in src/TechHub.Api/Program.cs
 
 ### Blazor Performance
 
-- [ ] T112 [US6] Configure Blazor SSR for initial render in dotnet/src/TechHub.Web/Program.cs
-- [ ] T113 [US6] Configure Blazor WASM auto-upgrade for interactivity in dotnet/src/TechHub.Web/Program.cs
-- [ ] T114 [P] [US6] Use @rendermode InteractiveAuto for filter components in dotnet/src/TechHub.Web/Components/Filters/
-- [ ] T115 [P] [US6] Use SSR-only rendering for static content components in dotnet/src/TechHub.Web/Components/
+- [ ] T112 [US6] Configure Blazor SSR for initial render in src/TechHub.Web/Program.cs
+- [ ] T113 [US6] Configure Blazor WASM auto-upgrade for interactivity in src/TechHub.Web/Program.cs
+- [ ] T114 [P] [US6] Use @rendermode InteractiveAuto for filter components in src/TechHub.Web/Components/Filters/
+- [ ] T115 [P] [US6] Use SSR-only rendering for static content components in src/TechHub.Web/Components/
 
 ### Image Optimization
 
-- [ ] T116 [P] [US6] Implement lazy loading for images below the fold in dotnet/src/TechHub.Web/Components/ContentItemCard.razor
-- [ ] T117 [P] [US6] Add responsive image sizes with srcset in dotnet/src/TechHub.Web/Components/ContentItemCard.razor
+- [ ] T116 [P] [US6] Implement lazy loading for images below the fold in src/TechHub.Web/Components/ContentItemCard.razor
+- [ ] T117 [P] [US6] Add responsive image sizes with srcset in src/TechHub.Web/Components/ContentItemCard.razor
 
 ### Performance Tests
 
-- [ ] T118 [P] [US6] Lighthouse performance test (score >95) in dotnet/tests/TechHub.E2E.Tests/Tests/PerformanceTests.cs
-- [ ] T119 [P] [US6] Core Web Vitals test (LCP, FID, CLS) in dotnet/tests/TechHub.E2E.Tests/Tests/PerformanceTests.cs
-- [ ] T120 [P] [US6] API response time test (<50ms p95 cached) in dotnet/tests/TechHub.Api.Tests/Performance/ResponseTimeTests.cs
-- [ ] T121 [P] [US6] Client-side filter performance test (<100ms) in dotnet/tests/TechHub.Web.Tests/Performance/FilterPerformanceTests.cs
+- [ ] T118 [P] [US6] Lighthouse performance test (score >95) in tests/TechHub.E2E.Tests/Tests/PerformanceTests.cs
+- [ ] T119 [P] [US6] Core Web Vitals test (LCP, FID, CLS) in tests/TechHub.E2E.Tests/Tests/PerformanceTests.cs
+- [ ] T120 [P] [US6] API response time test (<50ms p95 cached) in tests/TechHub.Api.Tests/Performance/ResponseTimeTests.cs
+- [ ] T121 [P] [US6] Client-side filter performance test (<100ms) in tests/TechHub.Web.Tests/Performance/FilterPerformanceTests.cs
 
 **Checkpoint**: User Story 6 complete - performance targets met, Lighthouse >95, Core Web Vitals pass
 
@@ -293,10 +293,10 @@ All .NET code resides in `dotnet/` directory per constitution requirements:
 
 **Independent Test**: Subscribe to /ai/feed.xml in RSS reader, verify feed is valid RSS 2.0 with recent items
 
-- [ ] T122 [P] [US3] Implement GET /api/rss/{sectionName} endpoint in dotnet/src/TechHub.Api/Endpoints/RssEndpoints.cs
-- [ ] T123 [P] [US3] Add RSS feed link to section page header in dotnet/src/TechHub.Web/Pages/Section.razor
-- [ ] T124 [P] [US3] Integration test for RSS feed generation in dotnet/tests/TechHub.Api.Tests/Endpoints/RssEndpointsTests.cs
-- [ ] T125 [P] [US3] Playwright test for RSS feed subscription in dotnet/tests/TechHub.E2E.Tests/Tests/RssFeedTests.cs
+- [ ] T122 [P] [US3] Implement GET /api/rss/{sectionName} endpoint in src/TechHub.Api/Endpoints/RssEndpoints.cs
+- [ ] T123 [P] [US3] Add RSS feed link to section page header in src/TechHub.Web/Pages/Section.razor
+- [ ] T124 [P] [US3] Integration test for RSS feed generation in tests/TechHub.Api.Tests/Endpoints/RssEndpointsTests.cs
+- [ ] T125 [P] [US3] Playwright test for RSS feed subscription in tests/TechHub.E2E.Tests/Tests/RssFeedTests.cs
 
 ### User Story 4 - Weekly Roundup Access (P2)
 
@@ -304,9 +304,9 @@ All .NET code resides in `dotnet/` directory per constitution requirements:
 
 **Independent Test**: Navigate to home page, verify 4 most recent roundups displayed, click a roundup, verify curated content
 
-- [ ] T126 [US4] Implement roundups collection filtering in dotnet/src/TechHub.Web/Pages/Index.razor
-- [ ] T127 [P] [US4] Create RoundupCard component in dotnet/src/TechHub.Web/Components/RoundupCard.razor
-- [ ] T128 [P] [US4] Playwright test for roundup display on home page in dotnet/tests/TechHub.E2E.Tests/Tests/RoundupTests.cs
+- [ ] T126 [US4] Implement roundups collection filtering in src/TechHub.Web/Pages/Index.razor
+- [ ] T127 [P] [US4] Create RoundupCard component in src/TechHub.Web/Components/RoundupCard.razor
+- [ ] T128 [P] [US4] Playwright test for roundup display on home page in tests/TechHub.E2E.Tests/Tests/RoundupTests.cs
 
 ### User Story 5 - SEO and Discoverability (P2)
 
@@ -314,13 +314,13 @@ All .NET code resides in `dotnet/` directory per constitution requirements:
 
 **Independent Test**: Run Google Rich Results Test, verify Schema.org markup, inspect meta tags, validate sitemap.xml
 
-- [ ] T129 [P] [US5] Add meta tags (title, description, Open Graph, Twitter Card) in dotnet/src/TechHub.Web/Pages/_Host.cshtml
-- [ ] T130 [P] [US5] Implement Schema.org Article markup in dotnet/src/TechHub.Web/Components/ContentDetail.razor
-- [ ] T131 [P] [US5] Implement Schema.org WebSite markup in dotnet/src/TechHub.Web/Pages/Index.razor
-- [ ] T132 [US5] Generate sitemap.xml endpoint in dotnet/src/TechHub.Api/Endpoints/SitemapEndpoints.cs
-- [ ] T133 [P] [US5] Implement canonical URLs in dotnet/src/TechHub.Web/Components/ContentDetail.razor
-- [ ] T134 [P] [US5] Lighthouse SEO test (score >95) in dotnet/tests/TechHub.E2E.Tests/Tests/SeoTests.cs
-- [ ] T135 [P] [US5] Structured data validation test in dotnet/tests/TechHub.E2E.Tests/Tests/SeoTests.cs
+- [ ] T129 [P] [US5] Add meta tags (title, description, Open Graph, Twitter Card) in src/TechHub.Web/Pages/_Host.cshtml
+- [ ] T130 [P] [US5] Implement Schema.org Article markup in src/TechHub.Web/Components/ContentDetail.razor
+- [ ] T131 [P] [US5] Implement Schema.org WebSite markup in src/TechHub.Web/Pages/Index.razor
+- [ ] T132 [US5] Generate sitemap.xml endpoint in src/TechHub.Api/Endpoints/SitemapEndpoints.cs
+- [ ] T133 [P] [US5] Implement canonical URLs in src/TechHub.Web/Components/ContentDetail.razor
+- [ ] T134 [P] [US5] Lighthouse SEO test (score >95) in tests/TechHub.E2E.Tests/Tests/SeoTests.cs
+- [ ] T135 [P] [US5] Structured data validation test in tests/TechHub.E2E.Tests/Tests/SeoTests.cs
 
 ### User Story 7 - Analytics and Monitoring (P3)
 
@@ -328,27 +328,27 @@ All .NET code resides in `dotnet/` directory per constitution requirements:
 
 **Independent Test**: Navigate site, verify GA4 events in debug mode, check Application Insights for telemetry
 
-- [ ] T136 [P] [US7] Integrate Google Analytics 4 in dotnet/src/TechHub.Web/Pages/_Host.cshtml
-- [ ] T137 [P] [US7] Add custom event tracking for filter interactions in dotnet/src/TechHub.Web/Services/FilterStateService.cs
-- [ ] T138 [P] [US7] Configure OpenTelemetry for Application Insights in dotnet/src/TechHub.Api/Program.cs
-- [ ] T139 [P] [US7] Add custom telemetry for repository operations in dotnet/src/TechHub.Infrastructure/Repositories/
-- [ ] T140 [US7] Implement cookie consent banner in dotnet/src/TechHub.Web/Components/CookieConsent.razor
+- [ ] T136 [P] [US7] Integrate Google Analytics 4 in src/TechHub.Web/Pages/_Host.cshtml
+- [ ] T137 [P] [US7] Add custom event tracking for filter interactions in src/TechHub.Web/Services/FilterStateService.cs
+- [ ] T138 [P] [US7] Configure OpenTelemetry for Application Insights in src/TechHub.Api/Program.cs
+- [ ] T139 [P] [US7] Add custom telemetry for repository operations in src/TechHub.Infrastructure/Repositories/
+- [ ] T140 [US7] Implement cookie consent banner in src/TechHub.Web/Components/CookieConsent.razor
 
 ### Infinite Scroll Pagination
 
-- [ ] T141 [US2] Implement infinite scroll component in dotnet/src/TechHub.Web/Components/InfiniteScroll.razor
-- [ ] T142 [US2] Integrate infinite scroll with Section page in dotnet/src/TechHub.Web/Pages/Section.razor
-- [ ] T143 [US2] Playwright test for infinite scroll in dotnet/tests/TechHub.E2E.Tests/Tests/InfiniteScrollTests.cs
+- [ ] T141 [US2] Implement infinite scroll component in src/TechHub.Web/Components/InfiniteScroll.razor
+- [ ] T142 [US2] Integrate infinite scroll with Section page in src/TechHub.Web/Pages/Section.razor
+- [ ] T143 [US2] Playwright test for infinite scroll in tests/TechHub.E2E.Tests/Tests/InfiniteScrollTests.cs
 
 ### Search Functionality
 
-- [ ] T144 [US2] Implement GET /api/search endpoint in dotnet/src/TechHub.Api/Endpoints/SearchEndpoints.cs
-- [ ] T145 [P] [US2] Integration test for search endpoint in dotnet/tests/TechHub.Api.Tests/Endpoints/SearchEndpointsTests.cs
+- [ ] T144 [US2] Implement GET /api/search endpoint in src/TechHub.Api/Endpoints/SearchEndpoints.cs
+- [ ] T145 [P] [US2] Integration test for search endpoint in tests/TechHub.Api.Tests/Endpoints/SearchEndpointsTests.cs
 
 ### Available Tags Endpoint
 
-- [ ] T146 [US2] Implement GET /api/tags endpoint in dotnet/src/TechHub.Api/Endpoints/TagsEndpoints.cs
-- [ ] T147 [P] [US2] Integration test for tags endpoint in dotnet/tests/TechHub.Api.Tests/Endpoints/TagsEndpointsTests.cs
+- [ ] T146 [US2] Implement GET /api/tags endpoint in src/TechHub.Api/Endpoints/TagsEndpoints.cs
+- [ ] T147 [P] [US2] Integration test for tags endpoint in tests/TechHub.Api.Tests/Endpoints/TagsEndpointsTests.cs
 
 **Checkpoint**: All supporting features complete - RSS feeds, roundups, SEO, analytics, infinite scroll, search
 
@@ -360,17 +360,17 @@ All .NET code resides in `dotnet/` directory per constitution requirements:
 
 ### Azure Resources
 
-- [ ] T148 Create Bicep template for Azure Container Apps in dotnet/infra/main.bicep
-- [ ] T149 [P] Define Container Apps environment in dotnet/infra/modules/container-apps-environment.bicep
-- [ ] T150 [P] Define Container Apps for API in dotnet/infra/modules/api-container-app.bicep
-- [ ] T151 [P] Define Container Apps for Web in dotnet/infra/modules/web-container-app.bicep
-- [ ] T152 [P] Configure Application Insights in dotnet/infra/modules/application-insights.bicep
-- [ ] T153 [P] Configure Key Vault for secrets in dotnet/infra/modules/key-vault.bicep
+- [ ] T148 Create Bicep template for Azure Container Apps in infra/main.bicep
+- [ ] T149 [P] Define Container Apps environment in infra/modules/container-apps-environment.bicep
+- [ ] T150 [P] Define Container Apps for API in infra/modules/api-container-app.bicep
+- [ ] T151 [P] Define Container Apps for Web in infra/modules/web-container-app.bicep
+- [ ] T152 [P] Configure Application Insights in infra/modules/application-insights.bicep
+- [ ] T153 [P] Configure Key Vault for secrets in infra/modules/key-vault.bicep
 
 ### Docker Containerization
 
-- [ ] T154 [P] Create Dockerfile for TechHub.Api in dotnet/src/TechHub.Api/Dockerfile
-- [ ] T155 [P] Create Dockerfile for TechHub.Web in dotnet/src/TechHub.Web/Dockerfile
+- [ ] T154 [P] Create Dockerfile for TechHub.Api in src/TechHub.Api/Dockerfile
+- [ ] T155 [P] Create Dockerfile for TechHub.Web in src/TechHub.Web/Dockerfile
 - [ ] T156 Create docker-compose.yml for local development in dotnet/docker-compose.yml
 
 ### CI/CD Pipeline
@@ -384,20 +384,20 @@ All .NET code resides in `dotnet/` directory per constitution requirements:
 
 ### Monitoring & Alerts
 
-- [ ] T163 [P] Configure Application Insights alerts for error rate >0.1% in dotnet/infra/modules/alerts.bicep
-- [ ] T164 [P] Configure Application Insights alerts for response time >200ms in dotnet/infra/modules/alerts.bicep
-- [ ] T165 Configure auto-scaling rules (1-10 instances, 80% CPU/memory threshold) in dotnet/infra/modules/scaling.bicep
+- [ ] T163 [P] Configure Application Insights alerts for error rate >0.1% in infra/modules/alerts.bicep
+- [ ] T164 [P] Configure Application Insights alerts for response time >200ms in infra/modules/alerts.bicep
+- [ ] T165 Configure auto-scaling rules (1-10 instances, 80% CPU/memory threshold) in infra/modules/scaling.bicep
 
 ### Health Checks
 
-- [ ] T166 Implement health check endpoint in dotnet/src/TechHub.Api/Endpoints/HealthEndpoints.cs
-- [ ] T167 [P] Add dependency health checks (cache, file system) in dotnet/src/TechHub.Api/HealthChecks/
+- [ ] T166 Implement health check endpoint in src/TechHub.Api/Endpoints/HealthEndpoints.cs
+- [ ] T167 [P] Add dependency health checks (cache, file system) in src/TechHub.Api/HealthChecks/
 
 ### Security
 
-- [ ] T168 [P] Configure Content Security Policy headers in dotnet/src/TechHub.Api/Middleware/SecurityHeadersMiddleware.cs
-- [ ] T169 [P] Configure HSTS headers in dotnet/src/TechHub.Api/Program.cs
-- [ ] T170 [P] Configure CORS policy (whitelist only) in dotnet/src/TechHub.Api/Program.cs
+- [ ] T168 [P] Configure Content Security Policy headers in src/TechHub.Api/Middleware/SecurityHeadersMiddleware.cs
+- [ ] T169 [P] Configure HSTS headers in src/TechHub.Api/Program.cs
+- [ ] T170 [P] Configure CORS policy (whitelist only) in src/TechHub.Api/Program.cs
 - [ ] T171 Implement input validation and sanitization in all API endpoints
 
 **Checkpoint**: Infrastructure complete - ready for production deployment
@@ -411,9 +411,9 @@ All .NET code resides in `dotnet/` directory per constitution requirements:
 ### Documentation
 
 - [ ] T172 [P] Create dotnet/README.md with setup instructions
-- [ ] T173 [P] Update dotnet/AGENTS.md with .NET development patterns
-- [ ] T174 [P] Document API endpoints in dotnet/docs/api-documentation.md
-- [ ] T175 [P] Create deployment runbook in dotnet/docs/deployment-runbook.md
+- [ ] T173 [P] Update AGENTS.md with .NET development patterns
+- [ ] T174 [P] Document API endpoints in docs/api-documentation.md
+- [ ] T175 [P] Create deployment runbook in docs/deployment-runbook.md
 
 ### Code Quality
 

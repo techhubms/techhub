@@ -16,7 +16,7 @@ This directory contains REST API endpoint specifications for the Tech Hub backen
 - ✅ Consistent naming (both sections and collections use human-readable names)
 - ❌ Removed flat structure endpoints (see Migration Notes below)
 
-See [/dotnet/docs/api-specification.md](../../../dotnet/docs/api-specification.md) for complete API reference.
+See [/docs/api-specification.md](../../../docs/api-specification.md) for complete API reference.
 
 ## Section Endpoints
 
@@ -233,6 +233,6 @@ Planned but not yet implemented:
 
 **Documentation**:
 
-- [API Specification](../../../dotnet/docs/api-specification.md) - Complete endpoint reference
-- [ADR: RESTful Structure](../../../dotnet/docs/decisions/restful-api-structure.md) - Design decision
-- [Test Suite](../../../dotnet/.tmp/test-restful-api.ps1) - Comprehensive tests
+- [API Specification](../../../docs/api-specification.md) - Complete endpoint reference
+- [ADR: RESTful Structure](../../../docs/decisions/restful-api-structure.md) - Design decision
+- [Test Suite](../../../.tmp/test-restful-api.ps1) - Comprehensive tests

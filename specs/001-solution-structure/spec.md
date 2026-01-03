@@ -324,7 +324,7 @@ TechHub.sln
 - `Endpoints/*.cs` - Minimal API endpoint groups
 - `appsettings.json` - Configuration
 
-**AGENTS.md**: `/dotnet/src/TechHub.Api/AGENTS.md` - API development patterns
+**AGENTS.md**: `/src/TechHub.Api/AGENTS.md` - API development patterns
 
 ---
 
@@ -355,7 +355,7 @@ TechHub.sln
 - `Components/Shared/*.razor` - Reusable components
 - `wwwroot/` - Static assets (CSS, JS, images)
 
-**AGENTS.md**: `/dotnet/src/TechHub.Web/AGENTS.md` - Blazor patterns
+**AGENTS.md**: `/src/TechHub.Web/AGENTS.md` - Blazor patterns
 
 ---
 
@@ -378,7 +378,7 @@ TechHub.sln
 - `Interfaces/IMarkdownProcessor.cs`
 - `Interfaces/IRssGenerator.cs`
 
-**AGENTS.md**: `/dotnet/src/TechHub.Core/AGENTS.md` - Domain design patterns
+**AGENTS.md**: `/src/TechHub.Core/AGENTS.md` - Domain design patterns
 
 ---
 
@@ -408,7 +408,7 @@ TechHub.sln
 - `Services/RssGenerator.cs`
 - `Configuration/ContentOptions.cs`
 
-**AGENTS.md**: `/dotnet/src/TechHub.Infrastructure/AGENTS.md` - Infrastructure patterns
+**AGENTS.md**: `/src/TechHub.Infrastructure/AGENTS.md` - Infrastructure patterns
 
 ---
 
@@ -494,7 +494,7 @@ All test projects use:
 
 **Project References**: `TechHub.Core`
 
-**AGENTS.md**: `/dotnet/tests/AGENTS.md` - Testing strategies
+**AGENTS.md**: `/tests/AGENTS.md` - Testing strategies
 
 ---
 

@@ -146,25 +146,25 @@ Nested routes enable efficient querying:
 
 ### Changed Files
 
-- `/dotnet/src/TechHub.Api/Endpoints/SectionsEndpoints.cs`
+- `/src/TechHub.Api/Endpoints/SectionsEndpoints.cs`
   - Added 4 new endpoint handlers:
     - `GetSectionItems()` - All items in section
     - `GetSectionCollections()` - All collections in section
     - `GetSectionCollection()` - Specific collection details
     - `GetSectionCollectionItems()` - Items in collection within section
 
-- `/dotnet/src/TechHub.Api/Endpoints/ContentEndpoints.cs`
+- `/src/TechHub.Api/Endpoints/ContentEndpoints.cs`
   - Removed: `GetAllContent()`, `GetContentByCollection()`, `GetContentByCategory()`, `GetContentById()`, `SearchContent()`
   - Added: `FilterContent()` with multi-criteria support
   - Kept: `GetAllTags()`
 
-- Deleted: `/dotnet/src/TechHub.Api/Endpoints/ItemsEndpoints.cs` (duplicate/obsolete)
+- Deleted: `/src/TechHub.Api/Endpoints/ItemsEndpoints.cs` (duplicate/obsolete)
 
 ### Documentation Updates
 
-- Created `/dotnet/docs/api-specification.md` with complete API reference
+- Created `/docs/api-specification.md` with complete API reference
 - This ADR documents the decision and rationale
-- Test suite `/dotnet/.tmp/test-restful-api.ps1` verifies all 14 endpoints
+- Test suite `/.tmp/test-restful-api.ps1` verifies all 14 endpoints
 
 ## Testing
 
@@ -201,7 +201,7 @@ All 14 endpoints tested and passing:
 
 ## References
 
-- [API Specification](/dotnet/docs/api-specification.md)
-- [Test Suite](/dotnet/.tmp/test-restful-api.ps1)
-- [SectionsEndpoints.cs](/dotnet/src/TechHub.Api/Endpoints/SectionsEndpoints.cs)
-- [ContentEndpoints.cs](/dotnet/src/TechHub.Api/Endpoints/ContentEndpoints.cs)
+- [API Specification](/docs/api-specification.md)
+- [Test Suite](/.tmp/test-restful-api.ps1)
+- [SectionsEndpoints.cs](/src/TechHub.Api/Endpoints/SectionsEndpoints.cs)
+- [ContentEndpoints.cs](/src/TechHub.Api/Endpoints/ContentEndpoints.cs)

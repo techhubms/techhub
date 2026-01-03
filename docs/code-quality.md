@@ -10,7 +10,7 @@ The project uses comprehensive code quality tooling to maintain consistent code 
 
 ### 1. EditorConfig (`.editorconfig`)
 
-**Location**: `/dotnet/.editorconfig`
+**Location**: `/.editorconfig`
 
 **Purpose**: Defines coding styles and formatting rules that are enforced by IDEs and build tools.
 
@@ -69,7 +69,7 @@ The following warnings are intentionally suppressed because they represent delib
 
 ### 3. Test-Specific Configuration
 
-**Location**: `/dotnet/tests/Directory.Build.props`
+**Location**: `/tests/Directory.Build.props`
 
 **Purpose**: Additional suppressions for test projects where certain conventions differ.
 

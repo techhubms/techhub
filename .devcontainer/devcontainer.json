@@ -221,7 +221,7 @@
       }
     }
   },
-  "postCreateCommand": "bash dotnet/.devcontainer/post-create.sh",
+  "postCreateCommand": "bash .devcontainer/post-create.sh",
   "forwardPorts": [5000, 5001, 15888, 5173],
   "portsAttributes": {
     "5000": { "label": "API HTTP" },

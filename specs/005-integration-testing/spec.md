@@ -325,7 +325,7 @@ Integration tests must validate that OpenAPI/Swagger documentation is available 
 
 ## Test Project Structure
 
-**Location**: `/dotnet/tests/TechHub.Api.Tests/`
+**Location**: `/tests/TechHub.Api.Tests/`
 
 **Organization**:
 
