@@ -42,7 +42,7 @@ Must cover:
 
 - Collection tabs navigation
 - Filtering controls (date, tags, search)
-- Content list with "20 + same-day" pagination
+- Content list with infinite scroll pagination
 - Server-side render, client-side enhancement
 
 **Custom Pages**:

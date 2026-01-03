@@ -264,7 +264,7 @@ All .NET code resides in repository root per constitution requirements:
 
 ### Filtering Logic
 
-- [ ] T107 [US2] Implement date range filtering logic (20 + Same-Day rule) in src/TechHub.Web/Services/ContentFilterService.cs
+- [ ] T107 [US2] Implement infinite scroll logic with configurable batch sizes (30-50 items) in src/TechHub.Web/Services/ContentFilterService.cs
 - [ ] T108 [P] [US2] Implement tag filtering logic (OR logic) in src/TechHub.Web/Services/ContentFilterService.cs
 - [ ] T109 [P] [US2] Implement text search filtering (title, description, tags) in src/TechHub.Web/Services/ContentFilterService.cs
 - [ ] T110 [US2] Integrate filtering with Section page component in src/TechHub.Web/Pages/Section.razor

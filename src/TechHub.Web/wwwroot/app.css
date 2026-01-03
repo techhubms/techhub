@@ -1,17 +1,18 @@
-h1:focus {
-    outline: none;
-}
-
+/* Form Validation States */
 .valid.modified:not([type=checkbox]) {
-    outline: 1px solid #26b050;
+    outline: 2px solid var(--color-accent-success, #3fb950);
+    outline-offset: 2px;
 }
 
 .invalid {
-    outline: 1px solid #e50000;
+    outline: 2px solid var(--color-accent-danger, #f85149);
+    outline-offset: 2px;
 }
 
 .validation-message {
-    color: #e50000;
+    color: var(--color-accent-danger, #f85149);
+    font-size: 0.875rem;
+    margin-top: 0.25rem;
 }
 
 .blazor-error-boundary {

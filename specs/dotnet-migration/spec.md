@@ -186,7 +186,7 @@ As a site administrator, I want to track user behavior, performance metrics, and
 **Filtering & Search**
 
 - **FR-008**: System MUST provide client-side date filtering with preset ranges (Last 7 days, Last 30 days, Last 90 days, Last 365 days, All time)
-- **FR-009**: System MUST implement "20 + Same-Day" rule for date filtering (show 20 most recent + any others from same day as 20th item)
+- **FR-009**: System MUST implement infinite scroll pagination with configurable batch sizes (30-50 items per batch, no arbitrary date-based limits)
 - **FR-010**: System MUST provide client-side tag filtering with multi-select capability (OR logic)
 - **FR-011**: System MUST provide client-side text search across title, description, and tags with debounced input
 - **FR-012**: System MUST synchronize filter state with URL query parameters for shareable filtered views

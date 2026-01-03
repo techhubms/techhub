@@ -4,7 +4,7 @@
 
 ## Overview
 
-Infinite scroll replaces the initial "20 + same-day" pagination with seamless progressive loading as users scroll down content lists. When users approach the bottom of the page, the system automatically fetches and appends the next batch of items without requiring button clicks. This enhancement improves browsing experience while maintaining compatibility with existing filtering, search, and URL state features.
+Infinite scroll provides seamless progressive content loading as users scroll down content lists. When users approach the bottom of the page, the system automatically fetches and appends the next batch of items without requiring button clicks. The initial server-side render loads 30-50 items (configurable), and subsequent batches load progressively as needed. This modern approach eliminates arbitrary pagination limits while maintaining compatibility with existing filtering, search, and URL state features.
 
 ## Requirements
 
@@ -28,7 +28,7 @@ Infinite scroll replaces the initial "20 + same-day" pagination with seamless pr
 **NFR-2**: Content loading MUST be debounced to prevent duplicate requests (minimum 500ms)  
 **NFR-3**: Loading indicator MUST appear within 100ms of scroll threshold  
 **NFR-4**: New content MUST render within 1 second of fetch completion  
-**NFR-5**: Infinite scroll MUST be disabled on initial page load (first 20 items server-rendered)  
+**NFR-5**: Infinite scroll MUST be disabled on initial page load (first batch server-rendered, configurable size 30-50 items)  
 **NFR-6**: Browsers without Intersection Observer MUST fall back to "Load More" button  
 **NFR-7**: Each fetch request MUST include current filter parameters (date, tags, search)  
 **NFR-8**: Scroll position MUST be preserved in session storage for back navigation  
@@ -39,17 +39,17 @@ Infinite scroll replaces the initial "20 + same-day" pagination with seamless pr
 ### UC-1: Automatic Content Loading
 
 **Actor**: Site Visitor  
-**Precondition**: Collection page is displayed with 20 items  
+**Precondition**: Collection page is displayed with initial batch (30-50 items)  
 **Trigger**: Visitor scrolls down content list  
 
 **Flow**:
 
-1. Visitor views collection page with initial 20 items (server-rendered)
+1. Visitor views collection page with initial batch of items (server-rendered)
 2. Visitor scrolls down to view items
 3. When visitor reaches 300px from bottom, Intersection Observer triggers
 4. System checks if more content available (total items > loaded items)
 5. Loading spinner appears at bottom of list
-6. System fetches next 20 items via API with current filters
+6. System fetches next batch (30-50 items) via API with current filters
 7. System appends new items below existing content
 8. Loading spinner disappears
 9. Visitor continues scrolling without interruption
@@ -66,10 +66,10 @@ Infinite scroll replaces the initial "20 + same-day" pagination with seamless pr
 **Flow**:
 
 1. Visitor applies "Last 30 days" filter
-2. Content list updates to show 20 filtered items
+2. Content list updates to show initial batch of filtered items
 3. Visitor scrolls down
 4. Intersection Observer triggers at bottom
-5. System fetches next batch with date filter parameter: `GET /api/items?date=30d&offset=20&limit=20`
+5. System fetches next batch with date filter parameter: `GET /api/items?date=30d&offset=30&limit=30`
 6. API returns only items matching date filter
 7. New items appended to list
 8. Filter state remains active
@@ -161,7 +161,7 @@ Infinite scroll replaces the initial "20 + same-day" pagination with seamless pr
 
 ## Acceptance Criteria
 
-**AC-1**: Given collection page with 100 items, when user scrolls to 300px from bottom, then next 20 items are fetched automatically  
+**AC-1**: Given collection page with 100 items, when user scrolls to 300px from bottom, then next batch (30-50 items) is fetched automatically  
 **AC-2**: Given fetch in progress, when triggered again within 500ms, then duplicate request is prevented (debounced)  
 **AC-3**: Given loading state, when waiting for response, then loading spinner is visible at bottom of list  
 **AC-4**: Given successful fetch, when items returned, then items are appended below existing content without page jump  
@@ -215,8 +215,8 @@ function handleIntersect(entries: IntersectionObserverEntry[]) {
 
 ```typescript
 interface InfiniteScrollState {
-  offset: number;           // Current offset (e.g., 0, 20, 40...)
-  limit: number;            // Items per batch (default: 20)
+  offset: number;           // Current offset (e.g., 0, 30, 60...)
+  limit: number;            // Items per batch (configurable: 30-50, default: 30)
   totalItems: number;       // Total available items
   isLoading: boolean;       // Fetch in progress
   hasMore: boolean;         // More content available
@@ -536,7 +536,7 @@ function initInfiniteScroll() {
 
 ```html
 <button id="load-more-button" class="btn btn-primary">
-  Load More (<span id="loaded-count">20</span> of <span id="total-count">150</span> loaded)
+  Load More (<span id="loaded-count">30</span> of <span id="total-count">150</span> loaded)
 </button>
 ```
 
@@ -645,13 +645,13 @@ function appendItems(items: Item[]) {
 
 ## Migration Notes
 
-**From Jekyll (MVP)**:
+**From Jekyll**:
 
-- MVP uses "20 + same-day" pagination with server-side rendering
-- Current behavior: Show first 20 items + all items from same day as 20th item
-- **POST-MVP**: Infinite scroll replaces pagination
-- **MIGRATION**: Keep "20 + same-day" for initial server-side render, infinite scroll for subsequent batches
-- **PRESERVE**: All filtering and search functionality must work with infinite scroll
+- **REMOVED**: Jekyll "20 + same-day" arbitrary pagination limits
+- **NEW**: Modern infinite scroll with configurable batch sizes (30-50 items)
+- **BENEFIT**: No more arbitrary date-based limits, users see all content progressively
+- **IMPLEMENTATION**: Initial server-side render loads first batch, infinite scroll loads subsequent batches
+- **PRESERVE**: All filtering and search functionality works with infinite scroll
 
 ## Testing Strategy
 

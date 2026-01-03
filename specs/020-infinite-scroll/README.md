@@ -9,7 +9,7 @@
 Infinite scroll pagination specification for progressive content loading:
 
 - Load more content as user scrolls down
-- Replace initial "20 + same-day" pagination
+- Configurable batch sizes (30-50 items, no arbitrary limits)
 - Maintain filter state during scroll
 - Provide loading indicators and error handling
 - Support URL state preservation
@@ -17,10 +17,11 @@ Infinite scroll pagination specification for progressive content loading:
 ## Why This Is Needed
 
 - Improves user experience for browsing large content lists
-- Eliminates need for "Load More" button clicks
-- Modern UX pattern expected by users
-- Maintains performance by loading content incrementally
+- Eliminates arbitrary pagination limits from Jekyll static site
+- Modern UX pattern expected by users (like Twitter, Reddit)
+- Maintains performance by loading content progressively
 - Reduces perceived page load time
+- All content accessible without manual pagination
 
 ## Dependencies
 
@@ -41,29 +42,34 @@ Must cover:
 - Performance optimization (debouncing, throttling)
 - Accessibility (keyboard navigation to loaded content, screen reader announcements)
 
-## Current Behavior (MVP)
+## Current Behavior (Jekyll - TO REPLACE)
 
-MVP uses "20 + same-day" pagination:
+Jekyll uses arbitrary "20 + same-day" pagination:
 
 1. Initial page load shows first 20 items
-2. Add all items from same day as 20th item
+2. Add all items from same day as 20th item (arbitrary limit)
 3. Apply 7-day recency filter
-4. Result: ~20-30 items per page
+4. Result: ~20-30 items per page with no way to see older content
 
-## Target Behavior (Post-MVP)
+**Problem**: Users can't see all content, arbitrary date-based limits
 
-With infinite scroll:
+## Target Behavior (.NET/Blazor)
 
-1. Initial page load shows first 20 items
-2. User scrolls near bottom → fetch next 20 items
+With modern infinite scroll:
+
+1. Initial page load shows first batch (30-50 items, configurable)
+2. User scrolls near bottom → fetch next batch (same size)
 3. Append to list seamlessly
 4. Continue until all content loaded or user stops scrolling
 5. Maintain filter state throughout
+6. Show total count: "Showing 45 of 237 items"
+7. All content accessible by scrolling
 
 ## References
 
-- `/docs/filtering-system.md` - "20 + same-day" rule
+- `/docs/filtering-system.md` - Filtering behavior
 - Root `AGENTS.md` - Performance and accessibility principles
+- [Intersection Observer API](https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API)
 
 ## Next Steps
 

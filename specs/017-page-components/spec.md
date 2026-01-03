@@ -39,7 +39,7 @@ This specification defines all page-level Blazor components that compose the use
 
 **FR-17**: The system MUST display content metadata (date, author, tags, categories)  
 **FR-18**: The system MUST render markdown content with proper heading hierarchy  
-**FR-19**: The system MUST display "20 + same-day" pagination on collection pages  
+**FR-19**: The system MUST display infinite scroll pagination on collection pages with configurable batch sizes  
 **FR-20**: The system MUST support embedded YouTube videos in markdown content  
 **FR-21**: The system MUST display related items based on tags/categories  
 
@@ -211,7 +211,7 @@ This specification defines all page-level Blazor components that compose the use
 **AC-6**: Given collection tabs, when page loads, then default collection tab is highlighted  
 **AC-7**: Given collection tab click, when JavaScript enabled, then content updates without full page reload  
 **AC-8**: Given collection tab click, when JavaScript disabled, then browser navigates to collection URL  
-**AC-9**: Given filtering controls, when no filters applied, then first 20 items + same-day items are visible  
+**AC-9**: Given filtering controls, when no filters applied, then first batch of items (30-50, configurable) is visible with total count  
 
 ### Custom Pages
 
@@ -319,14 +319,15 @@ This specification defines all page-level Blazor components that compose the use
 
 <main class="content-list">
   <div class="items">
-    <!-- First 20 + same-day items -->
+    <!-- Initial batch of items (30-50, configurable) -->
     @foreach (var item in Items) {
       <ItemCard item="@item" />
     }
   </div>
   
   @if (HasMore) {
-    <button class="load-more">Load More</button>
+    <div id="infinite-scroll-sentinel"></div>
+    <div class="loading-indicator">Loading...</div>
   }
 </main>
 ```
@@ -630,7 +631,7 @@ alt-collection: "features"  # Highlights "Features" tab even though URL is not /
 - `TagFilter` - Tag filter chips
 - `TextSearch` - Search input with debounce
 - `YouTubeEmbed` - Responsive YouTube video embed
-- `Pagination` - "20 + same-day" pagination control
+- `InfiniteScroll` - Progressive content loading with intersection observer
 
 ### Page-Specific Components
 
@@ -649,7 +650,7 @@ alt-collection: "features"  # Highlights "Features" tab even though URL is not /
 1. **Fetch data from API** (sections, collections, items)
 2. **Render complete HTML** (all visible content in initial response)
 3. **Apply default filters** (date, tags from URL parameters)
-4. **Calculate pagination** (first 20 + same-day items)
+4. **Calculate pagination** (first batch of 30-50 items, configurable)
 5. **Render metadata** (Open Graph, structured data)
 
 ### Client Responsibilities (Progressive Enhancement)
@@ -698,7 +699,7 @@ alt-collection: "features"  # Highlights "Features" tab even though URL is not /
 - Test each page component renders correctly with mock data
 - Test frontmatter parsing and special field handling
 - Test filter logic (date ranges, tag matching, tier filtering)
-- Test "20 + same-day" pagination calculation
+- Test infinite scroll batch loading and intersection observer
 - Test future date detection for features
 
 ### Integration Tests

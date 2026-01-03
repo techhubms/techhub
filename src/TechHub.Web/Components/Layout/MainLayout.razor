@@ -2,16 +2,18 @@
 
 <link href="styles.css" rel="stylesheet" />
 
+<a href="#main" class="skip-link">Skip to main content</a>
+
 <NavHeader />
 
-<main class="main-content">
+<main id="main" class="main-content">
     @Body
 </main>
 
 <footer class="site-footer">
     <div class="footer-content">
         <p>&copy; @DateTime.Now.Year Microsoft Tech Hub. All rights reserved.</p>
-        <nav class="footer-nav">
+        <nav class="footer-nav" aria-label="Footer navigation">
             <a href="/">Home</a>
         </nav>
     </div>
