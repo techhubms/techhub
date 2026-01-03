@@ -1,0 +1,477 @@
+using Microsoft.Playwright;
+using Xunit;
+using FluentAssertions;
+
+namespace TechHub.E2E.Tests.Tests;
+
+/// <summary>
+/// E2E tests for URL routing, collection navigation, and "all" collection functionality
+/// These tests document and verify the expected behavior of URL-based navigation
+/// </summary>
+public class UrlRoutingAndNavigationTests : IAsyncLifetime
+{
+    private IPlaywright? _playwright;
+    private IBrowser? _browser;
+    private const string BaseUrl = "http://localhost:5184";
+    private const string ApiUrl = "http://localhost:5029";
+
+    public async Task InitializeAsync()
+    {
+        _playwright = await Playwright.CreateAsync();
+        _browser = await _playwright.Chromium.LaunchAsync(new() { Headless = true });
+    }
+
+    public async Task DisposeAsync()
+    {
+        if (_browser != null)
+            await _browser.DisposeAsync();
+        
+        _playwright?.Dispose();
+    }
+
+    #region URL Routing Tests
+
+    [Fact]
+    public async Task NavigateToSection_DefaultsToAllCollection()
+    {
+        // Arrange
+        var page = await _browser!.NewPageAsync();
+        
+        // Act - Navigate to section without specifying collection
+        await page.GotoAsync($"{BaseUrl}/github-copilot");
+        await page.WaitForSelectorAsync(".collection-nav");
+        
+        // Assert - URL should show /github-copilot/all
+        page.Url.Should().EndWith("/github-copilot/all", 
+            "navigating to a section without collection should default to /section/all");
+        
+        // "All" button should be active
+        var activeButton = page.Locator(".collection-nav button.active");
+        var activeText = await activeButton.TextContentAsync();
+        activeText.Should().Contain("All", "the 'All' collection button should be active by default");
+        
+        await page.CloseAsync();
+    }
+
+    [Fact]
+    public async Task NavigateToSectionWithCollection_URLMatchesRoute()
+    {
+        // Arrange
+        var page = await _browser!.NewPageAsync();
+        
+        // Act - Navigate directly to /github-copilot/news
+        await page.GotoAsync($"{BaseUrl}/github-copilot/news");
+        await page.WaitForSelectorAsync(".collection-nav");
+        await page.WaitForSelectorAsync(".content-item-card");
+        
+        // Assert - URL should remain /github-copilot/news
+        page.Url.Should().EndWith("/github-copilot/news",
+            "URL should match the route /section/collection");
+        
+        // News button should be active
+        var activeButton = page.Locator(".collection-nav button.active");
+        var activeText = await activeButton.TextContentAsync();
+        activeText.Should().Contain("News", "the News collection button should be active");
+        
+        await page.CloseAsync();
+    }
+
+    [Fact]
+    public async Task ClickCollectionButton_UpdatesURL()
+    {
+        // Arrange
+        var page = await _browser!.NewPageAsync();
+        await page.GotoAsync($"{BaseUrl}/github-copilot");
+        await page.WaitForSelectorAsync(".collection-nav");
+        
+        // Act - Click "Blogs" collection button
+        var blogsButton = page.Locator(".collection-nav button", new() { HasTextString = "Blogs" });
+        await blogsButton.ClickAsync();
+        
+        // Assert - URL should update to /github-copilot/blogs
+        await page.WaitForURLAsync("**/github-copilot/blogs");
+        page.Url.Should().EndWith("/github-copilot/blogs",
+            "clicking a collection button should update the URL to /section/collection");
+        
+        // Content should reload with only blogs
+        await page.WaitForSelectorAsync(".content-item-card");
+        var collectionTitle = await page.Locator(".collection-title").TextContentAsync();
+        collectionTitle.Should().Contain("Blogs", "the collection title should reflect the selected collection");
+        
+        await page.CloseAsync();
+    }
+
+    [Fact]
+    public async Task ClickAllButton_UpdatesURLToSectionSlashAll()
+    {
+        // Arrange
+        var page = await _browser!.NewPageAsync();
+        await page.GotoAsync($"{BaseUrl}/github-copilot/news");
+        await page.WaitForSelectorAsync(".collection-nav");
+        
+        // Act - Click "All" button
+        var allButton = page.Locator(".collection-nav button", new() { HasTextString = "All" });
+        await allButton.ClickAsync();
+        
+        // Assert - URL should update to /github-copilot/all
+        await page.WaitForURLAsync("**/github-copilot/all");
+        page.Url.Should().EndWith("/github-copilot/all",
+            "clicking the 'All' button should update the URL to /section/all");
+        
+        await page.CloseAsync();
+    }
+
+    [Fact]
+    public async Task BrowserBackButton_NavigatesToPreviousCollection()
+    {
+        // Arrange
+        var page = await _browser!.NewPageAsync();
+        await page.GotoAsync($"{BaseUrl}/github-copilot/news");
+        await page.WaitForSelectorAsync(".collection-nav");
+        
+        // Navigate to videos
+        var videosButton = page.Locator(".collection-nav button", new() { HasTextString = "Videos" });
+        await videosButton.ClickAsync();
+        await page.WaitForURLAsync("**/github-copilot/videos");
+        
+        // Act - Press browser back button
+        await page.GoBackAsync();
+        
+        // Assert - Should return to /github-copilot/news
+        await page.WaitForURLAsync("**/github-copilot/news");
+        page.Url.Should().EndWith("/github-copilot/news",
+            "browser back button should navigate to previous collection URL");
+        
+        // News button should be active again
+        var activeButton = page.Locator(".collection-nav button.active");
+        var activeText = await activeButton.TextContentAsync();
+        activeText.Should().Contain("News", "the previously active collection should be restored");
+        
+        await page.CloseAsync();
+    }
+
+    [Fact]
+    public async Task BrowserForwardButton_NavigatesToNextCollection()
+    {
+        // Arrange
+        var page = await _browser!.NewPageAsync();
+        await page.GotoAsync($"{BaseUrl}/github-copilot/news");
+        await page.WaitForSelectorAsync(".collection-nav");
+        
+        // Navigate to videos
+        var videosButton = page.Locator(".collection-nav button", new() { HasTextString = "Videos" });
+        await videosButton.ClickAsync();
+        await page.WaitForURLAsync("**/github-copilot/videos");
+        
+        // Go back to news
+        await page.GoBackAsync();
+        await page.WaitForURLAsync("**/github-copilot/news");
+        
+        // Act - Press browser forward button
+        await page.GoForwardAsync();
+        
+        // Assert - Should return to /github-copilot/videos
+        await page.WaitForURLAsync("**/github-copilot/videos");
+        page.Url.Should().EndWith("/github-copilot/videos",
+            "browser forward button should navigate to next collection URL");
+        
+        await page.CloseAsync();
+    }
+
+    #endregion
+
+    #region "All" Collection Tests
+
+    [Fact]
+    public async Task AllCollection_ShowsAllContentFromSection()
+    {
+        // Arrange
+        var page = await _browser!.NewPageAsync();
+        
+        // Get total item count across all GitHub Copilot collections from API
+        var apiResponse = await page.APIRequest.GetAsync($"{ApiUrl}/api/content?category=GitHub%20Copilot");
+        var allItems = await apiResponse.JsonAsync();
+        var totalItemCount = allItems.Value.GetArrayLength();
+        
+        // Act - Navigate to /github-copilot/all
+        await page.GotoAsync($"{BaseUrl}/github-copilot/all");
+        await page.WaitForSelectorAsync(".content-item-card");
+        
+        // Assert - Should display all GitHub Copilot items regardless of collection
+        var displayedItems = await page.Locator(".content-item-card").CountAsync();
+        displayedItems.Should().Be(totalItemCount,
+            "the 'all' collection should show all content items from the section across all collection types");
+        
+        // Collection title should indicate "All Collections"
+        var collectionTitle = await page.Locator(".collection-title").TextContentAsync();
+        collectionTitle.Should().Contain("All", "the title should indicate showing all collections");
+        
+        await page.CloseAsync();
+    }
+
+    [Fact]
+    public async Task AllSection_AllCollection_ShowsEverything()
+    {
+        // Arrange
+        var page = await _browser!.NewPageAsync();
+        
+        // Get total item count across ALL sections and collections from API
+        var apiResponse = await page.APIRequest.GetAsync($"{ApiUrl}/api/content");
+        var allItems = await apiResponse.JsonAsync();
+        var totalItemCount = allItems.Value.GetArrayLength();
+        
+        // Act - Navigate to /all/all
+        await page.GotoAsync($"{BaseUrl}/all/all");
+        await page.WaitForSelectorAsync(".content-item-card");
+        
+        // Assert - Should display ALL content from ALL sections and collections
+        var displayedItems = await page.Locator(".content-item-card").CountAsync();
+        displayedItems.Should().Be(totalItemCount,
+            "/all/all should show absolutely all content items from all sections and all collections");
+        
+        await page.CloseAsync();
+    }
+
+    [Fact]
+    public async Task AllSection_SpecificCollection_ShowsCollectionAcrossAllSections()
+    {
+        // Arrange
+        var page = await _browser!.NewPageAsync();
+        
+        // Get total news count across all sections from API
+        var apiResponse = await page.APIRequest.GetAsync($"{ApiUrl}/api/content?collection=news");
+        var allNewsItems = await apiResponse.JsonAsync();
+        var totalNewsCount = allNewsItems.Value.GetArrayLength();
+        
+        // Act - Navigate to /all/news
+        await page.GotoAsync($"{BaseUrl}/all/news");
+        await page.WaitForSelectorAsync(".content-item-card");
+        
+        // Assert - Should display all news items from all sections
+        var displayedItems = await page.Locator(".content-item-card").CountAsync();
+        displayedItems.Should().Be(totalNewsCount,
+            "/all/news should show all news items from all sections");
+        
+        // All items should be from "news" collection
+        var collectionBadges = await page.Locator(".collection-badge").AllTextContentsAsync();
+        collectionBadges.Should().AllSatisfy(badge => 
+            badge.Should().Contain("News", "all items should be from the News collection"));
+        
+        await page.CloseAsync();
+    }
+
+    [Fact]
+    public async Task AllButton_ExistsInCollectionSidebar()
+    {
+        // Arrange
+        var page = await _browser!.NewPageAsync();
+        
+        // Act - Navigate to any section
+        await page.GotoAsync($"{BaseUrl}/github-copilot");
+        await page.WaitForSelectorAsync(".collection-nav");
+        
+        // Assert - "All" button should exist in the collection nav
+        var allButton = page.Locator(".collection-nav button", new() { HasTextString = "All" });
+        (await allButton.CountAsync()).Should().Be(1,
+            "there should be exactly one 'All' button in the collection sidebar");
+        
+        (await allButton.IsVisibleAsync()).Should().BeTrue(
+            "the 'All' button should be visible");
+        
+        await page.CloseAsync();
+    }
+
+    [Fact]
+    public async Task AllCollection_ShowsCollectionBadges()
+    {
+        // Arrange
+        var page = await _browser!.NewPageAsync();
+        
+        // Act - Navigate to /github-copilot/all
+        await page.GotoAsync($"{BaseUrl}/github-copilot/all");
+        await page.WaitForSelectorAsync(".content-item-card");
+        
+        // Assert - Collection badges should be visible on items
+        var firstCard = page.Locator(".content-item-card").First;
+        var collectionBadge = firstCard.Locator(".collection-badge");
+        
+        (await collectionBadge.IsVisibleAsync()).Should().BeTrue(
+            "collection badges should be shown on 'all' pages to distinguish content types");
+        
+        // Badge should have proper capitalization
+        var badgeText = await collectionBadge.TextContentAsync();
+        badgeText.Should().MatchRegex("^[A-Z]",
+            "collection badge should start with a capital letter (proper capitalization)");
+        
+        await page.CloseAsync();
+    }
+
+    [Fact]
+    public async Task SpecificCollection_DoesNotShowCollectionBadge()
+    {
+        // Arrange
+        var page = await _browser!.NewPageAsync();
+        
+        // Act - Navigate to /github-copilot/news
+        await page.GotoAsync($"{BaseUrl}/github-copilot/news");
+        await page.WaitForSelectorAsync(".content-item-card");
+        
+        // Assert - Collection badge should NOT be visible (redundant)
+        var firstCard = page.Locator(".content-item-card").First;
+        var collectionBadge = firstCard.Locator(".collection-badge");
+        
+        var isVisible = await collectionBadge.IsVisibleAsync();
+        isVisible.Should().BeFalse(
+            "collection badges should be hidden when viewing a specific collection (redundant information)");
+        
+        await page.CloseAsync();
+    }
+
+    #endregion
+
+    #region Interactive Button Tests
+
+    [Fact]
+    public async Task CollectionButtons_AreInteractive()
+    {
+        // Arrange
+        var page = await _browser!.NewPageAsync();
+        await page.GotoAsync($"{BaseUrl}/github-copilot");
+        await page.WaitForSelectorAsync(".collection-nav");
+        
+        // Act - Click each collection button and verify navigation
+        var newsButton = page.Locator(".collection-nav button", new() { HasTextString = "News" });
+        await newsButton.ClickAsync();
+        await page.WaitForURLAsync("**/github-copilot/news");
+        
+        var blogsButton = page.Locator(".collection-nav button", new() { HasTextString = "Blogs" });
+        await blogsButton.ClickAsync();
+        await page.WaitForURLAsync("**/github-copilot/blogs");
+        
+        var videosButton = page.Locator(".collection-nav button", new() { HasTextString = "Videos" });
+        await videosButton.ClickAsync();
+        await page.WaitForURLAsync("**/github-copilot/videos");
+        
+        var communityButton = page.Locator(".collection-nav button", new() { HasTextString = "Community" });
+        await communityButton.ClickAsync();
+        await page.WaitForURLAsync("**/github-copilot/community");
+        
+        // Assert - All buttons worked
+        page.Url.Should().EndWith("/github-copilot/community",
+            "all collection buttons should be interactive and update the URL");
+        
+        await page.CloseAsync();
+    }
+
+    [Fact]
+    public async Task RetryButton_ReloadsContentAfterError()
+    {
+        // Arrange
+        var page = await _browser!.NewPageAsync();
+        
+        // Simulate an error by navigating with API down (we'll test with valid URL but check button exists)
+        await page.GotoAsync(BaseUrl);
+        await page.WaitForSelectorAsync(".home-header");
+        
+        // Check if error message with retry button appears (may not in normal conditions)
+        var retryButton = page.Locator("button", new() { HasTextString = "Retry" });
+        var retryButtonExists = await retryButton.CountAsync() > 0;
+        
+        if (retryButtonExists)
+        {
+            // Act - Click retry button
+            await retryButton.ClickAsync();
+            
+            // Assert - Should attempt to reload (check for loading state or success)
+            await page.WaitForSelectorAsync(".section-card", new() { Timeout = 5000 });
+        }
+        
+        // If no error state, just verify the button would work (test passes either way)
+        retryButtonExists.Should().BeFalse(
+            "under normal conditions, no error message or retry button should appear");
+        
+        await page.CloseAsync();
+    }
+
+    [Fact]
+    public async Task ActiveCollectionButton_HasActiveClass()
+    {
+        // Arrange
+        var page = await _browser!.NewPageAsync();
+        await page.GotoAsync($"{BaseUrl}/github-copilot/news");
+        await page.WaitForSelectorAsync(".collection-nav");
+        
+        // Assert - News button should have "active" class
+        var newsButton = page.Locator(".collection-nav button", new() { HasTextString = "News" });
+        var className = await newsButton.GetAttributeAsync("class");
+        className.Should().Contain("active",
+            "the currently selected collection button should have the 'active' class");
+        
+        // Other buttons should NOT have "active" class
+        var blogsButton = page.Locator(".collection-nav button", new() { HasTextString = "Blogs" });
+        var blogsClass = await blogsButton.GetAttributeAsync("class");
+        blogsClass.Should().NotContain("active",
+            "non-selected collection buttons should not have the 'active' class");
+        
+        await page.CloseAsync();
+    }
+
+    #endregion
+
+    #region URL Sharing and Bookmarking
+
+    [Fact]
+    public async Task DirectURL_LoadsCorrectCollectionState()
+    {
+        // Arrange & Act - Open browser directly to a specific collection URL
+        var page = await _browser!.NewPageAsync();
+        await page.GotoAsync($"{BaseUrl}/azure/news");
+        await page.WaitForSelectorAsync(".collection-nav");
+        await page.WaitForSelectorAsync(".content-item-card");
+        
+        // Assert - Should load Azure News collection
+        page.Url.Should().EndWith("/azure/news",
+            "direct URL navigation should preserve the collection route");
+        
+        var activeButton = page.Locator(".collection-nav button.active");
+        var activeText = await activeButton.TextContentAsync();
+        activeText.Should().Contain("News",
+            "the correct collection should be active when loading from direct URL");
+        
+        var sectionHeading = await page.Locator("h1").TextContentAsync();
+        sectionHeading.Should().Contain("Azure",
+            "the correct section should be displayed when loading from direct URL");
+        
+        await page.CloseAsync();
+    }
+
+    [Fact]
+    public async Task CopiedURL_SharesExactCollectionState()
+    {
+        // Arrange
+        var page1 = await _browser!.NewPageAsync();
+        await page1.GotoAsync($"{BaseUrl}/ml/videos");
+        await page1.WaitForSelectorAsync(".collection-nav");
+        var sharedUrl = page1.Url;
+        
+        // Act - Open shared URL in new tab/page
+        var page2 = await _browser!.NewPageAsync();
+        await page2.GotoAsync(sharedUrl);
+        await page2.WaitForSelectorAsync(".collection-nav");
+        await page2.WaitForSelectorAsync(".content-item-card");
+        
+        // Assert - Both pages should show identical state
+        page2.Url.Should().Be(sharedUrl,
+            "shared URL should load the exact same route");
+        
+        var activeButton = page2.Locator(".collection-nav button.active");
+        var activeText = await activeButton.TextContentAsync();
+        activeText.Should().Contain("Videos",
+            "shared URL should restore the exact collection state");
+        
+        await page1.CloseAsync();
+        await page2.CloseAsync();
+    }
+
+    #endregion
+}

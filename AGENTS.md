@@ -287,6 +287,12 @@ When renaming ANY identifier, you **MUST** verify and update ALL occurrences acr
 - Make parameters required unless they can be null
 - **Run tests frequently** during implementation to catch issues early
 
+**Starting/Stopping the Application**:
+
+- **ALWAYS use `./run.ps1` to start/stop/build/test the ENTIRE website** - it handles service orchestration correctly
+- For building/testing individual projects only, use specific dotnet commands (e.g., `dotnet build src/TechHub.Api/TechHub.Api.csproj`)
+- The run.ps1 script ensures proper startup order, health checks, and graceful shutdown
+
 **Critical Requirements**:
 
 - **Ask for clarification** on ANYTHING unclear - NEVER assume

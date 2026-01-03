@@ -19,6 +19,12 @@ else
     echo "dotnet-ef already installed"
 fi
 
+if ! dotnet tool list -g | grep -q microsoft.playwright.cli; then
+    dotnet tool install --global Microsoft.Playwright.CLI
+else
+    dotnet tool update --global Microsoft.Playwright.CLI
+fi
+
 # ==================== Aspire ====================
 
 #DO NOT INSTALL THE ASPIRE WORKLOAD VIA DOTNET NEW ANYMORE: The Aspire workload is deprecated and no longer necessary. Aspire is now available as NuGet packages that you can add directly to your projects. For more information, see https://aka.ms/aspire/support-policy

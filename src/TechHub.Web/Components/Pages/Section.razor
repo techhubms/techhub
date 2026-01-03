@@ -4,6 +4,7 @@
 @using TechHub.Web.Services
 @inject TechHubApiClient ApiClient
 @inject NavigationManager Navigation
+@rendermode InteractiveServer
 
 <PageTitle>@PageTitle - Tech Hub</PageTitle>
 
@@ -206,7 +207,7 @@
             else if (section.Category.Equals("All", StringComparison.OrdinalIgnoreCase))
             {
                 // /all/news - get all news across all sections
-                contentItems = await ApiClient.GetContentAsync(null, selectedCollection);
+                contentItems = await ApiClient.GetContentAsync("", selectedCollection);
             }
             else
             {

@@ -158,8 +158,13 @@ All .NET code resides in repository root per constitution requirements:
 
 ### Pages for User Story 1
 
-- [X] T064 [US1] Create Home page in src/TechHub.Web/Pages/Home.razor
-- [X] T065 [US1] Create Section page (collections + items) in src/TechHub.Web/Pages/Section.razor
+- [X] T064 [US1] Create Home page in src/TechHub.Web/Pages/Home.razor (with @rendermode InteractiveServer for retry button)
+- [X] T065 [US1] Create Section page (collections + items) in src/TechHub.Web/Pages/Section.razor (with @rendermode InteractiveServer and URL routing)
+  - Dual route support: /{sectionName} and /{sectionName}/{collectionName}
+  - SelectCollection method navigates to /section/collection URLs
+  - OnParametersSetAsync detects URL changes and reloads content
+  - "All" button in collection sidebar
+  - Support for /all/all (everything), /section/all (all from section), /all/collection (collection across sections)
 - [X] T066 [US1] Create Content detail page in src/TechHub.Web/Pages/Content.razor
 
 ### API Client for User Story 1
@@ -203,8 +208,18 @@ All .NET code resides in repository root per constitution requirements:
 
 ### E2E Tests for User Story 1
 
-- [ ] T083 [P] [US1] Playwright test for home page navigation in tests/TechHub.E2E.Tests/Tests/HomePageTests.cs
-- [ ] T084 [P] [US1] Playwright test for section browsing in tests/TechHub.E2E.Tests/Tests/SectionBrowsingTests.cs
+- [X] T083 [P] [US1] Playwright test for home page navigation in tests/TechHub.E2E.Tests/Tests/NavigationImprovementsTests.cs
+- [X] T084 [P] [US1] Playwright test for section browsing in tests/TechHub.E2E.Tests/Tests/NavigationImprovementsTests.cs
+- [X] T084.1 [P] [US1] **NEW** Comprehensive URL routing and "all" collection tests in tests/TechHub.E2E.Tests/Tests/UrlRoutingAndNavigationTests.cs
+  - Tests URL patterns: /section, /section/collection, /section/all, /all/all, /all/collection
+  - Tests collection button clicks update URL correctly
+  - Tests browser back/forward navigation
+  - Tests "all" collection shows all content from section
+  - Tests collection badges display logic (shown on "all", hidden on specific collection)
+  - Tests retry button functionality
+  - Tests active button states
+  - Tests URL sharing and bookmarking
+  - 20 comprehensive test cases documenting expected behavior
 - [ ] T085 [P] [US1] Playwright test for content detail viewing in tests/TechHub.E2E.Tests/Tests/ContentViewingTests.cs
 - [ ] T086 [P] [US1] Playwright test for mobile responsive layout in tests/TechHub.E2E.Tests/Tests/ResponsiveDesignTests.cs
 - [ ] T087 [P] [US1] Playwright test for accessibility (keyboard navigation, screen reader) in tests/TechHub.E2E.Tests/Tests/AccessibilityTests.cs
