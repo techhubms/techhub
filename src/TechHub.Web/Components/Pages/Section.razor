@@ -2,16 +2,19 @@
 @page "/{sectionName}/{collectionName}"
 @using TechHub.Core.DTOs
 @using TechHub.Web.Services
+@using Microsoft.JSInterop
 @inject TechHubApiClient ApiClient
 @inject NavigationManager Navigation
+@inject IJSRuntime JS
+@implements IAsyncDisposable
 @rendermode InteractiveServer
 
 <PageTitle>@PageTitle - Tech Hub</PageTitle>
 
 <div class="section-page">
-    @if (isLoading)
+    @if (isLoading && showLoadingState)
     {
-        <div class="loading">
+        <div class="loading fade-in">
             <p>Loading section...</p>
         </div>
     }
@@ -44,9 +47,9 @@
                                     class="@(selectedCollection == "all" ? "active" : "")"
                                     disabled="@isLoadingContent">
                                 All
-                                @if (selectedCollection == "all" && isLoadingContent)
+                                @if (selectedCollection == "all" && showContentLoadingState)
                                 {
-                                    <span class="loading-indicator">Loading...</span>
+                                    <span class="loading-indicator fade-in">Loading...</span>
                                 }
                             </button>
                         </li>
@@ -57,9 +60,9 @@
                                         class="@(selectedCollection == collection.Collection ? "active" : "")"
                                         disabled="@isLoadingContent">
                                     @collection.Title
-                                    @if (selectedCollection == collection.Collection && isLoadingContent)
+                                    @if (selectedCollection == collection.Collection && showContentLoadingState)
                                     {
-                                        <span class="loading-indicator">Loading...</span>
+                                        <span class="loading-indicator fade-in">Loading...</span>
                                     }
                                 </button>
                             </li>
@@ -67,7 +70,7 @@
                     </ul>
                 </nav>
 
-                <div class="collection-content">
+                <div class="collection-content @(isLoadingContent ? "loading" : "")">
                     @if (contentItems != null)
                     {
                         <h2 class="collection-title">@GetCollectionDisplayName(selectedCollection)</h2>
@@ -99,9 +102,27 @@
     private string? previousCollectionName;
     private bool isLoading = true;
     private bool isLoadingContent = false;
+    private bool showLoadingState = false;
+    private bool showContentLoadingState = false;
+    private bool shouldRender = true;
+    private CancellationTokenSource? loadingDelayCts;
+    private CancellationTokenSource? contentLoadingDelayCts;
     private string? errorMessage;
 
     private string PageTitle => section?.Title ?? SectionName;
+
+    protected override bool ShouldRender()
+    {
+        // Always render on initial load or errors
+        if (shouldRender)
+        {
+            return true;
+        }
+        
+        // If only content changed (same section, different collection),
+        // we still need to render but we can optimize
+        return true;
+    }
 
     protected override async Task OnInitializedAsync()
     {
@@ -112,26 +133,58 @@
 
     protected override async Task OnParametersSetAsync()
     {
-        // Only reload if section or collection actually changed
-        if (SectionName != previousSectionName)
+        // Track if section changed for full reload
+        bool sectionChanged = SectionName != previousSectionName;
+        bool collectionChanged = CollectionName != previousCollectionName;
+        
+        if (sectionChanged)
         {
+            // Section changed - full reload needed
             previousSectionName = SectionName;
             previousCollectionName = CollectionName;
+            shouldRender = true;
             await LoadSection();
         }
-        else if (CollectionName != previousCollectionName)
+        else if (collectionChanged)
         {
+            // Same section, different collection - only update content
             previousCollectionName = CollectionName;
             selectedCollection = CollectionName ?? "all";
+            shouldRender = true;
             await LoadCollectionContent();
+        }
+        else
+        {
+            // Nothing changed - prevent render
+            shouldRender = false;
         }
     }
 
     private async Task LoadSection()
     {
         isLoading = true;
+        showLoadingState = false;
         errorMessage = null;
-        StateHasChanged(); // Update UI to show loading state
+        
+        // Cancel any existing loading delay
+        loadingDelayCts?.Cancel();
+        loadingDelayCts = new CancellationTokenSource();
+        var delayCts = loadingDelayCts;
+        
+        // Only show loading state if request takes longer than 300ms
+        _ = Task.Run(async () =>
+        {
+            try
+            {
+                await Task.Delay(300, delayCts.Token);
+                showLoadingState = true;
+                await InvokeAsync(StateHasChanged);
+            }
+            catch (TaskCanceledException)
+            {
+                // Loading completed before delay - do nothing
+            }
+        });
         
         try
         {
@@ -169,15 +222,24 @@
         }
         finally
         {
+            loadingDelayCts?.Cancel();
             isLoading = false;
+            showLoadingState = false;
             StateHasChanged(); // Update UI with results or error
         }
     }
 
-    private void SelectCollection(string collectionName)
+    private async void SelectCollection(string collectionName)
     {
-        // Navigate to /section/collection URL
-        Navigation.NavigateTo($"/{SectionName}/{collectionName}");
+        // Update URL using JavaScript history API to avoid triggering Blazor navigation
+        await JS.InvokeVoidAsync("history.pushState", null, "", $"/{SectionName}/{collectionName}");
+        
+        // Update local state
+        selectedCollection = collectionName;
+        previousCollectionName = collectionName;
+        
+        // Load new collection content (only updates content area)
+        await LoadCollectionContent();
     }
 
     private async Task LoadCollectionContent()
@@ -185,7 +247,27 @@
         if (string.IsNullOrEmpty(selectedCollection) || section == null) return;
 
         isLoadingContent = true;
-        StateHasChanged(); // Show loading state for collection content
+        showContentLoadingState = false;
+        
+        // Cancel any existing content loading delay
+        contentLoadingDelayCts?.Cancel();
+        contentLoadingDelayCts = new CancellationTokenSource();
+        var delayCts = contentLoadingDelayCts;
+        
+        // Only show loading state if request takes longer than 300ms
+        _ = Task.Run(async () =>
+        {
+            try
+            {
+                await Task.Delay(300, delayCts.Token);
+                showContentLoadingState = true;
+                await InvokeAsync(StateHasChanged);
+            }
+            catch (TaskCanceledException)
+            {
+                // Loading completed before delay - do nothing
+            }
+        });
         
         try
         {
@@ -221,7 +303,9 @@
         }
         finally
         {
+            contentLoadingDelayCts?.Cancel();
             isLoadingContent = false;
+            showContentLoadingState = false;
             StateHasChanged(); // Update UI with results
         }
     }
@@ -241,4 +325,12 @@
     private bool IsAllSection => section?.Category.Equals("All", StringComparison.OrdinalIgnoreCase) ?? false;
     
     private bool IsAllCollection => selectedCollection.Equals("all", StringComparison.OrdinalIgnoreCase);
+
+    public async ValueTask DisposeAsync()
+    {
+        loadingDelayCts?.Cancel();
+        loadingDelayCts?.Dispose();
+        contentLoadingDelayCts?.Cancel();
+        contentLoadingDelayCts?.Dispose();
+    }
 }

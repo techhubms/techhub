@@ -12,9 +12,9 @@
         <p class="tagline">Your source for Microsoft technology news, tutorials, and community content</p>
     </header>
 
-    @if (isLoading)
+    @if (isLoading && showLoadingState)
     {
-        <div class="loading">
+        <div class="loading fade-in">
             <p>Loading sections...</p>
         </div>
     }
@@ -49,6 +49,8 @@
 @code {
     private IEnumerable<SectionDto>? sections;
     private bool isLoading = true;
+    private bool showLoadingState = false;
+    private CancellationTokenSource? loadingDelayCts;
     private string? errorMessage;
 
     protected override async Task OnInitializedAsync()
@@ -59,8 +61,28 @@
     private async Task LoadSections()
     {
         isLoading = true;
+        showLoadingState = false;
         errorMessage = null;
-        StateHasChanged(); // Update UI to show loading state
+        
+        // Cancel any existing loading delay
+        loadingDelayCts?.Cancel();
+        loadingDelayCts = new CancellationTokenSource();
+        var delayCts = loadingDelayCts;
+        
+        // Only show loading state if request takes longer than 300ms
+        _ = Task.Run(async () =>
+        {
+            try
+            {
+                await Task.Delay(300, delayCts.Token);
+                showLoadingState = true;
+                await InvokeAsync(StateHasChanged);
+            }
+            catch (TaskCanceledException)
+            {
+                // Loading completed before delay - do nothing
+            }
+        });
         
         try
         {
@@ -72,7 +94,9 @@
         }
         finally
         {
+            loadingDelayCts?.Cancel();
             isLoading = false;
+            showLoadingState = false;
             StateHasChanged(); // Update UI with results or error
         }
     }

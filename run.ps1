@@ -217,9 +217,13 @@ function Stop-ExistingProcesses {
                     Write-Step "Cleaning up existing processes"
                     $stoppedAny = $true
                 }
-                Write-Info "  Port $port is in use, killing process(es): $($processIds -join ', ')"
-                $processIds | ForEach-Object { Stop-Process -Id $_ -Force -ErrorAction SilentlyContinue }
-                Start-Sleep -Milliseconds 500
+                Write-Info "Port $port is in use, killing process(es): $($processIds -join ', ')"
+                # Use SIGKILL for immediate termination
+                $processIds | ForEach-Object { 
+                    kill -9 $_ 2>$null
+                }
+                # Brief wait to ensure ports are released
+                Start-Sleep -Milliseconds 200
             }
         }
         catch {
@@ -304,70 +308,81 @@ function Start-BothProjects {
     Write-Info "Web: $webUrl"
     Write-Info "Press Ctrl+C to stop all"
     
-    # Start API in background job
-    $apiJob = Start-Job -ScriptBlock {
-        param($ProjectPath, $Port, $Configuration)
-        
-        $env:ASPNETCORE_ENVIRONMENT = "Development"
-        $env:ASPNETCORE_URLS = "http://localhost:$Port"
-        
-        Set-Location (Split-Path $ProjectPath -Parent)
-        dotnet run --project $ProjectPath --no-build --configuration $Configuration
-    } -ArgumentList $apiProjectPath, $ApiPort, $configuration
-    
-    # Wait for API to start
-    Write-Info "Waiting for API to start..."
-    Start-Sleep -Seconds 3
-    
-    # Start Web in background job
-    $webJob = Start-Job -ScriptBlock {
-        param($ProjectPath, $Configuration)
-        
-        $env:ASPNETCORE_ENVIRONMENT = "Development"
-        
-        Set-Location (Split-Path $ProjectPath -Parent)
-        dotnet run --project $ProjectPath --no-build --configuration $Configuration
-    } -ArgumentList $webProjectPath, $configuration
-    
-    # Wait for Web to start
-    Write-Info "Waiting for Web to start..."
-    Start-Sleep -Seconds 3
-    
-    # Open browser if requested
-    if (-not $NoBrowser) {
-        Start-Process $webUrl
-    }
-    
-    Write-Success "Both projects started"
-    Write-Info "`nMonitoring output (Ctrl+C to stop):"
-    Write-Info "Use 'Get-Job | Receive-Job' to see detailed output"
+    # Track processes for cleanup
+    $script:apiProcess = $null
+    $script:webProcess = $null
     
     try {
-        # Monitor both jobs
+        # Start API process
+        $apiStartInfo = New-Object System.Diagnostics.ProcessStartInfo
+        $apiStartInfo.FileName = "dotnet"
+        $apiStartInfo.Arguments = "run --project `"$apiProjectPath`" --no-build --configuration $configuration"
+        $apiStartInfo.WorkingDirectory = Split-Path $apiProjectPath -Parent
+        $apiStartInfo.UseShellExecute = $false
+        $apiStartInfo.CreateNoWindow = $false
+        $apiStartInfo.EnvironmentVariables["ASPNETCORE_ENVIRONMENT"] = "Development"
+        $apiStartInfo.EnvironmentVariables["ASPNETCORE_URLS"] = $apiUrl
+        
+        $script:apiProcess = [System.Diagnostics.Process]::Start($apiStartInfo)
+        Write-Info "API process started (PID: $($script:apiProcess.Id))"
+        
+        # Wait for API to start
+        Write-Info "Waiting for API to start..."
+        Start-Sleep -Seconds 3
+        
+        # Start Web process
+        $webStartInfo = New-Object System.Diagnostics.ProcessStartInfo
+        $webStartInfo.FileName = "dotnet"
+        $webStartInfo.Arguments = "run --project `"$webProjectPath`" --no-build --configuration $configuration"
+        $webStartInfo.WorkingDirectory = Split-Path $webProjectPath -Parent
+        $webStartInfo.UseShellExecute = $false
+        $webStartInfo.CreateNoWindow = $false
+        $webStartInfo.EnvironmentVariables["ASPNETCORE_ENVIRONMENT"] = "Development"
+        
+        $script:webProcess = [System.Diagnostics.Process]::Start($webStartInfo)
+        Write-Info "Web process started (PID: $($script:webProcess.Id))"
+        
+        # Wait for Web to start
+        Write-Info "Waiting for Web to start..."
+        Start-Sleep -Seconds 3
+        
+        # Open browser if requested
+        if (-not $NoBrowser) {
+            Start-Process $webUrl
+        }
+        
+        Write-Success "Both projects started"
+        Write-Info "`nPress Ctrl+C to stop all processes"
+        
+        # Wait for processes to exit
         while ($true) {
-            $apiJob | Receive-Job
-            $webJob | Receive-Job
-            
-            # Check if jobs are still running
-            if ($apiJob.State -ne "Running" -or $webJob.State -ne "Running") {
-                Write-Error "One or more projects stopped unexpectedly"
+            if ($script:apiProcess.HasExited -or $script:webProcess.HasExited) {
+                Write-Error "`nOne or more projects stopped unexpectedly"
                 break
             }
-            
-            Start-Sleep -Seconds 1
+            Start-Sleep -Milliseconds 500
         }
     }
     finally {
-        # Clean up jobs and processes
+        # Clean up processes
         Write-Info "`nStopping projects..."
         
-        # Stop jobs first
-        $apiJob | Stop-Job -ErrorAction SilentlyContinue
-        $webJob | Stop-Job -ErrorAction SilentlyContinue
-        $apiJob | Remove-Job -ErrorAction SilentlyContinue
-        $webJob | Remove-Job -ErrorAction SilentlyContinue
+        # Kill processes immediately
+        if ($null -ne $script:apiProcess -and -not $script:apiProcess.HasExited) {
+            Write-Info "Stopping API (PID: $($script:apiProcess.Id))..."
+            $script:apiProcess.Kill($true)  # Kill entire process tree
+            $script:apiProcess.WaitForExit(2000)  # Wait max 2 seconds
+            $script:apiProcess.Dispose()
+        }
         
-        # Kill dotnet processes on the ports (jobs don't always kill child processes)
+        if ($null -ne $script:webProcess -and -not $script:webProcess.HasExited) {
+            Write-Info "Stopping Web (PID: $($script:webProcess.Id))..."
+            $script:webProcess.Kill($true)  # Kill entire process tree
+            $script:webProcess.WaitForExit(2000)  # Wait max 2 seconds
+            $script:webProcess.Dispose()
+        }
+        
+        # Final cleanup - kill any remaining processes on the ports
         Stop-ExistingProcesses -Ports @($ApiPort, $WebPort)
         
         Write-Success "All projects stopped"

@@ -129,6 +129,120 @@ font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
 
 ## Component Patterns
 
+### Client-Side Navigation Without Re-Renders
+
+**Pattern**: Use JavaScript History API for URL updates without triggering Blazor navigation
+
+**When to Use**: When you need to update the URL for a state change but don't want the entire component to re-render (e.g., switching tabs/collections within the same page).
+
+**Example**: Section page with collection navigation
+
+```razor
+@page "/{sectionName}"
+@page "/{sectionName}/{collectionName}"
+@inject IJSRuntime JS
+@implements IAsyncDisposable
+
+<nav>
+    @foreach (var collection in collections)
+    {
+        <button @onclick="() => SelectCollection(collection.Name)">
+            @collection.Title
+        </button>
+    }
+</nav>
+
+<div class="content @(isLoadingContent ? "loading" : "")">
+    @* Only this area updates *@
+    <ContentList Items="@contentItems" />
+</div>
+
+@code {
+    [Parameter]
+    public string SectionName { get; set; } = null!;
+    
+    [Parameter]
+    public string? CollectionName { get; set; }
+    
+    private string selectedCollection = string.Empty;
+    private bool isLoadingContent = false;
+    
+    // Use JavaScript history API to update URL without Blazor navigation
+    private async void SelectCollection(string collectionName)
+    {
+        // Update URL without triggering OnParametersSetAsync
+        await JS.InvokeVoidAsync("history.pushState", null, "", 
+            $"/{SectionName}/{collectionName}");
+        
+        // Update local state
+        selectedCollection = collectionName;
+        
+        // Load new content (only this executes, not full component re-render)
+        await LoadCollectionContent();
+    }
+    
+    protected override async Task OnParametersSetAsync()
+    {
+        // This handles initial load and browser back/forward
+        // NOT called when using history.pushState
+        if (CollectionName != selectedCollection)
+        {
+            selectedCollection = CollectionName ?? "all";
+            await LoadCollectionContent();
+        }
+    }
+    
+    private async Task LoadCollectionContent()
+    {
+        isLoadingContent = true;
+        StateHasChanged(); // Trigger re-render for loading state
+        
+        try
+        {
+            contentItems = await ApiClient.GetContentAsync(SectionName, selectedCollection);
+        }
+        finally
+        {
+            isLoadingContent = false;
+            StateHasChanged(); // Trigger re-render with new content
+        }
+    }
+    
+    public async ValueTask DisposeAsync()
+    {
+        // Cleanup resources
+    }
+}
+```
+
+**CSS for Smooth Transitions**:
+
+```css
+.content {
+    opacity: 1;
+    transition: opacity 150ms ease-in-out;
+}
+
+.content.loading {
+    opacity: 0.5;
+    pointer-events: none; /* Prevent clicks during loading */
+}
+```
+
+**Key Points**:
+
+- **`history.pushState`** updates URL without triggering Blazor routing
+- **`OnParametersSetAsync`** still handles browser back/forward buttons
+- **`StateHasChanged()`** manually triggers re-render of content area only
+- **CSS transitions** provide smooth visual feedback
+- **Dispose pattern** ensures proper cleanup
+
+**When NOT to Use**:
+
+- Cross-page navigation (use `NavigationManager.NavigateTo` instead)
+- When you need full page reload
+- When SEO requires distinct page loads
+
 ### Article Sidebar Component
 
 **Pattern**: Sidebar with quick navigation, metadata, and related content

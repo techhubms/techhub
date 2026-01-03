@@ -137,10 +137,10 @@ When renaming ANY identifier, you **MUST** verify and update ALL occurrences acr
 
 - Never assume - always read before modifying
 - Understand the existing architecture before proposing changes
-- Follow existing code patterns and conventions
+- Follow existing code patterns and conventions when proposing changes
+- Use the latest version of code and libraries when proposing changes
+- Always use the context7 MCP tool to fetch latest documentation when proposing changes or if you don't understand something
 - Read documentation, code, and content files to understand implementation
-- Use the latest version of code and libraries
-- Use context7 MCP tool to fetch latest documentation when working with external libraries or frameworks
 
 ### 2. Create a Plan
 
@@ -285,6 +285,9 @@ When renaming ANY identifier, you **MUST** verify and update ALL occurrences acr
 - Use meaningful variable names and proper error handling
 - Prefer clarity over cleverness
 - Make parameters required unless they can be null
+- Follow existing code patterns and conventions
+- Use the latest version of code and libraries
+- Always use the context7 MCP tool to fetch latest documentation when modifying code
 - **Run tests frequently** during implementation to catch issues early
 
 **Starting/Stopping the Application**:
