@@ -10917,5 +10917,23 @@
     "canonical_url": "https://www.youtube.com/shorts/zztkA8cJaCs",
     "reason": "No categories found: No categories assigned. The content specifically covers basic Git commands (git status and git add) for beginners. While it is produced by GitHub, the material focuses solely on Git fundamentals and does not address any Microsoft-specific technologies, nor does it discuss DevOps, GitHub Actions, AI, Coding with Microsoft frameworks, or other qualifying themes as outlined in the inclusion rules. There is no discussion of developer experience topics as they relate to Microsoft tools or services (DevOps rule 9), and no central Microsoft architecture or integration is present. Therefore, none of the categories apply.",
     "timestamp": "2026-01-01 15:43:43 +00:00"
+  },
+  {
+    "reason": "No categories found: No categories are assigned. While the article discusses AI agents and rule engines, it is primarily focused on a personal finance tool (Tally) that the author built for transaction categorization. There is no substantive focus on Microsoft technologies, products, or developer-centric Microsoft tooling (see Multi-Platform Content Threshold and Category Inclusion rules). References to coding agents, Python, and code generation are platform-agnostic. Although the author mentions using agents (such as Claude) and picks Python over .NET, the emphasis remains on the personal project, agent-assisted programming, and rule-based data categorization in the context of personal finance, not Microsoft consulting, development, or technical implementation. Therefore, per the workflow's directive to only apply predefined Microsoft-centric categories and to exclude personal productivity/business automation content not centered on Microsoft developer products or services, no categories are assigned.",
+    "collection": "blogs",
+    "timestamp": "2026-01-01 18:03:47 +00:00",
+    "canonical_url": "https://medium.com/@davidfowl/tally-52f4b257b32a?source=rss-8163234c98f0------2"
+  },
+  {
+    "collection": "videos",
+    "canonical_url": "https://www.youtube.com/shorts/Sp3OVsyHQvo",
+    "reason": "No categories found: All categories were excluded due to the content being primarily historical and non-technical. The description and title indicate that the video is a story about 'Windows 95 Special Edition' shared as part of a retrospective series ('100 Years of Microsoft Stories'), with no evidence of technical depth, development, coding, modern Azure services, or actionable implementation guidance. As per the generic exclusion rules, content that is biographical or historical without substantial technical content does not qualify for any category.",
+    "timestamp": "2026-01-01 22:03:54 +00:00"
+  },
+  {
+    "timestamp": "2026-01-02 08:03:24 +00:00",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure/unable-to-delete-foundry-agent-identity-entra-app-in-azure/m-p/4482418#M22397",
+    "reason": "Insufficient content length",
+    "collection": "community"
   }
 ]
