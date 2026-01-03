@@ -20,6 +20,7 @@ Define comprehensive component testing strategy for Blazor components using bUni
 ## Scope
 
 **Test Coverage**:
+
 - Component rendering (markup output, CSS classes, attributes)
 - User interactions (clicks, inputs, form submissions)
 - Component parameters and cascading values
@@ -30,6 +31,7 @@ Define comprehensive component testing strategy for Blazor components using bUni
 - Error boundaries and error handling
 
 **Components to Test**:
+
 - Navigation components (Header, Footer, SectionNav, CollectionNav)
 - Filter components (DateFilter, TagFilter, SearchBox, FilterPanel)
 - Content display (ItemCard, ItemList, ItemDetail)
@@ -39,6 +41,7 @@ Define comprehensive component testing strategy for Blazor components using bUni
 - Loading states and error states
 
 **Testing Patterns**:
+
 - Arrange: Set up component parameters and mocked services
 - Act: Trigger user interactions or lifecycle events
 - Assert: Verify rendered markup and component state

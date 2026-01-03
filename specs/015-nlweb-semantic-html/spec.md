@@ -477,4 +477,3 @@ For each component:
 8. **GitHub Colors**: Reference design system spec for exact hex values
 9. **System Fonts**: Never load custom web fonts, use system font stack
 10. **8px Grid**: All spacing must be multiple of 8px (no 5px, 12px, 15px, etc.)
-

@@ -218,6 +218,7 @@ The section system organizes all content into logical topic areas (sections) and
 
 ```yaml
 # Content item frontmatter
+
 categories:
   - GitHub Copilot
   - AI
@@ -538,4 +539,3 @@ app.MapGet("/api/sections/{url}", async (string url, ISectionRepository repo) =>
 
 - [Filtering System Spec](/specs/019-filtering-system/spec.md)
 - [RSS Feeds Spec](/specs/021-rss-feeds/spec.md)
-

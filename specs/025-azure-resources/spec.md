@@ -534,7 +534,7 @@ param webImageTag = 'latest'
 **File**: `/infra/scripts/deploy.ps1`
 
 ```powershell
-#!/usr/bin/env pwsh
+# !/usr/bin/env pwsh
 
 param(
     [Parameter(Mandatory)]
@@ -551,6 +551,7 @@ $ErrorActionPreference = 'Stop'
 Write-Host "🚀 Deploying Tech Hub to Azure ($Environment)" -ForegroundColor Cyan
 
 # Validate Azure CLI login
+
 $account = az account show 2>$null | ConvertFrom-Json
 if (-not $account) {
     Write-Error "Not logged into Azure. Run: az login"
@@ -560,6 +561,7 @@ if (-not $account) {
 Write-Host "✅ Using Azure subscription: $($account.name)" -ForegroundColor Green
 
 # Build parameter file path
+
 $paramFile = Join-Path $PSScriptRoot ".." "parameters" "$Environment.bicepparam"
 
 if (-not (Test-Path $paramFile)) {
@@ -568,6 +570,7 @@ if (-not (Test-Path $paramFile)) {
 }
 
 # Deploy
+
 $deployArgs = @(
     'deployment', 'sub', 'create'
     '--location', $Location
@@ -653,12 +656,14 @@ resource vnet 'Microsoft.Network/virtualNetworks@2024-01-01' = {
 **Production Domain**: `tech.hub.ms`
 
 **SSL Certificate**:
+
 - **Strategy**: Azure-managed SSL certificates (automatic provisioning and renewal)
 - **Provider**: Container Apps managed certificates
 - **Renewal**: Automatic (no manual intervention required)
 - **Configuration**: Custom domain bound to Container Apps with auto-SSL
 
 **DNS Management**:
+
 - **DNS Provider**: To be configured (Azure DNS or external provider)
 - **Required Records**:
   - `A` or `CNAME` record pointing to Container Apps endpoint
@@ -666,6 +671,7 @@ resource vnet 'Microsoft.Network/virtualNetworks@2024-01-01' = {
 - **TTL**: 3600 seconds (1 hour) for production records
 
 **CDN Strategy**:
+
 - **MVP**: Direct Container Apps access (no CDN)
 - **Future Enhancement**: Azure Front Door for global CDN if traffic demands
 - **Rationale**: Container Apps provides auto-scaling and global availability; CDN adds cost/complexity without proven need
@@ -690,6 +696,7 @@ resource vnet 'Microsoft.Network/virtualNetworks@2024-01-01' = {
 - **Low (P3)**: CPU usage > 80% sustained → Daily summary
 
 **Alert Channels**:
+
 - Email notifications to site owner
 - Optional: SMS for P0 alerts (site down)
 - Azure Monitor action groups for alert routing
@@ -747,4 +754,3 @@ resource vnet 'Microsoft.Network/virtualNetworks@2024-01-01' = {
 - `/specs/cicd/github-actions.md` - CI/CD pipelines
 - Future spec: monitoring.md - Detailed monitoring setup
 - Future spec: networking.md - VNet configuration
-

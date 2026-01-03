@@ -71,7 +71,6 @@ Must cover:
 
 ## References
 
-
 - `/docs/content-management.md` - GitHub Copilot features special frontmatter
 - `/github-copilot/features.md` - Current features page implementation
 - `/github-copilot/levels-of-enlightenment.md` - Current learning path page
@@ -82,4 +81,3 @@ Must cover:
 2. Ensure spec covers all special frontmatter handling
 3. Include responsive layout requirements
 4. Document server-side render + client-side enhancement pattern
-

@@ -11,13 +11,16 @@
 
 ```bash
 # Clone repository
+
 git clone https://github.com/techhubms/techhub.git
 cd techhub
 
 # Checkout migration branch
+
 git checkout dotnet-migration
 
 # Open in VS Code
+
 code .
 ```
 
@@ -34,9 +37,11 @@ code .
 
 ```bash
 # Install .NET Aspire workload
+
 dotnet workload install aspire
 
 # Restore packages
+
 cd dotnet
 dotnet restore
 ```
@@ -45,19 +50,24 @@ dotnet restore
 
 ```bash
 # Navigate to dotnet directory
+
 cd dotnet
 
 # Run with .NET Aspire (starts API + Web)
+
 dotnet run --project src/TechHub.AppHost
 
 # Or run API only
+
 dotnet run --project src/TechHub.Api
 
 # Or run Web only  
+
 dotnet run --project src/TechHub.Web
 ```
 
 **Access**:
+
 - Aspire Dashboard: `http://localhost:15000`
 - API: `http://localhost:5001`
 - Web: `http://localhost:5002`
@@ -92,15 +102,19 @@ root/
 
 ```bash
 # Run all tests
+
 dotnet test
 
 # Run specific project tests
+
 dotnet test tests/TechHub.Core.Tests
 
 # Run with coverage
+
 dotnet test --collect:"XPlat Code Coverage"
 
 # Run E2E tests (requires API + Web running)
+
 cd tests/TechHub.E2E.Tests
 dotnet test
 ```
@@ -109,12 +123,15 @@ dotnet test
 
 ```bash
 # Build entire solution
+
 dotnet build
 
 # Build specific project
+
 dotnet build src/TechHub.Api
 
 # Build for production
+
 dotnet build -c Release
 ```
 
@@ -122,9 +139,11 @@ dotnet build -c Release
 
 ```bash
 # Content files remain in collections/ at repository root
+
 cd /workspaces/techhub/collections/_news
 
 # Create new markdown file
+
 cat > 2026-01-02-example-article.md << 'EOF'
 ---
 title: "Example Article"
@@ -144,6 +163,7 @@ Content goes here...
 EOF
 
 # Restart application to load new content
+
 # (In future: add file watcher for auto-reload)
 ```
 
@@ -156,6 +176,7 @@ EOF
 - **Debug Aspire** - Starts full application with Aspire dashboard
 
 **Breakpoints**:
+
 - Set breakpoints in C# code
 - Press F5 to start debugging
 - Use Debug Console for expressions
@@ -170,13 +191,18 @@ Browse `/specs/` directory for feature specifications:
 
 ```bash
 ls specs/
+
 # 001-solution-structure
+
 # 002-configuration-management
+
 # 003-resilience-error-handling
+
 # ...
 ```
 
 Each spec has:
+
 - `spec.md` - Feature requirements
 - `plan.md` - Implementation plan (if generated)
 - `tasks.md` - Task breakdown (if generated)
@@ -191,15 +217,19 @@ git checkout -b feature/011-domain-models
 
 ```bash
 # 1. Write failing test
+
 vi tests/TechHub.Core.Tests/Models/SectionTests.cs
 
 # 2. Run test (should fail)
+
 dotnet test tests/TechHub.Core.Tests
 
 # 3. Implement feature
+
 vi src/TechHub.Core/Models/Section.cs
 
 # 4. Run test (should pass)
+
 dotnet test tests/TechHub.Core.Tests
 
 # 5. Refactor if needed
@@ -215,9 +245,11 @@ dotnet test
 
 ```bash
 # Format code
+
 dotnet format
 
 # Analyze code
+
 dotnet build /p:TreatWarningsAsErrors=true
 ```
 
@@ -259,6 +291,7 @@ dotnet workload install aspire
 
 ```bash
 # Kill existing process
+
 lsof -ti:5001 | xargs kill -9
 
 # Or change port in appsettings.json

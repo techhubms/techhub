@@ -33,27 +33,32 @@ Blazor components provide the UI layer with server-side rendering (SSR) for SEO 
 ### Layout Components
 
 **MainLayout.razor** - Root application layout
+
 - Includes Header, Footer, and Body placeholder
 - Sets up HeadOutlet for page-specific meta tags
 - Provides common structure for all pages
 
 **Header.razor** - Site header with navigation
+
 - Semantic `<header role="banner">`
 - Logo linking to home page
 - Main navigation menu
 - Mobile-responsive hamburger menu
 
 **Footer.razor** - Site footer
+
 - Copyright information
 - RSS subscription link
 - Privacy/legal links
 
 **SectionHeader.razor** - Section-specific header
+
 - Background image from section configuration
 - Section title and description
 - Breadcrumb navigation
 
 **SectionNav.razor** - Section collection navigation
+
 - Links to section collections (News, Blogs, Videos, etc.)
 - Active state highlighting
 - Keyboard accessible
@@ -61,23 +66,27 @@ Blazor components provide the UI layer with server-side rendering (SSR) for SEO 
 ### Content Components
 
 **ContentList.razor** - List of content items
+
 - Grid or list layout
 - Supports infinite scroll (WASM interactivity)
 - Empty state handling
 
 **ItemCard.razor** - Individual content item card
+
 - Schema.org Article markup
 - Title, description, author, date
 - Link to full content
 - Video indicator for video items
 
 **SectionCard.razor** - Section card for home page
+
 - Section title and description
 - Background image
 - Link to section index
 - Item count badge
 
 **RoundupCard.razor** - Roundup-specific card
+
 - Special styling for roundups
 - Date prominence
 - Link to roundup content
@@ -85,6 +94,7 @@ Blazor components provide the UI layer with server-side rendering (SSR) for SEO 
 ### Filter Components
 
 **FilterControls.razor** - Filter UI controls (WASM)
+
 - Date range filters
 - Tag filters
 - Collection filters
@@ -92,12 +102,14 @@ Blazor components provide the UI layer with server-side rendering (SSR) for SEO 
 - Active filter indicators
 
 **FilterButton.razor** - Individual filter button
+
 - Active/inactive states
 - Item count badge
 - Keyboard accessible
 - ARIA pressed state
 
 **SearchBox.razor** - Text search input (WASM)
+
 - Debounced input (300ms)
 - Clear button
 - Keyboard shortcuts (Ctrl+K)
@@ -106,10 +118,12 @@ Blazor components provide the UI layer with server-side rendering (SSR) for SEO 
 ### Utility Components
 
 **LoadingSpinner.razor** - Loading indicator
+
 - Accessible loading announcement
 - Semantic ARIA attributes
 
 **ErrorBoundary.razor** - Error handling
+
 - Graceful degradation
 - User-friendly error messages
 
@@ -120,8 +134,8 @@ Blazor components provide the UI layer with server-side rendering (SSR) for SEO 
 ```razor
 @* TechHub.Web/Components/Content/ItemCard.razor *@
 
-<article class="item-card" 
-         itemscope 
+<article class="item-card"
+         itemscope
          itemtype="https://schema.org/@(GetSchemaType())">
     <a href="@Item.Url" class="item-link">
         @if (Item.VideoId is not null)
@@ -143,7 +157,7 @@ Blazor components provide the UI layer with server-side rendering (SSR) for SEO 
                     <span itemprop="name">@Item.Author</span>
                 </span>
                 
-                <time datetime="@Item.DateIso" 
+                <time datetime="@Item.DateIso"
                       itemprop="datePublished"
                       class="item-date">
                     @Item.Date
@@ -183,7 +197,7 @@ Blazor components provide the UI layer with server-side rendering (SSR) for SEO 
         @foreach (var collection in Section.Collections)
         {
             <li>
-                <a href="/@Section.Url/@collection.Url.html" 
+                <a href="/@Section.Url/@collection.Url.html"
                    class="@(IsActive(collection.Collection) ? "active" : "")"
                    aria-current="@(IsActive(collection.Collection) ? "page" : null)">
                     @collection.Title
@@ -216,8 +230,8 @@ Blazor components provide the UI layer with server-side rendering (SSR) for SEO 
 <div class="filter-controls" role="search">
     <div class="filter-header">
         <h2>Filters</h2>
-        <button @onclick="ClearAllFilters" 
-                class="btn-clear" 
+        <button @onclick="ClearAllFilters"
+                class="btn-clear"
                 disabled="@(!HasActiveFilters)">
             Clear All
         </button>
@@ -228,8 +242,8 @@ Blazor components provide the UI layer with server-side rendering (SSR) for SEO 
         <div role="group" aria-labelledby="date-filter-label">
             @foreach (var filter in DateFilters)
             {
-                <FilterButton 
-                    Label="@filter.Label" 
+                <FilterButton
+                    Label="@filter.Label"
                     Count="@filter.Count"
                     IsActive="@(ActiveDateFilter == filter.Value)"
                     OnClick="@(() => SetDateFilter(filter.Value))" />
@@ -239,12 +253,12 @@ Blazor components provide the UI layer with server-side rendering (SSR) for SEO 
     
     <div class="filter-section">
         <label for="search-input">Search</label>
-        <input type="search" 
+        <input type="search"
                id="search-input"
-               @bind="SearchText" 
+               @bind="SearchText"
                @bind:event="oninput"
                @bind:after="OnSearchChanged"
-               placeholder="Search content..." 
+               placeholder="Search content..."
                aria-label="Search content" />
     </div>
     
@@ -253,8 +267,8 @@ Blazor components provide the UI layer with server-side rendering (SSR) for SEO 
         <div role="group" aria-labelledby="collection-filter-label">
             @foreach (var collection in CollectionFilters)
             {
-                <FilterButton 
-                    Label="@collection.Label" 
+                <FilterButton
+                    Label="@collection.Label"
                     Count="@collection.Count"
                     IsActive="@ActiveCollections.Contains(collection.Value)"
                     OnClick="@(() => ToggleCollection(collection.Value))" />
@@ -281,9 +295,9 @@ Blazor components provide the UI layer with server-side rendering (SSR) for SEO 
     
     private int FilteredCount => ApplyFilters().Count;
     private int TotalCount => AllItems.Count;
-    private bool HasActiveFilters => 
-        !string.IsNullOrWhiteSpace(SearchText) || 
-        ActiveDateFilter is not null || 
+    private bool HasActiveFilters =>
+        !string.IsNullOrWhiteSpace(SearchText) ||
+        ActiveDateFilter is not null ||
         ActiveCollections.Count > 0;
     
     protected override void OnInitialized()
@@ -338,7 +352,7 @@ Blazor components provide the UI layer with server-side rendering (SSR) for SEO 
         
         if (!string.IsNullOrWhiteSpace(SearchText))
         {
-            filtered = filtered.Where(i => 
+            filtered = filtered.Where(i =>
                 i.Title.Contains(SearchText, StringComparison.OrdinalIgnoreCase) ||
                 i.Description.Contains(SearchText, StringComparison.OrdinalIgnoreCase) ||
                 i.Tags.Any(t => t.Contains(SearchText, StringComparison.OrdinalIgnoreCase)));
@@ -352,7 +366,7 @@ Blazor components provide the UI layer with server-side rendering (SSR) for SEO 
         
         if (ActiveCollections.Count > 0)
         {
-            filtered = filtered.Where(i => 
+            filtered = filtered.Where(i =>
                 ActiveCollections.Contains(i.Collection, StringComparer.OrdinalIgnoreCase));
         }
         
@@ -509,4 +523,3 @@ public class ItemCardTests : TestContext
 - bUnit documentation: https://bunit.dev/
 - Blazor documentation: https://learn.microsoft.com/aspnet/core/blazor
 - `/specs/013-api-endpoints/spec.md` - API client integration
-

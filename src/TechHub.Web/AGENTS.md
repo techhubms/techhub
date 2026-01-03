@@ -68,7 +68,7 @@
 **Font Stack**:
 
 ```css
-font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 
+font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
              "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
 ```
 
@@ -295,7 +295,7 @@ else
 **Pattern**: Use inline styles for dynamic background images with fallback color
 
 ```razor
-<div class="section-card" 
+<div class="section-card"
      style="background-image: url('@Section.BackgroundImage'); background-color: var(--dark-navy);">
     <div class="section-card-overlay">
         <h2>@Section.Title</h2>

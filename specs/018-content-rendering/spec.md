@@ -146,7 +146,6 @@ var pipeline = new MarkdownPipelineBuilder()
     .Build();
 ```
 
-
 ### Custom Extensions
 
 **YouTube Tag Processor**:

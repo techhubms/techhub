@@ -64,7 +64,9 @@ assets/css/
 
 ```scss
 ---
+
 # Front matter required for Jekyll processing
+
 ---
 
 // Import all partials in dependency order

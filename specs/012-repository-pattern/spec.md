@@ -62,8 +62,8 @@ public interface ISectionRepository
     /// Used for validating multi-location content URLs.
     /// </summary>
     Task<bool> SectionContainsCategoryAsync(
-        string sectionUrl, 
-        string category, 
+        string sectionUrl,
+        string category,
         CancellationToken ct = default);
 }
 ```
@@ -82,7 +82,7 @@ public interface IContentRepository
     /// Sorted by date descending
     /// </summary>
     Task<IReadOnlyList<ContentItem>> GetItemsByCollectionAsync(
-        string collection, 
+        string collection,
         CancellationToken ct = default);
     
     /// <summary>
@@ -91,7 +91,7 @@ public interface IContentRepository
     /// Sorted by date descending
     /// </summary>
     Task<IReadOnlyList<ContentItem>> GetItemsByCategoryAsync(
-        string category, 
+        string category,
         CancellationToken ct = default);
     
     /// <summary>
@@ -100,7 +100,7 @@ public interface IContentRepository
     /// Supports multi-location access: same content viewable from different sections.
     /// </summary>
     Task<ContentItem?> GetItemByIdAsync(
-        string id, 
+        string id,
         string? categoryFilter = null,
         CancellationToken ct = default);
     
@@ -108,7 +108,7 @@ public interface IContentRepository
     /// Get most recent items, optionally filtered by category
     /// </summary>
     Task<IReadOnlyList<ContentItem>> GetLatestItemsAsync(
-        int count, 
+        int count,
         string? category = null,
         CancellationToken ct = default);
     
@@ -184,11 +184,11 @@ public class FileSectionRepository : ISectionRepository
     }
     
     public async Task<Section?> GetSectionByUrlAsync(
-        string url, 
+        string url,
         CancellationToken ct = default)
     {
         var sections = await GetAllSectionsAsync(ct);
-        return sections.FirstOrDefault(s => 
+        return sections.FirstOrDefault(s =>
             s.Url.Equals(url, StringComparison.OrdinalIgnoreCase));
     }
     
@@ -198,7 +198,7 @@ public class FileSectionRepository : ISectionRepository
         CancellationToken ct = default)
     {
         var section = await GetSectionByUrlAsync(sectionUrl, ct);
-        return section is not null && 
+        return section is not null &&
                section.Category.Equals(category, StringComparison.OrdinalIgnoreCase);
     }
 }
@@ -221,7 +221,7 @@ public class FileContentRepository : IContentRepository
     private static readonly TimeSpan CacheDuration = TimeSpan.FromHours(1);
     
     // Collection directory names
-    private static readonly string[] CollectionDirectories = 
+    private static readonly string[] CollectionDirectories =
     {
         "_news", "_blogs", "_videos", "_community", "_roundups"
     };
@@ -319,13 +319,13 @@ public class FileContentRepository : IContentRepository
         CancellationToken ct = default)
     {
         var allItems = await GetAllItemsAsync(ct);
-        var item = allItems.FirstOrDefault(i => 
+        var item = allItems.FirstOrDefault(i =>
             i.Id.Equals(id, StringComparison.OrdinalIgnoreCase));
         
         if (item is null) return null;
         
         // If category filter specified, verify item has that category
-        if (categoryFilter is not null && 
+        if (categoryFilter is not null &&
             !item.Categories.Contains(categoryFilter, StringComparer.OrdinalIgnoreCase))
         {
             return null;
@@ -395,6 +395,7 @@ builder.Services.AddSingleton<IContentRepository, FileContentRepository>();
 ### UC-1: Load All Sections on Startup
 
 **Flow**:
+
 1. Application starts
 2. First request triggers `GetAllSectionsAsync`
 3. Repository checks cache (miss on first call)
@@ -407,6 +408,7 @@ builder.Services.AddSingleton<IContentRepository, FileContentRepository>();
 ### UC-2: Get Content for Section
 
 **Flow**:
+
 1. API receives request: `/api/content/section/ai`
 2. Controller calls `GetSectionByUrlAsync("ai")`
 3. Controller gets section category: "ai"
@@ -418,6 +420,7 @@ builder.Services.AddSingleton<IContentRepository, FileContentRepository>();
 ### UC-3: Validate Multi-Location Access
 
 **Flow**:
+
 1. User navigates to `/github-copilot/videos/vs-code-107.html`
 2. API calls `GetItemByIdAsync("vs-code-107", "github-copilot")`
 3. Repository finds item with ID
@@ -486,7 +489,7 @@ public class ContentRepositoryIntegrationTests : IClassFixture<TestFixture>
         
         var items = await repo.GetItemsByCollectionInSectionAsync("videos", "ai");
         
-        Assert.All(items, i => 
+        Assert.All(items, i =>
         {
             Assert.Equal("videos", i.Collection);
             Assert.Contains("ai", i.Categories);
@@ -498,16 +501,19 @@ public class ContentRepositoryIntegrationTests : IClassFixture<TestFixture>
 ## Performance Considerations
 
 **Caching Strategy**:
+
 - All data loaded into memory on first access
 - Sliding expiration (1 hour) prevents stale data
 - Cache eviction triggers reload on next access
 
 **Memory Usage**:
+
 - Typical site: ~1000 items × ~10KB = ~10MB
 - Acceptable for in-memory caching
 - Future: Add pagination for large datasets
 
 **File Watching** (Development):
+
 ```csharp
 // Optional: Watch for file changes in development
 builder.Services.AddSingleton<IFileWatcher, FileWatcher>();

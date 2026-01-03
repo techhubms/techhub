@@ -37,6 +37,7 @@ The domain models represent the core business entities of Tech Hub: Sections (to
 Represents a top-level content category (e.g., "AI", "GitHub Copilot").
 
 **Properties**:
+
 - `Id` (string, required): Unique identifier matching sections.json
 - `Title` (string, required): Display title (e.g., "GitHub Copilot")
 - `Description` (string, required): Section description for meta tags
@@ -46,6 +47,7 @@ Represents a top-level content category (e.g., "AI", "GitHub Copilot").
 - `Collections` (IReadOnlyList<CollectionReference>, required): Associated collections
 
 **Invariants**:
+
 - `Url` must be URL-safe (lowercase, hyphens only)
 - `Category` must match content item categories
 - `Collections` must not be empty
@@ -55,6 +57,7 @@ Represents a top-level content category (e.g., "AI", "GitHub Copilot").
 Represents a collection within a section (e.g., "News", "Videos").
 
 **Properties**:
+
 - `Title` (string, required): Display title (e.g., "Latest News")
 - `Url` (string, required): URL-safe slug (e.g., "news")
 - `Collection` (string, required): Collection identifier (matches collection directories)
@@ -62,6 +65,7 @@ Represents a collection within a section (e.g., "News", "Videos").
 - `IsCustom` (bool): Whether this is a custom collection (manually created page)
 
 **Invariants**:
+
 - `Collection` must match a valid collection directory (_news, _blogs, _videos, etc.)
 - `Url` must be URL-safe
 
@@ -70,6 +74,7 @@ Represents a collection within a section (e.g., "News", "Videos").
 Represents an individual piece of content (article, video, community post).
 
 **Properties**:
+
 - `Id` (string, required): Unique content identifier (slug from filename)
 - `Title` (string, required): Content title
 - `Description` (string, required): Brief description/excerpt
@@ -86,6 +91,7 @@ Represents an individual piece of content (article, video, community post).
 - `AltCollection` (string?, optional): Alternative collection for subfolder organization
 
 **Invariants**:
+
 - `DateEpoch` must be valid Unix timestamp
 - `Categories` must not be empty
 - `Tags` must be normalized (lowercase, trimmed)
@@ -93,6 +99,7 @@ Represents an individual piece of content (article, video, community post).
 - If `VideoId` is provided, `ExternalUrl` should be YouTube URL
 
 **Methods**:
+
 - `GetUrlInSection(string sectionUrl)`: Generate URL for this content in a specific section context
   - Returns: `/{sectionUrl}/{collection}/{id}.html`
   - Example: `/ai/videos/vs-code-107.html` or `/github-copilot/videos/vs-code-107.html`
@@ -102,6 +109,7 @@ Represents an individual piece of content (article, video, community post).
 Data Transfer Object for API responses, includes formatted display values.
 
 **Properties**:
+
 - `Id` (string, required): Content identifier
 - `Title` (string, required): Content title
 - `Description` (string, required): Description/excerpt
@@ -118,6 +126,7 @@ Data Transfer Object for API responses, includes formatted display values.
 - `VideoId` (string?, optional): YouTube video ID
 
 **Conversion**:
+
 - Created from `ContentItem` via `.ToDto(string sectionUrl)` extension method
 - `Url` is context-specific based on section
 - `Date` is formatted in Europe/Brussels timezone
@@ -128,6 +137,7 @@ Data Transfer Object for API responses, includes formatted display values.
 Data Transfer Object for section API responses.
 
 **Properties**:
+
 - Same as `Section` model
 - Used for API serialization
 
@@ -140,6 +150,7 @@ Data Transfer Object for section API responses.
 **Trigger**: Application startup or content refresh  
 
 **Flow**:
+
 1. Repository reads Markdown file
 2. Repository parses YAML frontmatter
 3. Repository extracts: title, date, author, categories, tags
@@ -153,6 +164,7 @@ Data Transfer Object for section API responses.
 **Postcondition**: Valid `ContentItem` instance created
 
 **Validation Rules**:
+
 - Title must not be empty
 - At least one category must be specified
 - Date must be parseable
@@ -165,6 +177,7 @@ Data Transfer Object for section API responses.
 **Trigger**: API request for content in specific section  
 
 **Flow**:
+
 1. API receives request: `/api/content/ai/videos/vs-code-107`
 2. Repository retrieves content item with id `vs-code-107`
 3. Content item has categories: `["ai", "github-copilot"]`
@@ -183,6 +196,7 @@ Data Transfer Object for section API responses.
 **Trigger**: Page render for SEO meta tags  
 
 **Flow**:
+
 1. Service receives content item
 2. Content item categories: `["ai", "github-copilot", "ml"]`
 3. Service reads `CanonicalUrl` property
@@ -262,7 +276,7 @@ public record ContentItem
     /// Supports multi-location access.
     /// Example: /ai/videos/vs-code-107.html or /github-copilot/videos/vs-code-107.html
     /// </summary>
-    public string GetUrlInSection(string sectionUrl) => 
+    public string GetUrlInSection(string sectionUrl) =>
         $"/{sectionUrl}/{Collection}/{Id}.html";
 }
 ```
@@ -275,7 +289,7 @@ namespace TechHub.Core.Utilities;
 
 public static class DateUtils
 {
-    private static readonly TimeZoneInfo BrusselsTimeZone = 
+    private static readonly TimeZoneInfo BrusselsTimeZone =
         TimeZoneInfo.FindSystemTimeZoneById("Europe/Brussels");
     
     /// <summary>
@@ -388,7 +402,7 @@ public class ContentItemTests
     [InlineData("github-copilot", "/github-copilot/videos/test.html")]
     [InlineData("ml", "/ml/videos/test.html")]
     public void GetUrlInSection_WithDifferentSections_ReturnsCorrectUrls(
-        string section, 
+        string section,
         string expectedUrl)
     {
         var item = new ContentItem
@@ -453,6 +467,7 @@ public class ContentRepositoryTests
 ### From Jekyll Front Matter
 
 **Jekyll YAML**:
+
 ```yaml
 ---
 title: "VS Code 107"
@@ -465,6 +480,7 @@ youtube_id: "abc123"
 ```
 
 **Converted to ContentItem**:
+
 ```csharp
 new ContentItem
 {
@@ -488,4 +504,3 @@ None - domain models are well-defined based on existing Jekyll structure.
 
 - `/AGENTS.md` - Root development guide
 - `/.specify/memory/constitution.md` - Project principles
-

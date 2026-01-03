@@ -466,7 +466,7 @@ public class ContentItemTests
     [InlineData("github-copilot", "/github-copilot/videos/test.html")]
     [InlineData("azure", "/azure/videos/test.html")]
     public void GetUrlInSection_WithDifferentSections_ReturnsCorrectUrls(
-        string sectionUrl, 
+        string sectionUrl,
         string expectedUrl)
     {
         // Arrange
@@ -571,7 +571,7 @@ public class DateUtilsTests
     [InlineData("2025-06-15", 1749081600)]
     [InlineData("2024-12-31", 1735603200)]
     public void ParseIsoDate_WithValidFormats_ReturnsCorrectEpoch(
-        string isoDate, 
+        string isoDate,
         long expectedEpoch)
     {
         // Arrange & Act

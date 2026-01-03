@@ -54,18 +54,23 @@ For complete implementation details, patterns, and best practices, see [scripts/
 
 ```bash
 # All PowerShell tests
+
 ./scripts/run-powershell-tests.ps1
 
 # Specific test file
+
 ./scripts/run-powershell-tests.ps1 -TestFile "tests/powershell/Convert-RssToMarkdown.Tests.ps1"
 
 # With code coverage
+
 ./scripts/run-powershell-tests.ps1 -Coverage
 
 # With detailed output
+
 ./scripts/run-powershell-tests.ps1 -Detailed
 
 # Run specific test by name
+
 ./scripts/run-powershell-tests.ps1 -TestName "should convert basic RSS"
 ```
 

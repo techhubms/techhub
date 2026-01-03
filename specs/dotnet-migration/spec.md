@@ -105,6 +105,7 @@ As a content creator or marketer, I want the site to be optimized for search eng
 **Issue Reporting**: GitHub Issues on techhubms/techhub repository
 
 **Priority Levels**:
+
 - **P0 (Site Down)**: Entire site unreachable → Notification sent immediately, fixed best effort
 - **P1 (Critical Bug)**: Major functionality broken (e.g., all videos not loading) → Fixed best effort
 - **P2 (High Bug)**: Specific feature broken (e.g., one section not loading) → Fixed when available
@@ -428,4 +429,3 @@ This master spec is supported by detailed feature specifications in `/specs/`:
 - [.NET Aspire Documentation](https://learn.microsoft.com/dotnet/aspire/)
 - [Schema.org Article](https://schema.org/Article)
 - [WCAG 2.1 Guidelines](https://www.w3.org/WAI/WCAG21/quickref/)
-

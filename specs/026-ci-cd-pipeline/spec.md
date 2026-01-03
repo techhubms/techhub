@@ -79,6 +79,7 @@ Define GitHub Actions workflows for continuous integration (build, test, lint) a
    - Auto-rollback on health check failures
 
 **Environments**:
+
 - Development: Auto-deploy on every commit to dev branch
 - Staging: Auto-deploy on merge to main
 - Production: Manual approval required after staging validation
@@ -104,6 +105,7 @@ Define GitHub Actions workflows for continuous integration (build, test, lint) a
 **Preferred Schedule**: Saturday 2:00 AM - 4:00 AM CET (low traffic period)
 
 **Content Freeze**: 2 hours before deployment start (Saturday 12:00 AM - 4:00 AM CET)
+
 - No new content published during this window
 - Jekyll site remains accessible (read-only)
 
@@ -125,32 +127,38 @@ Define GitHub Actions workflows for continuous integration (build, test, lint) a
 ### Rollback Plan
 
 **Automatic Rollback Triggers**:
+
 - Container Apps health checks fail
 - Error rate > 10% for 5+ minutes
 - Site unreachable after DNS update
 
 **Rollback Process**:
+
 1. Revert DNS records to Jekyll hosting
 2. Verify Jekyll site accessible
 3. Troubleshoot .NET deployment offline
 4. Schedule retry deployment
 
 **Jekyll Backup Retention**: 30 days post-migration
+
 - Keep Jekyll site deployable as fallback
 - Decommission Jekyll infrastructure after 30 days of stable .NET operation
 
 ### Post-Migration
 
 **First 24 Hours**:
+
 - Active monitoring of error rates and performance
 - Quick response to any critical issues (best effort, no SLA)
 
 **First 7 Days**:
+
 - Daily review of Application Insights metrics
 - Gather user feedback
 - Address high-priority bugs
 
 **First 30 Days**:
+
 - Weekly performance reviews
 - Content parity validation
 - Plan Jekyll decommissioning

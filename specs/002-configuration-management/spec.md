@@ -19,6 +19,7 @@ Define configuration structure for appsettings.json across dev/staging/productio
 ## Scope
 
 **Must Define**:
+
 - appsettings.json structure and schema
 - Environment-specific configuration (appsettings.Development.json, appsettings.Production.json)
 - Configuration validation on startup
@@ -28,6 +29,7 @@ Define configuration structure for appsettings.json across dev/staging/productio
 - Configuration binding to strongly-typed classes
 
 **Key Configuration Areas**:
+
 - Logging configuration (Application Insights, console, file)
 - Content repository settings (file paths, cache duration)
 - API URLs and external services (YouTube API if needed)
@@ -35,6 +37,7 @@ Define configuration structure for appsettings.json across dev/staging/productio
 - Monitoring and instrumentation (Application Insights key)
 
 **Caching Configuration** (IMemoryCache):
+
 - **Strategy**: In-memory cache with sliding/absolute expiration
 - **RSS Feeds**: 30-minute absolute expiration (balance freshness vs load)
 - **API Responses**: 1-hour absolute expiration (sections, content lists)
@@ -44,6 +47,7 @@ Define configuration structure for appsettings.json across dev/staging/productio
 - **Cache Keys**: Consistent naming convention for different content types
 
 **Configuration Example**:
+
 ```json
 {
   "Caching": {

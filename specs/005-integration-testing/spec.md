@@ -531,7 +531,7 @@ public class ContentEndpointsTests : IClassFixture<ApiWebApplicationFactory>
             .ReadFromJsonAsync<List<ContentItemDto>>();
         
         items.Should().NotBeNull();
-        items.Should().AllSatisfy(item => 
+        items.Should().AllSatisfy(item =>
             item.Categories.Should().Contain("ai"));
     }
     
@@ -1032,4 +1032,3 @@ dotnet test tests/TechHub.Api.Tests --collect:"XPlat Code Coverage"
 - `/specs/004-unit-testing/spec.md` - Unit testing strategy
 - `/specs/013-api-endpoints/spec.md` - Endpoints to test
 - `/specs/012-repository-pattern/spec.md` - Repository integration
-

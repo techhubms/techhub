@@ -644,12 +644,15 @@ global using TechHub.Core.DTOs;
 
 ```powershell
 # Navigate to /workspaces/techhub/dotnet
+
 cd /workspaces/techhub/dotnet
 
 # Create solution
+
 dotnet new sln -n TechHub
 
 # Create source projects
+
 dotnet new web -n TechHub.Api -o src/TechHub.Api
 dotnet new blazor -n TechHub.Web -o src/TechHub.Web -int Server
 dotnet new classlib -n TechHub.Core -o src/TechHub.Core
@@ -658,6 +661,7 @@ dotnet new classlib -n TechHub.ServiceDefaults -o src/TechHub.ServiceDefaults
 dotnet new aspire-apphost -n TechHub.AppHost -o src/TechHub.AppHost
 
 # Create test projects
+
 dotnet new xunit -n TechHub.Core.Tests -o tests/TechHub.Core.Tests
 dotnet new xunit -n TechHub.Api.Tests -o tests/TechHub.Api.Tests
 dotnet new xunit -n TechHub.Infrastructure.Tests -o tests/TechHub.Infrastructure.Tests
@@ -665,6 +669,7 @@ dotnet new xunit -n TechHub.Web.Tests -o tests/TechHub.Web.Tests
 dotnet new xunit -n TechHub.E2E.Tests -o tests/TechHub.E2E.Tests
 
 # Add projects to solution
+
 dotnet sln add src/TechHub.Api/TechHub.Api.csproj
 dotnet sln add src/TechHub.Web/TechHub.Web.csproj
 dotnet sln add src/TechHub.Core/TechHub.Core.csproj
@@ -678,6 +683,7 @@ dotnet sln add tests/TechHub.Web.Tests/TechHub.Web.Tests.csproj
 dotnet sln add tests/TechHub.E2E.Tests/TechHub.E2E.Tests.csproj
 
 # Add project references
+
 dotnet add src/TechHub.Api/TechHub.Api.csproj reference src/TechHub.Core/TechHub.Core.csproj
 dotnet add src/TechHub.Api/TechHub.Api.csproj reference src/TechHub.Infrastructure/TechHub.Infrastructure.csproj
 dotnet add src/TechHub.Api/TechHub.Api.csproj reference src/TechHub.ServiceDefaults/TechHub.ServiceDefaults.csproj
@@ -730,15 +736,19 @@ See `/specs/004-unit-testing/spec.md` for comprehensive testing approach.
 
 ```powershell
 # Run all tests
+
 dotnet test
 
 # Run specific project
+
 dotnet test tests/TechHub.Core.Tests
 
 # With coverage
+
 dotnet test --collect:"XPlat Code Coverage"
 
 # With logger
+
 dotnet test --logger "console;verbosity=detailed"
 ```
 

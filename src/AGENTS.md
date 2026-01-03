@@ -220,12 +220,15 @@ See [Directory.Build.props](/Directory.Build.props) for complete list with detai
 
 ```bash
 # Build with code analysis
+
 dotnet build
 
 # Build treating warnings as errors (for CI)
+
 dotnet build /p:TreatWarningsAsErrors=true
 
 # Clean build (reveals all warnings)
+
 dotnet clean && dotnet build
 ```
 
@@ -274,7 +277,7 @@ public static class SectionEndpoints
     }
     
     private static async Task<IResult> GetAllSections(
-        ISectionRepository repository, 
+        ISectionRepository repository,
         CancellationToken ct)
     {
         var sections = await repository.GetAllSectionsAsync(ct);
@@ -344,7 +347,7 @@ public class FileSectionRepository : ISectionRepository
         }
         
         var json = await File.ReadAllTextAsync(_sectionsJsonPath, ct);
-        var sections = JsonSerializer.Deserialize<List<Section>>(json) 
+        var sections = JsonSerializer.Deserialize<List<Section>>(json)
             ?? throw new InvalidOperationException("Failed to parse sections.json");
         
         _cache.Set(cacheKey, sections, TimeSpan.FromHours(1));
@@ -421,15 +424,19 @@ builder.Services.AddHttpClient<ITechHubApiClient, TechHubApiClient>(client =>
 
 ```bash
 # Debug build (default)
+
 dotnet build
 
 # Release build
+
 dotnet build -c Release
 
 # Restore packages
+
 dotnet restore
 
 # Clean build artifacts
+
 dotnet clean
 ```
 
@@ -437,10 +444,13 @@ dotnet clean
 
 ```bash
 # Start with Aspire orchestration
+
 dotnet run --project src/TechHub.AppHost
 
 # Aspire dashboard: https://localhost:15888
+
 # API: https://localhost:5001
+
 # Web: https://localhost:5173
 ```
 
@@ -448,12 +458,15 @@ dotnet run --project src/TechHub.AppHost
 
 ```bash
 # Run all tests
+
 dotnet test
 
 # Run specific project
+
 dotnet test tests/TechHub.Api.Tests
 
 # With coverage
+
 dotnet test --collect:"XPlat Code Coverage"
 ```
 
@@ -622,15 +635,19 @@ When working on .NET features, ALWAYS use context7 MCP tool to fetch current doc
 
 ```plaintext
 # .NET Runtime
+
 mcp_context7_query-docs(libraryID: "/dotnet/docs", query: "your topic")
 
 # ASP.NET Core
+
 mcp_context7_query-docs(libraryID: "/dotnet/aspnetcore", query: "minimal apis")
 
 # Blazor
+
 mcp_context7_query-docs(libraryID: "/dotnet/aspnetcore", query: "blazor ssr")
 
 # .NET Aspire
+
 mcp_context7_query-docs(libraryID: "/dotnet/aspire", query: "service discovery")
 ```
 
@@ -652,4 +669,3 @@ mcp_context7_query-docs(libraryID: "/dotnet/aspire", query: "service discovery")
 ---
 
 **Remember**: Code quality is not negotiable. Every commit should build with 0 warnings, pass all tests, and follow established patterns.
-

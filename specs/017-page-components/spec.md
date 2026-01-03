@@ -740,4 +740,3 @@ None - all page requirements are clearly defined
 - [019-filtering-system Spec](../019-filtering-system/spec.md) - Filtering logic
 - `/github-copilot/features.md` - Current features page
 - `/github-copilot/levels-of-enlightenment.md` - Current learning path page
-

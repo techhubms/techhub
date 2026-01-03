@@ -478,4 +478,3 @@ GenerateSlug(title, date, collection):
 6. **Performance**: Cache URL generation results (items don't change URLs)
 7. **Testing**: Generate all possible URLs for all items, verify HTTP 200
 8. **Sitemap Generation**: Include all URL variations in sitemap (not just canonical)
-

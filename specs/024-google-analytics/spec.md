@@ -65,6 +65,7 @@ The Google Analytics system integrates GA4 (Google Analytics 4) for comprehensiv
 1. User types "copilot features" and presses Enter
 2. Search results display
 3. System sends custom event to GA4:
+
    ```javascript
    gtag('event', 'search', {
      search_term: 'copilot features',
@@ -73,6 +74,7 @@ The Google Analytics system integrates GA4 (Google Analytics 4) for comprehensiv
      event_label: 'site_search'
    });
    ```
+
 4. GA4 records search event with parameters
 
 **Postcondition**: Search query tracked for analytics
@@ -92,6 +94,7 @@ The Google Analytics system integrates GA4 (Google Analytics 4) for comprehensiv
    - CLS (Cumulative Layout Shift)
    - TTFB (Time to First Byte)
 3. System sends metrics to GA4:
+
    ```javascript
    gtag('event', 'web_vitals', {
      metric_name: 'LCP',
@@ -99,6 +102,7 @@ The Google Analytics system integrates GA4 (Google Analytics 4) for comprehensiv
      metric_rating: 'good' // good/needs-improvement/poor
    });
    ```
+
 4. GA4 records performance metrics
 
 **Postcondition**: Core Web Vitals data available for analysis
@@ -141,6 +145,7 @@ The Google Analytics system integrates GA4 (Google Analytics 4) for comprehensiv
 1. User scrolls to 80% of content
 2. System loads next 20 items via API
 3. System sends custom event:
+
    ```javascript
    gtag('event', 'infinite_scroll', {
      event_category: 'engagement',
@@ -150,6 +155,7 @@ The Google Analytics system integrates GA4 (Google Analytics 4) for comprehensiv
      collection: 'news'
    });
    ```
+
 4. GA4 records scroll interaction
 
 **Postcondition**: Infinite scroll usage tracked

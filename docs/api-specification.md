@@ -79,6 +79,7 @@ Represents individual content (articles, videos, blogs, etc.).
 Get all sections.
 
 **Response**: `200 OK`
+
 ```json
 [
   {
@@ -94,6 +95,7 @@ Get all sections.
 ```
 
 **Example**:
+
 ```bash
 curl http://localhost:5029/api/sections
 ```
@@ -105,11 +107,13 @@ curl http://localhost:5029/api/sections
 Get a specific section by name.
 
 **Parameters**:
+
 - `sectionName` (path): Section identifier (e.g., `ai`, `github-copilot`, `ml`)
 
 **Response**: `200 OK` or `404 Not Found`
 
 **Example**:
+
 ```bash
 curl http://localhost:5029/api/sections/ai
 ```
@@ -121,13 +125,16 @@ curl http://localhost:5029/api/sections/ai
 Get all content items in a section (across all collections).
 
 **Parameters**:
+
 - `sectionName` (path): Section identifier
 
 **Response**: `200 OK` or `404 Not Found`
 
 **Example**:
+
 ```bash
 curl http://localhost:5029/api/sections/ai/items
+
 # Returns 1378+ AI-related items across all collections
 ```
 
@@ -138,13 +145,16 @@ curl http://localhost:5029/api/sections/ai/items
 Get all collections available in a section.
 
 **Parameters**:
+
 - `sectionName` (path): Section identifier
 
 **Response**: `200 OK` or `404 Not Found`
 
 **Example**:
+
 ```bash
 curl http://localhost:5029/api/sections/github-copilot/collections
+
 # Returns: news, blogs, videos, community
 ```
 
@@ -155,12 +165,14 @@ curl http://localhost:5029/api/sections/github-copilot/collections
 Get details about a specific collection within a section.
 
 **Parameters**:
+
 - `sectionName` (path): Section identifier
 - `collectionName` (path): Collection name (e.g., `news`, `blogs`, `videos`, `community`, `roundups`)
 
 **Response**: `200 OK` or `404 Not Found`
 
 **Example**:
+
 ```bash
 curl http://localhost:5029/api/sections/ai/collections/news
 ```
@@ -172,14 +184,17 @@ curl http://localhost:5029/api/sections/ai/collections/news
 Get all items in a specific collection within a section.
 
 **Parameters**:
+
 - `sectionName` (path): Section identifier
 - `collectionName` (path): Collection name
 
 **Response**: `200 OK` or `404 Not Found`
 
 **Example**:
+
 ```bash
 curl http://localhost:5029/api/sections/ml/collections/videos
+
 # Returns only videos tagged with ML category
 ```
 
@@ -192,6 +207,7 @@ curl http://localhost:5029/api/sections/ml/collections/videos
 Filter content across multiple criteria with AND logic.
 
 **Query Parameters**:
+
 - `sections` (optional): Comma-separated section names (e.g., `ai,ml`)
 - `collections` (optional): Comma-separated collection names (e.g., `news,blogs`)
 - `tags` (optional): Comma-separated tags - content must have ALL tags (AND logic)
@@ -202,32 +218,42 @@ Filter content across multiple criteria with AND logic.
 **Examples**:
 
 Filter by sections only:
+
 ```bash
 curl "http://localhost:5029/api/content/filter?sections=ai,ml"
+
 # Returns 1519+ items from AI or ML sections
 ```
 
 Filter by collections only:
+
 ```bash
 curl "http://localhost:5029/api/content/filter?collections=news,blogs"
+
 # Returns 1142+ news and blog items
 ```
 
 Combine section and collection:
+
 ```bash
 curl "http://localhost:5029/api/content/filter?sections=ai&collections=news"
+
 # Returns 528+ AI news items
 ```
 
 Complex multi-criteria filter:
+
 ```bash
 curl "http://localhost:5029/api/content/filter?sections=ai,ml&collections=news,blogs&tags=copilot"
+
 # Returns 144+ items with copilot tag in AI/ML news/blogs
 ```
 
 Search within filtered results:
+
 ```bash
 curl "http://localhost:5029/api/content/filter?sections=github-copilot&q=vscode"
+
 # Returns 4+ GitHub Copilot items mentioning 'vscode'
 ```
 
@@ -238,6 +264,7 @@ curl "http://localhost:5029/api/content/filter?sections=github-copilot&q=vscode"
 Get all unique tags across all content.
 
 **Response**: `200 OK`
+
 ```json
 [
   "copilot",
@@ -249,8 +276,10 @@ Get all unique tags across all content.
 ```
 
 **Example**:
+
 ```bash
 curl http://localhost:5029/api/content/tags
+
 # Returns 12,524+ unique tags
 ```
 
@@ -370,9 +399,11 @@ The previous flat structure has been **completely removed**:
 
 ```bash
 # Get section details
+
 curl http://localhost:5029/api/sections/ai
 
 # Get all items for the section
+
 curl http://localhost:5029/api/sections/ai/items
 ```
 
@@ -380,6 +411,7 @@ curl http://localhost:5029/api/sections/ai/items
 
 ```bash
 # Get GitHub Copilot news
+
 curl http://localhost:5029/api/sections/github-copilot/collections/news/items
 ```
 
@@ -387,6 +419,7 @@ curl http://localhost:5029/api/sections/github-copilot/collections/news/items
 
 ```bash
 # Find all copilot-related content in AI and ML blogs
+
 curl "http://localhost:5029/api/content/filter?sections=ai,ml&collections=blogs&tags=copilot"
 ```
 
@@ -394,9 +427,11 @@ curl "http://localhost:5029/api/content/filter?sections=ai,ml&collections=blogs&
 
 ```bash
 # Get all tags
+
 curl http://localhost:5029/api/content/tags
 
 # Filter by specific tags
+
 curl "http://localhost:5029/api/content/filter?tags=azure,copilot"
 ```
 
@@ -404,9 +439,11 @@ curl "http://localhost:5029/api/content/filter?tags=azure,copilot"
 
 ```bash
 # Search across all content
+
 curl "http://localhost:5029/api/content/filter?q=blazor"
 
 # Search within specific section
+
 curl "http://localhost:5029/api/content/filter?sections=coding&q=blazor"
 ```
 
@@ -502,4 +539,3 @@ Planned features (not yet implemented):
 - **RSS feeds**: `/api/sections/{section}/collections/{collection}/feed`
 - **Rate limiting**: Protect against abuse
 - **Authentication/Authorization**: Secure access control
-

@@ -123,15 +123,19 @@ Describe "Function-Name" {
 
 ```bash
 # All PowerShell tests
+
 ./scripts/run-powershell-tests.ps1
 
 # Specific test file
+
 ./scripts/run-powershell-tests.ps1 -TestPath "spec/powershell/Convert-RssToMarkdown.Tests.ps1"
 
 # With coverage
+
 ./scripts/run-powershell-tests.ps1 -Coverage
 
 # Detailed output
+
 ./scripts/run-powershell-tests.ps1 -Detailed
 ```
 
@@ -193,15 +197,19 @@ describe('Filter System', () => {
 
 ```bash
 # All JavaScript tests
+
 ./scripts/run-javascript-tests.ps1
 
 # Watch mode
+
 npm test -- --watch
 
 # Coverage
+
 npm test -- --coverage
 
 # Specific file
+
 npm test -- filters.test.js
 ```
 
@@ -243,12 +251,15 @@ end
 
 ```bash
 # All plugin tests
+
 ./scripts/run-plugin-tests.ps1
 
 # Specific file
+
 bundle exec rspec spec/_plugins/date_filters_spec.rb
 
 # With documentation format
+
 bundle exec rspec --format documentation
 ```
 
@@ -309,18 +320,23 @@ test.describe('Filter System', () => {
 
 ```bash
 # All E2E tests
+
 ./scripts/run-e2e-tests.ps1
 
 # Specific test file
+
 npx playwright test tests/filtering.spec.js
 
 # UI mode
+
 npx playwright test --ui
 
 # Debug mode
+
 npx playwright test --debug
 
 # Specific browser
+
 npx playwright test --project=chromium
 ```
 
@@ -335,6 +351,7 @@ Orchestrates all test suites:
 ```
 
 Executes in order:
+
 1. PowerShell tests (Pester)
 2. JavaScript tests (Jest)
 3. Ruby tests (RSpec)
@@ -352,12 +369,14 @@ Executes in order:
 ### PowerShell Unit Tests
 
 **Use For**:
+
 - Tag normalization algorithms
 - Content cleaning functions
 - File processing logic
 - String manipulation
 
 **Avoid**:
+
 - File I/O (mock instead)
 - Jekyll integration
 - Browser behavior
@@ -365,12 +384,14 @@ Executes in order:
 ### JavaScript Unit Tests
 
 **Use For**:
+
 - Filter state management
 - Tag relationship processing
 - Date filtering algorithms
 - URL parameter handling
 
 **Avoid**:
+
 - DOM manipulation (use Playwright)
 - Full browser APIs
 - Visual testing
@@ -378,12 +399,14 @@ Executes in order:
 ### Ruby Integration Tests
 
 **Use For**:
+
 - Jekyll plugin functionality
 - Liquid filter behavior
 - Data file generation
 - Server-side transformation
 
 **Avoid**:
+
 - Client-side logic
 - Browser rendering
 - External APIs
@@ -391,12 +414,14 @@ Executes in order:
 ### Playwright E2E Tests
 
 **Use For**:
+
 - Complete user workflows
 - Cross-browser compatibility
 - Performance validation
 - Visual regression
 
 **Avoid**:
+
 - Unit logic
 - Implementation details
 - Isolated functions
@@ -451,13 +476,17 @@ end
 
 ```bash
 # PowerShell coverage
+
 ./scripts/run-powershell-tests.ps1 -Coverage
 
 # JavaScript coverage
+
 npm test -- --coverage
 
 # View coverage reports
+
 # PowerShell: coverage.xml
+
 # JavaScript: coverage/index.html
 ```
 
@@ -475,9 +504,11 @@ Tests run automatically in GitHub Actions:
 
 ```powershell
 # ✅ CORRECT: Descriptive test names
+
 It "Should filter tags containing hyphens correctly" { }
 
 # ❌ WRONG: Vague test names
+
 It "Works" { }
 ```
 
@@ -500,11 +531,13 @@ test('example test', () => {
 
 ```powershell
 # ✅ CORRECT: Clean state each test
+
 BeforeEach {
     $variable = @()  # Reset for each test
 }
 
 # ❌ WRONG: Tests depend on order
+
 $variable = @()  # Shared state!
 It "First test" { $variable += 1 }
 It "Second test" { $variable += 2 }  # Depends on first!
@@ -516,12 +549,15 @@ It "Second test" { $variable += 2 }  # Depends on first!
 
 ```powershell
 # Add debug output
+
 Write-Host "Variable value: $variable"
 
 # Set breakpoint (VS Code)
+
 # Click left of line number
 
 # Step through
+
 # F10: Step over, F11: Step into
 ```
 
@@ -544,12 +580,15 @@ test.only('debug this test', () => {
 
 ```bash
 # Debug mode (pause on failures)
+
 npx playwright test --debug
 
 # Generate trace
+
 npx playwright test --trace on
 
 # View trace
+
 npx playwright show-trace trace.zip
 ```
 

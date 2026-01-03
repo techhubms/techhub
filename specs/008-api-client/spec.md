@@ -10,6 +10,7 @@ Implement typed HttpClient service for Blazor frontend to communicate with TechH
 ## Why This Matters
 
 Blazor Web (frontend) must call TechHub.Api (backend) to retrieve content, sections, filters, RSS feeds, etc. Without a well-designed API client:
+
 - Developers hardcode URLs and manually serialize JSON
 - No type safety between frontend and backend
 - Error handling is inconsistent
@@ -21,12 +22,14 @@ A typed API client provides compile-time safety and consistent communication pat
 ## Key Requirements (To Be Detailed)
 
 ### API Client Architecture
+
 - **IApiClient interface**: Abstraction for testing
 - **ApiClient implementation**: HttpClient wrapper with typed methods
 - **Shared DTOs**: Request/response models shared between API and Web
 - **Base URL configuration**: Environment-specific API endpoints
 
 ### Client Methods (Mirror API Endpoints)
+
 - `GetSectionsAsync()` → List of sections
 - `GetSectionContentAsync(sectionKey)` → Section with collections
 - `GetCollectionItemsAsync(section, collection, filters)` → Paginated items
@@ -35,6 +38,7 @@ A typed API client provides compile-time safety and consistent communication pat
 - `SearchContentAsync(query, filters)` → Search results
 
 ### Error Handling
+
 - HTTP status code handling (404, 500, etc.)
 - Timeout configuration
 - Retry policies via Polly
@@ -42,12 +46,14 @@ A typed API client provides compile-time safety and consistent communication pat
 - User-friendly error messages
 
 ### Serialization
+
 - System.Text.Json configuration
 - Camel case naming policy
 - Date/time handling (UTC conversion)
 - Null value handling
 
 ### Testing Support
+
 - Mock API client for component testing
 - Test helpers for creating API responses
 - In-memory API for E2E tests

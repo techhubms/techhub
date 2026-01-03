@@ -94,21 +94,27 @@ _plugins/
 
 ```ruby
 # Convert to Unix epoch timestamp
+
 {{ item.date | to_epoch }}
 
 # Convert with Europe/Brussels timezone
+
 {{ item.date | date_to_epoch }}
 
 # Get current timestamp
+
 {{ '' | now_epoch }}
 
 # Filter items with valid dates
+
 {{ site.documents | with_dates }}
 
 # Sort by date (newest first)
+
 {{ site.blogs | sort_by_date }}
 
 # Limit with same-day grouping (collection-aware)
+
 {{ site.blogs | limit_with_same_day: 10 }}
 ```
 
@@ -130,6 +136,7 @@ _plugins/
 
 ```ruby
 # Extract and normalize tags from frontmatter
+
 {{ item.tags | extract_tags }}
 ```
 
@@ -147,9 +154,11 @@ _plugins/
 
 ```ruby
 # URL validation
+
 {{ url_string | is_valid_url }}
 
 # Safe string output
+
 {{ content | safe_string }}
 ```
 
@@ -368,12 +377,15 @@ All Ruby plugins must use consistent date processing:
 
 ```ruby
 # Correct: Use DateUtils for consistent processing
+
 current_time = DateUtils.now_epoch()
 
 # Correct: Parse dates using DateUtils methods
+
 parsed_epoch = DateUtils.date_to_epoch(date_string)
 
 # Correct: Normalize to midnight Brussels time
+
 midnight_epoch = DateUtils.normalize_to_midnight(date_input)
 ```
 
@@ -410,9 +422,11 @@ spec/plugins/
 
 ```bash
 # All plugin tests
+
 ./scripts/run-plugin-tests.ps1
 
 # Specific file
+
 bundle exec rspec spec/_plugins/date_filters_spec.rb
 ```
 
@@ -524,12 +538,15 @@ end
 
 ```bash
 # Run all plugin tests
+
 ./scripts/run-plugin-tests.ps1
 
 # Run specific test file
+
 bundle exec rspec spec/_plugins/date_filters_spec.rb
 
 # Run with coverage
+
 bundle exec rspec --format documentation
 ```
 

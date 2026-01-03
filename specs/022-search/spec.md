@@ -272,9 +272,9 @@ graph LR
 
 <div class="search-overlay @(IsOpen ? "open" : "")">
     <div class="search-box">
-        <input type="search" 
-               placeholder="Search Tech Hub..." 
-               @bind="SearchQuery" 
+        <input type="search"
+               placeholder="Search Tech Hub..."
+               @bind="SearchQuery"
                @bind:event="oninput"
                @onkeyup="HandleSearchInput"
                autocomplete="off"
@@ -418,4 +418,3 @@ graph LR
 - [Filtering System Spec](/specs/019-filtering-system/spec.md) (for filter compatibility)
 - [Section System Spec](/specs/010-section-system/spec.md) (for category/collection structure)
 - [Azure AI Search Documentation](https://docs.microsoft.com/azure/search/)
-

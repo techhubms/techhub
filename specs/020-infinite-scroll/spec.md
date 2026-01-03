@@ -379,10 +379,10 @@ window.addEventListener('DOMContentLoaded', restoreScrollState);
 **ARIA Live Region**:
 
 ```html
-<div 
-  id="infinite-scroll-announcer" 
-  role="status" 
-  aria-live="polite" 
+<div
+  id="infinite-scroll-announcer"
+  role="status"
+  aria-live="polite"
   aria-atomic="true"
   class="visually-hidden"
 >

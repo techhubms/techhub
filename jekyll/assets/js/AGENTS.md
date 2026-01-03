@@ -12,6 +12,7 @@ You are a JavaScript specialist focused on client-side interactivity for the Tec
 ## When to Use This Guide
 
 **Read this file when**:
+
 - Writing or modifying JavaScript in `assets/js/` directory
 - Implementing client-side filtering or search features
 - Adding interactive UI enhancements
@@ -19,6 +20,7 @@ You are a JavaScript specialist focused on client-side interactivity for the Tec
 - Working with DOM manipulation
 
 **Related Documentation**:
+
 - Testing JavaScript → [spec/AGENTS.md](../../spec/AGENTS.md)
 - Server-side rendering → [.github/agents/fullstack.md](../../.github/agents/fullstack.md)
 - Date/timezone handling → Root [AGENTS.md](../../AGENTS.md)
@@ -239,7 +241,7 @@ The filtering system uses pre-calculated tag relationships embedded by Jekyll:
 
 ```html
 <!-- Server renders this -->
-<div data-tags="ai,azure,machine-learning" 
+<div data-tags="ai,azure,machine-learning"
      data-section="ai"
      data-collection="blogs">
   Content here
@@ -362,12 +364,14 @@ describe('Filter System', () => {
 ### Core Performance Guidelines
 
 **Progressive Enhancement**:
+
 - Ensure core functionality works without JavaScript
 - Load core functionality first, then enhance progressively
 - Monitor memory usage for leaks in long-running sessions
 - Never create initial content with JavaScript (server-rendered only)
 
 **Image and Asset Performance**:
+
 - **Lazy loading** - Load images as needed to improve initial page performance
 - **Modern formats** - Use WebP and other modern image formats when supported
 - **Responsive images** - Implement proper `srcset` and `sizes` attributes
@@ -376,16 +380,19 @@ describe('Filter System', () => {
 **Testing Requirements**:
 
 **Mobile Performance**:
+
 - Test loading speeds on mobile networks and various connection speeds
 - Ensure touch interactions are responsive
 - Verify performance standards are met on mobile devices
 
 **Browser Performance**:
+
 - Test across different browsers and versions
 - Track JavaScript execution times
 - Use browser dev tools to profile and identify bottlenecks
 
 **Performance Monitoring**:
+
 - Monitor JavaScript execution times
 - Measure page load times across devices
 - Use profiling tools to find slow operations
@@ -438,11 +445,13 @@ function updateDisplay() {
 ### Troubleshooting Slow Filtering or Page Loading
 
 **Common causes**:
+
 - Too much client-side processing
 - Inefficient DOM queries
 - Large datasets without optimization
 
 **Solutions**:
+
 1. Move processing to server-side (build time)
 2. Optimize JavaScript queries and cache DOM elements
 3. Implement proper caching strategies
@@ -501,12 +510,15 @@ function passesTextSearch(item, query) {
 
 ```bash
 # Run JavaScript tests
+
 ./scripts/run-javascript-tests.ps1
 
 # Run with coverage
+
 npm test -- --coverage
 
 # Watch mode
+
 npm test -- --watch
 ```
 
@@ -517,6 +529,7 @@ npm test -- --watch
 **🚨 CRITICAL**: Jekyll sites are built once and contain static HTML. Relative dates in data attributes used for filtering logic must NEVER be hardcoded.
 
 **Static Site Date Processing Requirements**:
+
 - **Convert to Epoch Immediately**: All dates must be converted to Unix epoch timestamps
 - **Client-Side Calculations**: Use epoch timestamps for all relative date calculations
 - **No Hardcoded Relative Dates**: Never use text like "last 3 days" in data attributes
@@ -525,15 +538,18 @@ npm test -- --watch
 ### What Is Allowed vs Not Allowed
 
 **✅ ALLOWED (Display Text)**:
+
 - Button labels: `<button>Last 3 days</button>`
 - Headings: `<h1>Last 3 days</h1>`
 - Dynamic display text calculated at runtime
 
 **❌ NOT ALLOWED (Data Attributes for Filtering)**:
+
 - Text in data attributes: `data-date="last 3 days"`
 - JavaScript parsing text strings for filtering logic
 
 **✅ REQUIRED (Filtering Logic)**:
+
 - Numeric data attributes: `data-days="3"` or `data-epoch="1721541345"`
 - Epoch timestamp calculations in JavaScript
 
@@ -610,15 +626,18 @@ const now = new Date(); // Uses client timezone inconsistently
 ### Data Attribute Requirements
 
 **✅ ALLOWED (Display Text)**:
+
 - Button labels: `<button>Last 3 days</button>`
 - Headings: `<h1>Last 3 days</h1>`
 - Dynamic display text calculated at runtime
 
 **❌ NOT ALLOWED (Data Attributes for Filtering)**:
+
 - Text in data attributes: `data-date="last 3 days"`
 - JavaScript parsing text strings for filtering logic
 
 **✅ REQUIRED (Filtering Logic)**:
+
 - Numeric data attributes: `data-days="3"` or `data-epoch="1721541345"`
 - Epoch timestamp calculations in JavaScript
 

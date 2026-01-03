@@ -29,6 +29,7 @@ public class Section
 ```
 
 **Validation Rules**:
+
 - `Id` must be lowercase with hyphens only
 - `Url` must start with `/` and match `Id`
 - `Category` must match valid categories from sections.json
@@ -52,6 +53,7 @@ public class CollectionReference
 ```
 
 **Validation Rules**:
+
 - `Collection` must match a valid collection directory (_news, _blogs, _videos, _community, _roundups)
 - `Url` must be valid URL path
 - `IsCustom` defaults to false
@@ -89,6 +91,7 @@ public class ContentItem
 ```
 
 **Validation Rules**:
+
 - `Title` must not be empty
 - `DateEpoch` must be valid Unix timestamp (> 0)
 - `Categories` must not be empty
@@ -111,10 +114,10 @@ public class FilterState
     public IReadOnlyList<string> SelectedCollections { get; set; } = Array.Empty<string>();
     
     // Computed
-    public bool HasActiveFilters => 
-        !string.IsNullOrWhiteSpace(SearchText) || 
-        DateRange != null || 
-        SelectedTags.Any() || 
+    public bool HasActiveFilters =>
+        !string.IsNullOrWhiteSpace(SearchText) ||
+        DateRange != null ||
+        SelectedTags.Any() ||
         SelectedCollections.Any();
         
     public void Clear()
@@ -198,6 +201,7 @@ public record ContentItemDto(
 ```
 
 **Notes**:
+
 - `RenderedHtml` is NOT included in list views (only in detail view)
 - `DateIso` provided for `<time datetime>` attributes
 - `CanonicalUrl` includes full URL for SEO
@@ -297,6 +301,7 @@ ContentItem (n) ─── (n) Tags (via many-to-many through frontmatter)
 ```
 
 **Key Relationships**:
+
 - One Section has many CollectionReferences
 - CollectionReferences point to collection names (not entities)
 - ContentItems belong to one primary Collection
@@ -426,6 +431,7 @@ The rest of the markdown content rendered to HTML...
 **CRITICAL**: All repository methods return content sorted by `DateEpoch` in **descending order** (newest first).
 
 This sorting is applied:
+
 - At the repository layer (not in controllers)
 - To all methods: `GetAllAsync()`, `GetByCollectionAsync()`, `GetByCategoryAsync()`, `SearchAsync()`
 - Before caching (cached results are pre-sorted)

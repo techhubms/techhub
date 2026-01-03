@@ -24,30 +24,39 @@ This directory contains the .NET/Blazor implementation of Tech Hub, migrating fr
 
 ```powershell
 # Basic usage - build and run both projects
+
 ./run.ps1
 
 # Clean build and run tests first
+
 ./run.ps1 -Clean -Test
 
 # Only build (no run)
+
 ./run.ps1 -Build
 
 # Run API only on custom port
+
 ./run.ps1 -ApiOnly -ApiPort 8080
 
 # Run Web only without opening browser
+
 ./run.ps1 -WebOnly -NoBrowser
 
 # Skip build (use existing binaries)
+
 ./run.ps1 -SkipBuild
 
 # Release build
+
 ./run.ps1 -Release
 
 # Verbose output
+
 ./run.ps1 -VerboseOutput
 
 # See all options
+
 ./run.ps1 -?
 ```
 
@@ -75,10 +84,12 @@ This directory contains the .NET/Blazor implementation of Tech Hub, migrating fr
 
 ```powershell
 # Terminal 1: API Server
+
 cd src/TechHub.Api
 dotnet run --urls http://localhost:5029
 
 # Terminal 2: Web Server
+
 cd src/TechHub.Web
 dotnet run
 ```
@@ -158,12 +169,15 @@ Follow the [8-step workflow](../AGENTS.md#ai-assistant-workflow) defined in the 
 
 ```bash
 # Get AI section with collections
+
 curl http://localhost:5029/api/sections/ai
 
 # Get all AI news items
+
 curl http://localhost:5029/api/sections/ai/collections/news/items
 
 # Complex filter: Copilot-tagged items in AI/ML news/blogs
+
 curl "http://localhost:5029/api/content/filter?sections=ai,ml&collections=news,blogs&tags=copilot"
 ```
 
@@ -205,10 +219,12 @@ Following the migration plan phases:
 
 ```bash
 # Terminal 1: API Server
+
 cd src/TechHub.Api
 dotnet run --urls http://localhost:5029
 
 # Terminal 2: Web Server  
+
 cd src/TechHub.Web
 dotnet run
 ```

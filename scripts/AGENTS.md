@@ -97,18 +97,23 @@ scripts/
 
 ```powershell
 # ✅ String interpolation
+
 Write-Host "Value is $variable"
 
 # ✅ Quotes in strings
+
 Write-Host "Value is `"$variable`""
 
 # ✅ Dotted notation in strings
+
 $variable = "a $($object.with.dottednotation) value"
 
 # ✅ Array access in strings
+
 $variable = "a $($object['key']) value"
 
 # ✅ Type casting in strings
+
 $variable = "value:type = $($type):string"
 ```
 
@@ -116,12 +121,15 @@ $variable = "value:type = $($type):string"
 
 ```powershell
 # ❌ Escaping dollar sign
+
 Write-Host "Value is `$variable"  # Wrong! Shows literal $variable
 
 # ❌ Backslash escaping
+
 Write-Host "Value is \"\$variable\""  # Wrong! Backslashes don't work
 
 # ❌ Dotted notation without subexpression
+
 $variable = "a $object.with.dottednotation value"  # Wrong! Only gets $object
 ```
 
@@ -148,6 +156,7 @@ Content processing scripts must handle two execution contexts:
 
 ```powershell
 # Determine the correct functions path
+
 $functionsPath = if ($WorkspaceDirectory -eq $PSScriptRoot) {
     # Running from the script's directory
     Join-Path $PSScriptRoot "functions"
@@ -166,7 +175,7 @@ try {
     . (Join-Path $functionsPath "Write-ErrorDetails.ps1")
     
     # Load other functions
-    Get-ChildItem -Path $functionsPath -Filter "*.ps1" | 
+    Get-ChildItem -Path $functionsPath -Filter "*.ps1" |
         Where-Object { $_.Name -ne "Write-ErrorDetails.ps1" } |
         ForEach-Object { . $_.FullName }
     
@@ -235,12 +244,15 @@ For PowerShell script testing (Pester v5), see:
 
 ```bash
 # All PowerShell tests for content processing scripts
+
 ./scripts/run-powershell-tests.ps1
 
 # Specific test file
+
 ./scripts/run-powershell-tests.ps1 -TestFile "tests/powershell/Convert-RssToMarkdown.Tests.ps1"
 
 # With coverage
+
 ./scripts/run-powershell-tests.ps1 -Coverage
 ```
 
@@ -264,12 +276,15 @@ tests/powershell/
 
 ```bash
 # All PowerShell tests (Content Processing Scripts)
+
 ./scripts/run-powershell-tests.ps1
 
 # Specific test file
+
 ./scripts/run-powershell-tests.ps1 -TestFile "tests/powershell/Convert-RssToMarkdown.Tests.ps1"
 
 # With coverage
+
 ./scripts/run-powershell-tests.ps1 -Coverage
 ```
 
@@ -329,10 +344,12 @@ param(
 
 ```powershell
 # Content processing
+
 ./scripts/content-processing/download-rss-feeds.ps1 -WorkspaceDirectory .
 ./scripts/content-processing/process-rss-to-markdown.ps1 "owner/repo" "token" -WorkspaceDirectory .
 
 # Infrastructure
+
 ./infra/Deploy-Infrastructure.ps1 -Mode validate
 ```
 

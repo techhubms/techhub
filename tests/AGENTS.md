@@ -180,7 +180,7 @@ public class ContentItemTests
     [InlineData("github-copilot", "/github-copilot/videos/test.html")]
     [InlineData("ml", "/ml/videos/test.html")]
     public void GetUrlInSection_WithDifferentSections_ReturnsCorrectUrls(
-        string sectionUrl, 
+        string sectionUrl,
         string expectedUrl)
     {
         // Arrange
@@ -324,17 +324,17 @@ public class TechHubApiFactory : WebApplicationFactory<Program>
         // Set up sections
         var sections = new List<Section>
         {
-            new() 
-            { 
-                Id = "ai", 
+            new()
+            {
+                Id = "ai",
                 Title = "AI",
                 Url = "ai",
                 Category = "AI",
                 Description = "AI content",
                 Collections = ["news", "blogs", "videos"]
             },
-            new() 
-            { 
+            new()
+            {
                 Id = "github-copilot",
                 Title = "GitHub Copilot",
                 Url = "github-copilot",
@@ -429,16 +429,16 @@ public async Task FilterContent_ComplexFilter_ReturnsFilteredItems()
     // Arrange - set up test data with specific characteristics
     var items = new List<ContentItem>
     {
-        new() 
-        { 
+        new()
+        {
             Id = "item1",
             Categories = ["ai"],
             Collection = "news",
             Tags = ["copilot", "azure"],
             // ... other properties
         },
-        new() 
-        { 
+        new()
+        {
             Id = "item2",
             Categories = ["ai", "github-copilot"],
             Collection = "blogs",
@@ -494,15 +494,15 @@ public class SectionCardTests : TestContext
     public void SectionCard_RendersTitle()
     {
         // Arrange
-        var section = new SectionDto 
-        { 
+        var section = new SectionDto
+        {
             Title = "GitHub Copilot",
             Url = "github-copilot",
             // ... other properties
         };
         
         // Act
-        var cut = RenderComponent<SectionCard>(parameters => 
+        var cut = RenderComponent<SectionCard>(parameters =>
             parameters.Add(p => p.Section, section));
         
         // Assert
@@ -516,7 +516,7 @@ public class SectionCardTests : TestContext
         var section = new SectionDto { Url = "ai", /* ... */ };
         
         // Act
-        var cut = RenderComponent<SectionCard>(parameters => 
+        var cut = RenderComponent<SectionCard>(parameters =>
             parameters.Add(p => p.Section, section));
         
         // Assert
@@ -612,12 +612,15 @@ See [tests/powershell/AGENTS.md](/tests/powershell/AGENTS.md) for detailed Power
 
 ```powershell
 # Run all PowerShell tests
+
 ./scripts/run-powershell-tests.ps1
 
 # Run specific test file
+
 ./scripts/run-powershell-tests.ps1 -TestFile "tests/powershell/MyScript.Tests.ps1"
 
 # With coverage
+
 ./scripts/run-powershell-tests.ps1 -Coverage
 ```
 
@@ -627,14 +630,17 @@ See [tests/powershell/AGENTS.md](/tests/powershell/AGENTS.md) for detailed Power
 
 ```bash
 # All .NET tests (unit + integration)
+
 dotnet test
 
 # Specific test project
+
 dotnet test tests/TechHub.Core.Tests
 dotnet test tests/TechHub.Infrastructure.Tests
 dotnet test tests/TechHub.Api.Tests
 
 # With detailed output
+
 dotnet test --logger "console;verbosity=detailed"
 ```
 
@@ -642,12 +648,15 @@ dotnet test --logger "console;verbosity=detailed"
 
 ```bash
 # Run specific test class
+
 dotnet test --filter "FullyQualifiedName~SectionsEndpointsTests"
 
 # Run specific test method
+
 dotnet test --filter "FullyQualifiedName~GetAllSections_Returns200_WithSections"
 
 # Run all tests in namespace
+
 dotnet test --filter "FullyQualifiedName~TechHub.Api.Tests.Endpoints"
 ```
 
@@ -655,12 +664,15 @@ dotnet test --filter "FullyQualifiedName~TechHub.Api.Tests.Endpoints"
 
 ```bash
 # Collect coverage
+
 dotnet test --collect:"XPlat Code Coverage"
 
-# Coverage is output to:
+# Coverage is output to
+
 # tests/{ProjectName}/TestResults/{guid}/coverage.cobertura.xml
 
 # Use ReportGenerator for HTML reports (future)
+
 dotnet tool install -g dotnet-reportgenerator-globaltool
 reportgenerator -reports:"**/coverage.cobertura.xml" -targetdir:"coverage-report"
 ```
@@ -669,6 +681,7 @@ reportgenerator -reports:"**/coverage.cobertura.xml" -targetdir:"coverage-report
 
 ```bash
 # Auto-run tests on file changes (requires dotnet-watch)
+
 dotnet watch test --project tests/TechHub.Core.Tests
 ```
 
@@ -677,6 +690,7 @@ dotnet watch test --project tests/TechHub.Core.Tests
 ### Unit Tests (xUnit)
 
 **Use For**:
+
 - Domain model behavior (`ContentItem.GetUrlInSection()`)
 - Service algorithms (markdown processing, front matter parsing)
 - Pure functions without external dependencies
@@ -684,18 +698,21 @@ dotnet watch test --project tests/TechHub.Core.Tests
 - Data transformations
 
 **Avoid**:
+
 - File system I/O (mock instead)
 - HTTP calls (mock instead)
 - Database operations (mock instead)
 - UI rendering
 
 **Current Projects**:
+
 - TechHub.Core.Tests
 - TechHub.Infrastructure.Tests
 
 ### API Integration Tests (WebApplicationFactory)
 
 **Use For**:
+
 - HTTP endpoint behavior
 - Request/response validation
 - Query parameter handling
@@ -705,16 +722,19 @@ dotnet watch test --project tests/TechHub.Core.Tests
 - Full request pipeline
 
 **Avoid**:
+
 - Complex domain logic (use unit tests)
 - UI interactions (use E2E tests)
 - Cross-browser testing
 
 **Current Projects**:
+
 - TechHub.Api.Tests
 
 ### Component Tests (bUnit - Future)
 
 **Use For**:
+
 - Blazor component rendering
 - Parameter binding
 - Event handling
@@ -723,16 +743,19 @@ dotnet watch test --project tests/TechHub.Core.Tests
 - Conditional rendering
 
 **Avoid**:
+
 - Full page workflows (use E2E)
 - API integration (use API tests)
 - Browser-specific features
 
 **Future Projects**:
+
 - TechHub.Web.Tests
 
 ### E2E Tests (Playwright - Future)
 
 **Use For**:
+
 - Complete user workflows
 - Cross-browser compatibility
 - Navigation flows
@@ -742,11 +765,13 @@ dotnet watch test --project tests/TechHub.Core.Tests
 - Visual regression
 
 **Avoid**:
+
 - Unit logic
 - Implementation details
 - Isolated functions
 
 **Future Projects**:
+
 - TechHub.E2E.Tests
 
 ## Test Data Management
@@ -888,13 +913,13 @@ public class IndependentTests : IClassFixture<TechHubApiFactory>
 private static int _counter = 0; // Shared state!
 
 [Fact]
-public void Test1() 
+public void Test1()
 {
     _counter++; // Modifies shared state
 }
 
 [Fact]
-public void Test2() 
+public void Test2()
 {
     Assert.Equal(1, _counter); // Depends on Test1 running first!
 }
@@ -965,9 +990,11 @@ public class MyTests
 
 ```bash
 # Run only one test for debugging
+
 dotnet test --filter "FullyQualifiedName~GetAllSections_Returns200_WithSections"
 
 # Run with detailed output
+
 dotnet test --logger "console;verbosity=detailed"
 ```
 
@@ -977,6 +1004,7 @@ All tests run automatically in GitHub Actions:
 
 ```yaml
 # .github/workflows/dotnet-tests.yml (future)
+
 - name: Run All .NET Tests
   run: dotnet test --logger "trx;LogFileName=test-results.trx"
 
@@ -1001,4 +1029,3 @@ All tests run automatically in GitHub Actions:
 ---
 
 **Remember**: Write tests BEFORE or DURING implementation, never after. Tests are not optional—they are part of the definition of "done".
-

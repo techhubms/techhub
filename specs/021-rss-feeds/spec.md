@@ -197,7 +197,7 @@ The RSS feed system generates RSS 2.0 and Atom 1.0 feeds for all sections and co
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
-<rss version="2.0" 
+<rss version="2.0"
      xmlns:atom="http://www.w3.org/2005/Atom"
      xmlns:dc="http://purl.org/dc/elements/1.1/">
   <channel>

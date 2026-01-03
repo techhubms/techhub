@@ -123,6 +123,7 @@ John Smith introduces the latest updates to GitHub Copilot, including new featur
 <!--excerpt_end-->
 
 ## Detailed Content Begins Here
+
 ...
 ```
 

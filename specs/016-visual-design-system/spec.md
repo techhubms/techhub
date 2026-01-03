@@ -377,11 +377,13 @@ All color combinations MUST meet WCAG 2.1 Level AA:
 ### Keyboard Navigation
 
 **Focus Indicators**:
+
 - All interactive elements MUST have visible focus state
 - Focus outline MUST be at least 2px solid with sufficient contrast
 - Focus outline MUST not be removed without providing alternative visual indicator
 
 **Tab Order**:
+
 - Tab order MUST follow logical reading order (top to bottom, left to right)
 - Skip links MUST be provided to bypass navigation
 - Keyboard traps MUST be avoided
@@ -389,6 +391,7 @@ All color combinations MUST meet WCAG 2.1 Level AA:
 ### Touch Targets
 
 On mobile devices (viewport < 768px):
+
 - All interactive elements MUST be at least 44x44px
 - Sufficient spacing between touch targets to prevent accidental activation
 - Interactive elements MUST respond to tap without delay

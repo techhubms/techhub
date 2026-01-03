@@ -35,6 +35,7 @@ The API provides RESTful endpoints for accessing sections, content items, and RS
 ### Section Endpoints
 
 **GET /api/sections** - List all sections
+
 ```http
 GET /api/sections HTTP/1.1
 Accept: application/json
@@ -54,6 +55,7 @@ Response 200 OK:
 ```
 
 **GET /api/sections/{url}** - Get section by URL
+
 ```http
 GET /api/sections/github-copilot HTTP/1.1
 
@@ -70,6 +72,7 @@ Response 404 Not Found (if section doesn't exist)
 ### Content Endpoints
 
 **GET /api/content/section/{sectionUrl}** - List content for section
+
 ```http
 GET /api/content/section/ai?collection=videos&limit=20 HTTP/1.1
 
@@ -91,6 +94,7 @@ Response 200 OK:
 ```
 
 **GET /api/content/{sectionUrl}/{collection}/{itemId}** - Get specific item
+
 ```http
 GET /api/content/ai/videos/vs-code-107 HTTP/1.1
 
@@ -110,6 +114,7 @@ Response 404 Not Found:
 ```
 
 **GET /api/content/roundups/latest** - Get latest roundups
+
 ```http
 GET /api/content/roundups/latest?count=4 HTTP/1.1
 
@@ -126,6 +131,7 @@ Response 200 OK:
 ### RSS Endpoints
 
 **GET /api/rss/{sectionUrl}** - Section RSS feed
+
 ```http
 GET /api/rss/ai HTTP/1.1
 Accept: application/rss+xml
@@ -138,6 +144,7 @@ Content-Type: application/rss+xml
 ```
 
 **GET /api/rss** - Everything RSS feed
+
 ```http
 GET /api/rss HTTP/1.1
 
@@ -417,4 +424,3 @@ public class SectionEndpointsTests : IClassFixture<WebApplicationFactory<Program
 - `/specs/011-domain-models/spec.md` - DTOs and models
 - `/specs/012-repository-pattern/spec.md` - Data access
 - `/specs/021-rss-feeds/spec.md` - RSS generation
-

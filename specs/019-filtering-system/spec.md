@@ -562,4 +562,3 @@ public static (DateRange, IEnumerable<string>, string) ParseFilterUrl(string que
 
 - [Filtering System Documentation](../../docs/filtering-system.md)
 - [Section System Spec](/specs/010-section-system/spec.md)
-

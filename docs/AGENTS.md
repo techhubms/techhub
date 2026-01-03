@@ -356,9 +356,11 @@ Content organized logically.
 
 ```markdown
 # ✅ Good: Contextual reference
+
 For specific implementation details, see [Development Guide](dev-guide.md).
 
 # ❌ Bad: Vague reference
+
 See other docs for more info.
 ```
 
@@ -442,38 +444,46 @@ Tech Hub implements these best practices through:
 ## Critical Rules
 
 ### ✅ Always Do
+
 - Run tests after changes
 - Fix linting errors
 - Update documentation
 
 ### ⚠️ Ask First
+
 - Breaking API changes
 - Adding dependencies
 
 ### 🚫 Never Do
+
 - Never commit with errors
 - Never skip tests
 
 ## Commands
-
 ```bash
+
 # Build
+
 npm run build
 
 # Test
-npm test
-```
 
+npm test
+
+```
 ## Patterns
 
 ✅ **Correct**:
 ```code
-// Good example
-```
 
+// Good example
+
+```
 ❌ **Wrong**:
 ```code
+
 // Bad example
+
 ```
 ````
 

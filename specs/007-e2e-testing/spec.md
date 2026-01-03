@@ -22,6 +22,7 @@ Define end-to-end testing strategy using Playwright to validate complete user jo
 **Test Scenarios** (from dotnet-migration spec user stories):
 
 **Navigation & Content Discovery**:
+
 - Home page loads with all sections visible
 - Click section → See collections for that section
 - Click collection → See filtered content list
@@ -29,6 +30,7 @@ Define end-to-end testing strategy using Playwright to validate complete user jo
 - Breadcrumb navigation works correctly
 
 **Filtering & Search**:
+
 - Apply date filter → Content filtered by date range
 - Apply tag filter (multi-select) → Content filtered by tags (OR logic)
 - Type in search box → Debounced search filters results
@@ -38,27 +40,32 @@ Define end-to-end testing strategy using Playwright to validate complete user jo
 - Browser back/forward restores filter state
 
 **Infinite Scroll**:
+
 - Scroll to bottom → Next batch loads automatically
 - Loading indicator displays during fetch
 - Error handling when API fails
 - Infinite scroll works with active filters
 
 **RSS Feeds**:
+
 - RSS feed link visible on section pages
 - RSS XML validates against RSS 2.0 spec
 - Feed contains expected items with correct data
 
 **Video Embeds**:
+
 - YouTube video loads and plays
 - Video embed responsive on mobile
 
 **Accessibility**:
+
 - Keyboard navigation works (tab, enter, arrow keys)
 - Screen reader announces content correctly
 - ARIA labels present and accurate
 - Focus indicators visible
 
 **Cross-Browser**:
+
 - All tests pass on Chrome, Firefox, Safari, Edge
 - Mobile viewport tests (iOS Safari, Android Chrome)
 

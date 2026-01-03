@@ -45,7 +45,6 @@ Must cover:
 
 ## References
 
-
 - `_sass/` directory - Current SCSS architecture
 - Root `AGENTS.md` - Accessibility standards section
 

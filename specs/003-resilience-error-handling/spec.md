@@ -20,6 +20,7 @@ Define resilience patterns (retry policies, circuit breakers, timeouts) and comp
 ## Scope
 
 **Resilience Patterns** (Polly):
+
 - Retry policies for transient failures (HTTP requests, file I/O)
 - Circuit breakers for failing services (prevent cascading failures)
 - Timeout policies for slow operations
@@ -27,6 +28,7 @@ Define resilience patterns (retry policies, circuit breakers, timeouts) and comp
 - Bulkhead isolation for critical operations
 
 **Error Handling**:
+
 - Global exception handling middleware
 - Custom exception types (ContentNotFoundException, ConfigurationException, etc.)
 - User-friendly error pages (404, 500, custom errors)
@@ -34,6 +36,7 @@ Define resilience patterns (retry policies, circuit breakers, timeouts) and comp
 - Error correlation IDs for tracing across services
 
 **Specific Failure Scenarios**:
+
 - YouTube video embed fails (deleted/private video) → Show placeholder with link
 - RSS feed parsing fails → Log error, return cached feed or empty
 - Content file not found → 404 page with navigation
@@ -41,6 +44,7 @@ Define resilience patterns (retry policies, circuit breakers, timeouts) and comp
 - Application Insights unavailable → Continue logging to console/file
 
 **OpenTelemetry Integration**:
+
 - Distributed tracing for HTTP requests across API and Web layers
 - Repository operation tracing (file reads, cache operations)
 - Cache hit/miss metrics for performance monitoring
