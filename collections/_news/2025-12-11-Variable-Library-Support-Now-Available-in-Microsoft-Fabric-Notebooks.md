@@ -11,7 +11,7 @@ feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
 date: 2025-12-11 10:00:00 +00:00
 permalink: "/2025-12-11-Variable-Library-Support-Now-Available-in-Microsoft-Fabric-Notebooks.html"
 categories: ["Azure", "Coding", "DevOps", "ML"]
-tags: ["%%configure", "Azure", "CI/CD", "Coding", "Configuration Management", "Data Engineering", "DevOps", "Dynamic Runtime Settings", "Enterprise Automation", "Lakehouse", "Microsoft Fabric", "ML", "News", "Notebooks", "NotebookUtils", "Parameterization", "Service Principal", "Spark Development", "SPN Authentication", "Variable Library"]
+tags: ["Azure", "CI/CD", "Coding", "Configuration Management", "Data Engineering", "DevOps", "Dynamic Runtime Settings", "Enterprise Automation", "Lakehouse", "Microsoft Fabric", "ML", "News", "Notebooks", "NotebookUtils", "Parameterization", "Service Principal", "Spark Development", "SPN Authentication", "Variable Library"]
 tags_normalized: ["configure", "azure", "cislashcd", "coding", "configuration management", "data engineering", "devops", "dynamic runtime settings", "enterprise automation", "lakehouse", "microsoft fabric", "ml", "news", "notebooks", "notebookutils", "parameterization", "service principal", "spark development", "spn authentication", "variable library"]
 ---
 

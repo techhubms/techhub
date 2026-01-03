@@ -78,22 +78,31 @@ NEXT AMENDMENT: When additional principles or constraints need definition
 
 ### Directory Structure Requirements
 
-**All .NET implementation code MUST reside in the `dotnet/` directory**, including:
+**All .NET implementation code MUST reside in repository root**, including:
 
-- .NET solution and project files
-- Source code (`src/`, `apps/`, etc.)
-- .NET-specific tests
-- .NET-specific DevContainer configuration (`.devcontainer/`)
-- .NET-specific README.md
-- .NET-specific AGENTS.md documentation
+- .NET solution and project files (root level: `TechHub.slnx`, `Directory.Build.props`)
+- Source code (`src/`, `tests/`, `infra/`)
+- DevContainer configuration (`.devcontainer/`)
+- .NET-specific documentation
 
-**Repository-level infrastructure MUST remain in repository root**, including:
+**All Jekyll implementation code MUST reside in the `jekyll/` directory**, including:
+
+- Jekyll configuration (`jekyll/_config.yml`, `jekyll/Gemfile`)
+- Jekyll templates and plugins (`jekyll/_includes/`, `jekyll/_layouts/`, `jekyll/_plugins/`)
+- Jekyll assets (`jekyll/assets/`, `jekyll/_sass/`)
+- Jekyll-specific tests (`jekyll/spec/`)
+- Jekyll-specific DevContainer configuration (`jekyll/.devcontainer/`)
+- Jekyll-specific documentation (`jekyll/AGENTS.md`)
+
+**Shared repository resources remain in repository root**, including:
 
 - `.github/` - GitHub workflows, actions, and agents
 - `.specify/` - Spec-kit templates and memory
 - `.vscode/` - VS Code workspace settings
+- Content directories (`collections/`, `_data/`)
+- Shared documentation (`docs/`, root `AGENTS.md`, `README.md`)
+- Infrastructure (`infra/`, `scripts/`)
 - Other dotfile configurations (`.gitignore`, `.editorconfig`, etc.)
-- Root-level AGENTS.md (framework-agnostic principles)
 
 ## Development Methodology
 
@@ -116,7 +125,8 @@ This project follows **Spec-Driven Development (SDD)** using the spec-kit method
 
 ## Documentation Requirements
 
-- AGENTS.md files for all major directories
+- AGENTS.md files for all major directories (see [docs/AGENTS.md](../../docs/AGENTS.md) for structure)
+- Functional documentation in `docs/` directory (system behavior, not implementation)
 - XML documentation comments for public APIs
 - README.md for each project
 - Inline comments for complex logic only

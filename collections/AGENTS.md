@@ -3,6 +3,41 @@
 > **AI CONTEXT**: This is a **LEAF** context file for the `collections/` directory. It complements the [Root AGENTS.md](../AGENTS.md).
 > **RULE**: Global rules (Timezone, Performance) in Root AGENTS.md apply **IN ADDITION** to local rules. Follow **BOTH**.
 
+## Critical Content Rules
+
+### ✅ Always Do
+
+- **Read writing-style-guidelines.md FIRST** before creating or editing ANY content
+- **Read markdown-guidelines.md FIRST** for frontmatter structure and formatting rules
+- **Use filename format `YYYY-MM-DD-title-slug.md`** for all content files
+- **Match filename date with frontmatter date** for `layout: post` files
+- **Include excerpt section** - Max 200 words, end with `<!--excerpt_end-->`
+- **Mention author in excerpt** - Author name must appear in intro
+- **Place files in correct collection directory** based on content type
+- **Follow frontmatter field ordering** as specified in markdown-guidelines.md
+- **Add `alt-collection` frontmatter** for special video subcollections (ghc-features, vscode-updates)
+
+### ⚠️ Ask First
+
+- **Creating new collection types** or changing collection structure
+- **Modifying frontmatter schema** or required fields
+- **Changing content processing** workflows
+
+### 🚫 Never Do
+
+- **Never create content without reading guidelines** - writing-style-guidelines.md and markdown-guidelines.md are REQUIRED reading
+- **Never skip excerpt section** - All content needs introduction
+- **Never exceed 200 words in excerpt** - Keep intros concise
+- **Never forget `<!--excerpt_end-->` marker** - Required to separate excerpt from main content
+- **Never omit author from excerpt** - Must mention who wrote/presented
+- **Never hardcode collection names** - Configuration-driven via `_data/sections.json`
+- **Never skip frontmatter** - All markdown needs YAML front matter
+- **Never mismatch filename and frontmatter dates** - Must be identical for posts
+- **Never place files in wrong collection** - Use correct directory for content type
+- **Never automatically run processing scripts** - Manual fixes preferred
+
+## Overview
+
 **CRITICAL**: Before creating or editing ANY content in this directory, you MUST read these files:
 
 1. **[writing-style-guidelines.md](writing-style-guidelines.md)** - Tone, voice, language standards, and writing quality requirements

@@ -4,6 +4,13 @@
 
 The Tech Hub API provides RESTful access to content organized by sections and collections. It uses a nested route structure that mirrors the site's hierarchical organization.
 
+**Key Design Principles**:
+
+- **Resource hierarchy**: Routes mirror domain model (`/sections/{section}/collections/{collection}/items`)
+- **Consistent naming**: Both sections and collections use human-readable slugs (no arbitrary IDs)
+- **Self-documenting**: URL structure explains what data is returned
+- **Flexible filtering**: Combine multiple criteria via `/api/content/filter` endpoint
+
 ## Base URL
 
 ```
@@ -300,21 +307,62 @@ The API follows RESTful conventions:
 5. **Nested routes**: Resources are organized hierarchically to match domain model
 6. **Advanced filtering**: Separate `/filter` endpoint for complex multi-criteria queries
 
+### Why Nested Routes?
+
+The nested route structure was chosen over a flat structure for several reasons:
+
+**Previous Flat Structure (Replaced)**:
+
+```http
+GET /api/content                          # All content
+GET /api/content/collection/{collection}  # Filter by collection
+GET /api/content/category/{category}      # Filter by category
+GET /api/content/{collection}/{id}        # Single item
+GET /api/content/search?q={query}         # Text search
+```
+
+**Issues with Flat Structure**:
+
+1. **Inconsistent naming**: Mixed use of "sectionId" vs "collectionName" despite both being slugs
+2. **No hierarchy**: Didn't reflect the natural domain model (sections → collections → items)
+3. **Limited composability**: Difficult to combine multiple filter criteria
+4. **Unclear semantics**: Not obvious how to get "all items in AI section" or "videos in ML section"
+
+**Benefits of Current Nested Structure**:
+
+1. ✅ **Intuitive**: Routes mirror domain model, easier to understand
+2. ✅ **Self-documenting**: URL structure explains what data is returned
+3. ✅ **Consistent naming**: No more ID vs name confusion
+4. ✅ **Flexible filtering**: Advanced `/filter` endpoint supports complex queries
+5. ✅ **RESTful design**: Follows standard REST conventions
+6. ✅ **Scalable**: Easy to add new nested resources
+
+**Trade-offs**:
+
+- More endpoints to document (6 section endpoints vs 1 flat endpoint)
+- Deeper URL nesting for some routes
+- Breaking changes for consumers (mitigated by this being pre-release)
+
+See [Decision Record](#architecture-decision-record) below for complete rationale.
+
 ## Migration Notes
 
 ### From Old Flat Structure
 
-The previous flat structure has been replaced:
+The previous flat structure has been **completely removed**:
 
 **Old** (deprecated):
-- ❌ `GET /api/content` - Use `/api/content/filter` instead
-- ❌ `GET /api/content/collection/{collection}` - Use `/api/sections/{section}/collections/{collection}/items`
-- ❌ `GET /api/content/category/{category}` - Use `/api/sections/{section}/items`
+
+- ❌ `GET /api/content` → Use `/api/content/filter` (no params = all content)
+- ❌ `GET /api/content/collection/{collection}` → Use `/api/sections/{section}/collections/{collection}/items`
+- ❌ `GET /api/content/category/{category}` → Use `/api/sections/{section}/items`
+- ❌ `GET /api/content/search?q={query}` → Use `/api/content/filter?q={query}`
 
 **New** (current):
+
 - ✅ `GET /api/sections/{section}/items` - All items in a section
 - ✅ `GET /api/sections/{section}/collections/{collection}/items` - Items in specific collection
-- ✅ `GET /api/content/filter` - Advanced multi-criteria filtering
+- ✅ `GET /api/content/filter` - Advanced multi-criteria filtering with query parameters
 
 ## Example Use Cases
 
@@ -362,16 +410,96 @@ curl "http://localhost:5029/api/content/filter?q=blazor"
 curl "http://localhost:5029/api/content/filter?sections=coding&q=blazor"
 ```
 
+## Testing
+
+### Integration Tests
+
+All 14 endpoints have comprehensive integration test coverage using `WebApplicationFactory<Program>`:
+
+**Section Endpoints** (18 tests in `SectionsEndpointsTests.cs`):
+
+- ✅ GET /api/sections - Returns all sections
+- ✅ GET /api/sections/{sectionName} - Returns section by name, 404 for invalid
+- ✅ GET /api/sections/{sectionName}/items - Returns section items, 404 for invalid
+- ✅ GET /api/sections/{sectionName}/collections - Returns collections, 404 for invalid
+- ✅ GET /api/sections/{sectionName}/collections/{collectionName} - Returns collection, 404 for invalid section/collection
+- ✅ GET /api/sections/{sectionName}/collections/{collectionName}/items - Returns items with correct URLs, 404 for invalid
+
+**Advanced Filtering** (22 tests in `ContentEndpointsTests.cs`):
+
+- ✅ GET /api/content/filter - No params returns all, single/multiple sections, single/multiple collections
+- ✅ Section AND collection filtering
+- ✅ Tag filtering (single and multiple with AND logic)
+- ✅ Complex multi-criteria filtering (sections + collections + tags)
+- ✅ Text search across title/description/tags
+- ✅ Text search with section filter
+- ✅ Case-insensitive filtering
+- ✅ Empty results handling
+- ✅ GET /api/content/tags - Returns all unique tags
+
+**Test Statistics**:
+
+- **Total Tests**: 40 API integration tests
+- **Pass Rate**: 100%
+- **Execution Time**: ~1.4 seconds
+- **Coverage**: All endpoints, all filter combinations, all error scenarios
+
+See [tests/AGENTS.md](/tests/AGENTS.md) and [TechHub.Api.Tests](/tests/TechHub.Api.Tests/) for complete testing documentation.
+
+## Architecture Decision Record
+
+### Decision: RESTful API Structure with Nested Routes
+
+**Status**: Accepted (2025-02-28)
+
+**Context**:
+
+The initial flat API structure used separate endpoints for different filtering criteria, which created inconsistencies in naming, didn't reflect the domain hierarchy, and made it difficult to combine multiple filters.
+
+**Decision**:
+
+We restructured the API to use nested RESTful routes that mirror the domain model:
+
+- Section endpoints: `/api/sections/{sectionName}/...`
+- Collection endpoints: `/api/sections/{sectionName}/collections/{collectionName}/...`
+- Advanced filtering: `/api/content/filter` with query parameters
+
+**Consequences**:
+
+**Positive**:
+
+1. Intuitive API that mirrors domain model
+2. Self-documenting URL structure
+3. Consistent naming (no ID vs name confusion)
+4. Flexible multi-criteria filtering
+5. Follows REST conventions
+6. Scalable for future additions
+
+**Negative**:
+
+1. More endpoints to document (6 vs 1)
+2. Deeper URL nesting for some routes
+3. Breaking changes for consumers (mitigated by pre-release status)
+
+**Implementation**:
+
+- Created `SectionsEndpoints.cs` with 6 nested route handlers
+- Refactored `ContentEndpoints.cs` to use `FilterContent()` with multi-criteria support
+- Removed flat structure endpoints
+- Added comprehensive integration test suite (40 tests)
+
+See `/docs/decisions/restful-api-structure.md` for complete decision documentation.
+
 ## Future Enhancements
 
 Planned features (not yet implemented):
 
-- Pagination support for large result sets
-- Sorting options (by date, title, etc.)
-- OR logic for tags (currently AND only)
-- RSS feed endpoints
-- Individual item endpoints (`/api/items/{collection}/{id}`)
-- Caching headers (ETag, Last-Modified)
-- Rate limiting
-- Authentication/Authorization
+- **Pagination**: `?page=1&pageSize=50` for large result sets
+- **Sorting**: `?sortBy=date&order=desc` for custom ordering
+- **Tag filtering modes**: `?tagMatch=any` for OR logic (currently AND only)
+- **Caching headers**: ETag and Last-Modified for efficient caching
+- **Individual items**: `/api/items/{collection}/{id}` for direct item access
+- **RSS feeds**: `/api/sections/{section}/collections/{collection}/feed`
+- **Rate limiting**: Protect against abuse
+- **Authentication/Authorization**: Secure access control
 

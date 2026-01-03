@@ -67,7 +67,7 @@ dotnet run --project src/TechHub.Web
 ## Project Structure
 
 ```
-dotnet/
+root/
 ├── src/
 │   ├── TechHub.Core/           # Domain models and interfaces
 │   ├── TechHub.Infrastructure/ # Data access, caching, services
@@ -80,7 +80,8 @@ dotnet/
 │   ├── TechHub.Api.Tests/
 │   ├── TechHub.Web.Tests/
 │   └── TechHub.E2E.Tests/
-└── TechHub.sln
+├── jekyll/                     # Jekyll reference implementation
+└── TechHub.slnx                # .NET solution file
 ```
 
 ---

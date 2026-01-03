@@ -261,12 +261,12 @@ Developers must be able to:
 
 ## Solution File
 
-**Location**: `/dotnet/TechHub.sln`
+**Location**: `/TechHub.slnx` (root level)
 
 **Structure**:
 
 ```text
-TechHub.sln
+TechHub.slnx
 ├── src/
 │   ├── TechHub.Api/                   # REST API Backend
 │   ├── TechHub.Web/                   # Blazor Frontend
@@ -280,6 +280,7 @@ TechHub.sln
 │   ├── TechHub.Infrastructure.Tests/  # Infrastructure Tests
 │   ├── TechHub.Web.Tests/             # bUnit Component Tests
 │   └── TechHub.E2E.Tests/             # Playwright E2E Tests
+├── jekyll/                            # Jekyll reference implementation
 ├── infra/
 │   ├── main.bicep
 │   ├── modules/
@@ -289,7 +290,7 @@ TechHub.sln
 │   ├── test.ps1
 │   └── deploy.ps1
 └── specs/
-    ├── .speckit/
+    ├── .specify/
     └── features/
 ```
 

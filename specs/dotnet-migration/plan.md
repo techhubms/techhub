@@ -35,7 +35,7 @@ Migrate Tech Hub content platform from Jekyll/Ruby to modern .NET/Blazor archite
 ✅ **Repository pattern**: File-based initially, database-ready (spec FR-035)  
 ✅ **Progressive enhancement**: Server-side rendered, works without JavaScript (spec FR-019)  
 ✅ **No backwards compatibility**: Greenfield optimal design per constitution v1.2.0  
-✅ **Directory structure**: All .NET code in `dotnet/` per constitution requirements  
+✅ **Directory structure**: All .NET code in repository root, Jekyll code in `jekyll/` per constitution requirements  
 ✅ **Quality standards**: 80% code coverage, all test types defined (spec SC-023)  
 ✅ **Security**: No secrets in code, validated inputs, HTTPS only  
 ✅ **Performance requirements**: All metrics defined in spec (SC-001 through SC-007)  
@@ -59,7 +59,7 @@ specs/[###-feature]/
 ### Source Code (repository root)
 
 ```text
-dotnet/                           # All .NET implementation code
+root/                             # All .NET implementation code
 ├── .devcontainer/               # .NET-specific DevContainer config
 ├── src/
 │   ├── TechHub.Core/           # Domain models and interfaces
@@ -109,7 +109,7 @@ specs/                          # Feature specifications (root level)
 AGENTS.md                       # Framework-agnostic principles (root level)
 ```
 
-**Structure Decision**: Web application architecture with separate API and Blazor frontend per constitution requirements. All .NET code isolated in `dotnet/` directory, while content, configuration, and infrastructure remain at repository root for consistency with Jekyll reference implementation.
+**Structure Decision**: Web application architecture with separate API and Blazor frontend per constitution requirements. All .NET code in repository root, while Jekyll reference implementation is isolated in `jekyll/` directory. Content, configuration, and infrastructure remain shared at repository root.
 
 ## Complexity Tracking
 
@@ -120,9 +120,11 @@ AGENTS.md                       # Framework-agnostic principles (root level)
 ## Phase 0: Research ✅ COMPLETE
 
 **Artifacts Generated**:
+
 - [research.md](research.md) - All technology choices validated
 
 **Key Decisions**:
+
 - .NET 10 + Blazor SSR/WASM hybrid rendering
 - Separate API + Frontend architecture
 - File-based storage with repository pattern
@@ -139,12 +141,14 @@ AGENTS.md                       # Framework-agnostic principles (root level)
 ## Phase 1: Design & Contracts ✅ COMPLETE
 
 **Artifacts Generated**:
+
 - [data-model.md](data-model.md) - Complete entity and DTO definitions
 - [contracts/README.md](contracts/README.md) - REST API endpoint specifications
 - [quickstart.md](quickstart.md) - Developer onboarding guide
 - `.github/agents/copilot-instructions.md` - Updated with .NET context
 
 **Key Deliverables**:
+
 - Domain entities: Section, CollectionReference, ContentItem, FilterState
 - DTOs: SectionDto, ContentItemDto, ContentItemDetailDto, PagedResultDto, RssChannelDto
 - 8 REST API endpoints fully specified
@@ -169,7 +173,7 @@ Re-validating constitution compliance after detailed design:
 ✅ **Accessibility**: Data model supports WCAG 2.1 AA compliance metadata  
 ✅ **Repository pattern**: File-based initially, designed for future database migration  
 ✅ **Progressive enhancement**: Server-side rendering works without JavaScript  
-✅ **Directory structure**: All .NET code in `dotnet/` per constitution  
+✅ **Directory structure**: All .NET code in repository root, Jekyll code in `jekyll/` per constitution  
 ✅ **Quality standards**: Testing strategy covers all test types (unit/integration/component/E2E)  
 ✅ **Security**: No secrets in DTOs, API contracts follow security best practices  
 ✅ **Performance SLAs**: API contracts define <50ms p95 response time targets  

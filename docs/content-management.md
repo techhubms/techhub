@@ -152,7 +152,7 @@ alt-collection: "features"  # or "vscode-updates"
 
 ### Implementation Details
 
-The header template (`_includes/header.html`) checks for the `alt-collection` frontmatter field and uses it to determine which collection tab should be highlighted. This overrides the default collection-based highlighting logic.
+The header template (`jekyll/_includes/header.html`) checks for the `alt-collection` frontmatter field and uses it to determine which collection tab should be highlighted. This overrides the default collection-based highlighting logic.
 
 The `alt-collection` value is matched against the URL path of collection links in the navigation. For example, `"features"` matches `/github-copilot/features.html`, and `"vscode-updates"` matches `/github-copilot/vscode-updates.html`.
 

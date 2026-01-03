@@ -17,12 +17,13 @@
 
 ## Path Conventions
 
-All .NET code resides in `dotnet/` directory per constitution requirements:
+All .NET code resides in repository root per constitution requirements:
 
 - Projects: `src/`
 - Tests: `tests/`
-- Content files: `collections/` (unchanged)
-- Configuration: `_data/sections.json` (unchanged)
+- Jekyll files: `jekyll/`
+- Content files: `collections/` (shared)
+- Configuration: `_data/sections.json` (shared)
 
 ---
 
@@ -371,7 +372,7 @@ All .NET code resides in `dotnet/` directory per constitution requirements:
 
 - [ ] T154 [P] Create Dockerfile for TechHub.Api in src/TechHub.Api/Dockerfile
 - [ ] T155 [P] Create Dockerfile for TechHub.Web in src/TechHub.Web/Dockerfile
-- [ ] T156 Create docker-compose.yml for local development in dotnet/docker-compose.yml
+- [ ] T156 Create docker-compose.yml for local development in docker-compose.yml
 
 ### CI/CD Pipeline
 
@@ -410,7 +411,7 @@ All .NET code resides in `dotnet/` directory per constitution requirements:
 
 ### Documentation
 
-- [ ] T172 [P] Create dotnet/README.md with setup instructions
+- [ ] T172 [P] Create README.md with setup instructions
 - [ ] T173 [P] Update AGENTS.md with .NET development patterns
 - [ ] T174 [P] Document API endpoints in docs/api-documentation.md
 - [ ] T175 [P] Create deployment runbook in docs/deployment-runbook.md

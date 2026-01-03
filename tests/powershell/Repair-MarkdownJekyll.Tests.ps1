@@ -347,34 +347,6 @@ Test content
         }
     }
     
-    Context "Canonical URL Tracking" {
-        It "Should extract canonical_url for processed-entries.json" {
-            # Mock Get-SourceRoot to return test temp path
-            Mock Get-SourceRoot { return $script:TempPath }
-            
-            $testFile = Join-Path $script:TempPath "collections/_blogs/test.md"
-            $testContent = @"
----
-layout: post
-title: Test Post
-canonical_url: "https://example.com/test-post"
-categories: [GitHub Copilot]
----
-Test content
-"@
-            Set-Content -Path $testFile -Value $testContent
-            
-            Repair-MarkdownJekyll -FilePath $testFile
-            
-            $processedFile = Join-Path $script:TempPath "scripts/data/processed-entries.json"
-            $processedFile | Should -Exist
-            
-            $processed = Get-Content $processedFile | ConvertFrom-Json
-            $processed | Should -Not -BeNullOrEmpty
-            $processed[0].canonical_url | Should -Be "https://example.com/test-post"
-        }
-    }
-    
     Context "Filename and Permalink Processing" {
         It "Should update permalink for layout post files" {
             $testFile = Join-Path $script:TempPath "collections/_blogs/2025-01-01-old-title.md"

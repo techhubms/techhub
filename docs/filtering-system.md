@@ -175,9 +175,9 @@ Item 23: July 14, 2025  ← NOT included (different day)
 - **Collection-Aware**: Applies limiting per collection independently
 - **Same-Day Inclusion**: Includes all items from the same day as the limit boundary
 
-**Custom Jekyll Filter Location**: `_plugins/date_filters.rb`
+**Custom Jekyll Filter Location**: `jekyll/_plugins/date_filters.rb`
 
-**Plugin Integration**: The `limit_with_same_day` filter is part of the broader plugin ecosystem that handles content processing. See [_plugins/AGENTS.md](../_plugins/AGENTS.md) for complete implementation details of this and other filtering-related plugins.
+**Plugin Integration**: The `limit_with_same_day` filter is part of the broader plugin ecosystem that handles content processing. See [jekyll/_plugins/AGENTS.md](../jekyll/_plugins/AGENTS.md) for complete implementation details of this and other filtering-related plugins.
 
 ### 7-Day Recency Filtering
 
@@ -259,7 +259,7 @@ const relatedPostIndices = window.tagRelationships[tag];
 const isMatch = relatedPostIndices.includes(postIndex);
 ```
 
-**Server-Side Generation**: The `generate_all_filters` filter in `tag_filters.rb` provides unified tag relationship generation. See [_plugins/AGENTS.md](../_plugins/AGENTS.md) for the Ruby implementation details.
+**Server-Side Generation**: The `generate_all_filters` filter in `tag_filters.rb` provides unified tag relationship generation. See [jekyll/_plugins/AGENTS.md](../jekyll/_plugins/AGENTS.md) for the Ruby implementation details.
 
 ### Text Search Implementation
 
@@ -509,7 +509,7 @@ When filters are deselected, the filtering scope adjusts accordingly:
 - **Tag Relationships**: JavaScript uses server-generated tag relationship mappings for consistent results
 - **Tag Filter Counts**: The server generates initial counts for all TAG filters (sections, collections, content tags). These counts are always correct and consistent, as they are not dependent on the user's timezone.
 - **Date Filter Counts**: The server does NOT generate initial counts for DATE filters. Instead, date filter counts are always recalculated client-side in JavaScript, using the user's local timezone. This ensures that date-based filtering (e.g., "Today") reflects the user's actual day, not the server's timezone. This also means that the set of visible posts for a date filter is always correct for the user's context, even if it differs from the server's timezone. The logic for which date filter buttons are visible and enabled is now handled entirely on the client, based on the user's timezone and the current filtered dataset.
-- **Date Filter Options**: The available date filter options (e.g., "Today", "Last 3 days", "Last 4 days", etc.) are configured in `_config.yml` and may change over time. Documentation and UI should reflect the current set of options.
+- **Date Filter Options**: The available date filter options (e.g., "Today", "Last 3 days", "Last 4 days", etc.) are configured in `jekyll/_config.yml` and may change over time. Documentation and UI should reflect the current set of options.
 - **Normalization**: Tag processing must use server-generated normalized tag data
 
 **Server-Side vs Client-Side Processing**:
@@ -532,7 +532,7 @@ The filtering system maintains consistency between server-side Jekyll/Liquid pro
    - Manages text search URL parameters for state persistence
    - Exception: Only `assets/js/sections.js` may modify content on page load
 
-**Plugin-JavaScript Consistency**: Client-side filtering logic uses server-generated tag relationship mappings to ensure consistent user experience. See [_plugins/AGENTS.md](../_plugins/AGENTS.md) for the server-side filter implementations that generate the data structures JavaScript uses.
+**Plugin-JavaScript Consistency**: Client-side filtering logic uses server-generated tag relationship mappings to ensure consistent user experience. See [jekyll/_plugins/AGENTS.md](../jekyll/_plugins/AGENTS.md) for the server-side filter implementations that generate the data structures JavaScript uses.
 
 **Special Rule for Date Filter Buttons**:
 
@@ -542,7 +542,7 @@ The filtering system maintains consistency between server-side Jekyll/Liquid pro
 
 #### Date Filter Display Rules
 
-**Current Date Filter Options**: The following date filter options are currently configured in `_config.yml` and available in the filtering UI:
+**Current Date Filter Options**: The following date filter options are currently configured in `jekyll/_config.yml` and available in the filtering UI:
 
 - Today
 - Last 2 days
@@ -558,7 +558,7 @@ The filtering system maintains consistency between server-side Jekyll/Liquid pro
 - Last 180 days
 - Last 365 days
 
-These options may change over time. Always check `_config.yml` for the authoritative list.
+These options may change over time. Always check `jekyll/_config.yml` for the authoritative list.
 
 **🚨 SERVER-SIDE REQUIREMENT**: On initial page load, the server only generates date filters with `count > 0` (using the `generate_eligible_date_filters` plugin). This means zero-count date filters cannot exist when no tag filters are active, ensuring users never see unusable filter buttons on first load.
 
@@ -636,7 +636,7 @@ Each tag object contains standardized properties:
 - **`first_seen`**: Date when tag first appeared (format: "YYYY-MM-DD", tracked during processing)
 - **`normalized`**: Lowercase, standardized version for programmatic use (generated by `tag_filters.rb`)
 
-**Plugin Data Source**: Tag data is processed by the `tag_filters.rb` plugin during Jekyll build. See [_plugins/AGENTS.md](../_plugins/AGENTS.md) for detailed plugin architecture and tag processing.
+**Plugin Data Source**: Tag data is processed by the `tag_filters.rb` plugin during Jekyll build. See [jekyll/_plugins/AGENTS.md](../jekyll/_plugins/AGENTS.md) for detailed plugin architecture and tag processing.
 
 ## Filter Modes by Page Type
 
@@ -921,22 +921,22 @@ Tag data is processed dynamically by the `tag_filters.rb` plugin, which provides
 
 **Template Architecture Flow**:
 
-1. **Page Layout Setup**: `_includes/section-index.html`
+1. **Page Layout Setup**: `jekyll/_includes/section-index.html`
    - Coordinates overall page structure for section index pages
    - Filters content by section category using `site.documents | where: "categories", section_data.category`
    - Applies "20 + Same-Day" limiting rule via `limit_with_same_day` filter
    - Delegates to `items.html` for content display and filtering
 
-2. **Content Display and Filter Coordination**: `_includes/items.html`
+2. **Content Display and Filter Coordination**: `jekyll/_includes/items.html`
    - Receives items from parent templates
    - Sorts and processes content items
    - Calculates oldest item date for filter generation
    - Delegates to `filters.html` for filter generation
    - Renders content items with data attributes for JavaScript filtering
 
-3. **Filter Generation**: `_includes/filters.html`
+3. **Filter Generation**: `jekyll/_includes/filters.html`
    - Main entry point for the unified filtering system
-   - Reads configuration from `_config.yml` for date filters and display limits
+   - Reads configuration from `jekyll/_config.yml` for date filters and display limits
    - Generates JavaScript data for client-side filtering using `generate_all_filters` filter
    - Conditionally renders filter components based on `index_tag_mode`:
      - Date range filters (always rendered first when applicable)

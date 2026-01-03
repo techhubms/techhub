@@ -60,10 +60,13 @@ Follow the [8-step workflow](../AGENTS.md#ai-assistant-workflow) defined in the 
 
 ## Documentation
 
-- **[Feature Specifications](../specs/)** - Complete feature requirements and specifications
-- **[Root AGENTS.md](../AGENTS.md)** - Framework-agnostic principles
-- **[.NET AGENTS.md](AGENTS.md)** - .NET-specific development guide
-- **[@dotnet Agent](../.github/agents/dotnet.md)** - Custom agent for .NET development
+- **[Feature Specifications](specs/)** - Complete feature requirements and specifications
+- **[Root AGENTS.md](AGENTS.md)** - Framework-agnostic principles and architecture
+- **[Documentation Guidelines](docs/AGENTS.md)** - How to maintain and structure documentation
+- **[.NET Development Guide](.github/agents/dotnet.md)** - .NET-specific development patterns
+- **[API Specification](docs/api-specification.md)** - REST API contracts and endpoints
+- **[Filtering System](docs/filtering-system.md)** - Tag and date filtering behavior
+- **[Content Management](docs/content-management.md)** - Content workflows and RSS processing
 
 ## Current Status
 

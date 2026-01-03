@@ -1,6 +1,6 @@
 # Tech Hub Documentation Guide
 
-**AI CONTEXT**: This is the **ROOT** context file. It defines global architecture, principles, and rules. When working in a specific domain (e.g., `scripts/`, `_plugins/`), **ALSO** read the `AGENTS.md` file in that directory.
+**AI CONTEXT**: This is the **ROOT** context file. It defines global architecture, principles, and rules. When working in a specific domain (e.g., `scripts/`, `jekyll/_plugins/`), **ALSO** read the `AGENTS.md` file in that directory.
 
 ## Index
 
@@ -58,11 +58,11 @@ These are the **non-negotiable rules** that apply to ALL development tasks. ALWA
 - **ALWAYS be direct and concise**: Avoid exaggerated language
 - **ALWAYS maintain professional yet approachable tone**: Clear and authoritative without being overly formal
 - **ALWAYS avoid filler phrases**: Don't use "Sure!" or "You're right!"
-- **DevContainer dependencies**: ALWAYS install dependencies in the appropriate `.devcontainer/post-create.sh` script (e.g., `/workspaces/techhub/.devcontainer/post-create.sh` for Jekyll project, `.devcontainer/post-create.sh` for .NET migration), NEVER install in PowerShell or other scripts
+- **DevContainer dependencies**: ALWAYS install dependencies in the appropriate `.devcontainer/post-create.sh` script (e.g., `/workspaces/techhub/jekyll/.devcontainer/post-create.sh` for Jekyll project), NEVER install in PowerShell or other scripts
 
 #### ⚠️ Ask First
 
-- **Website configuration changes**: Consult `@fullstack` agent before modifying build system or configuration (e.g., `_config.yml`, `package.json`, `Gemfile`)
+- **Website configuration changes**: Consult `@fullstack` agent before modifying build system or configuration (e.g., `jekyll/_config.yml`, `package.json`, `jekyll/Gemfile`)
 - **Breaking changes to public APIs**: Changes that affect existing functionality (e.g., modifying filter signatures, changing data structure)
 - **Adding new dependencies**: To dependency management files or any config (e.g., new npm packages, Ruby gems, PowerShell modules)
 - **Cross-domain changes**: Modifications affecting multiple areas (e.g., Ruby plugins + JavaScript + Liquid templates, or content structure + build system)
@@ -78,7 +78,7 @@ These are the **non-negotiable rules** that apply to ALL development tasks. ALWA
 - **Never use backslashes for escaping in PowerShell**: Always use backticks (`)
 - **Never work around missing tools**: Tell user if needed tools are unavailable instead of using alternatives
 - **Never commit secrets or API keys**: Check all files before committing
-- **Never modify generated directories**: `_site/`, `node_modules/`, `.tmp/` (except for temp files)
+- **Never modify generated directories**: `jekyll/_site/`, `node_modules/`, `.tmp/` (except for temp files)
 - **Never create content without frontmatter**: All markdown must have proper YAML front matter
 - **Never hardcode section/collection data**: Always use `_data/sections.json`
 - **Never let JavaScript create initial content**: Server-side render everything, JS only enhances
@@ -113,7 +113,7 @@ When renaming ANY identifier, you **MUST** verify and update ALL occurrences acr
 
 - Start with this file (Root AGENTS.md) for architecture and principles
 - See [Complete Documentation Map](#complete-documentation-map) for navigation guide to all documentation files
-- Read domain-specific AGENTS.md file for the area you'll modify (e.g., [_plugins/AGENTS.md](_plugins/AGENTS.md), [assets/js/AGENTS.md](assets/js/AGENTS.md), [scripts/AGENTS.md](scripts/AGENTS.md))
+- Read domain-specific AGENTS.md file for the area you'll modify (e.g., [jekyll/_plugins/AGENTS.md](jekyll/_plugins/AGENTS.md), [jekyll/assets/js/AGENTS.md](jekyll/assets/js/AGENTS.md), [scripts/AGENTS.md](scripts/AGENTS.md))
 - Review functional documentation in `docs/` if working on features (e.g., [docs/filtering-system.md](docs/filtering-system.md))
 - Check [collections/markdown-guidelines.md](collections/markdown-guidelines.md) and [collections/writing-style-guidelines.md](collections/writing-style-guidelines.md) for content work
 
@@ -400,8 +400,8 @@ This is a **permanent architectural principle**, not just a temporary measure. B
   - `dotnet.md` (future): .NET, Blazor, C# patterns
 - **Domain AGENTS.md**: Domain-specific patterns that MAY need updates but maintain focus
   - `assets/js/AGENTS.md`: JavaScript patterns (likely unchanged)
-  - `_plugins/AGENTS.md`: Build plugins (Ruby → C#, same purpose)
-  - `_sass/AGENTS.md`: Styling (SCSS → CSS-in-JS, same purpose)
+  - `jekyll/_plugins/AGENTS.md`: Build plugins (Ruby → C#, same purpose)
+  - `jekyll/_sass/AGENTS.md`: Styling (SCSS → CSS-in-JS, same purpose)
 - **Functional Docs** (`docs/`): Framework-agnostic descriptions of WHAT the system does
   - Only 2 files: `filtering-system.md`, `content-management.md`
 
@@ -409,7 +409,7 @@ This is a **permanent architectural principle**, not just a temporary measure. B
 
 **Why This Matters**: This separation ensures that when technology stacks change (Jekyll → .NET/Blazor, or any future migrations), only framework agents need replacement. All other documentation—principles, domain patterns, and functional specs—remain stable and relevant. This architecture makes the codebase resilient to technology evolution while preserving institutional knowledge.
 
-**Framework Mentions in Documentation**: Functional documentation may reference specific frameworks (Jekyll, .NET, etc.) when contextually relevant to the system behavior being described. These mentions serve as indicators for areas that may need review during migrations. For example, "Restart Jekyll after tag changes" is appropriate in filtering documentation, while "Jekyll uses Liquid templating" is generic framework information that belongs in framework agents. See [docs/AGENTS.md - Framework Mentions](docs/AGENTS.md#framework-mentions-in-functional-documentation) for complete guidelines.
+**Framework Mentions in Documentation**: Functional documentation may reference specific implementations (API endpoints, service names, etc.) when essential to understanding the system behavior. These mentions describe WHAT the system does (behavior, contracts, rules), not HOW to build it (code patterns, commands, frameworks). See [docs/AGENTS.md - Implementation Mentions](docs/AGENTS.md#implementation-mentions-in-functional-documentation) for complete guidelines.
 
 ### Complete Documentation Map
 
@@ -419,10 +419,10 @@ This is a **permanent architectural principle**, not just a temporary measure. B
 
 **Domain-Specific AGENTS.md Files**:
 
-- **[_plugins/AGENTS.md](_plugins/AGENTS.md)** - Jekyll plugins and extensions
-- **[_includes/AGENTS.md](_includes/AGENTS.md)** - Liquid templates and includes
-- **[assets/js/AGENTS.md](assets/js/AGENTS.md)** - JavaScript client-side development patterns
-- **[_sass/AGENTS.md](_sass/AGENTS.md)** - SCSS styling and CSS architecture
+- **[jekyll/_plugins/AGENTS.md](jekyll/_plugins/AGENTS.md)** - Jekyll plugins and extensions
+- **[jekyll/_includes/AGENTS.md](jekyll/_includes/AGENTS.md)** - Liquid templates and includes
+- **[jekyll/assets/js/AGENTS.md](jekyll/assets/js/AGENTS.md)** - JavaScript client-side development patterns
+- **[jekyll/_sass/AGENTS.md](jekyll/_sass/AGENTS.md)** - SCSS styling and CSS architecture
 - **[scripts/AGENTS.md](scripts/AGENTS.md)** - PowerShell automation scripts
 - **[rss/AGENTS.md](rss/AGENTS.md)** - RSS feed generation
 - **[docs/AGENTS.md](docs/AGENTS.md)** - Documentation maintenance guidelines
@@ -482,7 +482,7 @@ This is a **permanent architectural principle**, not just a temporary measure. B
 
 **Working on Jekyll plugins?**
 
-1. Read [_plugins/AGENTS.md](_plugins/AGENTS.md)
+1. Read [jekyll/_plugins/AGENTS.md](jekyll/_plugins/AGENTS.md)
 2. See `@fullstack` agent for framework specifics
 
 **Working on PowerShell scripts?**
@@ -499,16 +499,16 @@ This is a **permanent architectural principle**, not just a temporary measure. B
 **Working on templates?**
 
 1. Use `@fullstack` agent
-2. Read [_plugins/AGENTS.md](_plugins/AGENTS.md) for plugin patterns
+2. Read [jekyll/_plugins/AGENTS.md](jekyll/_plugins/AGENTS.md) for plugin patterns
 
 **Working on includes/layouts?**
 
-1. Read [_includes/AGENTS.md](_includes/AGENTS.md)
+1. Read [jekyll/_includes/AGENTS.md](jekyll/_includes/AGENTS.md)
 2. Use `@fullstack` agent for framework specifics
 
 **Working on styles?**
 
-1. Read [_sass/AGENTS.md](_sass/AGENTS.md)
+1. Read [jekyll/_sass/AGENTS.md](jekyll/_sass/AGENTS.md)
 
 **Working on tests?**
 
@@ -639,7 +639,7 @@ All user interface components and interactions must be accessible to users with 
 **Implementation Details**:
 
 - Server-side: See [.github/agents/fullstack.md](.github/agents/fullstack.md) for server-side patterns
-- Jekyll plugins: See [_plugins/AGENTS.md](_plugins/AGENTS.md) for plugin-specific handling
+- Jekyll plugins: See [jekyll/_plugins/AGENTS.md](jekyll/_plugins/AGENTS.md) for plugin-specific handling
 - JavaScript: See [assets/js/AGENTS.md](assets/js/AGENTS.md) for client-side patterns
 
 **Benefits**: Prevents date/time bugs, ensures consistent behavior across all systems, simplifies date comparisons.
@@ -689,37 +689,52 @@ All user interface components and interactions must be accessible to users with 
   - `_blogs/` - Blogs and technical articles
   - `_roundups/` - Curated weekly content summaries
 
-**Code & Templates** (framework-specific - see [.github/agents/fullstack.md](.github/agents/fullstack.md) for details):
+**Jekyll Code & Templates** (in `jekyll/` directory - see [.github/agents/fullstack.md](.github/agents/fullstack.md) for details):
 
-- **`_includes/`** - Reusable template components (see [_includes/AGENTS.md](_includes/AGENTS.md))
-- **`_layouts/`** - Page layout templates (see [_includes/AGENTS.md](_includes/AGENTS.md))
-- **`_plugins/`** - Build system plugins and extensions
-- **`_sass/`** - Stylesheet organization
-- **`assets/`** - Static assets (images, CSS, JS)
-  - `assets/js/` - Client-side JavaScript code
-  - `assets/section-backgrounds/` - Section header images
+- **`jekyll/_includes/`** - Reusable template components (see [jekyll/_includes/AGENTS.md](jekyll/_includes/AGENTS.md))
+- **`jekyll/_layouts/`** - Page layout templates (see [jekyll/_includes/AGENTS.md](jekyll/_includes/AGENTS.md))
+- **`jekyll/_plugins/`** - Build system plugins and extensions (see [jekyll/_plugins/AGENTS.md](jekyll/_plugins/AGENTS.md))
+- **`jekyll/_sass/`** - Stylesheet organization (see [jekyll/_sass/AGENTS.md](jekyll/_sass/AGENTS.md))
+- **`jekyll/assets/`** - Static assets (images, CSS, JS)
+  - `jekyll/assets/js/` - Client-side JavaScript code (see [jekyll/assets/js/AGENTS.md](jekyll/assets/js/AGENTS.md))
+  - `assets/section-backgrounds/` - Section header images (shared, in root)
 
-**Section Directories** (custom pages):
+**Section Directories** (custom pages in `jekyll/` directory):
 
-- **`ai/`** - AI section-specific files (e.g., `ai-to-z.md`)
-- **`github-copilot/`** - GitHub Copilot section files (e.g., `features.md`, `levels-of-enlightenment.md`)
+- **`jekyll/ai/`** - AI section-specific files (e.g., `ai-to-z.md`)
+- **`jekyll/github-copilot/`** - GitHub Copilot section files (e.g., `features.md`, `levels-of-enlightenment.md`)
 - Other sections auto-generated by build plugins
+
+**.NET Code & Projects** (in repository root):
+
+- **`src/`** - .NET source code projects
+  - `src/TechHub.Api/` - ASP.NET Core REST API
+  - `src/TechHub.Web/` - Blazor frontend
+  - `src/TechHub.Core/` - Domain models and interfaces
+  - `src/TechHub.Infrastructure/` - Repository implementations
+  - `src/TechHub.AppHost/` - .NET Aspire orchestration
+- **`tests/`** - .NET test projects
+  - `tests/TechHub.Core.Tests/` - Unit tests
+  - `tests/TechHub.Api.Tests/` - API integration tests
+  - `tests/TechHub.Web.Tests/` - bUnit component tests
+  - `tests/TechHub.E2E.Tests/` - Playwright E2E tests
 
 **Development & Build**:
 
 - **`docs/`** - Framework-agnostic functional documentation
 - **`.github/agents/`** - Framework-specific development agents
-- **`.devcontainer/`** - Dev container configuration and setup scripts
+- **`jekyll/.devcontainer/`** - Jekyll DevContainer configuration
 - **`scripts/`** - Automation and utility scripts (PowerShell)
-- **`rss/`** - RSS feed generation and management
-- **`spec/`** - Testing frameworks and test files
-- **`_site/`** - Generated site output (ignored in git)
+- **`jekyll/rss/`** - RSS feed generation
+- **`jekyll/spec/`** - Jekyll testing frameworks and test files
+- **`jekyll/_site/`** - Generated site output (ignored in git)
 - **`.tmp/`** - Temporary directory for development scripts
 
 **Configuration**:
 
-- **`_data/sections.json`** - Single source of truth for sections and collections
-- Build system configuration file - See [.github/agents/fullstack.md](.github/agents/fullstack.md) for framework-specific details
+- **`_data/sections.json`** - Single source of truth for sections and collections (shared)
+- **`jekyll/_config.yml`** - Jekyll build configuration
+- **`TechHub.slnx`** - .NET solution file
 
 > **See "Documentation Structure" section above for complete documentation map and navigation guide**
 
@@ -756,7 +771,7 @@ When working on the .NET migration (future state), refer to:
 **Collections**: Content types that represent different formats within sections.
 
 - **Purpose**: Organize content by format and purpose (news, videos, community, blogs, roundups)
-- **Configuration**: Defined in framework configuration (e.g., Jekyll's `_config.yml`), associated with sections via `_data/sections.json`
+- **Configuration**: Defined in framework configuration (e.g., Jekyll's `jekyll/_config.yml`), associated with sections via `_data/sections.json`
 - **Technical**: Each collection has its own directory, can be marked as custom (manually created) or auto-generated
 - **Properties**: Collections with output enabled generate individual pages for each item
 

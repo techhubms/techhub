@@ -50,6 +50,11 @@ else
     echo "Playwright browsers already installed"
 fi
 
+# ==================== PowerShell Modules ====================
+echo "Installing PowerShell modules..."
+pwsh -Command 'Install-Module HtmlToMarkdown -AcceptLicense -Force'
+pwsh -Command 'Install-Module Pester -Force -SkipPublisherCheck -MinimumVersion "5.0.0" -Scope CurrentUser'
+
 # ==================== Spec-Kit for Spec-Driven Development ====================
 if ! command -v uv &> /dev/null; then
     echo "Installing uv package manager..."
