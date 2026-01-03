@@ -2,89 +2,30 @@
 @page "/{sectionName}/{collectionName}"
 @using TechHub.Core.DTOs
 @using TechHub.Web.Services
-@using Microsoft.JSInterop
 @inject TechHubApiClient ApiClient
 @inject NavigationManager Navigation
-@inject IJSRuntime JS
-@implements IAsyncDisposable
 @rendermode InteractiveServer
 
 <PageTitle>@PageTitle - Tech Hub</PageTitle>
 
-<div class="section-page">
-    @if (isLoading && showLoadingState)
+<div class="section-page-grid">
+    @* Header loads independently *@
+    <SectionHeader SectionName="@SectionName" />
+    
+    @* Navigation loads independently *@
+    <CollectionNav SectionName="@SectionName" 
+                   SelectedCollection="@selectedCollection"
+                   IsLoadingContent="@isLoadingContent"
+                   OnCollectionChange="@HandleCollectionChange" />
+    
+    @* Content loads independently *@
+    @if (sectionCategory != null)
     {
-        <div class="loading fade-in">
-            <p>Loading section...</p>
-        </div>
-    }
-    else if (errorMessage != null)
-    {
-        <div class="error">
-            <h2>Error Loading Section</h2>
-            <p>@errorMessage</p>
-            <button @onclick="LoadSection">Retry</button>
-        </div>
-    }
-    else if (section != null)
-    {
-        var currentSection = section;
-        <header class="section-header" style="background-image: url('@(currentSection.BackgroundImage)')">
-            <div class="section-header-content">
-                <h1>@currentSection.Title</h1>
-                <p class="section-description">@currentSection.Description</p>
-            </div>
-        </header>
-
-        @if (currentSection.Collections.Any())
-        {
-            <div class="section-collections">
-                <nav class="collection-nav">
-                    <h2>Collections</h2>
-                    <ul>
-                        <li>
-                            <button @onclick="@(() => SelectCollection("all"))" 
-                                    class="@(selectedCollection == "all" ? "active" : "")"
-                                    disabled="@isLoadingContent">
-                                All
-                                @if (selectedCollection == "all" && showContentLoadingState)
-                                {
-                                    <span class="loading-indicator fade-in">Loading...</span>
-                                }
-                            </button>
-                        </li>
-                        @foreach (var collection in currentSection.Collections)
-                        {
-                            <li>
-                                <button @onclick="() => SelectCollection(collection.Collection)" 
-                                        class="@(selectedCollection == collection.Collection ? "active" : "")"
-                                        disabled="@isLoadingContent">
-                                    @collection.Title
-                                    @if (selectedCollection == collection.Collection && showContentLoadingState)
-                                    {
-                                        <span class="loading-indicator fade-in">Loading...</span>
-                                    }
-                                </button>
-                            </li>
-                        }
-                    </ul>
-                </nav>
-
-                <div class="collection-content @(isLoadingContent ? "loading" : "")">
-                    @if (contentItems != null)
-                    {
-                        <h2 class="collection-title">@GetCollectionDisplayName(selectedCollection)</h2>
-                        <CollectionList Items="@contentItems" IsLoading="@isLoadingContent" ShowCollectionBadge="@(IsAllSection || IsAllCollection)" />
-                    }
-                </div>
-            </div>
-        }
-        else
-        {
-            <div class="no-collections">
-                <p>No collections available in this section.</p>
-            </div>
-        }
+        <CollectionContent SectionName="@SectionName"
+                          CollectionName="@selectedCollection"
+                          SectionCategory="@sectionCategory"
+                          Collections="@collections" 
+                          @key="@selectedCollection" />
     }
 </div>
 
@@ -95,242 +36,62 @@
     [Parameter]
     public string? CollectionName { get; set; }
 
-    private SectionDto? section;
-    private IEnumerable<ContentItemDto>? contentItems;
     private string selectedCollection = string.Empty;
-    private string? previousSectionName;
-    private string? previousCollectionName;
-    private bool isLoading = true;
+    private string? sectionCategory;
+    private IReadOnlyList<CollectionReferenceDto> collections = Array.Empty<CollectionReferenceDto>();
     private bool isLoadingContent = false;
-    private bool showLoadingState = false;
-    private bool showContentLoadingState = false;
-    private bool shouldRender = true;
-    private CancellationTokenSource? loadingDelayCts;
-    private CancellationTokenSource? contentLoadingDelayCts;
-    private string? errorMessage;
 
-    private string PageTitle => section?.Title ?? SectionName;
-
-    protected override bool ShouldRender()
-    {
-        // Always render on initial load or errors
-        if (shouldRender)
-        {
-            return true;
-        }
-        
-        // If only content changed (same section, different collection),
-        // we still need to render but we can optimize
-        return true;
-    }
+    private string PageTitle => SectionName;
 
     protected override async Task OnInitializedAsync()
     {
-        previousSectionName = SectionName;
-        previousCollectionName = CollectionName;
-        await LoadSection();
+        selectedCollection = CollectionName ?? "all";
+        await LoadSectionMetadata();
     }
 
-    protected override async Task OnParametersSetAsync()
+    protected override Task OnParametersSetAsync()
     {
-        // Track if section changed for full reload
-        bool sectionChanged = SectionName != previousSectionName;
-        bool collectionChanged = CollectionName != previousCollectionName;
-        
-        if (sectionChanged)
+        // Handle URL changes (browser back/forward, direct navigation)
+        if (CollectionName != selectedCollection)
         {
-            // Section changed - full reload needed
-            previousSectionName = SectionName;
-            previousCollectionName = CollectionName;
-            shouldRender = true;
-            await LoadSection();
-        }
-        else if (collectionChanged)
-        {
-            // Same section, different collection - only update content
-            previousCollectionName = CollectionName;
             selectedCollection = CollectionName ?? "all";
-            shouldRender = true;
-            await LoadCollectionContent();
         }
-        else
-        {
-            // Nothing changed - prevent render
-            shouldRender = false;
-        }
+        
+        return Task.CompletedTask;
     }
 
-    private async Task LoadSection()
+    private async Task LoadSectionMetadata()
     {
-        isLoading = true;
-        showLoadingState = false;
-        errorMessage = null;
-        
-        // Cancel any existing loading delay
-        loadingDelayCts?.Cancel();
-        loadingDelayCts = new CancellationTokenSource();
-        var delayCts = loadingDelayCts;
-        
-        // Only show loading state if request takes longer than 300ms
-        _ = Task.Run(async () =>
-        {
-            try
-            {
-                await Task.Delay(300, delayCts.Token);
-                showLoadingState = true;
-                await InvokeAsync(StateHasChanged);
-            }
-            catch (TaskCanceledException)
-            {
-                // Loading completed before delay - do nothing
-            }
-        });
-        
         try
         {
-            section = await ApiClient.GetSectionAsync(SectionName);
-            
-            if (section?.Collections.Any() == true)
+            var section = await ApiClient.GetSectionAsync(SectionName);
+            if (section != null)
             {
-                // Use collection from URL if provided, otherwise default to "all"
-                if (!string.IsNullOrEmpty(CollectionName))
-                {
-                    // Validate collection exists (either "all" or a real collection)
-                    if (CollectionName.Equals("all", StringComparison.OrdinalIgnoreCase))
-                    {
-                        selectedCollection = "all";
-                    }
-                    else
-                    {
-                        var collectionExists = section.Collections.Any(c => 
-                            c.Collection.Equals(CollectionName, StringComparison.OrdinalIgnoreCase));
-                        selectedCollection = collectionExists ? CollectionName : "all";
-                    }
-                }
-                else
-                {
-                    // Default to showing all collections for this section
-                    selectedCollection = "all";
-                }
-                
-                await LoadCollectionContent();
+                sectionCategory = section.Category;
+                collections = section.Collections;
             }
         }
-        catch (Exception ex)
+        catch (Exception)
         {
-            errorMessage = $"Failed to load section: {ex.Message}";
-        }
-        finally
-        {
-            loadingDelayCts?.Cancel();
-            isLoading = false;
-            showLoadingState = false;
-            StateHasChanged(); // Update UI with results or error
+            sectionCategory = string.Empty;
+            collections = Array.Empty<CollectionReferenceDto>();
         }
     }
 
-    private async void SelectCollection(string collectionName)
+    private Task HandleCollectionChange(string collectionName)
     {
-        // Update URL using JavaScript history API to avoid triggering Blazor navigation
-        await JS.InvokeVoidAsync("history.pushState", null, "", $"/{SectionName}/{collectionName}");
-        
-        // Update local state
         selectedCollection = collectionName;
-        previousCollectionName = collectionName;
-        
-        // Load new collection content (only updates content area)
-        await LoadCollectionContent();
-    }
-
-    private async Task LoadCollectionContent()
-    {
-        if (string.IsNullOrEmpty(selectedCollection) || section == null) return;
-
         isLoadingContent = true;
-        showContentLoadingState = false;
+        StateHasChanged();
         
-        // Cancel any existing content loading delay
-        contentLoadingDelayCts?.Cancel();
-        contentLoadingDelayCts = new CancellationTokenSource();
-        var delayCts = contentLoadingDelayCts;
-        
-        // Only show loading state if request takes longer than 300ms
+        // Reset loading state after a brief delay (CollectionContent will manage its own loading)
         _ = Task.Run(async () =>
         {
-            try
-            {
-                await Task.Delay(300, delayCts.Token);
-                showContentLoadingState = true;
-                await InvokeAsync(StateHasChanged);
-            }
-            catch (TaskCanceledException)
-            {
-                // Loading completed before delay - do nothing
-            }
+            await Task.Delay(100);
+            isLoadingContent = false;
+            await InvokeAsync(StateHasChanged);
         });
         
-        try
-        {
-            // Handle "all" collection - get all content for this section across all collections
-            if (selectedCollection.Equals("all", StringComparison.OrdinalIgnoreCase))
-            {
-                if (section.Category.Equals("All", StringComparison.OrdinalIgnoreCase))
-                {
-                    // /all/all - get everything
-                    contentItems = await ApiClient.GetContentAsync("", "");
-                }
-                else
-                {
-                    // /section/all - get all content for this section's category
-                    contentItems = await ApiClient.GetContentAsync(section.Category, "");
-                }
-            }
-            // Special handling for "All" section with specific collection
-            else if (section.Category.Equals("All", StringComparison.OrdinalIgnoreCase))
-            {
-                // /all/news - get all news across all sections
-                contentItems = await ApiClient.GetContentAsync("", selectedCollection);
-            }
-            else
-            {
-                // /section/collection - get specific collection for specific category
-                contentItems = await ApiClient.GetContentAsync(section.Category, selectedCollection);
-            }
-        }
-        catch (Exception ex)
-        {
-            errorMessage = $"Failed to load content: {ex.Message}";
-        }
-        finally
-        {
-            contentLoadingDelayCts?.Cancel();
-            isLoadingContent = false;
-            showContentLoadingState = false;
-            StateHasChanged(); // Update UI with results
-        }
-    }
-
-    private string GetCollectionDisplayName(string collectionName)
-    {
-        if (collectionName.Equals("all", StringComparison.OrdinalIgnoreCase))
-        {
-            return "All Collections";
-        }
-        
-        return section?.Collections
-            .FirstOrDefault(c => c.Collection == collectionName)?.Title 
-            ?? collectionName;
-    }
-
-    private bool IsAllSection => section?.Category.Equals("All", StringComparison.OrdinalIgnoreCase) ?? false;
-    
-    private bool IsAllCollection => selectedCollection.Equals("all", StringComparison.OrdinalIgnoreCase);
-
-    public async ValueTask DisposeAsync()
-    {
-        loadingDelayCts?.Cancel();
-        loadingDelayCts?.Dispose();
-        contentLoadingDelayCts?.Cancel();
-        contentLoadingDelayCts?.Dispose();
+        return Task.CompletedTask;
     }
 }

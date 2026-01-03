@@ -1182,3 +1182,155 @@ img {
     --focus-outline-width: 3px;
   }
 }
+
+/* ============================================================================
+   SECTION PAGE CSS GRID LAYOUT
+   Independent async components with stable positioning
+   ============================================================================ */
+
+.section-page-grid {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  grid-template-rows: auto 1fr;
+  grid-template-areas:
+    "header header"
+    "nav content";
+  gap: 0;
+  min-height: calc(100vh - var(--header-height, 60px) - var(--footer-height, 100px));
+}
+
+/* Position child components in grid areas */
+.section-page-grid > *:nth-child(1) {
+  grid-area: header;
+}
+
+.section-page-grid > *:nth-child(2) {
+  grid-area: nav;
+}
+
+.section-page-grid > *:nth-child(3) {
+  grid-area: content;
+}
+
+/* Responsive grid layout */
+@media (max-width: 1024px) {
+  .section-page-grid {
+    grid-template-columns: 250px 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .section-page-grid {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "header"
+      "nav"
+      "content";
+  }
+}
+
+/* ============================================================================
+   SKELETON LOADING STATES
+   Shimmering placeholders for async content
+   ============================================================================ */
+
+@keyframes shimmer {
+  0% {
+    background-position: -1000px 0;
+  }
+  100% {
+    background-position: 1000px 0;
+  }
+}
+
+.skeleton {
+  background: linear-gradient(
+    90deg,
+    var(--color-bg-subtle) 0%,
+    var(--color-bg-emphasis) 20%,
+    var(--color-bg-subtle) 40%,
+    var(--color-bg-subtle) 100%
+  );
+  background-size: 1000px 100%;
+  animation: shimmer 2s linear infinite;
+  border-radius: var(--border-radius);
+}
+
+/* Skeleton Header */
+.skeleton-header {
+  height: 300px;
+  width: 100%;
+  margin-bottom: 0;
+}
+
+@media (max-width: 768px) {
+  .skeleton-header {
+    height: 200px;
+  }
+}
+
+/* Skeleton Navigation Item */
+.skeleton-nav-item {
+  height: 44px;
+  width: 100%;
+  margin-bottom: var(--spacing-2);
+  border-radius: var(--border-radius);
+}
+
+/* Skeleton Content Cards */
+.skeleton-card {
+  background: var(--color-card-bg);
+  border: 1px solid var(--color-card-border);
+  border-radius: var(--border-radius);
+  padding: var(--spacing-4);
+  margin-bottom: var(--spacing-4);
+}
+
+.skeleton-card-title {
+  height: 28px;
+  width: 70%;
+  margin-bottom: var(--spacing-3);
+}
+
+.skeleton-card-meta {
+  height: 16px;
+  width: 40%;
+  margin-bottom: var(--spacing-3);
+}
+
+.skeleton-card-description {
+  height: 16px;
+  width: 100%;
+  margin-bottom: var(--spacing-2);
+}
+
+.skeleton-card-description:last-child {
+  width: 80%;
+  margin-bottom: 0;
+}
+
+.skeleton-card-tags {
+  display: flex;
+  gap: var(--spacing-2);
+  margin-top: var(--spacing-3);
+}
+
+.skeleton-card-tag {
+  height: 24px;
+  width: 60px;
+  border-radius: 12px;
+}
+
+/* Skeleton Grid Layout */
+.skeleton-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: var(--spacing-4);
+  padding: var(--spacing-4);
+}
+
+@media (max-width: 768px) {
+  .skeleton-grid {
+    grid-template-columns: 1fr;
+  }
+}

@@ -243,6 +243,225 @@ font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
 - When you need full page reload
 - When SEO requires distinct page loads
 
+### Skeleton Layout Architecture
+
+**Pattern**: Three independent async components with stable CSS Grid positioning and skeleton placeholders
+
+**When to Use**: When page areas load at different speeds and you want to prevent layout shift during loading
+
+**Problem Solved**: Traditional layouts where child components load sequentially cause jarring visual shifts and poor UX. Users see empty space, then content appears causing the page to jump.
+
+**Solution**: CSS Grid layout with three independently-loading components that maintain stable positions. Each component shows skeleton placeholders while loading.
+
+**Example**: Section page with header, navigation, and content areas
+
+**Parent Component (Section.razor)**:
+
+```razor
+@page "/{sectionName}"
+@page "/{sectionName}/{collectionName}"
+@using TechHub.Core.DTOs
+@using TechHub.Web.Services
+@inject TechHubApiClient ApiClient
+@rendermode InteractiveServer
+
+<PageTitle>@SectionName - Tech Hub</PageTitle>
+
+<!-- CSS Grid with stable positioning -->
+<div class="section-page-grid">
+    @* Header loads independently *@
+    <SectionHeader SectionName="@SectionName" />
+    
+    @* Navigation loads independently *@
+    <CollectionNav SectionName="@SectionName" 
+                   SelectedCollection="@selectedCollection"
+                   OnCollectionChange="@HandleCollectionChange" />
+    
+    @* Content loads independently *@
+    <CollectionContent SectionName="@SectionName"
+                      CollectionName="@selectedCollection"
+                      SectionCategory="@sectionCategory"
+                      @key="@selectedCollection" />
+</div>
+
+@code {
+    [Parameter]
+    public string SectionName { get; set; } = null!;
+
+    [Parameter]
+    public string? CollectionName { get; set; }
+
+    private string selectedCollection = string.Empty;
+    private string? sectionCategory;
+
+    protected override async Task OnInitializedAsync()
+    {
+        selectedCollection = CollectionName ?? "all";
+        await LoadSectionMetadata(); // Loads category info
+    }
+
+    private async Task HandleCollectionChange(string collectionName)
+    {
+        selectedCollection = collectionName;
+        await JS.InvokeVoidAsync("history.pushState", null, "", 
+            $"/{SectionName}/{collectionName}");
+    }
+}
+```
+
+**CSS Grid Layout (wwwroot/styles.css)**:
+
+```css
+/* Stable three-area grid that never shifts */
+.section-page-grid {
+    display: grid;
+    grid-template-areas:
+        "header"
+        "nav"
+        "content";
+    grid-template-rows: auto auto 1fr;
+    gap: 1.5rem;
+    padding: 1rem;
+    min-height: 100vh; /* Prevents collapse during loading */
+}
+
+.section-header { grid-area: header; }
+.collection-nav { grid-area: nav; }
+.collection-content { grid-area: content; }
+
+/* Skeleton shimmer animation */
+@keyframes shimmer {
+    0% { background-position: -1000px 0; }
+    100% { background-position: 1000px 0; }
+}
+
+.skeleton {
+    background: linear-gradient(
+        90deg,
+        rgba(255, 255, 255, 0.05) 0%,
+        rgba(255, 255, 255, 0.1) 50%,
+        rgba(255, 255, 255, 0.05) 100%
+    );
+    background-size: 1000px 100%;
+    animation: shimmer 2s infinite;
+    border-radius: 4px;
+}
+
+.skeleton-header {
+    height: 120px;
+    margin-bottom: 1rem;
+}
+
+.skeleton-nav-item {
+    height: 40px;
+    margin-bottom: 0.5rem;
+}
+
+.skeleton-card {
+    height: 200px;
+    margin-bottom: 1rem;
+}
+```
+
+**Child Component Pattern (SectionHeader.razor)**:
+
+```razor
+@using TechHub.Core.DTOs
+@inject TechHubApiClient ApiClient
+@rendermode InteractiveServer
+
+<header class="section-header">
+    @if (section == null)
+    {
+        @* Skeleton placeholder shown while loading *@
+        <div class="skeleton skeleton-header"></div>
+    }
+    else
+    {
+        @* Actual content once loaded *@
+        <h1>@section.Title</h1>
+        <p>@section.Description</p>
+    }
+</header>
+
+@code {
+    [Parameter, EditorRequired]
+    public required string SectionName { get; set; }
+
+    private SectionDto? section;
+
+    protected override async Task OnInitializedAsync()
+    {
+        // Load independently from parent and siblings
+        section = await ApiClient.GetSectionAsync(SectionName);
+    }
+}
+```
+
+**Key Architecture Principles**:
+
+1. **CSS Grid Stability**: Grid areas have fixed positions that never change
+2. **Independent Loading**: Each component loads its own data asynchronously
+3. **Skeleton Placeholders**: Show loading state without layout shift
+4. **@key Directive**: Force component re-render on navigation (e.g., `@key="@selectedCollection"`)
+5. **EventCallback Communication**: Parent coordinates state (e.g., `OnCollectionChange`)
+
+**Component Parameters**:
+
+- **SectionHeader**: `SectionName` (string) - Loads section metadata
+- **CollectionNav**: `SectionName` (string), `SelectedCollection` (string), `OnCollectionChange` (EventCallback)
+- **CollectionContent**: `SectionName` (string), `CollectionName` (string), `SectionCategory` (string)
+
+**Testing Requirements**:
+
+```csharp
+// tests/TechHub.Web.Tests/Components/SectionTests.cs
+[Fact]
+public void Section_RendersWithSkeletonLayout()
+{
+    // Arrange: Mock API client with delayed response
+    var mockApi = new Mock<TechHubApiClient>();
+    var tcs = new TaskCompletionSource<SectionDto>();
+    mockApi.Setup(x => x.GetSectionAsync(It.IsAny<string>(), default))
+           .Returns(tcs.Task);
+
+    using var ctx = new TestContext();
+    ctx.Services.AddSingleton(mockApi.Object);
+
+    // Act: Render component (API hasn't responded yet)
+    var cut = ctx.RenderComponent<Section>(parameters => parameters
+        .Add(p => p.SectionName, "ai"));
+
+    // Assert: Verify CSS Grid structure exists immediately
+    cut.MarkupMatches(@"<div class=""section-page-grid"">
+        <section-header diff:ignore></section-header>
+        <collection-nav diff:ignore></collection-nav>
+        <collection-content diff:ignore></collection-content>
+    </div>");
+}
+```
+
+**Best Practices**:
+
+- **Null Safety**: Always check if data is null before rendering
+- **Loading States**: Use skeleton placeholders, not spinners (prevents layout shift)
+- **Error Handling**: Show error message in same space as skeleton
+- **Performance**: Each component loads independently (parallel HTTP requests)
+- **SEO**: Initial server-side render shows skeleton structure
+
+**When to Use This Pattern**:
+
+- Multi-section pages with independent data sources
+- Content that loads at different speeds
+- When you want to prevent cumulative layout shift (CLS)
+- Pages where parts can fail independently
+
+**When NOT to Use**:
+
+- Simple pages with single data source
+- When all data loads from same endpoint
+- Static pages without loading states
+
 ### Article Sidebar Component
 
 **Pattern**: Sidebar with quick navigation, metadata, and related content

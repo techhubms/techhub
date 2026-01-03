@@ -6,7 +6,7 @@ namespace TechHub.Web.Services;
 /// <summary>
 /// Typed HTTP client for calling Tech Hub API endpoints
 /// </summary>
-internal class TechHubApiClient
+public class TechHubApiClient
 {
     private readonly HttpClient _httpClient;
     private readonly ILogger<TechHubApiClient> _logger;
@@ -20,7 +20,7 @@ internal class TechHubApiClient
     /// <summary>
     /// Get all sections with their collections
     /// </summary>
-    public async Task<IEnumerable<SectionDto>?> GetAllSectionsAsync(CancellationToken cancellationToken = default)
+    public virtual async Task<IEnumerable<SectionDto>?> GetAllSectionsAsync(CancellationToken cancellationToken = default)
     {
         try
         {
@@ -42,7 +42,7 @@ internal class TechHubApiClient
     /// <summary>
     /// Get a specific section by name
     /// </summary>
-    public async Task<SectionDto?> GetSectionAsync(string sectionName, CancellationToken cancellationToken = default)
+    public virtual async Task<SectionDto?> GetSectionAsync(string sectionName, CancellationToken cancellationToken = default)
     {
         try
         {
@@ -63,7 +63,7 @@ internal class TechHubApiClient
     /// <summary>
     /// Get all items in a section
     /// </summary>
-    public async Task<IEnumerable<ContentItemDto>?> GetSectionItemsAsync(
+    public virtual async Task<IEnumerable<ContentItemDto>?> GetSectionItemsAsync(
         string sectionName, 
         CancellationToken cancellationToken = default)
     {
@@ -88,7 +88,7 @@ internal class TechHubApiClient
     /// <summary>
     /// Get items in a specific collection within a section
     /// </summary>
-    public async Task<IEnumerable<ContentItemDto>?> GetSectionCollectionItemsAsync(
+    public virtual async Task<IEnumerable<ContentItemDto>?> GetSectionCollectionItemsAsync(
         string sectionName,
         string collectionName,
         CancellationToken cancellationToken = default)
@@ -116,7 +116,7 @@ internal class TechHubApiClient
     /// <summary>
     /// Filter content by multiple criteria
     /// </summary>
-    public async Task<IEnumerable<ContentItemDto>?> FilterContentAsync(
+    public virtual async Task<IEnumerable<ContentItemDto>?> FilterContentAsync(
         string? sections = null,
         string? collections = null,
         string? tags = null,
@@ -154,7 +154,7 @@ internal class TechHubApiClient
     /// <summary>
     /// Get all unique tags across all content
     /// </summary>
-    public async Task<IEnumerable<string>?> GetAllTagsAsync(CancellationToken cancellationToken = default)
+    public virtual async Task<IEnumerable<string>?> GetAllTagsAsync(CancellationToken cancellationToken = default)
     {
         try
         {
@@ -177,7 +177,7 @@ internal class TechHubApiClient
     /// Get content items by category and collection.
     /// Pass null for category to get all items in the collection regardless of category.
     /// </summary>
-    public async Task<IEnumerable<ContentItemDto>?> GetContentAsync(
+    public virtual async Task<IEnumerable<ContentItemDto>?> GetContentAsync(
         string? category,
         string collection,
         CancellationToken cancellationToken = default)
@@ -209,7 +209,7 @@ internal class TechHubApiClient
     /// <summary>
     /// Get detailed content item by section, collection, and item ID
     /// </summary>
-    public async Task<ContentItemDetailDto?> GetContentDetailAsync(
+    public virtual async Task<ContentItemDetailDto?> GetContentDetailAsync(
         string sectionName,
         string collection,
         string itemId,
