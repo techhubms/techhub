@@ -38,7 +38,8 @@ public class FileBasedContentRepository : IContentRepository
     }
 
     /// <summary>
-    /// Get all content items across all collections
+    /// Get all content items across all collections.
+    /// Returns items sorted by date (DateEpoch) in descending order (newest first).
     /// </summary>
     public async Task<IReadOnlyList<ContentItem>> GetAllAsync(CancellationToken cancellationToken = default)
     {
@@ -50,11 +51,14 @@ public class FileBasedContentRepository : IContentRepository
             allItems.AddRange(items);
         }
 
-        return allItems;
+        return allItems
+            .OrderByDescending(x => x.DateEpoch)
+            .ToList();
     }
 
     /// <summary>
-    /// Get content items filtered by collection
+    /// Get content items filtered by collection.
+    /// Returns items sorted by date (DateEpoch) in descending order (newest first).
     /// </summary>
     public async Task<IReadOnlyList<ContentItem>> GetByCollectionAsync(
         string collection,
@@ -83,11 +87,14 @@ public class FileBasedContentRepository : IContentRepository
             }
         }
 
-        return items;
+        return items
+            .OrderByDescending(x => x.DateEpoch)
+            .ToList();
     }
 
     /// <summary>
-    /// Get content items filtered by category
+    /// Get content items filtered by category.
+    /// Returns items sorted by date (DateEpoch) in descending order (newest first).
     /// </summary>
     public async Task<IReadOnlyList<ContentItem>> GetByCategoryAsync(
         string category,
@@ -96,6 +103,7 @@ public class FileBasedContentRepository : IContentRepository
         var allItems = await GetAllAsync(cancellationToken);
         return allItems
             .Where(item => item.Categories.Contains(category, StringComparer.OrdinalIgnoreCase))
+            .OrderByDescending(x => x.DateEpoch)
             .ToList();
     }
 
@@ -113,8 +121,9 @@ public class FileBasedContentRepository : IContentRepository
     }
 
     /// <summary>
-    /// Search content items by text query (title, description, tags)
-    /// Case-insensitive search across multiple fields
+    /// Search content items by text query (title, description, tags).
+    /// Case-insensitive search across multiple fields.
+    /// Returns items sorted by date (DateEpoch) in descending order (newest first).
     /// </summary>
     public async Task<IReadOnlyList<ContentItem>> SearchAsync(
         string query,
@@ -133,6 +142,7 @@ public class FileBasedContentRepository : IContentRepository
                 item.Title.Contains(lowerQuery, StringComparison.OrdinalIgnoreCase) ||
                 item.Description.Contains(lowerQuery, StringComparison.OrdinalIgnoreCase) ||
                 item.Tags.Any(tag => tag.Contains(lowerQuery, StringComparison.OrdinalIgnoreCase)))
+            .OrderByDescending(x => x.DateEpoch)
             .ToList();
     }
 

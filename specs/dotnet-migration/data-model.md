@@ -319,18 +319,19 @@ ContentItem (n) ─── (n) Tags (via many-to-many through frontmatter)
    → Parses YAML frontmatter
    → Renders markdown to HTML (Markdig)
    → Creates ContentItem entities
+   → Sorts by DateEpoch descending (newest first)
    → Stores in IMemoryCache (sliding expiration 30min)
 
 3. API endpoints serve cached data
    → Convert entities to DTOs
-   → Return JSON responses
+   → Return JSON responses (pre-sorted by date desc)
 ```
 
 ### Client-Side Filtering
 
 ```
 1. Blazor Web loads full section content from API
-   → GET /api/sections/{sectionId}
+   → GET /api/sections/{sectionName}
    → Receives SectionDto with all ContentItemDto[]
 
 2. Client-side filter state tracks selections
@@ -415,6 +416,23 @@ The rest of the markdown content rendered to HTML...
 | ContentItem | Categories | Not empty |
 | ContentItem | Tags | Normalized (lowercase, hyphens) |
 | FilterState | SearchText | Optional, max 200 chars |
+
+---
+
+## Repository Behavior
+
+### Sorting
+
+**CRITICAL**: All repository methods return content sorted by `DateEpoch` in **descending order** (newest first).
+
+This sorting is applied:
+- At the repository layer (not in controllers)
+- To all methods: `GetAllAsync()`, `GetByCollectionAsync()`, `GetByCategoryAsync()`, `SearchAsync()`
+- Before caching (cached results are pre-sorted)
+
+**Rationale**: Consistent sorting order across all endpoints, reduces client-side sorting burden, matches user expectations (newest content first).
+
+**Implementation Note**: For database migration, add `ORDER BY DateEpoch DESC` to all queries. Current file-based implementation uses `.OrderByDescending(x => x.DateEpoch)`.
 
 ---
 

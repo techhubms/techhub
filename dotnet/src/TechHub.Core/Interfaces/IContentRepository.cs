@@ -3,7 +3,8 @@ using TechHub.Core.Models;
 namespace TechHub.Core.Interfaces;
 
 /// <summary>
-/// Repository for accessing content items from markdown files
+/// Repository for accessing content items from markdown files.
+/// All methods return content sorted by date (DateEpoch) in descending order (newest first).
 /// </summary>
 public interface IContentRepository
 {

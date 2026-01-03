@@ -21,25 +21,25 @@ public class FileBasedSectionRepository : ISectionRepository
     /// </summary>
     private class SectionJsonDto
     {
-        [JsonPropertyName("Id")]
-        public required string Id { get; set; }
-        
-        [JsonPropertyName("Title")]
+        [JsonPropertyName("title")]
         public required string Title { get; set; }
         
-        [JsonPropertyName("Description")]
+        [JsonPropertyName("description")]
         public required string Description { get; set; }
         
-        [JsonPropertyName("Url")]
+        [JsonPropertyName("url")]
         public required string Url { get; set; }
         
-        [JsonPropertyName("BackgroundImage")]
-        public required string BackgroundImage { get; set; }
+        [JsonPropertyName("section")]
+        public required string Section { get; set; }
         
-        [JsonPropertyName("Category")]
+        [JsonPropertyName("image")]
+        public required string Image { get; set; }
+        
+        [JsonPropertyName("category")]
         public required string Category { get; set; }
         
-        [JsonPropertyName("Collections")]
+        [JsonPropertyName("collections")]
         public required List<CollectionJsonDto> Collections { get; set; }
     }
 
@@ -48,19 +48,19 @@ public class FileBasedSectionRepository : ISectionRepository
     /// </summary>
     private class CollectionJsonDto
     {
-        [JsonPropertyName("Title")]
+        [JsonPropertyName("title")]
         public required string Title { get; set; }
         
-        [JsonPropertyName("Collection")]
+        [JsonPropertyName("collection")]
         public string? Collection { get; set; } // Nullable for custom pages that don't have a collection
         
-        [JsonPropertyName("Url")]
+        [JsonPropertyName("url")]
         public required string Url { get; set; }
         
-        [JsonPropertyName("Description")]
+        [JsonPropertyName("description")]
         public required string Description { get; set; }
         
-        [JsonPropertyName("IsCustom")]
+        [JsonPropertyName("custom")]
         public bool IsCustom { get; set; }
     }
 
@@ -90,17 +90,20 @@ public class FileBasedSectionRepository : ISectionRepository
 
         var json = await File.ReadAllTextAsync(_sectionsFilePath, cancellationToken);
         
-        // sections.json structure: Array of section objects
-        var sectionDtos = JsonSerializer.Deserialize<List<SectionJsonDto>>(json, _jsonOptions);
+        // sections.json structure: Dictionary with section IDs as keys
+        var sectionsDict = JsonSerializer.Deserialize<Dictionary<string, SectionJsonDto>>(json, _jsonOptions);
         
-        if (sectionDtos == null || sectionDtos.Count == 0)
+        if (sectionsDict == null || sectionsDict.Count == 0)
         {
             return new List<Section>();
         }
 
         // Convert DTOs to Section models
-        var sections = sectionDtos.Select(dto =>
+        var sections = sectionsDict.Select(kvp =>
         {
+            var sectionName = kvp.Key;
+            var dto = kvp.Value;
+            
             // Map collection DTOs to CollectionReference models
             // Filter out custom pages (those without a collection field) for now
             var collections = dto.Collections
@@ -117,11 +120,11 @@ public class FileBasedSectionRepository : ISectionRepository
             
             return new Section
             {
-                Id = dto.Id,
+                Id = sectionName,
                 Title = dto.Title,
                 Description = dto.Description,
                 Url = dto.Url,
-                BackgroundImage = dto.BackgroundImage,
+                BackgroundImage = dto.Image,
                 Category = dto.Category,
                 Collections = collections
             };

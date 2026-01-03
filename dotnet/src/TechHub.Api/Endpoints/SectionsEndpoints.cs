@@ -25,15 +25,15 @@ internal static class SectionsEndpoints
             .WithDescription("Returns all sections with their collections and metadata")
             .Produces<IEnumerable<SectionDto>>(StatusCodes.Status200OK);
 
-        group.MapGet("/{sectionId}", GetSectionById)
+        group.MapGet("/{sectionName}", GetSectionById)
             .WithName("GetSectionById")
-            .WithSummary("Get section by ID")
+            .WithSummary("Get section by name")
             .WithDescription("Returns a single section with its collections and metadata")
             .Produces<SectionDto>(StatusCodes.Status200OK)
             .Produces(StatusCodes.Status404NotFound);
 
         // Nested: items in a section
-        group.MapGet("/{sectionId}/items", GetSectionItems)
+        group.MapGet("/{sectionName}/items", GetSectionItems)
             .WithName("GetSectionItems")
             .WithSummary("Get all items in a section")
             .WithDescription("Returns all content items from all collections in this section")
@@ -41,7 +41,7 @@ internal static class SectionsEndpoints
             .Produces(StatusCodes.Status404NotFound);
 
         // Nested: collections in a section
-        group.MapGet("/{sectionId}/collections", GetSectionCollections)
+        group.MapGet("/{sectionName}/collections", GetSectionCollections)
             .WithName("GetSectionCollections")
             .WithSummary("Get all collections in a section")
             .WithDescription("Returns all collection references for this section")
@@ -49,7 +49,7 @@ internal static class SectionsEndpoints
             .Produces(StatusCodes.Status404NotFound);
 
         // Nested: specific collection in a section
-        group.MapGet("/{sectionId}/collections/{collectionName}", GetSectionCollection)
+        group.MapGet("/{sectionName}/collections/{collectionName}", GetSectionCollection)
             .WithName("GetSectionCollection")
             .WithSummary("Get collection details")
             .WithDescription("Returns details of a specific collection within this section")
@@ -57,7 +57,7 @@ internal static class SectionsEndpoints
             .Produces(StatusCodes.Status404NotFound);
 
         // Nested: items in a specific collection within a section
-        group.MapGet("/{sectionId}/collections/{collectionName}/items", GetSectionCollectionItems)
+        group.MapGet("/{sectionName}/collections/{collectionName}/items", GetSectionCollectionItems)
             .WithName("GetSectionCollectionItems")
             .WithSummary("Get items in a collection within a section")
             .WithDescription("Returns all content items from a specific collection in this section")
@@ -101,11 +101,11 @@ internal static class SectionsEndpoints
     /// GET /api/sections/{sectionName} - Get section by name
     /// </summary>
     private static async Task<Results<Ok<SectionDto>, NotFound>> GetSectionById(
-        string sectionId,
+        string sectionName,
         ISectionRepository sectionRepository,
         CancellationToken cancellationToken)
     {
-        var section = await sectionRepository.GetByIdAsync(sectionId, cancellationToken);
+        var section = await sectionRepository.GetByIdAsync(sectionName, cancellationToken);
         
         if (section == null)
         {
@@ -137,13 +137,13 @@ internal static class SectionsEndpoints
     /// GET /api/sections/{sectionName}/items - Get all items in a section
     /// </summary>
     private static async Task<Results<Ok<IEnumerable<ContentItemDto>>, NotFound>> GetSectionItems(
-        string sectionId,
+        string sectionName,
         ISectionRepository sectionRepository,
         IContentRepository contentRepository,
         CancellationToken cancellationToken)
     {
         // Verify section exists
-        var section = await sectionRepository.GetByIdAsync(sectionId, cancellationToken);
+        var section = await sectionRepository.GetByIdAsync(sectionName, cancellationToken);
         if (section == null)
         {
             return TypedResults.NotFound();
@@ -160,11 +160,11 @@ internal static class SectionsEndpoints
     /// GET /api/sections/{sectionName}/collections - Get all collections in a section
     /// </summary>
     private static async Task<Results<Ok<IEnumerable<CollectionReferenceDto>>, NotFound>> GetSectionCollections(
-        string sectionId,
+        string sectionName,
         ISectionRepository sectionRepository,
         CancellationToken cancellationToken)
     {
-        var section = await sectionRepository.GetByIdAsync(sectionId, cancellationToken);
+        var section = await sectionRepository.GetByIdAsync(sectionName, cancellationToken);
         
         if (section == null)
         {
@@ -187,12 +187,12 @@ internal static class SectionsEndpoints
     /// GET /api/sections/{sectionName}/collections/{collectionName} - Get collection details
     /// </summary>
     private static async Task<Results<Ok<CollectionReferenceDto>, NotFound>> GetSectionCollection(
-        string sectionId,
+        string sectionName,
         string collectionName,
         ISectionRepository sectionRepository,
         CancellationToken cancellationToken)
     {
-        var section = await sectionRepository.GetByIdAsync(sectionId, cancellationToken);
+        var section = await sectionRepository.GetByIdAsync(sectionName, cancellationToken);
         
         if (section == null)
         {
@@ -223,14 +223,14 @@ internal static class SectionsEndpoints
     /// GET /api/sections/{sectionName}/collections/{collectionName}/items - Get items in a collection within a section
     /// </summary>
     private static async Task<Results<Ok<IEnumerable<ContentItemDto>>, NotFound>> GetSectionCollectionItems(
-        string sectionId,
+        string sectionName,
         string collectionName,
         ISectionRepository sectionRepository,
         IContentRepository contentRepository,
         CancellationToken cancellationToken)
     {
         // Verify section exists
-        var section = await sectionRepository.GetByIdAsync(sectionId, cancellationToken);
+        var section = await sectionRepository.GetByIdAsync(sectionName, cancellationToken);
         if (section == null)
         {
             return TypedResults.NotFound();

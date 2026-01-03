@@ -237,13 +237,51 @@ public class SectionsEndpointsTests : IClassFixture<TechHubApiFactory>
     [Theory]
     [InlineData("ai", "AI")]
     [InlineData("github-copilot", "GitHub Copilot")]
-    public async Task GetSectionById_ReturnsCorrectCategory(string sectionId, string expectedCategory)
+    public async Task GetSectionById_ReturnsCorrectCategory(string sectionName, string expectedCategory)
     {
         // Act
-        var response = await _client.GetAsync($"/api/sections/{sectionId}");
+        var response = await _client.GetAsync($"/api/sections/{sectionName}");
         var section = await response.Content.ReadFromJsonAsync<SectionDto>();
 
         // Assert
         section!.Category.Should().Be(expectedCategory);
+    }
+
+    /// <summary>
+    /// INTEGRATION TEST: Verify API can serialize sections correctly through the HTTP layer
+    /// Why: Ensures the entire request/response pipeline works, including JSON serialization
+    /// This catches issues that might not show up in unit tests but appear when using Swagger/HTTP clients
+    /// </summary>
+    [Fact]
+    public async Task GetAllSections_SerializesCorrectlyThroughHttpPipeline()
+    {
+        // This test verifies the complete HTTP request/response cycle works correctly
+        // The same serialization path is used by Swagger UI
+        
+        // Act: Make HTTP request to get sections
+        var response = await _client.GetAsync("/api/sections");
+
+        // Assert: Should return success
+        response.StatusCode.Should().Be(HttpStatusCode.OK);
+        
+        // Verify Content-Type is JSON
+        response.Content.Headers.ContentType?.MediaType.Should().Be("application/json");
+
+        // Verify we can deserialize the response
+        var jsonString = await response.Content.ReadAsStringAsync();
+        jsonString.Should().NotBeEmpty();
+        
+        var sections = await response.Content.ReadFromJsonAsync<List<SectionDto>>();
+        sections.Should().NotBeNull();
+        sections.Should().NotBeEmpty();
+        
+        // Verify the structure matches what Swagger expects
+        foreach (var section in sections!)
+        {
+            section.Id.Should().NotBeNullOrEmpty();
+            section.Title.Should().NotBeNullOrEmpty();
+            section.Description.Should().NotBeNullOrEmpty();
+            section.Collections.Should().NotBeNull();
+        }
     }
 }

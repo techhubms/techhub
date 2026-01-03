@@ -142,8 +142,8 @@ All .NET code resides in `dotnet/` directory per constitution requirements:
 ### API Endpoints for User Story 1
 
 - [ ] T054 [P] [US1] Implement GET /api/sections endpoint in dotnet/src/TechHub.Api/Endpoints/SectionsEndpoints.cs
-- [ ] T055 [P] [US1] Implement GET /api/sections/{sectionId} endpoint in dotnet/src/TechHub.Api/Endpoints/SectionsEndpoints.cs
-- [ ] T056 [P] [US1] Implement GET /api/content/{sectionId}/{collection}/{itemId} endpoint in dotnet/src/TechHub.Api/Endpoints/ContentEndpoints.cs
+- [ ] T055 [P] [US1] Implement GET /api/sections/{sectionName} endpoint in dotnet/src/TechHub.Api/Endpoints/SectionsEndpoints.cs
+- [ ] T056 [P] [US1] Implement GET /api/content/{sectionName}/{collection}/{itemId} endpoint in dotnet/src/TechHub.Api/Endpoints/ContentEndpoints.cs
 - [ ] T057 [US1] Configure dependency injection for repositories and services in dotnet/src/TechHub.Api/Program.cs
 - [ ] T058 [US1] Configure CORS policy for TechHub.Web in dotnet/src/TechHub.Api/Program.cs
 
@@ -183,8 +183,8 @@ All .NET code resides in `dotnet/` directory per constitution requirements:
 ### Integration Tests for User Story 1
 
 - [ ] T077 [P] [US1] Integration test for GET /api/sections in dotnet/tests/TechHub.Api.Tests/Endpoints/SectionsEndpointsTests.cs
-- [ ] T078 [P] [US1] Integration test for GET /api/sections/{sectionId} in dotnet/tests/TechHub.Api.Tests/Endpoints/SectionsEndpointsTests.cs
-- [ ] T079 [P] [US1] Integration test for GET /api/content/{sectionId}/{collection}/{itemId} in dotnet/tests/TechHub.Api.Tests/Endpoints/ContentEndpointsTests.cs
+- [ ] T078 [P] [US1] Integration test for GET /api/sections/{sectionName} in dotnet/tests/TechHub.Api.Tests/Endpoints/SectionsEndpointsTests.cs
+- [ ] T079 [P] [US1] Integration test for GET /api/content/{sectionName}/{collection}/{itemId} in dotnet/tests/TechHub.Api.Tests/Endpoints/ContentEndpointsTests.cs
 
 ### Component Tests for User Story 1
 
@@ -293,7 +293,7 @@ All .NET code resides in `dotnet/` directory per constitution requirements:
 
 **Independent Test**: Subscribe to /ai/feed.xml in RSS reader, verify feed is valid RSS 2.0 with recent items
 
-- [ ] T122 [P] [US3] Implement GET /api/rss/{sectionId} endpoint in dotnet/src/TechHub.Api/Endpoints/RssEndpoints.cs
+- [ ] T122 [P] [US3] Implement GET /api/rss/{sectionName} endpoint in dotnet/src/TechHub.Api/Endpoints/RssEndpoints.cs
 - [ ] T123 [P] [US3] Add RSS feed link to section page header in dotnet/src/TechHub.Web/Pages/Section.razor
 - [ ] T124 [P] [US3] Integration test for RSS feed generation in dotnet/tests/TechHub.Api.Tests/Endpoints/RssEndpointsTests.cs
 - [ ] T125 [P] [US3] Playwright test for RSS feed subscription in dotnet/tests/TechHub.E2E.Tests/Tests/RssFeedTests.cs

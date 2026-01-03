@@ -129,6 +129,26 @@ Follow the 8-step workflow defined in the root AGENTS.md:
 ✅ **Options pattern**: Use `IOptions<T>` for configuration, never direct access  
 ✅ **Typed HttpClient**: Register with `AddHttpClient<TInterface, TImplementation>`  
 
+**🚨 CRITICAL - Naming Consistency Rule**:
+
+When renaming ANY identifier (parameters, variables, properties, methods, classes, endpoints), you **MUST** check and update ALL occurrences across:
+
+1. **Code**: C# files (implementation, interfaces, tests)
+2. **Documentation**: XML comments, markdown docs, specifications
+3. **API Contracts**: Endpoint routes, Swagger summaries, DTOs
+4. **Tests**: Test method names, parameters, assertions
+5. **Specifications**: tasks.md, data-model.md, contracts, plan.md
+
+**Example**: Renaming "sectionId" → "sectionName" requires updates in:
+- Endpoint route parameters: `/api/sections/{sectionId}` → `/api/sections/{sectionName}`
+- Method parameters: `GetSectionById(string sectionId)` → `GetSectionById(string sectionName)`
+- Variable names: `var sectionId = ...` → `var sectionName = ...`
+- XML comments: `<param name="sectionId">` → `<param name="sectionName">`
+- Test methods: `GetSectionById_ReturnsCorrectCategory(string sectionId, ...)` → `GetSectionById_ReturnsCorrectCategory(string sectionName, ...)`
+- Specifications: All mentions in tasks.md, data-model.md, etc.
+
+**Why This Matters**: Inconsistent naming creates confusion, breaks Swagger documentation, makes code harder to understand, and causes maintenance issues. ALWAYS use `grep_search` to find ALL occurrences before renaming.
+
 **Architecture Decisions**:
 
 ✅ **Separate frontend/backend**: TechHub.Web calls TechHub.Api via HttpClient  
@@ -461,6 +481,26 @@ public class FileSectionRepository : ISectionRepository
     // ... other methods
 }
 ```
+
+**CRITICAL**: All `IContentRepository` methods **MUST** return content sorted by `DateEpoch` in **descending order** (newest first). This sorting is applied:
+
+- At the repository layer (not in controllers/endpoints)
+- To all methods: `GetAllAsync()`, `GetByCollectionAsync()`, `GetByCategoryAsync()`, `SearchAsync()`
+- Before caching (cached results are pre-sorted)
+
+**Implementation Example**:
+
+```csharp
+public async Task<IReadOnlyList<ContentItem>> GetAllAsync(CancellationToken ct = default)
+{
+    var items = await LoadItemsFromDisk(ct);
+    return items
+        .OrderByDescending(x => x.DateEpoch)
+        .ToList();
+}
+```
+
+**Rationale**: Consistent sorting across all endpoints, reduces client-side burden, matches user expectations.
 
 ### Dependency Injection Service Lifetimes
 

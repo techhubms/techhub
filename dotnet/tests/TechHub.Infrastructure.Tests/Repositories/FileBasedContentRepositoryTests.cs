@@ -578,4 +578,194 @@ public class FileBasedContentRepositoryTests : IDisposable
         // Assert: Empty list returned (no exception)
         Assert.Empty(content);
     }
+
+    /// <summary>
+    /// Test: GetAllAsync returns content sorted by date descending (newest first)
+    /// Why: All repository methods MUST return content sorted by DateEpoch descending
+    /// This is a CRITICAL requirement for consistent user experience
+    /// </summary>
+    [Fact]
+    public async Task GetAllAsync_MultipleItems_ReturnsSortedByDateDescending()
+    {
+        // Arrange: Create content with different dates
+        var newsDir = Path.Combine(_collectionsPath, "_news");
+        Directory.CreateDirectory(newsDir);
+
+        await File.WriteAllTextAsync(Path.Combine(newsDir, "2025-01-10-oldest.md"), """
+            ---
+            title: Oldest Item
+            date: 2025-01-10
+            categories: [ai]
+            tags: [test]
+            excerpt: Oldest excerpt
+            ---
+            Oldest content
+            """);
+
+        await File.WriteAllTextAsync(Path.Combine(newsDir, "2025-01-20-newest.md"), """
+            ---
+            title: Newest Item
+            date: 2025-01-20
+            categories: [ai]
+            tags: [test]
+            excerpt: Newest excerpt
+            ---
+            Newest content
+            """);
+
+        await File.WriteAllTextAsync(Path.Combine(newsDir, "2025-01-15-middle.md"), """
+            ---
+            title: Middle Item
+            date: 2025-01-15
+            categories: [ai]
+            tags: [test]
+            excerpt: Middle excerpt
+            ---
+            Middle content
+            """);
+
+        // Act: Get all content
+        var content = await _repository.GetAllAsync();
+
+        // Assert: Items returned in descending date order (newest first)
+        Assert.Equal(3, content.Count);
+        Assert.Equal("Newest Item", content[0].Title);
+        Assert.Equal("Middle Item", content[1].Title);
+        Assert.Equal("Oldest Item", content[2].Title);
+        
+        // Verify dates are actually in descending order
+        Assert.True(content[0].DateEpoch > content[1].DateEpoch);
+        Assert.True(content[1].DateEpoch > content[2].DateEpoch);
+    }
+
+    /// <summary>
+    /// Test: GetByCollectionAsync returns content sorted by date descending
+    /// Why: Collection-specific queries must also maintain date sorting
+    /// </summary>
+    [Fact]
+    public async Task GetByCollectionAsync_MultipleItems_ReturnsSortedByDateDescending()
+    {
+        // Arrange: Create news items with different dates
+        var newsDir = Path.Combine(_collectionsPath, "_news");
+        Directory.CreateDirectory(newsDir);
+
+        await File.WriteAllTextAsync(Path.Combine(newsDir, "2025-01-05-old.md"), """
+            ---
+            title: Old News
+            date: 2025-01-05
+            categories: [ai]
+            tags: [news]
+            excerpt: Old news
+            ---
+            Old content
+            """);
+
+        await File.WriteAllTextAsync(Path.Combine(newsDir, "2025-01-25-new.md"), """
+            ---
+            title: New News
+            date: 2025-01-25
+            categories: [ai]
+            tags: [news]
+            excerpt: New news
+            ---
+            New content
+            """);
+
+        // Act: Get news collection
+        var content = await _repository.GetByCollectionAsync("news");
+
+        // Assert: Newest first
+        Assert.Equal(2, content.Count);
+        Assert.Equal("New News", content[0].Title);
+        Assert.Equal("Old News", content[1].Title);
+        Assert.True(content[0].DateEpoch > content[1].DateEpoch);
+    }
+
+    /// <summary>
+    /// Test: GetByCategoryAsync returns content sorted by date descending
+    /// Why: Category filtering must preserve date sorting for section pages
+    /// </summary>
+    [Fact]
+    public async Task GetByCategoryAsync_MultipleItems_ReturnsSortedByDateDescending()
+    {
+        // Arrange: Create AI category content with different dates
+        var newsDir = Path.Combine(_collectionsPath, "_news");
+        var blogsDir = Path.Combine(_collectionsPath, "_blogs");
+        Directory.CreateDirectory(newsDir);
+        Directory.CreateDirectory(blogsDir);
+
+        await File.WriteAllTextAsync(Path.Combine(newsDir, "2025-01-12-news.md"), """
+            ---
+            title: AI News
+            date: 2025-01-12
+            categories: [ai]
+            tags: [ai]
+            excerpt: AI news
+            ---
+            News content
+            """);
+
+        await File.WriteAllTextAsync(Path.Combine(blogsDir, "2025-01-18-blog.md"), """
+            ---
+            title: AI Blog
+            date: 2025-01-18
+            categories: [ai]
+            tags: [ai]
+            excerpt: AI blog
+            ---
+            Blog content
+            """);
+
+        // Act: Get AI category
+        var content = await _repository.GetByCategoryAsync("ai");
+
+        // Assert: Newest first (blog before news)
+        Assert.Equal(2, content.Count);
+        Assert.Equal("AI Blog", content[0].Title);
+        Assert.Equal("AI News", content[1].Title);
+        Assert.True(content[0].DateEpoch > content[1].DateEpoch);
+    }
+
+    /// <summary>
+    /// Test: SearchAsync returns results sorted by date descending
+    /// Why: Search results should show newest matches first
+    /// </summary>
+    [Fact]
+    public async Task SearchAsync_MultipleMatches_ReturnsSortedByDateDescending()
+    {
+        // Arrange: Create content with "Azure" in titles, different dates
+        var newsDir = Path.Combine(_collectionsPath, "_news");
+        Directory.CreateDirectory(newsDir);
+
+        await File.WriteAllTextAsync(Path.Combine(newsDir, "2025-01-08-azure-old.md"), """
+            ---
+            title: Azure Update Old
+            date: 2025-01-08
+            categories: [azure]
+            tags: [azure]
+            excerpt: Old update
+            ---
+            Old content
+            """);
+
+        await File.WriteAllTextAsync(Path.Combine(newsDir, "2025-01-22-azure-new.md"), """
+            ---
+            title: Azure Update New
+            date: 2025-01-22
+            categories: [azure]
+            tags: [azure]
+            excerpt: New update
+            ---
+            New content
+            """);
+
+        // Act: Search for "Azure"
+        var results = await _repository.SearchAsync("Azure");
+
+        // Assert: Newest first
+        Assert.Equal(2, results.Count);
+        Assert.Equal("Azure Update New", results[0].Title);
+        Assert.Equal("Azure Update Old", results[1].Title);
+        Assert.True(results[0].DateEpoch > results[1].DateEpoch);
+    }
 }

@@ -65,49 +65,49 @@ public class FileBasedSectionRepositoryTests : IDisposable
     {
         // Arrange: Create sections.json with 2 sections
         var sectionsJson = """
-            [
-              {
-                "Id": "ai",
-                "Title": "AI",
-                "Description": "Artificial Intelligence",
-                "Category": "ai",
-                "Url": "/ai",
-                "BackgroundImage": "/assets/ai-bg.jpg",
-                "Collections": [
+            {
+              "ai": {
+                "title": "AI",
+                "description": "Artificial Intelligence",
+                "category": "ai",
+                "url": "/ai",
+                "section": "ai",
+                "image": "/assets/ai-bg.jpg",
+                "collections": [
                   {
-                    "Title": "Latest News",
-                    "Collection": "news",
-                    "Url": "/ai/news",
-                    "Description": "AI news and announcements",
-                    "IsCustom": false
+                    "title": "Latest News",
+                    "collection": "news",
+                    "url": "/ai/news",
+                    "description": "AI news and announcements",
+                    "custom": false
                   },
                   {
-                    "Title": "Videos",
-                    "Collection": "videos",
-                    "Url": "/ai/videos",
-                    "Description": "AI video content",
-                    "IsCustom": false
+                    "title": "Videos",
+                    "collection": "videos",
+                    "url": "/ai/videos",
+                    "description": "AI video content",
+                    "custom": false
                   }
                 ]
               },
-              {
-                "Id": "github-copilot",
-                "Title": "GitHub Copilot",
-                "Description": "AI pair programmer",
-                "Category": "github-copilot",
-                "Url": "/github-copilot",
-                "BackgroundImage": "/assets/ghc-bg.jpg",
-                "Collections": [
+              "github-copilot": {
+                "title": "GitHub Copilot",
+                "description": "AI pair programmer",
+                "category": "github-copilot",
+                "url": "/github-copilot",
+                "section": "github-copilot",
+                "image": "/assets/ghc-bg.jpg",
+                "collections": [
                   {
-                    "Title": "Latest News",
-                    "Collection": "news",
-                    "Url": "/github-copilot/news",
-                    "Description": "GitHub Copilot news",
-                    "IsCustom": false
+                    "title": "Latest News",
+                    "collection": "news",
+                    "url": "/github-copilot/news",
+                    "description": "GitHub Copilot news",
+                    "custom": false
                   }
                 ]
               }
-            ]
+            }
             """;
         await File.WriteAllTextAsync(_sectionsFilePath, sectionsJson);
 
@@ -136,25 +136,25 @@ public class FileBasedSectionRepositoryTests : IDisposable
     {
         // Arrange: Create sections.json
         var sectionsJson = """
-            [
-              {
-                "Id": "azure",
-                "Title": "Azure",
-                "Description": "Cloud platform",
-                "Category": "azure",
-                "Url": "/azure",
-                "BackgroundImage": "/assets/azure-bg.jpg",
-                "Collections": [
+            {
+              "azure": {
+                "title": "Azure",
+                "description": "Cloud platform",
+                "category": "azure",
+                "url": "/azure",
+                "section": "azure",
+                "image": "/assets/azure-bg.jpg",
+                "collections": [
                   {
-                    "Title": "Latest News",
-                    "Collection": "news",
-                    "Url": "/azure/news",
-                    "Description": "Azure news",
-                    "IsCustom": false
+                    "title": "Latest News",
+                    "collection": "news",
+                    "url": "/azure/news",
+                    "description": "Azure news",
+                    "custom": false
                   }
                 ]
               }
-            ]
+            }
             """;
         await File.WriteAllTextAsync(_sectionsFilePath, sectionsJson);
 
@@ -176,25 +176,25 @@ public class FileBasedSectionRepositoryTests : IDisposable
     {
         // Arrange: Create sections.json without "devops" section
         var sectionsJson = """
-            [
-              {
-                "Id": "security",
-                "Title": "Security",
-                "Description": "Security topics",
-                "Category": "security",
-                "Url": "/security",
-                "BackgroundImage": "/assets/security-bg.jpg",
-                "Collections": [
+            {
+              "security": {
+                "title": "Security",
+                "description": "Security topics",
+                "category": "security",
+                "url": "/security",
+                "section": "security",
+                "image": "/assets/security-bg.jpg",
+                "collections": [
                   {
-                    "Title": "Latest News",
-                    "Collection": "news",
-                    "Url": "/security/news",
-                    "Description": "Security news",
-                    "IsCustom": false
+                    "title": "Latest News",
+                    "collection": "news",
+                    "url": "/security/news",
+                    "description": "Security news",
+                    "custom": false
                   }
                 ]
               }
-            ]
+            }
             """;
         await File.WriteAllTextAsync(_sectionsFilePath, sectionsJson);
 
@@ -214,25 +214,25 @@ public class FileBasedSectionRepositoryTests : IDisposable
     {
         // Arrange: Create section with lowercase ID
         var sectionsJson = """
-            [
-              {
-                "Id": "github-copilot",
-                "Title": "GitHub Copilot",
-                "Description": "AI assistant",
-                "Category": "github-copilot",
-                "Url": "/github-copilot",
-                "BackgroundImage": "/assets/ghc-bg.jpg",
-                "Collections": [
+            {
+              "github-copilot": {
+                "title": "GitHub Copilot",
+                "description": "AI assistant",
+                "category": "github-copilot",
+                "url": "/github-copilot",
+                "section": "github-copilot",
+                "image": "/assets/ghc-bg.jpg",
+                "collections": [
                   {
-                    "Title": "Latest News",
-                    "Collection": "news",
-                    "Url": "/github-copilot/news",
-                    "Description": "Copilot news",
-                    "IsCustom": false
+                    "title": "Latest News",
+                    "collection": "news",
+                    "url": "/github-copilot/news",
+                    "description": "Copilot news",
+                    "custom": false
                   }
                 ]
               }
-            ]
+            }
             """;
         await File.WriteAllTextAsync(_sectionsFilePath, sectionsJson);
 
@@ -275,8 +275,8 @@ public class FileBasedSectionRepositoryTests : IDisposable
     [Fact]
     public async Task GetAllAsync_EmptyArray_ReturnsEmptyList()
     {
-        // Arrange: Create empty sections array
-        var sectionsJson = "[]";
+        // Arrange: Create empty sections dictionary
+        var sectionsJson = "{}";
         await File.WriteAllTextAsync(_sectionsFilePath, sectionsJson);
 
         // Act: Load sections
@@ -295,26 +295,26 @@ public class FileBasedSectionRepositoryTests : IDisposable
     {
         // Arrange: JSON with comments and trailing comma
         var sectionsJson = """
-            [
+            {
               // AI Section
-              {
-                "Id": "ai",
-                "Title": "AI",
-                "Description": "Artificial Intelligence",
-                "Category": "ai",
-                "Url": "/ai",
-                "BackgroundImage": "/assets/ai-bg.jpg",
-                "Collections": [
+              "ai": {
+                "title": "AI",
+                "description": "Artificial Intelligence",
+                "category": "ai",
+                "url": "/ai",
+                "section": "ai",
+                "image": "/assets/ai-bg.jpg",
+                "collections": [
                   {
-                    "Title": "Latest News",
-                    "Collection": "news",
-                    "Url": "/ai/news",
-                    "Description": "AI news",
-                    "IsCustom": false
+                    "title": "Latest News",
+                    "collection": "news",
+                    "url": "/ai/news",
+                    "description": "AI news",
+                    "custom": false
                   }
                 ], // Trailing comma on collections
               }, // Trailing comma on section
-            ]
+            }
             """;
         await File.WriteAllTextAsync(_sectionsFilePath, sectionsJson);
 
@@ -324,5 +324,61 @@ public class FileBasedSectionRepositoryTests : IDisposable
         // Assert: Parsed successfully despite comments and trailing commas
         Assert.Single(sections);
         Assert.Equal("ai", sections[0].Id);
+    }
+
+    /// <summary>
+    /// INTEGRATION TEST: Load the actual sections.json file from the repository
+    /// Why: Ensures our code works with the real data, not just test fixtures
+    /// This catches mismatches between test data and production data
+    /// </summary>
+    [Fact]
+    public async Task GetAllAsync_RealSectionsFile_LoadsSuccessfully()
+    {
+        // Arrange: Find the real sections.json file in the repository
+        var repoRoot = FindRepositoryRoot();
+        var realSectionsPath = Path.Combine(repoRoot, "_data", "sections.json");
+        
+        // Skip test if sections.json not found (e.g., running in isolated environment)
+        if (!File.Exists(realSectionsPath))
+        {
+            return; // Skip test gracefully
+        }
+
+        // Copy real file to temp location
+        File.Copy(realSectionsPath, _sectionsFilePath, overwrite: true);
+
+        // Act: Load the real sections.json file
+        var sections = await _repository.GetAllAsync();
+
+        // Assert: Should load successfully and return multiple sections
+        Assert.NotEmpty(sections);
+        Assert.True(sections.Count >= 7, $"Expected at least 7 sections, got {sections.Count}");
+        
+        // Verify known sections exist
+        Assert.Contains(sections, s => s.Id == "all");
+        Assert.Contains(sections, s => s.Id == "ai");
+        Assert.Contains(sections, s => s.Id == "github-copilot");
+        
+        // Verify section structure
+        var aiSection = sections.First(s => s.Id == "ai");
+        Assert.NotNull(aiSection.Title);
+        Assert.NotNull(aiSection.Description);
+        Assert.NotNull(aiSection.Url);
+        Assert.NotNull(aiSection.Category);
+        Assert.NotNull(aiSection.BackgroundImage);
+        Assert.NotEmpty(aiSection.Collections);
+    }
+
+    /// <summary>
+    /// Helper method to find repository root directory
+    /// </summary>
+    private static string FindRepositoryRoot()
+    {
+        var currentDir = Directory.GetCurrentDirectory();
+        while (currentDir != null && !Directory.Exists(Path.Combine(currentDir, ".git")))
+        {
+            currentDir = Directory.GetParent(currentDir)?.FullName;
+        }
+        return currentDir ?? Directory.GetCurrentDirectory();
     }
 }

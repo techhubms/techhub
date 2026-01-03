@@ -91,6 +91,19 @@ These are the **non-negotiable rules** that apply to ALL development tasks. ALWA
 - **Never assume UTC**: Always use configured timezone (`Europe/Brussels`)
 - **Never include Windows support**: This project is Linux-only (DevContainer environment)
 - **Never suppress errors for resiliency**: Prevent errors by checking conditions first, don't hide failures with error suppression (e.g., `2>$null`)
+- **Never rename identifiers without checking ALL occurrences**: When renaming parameters, variables, properties, methods, or classes, use `grep_search` to find and update ALL occurrences in code, documentation, tests, and specifications
+
+#### 🚨 Naming Consistency Rule
+
+When renaming ANY identifier, you **MUST** verify and update ALL occurrences across:
+
+1. **Implementation code**: Source files, interfaces, classes
+2. **Documentation**: Comments, markdown files, specifications
+3. **Tests**: Test files, test method names, assertions
+4. **Configuration**: JSON files, YAML files, environment variables
+5. **API contracts**: Endpoint routes, DTOs, OpenAPI docs
+
+**Process**: Before renaming, run `grep_search` with the old name to find all occurrences, then systematically update each location. This prevents inconsistencies that break builds, confuse developers, and create maintenance issues.
 
 ### 1. Gather Context
 
