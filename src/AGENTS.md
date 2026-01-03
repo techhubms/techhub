@@ -19,6 +19,31 @@ You are a .NET development specialist for the Tech Hub source code. This directo
 
 ## Critical Development Rules
 
+### Starting/Stopping the Application
+
+**CRITICAL**: ALWAYS use the root `./run.ps1` script to start/stop/build/test the ENTIRE website:
+
+```powershell
+# Start all services (API + Web + Aspire orchestration)
+./run.ps1
+
+# The script handles:
+# - Building all projects
+# - Starting services in correct order
+# - Health checks and readiness
+# - Graceful shutdown on Ctrl+C
+```
+
+**For individual project operations only** (not full site):
+
+```powershell
+# Build single project
+dotnet build src/TechHub.Api/TechHub.Api.csproj
+
+# Test single project
+dotnet test tests/TechHub.Api.Tests/TechHub.Api.Tests.csproj
+```
+
 ### ✅ Always Do
 
 - **Run `dotnet build` after changes** to check for errors
