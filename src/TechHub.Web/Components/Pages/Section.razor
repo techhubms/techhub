@@ -1,0 +1,155 @@
+@page "/{sectionName}"
+@using TechHub.Core.DTOs
+@using TechHub.Web.Services
+@inject TechHubApiClient ApiClient
+@inject NavigationManager Navigation
+
+<PageTitle>@PageTitle - Tech Hub</PageTitle>
+
+<div class="section-page">
+    @if (isLoading)
+    {
+        <div class="loading">
+            <p>Loading section...</p>
+        </div>
+    }
+    else if (errorMessage != null)
+    {
+        <div class="error">
+            <h2>Error Loading Section</h2>
+            <p>@errorMessage</p>
+            <button @onclick="LoadSection">Retry</button>
+        </div>
+    }
+    else if (section != null)
+    {
+        var currentSection = section;
+        <header class="section-header" style="background-image: url('@(currentSection.BackgroundImage)')">
+            <div class="section-header-content">
+                <h1>@currentSection.Title</h1>
+                <p class="section-description">@currentSection.Description</p>
+            </div>
+        </header>
+
+        @if (currentSection.Collections.Any())
+        {
+            <div class="section-collections">
+                <nav class="collection-nav">
+                    <h2>Collections</h2>
+                    <ul>
+                        @foreach (var collection in currentSection.Collections)
+                        {
+                            <li>
+                                <button @onclick="() => SelectCollection(collection.Collection)" 
+                                        class="@(selectedCollection == collection.Collection ? "active" : "")">
+                                    @collection.Title
+                                </button>
+                            </li>
+                        }
+                    </ul>
+                </nav>
+
+                <div class="collection-content">
+                    @if (contentItems != null)
+                    {
+                        <h2>@GetCollectionDisplayName(selectedCollection)</h2>
+                        <CollectionList Items="@contentItems" IsLoading="@isLoadingContent" />
+                    }
+                </div>
+            </div>
+        }
+        else
+        {
+            <div class="no-collections">
+                <p>No collections available in this section.</p>
+            </div>
+        }
+    }
+</div>
+
+@code {
+    [Parameter]
+    public string SectionName { get; set; } = null!;
+
+    private SectionDto? section;
+    private IEnumerable<ContentItemDto>? contentItems;
+    private string selectedCollection = string.Empty;
+    private bool isLoading = true;
+    private bool isLoadingContent = false;
+    private string? errorMessage;
+
+    private string PageTitle => section?.Title ?? SectionName;
+
+    protected override async Task OnInitializedAsync()
+    {
+        await LoadSection();
+    }
+
+    protected override async Task OnParametersSetAsync()
+    {
+        if (!string.IsNullOrEmpty(SectionName))
+        {
+            await LoadSection();
+        }
+    }
+
+    private async Task LoadSection()
+    {
+        isLoading = true;
+        errorMessage = null;
+        StateHasChanged(); // Update UI to show loading state
+        
+        try
+        {
+            section = await ApiClient.GetSectionAsync(SectionName);
+            
+            if (section?.Collections.Any() == true)
+            {
+                selectedCollection = section.Collections.First().Collection;
+                await LoadCollectionContent();
+            }
+        }
+        catch (Exception ex)
+        {
+            errorMessage = $"Failed to load section: {ex.Message}";
+        }
+        finally
+        {
+            isLoading = false;
+            StateHasChanged(); // Update UI with results or error
+        }
+    }
+
+    private async Task SelectCollection(string collectionName)
+    {
+        selectedCollection = collectionName;
+        await LoadCollectionContent();
+    }
+
+    private async Task LoadCollectionContent()
+    {
+        if (string.IsNullOrEmpty(selectedCollection) || section == null) return;
+
+        isLoadingContent = true;
+        
+        try
+        {
+            contentItems = await ApiClient.GetContentAsync(section.Category, selectedCollection);
+        }
+        catch (Exception ex)
+        {
+            errorMessage = $"Failed to load content: {ex.Message}";
+        }
+        finally
+        {
+            isLoadingContent = false;
+        }
+    }
+
+    private string GetCollectionDisplayName(string collectionName)
+    {
+        return section?.Collections
+            .FirstOrDefault(c => c.Collection == collectionName)?.Title 
+            ?? collectionName;
+    }
+}

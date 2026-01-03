@@ -59,6 +59,7 @@
     {
         isLoading = true;
         errorMessage = null;
+        StateHasChanged(); // Update UI to show loading state
         
         try
         {
@@ -71,6 +72,7 @@
         finally
         {
             isLoading = false;
+            StateHasChanged(); // Update UI with results or error
         }
     }
 }

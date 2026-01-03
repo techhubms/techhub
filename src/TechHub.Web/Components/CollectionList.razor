@@ -1,0 +1,33 @@
+@using TechHub.Core.DTOs
+
+<section class="collection-list">
+    @if (Items != null && Items.Any())
+    {
+        <div class="content-grid">
+            @foreach (var item in Items)
+            {
+                <ContentItemCard Item="@item" />
+            }
+        </div>
+    }
+    else if (IsLoading)
+    {
+        <div class="loading">
+            <p>Loading content...</p>
+        </div>
+    }
+    else
+    {
+        <div class="no-content">
+            <p>No content available in this collection.</p>
+        </div>
+    }
+</section>
+
+@code {
+    [Parameter, EditorRequired]
+    public IEnumerable<ContentItemDto> Items { get; set; } = null!;
+
+    [Parameter]
+    public bool IsLoading { get; set; }
+}

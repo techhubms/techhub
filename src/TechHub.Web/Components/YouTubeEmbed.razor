@@ -1,0 +1,17 @@
+<div class="youtube-embed-container">
+    <iframe 
+        class="youtube-embed"
+        src="@EmbedUrl" 
+        title="YouTube video player" 
+        frameborder="0" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+        allowfullscreen>
+    </iframe>
+</div>
+
+@code {
+    [Parameter, EditorRequired]
+    public string VideoId { get; set; } = null!;
+
+    private string EmbedUrl => $"https://www.youtube.com/embed/{VideoId}";
+}

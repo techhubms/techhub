@@ -34,6 +34,9 @@ builder.Services.AddSingleton<IMarkdownService, MarkdownService>();
 builder.Services.AddSingleton<ISectionRepository, FileBasedSectionRepository>();
 builder.Services.AddSingleton<IContentRepository, FileBasedContentRepository>();
 
+// Add data cache warmer to load all data at startup
+builder.Services.AddHostedService<DataCacheWarmer>();
+
 // Add CORS
 builder.Services.AddCors(options =>
 {

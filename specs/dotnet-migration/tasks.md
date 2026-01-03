@@ -151,16 +151,16 @@ All .NET code resides in repository root per constitution requirements:
 ### Blazor Components for User Story 1
 
 - [X] T060 [P] [US1] Create SectionCard component in src/TechHub.Web/Components/SectionCard.razor
-- [ ] T060 [P] [US1] Create CollectionList component in src/TechHub.Web/Components/CollectionList.razor
+- [X] T060 [P] [US1] Create CollectionList component in src/TechHub.Web/Components/CollectionList.razor
 - [X] T061 [P] [US1] Create ContentItemCard component in src/TechHub.Web/Components/ContentItemCard.razor
-- [ ] T062 [P] [US1] Create ContentDetail component in src/TechHub.Web/Components/ContentDetail.razor
-- [ ] T063 [P] [US1] Create YouTubeEmbed component in src/TechHub.Web/Components/YouTubeEmbed.razor
+- [X] T062 [P] [US1] Create ContentDetail component in src/TechHub.Web/Components/ContentDetail.razor
+- [X] T063 [P] [US1] Create YouTubeEmbed component in src/TechHub.Web/Components/YouTubeEmbed.razor
 
-### Page Components for User Story 1
+### Pages for User Story 1
 
-- [X] T064 [US1] Create Home page (section grid) in src/TechHub.Web/Components/Pages/Home.razor
-- [ ] T065 [US1] Create Section page (collections + items) in src/TechHub.Web/Pages/Section.razor
-- [ ] T066 [US1] Create Content detail page in src/TechHub.Web/Pages/Content.razor
+- [X] T064 [US1] Create Home page in src/TechHub.Web/Pages/Home.razor
+- [X] T065 [US1] Create Section page (collections + items) in src/TechHub.Web/Pages/Section.razor
+- [X] T066 [US1] Create Content detail page in src/TechHub.Web/Pages/Content.razor
 
 ### API Client for User Story 1
 
@@ -211,18 +211,18 @@ All .NET code resides in repository root per constitution requirements:
 
 ### Visual Design Polish for User Story 1
 
-- [ ] T088 [P] [US1] Update styles.css with muted purple color variables (--muted-purple: #6b4fb8, --darker-purple: #7f56d9) in src/TechHub.Web/wwwroot/styles.css
-- [ ] T089 [P] [US1] Update styles.css with soft text colors (--text-primary: #333, --background-primary: #fafafa) in src/TechHub.Web/wwwroot/styles.css
-- [ ] T090 [P] [US1] Reduce bright purple backgrounds (<20% of background usage, use muted variants) in src/TechHub.Web/wwwroot/styles.css
+- [X] T088 [P] [US1] Update styles.css with muted purple color variables (--muted-purple: #6b4fb8, --darker-purple: #7f56d9) in src/TechHub.Web/wwwroot/styles.css
+- [X] T089 [P] [US1] Update styles.css with soft text colors (--text-primary: #333, --background-primary: #fafafa) in src/TechHub.Web/wwwroot/styles.css
+- [X] T090 [P] [US1] Reduce bright purple backgrounds (<20% of background usage, use muted variants) in src/TechHub.Web/wwwroot/styles.css
 - [ ] T091 [P] [US1] Verify WCAG AA color contrast ratios (4.5:1 normal text, 3:1 large/UI) for new color palette using contrast checker tool
 - [ ] T092 [P] [US1] Create ArticleSidebar component with 5-priority structure (quick nav, author, metadata, related, share) in src/TechHub.Web/Components/ArticleSidebar.razor
 - [ ] T093 [P] [US1] Implement table of contents generation from article headings in ArticleSidebar component
 - [ ] T094 [P] [US1] Implement smooth scroll with header offset for TOC links in ArticleSidebar component
-- [ ] T095 [P] [US1] Create article container with 800px max-width constraint in src/TechHub.Web/wwwroot/styles.css
+- [X] T095 [P] [US1] Create article container with 800px max-width constraint in src/TechHub.Web/wwwroot/styles.css (Implemented in .content-page)
 - [ ] T096 [P] [US1] Implement two-column article layout (25-30% sidebar, 70-75% content) in src/TechHub.Web/Components/Pages/Content.razor
 - [ ] T097 [P] [US1] Implement responsive mobile sidebar layout (essentials above, supplementary below) in src/TechHub.Web/wwwroot/css/responsive.css
-- [ ] T098 [P] [US1] Update section card background images with hover effects (brightness increase, smooth transition) in src/TechHub.Web/Components/SectionCard.razor
-- [ ] T099 [P] [US1] Verify full-width grid layout for section/collection listing pages (no max-width constraint) in src/TechHub.Web/wwwroot/styles.css
+- [X] T098 [P] [US1] Update section card background images with hover effects (brightness increase, smooth transition) in src/TechHub.Web/Components/SectionCard.razor (Already implemented with box-shadow and transform)
+- [X] T099 [P] [US1] Verify full-width grid layout for section/collection listing pages (no max-width constraint) in src/TechHub.Web/wwwroot/styles.css (Verified: .grid has no max-width)
 
 **Checkpoint**: User Story 1 complete - users can browse and consume content with full accessibility, responsive design, and polished visual design matching Jekyll quality
 

@@ -6,7 +6,7 @@ namespace TechHub.Web.Services;
 /// <summary>
 /// Typed HTTP client for calling Tech Hub API endpoints
 /// </summary>
-public class TechHubApiClient
+internal class TechHubApiClient
 {
     private readonly HttpClient _httpClient;
     private readonly ILogger<TechHubApiClient> _logger;
@@ -169,6 +169,62 @@ public class TechHubApiClient
         catch (HttpRequestException ex)
         {
             _logger.LogError(ex, "Failed to fetch tags from API");
+            throw;
+        }
+    }
+
+    /// <summary>
+    /// Get content items by category and collection
+    /// </summary>
+    public async Task<IEnumerable<ContentItemDto>?> GetContentAsync(
+        string category,
+        string collection,
+        CancellationToken cancellationToken = default)
+    {
+        try
+        {
+            _logger.LogInformation("Fetching content for category: {Category}, collection: {Collection}", 
+                category, collection);
+            
+            var items = await _httpClient.GetFromJsonAsync<IEnumerable<ContentItemDto>>(
+                $"/api/content?category={Uri.EscapeDataString(category)}&collection={Uri.EscapeDataString(collection)}",
+                cancellationToken);
+            
+            _logger.LogInformation("Successfully fetched {Count} items", items?.Count() ?? 0);
+            return items;
+        }
+        catch (HttpRequestException ex)
+        {
+            _logger.LogError(ex, "Failed to fetch content for category {Category}, collection {Collection}", 
+                category, collection);
+            throw;
+        }
+    }
+
+    /// <summary>
+    /// Get detailed content item by section, collection, and item ID
+    /// </summary>
+    public async Task<ContentItemDetailDto?> GetContentDetailAsync(
+        string sectionName,
+        string collection,
+        string itemId,
+        CancellationToken cancellationToken = default)
+    {
+        try
+        {
+            _logger.LogInformation("Fetching content detail: {Section}/{Collection}/{ItemId}", 
+                sectionName, collection, itemId);
+            
+            var item = await _httpClient.GetFromJsonAsync<ContentItemDetailDto>(
+                $"/api/content/{sectionName}/{collection}/{itemId}",
+                cancellationToken);
+            
+            return item;
+        }
+        catch (HttpRequestException ex)
+        {
+            _logger.LogError(ex, "Failed to fetch content detail for {Section}/{Collection}/{ItemId}", 
+                sectionName, collection, itemId);
             throw;
         }
     }

@@ -1,0 +1,77 @@
+@using TechHub.Core.DTOs
+
+<article class="content-detail">
+    <header class="content-detail-header">
+        <h1 class="content-detail-title">@Item.Title</h1>
+        
+        <div class="content-detail-meta">
+            <time datetime="@Item.DateIso">@FormatDate(Item.DateEpoch)</time>
+            
+            @if (!string.IsNullOrWhiteSpace(Item.Author))
+            {
+                <span class="content-detail-author">by @Item.Author</span>
+            }
+            
+            <span class="collection-badge">@Item.Collection</span>
+        </div>
+        
+        @if (Item.Tags.Any())
+        {
+            <div class="content-detail-tags">
+                @foreach (var tag in Item.Tags)
+                {
+                    <span class="tag">@tag</span>
+                }
+            </div>
+        }
+    </header>
+    
+    @if (!string.IsNullOrWhiteSpace(Item.VideoId))
+    {
+        <div class="content-detail-video">
+            <YouTubeEmbed VideoId="@Item.VideoId" />
+        </div>
+    }
+    
+    @if (!string.IsNullOrWhiteSpace(Item.Excerpt))
+    {
+        <div class="content-detail-excerpt">
+            @((MarkupString)Item.Excerpt)
+        </div>
+    }
+    
+    @if (!string.IsNullOrWhiteSpace(Item.RenderedHtml))
+    {
+        <div class="content-detail-body">
+            @((MarkupString)Item.RenderedHtml)
+        </div>
+    }
+    
+    @if (!string.IsNullOrWhiteSpace(Item.ExternalUrl))
+    {
+        <div class="content-detail-external">
+            <a href="@Item.ExternalUrl" target="_blank" rel="noopener noreferrer" class="external-link">
+                Read full article on original site ↗
+            </a>
+        </div>
+    }
+    
+    <footer class="content-detail-footer">
+        <div class="content-detail-meta-full">
+            <span><strong>Published:</strong> @FormatDate(Item.DateEpoch)</span>
+        </div>
+    </footer>
+</article>
+
+@code {
+    [Parameter, EditorRequired]
+    public ContentItemDetailDto Item { get; set; } = null!;
+
+    private string FormatDate(long epochSeconds)
+    {
+        if (epochSeconds == 0) return string.Empty;
+        
+        var dateTime = DateTimeOffset.FromUnixTimeSeconds(epochSeconds);
+        return dateTime.ToString("MMMM d, yyyy");
+    }
+}

@@ -869,7 +869,7 @@ tags: ["GitHub Copilot", "AI", "Visual Studio Code", "Development Tools"]
 **Tag Source Locations**:
 
 - `_blogs/`: Blogs with tags in frontmatter
-- `_community/`: Magazines, community discussions and Q&A posts
+- `_community/`: Community articles, discussions and Q&A posts
 - `_news/`: News articles and announcements
 - `_videos/`: Video content with descriptive tags
 - Other collections: Roundups

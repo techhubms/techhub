@@ -6,32 +6,90 @@ This directory contains the .NET/Blazor implementation of Tech Hub, migrating fr
 
 ## Quick Start
 
-### Option 1: Open in DevContainer (Recommended)
+### Option 1: F5 Debugging in VS Code (Recommended)
+
+1. Open the project in VS Code
+2. Press **F5** (or click **Run > Start Debugging**)
+3. Select **"Tech Hub (API + Web)"** from the dropdown
+4. Both API and Web servers will start with debugger attached
+5. Web UI opens automatically at <http://localhost:5184>
+6. API available at <http://localhost:5029> (Swagger: <http://localhost:5029/swagger>)
+
+**Debug Individual Projects**:
+
+- **API only**: Select "API (TechHub.Api)" from debug dropdown
+- **Web only**: Select "Web (TechHub.Web)" from debug dropdown
+
+### Option 2: PowerShell Run Script
+
+```powershell
+# Basic usage - build and run both projects
+./run.ps1
+
+# Clean build and run tests first
+./run.ps1 -Clean -Test
+
+# Only build (no run)
+./run.ps1 -Build
+
+# Run API only on custom port
+./run.ps1 -ApiOnly -ApiPort 8080
+
+# Run Web only without opening browser
+./run.ps1 -WebOnly -NoBrowser
+
+# Skip build (use existing binaries)
+./run.ps1 -SkipBuild
+
+# Release build
+./run.ps1 -Release
+
+# Verbose output
+./run.ps1 -VerboseOutput
+
+# See all options
+./run.ps1 -?
+```
+
+**Script Parameters**:
+
+- `-Clean` - Clean all build artifacts before building
+- `-Build` - Only build without running
+- `-Test` - Run all tests before starting
+- `-SkipBuild` - Skip build, use existing binaries
+- `-ApiOnly` - Only run the API project
+- `-WebOnly` - Only run the Web project
+- `-ApiPort <port>` - Custom API port (default: 5029)
+- `-WebPort <port>` - Custom Web port (default: 5184)
+- `-NoBrowser` - Don't open browser automatically
+- `-Release` - Build in Release mode
+- `-VerboseOutput` - Show verbose output
+
+**Built-in Features**:
+
+- **Port Cleanup**: Automatically kills processes using required ports before starting
+- **Ctrl+C Handling**: Properly stops all processes and cleans up ports when interrupted
+- **Conflict Prevention**: Safe to run even if ports are already in use
+
+### Option 3: Manual dotnet Commands
+
+```powershell
+# Terminal 1: API Server
+cd src/TechHub.Api
+dotnet run --urls http://localhost:5029
+
+# Terminal 2: Web Server
+cd src/TechHub.Web
+dotnet run
+```
+
+### Option 4: Open in DevContainer
 
 1. In VS Code, open the Command Palette (`Ctrl+Shift+P` or `Cmd+Shift+P`)
 2. Select **"Dev Containers: Reopen in Container"**
 3. Choose the **"Tech Hub .NET"** container
 4. Wait for the container to build and initialize
-
-### Option 2: Local Development
-
-Requirements:
-
-- .NET 10 SDK
-- Node.js LTS
-- PowerShell 7+
-- Azure CLI (optional)
-
-```powershell
-# Install .NET Aspire workload
-dotnet workload install aspire
-
-# Restore packages (when solution exists)
-dotnet restore
-
-# Run with Aspire (when solution exists)
-dotnet run --project src/TechHub.AppHost
-```
+5. Use F5 debugging or run script as described above
 
 ## Architecture
 
@@ -42,6 +100,12 @@ This is a modern .NET application with **separate frontend and backend**:
 - **TechHub.Core** - Domain models and interfaces
 - **TechHub.Infrastructure** - Data access implementations
 - **TechHub.AppHost** - .NET Aspire orchestration
+
+**Resilience & Reliability**:
+
+- **HTTP Resilience Policies** - Built-in retry (3 attempts with exponential backoff), circuit breaker (50% failure ratio), and timeout (60s)
+- **Graceful Error Handling** - User-friendly error messages with functional retry buttons
+- **Automatic State Management** - UI automatically updates during loading and retry operations
 
 See [/specs/](../specs/) for detailed feature specifications.
 

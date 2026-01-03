@@ -10,11 +10,13 @@ namespace TechHub.Infrastructure.Repositories;
 /// Repository for loading content from markdown files in collections directories
 /// Reads from: collections/_news/, collections/_videos/, collections/_blogs/, etc.
 /// </summary>
-public class FileBasedContentRepository : IContentRepository
+public sealed class FileBasedContentRepository : IContentRepository, IDisposable
 {
     private readonly string _basePath;
     private readonly FrontMatterParser _frontMatterParser;
     private readonly IMarkdownService _markdownService;
+    private IReadOnlyList<ContentItem>? _cachedAllItems;
+    private readonly SemaphoreSlim _loadLock = new(1, 1);
 
     // Valid collection directories per Jekyll configuration
     private static readonly string[] ValidCollections = 
@@ -38,26 +40,62 @@ public class FileBasedContentRepository : IContentRepository
     }
 
     /// <summary>
+    /// Initialize the repository by loading all data from disk.
+    /// Should be called once at application startup.
+    /// Returns the loaded collection for logging purposes.
+    /// </summary>
+    public async Task<IReadOnlyList<ContentItem>> InitializeAsync(CancellationToken cancellationToken = default)
+    {
+        // Load all data into cache
+        return await GetAllAsync(cancellationToken);
+    }
+
+    /// <summary>
     /// Get all content items across all collections.
+    /// Loads from disk once at startup and caches in memory.
     /// Returns items sorted by date (DateEpoch) in descending order (newest first).
     /// </summary>
     public async Task<IReadOnlyList<ContentItem>> GetAllAsync(CancellationToken cancellationToken = default)
     {
-        var allItems = new List<ContentItem>();
-
-        foreach (var collection in ValidCollections)
+        // Return cached data if already loaded
+        if (_cachedAllItems != null)
         {
-            var items = await GetByCollectionAsync(collection, cancellationToken);
-            allItems.AddRange(items);
+            return _cachedAllItems;
         }
 
-        return allItems
-            .OrderByDescending(x => x.DateEpoch)
-            .ToList();
+        // Thread-safe lazy loading
+        await _loadLock.WaitAsync(cancellationToken);
+        try
+        {
+            // Double-check after acquiring lock
+            if (_cachedAllItems != null)
+            {
+                return _cachedAllItems;
+            }
+
+            var allItems = new List<ContentItem>();
+
+            foreach (var collection in ValidCollections)
+            {
+                var items = await LoadCollectionItemsAsync(collection, cancellationToken);
+                allItems.AddRange(items);
+            }
+
+            _cachedAllItems = allItems
+                .OrderByDescending(x => x.DateEpoch)
+                .ToList();
+                
+            return _cachedAllItems;
+        }
+        finally
+        {
+            _loadLock.Release();
+        }
     }
 
     /// <summary>
     /// Get content items filtered by collection.
+    /// Filters from cached in-memory data.
     /// Returns items sorted by date (DateEpoch) in descending order (newest first).
     /// </summary>
     public async Task<IReadOnlyList<ContentItem>> GetByCollectionAsync(
@@ -68,32 +106,19 @@ public class FileBasedContentRepository : IContentRepository
         // Normalize collection name (add _ prefix if missing)
         var normalizedCollection = collection.StartsWith('_') ? collection : $"_{collection}";
         
-        var collectionPath = Path.Combine(_basePath, normalizedCollection);
+        // Load all items (from cache if available)
+        var allItems = await GetAllAsync(cancellationToken);
         
-        if (!Directory.Exists(collectionPath))
-        {
-            return Array.Empty<ContentItem>();
-        }
-
-        var items = new List<ContentItem>();
-        var markdownFiles = Directory.GetFiles(collectionPath, "*.md", SearchOption.AllDirectories);
-
-        foreach (var filePath in markdownFiles)
-        {
-            var item = await LoadContentItemAsync(filePath, normalizedCollection, cancellationToken);
-            if (item != null)
-            {
-                items.Add(item);
-            }
-        }
-
-        return items
+        // Filter by collection
+        return allItems
+            .Where(item => item.Collection.Equals(normalizedCollection.TrimStart('_'), StringComparison.OrdinalIgnoreCase))
             .OrderByDescending(x => x.DateEpoch)
             .ToList();
     }
 
     /// <summary>
     /// Get content items filtered by category.
+    /// Filters from cached in-memory data.
     /// Returns items sorted by date (DateEpoch) in descending order (newest first).
     /// </summary>
     public async Task<IReadOnlyList<ContentItem>> GetByCategoryAsync(
@@ -108,7 +133,8 @@ public class FileBasedContentRepository : IContentRepository
     }
 
     /// <summary>
-    /// Get a single content item by ID within a collection
+    /// Get a single content item by ID within a collection.
+    /// Searches cached in-memory data.
     /// ID is the filename without extension (e.g., "2026-01-01-my-article" from "2026-01-01-my-article.md")
     /// </summary>
     public async Task<ContentItem?> GetByIdAsync(
@@ -122,6 +148,7 @@ public class FileBasedContentRepository : IContentRepository
 
     /// <summary>
     /// Search content items by text query (title, description, tags).
+    /// Searches cached in-memory data.
     /// Case-insensitive search across multiple fields.
     /// Returns items sorted by date (DateEpoch) in descending order (newest first).
     /// </summary>
@@ -147,8 +174,9 @@ public class FileBasedContentRepository : IContentRepository
     }
 
     /// <summary>
-    /// Get all unique tags across all content
-    /// Returns normalized (lowercase) unique tags sorted alphabetically
+    /// Get all unique tags across all content.
+    /// Computes from cached in-memory data.
+    /// Returns normalized (lowercase) unique tags sorted alphabetically.
     /// </summary>
     public async Task<IReadOnlyList<string>> GetAllTagsAsync(CancellationToken cancellationToken = default)
     {
@@ -160,6 +188,39 @@ public class FileBasedContentRepository : IContentRepository
             .Distinct()
             .OrderBy(tag => tag)
             .ToList();
+    }
+
+    /// <summary>
+    /// Load all items from a collection directory.
+    /// Helper method for initial data loading.
+    /// </summary>
+    private async Task<List<ContentItem>> LoadCollectionItemsAsync(
+        string collection,
+        CancellationToken cancellationToken)
+    {
+        // Normalize collection name (add _ prefix if missing)
+        var normalizedCollection = collection.StartsWith('_') ? collection : $"_{collection}";
+        
+        var collectionPath = Path.Combine(_basePath, normalizedCollection);
+        
+        if (!Directory.Exists(collectionPath))
+        {
+            return new List<ContentItem>();
+        }
+
+        var items = new List<ContentItem>();
+        var markdownFiles = Directory.GetFiles(collectionPath, "*.md", SearchOption.AllDirectories);
+
+        foreach (var filePath in markdownFiles)
+        {
+            var item = await LoadContentItemAsync(filePath, normalizedCollection, cancellationToken);
+            if (item != null)
+            {
+                items.Add(item);
+            }
+        }
+
+        return items;
     }
 
     /// <summary>
@@ -256,5 +317,14 @@ public class FileBasedContentRepository : IContentRepository
             // Skip files that fail to parse
             return null;
         }
+    }
+
+    /// <summary>
+    /// Dispose of resources
+    /// </summary>
+    public void Dispose()
+    {
+        _loadLock.Dispose();
+        GC.SuppressFinalize(this);
     }
 }

@@ -32,7 +32,7 @@ You'll process content from:
 - **News**: Official Microsoft announcements and updates
 - **Blogs**: Technical articles and tutorials
 - **Videos**: YouTube content and presentations
-- **Community**: Discussions, announcements, magazines, Q&A posts
+- **Community**: Community announcements, discussions and insights
 
 ### Quality Standards
 

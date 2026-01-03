@@ -19,6 +19,21 @@ internal static class ContentEndpoints
             .WithTags("Content")
             .WithDescription("Endpoints for advanced content filtering and search");
 
+        // Get content by category and collection
+        group.MapGet("", GetContent)
+            .WithName("GetContent")
+            .WithSummary("Get content by category and collection")
+            .WithDescription("Get all content items for a specific category and collection. Example: /api/content?category=ai&collection=news")
+            .Produces<IEnumerable<ContentItemDto>>(StatusCodes.Status200OK);
+
+        // Get individual content detail
+        group.MapGet("/{sectionName}/{collection}/{itemId}", GetContentDetail)
+            .WithName("GetContentDetail")
+            .WithSummary("Get content detail")
+            .WithDescription("Get detailed content item by section, collection, and item ID")
+            .Produces<ContentItemDetailDto>(StatusCodes.Status200OK)
+            .Produces(StatusCodes.Status404NotFound);
+
         // Advanced filtering endpoint
         group.MapGet("/filter", FilterContent)
             .WithName("FilterContent")
@@ -34,6 +49,88 @@ internal static class ContentEndpoints
             .Produces<IEnumerable<string>>(StatusCodes.Status200OK);
 
         return endpoints;
+    }
+
+    /// <summary>
+    /// GET /api/content?category={category}&collection={collection} - Get content by category and collection
+    /// </summary>
+    private static async Task<Ok<IEnumerable<ContentItemDto>>> GetContent(
+        [FromQuery] string? category,
+        [FromQuery] string? collection,
+        IContentRepository contentRepository,
+        CancellationToken cancellationToken)
+    {
+        var content = await contentRepository.GetAllAsync(cancellationToken);
+        var results = content.AsEnumerable();
+
+        // Filter by category if specified
+        if (!string.IsNullOrWhiteSpace(category))
+        {
+            results = results.Where(c => c.Categories.Contains(category, StringComparer.OrdinalIgnoreCase));
+        }
+
+        // Filter by collection if specified
+        if (!string.IsNullOrWhiteSpace(collection))
+        {
+            results = results.Where(c => c.Collection.Equals(collection, StringComparison.OrdinalIgnoreCase));
+        }
+
+        var contentDtos = results.Select(MapToDto);
+        return TypedResults.Ok(contentDtos);
+    }
+
+    /// <summary>
+    /// GET /api/content/{sectionName}/{collection}/{itemId} - Get individual content detail
+    /// </summary>
+    private static async Task<Results<Ok<ContentItemDetailDto>, NotFound>> GetContentDetail(
+        string sectionName,
+        string collection,
+        string itemId,
+        ISectionRepository sectionRepository,
+        IContentRepository contentRepository,
+        IMarkdownService markdownService,
+        CancellationToken cancellationToken)
+    {
+        // Get the section to find the category
+        var section = await sectionRepository.GetByIdAsync(sectionName, cancellationToken);
+        if (section == null)
+        {
+            return TypedResults.NotFound();
+        }
+
+        // Get all content and find the specific item
+        var content = await contentRepository.GetAllAsync(cancellationToken);
+        var item = content.FirstOrDefault(c => 
+            c.Collection.Equals(collection, StringComparison.OrdinalIgnoreCase) &&
+            c.Id.Equals(itemId, StringComparison.OrdinalIgnoreCase) &&
+            c.Categories.Contains(section.Category, StringComparer.OrdinalIgnoreCase));
+
+        if (item == null)
+        {
+            return TypedResults.NotFound();
+        }
+
+        // Convert to detail DTO with full content HTML
+        var detailDto = new ContentItemDetailDto
+        {
+            Id = item.Id,
+            Title = item.Title,
+            Description = item.Description,
+            Author = item.Author,
+            DateEpoch = item.DateEpoch,
+            DateIso = item.DateIso,
+            Collection = item.Collection,
+            AltCollection = item.AltCollection,
+            Categories = item.Categories,
+            Tags = item.Tags,
+            Excerpt = item.Excerpt,
+            RenderedHtml = item.RenderedHtml,
+            ExternalUrl = item.ExternalUrl,
+            VideoId = item.VideoId,
+            Url = $"/{sectionName}/{collection}/{itemId}"
+        };
+
+        return TypedResults.Ok(detailDto);
     }
 
     /// <summary>

@@ -1,6 +1,6 @@
-# Tech Hub Documentation Guide
+# Tech Hub Development Guide
 
-**AI CONTEXT**: This is the **ROOT** context file. It defines global architecture, principles, and rules. When working in a specific domain (e.g., `scripts/`, `jekyll/_plugins/`), **ALSO** read the `AGENTS.md` file in that directory.
+**AI CONTEXT**: This is the **ROOT** development guide. It defines repository-wide principles, architecture, and workflow. When working in a specific domain (e.g., `src/`, `scripts/`, `tests/`), **ALSO** read the domain-specific `AGENTS.md` file in that directory.
 
 ## Index
 
@@ -14,8 +14,10 @@
   - [6. Test & Validate](#6-test--validate)
   - [7. Update Documentation](#7-update-documentation)
   - [8. Report Completion](#8-report-completion)
-- [Project Knowledge](#project-knowledge)
-- [Documentation Structure](#documentation-structure)
+- [Project Overview](#project-overview)
+- [Documentation Architecture](#documentation-architecture)
+  - [Documentation Hierarchy](#documentation-hierarchy)
+  - [Documentation Placement Strategy](#documentation-placement-strategy)
   - [Complete Documentation Map](#complete-documentation-map)
   - [Quick Reference Guide](#quick-reference-guide)
 - [Core Development Principles](#core-development-principles)
@@ -23,10 +25,14 @@
   - [Accessibility Standards](#accessibility-standards)
   - [Configuration-Driven Development](#configuration-driven-development)
   - [Timezone & Date Handling](#timezone--date-handling)
-- [Repository Structure](#repository-structure)
-  - [Site Architecture Overview](#site-architecture-overview)
+- [Repository Organization](#repository-organization)
   - [Core Directories](#core-directories)
+  - [Project Structure](#project-structure)
 - [Site Terminology](#site-terminology)
+  - [Core Concepts](#core-concepts)
+  - [Content Organization](#content-organization)
+  - [Filtering Systems](#filtering-systems)
+  - [RSS Feeds](#rss-feeds)
 
 ## AI Assistant Workflow
 
@@ -43,9 +49,9 @@ These are the **non-negotiable rules** that apply to ALL development tasks. ALWA
   - **MCP tools** (highest priority): Playwright MCP (web testing), GitHub MCP (GitHub operations), context7 MCP (documentation)
   - **Built-in tools**: `replace_string_in_file` (with 5-10 lines context), `read_file`, `grep_search`, `file_search`
   - **CLI** (lowest priority): Only for complex multi-step operations not supported by tools
-- **Use `@fullstack` agent for development tasks**: Server management, templating, plugins, build system, coding, testing. See [.github/agents/fullstack.md](.github/agents/fullstack.md)
+- **Use `@dotnet` agent for .NET development tasks**: API development, Blazor components, domain models, infrastructure. See [.github/agents/dotnet.md](.github/agents/dotnet.md)
 - **Check for errors after editing files**: Use `get_errors` tool on modified files to check VS Code diagnostics (markdown linting, ESLint, RuboCop, etc.) and fix all issues
-- **Run tests after modifying code**: CRITICAL - After ANY code changes (Ruby, JavaScript, PowerShell, templates), run appropriate test suites. Documentation-only changes do not require testing
+- **Run tests after modifying code**: CRITICAL - After ANY code changes (C#, JavaScript, PowerShell, templates), run appropriate test suites. Documentation-only changes do not require testing
 - **Fix linter issues**: Always resolve all linting errors and warnings, EXCEPT intentional bad examples in documentation
 - **Read domain-specific AGENTS.md files**: Before editing any code in that domain
 - **Store temp files in `.tmp/`**: ALL temporary/one-off scripts in `.tmp/` (e.g., quick tests, debugging scripts), permanent/reusable automation goes in `scripts/`
@@ -53,20 +59,20 @@ These are the **non-negotiable rules** that apply to ALL development tasks. ALWA
 - **Follow timezone standards**: `Europe/Brussels` for all date operations
 - **Use configuration-driven design**: Update `_data/sections.json`, not hardcoded values
 - **Server-side render all content**: Initial page load must show complete content
-- **Add tests for new functionality**: According to `spec/AGENTS.md`
-- **Follow markdown guidelines**: See `collections/markdown-guidelines.md` and `collections/writing-style-guidelines.md`
+- **Add tests for new functionality**: According to domain-specific AGENTS.md files
+- **Follow markdown guidelines**: See [collections/markdown-guidelines.md](collections/markdown-guidelines.md) and [collections/writing-style-guidelines.md](collections/writing-style-guidelines.md)
 - **ALWAYS be direct and concise**: Avoid exaggerated language
 - **ALWAYS maintain professional yet approachable tone**: Clear and authoritative without being overly formal
 - **ALWAYS avoid filler phrases**: Don't use "Sure!" or "You're right!"
-- **DevContainer dependencies**: ALWAYS install dependencies in the appropriate `.devcontainer/post-create.sh` script (e.g., `/workspaces/techhub/jekyll/.devcontainer/post-create.sh` for Jekyll project), NEVER install in PowerShell or other scripts
+- **DevContainer dependencies**: ALWAYS install dependencies in the appropriate `.devcontainer/post-create.sh` script (e.g., `/workspaces/techhub/.devcontainer/post-create.sh`), NEVER install in PowerShell or other scripts
 
 #### ⚠️ Ask First
 
-- **Website configuration changes**: Consult `@fullstack` agent before modifying build system or configuration (e.g., `jekyll/_config.yml`, `package.json`, `jekyll/Gemfile`)
-- **Breaking changes to public APIs**: Changes that affect existing functionality (e.g., modifying filter signatures, changing data structure)
-- **Adding new dependencies**: To dependency management files or any config (e.g., new npm packages, Ruby gems, PowerShell modules)
-- **Cross-domain changes**: Modifications affecting multiple areas (e.g., Ruby plugins + JavaScript + Liquid templates, or content structure + build system)
-- **Significant refactoring**: That touches many files or core architecture (e.g., restructuring `_data/sections.json`, changing collection types)
+- **Configuration changes**: Consult domain agents before modifying build system or configuration (e.g., `package.json`, `TechHub.slnx`, `.csproj` files)
+- **Breaking changes to public APIs**: Changes that affect existing functionality (e.g., modifying endpoint signatures, changing data structures)
+- **Adding new dependencies**: To dependency management files or any config (e.g., new NuGet packages, npm packages, PowerShell modules)
+- **Cross-domain changes**: Modifications affecting multiple areas (e.g., API + Blazor + Infrastructure, or content structure + build system)
+- **Significant refactoring**: That touches many files or core architecture (e.g., restructuring `_data/sections.json`, changing domain models)
 
 #### 🚫 Never Do
 
@@ -78,7 +84,7 @@ These are the **non-negotiable rules** that apply to ALL development tasks. ALWA
 - **Never use backslashes for escaping in PowerShell**: Always use backticks (`)
 - **Never work around missing tools**: Tell user if needed tools are unavailable instead of using alternatives
 - **Never commit secrets or API keys**: Check all files before committing
-- **Never modify generated directories**: `jekyll/_site/`, `node_modules/`, `.tmp/` (except for temp files)
+- **Never modify generated directories**: Build outputs (e.g., `bin/`, `obj/`, `node_modules/`, `.tmp/`)
 - **Never create content without frontmatter**: All markdown must have proper YAML front matter
 - **Never hardcode section/collection data**: Always use `_data/sections.json`
 - **Never let JavaScript create initial content**: Server-side render everything, JS only enhances
@@ -249,18 +255,18 @@ When renaming ANY identifier, you **MUST** verify and update ALL occurrences acr
 
 **Start Jekyll (If Needed)**:
 
-- Use `./scripts/jekyll-start.ps1` to start server
-- Wait for "✅ Jekyll server is ready and accessible!" message
-- Monitor rebuild progress with `tail -n 100 ./.tmp/jekyll-log.txt`
-- Wait for "...done in X seconds" in log file before testing
+- Use framework-specific scripts to start development servers
+- Wait for server readiness messages
+- Monitor rebuild progress with appropriate logs
+- Wait for completion messages before testing
 
 **Run Automated Tests**:
 
-- **CRITICAL**: Run tests after ANY code changes (Ruby, JavaScript, PowerShell, templates)
+- **CRITICAL**: Run tests after ANY code changes (C#, JavaScript, PowerShell, templates)
 - **Test-first workflow**: When fixing bugs, write a regression test FIRST that reproduces the issue
-- Use test scripts: `run-all-tests.ps1`, `run-plugin-tests.ps1`, `run-javascript-tests.ps1`, `run-powershell-tests.ps1`, `run-e2e-tests.ps1`
+- Use test scripts appropriate for the domain you're working in
 - Fix any regression issues immediately
-- See [spec/AGENTS.md](spec/AGENTS.md) for comprehensive testing strategy
+- See [tests/AGENTS.md](tests/AGENTS.md) for comprehensive testing strategy
 
 **Extend Tests**:
 
@@ -268,33 +274,8 @@ When renaming ANY identifier, you **MUST** verify and update ALL occurrences acr
 - **Update existing tests** if behavior changed
 - Ensure edge cases are covered
 - Test real implementation, not mocks
-- Use appropriate testing frameworks for each language (see [spec/AGENTS.md](spec/AGENTS.md))
+- Use appropriate testing frameworks for each language (see [tests/AGENTS.md](tests/AGENTS.md))
 - Never add wrapper methods in production code just for tests
-
-**Test Command Examples**:
-
-```powershell
-# Run all tests (all layers in sequence)
-./scripts/run-all-tests.ps1
-
-# Run specific test suites
-./scripts/run-powershell-tests.ps1
-./scripts/run-javascript-tests.ps1
-./scripts/run-plugin-tests.ps1
-./scripts/run-e2e-tests.ps1
-
-# Run specific test file (layer-specific parameters)
-./scripts/run-powershell-tests.ps1 -TestFile "spec/powershell/Get-MarkdownFiles.Tests.ps1"
-./scripts/run-javascript-tests.ps1 -TestFile "spec/javascript/sections.test.js"
-./scripts/run-plugin-tests.ps1 -SpecFile "spec/plugins/date_filters_spec.rb"
-./scripts/run-e2e-tests.ps1 -TestFile "spec/e2e/tests/filtering-core.spec.js"
-
-# Run with additional options
-./scripts/run-powershell-tests.ps1 -Coverage
-./scripts/run-javascript-tests.ps1 -Watch
-./scripts/run-plugin-tests.ps1 -Documentation
-./scripts/run-e2e-tests.ps1 -UI -Debug
-```
 
 **Key Rules**:
 
@@ -329,7 +310,7 @@ When renaming ANY identifier, you **MUST** verify and update ALL occurrences acr
 - Keep docs accurate and up-to-date
 - Follow markdown formatting guidelines (wrap symbol names in backticks, use KaTeX for equations)
 - Follow [`collections/markdown-guidelines.md`](collections/markdown-guidelines.md) and [`collections/writing-style-guidelines.md`](collections/writing-style-guidelines.md)
-- See [Documentation Structure](#documentation-structure) for complete doc map
+- See [Documentation Architecture](#documentation-architecture) for complete doc map
 
 **Key Rules**:
 
@@ -363,29 +344,68 @@ When renaming ANY identifier, you **MUST** verify and update ALL occurrences acr
 - Never stop working until task is complete
 - Include all relevant details in completion report
 
-## Project Knowledge
+## Project Overview
 
-The Tech Hub is a static technical content hub with configuration-driven section and collection management. All framework-specific implementation details are handled by the `@fullstack` agent.
+The Tech Hub is a technical content hub with configuration-driven section and collection management. Content is organized by sections (AI, GitHub Copilot, Azure, ML, .NET, DevOps, Security) and collections (news, videos, community, blogs, roundups).
 
-**Core Directories**:
+**Project Status**: 🚧 Currently migrating from Jekyll to .NET/Blazor architecture with separate API and frontend.
 
-- `collections/` - Content files (`_news/`, `_videos/`, `_community/`, `_blogs/`, `_roundups/`)
-- `_data/sections.json` - Single source of truth for site structure
-- `docs/` - Framework-agnostic functional documentation
-- `.github/agents/` - Framework-specific development agents
-- Domain-specific directories - See Documentation Structure below for complete map
+**Core Architecture**:
 
-## Documentation Structure
+- **Configuration-driven**: Single source of truth in `_data/sections.json`
+- **RESTful API**: Backend provides content via REST endpoints
+- **Modern frontend**: Blazor SSR with progressive enhancement
+- **Test-driven**: Comprehensive test coverage at all layers
+- **Performance-first**: Server-side rendering with client-side enhancements
 
-### Overview
+**Key Repositories**:
 
-The Tech Hub uses a multi-tier documentation system:
+- **Content Collections**: `collections/` directory with markdown files
+- **Data Configuration**: `_data/sections.json` for site structure
+- **.NET Projects**: `src/` directory with API, Web, Core, Infrastructure
+- **Tests**: `tests/` directory with unit, integration, and E2E tests
+- **Infrastructure**: `infra/` directory with Bicep templates
 
-1. **[README.md](README.md)**: Project overview, quick start, current status, and navigation
-2. **This file (AGENTS.md)**: High-level principles, architecture, and workflow
-3. **Domain-Specific AGENTS.md**: Development patterns for specific code areas
-4. **Custom Agents**: Framework-specific implementation guides
-5. **Functional Docs**: What the system does (not how to code it)
+See [README.md](README.md) for current implementation status and [specs/](specs/) for detailed feature specifications.
+
+## Documentation Architecture
+
+The Tech Hub uses a **multi-tier documentation system** designed to separate generic principles from implementation details. This architecture ensures documentation stability across technology migrations.
+
+### Documentation Hierarchy
+
+**1. Root AGENTS.md** (this file):
+
+- Generic development principles that apply to ANY tech stack
+- Timezone handling, performance architecture, configuration-driven design
+- Repository structure and organization
+- Site terminology and concepts
+- **NOT for**: Framework-specific implementation details
+
+**2. Framework-Specific Agents** (`.github/agents/`):
+
+- Complete framework-specific development guidance
+- Server management, build processes, testing commands
+- **Current**: `dotnet.md` for .NET/Blazor development
+- **Will be REPLACED** during technology migrations
+
+**3. Domain-Specific AGENTS.md Files**:
+
+- Development patterns for specific code areas (not frameworks)
+- Located in each major directory (`src/`, `scripts/`, `tests/`, etc.)
+- **MAY need updates** during migrations but maintain domain focus
+- Examples: API patterns, component patterns, scripting patterns
+
+**4. Functional Documentation** (`docs/`):
+
+- Framework-agnostic descriptions of WHAT the system does
+- Minimal set - only 3 files: filtering, content management, API spec
+- Survive technology changes with minimal updates
+
+**5. Content Guidelines** (`collections/`):
+
+- Writing standards and markdown formatting rules
+- Content creation and management workflows
 
 ### Documentation Placement Strategy
 
@@ -397,14 +417,15 @@ This is a **permanent architectural principle**, not just a temporary measure. B
 
 - **Root AGENTS.md** (this file): Generic principles that apply to ANY tech stack (timezone handling, performance architecture, configuration-driven design, terminology)
 - **Framework Agents** (`.github/agents/`): Complete framework-specific guidance that will be REPLACED during migration
-  - `fullstack.md` (current): Jekyll, Ruby, Liquid, testing commands
-  - `dotnet.md` (future): .NET, Blazor, C# patterns
+  - `dotnet.md` (current): .NET, Blazor, C# patterns
 - **Domain AGENTS.md**: Domain-specific patterns that MAY need updates but maintain focus
-  - `assets/js/AGENTS.md`: JavaScript patterns (likely unchanged)
-  - `jekyll/_plugins/AGENTS.md`: Build plugins (Ruby → C#, same purpose)
-  - `jekyll/_sass/AGENTS.md`: Styling (SCSS → CSS-in-JS, same purpose)
+  - `src/AGENTS.md`: .NET development across all projects
+  - `src/TechHub.Api/AGENTS.md`: API development patterns
+  - `src/TechHub.Web/AGENTS.md`: Blazor component patterns
+  - `scripts/AGENTS.md`: PowerShell automation patterns
+  - `tests/AGENTS.md`: Testing strategies
 - **Functional Docs** (`docs/`): Framework-agnostic descriptions of WHAT the system does
-  - Only 2 files: `filtering-system.md`, `content-management.md`
+  - Only 3 files: `filtering-system.md`, `content-management.md`, `api-specification.md`
 
 **Complete Placement Hierarchy**: See [docs/AGENTS.md](docs/AGENTS.md) for detailed guidance on where to place new documentation.
 
@@ -420,63 +441,30 @@ This is a **permanent architectural principle**, not just a temporary measure. B
 
 **Custom Agents** (in `.github/agents/`):
 
-- **[fullstack.md](.github/agents/fullstack.md)** - `@fullstack` agent for Jekyll, Liquid, Ruby plugins, JavaScript, PowerShell, testing, server management
+- **[dotnet.md](.github/agents/dotnet.md)** - `@dotnet` agent for .NET/Blazor development, C# patterns, ASP.NET Core, Aspire orchestration
 
 **Domain-Specific AGENTS.md Files**:
 
-- **[jekyll/_plugins/AGENTS.md](jekyll/_plugins/AGENTS.md)** - Jekyll plugins and extensions
-- **[jekyll/_includes/AGENTS.md](jekyll/_includes/AGENTS.md)** - Liquid templates and includes
-- **[jekyll/assets/js/AGENTS.md](jekyll/assets/js/AGENTS.md)** - JavaScript client-side development patterns
-- **[jekyll/_sass/AGENTS.md](jekyll/_sass/AGENTS.md)** - SCSS styling and CSS architecture
+- **[src/AGENTS.md](src/AGENTS.md)** - .NET development patterns across all projects
+- **[src/TechHub.Api/AGENTS.md](src/TechHub.Api/AGENTS.md)** - API development patterns (Minimal APIs, endpoints)
+- **[src/TechHub.Web/AGENTS.md](src/TechHub.Web/AGENTS.md)** - Blazor component patterns (SSR, interactivity)
+- **[src/TechHub.Core/AGENTS.md](src/TechHub.Core/AGENTS.md)** - Domain model design (records, DTOs)
+- **[src/TechHub.Infrastructure/AGENTS.md](src/TechHub.Infrastructure/AGENTS.md)** - Data access patterns (repositories, caching)
 - **[scripts/AGENTS.md](scripts/AGENTS.md)** - PowerShell automation scripts
-- **[rss/AGENTS.md](rss/AGENTS.md)** - RSS feed generation
 - **[docs/AGENTS.md](docs/AGENTS.md)** - Documentation maintenance guidelines
 - **[collections/AGENTS.md](collections/AGENTS.md)** - Content creation and management
-- **[spec/AGENTS.md](spec/AGENTS.md)** - Testing strategies across all frameworks
+- **[tests/AGENTS.md](tests/AGENTS.md)** - Testing strategies across all frameworks
 
 **Functional Documentation** (in `docs/`):
 
 - **[filtering-system.md](docs/filtering-system.md)** - How tag and date filtering works
 - **[content-management.md](docs/content-management.md)** - Content workflows and RSS processing
+- **[api-specification.md](docs/api-specification.md)** - REST API contracts and endpoints
 
 **Content Guidelines** (in `collections/`):
 
 - **[markdown-guidelines.md](collections/markdown-guidelines.md)** - Markdown formatting rules
 - **[writing-style-guidelines.md](collections/writing-style-guidelines.md)** - Writing tone and style
-
-### When to Use Each Documentation Type
-
-**Use This File (Root AGENTS.md)** for:
-
-- High-level architecture and principles
-- Performance and timezone standards
-- Repository structure overview
-- Cross-cutting concerns
-- Navigation to other docs
-
-**Use `@fullstack` Agent** for:
-
-- Server management and deployment
-- Local development and testing
-- Templating and view patterns
-- Jekyll plugin development
-- JavaScript implementation
-- PowerShell scripting
-- Testing commands and strategies
-- Framework-specific how-tos
-
-**Use Domain-Specific AGENTS.md** for:
-
-- Code patterns in specific areas
-- Before editing files in that domain
-- Language-specific best practices
-- Domain-specific rules and examples
-
-**Use Functional Docs** for:
-
-- Understanding system behavior
-- Feature specifications
-- Business logic documentation
 
 ### Quick Reference Guide
 
@@ -486,20 +474,16 @@ This is a **permanent architectural principle**, not just a temporary measure. B
 2. Read this file (AGENTS.md) for development workflow
 3. Review domain-specific AGENTS.md before coding
 
-**Working on JavaScript?**
+**Working on .NET/Blazor?**
 
-1. Read [assets/js/AGENTS.md](assets/js/AGENTS.md)
-2. See `@fullstack` agent for testing
-
-**Working on Jekyll plugins?**
-
-1. Read [jekyll/_plugins/AGENTS.md](jekyll/_plugins/AGENTS.md)
-2. See `@fullstack` agent for framework specifics
+1. Use `@dotnet` agent for framework specifics
+2. Read [src/AGENTS.md](src/AGENTS.md) for general .NET patterns
+3. Read specific domain AGENTS.md (API, Web, Core, Infrastructure)
 
 **Working on PowerShell scripts?**
 
 1. Read [scripts/AGENTS.md](scripts/AGENTS.md)
-2. See `@fullstack` agent for testing
+2. See `@dotnet` agent for testing
 
 **Working on content?**
 
@@ -507,29 +491,16 @@ This is a **permanent architectural principle**, not just a temporary measure. B
 2. Follow [markdown-guidelines.md](collections/markdown-guidelines.md)
 3. Follow [writing-style-guidelines.md](collections/writing-style-guidelines.md)
 
-**Working on templates?**
-
-1. Use `@fullstack` agent
-2. Read [jekyll/_plugins/AGENTS.md](jekyll/_plugins/AGENTS.md) for plugin patterns
-
-**Working on includes/layouts?**
-
-1. Read [jekyll/_includes/AGENTS.md](jekyll/_includes/AGENTS.md)
-2. Use `@fullstack` agent for framework specifics
-
-**Working on styles?**
-
-1. Read [jekyll/_sass/AGENTS.md](jekyll/_sass/AGENTS.md)
-
 **Working on tests?**
 
-1. Read [spec/AGENTS.md](spec/AGENTS.md)
-2. See `@fullstack` agent for test commands
+1. Read [tests/AGENTS.md](tests/AGENTS.md)
+2. See `@dotnet` agent for test commands
 
 **Understanding system behavior?**
 
 1. Read [docs/filtering-system.md](docs/filtering-system.md) for filtering
 2. Read [docs/content-management.md](docs/content-management.md) for content workflows
+3. Read [docs/api-specification.md](docs/api-specification.md) for API contracts
 
 ## Core Development Principles
 
@@ -649,44 +620,12 @@ All user interface components and interactions must be accessible to users with 
 
 **Implementation Details**:
 
-- Server-side: See [.github/agents/fullstack.md](.github/agents/fullstack.md) for server-side patterns
-- Jekyll plugins: See [jekyll/_plugins/AGENTS.md](jekyll/_plugins/AGENTS.md) for plugin-specific handling
-- JavaScript: See [assets/js/AGENTS.md](assets/js/AGENTS.md) for client-side patterns
+- Server-side: See [.github/agents/dotnet.md](.github/agents/dotnet.md) for server-side patterns
+- Client-side: See domain-specific AGENTS.md files for client-side patterns
 
 **Benefits**: Prevents date/time bugs, ensures consistent behavior across all systems, simplifies date comparisons.
 
-## Repository Structure
-
-### Site Architecture Overview
-
-**Main Index** (`index.md`):
-
-- Entry point displaying sections grid, roundups, and latest content
-- Uses `home` layout with dynamic section population from configuration
-
-**Section System**:
-
-- Organized into multiple topic areas (AI, GitHub Copilot, Azure, ML, .NET, DevOps, Security)
-- Each section contains index page, RSS feed, collections, and optional custom pages
-- Configuration-driven via `_data/sections.json` (single source of truth)
-- Auto-generated pages via Jekyll plugins for consistency
-
-> **See [_includes/AGENTS.md](_includes/AGENTS.md) for detailed section subnavigation behavior documentation**
-
-**Data Flow**:
-
-1. Content added to collection directories (`_news/`, `_videos/`, etc.)
-2. `_data/sections.json` defines which collections appear in which sections  
-3. Build system reads configuration and creates pages
-4. Generated pages use configuration data for navigation and display
-
-**Key Architectural Principles**:
-
-- **Configuration-Driven**: All sections and collections defined in data files
-- **Dynamic Generation**: Pages created automatically from configuration
-- **Modular Design**: New sections added by updating `sections.json`
-- **Consistent Structure**: Build system ensures uniform page generation
-- **Content Separation**: Clear distinction between generated and custom pages
+## Repository Organization
 
 ### Core Directories
 
@@ -699,22 +638,6 @@ All user interface components and interactions must be accessible to users with 
   - `_community/` - Microsoft Tech Community posts and community-sourced content
   - `_blogs/` - Blogs and technical articles
   - `_roundups/` - Curated weekly content summaries
-
-**Jekyll Code & Templates** (in `jekyll/` directory - see [.github/agents/fullstack.md](.github/agents/fullstack.md) for details):
-
-- **`jekyll/_includes/`** - Reusable template components (see [jekyll/_includes/AGENTS.md](jekyll/_includes/AGENTS.md))
-- **`jekyll/_layouts/`** - Page layout templates (see [jekyll/_includes/AGENTS.md](jekyll/_includes/AGENTS.md))
-- **`jekyll/_plugins/`** - Build system plugins and extensions (see [jekyll/_plugins/AGENTS.md](jekyll/_plugins/AGENTS.md))
-- **`jekyll/_sass/`** - Stylesheet organization (see [jekyll/_sass/AGENTS.md](jekyll/_sass/AGENTS.md))
-- **`jekyll/assets/`** - Static assets (images, CSS, JS)
-  - `jekyll/assets/js/` - Client-side JavaScript code (see [jekyll/assets/js/AGENTS.md](jekyll/assets/js/AGENTS.md))
-  - `assets/section-backgrounds/` - Section header images (shared, in root)
-
-**Section Directories** (custom pages in `jekyll/` directory):
-
-- **`jekyll/ai/`** - AI section-specific files (e.g., `ai-to-z.md`)
-- **`jekyll/github-copilot/`** - GitHub Copilot section files (e.g., `features.md`, `levels-of-enlightenment.md`)
-- Other sections auto-generated by build plugins
 
 **.NET Code & Projects** (in repository root):
 
@@ -734,43 +657,31 @@ All user interface components and interactions must be accessible to users with 
 
 - **`docs/`** - Framework-agnostic functional documentation
 - **`.github/agents/`** - Framework-specific development agents
-- **`jekyll/.devcontainer/`** - Jekyll DevContainer configuration
 - **`scripts/`** - Automation and utility scripts (PowerShell)
-- **`jekyll/rss/`** - RSS feed generation
-- **`jekyll/spec/`** - Jekyll testing frameworks and test files
-- **`jekyll/_site/`** - Generated site output (ignored in git)
 - **`.tmp/`** - Temporary directory for development scripts
 
 **Configuration**:
 
 - **`_data/sections.json`** - Single source of truth for sections and collections (shared)
-- **`jekyll/_config.yml`** - Jekyll build configuration
 - **`TechHub.slnx`** - .NET solution file
 
-> **See "Documentation Structure" section above for complete documentation map and navigation guide**
+> **See "Documentation Architecture" section above for complete documentation map and navigation guide**
 
-## .NET Migration Documentation
+### Project Structure
 
-When working on the .NET migration (future state), refer to:
+The Tech Hub follows a **configuration-driven architecture** where all sections, collections, and content organization is defined in `_data/sections.json`. This single source of truth ensures consistency across all parts of the application.
 
-- **[/AGENTS.md](AGENTS.md)** - Root .NET development guide with solution structure and patterns
-- **[/.github/agents/dotnet.md](.github/agents/dotnet.md)** - `@dotnet` agent for .NET-specific development
-- **[/specs/](specs/)** - Specifications directory with constitution and feature specs:
-  - [constitution.md](.specify/memory/constitution.md) - Project principles and constraints
-  - Numbered feature directories (001-026) - Individual feature specifications in `specs/NNN-feature-name/spec.md` format
+**Key Architectural Principles**:
 
-**Key Migration Principles**:
-
-- Preserve all existing URLs for SEO
-- Maintain identical visual appearance
-- Use `sections.json` as single source of truth
-- Server-side render all content (Blazor SSR)
-- Follow spec-driven development methodology
-- Keep Jekyll and .NET documentation separate
+- **Configuration-Driven**: All sections and collections defined in data files
+- **Dynamic Generation**: Pages created automatically from configuration
+- **Modular Design**: New sections added by updating `sections.json`
+- **Consistent Structure**: Build system ensures uniform page generation
+- **Content Separation**: Clear distinction between generated and custom pages
 
 ## Site Terminology
 
-### Core Content Organization
+### Core Concepts
 
 **Sections**: Top-level organizational units that group related content by topic or domain.
 
@@ -793,7 +704,9 @@ When working on the .NET migration (future state), refer to:
 - **Structure**: Markdown files with YAML front matter containing metadata (title, date, author, categories, tags) and content body
 - **Processing**: Items are processed by the build system and can be listed on collection pages, filtered by date/tags/categories, displayed on section index pages, and included in RSS feeds
 
-### Relationship Between Concepts
+### Content Organization
+
+**Relationship Between Concepts**:
 
 1. **Sections** contain multiple **Collections**
 2. **Collections** contain multiple **Items**
@@ -801,7 +714,7 @@ When working on the .NET migration (future state), refer to:
 4. Build-time processing prepares all data for client-side consumption
 5. Client-side filtering provides interactive content discovery
 
-### Content Types
+**Content Types**:
 
 - **News**: Official product updates and announcements
 - **Videos**: Educational and informational video content (may include special subfolders with `alt-collection` frontmatter)

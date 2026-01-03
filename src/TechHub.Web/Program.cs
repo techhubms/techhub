@@ -7,12 +7,28 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddRazorComponents()
     .AddInteractiveServerComponents();
 
-// Configure HTTP client for API
+// Configure HTTP client for API with resilience policies
 var apiBaseUrl = builder.Configuration["ApiBaseUrl"] ?? "http://localhost:5029";
 builder.Services.AddHttpClient<TechHubApiClient>(client =>
 {
     client.BaseAddress = new Uri(apiBaseUrl);
     client.Timeout = TimeSpan.FromSeconds(30);
+})
+.AddStandardResilienceHandler(options =>
+{
+    // Retry configuration: 3 attempts with exponential backoff
+    options.Retry.MaxRetryAttempts = 3;
+    options.Retry.BackoffType = Polly.DelayBackoffType.Exponential;
+    options.Retry.UseJitter = true;
+    
+    // Circuit breaker: open after 5 failures in 30 seconds
+    options.CircuitBreaker.FailureRatio = 0.5;
+    options.CircuitBreaker.SamplingDuration = TimeSpan.FromSeconds(30);
+    options.CircuitBreaker.MinimumThroughput = 5;
+    options.CircuitBreaker.BreakDuration = TimeSpan.FromSeconds(5);
+    
+    // Total timeout for the entire request (including retries)
+    options.TotalRequestTimeout.Timeout = TimeSpan.FromSeconds(60);
 });
 
 var app = builder.Build();

@@ -1,0 +1,434 @@
+#!/usr/bin/env pwsh
+<#
+.SYNOPSIS
+    Runs the Tech Hub application (API + Web) with various options.
+
+.DESCRIPTION
+    This script provides a convenient way to build, test, and run the Tech Hub .NET application
+    from the command line. It supports cleaning, building, testing, and running both the API
+    and Web projects.
+
+.PARAMETER Clean
+    Clean all build artifacts before building.
+
+.PARAMETER Build
+    Only build the solution without running the application.
+
+.PARAMETER Test
+    Run all tests before starting the application.
+
+.PARAMETER SkipBuild
+    Skip the build step and run the application with existing binaries.
+
+.PARAMETER ApiOnly
+    Only run the API project.
+
+.PARAMETER WebOnly
+    Only run the Web project.
+
+.PARAMETER ApiPort
+    Port for the API server (default: 5029).
+
+.PARAMETER WebPort
+    Port for the Web server (default: 5184).
+
+.PARAMETER NoBrowser
+    Don't automatically open the browser.
+
+.PARAMETER Release
+    Build and run in Release configuration instead of Debug.
+
+.PARAMETER VerboseOutput
+    Show verbose output from dotnet commands.
+
+.EXAMPLE
+    ./run.ps1
+    Builds and runs both API and Web projects.
+
+.EXAMPLE
+    ./run.ps1 -Clean -Test
+    Cleans, builds, runs all tests, then starts both projects.
+
+.EXAMPLE
+    ./run.ps1 -Build
+    Only builds the solution without running.
+
+.EXAMPLE
+    ./run.ps1 -ApiOnly -ApiPort 8080
+    Only runs the API on port 8080.
+
+.EXAMPLE
+    ./run.ps1 -SkipBuild -NoBrowser
+    Runs both projects with existing binaries, doesn't open browser.
+
+.NOTES
+    Author: Tech Hub Team
+    Requires: .NET 10 SDK, PowerShell 7+
+#>
+
+[CmdletBinding()]
+param(
+    [Parameter(Mandatory = $false)]
+    [switch]$Clean,
+
+    [Parameter(Mandatory = $false)]
+    [switch]$Build,
+
+    [Parameter(Mandatory = $false)]
+    [switch]$Test,
+
+    [Parameter(Mandatory = $false)]
+    [switch]$SkipBuild,
+
+    [Parameter(Mandatory = $false)]
+    [switch]$ApiOnly,
+
+    [Parameter(Mandatory = $false)]
+    [switch]$WebOnly,
+
+    [Parameter(Mandatory = $false)]
+    [int]$ApiPort = 5029,
+
+    [Parameter(Mandatory = $false)]
+    [int]$WebPort = 5184,
+
+    [Parameter(Mandatory = $false)]
+    [switch]$NoBrowser,
+
+    [Parameter(Mandatory = $false)]
+    [switch]$Release,
+
+    [Parameter(Mandatory = $false)]
+    [switch]$VerboseOutput
+)
+
+$ErrorActionPreference = "Stop"
+Set-StrictMode -Version Latest
+
+# Determine workspace root
+$workspaceRoot = $PSScriptRoot
+
+# Project paths
+$solutionPath = Join-Path $workspaceRoot "TechHub.slnx"
+$apiProjectPath = Join-Path $workspaceRoot "src/TechHub.Api/TechHub.Api.csproj"
+$webProjectPath = Join-Path $workspaceRoot "src/TechHub.Web/TechHub.Web.csproj"
+
+# Build configuration
+$configuration = if ($Release) { "Release" } else { "Debug" }
+
+# Verbosity level
+$verbosityLevel = if ($VerboseOutput) { "detailed" } else { "minimal" }
+
+# Color output helpers
+function Write-Step {
+    param([string]$Message)
+    Write-Host "`n==> $Message" -ForegroundColor Cyan
+}
+
+function Write-Success {
+    param([string]$Message)
+    Write-Host "✓ $Message" -ForegroundColor Green
+}
+
+function Write-Error {
+    param([string]$Message)
+    Write-Host "✗ $Message" -ForegroundColor Red
+}
+
+function Write-Info {
+    param([string]$Message)
+    Write-Host "  $Message" -ForegroundColor Gray
+}
+
+# Validate prerequisites
+function Test-Prerequisites {
+    Write-Step "Checking prerequisites"
+    
+    # Check .NET SDK
+    try {
+        $dotnetVersion = dotnet --version
+        Write-Info ".NET SDK version: $dotnetVersion"
+    }
+    catch {
+        Write-Error ".NET SDK not found. Please install .NET 10 SDK."
+        exit 1
+    }
+    
+    # Check solution file
+    if (-not (Test-Path $solutionPath)) {
+        Write-Error "Solution file not found: $solutionPath"
+        exit 1
+    }
+    
+    Write-Success "Prerequisites validated"
+}
+
+# Clean build artifacts
+function Invoke-Clean {
+    Write-Step "Cleaning build artifacts"
+    
+    try {
+        dotnet clean $solutionPath --configuration $configuration --verbosity $verbosityLevel
+        Write-Success "Clean completed"
+    }
+    catch {
+        Write-Error "Clean failed: $($_.Exception.Message)"
+        exit 1
+    }
+}
+
+# Build solution
+function Invoke-Build {
+    Write-Step "Building solution ($configuration)"
+    
+    try {
+        dotnet build $solutionPath --configuration $configuration --verbosity $verbosityLevel
+        Write-Success "Build completed"
+    }
+    catch {
+        Write-Error "Build failed: $($_.Exception.Message)"
+        exit 1
+    }
+}
+
+# Run tests
+function Invoke-Tests {
+    Write-Step "Running tests"
+    
+    try {
+        dotnet test $solutionPath --configuration $configuration --no-build --verbosity $verbosityLevel
+        Write-Success "All tests passed"
+    }
+    catch {
+        Write-Error "Tests failed: $($_.Exception.Message)"
+        exit 1
+    }
+}
+
+# Kill existing processes on ports
+function Stop-ExistingProcesses {
+    param(
+        [int[]]$Ports
+    )
+    
+    $stoppedAny = $false
+    foreach ($port in $Ports) {
+        try {
+            $processIds = lsof -ti ":$port" 2>$null
+            if ($processIds) {
+                if (-not $stoppedAny) {
+                    Write-Step "Cleaning up existing processes"
+                    $stoppedAny = $true
+                }
+                Write-Info "  Port $port is in use, killing process(es): $($processIds -join ', ')"
+                $processIds | ForEach-Object { Stop-Process -Id $_ -Force -ErrorAction SilentlyContinue }
+                Start-Sleep -Milliseconds 500
+            }
+        }
+        catch {
+            # Ignore errors if no process found
+        }
+    }
+    
+    if ($stoppedAny) {
+        Write-Success "Port cleanup completed"
+    }
+}
+
+# Run API project
+function Start-ApiProject {
+    param([int]$Port)
+    
+    Write-Step "Starting API (http://localhost:$Port)"
+    
+    $apiUrl = "http://localhost:$Port"
+    
+    try {
+        # Navigate to API directory and run
+        Push-Location (Join-Path $workspaceRoot "src/TechHub.Api")
+        
+        $env:ASPNETCORE_ENVIRONMENT = "Development"
+        $env:ASPNETCORE_URLS = $apiUrl
+        
+        Write-Info "API running at: $apiUrl"
+        Write-Info "Swagger UI: $apiUrl/swagger"
+        Write-Info "Press Ctrl+C to stop"
+        
+        dotnet run --project $apiProjectPath --no-build --configuration $configuration
+    }
+    finally {
+        Pop-Location
+    }
+}
+
+# Run Web project
+function Start-WebProject {
+    param([int]$Port)
+    
+    Write-Step "Starting Web (http://localhost:$Port)"
+    
+    $webUrl = "http://localhost:$Port"
+    
+    try {
+        # Navigate to Web directory and run
+        Push-Location (Join-Path $workspaceRoot "src/TechHub.Web")
+        
+        $env:ASPNETCORE_ENVIRONMENT = "Development"
+        
+        Write-Info "Web running at: $webUrl"
+        Write-Info "Press Ctrl+C to stop"
+        
+        # Open browser if requested
+        if (-not $NoBrowser) {
+            Start-Sleep -Seconds 2
+            Start-Process $webUrl
+        }
+        
+        dotnet run --project $webProjectPath --no-build --configuration $configuration
+    }
+    finally {
+        Pop-Location
+    }
+}
+
+# Run both projects
+function Start-BothProjects {
+    param(
+        [int]$ApiPort,
+        [int]$WebPort
+    )
+    
+    Write-Step "Starting both API and Web projects"
+    
+    $apiUrl = "http://localhost:$ApiPort"
+    $webUrl = "http://localhost:$WebPort"
+    
+    Write-Info "API: $apiUrl (Swagger: $apiUrl/swagger)"
+    Write-Info "Web: $webUrl"
+    Write-Info "Press Ctrl+C to stop all"
+    
+    # Start API in background job
+    $apiJob = Start-Job -ScriptBlock {
+        param($ProjectPath, $Port, $Configuration)
+        
+        $env:ASPNETCORE_ENVIRONMENT = "Development"
+        $env:ASPNETCORE_URLS = "http://localhost:$Port"
+        
+        Set-Location (Split-Path $ProjectPath -Parent)
+        dotnet run --project $ProjectPath --no-build --configuration $Configuration
+    } -ArgumentList $apiProjectPath, $ApiPort, $configuration
+    
+    # Wait for API to start
+    Write-Info "Waiting for API to start..."
+    Start-Sleep -Seconds 3
+    
+    # Start Web in background job
+    $webJob = Start-Job -ScriptBlock {
+        param($ProjectPath, $Configuration)
+        
+        $env:ASPNETCORE_ENVIRONMENT = "Development"
+        
+        Set-Location (Split-Path $ProjectPath -Parent)
+        dotnet run --project $ProjectPath --no-build --configuration $Configuration
+    } -ArgumentList $webProjectPath, $configuration
+    
+    # Wait for Web to start
+    Write-Info "Waiting for Web to start..."
+    Start-Sleep -Seconds 3
+    
+    # Open browser if requested
+    if (-not $NoBrowser) {
+        Start-Process $webUrl
+    }
+    
+    Write-Success "Both projects started"
+    Write-Info "`nMonitoring output (Ctrl+C to stop):"
+    Write-Info "Use 'Get-Job | Receive-Job' to see detailed output"
+    
+    try {
+        # Monitor both jobs
+        while ($true) {
+            $apiJob | Receive-Job
+            $webJob | Receive-Job
+            
+            # Check if jobs are still running
+            if ($apiJob.State -ne "Running" -or $webJob.State -ne "Running") {
+                Write-Error "One or more projects stopped unexpectedly"
+                break
+            }
+            
+            Start-Sleep -Seconds 1
+        }
+    }
+    finally {
+        # Clean up jobs and processes
+        Write-Info "`nStopping projects..."
+        
+        # Stop jobs first
+        $apiJob | Stop-Job -ErrorAction SilentlyContinue
+        $webJob | Stop-Job -ErrorAction SilentlyContinue
+        $apiJob | Remove-Job -ErrorAction SilentlyContinue
+        $webJob | Remove-Job -ErrorAction SilentlyContinue
+        
+        # Kill dotnet processes on the ports (jobs don't always kill child processes)
+        Stop-ExistingProcesses -Ports @($ApiPort, $WebPort)
+        
+        Write-Success "All projects stopped"
+    }
+}
+
+# Main execution
+try {
+    Write-Host "`n╔════════════════════════════════════════╗" -ForegroundColor Cyan
+    Write-Host "║      Tech Hub Development Runner      ║" -ForegroundColor Cyan
+    Write-Host "╚════════════════════════════════════════╝`n" -ForegroundColor Cyan
+    
+    # Validate prerequisites
+    Test-Prerequisites
+    
+    # Stop existing processes
+    $portsToCheck = @()
+    if (-not $WebOnly) { $portsToCheck += $ApiPort }
+    if (-not $ApiOnly) { $portsToCheck += $WebPort }
+    
+    if ($portsToCheck.Count -gt 0) {
+        Stop-ExistingProcesses -Ports $portsToCheck
+    }
+    
+    # Clean if requested
+    if ($Clean) {
+        Invoke-Clean
+    }
+    
+    # Build if needed
+    if (-not $SkipBuild) {
+        Invoke-Build
+    }
+    
+    # Test if requested
+    if ($Test) {
+        Invoke-Tests
+    }
+    
+    # If only build was requested, exit here
+    if ($Build) {
+        Write-Success "`nBuild completed successfully!"
+        exit 0
+    }
+    
+    # Run projects
+    if ($ApiOnly) {
+        Start-ApiProject -Port $ApiPort
+    }
+    elseif ($WebOnly) {
+        Start-WebProject -Port $WebPort
+    }
+    else {
+        Start-BothProjects -ApiPort $ApiPort -WebPort $WebPort
+    }
+}
+catch {
+    Write-Error "`nScript failed: $($_.Exception.Message)"
+    Write-Host $_.ScriptStackTrace -ForegroundColor DarkGray
+    exit 1
+}
