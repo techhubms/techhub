@@ -1,105 +1,34 @@
-_site/
-.sass-cache/
-.jekyll-cache/
+# Jekyll (in jekyll/ subdirectory)
+jekyll/_site/
+jekyll/.sass-cache/
+jekyll/.jekyll-cache/
+jekyll/.jekyll-metadata
+jekyll/.ruby-lsp
+jekyll/.bundle/
+jekyll/vendor/
+jekyll/Gemfile.lock
+jekyll/node_modules/
+jekyll/test-results/
+jekyll/spec/e2e/playwright-report/
+jekyll/spec/e2e/screenshots/
+jekyll/spec/e2e/videos/
+jekyll/spec/e2e/traces/
 .jekyll-metadata
-.ruby-lsp
-.bundle/
-vendor/
-Gemfile.lock
+
+# Content processing (keep execute-with-token.ps1 private)
 scripts/content-processing/execute-with-token.ps1
-.tmp/
-.logs/
-**/node_modules/
-**/test-results/
-spec/e2e/playwright-report/
-spec/e2e/screenshots/
-spec/e2e/videos/
-spec/e2e/traces/trivy-test.sarif
+
+# Temporary files and logs
+*.tmp
+*.log
+**/.tmp/
+**/.logs/
+trivy-test.sarif
 coverage.xml
 
-# .NET Core / .NET 5+ ignores
+# .NET Build outputs
 bin/
 obj/
-*.dll
-*.exe
-*.pdb
-*.cache
-*.suo
-*.user
-*.userprefs
-*.sln.docstates
-*.log
-*.vspscc
-*.vssscc
-.builds/
-*.pidb
-*.svclog
-*.scc
-
-# Visual Studio / VS Code
-.vs/
-.vscode/settings.json
-.vscode/tasks.json
-.vscode/launch.json
-.vscode/extensions.json
-*.code-workspace
-
-# MSBuild
-[Dd]ebug/
-[Dd]ebugPublic/
-[Rr]elease/
-[Rr]eleases/
-x64/
-x86/
-build/
-bld/
-[Bb]in/
-[Oo]bj/
-
-# NuGet
-packages/
-*.nupkg
-*.snupkg
-**/packages.lock.json
-!packages/build/
-
-# Test Results
-[Tt]est[Rr]esult*/
-[Bb]uild[Ll]og.*
-*.trx
-*.coverage
-*.coveragexml
-
-# ASP.NET
-project.lock.json
-project.fragment.lock.json
-artifacts/
-**/Properties/launchSettings.json
-
-# Entity Framework
-*.edmx.diagram
-*.edmx.sql
-
-# Rider
-.idea/
-
-# Mono Auto Generated Files
-mono_crash.*
-
-# Windows/Mac OS
-Thumbs.db
-ehthumbs.db
-Desktop.ini
-$RECYCLE.BIN/
-*.dmg
-*.app
-*.DS_Store
-
-.playwright-mcp/
-
-## .NET Core
-
-# Build results
 [Dd]ebug/
 [Dd]ebugPublic/
 [Rr]elease/
@@ -114,34 +43,64 @@ bld/
 [Oo]bj/
 [Ll]og/
 [Ll]ogs/
+build/
 
-# Visual Studio cache/options
+# .NET compiled files
+*.dll
+*.exe
+*.pdb
+*.cache
+
+# Visual Studio / VS Code
 .vs/
 .vscode/settings.json
+.vscode/tasks.json
+.vscode/launch.json
+.vscode/extensions.json
+*.code-workspace
 
 # User-specific files
 *.rsuser
 *.suo
 *.user
 *.userosscache
+*.userprefs
 *.sln.docstates
+*.vspscc
+*.vssscc
+.builds/
+*.pidb
+*.svclog
+*.scc
 
-# Test Results
+# NuGet packages
+packages/
+*.nupkg
+*.snupkg
+**/packages.lock.json
+!packages/build/
+
+# Test results
 [Tt]est[Rr]esult*/
 [Bb]uild[Ll]og.*
 *.trx
 *.coverage
 *.coveragexml
+test-results/
+playwright-report/
 
-# .NET Core
+# ASP.NET
 project.lock.json
 project.fragment.lock.json
 artifacts/
-
-# ASP.NET Scaffolding
+**/Properties/launchSettings.json
 ScaffoldingReadMe.txt
 
-# Rider
+# Entity Framework
+*.edmx.diagram
+*.edmx.sql
+
+# IDEs
 .idea/
 *.sln.iml
 
@@ -149,30 +108,36 @@ ScaffoldingReadMe.txt
 *.pubxml
 *.publishsettings
 
-# Node.js (for Playwright)
+# Node.js
 node_modules/
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
 # Playwright
-playwright-report/
-test-results/
 .playwright/
+.playwright-mcp/
 
 # Environment files
 .env
 .env.local
 .env.*.local
 
-# Temporary files
-*.tmp
-.tmp/
-*.cache
-
 # Azure
 *.azurewebsites.net.pubxml
 PublishProfiles/
 
-# Aspire
+# .NET Aspire
 .aspire/
+
+# OS files
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+*.dmg
+*.app
+*.DS_Store
+
+# Mono
+mono_crash.*
