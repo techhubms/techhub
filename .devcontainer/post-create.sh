@@ -50,8 +50,8 @@ fi
 
 if ! npx playwright --version &> /dev/null || [ ! -d "$HOME/.cache/ms-playwright/chromium-1200" ]; then
     echo "Installing Playwright browsers..."
-    npx -y playwright install-deps chromium
-    npx -y playwright install chromium
+    npx -y playwright install-deps chromium chrome
+    npx -y playwright install chromium chrome
 else
     echo "Playwright browsers already installed"
 fi

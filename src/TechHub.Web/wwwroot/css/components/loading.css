@@ -1,0 +1,166 @@
+/* ============================================================================
+   Loading States & Skeletons
+   
+   - Skeleton Placeholders
+   - Loading Indicators
+   - Error States
+   - Empty States
+   ============================================================================ */
+
+/* Skeleton Animation */
+@keyframes shimmer {
+  0% {
+    background-position: -1000px 0;
+  }
+  100% {
+    background-position: 1000px 0;
+  }
+}
+
+.skeleton {
+  background: linear-gradient(
+    90deg,
+    var(--color-bg-subtle) 0%,
+    var(--color-bg-emphasis) 20%,
+    var(--color-bg-subtle) 40%,
+    var(--color-bg-subtle) 100%
+  );
+  background-size: 1000px 100%;
+  animation: shimmer 2s linear infinite;
+  border-radius: var(--radius-md);
+}
+
+/* Skeleton Header */
+.skeleton-header {
+  height: 220px;
+  width: 100%;
+  margin-bottom: 0;
+}
+
+/* Skeleton Navigation Item */
+.skeleton-nav-item {
+  height: 44px;
+  width: 100%;
+  margin-bottom: var(--spacing-2);
+  border-radius: var(--radius-md);
+}
+
+/* Skeleton Content Cards */
+.skeleton-card {
+  background: var(--color-card-bg);
+  border: 1px solid var(--color-card-border);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-4);
+  margin-bottom: var(--spacing-4);
+}
+
+.skeleton-card-title {
+  height: 28px;
+  width: 70%;
+  margin-bottom: var(--spacing-3);
+}
+
+.skeleton-card-meta {
+  height: 16px;
+  width: 40%;
+  margin-bottom: var(--spacing-3);
+}
+
+.skeleton-card-description {
+  height: 16px;
+  width: 100%;
+  margin-bottom: var(--spacing-2);
+}
+
+.skeleton-card-description:last-child {
+  width: 80%;
+  margin-bottom: 0;
+}
+
+.skeleton-card-tags {
+  display: flex;
+  gap: var(--spacing-2);
+  margin-top: var(--spacing-3);
+}
+
+.skeleton-card-tag {
+  height: 24px;
+  width: 60px;
+  border-radius: 12px;
+}
+
+/* Skeleton Grid Layout */
+.skeleton-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: var(--spacing-4);
+  padding: var(--spacing-4);
+}
+
+/* Loading States */
+.loading,
+.error,
+.no-content,
+.no-collections {
+  text-align: center;
+  padding: var(--spacing-8);
+  color: var(--color-text-secondary);
+}
+
+.loading {
+  color: var(--color-text-primary);
+  opacity: 0;
+  animation: fadeIn var(--duration-normal) var(--easing-ease-in) forwards;
+}
+
+.fade-in {
+  opacity: 0;
+  animation: fadeIn var(--duration-normal) var(--easing-ease-in) forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.loading-indicator {
+  margin-left: var(--spacing-1);
+  font-size: var(--font-size-xs);
+  color: var(--color-text-secondary);
+}
+
+/* Content Loading Transition */
+.collection-content {
+  opacity: 1;
+  transition: opacity var(--duration-fast) var(--easing-ease-in-out);
+}
+
+.collection-content.loading {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+/* Error States */
+.error {
+  color: var(--color-accent-danger);
+}
+
+.error h2 {
+  color: var(--color-accent-danger);
+  margin-bottom: var(--spacing-2);
+}
+
+/* Responsive Skeleton */
+@media (max-width: 768px) {
+  .skeleton-header {
+    height: 160px;
+  }
+  
+  .skeleton-grid {
+    grid-template-columns: 1fr;
+  }
+}

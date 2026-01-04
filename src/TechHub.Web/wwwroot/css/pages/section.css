@@ -1,0 +1,175 @@
+/* ============================================================================
+   Section Page
+   
+   - Section Header Banner (Universal)
+   - Section Page Grid Layout
+   - Section Collections Layout
+   - Collection Content Grid
+   ============================================================================ */
+
+.section-page {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* Universal Section Header Banner - Same height on all pages */
+.section-header {
+  height: 220px;
+  background-size: cover;
+  background-position: center;
+  background-color: var(--color-purple-muted);
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: var(--spacing-3);
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+}
+
+.section-header::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(107, 79, 184, 0.7) 0%, rgba(26, 26, 46, 0.85) 100%);
+}
+
+.section-header::after {
+  content: '';
+  position: absolute;
+  bottom: -20px;
+  left: 0;
+  right: 0;
+  height: 20px;
+  background: linear-gradient(to bottom, rgba(13, 17, 23, 0.3), transparent);
+  pointer-events: none;
+}
+
+/* Homepage banner with default background */
+.home-banner {
+  background: linear-gradient(135deg, #6b4fb8 0%, #1a1a2e 100%);
+}
+
+.section-header-content {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  color: var(--color-text-on-emphasis);
+  padding: var(--spacing-4);
+  max-width: 800px;
+  width: 100%;
+}
+
+.section-header-content h1 {
+  font-size: clamp(2rem, 4vw, 3rem);
+  margin: 0 0 var(--spacing-2) 0;
+  font-weight: var(--font-weight-bold);
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.section-header-content .section-description {
+  font-size: var(--font-size-lg);
+  margin: 0;
+  opacity: 0.95;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+  color: var(--color-text-on-emphasis);
+}
+
+/* Section Collections Layout */
+.section-page .section-collections {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: flex;
+  gap: var(--spacing-4);
+  padding: var(--spacing-4) var(--spacing-3);
+  align-items: flex-start;
+}
+
+/* Collection Content Area */
+.collection-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.collection-title {
+  margin: 0 0 var(--spacing-4) 0;
+  font-size: var(--font-size-3xl);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text-primary);
+}
+
+.collection-list {
+  margin: var(--spacing-4) 0;
+}
+
+.content-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: var(--spacing-4);
+}
+
+/* Section Page CSS Grid Layout - Independent async components */
+.section-page-grid {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  grid-template-rows: auto 1fr;
+  grid-template-areas:
+    "header header"
+    "nav content";
+  gap: 0;
+  max-width: 1400px;
+  margin: 0 auto;
+  min-height: calc(100vh - var(--header-height, 60px) - var(--footer-height, 100px));
+}
+
+/* Position child components in grid areas */
+.section-page-grid > *:nth-child(1) {
+  grid-area: header;
+}
+
+.section-page-grid > *:nth-child(2) {
+  grid-area: nav;
+  padding: 0 0 var(--spacing-3) var(--spacing-3);
+}
+
+.section-page-grid > *:nth-child(3) {
+  grid-area: content;
+  padding: 0 var(--spacing-3) var(--spacing-3) 0;
+}
+
+/* Responsive Section Layout */
+@media (max-width: 1024px) {
+  .section-page .section-collections {
+    flex-direction: column;
+  }
+  
+  .section-page-grid {
+    grid-template-columns: 250px 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .section-header {
+    height: 160px;
+  }
+  
+  .section-header-content h1 {
+    font-size: clamp(1.5rem, 6vw, 2rem);
+  }
+  
+  .content-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .section-page-grid {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "header"
+      "nav"
+      "content";
+  }
+}

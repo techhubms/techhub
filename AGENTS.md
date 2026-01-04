@@ -2,6 +2,8 @@
 
 **AI CONTEXT**: This is the **ROOT** development guide. It defines repository-wide principles, architecture, and workflow. When working in a specific domain (e.g., `src/`, `scripts/`, `tests/`), **ALSO** read the domain-specific `AGENTS.md` file in that directory.
 
+**🚨 ABSOLUTELY CRITICAL**: This section defines a **required 9-step process** for all development tasks in [AI Assistant Workflow](#ai-assistant-workflow). Follow these steps in order for every request.
+
 ## Index
 
 - [AI Assistant Workflow](#ai-assistant-workflow)
@@ -15,6 +17,8 @@
   - [7. Validate & Fix](#7-validate--fix)
   - [8. Update Documentation](#8-update-documentation)
   - [9. Report Completion](#9-report-completion)
+- [Starting & Stopping the Website](#starting--stopping-the-website)
+- [.NET Migration Status](#net-migration-status)
 - [Project Overview](#project-overview)
 - [Documentation Architecture](#documentation-architecture)
   - [Documentation Hierarchy](#documentation-hierarchy)
@@ -37,44 +41,44 @@
 
 ## AI Assistant Workflow
 
-**🚨 ABSOLUTELY CRITICAL**: This section defines the **required 9-step process** for all development tasks. Follow these steps in order for every request. This workflow follows **Test-Driven Development (TDD)** principles - write tests BEFORE implementation.
-
 ### 0. Core Rules & Boundaries
 
 These are the **non-negotiable rules** that apply to ALL development tasks. ALWAYS follow these rules without exception.
 
 #### ✅ Always Do
 
-- **ALWAYS follow the 9-step workflow**: Complete all steps in order for every request
-- **ALWAYS write tests BEFORE implementation**: Test-Driven Development (TDD) is mandatory
-- **Prefer higher-level tools**: ALWAYS use MCP tools > Built-in tools > CLI commands
+- **Always follow the 9-step workflow**: Complete all steps in order for every request
+- **Always write tests BEFORE implementation**: Test-Driven Development (TDD) is mandatory
+- **Always read the root [README.md](/README.md) before starting any work to understand the context of this repository better.**
+- **Always prefer higher-level tools**: ALWAYS use MCP tools > Built-in tools > CLI commands
   - **MCP tools** (highest priority): Playwright MCP (web testing), GitHub MCP (GitHub operations), context7 MCP (documentation)
   - **Built-in tools**: `replace_string_in_file` (with 5-10 lines context), `read_file`, `grep_search`, `file_search`
   - **CLI** (lowest priority): Only for complex multi-step operations not supported by tools
-- **Use `@dotnet` agent for .NET development tasks**: API development, Blazor components, domain models, infrastructure. See [.github/agents/dotnet.md](.github/agents/dotnet.md)
-- **Check for errors after editing files**: Use `get_errors` tool on modified files to check VS Code diagnostics (markdown linting, ESLint, RuboCop, etc.) and fix all issues
-- **Run tests after modifying code**: CRITICAL - After ANY code changes (C#, JavaScript, PowerShell, templates), run appropriate test suites. Documentation-only changes do not require testing
-- **Fix linter issues**: Always resolve all linting errors and warnings, EXCEPT intentional bad examples in documentation
-- **Read domain-specific AGENTS.md files**: Before editing any code in that domain
-- **Store temp files in `.tmp/`**: ALL temporary/one-off scripts in `.tmp/` (e.g., quick tests, debugging scripts), permanent/reusable automation goes in `scripts/`
-- **Use PowerShell for scripts**: If script is required, it MUST be `.ps1` file in `.tmp/` directory, then execute it
-- **Follow timezone standards**: `Europe/Brussels` for all date operations
-- **Use configuration-driven design**: Update configuration in `appsettings.json`, not hardcoded values
-- **Server-side render all content**: Initial page load must show complete content
-- **Add tests for new functionality**: According to domain-specific AGENTS.md files
-- **Follow markdown guidelines**: See [collections/markdown-guidelines.md](collections/markdown-guidelines.md) and [collections/writing-style-guidelines.md](collections/writing-style-guidelines.md)
-- **ALWAYS be direct and concise**: Avoid exaggerated language
-- **ALWAYS maintain professional yet approachable tone**: Clear and authoritative without being overly formal
-- **ALWAYS avoid filler phrases**: Don't use "Sure!" or "You're right!"
-- **DevContainer dependencies**: ALWAYS install dependencies in the appropriate `.devcontainer/post-create.sh` script (e.g., `/workspaces/techhub/.devcontainer/post-create.sh`), NEVER install in PowerShell or other scripts
+- **Always use `@dotnet` agent for .NET development tasks**: API development, Blazor components, domain models, infrastructure. See [.github/agents/dotnet.md](.github/agents/dotnet.md)
+- **Always check for errors after editing files**: Use `get_errors` tool on modified files to check VS Code diagnostics (markdown linting, ESLint, RuboCop, etc.) and fix all issues
+- **Always run tests after modifying code**: CRITICAL - After ANY code changes (C#, JavaScript, PowerShell, templates), run appropriate test suites. Documentation-only changes do not require testing
+- **Always fix linter issues**: Always resolve all linting errors and warnings, EXCEPT intentional bad examples in documentation
+- **Always read domain-specific AGENTS.md files**: Before editing any code in that domain
+- **Always store temp files in `.tmp/`**: ALL temporary/one-off scripts in `.tmp/` (e.g., quick tests, debugging scripts), permanent/reusable automation goes in `scripts/`
+- **Always use PowerShell for scripts**: If script is required, it MUST be `.ps1` file in `.tmp/` directory, then execute it
+- **Always follow timezone standards**: `Europe/Brussels` for all date operations
+- **Always use configuration-driven design**: Update configuration in `appsettings.json`, not hardcoded values
+- **Always server-side render all content**: Initial page load must show complete content
+- **Always add tests for new functionality**: According to domain-specific AGENTS.md files
+- **Always follow markdown guidelines**: See [collections/markdown-guidelines.md](collections/markdown-guidelines.md) and [collections/writing-style-guidelines.md](collections/writing-style-guidelines.md)
+- **Always be direct and concise**: Avoid exaggerated language
+- **Always maintain professional yet approachable tone**: Clear and authoritative without being overly formal
+- **Always avoid filler phrases**: Don't use "Sure!" or "You're right!"
+- **Always install dependencies in and via the DevContainer configuration or installation scripts**: This means `.devcontainer/post-create.sh` script or `.devcontainer/devcontainer.json` file. NEVER install dependencies in PowerShell or other scripts
+- **Always install Playwright via devcontainer**: Playwright browsers are installed in `.devcontainer/post-create.sh`, NOT via terminal commands during development
 
 #### ⚠️ Ask First
 
-- **Configuration changes**: Consult domain agents before modifying build system or configuration (e.g., `package.json`, `TechHub.slnx`, `.csproj` files)
-- **Breaking changes to public APIs**: Changes that affect existing functionality (e.g., modifying endpoint signatures, changing data structures)
-- **Adding new dependencies**: To dependency management files or any config (e.g., new NuGet packages, npm packages, PowerShell modules)
-- **Cross-domain changes**: Modifications affecting multiple areas (e.g., API + Blazor + Infrastructure, or content structure + build system)
-- **Significant refactoring**: That touches many files or core architecture (e.g., modifying section configuration in `appsettings.json`, changing domain models)
+- **Ask first before making configuration changes**: Consult domain agents before modifying build system or configuration (e.g., `package.json`, `TechHub.slnx`, `.csproj` files)
+- **Ask first before making breaking changes to public APIs**: Changes that affect existing functionality (e.g., modifying endpoint signatures, changing data structures)
+- **Ask first before making adding new dependencies**: To dependency management files or any config (e.g., new NuGet packages, npm packages, PowerShell modules)
+- **Ask first before making cross-domain changes**: Modifications affecting multiple areas (e.g., API + Blazor + Infrastructure, or content structure + build system)
+- **Ask first before making a significant refactoring**: That touches many files or core architecture (e.g., modifying section configuration in `appsettings.json`, changing domain models)
 
 #### 🚫 Never Do
 
@@ -196,12 +200,26 @@ When renaming ANY identifier, you **MUST** verify and update ALL occurrences acr
 
 **If needed**, understand current behavior BEFORE writing tests or making changes:
 
-**Use Playwright MCP Server**:
+**Running the Website Locally**:
 
-- Reproduce bugs by interacting with live site
-- Verify expected behavior on <https://tech.hub.ms>
-- Understand how features currently work
-- Capture screenshots or console output for debugging
+- **ALWAYS use `./run.ps1` to start the website** - it handles both API and Web projects correctly (with or without `-NoBrowser` flag)
+- **Start in background**: Use `./run.ps1 -NoBrowser` and let it run in the background
+- **Reuse terminal**: Once started, NEVER touch that terminal window again
+- **New operations**: Use a NEW terminal for any other commands while website is running
+- **To test**: Use Playwright MCP tools directly in GitHub Copilot Chat (no terminal commands needed)
+- **To stop**: Only touch the terminal to stop the server (Ctrl+C)
+- **For building/testing individual projects**: Use specific dotnet commands (e.g., `dotnet build src/TechHub.Api/TechHub.Api.csproj`)
+- **The run.ps1 script ensures**: Proper startup order, health checks, and graceful shutdown for the entire website
+
+**Use Playwright MCP Server for Testing**:
+
+- **CRITICAL**: Playwright MCP tools work DIRECTLY in GitHub Copilot Chat - no terminal commands needed
+- **Navigate to page**: `mcp_playwright_browser_navigate` to <http://localhost:5184>
+- **Take snapshots**: `mcp_playwright_browser_snapshot` to capture page state
+- **Take screenshots**: `mcp_playwright_browser_take_screenshot` for visual verification
+- **Interact with elements**: `mcp_playwright_browser_click`, `mcp_playwright_browser_type`, etc.
+- **Verify behavior**: Reproduce bugs, verify expected behavior, understand features
+- **Debug issues**: Capture screenshots or console output for debugging
 
 **When to Verify**:
 
@@ -213,9 +231,11 @@ When renaming ANY identifier, you **MUST** verify and update ALL occurrences acr
 **Key Rules**:
 
 - Use Playwright MCP for browser testing and validation
-- Test on live site when appropriate
+- Test local site (<http://localhost:5184>) for development
+- Test live site (<https://tech.hub.ms>) when appropriate
 - Document unexpected behaviors you discover
 - Report any discrepancies between observed behavior and documentation
+- NEVER run terminal commands for Playwright testing - use MCP tools directly
 
 ### 5. Write Tests First (TDD)
 
@@ -292,9 +312,8 @@ When renaming ANY identifier, you **MUST** verify and update ALL occurrences acr
 
 **Starting/Stopping the Application**:
 
-- **ALWAYS use `./run.ps1` to start/stop/build/test the ENTIRE website** - it handles service orchestration correctly
-- For building/testing individual projects only, use specific dotnet commands (e.g., `dotnet build src/TechHub.Api/TechHub.Api.csproj`)
-- The run.ps1 script ensures proper startup order, health checks, and graceful shutdown
+- See [Starting & Stopping the Website](#starting--stopping-the-website) for complete instructions on running and testing the website
+- Use Playwright MCP tools in GitHub Copilot Chat for testing (no terminal commands needed)
 
 **Critical Requirements**:
 
@@ -435,11 +454,214 @@ When renaming ANY identifier, you **MUST** verify and update ALL occurrences acr
 - Never stop working until task is complete
 - Include all relevant details in completion report
 
+## Starting & Stopping the Website
+
+**🚨 CRITICAL FOR AI AGENTS**: This section defines how to properly start, interact with, and stop the running website without breaking it.
+
+### Starting the Website
+
+**ALWAYS use the run.ps1 script**:
+
+```powershell
+# Start in background without opening browser
+./run.ps1 -NoBrowser
+```
+
+**CRITICAL RULES**:
+
+✅ **DO**: Start website with `./run.ps1 -NoBrowser` in a dedicated terminal  
+✅ **DO**: Let it run in the background - NEVER touch that terminal again  
+✅ **DO**: Use Playwright MCP tools from GitHub Copilot Chat for all website testing  
+✅ **DO**: Open NEW terminals for ANY other commands while website is running  
+
+🚫 **NEVER**: Type ANY command in the terminal running the website  
+🚫 **NEVER**: Use curl, wget, or CLI tools in the website terminal  
+🚫 **NEVER**: Run dotnet commands in the website terminal  
+🚫 **NEVER**: Execute ANY operation that interacts with the website terminal  
+
+**Why This Matters**: ANY interaction with the terminal running the website (typing a command, pressing Enter, Ctrl+C accidentally) will **IMMEDIATELY SHUTDOWN** the website and cause the command to fail.
+
+### Testing the Running Website
+
+**ALWAYS use Playwright MCP tools directly in GitHub Copilot Chat** - NO terminal commands needed:
+
+```plaintext
+# Navigate to page
+mcp_playwright_browser_navigate(url: "http://localhost:5184")
+
+# Take snapshots to see page structure
+mcp_playwright_browser_snapshot()
+
+# Take screenshots for visual verification
+mcp_playwright_browser_take_screenshot()
+
+# Interact with elements
+mcp_playwright_browser_click(element: "button description")
+mcp_playwright_browser_type(element: "input field", text: "test query")
+
+# Verify behavior
+# - Reproduce bugs
+# - Verify expected behavior  
+# - Understand features
+# - Debug issues
+```
+
+**Benefits of Playwright MCP**:
+
+- Works directly from GitHub Copilot Chat - no terminal needed
+- Never risks shutting down the website
+- Provides rich snapshots and screenshots
+- Allows complex interactions (click, type, navigate)
+- Can verify page state and behavior
+
+### If CLI Tools Are Absolutely Required
+
+**ONLY if Playwright MCP cannot accomplish the task**, and you MUST use curl/wget/other CLI tools:
+
+```powershell
+# Open a NEW terminal (NEVER use the website terminal)
+# Then run your command
+curl http://localhost:5184/api/sections
+```
+
+**Terminal Safety Checklist**:
+
+- [ ] Website is running in Terminal 1 (DO NOT TOUCH)
+- [ ] Opened NEW Terminal 2 for commands
+- [ ] Verified I'm typing in Terminal 2, NOT Terminal 1
+- [ ] Command does not interact with Terminal 1 in any way
+
+### Stopping the Website
+
+**Only stop when task is complete or restart is needed**:
+
+1. Switch to the terminal running `./run.ps1`
+2. Press `Ctrl+C` to gracefully stop both API and Web servers
+3. Wait for "Cleanup complete" message
+4. Terminal is now safe to use for other commands
+
+**The run.ps1 script handles**:
+
+- Proper startup order (API first, then Web)
+- Health checks before declaring ready
+- Graceful shutdown of both processes
+- Port cleanup on exit
+
+### run.ps1 Script Parameters (for AI Agents)
+
+**Common Options**:
+
+- `-NoBrowser` - Don't open browser automatically (ALWAYS use this for AI agents)
+- `-Clean` - Clean all build artifacts before building
+- `-Test` - Run all tests before starting
+- `-SkipBuild` - Skip build, use existing binaries
+- `-ApiOnly` - Only run the API project
+- `-WebOnly` - Only run the Web project
+- `-Release` - Build in Release mode
+- `-VerboseOutput` - Show verbose output for debugging
+
+**Advanced Options**:
+
+- `-ApiPort <port>` - Custom API port (default: 5029)
+- `-WebPort <port>` - Custom Web port (default: 5184)
+- `-Build` - Only build without running
+
+**Examples**:
+
+```powershell
+# Standard development start
+./run.ps1 -NoBrowser
+
+# Clean build and test first
+./run.ps1 -NoBrowser -Clean -Test
+
+# Only API for backend testing
+./run.ps1 -ApiOnly -NoBrowser
+
+# Only Web for frontend testing
+./run.ps1 -WebOnly -NoBrowser
+
+# Skip build to save time
+./run.ps1 -NoBrowser -SkipBuild
+```
+
+**Script Built-in Features**:
+
+- **Port Cleanup**: Automatically kills processes using required ports before starting
+- **Ctrl+C Handling**: Properly stops all processes and cleans up ports when interrupted
+- **Conflict Prevention**: Safe to run even if ports are already in use
+- **Health Checks**: Verifies services are responding before declaring ready
+
+### Building/Testing Individual Projects
+
+**For building or testing specific projects WITHOUT running the website**, use dotnet commands directly in ANY terminal:
+
+```powershell
+# Build specific project
+dotnet build src/TechHub.Api/TechHub.Api.csproj
+dotnet build src/TechHub.Web/TechHub.Web.csproj
+
+# Run tests
+dotnet test
+dotnet test tests/TechHub.Core.Tests
+
+# Build entire solution
+dotnet build TechHub.slnx
+```
+
+These commands are safe to run anytime because they don't start the website.
+
+## .NET Migration Status
+
+**Project Status**: 🚧 Currently migrating from Jekyll to .NET/Blazor architecture with separate API and frontend.
+
+**Current Phase**: Phase 3 - User Story 1 MVP (API Implementation) ✅ Partially Complete
+
+### Implementation Progress
+
+Following the migration plan phases defined in [specs/dotnet-migration/](specs/dotnet-migration/):
+
+- **Phase 1: Foundation** (36/36 tasks) ✅ Complete
+  - All projects, domain models, DTOs, interfaces, extensions
+- **Phase 2: Data Access** (8/17 tasks) 🔄 In Progress
+  - ✅ FrontMatterParser (11 tests passing)
+  - ✅ MarkdownService (19 tests passing)
+  - ✅ FileBasedSectionRepository (7 tests passing)
+  - ✅ FileBasedContentRepository (15 tests passing)
+  - ⏳ RssService, Caching, Entity tests (not started)
+- **Phase 3: API Endpoints** (5/70 tasks) 🔄 In Progress
+  - ✅ All section endpoints (6 endpoints, 8 tests)
+  - ✅ Advanced filtering (2 endpoints, 6 tests)
+  - ⏳ Blazor components, pages, client (not started)
+
+**Test Results**: 52/52 tests passing (100% pass rate)
+
+**What's Working Now**:
+
+✅ **RESTful API** with 14 endpoints, all tested and working  
+✅ **Frontend** - Home page with 8 sections, responsive grid, design system  
+✅ **Components** - SectionCard, ContentItemCard with Tech Hub styling  
+✅ **HTTP Client** - TechHubApiClient with resilience policies  
+✅ **Visual Design** - Complete color system from Jekyll _sass  
+✅ **Images** - All 8 section background images  
+
+**Access Points**:
+
+- Web UI: <http://localhost:5184>
+- API: <http://localhost:5029/api/sections>
+- Swagger: <http://localhost:5029/swagger>
+
+**Next Steps**:
+
+1. Complete Phase 2: RssService, Caching, Entity tests (T045-T051)
+2. Continue Phase 3: Section/content detail pages, filtering, accessibility (T062-T087)
+3. Begin Phase 4: Features implementation (filtering, search, infinite scroll)
+
+See [specs/dotnet-migration/tasks.md](specs/dotnet-migration/tasks.md) for complete task breakdown and [README.md](README.md) for user-facing quick start guide.
+
 ## Project Overview
 
 The Tech Hub is a technical content hub with configuration-driven section and collection management. Content is organized by sections (AI, GitHub Copilot, Azure, ML, .NET, DevOps, Security) and collections (news, videos, community, blogs, roundups).
-
-**Project Status**: 🚧 Currently migrating from Jekyll to .NET/Blazor architecture with separate API and frontend.
 
 **Core Architecture**:
 
@@ -449,15 +671,28 @@ The Tech Hub is a technical content hub with configuration-driven section and co
 - **Test-driven**: Comprehensive test coverage at all layers
 - **Performance-first**: Server-side rendering with client-side enhancements
 
-**Key Repositories**:
+**.NET Projects** (separate frontend and backend):
+
+- **TechHub.Api** - REST API backend (ASP.NET Core Minimal API)
+- **TechHub.Web** - Blazor frontend (SSR + WebAssembly)
+- **TechHub.Core** - Domain models and interfaces
+- **TechHub.Infrastructure** - Data access implementations
+- **TechHub.AppHost** - .NET Aspire orchestration
+
+**Resilience & Reliability**:
+
+- **HTTP Resilience Policies** - Built-in retry (3 attempts with exponential backoff), circuit breaker (50% failure ratio), and timeout (60s)
+- **Graceful Error Handling** - User-friendly error messages with functional retry buttons
+- **Automatic State Management** - UI automatically updates during loading and retry operations
+
+**Content & Configuration**:
 
 - **Content Collections**: `collections/` directory with markdown files
 - **Data Configuration**: `appsettings.json` for site structure (sections and collections)
-- **.NET Projects**: `src/` directory with API, Web, Core, Infrastructure
-- **Tests**: `tests/` directory with unit, integration, and E2E tests
+- **Tests**: `tests/` directory with unit, integration, component, and E2E tests
 - **Infrastructure**: `infra/` directory with Bicep templates
 
-See [README.md](README.md) for current implementation status and [specs/](specs/) for detailed feature specifications.
+See [.NET Migration Status](#net-migration-status) section above for current implementation progress, [README.md](README.md) for quick start guide, and [specs/](specs/) for detailed feature specifications.
 
 ## Documentation Architecture
 

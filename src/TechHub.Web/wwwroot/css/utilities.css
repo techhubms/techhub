@@ -1,0 +1,38 @@
+/* ============================================================================
+   Utility Classes
+   
+   - Accessibility Utilities
+   - Spacing Utilities
+   - Text Utilities
+   ============================================================================ */
+
+/* Accessibility */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+/* Text Alignment */
+.u-text-center {
+  text-align: center;
+}
+
+/* Spacing Utilities */
+.u-mb-2 {
+  margin-bottom: var(--spacing-2);
+}
+
+.u-mb-4 {
+  margin-bottom: var(--spacing-4);
+}
+
+.u-mt-4 {
+  margin-top: var(--spacing-4);
+}

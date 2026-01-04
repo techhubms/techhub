@@ -44,7 +44,45 @@ if (!app.Environment.IsDevelopment())
 app.UseStatusCodePagesWithReExecute("/not-found", createScopeForStatusCodePages: true);
 app.UseHttpsRedirection();
 
-app.UseStaticFiles(); // Serve static files from wwwroot (including favicon.ico)
+// Configure static files with browser caching
+app.UseStaticFiles(new StaticFileOptions
+{
+    OnPrepareResponse = ctx =>
+    {
+        // Cache static assets for 1 year (images, fonts, etc.)
+        // CSS and JS files should use cache busting via MapStaticAssets()
+        var path = ctx.File.PhysicalPath ?? ctx.Context.Request.Path.Value ?? string.Empty;
+        
+        // Images, fonts, and other media - cache for 1 year
+        if (path.EndsWith(".jpg", StringComparison.OrdinalIgnoreCase) ||
+            path.EndsWith(".jpeg", StringComparison.OrdinalIgnoreCase) ||
+            path.EndsWith(".png", StringComparison.OrdinalIgnoreCase) ||
+            path.EndsWith(".gif", StringComparison.OrdinalIgnoreCase) ||
+            path.EndsWith(".webp", StringComparison.OrdinalIgnoreCase) ||
+            path.EndsWith(".svg", StringComparison.OrdinalIgnoreCase) ||
+            path.EndsWith(".ico", StringComparison.OrdinalIgnoreCase) ||
+            path.EndsWith(".woff", StringComparison.OrdinalIgnoreCase) ||
+            path.EndsWith(".woff2", StringComparison.OrdinalIgnoreCase) ||
+            path.EndsWith(".ttf", StringComparison.OrdinalIgnoreCase) ||
+            path.EndsWith(".eot", StringComparison.OrdinalIgnoreCase))
+        {
+            // Cache for 1 year, can be cached by browsers and CDNs
+            ctx.Context.Response.Headers.CacheControl = "public,max-age=31536000,immutable";
+        }
+        // CSS and JS files - let MapStaticAssets handle versioning
+        else if (path.EndsWith(".css", StringComparison.OrdinalIgnoreCase) ||
+                 path.EndsWith(".js", StringComparison.OrdinalIgnoreCase))
+        {
+            // Cache for 1 year with versioning (MapStaticAssets adds fingerprint)
+            ctx.Context.Response.Headers.CacheControl = "public,max-age=31536000,immutable";
+        }
+        else
+        {
+            // Default: cache for 1 hour
+            ctx.Context.Response.Headers.CacheControl = "public,max-age=3600";
+        }
+    }
+});
 
 app.UseAntiforgery();
 

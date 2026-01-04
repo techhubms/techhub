@@ -1,0 +1,43 @@
+/* ============================================================================
+   Home Page
+   
+   - Home Container
+   - Section Grid Layout
+   - Grid System
+   ============================================================================ */
+
+.home-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 var(--spacing-3) var(--spacing-3);
+}
+
+.sections-grid {
+  margin-bottom: var(--spacing-8);
+}
+
+.section-grid-title {
+  font-size: var(--font-size-3xl);
+  margin-bottom: var(--spacing-4);
+  color: var(--color-text-primary);
+  font-weight: var(--font-weight-semibold);
+}
+
+/* Grid Layout */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: var(--spacing-4);
+}
+
+/* Responsive Grid */
+@media (max-width: 768px) {
+  .home-container {
+    padding: var(--spacing-4) var(--spacing-2);
+  }
+  
+  .grid {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-3);
+  }
+}

@@ -1,0 +1,113 @@
+/* ============================================================================
+   Button Components
+   
+   - Collection Navigation Buttons
+   - External Link Buttons
+   - Back Link Buttons
+   - Retry Buttons
+   ============================================================================ */
+
+/* Collection Navigation Buttons */
+.collection-nav button {
+  width: 100%;
+  text-align: left;
+  padding: var(--spacing-2) var(--spacing-3);
+  background: var(--color-card-bg);
+  border: 1px solid var(--color-border-default);
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  transition: all var(--duration-fast) var(--easing-ease);
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-text-primary);
+  font-family: var(--font-family-base);
+  min-height: var(--touch-target-min-size);
+  display: flex;
+  align-items: center;
+}
+
+.collection-nav button:hover:not(:disabled) {
+  background: var(--color-bg-emphasis);
+  border-color: var(--color-accent-primary);
+  transform: translateX(4px);
+}
+
+.collection-nav button.active {
+  background: var(--color-accent-primary);
+  color: var(--color-text-on-emphasis);
+  border-color: var(--color-accent-primary);
+  font-weight: var(--font-weight-semibold);
+}
+
+.collection-nav button.active:hover {
+  background: var(--color-accent-primary);
+  border-color: var(--color-accent-primary);
+  transform: none;
+}
+
+.collection-nav button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* External Link Button */
+.external-link {
+  display: inline-block;
+  padding: var(--spacing-2) var(--spacing-4);
+  background: var(--color-button-primary-bg);
+  color: var(--color-button-primary-text);
+  text-decoration: none;
+  border-radius: var(--radius-md);
+  transition: background var(--duration-fast) var(--easing-ease);
+  font-weight: var(--font-weight-semibold);
+  min-height: var(--touch-target-min-size);
+  display: inline-flex;
+  align-items: center;
+}
+
+.external-link:hover {
+  background: var(--color-button-primary-hover);
+  text-decoration: none;
+}
+
+/* Back Link Button */
+.back-link {
+  display: inline-block;
+  padding: var(--spacing-2) var(--spacing-3);
+  background: var(--color-bg-emphasis);
+  color: var(--color-text-link);
+  text-decoration: none;
+  border-radius: var(--radius-md);
+  transition: all var(--duration-fast) var(--easing-ease);
+  font-weight: var(--font-weight-medium);
+  border: 1px solid var(--color-border-default);
+  min-height: var(--touch-target-min-size);
+  display: inline-flex;
+  align-items: center;
+}
+
+.back-link:hover {
+  background: var(--color-bg-subtle);
+  border-color: var(--color-accent-primary);
+  text-decoration: none;
+}
+
+/* Retry Button (Error States) */
+.error button {
+  margin-top: var(--spacing-3);
+  padding: var(--spacing-2) var(--spacing-4);
+  background: var(--color-button-primary-bg);
+  color: var(--color-button-primary-text);
+  border: none;
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-semibold);
+  transition: background var(--duration-fast) var(--easing-ease);
+  min-height: var(--touch-target-min-size);
+  font-family: var(--font-family-base);
+}
+
+.error button:hover {
+  background: var(--color-button-primary-hover);
+}

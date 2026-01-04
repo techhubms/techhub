@@ -33,9 +33,43 @@
 
 ## Tech Hub Design System
 
+### CSS Architecture
+
+**Modular Organization**: CSS is organized into functional modules for maintainability:
+
+```text
+wwwroot/css/
+├── design-tokens.css         # ALL colors, typography, spacing (single source of truth)
+├── base.css                  # Reset, typography, links, focus states
+├── layout.css                # Header, footer, navigation, grid
+├── components/
+│   ├── cards.css            # Section & content item cards
+│   ├── buttons.css          # All button styles
+│   ├── navigation.css       # Collection nav, breadcrumbs
+│   ├── loading.css          # Skeleton loaders, loading states
+│   └── forms.css            # Form validation, Blazor errors
+├── pages/
+│   ├── home.css             # Home page layout
+│   ├── section.css          # Section page grid & header
+│   └── content-detail.css   # Article detail page
+└── utilities.css             # Utility classes
+
+wwwroot/styles.css            # Main file - imports all modules
+```
+
+**Benefits**:
+
+- **All colors in one place** - `design-tokens.css` contains ALL CSS variables
+- **Easy navigation** - Find card styles → `components/cards.css`
+- **Small focused files** - 50-200 lines each vs 1300+ line monolith
+- **Scoped changes** - Modify buttons without touching cards
+- **Single import** - `styles.css` loads all modules (no additional HTTP requests)
+
+**Source**: All styles derive from Jekyll `_sass/_colors.scss` and `_sass/_settings.scss`
+
 ### Color Palette
 
-**Source**: `jekyll/_sass/_colors.scss`
+**Source**: [css/design-tokens.css](wwwroot/css/design-tokens.css)
 
 **Primary Colors**:
 
@@ -704,6 +738,33 @@ src/TechHub.Web/
 - `/images/section-backgrounds/azure.jpg`
 
 **Image Sizes**: 743KB - 967KB per section background (optimized JPG)
+
+## Static Files & Browser Caching
+
+**Configuration**: `Program.cs` configures aggressive browser caching for static assets
+
+**Cache Strategy**:
+
+- **Images** (jpg, png, webp, svg, ico): 1 year cache (`max-age=31536000,immutable`)
+- **Fonts** (woff, woff2, ttf, eot): 1 year cache (`max-age=31536000,immutable`)
+- **CSS/JS** (via MapStaticAssets): 1 year cache with fingerprinting for cache busting
+- **Other files**: 1 hour cache (`max-age=3600`)
+
+**Why This Works**:
+
+- **`immutable`**: Tells browser the file will NEVER change at this URL
+- **1 year cache**: Banner images, fonts, and other assets cached locally for maximum performance
+- **No revalidation**: Browser uses cached version without asking server "has it changed?"
+- **Cache busting**: CSS/JS files get version fingerprint in filename (e.g., `styles.abc123.css`)
+
+**Benefits**:
+
+- ✅ Banner images load instantly on subsequent page views (from disk cache)
+- ✅ Zero HTTP requests for cached assets = faster page loads
+- ✅ Reduces server bandwidth
+- ✅ Better user experience on slow connections
+
+**Source**: See `UseStaticFiles` configuration in [Program.cs](Program.cs)
 
 ## Testing Components
 

@@ -4,253 +4,84 @@
 
 This directory contains the .NET/Blazor implementation of Tech Hub, migrating from the Jekyll-based static site.
 
-## Quick Start
+## Migration Status
 
-### Option 1: F5 Debugging in VS Code (Recommended)
+This project is currently migrating from Jekyll to .NET/Blazor using [spec-kit](https://github.com/github/spec-kit) methodology. We're in **Phase 3** of the migration with 52/52 tests passing.
+
+**Quick Status**: API ✅ Complete | Frontend 🔄 In Progress (90%)
+
+For detailed progress, implementation status, and what's working now, see [MIGRATIONSTATUS.md](MIGRATIONSTATUS.md).
+
+**Migration Planning**:
+
+- **[Migration Plan](specs/dotnet-migration/spec.md)** - Complete migration specification and architecture
+- **[Task Breakdown](specs/dotnet-migration/tasks.md)** - All tasks with dependencies and status
+- **[Data Model](specs/dotnet-migration/data-model.md)** - Domain model design and contracts
+
+## Starting / stopping the website
+
+### For AI Agents
+
+**ALWAYS read [AGENTS.md - Starting & Stopping the Website](AGENTS.md#starting--stopping-the-website)** before starting/stopping the website. This section contains critical safety rules about terminal interactions and proper use of Playwright MCP tools.
+
+### For End Users
+
+**Easiest Way - F5 in VS Code**:
 
 1. Open the project in VS Code
 2. Press **F5** (or click **Run > Start Debugging**)
 3. Select **"Tech Hub (API + Web)"** from the dropdown
-4. Both API and Web servers will start with debugger attached
-5. Web UI opens automatically at <http://localhost:5184>
-6. API available at <http://localhost:5029> (Swagger: <http://localhost:5029/swagger>)
+4. Web UI opens automatically at <http://localhost:5184>
+5. API available at <http://localhost:5029> (Swagger: <http://localhost:5029/swagger>)
 
-**Debug Individual Projects**:
-
-- **API only**: Select "API (TechHub.Api)" from debug dropdown
-- **Web only**: Select "Web (TechHub.Web)" from debug dropdown
-
-### Option 2: PowerShell Run Script
+**Alternative - PowerShell Script**:
 
 ```powershell
-# Basic usage - build and run both projects
-
+# Build and run both API and Web
 ./run.ps1
 
-# Clean build and run tests first
-
+# Clean build and test first
 ./run.ps1 -Clean -Test
 
-# Only build (no run)
-
-./run.ps1 -Build
-
-# Run API only on custom port
-
-./run.ps1 -ApiOnly -ApiPort 8080
-
-# Run Web only without opening browser
-
-./run.ps1 -WebOnly -NoBrowser
-
-# Skip build (use existing binaries)
-
-./run.ps1 -SkipBuild
-
-# Release build
-
-./run.ps1 -Release
-
-# Verbose output
-
-./run.ps1 -VerboseOutput
-
-# See all options
-
-./run.ps1 -?
+# Don't open browser automatically
+./run.ps1 -NoBrowser
 ```
 
-**Script Parameters**:
+**Stop the Application**: Press `Ctrl+C` in the terminal where the script is running.
 
-- `-Clean` - Clean all build artifacts before building
-- `-Build` - Only build without running
-- `-Test` - Run all tests before starting
-- `-SkipBuild` - Skip build, use existing binaries
-- `-ApiOnly` - Only run the API project
-- `-WebOnly` - Only run the Web project
-- `-ApiPort <port>` - Custom API port (default: 5029)
-- `-WebPort <port>` - Custom Web port (default: 5184)
-- `-NoBrowser` - Don't open browser automatically
-- `-Release` - Build in Release mode
-- `-VerboseOutput` - Show verbose output
+### DevContainer Setup
 
-**Built-in Features**:
-
-- **Port Cleanup**: Automatically kills processes using required ports before starting
-- **Ctrl+C Handling**: Properly stops all processes and cleans up ports when interrupted
-- **Conflict Prevention**: Safe to run even if ports are already in use
-
-### Option 3: Manual dotnet Commands
-
-```powershell
-# Terminal 1: API Server
-
-cd src/TechHub.Api
-dotnet run --urls http://localhost:5029
-
-# Terminal 2: Web Server
-
-cd src/TechHub.Web
-dotnet run
-```
-
-### Option 4: Open in DevContainer
-
-1. In VS Code, open the Command Palette (`Ctrl+Shift+P` or `Cmd+Shift+P`)
+1. In VS Code, open Command Palette (`Ctrl+Shift+P`)
 2. Select **"Dev Containers: Reopen in Container"**
-3. Choose the **"Tech Hub .NET"** container
-4. Wait for the container to build and initialize
-5. Use F5 debugging or run script as described above
+3. Wait for container to build and initialize
+4. Use F5 or run script as described above
 
-## Architecture
+## Where to Find More Information
 
-This is a modern .NET application with **separate frontend and backend**:
+**Start Here**:
 
-- **TechHub.Api** - REST API backend (ASP.NET Core Minimal API)
-- **TechHub.Web** - Blazor frontend (SSR + WebAssembly)
-- **TechHub.Core** - Domain models and interfaces
-- **TechHub.Infrastructure** - Data access implementations
-- **TechHub.AppHost** - .NET Aspire orchestration
+- **[AGENTS.md](AGENTS.md)** - Complete development guide (AI workflow, architecture, principles, standards)
+- **[Migration Status](#migration-status)** - Current implementation progress
 
-**Resilience & Reliability**:
+**For Development**:
 
-- **HTTP Resilience Policies** - Built-in retry (3 attempts with exponential backoff), circuit breaker (50% failure ratio), and timeout (60s)
-- **Graceful Error Handling** - User-friendly error messages with functional retry buttons
-- **Automatic State Management** - UI automatically updates during loading and retry operations
+- **[AI Assistant Workflow](AGENTS.md#ai-assistant-workflow)** - Required 9-step process for all changes
+- **[Starting & Stopping the Website](AGENTS.md#starting--stopping-the-website)** - How to run and test locally
+- **[.NET Development Guide](.github/agents/dotnet.md)** - .NET/Blazor patterns and examples
+- **[Documentation Map](AGENTS.md#complete-documentation-map)** - Navigation to all docs
 
-See [/specs/](../specs/) for detailed feature specifications.
+**For Understanding the System**:
 
-## Development Workflow
-
-Follow the [8-step workflow](../AGENTS.md#ai-assistant-workflow) defined in the root AGENTS.md:
-
-1. **Gather Context** - Read AGENTS.md files for the domain you're modifying
-2. **Create a Plan** - Break down tasks into steps
-3. **Research & Validate** - Use context7 MCP for .NET/Blazor docs
-4. **Verify Behavior** - Use Playwright MCP for testing
-5. **Implement Changes** - Follow patterns in domain AGENTS.md
-6. **Test & Validate** - Run appropriate test suites
-7. **Update Documentation** - Keep AGENTS.md files current
-8. **Report Completion** - Summarize changes
-
-## Documentation
-
-- **[Feature Specifications](specs/)** - Complete feature requirements and specifications
-- **[Root AGENTS.md](AGENTS.md)** - Framework-agnostic principles and architecture
-- **[Documentation Guidelines](docs/AGENTS.md)** - How to maintain and structure documentation
-- **[.NET Development Guide](.github/agents/dotnet.md)** - .NET-specific development patterns
-- **[API Specification](docs/api-specification.md)** - REST API contracts and endpoints
-- **[Filtering System](docs/filtering-system.md)** - Tag and date filtering behavior
-- **[Content Management](docs/content-management.md)** - Content workflows and RSS processing
-
-## Current Status
-
-**Phase 3: User Story 1 MVP - API Implementation** ✅ (Partially Complete)
-
-### What's Working
-
-✅ **RESTful API** with nested routes (14 endpoints, all tested and working):
-
-**Section Endpoints**:
-
-- `GET /api/sections` - Get all sections (8 sections)
-- `GET /api/sections/{sectionName}` - Get specific section
-- `GET /api/sections/{sectionName}/items` - All items in section (e.g., 1378 AI items)
-- `GET /api/sections/{sectionName}/collections` - Collections in section
-- `GET /api/sections/{sectionName}/collections/{collectionName}` - Collection details
-- `GET /api/sections/{sectionName}/collections/{collectionName}/items` - Items in collection
-
-**Content Endpoints**:
-
-- `GET /api/content/filter?sections={s}&collections={c}&tags={t}&q={query}` - Advanced filtering
-- `GET /api/content/tags` - All unique tags (12,524 tags)
-
-**Examples**:
-
-```bash
-# Get AI section with collections
-
-curl http://localhost:5029/api/sections/ai
-
-# Get all AI news items
-
-curl http://localhost:5029/api/sections/ai/collections/news/items
-
-# Complex filter: Copilot-tagged items in AI/ML news/blogs
-
-curl "http://localhost:5029/api/content/filter?sections=ai,ml&collections=news,blogs&tags=copilot"
-```
-
-See [API Specification](docs/api-specification.md) for complete reference.
-
-### Implementation Progress
-
-Following the migration plan phases:
-
-- [x] Phase 1: Foundation (36/36 tasks) ✅
-  - All projects, domain models, DTOs, interfaces, extensions
-- [x] Phase 2: Data Access (8/17 tasks) 🔄
-  - ✅ FrontMatterParser (11 tests passing)
-  - ✅ MarkdownService (19 tests passing)
-  - ✅ FileBasedSectionRepository (7 tests passing)
-  - ✅ FileBasedContentRepository (15 tests passing)
-  - ⏳ RssService, Caching, Entity tests (not started)
-- [x] Phase 3: API Endpoints (5/70 tasks) 🔄
-  - ✅ All section endpoints (6 endpoints, 8 tests)
-  - ✅ Advanced filtering (2 endpoints, 6 tests)
-  - ⏳ Blazor components, pages, client (not started)
-
-**Test Results**: 52/52 tests passing (100% pass rate)
-
-**Performance**: Sections ~25ms, Content first load 5-9s (2251 markdown files)
-
-### What's Working Now
-
-✅ **Frontend** (User Story 1 ~90% Complete):
-
-- Home page displaying 8 sections in responsive grid (<http://localhost:5184>)
-- SectionCard component with background images
-- ContentItemCard component ready for section pages
-- TechHubApiClient with typed HTTP methods
-- Complete Tech Hub design system (colors from Jekyll _sass)
-- All 8 section background images (ai.jpg, azure.jpg, coding.jpg, devops.jpg, github-copilot.jpg, ml.jpg, security.jpg, all.jpg)
-
-**Running the Application**:
-
-```bash
-# Terminal 1: API Server
-
-cd src/TechHub.Api
-dotnet run --urls http://localhost:5029
-
-# Terminal 2: Web Server  
-
-cd src/TechHub.Web
-dotnet run
-```
-
-**Access**: Web UI at <http://localhost:5184>, API at <http://localhost:5029/api/sections>
-
-### Next Steps
-
-1. Complete Phase 2: RssService, Caching, Entity tests (T045-T051)
-2. Continue Phase 3: Section/content detail pages, filtering, accessibility (T062-T087)
-3. Begin Phase 4: Features implementation (filtering, search, infinite scroll)
-
-See [specs/dotnet-migration/tasks.md](specs/dotnet-migration/tasks.md) for complete task breakdown.
+- **[Project Overview](AGENTS.md#project-overview)** - Architecture and project structure
+- **[API Specification](docs/api-specification.md)** - REST API endpoints and contracts
+- **[Feature Specifications](specs/)** - Detailed feature requirements (spec-kit)
+- **[Filtering System](docs/filtering-system.md)** - How filtering works
+- **[Content Management](docs/content-management.md)** - Content workflows
 
 ## Contributing
 
-This is a migration project. All changes should:
+All development must follow the guidelines in [AGENTS.md](AGENTS.md):
 
-1. Follow the [feature specifications](../specs/)
-2. Use spec-driven development methodology
-3. Maintain feature parity with Jekyll site
-4. Include tests for all code changes
-
-## Related Resources
-
-- [Current Jekyll Site](../) - Source implementation
-- [Filtering System Docs](../docs/filtering-system.md) - Current filtering behavior
-- [Content Management Docs](../docs/content-management.md) - Content workflows
-- [spec-kit](https://github.com/github/spec-kit) - Development methodology
+- **[AI Assistant Workflow](AGENTS.md#ai-assistant-workflow)** - Required 9-step process
+- **[Core Rules & Boundaries](AGENTS.md#0-core-rules--boundaries)** - Non-negotiable rules
+- **[Feature Specifications](specs/)** - Use spec-kit methodology for all features
