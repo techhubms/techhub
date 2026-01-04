@@ -394,10 +394,10 @@ public class SectionsEndpointsTests : IClassFixture<TechHubApiFactory>
     [Theory]
     [InlineData("ai", "AI")]
     [InlineData("github-copilot", "GitHub Copilot")]
-    public async Task GetSectionById_ReturnsSection(string id, string expectedCategory)
+    public async Task GetSectionByName_ReturnsSection(string name, string expectedCategory)
     {
         // Act
-        var response = await _client.GetAsync($"/api/sections/{id}");
+        var response = await _client.GetAsync($"/api/sections/{name}");
         
         // Assert
         response.StatusCode.Should().Be(HttpStatusCode.OK);
@@ -409,7 +409,7 @@ public class SectionsEndpointsTests : IClassFixture<TechHubApiFactory>
     }
     
     [Fact]
-    public async Task GetSectionById_InvalidSection_Returns404()
+    public async Task GetSectionByName_InvalidSection_Returns404()
     {
         // Act
         var response = await _client.GetAsync("/api/sections/invalid");
@@ -626,21 +626,51 @@ See [tests/powershell/AGENTS.md](/tests/powershell/AGENTS.md) for detailed Power
 
 ## Running Tests
 
-### Run All Tests
+### Run with run.ps1 (Recommended)
+
+The `run.ps1` script provides the easiest way to run all tests including E2E:
 
 ```bash
-# All .NET tests (unit + integration)
+# Run all tests (including E2E with servers)
+./run.ps1 -Test
 
-dotnet test
+# Clean, build, and test
+./run.ps1 -Clean -Test
+
+# Continue even if tests fail
+./run.ps1 -Test -ContinueOnTestFailure
+```
+
+**What Happens**:
+
+- Builds the solution
+- Starts API and Web servers in `Test` environment (minimal logging via `appsettings.Test.json`)
+- Server output redirected to `.tmp/test-logs/api.log` and `.tmp/test-logs/web.log`
+- Runs all tests (unit, integration, component, E2E)
+- Shows clean dotnet test output with individual test results
+- Stops servers automatically
+- Displays summary with pass/fail counts
+
+**Server Logs** (when running E2E tests):
+
+- API logs: `.tmp/test-logs/api.log`
+- Web logs: `.tmp/test-logs/web.log`
+
+### Standard dotnet test
+
+For running tests without E2E (no servers needed):
+
+```bash
+# All unit/integration/component tests (no E2E)
+dotnet test --filter "FullyQualifiedName!~E2E"
 
 # Specific test project
-
 dotnet test tests/TechHub.Core.Tests
 dotnet test tests/TechHub.Infrastructure.Tests
 dotnet test tests/TechHub.Api.Tests
+dotnet test tests/TechHub.Web.Tests
 
 # With detailed output
-
 dotnet test --logger "console;verbosity=detailed"
 ```
 
@@ -818,13 +848,13 @@ public void SetupTestData()
     SectionRepository.GetAllSectionsAsync(Arg.Any<CancellationToken>())
         .Returns(sections);
     
-    SectionRepository.GetSectionByIdAsync("ai", Arg.Any<CancellationToken>())
+    SectionRepository.GetByIdAsync("ai", Arg.Any<CancellationToken>())
         .Returns(sections[0]);
     
-    SectionRepository.GetSectionByIdAsync("github-copilot", Arg.Any<CancellationToken>())
+    SectionRepository.GetByIdAsync("github-copilot", Arg.Any<CancellationToken>())
         .Returns(sections[1]);
     
-    SectionRepository.GetSectionByIdAsync("invalid", Arg.Any<CancellationToken>())
+    SectionRepository.GetByIdAsync("invalid", Arg.Any<CancellationToken>())
         .Returns((Section?)null);
 }
 ```
@@ -932,7 +962,7 @@ public void Test2()
 [Fact]
 public async Task GetSectionAsync_ReturnsSection()
 {
-    var result = await repository.GetSectionByIdAsync("ai", CancellationToken.None);
+    var result = await repository.GetByIdAsync("ai", CancellationToken.None);
     result.Should().NotBeNull();
 }
 
@@ -948,7 +978,7 @@ public async Task GetSectionAsync_InvalidId_ThrowsException()
 [Fact]
 public async void GetSectionAsync_ReturnsSection() // Never use async void!
 {
-    var result = await repository.GetSectionByIdAsync("ai", CancellationToken.None);
+    var result = await repository.GetByIdAsync("ai", CancellationToken.None);
 }
 ```
 

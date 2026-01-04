@@ -58,7 +58,7 @@ public class SectionsEndpointsTests : IClassFixture<TechHubApiFactory>
     }
 
     [Fact]
-    public async Task GetSectionById_WithValidId_ReturnsSection()
+    public async Task GetSectionByName_WithValidName_ReturnsSection()
     {
         // Act
         var response = await _client.GetAsync("/api/sections/ai");
@@ -74,7 +74,7 @@ public class SectionsEndpointsTests : IClassFixture<TechHubApiFactory>
     }
 
     [Fact]
-    public async Task GetSectionById_WithInvalidId_ReturnsNotFound()
+    public async Task GetSectionByName_WithInvalidName_ReturnsNotFound()
     {
         // Act
         var response = await _client.GetAsync("/api/sections/invalid");
@@ -237,7 +237,7 @@ public class SectionsEndpointsTests : IClassFixture<TechHubApiFactory>
     [Theory]
     [InlineData("ai", "AI")]
     [InlineData("github-copilot", "GitHub Copilot")]
-    public async Task GetSectionById_ReturnsCorrectCategory(string sectionName, string expectedCategory)
+    public async Task GetSectionByName_ReturnsCorrectCategory(string sectionName, string expectedCategory)
     {
         // Act
         var response = await _client.GetAsync($"/api/sections/{sectionName}");

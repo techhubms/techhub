@@ -141,10 +141,10 @@ When renaming ANY identifier (parameters, variables, properties, methods, classe
 
 **Example**: Renaming "sectionId" → "sectionName" requires updates in:
 - Endpoint route parameters: `/api/sections/{sectionId}` → `/api/sections/{sectionName}`
-- Method parameters: `GetSectionById(string sectionId)` → `GetSectionById(string sectionName)`
+- Method parameters: `GetSectionById(string sectionId)` → `GetSectionByName(string sectionName)`
 - Variable names: `var sectionId = ...` → `var sectionName = ...`
 - XML comments: `<param name="sectionId">` → `<param name="sectionName">`
-- Test methods: `GetSectionById_ReturnsCorrectCategory(string sectionId, ...)` → `GetSectionById_ReturnsCorrectCategory(string sectionName, ...)`
+- Test methods: `GetSectionById_ReturnsCorrectCategory(string sectionId, ...)` → `GetSectionByName_ReturnsCorrectCategory(string sectionName, ...)`
 - Specifications: All mentions in tasks.md, data-model.md, etc.
 
 **Why This Matters**: Inconsistent naming creates confusion, breaks Swagger documentation, makes code harder to understand, and causes maintenance issues. ALWAYS use `grep_search` to find ALL occurrences before renaming.

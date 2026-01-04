@@ -127,6 +127,7 @@ internal static class ContentEndpoints
             RenderedHtml = item.RenderedHtml,
             ExternalUrl = item.ExternalUrl,
             VideoId = item.VideoId,
+            ViewingMode = item.ViewingMode,
             Url = $"/{sectionName}/{collection}/{itemId}"
         };
 
@@ -226,6 +227,7 @@ internal static class ContentEndpoints
             Excerpt = item.Excerpt,
             ExternalUrl = item.ExternalUrl,
             VideoId = item.VideoId,
+            ViewingMode = item.ViewingMode,
             Url = $"/{item.Collection}/{item.Id}" // Generate URL from collection and ID
         };
     }

@@ -50,7 +50,7 @@ public interface ISectionRepository
     /// <summary>
     /// Get section by unique identifier
     /// </summary>
-    Task<Section?> GetSectionByIdAsync(string id, CancellationToken ct = default);
+    Task<Section?> GetByIdAsync(string id, CancellationToken ct = default);
     
     /// <summary>
     /// Get section by URL slug (e.g., "github-copilot")

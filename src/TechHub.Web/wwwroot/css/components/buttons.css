@@ -28,7 +28,7 @@
 
 .collection-nav button:hover:not(:disabled) {
   background: var(--color-bg-emphasis);
-  border-color: var(--color-accent-primary);
+  border-color: var(--color-purple-medium);
   transform: translateX(4px);
 }
 

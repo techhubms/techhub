@@ -19,5 +19,6 @@ public record ContentItemDetailDto
     public required string Excerpt { get; init; }
     public string? ExternalUrl { get; init; }
     public string? VideoId { get; init; }
+    public string? ViewingMode { get; init; }
     public required string Url { get; init; }
 }

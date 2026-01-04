@@ -25,8 +25,8 @@ internal static class SectionsEndpoints
             .WithDescription("Returns all sections with their collections and metadata")
             .Produces<IEnumerable<SectionDto>>(StatusCodes.Status200OK);
 
-        group.MapGet("/{sectionName}", GetSectionById)
-            .WithName("GetSectionById")
+        group.MapGet("/{sectionName}", GetSectionByName)
+            .WithName("GetSectionByName")
             .WithSummary("Get section by name")
             .WithDescription("Returns a single section with its collections and metadata")
             .Produces<SectionDto>(StatusCodes.Status200OK)
@@ -100,7 +100,7 @@ internal static class SectionsEndpoints
     /// <summary>
     /// GET /api/sections/{sectionName} - Get section by name
     /// </summary>
-    private static async Task<Results<Ok<SectionDto>, NotFound>> GetSectionById(
+    private static async Task<Results<Ok<SectionDto>, NotFound>> GetSectionByName(
         string sectionName,
         ISectionRepository sectionRepository,
         CancellationToken cancellationToken)
@@ -274,6 +274,7 @@ internal static class SectionsEndpoints
             Excerpt = item.Excerpt,
             ExternalUrl = item.ExternalUrl,
             VideoId = item.VideoId,
+            ViewingMode = item.ViewingMode,
             Url = $"/{item.Collection}/{item.Id}"
         };
     }

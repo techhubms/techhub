@@ -2,18 +2,19 @@
 @using TechHub.Web.Services
 @inject TechHubApiClient ApiClient
 @inject NavigationManager Navigation
+@implements IDisposable
 @rendermode InteractiveServer
 
 <header class="site-header">
     <div class="header-content">
-        <a href="/" class="site-logo">
-            <h1>Tech Hub</h1>
+        <a href="/" class="site-logo" aria-label="Tech Hub Home">
+            <span class="logo-text">Tech Hub</span>
         </a>
         
         @if (sections != null && sections.Any())
         {
             <nav class="main-nav" aria-label="Primary navigation">
-                @foreach (var item in sections.Take(7))
+                @foreach (var item in sections.Take(8))
                 {
                     <a href="/@item.Id" class="nav-link @(IsActiveSection(item.Id) ? "active" : "")">
                         @item.Title
@@ -26,12 +27,15 @@
 
 @code {
     private IEnumerable<SectionDto>? sections;
+    private string currentSection = "";
 
     protected override async Task OnInitializedAsync()
     {
         try
         {
             sections = await ApiClient.GetAllSectionsAsync();
+            Navigation.LocationChanged += OnLocationChanged;
+            UpdateCurrentSection();
         }
         catch
         {
@@ -40,9 +44,29 @@
         }
     }
 
+    private void OnLocationChanged(object? sender, Microsoft.AspNetCore.Components.Routing.LocationChangedEventArgs e)
+    {
+        UpdateCurrentSection();
+        StateHasChanged();
+    }
+
+    private void UpdateCurrentSection()
+    {
+        var uri = new Uri(Navigation.Uri);
+        var path = uri.AbsolutePath.Trim('/');
+        
+        // Get the first segment - that's our section
+        var segments = path.Split('/', StringSplitOptions.RemoveEmptyEntries);
+        currentSection = segments.Length > 0 ? segments[0] : "";
+    }
+
     private bool IsActiveSection(string sectionId)
     {
-        var currentPath = Navigation.ToBaseRelativePath(Navigation.Uri);
-        return currentPath.StartsWith(sectionId, StringComparison.OrdinalIgnoreCase);
+        return string.Equals(currentSection, sectionId, StringComparison.OrdinalIgnoreCase);
+    }
+
+    public void Dispose()
+    {
+        Navigation.LocationChanged -= OnLocationChanged;
     }
 }

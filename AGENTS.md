@@ -241,6 +241,13 @@ When renaming ANY identifier, you **MUST** verify and update ALL occurrences acr
 
 **CRITICAL**: Write tests BEFORE implementing changes to ensure proper validation:
 
+**ALWAYS Start with Clean Slate**:
+
+- **BEFORE any new feature, change, or bugfix**: Run ALL tests first
+- **Fix ALL broken tests**: Ensure 100% pass rate before starting new work
+- **Clean slate principle**: Never build on top of failing tests
+- **Prevents cascading failures**: Broken tests mask new issues
+
 **Test-First Development**:
 
 - **For bug fixes**: Write a failing test that reproduces the bug FIRST

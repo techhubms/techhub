@@ -262,6 +262,7 @@ public sealed class FileBasedContentRepository : IContentRepository, IDisposable
             var canonicalUrl = _frontMatterParser.GetValue<string>(frontMatter, "canonical_url", string.Empty);
             var videoUrl = _frontMatterParser.GetValue<string>(frontMatter, "video_url", string.Empty);
             var altCollection = _frontMatterParser.GetValue<string>(frontMatter, "alt_collection", string.Empty);
+            var viewingMode = _frontMatterParser.GetValue<string>(frontMatter, "viewing_mode", string.Empty);
 
             // Generate ID from filename (without extension)
             var fileName = Path.GetFileNameWithoutExtension(filePath);
@@ -307,7 +308,8 @@ public sealed class FileBasedContentRepository : IContentRepository, IDisposable
                 RenderedHtml = renderedHtml,
                 Excerpt = excerpt,
                 ExternalUrl = canonicalUrl,
-                VideoId = videoId
+                VideoId = videoId,
+                ViewingMode = viewingMode
             };
 
             return item;

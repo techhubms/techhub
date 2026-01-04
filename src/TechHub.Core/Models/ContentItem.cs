@@ -72,6 +72,11 @@ public class ContentItem
     public string? VideoId { get; init; }
 
     /// <summary>
+    /// Viewing mode for content (internal or external)
+    /// </summary>
+    public string? ViewingMode { get; init; }
+
+    /// <summary>
     /// Computed property: Date as DateTime (UTC)
     /// </summary>
     public DateTime DateUtc => DateTimeOffset.FromUnixTimeSeconds(DateEpoch).UtcDateTime;

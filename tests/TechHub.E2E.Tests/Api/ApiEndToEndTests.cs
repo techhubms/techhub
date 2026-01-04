@@ -55,7 +55,7 @@ public class ApiEndToEndTests : IClassFixture<ApiTestFactory>
     }
 
     [Fact]
-    public async Task GetSectionById_ReturnsRealSection()
+    public async Task GetSectionByName_ReturnsRealSection()
     {
         // Act
         var response = await _client.GetAsync("/api/sections/ai");
