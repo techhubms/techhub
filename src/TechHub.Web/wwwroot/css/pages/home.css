@@ -9,16 +9,16 @@
 .home-container {
   max-width: 1400px;
   margin: 0 auto;
-  padding: 0 var(--spacing-3) var(--spacing-3);
+  padding: 0 var(--spacing-3) var(--spacing-4);
 }
 
 .sections-grid {
-  margin-bottom: var(--spacing-8);
+  margin-bottom: var(--spacing-6);
 }
 
 .section-grid-title {
   font-size: var(--font-size-3xl);
-  margin-bottom: var(--spacing-4);
+  margin: 0 0 var(--spacing-4) 0;
   color: var(--color-text-primary);
   font-weight: var(--font-weight-semibold);
 }
@@ -33,7 +33,7 @@
 /* Responsive Grid */
 @media (max-width: 768px) {
   .home-container {
-    padding: var(--spacing-4) var(--spacing-2);
+    padding: 0 var(--spacing-2) var(--spacing-3);
   }
   
   .grid {

@@ -42,9 +42,6 @@ For detailed progress, implementation status, and what's working now, see [MIGRA
 
 # Clean build and test first
 ./run.ps1 -Clean -Test
-
-# Don't open browser automatically
-./run.ps1 -NoBrowser
 ```
 
 **Stop the Application**: Press `Ctrl+C` in the terminal where the script is running.

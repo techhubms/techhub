@@ -1,62 +1,130 @@
 @using TechHub.Core.DTOs
 
-<article class="content-item-card">
-    <div class="content-header">
-        <h3 class="content-title">
-            <a href="@Item.Url">@Item.Title</a>
-        </h3>
-        <div class="content-meta">
-            <time datetime="@Item.DateIso">@FormatDate(Item.DateEpoch)</time>
-            @if (!string.IsNullOrWhiteSpace(Item.Author))
-            {
-                <span class="content-author">by @Item.Author</span>
-            }
-        </div>
-    </div>
-    
-    @if (!string.IsNullOrWhiteSpace(Item.Excerpt))
-    {
-        <div class="content-excerpt">
-            @((MarkupString)Item.Excerpt)
-        </div>
-    }
-    else if (!string.IsNullOrWhiteSpace(Item.Description))
-    {
-        <p class="content-description">@Item.Description</p>
-    }
-    
-    @if (Item.Tags.Any() || (ShowCollectionBadge && !string.IsNullOrWhiteSpace(Item.Collection)))
-    {
-        <div class="content-tags">
-            @if (ShowCollectionBadge && !string.IsNullOrWhiteSpace(Item.Collection))
-            {
-                <span class="collection-badge-white">@CapitalizeCollection(Item.Collection)</span>
-            }
-            @foreach (var tag in Item.Tags.Take(5))
-            {
-                <span class="tag">@tag</span>
-            }
-            @if (Item.Tags.Count > 5)
-            {
-                <span class="tag-more">+@(Item.Tags.Count - 5) more</span>
-            }
-        </div>
-    }
-    
-    @if (!string.IsNullOrWhiteSpace(Item.VideoId) || !string.IsNullOrWhiteSpace(Item.ExternalUrl))
-    {
-        <div class="content-footer">
-            @if (!string.IsNullOrWhiteSpace(Item.VideoId))
-            {
-                <span class="video-indicator">🎥 Video</span>
-            }
-            @if (!string.IsNullOrWhiteSpace(Item.ExternalUrl))
-            {
-                <span class="external-indicator">🔗 External</span>
-            }
-        </div>
-    }
-</article>
+@{
+    var targetUrl = !string.IsNullOrWhiteSpace(Item.ExternalUrl) ? Item.ExternalUrl : Item.Url;
+    var isExternal = !string.IsNullOrWhiteSpace(Item.ExternalUrl);
+}
+
+@if (isExternal)
+{
+    <a href="@targetUrl" class="content-item-card" target="_blank" rel="noopener noreferrer">
+        <article>
+            <div class="content-header">
+                <h3 class="content-title">@Item.Title</h3>
+                <div class="content-meta">
+                    <time datetime="@Item.DateIso">@FormatDate(Item.DateEpoch)</time>
+                    @if (!string.IsNullOrWhiteSpace(Item.Author))
+                    {
+                        <span class="content-author">by @Item.Author</span>
+                    }
+                </div>
+            </div>
+        
+        @if (!string.IsNullOrWhiteSpace(Item.Excerpt))
+        {
+            <div class="content-excerpt">
+                @((MarkupString)Item.Excerpt)
+            </div>
+        }
+        else if (!string.IsNullOrWhiteSpace(Item.Description))
+        {
+            <p class="content-description">@Item.Description</p>
+        }
+        
+        @if (Item.Tags.Any() || (ShowCollectionBadge && !string.IsNullOrWhiteSpace(Item.Collection)))
+        {
+            <div class="content-tags">
+                @if (ShowCollectionBadge && !string.IsNullOrWhiteSpace(Item.Collection))
+                {
+                    <span class="collection-badge-white">@CapitalizeCollection(Item.Collection)</span>
+                }
+                @foreach (var tag in Item.Tags.Take(5))
+                {
+                    <span class="tag">@tag</span>
+                }
+                @if (Item.Tags.Count > 5)
+                {
+                    <span class="tag-more">+@(Item.Tags.Count - 5) more</span>
+                }
+            </div>
+        }
+        
+        @if (!string.IsNullOrWhiteSpace(Item.VideoId) || !string.IsNullOrWhiteSpace(Item.ExternalUrl))
+        {
+            <div class="content-footer">
+                @if (!string.IsNullOrWhiteSpace(Item.VideoId))
+                {
+                    <span class="video-indicator">🎥 Video</span>
+                }
+                @if (!string.IsNullOrWhiteSpace(Item.ExternalUrl))
+                {
+                    <span class="external-indicator">🔗 External</span>
+                }
+            </div>
+        }
+        </article>
+    </a>
+}
+else
+{
+    <a href="@targetUrl" class="content-item-card">
+        <article>
+            <div class="content-header">
+                <h3 class="content-title">@Item.Title</h3>
+                <div class="content-meta">
+                    <time datetime="@Item.DateIso">@FormatDate(Item.DateEpoch)</time>
+                    @if (!string.IsNullOrWhiteSpace(Item.Author))
+                    {
+                        <span class="content-author">by @Item.Author</span>
+                    }
+                </div>
+            </div>
+        
+        @if (!string.IsNullOrWhiteSpace(Item.Excerpt))
+        {
+            <div class="content-excerpt">
+                @((MarkupString)Item.Excerpt)
+            </div>
+        }
+        else if (!string.IsNullOrWhiteSpace(Item.Description))
+        {
+            <p class="content-description">@Item.Description</p>
+        }
+        
+        @if (Item.Tags.Any() || (ShowCollectionBadge && !string.IsNullOrWhiteSpace(Item.Collection)))
+        {
+            <div class="content-tags">
+                @if (ShowCollectionBadge && !string.IsNullOrWhiteSpace(Item.Collection))
+                {
+                    <span class="collection-badge-white">@CapitalizeCollection(Item.Collection)</span>
+                }
+                @foreach (var tag in Item.Tags.Take(5))
+                {
+                    <span class="tag">@tag</span>
+                }
+                @if (Item.Tags.Count > 5)
+                {
+                    <span class="tag-more">+@(Item.Tags.Count - 5) more</span>
+                }
+            </div>
+        }
+        
+        @if (!string.IsNullOrWhiteSpace(Item.VideoId) || !string.IsNullOrWhiteSpace(Item.ExternalUrl))
+        {
+            <div class="content-footer">
+                @if (!string.IsNullOrWhiteSpace(Item.VideoId))
+                {
+                    <span class="video-indicator">🎥 Video</span>
+                }
+                @if (!string.IsNullOrWhiteSpace(Item.ExternalUrl))
+                {
+                    <span class="external-indicator">🔗 External</span>
+                }
+            </div>
+        }
+        </article>
+    </a>
+}
 
 @code {
     [Parameter, EditorRequired]

@@ -259,7 +259,7 @@ public sealed class FileBasedContentRepository : IContentRepository, IDisposable
             var excerpt = _frontMatterParser.GetValue<string>(frontMatter, "excerpt", string.Empty);
             var categories = _frontMatterParser.GetListValue(frontMatter, "categories");
             var tags = _frontMatterParser.GetListValue(frontMatter, "tags");
-            var imageUrl = _frontMatterParser.GetValue<string>(frontMatter, "image", string.Empty);
+            var canonicalUrl = _frontMatterParser.GetValue<string>(frontMatter, "canonical_url", string.Empty);
             var videoUrl = _frontMatterParser.GetValue<string>(frontMatter, "video_url", string.Empty);
             var altCollection = _frontMatterParser.GetValue<string>(frontMatter, "alt_collection", string.Empty);
 
@@ -306,7 +306,7 @@ public sealed class FileBasedContentRepository : IContentRepository, IDisposable
                 Tags = tags,
                 RenderedHtml = renderedHtml,
                 Excerpt = excerpt,
-                ExternalUrl = imageUrl, // Temporarily map imageUrl to ExternalUrl
+                ExternalUrl = canonicalUrl,
                 VideoId = videoId
             };
 

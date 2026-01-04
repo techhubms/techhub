@@ -82,13 +82,14 @@
 
 .nav-link:hover {
   background: var(--color-bg-emphasis);
-  color: var(--color-text-link-hover);
+  color: var(--color-purple-bright);
   text-decoration: none;
 }
 
 .nav-link.active {
-  background: var(--color-accent-primary);
+  background: var(--color-purple-dark);
   color: var(--color-text-on-emphasis);
+  border-bottom: 3px solid var(--color-purple-bright);
 }
 
 /* Main Content */
@@ -108,12 +109,13 @@
 .footer-content {
   max-width: 1400px;
   margin: 0 auto;
-  padding: var(--spacing-4) var(--spacing-3);
+  padding: var(--spacing-2) var(--spacing-3);
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
-  gap: var(--spacing-2);
+  gap: var(--spacing-3);
+  min-height: var(--touch-target-min-size);
 }
 
 .footer-content p {

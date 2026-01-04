@@ -202,8 +202,8 @@ When renaming ANY identifier, you **MUST** verify and update ALL occurrences acr
 
 **Running the Website Locally**:
 
-- **ALWAYS use `./run.ps1` to start the website** - it handles both API and Web projects correctly (with or without `-NoBrowser` flag)
-- **Start in background**: Use `./run.ps1 -NoBrowser` and let it run in the background
+- **ALWAYS use `./run.ps1` to start the website** - it handles both API and Web projects correctly
+- **Start in background**: Use `./run.ps1` and let it run in the background (browser never opens in DevContainer)
 - **Reuse terminal**: Once started, NEVER touch that terminal window again
 - **New operations**: Use a NEW terminal for any other commands while website is running
 - **To test**: Use Playwright MCP tools directly in GitHub Copilot Chat (no terminal commands needed)
@@ -463,13 +463,13 @@ When renaming ANY identifier, you **MUST** verify and update ALL occurrences acr
 **ALWAYS use the run.ps1 script**:
 
 ```powershell
-# Start in background without opening browser
-./run.ps1 -NoBrowser
+# Start both API and Web (browser never opens in DevContainer)
+./run.ps1
 ```
 
 **CRITICAL RULES**:
 
-✅ **DO**: Start website with `./run.ps1 -NoBrowser` in a dedicated terminal  
+✅ **DO**: Start website with `./run.ps1` in a dedicated terminal  
 ✅ **DO**: Let it run in the background - NEVER touch that terminal again  
 ✅ **DO**: Use Playwright MCP tools from GitHub Copilot Chat for all website testing  
 ✅ **DO**: Open NEW terminals for ANY other commands while website is running  
@@ -551,7 +551,6 @@ curl http://localhost:5184/api/sections
 
 **Common Options**:
 
-- `-NoBrowser` - Don't open browser automatically (ALWAYS use this for AI agents)
 - `-Clean` - Clean all build artifacts before building
 - `-Test` - Run all tests before starting
 - `-SkipBuild` - Skip build, use existing binaries
@@ -570,19 +569,19 @@ curl http://localhost:5184/api/sections
 
 ```powershell
 # Standard development start
-./run.ps1 -NoBrowser
+./run.ps1
 
 # Clean build and test first
-./run.ps1 -NoBrowser -Clean -Test
+./run.ps1 -Clean -Test
 
 # Only API for backend testing
-./run.ps1 -ApiOnly -NoBrowser
+./run.ps1 -ApiOnly
 
 # Only Web for frontend testing
-./run.ps1 -WebOnly -NoBrowser
+./run.ps1 -WebOnly
 
 # Skip build to save time
-./run.ps1 -NoBrowser -SkipBuild
+./run.ps1 -SkipBuild
 ```
 
 **Script Built-in Features**:

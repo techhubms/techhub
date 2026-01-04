@@ -41,19 +41,16 @@ echo "Installing/updating Aspire project templates..."
 dotnet new install Aspire.ProjectTemplates
 
 # ==================== Playwright ====================
-if ! npm list @playwright/test &> /dev/null; then
-    echo "Installing Playwright npm package..."
-    npm install @playwright/test
-else
-    echo "Playwright npm package already installed"
-fi
+echo "Installing Playwright browsers for .NET..."
+# Build the test project to ensure Playwright.CLI is restored
+cd /workspaces/techhub
+dotnet build tests/TechHub.E2E.Tests/TechHub.E2E.Tests.csproj
 
-if ! npx playwright --version &> /dev/null || [ ! -d "$HOME/.cache/ms-playwright/chromium-1200" ]; then
-    echo "Installing Playwright browsers..."
-    npx -y playwright install-deps chromium chrome
-    npx -y playwright install chromium chrome
+# Install browsers using the .NET Playwright CLI
+if [ -f "tests/TechHub.E2E.Tests/bin/Debug/net10.0/playwright.ps1" ]; then
+    pwsh tests/TechHub.E2E.Tests/bin/Debug/net10.0/playwright.ps1 install --with-deps chromium
 else
-    echo "Playwright browsers already installed"
+    echo "Warning: playwright.ps1 not found, browsers may not be installed"
 fi
 
 # ==================== PowerShell Modules ====================

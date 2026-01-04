@@ -22,7 +22,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: var(--spacing-3);
+  margin-bottom: var(--spacing-4);
   width: 100vw;
   margin-left: calc(50% - 50vw);
   margin-right: calc(50% - 50vw);
@@ -35,7 +35,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(135deg, rgba(107, 79, 184, 0.7) 0%, rgba(26, 26, 46, 0.85) 100%);
+  background: linear-gradient(135deg, rgba(107, 79, 184, 0.25) 0%, rgba(26, 26, 46, 0.35) 100%);
 }
 
 .section-header::after {
@@ -85,7 +85,7 @@
   margin: 0 auto;
   display: flex;
   gap: var(--spacing-4);
-  padding: var(--spacing-4) var(--spacing-3);
+  padding: 0 var(--spacing-3) var(--spacing-4) var(--spacing-3);
   align-items: flex-start;
 }
 
@@ -120,7 +120,8 @@
   grid-template-areas:
     "header header"
     "nav content";
-  gap: 0;
+  column-gap: var(--spacing-4);
+  row-gap: 0;
   max-width: 1400px;
   margin: 0 auto;
   min-height: calc(100vh - var(--header-height, 60px) - var(--footer-height, 100px));
@@ -133,12 +134,13 @@
 
 .section-page-grid > *:nth-child(2) {
   grid-area: nav;
-  padding: 0 0 var(--spacing-3) var(--spacing-3);
+  padding: 0 0 var(--spacing-4) var(--spacing-3);
 }
 
 .section-page-grid > *:nth-child(3) {
   grid-area: content;
-  padding: 0 var(--spacing-3) var(--spacing-3) 0;
+  padding: 0 var(--spacing-3) var(--spacing-4) 0;
+  min-width: 0;
 }
 
 /* Responsive Section Layout */

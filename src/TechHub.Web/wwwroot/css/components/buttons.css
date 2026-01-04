@@ -33,15 +33,15 @@
 }
 
 .collection-nav button.active {
-  background: var(--color-accent-primary);
+  background: var(--color-purple-dark);
   color: var(--color-text-on-emphasis);
-  border-color: var(--color-accent-primary);
+  border-color: var(--color-purple-bright);
   font-weight: var(--font-weight-semibold);
 }
 
 .collection-nav button.active:hover {
-  background: var(--color-accent-primary);
-  border-color: var(--color-accent-primary);
+  background: var(--color-purple-medium);
+  border-color: var(--color-purple-bright);
   transform: none;
 }
 

@@ -15,9 +15,11 @@
                 <div class="section-collections">
                     @foreach (var collection in Section.Collections.Where(c => !string.IsNullOrEmpty(c.Collection)).Take(4))
                     {
-                        <span class="collection-badge">
-                            @collection.Title
-                        </span>
+                        <a href="/@Section.Id/@collection.Collection" class="collection-badge-link" @onclick="HandleCollectionClick" @onclick:stopPropagation="true">
+                            <span class="collection-badge">
+                                @collection.Title
+                            </span>
+                        </a>
                     }
                     @if (Section.Collections.Count(c => !string.IsNullOrEmpty(c.Collection)) > 4)
                     {
@@ -32,5 +34,11 @@
 @code {
     [Parameter, EditorRequired]
     public SectionDto Section { get; set; } = null!;
+
+    private void HandleCollectionClick()
+    {
+        // Prevent event from bubbling to parent link
+        // Navigation is handled by the anchor tag
+    }
 }
 

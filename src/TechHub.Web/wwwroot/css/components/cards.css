@@ -32,7 +32,7 @@
 
 .section-card:hover {
   box-shadow: var(--shadow-lg);
-  border-color: var(--color-card-hover-border);
+  border-color: var(--color-purple-medium);
 }
 
 .section-card-header {
@@ -92,6 +92,27 @@
   font-weight: var(--font-weight-medium);
 }
 
+.collection-badge-link {
+  text-decoration: none;
+  display: inline-block;
+  transition: transform var(--duration-fast) var(--easing-ease);
+}
+
+.collection-badge-link:hover {
+  text-decoration: none;
+  transform: scale(1.05);
+}
+
+.collection-badge-link .collection-badge {
+  transition: all var(--duration-fast) var(--easing-ease);
+}
+
+.collection-badge-link:hover .collection-badge {
+  background: var(--color-purple-medium);
+  color: var(--color-text-on-emphasis);
+  border-color: var(--color-purple-medium);
+}
+
 .collection-badge-white {
   background: var(--color-bg-emphasis);
   color: var(--color-text-secondary);
@@ -113,12 +134,15 @@
   height: 100%;
   display: flex;
   flex-direction: column;
+  text-decoration: none;
+  color: inherit;
 }
 
 .content-item-card:hover {
   box-shadow: var(--shadow-lg);
-  border-color: var(--color-card-hover-border);
+  border-color: var(--color-purple-medium);
   transform: translateY(-2px);
+  text-decoration: none;
 }
 
 .content-header {
@@ -130,16 +154,12 @@
   font-size: var(--font-size-xl);
   font-weight: var(--font-weight-semibold);
   line-height: var(--line-height-tight);
-}
-
-.content-title a {
   color: var(--color-text-primary);
   transition: color var(--duration-fast) var(--easing-ease);
 }
 
-.content-title a:hover {
-  color: var(--color-accent-primary);
-  text-decoration: none;
+.content-item-card:hover .content-title {
+  color: var(--color-purple-bright);
 }
 
 .content-meta {
@@ -167,7 +187,7 @@
 }
 
 .tag {
-  background: var(--color-accent-primary);
+  background: var(--color-purple-dark);
   color: var(--color-text-on-emphasis);
   padding: 0.25rem var(--spacing-2);
   border-radius: var(--radius-full);
@@ -176,8 +196,8 @@
   transition: background var(--duration-fast) var(--easing-ease);
 }
 
-.tag:hover {
-  background: var(--color-accent-primary-emphasis);
+.content-item-card:hover .tag {
+  background: var(--color-purple-bright);
 }
 
 .tag-more {

@@ -32,9 +32,6 @@
 .PARAMETER WebPort
     Port for the Web server (default: 5184).
 
-.PARAMETER NoBrowser
-    Don't automatically open the browser.
-
 .PARAMETER Release
     Build and run in Release configuration instead of Debug.
 
@@ -58,8 +55,8 @@
     Only runs the API on port 8080.
 
 .EXAMPLE
-    ./run.ps1 -SkipBuild -NoBrowser
-    Runs both projects with existing binaries, doesn't open browser.
+    ./run.ps1 -SkipBuild
+    Runs both projects with existing binaries.
 
 .NOTES
     Author: Tech Hub Team
@@ -91,9 +88,6 @@ param(
 
     [Parameter(Mandatory = $false)]
     [int]$WebPort = 5184,
-
-    [Parameter(Mandatory = $false)]
-    [switch]$NoBrowser,
 
     [Parameter(Mandatory = $false)]
     [switch]$Release,
@@ -279,12 +273,6 @@ function Start-WebProject {
         Write-Info "Web running at: $webUrl"
         Write-Info "Press Ctrl+C to stop"
         
-        # Open browser if requested
-        if (-not $NoBrowser) {
-            Start-Sleep -Seconds 2
-            Start-Process $webUrl
-        }
-        
         dotnet run --project $webProjectPath --no-build --configuration $configuration
     }
     finally {
@@ -345,11 +333,6 @@ function Start-BothProjects {
         # Wait for Web to start
         Write-Info "Waiting for Web to start..."
         Start-Sleep -Seconds 3
-        
-        # Open browser if requested
-        if (-not $NoBrowser) {
-            Start-Process $webUrl
-        }
         
         Write-Success "Both projects started"
         Write-Info "`nPress Ctrl+C to stop all processes"
