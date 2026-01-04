@@ -39,7 +39,7 @@ public class CollectionNavTests : TestContext
 
         // Act
         var cut = RenderComponent<CollectionNav>(parameters => parameters
-            .Add(p => p.SectionId, "ai")
+            .Add(p => p.SectionName, "ai")
             .Add(p => p.SelectedCollection, "all")
             .Add(p => p.IsLoadingContent, false)
             .Add(p => p.OnCollectionChange, EventCallback.Factory.Create<string>(this, _ => { })));
@@ -69,7 +69,7 @@ public class CollectionNavTests : TestContext
 
         // Act
         var cut = RenderComponent<CollectionNav>(parameters => parameters
-            .Add(p => p.SectionId, "ai")
+            .Add(p => p.SectionName, "ai")
             .Add(p => p.SelectedCollection, "all")
             .Add(p => p.IsLoadingContent, false)
             .Add(p => p.OnCollectionChange, EventCallback.Factory.Create<string>(this, _ => { })));
@@ -185,7 +185,7 @@ public class CollectionNavTests : TestContext
 
         // Act
         var cut = RenderComponent<CollectionNav>(parameters => parameters
-            .Add(p => p.SectionId, "ai")
+            .Add(p => p.SectionName, "ai")
             .Add(p => p.SelectedCollection, "all")
             .Add(p => p.IsLoadingContent, false)
             .Add(p => p.OnCollectionChange, EventCallback.Factory.Create<string>(this, _ => { })));

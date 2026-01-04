@@ -24,7 +24,7 @@
                 <button @onclick="@(() => OnCollectionSelected("all"))" 
                         class="@(SelectedCollection == "all" ? "active" : "")"
                         disabled="@IsLoadingContent">
-                    All
+                    Everything
                 </button>
             </li>
             @foreach (var collection in collections)
