@@ -22894,5 +22894,11 @@
     "canonical_url": "https://www.youtube.com/watch?v=daDtYv94bN8",
     "reason": "Succesfully added: Assigned 'AI' category because the video focuses on AI-powered features and extensions within Azure Managed PostgreSQL, including semantic search, embeddings, and integrations with tools like GitHub Copilot (AI rules 1, 3, 4, and 5). 'Azure' category is assigned as all AI features and integrations are presented within the context of Azure Managed PostgreSQL (Azure rules 1 and 4). 'Coding' is included due to discussion of developer tooling (VSCode, Copilot), coding practices for PostgreSQL, and technical walkthroughs relevant for database developers (Coding rules 2 and 4). GitHub Copilot is discussed as an integration point but not as the primary focus; the content covers a wide array of AI and coding topics relevant in the Azure ecosystem.",
     "timestamp": "2026-01-05 10:04:07 +00:00"
+  },
+  {
+    "canonical_url": "https://www.youtube.com/watch?v=dxDqelvVc2U",
+    "collection": "videos",
+    "reason": "Succesfully added: The 'AI' category is assigned because the content focuses heavily on AI-powered coding assistance and agentic development, specifically through GitHub Copilot and VS Code agent features (AI inclusion rules 1, 2, 4). 'GitHub Copilot' is applied as the lab directly demonstrates advanced use cases and customization with Copilot in developer workflows (GitHub Copilot rules 1, 2, 4). 'Coding' is included because the session involves hands-on programming, customizing code results, and integrating new application features via VS Code (Coding rules 1, 2, 4). Azure is not explicitly detailed as a core platform here, so has not been included. There are no generic exclusion rules triggered—the session is technical, English-language, non-biographical, and focused on developer tools and coding.",
+    "timestamp": "2026-01-05 13:17:08 +00:00"
   }
 ]
