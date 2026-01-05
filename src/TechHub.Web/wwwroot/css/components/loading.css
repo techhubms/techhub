@@ -45,48 +45,105 @@
   border-radius: var(--radius-md);
 }
 
+/* Skeleton Section Cards (Homepage) */
+.skeleton-card-link {
+  display: block;
+  pointer-events: none;
+}
+
+.skeleton-section-card {
+  background: var(--color-card-bg);
+  border: 1px solid var(--color-card-border);
+  border-radius: var(--radius-lg);
+}
+
+.skeleton-section-card .section-card-header {
+  height: 140px;
+  width: 100%;
+  margin-bottom: 0;
+  flex-shrink: 0;
+  /* Match real card header layout */
+  display: flex;
+  align-items: flex-end;
+}
+
+.skeleton-section-card .section-overlay {
+  /* Match real card overlay layout */
+  width: 100%;
+  padding: var(--spacing-3);
+  display: flex;
+  align-items: flex-end;
+}
+
+.skeleton-section-card .section-body {
+  padding: var(--spacing-3);
+}
+
+.skeleton-section-card .skeleton-description {
+  height: 16px;
+  width: 100%;
+  margin-bottom: var(--spacing-2);
+}
+
+.skeleton-section-card .skeleton-collections {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-1);
+}
+
+.skeleton-section-card .skeleton-badge {
+  height: 24px;
+  width: 60px;
+  border-radius: var(--radius-full);
+}
+
 /* Skeleton Content Cards */
 .skeleton-card {
   background: var(--color-card-bg);
   border: 1px solid var(--color-card-border);
   border-radius: var(--radius-lg);
-  padding: var(--spacing-4);
-  margin-bottom: var(--spacing-4);
+  padding: var(--spacing-3);
+  box-shadow: var(--shadow-md);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  min-height: 265px; /* Minimum height to match typical content cards */
 }
 
 .skeleton-card-title {
   height: 28px;
   width: 70%;
-  margin-bottom: var(--spacing-3);
+  margin-bottom: var(--spacing-1);
 }
 
 .skeleton-card-meta {
   height: 16px;
   width: 40%;
-  margin-bottom: var(--spacing-3);
+  margin-bottom: var(--spacing-2);
 }
 
 .skeleton-card-description {
   height: 16px;
   width: 100%;
   margin-bottom: var(--spacing-2);
+  flex: 1;
 }
 
-.skeleton-card-description:last-child {
+.skeleton-card-description:last-of-type {
   width: 80%;
-  margin-bottom: 0;
 }
 
 .skeleton-card-tags {
   display: flex;
-  gap: var(--spacing-2);
-  margin-top: var(--spacing-3);
+  gap: var(--spacing-1);
+  margin-top: auto;
+  padding-top: var(--spacing-2);
 }
 
 .skeleton-card-tag {
   height: 24px;
   width: 60px;
-  border-radius: 12px;
+  border-radius: var(--radius-full);
 }
 
 /* Skeleton Grid Layout */

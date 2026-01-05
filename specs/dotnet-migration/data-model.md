@@ -530,7 +530,7 @@ public static class SectionExtensions
 Estimated memory usage for typical content volume:
 
 - 1000 content items × ~10 KB average = ~10 MB
-- 7 sections × ~1 KB = ~7 KB  
+- 8 sections × ~1 KB = ~8 KB  
 - Total cached data: ~10-15 MB
 
 **Acceptable for current scale** - No distributed cache needed until traffic exceeds 10k concurrent users.

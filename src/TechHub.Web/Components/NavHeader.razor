@@ -1,6 +1,6 @@
 @using TechHub.Core.DTOs
 @using TechHub.Web.Services
-@inject TechHubApiClient ApiClient
+@inject SectionCache SectionCache
 @inject NavigationManager Navigation
 @implements IDisposable
 @rendermode InteractiveServer
@@ -11,37 +11,24 @@
             <span class="logo-text">Tech Hub</span>
         </a>
         
-        @if (sections != null && sections.Any())
-        {
-            <nav class="main-nav" aria-label="Primary navigation">
-                @foreach (var item in sections.Take(8))
-                {
-                    <a href="/@item.Name" class="nav-link @(IsActiveSection(item.Name) ? "active" : "")">
-                        @item.Title
-                    </a>
-                }
-            </nav>
-        }
+        <nav class="main-nav" aria-label="Primary navigation">
+            @foreach (var item in SectionCache.Sections.Take(8))
+            {
+                <a href="/@item.Name" class="nav-link @(IsActiveSection(item.Name) ? "active" : "")">
+                    @item.Title
+                </a>
+            }
+        </nav>
     </div>
 </header>
 
 @code {
-    private IEnumerable<SectionDto>? sections;
     private string currentSection = "";
 
-    protected override async Task OnInitializedAsync()
+    protected override void OnInitialized()
     {
-        try
-        {
-            sections = await ApiClient.GetAllSectionsAsync();
-            Navigation.LocationChanged += OnLocationChanged;
-            UpdateCurrentSection();
-        }
-        catch
-        {
-            // Silently fail - navigation will just not show sections
-            sections = Array.Empty<SectionDto>();
-        }
+        Navigation.LocationChanged += OnLocationChanged;
+        UpdateCurrentSection();
     }
 
     private void OnLocationChanged(object? sender, Microsoft.AspNetCore.Components.Routing.LocationChangedEventArgs e)

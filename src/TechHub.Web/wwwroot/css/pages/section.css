@@ -100,6 +100,8 @@
   font-size: var(--font-size-3xl);
   font-weight: var(--font-weight-semibold);
   color: var(--color-text-primary);
+  /* Always left-aligned to prevent shift during loading */
+  text-align: left;
 }
 
 .collection-list {

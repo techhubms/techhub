@@ -1,4 +1,6 @@
+using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Options;
+using Moq;
 using TechHub.Core.Configuration;
 using TechHub.Core.Interfaces;
 using TechHub.Infrastructure.Repositories;
@@ -44,11 +46,16 @@ public class FileBasedContentRepositoryTests : IDisposable
             Performance = new PerformanceSettings()
         };
 
+        // Setup: Create mock IHostEnvironment
+        var mockEnvironment = new Mock<IHostEnvironment>();
+        mockEnvironment.Setup(e => e.ContentRootPath).Returns(_tempDirectory);
+
         // Setup: Create dependencies
         _markdownService = new MarkdownService();
         _repository = new FileBasedContentRepository(
             Options.Create(_settings),
-            _markdownService
+            _markdownService,
+            mockEnvironment.Object
         );
     }
 

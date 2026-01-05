@@ -60,9 +60,9 @@ public class CollectionNavTests : TestContext
 
         // Assert
         var buttons = cut.FindAll("button");
-        Assert.Equal(4, buttons.Count); // "Everything" + 3 collections
+        Assert.Equal(4, buttons.Count); // "All" + 3 collections
         
-        Assert.Contains("Everything", buttons[0].TextContent);
+        Assert.Contains("All", buttons[0].TextContent);
         Assert.Contains("News", buttons[1].TextContent);
         Assert.Contains("Videos", buttons[2].TextContent);
         Assert.Contains("Blogs", buttons[3].TextContent);

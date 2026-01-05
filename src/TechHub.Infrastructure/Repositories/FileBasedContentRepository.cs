@@ -1,3 +1,4 @@
+using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Options;
 using TechHub.Core.Configuration;
 using TechHub.Core.Interfaces;
@@ -30,13 +31,60 @@ public sealed class FileBasedContentRepository : IContentRepository, IDisposable
 
     public FileBasedContentRepository(
         IOptions<AppSettings> settings,
-        IMarkdownService markdownService)
+        IMarkdownService markdownService,
+        IHostEnvironment environment)
     {
         ArgumentNullException.ThrowIfNull(settings);
         ArgumentNullException.ThrowIfNull(markdownService);
-        _basePath = settings.Value.Content.CollectionsPath;
+        ArgumentNullException.ThrowIfNull(environment);
+        
+        var configuredPath = settings.Value.Content.CollectionsPath;
+        
+        // Resolve relative paths to absolute paths based on content root
+        // In Development/Test: ContentRootPath = /workspaces/techhub/src/TechHub.Api
+        // We need to go up to solution root to find collections/
+        if (Path.IsPathRooted(configuredPath))
+        {
+            _basePath = configuredPath;
+        }
+        else
+        {
+            // Navigate up from API project to solution root, then to collections
+            var solutionRoot = FindSolutionRoot(environment.ContentRootPath);
+            _basePath = Path.Combine(solutionRoot, configuredPath);
+        }
+        
+        // Verify the path exists to prevent silent failures
+        if (!Directory.Exists(_basePath))
+        {
+            throw new DirectoryNotFoundException(
+                $"Collections directory not found: {_basePath}. " +
+                $"ContentRootPath: {environment.ContentRootPath}, " +
+                $"Configured path: {configuredPath}");
+        }
+        
         _frontMatterParser = new FrontMatterParser();
         _markdownService = markdownService;
+    }
+    
+    /// <summary>
+    /// Find solution root by walking up directory tree looking for TechHub.slnx
+    /// </summary>
+    private static string FindSolutionRoot(string startPath)
+    {
+        var directory = new DirectoryInfo(startPath);
+        while (directory != null)
+        {
+            if (File.Exists(Path.Combine(directory.FullName, "TechHub.slnx")))
+            {
+                return directory.FullName;
+            }
+
+            directory = directory.Parent;
+        }
+        
+        // Fallback: assume startPath is already at solution root
+        return startPath;
     }
 
     /// <summary>

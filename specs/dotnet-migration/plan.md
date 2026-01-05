@@ -7,7 +7,7 @@
 
 ## Summary
 
-Migrate Tech Hub content platform from Jekyll/Ruby to modern .NET/Blazor architecture with separate API and frontend, optimized for performance, accessibility, and maintainability. The system organizes content into 7 sections with 5 collection types, supports client-side filtering (date/tags/search), generates RSS feeds, and implements infinite scroll pagination. Built using .NET 10, Blazor SSR + WASM, .NET Aspire orchestration, with deployment to Azure Container Apps.
+Migrate Tech Hub content platform from Jekyll/Ruby to modern .NET/Blazor architecture with separate API and frontend, optimized for performance, accessibility, and maintainability. The system organizes content into 8 sections (including "Everything") with 5 collection types, supports client-side filtering (date/tags/search), generates RSS feeds, and implements infinite scroll pagination. Built using .NET 10, Blazor SSR + WASM, .NET Aspire orchestration, with deployment to Azure Container Apps.
 
 ## Technical Context
 
@@ -19,7 +19,7 @@ Migrate Tech Hub content platform from Jekyll/Ruby to modern .NET/Blazor archite
 **Project Type**: Web application with separate API backend + Blazor frontend (monorepo)  
 **Performance Goals**: Lighthouse >95, LCP <2.5s, FID <100ms, CLS <0.1, API response <50ms p95 (cached)  
 **Constraints**: WCAG 2.1 AA compliance, <200ms TTFB p95, works without JavaScript (progressive enhancement)  
-**Scale/Scope**: 7 sections, 5 collections, ~1000 content items initially, auto-scale 1-10 instances, 10k concurrent users max
+**Scale/Scope**: 8 sections, 5 collections, ~1000 content items initially, auto-scale 1-10 instances, 10k concurrent users max
 
 ## Constitution Check
 

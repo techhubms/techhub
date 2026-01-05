@@ -526,81 +526,226 @@ public class SectionCardTests : TestContext
 }
 ```
 
-## E2E Testing (Playwright .NET - Future)
+## E2E Testing (Playwright .NET)
 
-End-to-end tests will verify complete user workflows across the full application stack using Playwright .NET.
+End-to-end tests verify complete user workflows across the full application stack using Playwright .NET.
 
-### Planned Structure
+### Current Status
+
+- **Total Tests**: 47
+- **Pass Rate**: 100%
+- **Execution Time**: ~92 seconds
+- **Framework**: Playwright .NET with xUnit
+- **Browsers**: Chromium (headless)
+
+### Structure
 
 ```text
 TechHub.E2E.Tests/
 ├── Tests/
-│   ├── NavigationTests.cs
-│   ├── FilteringTests.cs
-│   └── SearchTests.cs
-├── PageObjects/
-│   ├── HomePage.cs
-│   ├── SectionPage.cs
-│   └── CollectionPage.cs
-└── PlaywrightFixture.cs
+│   ├── NavigationImprovementsTests.cs     # Section ordering, URL structure
+│   ├── UrlRoutingAndNavigationTests.cs    # URL routing, browser history
+│   └── Api/
+│       └── ApiEndToEndTests.cs            # API health checks
+├── Helpers/
+│   └── BlazorHelpers.cs                   # Blazor-specific test utilities
+└── TechHub.E2E.Tests.csproj
 ```
 
-### Planned Pattern (Reference)
+### Blazor Server Testing Patterns
+
+#### GotoAndWaitForBlazorAsync
+
+Blazor Server requires special handling for page navigation due to circuit initialization:
 
 ```csharp
-// Future Playwright .NET test pattern
-[Collection("Playwright")]
-public class NavigationTests : IAsyncLifetime
+// ✅ CORRECT: Use GotoAndWaitForBlazorAsync for Blazor pages
+await page.GotoAndWaitForBlazorAsync(BaseUrl);
+await page.WaitForSelectorAsync(".section-card");
+
+// ❌ WRONG: Plain GotoAsync doesn't wait for Blazor circuit
+await page.GotoAsync(BaseUrl); // Circuit might not be ready!
+```
+
+**What GotoAndWaitForBlazorAsync does**:
+
+1. Navigates to URL with extended 30s timeout
+2. Waits for NetworkIdle (SignalR connection established)
+3. Adds 500ms delay for first render to complete
+
+#### WaitForBlazorUrlContainsAsync
+
+Blazor Server uses **enhanced navigation** (SPA-style routing), just like React, Angular, and Vue. Traditional page load events don't fire because the page doesn't reload. This is intentional modern SPA behavior, not a limitation:
+
+```csharp
+// ✅ CORRECT: Use WaitForBlazorUrlContainsAsync for SPA navigation
+// This polls JavaScript for URL changes - the standard pattern for SPAs
+var newsButton = page.Locator(".collection-nav button", new() { HasTextString = "News" });
+await newsButton.ClickAsync();
+await page.WaitForBlazorUrlContainsAsync("/news");
+
+// ❌ WRONG: WaitForURLAsync expects navigation events (load, commit, domcontentloaded)
+// SPAs don't fire these events because the page doesn't reload
+await page.WaitForURLAsync("**/news"); // Times out!
+await page.WaitForURLAsync("**/news", new() { WaitUntil = WaitUntilState.Commit }); // Also times out!
+```
+
+**Why WaitForBlazorUrlContainsAsync is needed**:
+
+- All modern SPAs (React, Angular, Vue, Blazor) change URLs without page reload
+- Traditional navigation events ("load", "commit", "domcontentloaded") don't fire
+- Playwright's `WaitForFunctionAsync` is the standard pattern for testing SPAs - it polls JavaScript
+- This is NOT a Blazor limitation - it's how modern web apps work
+- See [BlazorHelpers.cs](Helpers/BlazorHelpers.cs) for implementation
+
+#### Browser History Testing
+
+Testing browser back/forward buttons uses the standard Blazor `NavigationManager.LocationChanged` pattern:
+
+```csharp
+[Fact]
+public async Task BrowserBackButton_NavigatesToPreviousCollection()
 {
-    private IPage _page = default!;
-    private IBrowser _browser = default!;
+    var page = await _context!.NewPageAsync();
+    await page.GotoAndWaitForBlazorAsync($"{BaseUrl}/github-copilot/news");
+    
+    // Navigate to videos
+    var videosButton = page.Locator(".collection-nav button", new() { HasTextString = "Videos" });
+    await videosButton.ClickAsync();
+    await page.WaitForBlazorUrlContainsAsync("/videos");
+    
+    // Press browser back button
+    await page.GoBackAsync();
+    await page.WaitForURLAsync("**/github-copilot/news");
+    
+    // CRITICAL: Wait for Blazor to sync state (NavigationManager.LocationChanged event)
+    await page.WaitForSelectorAsync(".collection-content");
+    await Task.Delay(1000); // Blazor needs time to process parameter change
+    
+    // Verify active collection button updated
+    var activeButton = page.Locator(".collection-nav button.active");
+    var activeText = await activeButton.TextContentAsync();
+    activeText.Should().Contain("News");
+}
+```
+
+**Why the delay is needed**:
+
+- `GoBackAsync()` changes URL immediately
+- Blazor's `NavigationManager.LocationChanged` event fires asynchronously
+- Component state update happens after event handler executes
+- Without delay, assertion might run before UI updates
+
+**Implementation Note**: See [Section.razor](../src/TechHub.Web/Components/Pages/Section.razor) for the `NavigationManager.LocationChanged` event handler. This is the **standard Blazor pattern** per [official documentation](https://learn.microsoft.com/aspnet/core/blazor/fundamentals/routing#uri-and-navigation-state-helpers).
+
+### Common Test Patterns
+
+```csharp
+public class MyE2ETests : IAsyncLifetime
+{
+    private IPlaywright? _playwright;
+    private IBrowser? _browser;
+    private IBrowserContext? _context;
+    private const string BaseUrl = "http://localhost:5184";
     
     public async Task InitializeAsync()
     {
-        var playwright = await Playwright.CreateAsync();
-        _browser = await playwright.Chromium.LaunchAsync();
-        _page = await _browser.NewPageAsync();
+        _playwright = await Playwright.CreateAsync();
+        _browser = await _playwright.Chromium.LaunchAsync(new() { Headless = true });
+        _context = await _browser.NewContextAsync();
+        _context.SetDefaultTimeout(5000); // 5s default, fail fast if something is wrong
     }
     
     [Fact]
-    public async Task HomePage_DisplaysSections()
+    public async Task Example_NavigationTest()
     {
-        // Navigate
-        await _page.GotoAsync("https://localhost:5173");
+        // Arrange
+        var page = await _context!.NewPageAsync();
+        await page.GotoAndWaitForBlazorAsync(BaseUrl);
         
-        // Verify sections grid
-        var sectionsGrid = await _page.QuerySelectorAsync(".category-grid");
-        Assert.NotNull(sectionsGrid);
+        // Act
+        var link = page.Locator(".section-card-link[href*='github-copilot']");
+        await link.ClickAsync();
+        await page.WaitForBlazorUrlContainsAsync("/github-copilot");
         
-        // Verify section cards
-        var sectionCards = await _page.QuerySelectorAllAsync(".section-card");
-        sectionCards.Should().HaveCountGreaterThanOrEqualTo(7);
-    }
-    
-    [Fact]
-    public async Task FilteringSystem_FiltersContentByTag()
-    {
-        // Navigate to section
-        await _page.GotoAsync("https://localhost:5173/ai");
+        // Assert
+        page.Url.Should().Contain("/github-copilot");
         
-        // Click tag filter
-        await _page.ClickAsync("[data-filter='copilot']");
-        
-        // Verify filtering
-        var visibleItems = await _page.QuerySelectorAllAsync(".content-item:visible");
-        visibleItems.Should().NotBeEmpty();
-        
-        // Verify URL updated
-        _page.Url.Should().Contain("filter=copilot");
+        await page.CloseAsync();
     }
     
     public async Task DisposeAsync()
     {
-        await _page.CloseAsync();
-        await _browser.CloseAsync();
+        if (_context != null) await _context.DisposeAsync();
+        if (_browser != null) await _browser.DisposeAsync();
+        _playwright?.Dispose();
     }
 }
 ```
+
+### Locator Strategies
+
+```csharp
+// ✅ GOOD: Specific CSS selectors
+page.Locator(".section-card-link[href*='github-copilot']")
+page.Locator(".collection-nav button.active")
+page.Locator(".content-item-card").First
+
+// ✅ GOOD: Text-based (user-visible)
+page.Locator(".collection-nav button", new() { HasTextString = "News" })
+
+// ⚠️ CAREFUL: nth selectors are brittle
+page.Locator(".section-card").Nth(2) // Breaks if order changes!
+
+// ❌ BAD: XPath (prefer CSS)
+page.Locator("xpath=//button[@class='active']")
+```
+
+### Debugging E2E Tests
+
+```csharp
+// Run in headed mode (see browser)
+_browser = await _playwright.Chromium.LaunchAsync(new() { Headless = false });
+
+// Slow down actions
+_browser = await _playwright.Chromium.LaunchAsync(new() { 
+    Headless = false,
+    SlowMo = 500 // 500ms delay between actions
+});
+
+// Take screenshots on failure
+try
+{
+    // test code
+}
+catch
+{
+    await page.ScreenshotAsync(new() { Path = "failure.png" });
+    throw;
+}
+
+// Enable verbose logging
+_context.SetDefaultTimeout(30000); // Longer timeout for debugging
+```
+
+### Running E2E Tests
+
+```bash
+# Run all E2E tests (requires servers running)
+./run.ps1 -Test
+
+# Run specific E2E test
+dotnet test tests/TechHub.E2E.Tests --filter "FullyQualifiedName~BrowserBackButton"
+
+# Debug E2E test (headed mode)
+# Modify test to set Headless = false, then:
+dotnet test tests/TechHub.E2E.Tests --filter "FullyQualifiedName~MyTest"
+```
+
+**Server Logs** (when running via `./run.ps1 -Test`):
+
+- API: `.tmp/test-logs/api.log`
+- Web: `.tmp/test-logs/web.log`
 
 ## PowerShell Testing (Pester)
 

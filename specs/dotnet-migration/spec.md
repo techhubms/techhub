@@ -175,7 +175,7 @@ As a site administrator, I want to track user behavior, performance metrics, and
 
 **Content Organization & Display**
 
-- **FR-001**: System MUST organize content into 7 sections (AI, GitHub Copilot, Azure, ML, .NET, DevOps, Security)
+- **FR-001**: System MUST organize content into 8 sections (Everything, AI, GitHub Copilot, Azure, ML, .NET, DevOps, Security)
 - **FR-002**: System MUST support 5 content collections (News, Blogs, Videos, Community, Roundups)
 - **FR-003**: System MUST read configuration from sections.json as single source of truth for site structure
 - **FR-004**: System MUST render markdown content to semantic HTML with proper heading hierarchy

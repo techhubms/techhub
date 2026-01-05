@@ -1,6 +1,8 @@
 @using TechHub.Core.DTOs
 @using Microsoft.JSInterop
 @inject IJSRuntime JS
+@inject NavigationManager Navigation
+@rendermode InteractiveServer
 
 <nav class="collection-nav">
     <h2>Collections</h2>
@@ -12,7 +14,7 @@
                 <button @onclick="@(() => OnCollectionSelected("all"))" 
                         class="@(SelectedCollection == "all" ? "active" : "")"
                         disabled="@IsLoadingContent">
-                    Everything
+                    All
                 </button>
             </li>
             @foreach (var collection in Section.Collections)
@@ -45,11 +47,8 @@
 
     private async Task OnCollectionSelected(string collectionName)
     {
-        // Update URL using JavaScript history API
-        if (JS != null)
-        {
-            await JS.InvokeVoidAsync("history.pushState", null, "", $"/{Section.Name}/{collectionName}");
-        }
+        // Navigate to new URL - Blazor will handle it
+        Navigation.NavigateTo($"/{Section.Name}/{collectionName}");
         
         // Notify parent component
         await OnCollectionChange.InvokeAsync(collectionName);

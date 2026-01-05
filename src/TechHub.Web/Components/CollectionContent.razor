@@ -2,6 +2,7 @@
 @using TechHub.Web.Services
 @inject TechHubApiClient ApiClient
 @inject ILogger<CollectionContent> Logger
+@attribute [StreamRendering]
 
 <div class="collection-content @(isLoading ? "loading" : "")">
     <h2 class="collection-title">@GetCollectionDisplayName()</h2>
@@ -133,7 +134,7 @@
     {
         if (CollectionName.Equals("all", StringComparison.OrdinalIgnoreCase))
         {
-            return "Everything";
+            return "All";
         }
         
         return Collections

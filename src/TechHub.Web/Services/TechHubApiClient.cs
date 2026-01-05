@@ -188,8 +188,8 @@ public class TechHubApiClient
                 category ?? "(all)", collection);
             
             var url = string.IsNullOrWhiteSpace(category)
-                ? $"/api/content?collection={Uri.EscapeDataString(collection)}"
-                : $"/api/content?category={Uri.EscapeDataString(category)}&collection={Uri.EscapeDataString(collection)}";
+                ? $"/api/content?collectionName={Uri.EscapeDataString(collection)}"
+                : $"/api/content?category={Uri.EscapeDataString(category)}&collectionName={Uri.EscapeDataString(collection)}";
             
             var items = await _httpClient.GetFromJsonAsync<IEnumerable<ContentItemDto>>(
                 url,

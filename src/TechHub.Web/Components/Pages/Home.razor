@@ -2,37 +2,28 @@
 @using TechHub.Core.DTOs
 @using TechHub.Web.Services
 @inject TechHubApiClient ApiClient
-@rendermode InteractiveServer
 
 <PageTitle>Tech Hub - Microsoft Technology News & Resources</PageTitle>
 
 <header class="section-header home-banner">
     <div class="section-header-content">
-        <h1>Tech Hub</h1>
+        <h1 tabindex="-1">Tech Hub</h1>
         <p class="section-description">Your source for Microsoft technology news, tutorials, and community content</p>
     </div>
 </header>
 
 <div class="home-container">
-
-    @if (isLoading && showLoadingState)
-    {
-        <div class="loading fade-in">
-            <p>Loading sections...</p>
-        </div>
-    }
-    else if (errorMessage != null)
+    @if (errorMessage != null)
     {
         <div class="error">
             <h2>Error Loading Content</h2>
             <p>@errorMessage</p>
-            <button @onclick="LoadSections">Retry</button>
         </div>
     }
     else if (sections != null && sections.Any())
     {
         <div class="sections-grid">
-            <h2 class="section-grid-title">Browse by Topic</h2>
+            <h2 class="section-grid-title">Browse by section</h2>
             <div class="grid">
                 @foreach (var item in sections)
                 {
@@ -51,42 +42,10 @@
 
 @code {
     private IEnumerable<SectionDto>? sections;
-    private bool isLoading = true;
-    private bool showLoadingState = false;
-    private CancellationTokenSource? loadingDelayCts;
     private string? errorMessage;
 
     protected override async Task OnInitializedAsync()
     {
-        await LoadSections();
-    }
-
-    private async Task LoadSections()
-    {
-        isLoading = true;
-        showLoadingState = false;
-        errorMessage = null;
-        
-        // Cancel any existing loading delay
-        loadingDelayCts?.Cancel();
-        loadingDelayCts = new CancellationTokenSource();
-        var delayCts = loadingDelayCts;
-        
-        // Only show loading state if request takes longer than 300ms
-        _ = Task.Run(async () =>
-        {
-            try
-            {
-                await Task.Delay(300, delayCts.Token);
-                showLoadingState = true;
-                await InvokeAsync(StateHasChanged);
-            }
-            catch (TaskCanceledException)
-            {
-                // Loading completed before delay - do nothing
-            }
-        });
-        
         try
         {
             sections = await ApiClient.GetAllSectionsAsync();
@@ -94,13 +53,6 @@
         catch (Exception ex)
         {
             errorMessage = $"Failed to load sections: {ex.Message}";
-        }
-        finally
-        {
-            loadingDelayCts?.Cancel();
-            isLoading = false;
-            showLoadingState = false;
-            StateHasChanged(); // Update UI with results or error
         }
     }
 }

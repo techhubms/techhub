@@ -1,8 +1,8 @@
 @using TechHub.Core.DTOs
 @inject NavigationManager Navigation
 
-<a href="/@Section.Name" class="section-card-link">
-    <div class="section-card">
+<div class="section-card">
+    <a href="/@Section.Name" class="section-card-link">
         <div class="section-card-header" style="background-image: url('@Section.BackgroundImage')">
             <div class="section-overlay">
                 <h2>@Section.Title</h2>
@@ -28,8 +28,8 @@
                 </div>
             }
         </div>
-    </div>
-</a>
+    </a>
+</div>
 
 @code {
     [Parameter, EditorRequired]

@@ -446,9 +446,10 @@ function Start-ApiProject {
         
         Write-Info "API running at: $apiUrl"
         Write-Info "Swagger UI: $apiUrl/swagger"
+        Write-Info "Hot reload enabled - changes will auto-reload"
         Write-Info "Press Ctrl+C to stop"
         
-        dotnet run --project $apiProjectPath --no-build --configuration $configuration
+        dotnet watch --project $apiProjectPath --configuration $configuration
     }
     finally {
         Pop-Location
@@ -470,9 +471,10 @@ function Start-WebProject {
         $env:ASPNETCORE_ENVIRONMENT = "Development"
         
         Write-Info "Web running at: $webUrl"
+        Write-Info "Hot reload enabled - changes will auto-reload"
         Write-Info "Press Ctrl+C to stop"
         
-        dotnet run --project $webProjectPath --no-build --configuration $configuration
+        dotnet watch --project $webProjectPath --configuration $configuration
     }
     finally {
         Pop-Location

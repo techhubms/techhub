@@ -1,8 +1,10 @@
-using Xunit;
+using Microsoft.Extensions.Hosting;
+using Microsoft.Extensions.Options;
+using Moq;
+using TechHub.Core.Configuration;
 using TechHub.Infrastructure.Repositories;
 using TechHub.Infrastructure.Services;
-using Microsoft.Extensions.Options;
-using TechHub.Core.Configuration;
+using Xunit;
 
 namespace TechHub.Infrastructure.Tests.Repositories;
 
@@ -38,7 +40,11 @@ public class ViewingModeTests : IDisposable
         var options = Options.Create(appSettings);
         var markdownService = new MarkdownService();
         
-        _repository = new FileBasedContentRepository(options, markdownService);
+        // Setup: Create mock IHostEnvironment
+        var mockEnvironment = new Mock<IHostEnvironment>();
+        mockEnvironment.Setup(e => e.ContentRootPath).Returns(_testDir);
+        
+        _repository = new FileBasedContentRepository(options, markdownService, mockEnvironment.Object);
     }
 
     [Fact]

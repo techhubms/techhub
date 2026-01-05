@@ -15,9 +15,14 @@
         <p class="components-reconnect-failed-visible">
             Failed to rejoin.<br />Please retry or reload the page.
         </p>
-        <button id="components-reconnect-button" class="components-reconnect-failed-visible">
-            Retry
-        </button>
+        <div class="components-reconnect-failed-visible" style="display: flex; gap: 0.5rem; justify-content: center;">
+            <button id="components-reconnect-button">
+                Retry
+            </button>
+            <button id="components-reload-button">
+                Reload Page
+            </button>
+        </div>
         <p class="components-pause-visible">
             The session has been paused by the server.
         </p>

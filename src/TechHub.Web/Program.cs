@@ -7,6 +7,18 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddRazorComponents()
     .AddInteractiveServerComponents();
 
+// Section cache for immediate (flicker-free) navigation rendering
+builder.Services.AddSingleton<SectionCache>();
+
+// Configure SignalR for Blazor Server with increased timeouts for reliability
+builder.Services.AddSignalR(options =>
+{
+    // Increase timeouts to prevent premature disconnections during initialization
+    options.ClientTimeoutInterval = TimeSpan.FromSeconds(60);
+    options.HandshakeTimeout = TimeSpan.FromSeconds(30);
+    options.KeepAliveInterval = TimeSpan.FromSeconds(15);
+});
+
 // Configure HTTP client for API with resilience policies
 var apiBaseUrl = builder.Configuration["ApiBaseUrl"] ?? "http://localhost:5029";
 builder.Services.AddHttpClient<TechHubApiClient>(client =>
@@ -34,6 +46,24 @@ builder.Services.AddHttpClient<TechHubApiClient>(client =>
 
 var app = builder.Build();
 
+// Pre-load sections into cache at startup for flicker-free navigation
+using (var scope = app.Services.CreateScope())
+{
+    var apiClient = scope.ServiceProvider.GetRequiredService<TechHubApiClient>();
+    var sectionCache = scope.ServiceProvider.GetRequiredService<SectionCache>();
+    
+    try
+    {
+        var sections = await apiClient.GetAllSectionsAsync();
+        sectionCache.Initialize(sections.ToList());
+    }
+    catch (Exception ex)
+    {
+        // Log error but continue - navigation will show without sections
+        app.Logger.LogError(ex, "Failed to pre-load sections at startup");
+    }
+}
+
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
 {
@@ -45,16 +75,15 @@ if (!app.Environment.IsDevelopment())
 app.UseStatusCodePagesWithReExecute("/not-found", createScopeForStatusCodePages: true);
 app.UseHttpsRedirection();
 
-// Configure static files with browser caching
+// Configure static files with environment-appropriate caching
 app.UseStaticFiles(new StaticFileOptions
 {
     OnPrepareResponse = ctx =>
     {
-        // Cache static assets for 1 year (images, fonts, etc.)
-        // CSS and JS files should use cache busting via MapStaticAssets()
         var path = ctx.File.PhysicalPath ?? ctx.Context.Request.Path.Value ?? string.Empty;
+        var isDevelopment = app.Environment.IsDevelopment();
         
-        // Images, fonts, and other media - cache for 1 year
+        // Images, fonts, and other media
         if (path.EndsWith(".jpg", StringComparison.OrdinalIgnoreCase) ||
             path.EndsWith(".jpeg", StringComparison.OrdinalIgnoreCase) ||
             path.EndsWith(".png", StringComparison.OrdinalIgnoreCase) ||
@@ -67,19 +96,23 @@ app.UseStaticFiles(new StaticFileOptions
             path.EndsWith(".ttf", StringComparison.OrdinalIgnoreCase) ||
             path.EndsWith(".eot", StringComparison.OrdinalIgnoreCase))
         {
-            // Cache for 1 year, can be cached by browsers and CDNs
-            ctx.Context.Response.Headers.CacheControl = "public,max-age=31536000,immutable";
+            // Development: 1 hour, Production: 1 year
+            ctx.Context.Response.Headers.CacheControl = isDevelopment
+                ? "public,max-age=3600"
+                : "public,max-age=31536000,immutable";
         }
-        // CSS and JS files - let MapStaticAssets handle versioning
+        // CSS and JS files
         else if (path.EndsWith(".css", StringComparison.OrdinalIgnoreCase) ||
                  path.EndsWith(".js", StringComparison.OrdinalIgnoreCase))
         {
-            // Cache for 1 year with versioning (MapStaticAssets adds fingerprint)
-            ctx.Context.Response.Headers.CacheControl = "public,max-age=31536000,immutable";
+            // Development: no-cache (always validate), Production: 1 year with versioning
+            ctx.Context.Response.Headers.CacheControl = isDevelopment
+                ? "no-cache"
+                : "public,max-age=31536000,immutable";
         }
         else
         {
-            // Default: cache for 1 hour
+            // Default: 1 hour
             ctx.Context.Response.Headers.CacheControl = "public,max-age=3600";
         }
     }

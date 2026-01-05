@@ -667,7 +667,7 @@ See [specs/dotnet-migration/tasks.md](specs/dotnet-migration/tasks.md) for compl
 
 ## Project Overview
 
-The Tech Hub is a technical content hub with configuration-driven section and collection management. Content is organized by sections (AI, GitHub Copilot, Azure, ML, .NET, DevOps, Security) and collections (news, videos, community, blogs, roundups).
+The Tech Hub is a technical content hub with configuration-driven section and collection management. Content is organized by sections (Everything, AI, GitHub Copilot, Azure, ML, .NET, DevOps, Security) and collections (news, videos, community, blogs, roundups).
 
 **Core Architecture**:
 
