@@ -1,0 +1,16 @@
+{
+  "Tags": [
+    "dotnet"
+  ],
+  "Author": "dotnet",
+  "Link": "https://www.youtube.com/watch?v=87AlzE53bxA",
+  "EnhancedContent": null,
+  "OutputDir": "_videos",
+  "FeedLevelAuthor": "dotnet",
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw",
+  "ProcessedDate": "2026-01-05 23:02:20",
+  "Description": "A deep dive into how routing, placement, and load balancing work in Orleans.\n\n🎙️ Featuring: Guest: Reuben Bond, Ledjon Behluli, David Pine, Frank Boucher\n\n#dotnet",
+  "FeedName": "DotNet YouTube",
+  "PubDate": "2026-01-05T22:35:41+00:00",
+  "Title": "On .NET Live | Orleans Deep Dive: Routing, Placement & Balancing"
+}
