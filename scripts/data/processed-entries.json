@@ -22936,5 +22936,17 @@
     "collection": "community",
     "canonical_url": "https://techcommunity.microsoft.com/t5/azure/issue-with-gmsa-when-installing-cloud-sync/m-p/4482486#M22398",
     "timestamp": "2026-01-05 19:06:58 +00:00"
+  },
+  {
+    "timestamp": "2026-01-05 22:04:23 +00:00",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-events/live-ama-demystifying-azure-pricing-am-session/ec-p/4483196#M665",
+    "reason": "Succesfully added: Assigned the Azure category because the session is specifically about Azure pricing, cost management methods, and optimization features, all of which are core Azure topics according to Azure inclusion rules. No other categories apply: the content doesn’t discuss coding, DevOps pipelines, AI, ML, security, or developer tooling. It is a technical session focused squarely on Azure cloud cost estimation and management for practitioners.",
+    "collection": "community"
+  },
+  {
+    "timestamp": "2026-01-05 22:04:39 +00:00",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-events/live-ama-demystifying-azure-pricing-pm-session/ec-p/4483198#M666",
+    "reason": "Succesfully added: Assigned the Azure category as the session centers on Azure pricing tools, offers, and cost optimization, aligning with Azure category inclusion rule 1 (any Azure service/technology) and rule 4 (Azure management/deployment practices). No other categories apply because the content focuses on financial and operational best practices for Azure without in-depth coverage of coding, DevOps tooling, AI, ML, or security. The session is sufficiently detailed (not short or promotional), is in English, and is technical/practitioner-focused, so no generic exclusion rules triggered.",
+    "collection": "community"
   }
 ]

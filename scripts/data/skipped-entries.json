@@ -10977,5 +10977,11 @@
     "collection": "news",
     "canonical_url": "https://news.xbox.com/en-us/2026/01/05/xbox-bring-cloud-gaming-select-hisense-homeos-powered-smart-tvs/",
     "timestamp": "2026-01-05 19:06:11 +00:00"
+  },
+  {
+    "collection": "videos",
+    "canonical_url": "https://www.youtube.com/shorts/qNbXVxS6eOI",
+    "reason": "No categories found: Content excluded due to generic exclusion rule - this video appears to be biographical and anecdotal in nature, focusing on an internal Microsoft story about a dog and the mail system rather than providing substantive technical content related to Microsoft technologies or development. The description highlights storytelling and personal anecdotes, without indicating technical implementation details, tutorials, or educational material relevant to the predefined categories.",
+    "timestamp": "2026-01-05 20:03:25 +00:00"
   }
 ]
