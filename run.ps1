@@ -106,6 +106,7 @@ $workspaceRoot = $PSScriptRoot
 $solutionPath = Join-Path $workspaceRoot "TechHub.slnx"
 $apiProjectPath = Join-Path $workspaceRoot "src/TechHub.Api/TechHub.Api.csproj"
 $webProjectPath = Join-Path $workspaceRoot "src/TechHub.Web/TechHub.Web.csproj"
+$e2eTestProjectPath = Join-Path $workspaceRoot "tests/TechHub.E2E.Tests/TechHub.E2E.Tests.csproj"
 
 # Build configuration
 $configuration = if ($Release) { "Release" } else { "Debug" }
@@ -191,9 +192,35 @@ function Invoke-Tests {
         [int]$WebPort = 5184
     )
     
-    Write-Step "Running tests with live servers"
+    # PHASE 1: Run all non-E2E tests first (fast, no server needed)
+    Write-Step "Running unit and integration tests"
+    Write-Host ""
     
-    # Start servers in background for E2E tests
+    $nonE2eTestArgs = @(
+        "test",
+        $solutionPath,
+        "--configuration", $configuration,
+        "--no-build",
+        "--verbosity", "detailed",
+        "--filter", "FullyQualifiedName!~E2E",  # Exclude E2E tests
+        "--blame-hang-timeout", "5m"
+    )
+    
+    & dotnet @nonE2eTestArgs
+    
+    $nonE2eExitCode = $LASTEXITCODE
+    Write-Host ""
+    
+    if ($nonE2eExitCode -ne 0) {
+        Write-Error "Unit/Integration tests failed with exit code $nonE2eExitCode"
+        exit 1
+    }
+    
+    Write-Success "Unit and integration tests passed"
+    
+    # PHASE 2: Start servers for E2E tests
+    Write-Step "Starting servers for E2E tests"
+    
     $apiUrl = "http://localhost:$ApiPort"
     $webUrl = "http://localhost:$WebPort"
     
@@ -206,192 +233,215 @@ function Invoke-Tests {
     $apiLogPath = Join-Path $logsDir "api.log"
     $webLogPath = Join-Path $logsDir "web.log"
     
-    Write-Info "Starting servers (output in .tmp/test-logs/)..."
+    Write-Info "Server output will be logged to .tmp/test-logs/"
     
     # Track processes for cleanup
     $script:testApiProcess = $null
     $script:testWebProcess = $null
+    $apiLogWriter = $null
+    $webLogWriter = $null
     
-    try {
-        # Start API process with Test environment (suppresses console logging via appsettings.Test.json)
-        $apiStartInfo = New-Object System.Diagnostics.ProcessStartInfo
-        $apiStartInfo.FileName = "dotnet"
-        $apiStartInfo.Arguments = "run --project `"$apiProjectPath`" --no-build --no-launch-profile --configuration $configuration"
-        $apiStartInfo.WorkingDirectory = Split-Path $apiProjectPath -Parent
-        $apiStartInfo.UseShellExecute = $false
-        $apiStartInfo.CreateNoWindow = $false
-        $apiStartInfo.RedirectStandardOutput = $true
-        $apiStartInfo.RedirectStandardError = $true
-        $apiStartInfo.EnvironmentVariables["ASPNETCORE_ENVIRONMENT"] = "Test"
-        $apiStartInfo.EnvironmentVariables["ASPNETCORE_URLS"] = $apiUrl
-        
-        $script:testApiProcess = [System.Diagnostics.Process]::Start($apiStartInfo)
-        
-        # Redirect API output (stdout + stderr) to log file
-        $apiLogWriter = [System.IO.StreamWriter]::new($apiLogPath, $false)
-        $apiLogWriter.AutoFlush = $true
-        $script:apiOutputJob = Start-ThreadJob -ScriptBlock {
-            param($stdoutReader, $stderrReader, $writer)
-            $jobs = @(
-                (Start-ThreadJob -ScriptBlock { param($r, $w) while (($line = $r.ReadLine()) -ne $null) { $w.WriteLine($line) } } -ArgumentList $stdoutReader, $writer),
-                (Start-ThreadJob -ScriptBlock { param($r, $w) while (($line = $r.ReadLine()) -ne $null) { $w.WriteLine("ERR: $line") } } -ArgumentList $stderrReader, $writer)
-            )
-            $jobs | Wait-Job | Out-Null
-        } -ArgumentList $script:testApiProcess.StandardOutput, $script:testApiProcess.StandardError, $apiLogWriter
-        
-        Write-Info "  API started (PID: $($script:testApiProcess.Id))"
-        
-        # Start Web process with Test environment (suppresses console logging via appsettings.Test.json)
-        $webStartInfo = New-Object System.Diagnostics.ProcessStartInfo
-        $webStartInfo.FileName = "dotnet"
-        $webStartInfo.Arguments = "run --project `"$webProjectPath`" --no-build --no-launch-profile --configuration $configuration"
-        $webStartInfo.WorkingDirectory = Split-Path $webProjectPath -Parent
-        $webStartInfo.UseShellExecute = $false
-        $webStartInfo.CreateNoWindow = $false
-        $webStartInfo.RedirectStandardOutput = $true
-        $webStartInfo.RedirectStandardError = $true
-        $webStartInfo.EnvironmentVariables["ASPNETCORE_ENVIRONMENT"] = "Test"
-        $webStartInfo.EnvironmentVariables["ASPNETCORE_URLS"] = $webUrl
-        
-        $script:testWebProcess = [System.Diagnostics.Process]::Start($webStartInfo)
-        
-        # Redirect Web output (stdout + stderr) to log file
-        $webLogWriter = [System.IO.StreamWriter]::new($webLogPath, $false)
-        $webLogWriter.AutoFlush = $true
-        $script:webOutputJob = Start-ThreadJob -ScriptBlock {
-            param($stdoutReader, $stderrReader, $writer)
-            $jobs = @(
-                (Start-ThreadJob -ScriptBlock { param($r, $w) while (($line = $r.ReadLine()) -ne $null) { $w.WriteLine($line) } } -ArgumentList $stdoutReader, $writer),
-                (Start-ThreadJob -ScriptBlock { param($r, $w) while (($line = $r.ReadLine()) -ne $null) { $w.WriteLine("ERR: $line") } } -ArgumentList $stderrReader, $writer)
-            )
-            $jobs | Wait-Job | Out-Null
-        } -ArgumentList $script:testWebProcess.StandardOutput, $script:testWebProcess.StandardError, $webLogWriter
-        
-        Write-Info "  Web started (PID: $($script:testWebProcess.Id))"
-        
-        # Wait for servers to be ready
-        Write-Info "Waiting for servers to start..."
-        $maxAttempts = 5
-        $attempt = 0
-        $apiReady = $false
-        $webReady = $false
-        
-        while ($attempt -lt $maxAttempts -and (-not $apiReady -or -not $webReady)) {
-            Start-Sleep -Seconds 1
-            $attempt++
-            
-            if (-not $apiReady) {
-                try {
-                    $response = Invoke-WebRequest -Uri "$apiUrl/health" -Method Get -TimeoutSec 2 -ErrorAction SilentlyContinue
-                    if ($response.StatusCode -eq 200) {
-                        $apiReady = $true
-                        Write-Info "API ready ✓"
-                    }
-                } catch {
-                    # Still waiting
-                }
-            }
-            
-            if (-not $webReady) {
-                try {
-                    $response = Invoke-WebRequest -Uri $webUrl -Method Get -TimeoutSec 2 -ErrorAction SilentlyContinue
-                    if ($response.StatusCode -eq 200) {
-                        $webReady = $true
-                        Write-Info "Web ready ✓"
-                    }
-                } catch {
-                    # Still waiting
-                }
-            }
-        }
-        
-        if (-not $apiReady -or -not $webReady) {
-            Write-Error "Servers failed to start within $maxAttempts seconds"
-            Write-Info "Check logs for details:"
-            Write-Info "  API: $apiLogPath"
-            Write-Info "  Web: $webLogPath"
-            throw "Server startup timeout"
-        }
-        
-        Write-Success "Servers ready"
-        
-        # Now run all tests including E2E
-        Write-Step "Running all tests (including E2E)"
-        Write-Host ""
-        
-        # Build dotnet test arguments
-        $testArgs = @(
-            "test",
-            $solutionPath,
-            "--configuration", $configuration,
-            "--no-build",
-            "--verbosity", "detailed",
-            "--blame-hang-timeout", "5m"  # Kill hanging tests after 5 minutes
+    # Start API process with Test environment (suppresses console logging via appsettings.Test.json)
+    $apiStartInfo = New-Object System.Diagnostics.ProcessStartInfo
+    $apiStartInfo.FileName = "dotnet"
+    $apiStartInfo.Arguments = "run --project `"$apiProjectPath`" --no-build --no-launch-profile --configuration $configuration"
+    $apiStartInfo.WorkingDirectory = Split-Path $apiProjectPath -Parent
+    $apiStartInfo.UseShellExecute = $false
+    $apiStartInfo.CreateNoWindow = $false
+    $apiStartInfo.RedirectStandardOutput = $true
+    $apiStartInfo.RedirectStandardError = $true
+    $apiStartInfo.EnvironmentVariables["ASPNETCORE_ENVIRONMENT"] = "Test"
+    $apiStartInfo.EnvironmentVariables["ASPNETCORE_URLS"] = $apiUrl
+    
+    $script:testApiProcess = [System.Diagnostics.Process]::Start($apiStartInfo)
+    
+    # Redirect API output (stdout + stderr) to log file
+    $apiLogWriter = [System.IO.StreamWriter]::new($apiLogPath, $false)
+    $apiLogWriter.AutoFlush = $true
+    $script:apiOutputJob = Start-ThreadJob -ScriptBlock {
+        param($stdoutReader, $stderrReader, $writer)
+        $jobs = @(
+            (Start-ThreadJob -ScriptBlock { param($r, $w) while ($null -ne ($line = $r.ReadLine())) { $w.WriteLine($line) } } -ArgumentList $stdoutReader, $writer),
+            (Start-ThreadJob -ScriptBlock { param($r, $w) while ($null -ne ($line = $r.ReadLine())) { $w.WriteLine("ERR: $line") } } -ArgumentList $stderrReader, $writer)
         )
+        $jobs | Wait-Job | Out-Null
+    } -ArgumentList $script:testApiProcess.StandardOutput, $script:testApiProcess.StandardError, $apiLogWriter
+    
+    Write-Info "  API started (PID: $($script:testApiProcess.Id))"
+    
+    # Start Web process with Test environment (suppresses console logging via appsettings.Test.json)
+    $webStartInfo = New-Object System.Diagnostics.ProcessStartInfo
+    $webStartInfo.FileName = "dotnet"
+    $webStartInfo.Arguments = "run --project `"$webProjectPath`" --no-build --no-launch-profile --configuration $configuration"
+    $webStartInfo.WorkingDirectory = Split-Path $webProjectPath -Parent
+    $webStartInfo.UseShellExecute = $false
+    $webStartInfo.CreateNoWindow = $false
+    $webStartInfo.RedirectStandardOutput = $true
+    $webStartInfo.RedirectStandardError = $true
+    $webStartInfo.EnvironmentVariables["ASPNETCORE_ENVIRONMENT"] = "Test"
+    $webStartInfo.EnvironmentVariables["ASPNETCORE_URLS"] = $webUrl
+    
+    $script:testWebProcess = [System.Diagnostics.Process]::Start($webStartInfo)
+    
+    # Redirect Web output (stdout + stderr) to log file
+    $webLogWriter = [System.IO.StreamWriter]::new($webLogPath, $false)
+    $webLogWriter.AutoFlush = $true
+    $script:webOutputJob = Start-ThreadJob -ScriptBlock {
+        param($stdoutReader, $stderrReader, $writer)
+        $jobs = @(
+            (Start-ThreadJob -ScriptBlock { param($r, $w) while ($null -ne ($line = $r.ReadLine())) { $w.WriteLine($line) } } -ArgumentList $stdoutReader, $writer),
+            (Start-ThreadJob -ScriptBlock { param($r, $w) while ($null -ne ($line = $r.ReadLine())) { $w.WriteLine("ERR: $line") } } -ArgumentList $stderrReader, $writer)
+        )
+        $jobs | Wait-Job | Out-Null
+    } -ArgumentList $script:testWebProcess.StandardOutput, $script:testWebProcess.StandardError, $webLogWriter
+    
+    Write-Info "  Web started (PID: $($script:testWebProcess.Id))"
+    
+    # Wait for servers to be ready
+    Write-Info "Waiting for servers to start..."
+    $maxAttempts = 5
+    $attempt = 0
+    $apiReady = $false
+    $webReady = $false
+    
+    while ($attempt -lt $maxAttempts -and (-not $apiReady -or -not $webReady)) {
+        Start-Sleep -Seconds 1
+        $attempt++
         
-        # Run tests with configured arguments
-        & dotnet @testArgs
+        if (-not $apiReady) {
+            try {
+                $response = Invoke-WebRequest -Uri "$apiUrl/health" -Method Get -TimeoutSec 2 -ErrorAction SilentlyContinue
+                if ($response.StatusCode -eq 200) {
+                    $apiReady = $true
+                    Write-Info "  API ready ✓"
+                }
+            } catch {
+                # Still waiting
+            }
+        }
         
-        $testExitCode = $LASTEXITCODE
-        
-        Write-Host ""
-        Write-Host "════════════════════════════════════════" -ForegroundColor Cyan
-        
-        Write-Info "Server logs:"
-        Write-Info "  API: $apiLogPath"
-        Write-Info "  Web: $webLogPath"
-        Write-Host ""
-        
-        if ($testExitCode -ne 0) {
-            Write-Error "Tests failed with exit code $testExitCode"
-            exit 1
-        } else {
-            Write-Success "All tests passed"
+        if (-not $webReady) {
+            try {
+                $response = Invoke-WebRequest -Uri $webUrl -Method Get -TimeoutSec 2 -ErrorAction SilentlyContinue
+                if ($response.StatusCode -eq 200) {
+                    $webReady = $true
+                    Write-Info "  Web ready ✓"
+                }
+            } catch {
+                # Still waiting
+            }
         }
     }
-    finally {
-        # Clean up test server processes
+    
+    if (-not $apiReady -or -not $webReady) {
+        Write-Error "Servers failed to start within $maxAttempts seconds"
+        Write-Info "Check logs for details:"
+        Write-Info "  API: $apiLogPath"
+        Write-Info "  Web: $webLogPath"
+        
+        # Clean up on startup failure
+        if ($null -ne $script:testApiProcess -and -not $script:testApiProcess.HasExited) {
+            $script:testApiProcess.Kill($true)
+            $script:testApiProcess.Dispose()
+        }
+        if ($null -ne $script:testWebProcess -and -not $script:testWebProcess.HasExited) {
+            $script:testWebProcess.Kill($true)
+            $script:testWebProcess.Dispose()
+        }
+        Stop-ExistingProcesses -Ports @($ApiPort, $WebPort)
+        exit 1
+    }
+    
+    Write-Success "Servers ready"
+    
+    # PHASE 3: Run E2E tests only
+    Write-Step "Running E2E tests"
+    Write-Host ""
+    
+    $e2eTestArgs = @(
+        "test",
+        $e2eTestProjectPath,
+        "--configuration", $configuration,
+        "--no-build",
+        "--verbosity", "detailed",
+        "--blame-hang-timeout", "5m"
+    )
+    
+    & dotnet @e2eTestArgs
+    
+    $e2eExitCode = $LASTEXITCODE
+    
+    Write-Host ""
+    Write-Host "════════════════════════════════════════" -ForegroundColor Cyan
+    
+    Write-Info "Server logs:"
+    Write-Info "  API: $apiLogPath"
+    Write-Info "  Web: $webLogPath"
+    Write-Host ""
+    
+    if ($e2eExitCode -ne 0) {
+        # E2E tests failed - clean up servers
+        Write-Error "E2E tests failed with exit code $e2eExitCode"
+        
+        # Stop servers on failure
         Write-Info "Stopping test servers..."
         
-        # Stop background log jobs
-        if ($null -ne $script:apiOutputJob) {
-            Stop-Job $script:apiOutputJob -ErrorAction SilentlyContinue
-            Remove-Job $script:apiOutputJob -Force -ErrorAction SilentlyContinue
-        }
-        if ($null -ne $script:webOutputJob) {
-            Stop-Job $script:webOutputJob -ErrorAction SilentlyContinue
-            Remove-Job $script:webOutputJob -Force -ErrorAction SilentlyContinue
-        }
-        
-        # Close log writers
-        if ($null -ne $apiLogWriter) {
-            $apiLogWriter.Flush()
-            $apiLogWriter.Close()
-            $apiLogWriter.Dispose()
-        }
-        if ($null -ne $webLogWriter) {
-            $webLogWriter.Flush()
-            $webLogWriter.Close()
-            $webLogWriter.Dispose()
-        }
-        
         if ($null -ne $script:testApiProcess -and -not $script:testApiProcess.HasExited) {
-            Write-Info "Stopping API (PID: $($script:testApiProcess.Id))..."
             $script:testApiProcess.Kill($true)
             $script:testApiProcess.WaitForExit(2000)
             $script:testApiProcess.Dispose()
         }
         
         if ($null -ne $script:testWebProcess -and -not $script:testWebProcess.HasExited) {
-            Write-Info "Stopping Web (PID: $($script:testWebProcess.Id))..."
             $script:testWebProcess.Kill($true)
             $script:testWebProcess.WaitForExit(2000)
             $script:testWebProcess.Dispose()
         }
         
-        # Final cleanup
         Stop-ExistingProcesses -Ports @($ApiPort, $WebPort)
-        Write-Success "Test servers stopped"
+        exit 1
+    }
+    
+    # All tests passed! Leave servers running
+    Write-Success "All tests passed! Servers are running:"
+    Write-Host ""
+    Write-Info "  API: $apiUrl (Swagger: $apiUrl/swagger)"
+    Write-Info "  Web: $webUrl"
+    Write-Host ""
+    Write-Info "Server logs:"
+    Write-Info "  API: $apiLogPath"
+    Write-Info "  Web: $webLogPath"
+    Write-Host ""
+    Write-Host "Press Ctrl+C to stop servers when done" -ForegroundColor Yellow
+    
+    # Wait for user to stop (Ctrl+C)
+    try {
+        while ($true) {
+            if ($script:testApiProcess.HasExited -or $script:testWebProcess.HasExited) {
+                Write-Error "`nOne or more servers stopped unexpectedly"
+                break
+            }
+            Start-Sleep -Milliseconds 500
+        }
+    }
+    finally {
+        # Clean up when user presses Ctrl+C or process exits
+        Write-Info "`nStopping servers..."
+        
+        if ($null -ne $script:testApiProcess -and -not $script:testApiProcess.HasExited) {
+            $script:testApiProcess.Kill($true)
+            $script:testApiProcess.WaitForExit(2000)
+            $script:testApiProcess.Dispose()
+        }
+        
+        if ($null -ne $script:testWebProcess -and -not $script:testWebProcess.HasExited) {
+            $script:testWebProcess.Kill($true)
+            $script:testWebProcess.WaitForExit(2000)
+            $script:testWebProcess.Dispose()
+        }
+        
+        Stop-ExistingProcesses -Ports @($ApiPort, $WebPort)
+        Write-Success "Servers stopped"
     }
 }
 

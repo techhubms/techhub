@@ -14,7 +14,7 @@ public static class BlazorHelpers
     public static async Task<IPage> NewPageWithDefaultsAsync(this IBrowserContext context)
     {
         var page = await context.NewPageAsync();
-        page.SetDefaultTimeout(5000);
+        page.SetDefaultTimeout(3000);
         page.SetDefaultNavigationTimeout(10000);
         return page;
     }
