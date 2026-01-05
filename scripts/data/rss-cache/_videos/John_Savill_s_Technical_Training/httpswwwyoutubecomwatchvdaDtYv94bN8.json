@@ -1,0 +1,26 @@
+{
+  "Link": "https://www.youtube.com/watch?v=daDtYv94bN8",
+  "ProcessedDate": "2026-01-05 10:03:03",
+  "Author": "John Savill's Technical Training",
+  "OutputDir": "_videos",
+  "Tags": [
+    "AI",
+    "azure",
+    "azure cloud",
+    "cloud",
+    "database",
+    "embedding",
+    "microsoft",
+    "microsoft azure",
+    "postgreSQL",
+    "postgress",
+    "vector"
+  ],
+  "Title": "Azure PostgreSQL AI Capabilities",
+  "FeedLevelAuthor": "John Savill's Technical Training",
+  "PubDate": "2026-01-05T09:39:54+00:00",
+  "Description": "A look at AI capabilities for interacting with Azure Managed PostgreSQL and AI features WITHIN Azure Managed PostgreSQL!\n\n🔎 Looking for content on a particular topic? Search the channel. If I have something it will be there! 🤔 Due to the channel growth and number of people wanting help I no longer can answer or even read questions and they will just stay in the moderation queue never to be seen so please post questions to other sites like Reddit, Microsoft Community Hub etc.\n\n▬▬▬▬▬▬ C H A P T E R S ⏰ ▬▬▬▬▬▬ 00:00 - Introduction 00:05 - AI and PostgreSQL 01:03 - PostgreSQL VSCode extension 01:52 - Server dashboard and AI help 03:55 - Schema visualization 04:44 - GitHub Copilot interaction 07:08 - AI extensions for PostgreSQL 08:22 - Embeddings and vectors 10:46 - Integration with Foundry 12:19 - Creating embeddings 13:42 - Creating the DiskANN index 14:28 - Performing a semantic search 15:58 - Using AI to generate content 17:09 - Semantic reranking 18:43 - Is true 20:05 - Extracting information 21:41 - Foundry integration 23:27 - Summary 24:21 - Close\n\n▬▬▬▬▬▬ K E Y L I N K S 🔗 ▬▬▬▬▬▬ ► PostgreSQL MCP Server: 🔗 https://github.com/Azure-Samples/azure-postgres-mcp-demo\n\n▬▬▬▬▬▬ Want to learn more? 🚀 ▬▬▬▬▬▬ 📖 Recommended Learning Path for Azure 🔗 https://learn.onboardtoazure.com 🥇 Certification Content Repository 🔗 https://github.com/johnthebrit/CertificationMaterials 📅 Weekly Azure Update 🔗 https://youtube.com/playlist?list=PLlVtbbG169nEv7jSfOVmQGRp9wAoAM0Ks ☁ Azure Master Class 🔗 https://youtube.com/playlist?list=PLlVtbbG169nGccbp8VSpAozu3w9xSQJoY ⚙ DevOps Master Class 🔗 https://youtube.com/playlist?list=PLlVtbbG169nFr8RzQ4GIxUEznpNR53ERq 💻 PowerShell Master Class 🔗 https://youtube.com/playlist?list=PLlVtbbG169nFq\\_hR7FcMYg32xsSAObuq8 🎓 Certification Cram Videos 🔗 https://youtube.com/playlist?list=PLlVtbbG169nHz2qfLvPsAz9CnnXofhmcA 🧠 Mentoring Content 🔗 https://youtube.com/playlist?list=PLlVtbbG169nGHxNkSWB0PjzZHwZ0BkXZZ ❔ Questions? Maybe I answered it in my FAQ 🔗 https://savilltech.com/faq 👕 Cure Childhood Cancer Charity T-Shirt Channel Store 🔗 https://johns-t-shirts-store.creator-spring.com/\n\n👂 Enable the subtitles and from there you can translate to your native language via the auto-translate feature in settings! https://youtu.be/v5b53-PgEmI for a demo of using this feature.\n\nSUBSCRIBE ✅ https://www.youtube.com/channel/UCpIn7ox7j7bH\\_OFj7tYouOQ?sub\\_confirmation=1\n\n#microsoft #azure #postgresql #AI #johnsavillstechnicaltraining #onboardtoazure",
+  "EnhancedContent": null,
+  "FeedName": "John Savill's Technical Training",
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCpIn7ox7j7bH_OFj7tYouOQ"
+}
