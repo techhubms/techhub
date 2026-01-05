@@ -604,9 +604,11 @@ try {
         Invoke-Build
     }
     
-    # Test if requested
+    # Test if requested - run tests FIRST before starting servers
     if ($Test) {
         Invoke-Tests -ApiPort $ApiPort -WebPort $WebPort
+        # If tests pass, continue to start servers normally (unless Build-only mode)
+        Write-Success "`nAll tests passed! Starting servers...`n"
     }
     
     # If only build was requested, exit here

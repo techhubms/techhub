@@ -70,9 +70,20 @@
   padding: var(--spacing-3);
 }
 
+.section-description-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  margin-bottom: var(--spacing-2);
+}
+
+.section-description-link:hover .section-description {
+  color: var(--color-text-primary);
+}
+
 .section-description {
   color: var(--color-text-secondary);
-  margin-bottom: var(--spacing-2);
+  margin: 0;
 }
 
 .section-collections {

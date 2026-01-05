@@ -1,33 +1,18 @@
 using Bunit;
+using FluentAssertions;
 using Microsoft.AspNetCore.Components;
+using Microsoft.AspNetCore.Components.Web;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
-using Microsoft.JSInterop;
-using Microsoft.JSInterop.Infrastructure;
-using Moq;
 using TechHub.Core.DTOs;
 using TechHub.Web.Components;
-using TechHub.Web.Services;
 using Xunit;
 
 namespace TechHub.Web.Tests.Components;
 
 public class CollectionNavTests : TestContext
 {
-    private readonly Mock<TechHubApiClient> _mockApiClient;
-    private readonly Mock<ILogger<CollectionNav>> _mockLogger;
-    private readonly Mock<IJSRuntime> _mockJsRuntime;
-
-    public CollectionNavTests()
-    {
-        _mockApiClient = new Mock<TechHubApiClient>(MockBehavior.Loose, new HttpClient(), Mock.Of<ILogger<TechHubApiClient>>());
-        _mockLogger = new Mock<ILogger<CollectionNav>>();
-        _mockJsRuntime = new Mock<IJSRuntime>();
-        
-        Services.AddSingleton(_mockApiClient.Object);
-        Services.AddSingleton(_mockLogger.Object);
-        Services.AddSingleton(_mockJsRuntime.Object);
-    }
+    // No mocks needed - NavigationManager is provided by bUnit TestContext
 
     [Fact]
     public void Component_DisplaysCollections()
@@ -122,12 +107,6 @@ public class CollectionNavTests : TestContext
             Collections = collections
         };
 
-        _mockJsRuntime
-            .Setup(x => x.InvokeAsync<IJSVoidResult>(
-                "history.pushState",
-                It.IsAny<object[]>()))
-            .ReturnsAsync(Mock.Of<IJSVoidResult>());
-
         // Act
         var cut = RenderComponent<CollectionNav>(parameters => parameters
             .Add(p => p.Section, sectionDto)
@@ -163,14 +142,7 @@ public class CollectionNavTests : TestContext
             Collections = collections
         };
 
-        _mockJsRuntime
-            .Setup(x => x.InvokeAsync<IJSVoidResult>(
-                "history.pushState",
-                It.Is<object[]>(args => 
-                    args.Length == 3 && 
-                    (string)args[2] == "/ai/news")))
-            .ReturnsAsync(Mock.Of<IJSVoidResult>())
-            .Verifiable();
+        var navMan = Services.GetRequiredService<NavigationManager>();
 
         // Act
         var cut = RenderComponent<CollectionNav>(parameters => parameters
@@ -183,8 +155,8 @@ public class CollectionNavTests : TestContext
         var newsButton = buttons.First(b => b.TextContent.Contains("News"));
         newsButton.Click();
 
-        // Assert
-        _mockJsRuntime.Verify();
+        // Assert - NavigationManager should navigate to /ai/news
+        navMan.Uri.Should().EndWith("/ai/news", "clicking News should navigate to /ai/news");
     }
 
     [Fact]

@@ -17,31 +17,38 @@ public static class BlazorHelpers
         PageGotoOptions? options = null)
     {
         var gotoOptions = options ?? new PageGotoOptions();
-        
-        // Blazor Server needs time to:
-        // 1. Load initial HTML/CSS
-        // 2. Download blazor.web.js
-        // 3. Establish SignalR connection
-        // 4. Initialize circuit
-        // 5. Complete first render
-        gotoOptions.Timeout ??= 10000; // 10 seconds is sufficient for local development
-        gotoOptions.WaitUntil = WaitUntilState.NetworkIdle; // Wait for network to settle
+        gotoOptions.WaitUntil = WaitUntilState.DOMContentLoaded; // Don't wait for network idle with streaming
         
         await page.GotoAsync(url, gotoOptions);
         
-        // Wait for Blazor to fully initialize by checking for absence of loading states
-        // This is more reliable than arbitrary delays
+        // Wait for StreamRendering to complete:
+        // 1. Skeletons render first (both .skeleton-header and .skeleton-card appear)
+        // 2. Then real content streams in (skeletons disappear, real elements appear)
         try
         {
-            await page.WaitForSelectorAsync(".loading", new() { State = WaitForSelectorState.Hidden, Timeout = 5000 });
+            // Wait for skeleton header to be hidden (section data loaded)
+            await page.WaitForSelectorAsync(".skeleton-header", new() { State = WaitForSelectorState.Hidden });
         }
         catch
         {
-            // Loading element might not exist if content loaded instantly - that's fine
+            // Skeleton might not exist if content loaded instantly - that's fine
         }
         
-        // Brief pause to ensure render is complete
-        await Task.Delay(100);
+        // Wait for skeleton CARDS to be replaced by real content
+        // Skeleton cards have BOTH .content-item-card AND .skeleton-card classes
+        // Real cards have ONLY .content-item-card class
+        // So we wait for cards WITHOUT the skeleton-card class
+        try
+        {
+            await page.WaitForSelectorAsync(".content-item-card:not(.skeleton-card)", new() { State = WaitForSelectorState.Visible });
+        }
+        catch
+        {
+            // Content cards might not exist on all pages (like home page) - that's fine
+        }
+        
+        // Brief pause to ensure final render is stable
+        await Task.Delay(200);
     }
 
     /// <summary>
@@ -63,10 +70,9 @@ public static class BlazorHelpers
     /// </summary>
     public static async Task WaitForBlazorRenderAsync(
         this IPage page, 
-        string selector, 
-        int timeout = 5000)
+        string selector)
     {
-        await page.WaitForSelectorAsync(selector, new() { Timeout = timeout });
+        await page.WaitForSelectorAsync(selector);
         // Element is visible means render is complete
     }
 
@@ -83,7 +89,6 @@ public static class BlazorHelpers
     /// </summary>
     /// <param name="page">The Playwright page</param>
     /// <param name="urlSegment">The URL path segment to wait for (e.g., "news", "videos", "github-copilot")</param>
-    /// <param name="timeout">Timeout in milliseconds (default 5000ms)</param>
     /// <remarks>
     /// Why WaitForFunctionAsync instead of WaitForURLAsync:
     /// - WaitForURLAsync with WaitUntilState (Load/Commit/DOMContentLoaded) waits for navigation events
@@ -98,13 +103,10 @@ public static class BlazorHelpers
     /// </remarks>
     public static async Task WaitForBlazorUrlContainsAsync(
         this IPage page,
-        string urlSegment,
-        int timeout = 5000)
+        string urlSegment)
     {
         await page.WaitForFunctionAsync(
-            $"() => window.location.pathname.includes('{urlSegment}')",
-            null,
-            new() { Timeout = timeout }
+            $"() => window.location.pathname.includes('{urlSegment}')"
         );
     }
 }

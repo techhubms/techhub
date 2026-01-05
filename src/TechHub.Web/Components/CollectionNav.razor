@@ -1,6 +1,4 @@
 @using TechHub.Core.DTOs
-@using Microsoft.JSInterop
-@inject IJSRuntime JS
 @inject NavigationManager Navigation
 @rendermode InteractiveServer
 
@@ -47,8 +45,11 @@
 
     private async Task OnCollectionSelected(string collectionName)
     {
-        // Navigate to new URL - Blazor will handle it
-        Navigation.NavigateTo($"/{Section.Name}/{collectionName}");
+        // Navigate to new URL with full page reload (forceLoad: true)
+        // This is required because Section.razor uses static SSR and won't receive
+        // parameter updates from client-side navigation. Full reload ensures
+        // OnParametersSetAsync is called with new CollectionName parameter.
+        Navigation.NavigateTo($"/{Section.Name}/{collectionName}", forceLoad: true);
         
         // Notify parent component
         await OnCollectionChange.InvokeAsync(collectionName);

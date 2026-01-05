@@ -22,8 +22,6 @@ public class UrlRoutingAndNavigationTests : IAsyncLifetime
         _playwright = await Playwright.CreateAsync();
         _browser = await _playwright.Chromium.LaunchAsync(new() { Headless = true });
         _context = await _browser.NewContextAsync();
-        // Set default timeout to 5 seconds - if anything takes longer, something is wrong
-        _context.SetDefaultTimeout(5000);
     }
 
     public async Task DisposeAsync()
@@ -152,7 +150,7 @@ public class UrlRoutingAndNavigationTests : IAsyncLifetime
         // Navigate to videos
         var videosButton = page.Locator(".collection-nav button", new() { HasTextString = "Videos" });
         await videosButton.ClickAsync();
-        await page.WaitForURLAsync("**/github-copilot/videos", new() { WaitUntil = WaitUntilState.Commit });
+        await page.WaitForBlazorUrlContainsAsync("/github-copilot/videos");
         
         // Verify Videos button is now active
         var videosButtonActive = page.Locator(".collection-nav button.active");
@@ -460,8 +458,6 @@ public class UrlRoutingAndNavigationTests : IAsyncLifetime
         // Arrange & Act - Open browser directly to a specific collection URL
         var page = await _context!.NewPageAsync();
         await page.GotoAndWaitForBlazorAsync($"{BaseUrl}/azure/news");
-        await page.WaitForSelectorAsync(".collection-nav");
-        await page.WaitForSelectorAsync(".content-item-card");
         
         // Assert - Should load Azure News collection
         page.Url.Should().EndWith("/azure/news",

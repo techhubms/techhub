@@ -3,6 +3,13 @@ using TechHub.Web.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
+// Enable static web assets for non-Development environments (e.g., Test)
+// Required for E2E tests which run in Test environment
+if (!builder.Environment.IsDevelopment())
+{
+    builder.WebHost.UseStaticWebAssets();
+}
+
 // Add services to the container.
 builder.Services.AddRazorComponents()
     .AddInteractiveServerComponents();

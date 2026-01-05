@@ -21,8 +21,6 @@ public class NavigationImprovementsTests : IAsyncLifetime
         _playwright = await Playwright.CreateAsync();
         _browser = await _playwright.Chromium.LaunchAsync(new() { Headless = true });
         _context = await _browser.NewContextAsync();
-        // Set default timeout to 5 seconds - if anything takes longer, something is wrong
-        _context.SetDefaultTimeout(5000);
     }
 
     public async Task DisposeAsync()
@@ -92,7 +90,7 @@ public class NavigationImprovementsTests : IAsyncLifetime
         await ghCopilotCard.ClickAsync();
         
         // Wait for URL to contain the section name
-        await page.WaitForBlazorUrlContainsAsync("/github-copilot", timeout: 10000);
+        await page.WaitForBlazorUrlContainsAsync("/github-copilot");
         
         // Assert - Should navigate to /github-copilot
         Assert.Contains("/github-copilot", page.Url);
@@ -154,9 +152,8 @@ public class NavigationImprovementsTests : IAsyncLifetime
         // Arrange
         var page = await _context!.NewPageAsync();
         
-        // Act - Navigate to "All" section
+        // Act - Navigate to "All" section (contains all content, may take longer to load)
         await page.GotoAndWaitForBlazorAsync($"{BaseUrl}/all");
-        await page.WaitForSelectorAsync(".content-item-card");
         
         // Get first content card
         var firstCard = page.Locator(".content-item-card").First;

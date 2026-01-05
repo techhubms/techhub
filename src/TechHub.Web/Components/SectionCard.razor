@@ -8,37 +8,33 @@
                 <h2>@Section.Title</h2>
             </div>
         </div>
-        <div class="section-body">
-            <p class="section-description">@Section.Description</p>
-            @if (Section.Collections.Any())
-            {
-                <div class="section-collections">
-                    @foreach (var collection in Section.Collections.Where(c => !string.IsNullOrEmpty(c.Name)).Take(4))
-                    {
-                        <a href="/@Section.Name/@collection.Name" class="collection-badge-link" @onclick="HandleCollectionClick" @onclick:stopPropagation="true">
-                            <span class="collection-badge">
-                                @collection.Title
-                            </span>
-                        </a>
-                    }
-                    @if (Section.Collections.Count(c => !string.IsNullOrEmpty(c.Name)) > 4)
-                    {
-                        <span class="collection-badge">+@(Section.Collections.Count(c => !string.IsNullOrEmpty(c.Name)) - 4) more</span>
-                    }
-                </div>
-            }
-        </div>
     </a>
+    <div class="section-body">
+        <a href="/@Section.Name" class="section-description-link">
+            <p class="section-description">@Section.Description</p>
+        </a>
+        @if (Section.Collections.Any())
+        {
+            <div class="section-collections">
+                @foreach (var collection in Section.Collections.Where(c => !string.IsNullOrEmpty(c.Name)).Take(4))
+                {
+                    <a href="/@Section.Name/@collection.Name" class="collection-badge-link">
+                        <span class="collection-badge">
+                            @collection.Title
+                        </span>
+                    </a>
+                }
+                @if (Section.Collections.Count(c => !string.IsNullOrEmpty(c.Name)) > 4)
+                {
+                    <span class="collection-badge">+@(Section.Collections.Count(c => !string.IsNullOrEmpty(c.Name)) - 4) more</span>
+                }
+            </div>
+        }
+    </div>
 </div>
 
 @code {
     [Parameter, EditorRequired]
     public SectionDto Section { get; set; } = null!;
-
-    private void HandleCollectionClick()
-    {
-        // Prevent event from bubbling to parent link
-        // Navigation is handled by the anchor tag
-    }
 }
 

@@ -4,7 +4,7 @@
 @using TechHub.Web.Services
 @inject TechHubApiClient ApiClient
 @inject NavigationManager Navigation
-@attribute [StreamRendering]
+@inject ILogger<Section> Logger
 
 <PageTitle>@PageTitle - Tech Hub</PageTitle>
 
@@ -73,12 +73,19 @@
 
     protected override async Task OnInitializedAsync()
     {
+        Logger.LogDebug("Section OnInitializedAsync START: SectionName={SectionName}, CollectionName={CollectionName}", 
+            SectionName, CollectionName);
         selectedCollection = CollectionName ?? "all";
         await LoadSection();
+        Logger.LogDebug("Section OnInitializedAsync COMPLETE: section={SectionTitle}, isLoadingSection={IsLoading}", 
+            section?.Title, isLoadingSection);
     }
 
     protected override async Task OnParametersSetAsync()
     {
+        Logger.LogDebug("Section OnParametersSetAsync: SectionName={SectionName}, CollectionName={CollectionName}, selectedCollection={Selected}", 
+            SectionName, CollectionName, selectedCollection);
+        
         // Handle URL changes (browser back/forward, direct navigation)
         if (CollectionName != selectedCollection)
         {
@@ -95,19 +102,25 @@
 
     private async Task LoadSection()
     {
+        Logger.LogDebug("LoadSection START: SectionName={SectionName}", SectionName);
         isLoadingSection = true;
         
         try
         {
             section = await ApiClient.GetSectionAsync(SectionName);
+            Logger.LogDebug("LoadSection API call complete: section={SectionTitle}, category={Category}", 
+                section?.Title, section?.Category);
         }
-        catch (Exception)
+        catch (Exception ex)
         {
+            Logger.LogError(ex, "LoadSection FAILED for {SectionName}", SectionName);
             section = null;
         }
         finally
         {
             isLoadingSection = false;
+            Logger.LogDebug("LoadSection FINALLY: isLoadingSection={IsLoading}, section={Section}", 
+                isLoadingSection, section?.Title ?? "null");
         }
     }
 

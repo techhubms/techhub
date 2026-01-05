@@ -86,6 +86,9 @@
         errorMessage = null;
         StateHasChanged();
         
+        Logger.LogDebug("LoadContent START: Section={SectionName}, Collection={CollectionName}, Category={SectionCategory}", 
+            SectionName, CollectionName, SectionCategory);
+        
         try
         {
             IEnumerable<ContentItemDto>? items = null;
@@ -96,11 +99,13 @@
                 if (SectionCategory.Equals("All", StringComparison.OrdinalIgnoreCase))
                 {
                     // /all/all - get everything
+                    Logger.LogDebug("Calling ApiClient.GetContentAsync(\"\", \"\") for /all/all");
                     items = await ApiClient.GetContentAsync("", "");
                 }
                 else
                 {
                     // /section/all - get all content for this section's category
+                    Logger.LogDebug("Calling ApiClient.GetContentAsync({Category}, ) for section category={Category}", SectionCategory, SectionCategory);
                     items = await ApiClient.GetContentAsync(SectionCategory, "");
                 }
             }
@@ -108,15 +113,19 @@
             else if (SectionCategory.Equals("All", StringComparison.OrdinalIgnoreCase))
             {
                 // /all/news - get all news across all sections
+                Logger.LogDebug("Calling ApiClient.GetContentAsync(, {Collection}) for collection={Collection}", CollectionName, CollectionName);
                 items = await ApiClient.GetContentAsync("", CollectionName);
             }
             else
             {
                 // /section/collection - get specific collection for specific category
+                Logger.LogDebug("Calling ApiClient.GetContentAsync({Category}, {Collection}) for category={Category}, collection={Collection}", 
+                    SectionCategory, CollectionName, SectionCategory, CollectionName);
                 items = await ApiClient.GetContentAsync(SectionCategory, CollectionName);
             }
 
             contentItems = items?.ToList() ?? new List<ContentItemDto>();
+            Logger.LogDebug("LoadContent COMPLETE: Loaded {Count} items, isLoading will be set to false", contentItems.Count);
         }
         catch (Exception ex)
         {
@@ -127,6 +136,7 @@
         {
             isLoading = false;
             StateHasChanged();
+            Logger.LogDebug("LoadContent FINALLY: isLoading={IsLoading}, contentItems.Count={Count}", isLoading, contentItems.Count);
         }
     }
 
