@@ -22882,5 +22882,11 @@
     "collection": "videos",
     "canonical_url": "https://www.youtube.com/shorts/pzF4D7juXbM",
     "reason": "Succesfully added: Assigned AI category because the video explicitly discusses the impact of artificial intelligence on programming language adoption and code generation, which meets AI inclusion rule 5 (high-level AI usage) and AI rule 4 (AI development with Microsoft tech, as GitHub is part of Microsoft). Assigned Coding because the core subject is programming languages, static typing, and their relationship with AI, aligning with Coding rule 1 (Microsoft programming languages) and rule 4 (coding practices). Did not assign 'GitHub Copilot' or 'DevOps' as the focus is on broad AI trends and language choices, not specific to Copilot usage or DevOps tooling."
+  },
+  {
+    "canonical_url": "https://hiddedesmet.com/from-vibe-coding-to-spec-driven-development",
+    "reason": "Succesfully added: Categories assigned: 'AI' because the article focuses on AI-assisted coding, its pitfalls, and best practices for working with AI coding assistants, specifically referencing GitHub Copilot and frameworks tailored for AI code generation (AI rule 1 and 2). 'Coding' is assigned due to the content's focus on code quality, maintainability, and iterative development techniques (Coding rule 4). 'DevOps' is included because the article addresses structured workflows, accountability, development process improvements, and implementation practices central to DevOps mindsets (DevOps rules 3, 4, 5). 'GitHub Copilot' is referenced, but this post is about workflows using AI coding assistants in general, not focusing on Copilot-specific features or best practices, so 'GitHub Copilot' is not assigned. Azure and ML are not assigned since there's no substantive coverage of Microsoft Azure or data science/ML topics. Security is discussed regarding vulnerabilities, but not to a technical implementation depth required for the Security category. The decision is based on the primary technical focus and references in the content.",
+    "timestamp": "2026-01-05 08:03:52 +00:00",
+    "collection": "blogs"
   }
 ]
