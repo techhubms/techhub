@@ -9,7 +9,7 @@ namespace TechHub.E2E.Tests.Tests;
 /// E2E tests for URL routing, collection navigation, and "all" collection functionality
 /// These tests document and verify the expected behavior of URL-based navigation
 /// </summary>
-[Collection("Playwright Collection")]
+[Collection("URL Routing Tests")]
 public class UrlRoutingAndNavigationTests : IAsyncLifetime
 {
     private readonly PlaywrightCollectionFixture _fixture;

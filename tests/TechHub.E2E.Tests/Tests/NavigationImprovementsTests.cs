@@ -8,7 +8,7 @@ namespace TechHub.E2E.Tests.Tests;
 /// E2E tests for navigation improvements and URL structure
 /// Tests for user story requirements: section ordering, URL structure, and navigation flow
 /// </summary>
-[Collection("Playwright Collection")]
+[Collection("Navigation Tests")]
 public class NavigationImprovementsTests : IAsyncLifetime
 {
     private readonly PlaywrightCollectionFixture _fixture;

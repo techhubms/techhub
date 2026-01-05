@@ -56,11 +56,16 @@ public class PlaywrightCollectionFixture : IAsyncLifetime
 }
 
 /// <summary>
-/// xUnit collection definition. All test classes marked with [Collection("Playwright Collection")]
-/// will share the same PlaywrightCollectionFixture instance (one browser for all tests).
+/// xUnit collection definitions for E2E tests.
+/// Each test class gets its own collection to enable parallel execution.
+/// All collections share the same PlaywrightCollectionFixture instance (one browser).
 /// </summary>
-[CollectionDefinition("Playwright Collection")]
-public class PlaywrightCollection : ICollectionFixture<PlaywrightCollectionFixture>
+[CollectionDefinition("URL Routing Tests")]
+public class UrlRoutingCollection : ICollectionFixture<PlaywrightCollectionFixture>
 {
-    // This class is never instantiated - it's just a marker for xUnit
+}
+
+[CollectionDefinition("Navigation Tests")]
+public class NavigationCollection : ICollectionFixture<PlaywrightCollectionFixture>
+{
 }
