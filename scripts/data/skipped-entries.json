@@ -10935,5 +10935,29 @@
     "canonical_url": "https://techcommunity.microsoft.com/t5/azure/unable-to-delete-foundry-agent-identity-entra-app-in-azure/m-p/4482418#M22397",
     "reason": "Insufficient content length",
     "collection": "community"
+  },
+  {
+    "reason": "Insufficient content length",
+    "timestamp": "2026-01-02 19:03:44 +00:00",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/app-development/windows-forms-user-control-layout-issues-at-runtime/m-p/4482223#M1280",
+    "collection": "community"
+  },
+  {
+    "timestamp": "2026-01-02 21:03:52 +00:00",
+    "canonical_url": "https://www.youtube.com/shorts/SO2mm2qoy9U",
+    "reason": "No categories found: No categories assigned. The content does not provide substantive technical detail—there is only a description noting that KC Lemson discusses creating a game called Bedlam and making it available online, but there is no actual content or technical explanation provided (the content field is null). According to the processing rules, category inclusion requires actual content with technical implementation, and generic exclusion rule 'focus on actual content' excludes purely navigational or promotional material without technical substance.",
+    "collection": "videos"
+  },
+  {
+    "timestamp": "2026-01-04 12:03:54 +00:00",
+    "reason": "No categories found: Content excluded due to the Non-Development Microsoft Products generic exclusion rule. The article compares and discusses usage scenarios for SharePoint, Teams, and OneDrive, but focuses entirely on end-user/business productivity guidance (file storage, collaboration, document lifecycle) rather than development, customization, or technical implementation. There is no technical depth related to coding, administration scripting, development practices, API integration, governance automation, or architecture beyond user-level feature selection. Microsoft 365 Copilot is also mentioned in related links but the main article itself contains no developer content. Therefore, no categories are assigned.",
+    "collection": "blogs",
+    "canonical_url": "https://dellenny.com/sharepoint-vs-teams-vs-onedrive-when-to-use-each-and-when-not-to/"
+  },
+  {
+    "collection": "videos",
+    "canonical_url": "https://www.youtube.com/shorts/FW7tsn75zh4",
+    "timestamp": "2026-01-04 16:03:50 +00:00",
+    "reason": "No categories found: Content does not qualify due to the generic exclusion rule for biographical and trivia content. The description and title indicate this video focuses on the historical trivia of Python's name rather than technical, educational, or development content involving Microsoft technologies or tooling. There is no substantive technical content or Microsoft relevance based on the input provided, so no categories were assigned."
   }
 ]
