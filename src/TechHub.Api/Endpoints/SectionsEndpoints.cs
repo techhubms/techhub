@@ -78,7 +78,7 @@ internal static class SectionsEndpoints
         
         var sectionDtos = sections.Select(s => new SectionDto
         {
-            Id = s.Id,
+            Name = s.Name,
             Title = s.Title,
             Description = s.Description,
             Url = s.Url,
@@ -87,7 +87,7 @@ internal static class SectionsEndpoints
             Collections = s.Collections.Select(c => new CollectionReferenceDto
             {
                 Title = c.Title,
-                Collection = c.Collection,
+                Name = c.Name,
                 Url = c.Url,
                 Description = c.Description,
                 IsCustom = c.IsCustom
@@ -105,7 +105,7 @@ internal static class SectionsEndpoints
         ISectionRepository sectionRepository,
         CancellationToken cancellationToken)
     {
-        var section = await sectionRepository.GetByIdAsync(sectionName, cancellationToken);
+        var section = await sectionRepository.GetByNameAsync(sectionName, cancellationToken);
         
         if (section == null)
         {
@@ -114,7 +114,7 @@ internal static class SectionsEndpoints
 
         var sectionDto = new SectionDto
         {
-            Id = section.Id,
+            Name = section.Name,
             Title = section.Title,
             Description = section.Description,
             Url = section.Url,
@@ -123,7 +123,7 @@ internal static class SectionsEndpoints
             Collections = section.Collections.Select(c => new CollectionReferenceDto
             {
                 Title = c.Title,
-                Collection = c.Collection,
+                Name = c.Name,
                 Url = c.Url,
                 Description = c.Description,
                 IsCustom = c.IsCustom
@@ -143,7 +143,7 @@ internal static class SectionsEndpoints
         CancellationToken cancellationToken)
     {
         // Verify section exists
-        var section = await sectionRepository.GetByIdAsync(sectionName, cancellationToken);
+        var section = await sectionRepository.GetByNameAsync(sectionName, cancellationToken);
         if (section == null)
         {
             return TypedResults.NotFound();
@@ -164,7 +164,7 @@ internal static class SectionsEndpoints
         ISectionRepository sectionRepository,
         CancellationToken cancellationToken)
     {
-        var section = await sectionRepository.GetByIdAsync(sectionName, cancellationToken);
+        var section = await sectionRepository.GetByNameAsync(sectionName, cancellationToken);
         
         if (section == null)
         {
@@ -174,7 +174,7 @@ internal static class SectionsEndpoints
         var collectionDtos = section.Collections.Select(c => new CollectionReferenceDto
         {
             Title = c.Title,
-            Collection = c.Collection,
+            Name = c.Name,
             Url = c.Url,
             Description = c.Description,
             IsCustom = c.IsCustom
@@ -192,7 +192,7 @@ internal static class SectionsEndpoints
         ISectionRepository sectionRepository,
         CancellationToken cancellationToken)
     {
-        var section = await sectionRepository.GetByIdAsync(sectionName, cancellationToken);
+        var section = await sectionRepository.GetByNameAsync(sectionName, cancellationToken);
         
         if (section == null)
         {
@@ -200,7 +200,7 @@ internal static class SectionsEndpoints
         }
 
         var collection = section.Collections.FirstOrDefault(c => 
-            c.Collection.Equals(collectionName, StringComparison.OrdinalIgnoreCase));
+            c.Name.Equals(collectionName, StringComparison.OrdinalIgnoreCase));
         
         if (collection == null)
         {
@@ -210,7 +210,7 @@ internal static class SectionsEndpoints
         var collectionDto = new CollectionReferenceDto
         {
             Title = collection.Title,
-            Collection = collection.Collection,
+            Name = collection.Name,
             Url = collection.Url,
             Description = collection.Description,
             IsCustom = collection.IsCustom
@@ -230,7 +230,7 @@ internal static class SectionsEndpoints
         CancellationToken cancellationToken)
     {
         // Verify section exists
-        var section = await sectionRepository.GetByIdAsync(sectionName, cancellationToken);
+        var section = await sectionRepository.GetByNameAsync(sectionName, cancellationToken);
         if (section == null)
         {
             return TypedResults.NotFound();
@@ -238,7 +238,7 @@ internal static class SectionsEndpoints
 
         // Verify collection exists in this section
         var hasCollection = section.Collections.Any(c => 
-            c.Collection.Equals(collectionName, StringComparison.OrdinalIgnoreCase));
+            c.Name.Equals(collectionName, StringComparison.OrdinalIgnoreCase));
         
         if (!hasCollection)
         {
@@ -261,13 +261,13 @@ internal static class SectionsEndpoints
     {
         return new ContentItemDto
         {
-            Id = item.Id,
+            Slug = item.Slug,
             Title = item.Title,
             Description = item.Description,
             Author = item.Author,
             DateEpoch = item.DateEpoch,
             DateIso = item.DateIso,
-            Collection = item.Collection,
+            CollectionName = item.CollectionName,
             AltCollection = item.AltCollection,
             Categories = item.Categories,
             Tags = item.Tags,
@@ -275,7 +275,7 @@ internal static class SectionsEndpoints
             ExternalUrl = item.ExternalUrl,
             VideoId = item.VideoId,
             ViewingMode = item.ViewingMode,
-            Url = $"/{item.Collection}/{item.Id}"
+            Url = $"/{item.CollectionName}/{item.Slug}"
         };
     }
 }

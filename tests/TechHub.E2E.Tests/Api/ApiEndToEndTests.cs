@@ -42,13 +42,13 @@ public class ApiEndToEndTests : IClassFixture<ApiTestFactory>
         sections!.Should().NotBeEmpty();
         
         // Verify expected sections from sections.json
-        sections.Should().Contain(s => s.Id == "ai");
-        sections.Should().Contain(s => s.Id == "github-copilot");
-        sections.Should().Contain(s => s.Id == "azure");
-        sections.Should().Contain(s => s.Id == "ml");
-        sections.Should().Contain(s => s.Id == "coding");
-        sections.Should().Contain(s => s.Id == "devops");
-        sections.Should().Contain(s => s.Id == "security");
+        sections.Should().Contain(s => s.Name == "ai");
+        sections.Should().Contain(s => s.Name == "github-copilot");
+        sections.Should().Contain(s => s.Name == "azure");
+        sections.Should().Contain(s => s.Name == "ml");
+        sections.Should().Contain(s => s.Name == "coding");
+        sections.Should().Contain(s => s.Name == "devops");
+        sections.Should().Contain(s => s.Name == "security");
         
         // All sections should have collections
         sections.Should().AllSatisfy(s => s.Collections.Should().NotBeEmpty());
@@ -65,7 +65,7 @@ public class ApiEndToEndTests : IClassFixture<ApiTestFactory>
 
         var section = await response.Content.ReadFromJsonAsync<SectionDto>();
         section.Should().NotBeNull();
-        section!.Id.Should().Be("ai");
+        section!.Name.Should().Be("ai");
         section.Title.Should().Be("Artificial Intelligence");
         section.Category.Should().Be("AI");
         section.Collections.Should().NotBeEmpty();
@@ -91,9 +91,9 @@ public class ApiEndToEndTests : IClassFixture<ApiTestFactory>
         // Verify content has expected structure
         content!.Should().AllSatisfy(item =>
         {
-            item.Id.Should().NotBeNullOrEmpty();
+            item.Slug.Should().NotBeNullOrEmpty();
             item.Title.Should().NotBeNullOrEmpty();
-            item.Collection.Should().NotBeNullOrEmpty();
+            item.CollectionName.Should().NotBeNullOrEmpty();
             item.DateEpoch.Should().BeGreaterThan(0);
             item.Url.Should().NotBeNullOrEmpty();
         });
@@ -114,7 +114,7 @@ public class ApiEndToEndTests : IClassFixture<ApiTestFactory>
     public async Task GetContentByCollection_News_ReturnsNewsItems()
     {
         // Act
-        var response = await _client.GetAsync("/api/content?collection=news");
+        var response = await _client.GetAsync("/api/content?collectionName=news");
 
         // Assert
         response.StatusCode.Should().Be(HttpStatusCode.OK);
@@ -122,14 +122,14 @@ public class ApiEndToEndTests : IClassFixture<ApiTestFactory>
         var items = await response.Content.ReadFromJsonAsync<List<ContentItemDto>>();
         items.Should().NotBeNull();
         items!.Should().NotBeEmpty();
-        items!.Should().AllSatisfy(item => item.Collection.Should().Be("news"));
+        items!.Should().AllSatisfy(item => item.CollectionName.Should().Be("news"));
     }
 
     [Fact]
     public async Task GetContentByCollection_Videos_ReturnsVideoItems()
     {
         // Act
-        var response = await _client.GetAsync("/api/content?collection=videos");
+        var response = await _client.GetAsync("/api/content?collectionName=videos");
 
         // Assert
         response.StatusCode.Should().Be(HttpStatusCode.OK);
@@ -137,14 +137,14 @@ public class ApiEndToEndTests : IClassFixture<ApiTestFactory>
         var items = await response.Content.ReadFromJsonAsync<List<ContentItemDto>>();
         items.Should().NotBeNull();
         items!.Should().NotBeEmpty();
-        items.Should().AllSatisfy(item => item.Collection.Should().Be("videos"));
+        items.Should().AllSatisfy(item => item.CollectionName.Should().Be("videos"));
     }
 
     [Fact]
     public async Task GetContentByCollection_Blogs_ReturnsBlogItems()
     {
         // Act
-        var response = await _client.GetAsync("/api/content?collection=blogs");
+        var response = await _client.GetAsync("/api/content?collectionName=blogs");
 
         // Assert
         response.StatusCode.Should().Be(HttpStatusCode.OK);
@@ -152,14 +152,14 @@ public class ApiEndToEndTests : IClassFixture<ApiTestFactory>
         var items = await response.Content.ReadFromJsonAsync<List<ContentItemDto>>();
         items.Should().NotBeNull();
         items!.Should().NotBeEmpty();
-        items.Should().AllSatisfy(item => item.Collection.Should().Be("blogs"));
+        items.Should().AllSatisfy(item => item.CollectionName.Should().Be("blogs"));
     }
 
     [Fact]
     public async Task GetContentByCollection_Community_ReturnsCommunityItems()
     {
         // Act
-        var response = await _client.GetAsync("/api/content?collection=community");
+        var response = await _client.GetAsync("/api/content?collectionName=community");
 
         // Assert
         response.StatusCode.Should().Be(HttpStatusCode.OK);
@@ -167,14 +167,14 @@ public class ApiEndToEndTests : IClassFixture<ApiTestFactory>
         var items = await response.Content.ReadFromJsonAsync<List<ContentItemDto>>();
         items.Should().NotBeNull();
         items!.Should().NotBeEmpty();
-        items.Should().AllSatisfy(item => item.Collection.Should().Be("community"));
+        items.Should().AllSatisfy(item => item.CollectionName.Should().Be("community"));
     }
 
     [Fact]
     public async Task GetContentByCollection_Roundups_ReturnsRoundupItems()
     {
         // Act
-        var response = await _client.GetAsync("/api/content?collection=roundups");
+        var response = await _client.GetAsync("/api/content?collectionName=roundups");
 
         // Assert
         response.StatusCode.Should().Be(HttpStatusCode.OK);
@@ -182,7 +182,7 @@ public class ApiEndToEndTests : IClassFixture<ApiTestFactory>
         var items = await response.Content.ReadFromJsonAsync<List<ContentItemDto>>();
         items.Should().NotBeNull();
         items!.Should().NotBeEmpty();
-        items.Should().AllSatisfy(item => item.Collection.Should().Be("roundups"));
+        items.Should().AllSatisfy(item => item.CollectionName.Should().Be("roundups"));
     }
 
     #endregion
@@ -267,7 +267,7 @@ public class ApiEndToEndTests : IClassFixture<ApiTestFactory>
         items!.Should().NotBeEmpty();
         items.Should().AllSatisfy(item =>
         {
-            item.Collection.Should().Be("news");
+            item.CollectionName.Should().Be("news");
             item.Categories.Should().Contain("GitHub Copilot");
         });
     }
@@ -392,13 +392,13 @@ public class ApiEndToEndTests : IClassFixture<ApiTestFactory>
         // Assert
         content!.Should().AllSatisfy(item =>
         {
-            item.Id.Should().NotBeNullOrEmpty();
+            item.Slug.Should().NotBeNullOrEmpty();
             item.Title.Should().NotBeNullOrEmpty();
             item.Description.Should().NotBeNullOrEmpty();
             item.Author.Should().NotBeNullOrEmpty();
             item.DateEpoch.Should().BeGreaterThan(0);
             item.DateIso.Should().NotBeNullOrEmpty();
-            item.Collection.Should().NotBeNullOrEmpty();
+            item.CollectionName.Should().NotBeNullOrEmpty();
             item.Categories.Should().NotBeEmpty();
             item.Tags.Should().NotBeEmpty();
             item.Url.Should().NotBeNullOrEmpty();
@@ -436,8 +436,8 @@ public class ApiEndToEndTests : IClassFixture<ApiTestFactory>
         {
             // URL should start with / and contain the collection and id
             item.Url.Should().StartWith("/");
-            item.Url.Should().Contain(item.Collection);
-            item.Url.Should().Contain(item.Id);
+            item.Url.Should().Contain(item.CollectionName);
+            item.Url.Should().Contain(item.Slug);
         });
     }
 

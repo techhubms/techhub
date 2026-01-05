@@ -9,23 +9,51 @@
 <PageTitle>@PageTitle - Tech Hub</PageTitle>
 
 <div class="section-page-grid">
-    @* Header loads independently *@
-    <SectionHeader SectionName="@SectionName" />
-    
-    @* Navigation loads independently *@
-    <CollectionNav SectionName="@SectionName" 
-                   SelectedCollection="@selectedCollection"
-                   IsLoadingContent="@isLoadingContent"
-                   OnCollectionChange="@HandleCollectionChange" />
-    
-    @* Content loads independently *@
-    @if (sectionCategory != null)
+    @if (isLoadingSection)
     {
+        @* Show skeleton while loading section data *@
+        <header class="section-header skeleton-header">
+            <div class="section-header-content">
+                <div class="skeleton skeleton-title"></div>
+                <div class="skeleton skeleton-description"></div>
+            </div>
+        </header>
+        
+        <nav class="collection-nav">
+            <h2>Collections</h2>
+            <ul class="skeleton-nav">
+                <li><div class="skeleton skeleton-nav-item"></div></li>
+                <li><div class="skeleton skeleton-nav-item"></div></li>
+                <li><div class="skeleton skeleton-nav-item"></div></li>
+            </ul>
+        </nav>
+    }
+    else if (section != null)
+    {
+        var sectionData = section;
+        @* Pass section data to children - no redundant API calls *@
+        <SectionHeader Section="@sectionData" />
+        
+        <CollectionNav Section="@sectionData"
+                       SelectedCollection="@selectedCollection"
+                       IsLoadingContent="@isLoadingContent"
+                       OnCollectionChange="@HandleCollectionChange" />
+        
         <CollectionContent SectionName="@SectionName"
                           CollectionName="@selectedCollection"
-                          SectionCategory="@sectionCategory"
-                          Collections="@collections" 
+                          SectionCategory="@sectionData.Category"
+                          Collections="@sectionData.Collections" 
                           @key="@selectedCollection" />
+    }
+    else
+    {
+        @* Error state *@
+        <header class="section-header error-header">
+            <div class="section-header-content">
+                <h1>Section Not Found</h1>
+                <p>Unable to load section "@SectionName"</p>
+            </div>
+        </header>
     }
 </div>
 
@@ -37,19 +65,19 @@
     public string? CollectionName { get; set; }
 
     private string selectedCollection = string.Empty;
-    private string? sectionCategory;
-    private IReadOnlyList<CollectionReferenceDto> collections = Array.Empty<CollectionReferenceDto>();
+    private SectionDto? section;
+    private bool isLoadingSection = true;
     private bool isLoadingContent = false;
 
-    private string PageTitle => SectionName;
+    private string PageTitle => section?.Title ?? SectionName;
 
     protected override async Task OnInitializedAsync()
     {
         selectedCollection = CollectionName ?? "all";
-        await LoadSectionMetadata();
+        await LoadSection();
     }
 
-    protected override Task OnParametersSetAsync()
+    protected override async Task OnParametersSetAsync()
     {
         // Handle URL changes (browser back/forward, direct navigation)
         if (CollectionName != selectedCollection)
@@ -57,24 +85,29 @@
             selectedCollection = CollectionName ?? "all";
         }
         
-        return Task.CompletedTask;
+        // Reload section if section name changed
+        var currentSectionName = section?.Name;
+        if (currentSectionName != null && currentSectionName != SectionName)
+        {
+            await LoadSection();
+        }
     }
 
-    private async Task LoadSectionMetadata()
+    private async Task LoadSection()
     {
+        isLoadingSection = true;
+        
         try
         {
-            var section = await ApiClient.GetSectionAsync(SectionName);
-            if (section != null)
-            {
-                sectionCategory = section.Category;
-                collections = section.Collections;
-            }
+            section = await ApiClient.GetSectionAsync(SectionName);
         }
         catch (Exception)
         {
-            sectionCategory = string.Empty;
-            collections = Array.Empty<CollectionReferenceDto>();
+            section = null;
+        }
+        finally
+        {
+            isLoadingSection = false;
         }
     }
 

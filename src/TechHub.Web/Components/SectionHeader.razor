@@ -1,73 +1,16 @@
 @using TechHub.Core.DTOs
-@using TechHub.Web.Services
-@inject TechHubApiClient ApiClient
-@inject ILogger<SectionHeader> Logger
 
-@if (isLoading)
+@if (Section != null)
 {
-    <header class="section-header skeleton-header">
+    <header class="section-header" style="background-image: url('@(Section.BackgroundImage)')">
         <div class="section-header-content">
-            <div class="skeleton skeleton-title"></div>
-            <div class="skeleton skeleton-description"></div>
-        </div>
-    </header>
-}
-else if (errorMessage != null)
-{
-    <header class="section-header error-header">
-        <div class="section-header-content">
-            <h1>Error Loading Section</h1>
-            <p>@errorMessage</p>
-        </div>
-    </header>
-}
-else if (section != null)
-{
-    var sectionData = section;
-    <header class="section-header" style="background-image: url('@(sectionData.BackgroundImage)')">
-        <div class="section-header-content">
-            <h1>@sectionData.Title</h1>
-            <p class="section-description">@sectionData.Description</p>
+            <h1>@Section.Title</h1>
+            <p class="section-description">@Section.Description</p>
         </div>
     </header>
 }
 
 @code {
     [Parameter, EditorRequired]
-    public required string SectionName { get; set; }
-
-    private SectionDto? section;
-    private bool isLoading = true;
-    private string? errorMessage;
-
-    protected override async Task OnInitializedAsync()
-    {
-        await LoadSection();
-    }
-
-    protected override async Task OnParametersSetAsync()
-    {
-        // Reload if section changes
-        await LoadSection();
-    }
-
-    private async Task LoadSection()
-    {
-        isLoading = true;
-        errorMessage = null;
-        
-        try
-        {
-            section = await ApiClient.GetSectionAsync(SectionName);
-        }
-        catch (Exception ex)
-        {
-            Logger.LogError(ex, "Failed to load section {SectionName}", SectionName);
-            errorMessage = "Unable to load section";
-        }
-        finally
-        {
-            isLoading = false;
-        }
-    }
+    public required SectionDto Section { get; set; }
 }

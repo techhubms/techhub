@@ -17,9 +17,6 @@
 .PARAMETER Test
     Run all tests before starting the application.
 
-.PARAMETER ContinueOnTestFailure
-    Continue starting the application even if tests fail (only with -Test).
-
 .PARAMETER SkipBuild
     Skip the build step and run the application with existing binaries.
 
@@ -76,9 +73,6 @@ param(
 
     [Parameter(Mandatory = $false)]
     [switch]$Test,
-
-    [Parameter(Mandatory = $false)]
-    [switch]$ContinueOnTestFailure,
 
     [Parameter(Mandatory = $false)]
     [switch]$SkipBuild,
@@ -194,8 +188,7 @@ function Invoke-Build {
 function Invoke-Tests {
     param(
         [int]$ApiPort = 5029,
-        [int]$WebPort = 5184,
-        [bool]$ContinueOnFailure = $false
+        [int]$WebPort = 5184
     )
     
     Write-Step "Running tests with live servers"
@@ -278,7 +271,7 @@ function Invoke-Tests {
         
         # Wait for servers to be ready
         Write-Info "Waiting for servers to start..."
-        $maxAttempts = 30
+        $maxAttempts = 5
         $attempt = 0
         $apiReady = $false
         $webReady = $false
@@ -313,7 +306,11 @@ function Invoke-Tests {
         }
         
         if (-not $apiReady -or -not $webReady) {
-            throw "Servers failed to start within $maxAttempts seconds"
+            Write-Error "Servers failed to start within $maxAttempts seconds"
+            Write-Info "Check logs for details:"
+            Write-Info "  API: $apiLogPath"
+            Write-Info "  Web: $webLogPath"
+            throw "Server startup timeout"
         }
         
         Write-Success "Servers ready"
@@ -322,11 +319,18 @@ function Invoke-Tests {
         Write-Step "Running all tests (including E2E)"
         Write-Host ""
         
-        # Run tests with detailed verbosity to show individual test results
-        dotnet test $solutionPath `
-            --configuration $configuration `
-            --no-build `
-            --verbosity detailed
+        # Build dotnet test arguments
+        $testArgs = @(
+            "test",
+            $solutionPath,
+            "--configuration", $configuration,
+            "--no-build",
+            "--verbosity", "detailed",
+            "--blame-hang-timeout", "5m"  # Kill hanging tests after 5 minutes
+        )
+        
+        # Run tests with configured arguments
+        & dotnet @testArgs
         
         $testExitCode = $LASTEXITCODE
         
@@ -339,13 +343,8 @@ function Invoke-Tests {
         Write-Host ""
         
         if ($testExitCode -ne 0) {
-            if ($ContinueOnFailure) {
-                Write-Host "⚠ Tests failed but continuing due to -ContinueOnTestFailure flag" -ForegroundColor Yellow
-                Write-Host ""
-            } else {
-                Write-Error "Tests failed with exit code $testExitCode"
-                exit 1
-            }
+            Write-Error "Tests failed with exit code $testExitCode"
+            exit 1
         } else {
             Write-Success "All tests passed"
         }
@@ -605,7 +604,7 @@ try {
     
     # Test if requested
     if ($Test) {
-        Invoke-Tests -ApiPort $ApiPort -WebPort $WebPort -ContinueOnFailure $ContinueOnTestFailure
+        Invoke-Tests -ApiPort $ApiPort -WebPort $WebPort
     }
     
     # If only build was requested, exit here

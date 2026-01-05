@@ -16,16 +16,17 @@ builder.Services.AddHttpClient<TechHubApiClient>(client =>
 })
 .AddStandardResilienceHandler(options =>
 {
-    // Retry configuration: 3 attempts with exponential backoff
-    options.Retry.MaxRetryAttempts = 3;
+    // Retry configuration: 2 attempts with exponential backoff starting at 1 second
+    options.Retry.MaxRetryAttempts = 2;
     options.Retry.BackoffType = Polly.DelayBackoffType.Exponential;
     options.Retry.UseJitter = true;
+    options.Retry.Delay = TimeSpan.FromSeconds(1);  // Base delay before exponential backoff
     
-    // Circuit breaker: open after 5 failures in 30 seconds
+    // Circuit breaker: open after 50% failures in 30 seconds (min 8 requests)
     options.CircuitBreaker.FailureRatio = 0.5;
     options.CircuitBreaker.SamplingDuration = TimeSpan.FromSeconds(30);
-    options.CircuitBreaker.MinimumThroughput = 5;
-    options.CircuitBreaker.BreakDuration = TimeSpan.FromSeconds(5);
+    options.CircuitBreaker.MinimumThroughput = 8;  // Increased to avoid premature triggering
+    options.CircuitBreaker.BreakDuration = TimeSpan.FromSeconds(10);
     
     // Total timeout for the entire request (including retries)
     options.TotalRequestTimeout.Timeout = TimeSpan.FromSeconds(60);

@@ -77,7 +77,7 @@ public class ContentEndpointsTests : IClassFixture<TechHubApiFactory>
         var items = await response.Content.ReadFromJsonAsync<List<ContentItemDto>>();
         items.Should().NotBeNull();
         items!.Should().HaveCount(2); // 2 news items
-        items.Should().AllSatisfy(item => item.Collection.Should().Be("news"));
+        items.Should().AllSatisfy(item => item.CollectionName.Should().Be("news"));
     }
 
     [Fact]
@@ -93,7 +93,7 @@ public class ContentEndpointsTests : IClassFixture<TechHubApiFactory>
         items.Should().NotBeNull();
         items!.Should().HaveCount(3); // 2 news + 1 blog
         items.Should().AllSatisfy(item => 
-            new[] { "news", "blogs" }.Should().Contain(item.Collection));
+            new[] { "news", "blogs" }.Should().Contain(item.CollectionName));
     }
 
     [Fact]
@@ -108,7 +108,7 @@ public class ContentEndpointsTests : IClassFixture<TechHubApiFactory>
         var items = await response.Content.ReadFromJsonAsync<List<ContentItemDto>>();
         items.Should().NotBeNull();
         items!.Should().HaveCount(1); // Only AI news item
-        items![0].Collection.Should().Be("news");
+        items![0].CollectionName.Should().Be("news");
         items[0].Categories.Should().Contain("AI");
     }
 
@@ -155,8 +155,8 @@ public class ContentEndpointsTests : IClassFixture<TechHubApiFactory>
         var items = await response.Content.ReadFromJsonAsync<List<ContentItemDto>>();
         items.Should().NotBeNull();
         items!.Should().HaveCount(1);
-        items![0].Id.Should().Be("2024-01-15-ai-news-1");
-        items[0].Collection.Should().Be("news");
+        items![0].Slug.Should().Be("2024-01-15-ai-news-1");
+        items[0].CollectionName.Should().Be("news");
         items[0].Categories.Should().Contain("AI");
         items[0].Tags.Should().Contain("copilot");
     }
@@ -275,13 +275,13 @@ public class ContentEndpointsTests : IClassFixture<TechHubApiFactory>
 
         // Assert
         var item = items![0];
-        item.Id.Should().NotBeNullOrEmpty();
+        item.Slug.Should().NotBeNullOrEmpty();
         item.Title.Should().NotBeNullOrEmpty();
         item.Description.Should().NotBeNullOrEmpty();
         item.Author.Should().NotBeNullOrEmpty();
         item.DateEpoch.Should().BeGreaterThan(0);
         item.DateIso.Should().NotBeNullOrEmpty();
-        item.Collection.Should().NotBeNullOrEmpty();
+        item.CollectionName.Should().NotBeNullOrEmpty();
         item.Categories.Should().NotBeEmpty();
         item.Tags.Should().NotBeEmpty();
         item.Excerpt.Should().NotBeNullOrEmpty();

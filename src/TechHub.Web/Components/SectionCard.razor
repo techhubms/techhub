@@ -1,7 +1,7 @@
 @using TechHub.Core.DTOs
 @inject NavigationManager Navigation
 
-<a href="/@Section.Id" class="section-card-link">
+<a href="/@Section.Name" class="section-card-link">
     <div class="section-card">
         <div class="section-card-header" style="background-image: url('@Section.BackgroundImage')">
             <div class="section-overlay">
@@ -13,17 +13,17 @@
             @if (Section.Collections.Any())
             {
                 <div class="section-collections">
-                    @foreach (var collection in Section.Collections.Where(c => !string.IsNullOrEmpty(c.Collection)).Take(4))
+                    @foreach (var collection in Section.Collections.Where(c => !string.IsNullOrEmpty(c.Name)).Take(4))
                     {
-                        <a href="/@Section.Id/@collection.Collection" class="collection-badge-link" @onclick="HandleCollectionClick" @onclick:stopPropagation="true">
+                        <a href="/@Section.Name/@collection.Name" class="collection-badge-link" @onclick="HandleCollectionClick" @onclick:stopPropagation="true">
                             <span class="collection-badge">
                                 @collection.Title
                             </span>
                         </a>
                     }
-                    @if (Section.Collections.Count(c => !string.IsNullOrEmpty(c.Collection)) > 4)
+                    @if (Section.Collections.Count(c => !string.IsNullOrEmpty(c.Name)) > 4)
                     {
-                        <span class="collection-badge">+@(Section.Collections.Count(c => !string.IsNullOrEmpty(c.Collection)) - 4) more</span>
+                        <span class="collection-badge">+@(Section.Collections.Count(c => !string.IsNullOrEmpty(c.Name)) - 4) more</span>
                     }
                 </div>
             }

@@ -57,21 +57,20 @@ public class TechHubApiFactory : WebApplicationFactory<Program>
         {
             new()
             {
-                Id = "ai",
-                Title = "AI",
+                Name = "ai", Title = "AI",
                 Description = "Artificial Intelligence resources",
                 Url = "/ai",
                 Category = "AI",
                 BackgroundImage = "/assets/section-backgrounds/ai.jpg",
                 Collections = new List<CollectionReference>
                 {
-                    new() { Title = "News", Collection = "news", Url = "/ai/news.html", Description = "AI News", IsCustom = false },
-                    new() { Title = "Blogs", Collection = "blogs", Url = "/ai/blogs.html", Description = "AI Blogs", IsCustom = false }
+                    new() { Title = "News", Name = "news", Url = "/ai/news.html", Description = "AI News", IsCustom = false },
+                    new() { Title = "Blogs", Name = "blogs", Url = "/ai/blogs.html", Description = "AI Blogs", IsCustom = false }
                 }
             },
             new()
             {
-                Id = "github-copilot",
+                Name = "github-copilot",
                 Title = "GitHub Copilot",
                 Description = "GitHub Copilot resources",
                 Url = "/github-copilot",
@@ -79,8 +78,8 @@ public class TechHubApiFactory : WebApplicationFactory<Program>
                 BackgroundImage = "/assets/section-backgrounds/github-copilot.jpg",
                 Collections = new List<CollectionReference>
                 {
-                    new() { Title = "News", Collection = "news", Url = "/github-copilot/news.html", Description = "GitHub Copilot News", IsCustom = false },
-                    new() { Title = "Videos", Collection = "videos", Url = "/github-copilot/videos.html", Description = "GitHub Copilot Videos", IsCustom = false }
+                    new() { Title = "News", Name = "news", Url = "/github-copilot/news.html", Description = "GitHub Copilot News", IsCustom = false },
+                    new() { Title = "Videos", Name = "videos", Url = "/github-copilot/videos.html", Description = "GitHub Copilot Videos", IsCustom = false }
                 }
             }
         };
@@ -88,13 +87,13 @@ public class TechHubApiFactory : WebApplicationFactory<Program>
         MockSectionRepository.GetAllAsync(Arg.Any<CancellationToken>())
             .Returns(Task.FromResult<IReadOnlyList<Section>>(sections));
 
-        MockSectionRepository.GetByIdAsync("ai", Arg.Any<CancellationToken>())
+        MockSectionRepository.GetByNameAsync("ai", Arg.Any<CancellationToken>())
             .Returns(Task.FromResult<Section?>(sections[0]));
 
-        MockSectionRepository.GetByIdAsync("github-copilot", Arg.Any<CancellationToken>())
+        MockSectionRepository.GetByNameAsync("github-copilot", Arg.Any<CancellationToken>())
             .Returns(Task.FromResult<Section?>(sections[1]));
 
-        MockSectionRepository.GetByIdAsync("invalid", Arg.Any<CancellationToken>())
+        MockSectionRepository.GetByNameAsync("invalid", Arg.Any<CancellationToken>())
             .Returns(Task.FromResult<Section?>(null));
     }
 
@@ -106,13 +105,10 @@ public class TechHubApiFactory : WebApplicationFactory<Program>
         var content = new List<ContentItem>
         {
             new()
-            {
-                Id = "2024-01-15-ai-news-1",
-                Title = "AI News Article 1",
+            { Slug = "2024-01-15-ai-news-1", Title = "AI News Article 1",
                 Description = "AI news description",
                 Author = "John Doe",
-                DateEpoch = 1705276800,
-                Collection = "news",
+                DateEpoch = 1705276800, CollectionName = "news",
                 AltCollection = null,
                 Categories = new List<string> { "AI" },
                 Tags = new List<string> { "ai", "copilot", "azure" },
@@ -122,13 +118,10 @@ public class TechHubApiFactory : WebApplicationFactory<Program>
                 VideoId = null
             },
             new()
-            {
-                Id = "2024-01-16-ai-blog-1",
-                Title = "AI Blog Article 1",
+            { Slug = "2024-01-16-ai-blog-1", Title = "AI Blog Article 1",
                 Description = "AI blog description",
                 Author = "Jane Smith",
-                DateEpoch = 1705363200,
-                Collection = "blogs",
+                DateEpoch = 1705363200, CollectionName = "blogs",
                 AltCollection = null,
                 Categories = new List<string> { "AI" },
                 Tags = new List<string> { "ai", "machine-learning" },
@@ -138,13 +131,10 @@ public class TechHubApiFactory : WebApplicationFactory<Program>
                 VideoId = null
             },
             new()
-            {
-                Id = "2024-01-17-copilot-video-1",
-                Title = "GitHub Copilot Video 1",
+            { Slug = "2024-01-17-copilot-video-1", Title = "GitHub Copilot Video 1",
                 Description = "Copilot video description",
                 Author = "Bob Johnson",
-                DateEpoch = 1705449600,
-                Collection = "videos",
+                DateEpoch = 1705449600, CollectionName = "videos",
                 AltCollection = null,
                 Categories = new List<string> { "GitHub Copilot" },
                 Tags = new List<string> { "copilot", "vscode", "productivity" },
@@ -154,13 +144,10 @@ public class TechHubApiFactory : WebApplicationFactory<Program>
                 VideoId = "abc123"
             },
             new()
-            {
-                Id = "2024-01-18-copilot-news-1",
-                Title = "GitHub Copilot News 1",
+            { Slug = "2024-01-18-copilot-news-1", Title = "GitHub Copilot News 1",
                 Description = "Copilot news description",
                 Author = "Alice Williams",
-                DateEpoch = 1705536000,
-                Collection = "news",
+                DateEpoch = 1705536000, CollectionName = "news",
                 AltCollection = null,
                 Categories = new List<string> { "GitHub Copilot" },
                 Tags = new List<string> { "copilot", "github" },
@@ -178,15 +165,15 @@ public class TechHubApiFactory : WebApplicationFactory<Program>
         // GetByCollectionAsync
         MockContentRepository.GetByCollectionAsync("news", Arg.Any<CancellationToken>())
             .Returns(Task.FromResult<IReadOnlyList<ContentItem>>(
-                content.Where(c => c.Collection == "news").ToList()));
+                content.Where(c => c.CollectionName == "news").ToList()));
 
         MockContentRepository.GetByCollectionAsync("blogs", Arg.Any<CancellationToken>())
             .Returns(Task.FromResult<IReadOnlyList<ContentItem>>(
-                content.Where(c => c.Collection == "blogs").ToList()));
+                content.Where(c => c.CollectionName == "blogs").ToList()));
 
         MockContentRepository.GetByCollectionAsync("videos", Arg.Any<CancellationToken>())
             .Returns(Task.FromResult<IReadOnlyList<ContentItem>>(
-                content.Where(c => c.Collection == "videos").ToList()));
+                content.Where(c => c.CollectionName == "videos").ToList()));
 
         // GetByCategoryAsync
         MockContentRepository.GetByCategoryAsync("AI", Arg.Any<CancellationToken>())

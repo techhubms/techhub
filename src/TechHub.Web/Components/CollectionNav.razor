@@ -1,23 +1,11 @@
 @using TechHub.Core.DTOs
-@using TechHub.Web.Services
 @using Microsoft.JSInterop
-@inject TechHubApiClient ApiClient
 @inject IJSRuntime JS
-@inject ILogger<CollectionNav> Logger
 
 <nav class="collection-nav">
     <h2>Collections</h2>
     
-    @if (isLoading)
-    {
-        <ul class="skeleton-nav">
-            <li><div class="skeleton skeleton-nav-item"></div></li>
-            <li><div class="skeleton skeleton-nav-item"></div></li>
-            <li><div class="skeleton skeleton-nav-item"></div></li>
-            <li><div class="skeleton skeleton-nav-item"></div></li>
-        </ul>
-    }
-    else if (collections != null && collections.Any())
+    @if (Section?.Collections != null && Section.Collections.Any())
     {
         <ul>
             <li>
@@ -27,9 +15,9 @@
                     Everything
                 </button>
             </li>
-            @foreach (var collection in collections)
+            @foreach (var collection in Section.Collections)
             {
-                var collectionName = collection.Collection;
+                var collectionName = collection.Name;
                 <li>
                     <button @onclick="() => OnCollectionSelected(collectionName)" 
                             class="@(SelectedCollection == collectionName ? "active" : "")"
@@ -44,7 +32,7 @@
 
 @code {
     [Parameter, EditorRequired]
-    public required string SectionName { get; set; }
+    public required SectionDto Section { get; set; }
 
     [Parameter]
     public string SelectedCollection { get; set; } = "all";
@@ -55,49 +43,12 @@
     [Parameter]
     public EventCallback<string> OnCollectionChange { get; set; }
 
-    private IReadOnlyList<CollectionReferenceDto>? collections;
-    private bool isLoading = true;
-
-    protected override async Task OnInitializedAsync()
-    {
-        await LoadCollections();
-    }
-
-    protected override async Task OnParametersSetAsync()
-    {
-        // Reload if section changes
-        if (SectionName != null)
-        {
-            await LoadCollections();
-        }
-    }
-
-    private async Task LoadCollections()
-    {
-        isLoading = true;
-        
-        try
-        {
-            var sectionData = await ApiClient.GetSectionAsync(SectionName);
-            collections = sectionData?.Collections ?? Array.Empty<CollectionReferenceDto>();
-        }
-        catch (Exception ex)
-        {
-            Logger.LogError(ex, "Failed to load collections for section {SectionName}", SectionName);
-            collections = Array.Empty<CollectionReferenceDto>();
-        }
-        finally
-        {
-            isLoading = false;
-        }
-    }
-
     private async Task OnCollectionSelected(string collectionName)
     {
         // Update URL using JavaScript history API
         if (JS != null)
         {
-            await JS.InvokeVoidAsync("history.pushState", null, "", $"/{SectionName}/{collectionName}");
+            await JS.InvokeVoidAsync("history.pushState", null, "", $"/{Section.Name}/{collectionName}");
         }
         
         // Notify parent component

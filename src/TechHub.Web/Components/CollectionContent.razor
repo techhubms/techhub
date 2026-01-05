@@ -137,7 +137,7 @@
         }
         
         return Collections
-            .FirstOrDefault(c => c.Collection == CollectionName)?.Title 
+            .FirstOrDefault(c => c.Name == CollectionName)?.Title 
             ?? CollectionName;
     }
 }

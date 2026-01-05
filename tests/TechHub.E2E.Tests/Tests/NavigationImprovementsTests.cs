@@ -11,6 +11,7 @@ public class NavigationImprovementsTests : IAsyncLifetime
 {
     private IPlaywright? _playwright;
     private IBrowser? _browser;
+    private IBrowserContext? _context;
     private const string BaseUrl = "http://localhost:5184";
     private const string ApiUrl = "http://localhost:5029";
 
@@ -18,10 +19,16 @@ public class NavigationImprovementsTests : IAsyncLifetime
     {
         _playwright = await Playwright.CreateAsync();
         _browser = await _playwright.Chromium.LaunchAsync(new() { Headless = true });
+        _context = await _browser.NewContextAsync();
+        // Set default timeout to 5 seconds - if anything takes longer, something is wrong
+        _context.SetDefaultTimeout(5000);
     }
 
     public async Task DisposeAsync()
     {
+        if (_context != null)
+            await _context.DisposeAsync();
+        
         if (_browser != null)
             await _browser.DisposeAsync();
         
@@ -32,7 +39,7 @@ public class NavigationImprovementsTests : IAsyncLifetime
     public async Task Homepage_SectionsAreOrderedCorrectly()
     {
         // Arrange
-        var page = await _browser!.NewPageAsync();
+        var page = await _context!.NewPageAsync();
         
         // Act
         await page.GotoAsync(BaseUrl);
@@ -66,7 +73,7 @@ public class NavigationImprovementsTests : IAsyncLifetime
     public async Task SectionCard_Click_NavigatesToSectionHomepage()
     {
         // Arrange
-        var page = await _browser!.NewPageAsync();
+        var page = await _context!.NewPageAsync();
         await page.GotoAsync(BaseUrl);
         await page.WaitForSelectorAsync(".section-card");
         
@@ -85,7 +92,7 @@ public class NavigationImprovementsTests : IAsyncLifetime
     public async Task CollectionNavigation_UpdatesURL_ToSectionSlashCollection()
     {
         // Arrange
-        var page = await _browser!.NewPageAsync();
+        var page = await _context!.NewPageAsync();
         await page.GotoAsync($"{BaseUrl}/github-copilot");
         await page.WaitForSelectorAsync(".collection-nav");
         
@@ -105,7 +112,7 @@ public class NavigationImprovementsTests : IAsyncLifetime
     public async Task CollectionPage_DoesNotShowRedundantCollectionBadge()
     {
         // Arrange
-        var page = await _browser!.NewPageAsync();
+        var page = await _context!.NewPageAsync();
         
         // Act - Navigate to GitHub Copilot News collection
         await page.GotoAsync($"{BaseUrl}/github-copilot/news");
@@ -132,7 +139,7 @@ public class NavigationImprovementsTests : IAsyncLifetime
     public async Task AllPage_ShowsCollectionBadgeBeforeTags()
     {
         // Arrange
-        var page = await _browser!.NewPageAsync();
+        var page = await _context!.NewPageAsync();
         
         // Act - Navigate to "All" section
         await page.GotoAsync($"{BaseUrl}/all");
@@ -156,7 +163,7 @@ public class NavigationImprovementsTests : IAsyncLifetime
     public async Task SectionPage_CollectionSidebarIsClickable()
     {
         // Arrange
-        var page = await _browser!.NewPageAsync();
+        var page = await _context!.NewPageAsync();
         await page.GotoAsync($"{BaseUrl}/github-copilot");
         await page.WaitForSelectorAsync(".collection-nav");
         
@@ -180,7 +187,7 @@ public class NavigationImprovementsTests : IAsyncLifetime
     public async Task SectionPage_HeaderAreaHasConsistentHeight()
     {
         // Arrange
-        var page = await _browser!.NewPageAsync();
+        var page = await _context!.NewPageAsync();
         
         // Act - Measure header height on homepage
         await page.GotoAsync(BaseUrl);
@@ -205,7 +212,7 @@ public class NavigationImprovementsTests : IAsyncLifetime
     public async Task SectionBackgroundImages_DisplayCorrectly()
     {
         // Arrange
-        var page = await _browser!.NewPageAsync();
+        var page = await _context!.NewPageAsync();
         await page.GotoAsync(BaseUrl);
         await page.WaitForSelectorAsync(".section-card");
         
@@ -236,7 +243,7 @@ public class NavigationImprovementsTests : IAsyncLifetime
     public async Task DirectURL_ToSectionWithCollection_LoadsCorrectContent()
     {
         // Arrange & Act
-        var page = await _browser!.NewPageAsync();
+        var page = await _context!.NewPageAsync();
         await page.GotoAsync($"{BaseUrl}/ai/news");
         
         // Assert

@@ -13,7 +13,7 @@ public interface ISectionRepository
     Task<IReadOnlyList<Section>> GetAllAsync(CancellationToken cancellationToken = default);
 
     /// <summary>
-    /// Get a single section by ID
+    /// Get a single section by name
     /// </summary>
-    Task<Section?> GetByIdAsync(string id, CancellationToken cancellationToken = default);
+    Task<Section?> GetByNameAsync(string name, CancellationToken cancellationToken = default);
 }

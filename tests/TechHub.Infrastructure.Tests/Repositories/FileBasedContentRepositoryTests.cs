@@ -198,11 +198,11 @@ public class FileBasedContentRepositoryTests : IDisposable
     }
 
     /// <summary>
-    /// Test: GetByIdAsync retrieves single content item by ID
+    /// Test: GetBySlugAsync retrieves single content item by ID
     /// Why: Display individual content detail pages by URL slug
     /// </summary>
     [Fact]
-    public async Task GetByIdAsync_ExistingItem_ReturnsItem()
+    public async Task GetBySlugAsync_ExistingItem_ReturnsItem()
     {
         // Arrange: Create news item with specific ID
         var newsDir = Path.Combine(_collectionsPath, "_news");
@@ -221,29 +221,29 @@ public class FileBasedContentRepositoryTests : IDisposable
             """);
 
         // Act: Get item by ID (filename without extension)
-        var item = await _repository.GetByIdAsync("news", "2025-01-15-product-launch");
+        var item = await _repository.GetBySlugAsync("news", "2025-01-15-product-launch");
 
         // Assert: Correct item returned with all properties
         Assert.NotNull(item);
         Assert.Equal("Product Launch", item.Title);
-        Assert.Equal("2025-01-15-product-launch", item.Id);
-        Assert.Equal("news", item.Collection);
+        Assert.Equal("2025-01-15-product-launch", item.Slug);
+        Assert.Equal("news", item.CollectionName);
         Assert.Contains("Full product launch details", item.RenderedHtml);
     }
 
     /// <summary>
-    /// Test: GetByIdAsync returns null for non-existent item
+    /// Test: GetBySlugAsync returns null for non-existent item
     /// Why: Graceful handling of missing content (404 pages)
     /// </summary>
     [Fact]
-    public async Task GetByIdAsync_NonExistentItem_ReturnsNull()
+    public async Task GetBySlugAsync_NonExistentItem_ReturnsNull()
     {
         // Arrange: Create empty news directory
         var newsDir = Path.Combine(_collectionsPath, "_news");
         Directory.CreateDirectory(newsDir);
 
         // Act: Try to get non-existent item
-        var item = await _repository.GetByIdAsync("news", "missing-item");
+        var item = await _repository.GetBySlugAsync("news", "missing-item");
 
         // Assert: Null returned (no exception thrown)
         Assert.Null(item);

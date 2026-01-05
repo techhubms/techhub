@@ -14,10 +14,10 @@ public interface IContentRepository
     Task<IReadOnlyList<ContentItem>> GetAllAsync(CancellationToken cancellationToken = default);
 
     /// <summary>
-    /// Get content items filtered by collection
+    /// Get content items filtered by collection name
     /// </summary>
     Task<IReadOnlyList<ContentItem>> GetByCollectionAsync(
-        string collection,
+        string collectionName,
         CancellationToken cancellationToken = default);
 
     /// <summary>
@@ -28,11 +28,11 @@ public interface IContentRepository
         CancellationToken cancellationToken = default);
 
     /// <summary>
-    /// Get a single content item by ID within a collection
+    /// Get a single content item by slug within a collection
     /// </summary>
-    Task<ContentItem?> GetByIdAsync(
-        string collection,
-        string id,
+    Task<ContentItem?> GetBySlugAsync(
+        string collectionName,
+        string slug,
         CancellationToken cancellationToken = default);
 
     /// <summary>

@@ -94,24 +94,24 @@ public sealed class FileBasedContentRepository : IContentRepository, IDisposable
     }
 
     /// <summary>
-    /// Get content items filtered by collection.
+    /// Get content items filtered by collection name.
     /// Filters from cached in-memory data.
     /// Returns items sorted by date (DateEpoch) in descending order (newest first).
     /// </summary>
     public async Task<IReadOnlyList<ContentItem>> GetByCollectionAsync(
-        string collection,
+        string collectionName,
         CancellationToken cancellationToken = default)
     {
-        ArgumentNullException.ThrowIfNull(collection);
+        ArgumentNullException.ThrowIfNull(collectionName);
         // Normalize collection name (add _ prefix if missing)
-        var normalizedCollection = collection.StartsWith('_') ? collection : $"_{collection}";
+        var normalizedCollection = collectionName.StartsWith('_') ? collectionName : $"_{collectionName}";
         
         // Load all items (from cache if available)
         var allItems = await GetAllAsync(cancellationToken);
         
         // Filter by collection
         return allItems
-            .Where(item => item.Collection.Equals(normalizedCollection.TrimStart('_'), StringComparison.OrdinalIgnoreCase))
+            .Where(item => item.CollectionName.Equals(normalizedCollection.TrimStart('_'), StringComparison.OrdinalIgnoreCase))
             .OrderByDescending(x => x.DateEpoch)
             .ToList();
     }
@@ -133,17 +133,17 @@ public sealed class FileBasedContentRepository : IContentRepository, IDisposable
     }
 
     /// <summary>
-    /// Get a single content item by ID within a collection.
+    /// Get a single content item by slug within a collection.
     /// Searches cached in-memory data.
-    /// ID is the filename without extension (e.g., "2026-01-01-my-article" from "2026-01-01-my-article.md")
+    /// Slug is the filename without extension (e.g., "2026-01-01-my-article" from "2026-01-01-my-article.md")
     /// </summary>
-    public async Task<ContentItem?> GetByIdAsync(
-        string collection,
-        string id,
+    public async Task<ContentItem?> GetBySlugAsync(
+        string collectionName,
+        string slug,
         CancellationToken cancellationToken = default)
     {
-        var items = await GetByCollectionAsync(collection, cancellationToken);
-        return items.FirstOrDefault(item => item.Id.Equals(id, StringComparison.OrdinalIgnoreCase));
+        var items = await GetByCollectionAsync(collectionName, cancellationToken);
+        return items.FirstOrDefault(item => item.Slug.Equals(slug, StringComparison.OrdinalIgnoreCase));
     }
 
     /// <summary>
@@ -296,12 +296,12 @@ public sealed class FileBasedContentRepository : IContentRepository, IDisposable
 
             var item = new ContentItem
             {
-                Id = fileName,
+                Slug = fileName,
                 Title = title,
                 Description = description,
                 Author = author,
                 DateEpoch = date.ToUnixTimeSeconds(),
-                Collection = collection.TrimStart('_'), // Store without _ prefix
+                CollectionName = collection.TrimStart('_'), // Store without _ prefix
                 AltCollection = altCollection,
                 Categories = categories,
                 Tags = tags,

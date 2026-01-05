@@ -26,13 +26,13 @@ public sealed class ConfigurationBasedSectionRepository : ISectionRepository
         // Convert configuration to Section models and apply ordering
         var sectionsDict = settings.Value.Content.Sections
             .Select(kvp => ConvertToSection(kvp.Key, kvp.Value))
-            .ToDictionary(s => s.Id);
+            .ToDictionary(s => s.Name);
         
         // Order sections according to defined order, then any remaining alphabetically
         _sections = sectionOrder
-            .Where(id => sectionsDict.ContainsKey(id))
-            .Select(id => sectionsDict[id])
-            .Concat(sectionsDict.Values.Where(s => !sectionOrder.Contains(s.Id)).OrderBy(s => s.Title))
+            .Where(name => sectionsDict.ContainsKey(name))
+            .Select(name => sectionsDict[name])
+            .Concat(sectionsDict.Values.Where(s => !sectionOrder.Contains(s.Name)).OrderBy(s => s.Title))
             .ToList()
             .AsReadOnly();
     }
@@ -56,11 +56,11 @@ public sealed class ConfigurationBasedSectionRepository : ISectionRepository
     }
 
     /// <summary>
-    /// Get section by ID
+    /// Get section by name
     /// </summary>
-    public Task<Section?> GetByIdAsync(string id, CancellationToken cancellationToken = default)
+    public Task<Section?> GetByNameAsync(string name, CancellationToken cancellationToken = default)
     {
-        var section = _sections.FirstOrDefault(s => s.Id == id);
+        var section = _sections.FirstOrDefault(s => s.Name == name);
         return Task.FromResult(section);
     }
 
@@ -76,7 +76,7 @@ public sealed class ConfigurationBasedSectionRepository : ISectionRepository
             .Select(c => new CollectionReference
             {
                 Title = c.Title,
-                Collection = c.Collection!,
+                Name = c.Collection!,
                 Url = c.Url,
                 Description = c.Description,
                 IsCustom = c.Custom
@@ -85,7 +85,7 @@ public sealed class ConfigurationBasedSectionRepository : ISectionRepository
 
         return new Section
         {
-            Id = sectionId,
+            Name = sectionId,
             Title = config.Title,
             Description = config.Description,
             Url = config.Url,

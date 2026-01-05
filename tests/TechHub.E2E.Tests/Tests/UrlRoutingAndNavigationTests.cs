@@ -12,6 +12,7 @@ public class UrlRoutingAndNavigationTests : IAsyncLifetime
 {
     private IPlaywright? _playwright;
     private IBrowser? _browser;
+    private IBrowserContext? _context;
     private const string BaseUrl = "http://localhost:5184";
     private const string ApiUrl = "http://localhost:5029";
 
@@ -19,10 +20,16 @@ public class UrlRoutingAndNavigationTests : IAsyncLifetime
     {
         _playwright = await Playwright.CreateAsync();
         _browser = await _playwright.Chromium.LaunchAsync(new() { Headless = true });
+        _context = await _browser.NewContextAsync();
+        // Set default timeout to 5 seconds - if anything takes longer, something is wrong
+        _context.SetDefaultTimeout(5000);
     }
 
     public async Task DisposeAsync()
     {
+        if (_context != null)
+            await _context.DisposeAsync();
+        
         if (_browser != null)
             await _browser.DisposeAsync();
         
@@ -35,7 +42,7 @@ public class UrlRoutingAndNavigationTests : IAsyncLifetime
     public async Task NavigateToSection_DefaultsToAllCollection()
     {
         // Arrange
-        var page = await _browser!.NewPageAsync();
+        var page = await _context!.NewPageAsync();
         
         // Act - Navigate to section without specifying collection
         await page.GotoAsync($"{BaseUrl}/github-copilot");
@@ -57,7 +64,7 @@ public class UrlRoutingAndNavigationTests : IAsyncLifetime
     public async Task NavigateToSectionWithCollection_URLMatchesRoute()
     {
         // Arrange
-        var page = await _browser!.NewPageAsync();
+        var page = await _context!.NewPageAsync();
         
         // Act - Navigate directly to /github-copilot/news
         await page.GotoAsync($"{BaseUrl}/github-copilot/news");
@@ -80,7 +87,7 @@ public class UrlRoutingAndNavigationTests : IAsyncLifetime
     public async Task ClickCollectionButton_UpdatesURL()
     {
         // Arrange
-        var page = await _browser!.NewPageAsync();
+        var page = await _context!.NewPageAsync();
         await page.GotoAsync($"{BaseUrl}/github-copilot");
         await page.WaitForSelectorAsync(".collection-nav");
         
@@ -105,7 +112,7 @@ public class UrlRoutingAndNavigationTests : IAsyncLifetime
     public async Task ClickAllButton_UpdatesURLToSectionSlashAll()
     {
         // Arrange
-        var page = await _browser!.NewPageAsync();
+        var page = await _context!.NewPageAsync();
         await page.GotoAsync($"{BaseUrl}/github-copilot/news");
         await page.WaitForSelectorAsync(".collection-nav");
         
@@ -125,7 +132,7 @@ public class UrlRoutingAndNavigationTests : IAsyncLifetime
     public async Task BrowserBackButton_NavigatesToPreviousCollection()
     {
         // Arrange
-        var page = await _browser!.NewPageAsync();
+        var page = await _context!.NewPageAsync();
         await page.GotoAsync($"{BaseUrl}/github-copilot/news");
         await page.WaitForSelectorAsync(".collection-nav");
         
@@ -154,7 +161,7 @@ public class UrlRoutingAndNavigationTests : IAsyncLifetime
     public async Task BrowserForwardButton_NavigatesToNextCollection()
     {
         // Arrange
-        var page = await _browser!.NewPageAsync();
+        var page = await _context!.NewPageAsync();
         await page.GotoAsync($"{BaseUrl}/github-copilot/news");
         await page.WaitForSelectorAsync(".collection-nav");
         
@@ -186,7 +193,7 @@ public class UrlRoutingAndNavigationTests : IAsyncLifetime
     public async Task AllCollection_ShowsAllContentFromSection()
     {
         // Arrange
-        var page = await _browser!.NewPageAsync();
+        var page = await _context!.NewPageAsync();
         
         // Get total item count across all GitHub Copilot collections from API
         var apiResponse = await page.APIRequest.GetAsync($"{ApiUrl}/api/content?category=GitHub%20Copilot");
@@ -213,7 +220,7 @@ public class UrlRoutingAndNavigationTests : IAsyncLifetime
     public async Task AllSection_AllCollection_ShowsEverything()
     {
         // Arrange
-        var page = await _browser!.NewPageAsync();
+        var page = await _context!.NewPageAsync();
         
         // Get total item count across ALL sections and collections from API
         var apiResponse = await page.APIRequest.GetAsync($"{ApiUrl}/api/content");
@@ -236,10 +243,10 @@ public class UrlRoutingAndNavigationTests : IAsyncLifetime
     public async Task AllSection_SpecificCollection_ShowsCollectionAcrossAllSections()
     {
         // Arrange
-        var page = await _browser!.NewPageAsync();
+        var page = await _context!.NewPageAsync();
         
         // Get total news count across all sections from API
-        var apiResponse = await page.APIRequest.GetAsync($"{ApiUrl}/api/content?collection=news");
+        var apiResponse = await page.APIRequest.GetAsync($"{ApiUrl}/api/content?collectionName=news");
         var allNewsItems = await apiResponse.JsonAsync();
         var totalNewsCount = allNewsItems.Value.GetArrayLength();
         
@@ -264,7 +271,7 @@ public class UrlRoutingAndNavigationTests : IAsyncLifetime
     public async Task AllButton_ExistsInCollectionSidebar()
     {
         // Arrange
-        var page = await _browser!.NewPageAsync();
+        var page = await _context!.NewPageAsync();
         
         // Act - Navigate to any section
         await page.GotoAsync($"{BaseUrl}/github-copilot");
@@ -285,7 +292,7 @@ public class UrlRoutingAndNavigationTests : IAsyncLifetime
     public async Task AllCollection_ShowsCollectionBadges()
     {
         // Arrange
-        var page = await _browser!.NewPageAsync();
+        var page = await _context!.NewPageAsync();
         
         // Act - Navigate to /github-copilot/all
         await page.GotoAsync($"{BaseUrl}/github-copilot/all");
@@ -310,7 +317,7 @@ public class UrlRoutingAndNavigationTests : IAsyncLifetime
     public async Task SpecificCollection_DoesNotShowCollectionBadge()
     {
         // Arrange
-        var page = await _browser!.NewPageAsync();
+        var page = await _context!.NewPageAsync();
         
         // Act - Navigate to /github-copilot/news
         await page.GotoAsync($"{BaseUrl}/github-copilot/news");
@@ -335,7 +342,7 @@ public class UrlRoutingAndNavigationTests : IAsyncLifetime
     public async Task CollectionButtons_AreInteractive()
     {
         // Arrange
-        var page = await _browser!.NewPageAsync();
+        var page = await _context!.NewPageAsync();
         await page.GotoAsync($"{BaseUrl}/github-copilot");
         await page.WaitForSelectorAsync(".collection-nav");
         
@@ -367,7 +374,7 @@ public class UrlRoutingAndNavigationTests : IAsyncLifetime
     public async Task RetryButton_ReloadsContentAfterError()
     {
         // Arrange
-        var page = await _browser!.NewPageAsync();
+        var page = await _context!.NewPageAsync();
         
         // Simulate an error by navigating with API down (we'll test with valid URL but check button exists)
         await page.GotoAsync(BaseUrl);
@@ -383,7 +390,7 @@ public class UrlRoutingAndNavigationTests : IAsyncLifetime
             await retryButton.ClickAsync();
             
             // Assert - Should attempt to reload (check for loading state or success)
-            await page.WaitForSelectorAsync(".section-card", new() { Timeout = 5000 });
+            await page.WaitForSelectorAsync(".section-card");
         }
         
         // If no error state, just verify the button would work (test passes either way)
@@ -397,7 +404,7 @@ public class UrlRoutingAndNavigationTests : IAsyncLifetime
     public async Task ActiveCollectionButton_HasActiveClass()
     {
         // Arrange
-        var page = await _browser!.NewPageAsync();
+        var page = await _context!.NewPageAsync();
         await page.GotoAsync($"{BaseUrl}/github-copilot/news");
         await page.WaitForSelectorAsync(".collection-nav");
         
@@ -424,7 +431,7 @@ public class UrlRoutingAndNavigationTests : IAsyncLifetime
     public async Task DirectURL_LoadsCorrectCollectionState()
     {
         // Arrange & Act - Open browser directly to a specific collection URL
-        var page = await _browser!.NewPageAsync();
+        var page = await _context!.NewPageAsync();
         await page.GotoAsync($"{BaseUrl}/azure/news");
         await page.WaitForSelectorAsync(".collection-nav");
         await page.WaitForSelectorAsync(".content-item-card");
@@ -449,13 +456,13 @@ public class UrlRoutingAndNavigationTests : IAsyncLifetime
     public async Task CopiedURL_SharesExactCollectionState()
     {
         // Arrange
-        var page1 = await _browser!.NewPageAsync();
+        var page1 = await _context!.NewPageAsync();
         await page1.GotoAsync($"{BaseUrl}/ml/videos");
         await page1.WaitForSelectorAsync(".collection-nav");
         var sharedUrl = page1.Url;
         
         // Act - Open shared URL in new tab/page
-        var page2 = await _browser!.NewPageAsync();
+        var page2 = await _context!.NewPageAsync();
         await page2.GotoAsync(sharedUrl);
         await page2.WaitForSelectorAsync(".collection-nav");
         await page2.WaitForSelectorAsync(".content-item-card");

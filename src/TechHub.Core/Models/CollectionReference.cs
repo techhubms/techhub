@@ -11,9 +11,9 @@ public class CollectionReference
     public required string Title { get; init; }
 
     /// <summary>
-    /// Collection identifier matching directory name (e.g., "news", "blogs", "videos")
+    /// URL-friendly name matching directory name (e.g., "news", "blogs", "videos")
     /// </summary>
-    public required string Collection { get; init; }
+    public required string Name { get; init; }
 
     /// <summary>
     /// URL path for this collection within the section (e.g., "/ai/news")
@@ -43,13 +43,13 @@ public class CollectionReference
     /// </summary>
     public void Validate()
     {
-        if (string.IsNullOrWhiteSpace(Collection))
-            throw new ArgumentException("Collection cannot be empty", nameof(Collection));
+        if (string.IsNullOrWhiteSpace(Name))
+            throw new ArgumentException("Collection name cannot be empty", nameof(Name));
 
-        if (!ValidCollections.Contains(Collection))
+        if (!ValidCollections.Contains(Name))
             throw new ArgumentException(
-                $"Collection must be one of: {string.Join(", ", ValidCollections)}",
-                nameof(Collection));
+                $"Collection name must be one of: {string.Join(", ", ValidCollections)}",
+                nameof(Name));
 
         if (string.IsNullOrWhiteSpace(Title))
             throw new ArgumentException("Collection title cannot be empty", nameof(Title));

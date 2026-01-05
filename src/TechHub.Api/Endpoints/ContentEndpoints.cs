@@ -23,14 +23,14 @@ internal static class ContentEndpoints
         group.MapGet("", GetContent)
             .WithName("GetContent")
             .WithSummary("Get content by category and collection")
-            .WithDescription("Get all content items for a specific category and collection. Example: /api/content?category=ai&collection=news")
+            .WithDescription("Get all content items for a specific category and collection. Example: /api/content?category=ai&collectionName=news")
             .Produces<IEnumerable<ContentItemDto>>(StatusCodes.Status200OK);
 
         // Get individual content detail
-        group.MapGet("/{sectionName}/{collection}/{itemId}", GetContentDetail)
+        group.MapGet("/{sectionName}/{collectionName}/{slug}", GetContentDetail)
             .WithName("GetContentDetail")
             .WithSummary("Get content detail")
-            .WithDescription("Get detailed content item by section, collection, and item ID")
+            .WithDescription("Get detailed content item by section name, collection name, and content slug")
             .Produces<ContentItemDetailDto>(StatusCodes.Status200OK)
             .Produces(StatusCodes.Status404NotFound);
 
@@ -52,11 +52,11 @@ internal static class ContentEndpoints
     }
 
     /// <summary>
-    /// GET /api/content?category={category}&collection={collection} - Get content by category and collection
+    /// GET /api/content?category={category}&collectionName={collectionName} - Get content by category and collection
     /// </summary>
     private static async Task<Ok<IEnumerable<ContentItemDto>>> GetContent(
         [FromQuery] string? category,
-        [FromQuery] string? collection,
+        [FromQuery] string? collectionName,
         IContentRepository contentRepository,
         CancellationToken cancellationToken)
     {
@@ -70,9 +70,9 @@ internal static class ContentEndpoints
         }
 
         // Filter by collection if specified
-        if (!string.IsNullOrWhiteSpace(collection))
+        if (!string.IsNullOrWhiteSpace(collectionName))
         {
-            results = results.Where(c => c.Collection.Equals(collection, StringComparison.OrdinalIgnoreCase));
+            results = results.Where(c => c.CollectionName.Equals(collectionName, StringComparison.OrdinalIgnoreCase));
         }
 
         var contentDtos = results.Select(MapToDto);
@@ -80,19 +80,19 @@ internal static class ContentEndpoints
     }
 
     /// <summary>
-    /// GET /api/content/{sectionName}/{collection}/{itemId} - Get individual content detail
+    /// GET /api/content/{sectionName}/{collectionName}/{slug} - Get individual content detail
     /// </summary>
     private static async Task<Results<Ok<ContentItemDetailDto>, NotFound>> GetContentDetail(
         string sectionName,
-        string collection,
-        string itemId,
+        string collectionName,
+        string slug,
         ISectionRepository sectionRepository,
         IContentRepository contentRepository,
         IMarkdownService markdownService,
         CancellationToken cancellationToken)
     {
         // Get the section to find the category
-        var section = await sectionRepository.GetByIdAsync(sectionName, cancellationToken);
+        var section = await sectionRepository.GetByNameAsync(sectionName, cancellationToken);
         if (section == null)
         {
             return TypedResults.NotFound();
@@ -101,8 +101,8 @@ internal static class ContentEndpoints
         // Get all content and find the specific item
         var content = await contentRepository.GetAllAsync(cancellationToken);
         var item = content.FirstOrDefault(c => 
-            c.Collection.Equals(collection, StringComparison.OrdinalIgnoreCase) &&
-            c.Id.Equals(itemId, StringComparison.OrdinalIgnoreCase) &&
+            c.CollectionName.Equals(collectionName, StringComparison.OrdinalIgnoreCase) &&
+            c.Slug.Equals(slug, StringComparison.OrdinalIgnoreCase) &&
             c.Categories.Contains(section.Category, StringComparer.OrdinalIgnoreCase));
 
         if (item == null)
@@ -113,13 +113,13 @@ internal static class ContentEndpoints
         // Convert to detail DTO with full content HTML
         var detailDto = new ContentItemDetailDto
         {
-            Id = item.Id,
+            Slug = item.Slug,
             Title = item.Title,
             Description = item.Description,
             Author = item.Author,
             DateEpoch = item.DateEpoch,
             DateIso = item.DateIso,
-            Collection = item.Collection,
+            CollectionName = item.CollectionName,
             AltCollection = item.AltCollection,
             Categories = item.Categories,
             Tags = item.Tags,
@@ -128,7 +128,7 @@ internal static class ContentEndpoints
             ExternalUrl = item.ExternalUrl,
             VideoId = item.VideoId,
             ViewingMode = item.ViewingMode,
-            Url = $"/{sectionName}/{collection}/{itemId}"
+            Url = $"/{sectionName}/{collectionName}/{slug}"
         };
 
         return TypedResults.Ok(detailDto);
@@ -160,7 +160,7 @@ internal static class ContentEndpoints
             
             // Map section names to categories
             var categories = allSections
-                .Where(s => sectionNames.Contains(s.Id, StringComparer.OrdinalIgnoreCase))
+                .Where(s => sectionNames.Contains(s.Name, StringComparer.OrdinalIgnoreCase))
                 .Select(s => s.Category)
                 .ToHashSet(StringComparer.OrdinalIgnoreCase);
             
@@ -171,7 +171,7 @@ internal static class ContentEndpoints
         if (!string.IsNullOrWhiteSpace(collections))
         {
             var collectionNames = collections.Split(',', StringSplitOptions.RemoveEmptyEntries | StringSplitOptions.TrimEntries);
-            results = results.Where(c => collectionNames.Contains(c.Collection, StringComparer.OrdinalIgnoreCase));
+            results = results.Where(c => collectionNames.Contains(c.CollectionName, StringComparer.OrdinalIgnoreCase));
         }
 
         // Filter by tags (content must have ALL specified tags)
@@ -214,13 +214,13 @@ internal static class ContentEndpoints
     {
         return new ContentItemDto
         {
-            Id = item.Id,
+            Slug = item.Slug,
             Title = item.Title,
             Description = item.Description,
             Author = item.Author,
             DateEpoch = item.DateEpoch,
             DateIso = item.DateIso,
-            Collection = item.Collection,
+            CollectionName = item.CollectionName,
             AltCollection = item.AltCollection,
             Categories = item.Categories,
             Tags = item.Tags,
@@ -228,7 +228,7 @@ internal static class ContentEndpoints
             ExternalUrl = item.ExternalUrl,
             VideoId = item.VideoId,
             ViewingMode = item.ViewingMode,
-            Url = $"/{item.Collection}/{item.Id}" // Generate URL from collection and ID
+            Url = $"/{item.CollectionName}/{item.Slug}" // Generate URL from collection name and slug
         };
     }
 }

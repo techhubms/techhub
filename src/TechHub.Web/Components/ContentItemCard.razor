@@ -31,12 +31,12 @@
             <p class="content-description">@Item.Description</p>
         }
         
-        @if (Item.Tags.Any() || (ShowCollectionBadge && !string.IsNullOrWhiteSpace(Item.Collection)))
+        @if (Item.Tags.Any() || (ShowCollectionBadge && !string.IsNullOrWhiteSpace(Item.CollectionName)))
         {
             <div class="content-tags">
-                @if (ShowCollectionBadge && !string.IsNullOrWhiteSpace(Item.Collection))
+                @if (ShowCollectionBadge && !string.IsNullOrWhiteSpace(Item.CollectionName))
                 {
-                    <span class="collection-badge-white">@CapitalizeCollection(Item.Collection)</span>
+                    <span class="collection-badge-white">@CapitalizeCollection(Item.CollectionName)</span>
                 }
                 @foreach (var tag in Item.Tags.Take(5))
                 {
@@ -91,12 +91,12 @@ else
             <p class="content-description">@Item.Description</p>
         }
         
-        @if (Item.Tags.Any() || (ShowCollectionBadge && !string.IsNullOrWhiteSpace(Item.Collection)))
+        @if (Item.Tags.Any() || (ShowCollectionBadge && !string.IsNullOrWhiteSpace(Item.CollectionName)))
         {
             <div class="content-tags">
-                @if (ShowCollectionBadge && !string.IsNullOrWhiteSpace(Item.Collection))
+                @if (ShowCollectionBadge && !string.IsNullOrWhiteSpace(Item.CollectionName))
                 {
-                    <span class="collection-badge-white">@CapitalizeCollection(Item.Collection)</span>
+                    <span class="collection-badge-white">@CapitalizeCollection(Item.CollectionName)</span>
                 }
                 @foreach (var tag in Item.Tags.Take(5))
                 {

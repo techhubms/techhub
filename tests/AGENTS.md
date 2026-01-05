@@ -636,9 +636,6 @@ The `run.ps1` script provides the easiest way to run all tests including E2E:
 
 # Clean, build, and test
 ./run.ps1 -Clean -Test
-
-# Continue even if tests fail
-./run.ps1 -Test -ContinueOnTestFailure
 ```
 
 **What Happens**:

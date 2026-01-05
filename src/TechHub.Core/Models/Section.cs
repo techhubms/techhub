@@ -6,9 +6,9 @@ namespace TechHub.Core.Models;
 public class Section
 {
     /// <summary>
-    /// Unique identifier (lowercase with hyphens, e.g., "ai", "github-copilot")
+    /// URL-friendly name (lowercase with hyphens, e.g., "ai", "github-copilot")
     /// </summary>
-    public required string Id { get; init; }
+    public required string Name { get; init; }
 
     /// <summary>
     /// Display title (e.g., "AI", "GitHub Copilot")
@@ -45,11 +45,11 @@ public class Section
     /// </summary>
     public void Validate()
     {
-        if (string.IsNullOrWhiteSpace(Id))
-            throw new ArgumentException("Section ID cannot be empty", nameof(Id));
+        if (string.IsNullOrWhiteSpace(Name))
+            throw new ArgumentException("Section name cannot be empty", nameof(Name));
 
-        if (!Id.All(c => char.IsLower(c) || c == '-'))
-            throw new ArgumentException("Section ID must be lowercase with hyphens only", nameof(Id));
+        if (!Name.All(c => char.IsLower(c) || c == '-'))
+            throw new ArgumentException("Section name must be lowercase with hyphens only", nameof(Name));
 
         if (string.IsNullOrWhiteSpace(Title))
             throw new ArgumentException("Section title cannot be empty", nameof(Title));

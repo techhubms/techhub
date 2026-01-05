@@ -59,7 +59,7 @@ public class SectionTests : TestContext
         
         var sectionDto = new SectionDto
         {
-            Id = "ai",
+            Name = "ai",
             Title = "Artificial Intelligence",
             Description = "AI and machine learning content",
             Url = "/ai",
@@ -70,7 +70,7 @@ public class SectionTests : TestContext
                 new CollectionReferenceDto
                 {
                     Title = "News",
-                    Collection = "news",
+                    Name = "news",
                     Url = "/ai/news",
                     Description = "Latest AI news"
                 }

@@ -6,9 +6,9 @@ namespace TechHub.Core.Models;
 public class ContentItem
 {
     /// <summary>
-    /// Unique identifier slug derived from filename
+    /// URL-friendly slug derived from filename (e.g., "2025-01-15-product-launch")
     /// </summary>
-    public required string Id { get; init; }
+    public required string Slug { get; init; }
 
     /// <summary>
     /// Article title
@@ -31,9 +31,9 @@ public class ContentItem
     public required long DateEpoch { get; init; }
 
     /// <summary>
-    /// Collection this item belongs to (e.g., "news", "blogs", "videos")
+    /// Collection name this item belongs to (e.g., "news", "blogs", "videos")
     /// </summary>
-    public required string Collection { get; init; }
+    public required string CollectionName { get; init; }
 
     /// <summary>
     /// Optional alt-collection for content organized in subfolders
@@ -89,15 +89,15 @@ public class ContentItem
     /// <summary>
     /// Get the URL for this content item within a specific section
     /// </summary>
-    public string GetUrlInSection(string sectionUrl) => $"{sectionUrl}/{Collection}/{Id}.html";
+    public string GetUrlInSection(string sectionUrl) => $"{sectionUrl}/{CollectionName}/{Slug}.html";
 
     /// <summary>
     /// Validates that all required properties are correctly formatted
     /// </summary>
     public void Validate()
     {
-        if (string.IsNullOrWhiteSpace(Id))
-            throw new ArgumentException("Content ID cannot be empty", nameof(Id));
+        if (string.IsNullOrWhiteSpace(Slug))
+            throw new ArgumentException("Content slug cannot be empty", nameof(Slug));
 
         if (string.IsNullOrWhiteSpace(Title))
             throw new ArgumentException("Content title cannot be empty", nameof(Title));

@@ -17,13 +17,13 @@ public static class ContentItemExtensions
 
         return new ContentItemDto
         {
-            Id = item.Id,
+            Slug = item.Slug,
             Title = item.Title,
             Description = item.Description,
             Author = item.Author,
             DateEpoch = item.DateEpoch,
             DateIso = item.DateIso,
-            Collection = item.Collection,
+            CollectionName = item.CollectionName,
             AltCollection = item.AltCollection,
             Categories = item.Categories,
             Tags = item.Tags,
@@ -43,13 +43,13 @@ public static class ContentItemExtensions
 
         return new ContentItemDetailDto
         {
-            Id = item.Id,
+            Slug = item.Slug,
             Title = item.Title,
             Description = item.Description,
             Author = item.Author,
             DateEpoch = item.DateEpoch,
             DateIso = item.DateIso,
-            Collection = item.Collection,
+            CollectionName = item.CollectionName,
             AltCollection = item.AltCollection,
             Categories = item.Categories,
             Tags = item.Tags,

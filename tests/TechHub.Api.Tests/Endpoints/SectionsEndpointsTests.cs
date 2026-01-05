@@ -34,8 +34,8 @@ public class SectionsEndpointsTests : IClassFixture<TechHubApiFactory>
         var sections = await response.Content.ReadFromJsonAsync<List<SectionDto>>();
         sections.Should().NotBeNull();
         sections!.Should().HaveCount(2);
-        sections.Should().Contain(s => s.Id == "ai");
-        sections.Should().Contain(s => s.Id == "github-copilot");
+        sections.Should().Contain(s => s.Name == "ai");
+        sections.Should().Contain(s => s.Name == "github-copilot");
     }
 
     [Fact]
@@ -46,15 +46,15 @@ public class SectionsEndpointsTests : IClassFixture<TechHubApiFactory>
         var sections = await response.Content.ReadFromJsonAsync<List<SectionDto>>();
 
         // Assert
-        var aiSection = sections!.First(s => s.Id == "ai");
+        var aiSection = sections!.First(s => s.Name == "ai");
         aiSection.Title.Should().Be("AI");
         aiSection.Description.Should().Be("Artificial Intelligence resources");
         aiSection.Url.Should().Be("/ai");
         aiSection.Category.Should().Be("AI");
         aiSection.BackgroundImage.Should().Be("/assets/section-backgrounds/ai.jpg");
         aiSection.Collections.Should().HaveCount(2);
-        aiSection.Collections.Should().Contain(c => c.Collection == "news");
-        aiSection.Collections.Should().Contain(c => c.Collection == "blogs");
+        aiSection.Collections.Should().Contain(c => c.Name == "news");
+        aiSection.Collections.Should().Contain(c => c.Name == "blogs");
     }
 
     [Fact]
@@ -68,7 +68,7 @@ public class SectionsEndpointsTests : IClassFixture<TechHubApiFactory>
 
         var section = await response.Content.ReadFromJsonAsync<SectionDto>();
         section.Should().NotBeNull();
-        section!.Id.Should().Be("ai");
+        section!.Name.Should().Be("ai");
         section.Title.Should().Be("AI");
         section.Collections.Should().HaveCount(2);
     }
@@ -120,8 +120,8 @@ public class SectionsEndpointsTests : IClassFixture<TechHubApiFactory>
         var collections = await response.Content.ReadFromJsonAsync<List<CollectionReferenceDto>>();
         collections.Should().NotBeNull();
         collections!.Should().HaveCount(2);
-        collections.Should().Contain(c => c.Collection == "news");
-        collections.Should().Contain(c => c.Collection == "videos");
+        collections.Should().Contain(c => c.Name == "news");
+        collections.Should().Contain(c => c.Name == "videos");
     }
 
     [Fact]
@@ -145,7 +145,7 @@ public class SectionsEndpointsTests : IClassFixture<TechHubApiFactory>
 
         var collection = await response.Content.ReadFromJsonAsync<CollectionReferenceDto>();
         collection.Should().NotBeNull();
-        collection!.Collection.Should().Be("news");
+        collection!.Name.Should().Be("news");
         collection.Title.Should().Be("News");
         collection.Url.Should().Be("/ai/news.html");
     }
@@ -182,7 +182,7 @@ public class SectionsEndpointsTests : IClassFixture<TechHubApiFactory>
         var items = await response.Content.ReadFromJsonAsync<List<ContentItemDto>>();
         items.Should().NotBeNull();
         items!.Should().HaveCount(1); // 1 AI news item
-        items![0].Collection.Should().Be("news");
+        items![0].CollectionName.Should().Be("news");
         items[0].Categories.Should().Contain("AI");
     }
 
@@ -198,7 +198,7 @@ public class SectionsEndpointsTests : IClassFixture<TechHubApiFactory>
         var items = await response.Content.ReadFromJsonAsync<List<ContentItemDto>>();
         items.Should().NotBeNull();
         items!.Should().HaveCount(1);
-        items![0].Collection.Should().Be("videos");
+        items![0].CollectionName.Should().Be("videos");
         items[0].Categories.Should().Contain("GitHub Copilot");
         items[0].VideoId.Should().Be("abc123");
     }
@@ -278,7 +278,7 @@ public class SectionsEndpointsTests : IClassFixture<TechHubApiFactory>
         // Verify the structure matches what Swagger expects
         foreach (var section in sections!)
         {
-            section.Id.Should().NotBeNullOrEmpty();
+            section.Name.Should().NotBeNullOrEmpty();
             section.Title.Should().NotBeNullOrEmpty();
             section.Description.Should().NotBeNullOrEmpty();
             section.Collections.Should().NotBeNull();

@@ -17,7 +17,7 @@ public static class SectionExtensions
 
         return new SectionDto
         {
-            Id = section.Id,
+            Name = section.Name,
             Title = section.Title,
             Description = section.Description,
             Url = section.Url,
@@ -36,8 +36,8 @@ public static class SectionExtensions
 
         return new CollectionReferenceDto
         {
+            Name = collection.Name,
             Title = collection.Title,
-            Collection = collection.Collection,
             Url = collection.Url,
             Description = collection.Description,
             IsCustom = collection.IsCustom

@@ -5,13 +5,13 @@ namespace TechHub.Core.DTOs;
 /// </summary>
 public record ContentItemDto
 {
-    public required string Id { get; init; }
+    public required string Slug { get; init; }
     public required string Title { get; init; }
     public required string Description { get; init; }
     public string? Author { get; init; }
     public required long DateEpoch { get; init; }
     public required string DateIso { get; init; }
-    public required string Collection { get; init; }
+    public required string CollectionName { get; init; }
     public string? AltCollection { get; init; }
     public required IReadOnlyList<string> Categories { get; init; }
     public required IReadOnlyList<string> Tags { get; init; }
