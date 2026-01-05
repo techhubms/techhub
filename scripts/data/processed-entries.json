@@ -22900,5 +22900,11 @@
     "collection": "videos",
     "reason": "Succesfully added: The 'AI' category is assigned because the content focuses heavily on AI-powered coding assistance and agentic development, specifically through GitHub Copilot and VS Code agent features (AI inclusion rules 1, 2, 4). 'GitHub Copilot' is applied as the lab directly demonstrates advanced use cases and customization with Copilot in developer workflows (GitHub Copilot rules 1, 2, 4). 'Coding' is included because the session involves hands-on programming, customizing code results, and integrating new application features via VS Code (Coding rules 1, 2, 4). Azure is not explicitly detailed as a core platform here, so has not been included. There are no generic exclusion rules triggered—the session is technical, English-language, non-biographical, and focused on developer tools and coding.",
     "timestamp": "2026-01-05 13:17:08 +00:00"
+  },
+  {
+    "canonical_url": "https://techcommunity.microsoft.com/t5/microsoft-developer-community/engineering-a-local-first-agentic-podcast-studio-a-deep-dive/ba-p/4482839",
+    "timestamp": "2026-01-05 14:05:17 +00:00",
+    "reason": "Succesfully added: Assigned 'AI' because the content focuses on Microsoft Agent Framework, local AI agents, multi-agent orchestration, and VibeVoice for conversational synthesis—all core AI development topics (AI rules 1, 4, 5). Assigned 'Coding' because the article includes Python-based code samples, agent/client class implementations, and workflow construction, all within a developer context (Coding rules 1, 2, 4). Did not assign 'Azure' or 'DevOps' as the solution is exclusively edge/local and does not discuss Microsoft cloud services or DevOps practices. Did not assign 'ML' because although LLMs and SLMs are discussed, the primary focus is on orchestration and automation, not custom machine learning workflows or analytics engineering. 'Security' was not assigned as security is mentioned only as a benefit of local-first operation, not as a technical Microsoft security service or implementation.",
+    "collection": "community"
   }
 ]
