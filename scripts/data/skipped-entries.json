@@ -10959,5 +10959,17 @@
     "canonical_url": "https://www.youtube.com/shorts/FW7tsn75zh4",
     "timestamp": "2026-01-04 16:03:50 +00:00",
     "reason": "No categories found: Content does not qualify due to the generic exclusion rule for biographical and trivia content. The description and title indicate this video focuses on the historical trivia of Python's name rather than technical, educational, or development content involving Microsoft technologies or tooling. There is no substantive technical content or Microsoft relevance based on the input provided, so no categories were assigned."
+  },
+  {
+    "timestamp": "2026-01-05 16:04:20 +00:00",
+    "reason": "No categories found: No categories assigned. Although the content discusses the impact of AI-powered coding tools and references companies like Microsoft and GitHub, the article is an industry analysis/news piece focused on how developer support workflows and community behavior are changing in response to new tools. There is no significant technical detail, guidance, or implementation coverage of Microsoft technologies, nor coverage central to Microsoft-specific AI, coding, DevOps, Azure, ML, or Security practices (per Generic Exclusion and Inclusion Rules). Thus, no categories apply.",
+    "canonical_url": "https://devclass.com/2026/01/05/dramatic-drop-in-stack-overflow-questions-as-devs-look-elsewhere-for-help/",
+    "collection": "blogs"
+  },
+  {
+    "timestamp": "2026-01-05 16:04:48 +00:00",
+    "reason": "No categories found: Content excluded due to Generic Exclusion Rules. The episode is primarily biographical, focusing on Koushik Kothagal's personal journey as a developer, his experiences as a YouTube creator, and career advice. Although there are mentions of AI and Java, the main emphasis is on personal stories, career struggles, and developer motivation rather than substantive technical information or implementation details related to Microsoft technologies, development, or specific products/tools. This matches the 'Biographical Focus' generic exclusion rule in Chapter 3—technical depth is insufficient for any inclusion criteria.",
+    "canonical_url": "https://www.youtube.com/watch?v=aWG3QiD-QwA",
+    "collection": "videos"
   }
 ]

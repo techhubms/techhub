@@ -22912,5 +22912,11 @@
     "canonical_url": "https://devblogs.microsoft.com/visualstudio/vs-live-2026-immersive-learning-for-vs2026/",
     "timestamp": "2026-01-05 15:04:05 +00:00",
     "collection": "news"
+  },
+  {
+    "timestamp": "2026-01-05 16:05:14 +00:00",
+    "reason": "Succesfully added: Assigned Azure category because the newsletter’s central focus is Azure Logic Apps, Azure-based integration, and cloud modernization. Assigned AI category for multiple items covering AI integration in Logic Apps, RAG connectors, MCP usage, and AI-powered automation (AI inclusion rules 1, 3, and 4). Assigned DevOps due to coverage of architecture, DevOps pipelines, and automation/testing processes for Logic Apps workflows. Assigned Coding because of technical deep-dives on JSON validation, workflow variable management, and API/messaging patterns (Coding inclusion rule 4). ML and Security were not assigned because ML/data science or security-specific technical implementation was not directly addressed in this issue. The newsletter contains high-quality, technical, and actionable content on Azure Logic Apps and related developer practices.",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-integration-services-blog/logic-apps-aviators-newsletter-january-2026/ba-p/4482877",
+    "collection": "community"
   }
 ]
