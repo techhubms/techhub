@@ -22918,5 +22918,23 @@
     "reason": "Succesfully added: Assigned Azure category because the newsletter’s central focus is Azure Logic Apps, Azure-based integration, and cloud modernization. Assigned AI category for multiple items covering AI integration in Logic Apps, RAG connectors, MCP usage, and AI-powered automation (AI inclusion rules 1, 3, and 4). Assigned DevOps due to coverage of architecture, DevOps pipelines, and automation/testing processes for Logic Apps workflows. Assigned Coding because of technical deep-dives on JSON validation, workflow variable management, and API/messaging patterns (Coding inclusion rule 4). ML and Security were not assigned because ML/data science or security-specific technical implementation was not directly addressed in this issue. The newsletter contains high-quality, technical, and actionable content on Azure Logic Apps and related developer practices.",
     "canonical_url": "https://techcommunity.microsoft.com/t5/azure-integration-services-blog/logic-apps-aviators-newsletter-january-2026/ba-p/4482877",
     "collection": "community"
+  },
+  {
+    "reason": "Succesfully added: Assigned AI category as the article's core focus is generative AI, large language models, prompt engineering, and the Microsoft AI ecosystem (AI inclusion rules 1, 3, and 4). Assigned Azure, as Azure OpenAI Service, Microsoft Foundry (formerly Azure AI Studio), and Azure integration are discussed in detail (Azure rules 1, 3, and 5). Assigned Coding due to extensive coverage of .NET, C# development, APIs, and engineering guidance for Microsoft developer audiences (Coding rules 1, 2, and 4). Did not assign ML since the focus is AI concepts and service integration, not traditional ML workflow, custom model engineering, or advanced analytics. GitHub Copilot is not discussed. Security and DevOps are not featured in the technical depth required for those categories.",
+    "collection": "news",
+    "canonical_url": "https://devblogs.microsoft.com/dotnet/generative-ai-with-large-language-models-in-dotnet-and-csharp/",
+    "timestamp": "2026-01-05 19:05:31 +00:00"
+  },
+  {
+    "reason": "Succesfully added: Assigned AI category because Osmos is described as an agentic AI data engineering platform, central to enabling AI-driven automation in data prep (AI rule 1, 4, 5). Assigned Azure because Fabric, OneLake, and Azure Data Analytics are core Azure services featured centrally (Azure rule 1, 3, 5). Assigned ML because the content addresses analytics, data engineering for AI/ML, and building AI-ready data assets in Fabric (ML rule 1, 2, 3, 4). The news is about technical product evolution and platform engineering, not high-level strategy or end-user business productivity, therefore it qualifies.",
+    "collection": "news",
+    "canonical_url": "https://blogs.microsoft.com/blog/2026/01/05/microsoft-announces-acquisition-of-osmos-to-accelerate-autonomous-data-engineering-in-fabric/",
+    "timestamp": "2026-01-05 19:05:59 +00:00"
+  },
+  {
+    "reason": "Succesfully added: Included the Azure category because the content is about installing Cloud Sync, a Microsoft Entra (Azure AD) feature, and involves hybrid cloud identity management (Azure rule 1 and 4). Included Security because configuring permissions for password writeback and managing gMSA accounts are essential elements of identity and access security (Security rules 1 and 3). Did not assign AI, GitHub Copilot, Coding, DevOps, or ML because the content is an infrastructure troubleshooting discussion without direct development, DevOps process, or ML focus.",
+    "collection": "community",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure/issue-with-gmsa-when-installing-cloud-sync/m-p/4482486#M22398",
+    "timestamp": "2026-01-05 19:06:58 +00:00"
   }
 ]

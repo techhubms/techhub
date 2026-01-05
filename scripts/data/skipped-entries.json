@@ -10971,5 +10971,11 @@
     "reason": "No categories found: Content excluded due to Generic Exclusion Rules. The episode is primarily biographical, focusing on Koushik Kothagal's personal journey as a developer, his experiences as a YouTube creator, and career advice. Although there are mentions of AI and Java, the main emphasis is on personal stories, career struggles, and developer motivation rather than substantive technical information or implementation details related to Microsoft technologies, development, or specific products/tools. This matches the 'Biographical Focus' generic exclusion rule in Chapter 3—technical depth is insufficient for any inclusion criteria.",
     "canonical_url": "https://www.youtube.com/watch?v=aWG3QiD-QwA",
     "collection": "videos"
+  },
+  {
+    "reason": "No categories found: Content excluded due to generic exclusion rules. This article is a company news announcement focused on an Xbox app partnership with Hisense and V homeOS-powered smart TVs to bring Xbox Cloud Gaming to a wider audience. While it discusses the use of Xbox Cloud Gaming and Game Pass, the core content is about consumer gaming, not development, coding, DevOps, AI/ML, or Microsoft technical implementation. It does not cover Microsoft developer tools, coding practices, Azure, security, or technical details relevant to professionals in those fields. Per the exclusion rules for non-development Microsoft products, gaming and end-user consumer features are outside the scope of categories.",
+    "collection": "news",
+    "canonical_url": "https://news.xbox.com/en-us/2026/01/05/xbox-bring-cloud-gaming-select-hisense-homeos-powered-smart-tvs/",
+    "timestamp": "2026-01-05 19:06:11 +00:00"
   }
 ]

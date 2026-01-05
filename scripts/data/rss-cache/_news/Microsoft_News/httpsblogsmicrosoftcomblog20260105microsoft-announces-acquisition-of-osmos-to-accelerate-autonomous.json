@@ -1,0 +1,17 @@
+{
+  "Tags": [
+    "AI",
+    "Company News"
+  ],
+  "Title": "Microsoft announces acquisition of Osmos to accelerate autonomous data engineering in Fabric",
+  "Description": "The post [Microsoft announces acquisition of Osmos to accelerate autonomous data engineering in Fabric](https://blogs.microsoft.com/blog/2026/01/05/microsoft-announces-acquisition-of-osmos-to-accelerate-autonomous-data-engineering-in-fabric/) appeared first on [Source](https://news.microsoft.com/source).",
+  "Author": "stclarke",
+  "FeedLevelAuthor": "Source",
+  "OutputDir": "_news",
+  "EnhancedContent": "![A constellation of circles with art representing the cloud, SQL and other technological symbols, boxes with the words Databases, Realtime Databases, SQL and NoSQL and images of four people. The circles, boxes and images are connected by gray lines. The artistic constellation is set against a dark background and map of the world made up of dots.](https://blogs.microsoft.com/wp-content/uploads/2026/01/OMB-Art-CN-1_5_26.png)\n\nToday, Microsoft is announcing the acquisition of Osmos, an agentic AI data engineering platform designed to help simplify complex and time-consuming data workflows.\n\n### **Microsoft + Osmos: Extending Microsoft Fabric with agentic AI for data engineering**\n\nOrganizations today face a common challenge: data is everywhere, but making it actionable is often manual, slow and expensive. Many teams spend most of their time preparing data instead of analyzing it. Osmos solves this problem by applying agentic AI to turn raw data into analytics and AI-ready assets in OneLake, the unified data lake at the core of Microsoft Fabric.\n\nThis acquisition builds on Microsoft Fabric’s goal to enable customers to unify all data and analytics into a single, secure platform. With the acquisition of Osmos, we are taking the next step toward a future where autonomous AI agents work alongside people — helping reduce operational overhead and making it easier for customers to connect, prepare, analyze and share data across the organization.\n\n### **Looking ahead: Empowering customers to unlock value from data**\n\nToday’s announcement reinforces Microsoft’s focus to help every organization unlock more value from their data faster and with greater simplicity. The Osmos team will join Microsoft’s Fabric engineering organization to advance our vision for simpler, more intuitive and AI-ready data experiences.\n\nStay tuned for updates as we integrate Osmos into Fabric and continue our journey to empower every organization to achieve more with data. To follow updates, visit the [Microsoft Fabric Blog](https://www.microsoft.com/en-us/microsoft-fabric/blog).\n\n*Bogdan Crivat leads Microsoft’s Azure Data Analytics, building the Fabric engines for big data behind Power BI, and our AI-powered analytics infrastructure.*\n\nTags: [AI](https://blogs.microsoft.com/blog/tag/ai/), [Microsoft Fabric](https://blogs.microsoft.com/blog/tag/microsoft-fabric/), [OneLake](https://blogs.microsoft.com/blog/tag/onelake/)",
+  "FeedName": "Microsoft News",
+  "ProcessedDate": "2026-01-05 19:04:26",
+  "Link": "https://blogs.microsoft.com/blog/2026/01/05/microsoft-announces-acquisition-of-osmos-to-accelerate-autonomous-data-engineering-in-fabric/",
+  "PubDate": "2026-01-05T18:40:45+00:00",
+  "FeedUrl": "https://news.microsoft.com/source/feed/"
+}
