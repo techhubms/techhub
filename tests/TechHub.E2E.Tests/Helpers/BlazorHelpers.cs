@@ -8,6 +8,18 @@ namespace TechHub.E2E.Tests.Helpers;
 public static class BlazorHelpers
 {
     /// <summary>
+    /// Creates a new page with optimized default settings for E2E tests.
+    /// Sets aggressive timeouts to fail fast and avoid slow tests.
+    /// </summary>
+    public static async Task<IPage> NewPageWithDefaultsAsync(this IBrowserContext context)
+    {
+        var page = await context.NewPageAsync();
+        page.SetDefaultTimeout(5000);
+        page.SetDefaultNavigationTimeout(10000);
+        return page;
+    }
+
+    /// <summary>
     /// Navigates to a URL and waits for Blazor circuit to be ready.
     /// Uses optimized wait strategy for Blazor Server initialization.
     /// </summary>
@@ -17,7 +29,8 @@ public static class BlazorHelpers
         PageGotoOptions? options = null)
     {
         var gotoOptions = options ?? new PageGotoOptions();
-        gotoOptions.WaitUntil = WaitUntilState.DOMContentLoaded; // Don't wait for network idle with streaming
+        gotoOptions.WaitUntil = WaitUntilState.DOMContentLoaded; // Faster than NetworkIdle
+        gotoOptions.Timeout = 10000; // Reduced from default 30s - fail fast
         
         await page.GotoAsync(url, gotoOptions);
         
@@ -27,7 +40,10 @@ public static class BlazorHelpers
         try
         {
             // Wait for skeleton header to be hidden (section data loaded)
-            await page.WaitForSelectorAsync(".skeleton-header", new() { State = WaitForSelectorState.Hidden });
+            await page.WaitForSelectorAsync(".skeleton-header", new() { 
+                State = WaitForSelectorState.Hidden,
+                Timeout = 2000 // Reduced timeout
+            });
         }
         catch
         {
@@ -40,15 +56,18 @@ public static class BlazorHelpers
         // So we wait for cards WITHOUT the skeleton-card class
         try
         {
-            await page.WaitForSelectorAsync(".content-item-card:not(.skeleton-card)", new() { State = WaitForSelectorState.Visible });
+            await page.WaitForSelectorAsync(".content-item-card:not(.skeleton-card)", new() { 
+                State = WaitForSelectorState.Visible,
+                Timeout = 2000 // Reduced timeout
+            });
         }
         catch
         {
             // Content cards might not exist on all pages (like home page) - that's fine
         }
         
-        // Brief pause to ensure final render is stable
-        await Task.Delay(200);
+        // Brief pause to ensure final render is stable (reduced from 200ms)
+        await Task.Delay(100);
     }
 
     /// <summary>
@@ -103,11 +122,49 @@ public static class BlazorHelpers
     /// </remarks>
     public static async Task WaitForBlazorUrlContainsAsync(
         this IPage page,
-        string urlSegment)
+        string urlSegment,
+        int timeoutMs = 5000) // Explicit timeout, reduced from default 30s
     {
         await page.WaitForFunctionAsync(
-            $"() => window.location.pathname.includes('{urlSegment}')"
+            $"() => window.location.pathname.includes('{urlSegment}')",
+            new PageWaitForFunctionOptions { Timeout = timeoutMs, PollingInterval = 50 } // Poll every 50ms for faster detection
         );
+    }
+    
+    /// <summary>
+    /// Waits for Blazor component state to synchronize after browser navigation.
+    /// Replaces hard-coded Task.Delay(1000) with smart polling that returns as soon as state is synced.
+    /// </summary>
+    /// <param name="page">The Playwright page</param>
+    /// <param name="expectedActiveButtonText">The text that should appear in the active collection button</param>
+    /// <param name="timeoutMs">Maximum time to wait (default 3000ms)</param>
+    public static async Task WaitForBlazorStateSyncAsync(
+        this IPage page,
+        string expectedActiveButtonText,
+        int timeoutMs = 3000)
+    {
+        var startTime = DateTime.UtcNow;
+        while ((DateTime.UtcNow - startTime).TotalMilliseconds < timeoutMs)
+        {
+            try
+            {
+                var activeButton = page.Locator(".collection-nav button.active");
+                var activeText = await activeButton.TextContentAsync(new() { Timeout = 500 });
+                
+                if (activeText?.Contains(expectedActiveButtonText, StringComparison.OrdinalIgnoreCase) == true)
+                {
+                    return; // State is synced!
+                }
+            }
+            catch
+            {
+                // Button might not exist yet or text might not match, keep polling
+            }
+            
+            await Task.Delay(50); // Poll every 50ms (much faster than 1000ms delay)
+        }
+        
+        throw new TimeoutException($"Blazor state did not sync to '{expectedActiveButtonText}' within {timeoutMs}ms");
     }
 }
 

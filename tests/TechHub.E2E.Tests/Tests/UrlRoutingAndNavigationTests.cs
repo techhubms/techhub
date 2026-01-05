@@ -9,30 +9,29 @@ namespace TechHub.E2E.Tests.Tests;
 /// E2E tests for URL routing, collection navigation, and "all" collection functionality
 /// These tests document and verify the expected behavior of URL-based navigation
 /// </summary>
+[Collection("Playwright Collection")]
 public class UrlRoutingAndNavigationTests : IAsyncLifetime
 {
-    private IPlaywright? _playwright;
-    private IBrowser? _browser;
+    private readonly PlaywrightCollectionFixture _fixture;
     private IBrowserContext? _context;
     private const string BaseUrl = "http://localhost:5184";
     private const string ApiUrl = "http://localhost:5029";
 
+    public UrlRoutingAndNavigationTests(PlaywrightCollectionFixture fixture)
+    {
+        _fixture = fixture;
+    }
+
     public async Task InitializeAsync()
     {
-        _playwright = await Playwright.CreateAsync();
-        _browser = await _playwright.Chromium.LaunchAsync(new() { Headless = true });
-        _context = await _browser.NewContextAsync();
+        _context = await _fixture.CreateContextAsync();
     }
 
     public async Task DisposeAsync()
     {
         if (_context != null)
             await _context.DisposeAsync();
-        
-        if (_browser != null)
-            await _browser.DisposeAsync();
-        
-        _playwright?.Dispose();
+
     }
 
     #region URL Routing Tests
@@ -41,7 +40,7 @@ public class UrlRoutingAndNavigationTests : IAsyncLifetime
     public async Task NavigateToSection_DefaultsToAllCollection()
     {
         // Arrange
-        var page = await _context!.NewPageAsync();
+        var page = await _context!.NewPageWithDefaultsAsync();
         
         // Act - Navigate to section without specifying collection
         await page.GotoAndWaitForBlazorAsync($"{BaseUrl}/github-copilot");
@@ -70,7 +69,7 @@ public class UrlRoutingAndNavigationTests : IAsyncLifetime
     public async Task NavigateToSectionWithCollection_URLMatchesRoute()
     {
         // Arrange
-        var page = await _context!.NewPageAsync();
+        var page = await _context!.NewPageWithDefaultsAsync();
         
         // Act - Navigate directly to /github-copilot/news
         await page.GotoAndWaitForBlazorAsync($"{BaseUrl}/github-copilot/news");
@@ -93,7 +92,7 @@ public class UrlRoutingAndNavigationTests : IAsyncLifetime
     public async Task ClickCollectionButton_UpdatesURL()
     {
         // Arrange
-        var page = await _context!.NewPageAsync();
+        var page = await _context!.NewPageWithDefaultsAsync();
         await page.GotoAndWaitForBlazorAsync($"{BaseUrl}/github-copilot");
         await page.WaitForSelectorAsync(".collection-nav");
         
@@ -118,7 +117,7 @@ public class UrlRoutingAndNavigationTests : IAsyncLifetime
     public async Task ClickAllButton_UpdatesURLToSectionSlashAll()
     {
         // Arrange
-        var page = await _context!.NewPageAsync();
+        var page = await _context!.NewPageWithDefaultsAsync();
         await page.GotoAndWaitForBlazorAsync($"{BaseUrl}/github-copilot/news");
         await page.WaitForSelectorAsync(".collection-nav");
         
@@ -138,7 +137,7 @@ public class UrlRoutingAndNavigationTests : IAsyncLifetime
     public async Task BrowserBackButton_NavigatesToPreviousCollection()
     {
         // Arrange
-        var page = await _context!.NewPageAsync();
+        var page = await _context!.NewPageWithDefaultsAsync();
         await page.GotoAndWaitForBlazorAsync($"{BaseUrl}/github-copilot/news");
         await page.WaitForSelectorAsync(".collection-nav");
         
@@ -166,9 +165,7 @@ public class UrlRoutingAndNavigationTests : IAsyncLifetime
             "browser back button should navigate to previous collection URL");
         
         // Wait for Blazor to sync state with URL (OnParametersSetAsync should fire)
-        // Give Blazor SignalR time to update the component
-        await page.WaitForSelectorAsync(".collection-content");
-        await Task.Delay(1000); // Blazor needs time to process the parameter change
+        await page.WaitForBlazorStateSyncAsync("News");
         
         // News button should be active again
         var activeButton = page.Locator(".collection-nav button.active");
@@ -182,7 +179,7 @@ public class UrlRoutingAndNavigationTests : IAsyncLifetime
     public async Task BrowserForwardButton_NavigatesToNextCollection()
     {
         // Arrange
-        var page = await _context!.NewPageAsync();
+        var page = await _context!.NewPageWithDefaultsAsync();
         await page.GotoAndWaitForBlazorAsync($"{BaseUrl}/github-copilot/news");
         await page.WaitForSelectorAsync(".collection-nav");
         
@@ -214,7 +211,7 @@ public class UrlRoutingAndNavigationTests : IAsyncLifetime
     public async Task AllCollection_ShowsAllContentFromSection()
     {
         // Arrange
-        var page = await _context!.NewPageAsync();
+        var page = await _context!.NewPageWithDefaultsAsync();
         
         // Get total item count across all GitHub Copilot collections from API
         var apiResponse = await page.APIRequest.GetAsync($"{ApiUrl}/api/content?category=GitHub%20Copilot");
@@ -241,7 +238,7 @@ public class UrlRoutingAndNavigationTests : IAsyncLifetime
     public async Task AllSection_AllCollection_ShowsAllContent()
     {
         // Arrange
-        var page = await _context!.NewPageAsync();
+        var page = await _context!.NewPageWithDefaultsAsync();
         
         // Get total item count across ALL sections and collections from API
         var apiResponse = await page.APIRequest.GetAsync($"{ApiUrl}/api/content");
@@ -264,7 +261,7 @@ public class UrlRoutingAndNavigationTests : IAsyncLifetime
     public async Task AllSection_SpecificCollection_ShowsCollectionAcrossAllSections()
     {
         // Arrange
-        var page = await _context!.NewPageAsync();
+        var page = await _context!.NewPageWithDefaultsAsync();
         
         // Get total news count across all sections from API
         var apiResponse = await page.APIRequest.GetAsync($"{ApiUrl}/api/content?collectionName=news");
@@ -292,7 +289,7 @@ public class UrlRoutingAndNavigationTests : IAsyncLifetime
     public async Task AllButton_ExistsInCollectionSidebar()
     {
         // Arrange
-        var page = await _context!.NewPageAsync();
+        var page = await _context!.NewPageWithDefaultsAsync();
         
         // Act - Navigate to any section
         await page.GotoAndWaitForBlazorAsync($"{BaseUrl}/github-copilot");
@@ -313,7 +310,7 @@ public class UrlRoutingAndNavigationTests : IAsyncLifetime
     public async Task AllCollection_ShowsCollectionBadges()
     {
         // Arrange
-        var page = await _context!.NewPageAsync();
+        var page = await _context!.NewPageWithDefaultsAsync();
         
         // Act - Navigate to /github-copilot/all
         await page.GotoAndWaitForBlazorAsync($"{BaseUrl}/github-copilot/all");
@@ -338,7 +335,7 @@ public class UrlRoutingAndNavigationTests : IAsyncLifetime
     public async Task SpecificCollection_DoesNotShowCollectionBadge()
     {
         // Arrange
-        var page = await _context!.NewPageAsync();
+        var page = await _context!.NewPageWithDefaultsAsync();
         
         // Act - Navigate to /github-copilot/news
         await page.GotoAndWaitForBlazorAsync($"{BaseUrl}/github-copilot/news");
@@ -363,7 +360,7 @@ public class UrlRoutingAndNavigationTests : IAsyncLifetime
     public async Task CollectionButtons_AreInteractive()
     {
         // Arrange
-        var page = await _context!.NewPageAsync();
+        var page = await _context!.NewPageWithDefaultsAsync();
         await page.GotoAndWaitForBlazorAsync($"{BaseUrl}/github-copilot");
         await page.WaitForSelectorAsync(".collection-nav");
         
@@ -397,7 +394,7 @@ public class UrlRoutingAndNavigationTests : IAsyncLifetime
     public async Task RetryButton_ReloadsContentAfterError()
     {
         // Arrange
-        var page = await _context!.NewPageAsync();
+        var page = await _context!.NewPageWithDefaultsAsync();
         
         // Simulate an error by navigating with API down (we'll test with valid URL but check button exists)
         await page.GotoAndWaitForBlazorAsync(BaseUrl);
@@ -429,7 +426,7 @@ public class UrlRoutingAndNavigationTests : IAsyncLifetime
     public async Task ActiveCollectionButton_HasActiveClass()
     {
         // Arrange
-        var page = await _context!.NewPageAsync();
+        var page = await _context!.NewPageWithDefaultsAsync();
         await page.GotoAndWaitForBlazorAsync($"{BaseUrl}/github-copilot/news");
         await page.WaitForSelectorAsync(".collection-nav");
         
@@ -456,7 +453,7 @@ public class UrlRoutingAndNavigationTests : IAsyncLifetime
     public async Task DirectURL_LoadsCorrectCollectionState()
     {
         // Arrange & Act - Open browser directly to a specific collection URL
-        var page = await _context!.NewPageAsync();
+        var page = await _context!.NewPageWithDefaultsAsync();
         await page.GotoAndWaitForBlazorAsync($"{BaseUrl}/azure/news");
         
         // Assert - Should load Azure News collection

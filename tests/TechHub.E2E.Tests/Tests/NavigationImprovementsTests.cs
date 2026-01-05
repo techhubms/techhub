@@ -8,41 +8,38 @@ namespace TechHub.E2E.Tests.Tests;
 /// E2E tests for navigation improvements and URL structure
 /// Tests for user story requirements: section ordering, URL structure, and navigation flow
 /// </summary>
+[Collection("Playwright Collection")]
 public class NavigationImprovementsTests : IAsyncLifetime
 {
-    private IPlaywright? _playwright;
-    private IBrowser? _browser;
+    private readonly PlaywrightCollectionFixture _fixture;
     private IBrowserContext? _context;
     private const string BaseUrl = "http://localhost:5184";
     private const string ApiUrl = "http://localhost:5029";
 
+    public NavigationImprovementsTests(PlaywrightCollectionFixture fixture)
+    {
+        _fixture = fixture;
+    }
+
     public async Task InitializeAsync()
     {
-        _playwright = await Playwright.CreateAsync();
-        _browser = await _playwright.Chromium.LaunchAsync(new() { Headless = true });
-        _context = await _browser.NewContextAsync();
+        _context = await _fixture.CreateContextAsync();
     }
 
     public async Task DisposeAsync()
     {
         if (_context != null)
             await _context.DisposeAsync();
-        
-        if (_browser != null)
-            await _browser.DisposeAsync();
-        
-        _playwright?.Dispose();
     }
 
     [Fact]
     public async Task Homepage_SectionsAreOrderedCorrectly()
     {
         // Arrange
-        var page = await _context!.NewPageAsync();
+        var page = await _context!.NewPageWithDefaultsAsync();
         
         // Act
         await page.GotoAndWaitForBlazorAsync(BaseUrl);
-        await page.WaitForSelectorAsync(".section-card");
         
         // Get all section card titles
         var sectionTitles = await page.Locator(".section-card h2").AllTextContentsAsync();
@@ -73,9 +70,8 @@ public class NavigationImprovementsTests : IAsyncLifetime
     public async Task SectionCard_Click_NavigatesToSectionHomepage()
     {
         // Arrange
-        var page = await _context!.NewPageAsync();
+        var page = await _context!.NewPageWithDefaultsAsync();
         await page.GotoAndWaitForBlazorAsync(BaseUrl);
-        await page.WaitForSelectorAsync(".section-card");
         
         // Act - Click on the GitHub Copilot section card
         // Find the GitHub Copilot card specifically (not the first card which is "Everything")
@@ -103,9 +99,8 @@ public class NavigationImprovementsTests : IAsyncLifetime
     public async Task CollectionNavigation_UpdatesURL_ToSectionSlashCollection()
     {
         // Arrange
-        var page = await _context!.NewPageAsync();
+        var page = await _context!.NewPageWithDefaultsAsync();
         await page.GotoAndWaitForBlazorAsync($"{BaseUrl}/github-copilot");
-        await page.WaitForSelectorAsync(".collection-nav");
         
         // Act - Click on "News" collection button
         var newsButton = page.Locator(".collection-nav button", new() { HasTextString = "News" });
@@ -123,11 +118,10 @@ public class NavigationImprovementsTests : IAsyncLifetime
     public async Task CollectionPage_DoesNotShowRedundantCollectionBadge()
     {
         // Arrange
-        var page = await _context!.NewPageAsync();
+        var page = await _context!.NewPageWithDefaultsAsync();
         
         // Act - Navigate to GitHub Copilot News collection
         await page.GotoAndWaitForBlazorAsync($"{BaseUrl}/github-copilot/news");
-        await page.WaitForSelectorAsync(".content-item-card");
         
         // Get first content card
         var firstCard = page.Locator(".content-item-card").First;
@@ -150,7 +144,7 @@ public class NavigationImprovementsTests : IAsyncLifetime
     public async Task AllPage_ShowsCollectionBadgeBeforeTags()
     {
         // Arrange
-        var page = await _context!.NewPageAsync();
+        var page = await _context!.NewPageWithDefaultsAsync();
         
         // Act - Navigate to "All" section (contains all content, may take longer to load)
         await page.GotoAndWaitForBlazorAsync($"{BaseUrl}/all");
@@ -173,9 +167,8 @@ public class NavigationImprovementsTests : IAsyncLifetime
     public async Task SectionPage_CollectionSidebarIsClickable()
     {
         // Arrange
-        var page = await _context!.NewPageAsync();
+        var page = await _context!.NewPageWithDefaultsAsync();
         await page.GotoAndWaitForBlazorAsync($"{BaseUrl}/github-copilot");
-        await page.WaitForSelectorAsync(".collection-nav");
         
         // Act - Click on "Videos" collection
         var videosButton = page.Locator(".collection-nav button", new() { HasTextString = "Videos" });
@@ -197,16 +190,14 @@ public class NavigationImprovementsTests : IAsyncLifetime
     public async Task SectionPage_HeaderAreaHasConsistentHeight()
     {
         // Arrange
-        var page = await _context!.NewPageAsync();
+        var page = await _context!.NewPageWithDefaultsAsync();
         
         // Act - Measure header height on homepage
         await page.GotoAndWaitForBlazorAsync(BaseUrl);
-        await page.WaitForSelectorAsync(".section-header.home-banner");
         var homeHeaderHeight = await page.Locator(".section-header.home-banner").BoundingBoxAsync();
         
         // Navigate to section page
         await page.GotoAndWaitForBlazorAsync($"{BaseUrl}/github-copilot");
-        await page.WaitForSelectorAsync(".section-header");
         var sectionHeaderHeight = await page.Locator(".section-header").BoundingBoxAsync();
         
         // Assert - Both should have defined heights (not auto)
@@ -222,9 +213,8 @@ public class NavigationImprovementsTests : IAsyncLifetime
     public async Task SectionBackgroundImages_DisplayCorrectly()
     {
         // Arrange
-        var page = await _context!.NewPageAsync();
+        var page = await _context!.NewPageWithDefaultsAsync();
         await page.GotoAndWaitForBlazorAsync(BaseUrl);
-        await page.WaitForSelectorAsync(".section-card");
         
         // Act - Get first section card
         var firstCard = page.Locator(".section-card").First;
@@ -254,7 +244,7 @@ public class NavigationImprovementsTests : IAsyncLifetime
     public async Task DirectURL_ToSectionWithCollection_LoadsCorrectContent()
     {
         // Arrange & Act
-        var page = await _context!.NewPageAsync();
+        var page = await _context!.NewPageWithDefaultsAsync();
         await page.GotoAndWaitForBlazorAsync($"{BaseUrl}/ai/news");
         
         // Assert
