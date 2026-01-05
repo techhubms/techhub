@@ -22906,5 +22906,11 @@
     "timestamp": "2026-01-05 14:05:17 +00:00",
     "reason": "Succesfully added: Assigned 'AI' because the content focuses on Microsoft Agent Framework, local AI agents, multi-agent orchestration, and VibeVoice for conversational synthesis—all core AI development topics (AI rules 1, 4, 5). Assigned 'Coding' because the article includes Python-based code samples, agent/client class implementations, and workflow construction, all within a developer context (Coding rules 1, 2, 4). Did not assign 'Azure' or 'DevOps' as the solution is exclusively edge/local and does not discuss Microsoft cloud services or DevOps practices. Did not assign 'ML' because although LLMs and SLMs are discussed, the primary focus is on orchestration and automation, not custom machine learning workflows or analytics engineering. 'Security' was not assigned as security is mentioned only as a benefit of local-first operation, not as a technical Microsoft security service or implementation.",
     "collection": "community"
+  },
+  {
+    "reason": "Succesfully added: Assigned AI and GitHub Copilot because of direct references to AI-assisted development and highlighted sessions including GitHub Copilot in Visual Studio (AI rule 2, GitHub Copilot rule 1). Coding is included due to deep focus on .NET, C#, Visual Studio, source generators, and practical application sessions (Coding rules 1–4). DevOps is assigned based on session tracks and mentions of DevOps, modern architecture, and process optimization (DevOps rules 3, 4, and 10). Azure is assigned due to repeated references to Azure, Azure PM teams, and direct discussions with Azure product managers (Azure rule 1, 4). Security is included because conference session topics and tracks include security themes and architecture (Security rule 4 and 9). All categories are supported by content discussing learning opportunities, technologies covered, and immersive event format. No generic exclusion rules triggered as the content is technical, not biographical, sales, or executive focused.",
+    "canonical_url": "https://devblogs.microsoft.com/visualstudio/vs-live-2026-immersive-learning-for-vs2026/",
+    "timestamp": "2026-01-05 15:04:05 +00:00",
+    "collection": "news"
   }
 ]
