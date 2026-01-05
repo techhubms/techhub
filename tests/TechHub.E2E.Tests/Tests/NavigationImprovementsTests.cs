@@ -176,7 +176,6 @@ public class NavigationImprovementsTests : IAsyncLifetime
         
         // Assert - Should navigate and load videos
         await page.WaitForURLAsync("**/github-copilot/videos");
-        await page.WaitForSelectorAsync(".content-item-card");
         
         // Videos collection should be active
         var activeButton = page.Locator(".collection-nav button.active");

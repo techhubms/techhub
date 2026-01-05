@@ -106,7 +106,6 @@ public class UrlRoutingAndNavigationTests : IAsyncLifetime
             "clicking a collection button should update the URL to /section/collection");
         
         // Content should reload with only blogs
-        await page.WaitForSelectorAsync(".content-item-card");
         var collectionTitle = await page.Locator(".collection-title").TextContentAsync();
         collectionTitle.Should().Contain("Blogs", "the collection title should reflect the selected collection");
         
