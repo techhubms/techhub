@@ -69,3 +69,8 @@ public class UrlRoutingCollection : ICollectionFixture<PlaywrightCollectionFixtu
 public class NavigationCollection : ICollectionFixture<PlaywrightCollectionFixture>
 {
 }
+
+[CollectionDefinition("RSS Tests")]
+public class RssCollection : ICollectionFixture<PlaywrightCollectionFixture>
+{
+}

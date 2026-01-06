@@ -79,6 +79,54 @@
   color: var(--color-text-on-emphasis);
 }
 
+/* RSS Icon in Section Header */
+.page-heading-with-rss {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 0;
+  justify-content: center;
+}
+
+.page-heading-with-rss h1 {
+  margin-bottom: 0;
+}
+
+.rss-icon-link {
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+  opacity: 0.9;
+  transition: opacity 0.2s ease;
+}
+
+.rss-icon {
+  width: 20px;
+  height: 20px;
+  fill: rgba(255, 255, 255, 0.8);
+  transition: fill 0.2s ease;
+}
+
+.rss-icon-link:hover {
+  opacity: 1;
+}
+
+.rss-icon-link:hover .rss-icon {
+  fill: rgba(255, 255, 255, 1);
+}
+
+@media (max-width: 768px) {
+  .page-heading-with-rss {
+    gap: 10px;
+  }
+  
+  .rss-icon {
+    width: 18px;
+    height: 18px;
+  }
+}
+
 /* Section Collections Layout */
 .section-page .section-collections {
   max-width: 1400px;

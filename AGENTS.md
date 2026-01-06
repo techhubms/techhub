@@ -368,6 +368,10 @@ When renaming ANY identifier, you **MUST** verify and update ALL occurrences acr
 
 **Run Full Test Suite**:
 
+- **ALWAYS use `./run.ps1 -Test`** to run all tests (unit, integration, component, E2E)
+  - This automatically starts the server for E2E tests
+  - Ensures consistent test environment
+  - See [Starting & Stopping the Website](#starting--stopping-the-website) for details
 - Run ALL affected tests (unit, integration, component, E2E as appropriate)
 - Tests should NOW PASS (they failed in step 5, you fixed in step 6)
 - Use test scripts appropriate for the domain you're working in
@@ -786,6 +790,7 @@ This is a **permanent architectural principle**, not just a temporary measure. B
 - **[docs/AGENTS.md](docs/AGENTS.md)** - Documentation maintenance guidelines
 - **[collections/AGENTS.md](collections/AGENTS.md)** - Content creation and management
 - **[tests/AGENTS.md](tests/AGENTS.md)** - Testing strategies across all frameworks
+- **[tests/TechHub.E2E.Tests/AGENTS.md](tests/TechHub.E2E.Tests/AGENTS.md)** - E2E test architecture and performance optimizations
 
 **Functional Documentation** (in `docs/`):
 

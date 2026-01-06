@@ -8,6 +8,15 @@
 
 <PageTitle>@PageTitle - Tech Hub</PageTitle>
 
+@if (section != null)
+{
+    <HeadContent>
+        <link rel="alternate" type="application/rss+xml" 
+              title="Tech Hub - @(section.Title) - RSS Feed" 
+              href="@($"/api/rss/{section.Name}")" />
+    </HeadContent>
+}
+
 <div class="section-page-grid">
     @if (isLoadingSection)
     {

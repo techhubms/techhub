@@ -33,6 +33,7 @@ builder.Services.Configure<AppSettings>(builder.Configuration.GetSection("AppSet
 builder.Services.AddSingleton<IMarkdownService, MarkdownService>();
 builder.Services.AddSingleton<ISectionRepository, ConfigurationBasedSectionRepository>();
 builder.Services.AddSingleton<IContentRepository, FileBasedContentRepository>();
+builder.Services.AddSingleton<IRssService, RssService>();
 
 // Add data cache warmer to load all data at startup
 builder.Services.AddHostedService<DataCacheWarmer>();
@@ -74,6 +75,7 @@ app.UseCors();
 // Map API endpoints
 app.MapSectionsEndpoints();
 app.MapContentEndpoints();
+app.MapRssEndpoints();
 
 // Health check endpoint
 app.MapGet("/health", () => Results.Ok(new { status = "healthy", timestamp = DateTimeOffset.UtcNow }))

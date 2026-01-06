@@ -40,7 +40,7 @@ For detailed progress, implementation status, and what's working now, see [MIGRA
 # Build and run both API and Web
 ./run.ps1
 
-# Clean build and test first
+# Clean build and test first, then start both API and Web if tests pass
 ./run.ps1 -Clean -Test
 ```
 

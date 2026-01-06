@@ -112,8 +112,8 @@ All .NET code resides in repository root per constitution requirements:
 
 ### RSS Feed Generation
 
-- [ ] T043 Implement RssService for feed generation in src/TechHub.Infrastructure/Services/RssService.cs
-- [ ] T044 Add RSS XML serialization helpers in src/TechHub.Infrastructure/Services/RssXmlHelpers.cs
+- [X] T043 Implement RssService for feed generation in src/TechHub.Infrastructure/Services/RssService.cs
+- [X] T044 ~~Add RSS XML serialization helpers in src/TechHub.Infrastructure/Services/RssXmlHelpers.cs~~ Integrated into RssService.SerializeToXml()
 
 ### Caching Strategy
 
@@ -123,12 +123,12 @@ All .NET code resides in repository root per constitution requirements:
 
 ### Unit Tests for Core Services
 
-- [ ] T048 [P] Unit tests for Section entity validation in tests/TechHub.Core.Tests/Models/SectionTests.cs
-- [ ] T049 [P] Unit tests for ContentItem entity validation in tests/TechHub.Core.Tests/Models/ContentItemTests.cs
-- [ ] T050 [P] Unit tests for extension methods in tests/TechHub.Core.Tests/Extensions/ContentItemExtensionsTests.cs
-- [ ] T051 [P] Unit tests for MarkdownService in tests/TechHub.Infrastructure.Tests/Services/MarkdownServiceTests.cs
-- [ ] T052 [P] Unit tests for RssService in tests/TechHub.Infrastructure.Tests/Services/RssServiceTests.cs
-- [ ] T053 [P] Unit tests for FileBasedContentRepository in tests/TechHub.Infrastructure.Tests/Repositories/FileBasedContentRepositoryTests.cs
+- [X] T048 [P] Unit tests for Section entity validation in tests/TechHub.Core.Tests/Models/SectionTests.cs (already existed)
+- [X] T049 [P] Unit tests for ContentItem entity validation in tests/TechHub.Core.Tests/Models/ContentItemTests.cs (already existed)
+- [X] T050 [P] Unit tests for extension methods in tests/TechHub.Core.Tests/Extensions/ContentItemExtensionsTests.cs (already existed)
+- [X] T051 [P] Unit tests for MarkdownService in tests/TechHub.Infrastructure.Tests/Services/MarkdownServiceTests.cs (already existed)
+- [X] T052 [P] Unit tests for RssService in tests/TechHub.Infrastructure.Tests/Services/RssServiceTests.cs
+- [X] T053 [P] Unit tests for FileBasedContentRepository in tests/TechHub.Infrastructure.Tests/Repositories/FileBasedContentRepositoryTests.cs (already existed)
 
 **Checkpoint**: Data access layer complete - repositories can load content from markdown files, parse YAML, render markdown, and generate RSS feeds
 
@@ -332,10 +332,10 @@ All .NET code resides in repository root per constitution requirements:
 
 **Independent Test**: Subscribe to /ai/feed.xml in RSS reader, verify feed is valid RSS 2.0 with recent items
 
-- [ ] T122 [P] [US3] Implement GET /api/rss/{sectionName} endpoint in src/TechHub.Api/Endpoints/RssEndpoints.cs
-- [ ] T123 [P] [US3] Add RSS feed link to section page header in src/TechHub.Web/Pages/Section.razor
-- [ ] T124 [P] [US3] Integration test for RSS feed generation in tests/TechHub.Api.Tests/Endpoints/RssEndpointsTests.cs
-- [ ] T125 [P] [US3] Playwright test for RSS feed subscription in tests/TechHub.E2E.Tests/Tests/RssFeedTests.cs
+- [X] T122 [P] [US3] Implement GET /api/rss/{sectionName} endpoint in src/TechHub.Api/Endpoints/RssEndpoints.cs
+- [X] T123 [P] [US3] Add RSS feed link to section page header in src/TechHub.Web/Pages/Section.razor  
+- [X] T124 [P] [US3] Integration test for RSS feed generation in tests/TechHub.Api.Tests/Endpoints/RssEndpointsTests.cs
+- [X] T125 [P] [US3] Playwright test for RSS feed subscription in tests/TechHub.E2E.Tests/Tests/RssFeedTests.cs
 
 ### User Story 4 - Weekly Roundup Access (P2)
 
