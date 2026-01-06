@@ -22990,5 +22990,23 @@
     "reason": "Succesfully added: Assigned the 'Security' category due to the article's focus on security insights, sensitivity labels, data loss prevention, and compliance features within Microsoft Fabric (Security rules 1, 2, 3, 7). Assigned the 'Azure' category because Microsoft Fabric and OneLake are core Azure-based services and the governance discussed is primarily within Microsoft's cloud ecosystem (Azure rule 1). Did not assign 'AI' since Copilot is mentioned as an augmentative tool for insights exploration rather than the main content focus. Other categories like 'ML', 'Coding', 'DevOps', and 'GitHub Copilot' do not apply as there is no software development, DevOps, or code-oriented material.",
     "collection": "news",
     "canonical_url": "https://blog.fabric.microsoft.com/en-US/blog/explore-your-fabric-security-insights-in-the-onelake-catalog-govern-tab/"
+  },
+  {
+    "collection": "news",
+    "canonical_url": "https://www.microsoft.com/en-us/security/blog/2026/01/06/introducing-the-microsoft-defender-experts-suite-elevate-your-security-with-expert-led-services/",
+    "reason": "Succesfully added: Assigned the 'Security' category based on strong alignment with Security category inclusion rule 1: the article is entirely focused on Microsoft Defender suite offerings (Defender Experts for XDR, Incident Response, Enhanced Designated Engineering), all of which are Microsoft security services. All key parts discuss securing organizations against advanced threats, incident response, threat hunting, and advisory services—clearly within Security category rules. No other categories are assigned as the article does not delve into coding, DevOps pipelines, Azure service management outside security, AI development, or ML engineering. It does discuss AI-powered attacks but not the use of Microsoft AI services or tools, so 'AI' is not assigned. Generic exclusion rules do not apply, as the content is technical, professional, English, and not biographical or business-only.",
+    "timestamp": "2026-01-06 18:03:45 +00:00"
+  },
+  {
+    "collection": "videos",
+    "canonical_url": "https://www.youtube.com/shorts/m24psZGp_bA",
+    "reason": "Succesfully added: Assigned the AI category because the main discussion centers on the influence of AI models and tools (AI rule 1 and 4). Assigned GitHub Copilot because the description specifically highlights Copilot's impact on programming accessibility and framework usage (GitHub Copilot rules 1 and 4). Did not assign Coding because the content discusses industry effects rather than specific code or programming best practices. 'React' and 'Haskell' are discussed as examples, but not as technical how-tos or architectural guidance. Azure and other categories were not assigned since they are not mentioned or implied in the content.",
+    "timestamp": "2026-01-06 18:04:23 +00:00"
+  },
+  {
+    "collection": "community",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/find-the-alerts-you-didn-t-know-you-were-missing-with-azure-sre/ba-p/4483494",
+    "reason": "Succesfully added: Assigned Azure category as the post is entirely based around Azure technologies (AKS, Azure Monitor, Azure Cache for Redis, Azure SRE Agent). DevOps category is included due to focus on operational monitoring, alert rule design, integration between code and operations, and workflow automation (Chapter 4 DevOps rules 1, 5, 7, 9). Added Security because the scenario centers on credential rotation—a classic security event—and its propagation into alerting architecture, fulfilling Security rule 7, and the operational response. Did not assign Coding, AI, ML, or GitHub Copilot, as the post mentions Copilot Agent only as an aside, not in a developer/AI/coding or ML workflow context. All rule hierarchy and multi-platform requirements have been carefully considered. No generic exclusions are triggered (content is technical, English, not biographical, sufficiently lengthy, and not a sales pitch or negative).",
+    "timestamp": "2026-01-06 18:04:54 +00:00"
   }
 ]
