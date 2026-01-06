@@ -22984,5 +22984,11 @@
     "collection": "news",
     "reason": "Succesfully added: Assigned the 'AI' category because the content centrally focuses on Microsoft Copilot, the Microsoft AI for Impact program, and the development and use of AI agents as creative tools (AI category rules 1, 4, 5, and 6). Although Copilot is featured, it is not described in a developer tool context but rather as a creative assistant, and there are no substantial details about software development or coding, so 'GitHub Copilot', 'Coding', 'DevOps', 'Azure', 'ML', or 'Security' were not assigned. The main substance is the application of AI to support accessibility and creativity for Deaf creators, not technical implementation or programming.",
     "canonical_url": "https://news.microsoft.com/source/asia/features/a-deaf-writers-journey-with-ai-discovering-new-creative-paths/?lang=ko"
+  },
+  {
+    "timestamp": "2026-01-06 17:06:45 +00:00",
+    "reason": "Succesfully added: Assigned the 'Security' category due to the article's focus on security insights, sensitivity labels, data loss prevention, and compliance features within Microsoft Fabric (Security rules 1, 2, 3, 7). Assigned the 'Azure' category because Microsoft Fabric and OneLake are core Azure-based services and the governance discussed is primarily within Microsoft's cloud ecosystem (Azure rule 1). Did not assign 'AI' since Copilot is mentioned as an augmentative tool for insights exploration rather than the main content focus. Other categories like 'ML', 'Coding', 'DevOps', and 'GitHub Copilot' do not apply as there is no software development, DevOps, or code-oriented material.",
+    "collection": "news",
+    "canonical_url": "https://blog.fabric.microsoft.com/en-US/blog/explore-your-fabric-security-insights-in-the-onelake-catalog-govern-tab/"
   }
 ]
