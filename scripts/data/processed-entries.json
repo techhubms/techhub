@@ -22978,5 +22978,11 @@
     "canonical_url": "https://www.youtube.com/watch?v=Dwyx8GomVvQ",
     "collection": "videos",
     "reason": "Succesfully added: I assigned the 'AI' category because the episode deeply explores orchestrating multiple AI agents, relevant design patterns, and related AI frameworks (AI inclusion rules 1, 3, 4, 5). 'Azure' was included since the discussion is framed within Azure Essentials, highlights the Azure Architecture Center, and the recommended tooling is Azure-centric (Azure inclusion rules 1, 4, 5). 'Security' is included due to substantive coverage of data leak prevention, security policies, and governance using tools such as Microsoft Purview (Security inclusion rules 1, 2, 3, and 7). No generic exclusions apply—the content is technical, in English, and targets developers and architects."
+  },
+  {
+    "timestamp": "2026-01-06 16:04:59 +00:00",
+    "collection": "news",
+    "reason": "Succesfully added: Assigned the 'AI' category because the content centrally focuses on Microsoft Copilot, the Microsoft AI for Impact program, and the development and use of AI agents as creative tools (AI category rules 1, 4, 5, and 6). Although Copilot is featured, it is not described in a developer tool context but rather as a creative assistant, and there are no substantial details about software development or coding, so 'GitHub Copilot', 'Coding', 'DevOps', 'Azure', 'ML', or 'Security' were not assigned. The main substance is the application of AI to support accessibility and creativity for Deaf creators, not technical implementation or programming.",
+    "canonical_url": "https://news.microsoft.com/source/asia/features/a-deaf-writers-journey-with-ai-discovering-new-creative-paths/?lang=ko"
   }
 ]

@@ -10989,5 +10989,11 @@
     "canonical_url": "https://techcommunity.microsoft.com/t5/azure-virtual-desktop-feedback/enable-single-sign-on-for-windows-app-under-proxy-environment/idi-p/4483296",
     "collection": "community",
     "reason": "Insufficient content length"
+  },
+  {
+    "timestamp": "2026-01-06 16:05:23 +00:00",
+    "collection": "blogs",
+    "reason": "No categories found: No categories are assigned because this article focuses on the Ruby 4.0 release, a general programming language update that does not centrally involve any Microsoft technology or development tools. There are no significant references to Microsoft platforms, Azure, .NET, GitHub Copilot, or any qualifying Microsoft services or frameworks in the title, description, content, or tags. This is a general industry development news update about non-Microsoft technologies, which falls outside of the defined category inclusion rules.",
+    "canonical_url": "https://devclass.com/2026/01/06/ruby-4-0-released-but-its-best-new-features-are-not-production-ready/"
   }
 ]
