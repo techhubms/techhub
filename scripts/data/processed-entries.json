@@ -23026,5 +23026,17 @@
     "reason": "Succesfully added: Content focuses on Blazor and .NET 11 development, falling under the Coding category (Coding rules 1 and 2: Microsoft programming languages and frameworks). No other category applies: there is no substantial DevOps, AI, Azure, Security, ML, or GitHub Copilot aspect mentioned. Content is not excluded by any generic rule: it is a community video about technical roadmap and planning, not business, executive, or personal/biographical content.",
     "canonical_url": "https://www.youtube.com/watch?v=aAZZD_sXNg8",
     "collection": "videos"
+  },
+  {
+    "reason": "Succesfully added: Assigned 'AI' due to the focus on deployment and capabilities of the Gemini 3 Flash AI model within GitHub Copilot (AI rule 1). Assigned 'GitHub Copilot' because the announcement directly concerns its features, integrations, and configuration steps (GitHub Copilot rules 1, 2, and 3). No other categories apply as there is no discussion of coding practices, DevOps, Azure, ML data workflows, or security implementations. Non-development Copilot products (Microsoft 365 Copilot) are not referenced. The content avoids all generic exclusion rules: it is technical, not biographical or sales-focused, and pertains to developer tooling.",
+    "timestamp": "2026-01-06 21:03:51 +00:00",
+    "collection": "news",
+    "canonical_url": "https://github.blog/changelog/2026-01-06-gemini-3-flash-is-now-available-in-visual-studio-jetbrains-ides-xcode-and-eclipse"
+  },
+  {
+    "reason": "Succesfully added: Assigned the Azure category as the content centrally explains Azure Maps (Azure Rule 1) and its API behaviors for developer scenarios. Did not assign AI, ML, Coding, DevOps, GitHub Copilot, or Security—there is no mention of AI/ML, code-level patterns or samples, DevOps practices, GitHub, or security concepts. Tags were extracted based on Azure Maps technology focus, geocoding/routing context, display vs navigation terminology, and architecturally relevant features. The explanation emphasizes practical, technical advice for those building location-intelligent applications on Azure Maps, directly matching the 'Azure' category.",
+    "timestamp": "2026-01-06 21:04:38 +00:00",
+    "collection": "community",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-maps-blog/azure-maps-understanding-view-vs-routing-coordinates/ba-p/4483532"
   }
 ]
