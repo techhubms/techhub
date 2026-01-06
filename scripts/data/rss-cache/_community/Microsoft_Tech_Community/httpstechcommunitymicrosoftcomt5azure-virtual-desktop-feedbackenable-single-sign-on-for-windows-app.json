@@ -1,0 +1,14 @@
+{
+  "FeedName": "Microsoft Tech Community",
+  "Description": "a { text-decoration: none; color: #464feb; } tr th, tr td { border: 1px solid #e6e6e6; } tr th { background-color: #f5f5f5; }\n\nWe are using **Azure Virtual Desktop** and, due to our security policy, we run **Windows App** under a proxy environment. Currently, when signing in to Windows App in this environment, Single Sign-On (SSO) does not work for users connected via **Entra Connect**.\n\nCould you please update the specifications so that these users can sign in with SSO when using Windows App under a proxy?\n\nFor reference, in the **Remote Desktop Client app**, SSO works correctly after pressing the **Register** button. We would like to see similar functionality in Windows App.",
+  "ProcessedDate": "2026-01-06 08:03:08",
+  "Author": "tsmtsm",
+  "FeedLevelAuthor": "rss.livelink.threads-in-node",
+  "EnhancedContent": "a { text-decoration: none; color: #464feb; } tr th, tr td { border: 1px solid #e6e6e6; } tr th { background-color: #f5f5f5; }\n\nWe are using **Azure Virtual Desktop** and, due to our security policy, we run **Windows App** under a proxy environment. Currently, when signing in to Windows App in this environment, Single Sign-On (SSO) does not work for users connected via **Entra Connect**.\n\nCould you please update the specifications so that these users can sign in with SSO when using Windows App under a proxy?\n\nFor reference, in the **Remote Desktop Client app**, SSO works correctly after pressing the **Register** button. We would like to see similar functionality in Windows App.",
+  "Tags": [],
+  "FeedUrl": "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure",
+  "PubDate": "2026-01-06T07:26:45+00:00",
+  "Title": "Enable Single Sign-On for Windows App under Proxy Environment with Entra Connect Users",
+  "Link": "https://techcommunity.microsoft.com/t5/azure-virtual-desktop-feedback/enable-single-sign-on-for-windows-app-under-proxy-environment/idi-p/4483296",
+  "OutputDir": "_community"
+}

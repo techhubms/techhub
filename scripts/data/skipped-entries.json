@@ -10983,5 +10983,11 @@
     "canonical_url": "https://www.youtube.com/shorts/qNbXVxS6eOI",
     "reason": "No categories found: Content excluded due to generic exclusion rule - this video appears to be biographical and anecdotal in nature, focusing on an internal Microsoft story about a dog and the mail system rather than providing substantive technical content related to Microsoft technologies or development. The description highlights storytelling and personal anecdotes, without indicating technical implementation details, tutorials, or educational material relevant to the predefined categories.",
     "timestamp": "2026-01-05 20:03:25 +00:00"
+  },
+  {
+    "timestamp": "2026-01-06 08:04:11 +00:00",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-virtual-desktop-feedback/enable-single-sign-on-for-windows-app-under-proxy-environment/idi-p/4483296",
+    "collection": "community",
+    "reason": "Insufficient content length"
   }
 ]
