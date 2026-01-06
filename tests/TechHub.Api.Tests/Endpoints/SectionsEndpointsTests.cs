@@ -147,7 +147,7 @@ public class SectionsEndpointsTests : IClassFixture<TechHubApiFactory>
         collection.Should().NotBeNull();
         collection!.Name.Should().Be("news");
         collection.Title.Should().Be("News");
-        collection.Url.Should().Be("/ai/news.html");
+        collection.Url.Should().Be("/ai/news");
     }
 
     [Fact]
@@ -230,8 +230,8 @@ public class SectionsEndpointsTests : IClassFixture<TechHubApiFactory>
         var response = await _client.GetAsync("/api/sections/ai/collections/news/items");
         var items = await response.Content.ReadFromJsonAsync<List<ContentItemDto>>();
 
-        // Assert
-        items![0].Url.Should().Be("/news/2024-01-15-ai-news-1");
+        // Assert - URLs should include section context and be lowercase 
+        items![0].Url.Should().Be("/ai/news/2024-01-15-ai-news-1");
     }
 
     [Theory]

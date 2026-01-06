@@ -602,16 +602,16 @@ namespace TechHub.Core.Models;
 /// <summary>
 /// Represents a content item (news, blog, video, etc.)
 /// </summary>
-public record ContentItem
+public class ContentItem
 {
     /// <summary>
-    /// Unique content identifier (slug)
+    /// URL-friendly slug derived from filename (e.g., "2025-01-15-product-launch")
     /// </summary>
-    public required string Id { get; init; }
+    public required string Slug { get; init; }
     
     public required string Title { get; init; }
     public required string Description { get; init; }
-    public required string Author { get; init; }
+    public string? Author { get; init; }
     
     /// <summary>
     /// Publication date as Unix epoch timestamp
@@ -621,7 +621,13 @@ public record ContentItem
     /// <summary>
     /// Primary collection (news, blogs, videos, community, roundups)
     /// </summary>
-    public required string Collection { get; init; }
+    public required string CollectionName { get; init; }
+    
+    /// <summary>
+    /// Optional alt-collection for content organized in subfolders
+    /// (e.g., "ghc-features" for _videos/ghc-features/)
+    /// </summary>
+    public string? AltCollection { get; init; }
     
     /// <summary>
     /// All categories this content belongs to (e.g., ["ai", "github-copilot"])
@@ -630,25 +636,78 @@ public record ContentItem
     public required IReadOnlyList<string> Categories { get; init; }
     
     public required IReadOnlyList<string> Tags { get; init; }
-    public required string Content { get; init; }
+    public required string RenderedHtml { get; init; }
     public required string Excerpt { get; init; }
     
     /// <summary>
-    /// Canonical URL for SEO (primary section context)
+    /// External link URL (mapped from frontmatter canonical_url field)
     /// </summary>
-    public required string CanonicalUrl { get; init; }
-    
     public string? ExternalUrl { get; init; }
+    
+    /// <summary>
+    /// YouTube video ID for video content
+    /// </summary>
     public string? VideoId { get; init; }
+    
+    /// <summary>
+    /// Viewing mode for content ("internal" or "external", default: "external")
+    /// Maps from frontmatter viewing_mode field
+    /// </summary>
+    public string? ViewingMode { get; init; }
     
     /// <summary>
     /// Generate URL for this content in a specific section context.
     /// Example: /ai/videos/vs-code-107.html
+    /// All URLs are lowercase for consistency
     /// </summary>
-    public string GetUrlInSection(string sectionUrl) => 
-        $"/{sectionUrl}/{Collection}/{Id}.html";
+    public string GetUrlInSection(string sectionUrl)
+    {
+        var normalizedSection = sectionUrl.StartsWith('/') ? sectionUrl : $"/{sectionUrl}";
+        return $"{normalizedSection.ToLowerInvariant()}/{CollectionName.ToLowerInvariant()}/{Slug.ToLowerInvariant()}.html";
+    }
 }
 ```
+
+### Markdown Frontmatter Mapping
+
+**Critical**: Understanding how markdown frontmatter maps to domain model properties:
+
+```markdown
+---
+title: "Example Article Title"
+author: "Author Name"
+date: 2026-01-02
+categories: [ai, github-copilot]
+tags: [machine-learning, azure-openai]
+canonical_url: "https://example.com/article"  # Maps to ExternalUrl property
+viewing_mode: "external"                      # "internal" or "external" (default: "external")
+video_id: "dQw4w9WgXcQ"                       # YouTube video ID (not extracted from URLs)
+alt_collection: "ghc-features"                # For subfolder organization (_videos/ghc-features/)
+---
+
+This is the excerpt that appears in list views.
+
+<!--excerpt_end-->
+
+# Full Article Content
+
+The rest of the markdown content rendered to HTML...
+```
+
+**Property Mappings**:
+
+- `title` → `Title`
+- `author` → `Author`
+- `date` → `DateEpoch` (converted to Unix timestamp)
+- `categories` → `Categories` (array)
+- `tags` → `Tags` (normalized to lowercase, hyphen-separated)
+- `canonical_url` → `ExternalUrl` (original source URL)
+- `viewing_mode` → `ViewingMode` ("internal" or "external")
+- `video_id` → `VideoId` (YouTube video identifier)
+- `alt_collection` → `AltCollection` (subfolder categorization)
+- Filename → `Slug` (e.g., `2025-01-15-article.md` → `2025-01-15-article`)
+- Content before `<!--excerpt_end-->` → `Excerpt`
+- Full markdown → `RenderedHtml` (rendered with Markdig)
 
 ### Dependency Injection Configuration
 

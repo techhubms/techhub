@@ -104,7 +104,7 @@ public class RssEndpointsTests : IClassFixture<WebApplicationFactory<Program>>
         Assert.Equal(HttpStatusCode.NotFound, response.StatusCode);
     }
 
-    [Fact(Skip = "Roundups collection not yet configured in appsettings.json")]
+    [Fact]
     public async Task GetCollectionFeed_Roundups_ReturnsValidRss()
     {
         // Act

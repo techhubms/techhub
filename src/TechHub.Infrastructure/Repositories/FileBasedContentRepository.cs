@@ -307,10 +307,10 @@ public sealed class FileBasedContentRepository : IContentRepository, IDisposable
             var excerpt = _frontMatterParser.GetValue<string>(frontMatter, "excerpt", string.Empty);
             var categories = _frontMatterParser.GetListValue(frontMatter, "categories");
             var tags = _frontMatterParser.GetListValue(frontMatter, "tags");
-            var canonicalUrl = _frontMatterParser.GetValue<string>(frontMatter, "canonical_url", string.Empty);
-            var videoUrl = _frontMatterParser.GetValue<string>(frontMatter, "video_url", string.Empty);
+            var externalUrl = _frontMatterParser.GetValue<string>(frontMatter, "canonical_url", string.Empty);
+            var videoId = _frontMatterParser.GetValue<string>(frontMatter, "youtube_video_id", string.Empty);
+            var viewingMode = _frontMatterParser.GetValue<string>(frontMatter, "viewing_mode", "external");
             var altCollection = _frontMatterParser.GetValue<string>(frontMatter, "alt_collection", string.Empty);
-            var viewingMode = _frontMatterParser.GetValue<string>(frontMatter, "viewing_mode", string.Empty);
 
             // Generate ID from filename (without extension)
             var fileName = Path.GetFileNameWithoutExtension(filePath);
@@ -330,17 +330,6 @@ public sealed class FileBasedContentRepository : IContentRepository, IDisposable
             // Process YouTube embeds and render markdown to HTML
             var processedMarkdown = _markdownService.ProcessYouTubeEmbeds(content);
             var renderedHtml = _markdownService.RenderToHtml(processedMarkdown);
-            
-            // Extract video ID from URL if present
-            string? videoId = null;
-            if (!string.IsNullOrWhiteSpace(videoUrl))
-            {
-                var match = System.Text.RegularExpressions.Regex.Match(videoUrl, @"(?:youtube\.com/watch\?v=|youtu\.be/)([a-zA-Z0-9_-]+)");
-                if (match.Success)
-                {
-                    videoId = match.Groups[1].Value;
-                }
-            }
 
             var item = new ContentItem
             {
@@ -355,7 +344,7 @@ public sealed class FileBasedContentRepository : IContentRepository, IDisposable
                 Tags = tags,
                 RenderedHtml = renderedHtml,
                 Excerpt = excerpt,
-                ExternalUrl = canonicalUrl,
+                ExternalUrl = externalUrl,
                 VideoId = videoId,
                 ViewingMode = viewingMode
             };

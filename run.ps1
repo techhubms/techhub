@@ -15,7 +15,23 @@
     Only build the solution without running the application.
 
 .PARAMETER Test
-    Run all tests before starting the application.
+    Run all tests before starting the application (servers keep running after tests).
+
+.PARAMETER SkipTests
+    Skip tests and start servers directly (for interactive debugging with Playwright MCP).
+    
+    Use this for:
+    - AI agents doing interactive debugging with Playwright MCP tools
+    - Humans manually testing or using Playwright MCP
+    - Fast startup when you don't need to verify all tests first
+
+.PARAMETER OnlyTests
+    Run all tests and exit without starting servers (for CI/automated testing).
+    
+    Use this for:
+    - Automated verification that all changes work correctly
+    - CI/CD pipelines
+    - Final verification before committing changes
 
 .PARAMETER SkipBuild
     Skip the build step and run the application with existing binaries.
@@ -40,7 +56,18 @@
 
 .EXAMPLE
     ./run.ps1
-    Builds and runs both API and Web projects.
+    Default: Builds, runs all tests, then starts both API and Web projects.
+
+.EXAMPLE
+    ./run.ps1 -SkipTests
+    Builds and starts servers without tests (for interactive debugging).
+    AI agents: Use this with Playwright MCP for fast interactive testing!
+    Humans: Use this for manual testing or Playwright MCP exploration.
+
+.EXAMPLE
+    ./run.ps1 -OnlyTests
+    Builds, runs all tests, then exits (for automated verification).
+    Use this when you want to verify all changes work correctly.
 
 .EXAMPLE
     ./run.ps1 -Clean -Test
@@ -73,6 +100,12 @@ param(
 
     [Parameter(Mandatory = $false)]
     [switch]$Test,
+
+    [Parameter(Mandatory = $false)]
+    [switch]$SkipTests,
+
+    [Parameter(Mandatory = $false)]
+    [switch]$OnlyTests,
 
     [Parameter(Mandatory = $false)]
     [switch]$SkipBuild,
@@ -189,7 +222,8 @@ function Invoke-Build {
 function Invoke-Tests {
     param(
         [int]$ApiPort = 5029,
-        [int]$WebPort = 5184
+        [int]$WebPort = 5184,
+        [switch]$OnlyTests
     )
     
     # PHASE 1: Run all non-E2E tests first (fast, no server needed)
@@ -402,7 +436,30 @@ function Invoke-Tests {
         exit 1
     }
     
-    # All tests passed! Leave servers running
+    # OnlyTests mode: Stop servers and exit
+    if ($OnlyTests) {
+        Write-Success "All tests passed!"
+        
+        # Stop servers
+        Write-Info "Stopping test servers..."
+        
+        if ($null -ne $script:testApiProcess -and -not $script:testApiProcess.HasExited) {
+            $script:testApiProcess.Kill($true)
+            $script:testApiProcess.WaitForExit(2000)
+            $script:testApiProcess.Dispose()
+        }
+        
+        if ($null -ne $script:testWebProcess -and -not $script:testWebProcess.HasExited) {
+            $script:testWebProcess.Kill($true)
+            $script:testWebProcess.WaitForExit(2000)
+            $script:testWebProcess.Dispose()
+        }
+        
+        Stop-ExistingProcesses -Ports @($ApiPort, $WebPort)
+        return
+    }
+    
+    # All tests passed! Leave servers running for default mode
     Write-Success "All tests passed! Servers are running:"
     Write-Host ""
     Write-Info "  API: $apiUrl (Swagger: $apiUrl/swagger)"
@@ -632,6 +689,29 @@ try {
     Write-Host "║      Tech Hub Development Runner      ║" -ForegroundColor Cyan
     Write-Host "╚════════════════════════════════════════╝`n" -ForegroundColor Cyan
     
+    # Validate parameter combinations
+    if ($SkipTests -and $OnlyTests) {
+        Write-Error "Cannot use both -SkipTests and -OnlyTests"
+        exit 1
+    }
+    
+    if ($Test -and ($SkipTests -or $OnlyTests)) {
+        Write-Error "Cannot use -Test with -SkipTests or -OnlyTests"
+        exit 1
+    }
+    
+    if ($OnlyTests -and ($ApiOnly -or $WebOnly)) {
+        Write-Error "Cannot use -OnlyTests with -ApiOnly or -WebOnly"
+        exit 1
+    }
+    
+    # Default behavior: Run tests unless explicitly skipped or -Build specified
+    if (-not $Test -and -not $SkipTests -and -not $OnlyTests -and -not $Build) {
+        $Test = $true
+        Write-Info "Running tests by default (use -SkipTests to skip, -OnlyTests to run tests and exit)"
+        Write-Host ""
+    }
+    
     # Validate prerequisites
     Test-Prerequisites
     
@@ -659,6 +739,13 @@ try {
         Invoke-Tests -ApiPort $ApiPort -WebPort $WebPort
         # If tests pass, continue to start servers normally (unless Build-only mode)
         Write-Success "`nAll tests passed! Starting servers...`n"
+    }
+    
+    # OnlyTests mode: Run tests then EXIT (don't start servers)
+    if ($OnlyTests) {
+        Invoke-Tests -ApiPort $ApiPort -WebPort $WebPort -OnlyTests
+        Write-Success "`nAll tests passed!"
+        exit 0
     }
     
     # If only build was requested, exit here

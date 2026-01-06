@@ -69,6 +69,7 @@
   gap: var(--spacing-2);
   flex-wrap: wrap;
   align-items: center;
+  flex: 1;
 }
 
 .nav-link {
@@ -100,6 +101,11 @@
   color: var(--color-purple-bright);
   background: transparent;
   border-radius: 0;
+}
+
+/* About link - positioned on the right */
+.about-link {
+  margin-left: auto;
 }
 
 /* Main Content */

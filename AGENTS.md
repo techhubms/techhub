@@ -2,7 +2,9 @@
 
 **AI CONTEXT**: This is the **ROOT** development guide. It defines repository-wide principles, architecture, and workflow. When working in a specific domain (e.g., `src/`, `scripts/`, `tests/`), **ALSO** read the domain-specific `AGENTS.md` file in that directory.
 
-**🚨 ABSOLUTELY CRITICAL**: This section defines a **required 9-step process** for all development tasks in [AI Assistant Workflow](#ai-assistant-workflow). Follow these steps in order for every request.
+**🚨 ABSOLUTELY CRITICAL**: This section defines a **required 9-step process** for all development tasks in [AI Assistant Workflow](#ai-assistant-workflow). Always follow these steps in order for every request.
+**🚨 ABSOLUTELY CRITICAL**: Always read the root [README.md](/README.md) before starting any work to understand the context of this repository better.**
+**🚨 ABSOLUTELY CRITICAL**: Always use `@dotnet` agent for .NET development tasks**: API development, Blazor components, domain models, infrastructure. See [.github/agents/dotnet.md](.github/agents/dotnet.md)
 
 ## Index
 
@@ -49,12 +51,10 @@ These are the **non-negotiable rules** that apply to ALL development tasks. ALWA
 
 - **Always follow the 9-step workflow**: Complete all steps in order for every request
 - **Always write tests BEFORE implementation**: Test-Driven Development (TDD) is mandatory
-- **Always read the root [README.md](/README.md) before starting any work to understand the context of this repository better.**
 - **Always prefer higher-level tools**: ALWAYS use MCP tools > Built-in tools > CLI commands
   - **MCP tools** (highest priority): Playwright MCP (web testing), GitHub MCP (GitHub operations), context7 MCP (documentation)
   - **Built-in tools**: `replace_string_in_file` (with 5-10 lines context), `read_file`, `grep_search`, `file_search`
   - **CLI** (lowest priority): Only for complex multi-step operations not supported by tools
-- **Always use `@dotnet` agent for .NET development tasks**: API development, Blazor components, domain models, infrastructure. See [.github/agents/dotnet.md](.github/agents/dotnet.md)
 - **Always check for errors after editing files**: Use `get_errors` tool on modified files to check VS Code diagnostics (markdown linting, ESLint, RuboCop, etc.) and fix all issues
 - **Always run tests after modifying code**: CRITICAL - After ANY code changes (C#, JavaScript, PowerShell, templates), run appropriate test suites. Documentation-only changes do not require testing
 - **Always fix linter issues**: Always resolve all linting errors and warnings, EXCEPT intentional bad examples in documentation
@@ -84,6 +84,7 @@ These are the **non-negotiable rules** that apply to ALL development tasks. ALWA
 
 - **Never skip the 9-step workflow**: All steps are required for quality work
 - **Never write implementation before tests**: TDD is mandatory for code changes
+- **Never skip E2E tests for UI changes**: E2E tests are MANDATORY for frontend, not optional
 - **Never use lower-level tools unnecessarily**: Don't use CLI when MCP or built-in tools are available
 - **Never dissect GitHub URLs**: Always extract IDs from URLs before passing to GitHub MCP tools
 - **Never paste scripts into terminal**: Always save as `.ps1` file in `.tmp/` and execute
@@ -260,16 +261,27 @@ When renaming ANY identifier, you **MUST** verify and update ALL occurrences acr
 - **Unit tests**: Test individual components in isolation (Core, Infrastructure layers)
 - **Integration tests**: Test API endpoints and data access (API, Repository layers)
 - **Component tests**: Test Blazor components with bUnit (Web layer)
-- **E2E tests**: Test complete user workflows with Playwright (critical paths only)
+- **E2E tests**: Test complete user workflows with Playwright - **MANDATORY for ALL UI changes**
 - See [tests/AGENTS.md](tests/AGENTS.md) for comprehensive testing strategies
+
+**🚨 CRITICAL E2E RULE**: NEVER skip E2E tests for UI/frontend changes:
+
+- ALL URL routing changes → E2E tests REQUIRED
+- ALL Blazor component changes → E2E tests REQUIRED
+- ALL button/interaction changes → E2E tests REQUIRED
+- ALL navigation changes → E2E tests REQUIRED
+- See [tests/TechHub.E2E.Tests/AGENTS.md](tests/TechHub.E2E.Tests/AGENTS.md) for patterns
 
 **When to Write Tests**:
 
-- **ALWAYS** for bug fixes - reproduce the bug first
-- **ALWAYS** for new features - define expected behavior first
-- **ALWAYS** for API changes - test contracts and responses
-- **SKIP** for documentation-only changes
-- **SKIP** for trivial UI tweaks (but test business logic behind them)
+- **ALWAYS** for bug fixes - reproduce the bug first (all layers including E2E)
+- **ALWAYS** for new features - define expected behavior first (all layers including E2E)
+- **ALWAYS** for API changes - test contracts and responses (integration + E2E)
+- **ALWAYS** for UI/frontend changes - E2E tests are MANDATORY, not optional
+- **ALWAYS** for URL routing changes - E2E tests verify navigation flows
+- **ALWAYS** for component interactivity - E2E tests verify button clicks, forms, etc.
+- **SKIP** for documentation-only changes (no code impact)
+- **SKIP** for backend-only changes that don't affect user workflows (but keep integration tests)
 
 **Key Benefits of Test-First**:
 
@@ -320,7 +332,10 @@ When renaming ANY identifier, you **MUST** verify and update ALL occurrences acr
 **Starting/Stopping the Application**:
 
 - See [Starting & Stopping the Website](#starting--stopping-the-website) for complete instructions on running and testing the website
-- Use Playwright MCP tools in GitHub Copilot Chat for testing (no terminal commands needed)
+- **For automated testing**: Use `./run.ps1 -OnlyTests` (runs all tests, exits - for verifying changes)
+- **For interactive debugging**: Use `./run.ps1 -SkipTests` (AI agents AND humans using Playwright MCP tools)
+- **Default behavior**: Use `./run.ps1` (runs tests first, then keeps servers running)
+- **IMPORTANT**: AI agents should use Playwright MCP for interactive debugging AND write tests that reproduce the debugged issues so they don't happen again
 
 **Critical Requirements**:
 
@@ -368,11 +383,10 @@ When renaming ANY identifier, you **MUST** verify and update ALL occurrences acr
 
 **Run Full Test Suite**:
 
-- **ALWAYS use `./run.ps1 -Test`** to run all tests (unit, integration, component, E2E)
-  - This automatically starts the server for E2E tests
-  - Ensures consistent test environment
-  - See [Starting & Stopping the Website](#starting--stopping-the-website) for details
+- **For AI agents**: Use `./run.ps1 -OnlyTests` to run all tests (unit, integration, component, E2E) and exit
+- **For humans**: Use `./run.ps1` to run tests and keep servers running for interactive debugging
 - Run ALL affected tests (unit, integration, component, E2E as appropriate)
+- **E2E tests are MANDATORY** for any UI/frontend changes - NO EXCEPTIONS
 - Tests should NOW PASS (they failed in step 5, you fixed in step 6)
 - Use test scripts appropriate for the domain you're working in
 - See [tests/AGENTS.md](tests/AGENTS.md) for comprehensive testing strategy
@@ -475,8 +489,20 @@ When renaming ANY identifier, you **MUST** verify and update ALL occurrences acr
 
 ```powershell
 # Start both API and Web (browser never opens in DevContainer)
+# Default behavior: runs tests, then keeps servers running
 ./run.ps1
+
+# For automated testing (AI agents verifying changes)
+./run.ps1 -OnlyTests
+
+# For interactive debugging with Playwright MCP (AI agents AND humans)
+./run.ps1 -SkipTests
 ```
+
+**⚠️ CRITICAL E2E TEST WARNING**:
+
+🚫 **NEVER** run `dotnet test tests/TechHub.E2E.Tests` directly - it **WILL FAIL** without servers running!  
+✅ **ALWAYS** use `./run.ps1 -OnlyTests` which handles server startup, testing, and shutdown automatically.
 
 **CRITICAL RULES**:
 
@@ -484,6 +510,8 @@ When renaming ANY identifier, you **MUST** verify and update ALL occurrences acr
 ✅ **DO**: Let it run in the background - NEVER touch that terminal again  
 ✅ **DO**: Use Playwright MCP tools from GitHub Copilot Chat for all website testing  
 ✅ **DO**: Open NEW terminals for ANY other commands while website is running  
+✅ **DO**: Use `./run.ps1 -OnlyTests` for automated testing (run all tests, verify changes, exit)
+✅ **DO**: Use `./run.ps1 -SkipTests` for interactive debugging (AI agents AND humans using Playwright MCP)
 
 🚫 **NEVER**: Type ANY command in the terminal running the website  
 🚫 **NEVER**: Use curl, wget, or CLI tools in the website terminal  
@@ -562,37 +590,39 @@ curl http://localhost:5184/api/sections
 
 **Common Options**:
 
+- **Default** (no args) - Run tests, then keep servers running
+- `-OnlyTests` - Run all tests, then exit (for automated testing and verification)
+- `-SkipTests` - Skip tests, start servers directly (for interactive debugging with Playwright MCP)
+  - **AI agents**: Use this when investigating bugs, testing UI, or exploring behavior interactively
+  - **Humans**: Use this when manually testing or using Playwright MCP tools
+  - **Why**: Playwright MCP is faster than writing tests for exploration and debugging
 - `-Clean` - Clean all build artifacts before building
-- `-Test` - Run all tests before starting
 - `-SkipBuild` - Skip build, use existing binaries
 - `-ApiOnly` - Only run the API project
 - `-WebOnly` - Only run the Web project
 - `-Release` - Build in Release mode
 - `-VerboseOutput` - Show verbose output for debugging
 
-**Advanced Options**:
-
-- `-ApiPort <port>` - Custom API port (default: 5029)
-- `-WebPort <port>` - Custom Web port (default: 5184)
-- `-Build` - Only build without running
-
 **Examples**:
 
 ```powershell
-# Standard development start
+# Automated testing - verify all changes work
+./run.ps1 -OnlyTests
+
+# Interactive debugging - AI agents OR humans using Playwright MCP
+./run.ps1 -SkipTests
+
+# Default - run tests first, then keep servers running
 ./run.ps1
 
 # Clean build and test first
-./run.ps1 -Clean -Test
+./run.ps1 -Clean
 
 # Only API for backend testing
 ./run.ps1 -ApiOnly
 
 # Only Web for frontend testing
 ./run.ps1 -WebOnly
-
-# Skip build to save time
-./run.ps1 -SkipBuild
 ```
 
 **Script Built-in Features**:

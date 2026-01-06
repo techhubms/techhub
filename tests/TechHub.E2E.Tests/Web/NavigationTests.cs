@@ -2,21 +2,21 @@ using Microsoft.Playwright;
 using Xunit;
 using TechHub.E2E.Tests.Helpers;
 
-namespace TechHub.E2E.Tests.Tests;
+namespace TechHub.E2E.Tests.Web;
 
 /// <summary>
 /// E2E tests for navigation improvements and URL structure
 /// Tests for user story requirements: section ordering, URL structure, and navigation flow
 /// </summary>
 [Collection("Navigation Tests")]
-public class NavigationImprovementsTests : IAsyncLifetime
+public class NavigationTests : IAsyncLifetime
 {
     private readonly PlaywrightCollectionFixture _fixture;
     private IBrowserContext? _context;
     private const string BaseUrl = "http://localhost:5184";
     private const string ApiUrl = "http://localhost:5029";
 
-    public NavigationImprovementsTests(PlaywrightCollectionFixture fixture)
+    public NavigationTests(PlaywrightCollectionFixture fixture)
     {
         _fixture = fixture;
     }

@@ -10,19 +10,68 @@ End-to-end tests using Playwright to verify complete user workflows and function
    pwsh tests/TechHub.E2E.Tests/bin/Debug/net10.0/playwright.ps1 install
    ```
 
-2. **Application must be running**:
+2. **Application must be running**: Choose the appropriate mode based on your workflow.
+
+   **For Automated Testing** (verifying changes):
 
    ```powershell
-   # Start the entire application using the run script
+   # Run all tests and exit (don't keep servers running)
+   ./run.ps1 -OnlyTests
+   ```
+
+   **For Interactive Debugging** (AI agents AND humans using Playwright MCP):
+
+   ```powershell
+   # Skip tests and just start servers (recommended for Playwright MCP)
+   ./run.ps1 -SkipTests
+   
+   # OR run tests first, then keep servers running
    ./run.ps1
    ```
 
+   **IMPORTANT for AI agents**: Use `-SkipTests` + Playwright MCP for interactive debugging!
+   - Faster than writing tests for exploration
+   - More powerful than curl/wget for UI testing
+   - Can investigate bugs, test interactions, verify behavior interactively
+   - Afterwards always write tests that reproduce the debugged issues so they don't happen again
+
 ## Running Tests
 
-### Run All E2E Tests
+### Full Test Suite (Recommended)
+
+**For Automated Testing** (verifying all changes):
 
 ```powershell
 # From repository root
+./run.ps1 -OnlyTests   # Builds, runs all tests, exits
+```
+
+**For Interactive Debugging** (AI agents AND humans):
+
+```powershell
+# From repository root - START SERVERS WITHOUT TESTS
+./run.ps1 -SkipTests   # Fast startup, use Playwright MCP interactively
+
+# OR run tests first, then keep servers running
+./run.ps1              # Builds, runs all tests, keeps servers running
+```
+
+**AI Agents - Use Interactive Debugging More Often!**
+
+- When investigating bugs: `./run.ps1 -SkipTests` + Playwright MCP
+- When testing UI interactions: `./run.ps1 -SkipTests` + Playwright MCP
+- When verifying changes: `./run.ps1 -OnlyTests` (automated tests)
+
+### Manual Test Execution (When Servers Already Running)
+
+**⚠️ CRITICAL WARNING**: Running `dotnet test` on the E2E project directly **WILL FAIL** unless servers are already running!
+
+- **DO NOT USE**: `dotnet test tests/TechHub.E2E.Tests` without starting servers first
+- **RECOMMENDED**: Always use `./run.ps1 -OnlyTests` which handles everything automatically
+- **ONLY IF** servers are already running (via `./run.ps1 -SkipTests`), then you can run:
+
+```powershell
+# Run all E2E tests (requires servers at localhost:5029 and localhost:5184)
 dotnet test tests/TechHub.E2E.Tests/TechHub.E2E.Tests.csproj
 ```
 
@@ -30,22 +79,28 @@ dotnet test tests/TechHub.E2E.Tests/TechHub.E2E.Tests.csproj
 
 ```powershell
 # URL routing and navigation tests
-dotnet test tests/TechHub.E2E.Tests/TechHub.E2E.Tests.csproj --filter "FullyQualifiedName~UrlRoutingAndNavigationTests"
+dotnet test tests/TechHub.E2E.Tests/TechHub.E2E.Tests.csproj --filter "FullyQualifiedName~Web.UrlRoutingTests"
 
-# Navigation improvements tests
-dotnet test tests/TechHub.E2E.Tests/TechHub.E2E.Tests.csproj --filter "FullyQualifiedName~NavigationImprovementsTests"
+# Navigation tests
+dotnet test tests/TechHub.E2E.Tests/TechHub.E2E.Tests.csproj --filter "FullyQualifiedName~Web.NavigationTests"
+
+# RSS feed tests
+dotnet test tests/TechHub.E2E.Tests/TechHub.E2E.Tests.csproj --filter "FullyQualifiedName~Web.RssTests"
+
+# API integration tests (non-Playwright)
+dotnet test tests/TechHub.E2E.Tests/TechHub.E2E.Tests.csproj --filter "FullyQualifiedName~Api.ApiEndToEndTests"
 ```
 
 ### Run Single Test
 
 ```powershell
 # Example: Run only the URL routing test
-dotnet test tests/TechHub.E2E.Tests/TechHub.E2E.Tests.csproj --filter "FullyQualifiedName~UrlRoutingAndNavigationTests.NavigateToSection_DefaultsToAllCollection"
+dotnet test tests/TechHub.E2E.Tests/TechHub.E2E.Tests.csproj --filter "FullyQualifiedName~Web.UrlRoutingTests.NavigateToSection_DefaultsToAllCollection"
 ```
 
 ## Test Coverage
 
-### URL Routing and Navigation (UrlRoutingAndNavigationTests.cs)
+### URL Routing and Navigation (Web/UrlRoutingTests.cs)
 
 Comprehensive tests for URL-based navigation and "all" collection functionality:
 
@@ -80,7 +135,7 @@ Comprehensive tests for URL-based navigation and "all" collection functionality:
 
 #### Total: 20 comprehensive test cases
 
-### Navigation Improvements (NavigationImprovementsTests.cs)
+### Navigation Improvements (Web/NavigationTests.cs)
 
 Tests for section ordering, styling, and navigation flow:
 
@@ -94,7 +149,19 @@ Tests for section ordering, styling, and navigation flow:
 - ✅ Section background images display correctly (no grey bars)
 - ✅ Direct URL to section/collection loads correct content
 
-#### Total: 10 test cases
+### RSS Feed Functionality (Web/RssTests.cs)
+
+Tests for RSS feed features:
+
+- ✅ Feed discovery links exist on home and section pages
+- ✅ RSS icon displays correctly in section header
+- ✅ Footer RSS link navigates to feed
+- ✅ RSS feeds are valid XML
+- ✅ RSS feeds contain proper metadata
+- ✅ Section feeds filter content correctly
+- ✅ Collection feeds work properly
+
+#### Total: 9 test cases
 
 ## Test Architecture
 
@@ -102,16 +169,33 @@ Tests for section ordering, styling, and navigation flow:
 
 ```text
 tests/TechHub.E2E.Tests/
-├── Tests/
-│   ├── UrlRoutingAndNavigationTests.cs  ← URL routing, "all" collection, buttons
-│   └── NavigationImprovementsTests.cs   ← Section ordering, styling, navigation
+├── Web/                                 ← Playwright-based E2E tests for frontend
+│   ├── UrlRoutingTests.cs              ← URL routing, "all" collection, buttons (20 tests)
+│   ├── NavigationTests.cs              ← Section ordering, styling, navigation (10 tests)
+│   └── RssTests.cs                     ← RSS feed functionality (9 tests)
+├── Api/
+│   └── ApiEndToEndTests.cs             ← Direct API testing (WebApplicationFactory, not Playwright)
 ├── Helpers/
-│   └── BlazorHelpers.cs                 ← Extension methods for Blazor-specific wait patterns
-├── PlaywrightCollectionFixture.cs       ← Shared browser instance (ONE per test run)
-├── xunit.runner.json                    ← Parallel execution configuration
+│   ├── BlazorHelpers.cs                ← Extension methods for Blazor-specific wait patterns
+│   └── PlaywrightExtensions.cs         ← Page interaction helpers
+├── PlaywrightCollectionFixture.cs      ← Shared browser instance (ONE per test run)
+├── xunit.runner.json                   ← Parallel execution configuration
 ├── TechHub.E2E.Tests.csproj
 └── AGENTS.md (this file)
 ```
+
+**Folder Organization**:
+
+- **Web/** - Playwright-based tests for frontend (Blazor components, URL routing, UI interactions)
+- **Api/** - Direct API integration tests using WebApplicationFactory (no Playwright)
+- Test files organized by testing approach, not by feature
+
+**Naming Convention**:
+
+- File names match their test purpose with namespace: `Web.UrlRoutingTests`, `Api.ApiEndToEndTests`
+- All Playwright-based tests in `Web/` folder
+- Non-Playwright integration tests in `Api/` folder
+- Collections defined in `PlaywrightCollectionFixture.cs` match test file purposes
 
 ### Performance Architecture 🚀
 
@@ -620,6 +704,23 @@ public class MyFeatureTests : IAsyncLifetime
 // Step 10: Add collection definition to PlaywrightCollectionFixture.cs
 // [CollectionDefinition("My Feature Tests")]
 // public class MyFeatureCollection : ICollectionFixture<PlaywrightCollectionFixture> { }
+```
+
+**Important**: New test files in `Web/` folder should use namespace `TechHub.E2E.Tests.Web`:
+
+```csharp
+using Microsoft.Playwright;
+using Xunit;
+using FluentAssertions;
+using TechHub.E2E.Tests.Helpers;
+
+namespace TechHub.E2E.Tests.Web;  // Note: .Web namespace for files in Web/ folder
+
+[Collection("My Feature Tests")]
+public class MyFeatureTests : IAsyncLifetime
+{
+    // ... test implementation
+}
 ```
 
 **Why This Pattern Is Fast**:

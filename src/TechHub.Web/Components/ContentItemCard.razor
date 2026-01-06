@@ -1,8 +1,12 @@
 @using TechHub.Core.DTOs
 
 @{
-    var targetUrl = !string.IsNullOrWhiteSpace(Item.ExternalUrl) ? Item.ExternalUrl : Item.Url;
-    var isExternal = !string.IsNullOrWhiteSpace(Item.ExternalUrl);
+    // External links: ViewingMode is "external" (default) - opens external source in new tab
+    // Internal links: ViewingMode is "internal" - navigates to our content detail page
+    var isExternal = string.IsNullOrWhiteSpace(Item.ViewingMode) || Item.ViewingMode == "external";
+    var targetUrl = isExternal
+        ? Item.ExternalUrl ?? "" // External content uses canonical source URL
+        : Item.Url;              // Internal content uses our detail page
 }
 
 @if (isExternal)
@@ -67,7 +71,7 @@
 }
 else
 {
-    <a href="@targetUrl" class="content-item-card">
+    <a href="@targetUrl" class="content-item-card" data-enhance-nav="true">
         <article>
             <div class="content-header">
                 <h3 class="content-title">@Item.Title</h3>

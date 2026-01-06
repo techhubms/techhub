@@ -24,7 +24,7 @@ public class SectionTests
                 {
                     Name = "news",
                     Title = "News",
-                    Url = "/ai/news.html",
+                    Url = "/ai/news",
                     Description = "Latest AI news",
                     IsCustom = false
                 }
@@ -63,7 +63,7 @@ public class SectionTests
                 {
                     Name = "news",
                     Title = "News",
-                    Url = "/test/news.html",
+                    Url = "/test/news",
                     Description = "Test",
                     IsCustom = false
                 }
@@ -97,7 +97,7 @@ public class SectionTests
                 {
                     Name = "news",
                     Title = "News",
-                    Url = "/test/news.html",
+                    Url = "/test/news",
                     Description = "Test",
                     IsCustom = false
                 }
@@ -135,7 +135,7 @@ public class SectionTests
                 {
                     Name = "news",
                     Title = "News",
-                    Url = "/test/news.html",
+                    Url = "/test/news",
                     Description = "Test",
                     IsCustom = false
                 }
@@ -173,7 +173,7 @@ public class SectionTests
                 {
                     Name = "news",
                     Title = "News",
-                    Url = "/test/news.html",
+                    Url = "/test/news",
                     Description = "Test",
                     IsCustom = false
                 }
@@ -205,7 +205,7 @@ public class SectionTests
                 {
                     Name = "news",
                     Title = "News",
-                    Url = "/test/news.html",
+                    Url = "/test/news",
                     Description = "Test",
                     IsCustom = false
                 }
@@ -239,7 +239,7 @@ public class SectionTests
                 {
                     Name = "news",
                     Title = "News",
-                    Url = "/test/news.html",
+                    Url = "/test/news",
                     Description = "Test",
                     IsCustom = false
                 }
@@ -276,7 +276,7 @@ public class SectionTests
                 {
                     Name = "news",
                     Title = "News",
-                    Url = "/test/news.html",
+                    Url = "/test/news",
                     Description = "Test",
                     IsCustom = false
                 }
@@ -313,7 +313,7 @@ public class SectionTests
                 {
                     Name = "news",
                     Title = "News",
-                    Url = "/test/news.html",
+                    Url = "/test/news",
                     Description = "Test",
                     IsCustom = false
                 }
@@ -369,7 +369,7 @@ public class SectionTests
                 {
                     Name = "news",
                     Title = "News",
-                    Url = "/ai/news.html",
+                    Url = "/ai/news",
                     Description = "Latest AI news",
                     IsCustom = false
                 },
@@ -377,7 +377,7 @@ public class SectionTests
                 {
                     Name = "blogs",
                     Title = "Blogs",
-                    Url = "/ai/blogs.html",
+                    Url = "/ai/blogs",
                     Description = "AI blog posts",
                     IsCustom = false
                 },
@@ -385,7 +385,7 @@ public class SectionTests
                 {
                     Name = "videos",
                     Title = "Videos",
-                    Url = "/ai/videos.html",
+                    Url = "/ai/videos",
                     Description = "AI video content",
                     IsCustom = false
                 }

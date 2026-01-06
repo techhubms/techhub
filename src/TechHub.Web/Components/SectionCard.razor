@@ -16,17 +16,19 @@
         @if (Section.Collections.Any())
         {
             <div class="section-collections">
-                @foreach (var collection in Section.Collections.Where(c => !string.IsNullOrEmpty(c.Name)).Take(4))
+                @* Show first 4 collections/pages (both regular and custom) *@
+                @foreach (var collection in Section.Collections.Take(4))
                 {
-                    <a href="/@Section.Name/@collection.Name" class="collection-badge-link">
-                        <span class="collection-badge">
+                    var href = collection.IsCustom ? collection.Url : $"/@Section.Name/@collection.Name";
+                    <a href="@href" class="collection-badge-link">
+                        <span class="collection-badge @(collection.IsCustom ? "custom-page-badge" : "")">
                             @collection.Title
                         </span>
                     </a>
                 }
-                @if (Section.Collections.Count(c => !string.IsNullOrEmpty(c.Name)) > 4)
+                @if (Section.Collections.Count > 4)
                 {
-                    <span class="collection-badge">+@(Section.Collections.Count(c => !string.IsNullOrEmpty(c.Name)) - 4) more</span>
+                    <span class="collection-badge">+@(Section.Collections.Count - 4) more</span>
                 }
             </div>
         }

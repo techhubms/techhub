@@ -1,4 +1,4 @@
-﻿@page "/"
+@page "/"
 @using TechHub.Core.DTOs
 @using TechHub.Web.Services
 @inject TechHubApiClient ApiClient
@@ -18,48 +18,351 @@
     </div>
 </header>
 
-<div class="home-container">
-    @if (errorMessage != null)
-    {
-        <div class="error">
-            <h2>Error Loading Content</h2>
-            <p>@errorMessage</p>
-        </div>
-    }
-    else if (sections != null && sections.Any())
-    {
-        <div class="sections-grid">
-            <h2 class="section-grid-title">Browse by section</h2>
-            <div class="grid">
-                @foreach (var item in sections)
-                {
-                    <SectionCard Section="@item" />
-                }
+<div class="home-container home-with-sidebar">
+    @* Sidebar (Left Column) *@
+    <aside class="home-sidebar">
+        @* Latest Roundup *@
+        @if (roundups != null && roundups.Any())
+        {
+            <div class="sidebar-section latest-roundup">
+                <h3>Latest Roundup</h3>
+                <a href="/all/roundups/@(roundups.First().Slug.ToLowerInvariant())" class="roundup-featured-link">
+                    <span class="roundup-title">@roundups.First().Title</span>
+                    <span class="roundup-date">@DateTime.Parse(roundups.First().DateIso).ToString("MMM dd, yyyy")</span>
+                </a>
             </div>
+        }
+
+        @* Latest Items *@
+        @if (latestItems != null && latestItems.Any())
+        {
+            <div class="sidebar-section latest-items">
+                <h3>Latest Content</h3>
+                <ul class="sidebar-list">
+                    @foreach (var item in latestItems.Take(10))
+                    {
+                        var sectionUrl = GetSectionUrlFromName(item.PrimarySection);
+                        <li>
+                            <a href="/@(sectionUrl)/@(item.CollectionName.ToLowerInvariant())/@(item.Slug.ToLowerInvariant())" class="sidebar-item-link">
+                                <span class="sidebar-item-title">@item.Title</span>
+                                <span class="sidebar-item-date">@DateTime.Parse(item.DateIso).ToString("MMM dd, yyyy")</span>
+                            </a>
+                        </li>
+                    }
+                </ul>
+            </div>
+        }
+
+        @* Subscribe Section *@
+        <div class="sidebar-section subscribe-section">
+            <h3>Subscribe</h3>
+            <ul class="subscribe-links">
+                <li>
+                    <a href="/api/rss/all" target="_blank" rel="noopener noreferrer">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                            <path d="M6.18 15.64a2.18 2.18 0 0 1 2.18 2.18C8.36 19 7.38 20 6.18 20C5 20 4 19 4 17.82a2.18 2.18 0 0 1 2.18-2.18M4 4.44A15.56 15.56 0 0 1 19.56 20h-2.83A12.73 12.73 0 0 0 4 7.27V4.44m0 5.66a9.9 9.9 0 0 1 9.9 9.9h-2.83A7.07 7.07 0 0 0 4 12.93V10.1z"/>
+                        </svg>
+                        RSS Feed - All Content
+                    </a>
+                </li>
+                <li>
+                    <a href="/api/rss/collection/roundups" target="_blank" rel="noopener noreferrer">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                            <path d="M6.18 15.64a2.18 2.18 0 0 1 2.18 2.18C8.36 19 7.38 20 6.18 20C5 20 4 19 4 17.82a2.18 2.18 0 0 1 2.18-2.18M4 4.44A15.56 15.56 0 0 1 19.56 20h-2.83A12.73 12.73 0 0 0 4 7.27V4.44m0 5.66a9.9 9.9 0 0 1 9.9 9.9h-2.83A7.07 7.07 0 0 0 4 12.93V10.1z"/>
+                        </svg>
+                        RSS Feed - Roundups
+                    </a>
+                </li>
+                <li>
+                    <a href="https://mailchi.mp/1c8d4b5ea99c/tech-hub" target="_blank" rel="noopener noreferrer">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                            <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+                        </svg>
+                        Newsletter
+                    </a>
+                </li>
+            </ul>
         </div>
-    }
-    else
-    {
-        <div class="no-content">
-            <p>No sections available.</p>
-        </div>
-    }
+
+        @* Popular Tags *@
+        @if (popularTags != null && popularTags.Any())
+        {
+            <div class="sidebar-section popular-tags">
+                <h3>Popular Tags</h3>
+                <div class="tags-cloud">
+                    @foreach (var tag in popularTags.Take(15))
+                    {
+                        <a href="/all?tags=@Uri.EscapeDataString(tag)" class="tag">@tag</a>
+                    }
+                </div>
+            </div>
+        }
+    </aside>
+
+    <div class="home-main-content">
+        @if (errorMessage != null)
+        {
+            <div class="error">
+                <h2>Error Loading Content</h2>
+                <p>@errorMessage</p>
+            </div>
+        }
+        else if (sections != null && sections.Any())
+        {
+            <div class="sections-grid">
+                <h2 class="section-grid-title">Browse by section</h2>
+                <div class="grid">
+                    @foreach (var item in sections)
+                    {
+                        <SectionCard Section="@item" />
+                    }
+                </div>
+            </div>
+        }
+        else
+        {
+            <div class="no-content">
+                <p>No sections available.</p>
+            </div>
+        }
+    </div>
 </div>
 
 @code {
     private IEnumerable<SectionDto>? sections;
+    private IEnumerable<ContentItemDto>? roundups;
+    private IEnumerable<ContentItemDto>? latestItems;
+    private IEnumerable<string>? popularTags;
     private string? errorMessage;
 
     protected override async Task OnInitializedAsync()
     {
         try
         {
-            sections = await ApiClient.GetAllSectionsAsync();
+            // Fetch all content in parallel
+            var sectionsTask = ApiClient.GetAllSectionsAsync();
+            var roundupsTask = ApiClient.GetContentAsync(category: null, collection: "roundups");
+            var latestItemsTask = ApiClient.GetLatestItemsAsync(count: 10);
+            var popularTagsTask = ApiClient.GetPopularTagsAsync(count: 15);
+            
+            await Task.WhenAll(sectionsTask, roundupsTask, latestItemsTask, popularTagsTask);
+            
+            sections = await sectionsTask;
+            
+            // Get roundups and order by date descending to get the latest ones first
+            var allRoundups = await roundupsTask;
+            roundups = allRoundups?.OrderByDescending(r => r.DateEpoch);
+            
+            latestItems = await latestItemsTask;
+            popularTags = await popularTagsTask;
         }
         catch (Exception ex)
         {
-            errorMessage = $"Failed to load sections: {ex.Message}";
+            errorMessage = $"Failed to load content: {ex.Message}";
         }
     }
+
+    private string GetSectionUrlFromName(string sectionName)
+    {
+        return sectionName?.ToLowerInvariant() switch
+        {
+            "github copilot" => "github-copilot",
+            "ai" => "ai",
+            "ml" => "ml",
+            "coding" or ".net" => "coding",
+            "azure" => "azure",
+            "devops" => "devops",
+            "security" => "security",
+            "all" => "all",
+            _ => "all"
+        };
+    }
 }
+
+<style>
+/* Two-column layout for home page - Sidebar left, content right */
+.home-with-sidebar {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    gap: 2rem;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+/* Main content area */
+.home-main-content {
+    min-width: 0; /* Prevent grid blowout */
+}
+
+/* Sidebar styles */
+.home-sidebar {
+    position: sticky;
+    top: 2rem;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.sidebar-section {
+    background: var(--color-surface);
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar-section h3 {
+    color: var(--color-text-primary);
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+/* Latest items list */
+.sidebar-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar-list li {
+    margin-bottom: 1rem;
+}
+
+.sidebar-item-link {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    text-decoration: none;
+    color: var(--color-text-primary);
+    transition: color 0.2s;
+}
+
+.sidebar-item-link:hover {
+    color: var(--color-primary);
+}
+
+.sidebar-item-title {
+    font-weight: 500;
+    line-height: 1.3;
+}
+
+.sidebar-item-date {
+    font-size: 0.85rem;
+    color: var(--color-text-secondary);
+}
+
+/* Subscribe section */
+.subscribe-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.subscribe-links li {
+    margin-bottom: 0.75rem;
+}
+
+.subscribe-links a {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    text-decoration: none;
+    color: var(--color-text-primary);
+    font-weight: 500;
+    transition: color 0.2s;
+}
+
+.subscribe-links a:hover {
+    color: var(--color-primary);
+}
+
+.subscribe-links svg {
+    flex-shrink: 0;
+}
+
+/* Popular tags cloud */
+.tags-cloud {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.tags-cloud .tag {
+    display: inline-block;
+    padding: 0.4rem 0.8rem;
+    background: var(--color-surface-hover);
+    border-radius: 4px;
+    font-size: 0.85rem;
+    text-decoration: none;
+    color: var(--color-text-primary);
+    transition: all 0.2s;
+}
+
+.tags-cloud .tag:hover {
+    background: var(--color-primary);
+    color: white;
+}
+
+/* Roundups section */
+.site-roundups {
+    margin: 0 0 2rem 0;
+    padding: 2rem;
+    background: var(--color-surface);
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.site-roundups h2 {
+    color: var(--color-text-primary);
+    margin-bottom: 1rem;
+}
+
+.roundups-list {
+    list-style: none;
+    padding: 0;
+    margin: 1.5rem 0;
+}
+
+.roundups-list li {
+    margin-bottom: 0.75rem;
+}
+
+.roundup-title {
+    color: var(--color-primary);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s;
+}
+
+.roundup-title:hover {
+    color: var(--color-primary-hover);
+    text-decoration: underline;
+}
+
+.site-roundups p {
+    color: var(--color-text-secondary);
+    line-height: 1.6;
+}
+
+.site-roundups a:not(.roundup-title) {
+    color: var(--color-primary);
+    text-decoration: underline;
+}
+
+/* Responsive design */
+@@media (max-width: 1024px) {
+    .home-with-sidebar {
+        grid-template-columns: 1fr;
+    }
+    
+    .home-sidebar {
+        position: static;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 1.5rem;
+    }
+}
+</style>
 

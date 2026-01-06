@@ -18,6 +18,9 @@
                     @item.Title
                 </a>
             }
+            <a href="/about" class="nav-link about-link @(IsActivePage("/about") ? "active" : "")">
+                About
+            </a>
         </nav>
     </div>
 </header>
@@ -50,6 +53,12 @@
     private bool IsActiveSection(string sectionId)
     {
         return string.Equals(currentSection, sectionId, StringComparison.OrdinalIgnoreCase);
+    }
+
+    private bool IsActivePage(string path)
+    {
+        var uri = new Uri(Navigation.Uri);
+        return string.Equals(uri.AbsolutePath, path, StringComparison.OrdinalIgnoreCase);
     }
 
     public void Dispose()

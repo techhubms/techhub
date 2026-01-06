@@ -99,13 +99,13 @@ public class ContentItemTests
         var url = item.GetUrlInSection(sectionUrl);
 
         // Assert
-        url.Should().Be("/ai/news/2024-01-15-test-article.html");
+        url.Should().Be("/ai/news/2024-01-15-test-article");
     }
 
     [Theory]
-    [InlineData("/ai", "news", "test-slug", "/ai/news/test-slug.html")]
-    [InlineData("/github-copilot", "videos", "video-demo", "/github-copilot/videos/video-demo.html")]
-    [InlineData("/azure", "blogs", "2024-01-01-blog", "/azure/blogs/2024-01-01-blog.html")]
+    [InlineData("/ai", "news", "test-slug", "/ai/news/test-slug")]
+    [InlineData("/github-copilot", "videos", "video-demo", "/github-copilot/videos/video-demo")]
+    [InlineData("/azure", "blogs", "2024-01-01-blog", "/azure/blogs/2024-01-01-blog")]
     public void GetUrlInSection_GeneratesCorrectUrl_ForVariousParameters(
         string sectionUrl, string collectionName, string slug, string expectedUrl)
     {

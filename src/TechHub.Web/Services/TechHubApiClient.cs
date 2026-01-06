@@ -233,4 +233,63 @@ public class TechHubApiClient
             throw;
         }
     }
+
+    /// <summary>
+    /// Get the latest items across all sections (for homepage sidebar)
+    /// </summary>
+    public virtual async Task<IEnumerable<ContentItemDto>?> GetLatestItemsAsync(
+        int count = 10,
+        CancellationToken cancellationToken = default)
+    {
+        try
+        {
+            _logger.LogInformation("Fetching latest {Count} items", count);
+            
+            // Use filter endpoint without filters to get all items
+            var allItems = await FilterContentAsync(cancellationToken: cancellationToken);
+            
+            // Sort by published date descending and take the requested count
+            var latestItems = allItems?
+                .OrderByDescending(i => i.DateEpoch)
+                .Take(count);
+            
+            _logger.LogInformation("Successfully fetched {Count} latest items", latestItems?.Count() ?? 0);
+            return latestItems;
+        }
+        catch (HttpRequestException ex)
+        {
+            _logger.LogError(ex, "Failed to fetch latest items");
+            throw;
+        }
+    }
+
+    /// <summary>
+    /// Get popular tags (tags that appear most frequently across all content)
+    /// </summary>
+    public virtual async Task<IEnumerable<string>?> GetPopularTagsAsync(
+        int count = 15,
+        CancellationToken cancellationToken = default)
+    {
+        try
+        {
+            _logger.LogInformation("Fetching popular tags (top {Count})", count);
+            
+            // Get all tags
+            var allTags = await GetAllTagsAsync(cancellationToken);
+            
+            // For now, return all tags sorted alphabetically
+            // In the future, this could be enhanced to track tag frequency
+            var popularTags = allTags?
+                .OrderBy(t => t)
+                .Take(count);
+            
+            _logger.LogInformation("Successfully fetched {Count} popular tags", popularTags?.Count() ?? 0);
+            return popularTags;
+        }
+        catch (HttpRequestException ex)
+        {
+            _logger.LogError(ex, "Failed to fetch popular tags");
+            throw;
+        }
+    }
 }

@@ -51,11 +51,12 @@ public class ContentItemExtensionsTests
         dto.CollectionName.Should().Be("news");
         dto.AltCollection.Should().BeNull();
         dto.Categories.Should().BeEquivalentTo(new[] { "AI", "Azure" });
+        dto.PrimarySection.Should().Be("AI"); // First category in menubar priority order
         dto.Tags.Should().BeEquivalentTo(new[] { "machine-learning", "cloud" });
         dto.Excerpt.Should().Be("Test excerpt");
         dto.ExternalUrl.Should().Be("https://example.com");
         dto.VideoId.Should().BeNull();
-        dto.Url.Should().Be("/ai/news/2024-01-15-test-article.html");
+        dto.Url.Should().Be("/ai/news/2024-01-15-test-article");
     }
 
     [Fact]
@@ -97,6 +98,7 @@ public class ContentItemExtensionsTests
 
         // Assert
         dto.VideoId.Should().Be("abc123");
+        dto.PrimarySection.Should().Be("GitHub Copilot");
     }
 
     [Fact]
@@ -124,6 +126,7 @@ public class ContentItemExtensionsTests
 
         // Assert
         dto.AltCollection.Should().Be("ghc-features");
+        dto.PrimarySection.Should().Be("GitHub Copilot");
     }
 
     [Fact]
@@ -145,12 +148,13 @@ public class ContentItemExtensionsTests
         dto.DateIso.Should().Be("2024-01-15");
         dto.CollectionName.Should().Be("news");
         dto.Categories.Should().BeEquivalentTo(new[] { "AI", "Azure" });
+        dto.PrimarySection.Should().Be("AI");
         dto.Tags.Should().BeEquivalentTo(new[] { "machine-learning", "cloud" });
         dto.RenderedHtml.Should().Be("<p>Test content</p>");
         dto.Excerpt.Should().Be("Test excerpt");
         dto.ExternalUrl.Should().Be("https://example.com");
         dto.VideoId.Should().BeNull();
-        dto.Url.Should().Be("/ai/news/2024-01-15-test-article.html");
+        dto.Url.Should().Be("/ai/news/2024-01-15-test-article");
     }
 
     [Fact]
@@ -197,8 +201,10 @@ public class ContentItemExtensionsTests
         dtos.Should().HaveCount(2);
         dtos[0].Slug.Should().Be("2024-01-15-test-article");
         dtos[0].Title.Should().Be("Test Article");
+        dtos[0].PrimarySection.Should().Be("AI");
         dtos[1].Slug.Should().Be("2024-01-16-test-article-2");
         dtos[1].Title.Should().Be("Test Article 2");
+        dtos[1].PrimarySection.Should().Be("AI");
     }
 
     [Fact]
@@ -216,9 +222,9 @@ public class ContentItemExtensionsTests
     }
 
     [Theory]
-    [InlineData("/ai", "/ai/news/2024-01-15-test-article.html")]
-    [InlineData("/github-copilot", "/github-copilot/news/2024-01-15-test-article.html")]
-    [InlineData("/azure", "/azure/news/2024-01-15-test-article.html")]
+    [InlineData("/ai", "/ai/news/2024-01-15-test-article")]
+    [InlineData("/github-copilot", "/github-copilot/news/2024-01-15-test-article")]
+    [InlineData("/azure", "/azure/news/2024-01-15-test-article")]
     public void ToDto_GeneratesCorrectUrl_ForDifferentSections(string sectionUrl, string expectedUrl)
     {
         // Arrange

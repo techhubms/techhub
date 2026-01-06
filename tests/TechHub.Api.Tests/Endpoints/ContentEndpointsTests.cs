@@ -227,8 +227,8 @@ public class ContentEndpointsTests : IClassFixture<TechHubApiFactory>
         var response = await _client.GetAsync("/api/content/filter?collections=blogs");
         var items = await response.Content.ReadFromJsonAsync<List<ContentItemDto>>();
 
-        // Assert
-        items![0].Url.Should().Be("/blogs/2024-01-16-ai-blog-1");
+        // Assert - URLs should include section context (primary section based on categories) and be lowercase 
+        items![0].Url.Should().Be("/ai/blogs/2024-01-16-ai-blog-1");
     }
 
     [Fact]

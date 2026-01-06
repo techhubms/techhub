@@ -15,7 +15,7 @@
                     All
                 </button>
             </li>
-            @foreach (var collection in Section.Collections)
+            @foreach (var collection in RegularCollections)
             {
                 var collectionName = collection.Name;
                 <li>
@@ -27,6 +27,21 @@
                 </li>
             }
         </ul>
+        
+        @if (CustomPages.Any())
+        {
+            <h3>Pages</h3>
+            <ul>
+                @foreach (var customPage in CustomPages)
+                {
+                    <li>
+                        <a href="@customPage.Url" class="custom-page-link">
+                            @customPage.Title
+                        </a>
+                    </li>
+                }
+            </ul>
+        }
     }
 </nav>
 
@@ -42,16 +57,16 @@
 
     [Parameter]
     public EventCallback<string> OnCollectionChange { get; set; }
+    
+    private IEnumerable<CollectionReferenceDto> RegularCollections => 
+        Section?.Collections.Where(c => !c.IsCustom) ?? Enumerable.Empty<CollectionReferenceDto>();
+    
+    private IEnumerable<CollectionReferenceDto> CustomPages => 
+        Section?.Collections.Where(c => c.IsCustom) ?? Enumerable.Empty<CollectionReferenceDto>();
 
     private async Task OnCollectionSelected(string collectionName)
     {
-        // Navigate to new URL with full page reload (forceLoad: true)
-        // This is required because Section.razor uses static SSR and won't receive
-        // parameter updates from client-side navigation. Full reload ensures
-        // OnParametersSetAsync is called with new CollectionName parameter.
         Navigation.NavigateTo($"/{Section.Name}/{collectionName}", forceLoad: true);
-        
-        // Notify parent component
         await OnCollectionChange.InvokeAsync(collectionName);
     }
 }

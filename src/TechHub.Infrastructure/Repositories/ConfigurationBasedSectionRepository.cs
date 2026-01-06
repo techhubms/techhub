@@ -70,16 +70,15 @@ public sealed class ConfigurationBasedSectionRepository : ISectionRepository
     private static Section ConvertToSection(string sectionId, SectionConfig config)
     {
         // Map collection configurations to CollectionReference models
-        // Filter out custom pages (those without a collection field) for now
+        // Include both regular collections AND custom pages
         var collections = config.Collections
-            .Where(c => !string.IsNullOrEmpty(c.Collection))
             .Select(c => new CollectionReference
             {
                 Title = c.Title,
-                Name = c.Collection!,
+                Name = c.Collection ?? "", // Empty string for custom pages (no collection field)
                 Url = c.Url,
                 Description = c.Description,
-                IsCustom = c.Custom
+                IsCustom = string.IsNullOrEmpty(c.Collection) // Custom pages have no collection field
             })
             .ToList();
 

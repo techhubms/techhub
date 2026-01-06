@@ -3,21 +3,21 @@ using Xunit;
 using FluentAssertions;
 using TechHub.E2E.Tests.Helpers;
 
-namespace TechHub.E2E.Tests.Tests;
+namespace TechHub.E2E.Tests.Web;
 
 /// <summary>
 /// E2E tests for URL routing, collection navigation, and "all" collection functionality
 /// These tests document and verify the expected behavior of URL-based navigation
 /// </summary>
 [Collection("URL Routing Tests")]
-public class UrlRoutingAndNavigationTests : IAsyncLifetime
+public class UrlRoutingTests : IAsyncLifetime
 {
     private readonly PlaywrightCollectionFixture _fixture;
     private IBrowserContext? _context;
     private const string BaseUrl = "http://localhost:5184";
     private const string ApiUrl = "http://localhost:5029";
 
-    public UrlRoutingAndNavigationTests(PlaywrightCollectionFixture fixture)
+    public UrlRoutingTests(PlaywrightCollectionFixture fixture)
     {
         _fixture = fixture;
     }

@@ -321,12 +321,12 @@ namespace TechHub.Core.Models;
 /// <summary>
 /// Represents a content item (news, blog, video, etc.)
 /// </summary>
-public record ContentItem
+public class ContentItem
 {
     /// <summary>
-    /// Unique content identifier (slug)
+    /// URL-friendly slug derived from filename
     /// </summary>
-    public required string Id { get; init; }
+    public required string Slug { get; init; }
     
     public required string Title { get; init; }
     public required long DateEpoch { get; init; }
@@ -524,15 +524,34 @@ See [tests/AGENTS.md](/tests/AGENTS.md) for comprehensive testing guidance.
 /// <summary>
 /// Represents a section (thematic grouping of content)
 /// </summary>
-public record Section
+public class Section
 {
     /// <summary>
-    /// Unique identifier and URL slug (e.g., "ai", "github-copilot")
+    /// URL-friendly name (lowercase with hyphens, e.g., "ai", "github-copilot")
     /// </summary>
-    public required string Id { get; init; }
+    public required string Name { get; init; }
     
     public required string Title { get; init; }
-    // ... other properties
+    public required string Description { get; init; }
+    public required string Url { get; init; }
+    public required string Category { get; init; }
+    public required string BackgroundImage { get; init; }
+    public required IReadOnlyList<CollectionReference> Collections { get; init; }
+    
+    /// <summary>
+    /// Validates that all required properties are correctly formatted
+    /// </summary>
+    public void Validate()
+    {
+        if (string.IsNullOrWhiteSpace(Name))
+            throw new ArgumentException("Section name cannot be empty", nameof(Name));
+        if (!Name.All(c => char.IsLower(c) || c == '-'))
+            throw new ArgumentException("Section name must be lowercase with hyphens only", nameof(Name));
+        if (!Url.StartsWith('/'))
+            throw new ArgumentException("Section URL must start with '/'", nameof(Url));
+        if (Collections.Count == 0)
+            throw new ArgumentException("Section must have at least one collection", nameof(Collections));
+    }
 }
 ```
 

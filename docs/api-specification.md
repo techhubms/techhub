@@ -39,7 +39,7 @@ Represents a thematic grouping of content (e.g., AI, GitHub Copilot, Azure).
     {
       "title": "News",
       "collection": "news",
-      "url": "/ai/news.html",
+      "url": "/ai/news",
       "description": "News articles from official product sources.",
       "isCustom": false
     }
@@ -47,28 +47,56 @@ Represents a thematic grouping of content (e.g., AI, GitHub Copilot, Azure).
 }
 ```
 
-### Content Item
+### Content Item (ContentItemDto)
 
-Represents individual content (articles, videos, blogs, etc.).
+Represents individual content (articles, videos, blogs, etc.) in API responses.
 
 ```json
 {
-  "id": "2024-01-15-example-post",
+  "slug": "2024-01-15-example-post",
   "title": "Example Post",
   "description": "Brief description of the content",
   "author": "Jane Doe",
   "dateEpoch": 1705276800,
   "dateIso": "2024-01-15",
-  "collection": "news",
+  "collectionName": "news",
   "altCollection": null,
   "categories": ["AI", "GitHub Copilot"],
+  "primarySection": "Artificial Intelligence",
   "tags": ["copilot", "ai", "productivity"],
   "excerpt": "First paragraph excerpt...",
-  "externalUrl": "https://example.com/post",
+  "externalUrl": "https://techcommunity.microsoft.com/example-post",
   "videoId": null,
-  "url": "/news/2024-01-15-example-post"
+  "viewingMode": "external",
+  "url": "/ai/news/2024-01-15-example-post"
 }
 ```
+
+**Key Fields**:
+
+- `slug`: Unique identifier derived from filename (e.g., `"2024-01-15-example-post"`)
+- `title`, `description`, `author`, `excerpt`: Content metadata
+- `dateEpoch`, `dateIso`: Publication date in both formats
+- `collectionName`: Collection this item belongs to (`"news"`, `"blogs"`, `"videos"`, `"community"`, `"roundups"`)
+- `altCollection`: Alternative collection for special content (e.g., `"features"` for ghc-features videos) - used for navigation highlighting
+- `categories`: Array of sections this content belongs to (e.g., `["AI", "GitHub Copilot"]`) - used for filtering and PrimarySection calculation
+- `primarySection`: Highest-priority section from categories (used for URL routing, e.g., `"Artificial Intelligence"`)
+- `tags`: Content tags for filtering
+- `url`: Item detail page URL (format: `/{primarySection}/{collection}/{slug}`)
+- `externalUrl`: Original source URL from frontmatter `canonical_url` field (e.g., `"https://techcommunity.microsoft.com/..."`) - always present regardless of ViewingMode
+- `viewingMode`: Display mode - `"internal"` (show on our site) or `"external"` (link to source)
+  - Videos and roundups: `"internal"` (content opens on site)
+  - All other collections: `"external"` (links open in new tab)
+- `videoId`: YouTube video ID from frontmatter `youtube_video_id` field (for video embeds)
+
+**Important Behaviors**:
+
+- **PrimarySection**: Calculated using section priority: GitHub Copilot > AI > ML > Azure > .NET > DevOps > Security > Everything
+- **URL Routing**: URLs always use PrimarySection for consistent navigation (e.g., item with `["AI", "ML"]` categories → `/ai/videos/item`)
+- **ViewingMode**: Determines link behavior
+  - `"internal"` - navigates to detail page on site (videos, roundups)
+  - `"external"` - opens source URL in new tab (news, blogs, community)
+- **ExternalUrl**: Always contains original source regardless of ViewingMode (used for attribution and external links)
 
 ## Endpoints
 
@@ -306,7 +334,7 @@ Returned when a section, collection, or item does not exist.
 
 ## Valid Values
 
-### Sections
+### Section Names
 
 - `all` - Everything
 - `github-copilot` - GitHub Copilot
@@ -317,7 +345,7 @@ Returned when a section, collection, or item does not exist.
 - `coding` - .NET
 - `security` - Security
 
-### Collections
+### Collection Names
 
 - `news` - Official announcements and product updates
 - `videos` - Video content and tutorials

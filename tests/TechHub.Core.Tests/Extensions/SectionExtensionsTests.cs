@@ -26,7 +26,7 @@ public class SectionExtensionsTests
                 {
                     Name = "news",
                     Title = "News",
-                    Url = "/ai/news.html",
+                    Url = "/ai/news",
                     Description = "Latest AI news",
                     IsCustom = false
                 },
@@ -34,7 +34,7 @@ public class SectionExtensionsTests
                 {
                     Name = "blogs",
                     Title = "Blogs",
-                    Url = "/ai/blogs.html",
+                    Url = "/ai/blogs",
                     Description = "AI blog posts",
                     IsCustom = false
                 }
@@ -87,7 +87,7 @@ public class SectionExtensionsTests
         dto.Collections.Should().HaveCount(2);
         dto.Collections[0].Name.Should().Be("news");
         dto.Collections[0].Title.Should().Be("News");
-        dto.Collections[0].Url.Should().Be("/ai/news.html");
+        dto.Collections[0].Url.Should().Be("/ai/news");
         dto.Collections[0].Description.Should().Be("Latest AI news");
         dto.Collections[0].IsCustom.Should().BeFalse();
         
@@ -103,7 +103,7 @@ public class SectionExtensionsTests
         {
             Name = "videos",
             Title = "Videos",
-            Url = "/github-copilot/videos.html",
+            Url = "/github-copilot/videos",
             Description = "Video tutorials",
             IsCustom = false
         };
@@ -114,7 +114,7 @@ public class SectionExtensionsTests
         // Assert
         dto.Name.Should().Be("videos");
         dto.Title.Should().Be("Videos");
-        dto.Url.Should().Be("/github-copilot/videos.html");
+        dto.Url.Should().Be("/github-copilot/videos");
         dto.Description.Should().Be("Video tutorials");
         dto.IsCustom.Should().BeFalse();
     }
@@ -140,7 +140,7 @@ public class SectionExtensionsTests
         {
             Name = "custom",
             Title = "Custom Collection",
-            Url = "/ai/custom.html",
+            Url = "/ai/custom",
             Description = "Custom content",
             IsCustom = true
         };
@@ -173,7 +173,7 @@ public class SectionExtensionsTests
                     {
                         Name = "news",
                         Title = "News",
-                        Url = "/github-copilot/news.html",
+                        Url = "/github-copilot/news",
                         Description = "Latest news",
                         IsCustom = false
                     }

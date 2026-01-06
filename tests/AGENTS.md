@@ -5,6 +5,10 @@
 
 ## Critical Testing Rules
 
+**⚠️ CRITICAL E2E TEST WARNING**:  
+🚫 **NEVER run `dotnet test tests/TechHub.E2E.Tests` directly** - it **WILL FAIL** without servers running!  
+✅ **ALWAYS use `./run.ps1 -OnlyTests`** which handles server startup, testing, and shutdown automatically.
+
 ### ✅ Always Do
 
 - **Write tests BEFORE or DURING implementation** (TDD) - Never after
@@ -165,20 +169,20 @@ public class ContentItemTests
             Tags = [],
             Content = "Test",
             Excerpt = "Test",
-            CanonicalUrl = "/ai/videos/vs-code-107.html"
+            ExternalUrl = "/ai/videos/vs-code-107"
         };
         
         // Act
         var url = item.GetUrlInSection("ai");
         
         // Assert
-        url.Should().Be("/ai/videos/vs-code-107.html");
+        url.Should().Be("/ai/videos/vs-code-107");
     }
     
     [Theory]
-    [InlineData("ai", "/ai/videos/test.html")]
-    [InlineData("github-copilot", "/github-copilot/videos/test.html")]
-    [InlineData("ml", "/ml/videos/test.html")]
+    [InlineData("ai", "/ai/videos/test")]
+    [InlineData("github-copilot", "/github-copilot/videos/test")]
+    [InlineData("ml", "/ml/videos/test")]
     public void GetUrlInSection_WithDifferentSections_ReturnsCorrectUrls(
         string sectionUrl,
         string expectedUrl)
@@ -209,7 +213,7 @@ public class ContentItemTests
             Tags = ["test"],
             Content = "Test",
             Excerpt = "Test",
-            CanonicalUrl = $"/ai/{collection}/{id}.html"
+            ExternalUrl = $"/ai/{collection}/{id}"
         };
     }
 }
@@ -261,7 +265,7 @@ result.Should().Be("expected");
 result.Should().NotBeNullOrEmpty();
 result.Should().Contain("substring");
 result.Should().StartWith("prefix");
-result.Should().Match("/ai/*/test.html");
+result.Should().Match("/ai/*/test");
 
 // Booleans
 result.Should().BeTrue();
@@ -730,19 +734,44 @@ _context.SetDefaultTimeout(30000); // Longer timeout for debugging
 
 ### Running E2E Tests
 
+**For Automated Testing** (verifying changes work):
+
 ```bash
-# Run all E2E tests (requires servers running)
-./run.ps1 -Test
+# Run all tests (unit, integration, component, E2E) and exit
+./run.ps1 -OnlyTests
+```
 
-# Run specific E2E test
-dotnet test tests/TechHub.E2E.Tests --filter "FullyQualifiedName~BrowserBackButton"
+**For Interactive Debugging** (AI agents AND humans using Playwright MCP):
 
-# Debug E2E test (headed mode)
-# Modify test to set Headless = false, then:
+```bash
+# RECOMMENDED: Skip tests, start servers fast, use Playwright MCP interactively
+./run.ps1 -SkipTests
+
+# OR run tests first, then keep servers running for manual testing
+./run.ps1
+```
+
+**AI Agents - Interactive Debugging is Powerful!**
+
+- Use `./run.ps1 -SkipTests` to start servers quickly
+- Use Playwright MCP tools in GitHub Copilot Chat to:
+  - Navigate pages, take screenshots, capture snapshots
+  - Click buttons, fill forms, test interactions
+  - Investigate bugs interactively (faster than writing tests)
+  - Verify UI behavior before writing automated tests
+
+```bash
+# Run specific E2E test (requires servers already running)
+dotnet test tests/TechHub.E2E.Tests --filter "FullyQualifiedName~Web.UrlRoutingTests.NavigateToSection"
+```
+
+```bash
+# Debug E2E test in headed mode
+# First, modify test to set Headless = false, then run:
 dotnet test tests/TechHub.E2E.Tests --filter "FullyQualifiedName~MyTest"
 ```
 
-**Server Logs** (when running via `./run.ps1 -Test`):
+**Server Logs** (when running via `./run.ps1`):
 
 - API: `.tmp/test-logs/api.log`
 - Web: `.tmp/test-logs/web.log`
@@ -775,23 +804,47 @@ See [tests/powershell/AGENTS.md](/tests/powershell/AGENTS.md) for detailed Power
 
 The `run.ps1` script provides the easiest way to run all tests including E2E:
 
-```bash
-# Run all tests (including E2E with servers)
-./run.ps1 -Test
+**For Automated Testing** (verifying all changes):
 
-# Clean, build, and test
-./run.ps1 -Clean -Test
+```bash
+# Run all tests and exit
+./run.ps1 -OnlyTests
 ```
 
-**What Happens**:
+**For Interactive Debugging** (AI agents AND humans with Playwright MCP):
+
+```bash
+# RECOMMENDED: Skip tests, start servers fast, debug interactively
+./run.ps1 -SkipTests
+
+# OR run tests first, then keep servers running
+./run.ps1
+
+# Clean build before debugging
+./run.ps1 -Clean -SkipTests
+```
+
+**Why AI Agents Should Use Interactive Debugging**:
+
+- **Faster exploration**: No need to write tests first - just navigate and interact
+- **Better bug investigation**: See actual UI, take screenshots, inspect elements
+- **Iterative testing**: Test → fix → test again without restarting
+- **Playwright MCP in Chat**: All debugging happens in Copilot Chat, no terminal needed
+
+**What Happens** (with `-OnlyTests`):
 
 - Builds the solution
+- Runs unit and integration tests
 - Starts API and Web servers in `Test` environment (minimal logging via `appsettings.Test.json`)
 - Server output redirected to `.tmp/test-logs/api.log` and `.tmp/test-logs/web.log`
-- Runs all tests (unit, integration, component, E2E)
-- Shows clean dotnet test output with individual test results
+- Runs E2E tests
 - Stops servers automatically
-- Displays summary with pass/fail counts
+- Exits with test results
+
+**What Happens** (default behavior):
+
+- Same as `-OnlyTests` but keeps servers running after tests complete
+- Useful for manual testing or Playwright MCP interactive debugging
 
 **Server Logs** (when running E2E tests):
 
@@ -970,7 +1023,7 @@ private static ContentItem CreateTestContentItem(
         DateEpoch = DateTimeOffset.UtcNow.ToUnixTimeSeconds(),
         Content = "Test content",
         Excerpt = "Test excerpt",
-        CanonicalUrl = $"/ai/{collection}/{id}.html"
+        ExternalUrl = $"/ai/{collection}/{id}"
     };
 }
 ```
@@ -1028,7 +1081,7 @@ See [docs/testing-summary.md](/docs/testing-summary.md) for latest coverage stat
 public void GetUrlInSection_WithValidSection_ReturnsCorrectUrl()
 
 [Theory]
-[InlineData("ai", "/ai/videos/test.html")]
+[InlineData("ai", "/ai/videos/test")]
 public void GetUrlInSection_WithDifferentSections_ReturnsCorrectUrls(string section, string expected)
 
 // ❌ WRONG: Vague test names

@@ -96,7 +96,7 @@ As a content creator or marketer, I want the site to be optimized for search eng
 2. **Given** I run Google's Rich Results Test on any article, **When** the test completes, **Then** Schema.org Article markup is detected with valid headline, author, datePublished, and description
 3. **Given** I run Lighthouse on any page, **When** the test completes, **Then** SEO score is 95+ with no critical issues
 4. **Given** I view the sitemap.xml, **When** I inspect its contents, **Then** all content pages are listed with proper priority and change frequency
-5. **Given** a content item appears in multiple sections, **When** I inspect the HTML, **Then** a canonical URL is specified to prevent duplicate content penalties
+5. **Given** a content item appears in multiple sections, **When** I inspect the HTML, **Then** a canonical URL meta tag is specified to prevent duplicate content penalties
 
 ---
 
@@ -215,7 +215,7 @@ As a site administrator, I want to track user behavior, performance metrics, and
 - **FR-026**: System MUST include Schema.org Article markup on all content pages
 - **FR-027**: System MUST include Schema.org WebSite markup on home page
 - **FR-028**: System MUST generate sitemap.xml with all content URLs
-- **FR-029**: System MUST implement canonical URLs for content appearing in multiple sections
+- **FR-029**: System MUST implement canonical URL meta tags for content appearing in multiple sections
 - **FR-030**: System MUST meet WCAG 2.1 Level AA compliance (color contrast, keyboard navigation, screen reader support)
 
 **Data Management**

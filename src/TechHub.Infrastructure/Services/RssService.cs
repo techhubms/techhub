@@ -153,7 +153,7 @@ public class RssService : IRssService
     {
         var link = item.ViewingMode == "external" && !string.IsNullOrWhiteSpace(item.ExternalUrl)
             ? item.ExternalUrl
-            : $"{SiteUrl}/{item.CollectionName}/{item.Slug}.html";
+            : $"{SiteUrl}/{item.CollectionName}/{item.Slug}";
 
         var description = !string.IsNullOrWhiteSpace(item.Excerpt)
             ? item.Excerpt

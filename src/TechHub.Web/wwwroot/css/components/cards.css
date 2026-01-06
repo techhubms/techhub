@@ -123,6 +123,19 @@
   border-color: var(--color-purple-medium);
 }
 
+/* Custom page badge styling - distinct from regular collection badges */
+.custom-page-badge {
+  background: var(--color-purple-light);
+  border-color: var(--color-purple-medium);
+  font-style: italic;
+}
+
+.collection-badge-link:hover .custom-page-badge {
+  background: var(--color-purple-bright);
+  color: var(--color-text-on-emphasis);
+  border-color: var(--color-purple-bright);
+}
+
 .collection-badge-white {
   background: var(--color-bg-emphasis);
   color: var(--color-text-secondary);

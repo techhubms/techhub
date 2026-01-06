@@ -88,8 +88,14 @@ public class ContentItem
 
     /// <summary>
     /// Get the URL for this content item within a specific section
+    /// All URLs are lowercase for consistency and include leading slash for proper routing
     /// </summary>
-    public string GetUrlInSection(string sectionUrl) => $"{sectionUrl}/{CollectionName}/{Slug}.html";
+    public string GetUrlInSection(string sectionUrl)
+    {
+        // Ensure section URL has leading slash for proper routing
+        var normalizedSection = sectionUrl.StartsWith('/') ? sectionUrl : $"/{sectionUrl}";
+        return $"{normalizedSection.ToLowerInvariant()}/{CollectionName.ToLowerInvariant()}/{Slug.ToLowerInvariant()}";
+    }
 
     /// <summary>
     /// Validates that all required properties are correctly formatted

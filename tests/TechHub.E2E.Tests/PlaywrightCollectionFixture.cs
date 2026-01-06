@@ -74,3 +74,28 @@ public class NavigationCollection : ICollectionFixture<PlaywrightCollectionFixtu
 public class RssCollection : ICollectionFixture<PlaywrightCollectionFixture>
 {
 }
+
+[CollectionDefinition("Content Detail Tests")]
+public class ContentDetailCollection : ICollectionFixture<PlaywrightCollectionFixture>
+{
+}
+
+[CollectionDefinition("About Page Tests")]
+public class AboutPageCollection : ICollectionFixture<PlaywrightCollectionFixture>
+{
+}
+
+[CollectionDefinition("Home Page Roundups Tests")]
+public class HomePageRoundupsCollection : ICollectionFixture<PlaywrightCollectionFixture>
+{
+}
+
+[CollectionDefinition("Home Page Sidebar Tests")]
+public class HomePageSidebarCollection : ICollectionFixture<PlaywrightCollectionFixture>
+{
+}
+
+[CollectionDefinition("Custom Pages Tests")]
+public class CustomPagesCollection : ICollectionFixture<PlaywrightCollectionFixture>
+{
+}

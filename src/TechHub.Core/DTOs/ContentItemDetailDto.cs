@@ -14,6 +14,7 @@ public record ContentItemDetailDto
     public required string CollectionName { get; init; }
     public string? AltCollection { get; init; }
     public required IReadOnlyList<string> Categories { get; init; }
+    public required string PrimarySection { get; init; }
     public required IReadOnlyList<string> Tags { get; init; }
     public required string RenderedHtml { get; init; }
     public required string Excerpt { get; init; }

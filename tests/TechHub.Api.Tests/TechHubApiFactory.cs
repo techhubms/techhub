@@ -64,8 +64,8 @@ public class TechHubApiFactory : WebApplicationFactory<Program>
                 BackgroundImage = "/assets/section-backgrounds/ai.jpg",
                 Collections = new List<CollectionReference>
                 {
-                    new() { Title = "News", Name = "news", Url = "/ai/news.html", Description = "AI News", IsCustom = false },
-                    new() { Title = "Blogs", Name = "blogs", Url = "/ai/blogs.html", Description = "AI Blogs", IsCustom = false }
+                    new() { Title = "News", Name = "news", Url = "/ai/news", Description = "AI News", IsCustom = false },
+                    new() { Title = "Blogs", Name = "blogs", Url = "/ai/blogs", Description = "AI Blogs", IsCustom = false }
                 }
             },
             new()
@@ -78,8 +78,8 @@ public class TechHubApiFactory : WebApplicationFactory<Program>
                 BackgroundImage = "/assets/section-backgrounds/github-copilot.jpg",
                 Collections = new List<CollectionReference>
                 {
-                    new() { Title = "News", Name = "news", Url = "/github-copilot/news.html", Description = "GitHub Copilot News", IsCustom = false },
-                    new() { Title = "Videos", Name = "videos", Url = "/github-copilot/videos.html", Description = "GitHub Copilot Videos", IsCustom = false }
+                    new() { Title = "News", Name = "news", Url = "/github-copilot/news", Description = "GitHub Copilot News", IsCustom = false },
+                    new() { Title = "Videos", Name = "videos", Url = "/github-copilot/videos", Description = "GitHub Copilot Videos", IsCustom = false }
                 }
             }
         };

@@ -5,20 +5,20 @@ using Microsoft.Playwright;
 using TechHub.E2E.Tests.Helpers;
 using Xunit;
 
-namespace TechHub.E2E.Tests.Features;
+namespace TechHub.E2E.Tests.Web;
 
 /// <summary>
 /// E2E tests for RSS feed functionality
 /// </summary>
 [Collection("RSS Tests")]
-public class RssFeature : IAsyncLifetime
+public class RssTests : IAsyncLifetime
 {
     private readonly PlaywrightCollectionFixture _fixture;
     private IBrowserContext? _context;
     private const string BaseUrl = "http://localhost:5184";
     private const string ApiUrl = "http://localhost:5029";
 
-    public RssFeature(PlaywrightCollectionFixture fixture)
+    public RssTests(PlaywrightCollectionFixture fixture)
     {
         _fixture = fixture;
     }

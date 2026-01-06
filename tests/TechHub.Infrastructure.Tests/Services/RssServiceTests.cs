@@ -257,7 +257,7 @@ public class RssServiceTests
     }
 
     [Fact]
-    public async Task RssItem_UsesCanonicalUrlForExternalContent()
+    public async Task RssItem_UsesExternalUrlForExternalContent()
     {
         // Arrange
         var section = CreateTestSection();

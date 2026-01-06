@@ -138,7 +138,7 @@ Test video content
         // Assert
         Assert.NotNull(video);
         Assert.Equal("Default Video", video.Title);
-        Assert.True(string.IsNullOrEmpty(video.ViewingMode)); // No viewing_mode specified, defaults to null or empty
+        Assert.Equal("external", video.ViewingMode); // Defaults to 'external' when not specified
         Assert.Equal("https://youtube.com/watch?v=def456", video.ExternalUrl);
     }
 

@@ -6,7 +6,7 @@
 @inject NavigationManager Navigation
 @inject ILogger<Section> Logger
 
-<PageTitle>@PageTitle - Tech Hub</PageTitle>
+<PageTitle>@(section != null ? section.Title : GetSectionDisplayName(SectionName)) - Tech Hub</PageTitle>
 
 @if (section != null)
 {
@@ -78,8 +78,6 @@
     private bool isLoadingSection = true;
     private bool isLoadingContent = false;
 
-    private string PageTitle => section?.Title ?? SectionName;
-
     protected override async Task OnInitializedAsync()
     {
         Logger.LogDebug("Section OnInitializedAsync START: SectionName={SectionName}, CollectionName={CollectionName}", 
@@ -148,5 +146,21 @@
         });
         
         return Task.CompletedTask;
+    }
+
+    private string GetSectionDisplayName(string sectionUrl)
+    {
+        return sectionUrl switch
+        {
+            "github-copilot" => "GitHub Copilot",
+            "ai" => "AI",
+            "ml" => "ML",
+            "coding" => ".NET",
+            "azure" => "Azure",
+            "devops" => "DevOps",
+            "security" => "Security",
+            "all" => "All",
+            _ => sectionUrl
+        };
     }
 }

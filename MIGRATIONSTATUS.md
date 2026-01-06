@@ -49,25 +49,32 @@ Following the migration plan phases defined in [specs/dotnet-migration/](specs/d
   - ✅ FileBasedSectionRepository (7 tests passing)
   - ✅ FileBasedContentRepository (15 tests passing)
   - ⏳ RssService, Caching, Entity tests (not started)
-- [x] **Phase 3: API Endpoints** (5/70 tasks) 🔄 In Progress
+- [x] **Phase 3: API Endpoints** (15/70 tasks) 🔄 In Progress
   - ✅ All section endpoints (6 endpoints, 8 tests)
   - ✅ Advanced filtering (2 endpoints, 6 tests)
-  - ⏳ Blazor components, pages, client (not started)
+  - ✅ Blazor home page with section grid
+  - ✅ ContentItemCard and SectionCard components
+  - ✅ TechHubApiClient with resilience policies
+  - ✅ PrimarySection URL routing logic
+  - ✅ ViewingMode (internal/external) content handling
+  - ⏳ Content detail pages (partially implemented)
 
-**Test Results**: 52/52 tests passing (100% pass rate)
+**Test Results**: 245/245 unit/integration tests passing (100%), 60/69 E2E tests passing (87%)
 
-**Performance**: Sections ~25ms, Content first load 5-9s (2251 markdown files)
+**Performance**: Sections ~25ms, Content first load 5-9s (2266 markdown files)
 
 ## What's Working Now
 
-✅ **Frontend** (User Story 1 ~90% Complete):
+✅ **Frontend** (User Story 1 ~95% Complete):
 
 - Home page displaying 8 sections in responsive grid (<http://localhost:5184>)
-- SectionCard component with background images
-- ContentItemCard component ready for section pages
-- TechHubApiClient with typed HTTP methods
+- Section pages with collection navigation and content display
+- SectionCard and ContentItemCard components with Tech Hub styling
+- TechHubApiClient with resilience policies (retry, circuit breaker, timeout)
+- PrimarySection URL routing (e.g., `/github-copilot/videos/item-id`)
+- ViewingMode support (internal content navigates to detail pages, external opens in new tab)
 - Complete Tech Hub design system (colors from Jekyll _sass)
-- All 8 section background images (ai.jpg, azure.jpg, coding.jpg, devops.jpg, github-copilot.jpg, ml.jpg, security.jpg, all.jpg)
+- All 8 section background images
 
 **Running the Application**:
 

@@ -1,0 +1,108 @@
+using System.Text.RegularExpressions;
+using Microsoft.Playwright;
+using Xunit;
+
+namespace TechHub.E2E.Tests.Web;
+
+[Collection("Custom Pages Tests")]
+public class CustomPagesTests(PlaywrightCollectionFixture fixture) : IAsyncLifetime
+{
+    private const string BaseUrl = "http://localhost:5184";
+    private IBrowserContext? _context;
+    private IPage Page => _page ?? throw new InvalidOperationException("Page not initialized");
+    private IPage? _page;
+
+    public async Task InitializeAsync()
+    {
+        _context = await fixture.CreateContextAsync();
+        _page = await _context.NewPageAsync();
+    }
+
+    public async Task DisposeAsync()
+    {
+        if (_page != null)
+            await _page.CloseAsync();
+        
+        if (_context != null)
+            await _context.CloseAsync();
+    }
+    [Theory]
+    [InlineData("/ai/genai-basics", "GenAI Basics")]
+    [InlineData("/ai/genai-applied", "GenAI Applied")]
+    [InlineData("/ai/genai-advanced", "GenAI Advanced")]
+    [InlineData("/ai/sdlc", "SDLC")]
+    [InlineData("/github-copilot/features", "Features")]
+    [InlineData("/github-copilot/handbook", "GitHub Copilot Handbook")]
+    [InlineData("/github-copilot/levels-of-enlightenment", "Levels of Enlightenment")]
+    [InlineData("/github-copilot/vscode-updates", "VSCode Updates")]
+    [InlineData("/devops/dx-space", "DX")]
+    public async Task CustomPage_ShouldLoad_Successfully(string url, string expectedTitlePart)
+    {
+        // Act
+        await Page.GotoAsync($"{BaseUrl}{url}");
+        
+        // Assert
+        await Assertions.Expect(Page).ToHaveTitleAsync(new Regex(Regex.Escape(expectedTitlePart), RegexOptions.IgnoreCase));
+    }
+
+    [Theory]
+    [InlineData("/ai/genai-basics")]
+    [InlineData("/ai/genai-applied")]
+    [InlineData("/ai/genai-advanced")]
+    [InlineData("/ai/sdlc")]
+    [InlineData("/github-copilot/features")]
+    [InlineData("/github-copilot/handbook")]
+    [InlineData("/github-copilot/levels-of-enlightenment")]
+    [InlineData("/github-copilot/vscode-updates")]
+    [InlineData("/devops/dx-space")]
+    public async Task CustomPage_ShouldDisplay_Content(string url)
+    {
+        // Act
+        await Page.GotoAsync($"{BaseUrl}{url}");
+        
+        // Assert - Page should have main heading
+        var mainHeading = Page.GetByRole(AriaRole.Heading, new() { Level = 1 });
+        await Assertions.Expect(mainHeading).ToBeVisibleAsync();
+        
+        // Should have some content (paragraphs, lists, etc.)
+        var paragraphs = Page.Locator("p");
+        var count = await paragraphs.CountAsync();
+        Assert.True(count > 0, $"Expected at least one paragraph on {url}, but found {count}");
+    }
+
+    [Fact]
+    public async Task GitHubCopilotHandbook_ShouldDisplay_BookInformation()
+    {
+        // Act
+        await Page.GotoAsync($"{BaseUrl}/github-copilot/handbook");
+        
+        // Assert - Check for author headings (more specific than just text)
+        await Assertions.Expect(Page.GetByRole(AriaRole.Heading, new() { Name = "Rob Bos" })).ToBeVisibleAsync();
+        await Assertions.Expect(Page.GetByRole(AriaRole.Heading, new() { Name = "Randy Pagels" })).ToBeVisibleAsync();
+        await Assertions.Expect(Page.GetByRole(AriaRole.Link, new() { NameRegex = new Regex("Amazon", RegexOptions.IgnoreCase) })).ToBeVisibleAsync();
+    }
+
+    [Fact]
+    public async Task GenAIBasics_ShouldDisplay_TableOfContents()
+    {
+        // Act
+        await Page.GotoAsync($"{BaseUrl}/ai/genai-basics");
+        
+        // Assert - Should have major section headings (use exact names to avoid strict mode)
+        await Assertions.Expect(Page.GetByRole(AriaRole.Heading, new() { Name = "History" })).ToBeVisibleAsync();
+        await Assertions.Expect(Page.GetByRole(AriaRole.Heading, new() { Name = "Models", Exact = true })).ToBeVisibleAsync();
+        await Assertions.Expect(Page.GetByRole(AriaRole.Heading, new() { NameRegex = new Regex("Tokens", RegexOptions.IgnoreCase) })).ToBeVisibleAsync();
+    }
+
+    [Fact]
+    public async Task DXSpace_ShouldDisplay_FrameworkSections()
+    {
+        // Act
+        await Page.GotoAsync($"{BaseUrl}/devops/dx-space");
+        
+        // Assert - Check for framework section headings (exact names to avoid matches in page title)
+        await Assertions.Expect(Page.GetByRole(AriaRole.Heading, new() { Name = "DORA Metrics" })).ToBeVisibleAsync();
+        await Assertions.Expect(Page.GetByRole(AriaRole.Heading, new() { Name = "SPACE Framework" })).ToBeVisibleAsync();
+        await Assertions.Expect(Page.GetByRole(AriaRole.Heading, new() { NameRegex = new Regex("DevEx", RegexOptions.IgnoreCase) })).ToBeVisibleAsync();
+    }
+}

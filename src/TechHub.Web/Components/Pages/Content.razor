@@ -4,40 +4,109 @@
 @inject TechHubApiClient ApiClient
 @inject NavigationManager Navigation
 
-<PageTitle>@PageTitle - Tech Hub</PageTitle>
+<PageTitle>@(item?.Title ?? "Loading...") - Tech Hub</PageTitle>
 
-<div class="content-page">
-    @if (isLoading)
-    {
-        <div class="loading">
-            <p>Loading content...</p>
-        </div>
-    }
-    else if (errorMessage != null)
-    {
-        <div class="error">
-            <h2>Error Loading Content</h2>
-            <p>@errorMessage</p>
-            <button @onclick="LoadContent">Retry</button>
-        </div>
-    }
-    else if (item != null)
-    {
-        <nav class="breadcrumb">
-            <a href="/">Home</a>
-            <span class="separator">/</span>
-            <a href="/@SectionName">@SectionName</a>
-            <span class="separator">/</span>
-            <span>@item.Title</span>
-        </nav>
+@if (sectionData != null)
+{
+    <HeadContent>
+        <link rel="canonical" href="@($"https://tech.hub.ms/{SectionName.ToLowerInvariant()}/{Collection.ToLowerInvariant()}/{ItemId.ToLowerInvariant()}")" />
+    </HeadContent>
+}
 
-        <ContentDetail Item="@item" />
+@if (isLoading)
+{
+    <div class="loading">
+        <p>Loading content...</p>
+    </div>
+}
+else if (errorMessage != null)
+{
+    <div class="error">
+        <h2>Error Loading Content</h2>
+        <p>@errorMessage</p>
+        <button @onclick="LoadContent">Retry</button>
+    </div>
+}
+else if (sectionData != null && item != null)
+{
+    @* Section Header (same as section pages) *@
+    <SectionHeader Section="@sectionData" />
+    
+    @* Collection Navigation (same as section pages) *@
+    <CollectionNav Section="@sectionData" 
+                   SelectedCollection="@Collection" 
+                   IsLoadingContent="false"
+                   OnCollectionChange="@HandleCollectionChange" />
+    
+    <div class="content-detail-page">
+        @* Sidebar with breadcrumbs and metadata *@
+        <aside class="content-sidebar">
+            @* Breadcrumbs *@
+            <nav class="breadcrumbs" aria-label="Breadcrumb">
+                <ol>
+                    <li><a href="/@(SectionName.ToLowerInvariant())">@GetSectionDisplayName(SectionName)</a></li>
+                    <li><a href="/@(SectionName.ToLowerInvariant())/@(Collection.ToLowerInvariant())">@CapitalizeCollection(Collection)</a></li>
+                    <li aria-current="page">@item.Title</li>
+                </ol>
+            </nav>
 
-        <nav class="content-navigation">
-            <a href="/@SectionName" class="back-link">← Back to @SectionName</a>
-        </nav>
-    }
-</div>
+            @* Metadata *@
+            <div class="sidebar-section">
+                <h3>Published</h3>
+                <time datetime="@item.DateIso">@FormatDate(item.DateEpoch)</time>
+            </div>
+
+            @if (!string.IsNullOrWhiteSpace(item.Author))
+            {
+                <div class="sidebar-section">
+                    <h3>Author</h3>
+                    <p>@item.Author</p>
+                </div>
+            }
+
+            <div class="sidebar-section">
+                <h3>Collection</h3>
+                <p>@CapitalizeCollection(item.CollectionName)</p>
+            </div>
+
+            @if (item.Categories.Any())
+            {
+                <div class="sidebar-section">
+                    <h3>Categories</h3>
+                    <div class="category-tags">
+                        @foreach (var category in item.Categories)
+                        {
+                            <span class="category-tag">@category</span>
+                        }
+                    </div>
+                </div>
+            }
+
+            @if (item.Tags.Any())
+            {
+                <div class="sidebar-section">
+                    <h3>Tags</h3>
+                    <div class="content-tags">
+                        @foreach (var tag in item.Tags)
+                        {
+                            <span class="tag">@tag</span>
+                        }
+                    </div>
+                </div>
+            }
+        </aside>
+
+        @* Main content area *@
+        <main class="content-main" id="top">
+            <ContentDetail Item="@item" />
+
+            <nav class="content-navigation">
+                <a href="#top" @onclick="ScrollToTop" @onclick:preventDefault class="nav-button primary">Back to Top</a>
+                <a href="/@(SectionName.ToLowerInvariant())" class="nav-button secondary">Back to @GetSectionDisplayName(SectionName)</a>
+            </nav>
+        </main>
+    </div>
+}
 
 @code {
     [Parameter]
@@ -49,11 +118,10 @@
     [Parameter]
     public string ItemId { get; set; } = null!;
 
+    private SectionDto? sectionData;
     private ContentItemDetailDto? item;
     private bool isLoading = true;
     private string? errorMessage;
-
-    private string PageTitle => item?.Title ?? "Loading...";
 
     protected override async Task OnInitializedAsync()
     {
@@ -72,11 +140,18 @@
     {
         isLoading = true;
         errorMessage = null;
-        StateHasChanged(); // Update UI to show loading state
+        StateHasChanged();
         
         try
         {
-            item = await ApiClient.GetContentDetailAsync(SectionName, Collection, ItemId);
+            // Load section and item in parallel
+            var sectionTask = ApiClient.GetSectionAsync(SectionName.ToLowerInvariant());
+            var itemTask = ApiClient.GetContentDetailAsync(SectionName.ToLowerInvariant(), Collection.ToLowerInvariant(), ItemId.ToLowerInvariant());
+            
+            await Task.WhenAll(sectionTask, itemTask);
+            
+            sectionData = await sectionTask;
+            item = await itemTask;
         }
         catch (Exception ex)
         {
@@ -85,7 +160,49 @@
         finally
         {
             isLoading = false;
-            StateHasChanged(); // Update UI with results or error
+            StateHasChanged();
         }
     }
+
+    private Task HandleCollectionChange(string collectionName)
+    {
+        Navigation.NavigateTo($"/{SectionName.ToLowerInvariant()}/{collectionName.ToLowerInvariant()}");
+        return Task.CompletedTask;
+    }
+
+    private void ScrollToTop()
+    {
+        Navigation.NavigateTo(Navigation.Uri.Split('#')[0], forceLoad: false);
+    }
+
+    private string FormatDate(long epochSeconds)
+    {
+        var dateTime = DateTimeOffset.FromUnixTimeSeconds(epochSeconds);
+        return dateTime.ToString("MMMM d, yyyy");
+    }
+
+    private string CapitalizeCollection(string collection)
+    {
+        if (string.IsNullOrWhiteSpace(collection))
+            return collection;
+        
+        return System.Globalization.CultureInfo.CurrentCulture.TextInfo.ToTitleCase(collection.ToLower());
+    }
+
+    private string GetSectionDisplayName(string sectionUrl)
+    {
+        return sectionUrl?.ToLowerInvariant() switch
+        {
+            "github-copilot" => "GitHub Copilot",
+            "ai" => "AI",
+            "ml" => "ML",
+            "coding" => ".NET",
+            "azure" => "Azure",
+            "devops" => "DevOps",
+            "security" => "Security",
+            "all" => "All",
+            _ => System.Globalization.CultureInfo.CurrentCulture.TextInfo.ToTitleCase(sectionUrl?.ToLowerInvariant() ?? "")
+        };
+    }
 }
+

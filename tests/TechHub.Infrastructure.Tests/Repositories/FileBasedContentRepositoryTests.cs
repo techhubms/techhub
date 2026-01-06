@@ -433,7 +433,7 @@ public class FileBasedContentRepositoryTests : IDisposable
             categories: [github-copilot]
             tags: [tutorial]
             excerpt: Watch this tutorial
-            video_url: https://www.youtube.com/watch?v=dQw4w9WgXcQ
+            youtube_video_id: dQw4w9WgXcQ
             ---
             
             [YouTube: dQw4w9WgXcQ]

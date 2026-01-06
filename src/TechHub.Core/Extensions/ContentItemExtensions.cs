@@ -1,5 +1,6 @@
 using TechHub.Core.DTOs;
 using TechHub.Core.Models;
+using TechHub.Core.Helpers;
 
 namespace TechHub.Core.Extensions;
 
@@ -15,6 +16,10 @@ public static class ContentItemExtensions
     {
         ArgumentNullException.ThrowIfNull(item);
 
+        // Determine primary section based on categories
+        var primarySectionUrl = SectionPriorityHelper.GetPrimarySectionUrl(item.Categories);
+        var primarySectionName = SectionPriorityHelper.GetPrimarySectionName(item.Categories);
+
         return new ContentItemDto
         {
             Slug = item.Slug,
@@ -26,6 +31,7 @@ public static class ContentItemExtensions
             CollectionName = item.CollectionName,
             AltCollection = item.AltCollection,
             Categories = item.Categories,
+            PrimarySection = primarySectionName,
             Tags = item.Tags,
             Excerpt = item.Excerpt,
             ExternalUrl = item.ExternalUrl,
@@ -41,6 +47,10 @@ public static class ContentItemExtensions
     {
         ArgumentNullException.ThrowIfNull(item);
 
+        // Determine primary section based on categories
+        var primarySectionUrl = SectionPriorityHelper.GetPrimarySectionUrl(item.Categories);
+        var primarySectionName = SectionPriorityHelper.GetPrimarySectionName(item.Categories);
+
         return new ContentItemDetailDto
         {
             Slug = item.Slug,
@@ -52,6 +62,7 @@ public static class ContentItemExtensions
             CollectionName = item.CollectionName,
             AltCollection = item.AltCollection,
             Categories = item.Categories,
+            PrimarySection = primarySectionName,
             Tags = item.Tags,
             RenderedHtml = item.RenderedHtml,
             Excerpt = item.Excerpt,

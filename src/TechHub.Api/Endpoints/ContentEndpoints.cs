@@ -122,6 +122,7 @@ internal static class ContentEndpoints
             CollectionName = item.CollectionName,
             AltCollection = item.AltCollection,
             Categories = item.Categories,
+            PrimarySection = TechHub.Core.Helpers.SectionPriorityHelper.GetPrimarySectionName(item.Categories),
             Tags = item.Tags,
             Excerpt = item.Excerpt,
             RenderedHtml = item.RenderedHtml,
@@ -212,6 +213,8 @@ internal static class ContentEndpoints
     /// </summary>
     private static ContentItemDto MapToDto(Core.Models.ContentItem item)
     {
+        var primarySectionUrl = TechHub.Core.Helpers.SectionPriorityHelper.GetPrimarySectionUrl(item.Categories);
+        
         return new ContentItemDto
         {
             Slug = item.Slug,
@@ -223,12 +226,13 @@ internal static class ContentEndpoints
             CollectionName = item.CollectionName,
             AltCollection = item.AltCollection,
             Categories = item.Categories,
+            PrimarySection = TechHub.Core.Helpers.SectionPriorityHelper.GetPrimarySectionName(item.Categories),
             Tags = item.Tags,
             Excerpt = item.Excerpt,
             ExternalUrl = item.ExternalUrl,
             VideoId = item.VideoId,
             ViewingMode = item.ViewingMode,
-            Url = $"/{item.CollectionName}/{item.Slug}" // Generate URL from collection name and slug
+            Url = $"/{primarySectionUrl.ToLowerInvariant()}/{item.CollectionName.ToLowerInvariant()}/{item.Slug.ToLowerInvariant()}"
         };
     }
 }

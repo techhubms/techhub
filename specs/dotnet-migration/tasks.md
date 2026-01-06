@@ -220,7 +220,12 @@ All .NET code resides in repository root per constitution requirements:
   - Tests active button states
   - Tests URL sharing and bookmarking
   - 20 comprehensive test cases documenting expected behavior
-- [ ] T085 [P] [US1] Playwright test for content detail viewing in tests/TechHub.E2E.Tests/Tests/ContentViewingTests.cs
+- [X] T085 [P] [US1] Playwright test for content detail viewing in tests/TechHub.E2E.Tests/Web/ContentDetailTests.cs
+  - 11 E2E tests created for content detail page functionality
+  - Tests PrimarySection URL routing (e.g., /github-copilot/videos/item)
+  - Tests sidebar display, navigation buttons, button spacing
+  - 3/11 passing, 8/11 skipped pending internal content (roundups, custom pages in US4)
+  - Tests require ViewingMode="internal" content which will be implemented in User Story 4
 - [ ] T086 [P] [US1] Playwright test for mobile responsive layout in tests/TechHub.E2E.Tests/Tests/ResponsiveDesignTests.cs
 - [ ] T087 [P] [US1] Playwright test for accessibility (keyboard navigation, screen reader) in tests/TechHub.E2E.Tests/Tests/AccessibilityTests.cs
 
@@ -357,7 +362,7 @@ All .NET code resides in repository root per constitution requirements:
 - [ ] T130 [P] [US5] Implement Schema.org Article markup in src/TechHub.Web/Components/ContentDetail.razor
 - [ ] T131 [P] [US5] Implement Schema.org WebSite markup in src/TechHub.Web/Pages/Index.razor
 - [ ] T132 [US5] Generate sitemap.xml endpoint in src/TechHub.Api/Endpoints/SitemapEndpoints.cs
-- [ ] T133 [P] [US5] Implement canonical URLs in src/TechHub.Web/Components/ContentDetail.razor
+- [ ] T133 [P] [US5] Implement canonical URL meta tags in src/TechHub.Web/Components/ContentDetail.razor
 - [ ] T134 [P] [US5] Lighthouse SEO test (score >95) in tests/TechHub.E2E.Tests/Tests/SeoTests.cs
 - [ ] T135 [P] [US5] Structured data validation test in tests/TechHub.E2E.Tests/Tests/SeoTests.cs
 
