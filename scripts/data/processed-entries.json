@@ -23044,5 +23044,11 @@
     "timestamp": "2026-01-07 06:04:13 +00:00",
     "collection": "community",
     "reason": "Succesfully added: Categories assigned are Azure (primary focus is a managed Azure service—Azure rule 1), DevOps (covers operational practices such as scaling, global deployment, auto-scaling—DevOps rules 5 and 6), Coding (explains backend real-time architecture design and implementation—Coding rules 2 and 4), and Security (covers security implications of persistent connections, authentication, Azure Front Door—Security rules 2 and 7). AI and ML are not included as the article does not cover AI/ML features. All critical decisions are supported by explicit sections in the article that address these architectural and technical areas."
+  },
+  {
+    "reason": "Succesfully added: Assigned 'Azure' category as the content is centrally about Azure CycleCloud and integration with multiple Azure services (Azure rule 1, 2, 4, 5). Assigned 'Security' because the article discusses enabling and configuring Entra ID SSO (Microsoft Entra ID, formerly Azure AD), focusing on secure authentication, permissions, identity management, and best practices (Security rules 1, 3, 4, 9). Did not assign 'AI', 'ML', 'Coding', 'DevOps', or 'GitHub Copilot' – the content covers cluster management, resource monitoring, and security for HPC environments but does not discuss AI/ML workloads, software development, DevOps pipelines/workflows, or Copilot usage. Community content is well above 200 words and is technical and instructional, not sales, non-English, biographical, or negative, so no generic exclusions apply.",
+    "collection": "community",
+    "timestamp": "2026-01-07 10:03:48 +00:00",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-high-performance-computing/announcing-azure-cyclecloud-workspace-for-slurm-version-2025-12/ba-p/4481953"
   }
 ]

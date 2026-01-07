@@ -10995,5 +10995,11 @@
     "collection": "blogs",
     "reason": "No categories found: No categories are assigned because this article focuses on the Ruby 4.0 release, a general programming language update that does not centrally involve any Microsoft technology or development tools. There are no significant references to Microsoft platforms, Azure, .NET, GitHub Copilot, or any qualifying Microsoft services or frameworks in the title, description, content, or tags. This is a general industry development news update about non-Microsoft technologies, which falls outside of the defined category inclusion rules.",
     "canonical_url": "https://devclass.com/2026/01/06/ruby-4-0-released-but-its-best-new-features-are-not-production-ready/"
+  },
+  {
+    "reason": "No categories found: No categories assigned. The content does not qualify because it lacks substantive technical depth to trigger any inclusion rules. The description indicates a 'lighthearted and informal stream' focused on live coding, revisiting personal projects (the 'countdown projects'), and discussing general setup on GitHub. There is no indication that Microsoft technologies—including Azure, GitHub Copilot, or any other specific Microsoft developer/service features—are central to the session or constitute 40% or more of the content (per Multi-Platform Content Threshold). There is also no mention of core topics such as AI, DevOps, Coding with Microsoft tools, ML, Security, or specific frameworks/services. Without detailed content (the 'content' field is null) or explicit mention of relevant Microsoft technical implementation, the submission must be excluded per the 'When in doubt, exclude' rule.",
+    "collection": "videos",
+    "timestamp": "2026-01-07 09:06:59 +00:00",
+    "canonical_url": "https://www.youtube.com/watch?v=KalgAXDzG4w"
   }
 ]
