@@ -40,15 +40,15 @@
             <div class="content-tags" @onclick:preventDefault @onclick:stopPropagation>
                 @if (ShowCollectionBadge && !string.IsNullOrWhiteSpace(Item.CollectionName))
                 {
-                    <span class="collection-badge-white" @onclick:preventDefault @onclick:stopPropagation>@CapitalizeCollection(Item.CollectionName)</span>
+                    <span class="collection-badge-white">@CapitalizeCollection(Item.CollectionName)</span>
                 }
                 @foreach (var tag in Item.Tags.Take(5))
                 {
-                    <span class="tag" @onclick:preventDefault @onclick:stopPropagation>@tag</span>
+                    <span class="content-item-card-tag">@tag</span>
                 }
                 @if (Item.Tags.Count > 5)
                 {
-                    <span class="tag-more" @onclick:preventDefault @onclick:stopPropagation>+@(Item.Tags.Count - 5) more</span>
+                    <span class="content-item-card-tag-more">+@(Item.Tags.Count - 5) more</span>
                 }
             </div>
         }
@@ -100,15 +100,15 @@ else
             <div class="content-tags" @onclick:preventDefault @onclick:stopPropagation>
                 @if (ShowCollectionBadge && !string.IsNullOrWhiteSpace(Item.CollectionName))
                 {
-                    <span class="collection-badge-white" @onclick:preventDefault @onclick:stopPropagation>@CapitalizeCollection(Item.CollectionName)</span>
+                    <span class="collection-badge-white">@CapitalizeCollection(Item.CollectionName)</span>
                 }
                 @foreach (var tag in Item.Tags.Take(5))
                 {
-                    <span class="tag" @onclick:preventDefault @onclick:stopPropagation>@tag</span>
+                    <span class="content-item-card-tag">@tag</span>
                 }
                 @if (Item.Tags.Count > 5)
                 {
-                    <span class="tag-more" @onclick:preventDefault @onclick:stopPropagation>+@(Item.Tags.Count - 5) more</span>
+                    <span class="content-item-card-tag-more">+@(Item.Tags.Count - 5) more</span>
                 }
             </div>
         }

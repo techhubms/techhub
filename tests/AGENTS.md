@@ -119,13 +119,13 @@ tests/
 
 ### Test Layer Mapping
 
-| Layer | Framework | Projects | Purpose |
-|-------|-----------|----------|---------|
-| **Unit** | xUnit | Core, Infrastructure | Domain logic, services |
-| **Integration** | xUnit + WebApplicationFactory | Api | HTTP endpoints, full request/response |
-| **Component** | bUnit | Web (future) | Blazor component rendering & logic |
-| **E2E** | Playwright .NET | E2E (future) | Full user workflows |
-| **PowerShell** | Pester | powershell/ | Automation scripts |
+| Layer         | Framework                   | Projects              | Purpose                                 |
+| ------------- | --------------------------- | --------------------- | --------------------------------------- |
+| **Unit**      | xUnit                       | Core, Infrastructure  | Domain logic, services                  |
+| **Integration** | xUnit + WebApplicationFactory | Api                 | HTTP endpoints, full request/response   |
+| **Component** | bUnit                       | Web (future)          | Blazor component rendering & logic      |
+| **E2E**       | Playwright .NET             | E2E (future)          | Full user workflows                     |
+| **PowerShell** | Pester                     | powershell/           | Automation scripts                      |
 
 ## Unit Testing (xUnit)
 
@@ -773,8 +773,8 @@ dotnet test tests/TechHub.E2E.Tests --filter "FullyQualifiedName~MyTest"
 
 **Server Logs** (when running via `./run.ps1`):
 
-- API: `.tmp/test-logs/api.log`
-- Web: `.tmp/test-logs/web.log`
+- API: `.tmp/test-logs/api-e2e.log`
+- Web: `.tmp/test-logs/web-e2e.log`
 
 ## PowerShell Testing (Pester)
 
@@ -836,7 +836,7 @@ The `run.ps1` script provides the easiest way to run all tests including E2E:
 - Builds the solution
 - Runs unit and integration tests
 - Starts API and Web servers in `Test` environment (minimal logging via `appsettings.Test.json`)
-- Server output redirected to `.tmp/test-logs/api.log` and `.tmp/test-logs/web.log`
+- Server output redirected to `.tmp/test-logs/api-e2e.log` and `.tmp/test-logs/web-e2e.log`
 - Runs E2E tests
 - Stops servers automatically
 - Exits with test results
@@ -848,8 +848,8 @@ The `run.ps1` script provides the easiest way to run all tests including E2E:
 
 **Server Logs** (when running E2E tests):
 
-- API logs: `.tmp/test-logs/api.log`
-- Web logs: `.tmp/test-logs/web.log`
+- API logs: `.tmp/test-logs/api-e2e.log`
+- Web logs: `.tmp/test-logs/web-e2e.log`
 
 ### Standard dotnet test
 

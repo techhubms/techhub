@@ -86,9 +86,8 @@ These are the **non-negotiable rules** that apply to ALL development tasks. ALWA
 - **Never write implementation before tests**: TDD is mandatory for code changes
 - **Never skip E2E tests for UI changes**: E2E tests are MANDATORY for frontend, not optional
 - **Never use lower-level tools unnecessarily**: Don't use CLI when MCP or built-in tools are available
-- **Never dissect GitHub URLs**: Always extract IDs from URLs before passing to GitHub MCP tools
 - **Never paste scripts into terminal**: Always save as `.ps1` file in `.tmp/` and execute
-- **Never use `pwsh -Command`**: Save script to file and execute it
+- **Never use `pwsh -Command` with EOF or other large text demarcations**: Save script to file and execute it
 - **Never use backslashes for escaping in PowerShell**: Always use backticks (`)
 - **Never work around missing tools**: Tell user if needed tools are unavailable instead of using alternatives
 - **Never commit secrets or API keys**: Check all files before committing

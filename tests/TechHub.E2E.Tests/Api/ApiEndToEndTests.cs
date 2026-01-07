@@ -434,10 +434,10 @@ public class ApiEndToEndTests : IClassFixture<ApiTestFactory>
         // Assert
         content!.Should().AllSatisfy(item =>
         {
-            // URL should start with / and contain the collection and id
+            // URL should start with / and contain the collection and slug (lowercased)
             item.Url.Should().StartWith("/");
-            item.Url.Should().Contain(item.CollectionName);
-            item.Url.Should().Contain(item.Slug);
+            item.Url.Should().Contain(item.CollectionName.ToLowerInvariant());
+            item.Url.Should().Contain(item.Slug.ToLowerInvariant());
         });
     }
 

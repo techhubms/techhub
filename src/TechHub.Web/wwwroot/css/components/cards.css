@@ -213,25 +213,21 @@
   padding-top: var(--spacing-2);
 }
 
-.tag {
+/* Content Item Card Tag - decorative, non-clickable tags inside content cards */
+.content-item-card-tag {
   background: rgba(139, 92, 246, 0.3);
   color: var(--color-text-on-emphasis);
   padding: 0.25rem var(--spacing-2);
   border-radius: var(--radius-full);
   font-size: var(--font-size-xs);
   font-weight: var(--font-weight-medium);
-  cursor: default; /* Prevent pointer cursor - tags are not clickable */
-  user-select: none; /* Prevent text selection */
-  pointer-events: none; /* Prevent all mouse events on tags */
 }
 
-.tag-more {
+/* Tag overflow indicator - decorative */
+.content-item-card-tag-more {
   color: var(--color-text-tertiary);
   font-size: var(--font-size-xs);
   padding: 0.25rem var(--spacing-1);
-  cursor: default; /* Prevent pointer cursor */
-  user-select: none; /* Prevent text selection */
-  pointer-events: none; /* Prevent all mouse events */
 }
 
 .content-footer {

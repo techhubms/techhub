@@ -2,20 +2,20 @@ using System.Net;
 using System.Net.Http;
 using System.Threading.Tasks;
 using System.Xml.Linq;
-using Microsoft.AspNetCore.Mvc.Testing;
 using Xunit;
 
 namespace TechHub.Api.Tests.Endpoints;
 
 /// <summary>
-/// Integration tests for RSS feed endpoints
+/// Integration tests for RSS feed endpoints (uses real data, no mocks)
 /// </summary>
-public class RssEndpointsTests : IClassFixture<WebApplicationFactory<Program>>
+public class RssEndpointsTests : IClassFixture<TechHubApiFactory>
 {
     private readonly HttpClient _client;
 
-    public RssEndpointsTests(WebApplicationFactory<Program> factory)
+    public RssEndpointsTests(TechHubApiFactory factory)
     {
+        // Don't call setup methods - use real repositories
         _client = factory.CreateClient();
     }
 

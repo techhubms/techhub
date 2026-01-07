@@ -235,7 +235,7 @@ function Invoke-Tests {
         $solutionPath,
         "--configuration", $configuration,
         "--no-build",
-        "--verbosity", "detailed",
+        "--settings", (Join-Path $workspaceRoot ".runsettings"),
         "--filter", "FullyQualifiedName!~E2E",  # Exclude E2E tests
         "--blame-hang-timeout", "5m"
     )
@@ -258,16 +258,16 @@ function Invoke-Tests {
     $apiUrl = "http://localhost:$ApiPort"
     $webUrl = "http://localhost:$WebPort"
     
-    # Create logs directory for server output
-    $logsDir = Join-Path $PSScriptRoot ".tmp/test-logs"
+    # Use system temp directory for logs (works on CI/CD)
+    $logsDir = Join-Path ([System.IO.Path]::GetTempPath()) "techhub-tests"
     if (-not (Test-Path $logsDir)) {
         New-Item -ItemType Directory -Path $logsDir -Force | Out-Null
     }
     
-    $apiLogPath = Join-Path $logsDir "api.log"
-    $webLogPath = Join-Path $logsDir "web.log"
+    $apiLogPath = Join-Path $logsDir "api-e2e.log"
+    $webLogPath = Join-Path $logsDir "web-e2e.log"
     
-    Write-Info "Server output will be logged to .tmp/test-logs/"
+    Write-Info "Server output will be logged to $logsDir/"
     
     # Track processes for cleanup
     $script:testApiProcess = $null
@@ -397,7 +397,8 @@ function Invoke-Tests {
         $e2eTestProjectPath,
         "--configuration", $configuration,
         "--no-build",
-        "--verbosity", "detailed",
+        "--settings", (Join-Path $workspaceRoot ".runsettings"),
+        "--logger", "console;verbosity=detailed",
         "--blame-hang-timeout", "5m"
     )
     
@@ -505,19 +506,23 @@ function Invoke-Tests {
 # Kill existing processes on ports
 function Stop-ExistingProcesses {
     param(
-        [int[]]$Ports
+        [int[]]$Ports,
+        [switch]$Silent
     )
     
     $stoppedAny = $false
     foreach ($port in $Ports) {
         try {
-            $processIds = lsof -ti ":$port" 2>$null
+            $portArg = ":" + $port
+            $processIds = lsof -ti $portArg 2>$null
             if ($processIds) {
-                if (-not $stoppedAny) {
-                    Write-Step "Cleaning up existing processes"
+                if (-not $stoppedAny -and -not $Silent) {
+                    Write-Info "Cleaning up processes on ports..."
                     $stoppedAny = $true
                 }
-                Write-Info "Port $port is in use, killing process(es): $($processIds -join ', ')"
+                if (-not $Silent) {
+                    Write-Info ("  Port {0} - killing PID(s) {1}" -f $port, ($processIds -join ', '))
+                }
                 # Use SIGKILL for immediate termination
                 $processIds | ForEach-Object { 
                     kill -9 $_ 2>$null
@@ -531,8 +536,116 @@ function Stop-ExistingProcesses {
         }
     }
     
-    if ($stoppedAny) {
+    if ($stoppedAny -and -not $Silent) {
         Write-Success "Port cleanup completed"
+    }
+}
+
+# Kill ALL potentially orphaned processes (browsers, test runners, dotnet processes)
+function Stop-AllOrphanedProcesses {
+    param(
+        [switch]$Silent
+    )
+    
+    $cleanedAny = $false
+    
+    # Kill orphaned Playwright/Chromium processes
+    $playwrightProcesses = Get-Process -ErrorAction SilentlyContinue | Where-Object { 
+        $_.ProcessName -match "chromium|chrome|headless_shell" -and 
+        $_.CommandLine -match "playwright|--remote-debugging"
+    }
+    if ($playwrightProcesses) {
+        if (-not $Silent) {
+            Write-Info "  Killing orphaned browser processes..."
+        }
+        $playwrightProcesses | ForEach-Object { 
+            try { $_.Kill() } catch { }
+        }
+        $cleanedAny = $true
+    }
+    
+    # Kill orphaned vstest/testhost processes
+    $testProcesses = Get-Process -ErrorAction SilentlyContinue | Where-Object { 
+        $_.ProcessName -match "testhost|vstest" -or
+        ($_.ProcessName -eq "dotnet" -and $_.CommandLine -match "vstest\.console|testhost")
+    }
+    if ($testProcesses) {
+        if (-not $Silent) {
+            Write-Info "  Killing orphaned test processes..."
+        }
+        $testProcesses | ForEach-Object { 
+            try { $_.Kill() } catch { }
+        }
+        $cleanedAny = $true
+    }
+    
+    # Kill orphaned TechHub dotnet processes (but NOT VS Code language servers)
+    $dotnetProcesses = Get-Process -Name "dotnet" -ErrorAction SilentlyContinue | Where-Object { 
+        $_.CommandLine -match "TechHub\.(Api|Web)" -and
+        $_.CommandLine -notmatch "LanguageServer|csdevkit|csharp"
+    }
+    if ($dotnetProcesses) {
+        if (-not $Silent) {
+            Write-Info "  Killing orphaned TechHub processes..."
+        }
+        $dotnetProcesses | ForEach-Object { 
+            try { $_.Kill() } catch { }
+        }
+        $cleanedAny = $true
+    }
+    
+    return $cleanedAny
+}
+
+# Comprehensive cleanup function - call at start AND end
+function Invoke-FullCleanup {
+    param(
+        [int]$ApiPort = 5029,
+        [int]$WebPort = 5184,
+        [switch]$Silent
+    )
+    
+    if (-not $Silent) {
+        Write-Step "Cleaning up any orphaned processes"
+    }
+    
+    $cleanedAny = $false
+    
+    # First: Kill processes by port
+    $portsCleaned = $false
+    foreach ($port in @($ApiPort, $WebPort)) {
+        try {
+            $portArg = ":" + $port
+            $processIds = lsof -ti $portArg 2>$null
+            if ($processIds) {
+                if (-not $Silent) {
+                    Write-Info ("  Port {0} - killing PID(s) {1}" -f $port, ($processIds -join ', '))
+                }
+                $processIds | ForEach-Object { kill -9 $_ 2>$null }
+                $portsCleaned = $true
+                Start-Sleep -Milliseconds 100
+            }
+        }
+        catch { }
+    }
+    if ($portsCleaned) { $cleanedAny = $true }
+    
+    # Second: Kill orphaned processes by name/command
+    if (Stop-AllOrphanedProcesses -Silent:$Silent) {
+        $cleanedAny = $true
+    }
+    
+    # Brief pause to let OS release resources
+    if ($cleanedAny) {
+        Start-Sleep -Milliseconds 300
+    }
+    
+    if (-not $Silent) {
+        if ($cleanedAny) {
+            Write-Success "Cleanup completed"
+        } else {
+            Write-Info "  No orphaned processes found"
+        }
     }
 }
 
@@ -715,16 +828,10 @@ try {
     # Validate prerequisites
     Test-Prerequisites
     
-    # Stop existing processes
-    $portsToCheck = @()
-    if (-not $WebOnly) { $portsToCheck += $ApiPort }
-    if (-not $ApiOnly) { $portsToCheck += $WebPort }
+    # ALWAYS clean up orphaned processes at start (ports + browsers + test runners)
+    Invoke-FullCleanup -ApiPort $ApiPort -WebPort $WebPort
     
-    if ($portsToCheck.Count -gt 0) {
-        Stop-ExistingProcesses -Ports $portsToCheck
-    }
-    
-    # Clean if requested
+    # Clean build artifacts if requested
     if ($Clean) {
         Invoke-Clean
     }
@@ -768,9 +875,17 @@ try {
 catch {
     Write-Error "`nScript failed: $($_.Exception.Message)"
     Write-Host $_.ScriptStackTrace -ForegroundColor DarkGray
+    
+    # Clean up on error
+    Write-Info "`nCleaning up after error..."
+    Invoke-FullCleanup -ApiPort $ApiPort -WebPort $WebPort -Silent
+    
     exit 1
 }
 finally {
+    # ALWAYS clean up at the end (ports, browsers, test runners)
+    Invoke-FullCleanup -ApiPort $ApiPort -WebPort $WebPort -Silent
+    
     # Always return to workspace root
     Set-Location $workspaceRoot
 }

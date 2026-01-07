@@ -92,7 +92,7 @@
                 <div class="tags-cloud">
                     @foreach (var tag in popularTags.Take(15))
                     {
-                        <a href="/all?tags=@Uri.EscapeDataString(tag)" class="tag">@tag</a>
+                        <a href="/all?tags=@Uri.EscapeDataString(tag)" class="sidebar-tag">@tag</a>
                     }
                 </div>
             </div>

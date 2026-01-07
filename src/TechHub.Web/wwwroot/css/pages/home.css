@@ -172,14 +172,14 @@
   flex-shrink: 0;
 }
 
-/* Popular tags cloud */
+/* Popular tags cloud - clickable links for filtering */
 .tags-cloud {
   display: flex;
   flex-wrap: wrap;
   gap: var(--spacing-2);
 }
 
-.tags-cloud .tag {
+.sidebar-tag {
   display: inline-block;
   padding: var(--spacing-1) var(--spacing-2);
   background: var(--color-surface-hover);
@@ -190,7 +190,7 @@
   transition: all 0.2s ease;
 }
 
-.tags-cloud .tag:hover {
+.sidebar-tag:hover {
   background: var(--color-primary);
   color: white;
   transform: translateY(-2px);

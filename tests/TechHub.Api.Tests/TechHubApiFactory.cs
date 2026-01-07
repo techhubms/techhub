@@ -3,56 +3,73 @@ using Microsoft.AspNetCore.Mvc.Testing;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using NSubstitute;
+using System.Collections.Concurrent;
 using TechHub.Core.Interfaces;
 using TechHub.Core.Models;
 
 namespace TechHub.Api.Tests;
 
 /// <summary>
-/// Custom WebApplicationFactory for API integration tests with mocked dependencies
+/// Custom WebApplicationFactory for API integration tests
+/// - Logs to .tmp/test-logs/api-integration-tests.log (no console output)
+/// - Uses Test environment
+/// - Can use mocks (call SetupDefaultSections/SetupDefaultContent) OR real data (don't call setup)
 /// </summary>
 public class TechHubApiFactory : WebApplicationFactory<Program>
 {
-    public ISectionRepository MockSectionRepository { get; } = Substitute.For<ISectionRepository>();
-    public IContentRepository MockContentRepository { get; } = Substitute.For<IContentRepository>();
+    public ISectionRepository? MockSectionRepository { get; private set; }
+    public IContentRepository? MockContentRepository { get; private set; }
+    private bool _useMocks = false;
 
     protected override void ConfigureWebHost(IWebHostBuilder builder)
     {
-        builder.ConfigureServices(services =>
+        // Only swap out repositories if mocks are being used
+        if (_useMocks)
         {
-            // Remove real repository registrations
-            var sectionDescriptor = services.SingleOrDefault(d => d.ServiceType == typeof(ISectionRepository));
-            if (sectionDescriptor != null)
+            builder.ConfigureServices(services =>
             {
-                services.Remove(sectionDescriptor);
-            }
+                // Remove real repository registrations
+                var sectionDescriptor = services.SingleOrDefault(d => d.ServiceType == typeof(ISectionRepository));
+                if (sectionDescriptor != null)
+                {
+                    services.Remove(sectionDescriptor);
+                }
 
-            var contentDescriptor = services.SingleOrDefault(d => d.ServiceType == typeof(IContentRepository));
-            if (contentDescriptor != null)
-            {
-                services.Remove(contentDescriptor);
-            }
+                var contentDescriptor = services.SingleOrDefault(d => d.ServiceType == typeof(IContentRepository));
+                if (contentDescriptor != null)
+                {
+                    services.Remove(contentDescriptor);
+                }
 
-            // Register mocked repositories
-            services.AddSingleton(MockSectionRepository);
-            services.AddSingleton(MockContentRepository);
-        });
+                // Register mocked repositories
+                services.AddSingleton(MockSectionRepository!);
+                services.AddSingleton(MockContentRepository!);
+            });
+        }
 
-        // Suppress verbose logging during tests
+        // Configure logging to file only (no console output)
         builder.ConfigureLogging(logging =>
         {
             logging.ClearProviders();
-            logging.SetMinimumLevel(LogLevel.Critical);
+            var logPath = Path.Combine(Path.GetTempPath(), "techhub-tests", "api-integration.log");
+            logging.AddProvider(new FileLoggerProvider(logPath));
         });
 
         builder.UseEnvironment("Test");
     }
 
     /// <summary>
-    /// Setup default test data for section repository
+    /// Setup default test data for section repository (enables mocking mode)
     /// </summary>
     public void SetupDefaultSections()
     {
+        if (!_useMocks)
+        {
+            _useMocks = true;
+            MockSectionRepository = Substitute.For<ISectionRepository>();
+            MockContentRepository = Substitute.For<IContentRepository>();
+        }
+
         var sections = new List<Section>
         {
             new()
@@ -84,24 +101,31 @@ public class TechHubApiFactory : WebApplicationFactory<Program>
             }
         };
 
-        MockSectionRepository.GetAllAsync(Arg.Any<CancellationToken>())
+        MockSectionRepository!.GetAllAsync(Arg.Any<CancellationToken>())
             .Returns(Task.FromResult<IReadOnlyList<Section>>(sections));
 
-        MockSectionRepository.GetByNameAsync("ai", Arg.Any<CancellationToken>())
+        MockSectionRepository!.GetByNameAsync("ai", Arg.Any<CancellationToken>())
             .Returns(Task.FromResult<Section?>(sections[0]));
 
-        MockSectionRepository.GetByNameAsync("github-copilot", Arg.Any<CancellationToken>())
+        MockSectionRepository!.GetByNameAsync("github-copilot", Arg.Any<CancellationToken>())
             .Returns(Task.FromResult<Section?>(sections[1]));
 
-        MockSectionRepository.GetByNameAsync("invalid", Arg.Any<CancellationToken>())
+        MockSectionRepository!.GetByNameAsync("invalid", Arg.Any<CancellationToken>())
             .Returns(Task.FromResult<Section?>(null));
     }
 
     /// <summary>
-    /// Setup default test data for content repository
+    /// Setup default test data for content repository (enables mocking mode)
     /// </summary>
     public void SetupDefaultContent()
     {
+        if (!_useMocks)
+        {
+            _useMocks = true;
+            MockSectionRepository = Substitute.For<ISectionRepository>();
+            MockContentRepository = Substitute.For<IContentRepository>();
+        }
+
         var content = new List<ContentItem>
         {
             new()
@@ -159,34 +183,98 @@ public class TechHubApiFactory : WebApplicationFactory<Program>
         };
 
         // GetAllAsync
-        MockContentRepository.GetAllAsync(Arg.Any<CancellationToken>())
+        MockContentRepository!.GetAllAsync(Arg.Any<CancellationToken>())
             .Returns(Task.FromResult<IReadOnlyList<ContentItem>>(content));
 
         // GetByCollectionAsync
-        MockContentRepository.GetByCollectionAsync("news", Arg.Any<CancellationToken>())
+        MockContentRepository!.GetByCollectionAsync("news", Arg.Any<CancellationToken>())
             .Returns(Task.FromResult<IReadOnlyList<ContentItem>>(
                 content.Where(c => c.CollectionName == "news").ToList()));
 
-        MockContentRepository.GetByCollectionAsync("blogs", Arg.Any<CancellationToken>())
+        MockContentRepository!.GetByCollectionAsync("blogs", Arg.Any<CancellationToken>())
             .Returns(Task.FromResult<IReadOnlyList<ContentItem>>(
                 content.Where(c => c.CollectionName == "blogs").ToList()));
 
-        MockContentRepository.GetByCollectionAsync("videos", Arg.Any<CancellationToken>())
+        MockContentRepository!.GetByCollectionAsync("videos", Arg.Any<CancellationToken>())
             .Returns(Task.FromResult<IReadOnlyList<ContentItem>>(
                 content.Where(c => c.CollectionName == "videos").ToList()));
 
         // GetByCategoryAsync
-        MockContentRepository.GetByCategoryAsync("AI", Arg.Any<CancellationToken>())
+        MockContentRepository!.GetByCategoryAsync("AI", Arg.Any<CancellationToken>())
             .Returns(Task.FromResult<IReadOnlyList<ContentItem>>(
                 content.Where(c => c.Categories.Contains("AI")).ToList()));
 
-        MockContentRepository.GetByCategoryAsync("GitHub Copilot", Arg.Any<CancellationToken>())
+        MockContentRepository!.GetByCategoryAsync("GitHub Copilot", Arg.Any<CancellationToken>())
             .Returns(Task.FromResult<IReadOnlyList<ContentItem>>(
                 content.Where(c => c.Categories.Contains("GitHub Copilot")).ToList()));
 
         // GetAllTagsAsync
         var allTags = content.SelectMany(c => c.Tags).Distinct().ToList();
-        MockContentRepository.GetAllTagsAsync(Arg.Any<CancellationToken>())
+        MockContentRepository!.GetAllTagsAsync(Arg.Any<CancellationToken>())
             .Returns(Task.FromResult<IReadOnlyList<string>>(allTags));
+    }
+}
+
+/// <summary>
+/// Simple file logger provider for test server logs
+/// </summary>
+file class FileLoggerProvider : ILoggerProvider
+{
+    private readonly string _filePath;
+    private readonly StreamWriter _writer;
+    private readonly object _lock = new();
+
+    public FileLoggerProvider(string filePath)
+    {
+        _filePath = filePath;
+        var directory = Path.GetDirectoryName(_filePath);
+        if (!string.IsNullOrEmpty(directory))
+        {
+            Directory.CreateDirectory(directory);
+        }
+        _writer = new StreamWriter(_filePath, append: true) { AutoFlush = true };
+    }
+
+    public ILogger CreateLogger(string categoryName) => new FileLogger(categoryName, _writer, _lock);
+
+    public void Dispose()
+    {
+        _writer.Dispose();
+        GC.SuppressFinalize(this);
+    }
+}
+
+/// <summary>
+/// Simple file logger for test server
+/// </summary>
+file class FileLogger : ILogger
+{
+    private readonly string _categoryName;
+    private readonly StreamWriter _writer;
+    private readonly object _lock;
+
+    public FileLogger(string categoryName, StreamWriter writer, object lockObj)
+    {
+        _categoryName = categoryName;
+        _writer = writer;
+        _lock = lockObj;
+    }
+
+    public IDisposable? BeginScope<TState>(TState state) where TState : notnull => null;
+
+    public bool IsEnabled(LogLevel logLevel) => logLevel >= LogLevel.Information;
+
+    public void Log<TState>(LogLevel logLevel, EventId eventId, TState state, Exception? exception, Func<TState, Exception?, string> formatter)
+    {
+        if (!IsEnabled(logLevel)) return;
+
+        lock (_lock)
+        {
+            _writer.WriteLine($"[{DateTime.UtcNow:yyyy-MM-dd HH:mm:ss.fff}] [{logLevel}] {_categoryName}: {formatter(state, exception)}");
+            if (exception != null)
+            {
+                _writer.WriteLine(exception.ToString());
+            }
+        }
     }
 }
