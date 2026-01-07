@@ -450,6 +450,155 @@ builder.Services.AddHttpClient<ITechHubApiClient, TechHubApiClient>(client =>
 .AddStandardResilienceHandler(); // Retry + Circuit Breaker
 ```
 
+**Common DI Pitfalls**:
+
+❌ **WRONG**: Singleton with scoped dependency (e.g., HttpContext)  
+❌ **WRONG**: Transient for heavy objects (creates too many instances)  
+❌ **WRONG**: Direct configuration access (`builder.Configuration["Key"]`)  
+
+✅ **CORRECT**: Match lifetime to dependency requirements  
+✅ **CORRECT**: Singleton for stateless services  
+✅ **CORRECT**: Use Options pattern for configuration
+
+### Blazor Components with Code-Behind
+
+Separate complex component logic using code-behind pattern:
+
+```razor
+@* Components/Pages/SectionIndex.razor *@
+@page "/{SectionUrl}"
+@inherits SectionIndexBase
+
+<PageTitle>@Section?.Title | Tech Hub</PageTitle>
+
+<HeadContent>
+    <meta name="description" content="@Section?.Description" />
+    <link rel="canonical" href="https://tech.hub.ms/@SectionUrl" />
+</HeadContent>
+
+@if (Section is not null)
+{
+    <SectionHeader Section="@Section" />
+    <SectionNav Section="@Section" ActiveCollection="@null" />
+    
+    <main id="content" role="main">
+        <FilterControls @bind-FilteredItems="FilteredItems" AllItems="@AllItems" />
+        <ContentList Items="@FilteredItems" />
+    </main>
+}
+```
+
+```csharp
+// Components/Pages/SectionIndex.razor.cs
+namespace TechHub.Web.Components.Pages;
+
+public class SectionIndexBase : ComponentBase
+{
+    [Parameter] public required string SectionUrl { get; set; }
+    
+    [Inject] protected ITechHubApiClient ApiClient { get; set; } = default!;
+    [Inject] protected NavigationManager Navigation { get; set; } = default!;
+    
+    protected SectionDto? Section { get; set; }
+    protected IReadOnlyList<ContentItemDto> AllItems { get; set; } = [];
+    protected IReadOnlyList<ContentItemDto> FilteredItems { get; set; } = [];
+    
+    protected override async Task OnInitializedAsync()
+    {
+        Section = await ApiClient.GetSectionAsync(SectionUrl);
+        if (Section is null)
+        {
+            Navigation.NavigateTo("/404");
+            return;
+        }
+        
+        AllItems = await ApiClient.GetContentAsync(SectionUrl);
+        FilteredItems = AllItems;
+    }
+}
+```
+
+### Markdown Frontmatter Mapping
+
+**Critical**: Understanding how markdown frontmatter maps to domain model properties:
+
+```markdown
+---
+title: "Example Article Title"
+author: "Author Name"
+date: 2026-01-02
+categories: [ai, github-copilot]
+tags: [machine-learning, azure-openai]
+canonical_url: "https://example.com/article"  # Maps to ExternalUrl property
+viewing_mode: "external"                      # "internal" or "external" (default: "external")
+video_id: "dQw4w9WgXcQ"                       # YouTube video ID (not extracted from URLs)
+alt_collection: "ghc-features"                # For subfolder organization (_videos/ghc-features/, _videos/vscode-updates/)
+---
+
+This is the excerpt that appears in list views.
+
+<!--excerpt_end-->
+
+# Full Article Content
+
+The rest of the markdown content rendered to HTML...
+```
+
+**Property Mappings**:
+
+- `title` → `Title`
+- `author` → `Author`
+- `date` → `DateEpoch` (converted to Unix timestamp)
+- `categories` → `Categories` (array)
+- `tags` → `Tags` (normalized to lowercase, hyphen-separated)
+- `canonical_url` → `ExternalUrl` (original source URL)
+- `viewing_mode` → `ViewingMode` ("internal" or "external")
+- `video_id` → `VideoId` (YouTube video identifier)
+- `alt_collection` → `AltCollection` (subfolder categorization)
+- Filename → `Slug` (e.g., `2025-01-15-article.md` → `2025-01-15-article`)
+- Content before `<!--excerpt_end-->` → `Excerpt`
+- Full markdown → `RenderedHtml` (rendered with Markdig)
+
+### Dependency Injection Configuration
+
+```csharp
+// Api/Program.cs - Dependency Registration
+var builder = WebApplication.CreateBuilder(args);
+
+// Add Aspire service defaults (OpenTelemetry, health checks, resilience)
+builder.AddServiceDefaults();
+
+// Configuration
+builder.Services.Configure<ContentOptions>(
+    builder.Configuration.GetSection("Content"));
+
+// Infrastructure services
+builder.Services.AddMemoryCache();
+builder.Services.AddSingleton(TimeProvider.System);
+
+// Repositories (file-based)
+builder.Services.AddSingleton<ISectionRepository, FileSectionRepository>();
+builder.Services.AddSingleton<IContentRepository, FileContentRepository>();
+
+// Services
+builder.Services.AddSingleton<IMarkdownProcessor, MarkdownProcessor>();
+builder.Services.AddScoped<IRssGenerator, RssGenerator>();
+builder.Services.AddScoped<IStructuredDataService, StructuredDataService>();
+
+// API documentation
+builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddOpenApi();
+
+// CORS for Blazor frontend
+builder.Services.AddCors(options =>
+{
+    options.AddDefaultPolicy(policy =>
+        policy.WithOrigins(builder.Configuration["AllowedOrigins"] ?? "https://localhost:5173")
+              .AllowAnyMethod()
+              .AllowAnyHeader());
+});
+```
+
 ## Development Commands
 
 **Building**:
@@ -685,21 +834,24 @@ else
 When working on .NET features, ALWAYS use context7 MCP tool to fetch current documentation:
 
 ```plaintext
-# .NET Runtime
-
+# .NET Runtime and Libraries
+mcp_context7_resolve-library-id(libraryName: "dotnet")
 mcp_context7_query-docs(libraryID: "/dotnet/docs", query: "your topic")
 
 # ASP.NET Core
-
+mcp_context7_resolve-library-id(libraryName: "aspnetcore")
 mcp_context7_query-docs(libraryID: "/dotnet/aspnetcore", query: "minimal apis")
 
 # Blazor
-
-mcp_context7_query-docs(libraryID: "/dotnet/aspnetcore", query: "blazor ssr")
+mcp_context7_query-docs(libraryID: "/dotnet/aspnetcore", query: "blazor server-side rendering")
 
 # .NET Aspire
-
+mcp_context7_resolve-library-id(libraryName: "aspire")
 mcp_context7_query-docs(libraryID: "/dotnet/aspire", query: "service discovery")
+
+# xUnit Testing
+mcp_context7_resolve-library-id(libraryName: "xunit")
+mcp_context7_query-docs(libraryID: "/xunit/xunit", query: "theories and data-driven tests")
 ```
 
 **Tech Hub Documentation**:

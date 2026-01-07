@@ -24,20 +24,11 @@
   - [Complete Documentation Map](#complete-documentation-map)
   - [Quick Reference Guide](#quick-reference-guide)
 - [Starting & Stopping the Website](#starting--stopping-the-website)
-- [.NET Development Commands](#net-development-commands)
 - [.NET Migration Status](#net-migration-status)
 - [.NET Tech Stack](#net-tech-stack)
-- [.NET Patterns & Examples](#net-patterns--examples)
-  - [Minimal API Endpoints](#minimal-api-endpoints)
-  - [Blazor Components with Code-Behind](#blazor-components-with-code-behind)
-  - [Repository Pattern Implementation](#repository-pattern-implementation)
-  - [Dependency Injection Service Lifetimes](#dependency-injection-service-lifetimes)
-  - [Domain Models with Records](#domain-models-with-records)
-  - [Markdown Frontmatter Mapping](#markdown-frontmatter-mapping)
-  - [Dependency Injection Configuration](#dependency-injection-configuration)
 - [Project Overview](#project-overview)
-  - [Core Architecture](#core-architecture)
-  - [Repository Structure](#repository-structure)
+  - [Repository Organization](#repository-organization)
+  - [Architectural Principles](#architectural-principles)
 - [Core Development Principles](#core-development-principles)
   - [Performance Architecture](#performance-architecture)
   - [Accessibility Standards](#accessibility-standards)
@@ -488,59 +479,98 @@ When renaming ANY identifier, you **MUST** verify and update ALL occurrences acr
 
 ## Documentation Architecture
 
-The Tech Hub uses a **multi-tier documentation system** designed to separate generic principles from implementation details. This architecture ensures documentation stability across technology migrations.
+The Tech Hub uses a **multi-tier documentation system** organized by scope and domain. Since we're committed to .NET as our permanent tech stack, documentation is separated by **scope** (repository-wide vs domain-specific), not by framework.
 
 ### Documentation Hierarchy
 
 **1. Root AGENTS.md** (this file):
 
-- Generic development principles that apply to ANY tech stack
-- Timezone handling, performance architecture, configuration-driven design
-- Repository structure and organization
-- Site terminology and concepts
-- **NOT for**: Framework-specific implementation details
+- Repository-wide development principles and standards
+- AI Assistant Workflow (10-step process for all development)
+- Core rules and boundaries
+- .NET tech stack, development commands, and common patterns
+- Performance architecture, accessibility standards, timezone handling
+- Configuration-driven development principles
+- Repository structure and site terminology
+- **Scope**: Applies to ALL work across the entire repository
 
 **2. Domain-Specific AGENTS.md Files**:
 
-- Development patterns for specific code areas (src/, scripts/, tests/, etc.)
+- Development patterns for specific code domains (src/, scripts/, tests/, collections/, etc.)
 - Located in each major directory
-- MAY need updates during migrations but maintain domain focus
-- Examples: API patterns, component patterns, scripting patterns
+- Domain-specific rules, patterns, and examples
+- **Scope**: Applies only when working in that specific domain
 
 **3. Functional Documentation** (`docs/`):
 
-- Framework-agnostic descriptions of WHAT the system does
-- Minimal set - only 3 files: filtering, content management, API spec
-- Survive technology changes with minimal updates
+- WHAT the system does (behavior, contracts, rules)
+- Minimal set: filtering, content management, API specification
+- Describes features and capabilities, not implementation
+- **Scope**: Understanding system behavior and architecture
 
 **4. Content Guidelines** (`collections/`):
 
 - Writing standards and markdown formatting rules
 - Content creation and management workflows
+- **Scope**: Creating and maintaining content
 
 ### Documentation Placement Strategy
 
-**CRITICAL**: Understanding where information belongs is essential for maintaining clean, maintainable documentation that remains stable across technology changes.
+**Where to Place Information**:
 
-**Why Framework-Specific Details Are NOT in Root AGENTS.md:**
+**Root AGENTS.md** (this file):
 
-This is a **permanent architectural principle**, not just a temporary measure. By separating framework-specific implementation from generic principles, we ensure documentation stability across all future technology migrations (currently Jekyll → .NET/Blazor, but applicable to any future changes):
+- Development workflow and process (10 steps, TDD, etc.)
+- Core rules and boundaries (always/ask/never rules)
+- .NET tech stack overview (what we use: .NET 10, Blazor, etc.)
+- .NET development commands (dotnet build, test, run, etc.)
+- Repository-wide principles (performance, accessibility, timezone, configuration-driven design)
+- Site terminology and concepts
 
-- **Root AGENTS.md** (this file): Generic principles that apply to ANY tech stack (timezone handling, performance architecture, configuration-driven design, terminology), plus .NET-specific patterns and commands
-- **Domain AGENTS.md**: Domain-specific patterns that MAY need updates but maintain focus
-  - `src/AGENTS.md`: .NET development across all projects
-  - `src/TechHub.Api/AGENTS.md`: API development patterns
-  - `src/TechHub.Web/AGENTS.md`: Blazor component patterns
-  - `scripts/AGENTS.md`: PowerShell automation patterns
-  - `tests/AGENTS.md`: Testing strategies
-- **Functional Docs** (`docs/`): Framework-agnostic descriptions of WHAT the system does
-  - Only 3 files: `filtering-system.md`, `content-management.md`, `api-specification.md`
+**src/AGENTS.md** (ALL .NET implementation patterns):
 
-**Complete Placement Hierarchy**: See [docs/AGENTS.md](docs/AGENTS.md) for detailed guidance on where to place new documentation.
+- Minimal API endpoint patterns
+- Blazor component patterns (code-behind, etc.)
+- Repository pattern implementation
+- Dependency injection patterns and service lifetimes
+- Domain models and DTOs
+- Markdown frontmatter mapping
+- HttpClient configuration
+- ALL other .NET code patterns
 
-**Why This Matters**: This separation ensures that when technology stacks change (Jekyll → .NET/Blazor, or any future migrations), only framework agents need replacement. All other documentation—principles, domain patterns, and functional specs—remain stable and relevant. This architecture makes the codebase resilient to technology evolution while preserving institutional knowledge.
+**tests/AGENTS.md** (Testing strategies):
 
-**Framework Mentions in Documentation**: Functional documentation may reference specific implementations (API endpoints, service names, etc.) when essential to understanding the system behavior. These mentions describe WHAT the system does (behavior, contracts, rules), not HOW to build it (code patterns, commands, frameworks). See [docs/AGENTS.md - Implementation Mentions](docs/AGENTS.md#implementation-mentions-in-functional-documentation) for complete guidelines.
+- Testing strategies across all frameworks (unit, integration, component, E2E)
+- When to write tests and what to test
+- Test organization and naming
+- References src/AGENTS.md for implementation patterns when writing test code
+
+**Domain-specific AGENTS.md** (src/TechHub.Web/, src/TechHub.Api/, etc.):
+
+- Patterns specific to that project/domain
+- Project-specific configuration
+- Specialized tooling for that domain
+
+**Functional Docs** (docs/):
+
+- Feature descriptions (WHAT the system does)
+- API contracts and endpoint specifications
+- Business rules and behavior
+- System architecture diagrams
+
+**Content Guidelines** (collections/):
+
+- Markdown formatting standards
+- Writing style and tone
+- Content workflow and RSS processing
+
+**Key Principle**: Place information at the **highest applicable level**:
+
+- If it's a .NET pattern used across projects → src/AGENTS.md
+- If it's specific to one project → Domain AGENTS.md (e.g., src/TechHub.Web/AGENTS.md)
+- If it's repository-wide workflow/rules → Root AGENTS.md
+- If it describes behavior → Functional docs
+- If it's about content → Content guidelines
 
 ### Complete Documentation Map
 
@@ -589,7 +619,7 @@ This is a **permanent architectural principle**, not just a temporary measure. B
 **Working on PowerShell scripts?**
 
 1. Read [scripts/AGENTS.md](scripts/AGENTS.md)
-2. Review [.NET Development Commands](#net-development-commands) for testing
+2. Review [Starting & Stopping the Website](#starting--stopping-the-website) for build/test commands
 
 **Working on content?**
 
@@ -607,7 +637,7 @@ This is a **permanent architectural principle**, not just a temporary measure. B
    - [tests/TechHub.Core.Tests/AGENTS.md](tests/TechHub.Core.Tests/AGENTS.md) - Unit test patterns
    - [tests/TechHub.Infrastructure.Tests/AGENTS.md](tests/TechHub.Infrastructure.Tests/AGENTS.md) - Infrastructure test patterns
    - [tests/powershell/AGENTS.md](tests/powershell/AGENTS.md) - PowerShell test patterns
-3. Review [.NET Development Commands](#net-development-commands) for test commands
+3. Review [Starting & Stopping the Website](#starting--stopping-the-website) for build/test commands
 
 **Understanding system behavior?**
 
@@ -770,94 +800,52 @@ curl http://localhost:5184/api/sections
 
 ### Building/Testing Individual Projects
 
-**For building or testing specific projects WITHOUT running the website**, use dotnet commands directly in ANY terminal:
+**ALWAYS prefer ./run.ps1 for build and test operations**:
 
 ```powershell
-# Build specific project
-dotnet build src/TechHub.Api/TechHub.Api.csproj
-dotnet build src/TechHub.Web/TechHub.Web.csproj
+# Build and test everything (recommended)
+./run.ps1 -OnlyTests
 
-# Run tests
-dotnet test
-dotnet test tests/TechHub.Core.Tests
+# Build everything with clean slate
+./run.ps1 -Clean -OnlyTests
 
-# Build entire solution
-dotnet build TechHub.slnx
+# Build and run specific project
+./run.ps1 -ApiOnly    # API only
+./run.ps1 -WebOnly    # Web only
 ```
 
-These commands are safe to run anytime because they don't start the website.
-
-## .NET Development Commands
-
-**Build Commands**:
+**Only use low-level dotnet commands when run.ps1 doesn't support the operation**:
 
 ```powershell
-# Build all projects
-dotnet build TechHub.slnx
+# Restore NuGet packages (not in run.ps1)
+dotnet restore
 
-# Build specific project
-dotnet build src/TechHub.Api/TechHub.Api.csproj
-dotnet build src/TechHub.Web/TechHub.Web.csproj
-
-# Clean build artifacts
+# Clean build artifacts only (without rebuild)
 dotnet clean TechHub.slnx
 
-# Restore NuGet packages
-dotnet restore
-```
+# Watch mode for development (not in run.ps1)
+dotnet watch --project src/TechHub.Api/TechHub.Api.csproj
+dotnet watch --project src/TechHub.Web/TechHub.Web.csproj
 
-**Test Commands**:
-
-```powershell
-# Run all tests
-dotnet test
-
-# Run specific test project
-dotnet test tests/TechHub.Core.Tests
-dotnet test tests/TechHub.Api.Tests
-dotnet test tests/TechHub.Web.Tests
-dotnet test tests/TechHub.E2E.Tests
-
-# Run with code coverage
+# Code coverage (not in run.ps1)
 dotnet test --collect:"XPlat Code Coverage"
 
-# Run with detailed output
-dotnet test --logger "console;verbosity=detailed"
-```
-
-**Watch Mode** (auto-rebuild on file changes):
-
-```powershell
-# Watch API project
-dotnet watch --project src/TechHub.Api/TechHub.Api.csproj
-
-# Watch Web project
-dotnet watch --project src/TechHub.Web/TechHub.Web.csproj
-```
-
-**Entity Framework** (future):
-
-```powershell
-# Add migration
+# Entity Framework migrations (future, not in run.ps1)
 dotnet ef migrations add MigrationName --project src/TechHub.Infrastructure
-
-# Update database
 dotnet ef database update --project src/TechHub.Api
 
-# Remove last migration
-dotnet ef migrations remove --project src/TechHub.Infrastructure
-```
-
-**Global Tools**:
-
-```powershell
-# Install global tools
+# Global tools management (not in run.ps1)
 dotnet tool install --global dotnet-ef
-dotnet tool install --global dotnet-aspire
-
-# Update global tools
 dotnet tool update --global dotnet-ef
 ```
+
+**Why prefer ./run.ps1**:
+
+- Handles server startup/shutdown correctly
+- Runs E2E tests with proper infrastructure
+- Cleans up ports automatically
+- Provides consistent experience across operations
+- Prevents common errors (like running E2E tests without servers)
 
 ## .NET Migration Status
 
@@ -911,628 +899,125 @@ See [specs/dotnet-migration/tasks.md](specs/dotnet-migration/tasks.md) for compl
 
 ## .NET Tech Stack
 
-**.NET Runtime & Framework**:
+**Runtime & Core Frameworks**:
 
 - .NET 10 (latest LTS - November 2025)
-- C# 13 with nullable reference types enabled
-- File-scoped namespaces
+- C# 13 with nullable reference types
+- ASP.NET Core Minimal API (backend)
+- Blazor SSR + WebAssembly (frontend)
+- .NET Aspire (orchestration)
 
-**Frontend (Blazor)**:
-
-- Blazor Server-Side Rendering (SSR) for SEO
-- Blazor WebAssembly for enhanced interactivity
-- Typed HttpClient for API communication
-- Resilience policies (retry, circuit breaker)
-
-**Backend (REST API)**:
-
-- ASP.NET Core Minimal API
-- OpenAPI/Swagger documentation
-- Repository pattern for data access
-- File-based content storage (database-ready design)
-
-**Infrastructure**:
-
-- .NET Aspire for orchestration
-- OpenTelemetry + Application Insights
-- Azure Container Apps deployment
-- Bicep Infrastructure as Code
-
-**Testing Frameworks**:
+**Testing & Quality**:
 
 - xUnit (unit and integration tests)
 - bUnit (Blazor component tests)
 - Moq (mocking framework)
 - Playwright (E2E tests)
 
-**Key Directories**:
+**Deployment**:
 
-- `src/TechHub.Api/` - REST API backend
-- `src/TechHub.Web/` - Blazor frontend
-- `src/TechHub.Core/` - Domain models and interfaces
-- `src/TechHub.Infrastructure/` - Data access implementations
-- `src/TechHub.AppHost/` - .NET Aspire orchestration
-- `tests/` - All test projects
-- `infra/` - Bicep infrastructure
-- `scripts/` - PowerShell automation
+- Azure Container Apps
+- Bicep Infrastructure as Code
+- OpenTelemetry + Application Insights
 
-**.NET-Specific Development Patterns**:
+**Implementation Guidance**:
 
-✅ **File-scoped namespaces**: Use in all C# files  
-✅ **Nullable reference types**: Enabled in all projects  
-✅ **Records for DTOs**: Prefer `record` over `class` for immutable data  
-✅ **Minimal APIs**: Use static methods for endpoint handlers  
-✅ **Async/await**: All I/O operations must be asynchronous  
-✅ **Dependency injection**: Constructor injection for all dependencies  
-✅ **Service lifetimes**: Singleton (stateless/cached), Scoped (per-request), Transient (lightweight)  
-✅ **Options pattern**: Use `IOptions<T>` for configuration, never direct access  
-✅ **Typed HttpClient**: Register with `AddHttpClient<TInterface, TImplementation>`  
+For ALL .NET code patterns, examples, and best practices, see **[src/AGENTS.md](src/AGENTS.md)**:
 
-**Architecture Decisions**:
+- Minimal API endpoint patterns
+- Blazor component patterns (code-behind, SSR)
+- Repository pattern implementation
+- Dependency injection and service lifetimes
+- Domain models and DTOs
+- HttpClient configuration and resilience
+- Documentation resources (context7 MCP queries)
+- All other .NET development patterns
 
-✅ **Separate frontend/backend**: TechHub.Web calls TechHub.Api via HttpClient  
-✅ **MCP-ready design**: API follows resource-oriented patterns for future MCP support  
-✅ **Auth-ready design**: Architecture supports future IdentityServer/Duende integration  
-✅ **Multi-location URLs**: Content accessible from multiple section contexts  
-
-**Documentation Resources** (use context7 MCP tool):
-
-When working on .NET features, ALWAYS use the context7 MCP tool to fetch current documentation:
-
-```plaintext
-# .NET Runtime and Libraries
-mcp_context7_resolve-library-id(libraryName: "dotnet")
-mcp_context7_query-docs(context7CompatibleLibraryID: "/dotnet/docs", query: "your topic")
-
-# ASP.NET Core
-mcp_context7_resolve-library-id(libraryName: "aspnetcore")
-mcp_context7_query-docs(context7CompatibleLibraryID: "/dotnet/aspnetcore", query: "minimal apis")
-
-# Blazor
-mcp_context7_query-docs(context7CompatibleLibraryID: "/dotnet/aspnetcore", query: "blazor server-side rendering")
-
-# .NET Aspire
-mcp_context7_resolve-library-id(libraryName: "aspire")
-mcp_context7_query-docs(context7CompatibleLibraryID: "/dotnet/aspire", query: "service discovery")
-
-# xUnit Testing
-mcp_context7_resolve-library-id(libraryName: "xunit")
-mcp_context7_query-docs(context7CompatibleLibraryID: "/xunit/xunit", query: "theories and data-driven tests")
-
-# bUnit (Blazor Testing)
-mcp_context7_resolve-library-id(libraryName: "bunit")
-mcp_context7_query-docs(context7CompatibleLibraryID: "/bunit/bunit", query: "component testing")
-```
-
-## .NET Patterns & Examples
-
-### Minimal API Endpoints
-
-Use static methods for endpoint handlers following clean architecture:
-
-```csharp
-// Endpoints/SectionEndpoints.cs
-namespace TechHub.Api.Endpoints;
-
-public static class SectionEndpoints
-{
-    public static void MapSectionEndpoints(this WebApplication app)
-    {
-        var group = app.MapGroup("/api/sections")
-            .WithTags("Sections")
-            .WithOpenApi();
-        
-        group.MapGet("/", GetAllSections)
-            .WithName("GetAllSections")
-            .WithSummary("Get all sections");
-        
-        group.MapGet("/{url}", GetSectionByUrl)
-            .WithName("GetSectionByUrl")
-            .WithSummary("Get section by URL slug");
-    }
-    
-    private static async Task<IResult> GetAllSections(
-        ISectionRepository repository, 
-        CancellationToken ct)
-    {
-        var sections = await repository.GetAllSectionsAsync(ct);
-        return Results.Ok(sections);
-    }
-    
-    private static async Task<IResult> GetSectionByUrl(
-        string url,
-        ISectionRepository repository, 
-        CancellationToken ct)
-    {
-        var section = await repository.GetSectionByUrlAsync(url, ct);
-        return section is not null 
-            ? Results.Ok(section) 
-            : Results.NotFound();
-    }
-}
-```
-
-### Blazor Components with Code-Behind
-
-Separate complex component logic using code-behind pattern:
-
-```razor
-@* Components/Pages/SectionIndex.razor *@
-@page "/{SectionUrl}"
-@inherits SectionIndexBase
-
-<PageTitle>@Section?.Title | Tech Hub</PageTitle>
-
-<HeadContent>
-    <meta name="description" content="@Section?.Description" />
-    <link rel="canonical" href="https://tech.hub.ms/@SectionUrl" />
-</HeadContent>
-
-@if (Section is not null)
-{
-    <SectionHeader Section="@Section" />
-    <SectionNav Section="@Section" ActiveCollection="@null" />
-    
-    <main id="content" role="main">
-        <FilterControls @bind-FilteredItems="FilteredItems" AllItems="@AllItems" />
-        <ContentList Items="@FilteredItems" />
-    </main>
-}
-```
-
-```csharp
-// Components/Pages/SectionIndex.razor.cs
-namespace TechHub.Web.Components.Pages;
-
-public class SectionIndexBase : ComponentBase
-{
-    [Parameter] public required string SectionUrl { get; set; }
-    
-    [Inject] protected ITechHubApiClient ApiClient { get; set; } = default!;
-    [Inject] protected NavigationManager Navigation { get; set; } = default!;
-    
-    protected SectionDto? Section { get; set; }
-    protected IReadOnlyList<ContentItemDto> AllItems { get; set; } = [];
-    protected IReadOnlyList<ContentItemDto> FilteredItems { get; set; } = [];
-    
-    protected override async Task OnInitializedAsync()
-    {
-        Section = await ApiClient.GetSectionAsync(SectionUrl);
-        if (Section is null)
-        {
-            Navigation.NavigateTo("/404");
-            return;
-        }
-        
-        AllItems = await ApiClient.GetContentAsync(SectionUrl);
-        FilteredItems = AllItems;
-    }
-}
-```
-
-### Repository Pattern Implementation
-
-File-based repository with caching:
-
-```csharp
-// Infrastructure/Repositories/FileSectionRepository.cs
-namespace TechHub.Infrastructure.Repositories;
-
-public class FileSectionRepository : ISectionRepository
-{
-    private readonly string _sectionsJsonPath;
-    private readonly IMemoryCache _cache;
-    private readonly ILogger<FileSectionRepository> _logger;
-    
-    public FileSectionRepository(
-        IOptions<ContentOptions> options,
-        IMemoryCache cache,
-        ILogger<FileSectionRepository> logger)
-    {
-        _sectionsJsonPath = options.Value.SectionsJsonPath;
-        _cache = cache;
-        _logger = logger;
-    }
-    
-    public async Task<IReadOnlyList<Section>> GetAllSectionsAsync(
-        CancellationToken ct = default)
-    {
-        const string cacheKey = "all_sections";
-        
-        if (_cache.TryGetValue<IReadOnlyList<Section>>(cacheKey, out var cached))
-        {
-            return cached!;
-        }
-        
-        var json = await File.ReadAllTextAsync(_sectionsJsonPath, ct);
-        var sections = JsonSerializer.Deserialize<List<Section>>(json) 
-            ?? throw new InvalidOperationException("Failed to parse sections.json");
-        
-        _cache.Set(cacheKey, sections, TimeSpan.FromHours(1));
-        
-        _logger.LogInformation("Loaded {Count} sections from {Path}", 
-            sections.Count, _sectionsJsonPath);
-        
-        return sections;
-    }
-    
-    // ... other methods
-}
-```
-
-**CRITICAL**: All `IContentRepository` methods **MUST** return content sorted by `DateEpoch` in **descending order** (newest first). This sorting is applied:
-
-- At the repository layer (not in controllers/endpoints)
-- To all methods: `GetAllAsync()`, `GetByCollectionAsync()`, `GetByCategoryAsync()`, `SearchAsync()`
-- Before caching (cached results are pre-sorted)
-
-**Implementation Example**:
-
-```csharp
-public async Task<IReadOnlyList<ContentItem>> GetAllAsync(CancellationToken ct = default)
-{
-    var items = await LoadItemsFromDisk(ct);
-    return items
-        .OrderByDescending(x => x.DateEpoch)
-        .ToList();
-}
-```
-
-**Rationale**: Consistent sorting across all endpoints, reduces client-side burden, matches user expectations.
-
-### Dependency Injection Service Lifetimes
-
-**Singleton** - Service has no state or state is shared across all requests:
-
-- `ISectionRepository` (FileSectionRepository with caching)
-- `IContentRepository` (FileContentRepository with caching)
-- `IMarkdownProcessor` (stateless)
-- `IMemoryCache`, `TimeProvider` (built-in)
-
-**Scoped** - Service lifetime matches HTTP request:
-
-- `IRssGenerator` (generates per-request)
-- `IStructuredDataService` (generates per-request)
-- `ITechHubApiClient` (typed HttpClient)
-
-**Transient** - Lightweight, stateless, new instance each time:
-
-- Rarely needed (most services fit Singleton or Scoped)
-
-**Options Pattern for Configuration**:
-
-```csharp
-// Configuration class
-public class ContentOptions
-{
-    public required string SectionsJsonPath { get; init; }
-    public required string CollectionsRootPath { get; init; }
-    public string Timezone { get; init; } = "Europe/Brussels";
-}
-
-// Registration in Program.cs
-builder.Services.Configure<ContentOptions>(
-    builder.Configuration.GetSection("Content"));
-
-// Injection in service
-public class FileSectionRepository : ISectionRepository
-{
-    private readonly ContentOptions _options;
-    
-    public FileSectionRepository(IOptions<ContentOptions> options)
-    {
-        _options = options.Value;
-    }
-}
-```
-
-**Typed HttpClient Pattern**:
-
-```csharp
-// Interface
-public interface ITechHubApiClient
-{
-    Task<IReadOnlyList<SectionDto>> GetAllSectionsAsync(CancellationToken ct = default);
-}
-
-// Registration with resilience
-builder.Services.AddHttpClient<ITechHubApiClient, TechHubApiClient>(client =>
-{
-    client.BaseAddress = new Uri("https+http://api"); // Aspire service discovery
-})
-.AddStandardResilienceHandler(); // Retry + Circuit Breaker
-
-// Implementation
-public class TechHubApiClient : ITechHubApiClient
-{
-    private readonly HttpClient _httpClient;
-    
-    public TechHubApiClient(HttpClient httpClient)
-    {
-        _httpClient = httpClient;
-    }
-    
-    public async Task<IReadOnlyList<SectionDto>> GetAllSectionsAsync(
-        CancellationToken ct = default)
-    {
-        var response = await _httpClient.GetAsync("/api/sections", ct);
-        response.EnsureSuccessStatusCode();
-        return await response.Content.ReadFromJsonAsync<List<SectionDto>>(ct) ?? [];
-    }
-}
-```
-
-**Common DI Pitfalls**:
-
-❌ **WRONG**: Singleton with scoped dependency (e.g., HttpContext)  
-❌ **WRONG**: Transient for heavy objects (creates too many instances)  
-❌ **WRONG**: Direct configuration access (`builder.Configuration["Key"]`)  
-
-✅ **CORRECT**: Match lifetime to dependency requirements  
-✅ **CORRECT**: Singleton for stateless services  
-✅ **CORRECT**: Use Options pattern for configuration
-
-### Domain Models with Records
-
-Use records for immutable domain models:
-
-```csharp
-// Core/Models/ContentItem.cs
-namespace TechHub.Core.Models;
-
-/// <summary>
-/// Represents a content item (news, blog, video, etc.)
-/// </summary>
-public class ContentItem
-{
-    /// <summary>
-    /// URL-friendly slug derived from filename (e.g., "2025-01-15-product-launch")
-    /// </summary>
-    public required string Slug { get; init; }
-    
-    public required string Title { get; init; }
-    public required string Description { get; init; }
-    public string? Author { get; init; }
-    
-    /// <summary>
-    /// Publication date as Unix epoch timestamp
-    /// </summary>
-    public required long DateEpoch { get; init; }
-    
-    /// <summary>
-    /// Primary collection (news, blogs, videos, community, roundups)
-    /// </summary>
-    public required string CollectionName { get; init; }
-    
-    /// <summary>
-    /// Optional alt-collection for content organized in subfolders
-    /// (e.g., "ghc-features" for _videos/ghc-features/, "vscode-updates" for _videos/vscode-updates/)
-    /// </summary>
-    public string? AltCollection { get; init; }
-    
-    /// <summary>
-    /// All categories this content belongs to (e.g., ["ai", "github-copilot"])
-    /// Supports multi-location content access
-    /// </summary>
-    public required IReadOnlyList<string> Categories { get; init; }
-    
-    public required IReadOnlyList<string> Tags { get; init; }
-    public required string RenderedHtml { get; init; }
-    public required string Excerpt { get; init; }
-    
-    /// <summary>
-    /// External link URL (mapped from frontmatter canonical_url field)
-    /// </summary>
-    public string? ExternalUrl { get; init; }
-    
-    /// <summary>
-    /// YouTube video ID for video content
-    /// </summary>
-    public string? VideoId { get; init; }
-    
-    /// <summary>
-    /// Viewing mode for content ("internal" or "external", default: "external")
-    /// Maps from frontmatter viewing_mode field
-    /// </summary>
-    public string? ViewingMode { get; init; }
-    
-    /// <summary>
-    /// Generate URL for this content in a specific section context.
-    /// Example: /ai/videos/vs-code-107.html
-    /// All URLs are lowercase for consistency
-    /// </summary>
-    public string GetUrlInSection(string sectionUrl)
-    {
-        var normalizedSection = sectionUrl.StartsWith('/') ? sectionUrl : $"/{sectionUrl}";
-        return $"{normalizedSection.ToLowerInvariant()}/{CollectionName.ToLowerInvariant()}/{Slug.ToLowerInvariant()}.html";
-    }
-}
-```
-
-### Markdown Frontmatter Mapping
-
-**Critical**: Understanding how markdown frontmatter maps to domain model properties:
-
-```markdown
----
-title: "Example Article Title"
-author: "Author Name"
-date: 2026-01-02
-categories: [ai, github-copilot]
-tags: [machine-learning, azure-openai]
-canonical_url: "https://example.com/article"  # Maps to ExternalUrl property
-viewing_mode: "external"                      # "internal" or "external" (default: "external")
-video_id: "dQw4w9WgXcQ"                       # YouTube video ID (not extracted from URLs)
-alt_collection: "ghc-features"                # For subfolder organization (_videos/ghc-features/, _videos/vscode-updates/)
----
-
-This is the excerpt that appears in list views.
-
-<!--excerpt_end-->
-
-# Full Article Content
-
-The rest of the markdown content rendered to HTML...
-```
-
-**Property Mappings**:
-
-- `title` → `Title`
-- `author` → `Author`
-- `date` → `DateEpoch` (converted to Unix timestamp)
-- `categories` → `Categories` (array)
-- `tags` → `Tags` (normalized to lowercase, hyphen-separated)
-- `canonical_url` → `ExternalUrl` (original source URL)
-- `viewing_mode` → `ViewingMode` ("internal" or "external")
-- `video_id` → `VideoId` (YouTube video identifier)
-- `alt_collection` → `AltCollection` (subfolder categorization)
-- Filename → `Slug` (e.g., `2025-01-15-article.md` → `2025-01-15-article`)
-- Content before `<!--excerpt_end-->` → `Excerpt`
-- Full markdown → `RenderedHtml` (rendered with Markdig)
-
-### Dependency Injection Configuration
-
-```csharp
-// Api/Program.cs - Dependency Registration
-var builder = WebApplication.CreateBuilder(args);
-
-// Add Aspire service defaults (OpenTelemetry, health checks, resilience)
-builder.AddServiceDefaults();
-
-// Configuration
-builder.Services.Configure<ContentOptions>(
-    builder.Configuration.GetSection("Content"));
-
-// Infrastructure services
-builder.Services.AddMemoryCache();
-builder.Services.AddSingleton(TimeProvider.System);
-
-// Repositories (file-based)
-builder.Services.AddSingleton<ISectionRepository, FileSectionRepository>();
-builder.Services.AddSingleton<IContentRepository, FileContentRepository>();
-
-// Services
-builder.Services.AddSingleton<IMarkdownProcessor, MarkdownProcessor>();
-builder.Services.AddScoped<IRssGenerator, RssGenerator>();
-builder.Services.AddScoped<IStructuredDataService, StructuredDataService>();
-
-// API documentation
-builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddOpenApi();
-
-// CORS for Blazor frontend
-builder.Services.AddCors(options =>
-{
-    options.AddDefaultPolicy(policy =>
-        policy.WithOrigins(builder.Configuration["AllowedOrigins"] ?? "https://localhost:5173")
-              .AllowAnyMethod()
-              .AllowAnyHeader());
-});
-```
+**When writing .NET code** (including tests), ALWAYS read [src/AGENTS.md](src/AGENTS.md) for implementation patterns.
 
 ## Project Overview
 
-The Tech Hub is a technical content hub with configuration-driven section and collection management. Content is organized by sections (Everything, AI, GitHub Copilot, Azure, ML, .NET, DevOps, Security) and collections (news, videos, community, blogs, roundups).
+The Tech Hub is a **modern .NET web application** built with Blazor that serves as a technical content hub. We're creating a fast, responsive, accessible platform for showcasing Microsoft technical content across AI, Azure, GitHub Copilot, .NET, DevOps, and Security topics.
 
-**Core Architecture**:
+**What We're Building**:
 
-- **Configuration-driven**: Single source of truth in `_data/sections.json`
-- **RESTful API**: Backend provides content via REST endpoints
-- **Modern frontend**: Blazor SSR with progressive enhancement
-- **Test-driven**: Comprehensive test coverage at all layers
-- **Performance-first**: Server-side rendering with client-side enhancements
+A production-quality web application featuring:
 
-**.NET Projects** (separate frontend and backend):
+- **Modern responsive design** - Mobile-first, accessible UI with Tech Hub visual identity
+- **Server-side rendering** - Blazor SSR for optimal SEO and performance
+- **Progressive enhancement** - WebAssembly for rich client-side interactions
+- **RESTful architecture** - Decoupled API backend and Blazor frontend
+- **Configuration-driven** - Content structure defined in data files, not code
+- **Resilient by design** - Built-in retry policies, error handling, graceful degradation
 
-- **TechHub.Api** - REST API backend (ASP.NET Core Minimal API)
+**Implementation Details**:
+
+For .NET development patterns, component architecture, API design, and all code examples, see **[src/AGENTS.md](src/AGENTS.md)**.
+
+### Repository Organization
+
+**Source Code** (`src/`):
+
+- **TechHub.Api** - REST API backend (Minimal API, OpenAPI/Swagger)
 - **TechHub.Web** - Blazor frontend (SSR + WebAssembly)
-- **TechHub.Core** - Domain models and interfaces
-- **TechHub.Infrastructure** - Data access implementations
+- **TechHub.Core** - Domain models, DTOs, interfaces
+- **TechHub.Infrastructure** - Repository implementations, services
 - **TechHub.AppHost** - .NET Aspire orchestration
 
-**Resilience & Reliability**:
+**Content** (`collections/`):
 
-- **HTTP Resilience Policies** - Built-in retry (3 attempts with exponential backoff), circuit breaker (50% failure ratio), and timeout (60s)
-- **Graceful Error Handling** - User-friendly error messages with functional retry buttons
-- **Automatic State Management** - UI automatically updates during loading and retry operations
+- `_news/` - Official announcements and product updates
+- `_videos/` - Video content and tutorials
+- `_community/` - Microsoft Tech Community posts
+- `_blogs/` - Technical articles and blogs
+- `_roundups/` - Curated weekly summaries
 
-**Content & Configuration**:
+**Tests** (`tests/`):
 
-- **Content Collections**: `collections/` directory with markdown files
-- **Data Configuration**: `appsettings.json` for site structure (sections and collections)
-- **Tests**: `tests/` directory with unit, integration, component, and E2E tests
-- **Infrastructure**: `infra/` directory with Bicep templates
+- `TechHub.Core.Tests/` - Unit tests for domain logic
+- `TechHub.Api.Tests/` - Integration tests for API endpoints
+- `TechHub.Web.Tests/` - bUnit component tests
+- `TechHub.E2E.Tests/` - Playwright end-to-end tests
+- `powershell/` - PowerShell script tests
 
-See [.NET Migration Status](#net-migration-status) section above for current implementation progress, [MIGRATIONSTATUS.md](MIGRATIONSTATUS.md) for detailed migration status, [README.md](README.md) for quick start guide, and [specs/](specs/) for detailed feature specifications.
+**Configuration & Documentation**:
 
-**IMPORTANT**: The [specs/](specs/) directory contains initial planning documents that may be outdated. Always refer to [MIGRATIONSTATUS.md](MIGRATIONSTATUS.md) for current implementation status and this file (AGENTS.md) for up-to-date development guidance.
+- `_data/sections.json` - Single source of truth for content structure
+- `appsettings.json` - Application configuration (sections, collections)
+- `docs/` - Functional documentation (API spec, filtering, content management)
+- `scripts/` - Automation and utility scripts (PowerShell)
+- `infra/` - Azure infrastructure (Bicep templates)
+- `specs/` - Feature specifications (planning docs, may be outdated)
 
-### Core Architecture
+**Navigation**:
 
-The Tech Hub uses a **configuration-driven architecture** where all sections, collections, and content organization is defined in `_data/sections.json`. This single source of truth ensures consistency across all parts of the application.
+- See [Documentation Architecture](#documentation-architecture) for complete documentation map
+- See [.NET Migration Status](#net-migration-status) for current implementation progress
+- See [README.md](README.md) for quick start guide
+- See [MIGRATIONSTATUS.md](MIGRATIONSTATUS.md) for detailed migration status
 
-**Key Architectural Principles**:
+### Architectural Principles
 
-- **Configuration-Driven**: All sections and collections defined in data files
-- **Dynamic Generation**: Pages created automatically from configuration
-- **Modular Design**: New sections added by updating `sections.json`
-- **Consistent Structure**: Build system ensures uniform page generation
-- **Content Separation**: Clear distinction between generated and custom pages
+**Configuration-Driven Design**:
 
-### Repository Structure
+- All sections and collections defined in `_data/sections.json`
+- Content structure managed through data files, not code
+- New sections added by updating configuration
+- Single source of truth ensures consistency
 
-#### Core Directories
+**Performance & User Experience**:
 
-**Content Directories**:
+- Server-side rendering for fast initial page loads
+- Client-side enhancement for responsive interactions
+- Pre-computation during build for optimal runtime performance
+- Resilience policies (retry, circuit breaker, timeout)
 
-- **`collections/`** - Content organization with one directory per collection:
-  - `_news/` - Official announcements and product updates
-  - `_videos/` - Video content and tutorials
-    - `_videos/ghc-features/` - GitHub Copilot feature demos (special frontmatter required)
-    - `_videos/vscode-updates/` - Visual Studio Code updates (special frontmatter required)
-  - `_community/` - Microsoft Tech Community posts and community-sourced content
-  - `_blogs/` - Blogs and technical articles
-  - `_roundups/` - Curated weekly content summaries
+**Quality & Maintainability**:
 
-**.NET Code & Projects** (in repository root):
-
-- **`src/`** - .NET source code projects
-  - `src/TechHub.Api/` - ASP.NET Core REST API
-  - `src/TechHub.Web/` - Blazor frontend
-  - `src/TechHub.Core/` - Domain models and interfaces
-  - `src/TechHub.Infrastructure/` - Repository implementations
-  - `src/TechHub.AppHost/` - .NET Aspire orchestration
-- **`tests/`** - .NET test projects
-  - `tests/TechHub.Core.Tests/` - Unit tests
-  - `tests/TechHub.Api.Tests/` - API integration tests
-  - `tests/TechHub.Web.Tests/` - bUnit component tests
-  - `tests/TechHub.E2E.Tests/` - Playwright E2E tests
-
-**Development & Build**:
-
-- **`docs/`** - Framework-agnostic functional documentation
-- **`.github/agents/`** - Framework-specific development agents
-- **`scripts/`** - Automation and utility scripts (PowerShell)
-- **`.tmp/`** - Temporary directory for development scripts
-
-**Configuration**:
-
-- **`_data/sections.json`** - Single source of truth for sections and collections (shared)
-- **`TechHub.slnx`** - .NET solution file
-
-> **See "Documentation Architecture" section above for complete documentation map and navigation guide**
-
-#### Project Structure
-
-The Tech Hub follows a **configuration-driven architecture** where all sections, collections, and content organization is defined in `_data/sections.json`. This single source of truth ensures consistency across all parts of the application.
-
-**Key Architectural Principles**:
-
-- **Configuration-Driven**: All sections and collections defined in data files
-- **Dynamic Generation**: Pages created automatically from configuration
-- **Modular Design**: New sections added by updating `sections.json`
-- **Consistent Structure**: Build system ensures uniform page generation
-- **Content Separation**: Clear distinction between generated and custom pages
+- Test-driven development at all layers
+- Comprehensive test coverage (unit, integration, component, E2E)
+- Clean architecture with separation of concerns
+- Zero-warning policy for code quality
 
 ## Core Development Principles
 
@@ -1652,7 +1137,7 @@ All user interface components and interactions must be accessible to users with 
 
 **Implementation Details**:
 
-- Server-side: See [.NET Patterns & Examples](#net-patterns--examples) section
+- Server-side: See [.NET Tech Stack](#net-tech-stack) section for patterns reference
 - Client-side: See domain-specific AGENTS.md files for client-side patterns
 
 **Benefits**: Prevents date/time bugs, ensures consistent behavior across all systems, simplifies date comparisons.
@@ -1675,7 +1160,7 @@ All user interface components and interactions must be accessible to users with 
 - **Technical**: Each collection has its own directory, can be marked as custom (manually created) or auto-generated
 - **Properties**: Collections with output enabled generate individual pages for each item
 
-**Items**: Individual pieces of content within collections.
+**Items**: Individual pieces of content within collections. Also referred to as content or content items.
 
 - **Definition**: Actual content users consume (articles, videos, announcements, Blogs)
 - **Terminology Note**: "Item" is the preferred term, but "Article" and "Post" are also used in code/documentation to refer to content (note: "Post" in variables does NOT specifically mean blogs from `_blogs/`)
@@ -1687,7 +1172,7 @@ All user interface components and interactions must be accessible to users with 
 **Relationship Between Concepts**:
 
 1. **Sections** contain multiple **Collections**
-2. **Collections** contain multiple **Items**
+2. **Collections** contain multiple **Items** (also called content or content items)
 3. **Items** have metadata (dates, tags) used by filtering systems
 4. Build-time processing prepares all data for client-side consumption
 5. Client-side filtering provides interactive content discovery

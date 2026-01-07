@@ -34,33 +34,22 @@ This project is currently migrating from Jekyll to .NET/Blazor using [spec-kit](
 
 For detailed progress, implementation status, and what's working now, see [MIGRATIONSTATUS.md](MIGRATIONSTATUS.md).
 
-## Documentation Guide
+## Documentation
 
-This project uses a **3-level documentation hierarchy**:
+For complete development guidelines, architecture, and coding standards, see [AGENTS.md](AGENTS.md).
 
-**Level 1: Domain-Specific AGENTS.md** (Read FIRST when working in a domain):
+**Quick Links**:
 
-- [src/TechHub.Api/AGENTS.md](src/TechHub.Api/AGENTS.md) - API patterns
-- [src/TechHub.Web/AGENTS.md](src/TechHub.Web/AGENTS.md) - Blazor patterns
-- [tests/AGENTS.md](tests/AGENTS.md) - Testing strategies
-- [See complete list in root AGENTS.md](AGENTS.md#complete-3-level-documentation-structure)
+- [AI Assistant Workflow](AGENTS.md#ai-assistant-workflow) - Required 10-step development process
+- [.NET Tech Stack & Commands](AGENTS.md#net-tech-stack) - Runtime, frameworks, and CLI commands
+- [Documentation Architecture](AGENTS.md#documentation-architecture) - Complete documentation map
 
-**Level 2: Root [AGENTS.md](AGENTS.md)** (Read SECOND for repository-wide standards):
+## DevContainer Setup
 
-- 10-step AI Assistant Workflow (REQUIRED for all development)
-- Core rules and boundaries
-- .NET tech stack, commands, and patterns
-- Architecture principles and site terminology
-
-**Level 3: [README.md](README.md)** (You're here - minimal getting started)
-
-**Precedence**: Domain AGENTS.md → Root AGENTS.md → README.md
-
-**Supporting Documentation**:
-
-- **Feature Specifications**: [specs/](specs/) - Detailed requirements using spec-kit
-- **Functional Docs**: [docs/filtering-system.md](docs/filtering-system.md), [docs/content-management.md](docs/content-management.md), [docs/api-specification.md](docs/api-specification.md)
-- **Migration Planning**: [specs/dotnet-migration/](specs/dotnet-migration/) - Complete migration spec and task breakdown
+1. In VS Code, open Command Palette (`Ctrl+Shift+P`)
+2. Select **"Dev Containers: Reopen in Container"**
+3. Wait for container to build and initialize
+4. Use F5 or run script as described above
 
 ## Contributing
 
@@ -69,10 +58,3 @@ All development must follow the guidelines in [AGENTS.md](AGENTS.md):
 - **[AI Assistant Workflow](AGENTS.md#ai-assistant-workflow)** - Required 10-step process
 - **[Core Rules & Boundaries](AGENTS.md#1-core-rules--boundaries)** - Non-negotiable rules
 - **[Feature Specifications](specs/)** - Use spec-kit methodology for all features
-
-## DevContainer Setup
-
-1. In VS Code, open Command Palette (`Ctrl+Shift+P`)
-2. Select **"Dev Containers: Reopen in Container"**
-3. Wait for container to build and initialize
-4. Use F5 or run script as described above
