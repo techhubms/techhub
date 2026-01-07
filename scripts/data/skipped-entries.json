@@ -11001,5 +11001,23 @@
     "collection": "videos",
     "timestamp": "2026-01-07 09:06:59 +00:00",
     "canonical_url": "https://www.youtube.com/watch?v=KalgAXDzG4w"
+  },
+  {
+    "timestamp": "2026-01-07 16:04:54 +00:00",
+    "reason": "No categories found: Content excluded based on generic exclusion rules. The provided description is extremely brief and lacks substantive technical details. There is no actual content beyond a short marketing-oriented summary and a promotional link, with no technical depth, implementation steps, or development focus. Additionally, the materials present a sales-pitch vibe and target end users (retail shoppers) rather than developers or technical practitioners. Per sales pitch and content quality exclusions, as well as lack of substantive content, no categories apply.",
+    "collection": "videos",
+    "canonical_url": "https://www.youtube.com/watch?v=_s974O_vxoQ"
+  },
+  {
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure/container-apps-environment-networking-consumption/m-p/4483790#M22402",
+    "timestamp": "2026-01-07 17:08:38 +00:00",
+    "collection": "community",
+    "reason": "Insufficient content length"
+  },
+  {
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure/retrive-deleted-release-classic-pipeline/m-p/4483154#M22400",
+    "timestamp": "2026-01-07 17:08:38 +00:00",
+    "collection": "community",
+    "reason": "Insufficient content length"
   }
 ]

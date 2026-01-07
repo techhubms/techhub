@@ -1,0 +1,22 @@
+{
+  "Title": "What's new in Fabric Data Warehousing - 2025 roundup | Data Exposed",
+  "Tags": [
+    "Azure",
+    "Cloud Computing",
+    "Dev",
+    "Development",
+    "Microsoft",
+    "Tech",
+    "Technology"
+  ],
+  "FeedName": "Microsoft Developer YouTube",
+  "OutputDir": "_videos",
+  "FeedLevelAuthor": "Microsoft Developer",
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g",
+  "PubDate": "2026-01-07T17:00:14+00:00",
+  "Description": "Let's dive into the major updates and innovations that came to Microsoft Fabric Data Warehousing in 2025, including features like Data Clustering, IDENTITY columns, MERGE, Migration Assistant, Security Features, and more!\n\n✅ Chapters: 0:00 Introduction 2:38 Fabric Data Warehouse in 2025 3:49 Data Clustering 4:50 IDENTITY columns 5:54 MERGE 6:54 Migration Assistant 8:05 Security Features 9:45 What's next\n\n✅ Resources: Fabric Roadmap, Administration, Governance and Security: http://aka.ms/fabricroadmap\n\n📌 Let's connect: Twitter - Anna Hoffman, https://twitter.com/AnalyticAnna Twitter - AzureSQL, https://aka.ms/azuresqltw\n\n🔴 Watch even more Data Exposed episodes: https://aka.ms/dataexposedyt\n\n🔔 Subscribe to our channels for even more SQL tips: Microsoft Azure SQL: https://aka.ms/msazuresqlyt Microsoft SQL Server: https://aka.ms/mssqlserveryt Microsoft Developer: https://aka.ms/microsoftdeveloperyt\n\n#AzureSQL #SQL #LearnSQL",
+  "EnhancedContent": null,
+  "Link": "https://www.youtube.com/watch?v=9TH1EX_6FMk",
+  "Author": "Microsoft Developer",
+  "ProcessedDate": "2026-01-07 17:06:01"
+}

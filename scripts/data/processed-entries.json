@@ -23062,5 +23062,29 @@
     "canonical_url": "https://www.youtube.com/watch?v=0ccUfvqzalA",
     "timestamp": "2026-01-07 15:04:59 +00:00",
     "reason": "Succesfully added: Assigned the 'AI' category because the content centers on Microsoft Copilot Studio, explicitly mentioned as a developer/maker tool, which qualifies under AI category inclusion rule 1. Tags such as Agentic AI and Copilot Studio confirm the focus on Microsoft's AI-driven automation for store operations. The content is not about Microsoft 365 Copilot or general productivity use, but rather about implementing AI in operational workflows, which fits the AI category. No other categories were assigned since there's no direct evidence of coding, DevOps, Azure-specific implementation, ML/data science, or Security focus."
+  },
+  {
+    "canonical_url": "https://devblogs.microsoft.com/all-things-azure/the-realities-of-application-modernization-with-agentic-ai-early-2026/",
+    "timestamp": "2026-01-07 17:07:00 +00:00",
+    "collection": "news",
+    "reason": "Succesfully added: Included only the 'AI' category. The article is focused on the realities of application modernization, with special emphasis on 'agentic AI' and its evolving role—aligning with AI category inclusion rules 1, 4, and 5. While Azure, Coding, DevOps, and Security are referenced indirectly, the discussion remains abstract and strategic rather than providing concrete technical implementation, code, or Microsoft-specific platform guidance, so those categories were not assigned. The content reflects on organizational and technical complexity, and how agentic AI acts as a tool for discovery, understanding, and acceleration, but does not detail programming, DevOps pipelines, specific cloud architectures, or explicit security implementations."
+  },
+  {
+    "canonical_url": "https://www.youtube.com/watch?v=hjtQp9kEMH8",
+    "timestamp": "2026-01-07 17:07:50 +00:00",
+    "collection": "videos",
+    "reason": "Succesfully added: Assigned the Coding category because the content is about cross-platform application development using .NET MAUI and Avalonia (Coding rule 1: Microsoft programming languages, rule 4: coding practices with Microsoft technologies). Did not assign Azure, AI, ML, DevOps, Security, or GitHub Copilot as the focus is on UI frameworks and platform support, not those domains. The content is technical and adheres to inclusion requirements."
+  },
+  {
+    "canonical_url": "https://www.youtube.com/watch?v=9TH1EX_6FMk",
+    "timestamp": "2026-01-07 17:08:12 +00:00",
+    "collection": "videos",
+    "reason": "Succesfully added: Assigned the Azure category because Fabric Data Warehousing is a core Azure service, as per Azure rule 1. ML category was included because the features and use-cases pertain to analytics engineering, warehousing, and data engineering for analytics/ML (ML rule 1, 2, 3, 4, 5 - especially data modeling, warehousing, and analytics-focused architecture). Security category assigned due to the focus on new security features, compliance, governance, and administration (Security rules 1, 2, 4, 5, and 7). Did not assign AI because there is no mention of integrating pre-built AI models or services, nor Coding or DevOps, as there is no focus on code, application development, or DevOps processes."
+  },
+  {
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-high-performance-computing/azure-v710-v5-series-amd-radeon-gpu-validation-of-siemens-cad-nx/ba-p/4483791",
+    "timestamp": "2026-01-07 17:08:38 +00:00",
+    "collection": "community",
+    "reason": "Succesfully added: Applied the Azure category because the entire content is focused on deploying and benchmarking Siemens NX on Azure NVads V710 v5-series virtual machines, including technical configuration, architecture, and usage scenarios (Azure rule 1, 2, 4, 5). While it mentions CAD/CAM/CAE and engineering workflows, there is no substantive code–therefore the Coding, ML, AI, DevOps, Security, and GitHub Copilot categories do not apply per content rules. The community post is sufficiently deep and technical, far exceeding the 200-word minimum for community content."
   }
 ]
