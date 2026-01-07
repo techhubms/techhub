@@ -23038,5 +23038,11 @@
     "timestamp": "2026-01-06 21:04:38 +00:00",
     "collection": "community",
     "canonical_url": "https://techcommunity.microsoft.com/t5/azure-maps-blog/azure-maps-understanding-view-vs-routing-coordinates/ba-p/4483532"
+  },
+  {
+    "canonical_url": "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/building-scalable-cost-effective-real-time-multiplayer-games/ba-p/4483584",
+    "timestamp": "2026-01-07 06:04:13 +00:00",
+    "collection": "community",
+    "reason": "Succesfully added: Categories assigned are Azure (primary focus is a managed Azure service—Azure rule 1), DevOps (covers operational practices such as scaling, global deployment, auto-scaling—DevOps rules 5 and 6), Coding (explains backend real-time architecture design and implementation—Coding rules 2 and 4), and Security (covers security implications of persistent connections, authentication, Azure Front Door—Security rules 2 and 7). AI and ML are not included as the article does not cover AI/ML features. All critical decisions are supported by explicit sections in the article that address these architectural and technical areas."
   }
 ]
