@@ -7,6 +7,8 @@
 
 ## Index
 
+- [Project Overview](#project-overview)
+  - [Repository Organization](#repository-organization)
 - [AI Assistant Workflow](#ai-assistant-workflow)
   - [1. Core Rules & Boundaries](#1-core-rules--boundaries)
   - [2. Gather Context](#2-gather-context)
@@ -18,18 +20,21 @@
   - [8. Validate & Fix](#8-validate--fix)
   - [9. Update Documentation](#9-update-documentation)
   - [10. Report Completion](#10-report-completion)
+- [Starting & Stopping the Website](#starting--stopping-the-website)
+  - [Starting the Website](#starting-the-website)
+  - [Testing the Running Website](#testing-the-running-website)
+  - [If CLI Tools Are Absolutely Required](#if-cli-tools-are-absolutely-required)
+  - [Stopping the Website](#stopping-the-website)
+  - [run.ps1 Script Parameters (for AI Agents)](#runps1-script-parameters-for-ai-agents)
+  - [Building/Testing Individual Projects](#buildingtesting-individual-projects)
 - [Documentation Architecture](#documentation-architecture)
   - [Documentation Hierarchy](#documentation-hierarchy)
   - [Documentation Placement Strategy](#documentation-placement-strategy)
   - [Complete Documentation Map](#complete-documentation-map)
   - [Quick Reference Guide](#quick-reference-guide)
-- [Starting & Stopping the Website](#starting--stopping-the-website)
-- [.NET Migration Status](#net-migration-status)
-- [.NET Tech Stack](#net-tech-stack)
-- [Project Overview](#project-overview)
-  - [Repository Organization](#repository-organization)
-  - [Architectural Principles](#architectural-principles)
 - [Core Development Principles](#core-development-principles)
+  - [Tech Stack](#tech-stack)
+  - [Architectural Principles](#architectural-principles)
   - [Performance Architecture](#performance-architecture)
   - [Accessibility Standards](#accessibility-standards)
   - [Configuration-Driven Development](#configuration-driven-development)
@@ -38,7 +43,71 @@
   - [Core Concepts](#core-concepts)
   - [Content Organization](#content-organization)
   - [Filtering Systems](#filtering-systems)
+  - [Content Structure](#content-structure)
   - [RSS Feeds](#rss-feeds)
+- [.NET Migration Status](#net-migration-status)
+  - [Implementation Progress](#implementation-progress)
+
+## Project Overview
+
+The Tech Hub is a **modern .NET web application** built with Blazor that serves as a technical content hub. We're creating a fast, responsive, accessible platform for showcasing Microsoft technical content across AI, Azure, GitHub Copilot, .NET, DevOps, and Security topics.
+
+**What We're Building**:
+
+A production-quality web application featuring:
+
+- **Modern responsive design** - Mobile-first, accessible UI with Tech Hub visual identity
+- **Server-side rendering** - Blazor SSR for optimal SEO and performance
+- **Progressive enhancement** - WebAssembly for rich client-side interactions
+- **RESTful architecture** - Decoupled API backend and Blazor frontend
+- **Configuration-driven** - Content structure defined in data files, not code
+- **Resilient by design** - Built-in retry policies, error handling, graceful degradation
+
+**Implementation Details**:
+
+For .NET development patterns, component architecture, API design, and all code examples, see **[src/AGENTS.md](src/AGENTS.md)**.
+
+### Repository Organization
+
+**Source Code** (`src/`):
+
+- `TechHub.Api/` - REST API backend (Minimal API, OpenAPI/Swagger)
+- `TechHub.Web/` - Blazor frontend (SSR + WebAssembly)
+- `TechHub.Core/` - Domain models, DTOs, interfaces
+- `TechHub.Infrastructure/` - Repository implementations, services
+- `TechHub.AppHost/` - .NET Aspire orchestration
+
+**Content** (`collections/`):
+
+- `_news/` - Official announcements and product updates
+- `_videos/` - Video content and tutorials
+- `_community/` - Microsoft Tech Community posts
+- `_blogs/` - Technical articles and blogs
+- `_roundups/` - Curated weekly summaries
+
+**Tests** (`tests/`):
+
+- `TechHub.Core.Tests/` - Unit tests for domain logic
+- `TechHub.Api.Tests/` - Integration tests for API endpoints
+- `TechHub.Web.Tests/` - bUnit component tests
+- `TechHub.E2E.Tests/` - Playwright end-to-end tests
+- `powershell/` - PowerShell script tests
+
+**Configuration & Documentation**:
+
+- `_data/sections.json` - Single source of truth for content structure
+- `appsettings.json` - Application configuration (sections, collections)
+- `docs/` - Functional documentation (API spec, filtering, content management)
+- `scripts/` - Automation and utility scripts (PowerShell)
+- `infra/` - Azure infrastructure (Bicep templates)
+- `specs/` - Feature specifications (planning docs, may be outdated)
+
+**Navigation**:
+
+- See [Documentation Architecture](#documentation-architecture) for complete documentation map
+- See [.NET Migration Status](#net-migration-status) for current implementation progress
+- See [README.md](README.md) for quick start guide
+- See [MIGRATIONSTATUS.md](MIGRATIONSTATUS.md) for detailed migration status
 
 ## AI Assistant Workflow
 
@@ -125,16 +194,14 @@ When renaming ANY identifier, you **MUST** verify and update ALL occurrences acr
 
 - Start with this file (Root AGENTS.md) for architecture and principles
 - See [Complete Documentation Map](#complete-documentation-map) for navigation guide to all documentation files
-- Read domain-specific AGENTS.md file for the area you'll modify (e.g., [jekyll/_plugins/AGENTS.md](jekyll/_plugins/AGENTS.md), [jekyll/assets/js/AGENTS.md](jekyll/assets/js/AGENTS.md), [scripts/AGENTS.md](scripts/AGENTS.md))
-- Review functional documentation in `docs/` if working on features (e.g., [docs/filtering-system.md](docs/filtering-system.md))
-- Check [collections/markdown-guidelines.md](collections/markdown-guidelines.md) and [collections/writing-style-guidelines.md](collections/writing-style-guidelines.md) for content work
+- See [Quick Reference Guide](#quick-reference-guide) for quick navigation by task type
 
 **Scan the Code**:
 
 - Use `read_file` to examine relevant files
 - Use `grep_search` or `semantic_search` to find related code patterns
 - Use `list_dir` to understand directory structure
-- Check existing tests in `spec/` to understand expected behavior
+- Check existing tests in `tests/` to understand expected behavior
 
 **Key Rules**:
 
@@ -177,7 +244,7 @@ When renaming ANY identifier, you **MUST** verify and update ALL occurrences acr
 
 **Use Online Resources**:
 
-- **context7 MCP tool**: Get up-to-date documentation for any framework/library (REQUIRED for Jekyll, JavaScript libraries, etc.)
+- **context7 MCP tool**: Get up-to-date documentation for any framework/library (.NET, Blazor, JavaScript libraries, etc.)
 - **Web searches**: Research best practices, patterns, or solutions
 - **Follow referenced links**: Check official documentation and guides
 - **Verify information**: Cross-reference multiple sources when uncertain
@@ -199,26 +266,14 @@ When renaming ANY identifier, you **MUST** verify and update ALL occurrences acr
 
 **If needed**, understand current behavior BEFORE writing tests or making changes:
 
-**Running the Website Locally**:
+**How to Run and Test**:
 
-- **ALWAYS use `./run.ps1` to start the website** - it handles both API and Web projects correctly
-- **Start in background**: Use `./run.ps1` and let it run in the background (browser never opens in DevContainer)
-- **Reuse terminal**: Once started, NEVER touch that terminal window again
-- **New operations**: Use a NEW terminal for any other commands while website is running
-- **To test**: Use Playwright MCP tools directly in GitHub Copilot Chat (no terminal commands needed)
-- **To stop**: Only touch the terminal to stop the server (Ctrl+C)
-- **For building/testing individual projects**: Use specific dotnet commands (e.g., `dotnet build src/TechHub.Api/TechHub.Api.csproj`)
-- **The run.ps1 script ensures**: Proper startup order, health checks, and graceful shutdown for the entire website
+See [Starting & Stopping the Website](#starting--stopping-the-website) for complete instructions on:
 
-**Use Playwright MCP Server for Testing**:
-
-- **CRITICAL**: Playwright MCP tools work DIRECTLY in GitHub Copilot Chat - no terminal commands needed
-- **Navigate to page**: `mcp_playwright_browser_navigate` to <http://localhost:5184>
-- **Take snapshots**: `mcp_playwright_browser_snapshot` to capture page state
-- **Take screenshots**: `mcp_playwright_browser_take_screenshot` for visual verification
-- **Interact with elements**: `mcp_playwright_browser_click`, `mcp_playwright_browser_type`, etc.
-- **Verify behavior**: Reproduce bugs, verify expected behavior, understand features
-- **Debug issues**: Capture screenshots or console output for debugging
+- How to start the website with `./run.ps1`
+- Using Playwright MCP tools for testing (CRITICAL: works directly in GitHub Copilot Chat)
+- When to use `-OnlyTests` vs `-SkipTests` parameters
+- How to safely interact with the running website
 
 **When to Verify**:
 
@@ -234,7 +289,6 @@ When renaming ANY identifier, you **MUST** verify and update ALL occurrences acr
 - Test live site (<https://tech.hub.ms>) when appropriate
 - Document unexpected behaviors you discover
 - Report any discrepancies between observed behavior and documentation
-- NEVER run terminal commands for Playwright testing - use MCP tools directly
 
 ### 6. Write Tests First (TDD)
 
@@ -327,13 +381,10 @@ When renaming ANY identifier, you **MUST** verify and update ALL occurrences acr
 - Always use the context7 MCP tool to fetch latest documentation when modifying code
 - **Run tests frequently** during implementation to catch issues early
 
-**Starting/Stopping the Application**:
+**Running and Testing**:
 
-- See [Starting & Stopping the Website](#starting--stopping-the-website) for complete instructions on running and testing the website
-- **For automated testing**: Use `./run.ps1 -OnlyTests` (runs all tests, exits - for verifying changes)
-- **For interactive debugging**: Use `./run.ps1 -SkipTests` (AI agents AND humans using Playwright MCP tools)
-- **Default behavior**: Use `./run.ps1` (runs tests first, then keeps servers running)
-- **IMPORTANT**: AI agents should use Playwright MCP for interactive debugging AND write tests that reproduce the debugged issues so they don't happen again
+- See [Starting & Stopping the Website](#starting--stopping-the-website) for complete instructions
+- Quick reference: Use `./run.ps1 -OnlyTests` for automated testing, `./run.ps1 -SkipTests` for interactive debugging
 
 **Critical Requirements**:
 
@@ -476,174 +527,6 @@ When renaming ANY identifier, you **MUST** verify and update ALL occurrences acr
 - Only report completion when task is 100% done
 - Never stop working until task is complete
 - Include all relevant details in completion report
-
-## Documentation Architecture
-
-The Tech Hub uses a **multi-tier documentation system** organized by scope and domain. Since we're committed to .NET as our permanent tech stack, documentation is separated by **scope** (repository-wide vs domain-specific), not by framework.
-
-### Documentation Hierarchy
-
-**1. Root AGENTS.md** (this file):
-
-- Repository-wide development principles and standards
-- AI Assistant Workflow (10-step process for all development)
-- Core rules and boundaries
-- .NET tech stack, development commands, and common patterns
-- Performance architecture, accessibility standards, timezone handling
-- Configuration-driven development principles
-- Repository structure and site terminology
-- **Scope**: Applies to ALL work across the entire repository
-
-**2. Domain-Specific AGENTS.md Files**:
-
-- Development patterns for specific code domains (src/, scripts/, tests/, collections/, etc.)
-- Located in each major directory
-- Domain-specific rules, patterns, and examples
-- **Scope**: Applies only when working in that specific domain
-
-**3. Functional Documentation** (`docs/`):
-
-- WHAT the system does (behavior, contracts, rules)
-- Minimal set: filtering, content management, API specification
-- Describes features and capabilities, not implementation
-- **Scope**: Understanding system behavior and architecture
-
-**4. Content Guidelines** (`collections/`):
-
-- Writing standards and markdown formatting rules
-- Content creation and management workflows
-- **Scope**: Creating and maintaining content
-
-### Documentation Placement Strategy
-
-**Where to Place Information**:
-
-**Root AGENTS.md** (this file):
-
-- Development workflow and process (10 steps, TDD, etc.)
-- Core rules and boundaries (always/ask/never rules)
-- .NET tech stack overview (what we use: .NET 10, Blazor, etc.)
-- .NET development commands (dotnet build, test, run, etc.)
-- Repository-wide principles (performance, accessibility, timezone, configuration-driven design)
-- Site terminology and concepts
-
-**src/AGENTS.md** (ALL .NET implementation patterns):
-
-- Minimal API endpoint patterns
-- Blazor component patterns (code-behind, etc.)
-- Repository pattern implementation
-- Dependency injection patterns and service lifetimes
-- Domain models and DTOs
-- Markdown frontmatter mapping
-- HttpClient configuration
-- ALL other .NET code patterns
-
-**tests/AGENTS.md** (Testing strategies):
-
-- Testing strategies across all frameworks (unit, integration, component, E2E)
-- When to write tests and what to test
-- Test organization and naming
-- References src/AGENTS.md for implementation patterns when writing test code
-
-**Domain-specific AGENTS.md** (src/TechHub.Web/, src/TechHub.Api/, etc.):
-
-- Patterns specific to that project/domain
-- Project-specific configuration
-- Specialized tooling for that domain
-
-**Functional Docs** (docs/):
-
-- Feature descriptions (WHAT the system does)
-- API contracts and endpoint specifications
-- Business rules and behavior
-- System architecture diagrams
-
-**Content Guidelines** (collections/):
-
-- Markdown formatting standards
-- Writing style and tone
-- Content workflow and RSS processing
-
-**Key Principle**: Place information at the **highest applicable level**:
-
-- If it's a .NET pattern used across projects → src/AGENTS.md
-- If it's specific to one project → Domain AGENTS.md (e.g., src/TechHub.Web/AGENTS.md)
-- If it's repository-wide workflow/rules → Root AGENTS.md
-- If it describes behavior → Functional docs
-- If it's about content → Content guidelines
-
-### Complete Documentation Map
-
-**Project Overview**:
-
-- **[README.md](README.md)** - Project overview, quick start guide, architecture summary, current implementation status, and navigation to all other documentation
-
-**Domain-Specific AGENTS.md Files**:
-
-- **[src/AGENTS.md](src/AGENTS.md)** - .NET development patterns across all projects
-- **[src/TechHub.Api/AGENTS.md](src/TechHub.Api/AGENTS.md)** - API development patterns (Minimal APIs, endpoints)
-- **[src/TechHub.Web/AGENTS.md](src/TechHub.Web/AGENTS.md)** - Blazor component patterns (SSR, interactivity)
-- **[src/TechHub.Core/AGENTS.md](src/TechHub.Core/AGENTS.md)** - Domain model design (records, DTOs)
-- **[src/TechHub.Infrastructure/AGENTS.md](src/TechHub.Infrastructure/AGENTS.md)** - Data access patterns (repositories, caching)
-- **[scripts/AGENTS.md](scripts/AGENTS.md)** - PowerShell automation scripts
-- **[docs/AGENTS.md](docs/AGENTS.md)** - Documentation maintenance guidelines
-- **[collections/AGENTS.md](collections/AGENTS.md)** - Content creation and management
-- **[tests/AGENTS.md](tests/AGENTS.md)** - Testing strategies across all frameworks
-- **[tests/TechHub.E2E.Tests/AGENTS.md](tests/TechHub.E2E.Tests/AGENTS.md)** - E2E test architecture and performance optimizations
-
-**Functional Documentation** (in `docs/`):
-
-- **[filtering-system.md](docs/filtering-system.md)** - How tag and date filtering works
-- **[content-management.md](docs/content-management.md)** - Content workflows and RSS processing
-- **[api-specification.md](docs/api-specification.md)** - REST API contracts and endpoints
-
-**Content Guidelines** (in `collections/`):
-
-- **[markdown-guidelines.md](collections/markdown-guidelines.md)** - Markdown formatting rules
-- **[writing-style-guidelines.md](collections/writing-style-guidelines.md)** - Writing tone and style
-
-### Quick Reference Guide
-
-**New to the project?**
-
-1. Start with [README.md](README.md) for overview and quick start
-2. Read this file (AGENTS.md) for development workflow
-3. Review domain-specific AGENTS.md before coding
-
-**Working on .NET/Blazor?**
-
-1. Review .NET sections in this file (Tech Stack, Commands, Patterns)
-2. Read [src/AGENTS.md](src/AGENTS.md) for general .NET patterns
-3. Read specific domain AGENTS.md (API, Web, Core, Infrastructure)
-
-**Working on PowerShell scripts?**
-
-1. Read [scripts/AGENTS.md](scripts/AGENTS.md)
-2. Review [Starting & Stopping the Website](#starting--stopping-the-website) for build/test commands
-
-**Working on content?**
-
-1. Read [collections/AGENTS.md](collections/AGENTS.md)
-2. Follow [markdown-guidelines.md](collections/markdown-guidelines.md)
-3. Follow [writing-style-guidelines.md](collections/writing-style-guidelines.md)
-
-**Working on tests?**
-
-1. Read [tests/AGENTS.md](tests/AGENTS.md) for testing strategies
-2. Read specific test domain AGENTS.md:
-   - [tests/TechHub.E2E.Tests/AGENTS.md](tests/TechHub.E2E.Tests/AGENTS.md) - E2E test patterns
-   - [tests/TechHub.Api.Tests/AGENTS.md](tests/TechHub.Api.Tests/AGENTS.md) - API integration test patterns
-   - [tests/TechHub.Web.Tests/AGENTS.md](tests/TechHub.Web.Tests/AGENTS.md) - Blazor component test patterns
-   - [tests/TechHub.Core.Tests/AGENTS.md](tests/TechHub.Core.Tests/AGENTS.md) - Unit test patterns
-   - [tests/TechHub.Infrastructure.Tests/AGENTS.md](tests/TechHub.Infrastructure.Tests/AGENTS.md) - Infrastructure test patterns
-   - [tests/powershell/AGENTS.md](tests/powershell/AGENTS.md) - PowerShell test patterns
-3. Review [Starting & Stopping the Website](#starting--stopping-the-website) for build/test commands
-
-**Understanding system behavior?**
-
-1. Read [docs/filtering-system.md](docs/filtering-system.md) for filtering
-2. Read [docs/content-management.md](docs/content-management.md) for content workflows
-3. Read [docs/api-specification.md](docs/api-specification.md) for API contracts
 
 ## Starting & Stopping the Website
 
@@ -847,57 +730,177 @@ dotnet tool update --global dotnet-ef
 - Provides consistent experience across operations
 - Prevents common errors (like running E2E tests without servers)
 
-## .NET Migration Status
+## Documentation Architecture
 
-**Project Status**: 🚧 Currently migrating from Jekyll to .NET/Blazor architecture with separate API and frontend.
+The Tech Hub uses a **multi-tier documentation system** organized by scope and domain. Since we're committed to .NET as our permanent tech stack, documentation is separated by **scope** (repository-wide vs domain-specific), not by framework.
 
-**Current Phase**: Phase 3 - User Story 1 MVP (API Implementation) ✅ Partially Complete
+### Documentation Hierarchy
 
-### Implementation Progress
+**1. Root AGENTS.md** (this file):
 
-Following the migration plan phases defined in [specs/dotnet-migration/](specs/dotnet-migration/):
+- Repository-wide development principles and standards
+- AI Assistant Workflow (10-step process for all development)
+- Core rules and boundaries
+- .NET tech stack, development commands, and common patterns
+- Performance architecture, accessibility standards, timezone handling
+- Configuration-driven development principles
+- Repository structure and site terminology
+- **Scope**: Applies to ALL work across the entire repository
 
-- **Phase 1: Foundation** (36/36 tasks) ✅ Complete
-  - All projects, domain models, DTOs, interfaces, extensions
-- **Phase 2: Data Access** (8/17 tasks) 🔄 In Progress
-  - ✅ FrontMatterParser (11 tests passing)
-  - ✅ MarkdownService (19 tests passing)
-  - ✅ FileBasedSectionRepository (7 tests passing)
-  - ✅ FileBasedContentRepository (15 tests passing)
-  - ⏳ RssService, Caching, Entity tests (not started)
-- **Phase 3: API Endpoints** (5/70 tasks) 🔄 In Progress
-  - ✅ All section endpoints (6 endpoints, 8 tests)
-  - ✅ Advanced filtering (2 endpoints, 6 tests)
-  - ⏳ Blazor components, pages, client (not started)
+**2. Domain-Specific AGENTS.md Files**:
 
-**Test Results**: 52/52 tests passing (100% pass rate)
+- Development patterns for specific code domains (src/, scripts/, tests/, collections/, etc.)
+- Located in each major directory
+- Domain-specific rules, patterns, and examples
+- **Scope**: Applies only when working in that specific domain
 
-**What's Working Now**:
+**3. Functional Documentation** (`docs/`):
 
-✅ **RESTful API** with 14 endpoints, all tested and working  
-✅ **Frontend** - Home page with 8 sections, responsive grid, design system  
-✅ **Components** - SectionCard, ContentItemCard with Tech Hub styling  
-✅ **HTTP Client** - TechHubApiClient with resilience policies  
-✅ **Visual Design** - Complete color system from Jekyll _sass  
-✅ **Images** - All 8 section background images  
+- WHAT the system does (behavior, contracts, rules)
+- Minimal set: filtering, content management, API specification
+- Describes features and capabilities, not implementation
+- **Scope**: Understanding system behavior and architecture
 
-**Access Points**:
+**4. Content Guidelines** (`collections/`):
 
-- Web UI: <http://localhost:5184>
-- API: <http://localhost:5029/api/sections>
-- Swagger: <http://localhost:5029/swagger>
+- Writing standards and markdown formatting rules
+- Content creation and management workflows
+- **Scope**: Creating and maintaining content
 
-**Next Steps**:
+### Documentation Placement Strategy
 
-1. Complete Phase 2: RssService, Caching, Entity tests (T045-T051)
-2. Continue Phase 3: Section/content detail pages, filtering, accessibility (T062-T087)
-3. Begin Phase 4: Features implementation (filtering, search, infinite scroll)
+**Where to Place Information**:
 
-See [specs/dotnet-migration/tasks.md](specs/dotnet-migration/tasks.md) for complete task breakdown, [MIGRATIONSTATUS.md](MIGRATIONSTATUS.md) for detailed migration progress, and [README.md](README.md) for user-facing quick start guide.
+**Root AGENTS.md** (this file):
 
-**IMPORTANT**: The [specs/](specs/) directory contains initial planning documents that may be outdated. Always refer to [MIGRATIONSTATUS.md](MIGRATIONSTATUS.md) for current implementation status and this file (AGENTS.md) for up-to-date development guidance.
+- Development workflow and process (10 steps, TDD, etc.)
+- Core rules and boundaries (always/ask/never rules)
+- .NET tech stack overview (what we use: .NET 10, Blazor, etc.)
+- .NET development commands (dotnet build, test, run, etc.)
+- Repository-wide principles (performance, accessibility, timezone, configuration-driven design)
+- Site terminology and concepts
 
-## .NET Tech Stack
+**src/AGENTS.md** (ALL .NET implementation patterns):
+
+- Minimal API endpoint patterns
+- Blazor component patterns (code-behind, etc.)
+- Repository pattern implementation
+- Dependency injection patterns and service lifetimes
+- Domain models and DTOs
+- Markdown frontmatter mapping
+- HttpClient configuration
+- ALL other .NET code patterns
+
+**tests/AGENTS.md** (Testing strategies):
+
+- Testing strategies across all frameworks (unit, integration, component, E2E)
+- When to write tests and what to test
+- Test organization and naming
+- References src/AGENTS.md for implementation patterns when writing test code
+
+**Domain-specific AGENTS.md** (src/TechHub.Web/, src/TechHub.Api/, etc.):
+
+- Patterns specific to that project/domain
+- Project-specific configuration
+- Specialized tooling for that domain
+
+**Functional Docs** (docs/):
+
+- Feature descriptions (WHAT the system does)
+- API contracts and endpoint specifications
+- Business rules and behavior
+- System architecture diagrams
+
+**Content Guidelines** (collections/):
+
+- Markdown formatting standards
+- Writing style and tone
+- Content workflow and RSS processing
+
+**Key Principle**: Place information at the **highest applicable level**:
+
+- If it's a .NET pattern used across projects → src/AGENTS.md
+- If it's specific to one project → Domain AGENTS.md (e.g., src/TechHub.Web/AGENTS.md)
+- If it's repository-wide workflow/rules → Root AGENTS.md
+- If it describes behavior → Functional docs
+- If it's about content → Content guidelines
+
+### Complete Documentation Map
+
+**Project Overview**:
+
+- **[README.md](README.md)** - Project overview, quick start guide, architecture summary, current implementation status, and navigation to all other documentation
+
+**Domain-Specific AGENTS.md Files**:
+
+- **[src/AGENTS.md](src/AGENTS.md)** - .NET development patterns across all projects
+- **[src/TechHub.Api/AGENTS.md](src/TechHub.Api/AGENTS.md)** - API development patterns (Minimal APIs, endpoints)
+- **[src/TechHub.Web/AGENTS.md](src/TechHub.Web/AGENTS.md)** - Blazor component patterns (SSR, interactivity)
+- **[src/TechHub.Core/AGENTS.md](src/TechHub.Core/AGENTS.md)** - Domain model design (records, DTOs)
+- **[src/TechHub.Infrastructure/AGENTS.md](src/TechHub.Infrastructure/AGENTS.md)** - Data access patterns (repositories, caching)
+- **[scripts/AGENTS.md](scripts/AGENTS.md)** - PowerShell automation scripts
+- **[docs/AGENTS.md](docs/AGENTS.md)** - Documentation maintenance guidelines
+- **[collections/AGENTS.md](collections/AGENTS.md)** - Content creation and management
+- **[tests/AGENTS.md](tests/AGENTS.md)** - Testing strategies across all frameworks
+- **[tests/TechHub.E2E.Tests/AGENTS.md](tests/TechHub.E2E.Tests/AGENTS.md)** - E2E test architecture and performance optimizations
+
+**Functional Documentation** (in `docs/`):
+
+- **[filtering-system.md](docs/filtering-system.md)** - How tag and date filtering works
+- **[content-management.md](docs/content-management.md)** - Content workflows and RSS processing
+- **[api-specification.md](docs/api-specification.md)** - REST API contracts and endpoints
+
+**Content Guidelines** (in `collections/`):
+
+- **[markdown-guidelines.md](collections/markdown-guidelines.md)** - Markdown formatting rules
+- **[writing-style-guidelines.md](collections/writing-style-guidelines.md)** - Writing tone and style
+
+### Quick Reference Guide
+
+**New to the project?**
+
+1. Start with [README.md](README.md) for overview and quick start
+2. Read this file (AGENTS.md) for development workflow
+3. Review domain-specific AGENTS.md before coding
+
+**Working on .NET/Blazor?**
+
+1. Review .NET sections in this file (Tech Stack, Commands, Patterns)
+2. Read [src/AGENTS.md](src/AGENTS.md) for general .NET patterns
+3. Read specific domain AGENTS.md (API, Web, Core, Infrastructure)
+
+**Working on PowerShell scripts?**
+
+1. Read [scripts/AGENTS.md](scripts/AGENTS.md)
+2. Review [Starting & Stopping the Website](#starting--stopping-the-website) for build/test commands
+
+**Working on content?**
+
+1. Read [collections/AGENTS.md](collections/AGENTS.md)
+2. Follow [markdown-guidelines.md](collections/markdown-guidelines.md)
+3. Follow [writing-style-guidelines.md](collections/writing-style-guidelines.md)
+
+**Working on tests?**
+
+1. Read [tests/AGENTS.md](tests/AGENTS.md) for testing strategies
+2. Read specific test domain AGENTS.md:
+   - [tests/TechHub.E2E.Tests/AGENTS.md](tests/TechHub.E2E.Tests/AGENTS.md) - E2E test patterns
+   - [tests/TechHub.Api.Tests/AGENTS.md](tests/TechHub.Api.Tests/AGENTS.md) - API integration test patterns
+   - [tests/TechHub.Web.Tests/AGENTS.md](tests/TechHub.Web.Tests/AGENTS.md) - Blazor component test patterns
+   - [tests/TechHub.Core.Tests/AGENTS.md](tests/TechHub.Core.Tests/AGENTS.md) - Unit test patterns
+   - [tests/TechHub.Infrastructure.Tests/AGENTS.md](tests/TechHub.Infrastructure.Tests/AGENTS.md) - Infrastructure test patterns
+   - [tests/powershell/AGENTS.md](tests/powershell/AGENTS.md) - PowerShell test patterns
+3. Review [Starting & Stopping the Website](#starting--stopping-the-website) for build/test commands
+
+**Understanding system behavior?**
+
+1. Read [docs/filtering-system.md](docs/filtering-system.md) for filtering
+2. Read [docs/content-management.md](docs/content-management.md) for content workflows
+3. Read [docs/api-specification.md](docs/api-specification.md) for API contracts
+
+## Core Development Principles
+
+### Tech Stack
 
 **Runtime & Core Frameworks**:
 
@@ -907,18 +910,34 @@ See [specs/dotnet-migration/tasks.md](specs/dotnet-migration/tasks.md) for compl
 - Blazor SSR + WebAssembly (frontend)
 - .NET Aspire (orchestration)
 
+**Frontend Technologies**:
+
+- HTML5 semantic markup
+- CSS3 with modern features (Grid, Flexbox, Custom Properties)
+- Vanilla JavaScript (ES2024+) for progressive enhancement
+- No JavaScript frameworks - pure web standards
+
 **Testing & Quality**:
 
 - xUnit (unit and integration tests)
 - bUnit (Blazor component tests)
 - Moq (mocking framework)
 - Playwright (E2E tests)
+- PowerShell Pester (script tests)
 
-**Deployment**:
+**Infrastructure & Deployment**:
 
 - Azure Container Apps
 - Bicep Infrastructure as Code
 - OpenTelemetry + Application Insights
+- GitHub Actions (CI/CD)
+
+**Development Tools**:
+
+- PowerShell 7+ (automation scripts)
+- Git (version control)
+- VS Code DevContainers (consistent development environment)
+- Markdown (documentation)
 
 **Implementation Guidance**:
 
@@ -934,67 +953,6 @@ For ALL .NET code patterns, examples, and best practices, see **[src/AGENTS.md](
 - All other .NET development patterns
 
 **When writing .NET code** (including tests), ALWAYS read [src/AGENTS.md](src/AGENTS.md) for implementation patterns.
-
-## Project Overview
-
-The Tech Hub is a **modern .NET web application** built with Blazor that serves as a technical content hub. We're creating a fast, responsive, accessible platform for showcasing Microsoft technical content across AI, Azure, GitHub Copilot, .NET, DevOps, and Security topics.
-
-**What We're Building**:
-
-A production-quality web application featuring:
-
-- **Modern responsive design** - Mobile-first, accessible UI with Tech Hub visual identity
-- **Server-side rendering** - Blazor SSR for optimal SEO and performance
-- **Progressive enhancement** - WebAssembly for rich client-side interactions
-- **RESTful architecture** - Decoupled API backend and Blazor frontend
-- **Configuration-driven** - Content structure defined in data files, not code
-- **Resilient by design** - Built-in retry policies, error handling, graceful degradation
-
-**Implementation Details**:
-
-For .NET development patterns, component architecture, API design, and all code examples, see **[src/AGENTS.md](src/AGENTS.md)**.
-
-### Repository Organization
-
-**Source Code** (`src/`):
-
-- **TechHub.Api** - REST API backend (Minimal API, OpenAPI/Swagger)
-- **TechHub.Web** - Blazor frontend (SSR + WebAssembly)
-- **TechHub.Core** - Domain models, DTOs, interfaces
-- **TechHub.Infrastructure** - Repository implementations, services
-- **TechHub.AppHost** - .NET Aspire orchestration
-
-**Content** (`collections/`):
-
-- `_news/` - Official announcements and product updates
-- `_videos/` - Video content and tutorials
-- `_community/` - Microsoft Tech Community posts
-- `_blogs/` - Technical articles and blogs
-- `_roundups/` - Curated weekly summaries
-
-**Tests** (`tests/`):
-
-- `TechHub.Core.Tests/` - Unit tests for domain logic
-- `TechHub.Api.Tests/` - Integration tests for API endpoints
-- `TechHub.Web.Tests/` - bUnit component tests
-- `TechHub.E2E.Tests/` - Playwright end-to-end tests
-- `powershell/` - PowerShell script tests
-
-**Configuration & Documentation**:
-
-- `_data/sections.json` - Single source of truth for content structure
-- `appsettings.json` - Application configuration (sections, collections)
-- `docs/` - Functional documentation (API spec, filtering, content management)
-- `scripts/` - Automation and utility scripts (PowerShell)
-- `infra/` - Azure infrastructure (Bicep templates)
-- `specs/` - Feature specifications (planning docs, may be outdated)
-
-**Navigation**:
-
-- See [Documentation Architecture](#documentation-architecture) for complete documentation map
-- See [.NET Migration Status](#net-migration-status) for current implementation progress
-- See [README.md](README.md) for quick start guide
-- See [MIGRATIONSTATUS.md](MIGRATIONSTATUS.md) for detailed migration status
 
 ### Architectural Principles
 
@@ -1018,8 +976,6 @@ For .NET development patterns, component architecture, API design, and all code 
 - Comprehensive test coverage (unit, integration, component, E2E)
 - Clean architecture with separation of concerns
 - Zero-warning policy for code quality
-
-## Core Development Principles
 
 ### Performance Architecture
 
@@ -1137,7 +1093,7 @@ All user interface components and interactions must be accessible to users with 
 
 **Implementation Details**:
 
-- Server-side: See [.NET Tech Stack](#net-tech-stack) section for patterns reference
+- Server-side: See [Tech Stack](#tech-stack) section for patterns reference
 - Client-side: See domain-specific AGENTS.md files for client-side patterns
 
 **Benefits**: Prevents date/time bugs, ensures consistent behavior across all systems, simplifies date comparisons.
@@ -1156,9 +1112,9 @@ All user interface components and interactions must be accessible to users with 
 **Collections**: Content types that represent different formats within sections.
 
 - **Purpose**: Organize content by format and purpose (news, videos, community, blogs, roundups)
-- **Configuration**: Defined in framework configuration (e.g., Jekyll's `jekyll/_config.yml`), associated with sections via `_data/sections.json`
+- **Configuration**: Defined in `appsettings.json`, associated with sections via section configuration
 - **Technical**: Each collection has its own directory, can be marked as custom (manually created) or auto-generated
-- **Properties**: Collections with output enabled generate individual pages for each item
+- **Properties**: Collections generate individual pages for each item via Blazor routing
 
 **Items**: Individual pieces of content within collections. Also referred to as content or content items.
 
@@ -1224,3 +1180,53 @@ The site provides RSS feeds for all sections and collections:
 
 - Section pages include RSS link in header area
 - Footer "Subscribe via RSS" links to everything feed
+
+## .NET Migration Status
+
+**Project Status**: 🚧 Currently migrating from Jekyll to .NET/Blazor architecture with separate API and frontend.
+
+**Current Phase**: Phase 3 - User Story 1 MVP (API Implementation) ✅ Partially Complete
+
+### Implementation Progress
+
+Following the migration plan phases defined in [specs/dotnet-migration/](specs/dotnet-migration/):
+
+- **Phase 1: Foundation** (36/36 tasks) ✅ Complete
+  - All projects, domain models, DTOs, interfaces, extensions
+- **Phase 2: Data Access** (8/17 tasks) 🔄 In Progress
+  - ✅ FrontMatterParser (11 tests passing)
+  - ✅ MarkdownService (19 tests passing)
+  - ✅ FileBasedSectionRepository (7 tests passing)
+  - ✅ FileBasedContentRepository (15 tests passing)
+  - ⏳ RssService, Caching, Entity tests (not started)
+- **Phase 3: API Endpoints** (5/70 tasks) 🔄 In Progress
+  - ✅ All section endpoints (6 endpoints, 8 tests)
+  - ✅ Advanced filtering (2 endpoints, 6 tests)
+  - ⏳ Blazor components, pages, client (not started)
+
+**Test Results**: 52/52 tests passing (100% pass rate)
+
+**What's Working Now**:
+
+✅ **RESTful API** with 14 endpoints, all tested and working  
+✅ **Frontend** - Home page with 8 sections, responsive grid, design system  
+✅ **Components** - SectionCard, ContentItemCard with Tech Hub styling  
+✅ **HTTP Client** - TechHubApiClient with resilience policies  
+✅ **Visual Design** - Complete Tech Hub design system  
+✅ **Images** - All 8 section background images  
+
+**Access Points**:
+
+- Web UI: <http://localhost:5184>
+- API: <http://localhost:5029/api/sections>
+- Swagger: <http://localhost:5029/swagger>
+
+**Next Steps**:
+
+1. Complete Phase 2: RssService, Caching, Entity tests (T045-T051)
+2. Continue Phase 3: Section/content detail pages, filtering, accessibility (T062-T087)
+3. Begin Phase 4: Features implementation (filtering, search, infinite scroll)
+
+See [specs/dotnet-migration/tasks.md](specs/dotnet-migration/tasks.md) for complete task breakdown, [MIGRATIONSTATUS.md](MIGRATIONSTATUS.md) for detailed migration progress, and [README.md](README.md) for user-facing quick start guide.
+
+**IMPORTANT**: The [specs/](specs/) directory contains initial planning documents that may be outdated. Always refer to [MIGRATIONSTATUS.md](MIGRATIONSTATUS.md) for current implementation status and this file (AGENTS.md) for up-to-date development guidance.

@@ -7,6 +7,8 @@
 
 This directory contains **component tests** for Tech Hub Blazor components using **bUnit**. These tests validate component rendering, interactivity, and state management without requiring a browser.
 
+**Implementation being tested**: See [src/TechHub.Web/AGENTS.md](../../src/TechHub.Web/AGENTS.md) for Blazor component patterns.
+
 ## What This Directory Contains
 
 **Test Files**: bUnit test classes that validate Blazor component behavior:
@@ -147,7 +149,7 @@ dotnet test tests/TechHub.Web.Tests --logger "console;verbosity=detailed"
 ## Best Practices
 
 1. **Use bUnit's TestContext** - Inherit from TestContext base class
-2. **Mock injected services** - Use NSubstitute for API clients
+2. **Mock injected services** - Use Moq for API clients
 3. **Test user perspective** - Find elements by CSS selectors, not implementation
 4. **Use WaitForState** - For async component initialization
 5. **Test accessibility** - Verify ARIA labels, semantic HTML

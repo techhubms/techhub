@@ -7,6 +7,8 @@
 
 This directory contains **unit tests** for the Tech Hub Core domain layer using **xUnit**. These tests validate domain models, business logic, and pure functions in complete isolation with no external dependencies.
 
+**Implementation being tested**: See [src/TechHub.Core/AGENTS.md](../../src/TechHub.Core/AGENTS.md) for domain model patterns.
+
 ## What This Directory Contains
 
 **Test Files**: xUnit test classes that validate domain model behavior:

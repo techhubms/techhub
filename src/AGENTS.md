@@ -19,29 +19,23 @@ You are a .NET development specialist for the Tech Hub source code. This directo
 
 ## Critical Development Rules
 
-### Starting/Stopping the Application
+### Starting, Running, and Testing
 
-**CRITICAL**: ALWAYS use the root `./run.ps1` script to start/stop/build/test the ENTIRE website:
+**ALWAYS refer to [Root AGENTS.md](../AGENTS.md#starting--stopping-the-website)** for complete instructions on:
 
-```powershell
-# Start all services (API + Web + Aspire orchestration)
-./run.ps1
+- Starting the website with `./run.ps1`
+- Running all tests with `./run.ps1 -OnlyTests`
+- Interactive debugging with `./run.ps1 -SkipTests`
+- Using Playwright MCP tools for testing
+- Proper terminal management and safety
+- Building/testing individual projects
 
-# The script handles:
-# - Building all projects
-# - Starting services in correct order
-# - Health checks and readiness
-# - Graceful shutdown on Ctrl+C
-```
-
-**For individual project operations only** (not full site):
+**Quick command reference** (see root AGENTS.md for full details):
 
 ```powershell
-# Build single project
-dotnet build src/TechHub.Api/TechHub.Api.csproj
-
-# Test single project
-dotnet test tests/TechHub.Api.Tests/TechHub.Api.Tests.csproj
+./run.ps1                 # Run tests, then keep servers running
+./run.ps1 -OnlyTests      # Run all tests and exit (for verification)
+./run.ps1 -SkipTests      # Skip tests, start servers (for debugging)
 ```
 
 ### ✅ Always Do
@@ -278,120 +272,14 @@ To suppress warnings for specific projects:
    </PropertyGroup>
    ```
 
-## Patterns & Best Practices
+## Shared .NET Patterns
 
-### Minimal API Endpoints
+These patterns apply across all .NET projects. **See project-specific AGENTS.md files** for detailed examples:
 
-Use static methods for endpoint handlers following clean architecture:
-
-```csharp
-// Endpoints/SectionEndpoints.cs
-namespace TechHub.Api.Endpoints;
-
-public static class SectionEndpoints
-{
-    public static void MapSectionEndpoints(this WebApplication app)
-    {
-        var group = app.MapGroup("/api/sections")
-            .WithTags("Sections")
-            .WithOpenApi();
-        
-        group.MapGet("/", GetAllSections)
-            .WithName("GetAllSections")
-            .WithSummary("Get all sections");
-    }
-    
-    private static async Task<IResult> GetAllSections(
-        ISectionRepository repository,
-        CancellationToken ct)
-    {
-        var sections = await repository.GetAllSectionsAsync(ct);
-        return Results.Ok(sections);
-    }
-}
-```
-
-### Domain Models with Records
-
-Use records for immutable domain models:
-
-```csharp
-namespace TechHub.Core.Models;
-
-/// <summary>
-/// Represents a content item (news, blog, video, etc.)
-/// </summary>
-public class ContentItem
-{
-    /// <summary>
-    /// URL-friendly slug derived from filename
-    /// </summary>
-    public required string Slug { get; init; }
-    
-    public required string Title { get; init; }
-    public required long DateEpoch { get; init; }
-    public required string Collection { get; init; }
-    public required IReadOnlyList<string> Categories { get; init; }
-    public required IReadOnlyList<string> Tags { get; init; }
-    
-    // ... other properties
-}
-```
-
-### Repository Pattern
-
-Configuration-based repository (sections loaded from appsettings.json):
-
-```csharp
-namespace TechHub.Infrastructure.Repositories;
-
-public sealed class ConfigurationBasedSectionRepository : ISectionRepository
-{
-    private readonly IReadOnlyList<Section> _sections;
-    
-    public ConfigurationBasedSectionRepository(IOptions<AppSettings> settings)
-    {
-        ArgumentNullException.ThrowIfNull(settings);
-        _sections = settings.Value.Content.Sections
-            .Select(kvp => ConvertToSection(kvp.Key, kvp.Value))
-            .ToList()
-            .AsReadOnly();
-    }
-    
-    public Task<IReadOnlyList<Section>> InitializeAsync(CancellationToken ct = default)
-    {
-        return Task.FromResult(_sections);
-    }
-    
-    public Task<IReadOnlyList<Section>> GetAllAsync(CancellationToken ct = default)
-    {
-        return Task.FromResult(_sections);
-    }
-    
-    private static Section ConvertToSection(string key, SectionConfig config)
-    {
-        return new Section
-        {
-            Id = key,
-            Title = config.Title,
-            Description = config.Description,
-            Url = config.Url,
-            Category = config.Category,
-            BackgroundImage = config.Image,
-            Collections = config.Collections.Select(c => new Collection
-            {
-                Title = c.Title,
-                Collection = c.Collection,
-                Url = c.Url,
-                Description = c.Description,
-                IsCustom = c.IsCustom
-            }).ToList()
-        };
-    }
-}
-```
-
-**CRITICAL**: All `IContentRepository` methods **MUST** return content sorted by `DateEpoch` in **descending order** (newest first). This sorting is applied at the repository layer before caching.
+- **[TechHub.Api/AGENTS.md](TechHub.Api/AGENTS.md)** - Minimal API endpoint patterns
+- **[TechHub.Core/AGENTS.md](TechHub.Core/AGENTS.md)** - Domain model patterns  
+- **[TechHub.Infrastructure/AGENTS.md](TechHub.Infrastructure/AGENTS.md)** - Repository and data access patterns
+- **[TechHub.Web/AGENTS.md](TechHub.Web/AGENTS.md)** - Blazor component patterns
 
 ### Dependency Injection Service Lifetimes
 
@@ -460,372 +348,9 @@ builder.Services.AddHttpClient<ITechHubApiClient, TechHubApiClient>(client =>
 ✅ **CORRECT**: Singleton for stateless services  
 ✅ **CORRECT**: Use Options pattern for configuration
 
-### Blazor Components with Code-Behind
-
-Separate complex component logic using code-behind pattern:
-
-```razor
-@* Components/Pages/SectionIndex.razor *@
-@page "/{SectionUrl}"
-@inherits SectionIndexBase
-
-<PageTitle>@Section?.Title | Tech Hub</PageTitle>
-
-<HeadContent>
-    <meta name="description" content="@Section?.Description" />
-    <link rel="canonical" href="https://tech.hub.ms/@SectionUrl" />
-</HeadContent>
-
-@if (Section is not null)
-{
-    <SectionHeader Section="@Section" />
-    <SectionNav Section="@Section" ActiveCollection="@null" />
-    
-    <main id="content" role="main">
-        <FilterControls @bind-FilteredItems="FilteredItems" AllItems="@AllItems" />
-        <ContentList Items="@FilteredItems" />
-    </main>
-}
-```
-
-```csharp
-// Components/Pages/SectionIndex.razor.cs
-namespace TechHub.Web.Components.Pages;
-
-public class SectionIndexBase : ComponentBase
-{
-    [Parameter] public required string SectionUrl { get; set; }
-    
-    [Inject] protected ITechHubApiClient ApiClient { get; set; } = default!;
-    [Inject] protected NavigationManager Navigation { get; set; } = default!;
-    
-    protected SectionDto? Section { get; set; }
-    protected IReadOnlyList<ContentItemDto> AllItems { get; set; } = [];
-    protected IReadOnlyList<ContentItemDto> FilteredItems { get; set; } = [];
-    
-    protected override async Task OnInitializedAsync()
-    {
-        Section = await ApiClient.GetSectionAsync(SectionUrl);
-        if (Section is null)
-        {
-            Navigation.NavigateTo("/404");
-            return;
-        }
-        
-        AllItems = await ApiClient.GetContentAsync(SectionUrl);
-        FilteredItems = AllItems;
-    }
-}
-```
-
 ### Markdown Frontmatter Mapping
 
-**Critical**: Understanding how markdown frontmatter maps to domain model properties:
-
-```markdown
----
-title: "Example Article Title"
-author: "Author Name"
-date: 2026-01-02
-categories: [ai, github-copilot]
-tags: [machine-learning, azure-openai]
-canonical_url: "https://example.com/article"  # Maps to ExternalUrl property
-viewing_mode: "external"                      # "internal" or "external" (default: "external")
-video_id: "dQw4w9WgXcQ"                       # YouTube video ID (not extracted from URLs)
-alt_collection: "ghc-features"                # For subfolder organization (_videos/ghc-features/, _videos/vscode-updates/)
----
-
-This is the excerpt that appears in list views.
-
-<!--excerpt_end-->
-
-# Full Article Content
-
-The rest of the markdown content rendered to HTML...
-```
-
-**Property Mappings**:
-
-- `title` → `Title`
-- `author` → `Author`
-- `date` → `DateEpoch` (converted to Unix timestamp)
-- `categories` → `Categories` (array)
-- `tags` → `Tags` (normalized to lowercase, hyphen-separated)
-- `canonical_url` → `ExternalUrl` (original source URL)
-- `viewing_mode` → `ViewingMode` ("internal" or "external")
-- `video_id` → `VideoId` (YouTube video identifier)
-- `alt_collection` → `AltCollection` (subfolder categorization)
-- Filename → `Slug` (e.g., `2025-01-15-article.md` → `2025-01-15-article`)
-- Content before `<!--excerpt_end-->` → `Excerpt`
-- Full markdown → `RenderedHtml` (rendered with Markdig)
-
-### Dependency Injection Configuration
-
-```csharp
-// Api/Program.cs - Dependency Registration
-var builder = WebApplication.CreateBuilder(args);
-
-// Add Aspire service defaults (OpenTelemetry, health checks, resilience)
-builder.AddServiceDefaults();
-
-// Configuration
-builder.Services.Configure<ContentOptions>(
-    builder.Configuration.GetSection("Content"));
-
-// Infrastructure services
-builder.Services.AddMemoryCache();
-builder.Services.AddSingleton(TimeProvider.System);
-
-// Repositories (file-based)
-builder.Services.AddSingleton<ISectionRepository, FileSectionRepository>();
-builder.Services.AddSingleton<IContentRepository, FileContentRepository>();
-
-// Services
-builder.Services.AddSingleton<IMarkdownProcessor, MarkdownProcessor>();
-builder.Services.AddScoped<IRssGenerator, RssGenerator>();
-builder.Services.AddScoped<IStructuredDataService, StructuredDataService>();
-
-// API documentation
-builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddOpenApi();
-
-// CORS for Blazor frontend
-builder.Services.AddCors(options =>
-{
-    options.AddDefaultPolicy(policy =>
-        policy.WithOrigins(builder.Configuration["AllowedOrigins"] ?? "https://localhost:5173")
-              .AllowAnyMethod()
-              .AllowAnyHeader());
-});
-```
-
-## Development Commands
-
-**Building**:
-
-```bash
-# Debug build (default)
-
-dotnet build
-
-# Release build
-
-dotnet build -c Release
-
-# Restore packages
-
-dotnet restore
-
-# Clean build artifacts
-
-dotnet clean
-```
-
-**Running**:
-
-```bash
-# Start with Aspire orchestration
-
-dotnet run --project src/TechHub.AppHost
-
-# Aspire dashboard: https://localhost:15888
-
-# API: https://localhost:5001
-
-# Web: https://localhost:5173
-```
-
-**Testing**:
-
-```bash
-# Run all tests
-
-dotnet test
-
-# Run specific project
-
-dotnet test tests/TechHub.Api.Tests
-
-# With coverage
-
-dotnet test --collect:"XPlat Code Coverage"
-```
-
-See [tests/AGENTS.md](/tests/AGENTS.md) for comprehensive testing guidance.
-
-## Project-Specific Patterns
-
-### TechHub.Core (Domain Models)
-
-**Purpose**: Domain models, DTOs, and interfaces (no dependencies)
-
-**Patterns**:
-
-- Use `record` for immutable data
-- Use `required` for mandatory properties
-- Use `init` accessors for immutability
-- Document public APIs with XML comments
-- No framework dependencies (pure .NET)
-
-**Example**:
-
-```csharp
-/// <summary>
-/// Represents a section (thematic grouping of content)
-/// </summary>
-public class Section
-{
-    /// <summary>
-    /// URL-friendly name (lowercase with hyphens, e.g., "ai", "github-copilot")
-    /// </summary>
-    public required string Name { get; init; }
-    
-    public required string Title { get; init; }
-    public required string Description { get; init; }
-    public required string Url { get; init; }
-    public required string Category { get; init; }
-    public required string BackgroundImage { get; init; }
-    public required IReadOnlyList<CollectionReference> Collections { get; init; }
-    
-    /// <summary>
-    /// Validates that all required properties are correctly formatted
-    /// </summary>
-    public void Validate()
-    {
-        if (string.IsNullOrWhiteSpace(Name))
-            throw new ArgumentException("Section name cannot be empty", nameof(Name));
-        if (!Name.All(c => char.IsLower(c) || c == '-'))
-            throw new ArgumentException("Section name must be lowercase with hyphens only", nameof(Name));
-        if (!Url.StartsWith('/'))
-            throw new ArgumentException("Section URL must start with '/'", nameof(Url));
-        if (Collections.Count == 0)
-            throw new ArgumentException("Section must have at least one collection", nameof(Collections));
-    }
-}
-```
-
-### TechHub.Infrastructure (Data Access)
-
-**Purpose**: Repository implementations, services, file I/O
-
-**Patterns**:
-
-- Implement interfaces from TechHub.Core
-- Use `IOptions<T>` for configuration
-- Use `IMemoryCache` for caching
-- Use `ILogger<T>` for logging
-- Handle errors gracefully with logging
-
-**Example**:
-
-```csharp
-public class FileContentRepository : IContentRepository
-{
-    private readonly ContentOptions _options;
-    private readonly IMemoryCache _cache;
-    private readonly ILogger<FileContentRepository> _logger;
-    
-    public FileContentRepository(
-        IOptions<ContentOptions> options,
-        IMemoryCache cache,
-        ILogger<FileContentRepository> logger)
-    {
-        _options = options.Value;
-        _cache = cache;
-        _logger = logger;
-    }
-    
-    // Implementation with caching, error handling, logging
-}
-```
-
-### TechHub.Api (REST API)
-
-**Purpose**: HTTP endpoints, minimal APIs, Swagger documentation
-
-**Patterns**:
-
-- Use static endpoint mapper methods
-- Use endpoint groups for organization
-- Add OpenAPI documentation (`.WithOpenApi()`)
-- Use descriptive endpoint names (`.WithName()`)
-- Use tag grouping (`.WithTags()`)
-- Return `IResult` for consistent responses
-- Use dependency injection for repositories
-
-**Example**:
-
-```csharp
-public static class SectionEndpoints
-{
-    public static void MapSectionEndpoints(this WebApplication app)
-    {
-        var group = app.MapGroup("/api/sections")
-            .WithTags("Sections")
-            .WithOpenApi();
-        
-        group.MapGet("/", GetAllSections)
-            .WithName("GetAllSections")
-            .WithSummary("Get all sections");
-    }
-}
-```
-
-### TechHub.Web (Blazor Frontend)
-
-**Purpose**: Blazor components, pages, client-side interactions
-
-**CRITICAL**: Read [TechHub.Web/AGENTS.md](TechHub.Web/AGENTS.md) for complete Blazor component patterns, design system colors, and styling conventions.
-
-**Key Patterns**:
-
-- **Design System**: Use Tech Hub colors from `jekyll/_sass/_colors.scss` (primary: #1f6feb, purple: #bd93f9, navy: #1a1a2e)
-- **Image Paths**: Use `/images/` convention (NOT `/assets/`) - e.g., `/images/section-backgrounds/ai.jpg`
-- **TechHubApiClient**: Use typed HTTP client for all API calls
-- **Server-Side Rendering**: Initial content must be SSR for SEO
-- **Progressive Enhancement**: Core functionality works without JavaScript
-
-**Example**:
-
-```razor
-@page "/sections/{id}"
-@inject TechHubApiClient ApiClient
-@inject ILogger<SectionPage> Logger
-
-@if (section == null)
-{
-    <p>Loading...</p>
-}
-else if (errorMessage != null)
-{
-    <div class="error">@errorMessage</div>
-}
-else
-{
-    <SectionCard Section="@section" />
-}
-
-@code {
-    [Parameter]
-    public string Id { get; set; } = string.Empty;
-    
-    private SectionDto? section;
-    private string? errorMessage;
-    
-    protected override async Task OnInitializedAsync()
-    {
-        try
-        {
-            section = await ApiClient.GetSectionAsync(Id);
-        }
-        catch (Exception ex)
-        {
-            Logger.LogError(ex, "Failed to load section {SectionId}", Id);
-            errorMessage = "Unable to load section. Please try again.";
-        }
-    }
-}
-```
+**See [TechHub.Core/AGENTS.md](TechHub.Core/AGENTS.md#markdown-frontmatter-mapping)** for complete mapping documentation showing how markdown frontmatter fields map to domain model properties.
 
 ## Documentation Resources
 
@@ -856,16 +381,20 @@ mcp_context7_query-docs(libraryID: "/xunit/xunit", query: "theories and data-dri
 
 **Tech Hub Documentation**:
 
-- **[Root AGENTS.md](/AGENTS.md)** - Framework-agnostic principles, .NET Tech Stack, Commands, Patterns & Examples
-- **[tests/AGENTS.md](/tests/AGENTS.md)** - Testing strategies and patterns
-- **[Feature Specifications](/specs/)** - Complete feature requirements
-- **[API Specification](/docs/api-specification.md)** - REST API documentation
+- **[Root AGENTS.md](../AGENTS.md)** - AI Workflow, starting/stopping website, repository-wide principles
+- **[TechHub.Api/AGENTS.md](TechHub.Api/AGENTS.md)** - API development patterns
+- **[TechHub.Core/AGENTS.md](TechHub.Core/AGENTS.md)** - Domain model patterns
+- **[TechHub.Infrastructure/AGENTS.md](TechHub.Infrastructure/AGENTS.md)** - Repository and data access patterns
+- **[TechHub.Web/AGENTS.md](TechHub.Web/AGENTS.md)** - Blazor component patterns
+- **[tests/AGENTS.md](../tests/AGENTS.md)** - Testing strategies and patterns
+- **[docs/AGENTS.md](../docs/AGENTS.md)** - Documentation maintenance guidelines
 
 ## Related Documentation
 
-- **[tests/AGENTS.md](/tests/AGENTS.md)** - Testing strategies (test code is also source code!)
-- **[Root AGENTS.md](/AGENTS.md)** - Global principles, AI workflow, .NET Tech Stack, Commands, Patterns
-- **[docs/AGENTS.md](/docs/AGENTS.md)** - Documentation maintenance guidelines
+- **[Root AGENTS.md](../AGENTS.md)** - AI workflow, starting/stopping website, principles
+- **[tests/AGENTS.md](../tests/AGENTS.md)** - Testing strategies (test code is also source code!)
+- **[docs/AGENTS.md](../docs/AGENTS.md)** - Documentation maintenance
+- **Project-specific AGENTS.md files**: See each subdirectory for detailed patterns
 
 ---
 

@@ -2,6 +2,8 @@
 
 End-to-end tests using Playwright to verify complete user workflows and functionality.
 
+**Implementation being tested**: See [src/TechHub.Web/AGENTS.md](../../src/TechHub.Web/AGENTS.md) for Blazor component patterns and [src/TechHub.Api/AGENTS.md](../../src/TechHub.Api/AGENTS.md) for API endpoint patterns.
+
 ## Prerequisites
 
 1. **Playwright browsers must be installed**:

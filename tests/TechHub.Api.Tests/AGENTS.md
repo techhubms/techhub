@@ -7,6 +7,8 @@
 
 This directory contains **integration tests** for the Tech Hub REST API using **xUnit** and **WebApplicationFactory**. These tests validate API endpoints, HTTP contracts, and request/response behavior against a real (in-memory) ASP.NET Core application.
 
+**Implementation being tested**: See [src/TechHub.Api/AGENTS.md](../../src/TechHub.Api/AGENTS.md) for endpoint patterns.
+
 ## What This Directory Contains
 
 **Test Files**: xUnit test classes that validate API endpoint behavior:

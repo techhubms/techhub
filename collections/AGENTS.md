@@ -84,7 +84,7 @@ This directory contains the content collections for the Tech Hub site. Each coll
 
 **Configuration:**
 
-- Collections are defined in configuration files (`_config.yml` in Jekyll, similar in other frameworks)
+- Collections are defined in `appsettings.json` in the .NET application
 - Each collection has its own processing rules and display logic
 - Never hardcode collection names - they are configuration-driven
 

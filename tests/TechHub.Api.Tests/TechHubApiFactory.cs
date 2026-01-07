@@ -2,7 +2,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc.Testing;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
-using NSubstitute;
+using Moq;
 using System.Collections.Concurrent;
 using TechHub.Core.Interfaces;
 using TechHub.Core.Models;
@@ -66,8 +66,8 @@ public class TechHubApiFactory : WebApplicationFactory<Program>
         if (!_useMocks)
         {
             _useMocks = true;
-            MockSectionRepository = Substitute.For<ISectionRepository>();
-            MockContentRepository = Substitute.For<IContentRepository>();
+            MockSectionRepository = new Mock<ISectionRepository>().Object;
+            MockContentRepository = new Mock<IContentRepository>().Object;
         }
 
         var sections = new List<Section>
@@ -101,17 +101,18 @@ public class TechHubApiFactory : WebApplicationFactory<Program>
             }
         };
 
-        MockSectionRepository!.GetAllAsync(Arg.Any<CancellationToken>())
-            .Returns(Task.FromResult<IReadOnlyList<Section>>(sections));
+        var mockRepo = Mock.Get(MockSectionRepository!);
+        mockRepo.Setup(r => r.GetAllAsync(It.IsAny<CancellationToken>()))
+            .ReturnsAsync(sections);
 
-        MockSectionRepository!.GetByNameAsync("ai", Arg.Any<CancellationToken>())
-            .Returns(Task.FromResult<Section?>(sections[0]));
+        mockRepo.Setup(r => r.GetByNameAsync("ai", It.IsAny<CancellationToken>()))
+            .ReturnsAsync(sections[0]);
 
-        MockSectionRepository!.GetByNameAsync("github-copilot", Arg.Any<CancellationToken>())
-            .Returns(Task.FromResult<Section?>(sections[1]));
+        mockRepo.Setup(r => r.GetByNameAsync("github-copilot", It.IsAny<CancellationToken>()))
+            .ReturnsAsync(sections[1]);
 
-        MockSectionRepository!.GetByNameAsync("invalid", Arg.Any<CancellationToken>())
-            .Returns(Task.FromResult<Section?>(null));
+        mockRepo.Setup(r => r.GetByNameAsync("invalid", It.IsAny<CancellationToken>()))
+            .ReturnsAsync((Section?)null);
     }
 
     /// <summary>
@@ -122,8 +123,8 @@ public class TechHubApiFactory : WebApplicationFactory<Program>
         if (!_useMocks)
         {
             _useMocks = true;
-            MockSectionRepository = Substitute.For<ISectionRepository>();
-            MockContentRepository = Substitute.For<IContentRepository>();
+            MockSectionRepository = new Mock<ISectionRepository>().Object;
+            MockContentRepository = new Mock<IContentRepository>().Object;
         }
 
         var content = new List<ContentItem>
@@ -182,36 +183,33 @@ public class TechHubApiFactory : WebApplicationFactory<Program>
             }
         };
 
+        var mockRepo = Mock.Get(MockContentRepository!);
+        
         // GetAllAsync
-        MockContentRepository!.GetAllAsync(Arg.Any<CancellationToken>())
-            .Returns(Task.FromResult<IReadOnlyList<ContentItem>>(content));
+        mockRepo.Setup(r => r.GetAllAsync(It.IsAny<CancellationToken>()))
+            .ReturnsAsync(content);
 
         // GetByCollectionAsync
-        MockContentRepository!.GetByCollectionAsync("news", Arg.Any<CancellationToken>())
-            .Returns(Task.FromResult<IReadOnlyList<ContentItem>>(
-                content.Where(c => c.CollectionName == "news").ToList()));
+        mockRepo.Setup(r => r.GetByCollectionAsync("news", It.IsAny<CancellationToken>()))
+            .ReturnsAsync(content.Where(c => c.CollectionName == "news").ToList());
 
-        MockContentRepository!.GetByCollectionAsync("blogs", Arg.Any<CancellationToken>())
-            .Returns(Task.FromResult<IReadOnlyList<ContentItem>>(
-                content.Where(c => c.CollectionName == "blogs").ToList()));
+        mockRepo.Setup(r => r.GetByCollectionAsync("blogs", It.IsAny<CancellationToken>()))
+            .ReturnsAsync(content.Where(c => c.CollectionName == "blogs").ToList());
 
-        MockContentRepository!.GetByCollectionAsync("videos", Arg.Any<CancellationToken>())
-            .Returns(Task.FromResult<IReadOnlyList<ContentItem>>(
-                content.Where(c => c.CollectionName == "videos").ToList()));
+        mockRepo.Setup(r => r.GetByCollectionAsync("videos", It.IsAny<CancellationToken>()))
+            .ReturnsAsync(content.Where(c => c.CollectionName == "videos").ToList());
 
         // GetByCategoryAsync
-        MockContentRepository!.GetByCategoryAsync("AI", Arg.Any<CancellationToken>())
-            .Returns(Task.FromResult<IReadOnlyList<ContentItem>>(
-                content.Where(c => c.Categories.Contains("AI")).ToList()));
+        mockRepo.Setup(r => r.GetByCategoryAsync("AI", It.IsAny<CancellationToken>()))
+            .ReturnsAsync(content.Where(c => c.Categories.Contains("AI")).ToList());
 
-        MockContentRepository!.GetByCategoryAsync("GitHub Copilot", Arg.Any<CancellationToken>())
-            .Returns(Task.FromResult<IReadOnlyList<ContentItem>>(
-                content.Where(c => c.Categories.Contains("GitHub Copilot")).ToList()));
+        mockRepo.Setup(r => r.GetByCategoryAsync("GitHub Copilot", It.IsAny<CancellationToken>()))
+            .ReturnsAsync(content.Where(c => c.Categories.Contains("GitHub Copilot")).ToList());
 
         // GetAllTagsAsync
         var allTags = content.SelectMany(c => c.Tags).Distinct().ToList();
-        MockContentRepository!.GetAllTagsAsync(Arg.Any<CancellationToken>())
-            .Returns(Task.FromResult<IReadOnlyList<string>>(allTags));
+        mockRepo.Setup(r => r.GetAllTagsAsync(It.IsAny<CancellationToken>()))
+            .ReturnsAsync(allTags);
     }
 }
 

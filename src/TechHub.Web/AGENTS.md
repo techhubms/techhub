@@ -3,11 +3,22 @@
 > **AI CONTEXT**: This is a **LEAF** context file for `src/TechHub.Web/`. It complements the [Root AGENTS.md](../../AGENTS.md) and [src/AGENTS.md](../AGENTS.md).
 > **RULE**: Global rules (Timezone, Performance) in Root AGENTS.md apply **IN ADDITION** to local rules. Follow **BOTH**.
 
+## Overview
+
+This project implements the Blazor frontend with server-side rendering (SSR) and optional WebAssembly interactivity. It consumes the TechHub.Api through TechHubApiClient and renders content using the Tech Hub design system.
+
+**When to read this file**: When creating or modifying Blazor components, pages, layouts, or understanding frontend architecture.
+
+**Testing this code**:
+
+- Component tests: See [tests/TechHub.Web.Tests/AGENTS.md](../../tests/TechHub.Web.Tests/AGENTS.md) for bUnit patterns
+- E2E tests: See [tests/TechHub.E2E.Tests/AGENTS.md](../../tests/TechHub.E2E.Tests/AGENTS.md) for Playwright patterns
+
 ## Critical Rules
 
 ### ✅ Always Do
 
-- **Reference Jekyll _sass for design system** - Colors, typography, and spacing from `jekyll/_sass/_colors.scss` and `jekyll/_sass/_settings.scss`
+- **Use Tech Hub design system** - Colors, typography, and spacing defined in `wwwroot/css/site.css` (derived from legacy Jekyll _sass)
 - **Use Tech Hub color palette** - #1f6feb (primary blue), #bd93f9 (bright purple), #1a1a2e (dark navy), #28a745 (secondary green)
 - **Server-side render initial content** - Use SSR for SEO and performance
 - **Progressive enhancement** - Core functionality works without JavaScript
@@ -97,8 +108,6 @@ wwwroot/styles.css            # Main file - imports all modules
 
 ### Typography
 
-**Source**: `jekyll/_sass/_settings.scss`
-
 **Font Stack**:
 
 ```css
@@ -112,7 +121,7 @@ font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
 
 **Spacing**: Use consistent spacing units (0.25rem, 0.5rem, 1rem, 1.5rem, 2rem, 3rem)
 
-**Breakpoints** (from `jekyll/_sass/_settings.scss`):
+**Breakpoints**:
 
 - Mobile: < 768px
 - Tablet: 768px - 1024px
@@ -123,7 +132,7 @@ font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
 **Content Widths**:
 
 - **Listing pages** (home, section pages): Full-width responsive grid (no max-width constraint)
-- **Article detail pages**: 800px max-width for optimal reading (matching Jekyll $content-width)
+- **Article detail pages**: 800px max-width for optimal reading
 - **Grid columns**: 1 column (mobile), 2 columns (tablet), 3 columns (desktop)
 
 **Article Detail Page Layout**:
@@ -843,4 +852,3 @@ else if (data != null)
 - **[Root AGENTS.md](../../AGENTS.md)** - AI Assistant Workflow, .NET Tech Stack, Patterns & Examples, performance architecture, timezone handling
 - **[src/AGENTS.md](../AGENTS.md)** - .NET development patterns across all src/ projects
 - **[tests/TechHub.Web.Tests/AGENTS.md](../../tests/TechHub.Web.Tests/AGENTS.md)** - bUnit component testing patterns
-- **[Jekyll _sass](../../jekyll/_sass/)** - Source design tokens (colors, typography, spacing)

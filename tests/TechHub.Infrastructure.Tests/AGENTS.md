@@ -7,6 +7,8 @@
 
 This directory contains **unit and integration tests** for the Tech Hub Infrastructure layer using **xUnit**. These tests validate repositories, services, parsers, and data access logic with real file operations.
 
+**Implementation being tested**: See [src/TechHub.Infrastructure/AGENTS.md](../../src/TechHub.Infrastructure/AGENTS.md) for repository and service patterns.
+
 ## What This Directory Contains
 
 **Test Files**: xUnit test classes that validate infrastructure behavior:
