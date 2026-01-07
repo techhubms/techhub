@@ -36,6 +36,7 @@ public static class ContentItemExtensions
             Excerpt = item.Excerpt,
             ExternalUrl = item.ExternalUrl,
             VideoId = item.VideoId,
+            ViewingMode = item.ViewingMode,
             Url = item.GetUrlInSection(sectionUrl)
         };
     }
@@ -68,6 +69,7 @@ public static class ContentItemExtensions
             Excerpt = item.Excerpt,
             ExternalUrl = item.ExternalUrl,
             VideoId = item.VideoId,
+            ViewingMode = item.ViewingMode,
             Url = item.GetUrlInSection(sectionUrl)
         };
     }

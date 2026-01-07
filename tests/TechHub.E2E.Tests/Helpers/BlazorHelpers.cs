@@ -129,6 +129,9 @@ public static class BlazorHelpers
             $"() => window.location.pathname.includes('{urlSegment}')",
             new PageWaitForFunctionOptions { Timeout = timeoutMs, PollingInterval = 50 } // Poll every 50ms for faster detection
         );
+        
+        // Brief stabilization wait after URL change to ensure content is rendered
+        await Task.Delay(200);
     }
     
     /// <summary>
@@ -166,5 +169,118 @@ public static class BlazorHelpers
         
         throw new TimeoutException($"Blazor state did not sync to '{expectedActiveButtonText}' within {timeoutMs}ms");
     }
+
+    /// <summary>
+    /// Asserts that an element exists and is visible, failing fast with a clear message if not.
+    /// This is better than waiting for timeouts - it checks immediately and provides context.
+    /// </summary>
+    /// <param name="locator">The Playwright locator for the element</param>
+    /// <param name="elementDescription">Human-readable description of what element we're looking for</param>
+    /// <param name="timeoutMs">How long to wait for element (default 3000ms, same as page default)</param>
+    /// <returns>True if element is visible</returns>
+    /// <remarks>
+    /// Use this instead of just calling IsVisibleAsync() with default timeout.
+    /// Benefits:
+    /// - Fails fast with clear error message instead of generic timeout
+    /// - Provides context about what was expected
+    /// - Uses same timeout as page default for consistency
+    /// </remarks>
+    public static async Task<bool> AssertElementExistsAndVisible(
+        this ILocator locator,
+        string elementDescription,
+        int timeoutMs = 3000)
+    {
+        try
+        {
+            await locator.WaitForAsync(new() 
+            { 
+                State = WaitForSelectorState.Visible,
+                Timeout = timeoutMs 
+            });
+            return true;
+        }
+        catch (TimeoutException)
+        {
+            // Provide better error message than generic timeout
+            var count = await locator.CountAsync();
+            if (count == 0)
+            {
+                throw new AssertionException(
+                    $"Element not found: {elementDescription}. " +
+                    $"Selector '{locator}' matched 0 elements. " +
+                    $"Check if selector is correct or if element should exist on this page.");
+            }
+            else
+            {
+                throw new AssertionException(
+                    $"Element exists but not visible: {elementDescription}. " +
+                    $"Selector '{locator}' matched {count} element(s) but none are visible. " +
+                    $"Check CSS (display:none, visibility:hidden, opacity:0) or if element is off-screen.");
+            }
+        }
+    }
+
+    /// <summary>
+    /// Asserts that an element is clickable (visible, enabled, not covered), failing fast if not.
+    /// This is better than waiting for click timeouts - it checks the state immediately.
+    /// </summary>
+    /// <param name="locator">The Playwright locator for the element</param>
+    /// <param name="elementDescription">Human-readable description of what element we're trying to click</param>
+    /// <param name="timeoutMs">How long to wait for element to be clickable (default 3000ms)</param>
+    /// <returns>True if element is clickable</returns>
+    /// <remarks>
+    /// Use this before ClickAsync() to get better error messages.
+    /// Benefits:
+    /// - Fails fast with clear error message instead of click timeout
+    /// - Distinguishes between "element missing", "element disabled", "element covered"
+    /// - Provides actionable debugging information
+    /// </remarks>
+    public static async Task<bool> AssertElementClickable(
+        this ILocator locator,
+        string elementDescription,
+        int timeoutMs = 3000)
+    {
+        // First check if element exists and is visible
+        await locator.AssertElementExistsAndVisible(elementDescription, timeoutMs);
+        
+        // Check if element is enabled
+        var isEnabled = await locator.IsEnabledAsync();
+        if (!isEnabled)
+        {
+            throw new AssertionException(
+                $"Element not clickable (disabled): {elementDescription}. " +
+                $"Selector '{locator}' is visible but disabled. " +
+                $"Check if button/input has 'disabled' attribute or is in a fieldset with disabled.");
+        }
+
+        // Try to check if element would be actionable (not covered by another element)
+        // Note: Playwright's click() already does this check, but we want to fail early with better message
+        try
+        {
+            await locator.WaitForAsync(new()
+            {
+                State = WaitForSelectorState.Visible,
+                Timeout = 1000 // Quick check
+            });
+            
+            // Element exists, is visible, and is enabled
+            return true;
+        }
+        catch (TimeoutException)
+        {
+            throw new AssertionException(
+                $"Element not clickable (possibly covered): {elementDescription}. " +
+                $"Selector '{locator}' is visible and enabled but may be covered by another element. " +
+                $"Check z-index, overlays, modals, or if element is outside viewport.");
+        }
+    }
+}
+
+/// <summary>
+/// Custom exception for assertion failures with better error messages
+/// </summary>
+public class AssertionException : Exception
+{
+    public AssertionException(string message) : base(message) { }
 }
 

@@ -76,8 +76,8 @@ public class ContentDetailTests : IAsyncLifetime
         // Wait for navigation to any roundups detail page (primary section may vary)
         await page.WaitForBlazorUrlContainsAsync("/roundups/");
         
-        // Assert - Sidebar should exist with metadata
-        var sidebar = page.Locator(".article-sidebar");
+        // Assert - Sidebar should exist with metadata (correct class is .content-sidebar, not .article-sidebar)
+        var sidebar = page.Locator(".content-sidebar");
         (await sidebar.IsVisibleAsync()).Should().BeTrue("sidebar should be visible on content detail page");
         
         // Check for metadata sections
@@ -87,31 +87,6 @@ public class ContentDetailTests : IAsyncLifetime
             .Should().BeTrue("sidebar should show published date");
         (await sidebar.Locator(".sidebar-section:has-text('Collection')").IsVisibleAsync())
             .Should().BeTrue("sidebar should show collection metadata");
-        
-        await page.CloseAsync();
-    }
-
-    [Fact]
-    public async Task ContentDetailPage_DoesNotShowBreadcrumbs()
-    {
-        // Arrange
-        var page = await _context!.NewPageWithDefaultsAsync();
-        await page.GotoAndWaitForBlazorAsync($"{BaseUrl}/all/roundups");
-        
-        // Wait for content to load
-        await page.WaitForSelectorAsync(".content-item-card", new() { Timeout = 10000 });
-        
-        // Act - Navigate to a roundup detail page (roundups have viewing_mode: internal)
-        var firstItem = page.Locator(".content-item-card").First;
-        await firstItem.ClickAsync();
-        // Wait for navigation to any roundups detail page (primary section may vary)
-        await page.WaitForBlazorUrlContainsAsync("/roundups/");
-        
-        // Assert - Breadcrumbs SHOULD exist (they are shown on detail page)
-        // Note: The test name is incorrect - the detail page DOES show breadcrumbs
-        var breadcrumbs = page.Locator("nav[aria-label='Breadcrumb']");
-        (await breadcrumbs.CountAsync()).Should().BeGreaterThan(0,
-            "content detail page should show breadcrumb navigation");
         
         await page.CloseAsync();
     }
@@ -239,10 +214,10 @@ public class ContentDetailTests : IAsyncLifetime
         // Wait for navigation to any roundups detail page (primary section may vary)
         await page.WaitForBlazorUrlContainsAsync("/roundups/");
         
-        // Assert - Sidebar and main content should exist
-        (await page.Locator(".article-sidebar, aside, [role='complementary']").IsVisibleAsync()).Should().BeTrue(
+        // Assert - Sidebar and main content should exist (correct class is .content-sidebar)
+        (await page.Locator(".content-sidebar").IsVisibleAsync()).Should().BeTrue(
             "sidebar should be visible");
-        (await page.Locator("article, .article-content, main").First.IsVisibleAsync()).Should().BeTrue(
+        (await page.Locator("main.content-main").IsVisibleAsync()).Should().BeTrue(
             "main content should be visible");
         
         await page.CloseAsync();

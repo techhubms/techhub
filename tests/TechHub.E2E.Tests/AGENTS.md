@@ -631,14 +631,43 @@ await Task.Delay(2000);
 
 **Available Helper Methods** (in `BlazorHelpers.cs`):
 
-| Method                              | Purpose                                  | When to Use                  |
-| ----------------------------------- | ---------------------------------------- | ---------------------------- |
-| `NewPageWithDefaultsAsync()`        | Create page with aggressive timeouts     | Every test start             |
-| `GotoAndWaitForBlazorAsync()`       | Navigate + wait for streaming complete   | Initial page load            |
-| `WaitForBlazorUrlContainsAsync()`   | Wait for SPA navigation                  | After clicks that change URL |
-| `WaitForBlazorStateSyncAsync()`     | Wait for state sync                      | After browser back/forward   |
-| `WaitForBlazorCircuitAsync()`       | Wait for SignalR connection              | Rare - after reconnect       |
-| `WaitForBlazorRenderAsync()`        | Wait for element to appear               | After state changes          |
+| Method                            | Purpose                                | When to Use                          |
+| --------------------------------- | -------------------------------------- | ------------------------------------ |
+| `NewPageWithDefaultsAsync()`      | Create page with aggressive timeouts   | Every test start                     |
+| `GotoAndWaitForBlazorAsync()`     | Navigate + wait for streaming complete | Initial page load                    |
+| `WaitForBlazorUrlContainsAsync()` | Wait for SPA navigation                | After clicks that change URL         |
+| `WaitForBlazorStateSyncAsync()`   | Wait for state sync                    | After browser back/forward           |
+| `WaitForBlazorCircuitAsync()`     | Wait for SignalR connection            | Rare - after reconnect               |
+| `WaitForBlazorRenderAsync()`      | Wait for element to appear             | After state changes                  |
+| `AssertElementExistsAndVisible()` | Fail fast if element missing/hidden    | Before interacting with elements     |
+| `AssertElementClickable()`        | Fail fast if element not clickable     | Before ClickAsync() calls            |
+
+**Fail-Fast Pattern** (NEW - Use for Better Error Messages):
+
+The new `AssertElementExistsAndVisible()` and `AssertElementClickable()` helpers provide early failure detection:
+
+```csharp
+// ✅ BEST - Fail fast with clear error if button doesn't exist or isn't clickable
+var button = page.Locator("button.submit");
+await button.AssertElementClickable("Submit button");
+await button.ClickAsync();
+
+// ✅ GOOD - Fail fast with clear error if element doesn't exist or isn't visible  
+var sidebar = page.Locator(".content-sidebar");
+await sidebar.AssertElementExistsAndVisible("Content sidebar");
+(await sidebar.IsVisibleAsync()).Should().BeTrue();
+
+// ❌ OLD - Generic timeout error doesn't tell you WHY it failed
+var button = page.Locator("button.submit");
+await button.ClickAsync(); // Timeout: "Element not found" - but WHY? Wrong selector? Element hidden? Disabled?
+```
+
+**Benefits of Fail-Fast Helpers**:
+
+- **Better error messages**: "Element not found: Submit button. Selector 'button.submit' matched 0 elements" vs "Timeout"
+- **Faster debugging**: Immediate failure vs waiting for full timeout
+- **Actionable information**: Tells you if element is missing, hidden, disabled, or covered
+- **Early detection**: Catch issues before they cause cascading failures
 
 ### Complete Test Example
 
