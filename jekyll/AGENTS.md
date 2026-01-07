@@ -9,6 +9,6 @@
 > - **Content patterns**: How content was organized and displayed
 > - **Inspiration**: Examples of how features were implemented
 >
-> **For active development**: Use the `.NET implementation` in the root directory with the `@dotnet` agent. See [/.github/agents/dotnet.md](/.github/agents/dotnet.md).
+> **For active development**: Use the `.NET implementation` in the root directory. See [/AGENTS.md](/AGENTS.md) for .NET development guidance including tech stack, commands, and patterns.
 >
 > **For framework-agnostic principles**: See [/AGENTS.md](/AGENTS.md).

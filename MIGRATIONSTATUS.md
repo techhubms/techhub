@@ -100,8 +100,10 @@ See [specs/dotnet-migration/tasks.md](specs/dotnet-migration/tasks.md) for compl
 
 ## Related Documentation
 
-- **[Migration Plan](specs/dotnet-migration/spec.md)** - Complete migration specification
-- **[Task Breakdown](specs/dotnet-migration/tasks.md)** - Detailed task list with dependencies
-- **[Data Model](specs/dotnet-migration/data-model.md)** - Domain model design
+- **[Migration Plan](specs/dotnet-migration/spec.md)** - Complete migration specification (⚠️ may be outdated, verify against code)
+- **[Task Breakdown](specs/dotnet-migration/tasks.md)** - Detailed task list with dependencies (⚠️ may be outdated, verify against code)
+- **[Data Model](specs/dotnet-migration/data-model.md)** - Domain model design (⚠️ may be outdated, verify against code)
 - **[README.md](README.md)** - Quick start guide
 - **[AGENTS.md](AGENTS.md)** - Development workflow and standards
+
+**⚠️ Note on Specifications**: The `specs/` directory contains planning documents created during migration. As implementation progresses, these specs may not reflect current reality. Always verify against actual code and prefer documentation in `docs/`, domain-specific AGENTS.md files, and root AGENTS.md. See [AGENTS.md Project Overview section](AGENTS.md#project-overview) for complete guidance on when to use specs.

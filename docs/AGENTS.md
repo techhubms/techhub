@@ -35,6 +35,66 @@
 - **Never use vague language** ("might", "probably", "should")
 - **Never skip documentation updates** when code behavior changes
 
+## Tech Hub Documentation Structure (3-Level Hierarchy)
+
+The Tech Hub uses a **3-level documentation hierarchy** with clear precedence:
+
+**Precedence Order**: Domain AGENTS.md (deepest) → Root AGENTS.md → README.md (shallowest)
+
+### Level 1: Domain-Specific AGENTS.md (Highest Precedence)
+
+Development patterns for specific code domains. **Read FIRST** when working in a domain.
+
+**Examples**:
+
+- [src/TechHub.Api/AGENTS.md](../src/TechHub.Api/AGENTS.md) - API development patterns
+- [src/TechHub.Web/AGENTS.md](../src/TechHub.Web/AGENTS.md) - Blazor component patterns
+- [tests/AGENTS.md](../tests/AGENTS.md) - Testing strategies
+- [scripts/AGENTS.md](../scripts/AGENTS.md) - PowerShell automation
+
+**Purpose**: Domain-specific rules, patterns, and code examples. These override root AGENTS.md for domain-specific concerns.
+
+### Level 2: Root [AGENTS.md](../AGENTS.md) (Medium Precedence)
+
+Repository-wide principles, architecture, and standards. **Read SECOND** after domain files.
+
+**Contains**:
+
+- 10-step AI Assistant Workflow (REQUIRED process)
+- Core rules and boundaries
+- .NET tech stack, commands, and patterns
+- Architecture principles
+- Site terminology
+
+**Purpose**: Standards that apply across ALL domains. Domain AGENTS.md files can override these for specific needs.
+
+### Level 3: [README.md](../README.md) (Lowest Precedence)
+
+Minimal getting started guide. **Read LAST** for general orientation.
+
+**Contains**:
+
+- Quick start instructions
+- High-level project overview
+- Links to detailed documentation
+
+**Purpose**: Entry point for new contributors. Not for development details.
+
+### Supporting Documentation (Not in Precedence Chain)
+
+**Functional Documentation** (in `docs/` - this directory):
+
+- [filtering-system.md](filtering-system.md) - How filtering works
+- [content-management.md](content-management.md) - Content workflows
+- [api-specification.md](api-specification.md) - REST API contracts
+
+**Content Guidelines** (in `collections/`):
+
+- [markdown-guidelines.md](../collections/markdown-guidelines.md) - Markdown formatting
+- [writing-style-guidelines.md](../collections/writing-style-guidelines.md) - Writing standards
+
+**Purpose**: Framework-agnostic descriptions of system behavior and content standards.
+
 ## Purpose
 
 **GOAL**: Keep this folder MINIMAL - only **functional documentation files** that explain WHAT the system does (not HOW to implement it).
@@ -50,52 +110,11 @@ These files are framework-agnostic and describe system behavior, not implementat
 **All other content is located elsewhere**:
 
 - Development patterns → Domain-specific AGENTS.md files
-- Framework commands/patterns → `.github/agents/dotnet.md`
+- Repository-wide standards → Root AGENTS.md
 - Writing/quality standards → `collections/markdown-guidelines.md`, `collections/writing-style-guidelines.md`
-- Terminology/architecture → Root `AGENTS.md` (Site Terminology and Repository Structure sections)
-- Technical implementation guides → Appropriate AGENTS.md files
+- Terminology/architecture → Root `AGENTS.md` (Site Terminology and Repository Organization sections)
 
 **Rationale**: Only files that explain system functionality (not development, not writing, not architecture) remain in docs/.
-
-## Tech Hub Documentation Structure
-
-The Tech Hub uses a three-tier documentation system:
-
-### 1. AGENTS.md Files (Domain-Specific Development Guidance)
-
-Located in each major directory, AGENTS.md files provide focused guidance for AI assistants working in specific code domains:
-
-- **`AGENTS.md`** (root): Generic development principles, performance rules, timezone handling, repository navigation
-- **`scripts/AGENTS.md`**: PowerShell development and automation scripts
-- **`src/AGENTS.md`**: .NET development patterns across all projects
-- **`src/TechHub.Api/AGENTS.md`**: API development patterns (Minimal APIs, endpoints, OpenAPI)
-- **`src/TechHub.Web/AGENTS.md`**: Blazor component patterns (SSR, interactivity, code-behind)
-- **`src/TechHub.Core/AGENTS.md`**: Domain model design (records, DTOs, interfaces)
-- **`src/TechHub.Infrastructure/AGENTS.md`**: Data access patterns (repositories, caching)
-- **`tests/AGENTS.md`**: Testing strategies and frameworks (xUnit, bUnit, Playwright)
-- **`infra/AGENTS.md`**: Infrastructure patterns (Bicep, Azure resources)
-- **`docs/AGENTS.md`**: Documentation guidelines and maintenance (this file)
-- **`collections/AGENTS.md`**: Content creation and management
-
-**Purpose**: Domain-specific development patterns, critical rules, and code standards. These files maintain domain focus regardless of framework.
-
-**Key Distinction**: Domain-specific (code patterns for a specific area) vs Framework-specific (patterns for the tech stack).
-
-### 2. Framework Agent Files (Framework-Specific Development Guidance)
-
-Located in `.github/agents/`, these custom agents provide framework-specific development guidance:
-
-- **`dotnet.md`**: .NET/Blazor development, C# patterns, ASP.NET Core, Aspire orchestration
-
-**Purpose**: Complete framework-specific how-to guides for working with the tech stack. These files are entirely framework-dependent.
-
-**Usage**: Use `@dotnet` custom agent for .NET development.
-
-### 3. Documentation Files (Framework-Agnostic Functional Documentation)
-
-Located in `docs/`, these files explain how the system works, independent of implementation:
-
-**Purpose**: Explain WHAT the system does and WHY, not HOW TO CODE it.
 
 ## Documentation Files (Current State)
 

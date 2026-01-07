@@ -4,23 +4,32 @@
 
 **🚨 ABSOLUTELY CRITICAL**: This section defines a **required 9-step process** for all development tasks in [AI Assistant Workflow](#ai-assistant-workflow). Always follow these steps in order for every request.
 **🚨 ABSOLUTELY CRITICAL**: Always read the root [README.md](/README.md) before starting any work to understand the context of this repository better.**
-**🚨 ABSOLUTELY CRITICAL**: Always use `@dotnet` agent for .NET development tasks**: API development, Blazor components, domain models, infrastructure. See [.github/agents/dotnet.md](.github/agents/dotnet.md)
 
 ## Index
 
 - [AI Assistant Workflow](#ai-assistant-workflow)
-  - [0. Core Rules & Boundaries](#0-core-rules--boundaries)
-  - [1. Gather Context](#1-gather-context)
-  - [2. Create a Plan](#2-create-a-plan)
-  - [3. Research & Validate](#3-research--validate)
-  - [4. Verify Current Behavior (Optional)](#4-verify-current-behavior-optional)
-  - [5. Write Tests First (TDD)](#5-write-tests-first-tdd)
-  - [6. Implement Changes](#6-implement-changes)
-  - [7. Validate & Fix](#7-validate--fix)
-  - [8. Update Documentation](#8-update-documentation)
-  - [9. Report Completion](#9-report-completion)
+  - [1. Core Rules & Boundaries](#1-core-rules--boundaries)
+  - [2. Gather Context](#2-gather-context)
+  - [3. Create a Plan](#3-create-a-plan)
+  - [4. Research & Validate](#4-research--validate)
+  - [5. Verify Current Behavior (Optional)](#5-verify-current-behavior-optional)
+  - [6. Write Tests First (TDD)](#6-write-tests-first-tdd)
+  - [7. Implement Changes](#7-implement-changes)
+  - [8. Validate & Fix](#8-validate--fix)
+  - [9. Update Documentation](#9-update-documentation)
+  - [10. Report Completion](#10-report-completion)
 - [Starting & Stopping the Website](#starting--stopping-the-website)
+- [.NET Development Commands](#net-development-commands)
 - [.NET Migration Status](#net-migration-status)
+- [.NET Tech Stack](#net-tech-stack)
+- [.NET Patterns & Examples](#net-patterns--examples)
+  - [Minimal API Endpoints](#minimal-api-endpoints)
+  - [Blazor Components with Code-Behind](#blazor-components-with-code-behind)
+  - [Repository Pattern Implementation](#repository-pattern-implementation)
+  - [Dependency Injection Service Lifetimes](#dependency-injection-service-lifetimes)
+  - [Domain Models with Records](#domain-models-with-records)
+  - [Markdown Frontmatter Mapping](#markdown-frontmatter-mapping)
+  - [Dependency Injection Configuration](#dependency-injection-configuration)
 - [Project Overview](#project-overview)
 - [Documentation Architecture](#documentation-architecture)
   - [Documentation Hierarchy](#documentation-hierarchy)
@@ -43,7 +52,7 @@
 
 ## AI Assistant Workflow
 
-### 0. Core Rules & Boundaries
+### 1. Core Rules & Boundaries
 
 These are the **non-negotiable rules** that apply to ALL development tasks. ALWAYS follow these rules without exception.
 
@@ -118,7 +127,7 @@ When renaming ANY identifier, you **MUST** verify and update ALL occurrences acr
 
 **Process**: Before renaming, run `grep_search` with the old name to find all occurrences, then systematically update each location. This prevents inconsistencies that break builds, confuse developers, and create maintenance issues.
 
-### 1. Gather Context
+### 2. Gather Context
 
 **Before touching any code**, understand what you're working on:
 
@@ -146,7 +155,7 @@ When renaming ANY identifier, you **MUST** verify and update ALL occurrences acr
 - Always use the context7 MCP tool to fetch latest documentation when proposing changes or if you don't understand something
 - Read documentation, code, and content files to understand implementation
 
-### 2. Create a Plan
+### 3. Create a Plan
 
 **Always create a step-by-step plan** before making any changes:
 
@@ -172,7 +181,7 @@ When renaming ANY identifier, you **MUST** verify and update ALL occurrences acr
 - Always explain what you're about to do before doing it
 - Wait for confirmation if changes are significant or complex
 
-### 3. Research & Validate
+### 4. Research & Validate
 
 **Find additional information** to ensure correct implementation:
 
@@ -196,7 +205,7 @@ When renaming ANY identifier, you **MUST** verify and update ALL occurrences acr
 - Never fabricate or invent information
 - Prefer official documentation over Stack Overflow
 
-### 4. Verify Current Behavior (Optional)
+### 5. Verify Current Behavior (Optional)
 
 **If needed**, understand current behavior BEFORE writing tests or making changes:
 
@@ -237,7 +246,7 @@ When renaming ANY identifier, you **MUST** verify and update ALL occurrences acr
 - Report any discrepancies between observed behavior and documentation
 - NEVER run terminal commands for Playwright testing - use MCP tools directly
 
-### 5. Write Tests First (TDD)
+### 6. Write Tests First (TDD)
 
 **CRITICAL**: Write tests BEFORE implementing changes to ensure proper validation:
 
@@ -308,7 +317,7 @@ When renaming ANY identifier, you **MUST** verify and update ALL occurrences acr
 - Use `[Theory]` for testing multiple similar scenarios
 - See domain-specific AGENTS.md for test patterns
 
-### 6. Implement Changes
+### 7. Implement Changes
 
 **NOW implement** to make your tests pass:
 
@@ -374,9 +383,9 @@ When renaming ANY identifier, you **MUST** verify and update ALL occurrences acr
 - Don't add features not covered by tests
 - Follow existing patterns and conventions
 - Clean up outdated code and files immediately
-- See [Core Rules & Boundaries](#0-core-rules--boundaries) for complete rule list
+- See [Core Rules & Boundaries](#1-core-rules--boundaries) for complete rule list
 
-### 7. Validate & Fix
+### 8. Validate & Fix
 
 **Ensure all tests pass and code quality is high**:
 
@@ -419,7 +428,7 @@ When renaming ANY identifier, you **MUST** verify and update ALL occurrences acr
 - If tests fail, return to step 6 and fix implementation
 - Never commit code with failing tests
 
-### 8. Update Documentation
+### 9. Update Documentation
 
 **Keep documentation in sync with code changes**:
 
@@ -453,7 +462,7 @@ When renaming ANY identifier, you **MUST** verify and update ALL occurrences acr
 - Fix any MD032 or other markdown issues
 - Documentation is part of "task complete"
 
-### 9. Report Completion
+### 10. Report Completion
 
 **Tell the user you're done** with a clear summary:
 
@@ -650,6 +659,78 @@ dotnet build TechHub.slnx
 
 These commands are safe to run anytime because they don't start the website.
 
+## .NET Development Commands
+
+**Build Commands**:
+
+```powershell
+# Build all projects
+dotnet build TechHub.slnx
+
+# Build specific project
+dotnet build src/TechHub.Api/TechHub.Api.csproj
+dotnet build src/TechHub.Web/TechHub.Web.csproj
+
+# Clean build artifacts
+dotnet clean TechHub.slnx
+
+# Restore NuGet packages
+dotnet restore
+```
+
+**Test Commands**:
+
+```powershell
+# Run all tests
+dotnet test
+
+# Run specific test project
+dotnet test tests/TechHub.Core.Tests
+dotnet test tests/TechHub.Api.Tests
+dotnet test tests/TechHub.Web.Tests
+dotnet test tests/TechHub.E2E.Tests
+
+# Run with code coverage
+dotnet test --collect:"XPlat Code Coverage"
+
+# Run with detailed output
+dotnet test --logger "console;verbosity=detailed"
+```
+
+**Watch Mode** (auto-rebuild on file changes):
+
+```powershell
+# Watch API project
+dotnet watch --project src/TechHub.Api/TechHub.Api.csproj
+
+# Watch Web project
+dotnet watch --project src/TechHub.Web/TechHub.Web.csproj
+```
+
+**Entity Framework** (future):
+
+```powershell
+# Add migration
+dotnet ef migrations add MigrationName --project src/TechHub.Infrastructure
+
+# Update database
+dotnet ef database update --project src/TechHub.Api
+
+# Remove last migration
+dotnet ef migrations remove --project src/TechHub.Infrastructure
+```
+
+**Global Tools**:
+
+```powershell
+# Install global tools
+dotnet tool install --global dotnet-ef
+dotnet tool install --global dotnet-aspire
+
+# Update global tools
+dotnet tool update --global dotnet-ef
+```
+
 ## .NET Migration Status
 
 **Project Status**: 🚧 Currently migrating from Jekyll to .NET/Blazor architecture with separate API and frontend.
@@ -697,6 +778,527 @@ Following the migration plan phases defined in [specs/dotnet-migration/](specs/d
 3. Begin Phase 4: Features implementation (filtering, search, infinite scroll)
 
 See [specs/dotnet-migration/tasks.md](specs/dotnet-migration/tasks.md) for complete task breakdown and [README.md](README.md) for user-facing quick start guide.
+
+## .NET Tech Stack
+
+**.NET Runtime & Framework**:
+
+- .NET 10 (latest LTS - November 2025)
+- C# 13 with nullable reference types enabled
+- File-scoped namespaces
+
+**Frontend (Blazor)**:
+
+- Blazor Server-Side Rendering (SSR) for SEO
+- Blazor WebAssembly for enhanced interactivity
+- Typed HttpClient for API communication
+- Resilience policies (retry, circuit breaker)
+
+**Backend (REST API)**:
+
+- ASP.NET Core Minimal API
+- OpenAPI/Swagger documentation
+- Repository pattern for data access
+- File-based content storage (database-ready design)
+
+**Infrastructure**:
+
+- .NET Aspire for orchestration
+- OpenTelemetry + Application Insights
+- Azure Container Apps deployment
+- Bicep Infrastructure as Code
+
+**Testing Frameworks**:
+
+- xUnit (unit and integration tests)
+- bUnit (Blazor component tests)
+- Moq (mocking framework)
+- Playwright (E2E tests)
+
+**Key Directories**:
+
+- `src/TechHub.Api/` - REST API backend
+- `src/TechHub.Web/` - Blazor frontend
+- `src/TechHub.Core/` - Domain models and interfaces
+- `src/TechHub.Infrastructure/` - Data access implementations
+- `src/TechHub.AppHost/` - .NET Aspire orchestration
+- `tests/` - All test projects
+- `infra/` - Bicep infrastructure
+- `scripts/` - PowerShell automation
+
+**.NET-Specific Development Patterns**:
+
+✅ **File-scoped namespaces**: Use in all C# files  
+✅ **Nullable reference types**: Enabled in all projects  
+✅ **Records for DTOs**: Prefer `record` over `class` for immutable data  
+✅ **Minimal APIs**: Use static methods for endpoint handlers  
+✅ **Async/await**: All I/O operations must be asynchronous  
+✅ **Dependency injection**: Constructor injection for all dependencies  
+✅ **Service lifetimes**: Singleton (stateless/cached), Scoped (per-request), Transient (lightweight)  
+✅ **Options pattern**: Use `IOptions<T>` for configuration, never direct access  
+✅ **Typed HttpClient**: Register with `AddHttpClient<TInterface, TImplementation>`  
+
+**Architecture Decisions**:
+
+✅ **Separate frontend/backend**: TechHub.Web calls TechHub.Api via HttpClient  
+✅ **MCP-ready design**: API follows resource-oriented patterns for future MCP support  
+✅ **Auth-ready design**: Architecture supports future IdentityServer/Duende integration  
+✅ **Multi-location URLs**: Content accessible from multiple section contexts  
+
+**Documentation Resources** (use context7 MCP tool):
+
+When working on .NET features, ALWAYS use the context7 MCP tool to fetch current documentation:
+
+```plaintext
+# .NET Runtime and Libraries
+mcp_context7_resolve-library-id(libraryName: "dotnet")
+mcp_context7_query-docs(context7CompatibleLibraryID: "/dotnet/docs", query: "your topic")
+
+# ASP.NET Core
+mcp_context7_resolve-library-id(libraryName: "aspnetcore")
+mcp_context7_query-docs(context7CompatibleLibraryID: "/dotnet/aspnetcore", query: "minimal apis")
+
+# Blazor
+mcp_context7_query-docs(context7CompatibleLibraryID: "/dotnet/aspnetcore", query: "blazor server-side rendering")
+
+# .NET Aspire
+mcp_context7_resolve-library-id(libraryName: "aspire")
+mcp_context7_query-docs(context7CompatibleLibraryID: "/dotnet/aspire", query: "service discovery")
+
+# xUnit Testing
+mcp_context7_resolve-library-id(libraryName: "xunit")
+mcp_context7_query-docs(context7CompatibleLibraryID: "/xunit/xunit", query: "theories and data-driven tests")
+
+# bUnit (Blazor Testing)
+mcp_context7_resolve-library-id(libraryName: "bunit")
+mcp_context7_query-docs(context7CompatibleLibraryID: "/bunit/bunit", query: "component testing")
+```
+
+## .NET Patterns & Examples
+
+### Minimal API Endpoints
+
+Use static methods for endpoint handlers following clean architecture:
+
+```csharp
+// Endpoints/SectionEndpoints.cs
+namespace TechHub.Api.Endpoints;
+
+public static class SectionEndpoints
+{
+    public static void MapSectionEndpoints(this WebApplication app)
+    {
+        var group = app.MapGroup("/api/sections")
+            .WithTags("Sections")
+            .WithOpenApi();
+        
+        group.MapGet("/", GetAllSections)
+            .WithName("GetAllSections")
+            .WithSummary("Get all sections");
+        
+        group.MapGet("/{url}", GetSectionByUrl)
+            .WithName("GetSectionByUrl")
+            .WithSummary("Get section by URL slug");
+    }
+    
+    private static async Task<IResult> GetAllSections(
+        ISectionRepository repository, 
+        CancellationToken ct)
+    {
+        var sections = await repository.GetAllSectionsAsync(ct);
+        return Results.Ok(sections);
+    }
+    
+    private static async Task<IResult> GetSectionByUrl(
+        string url,
+        ISectionRepository repository, 
+        CancellationToken ct)
+    {
+        var section = await repository.GetSectionByUrlAsync(url, ct);
+        return section is not null 
+            ? Results.Ok(section) 
+            : Results.NotFound();
+    }
+}
+```
+
+### Blazor Components with Code-Behind
+
+Separate complex component logic using code-behind pattern:
+
+```razor
+@* Components/Pages/SectionIndex.razor *@
+@page "/{SectionUrl}"
+@inherits SectionIndexBase
+
+<PageTitle>@Section?.Title | Tech Hub</PageTitle>
+
+<HeadContent>
+    <meta name="description" content="@Section?.Description" />
+    <link rel="canonical" href="https://tech.hub.ms/@SectionUrl" />
+</HeadContent>
+
+@if (Section is not null)
+{
+    <SectionHeader Section="@Section" />
+    <SectionNav Section="@Section" ActiveCollection="@null" />
+    
+    <main id="content" role="main">
+        <FilterControls @bind-FilteredItems="FilteredItems" AllItems="@AllItems" />
+        <ContentList Items="@FilteredItems" />
+    </main>
+}
+```
+
+```csharp
+// Components/Pages/SectionIndex.razor.cs
+namespace TechHub.Web.Components.Pages;
+
+public class SectionIndexBase : ComponentBase
+{
+    [Parameter] public required string SectionUrl { get; set; }
+    
+    [Inject] protected ITechHubApiClient ApiClient { get; set; } = default!;
+    [Inject] protected NavigationManager Navigation { get; set; } = default!;
+    
+    protected SectionDto? Section { get; set; }
+    protected IReadOnlyList<ContentItemDto> AllItems { get; set; } = [];
+    protected IReadOnlyList<ContentItemDto> FilteredItems { get; set; } = [];
+    
+    protected override async Task OnInitializedAsync()
+    {
+        Section = await ApiClient.GetSectionAsync(SectionUrl);
+        if (Section is null)
+        {
+            Navigation.NavigateTo("/404");
+            return;
+        }
+        
+        AllItems = await ApiClient.GetContentAsync(SectionUrl);
+        FilteredItems = AllItems;
+    }
+}
+```
+
+### Repository Pattern Implementation
+
+File-based repository with caching:
+
+```csharp
+// Infrastructure/Repositories/FileSectionRepository.cs
+namespace TechHub.Infrastructure.Repositories;
+
+public class FileSectionRepository : ISectionRepository
+{
+    private readonly string _sectionsJsonPath;
+    private readonly IMemoryCache _cache;
+    private readonly ILogger<FileSectionRepository> _logger;
+    
+    public FileSectionRepository(
+        IOptions<ContentOptions> options,
+        IMemoryCache cache,
+        ILogger<FileSectionRepository> logger)
+    {
+        _sectionsJsonPath = options.Value.SectionsJsonPath;
+        _cache = cache;
+        _logger = logger;
+    }
+    
+    public async Task<IReadOnlyList<Section>> GetAllSectionsAsync(
+        CancellationToken ct = default)
+    {
+        const string cacheKey = "all_sections";
+        
+        if (_cache.TryGetValue<IReadOnlyList<Section>>(cacheKey, out var cached))
+        {
+            return cached!;
+        }
+        
+        var json = await File.ReadAllTextAsync(_sectionsJsonPath, ct);
+        var sections = JsonSerializer.Deserialize<List<Section>>(json) 
+            ?? throw new InvalidOperationException("Failed to parse sections.json");
+        
+        _cache.Set(cacheKey, sections, TimeSpan.FromHours(1));
+        
+        _logger.LogInformation("Loaded {Count} sections from {Path}", 
+            sections.Count, _sectionsJsonPath);
+        
+        return sections;
+    }
+    
+    // ... other methods
+}
+```
+
+**CRITICAL**: All `IContentRepository` methods **MUST** return content sorted by `DateEpoch` in **descending order** (newest first). This sorting is applied:
+
+- At the repository layer (not in controllers/endpoints)
+- To all methods: `GetAllAsync()`, `GetByCollectionAsync()`, `GetByCategoryAsync()`, `SearchAsync()`
+- Before caching (cached results are pre-sorted)
+
+**Implementation Example**:
+
+```csharp
+public async Task<IReadOnlyList<ContentItem>> GetAllAsync(CancellationToken ct = default)
+{
+    var items = await LoadItemsFromDisk(ct);
+    return items
+        .OrderByDescending(x => x.DateEpoch)
+        .ToList();
+}
+```
+
+**Rationale**: Consistent sorting across all endpoints, reduces client-side burden, matches user expectations.
+
+### Dependency Injection Service Lifetimes
+
+**Singleton** - Service has no state or state is shared across all requests:
+
+- `ISectionRepository` (FileSectionRepository with caching)
+- `IContentRepository` (FileContentRepository with caching)
+- `IMarkdownProcessor` (stateless)
+- `IMemoryCache`, `TimeProvider` (built-in)
+
+**Scoped** - Service lifetime matches HTTP request:
+
+- `IRssGenerator` (generates per-request)
+- `IStructuredDataService` (generates per-request)
+- `ITechHubApiClient` (typed HttpClient)
+
+**Transient** - Lightweight, stateless, new instance each time:
+
+- Rarely needed (most services fit Singleton or Scoped)
+
+**Options Pattern for Configuration**:
+
+```csharp
+// Configuration class
+public class ContentOptions
+{
+    public required string SectionsJsonPath { get; init; }
+    public required string CollectionsRootPath { get; init; }
+    public string Timezone { get; init; } = "Europe/Brussels";
+}
+
+// Registration in Program.cs
+builder.Services.Configure<ContentOptions>(
+    builder.Configuration.GetSection("Content"));
+
+// Injection in service
+public class FileSectionRepository : ISectionRepository
+{
+    private readonly ContentOptions _options;
+    
+    public FileSectionRepository(IOptions<ContentOptions> options)
+    {
+        _options = options.Value;
+    }
+}
+```
+
+**Typed HttpClient Pattern**:
+
+```csharp
+// Interface
+public interface ITechHubApiClient
+{
+    Task<IReadOnlyList<SectionDto>> GetAllSectionsAsync(CancellationToken ct = default);
+}
+
+// Registration with resilience
+builder.Services.AddHttpClient<ITechHubApiClient, TechHubApiClient>(client =>
+{
+    client.BaseAddress = new Uri("https+http://api"); // Aspire service discovery
+})
+.AddStandardResilienceHandler(); // Retry + Circuit Breaker
+
+// Implementation
+public class TechHubApiClient : ITechHubApiClient
+{
+    private readonly HttpClient _httpClient;
+    
+    public TechHubApiClient(HttpClient httpClient)
+    {
+        _httpClient = httpClient;
+    }
+    
+    public async Task<IReadOnlyList<SectionDto>> GetAllSectionsAsync(
+        CancellationToken ct = default)
+    {
+        var response = await _httpClient.GetAsync("/api/sections", ct);
+        response.EnsureSuccessStatusCode();
+        return await response.Content.ReadFromJsonAsync<List<SectionDto>>(ct) ?? [];
+    }
+}
+```
+
+**Common DI Pitfalls**:
+
+❌ **WRONG**: Singleton with scoped dependency (e.g., HttpContext)  
+❌ **WRONG**: Transient for heavy objects (creates too many instances)  
+❌ **WRONG**: Direct configuration access (`builder.Configuration["Key"]`)  
+
+✅ **CORRECT**: Match lifetime to dependency requirements  
+✅ **CORRECT**: Singleton for stateless services  
+✅ **CORRECT**: Use Options pattern for configuration
+
+### Domain Models with Records
+
+Use records for immutable domain models:
+
+```csharp
+// Core/Models/ContentItem.cs
+namespace TechHub.Core.Models;
+
+/// <summary>
+/// Represents a content item (news, blog, video, etc.)
+/// </summary>
+public class ContentItem
+{
+    /// <summary>
+    /// URL-friendly slug derived from filename (e.g., "2025-01-15-product-launch")
+    /// </summary>
+    public required string Slug { get; init; }
+    
+    public required string Title { get; init; }
+    public required string Description { get; init; }
+    public string? Author { get; init; }
+    
+    /// <summary>
+    /// Publication date as Unix epoch timestamp
+    /// </summary>
+    public required long DateEpoch { get; init; }
+    
+    /// <summary>
+    /// Primary collection (news, blogs, videos, community, roundups)
+    /// </summary>
+    public required string CollectionName { get; init; }
+    
+    /// <summary>
+    /// Optional alt-collection for content organized in subfolders
+    /// (e.g., "ghc-features" for _videos/ghc-features/)
+    /// </summary>
+    public string? AltCollection { get; init; }
+    
+    /// <summary>
+    /// All categories this content belongs to (e.g., ["ai", "github-copilot"])
+    /// Supports multi-location content access
+    /// </summary>
+    public required IReadOnlyList<string> Categories { get; init; }
+    
+    public required IReadOnlyList<string> Tags { get; init; }
+    public required string RenderedHtml { get; init; }
+    public required string Excerpt { get; init; }
+    
+    /// <summary>
+    /// External link URL (mapped from frontmatter canonical_url field)
+    /// </summary>
+    public string? ExternalUrl { get; init; }
+    
+    /// <summary>
+    /// YouTube video ID for video content
+    /// </summary>
+    public string? VideoId { get; init; }
+    
+    /// <summary>
+    /// Viewing mode for content ("internal" or "external", default: "external")
+    /// Maps from frontmatter viewing_mode field
+    /// </summary>
+    public string? ViewingMode { get; init; }
+    
+    /// <summary>
+    /// Generate URL for this content in a specific section context.
+    /// Example: /ai/videos/vs-code-107.html
+    /// All URLs are lowercase for consistency
+    /// </summary>
+    public string GetUrlInSection(string sectionUrl)
+    {
+        var normalizedSection = sectionUrl.StartsWith('/') ? sectionUrl : $"/{sectionUrl}";
+        return $"{normalizedSection.ToLowerInvariant()}/{CollectionName.ToLowerInvariant()}/{Slug.ToLowerInvariant()}.html";
+    }
+}
+```
+
+### Markdown Frontmatter Mapping
+
+**Critical**: Understanding how markdown frontmatter maps to domain model properties:
+
+```markdown
+---
+title: "Example Article Title"
+author: "Author Name"
+date: 2026-01-02
+categories: [ai, github-copilot]
+tags: [machine-learning, azure-openai]
+canonical_url: "https://example.com/article"  # Maps to ExternalUrl property
+viewing_mode: "external"                      # "internal" or "external" (default: "external")
+video_id: "dQw4w9WgXcQ"                       # YouTube video ID (not extracted from URLs)
+alt_collection: "ghc-features"                # For subfolder organization (_videos/ghc-features/)
+---
+
+This is the excerpt that appears in list views.
+
+<!--excerpt_end-->
+
+# Full Article Content
+
+The rest of the markdown content rendered to HTML...
+```
+
+**Property Mappings**:
+
+- `title` → `Title`
+- `author` → `Author`
+- `date` → `DateEpoch` (converted to Unix timestamp)
+- `categories` → `Categories` (array)
+- `tags` → `Tags` (normalized to lowercase, hyphen-separated)
+- `canonical_url` → `ExternalUrl` (original source URL)
+- `viewing_mode` → `ViewingMode` ("internal" or "external")
+- `video_id` → `VideoId` (YouTube video identifier)
+- `alt_collection` → `AltCollection` (subfolder categorization)
+- Filename → `Slug` (e.g., `2025-01-15-article.md` → `2025-01-15-article`)
+- Content before `<!--excerpt_end-->` → `Excerpt`
+- Full markdown → `RenderedHtml` (rendered with Markdig)
+
+### Dependency Injection Configuration
+
+```csharp
+// Api/Program.cs - Dependency Registration
+var builder = WebApplication.CreateBuilder(args);
+
+// Add Aspire service defaults (OpenTelemetry, health checks, resilience)
+builder.AddServiceDefaults();
+
+// Configuration
+builder.Services.Configure<ContentOptions>(
+    builder.Configuration.GetSection("Content"));
+
+// Infrastructure services
+builder.Services.AddMemoryCache();
+builder.Services.AddSingleton(TimeProvider.System);
+
+// Repositories (file-based)
+builder.Services.AddSingleton<ISectionRepository, FileSectionRepository>();
+builder.Services.AddSingleton<IContentRepository, FileContentRepository>();
+
+// Services
+builder.Services.AddSingleton<IMarkdownProcessor, MarkdownProcessor>();
+builder.Services.AddScoped<IRssGenerator, RssGenerator>();
+builder.Services.AddScoped<IStructuredDataService, StructuredDataService>();
+
+// API documentation
+builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddOpenApi();
+
+// CORS for Blazor frontend
+builder.Services.AddCors(options =>
+{
+    options.AddDefaultPolicy(policy =>
+        policy.WithOrigins(builder.Configuration["AllowedOrigins"] ?? "https://localhost:5173")
+              .AllowAnyMethod()
+              .AllowAnyHeader());
+});
+```
 
 ## Project Overview
 

@@ -4,27 +4,7 @@
 
 This directory contains the .NET/Blazor implementation of Tech Hub, migrating from the Jekyll-based static site.
 
-## Migration Status
-
-This project is currently migrating from Jekyll to .NET/Blazor using [spec-kit](https://github.com/github/spec-kit) methodology. We're in **Phase 3** of the migration with 245/245 unit/integration tests and 60/69 E2E tests passing.
-
-**Quick Status**: API ✅ Complete | Frontend 🔄 In Progress (95%)
-
-For detailed progress, implementation status, and what's working now, see [MIGRATIONSTATUS.md](MIGRATIONSTATUS.md).
-
-**Migration Planning**:
-
-- **[Migration Plan](specs/dotnet-migration/spec.md)** - Complete migration specification and architecture
-- **[Task Breakdown](specs/dotnet-migration/tasks.md)** - All tasks with dependencies and status
-- **[Data Model](specs/dotnet-migration/data-model.md)** - Domain model design and contracts
-
-## Starting / stopping the website
-
-### For AI Agents
-
-**ALWAYS read [AGENTS.md - Starting & Stopping the Website](AGENTS.md#starting--stopping-the-website)** before starting/stopping the website. This section contains critical safety rules about terminal interactions and proper use of Playwright MCP tools.
-
-### For End Users
+## Quick Start
 
 **Easiest Way - F5 in VS Code**:
 
@@ -46,39 +26,53 @@ For detailed progress, implementation status, and what's working now, see [MIGRA
 
 **Stop the Application**: Press `Ctrl+C` in the terminal where the script is running.
 
-### DevContainer Setup
+## Migration Status
 
-1. In VS Code, open Command Palette (`Ctrl+Shift+P`)
-2. Select **"Dev Containers: Reopen in Container"**
-3. Wait for container to build and initialize
-4. Use F5 or run script as described above
+This project is currently migrating from Jekyll to .NET/Blazor using [spec-kit](https://github.com/github/spec-kit) methodology. We're in **Phase 3** of the migration with 245/245 unit/integration tests and 60/69 E2E tests passing.
 
-## Where to Find More Information
+**Quick Status**: API ✅ Complete | Frontend 🔄 In Progress (95%)
 
-**Start Here**:
+For detailed progress, implementation status, and what's working now, see [MIGRATIONSTATUS.md](MIGRATIONSTATUS.md).
 
-- **[AGENTS.md](AGENTS.md)** - Complete development guide (AI workflow, architecture, principles, standards)
-- **[Migration Status](#migration-status)** - Current implementation progress
+## Documentation Guide
 
-**For Development**:
+This project uses a **3-level documentation hierarchy**:
 
-- **[AI Assistant Workflow](AGENTS.md#ai-assistant-workflow)** - Required 9-step process for all changes
-- **[Starting & Stopping the Website](AGENTS.md#starting--stopping-the-website)** - How to run and test locally
-- **[.NET Development Guide](.github/agents/dotnet.md)** - .NET/Blazor patterns and examples
-- **[Documentation Map](AGENTS.md#complete-documentation-map)** - Navigation to all docs
+**Level 1: Domain-Specific AGENTS.md** (Read FIRST when working in a domain):
 
-**For Understanding the System**:
+- [src/TechHub.Api/AGENTS.md](src/TechHub.Api/AGENTS.md) - API patterns
+- [src/TechHub.Web/AGENTS.md](src/TechHub.Web/AGENTS.md) - Blazor patterns
+- [tests/AGENTS.md](tests/AGENTS.md) - Testing strategies
+- [See complete list in root AGENTS.md](AGENTS.md#complete-3-level-documentation-structure)
 
-- **[Project Overview](AGENTS.md#project-overview)** - Architecture and project structure
-- **[API Specification](docs/api-specification.md)** - REST API endpoints and contracts
-- **[Feature Specifications](specs/)** - Detailed feature requirements (spec-kit)
-- **[Filtering System](docs/filtering-system.md)** - How filtering works
-- **[Content Management](docs/content-management.md)** - Content workflows
+**Level 2: Root [AGENTS.md](AGENTS.md)** (Read SECOND for repository-wide standards):
+
+- 10-step AI Assistant Workflow (REQUIRED for all development)
+- Core rules and boundaries
+- .NET tech stack, commands, and patterns
+- Architecture principles and site terminology
+
+**Level 3: [README.md](README.md)** (You're here - minimal getting started)
+
+**Precedence**: Domain AGENTS.md → Root AGENTS.md → README.md
+
+**Supporting Documentation**:
+
+- **Feature Specifications**: [specs/](specs/) - Detailed requirements using spec-kit
+- **Functional Docs**: [docs/filtering-system.md](docs/filtering-system.md), [docs/content-management.md](docs/content-management.md), [docs/api-specification.md](docs/api-specification.md)
+- **Migration Planning**: [specs/dotnet-migration/](specs/dotnet-migration/) - Complete migration spec and task breakdown
 
 ## Contributing
 
 All development must follow the guidelines in [AGENTS.md](AGENTS.md):
 
-- **[AI Assistant Workflow](AGENTS.md#ai-assistant-workflow)** - Required 9-step process
-- **[Core Rules & Boundaries](AGENTS.md#0-core-rules--boundaries)** - Non-negotiable rules
+- **[AI Assistant Workflow](AGENTS.md#ai-assistant-workflow)** - Required 10-step process
+- **[Core Rules & Boundaries](AGENTS.md#1-core-rules--boundaries)** - Non-negotiable rules
 - **[Feature Specifications](specs/)** - Use spec-kit methodology for all features
+
+## DevContainer Setup
+
+1. In VS Code, open Command Palette (`Ctrl+Shift+P`)
+2. Select **"Dev Containers: Reopen in Container"**
+3. Wait for container to build and initialize
+4. Use F5 or run script as described above
