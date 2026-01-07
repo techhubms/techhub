@@ -263,7 +263,7 @@ public class NavigationCollection : ICollectionFixture<PlaywrightCollectionFixtu
 
 // Test class declares which collection it belongs to
 [Collection("URL Routing Tests")]
-public class UrlRoutingAndNavigationTests : IAsyncLifetime
+public class UrlRoutingTests : IAsyncLifetime
 {
     private readonly PlaywrightCollectionFixture _fixture;
     private IBrowserContext? _context;  // Isolated context per test class
@@ -277,9 +277,9 @@ public class UrlRoutingAndNavigationTests : IAsyncLifetime
 
 **Benefits**:
 
-- **4x+ throughput** on multi-core machines
+- **Parallel execution** across collections on multi-core machines
 - **Isolated contexts** prevent test interference
-- **Same browser** shared across parallel tests
+- **Each collection** gets its own browser instance
 - **Fast context creation** (<100ms vs 2-3s for browser)
 
 #### 3. **Smart Wait Strategies** (No Task.Delay!)

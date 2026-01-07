@@ -122,7 +122,7 @@ internal static class ContentEndpoints
             CollectionName = item.CollectionName,
             AltCollection = item.AltCollection,
             Categories = item.Categories,
-            PrimarySection = TechHub.Core.Helpers.SectionPriorityHelper.GetPrimarySectionName(item.Categories),
+            PrimarySection = TechHub.Core.Helpers.SectionPriorityHelper.GetPrimarySectionName(item.Categories, item.CollectionName),
             Tags = item.Tags,
             Excerpt = item.Excerpt,
             RenderedHtml = item.RenderedHtml,

@@ -144,6 +144,9 @@
   font-size: var(--font-size-xs);
   font-weight: var(--font-weight-medium);
   border: 1px solid var(--color-border-default);
+  cursor: default; /* Prevent pointer cursor */
+  user-select: none; /* Prevent text selection */
+  pointer-events: none; /* Prevent all mouse events */
 }
 
 /* Content Item Card Component */
@@ -217,13 +220,18 @@
   border-radius: var(--radius-full);
   font-size: var(--font-size-xs);
   font-weight: var(--font-weight-medium);
-  /* No transition - prevents unwanted hover effects */
+  cursor: default; /* Prevent pointer cursor - tags are not clickable */
+  user-select: none; /* Prevent text selection */
+  pointer-events: none; /* Prevent all mouse events on tags */
 }
 
 .tag-more {
   color: var(--color-text-tertiary);
   font-size: var(--font-size-xs);
   padding: 0.25rem var(--spacing-1);
+  cursor: default; /* Prevent pointer cursor */
+  user-select: none; /* Prevent text selection */
+  pointer-events: none; /* Prevent all mouse events */
 }
 
 .content-footer {

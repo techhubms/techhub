@@ -92,6 +92,8 @@ public class ContentItem
     /// </summary>
     public string GetUrlInSection(string sectionUrl)
     {
+        ArgumentNullException.ThrowIfNull(sectionUrl);
+        
         // Ensure section URL has leading slash for proper routing
         var normalizedSection = sectionUrl.StartsWith('/') ? sectionUrl : $"/{sectionUrl}";
         return $"{normalizedSection.ToLowerInvariant()}/{CollectionName.ToLowerInvariant()}/{Slug.ToLowerInvariant()}";

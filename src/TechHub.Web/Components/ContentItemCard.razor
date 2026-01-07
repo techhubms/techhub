@@ -37,18 +37,18 @@
         
         @if (Item.Tags.Any() || (ShowCollectionBadge && !string.IsNullOrWhiteSpace(Item.CollectionName)))
         {
-            <div class="content-tags">
+            <div class="content-tags" @onclick:preventDefault @onclick:stopPropagation>
                 @if (ShowCollectionBadge && !string.IsNullOrWhiteSpace(Item.CollectionName))
                 {
-                    <span class="collection-badge-white">@CapitalizeCollection(Item.CollectionName)</span>
+                    <span class="collection-badge-white" @onclick:preventDefault @onclick:stopPropagation>@CapitalizeCollection(Item.CollectionName)</span>
                 }
                 @foreach (var tag in Item.Tags.Take(5))
                 {
-                    <span class="tag">@tag</span>
+                    <span class="tag" @onclick:preventDefault @onclick:stopPropagation>@tag</span>
                 }
                 @if (Item.Tags.Count > 5)
                 {
-                    <span class="tag-more">+@(Item.Tags.Count - 5) more</span>
+                    <span class="tag-more" @onclick:preventDefault @onclick:stopPropagation>+@(Item.Tags.Count - 5) more</span>
                 }
             </div>
         }
@@ -97,18 +97,18 @@ else
         
         @if (Item.Tags.Any() || (ShowCollectionBadge && !string.IsNullOrWhiteSpace(Item.CollectionName)))
         {
-            <div class="content-tags">
+            <div class="content-tags" @onclick:preventDefault @onclick:stopPropagation>
                 @if (ShowCollectionBadge && !string.IsNullOrWhiteSpace(Item.CollectionName))
                 {
-                    <span class="collection-badge-white">@CapitalizeCollection(Item.CollectionName)</span>
+                    <span class="collection-badge-white" @onclick:preventDefault @onclick:stopPropagation>@CapitalizeCollection(Item.CollectionName)</span>
                 }
                 @foreach (var tag in Item.Tags.Take(5))
                 {
-                    <span class="tag">@tag</span>
+                    <span class="tag" @onclick:preventDefault @onclick:stopPropagation>@tag</span>
                 }
                 @if (Item.Tags.Count > 5)
                 {
-                    <span class="tag-more">+@(Item.Tags.Count - 5) more</span>
+                    <span class="tag-more" @onclick:preventDefault @onclick:stopPropagation>+@(Item.Tags.Count - 5) more</span>
                 }
             </div>
         }

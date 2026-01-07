@@ -4,9 +4,12 @@ using TechHub.Core.DTOs;
 namespace TechHub.Web.Services;
 
 /// <summary>
-/// Typed HTTP client for calling Tech Hub API endpoints
+/// Typed HTTP client for calling Tech Hub API endpoints.
+/// Public to allow mocking in unit tests (virtual methods require public class for Moq proxies).
 /// </summary>
+#pragma warning disable CA1515 // Public type in non-public assembly - required for unit test mocking
 public class TechHubApiClient
+#pragma warning restore CA1515
 {
     private readonly HttpClient _httpClient;
     private readonly ILogger<TechHubApiClient> _logger;

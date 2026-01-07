@@ -115,11 +115,14 @@ public sealed class FileBasedContentRepository : IContentRepository, IDisposable
         await _loadLock.WaitAsync(cancellationToken);
         try
         {
-            // Double-check after acquiring lock
+            // Double-check after acquiring lock (required for thread-safety)
+            // CA1508 false positive: another thread may have populated the cache while we waited for the lock
+#pragma warning disable CA1508 // Avoid dead conditional code - this is a valid double-check pattern
             if (_cachedAllItems != null)
             {
                 return _cachedAllItems;
             }
+#pragma warning restore CA1508
 
             var allItems = new List<ContentItem>();
 

@@ -62,7 +62,7 @@ using (var scope = app.Services.CreateScope())
     try
     {
         var sections = await apiClient.GetAllSectionsAsync();
-        sectionCache.Initialize(sections.ToList());
+        sectionCache.Initialize(sections?.ToList() ?? []);
     }
     catch (Exception ex)
     {
@@ -131,4 +131,4 @@ app.MapStaticAssets();
 app.MapRazorComponents<App>()
     .AddInteractiveServerRenderMode();
 
-app.Run();
+await app.RunAsync();

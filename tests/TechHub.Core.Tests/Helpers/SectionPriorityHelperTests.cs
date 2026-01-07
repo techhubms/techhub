@@ -148,4 +148,43 @@ public class SectionPriorityHelperTests
         // Assert - Should pick GitHub Copilot (first in menubar)
         result.Should().Be("github-copilot");
     }
+
+    [Fact]
+    public void GetPrimarySectionUrl_ReturnsAll_ForRoundupsCollection()
+    {
+        // Arrange - Roundups content may have various categories
+        var categories = new[] { "AI", "GitHub Copilot", "Azure" };
+
+        // Act - Pass "roundups" as collection name
+        var result = SectionPriorityHelper.GetPrimarySectionUrl(categories, "roundups");
+
+        // Assert - Should always return "all" regardless of categories
+        result.Should().Be("all", "roundups always belong to the 'all' section");
+    }
+
+    [Fact]
+    public void GetPrimarySectionName_ReturnsAll_ForRoundupsCollection()
+    {
+        // Arrange - Roundups content may have various categories
+        var categories = new[] { "AI", "GitHub Copilot", "Azure" };
+
+        // Act - Pass "roundups" as collection name
+        var result = SectionPriorityHelper.GetPrimarySectionName(categories, "roundups");
+
+        // Assert - Should always return "All" regardless of categories
+        result.Should().Be("All", "roundups always belong to the 'All' section");
+    }
+
+    [Fact]
+    public void GetPrimarySectionUrl_RespectsCategories_ForNonRoundupsCollections()
+    {
+        // Arrange
+        var categories = new[] { "GitHub Copilot" };
+
+        // Act - Pass a non-roundups collection name
+        var result = SectionPriorityHelper.GetPrimarySectionUrl(categories, "news");
+
+        // Assert - Should use normal priority logic
+        result.Should().Be("github-copilot", "non-roundups collections should use normal priority logic");
+    }
 }

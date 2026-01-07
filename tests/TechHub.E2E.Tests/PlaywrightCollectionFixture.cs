@@ -12,7 +12,7 @@ public class PlaywrightCollectionFixture : IAsyncLifetime
 {
     public IPlaywright? Playwright { get; private set; }
     public IBrowser? Browser { get; private set; }
-    
+
     public async Task InitializeAsync()
     {
         Playwright = await Microsoft.Playwright.Playwright.CreateAsync();
@@ -28,15 +28,15 @@ public class PlaywrightCollectionFixture : IAsyncLifetime
             }
         });
     }
-    
+
     public async Task DisposeAsync()
     {
         if (Browser != null)
             await Browser.CloseAsync();
-        
+
         Playwright?.Dispose();
     }
-    
+
     /// <summary>
     /// Creates a new isolated browser context for a test class.
     /// Contexts are lightweight and isolated from each other (separate cookies, storage, etc.).
@@ -45,7 +45,7 @@ public class PlaywrightCollectionFixture : IAsyncLifetime
     {
         if (Browser == null)
             throw new InvalidOperationException("Browser not initialized");
-        
+
         return await Browser.NewContextAsync(new BrowserNewContextOptions
         {
             ViewportSize = new ViewportSize { Width = 1920, Height = 1080 },

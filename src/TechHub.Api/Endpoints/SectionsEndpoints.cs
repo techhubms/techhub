@@ -259,7 +259,7 @@ internal static class SectionsEndpoints
     /// </summary>
     private static ContentItemDto MapContentToDto(Core.Models.ContentItem item)
     {
-        var primarySectionUrl = TechHub.Core.Helpers.SectionPriorityHelper.GetPrimarySectionUrl(item.Categories);
+        var primarySectionUrl = TechHub.Core.Helpers.SectionPriorityHelper.GetPrimarySectionUrl(item.Categories, item.CollectionName);
         
         return new ContentItemDto
         {
@@ -272,7 +272,7 @@ internal static class SectionsEndpoints
             CollectionName = item.CollectionName,
             AltCollection = item.AltCollection,
             Categories = item.Categories,
-            PrimarySection = TechHub.Core.Helpers.SectionPriorityHelper.GetPrimarySectionName(item.Categories),
+            PrimarySection = TechHub.Core.Helpers.SectionPriorityHelper.GetPrimarySectionName(item.Categories, item.CollectionName),
             Tags = item.Tags,
             Excerpt = item.Excerpt,
             ExternalUrl = item.ExternalUrl,

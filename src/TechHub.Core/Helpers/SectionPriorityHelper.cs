@@ -35,13 +35,18 @@ public static class SectionPriorityHelper
     };
 
     /// <summary>
-    /// Determines the primary section URL for a content item based on its categories
+    /// Determines the primary section URL for a content item based on its categories and collection
     /// </summary>
     /// <param name="categories">List of categories from the content item</param>
+    /// <param name="collectionName">Optional collection name (e.g., "roundups")</param>
     /// <returns>The URL of the primary section (e.g., "github-copilot", "ai"), or "all" if no match</returns>
-    public static string GetPrimarySectionUrl(IReadOnlyList<string> categories)
+    public static string GetPrimarySectionUrl(IReadOnlyList<string> categories, string? collectionName = null)
     {
         ArgumentNullException.ThrowIfNull(categories);
+        
+        // Special case: Roundups always belong to "all" section
+        if (collectionName?.Equals("roundups", StringComparison.OrdinalIgnoreCase) == true)
+            return "all";
         
         if (categories.Count == 0)
             return "all";
@@ -60,13 +65,18 @@ public static class SectionPriorityHelper
     }
 
     /// <summary>
-    /// Determines the primary section name (display name) for a content item based on its categories
+    /// Determines the primary section name (display name) for a content item based on its categories and collection
     /// </summary>
     /// <param name="categories">List of categories from the content item</param>
+    /// <param name="collectionName">Optional collection name (e.g., "roundups")</param>
     /// <returns>The display name of the primary section (e.g., "GitHub Copilot", "AI"), or "All" if no match</returns>
-    public static string GetPrimarySectionName(IReadOnlyList<string> categories)
+    public static string GetPrimarySectionName(IReadOnlyList<string> categories, string? collectionName = null)
     {
         ArgumentNullException.ThrowIfNull(categories);
+        
+        // Special case: Roundups always belong to "All" section
+        if (collectionName?.Equals("roundups", StringComparison.OrdinalIgnoreCase) == true)
+            return "All";
         
         if (categories.Count == 0)
             return "All";

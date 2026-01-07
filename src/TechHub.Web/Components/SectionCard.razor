@@ -2,7 +2,7 @@
 @inject NavigationManager Navigation
 
 <div class="section-card">
-    <a href="/@Section.Name" class="section-card-link">
+    <a href="@Section.Url" class="section-card-link">
         <div class="section-card-header" style="background-image: url('@Section.BackgroundImage')">
             <div class="section-overlay">
                 <h2>@Section.Title</h2>
@@ -10,7 +10,7 @@
         </div>
     </a>
     <div class="section-body">
-        <a href="/@Section.Name" class="section-description-link">
+        <a href="@Section.Url" class="section-description-link">
             <p class="section-description">@Section.Description</p>
         </a>
         @if (Section.Collections.Any())
@@ -19,7 +19,7 @@
                 @* Show first 4 collections/pages (both regular and custom) *@
                 @foreach (var collection in Section.Collections.Take(4))
                 {
-                    var href = collection.IsCustom ? collection.Url : $"/@Section.Name/@collection.Name";
+                    var href = collection.IsCustom ? collection.Url : $"{Section.Url}/{collection.Name}";
                     <a href="@href" class="collection-badge-link">
                         <span class="collection-badge @(collection.IsCustom ? "custom-page-badge" : "")">
                             @collection.Title
