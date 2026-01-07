@@ -1,6 +1,6 @@
 # Testing Strategy for Tech Hub .NET
 
-> **AI CONTEXT**: This is a **LEAF** context file for the `tests/` directory. It complements the [Root AGENTS.md](/AGENTS.md) and [.NET Development Expert](/.github/agents/dotnet.md).
+> **AI CONTEXT**: This is a **LEAF** context file for the `tests/` directory. It complements the [Root AGENTS.md](/AGENTS.md).
 > **RULE**: Global rules (Timezone, Performance, AI Assistant Workflow) in Root AGENTS.md apply **IN ADDITION** to local rules. Follow **BOTH**.
 
 ## Critical Testing Rules
@@ -1243,13 +1243,26 @@ All tests run automatically in GitHub Actions:
 
 ## Additional Resources
 
-- **Source Code Patterns**: [src/AGENTS.md](/src/AGENTS.md) - Production code development patterns (test code is also source code!)
-- **xUnit Documentation**: Use context7 MCP tool (`mcp_context7_query-docs` with library "/xunit/xunit")
-- **FluentAssertions Docs**: Use context7 MCP tool
-- **NSubstitute Docs**: Use context7 MCP tool
-- **bUnit Documentation**: Use context7 MCP tool (future component testing)
-- **Playwright .NET Docs**: Use context7 MCP tool (future E2E testing)
-- **PowerShell Testing**: [tests/powershell/AGENTS.md](/tests/powershell/AGENTS.md)
+**Domain-Specific Test Patterns**:
+
+- **[tests/TechHub.E2E.Tests/AGENTS.md](TechHub.E2E.Tests/AGENTS.md)** - E2E test patterns with Playwright
+- **[tests/TechHub.Api.Tests/AGENTS.md](TechHub.Api.Tests/AGENTS.md)** - API integration test patterns
+- **[tests/TechHub.Web.Tests/AGENTS.md](TechHub.Web.Tests/AGENTS.md)** - Blazor component test patterns with bUnit
+- **[tests/TechHub.Core.Tests/AGENTS.md](TechHub.Core.Tests/AGENTS.md)** - Unit test patterns for domain models
+- **[tests/TechHub.Infrastructure.Tests/AGENTS.md](TechHub.Infrastructure.Tests/AGENTS.md)** - Infrastructure test patterns
+- **[tests/powershell/AGENTS.md](powershell/AGENTS.md)** - PowerShell Pester test patterns
+
+**Source Code Patterns**:
+
+- **[src/AGENTS.md](/src/AGENTS.md)** - Production code development patterns (test code is also source code!)
+
+**Framework Documentation** (use context7 MCP tool):
+
+- **xUnit**: Use `mcp_context7_query-docs` with library "/xunit/xunit"
+- **FluentAssertions**: Use context7 MCP tool for assertion patterns
+- **NSubstitute**: Use context7 MCP tool for mocking patterns
+- **bUnit**: Use context7 MCP tool for Blazor component testing (future)
+- **Playwright .NET**: Use context7 MCP tool for E2E testing (future)
 
 ---
 

@@ -7,9 +7,9 @@
 For current domain models, DTOs, validation patterns, and repository implementation:
 
 - **Domain Models & DTOs**: See actual implementation in `/src/TechHub.Core/Models/` and `/src/TechHub.Core/DTOs/`
-- **Domain Model Patterns**: [/.github/agents/dotnet.md](/.github/agents/dotnet.md#domain-models-with-records)
+- **Domain Model Patterns**: [Root AGENTS.md](/AGENTS.md#domain-models-with-records)
 - **Repository Patterns**: [/src/AGENTS.md](/src/AGENTS.md#repository-pattern)
-- **Frontmatter Mapping**: [/.github/agents/dotnet.md](/.github/agents/dotnet.md#markdown-frontmatter-mapping)
+- **Frontmatter Mapping**: [Root AGENTS.md](/AGENTS.md#markdown-frontmatter-mapping)
 
 ---
 

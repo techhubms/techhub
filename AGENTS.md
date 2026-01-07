@@ -2,7 +2,7 @@
 
 **AI CONTEXT**: This is the **ROOT** development guide. It defines repository-wide principles, architecture, and workflow. When working in a specific domain (e.g., `src/`, `scripts/`, `tests/`), **ALSO** read the domain-specific `AGENTS.md` file in that directory.
 
-**🚨 ABSOLUTELY CRITICAL**: This section defines a **required 9-step process** for all development tasks in [AI Assistant Workflow](#ai-assistant-workflow). Always follow these steps in order for every request.
+**🚨 ABSOLUTELY CRITICAL**: This section defines a **required 10-step process** for all development tasks in [AI Assistant Workflow](#ai-assistant-workflow). Always follow these steps in order for every request.
 **🚨 ABSOLUTELY CRITICAL**: Always read the root [README.md](/README.md) before starting any work to understand the context of this repository better.**
 
 ## Index
@@ -18,6 +18,11 @@
   - [8. Validate & Fix](#8-validate--fix)
   - [9. Update Documentation](#9-update-documentation)
   - [10. Report Completion](#10-report-completion)
+- [Documentation Architecture](#documentation-architecture)
+  - [Documentation Hierarchy](#documentation-hierarchy)
+  - [Documentation Placement Strategy](#documentation-placement-strategy)
+  - [Complete Documentation Map](#complete-documentation-map)
+  - [Quick Reference Guide](#quick-reference-guide)
 - [Starting & Stopping the Website](#starting--stopping-the-website)
 - [.NET Development Commands](#net-development-commands)
 - [.NET Migration Status](#net-migration-status)
@@ -31,19 +36,13 @@
   - [Markdown Frontmatter Mapping](#markdown-frontmatter-mapping)
   - [Dependency Injection Configuration](#dependency-injection-configuration)
 - [Project Overview](#project-overview)
-- [Documentation Architecture](#documentation-architecture)
-  - [Documentation Hierarchy](#documentation-hierarchy)
-  - [Documentation Placement Strategy](#documentation-placement-strategy)
-  - [Complete Documentation Map](#complete-documentation-map)
-  - [Quick Reference Guide](#quick-reference-guide)
+  - [Core Architecture](#core-architecture)
+  - [Repository Structure](#repository-structure)
 - [Core Development Principles](#core-development-principles)
   - [Performance Architecture](#performance-architecture)
   - [Accessibility Standards](#accessibility-standards)
   - [Configuration-Driven Development](#configuration-driven-development)
   - [Timezone & Date Handling](#timezone--date-handling)
-- [Repository Organization](#repository-organization)
-  - [Core Directories](#core-directories)
-  - [Project Structure](#project-structure)
 - [Site Terminology](#site-terminology)
   - [Core Concepts](#core-concepts)
   - [Content Organization](#content-organization)
@@ -58,7 +57,7 @@ These are the **non-negotiable rules** that apply to ALL development tasks. ALWA
 
 #### ✅ Always Do
 
-- **Always follow the 9-step workflow**: Complete all steps in order for every request
+- **Always follow the 10-step workflow**: Complete all steps in order for every request
 - **Always write tests BEFORE implementation**: Test-Driven Development (TDD) is mandatory
 - **Always prefer higher-level tools**: ALWAYS use MCP tools > Built-in tools > CLI commands
   - **MCP tools** (highest priority): Playwright MCP (web testing), GitHub MCP (GitHub operations), context7 MCP (documentation)
@@ -91,7 +90,7 @@ These are the **non-negotiable rules** that apply to ALL development tasks. ALWA
 
 #### 🚫 Never Do
 
-- **Never skip the 9-step workflow**: All steps are required for quality work
+- **Never skip the 10-step workflow**: All steps are required for quality work
 - **Never write implementation before tests**: TDD is mandatory for code changes
 - **Never skip E2E tests for UI changes**: E2E tests are MANDATORY for frontend, not optional
 - **Never use lower-level tools unnecessarily**: Don't use CLI when MCP or built-in tools are available
@@ -487,6 +486,135 @@ When renaming ANY identifier, you **MUST** verify and update ALL occurrences acr
 - Never stop working until task is complete
 - Include all relevant details in completion report
 
+## Documentation Architecture
+
+The Tech Hub uses a **multi-tier documentation system** designed to separate generic principles from implementation details. This architecture ensures documentation stability across technology migrations.
+
+### Documentation Hierarchy
+
+**1. Root AGENTS.md** (this file):
+
+- Generic development principles that apply to ANY tech stack
+- Timezone handling, performance architecture, configuration-driven design
+- Repository structure and organization
+- Site terminology and concepts
+- **NOT for**: Framework-specific implementation details
+
+**2. Domain-Specific AGENTS.md Files**:
+
+- Development patterns for specific code areas (src/, scripts/, tests/, etc.)
+- Located in each major directory
+- MAY need updates during migrations but maintain domain focus
+- Examples: API patterns, component patterns, scripting patterns
+
+**3. Functional Documentation** (`docs/`):
+
+- Framework-agnostic descriptions of WHAT the system does
+- Minimal set - only 3 files: filtering, content management, API spec
+- Survive technology changes with minimal updates
+
+**4. Content Guidelines** (`collections/`):
+
+- Writing standards and markdown formatting rules
+- Content creation and management workflows
+
+### Documentation Placement Strategy
+
+**CRITICAL**: Understanding where information belongs is essential for maintaining clean, maintainable documentation that remains stable across technology changes.
+
+**Why Framework-Specific Details Are NOT in Root AGENTS.md:**
+
+This is a **permanent architectural principle**, not just a temporary measure. By separating framework-specific implementation from generic principles, we ensure documentation stability across all future technology migrations (currently Jekyll → .NET/Blazor, but applicable to any future changes):
+
+- **Root AGENTS.md** (this file): Generic principles that apply to ANY tech stack (timezone handling, performance architecture, configuration-driven design, terminology), plus .NET-specific patterns and commands
+- **Domain AGENTS.md**: Domain-specific patterns that MAY need updates but maintain focus
+  - `src/AGENTS.md`: .NET development across all projects
+  - `src/TechHub.Api/AGENTS.md`: API development patterns
+  - `src/TechHub.Web/AGENTS.md`: Blazor component patterns
+  - `scripts/AGENTS.md`: PowerShell automation patterns
+  - `tests/AGENTS.md`: Testing strategies
+- **Functional Docs** (`docs/`): Framework-agnostic descriptions of WHAT the system does
+  - Only 3 files: `filtering-system.md`, `content-management.md`, `api-specification.md`
+
+**Complete Placement Hierarchy**: See [docs/AGENTS.md](docs/AGENTS.md) for detailed guidance on where to place new documentation.
+
+**Why This Matters**: This separation ensures that when technology stacks change (Jekyll → .NET/Blazor, or any future migrations), only framework agents need replacement. All other documentation—principles, domain patterns, and functional specs—remain stable and relevant. This architecture makes the codebase resilient to technology evolution while preserving institutional knowledge.
+
+**Framework Mentions in Documentation**: Functional documentation may reference specific implementations (API endpoints, service names, etc.) when essential to understanding the system behavior. These mentions describe WHAT the system does (behavior, contracts, rules), not HOW to build it (code patterns, commands, frameworks). See [docs/AGENTS.md - Implementation Mentions](docs/AGENTS.md#implementation-mentions-in-functional-documentation) for complete guidelines.
+
+### Complete Documentation Map
+
+**Project Overview**:
+
+- **[README.md](README.md)** - Project overview, quick start guide, architecture summary, current implementation status, and navigation to all other documentation
+
+**Domain-Specific AGENTS.md Files**:
+
+- **[src/AGENTS.md](src/AGENTS.md)** - .NET development patterns across all projects
+- **[src/TechHub.Api/AGENTS.md](src/TechHub.Api/AGENTS.md)** - API development patterns (Minimal APIs, endpoints)
+- **[src/TechHub.Web/AGENTS.md](src/TechHub.Web/AGENTS.md)** - Blazor component patterns (SSR, interactivity)
+- **[src/TechHub.Core/AGENTS.md](src/TechHub.Core/AGENTS.md)** - Domain model design (records, DTOs)
+- **[src/TechHub.Infrastructure/AGENTS.md](src/TechHub.Infrastructure/AGENTS.md)** - Data access patterns (repositories, caching)
+- **[scripts/AGENTS.md](scripts/AGENTS.md)** - PowerShell automation scripts
+- **[docs/AGENTS.md](docs/AGENTS.md)** - Documentation maintenance guidelines
+- **[collections/AGENTS.md](collections/AGENTS.md)** - Content creation and management
+- **[tests/AGENTS.md](tests/AGENTS.md)** - Testing strategies across all frameworks
+- **[tests/TechHub.E2E.Tests/AGENTS.md](tests/TechHub.E2E.Tests/AGENTS.md)** - E2E test architecture and performance optimizations
+
+**Functional Documentation** (in `docs/`):
+
+- **[filtering-system.md](docs/filtering-system.md)** - How tag and date filtering works
+- **[content-management.md](docs/content-management.md)** - Content workflows and RSS processing
+- **[api-specification.md](docs/api-specification.md)** - REST API contracts and endpoints
+
+**Content Guidelines** (in `collections/`):
+
+- **[markdown-guidelines.md](collections/markdown-guidelines.md)** - Markdown formatting rules
+- **[writing-style-guidelines.md](collections/writing-style-guidelines.md)** - Writing tone and style
+
+### Quick Reference Guide
+
+**New to the project?**
+
+1. Start with [README.md](README.md) for overview and quick start
+2. Read this file (AGENTS.md) for development workflow
+3. Review domain-specific AGENTS.md before coding
+
+**Working on .NET/Blazor?**
+
+1. Review .NET sections in this file (Tech Stack, Commands, Patterns)
+2. Read [src/AGENTS.md](src/AGENTS.md) for general .NET patterns
+3. Read specific domain AGENTS.md (API, Web, Core, Infrastructure)
+
+**Working on PowerShell scripts?**
+
+1. Read [scripts/AGENTS.md](scripts/AGENTS.md)
+2. Review [.NET Development Commands](#net-development-commands) for testing
+
+**Working on content?**
+
+1. Read [collections/AGENTS.md](collections/AGENTS.md)
+2. Follow [markdown-guidelines.md](collections/markdown-guidelines.md)
+3. Follow [writing-style-guidelines.md](collections/writing-style-guidelines.md)
+
+**Working on tests?**
+
+1. Read [tests/AGENTS.md](tests/AGENTS.md) for testing strategies
+2. Read specific test domain AGENTS.md:
+   - [tests/TechHub.E2E.Tests/AGENTS.md](tests/TechHub.E2E.Tests/AGENTS.md) - E2E test patterns
+   - [tests/TechHub.Api.Tests/AGENTS.md](tests/TechHub.Api.Tests/AGENTS.md) - API integration test patterns
+   - [tests/TechHub.Web.Tests/AGENTS.md](tests/TechHub.Web.Tests/AGENTS.md) - Blazor component test patterns
+   - [tests/TechHub.Core.Tests/AGENTS.md](tests/TechHub.Core.Tests/AGENTS.md) - Unit test patterns
+   - [tests/TechHub.Infrastructure.Tests/AGENTS.md](tests/TechHub.Infrastructure.Tests/AGENTS.md) - Infrastructure test patterns
+   - [tests/powershell/AGENTS.md](tests/powershell/AGENTS.md) - PowerShell test patterns
+3. Review [.NET Development Commands](#net-development-commands) for test commands
+
+**Understanding system behavior?**
+
+1. Read [docs/filtering-system.md](docs/filtering-system.md) for filtering
+2. Read [docs/content-management.md](docs/content-management.md) for content workflows
+3. Read [docs/api-specification.md](docs/api-specification.md) for API contracts
+
 ## Starting & Stopping the Website
 
 **🚨 CRITICAL FOR AI AGENTS**: This section defines how to properly start, interact with, and stop the running website without breaking it.
@@ -777,7 +905,9 @@ Following the migration plan phases defined in [specs/dotnet-migration/](specs/d
 2. Continue Phase 3: Section/content detail pages, filtering, accessibility (T062-T087)
 3. Begin Phase 4: Features implementation (filtering, search, infinite scroll)
 
-See [specs/dotnet-migration/tasks.md](specs/dotnet-migration/tasks.md) for complete task breakdown and [README.md](README.md) for user-facing quick start guide.
+See [specs/dotnet-migration/tasks.md](specs/dotnet-migration/tasks.md) for complete task breakdown, [MIGRATIONSTATUS.md](MIGRATIONSTATUS.md) for detailed migration progress, and [README.md](README.md) for user-facing quick start guide.
+
+**IMPORTANT**: The [specs/](specs/) directory contains initial planning documents that may be outdated. Always refer to [MIGRATIONSTATUS.md](MIGRATIONSTATUS.md) for current implementation status and this file (AGENTS.md) for up-to-date development guidance.
 
 ## .NET Tech Stack
 
@@ -1176,7 +1306,7 @@ public class ContentItem
     
     /// <summary>
     /// Optional alt-collection for content organized in subfolders
-    /// (e.g., "ghc-features" for _videos/ghc-features/)
+    /// (e.g., "ghc-features" for _videos/ghc-features/, "vscode-updates" for _videos/vscode-updates/)
     /// </summary>
     public string? AltCollection { get; init; }
     
@@ -1233,7 +1363,7 @@ tags: [machine-learning, azure-openai]
 canonical_url: "https://example.com/article"  # Maps to ExternalUrl property
 viewing_mode: "external"                      # "internal" or "external" (default: "external")
 video_id: "dQw4w9WgXcQ"                       # YouTube video ID (not extracted from URLs)
-alt_collection: "ghc-features"                # For subfolder organization (_videos/ghc-features/)
+alt_collection: "ghc-features"                # For subfolder organization (_videos/ghc-features/, _videos/vscode-updates/)
 ---
 
 This is the excerpt that appears in list views.
@@ -1333,142 +1463,76 @@ The Tech Hub is a technical content hub with configuration-driven section and co
 - **Tests**: `tests/` directory with unit, integration, component, and E2E tests
 - **Infrastructure**: `infra/` directory with Bicep templates
 
-See [.NET Migration Status](#net-migration-status) section above for current implementation progress, [README.md](README.md) for quick start guide, and [specs/](specs/) for detailed feature specifications.
+See [.NET Migration Status](#net-migration-status) section above for current implementation progress, [MIGRATIONSTATUS.md](MIGRATIONSTATUS.md) for detailed migration status, [README.md](README.md) for quick start guide, and [specs/](specs/) for detailed feature specifications.
 
-## Documentation Architecture
+**IMPORTANT**: The [specs/](specs/) directory contains initial planning documents that may be outdated. Always refer to [MIGRATIONSTATUS.md](MIGRATIONSTATUS.md) for current implementation status and this file (AGENTS.md) for up-to-date development guidance.
 
-The Tech Hub uses a **multi-tier documentation system** designed to separate generic principles from implementation details. This architecture ensures documentation stability across technology migrations.
+### Core Architecture
 
-### Documentation Hierarchy
+The Tech Hub uses a **configuration-driven architecture** where all sections, collections, and content organization is defined in `_data/sections.json`. This single source of truth ensures consistency across all parts of the application.
 
-**1. Root AGENTS.md** (this file):
+**Key Architectural Principles**:
 
-- Generic development principles that apply to ANY tech stack
-- Timezone handling, performance architecture, configuration-driven design
-- Repository structure and organization
-- Site terminology and concepts
-- **NOT for**: Framework-specific implementation details
+- **Configuration-Driven**: All sections and collections defined in data files
+- **Dynamic Generation**: Pages created automatically from configuration
+- **Modular Design**: New sections added by updating `sections.json`
+- **Consistent Structure**: Build system ensures uniform page generation
+- **Content Separation**: Clear distinction between generated and custom pages
 
-**2. Framework-Specific Agents** (`.github/agents/`):
+### Repository Structure
 
-- Complete framework-specific development guidance
-- Server management, build processes, testing commands
-- **Current**: `dotnet.md` for .NET/Blazor development
-- **Will be REPLACED** during technology migrations
+#### Core Directories
 
-**3. Domain-Specific AGENTS.md Files**:
+**Content Directories**:
 
-- Development patterns for specific code areas (not frameworks)
-- Located in each major directory (`src/`, `scripts/`, `tests/`, etc.)
-- **MAY need updates** during migrations but maintain domain focus
-- Examples: API patterns, component patterns, scripting patterns
+- **`collections/`** - Content organization with one directory per collection:
+  - `_news/` - Official announcements and product updates
+  - `_videos/` - Video content and tutorials
+    - `_videos/ghc-features/` - GitHub Copilot feature demos (special frontmatter required)
+    - `_videos/vscode-updates/` - Visual Studio Code updates (special frontmatter required)
+  - `_community/` - Microsoft Tech Community posts and community-sourced content
+  - `_blogs/` - Blogs and technical articles
+  - `_roundups/` - Curated weekly content summaries
 
-**4. Functional Documentation** (`docs/`):
+**.NET Code & Projects** (in repository root):
 
-- Framework-agnostic descriptions of WHAT the system does
-- Minimal set - only 3 files: filtering, content management, API spec
-- Survive technology changes with minimal updates
+- **`src/`** - .NET source code projects
+  - `src/TechHub.Api/` - ASP.NET Core REST API
+  - `src/TechHub.Web/` - Blazor frontend
+  - `src/TechHub.Core/` - Domain models and interfaces
+  - `src/TechHub.Infrastructure/` - Repository implementations
+  - `src/TechHub.AppHost/` - .NET Aspire orchestration
+- **`tests/`** - .NET test projects
+  - `tests/TechHub.Core.Tests/` - Unit tests
+  - `tests/TechHub.Api.Tests/` - API integration tests
+  - `tests/TechHub.Web.Tests/` - bUnit component tests
+  - `tests/TechHub.E2E.Tests/` - Playwright E2E tests
 
-**5. Content Guidelines** (`collections/`):
+**Development & Build**:
 
-- Writing standards and markdown formatting rules
-- Content creation and management workflows
+- **`docs/`** - Framework-agnostic functional documentation
+- **`.github/agents/`** - Framework-specific development agents
+- **`scripts/`** - Automation and utility scripts (PowerShell)
+- **`.tmp/`** - Temporary directory for development scripts
 
-### Documentation Placement Strategy
+**Configuration**:
 
-**CRITICAL**: Understanding where information belongs is essential for maintaining clean, maintainable documentation that remains stable across technology changes.
+- **`_data/sections.json`** - Single source of truth for sections and collections (shared)
+- **`TechHub.slnx`** - .NET solution file
 
-**Why Framework-Specific Details Are NOT in Root AGENTS.md:**
+> **See "Documentation Architecture" section above for complete documentation map and navigation guide**
 
-This is a **permanent architectural principle**, not just a temporary measure. By separating framework-specific implementation from generic principles, we ensure documentation stability across all future technology migrations (currently Jekyll → .NET/Blazor, but applicable to any future changes):
+#### Project Structure
 
-- **Root AGENTS.md** (this file): Generic principles that apply to ANY tech stack (timezone handling, performance architecture, configuration-driven design, terminology)
-- **Framework Agents** (`.github/agents/`): Complete framework-specific guidance that will be REPLACED during migration
-  - `dotnet.md` (current): .NET, Blazor, C# patterns
-- **Domain AGENTS.md**: Domain-specific patterns that MAY need updates but maintain focus
-  - `src/AGENTS.md`: .NET development across all projects
-  - `src/TechHub.Api/AGENTS.md`: API development patterns
-  - `src/TechHub.Web/AGENTS.md`: Blazor component patterns
-  - `scripts/AGENTS.md`: PowerShell automation patterns
-  - `tests/AGENTS.md`: Testing strategies
-- **Functional Docs** (`docs/`): Framework-agnostic descriptions of WHAT the system does
-  - Only 3 files: `filtering-system.md`, `content-management.md`, `api-specification.md`
+The Tech Hub follows a **configuration-driven architecture** where all sections, collections, and content organization is defined in `_data/sections.json`. This single source of truth ensures consistency across all parts of the application.
 
-**Complete Placement Hierarchy**: See [docs/AGENTS.md](docs/AGENTS.md) for detailed guidance on where to place new documentation.
+**Key Architectural Principles**:
 
-**Why This Matters**: This separation ensures that when technology stacks change (Jekyll → .NET/Blazor, or any future migrations), only framework agents need replacement. All other documentation—principles, domain patterns, and functional specs—remain stable and relevant. This architecture makes the codebase resilient to technology evolution while preserving institutional knowledge.
-
-**Framework Mentions in Documentation**: Functional documentation may reference specific implementations (API endpoints, service names, etc.) when essential to understanding the system behavior. These mentions describe WHAT the system does (behavior, contracts, rules), not HOW to build it (code patterns, commands, frameworks). See [docs/AGENTS.md - Implementation Mentions](docs/AGENTS.md#implementation-mentions-in-functional-documentation) for complete guidelines.
-
-### Complete Documentation Map
-
-**Project Overview**:
-
-- **[README.md](README.md)** - Project overview, quick start guide, architecture summary, current implementation status, and navigation to all other documentation
-
-**Custom Agents** (in `.github/agents/`):
-
-- **[dotnet.md](.github/agents/dotnet.md)** - `@dotnet` agent for .NET/Blazor development, C# patterns, ASP.NET Core, Aspire orchestration
-
-**Domain-Specific AGENTS.md Files**:
-
-- **[src/AGENTS.md](src/AGENTS.md)** - .NET development patterns across all projects
-- **[src/TechHub.Api/AGENTS.md](src/TechHub.Api/AGENTS.md)** - API development patterns (Minimal APIs, endpoints)
-- **[src/TechHub.Web/AGENTS.md](src/TechHub.Web/AGENTS.md)** - Blazor component patterns (SSR, interactivity)
-- **[src/TechHub.Core/AGENTS.md](src/TechHub.Core/AGENTS.md)** - Domain model design (records, DTOs)
-- **[src/TechHub.Infrastructure/AGENTS.md](src/TechHub.Infrastructure/AGENTS.md)** - Data access patterns (repositories, caching)
-- **[scripts/AGENTS.md](scripts/AGENTS.md)** - PowerShell automation scripts
-- **[docs/AGENTS.md](docs/AGENTS.md)** - Documentation maintenance guidelines
-- **[collections/AGENTS.md](collections/AGENTS.md)** - Content creation and management
-- **[tests/AGENTS.md](tests/AGENTS.md)** - Testing strategies across all frameworks
-- **[tests/TechHub.E2E.Tests/AGENTS.md](tests/TechHub.E2E.Tests/AGENTS.md)** - E2E test architecture and performance optimizations
-
-**Functional Documentation** (in `docs/`):
-
-- **[filtering-system.md](docs/filtering-system.md)** - How tag and date filtering works
-- **[content-management.md](docs/content-management.md)** - Content workflows and RSS processing
-- **[api-specification.md](docs/api-specification.md)** - REST API contracts and endpoints
-
-**Content Guidelines** (in `collections/`):
-
-- **[markdown-guidelines.md](collections/markdown-guidelines.md)** - Markdown formatting rules
-- **[writing-style-guidelines.md](collections/writing-style-guidelines.md)** - Writing tone and style
-
-### Quick Reference Guide
-
-**New to the project?**
-
-1. Start with [README.md](README.md) for overview and quick start
-2. Read this file (AGENTS.md) for development workflow
-3. Review domain-specific AGENTS.md before coding
-
-**Working on .NET/Blazor?**
-
-1. Use `@dotnet` agent for framework specifics
-2. Read [src/AGENTS.md](src/AGENTS.md) for general .NET patterns
-3. Read specific domain AGENTS.md (API, Web, Core, Infrastructure)
-
-**Working on PowerShell scripts?**
-
-1. Read [scripts/AGENTS.md](scripts/AGENTS.md)
-2. See `@dotnet` agent for testing
-
-**Working on content?**
-
-1. Read [collections/AGENTS.md](collections/AGENTS.md)
-2. Follow [markdown-guidelines.md](collections/markdown-guidelines.md)
-3. Follow [writing-style-guidelines.md](collections/writing-style-guidelines.md)
-
-**Working on tests?**
-
-1. Read [tests/AGENTS.md](tests/AGENTS.md)
-2. See `@dotnet` agent for test commands
-
-**Understanding system behavior?**
-
-1. Read [docs/filtering-system.md](docs/filtering-system.md) for filtering
-2. Read [docs/content-management.md](docs/content-management.md) for content workflows
-3. Read [docs/api-specification.md](docs/api-specification.md) for API contracts
+- **Configuration-Driven**: All sections and collections defined in data files
+- **Dynamic Generation**: Pages created automatically from configuration
+- **Modular Design**: New sections added by updating `sections.json`
+- **Consistent Structure**: Build system ensures uniform page generation
+- **Content Separation**: Clear distinction between generated and custom pages
 
 ## Core Development Principles
 
@@ -1588,64 +1652,10 @@ All user interface components and interactions must be accessible to users with 
 
 **Implementation Details**:
 
-- Server-side: See [.github/agents/dotnet.md](.github/agents/dotnet.md) for server-side patterns
+- Server-side: See [.NET Patterns & Examples](#net-patterns--examples) section
 - Client-side: See domain-specific AGENTS.md files for client-side patterns
 
 **Benefits**: Prevents date/time bugs, ensures consistent behavior across all systems, simplifies date comparisons.
-
-## Repository Organization
-
-### Core Directories
-
-**Content Directories**:
-
-- **`collections/`** - Content organization with one directory per collection:
-  - `_news/` - Official announcements and product updates
-  - `_videos/` - Video content and tutorials
-    - `_videos/ghc-features/` - GitHub Copilot feature demos (special frontmatter required)
-  - `_community/` - Microsoft Tech Community posts and community-sourced content
-  - `_blogs/` - Blogs and technical articles
-  - `_roundups/` - Curated weekly content summaries
-
-**.NET Code & Projects** (in repository root):
-
-- **`src/`** - .NET source code projects
-  - `src/TechHub.Api/` - ASP.NET Core REST API
-  - `src/TechHub.Web/` - Blazor frontend
-  - `src/TechHub.Core/` - Domain models and interfaces
-  - `src/TechHub.Infrastructure/` - Repository implementations
-  - `src/TechHub.AppHost/` - .NET Aspire orchestration
-- **`tests/`** - .NET test projects
-  - `tests/TechHub.Core.Tests/` - Unit tests
-  - `tests/TechHub.Api.Tests/` - API integration tests
-  - `tests/TechHub.Web.Tests/` - bUnit component tests
-  - `tests/TechHub.E2E.Tests/` - Playwright E2E tests
-
-**Development & Build**:
-
-- **`docs/`** - Framework-agnostic functional documentation
-- **`.github/agents/`** - Framework-specific development agents
-- **`scripts/`** - Automation and utility scripts (PowerShell)
-- **`.tmp/`** - Temporary directory for development scripts
-
-**Configuration**:
-
-- **`_data/sections.json`** - Single source of truth for sections and collections (shared)
-- **`TechHub.slnx`** - .NET solution file
-
-> **See "Documentation Architecture" section above for complete documentation map and navigation guide**
-
-### Project Structure
-
-The Tech Hub follows a **configuration-driven architecture** where all sections, collections, and content organization is defined in `_data/sections.json`. This single source of truth ensures consistency across all parts of the application.
-
-**Key Architectural Principles**:
-
-- **Configuration-Driven**: All sections and collections defined in data files
-- **Dynamic Generation**: Pages created automatically from configuration
-- **Modular Design**: New sections added by updating `sections.json`
-- **Consistent Structure**: Build system ensures uniform page generation
-- **Content Separation**: Clear distinction between generated and custom pages
 
 ## Site Terminology
 

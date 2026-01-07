@@ -130,12 +130,8 @@ These files are framework-agnostic and describe system behavior, not implementat
 
 **Development Guidance** (in AGENTS.md files):
 
-- **[Root `AGENTS.md`](../AGENTS.md)** - Generic principles, architecture, terminology, performance, timezone handling
+- **[Root `AGENTS.md`](../AGENTS.md)** - Generic principles, .NET Tech Stack, Commands, Patterns & Examples, architecture, terminology, performance, timezone handling
 - **Domain-specific AGENTS.md** - See root `AGENTS.md` for complete list
-
-**Framework-Specific** (in `.github/agents/`):
-
-- **[`.github/agents/dotnet.md`](../.github/agents/dotnet.md)** - .NET/Blazor development, C# patterns, Aspire orchestration
 
 **Content Writing** (in `collections/`):
 
@@ -151,22 +147,17 @@ When adding documentation, place it in the most specific appropriate location:
 
 - High-level project overview and navigation
 - Generic, framework-agnostic development principles
+- .NET Tech Stack, Development Commands, Patterns & Examples
 - Repository structure and organization
-- **Not for**: Specific implementation details
+- **Not for**: Domain-specific implementation details
 
-### 2. Framework Agent Files (`.github/agents/`)
+### 2. Domain-Specific AGENTS.md Files
 
-- **Complete framework-specific guidance** for the tech stack
-- Server management, build processes, templating, framework best practices, tech specific implementations of the generic development principles mentioned in root `AGENTS.md`
-- **Current**: `dotnet.md` (C#, Blazor, ASP.NET Core, Aspire)
-
-### 3. Domain-Specific AGENTS.md Files
-
-- **Development patterns for specific code domains** (not frameworks)
-- Examples: API patterns, Blazor patterns, PowerShell patterns
+- **Development patterns for specific code domains** (API, Web, Core, Infrastructure, scripts, tests)
+- Examples: API endpoint patterns, Blazor component patterns, PowerShell script patterns
 - See root `AGENTS.md` for complete list and when to read them
 
-### 4. Functional Documentation (`docs/`)
+### 3. Functional Documentation (`docs/`)
 
 **CRITICAL**: Keep MINIMAL - only files that describe system behavior, not implementation.
 
@@ -180,7 +171,8 @@ When adding documentation, place it in the most specific appropriate location:
 
 - Terminology/concepts → Root `AGENTS.md` (Site Terminology section)
 - Architecture/overview → Root `AGENTS.md` or `docs/AGENTS.md`
-- Framework patterns → `.github/agents/dotnet.md`
+- .NET/Blazor patterns → Root `AGENTS.md` (.NET Tech Stack, Commands, Patterns sections)
+- Domain patterns → Domain-specific AGENTS.md files (src/, tests/, scripts/)
 - Development guidance → Domain-specific AGENTS.md files
 - Writing standards → `collections/AGENTS.md`
 - Quality standards → `docs/AGENTS.md` (this file)
@@ -213,10 +205,13 @@ When adding documentation, place it in the most specific appropriate location:
 - **Architecture overview** → Root `AGENTS.md` (Repository Structure section)
 - **Generic performance principles** → Root `AGENTS.md` (Performance Architecture section)
 - **Timezone handling rules** → Root `AGENTS.md` (Timezone & Date Handling section)
+- **.NET Tech Stack** → Root `AGENTS.md` (.NET Runtime & Framework, Frontend, Backend, Infrastructure)
+- **.NET Development Commands** → Root `AGENTS.md` (Build, Test, Watch, EF, Global Tools)
+- **.NET Patterns & Examples** → Root `AGENTS.md` (Minimal APIs, Blazor, Repositories, DI, Records)
 - **Blazor component patterns** → `src/TechHub.Web/AGENTS.md` (domain-specific)
 - **API endpoint patterns** → `src/TechHub.Api/AGENTS.md` (domain-specific)
-- **.NET development patterns** → `.github/agents/dotnet.md` (framework-specific)
 - **PowerShell script patterns** → `scripts/AGENTS.md` (domain-specific)
+- **Testing patterns** → `tests/AGENTS.md` and test subdirectory AGENTS.md files
 - **Markdown formatting** → `collections/markdown-guidelines.md` (content writing)
 - **Writing style** → `collections/writing-style-guidelines.md` (content writing)
 
@@ -224,12 +219,12 @@ When adding documentation, place it in the most specific appropriate location:
 
 - **Terminology/concepts** → `docs/` (belongs in root `AGENTS.md`)
 - **Architecture overview** → `docs/` (belongs in root `AGENTS.md`)
-- **.NET-specific patterns** → `docs/` or root `AGENTS.md` (belongs in `.github/agents/dotnet.md`)
+- **.NET-specific patterns** → `docs/` (belongs in root `AGENTS.md` .NET sections)
 - **Writing standards** → `docs/` (belongs in `collections/markdown-guidelines.md` or `collections/writing-style-guidelines.md`)
 - **Code examples** → `docs/` (belongs in AGENTS.md files)
 - **Development how-tos** → `docs/` (belongs in AGENTS.md files)
 - **API implementation code** → `docs/` (belongs in `src/TechHub.Api/AGENTS.md`)
-- **Domain-specific patterns** → Framework agents (domain ≠ framework)
+- **Domain-specific patterns** → Root AGENTS.md (belongs in domain AGENTS.md files)
 - **Content formatting** → `docs/` (belongs in `collections/markdown-guidelines.md`)
 
 ## When to Update Documentation Types
@@ -295,8 +290,8 @@ Functional documentation files in `docs/` may reference specific implementations
 
 **Examples of Inappropriate Implementation References**:
 
-- ❌ ".NET uses dependency injection" - Generic framework information (belongs in dotnet.md)
-- ❌ "To run the API, use dotnet run" - Generic command (belongs in dotnet.md)
+- ❌ ".NET uses dependency injection" - Generic framework information (belongs in Root AGENTS.md)
+- ❌ "To run the API, use dotnet run" - Generic command (belongs in Root AGENTS.md)
 - ❌ "Blazor component lifecycle is..." - Generic tutorial (belongs in TechHub.Web/AGENTS.md)
 
 **Why This Approach**:

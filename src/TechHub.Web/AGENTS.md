@@ -1,6 +1,6 @@
 # Blazor Frontend Development Guide
 
-> **AI CONTEXT**: This is a **LEAF** context file for `src/TechHub.Web/`. It complements the [Root AGENTS.md](../../AGENTS.md), [src/AGENTS.md](../AGENTS.md), and [.github/agents/dotnet.md](../../.github/agents/dotnet.md).
+> **AI CONTEXT**: This is a **LEAF** context file for `src/TechHub.Web/`. It complements the [Root AGENTS.md](../../AGENTS.md) and [src/AGENTS.md](../AGENTS.md).
 > **RULE**: Global rules (Timezone, Performance) in Root AGENTS.md apply **IN ADDITION** to local rules. Follow **BOTH**.
 
 ## Critical Rules
@@ -12,9 +12,9 @@
 - **Server-side render initial content** - Use SSR for SEO and performance
 - **Progressive enhancement** - Core functionality works without JavaScript
 - **Use TechHubApiClient for all API calls** - Typed HTTP client in `Services/TechHubApiClient.cs`
-- **Follow Blazor component patterns** - See `.github/agents/dotnet.md` for framework-specific guidance
+- **Follow Blazor component patterns** - See [Root AGENTS.md](../../AGENTS.md) for .NET/Blazor framework-specific guidance
 - **Fix all linting errors** - Check with `get_errors` tool after editing files
-- **Add tests for components** - Use bUnit for component testing (see `tests/TechHub.Web.Tests/AGENTS.md`)
+- **Add tests for components** - Use bUnit for component testing (see [tests/TechHub.Web.Tests/AGENTS.md](../../tests/TechHub.Web.Tests/AGENTS.md))
 
 ### ⚠️ Ask First
 
@@ -840,8 +840,7 @@ else if (data != null)
 
 ## Related Documentation
 
-- **[Root AGENTS.md](../../AGENTS.md)** - Generic principles and architecture
-- **[.github/agents/dotnet.md](../../.github/agents/dotnet.md)** - .NET/Blazor framework patterns
-- **[src/AGENTS.md](../AGENTS.md)** - .NET project structure and patterns
-- **[Jekyll _sass](../../jekyll/_sass/)** - Design system source (colors, typography, spacing)
-- **[tests/TechHub.Web.Tests/AGENTS.md](../../tests/TechHub.Web.Tests/AGENTS.md)** - Component testing patterns
+- **[Root AGENTS.md](../../AGENTS.md)** - AI Assistant Workflow, .NET Tech Stack, Patterns & Examples, performance architecture, timezone handling
+- **[src/AGENTS.md](../AGENTS.md)** - .NET development patterns across all src/ projects
+- **[tests/TechHub.Web.Tests/AGENTS.md](../../tests/TechHub.Web.Tests/AGENTS.md)** - bUnit component testing patterns
+- **[Jekyll _sass](../../jekyll/_sass/)** - Source design tokens (colors, typography, spacing)

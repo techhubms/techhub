@@ -1,6 +1,6 @@
 # Source Code Development Guide
 
-> **AI CONTEXT**: This is a **LEAF** context file for the `src/` directory. It complements the [Root AGENTS.md](/AGENTS.md) and [.NET Development Expert](/.github/agents/dotnet.md).
+> **AI CONTEXT**: This is a **LEAF** context file for the `src/` directory. It complements the [Root AGENTS.md](/AGENTS.md).
 > **RULE**: Global rules (Timezone, Performance, AI Assistant Workflow) in Root AGENTS.md apply **IN ADDITION** to local rules. Follow **BOTH**.
 
 ## Overview
@@ -704,8 +704,7 @@ mcp_context7_query-docs(libraryID: "/dotnet/aspire", query: "service discovery")
 
 **Tech Hub Documentation**:
 
-- **[Root AGENTS.md](/AGENTS.md)** - Framework-agnostic principles
-- **[.NET Development Expert](/.github/agents/dotnet.md)** - Complete .NET development guide
+- **[Root AGENTS.md](/AGENTS.md)** - Framework-agnostic principles, .NET Tech Stack, Commands, Patterns & Examples
 - **[tests/AGENTS.md](/tests/AGENTS.md)** - Testing strategies and patterns
 - **[Feature Specifications](/specs/)** - Complete feature requirements
 - **[API Specification](/docs/api-specification.md)** - REST API documentation
@@ -713,8 +712,7 @@ mcp_context7_query-docs(libraryID: "/dotnet/aspire", query: "service discovery")
 ## Related Documentation
 
 - **[tests/AGENTS.md](/tests/AGENTS.md)** - Testing strategies (test code is also source code!)
-- **[Root AGENTS.md](/AGENTS.md)** - Global principles and AI workflow
-- **[.NET Development Expert](/.github/agents/dotnet.md)** - Complete framework-specific guidance
+- **[Root AGENTS.md](/AGENTS.md)** - Global principles, AI workflow, .NET Tech Stack, Commands, Patterns
 - **[docs/AGENTS.md](/docs/AGENTS.md)** - Documentation maintenance guidelines
 
 ---
