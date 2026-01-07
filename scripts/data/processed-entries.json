@@ -23050,5 +23050,17 @@
     "collection": "community",
     "timestamp": "2026-01-07 10:03:48 +00:00",
     "canonical_url": "https://techcommunity.microsoft.com/t5/azure-high-performance-computing/announcing-azure-cyclecloud-workspace-for-slurm-version-2025-12/ba-p/4481953"
+  },
+  {
+    "collection": "blogs",
+    "canonical_url": "https://devclass.com/2026/01/07/microsoft-open-sources-xaml-studio-amid-developer-discontent-with-visual-studio-designers/",
+    "timestamp": "2026-01-07 15:04:31 +00:00",
+    "reason": "Succesfully added: Assigned the Coding category because the article discusses the open sourcing and use of XAML Studio, a Microsoft tool for designing application UIs using XAML, as well as its integration with Visual Studio. The main focus is on developer tooling, UI frameworks (WinUI 3, .NET MAUI, UWP), and workflow implications for desktop application development with Microsoft technologies. No other inclusion rules were satisfied: there is no Azure, AI, ML, DevOps, or Security focus. The article meets quality and scope standards: it is not biographical, not a sales pitch, not question-only, and not business or career-focused. The focus is technical and relevant to the developer ecosystem."
+  },
+  {
+    "collection": "videos",
+    "canonical_url": "https://www.youtube.com/watch?v=0ccUfvqzalA",
+    "timestamp": "2026-01-07 15:04:59 +00:00",
+    "reason": "Succesfully added: Assigned the 'AI' category because the content centers on Microsoft Copilot Studio, explicitly mentioned as a developer/maker tool, which qualifies under AI category inclusion rule 1. Tags such as Agentic AI and Copilot Studio confirm the focus on Microsoft's AI-driven automation for store operations. The content is not about Microsoft 365 Copilot or general productivity use, but rather about implementing AI in operational workflows, which fits the AI category. No other categories were assigned since there's no direct evidence of coding, DevOps, Azure-specific implementation, ML/data science, or Security focus."
   }
 ]
