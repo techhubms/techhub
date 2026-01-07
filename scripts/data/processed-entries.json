@@ -23086,5 +23086,17 @@
     "timestamp": "2026-01-07 17:08:38 +00:00",
     "collection": "community",
     "reason": "Succesfully added: Applied the Azure category because the entire content is focused on deploying and benchmarking Siemens NX on Azure NVads V710 v5-series virtual machines, including technical configuration, architecture, and usage scenarios (Azure rule 1, 2, 4, 5). While it mentions CAD/CAM/CAE and engineering workflows, there is no substantive code–therefore the Coding, ML, AI, DevOps, Security, and GitHub Copilot categories do not apply per content rules. The community post is sufficiently deep and technical, far exceeding the 200-word minimum for community content."
+  },
+  {
+    "timestamp": "2026-01-07 19:05:54 +00:00",
+    "reason": "Succesfully added: I assigned the 'Coding' category because the content is focused on using the MongoDB EF Core provider in .NET applications, which involves practical development with C# and EF Core (Coding rules 1, 2, and 4). I added the 'AI' category because it covers Vector Search, a technology that enables semantic search and AI-powered application scenarios (AI rule 4 and 5). While the article is about integrating MongoDB (not a Microsoft product), the central topic is .NET EF Core, a Microsoft development framework, making Microsoft tech core to the solution and well above the 40% threshold for inclusion. Other categories do not strongly apply as the content is not DevOps, Security, Azure, or ML-focused. There are no generic exclusion triggers.",
+    "canonical_url": "https://devblogs.microsoft.com/dotnet/mongodb-efcore-provider-queryable-encryption-vector-search/",
+    "collection": "news"
+  },
+  {
+    "timestamp": "2026-01-07 19:06:26 +00:00",
+    "reason": "Succesfully added: The content qualifies for the Security category because it details a range of proactive and reactive security services offered by Microsoft Incident Response. These include incident response plan development, threat simulations, compromise assessments, identity hardening, and more—all of which are directly related to security, security architecture, and threat defense using Microsoft tools and expertise (Security rules 1, 2, 5, 9). The content is technical and practical, aimed at implementing resilience and security best practices. No other categories apply as there is no focus on coding, ML, AI, DevOps, GitHub Copilot, or Azure development/operation specifics.",
+    "canonical_url": "https://www.microsoft.com/en-us/security/blog/2026/01/07/explore-the-latest-microsoft-incident-response-proactive-services-for-enhanced-resilience/",
+    "collection": "news"
   }
 ]
