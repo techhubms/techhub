@@ -45,8 +45,9 @@
     }
   },
   "remoteEnv": {
-    "PLAYWRIGHT_BROWSERS_PATH": "/ms-playwright",
-    "CHROME_DEVEL_SANDBOX": "/usr/local/sbin/chrome-devel-sandbox"
+    "PLAYWRIGHT_BROWSERS_PATH": "${containerEnv:HOME}/.cache/ms-playwright",
+    "PLAYWRIGHT_LAUNCH_OPTIONS": "{\"args\":[\"--no-sandbox\",\"--disable-setuid-sandbox\"]}",
+    "PLAYWRIGHT_CHROMIUM_USE_HEADLESS_NEW": "1"
   },
   "postCreateCommand": "bash .devcontainer/post-create.sh",
   "forwardPorts": [5000, 5001, 15888, 5173],

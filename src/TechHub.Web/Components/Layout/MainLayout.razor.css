@@ -72,23 +72,133 @@
 
 /* Blazor Error UI - Global utility */
 #blazor-error-ui {
-    color-scheme: light only;
-    background: lightyellow;
-    bottom: 0;
-    box-shadow: 0 -1px 2px rgba(0, 0, 0, 0.2);
-    box-sizing: border-box;
-    display: none;
-    left: 0;
-    padding: 0.6rem 1.25rem 0.7rem 1.25rem;
-    position: fixed;
-    width: 100%;
-    z-index: 1000;
+  background: linear-gradient(135deg, var(--color-purple-dark) 0%, var(--color-purple-bright) 100%);
+  bottom: 0;
+  box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.15);
+  box-sizing: border-box;
+  color: var(--color-text-inverse);
+  display: none;
+  left: 0;
+  padding: var(--spacing-3) var(--spacing-4);
+  position: fixed;
+  width: 100%;
+  z-index: 10000;
+  animation: slideUp 0.3s var(--easing-ease-out);
 }
 
-    #blazor-error-ui .dismiss {
-        cursor: pointer;
-        position: absolute;
-        right: 0.75rem;
-        top: 0.5rem;
-    }
+@keyframes slideUp {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+#blazor-error-ui .error-content {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-3);
+  flex: 1;
+}
+
+#blazor-error-ui .error-icon {
+  flex-shrink: 0;
+  width: 24px;
+  height: 24px;
+  color: var(--color-text-inverse);
+}
+
+#blazor-error-ui .error-message {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-1);
+  flex: 1;
+}
+
+#blazor-error-ui .error-message strong {
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text-inverse);
+}
+
+#blazor-error-ui .error-message span {
+  font-size: var(--font-size-sm);
+  color: rgba(255, 255, 255, 0.9);
+}
+
+#blazor-error-ui .error-actions {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-2);
+}
+
+#blazor-error-ui .reload-button {
+  background: rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: var(--color-text-inverse);
+  padding: var(--spacing-2) var(--spacing-3);
+  border-radius: var(--radius-md);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  text-decoration: none;
+  transition: all var(--duration-fast) var(--easing-ease);
+  white-space: nowrap;
+}
+
+#blazor-error-ui .reload-button:hover {
+  background: rgba(255, 255, 255, 0.3);
+  border-color: rgba(255, 255, 255, 0.5);
+  transform: translateY(-1px);
+}
+
+#blazor-error-ui .dismiss-button {
+  background: transparent;
+  border: none;
+  color: var(--color-text-inverse);
+  cursor: pointer;
+  padding: var(--spacing-2);
+  font-size: var(--font-size-lg);
+  line-height: 1;
+  transition: opacity var(--duration-fast) var(--easing-ease);
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-sm);
+}
+
+#blazor-error-ui .dismiss-button:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  #blazor-error-ui {
+    padding: var(--spacing-3);
+  }
+
+  #blazor-error-ui .error-content {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--spacing-2);
+  }
+
+  #blazor-error-ui .error-message span {
+    font-size: var(--font-size-xs);
+  }
+
+  #blazor-error-ui .error-actions {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  #blazor-error-ui .reload-button {
+    flex: 1;
+    text-align: center;
+  }
+}
 

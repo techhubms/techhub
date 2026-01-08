@@ -19,8 +19,20 @@
     </div>
 </footer>
 
-<div id="blazor-error-ui" data-nosnippet>
-    An unhandled error has occurred.
-    <a href="." class="reload">Reload</a>
-    <span class="dismiss">🗙</span>
+<div id="blazor-error-ui" role="alert" aria-live="assertive" data-nosnippet>
+    <div class="error-content">
+        <svg class="error-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="12" cy="12" r="10"></circle>
+            <line x1="12" y1="8" x2="12" y2="12"></line>
+            <line x1="12" y1="16" x2="12.01" y2="16"></line>
+        </svg>
+        <div class="error-message">
+            <strong>Something went wrong</strong>
+            <span>An unexpected error occurred. Please reload the page to continue.</span>
+        </div>
+    </div>
+    <div class="error-actions">
+        <a href="." class="reload-button">Reload Page</a>
+        <button class="dismiss-button" aria-label="Dismiss error message">✕</button>
+    </div>
 </div>
