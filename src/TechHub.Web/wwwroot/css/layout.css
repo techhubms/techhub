@@ -16,18 +16,28 @@
 /* Skip Link (Accessibility) - Global utility */
 .skip-link {
   position: absolute;
-  top: -100px;
+  top: 0;
   left: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  white-space: nowrap;
+  width: 1px;
+}
+
+.skip-link:focus {
+  clip: auto;
+  clip-path: none;
+  height: auto;
+  overflow: visible;
+  width: auto;
   background: var(--color-accent-primary);
   color: var(--color-text-on-emphasis);
   padding: var(--spacing-2) var(--spacing-3);
   text-decoration: none;
   font-weight: var(--font-weight-semibold);
   z-index: 1000;
-}
-
-.skip-link:focus {
-  top: 0;
 }
 
 /* Main Content Wrapper - Global layout container */

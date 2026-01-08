@@ -107,7 +107,7 @@ public class NavigationTests : IAsyncLifetime
         await newsButton.ClickAsync();
         
         // Assert - URL should be /github-copilot/news
-        await page.WaitForURLAsync("**/github-copilot/news");
+        await page.WaitForURLWithTimeoutAsync("**/github-copilot/news");
         Assert.EndsWith("/github-copilot/news", page.Url);
         Assert.DoesNotContain("#", page.Url); // No hash fragments
         
@@ -133,7 +133,7 @@ public class NavigationTests : IAsyncLifetime
         // Either no collection badge, or badge doesn't say "News"
         if (badgeCount > 0)
         {
-            var badgeText = await collectionBadges.First.TextContentAsync();
+            var badgeText = await collectionBadges.First.TextContentWithTimeoutAsync();
             Assert.NotEqual("News", badgeText); // Should not show the current collection
         }
         
@@ -157,7 +157,7 @@ public class NavigationTests : IAsyncLifetime
         Assert.True(await collectionBadge.IsVisibleAsync());
         
         // Collection badge should have proper capitalization (e.g., "News" not "news")
-        var badgeText = await collectionBadge.TextContentAsync();
+        var badgeText = await collectionBadge.TextContentWithTimeoutAsync();
         Assert.Matches("^[A-Z]", badgeText!); // Starts with capital letter
         
         await page.CloseAsync();
@@ -175,14 +175,14 @@ public class NavigationTests : IAsyncLifetime
         await videosButton.ClickAsync();
         
         // Assert - Should navigate and load videos
-        await page.WaitForURLAsync("**/github-copilot/videos");
+        await page.WaitForURLWithTimeoutAsync("**/github-copilot/videos");
         
         // Wait for page to fully load after navigation
         await page.WaitForBlazorStateSyncAsync("Videos");
         
         // Videos collection should be active
         var activeButton = page.Locator(".collection-nav a.active");
-        var activeText = await activeButton.TextContentAsync();
+        var activeText = await activeButton.TextContentWithTimeoutAsync();
         Assert.Contains("Videos", activeText);
         
         await page.CloseAsync();
@@ -250,17 +250,17 @@ public class NavigationTests : IAsyncLifetime
         await page.GotoAndWaitForBlazorAsync($"{BaseUrl}/ai/news");
         
         // Assert
-        await page.WaitForSelectorAsync(".collection-nav");
-        await page.WaitForSelectorAsync(".content-item-card");
+        await page.WaitForSelectorWithTimeoutAsync(".collection-nav");
+        await page.WaitForSelectorWithTimeoutAsync(".content-item-card");
         
         // Should show AI section
         var heading = page.Locator("h1");
-        var headingText = await heading.TextContentAsync();
+        var headingText = await heading.TextContentWithTimeoutAsync();
         Assert.Contains("Artificial Intelligence", headingText);
         
         // News collection should be active
         var activeButton = page.Locator(".collection-nav a.active");
-        var activeText = await activeButton.TextContentAsync();
+        var activeText = await activeButton.TextContentWithTimeoutAsync();
         Assert.Contains("News", activeText);
         
         await page.CloseAsync();

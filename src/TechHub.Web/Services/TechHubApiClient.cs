@@ -304,7 +304,7 @@ public class TechHubApiClient
         try
         {
             _logger.LogInformation("Fetching RSS feed for all content");
-            var response = await _httpClient.GetAsync("/api/rss/all", cancellationToken);
+            var response = await _httpClient.GetAsync(new Uri("/api/rss/all", UriKind.Relative), cancellationToken);
             response.EnsureSuccessStatusCode();
             
             var xml = await response.Content.ReadAsStringAsync(cancellationToken);
@@ -326,7 +326,7 @@ public class TechHubApiClient
         try
         {
             _logger.LogInformation("Fetching RSS feed for section: {SectionName}", sectionName);
-            var response = await _httpClient.GetAsync($"/api/rss/{sectionName}", cancellationToken);
+            var response = await _httpClient.GetAsync(new Uri($"/api/rss/{sectionName}", UriKind.Relative), cancellationToken);
             response.EnsureSuccessStatusCode();
             
             var xml = await response.Content.ReadAsStringAsync(cancellationToken);
@@ -348,7 +348,7 @@ public class TechHubApiClient
         try
         {
             _logger.LogInformation("Fetching RSS feed for collection: {CollectionName}", collectionName);
-            var response = await _httpClient.GetAsync($"/api/rss/collection/{collectionName}", cancellationToken);
+            var response = await _httpClient.GetAsync(new Uri($"/api/rss/collection/{collectionName}", UriKind.Relative), cancellationToken);
             response.EnsureSuccessStatusCode();
             
             var xml = await response.Content.ReadAsStringAsync(cancellationToken);

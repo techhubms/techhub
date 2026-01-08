@@ -19,6 +19,7 @@ public class PlaywrightCollectionFixture : IAsyncLifetime
         Browser = await Playwright.Chromium.LaunchAsync(new BrowserTypeLaunchOptions
         {
             Headless = true,
+            Timeout = 5000, // 5 second timeout for browser launch
             // Performance optimizations for test environment
             Args = new[]
             {
@@ -27,6 +28,10 @@ public class PlaywrightCollectionFixture : IAsyncLifetime
                 "--disable-web-security",      // Faster loading (test only!)
                 "--disable-features=IsolateOrigins,site-per-process",
                 "--disable-blink-features=AutomationControlled",
+                "--disable-dev-shm-usage",     // Overcome limited resource problems
+                "--disable-gpu",               // Disable GPU hardware acceleration
+                "--no-zygote",                 // Disable zygote process (helps with cleanup)
+                "--single-process",            // Run in single process mode (better cleanup)
             }
         });
     }

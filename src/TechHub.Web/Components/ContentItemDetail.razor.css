@@ -1,0 +1,30 @@
+/* ============================================================================
+   Content Item Detail Component
+   
+   Component-scoped styles for article content display
+   ============================================================================ */
+
+/* Article Metadata - below title, before content */
+.article-metadata {
+    font-size: var(--font-size-sm);
+    color: var(--color-text-muted);
+    margin-top: calc(var(--spacing-4) * -0.8);
+    margin-bottom: var(--spacing-4);
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-2);
+}
+
+.article-metadata time {
+    color: var(--color-text-muted);
+    font-style: italic;
+}
+
+.article-metadata .metadata-separator {
+    color: var(--color-text-tertiary);
+}
+
+.article-metadata .author {
+    color: var(--color-text-muted);
+    font-style: italic;
+}

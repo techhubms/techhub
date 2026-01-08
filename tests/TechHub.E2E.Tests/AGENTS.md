@@ -619,7 +619,12 @@ await page.WaitForBlazorUrlContainsAsync("/news");
 await page.GoBackAsync();
 await page.WaitForBlazorStateSyncAsync("News");
 
-// ✅ GOOD - Wait for specific element with timeout
+// ✅ GOOD - Use centralized timeout methods (timeouts managed in one place)
+await page.WaitForSelectorWithTimeoutAsync(".collection-nav");
+var text = await locator.TextContentWithTimeoutAsync();
+await page.WaitForURLWithTimeoutAsync("**/github-copilot/news");
+
+// ❌ BAD - Don't use explicit timeout options (harder to maintain)
 await page.WaitForSelectorAsync(".collection-nav", new() { Timeout = 3000 });
 
 // ⚠️ AVOID - Only use for final stabilization (100ms max)
@@ -631,16 +636,28 @@ await Task.Delay(2000);
 
 **Available Helper Methods** (in `BlazorHelpers.cs`):
 
-| Method                            | Purpose                                | When to Use                          |
-| --------------------------------- | -------------------------------------- | ------------------------------------ |
-| `NewPageWithDefaultsAsync()`      | Create page with aggressive timeouts   | Every test start                     |
-| `GotoAndWaitForBlazorAsync()`     | Navigate + wait for streaming complete | Initial page load                    |
-| `WaitForBlazorUrlContainsAsync()` | Wait for SPA navigation                | After clicks that change URL         |
-| `WaitForBlazorStateSyncAsync()`   | Wait for state sync                    | After browser back/forward           |
-| `WaitForBlazorCircuitAsync()`     | Wait for SignalR connection            | Rare - after reconnect               |
-| `WaitForBlazorRenderAsync()`      | Wait for element to appear             | After state changes                  |
-| `AssertElementExistsAndVisible()` | Fail fast if element missing/hidden    | Before interacting with elements     |
-| `AssertElementClickable()`        | Fail fast if element not clickable     | Before ClickAsync() calls            |
+| Method                               | Purpose                                | When to Use                          | Timeout |
+| ------------------------------------ | -------------------------------------- | ------------------------------------ | ------- |
+| `NewPageWithDefaultsAsync()`         | Create page with aggressive timeouts   | Every test start                     | 3s/10s  |
+| `GotoAndWaitForBlazorAsync()`        | Navigate + wait for streaming complete | Initial page load                    | 10s     |
+| `WaitForBlazorUrlContainsAsync()`    | Wait for SPA navigation                | After clicks that change URL         | 5s      |
+| `WaitForBlazorStateSyncAsync()`      | Wait for state sync                    | After browser back/forward           | 3s      |
+| `WaitForBlazorCircuitAsync()`        | Wait for SignalR connection            | Rare - after reconnect               | N/A     |
+| `WaitForBlazorRenderAsync()`         | Wait for element to appear             | After state changes                  | Default |
+| `WaitForSelectorWithTimeoutAsync()`  | **Wait for element (centralized)**     | **Any element wait**                 | **3s**  |
+| `TextContentWithTimeoutAsync()`      | **Get text content (centralized)**     | **Any text retrieval**               | **3s**  |
+| `WaitForURLWithTimeoutAsync()`       | **Wait for URL change (centralized)**  | **Any URL navigation**               | **5s**  |
+| `AssertElementExistsAndVisible()`    | Fail fast if element missing/hidden    | Before interacting with elements     | 3s      |
+| `AssertElementClickable()`           | Fail fast if element not clickable     | Before ClickAsync() calls            | 3s      |
+
+**🎯 Centralized Timeout Management** (NEW):
+
+All timeouts are now managed through extension methods in `BlazorHelpers.cs`. This means:
+
+- **Single point of control**: Change timeout values in one place (e.g., from 3s to 5s for slower environments)
+- **Consistent behavior**: All tests use the same timeout values
+- **Fail fast**: Reduced from 30s defaults to 3-5s for quick failure detection
+- **Easy tuning**: Adjust `WaitForSelectorWithTimeoutAsync()`, `TextContentWithTimeoutAsync()`, and `WaitForURLWithTimeoutAsync()` methods to change all tests at once
 
 **Fail-Fast Pattern** (NEW - Use for Better Error Messages):
 
@@ -716,18 +733,24 @@ public class MyFeatureTests : IAsyncLifetime
         // Step 5: Use smart wait helpers
         await page.GotoAndWaitForBlazorAsync($"{BaseUrl}/github-copilot");
         
-        // Step 6: Interact with elements
+        // Step 6: Interact with elements (use centralized timeout methods)
+        await page.WaitForSelectorWithTimeoutAsync(".collection-nav");
         var newsButton = page.Locator(".collection-nav button", new() { HasTextString = "News" });
         await newsButton.ClickAsync();
         
         // Step 7: Wait for SPA navigation (NOT WaitForNavigationAsync!)
-        await page.WaitForBlazorUrlContainsAsync("/news");
+        await page.WaitForURLWithTimeoutAsync("**/github-copilot/news");
         
-        // Step 8: Use FluentAssertions for descriptive assertions
+        // Step 8: Use centralized timeout method for text content
+        var heading = page.Locator("h1");
+        var headingText = await heading.TextContentWithTimeoutAsync();
+        
+        // Step 9: Use FluentAssertions for descriptive assertions
         page.Url.Should().EndWith("/github-copilot/news",
             "clicking News should navigate to /github-copilot/news");
+        headingText.Should().Contain("GitHub Copilot");
         
-        // Step 9: Clean up page after test
+        // Step 10: Clean up page after test
         await page.CloseAsync();
     }
 }
@@ -759,8 +782,9 @@ public class MyFeatureTests : IAsyncLifetime
 - **Shared browser** - ONE Chromium launch for ALL tests
 - **Parallel execution** - Different collections run simultaneously
 - **Smart waits** - Return immediately when conditions are met
+- **Centralized timeouts** - Manage all timeout values in one place (3s element, 5s navigation)
 - **No Task.Delay** - No arbitrary delays masking issues
-- **Aggressive timeouts** - Fail fast when something is wrong
+- **Aggressive timeouts** - Fail fast when something is wrong (3-5s vs 30s defaults)
 - **Isolated contexts** - Tests don't interfere with each other
 
 ## Debugging Tests

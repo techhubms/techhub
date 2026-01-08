@@ -2,33 +2,35 @@
 @inject NavigationManager Navigation
 
 <nav class="collection-nav">
-    <div class="sidebar-section">
-        <h2>Collections</h2>
-        
-        @if (Section?.Collections != null && Section.Collections.Any())
-        {
+    @if (Section?.Collections != null && Section.Collections.Any())
+    {
+        <div class="sidebar-section">
+            <h2 class="sidebar-h2">Collections</h2>
             <ul>
-            <li>
-                <a href="/@(Section.Name)/all" 
-                   class="@(SelectedCollection == "all" ? "active" : "")">
-                    All
-                </a>
-            </li>
-            @foreach (var collection in RegularCollections)
-            {
-                var collectionName = collection.Name;
                 <li>
-                    <a href="/@(Section.Name)/@collectionName" 
-                       class="@(SelectedCollection == collectionName ? "active" : "")">
-                        @collection.Title
+                    <a href="/@(Section.Name)/all" 
+                    class="@(SelectedCollection == "all" ? "active" : "")">
+                        All
                     </a>
                 </li>
-            }
-        </ul>
-        
-        @if (CustomPages.Any())
-        {
-            <h3>Pages</h3>
+                @foreach (var collection in RegularCollections)
+                {
+                    var collectionName = collection.Name;
+                    <li>
+                        <a href="/@(Section.Name)/@collectionName" 
+                        class="@(SelectedCollection == collectionName ? "active" : "")">
+                            @collection.Title
+                        </a>
+                    </li>
+                }
+            </ul>
+        </div>
+    }
+
+    @if (CustomPages.Any())
+    {
+        <div class="sidebar-section">
+            <h2 class="sidebar-h2">Pages</h2>
             <ul>
                 @foreach (var customPage in CustomPages)
                 {
@@ -39,12 +41,11 @@
                     </li>
                 }
             </ul>
-        }
+        </div>
     }
-    </div>
     
     <div class="sidebar-section">
-        <h2>Subscribe</h2>
+        <h2 class="sidebar-h2">Subscribe</h2>
         <ul class="sidebar-links">
             <li>
                 <a href="@($"{Section!.Url}/feed.xml")" target="_blank" rel="noopener noreferrer">

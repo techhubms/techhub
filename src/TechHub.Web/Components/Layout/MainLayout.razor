@@ -1,10 +1,10 @@
 ﻿@inherits LayoutComponentBase
 
-<a href="#main" class="skip-link">Skip to main content</a>
+<a href="#" class="skip-link" onclick="document.querySelector('h1')?.focus(); return false;">Skip to main content</a>
 
 <NavHeader />
 
-<main id="main" class="main-content">
+<main class="main-content">
     @Body
 </main>
 

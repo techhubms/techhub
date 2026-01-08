@@ -1,3 +1,4 @@
+using TechHub.Core.Configuration;
 using TechHub.Web.Components;
 using TechHub.Web.Services;
 
@@ -9,6 +10,10 @@ if (!builder.Environment.IsDevelopment())
 {
     builder.WebHost.UseStaticWebAssets();
 }
+
+// Configure application settings
+builder.Services.Configure<WebAppSettings>(
+    builder.Configuration.GetSection("AppSettings"));
 
 // Configure routing to be case-insensitive for better UX
 builder.Services.Configure<RouteOptions>(options =>

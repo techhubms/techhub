@@ -65,11 +65,12 @@
   border: 1px solid rgba(189, 147, 249, 0.12);
 }
 
-.section-header-content h1 {
+.section-header-content .header-title {
   font-size: clamp(2rem, 4vw, 3rem);
   margin: 0 0 var(--spacing-3) 0;
   font-weight: var(--font-weight-bold);
   text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  line-height: var(--line-height-heading);
 }
 
 .section-header-content .section-description {
@@ -86,7 +87,7 @@
     height: 160px;
   }
   
-  .section-header-content h1 {
+  .section-header-content .header-title {
     font-size: clamp(1.5rem, 6vw, 2rem);
   }
 }

@@ -2,41 +2,22 @@
 
 <article class="content-detail">
     <header class="content-detail-header">
-        <h1 class="content-detail-title">@Item.Title</h1>
+        <h1 class="page-h1" tabindex="-1">@Item.Title</h1>
         
-        <div class="content-detail-meta">
+        <div class="article-metadata">
             <time datetime="@Item.DateIso">@FormatDate(Item.DateEpoch)</time>
-            
             @if (!string.IsNullOrWhiteSpace(Item.Author))
             {
-                <span class="content-detail-author">by @Item.Author</span>
+                <span class="metadata-separator">•</span>
+                <span class="author">@Item.Author</span>
             }
-            
-            <span class="collection-badge">@Item.CollectionName</span>
         </div>
-        
-        @if (Item.Tags.Any())
-        {
-            <div class="content-detail-tags">
-                @foreach (var tag in Item.Tags)
-                {
-                    <span class="content-detail-tag">@tag</span>
-                }
-            </div>
-        }
     </header>
     
     @if (!string.IsNullOrWhiteSpace(Item.VideoId))
     {
         <div class="content-detail-video">
             <YouTubeEmbed VideoId="@Item.VideoId" />
-        </div>
-    }
-    
-    @if (!string.IsNullOrWhiteSpace(Item.Excerpt))
-    {
-        <div class="content-detail-excerpt">
-            @((MarkupString)Item.Excerpt)
         </div>
     }
     
@@ -55,12 +36,6 @@
             </a>
         </div>
     }
-    
-    <footer class="content-detail-footer">
-        <div class="content-detail-meta-full">
-            <span><strong>Published:</strong> @FormatDate(Item.DateEpoch)</span>
-        </div>
-    </footer>
 </article>
 
 @code {

@@ -23,7 +23,7 @@
         @if (roundups != null && roundups.Any())
         {
             <div class="sidebar-section latest-roundup">
-                <h2>Latest Roundup</h2>
+                <h2 class="sidebar-h2">Latest Roundup</h2>
                 <a href="/all/roundups/@(roundups.First().Slug.ToLowerInvariant())" class="sidebar-featured-link">
                     <span class="sidebar-featured-title">@roundups.First().Title</span>
                     <span class="sidebar-featured-date">@DateTime.Parse(roundups.First().DateIso).ToString("MMM dd, yyyy")</span>
@@ -35,7 +35,7 @@
         @if (latestItems != null && latestItems.Any())
         {
             <div class="sidebar-section latest-items">
-                <h2>Latest Content</h2>
+                <h2 class="sidebar-h2">Latest Content</h2>
                 <ul class="sidebar-list">
                     @foreach (var item in latestItems.Take(5))
                     {
@@ -59,7 +59,7 @@
 
         @* Subscribe Section *@
         <div class="sidebar-section subscribe-section">
-            <h2>Subscribe</h2>
+            <h2 class="sidebar-h2">Subscribe</h2>
             <ul class="sidebar-links">
                 <li>
                     <a href="/all/feed.xml" target="_blank" rel="noopener noreferrer">
@@ -92,7 +92,7 @@
         @if (popularTags != null && popularTags.Any())
         {
             <div class="sidebar-section popular-tags">
-                <h2>Popular Tags</h2>
+                <h2 class="sidebar-h2">Popular Tags</h2>
                 <div class="tags-cloud">
                     @foreach (var tag in popularTags.Take(15))
                     {

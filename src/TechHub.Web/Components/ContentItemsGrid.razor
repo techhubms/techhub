@@ -1,11 +1,14 @@
 @using TechHub.Core.DTOs
+@using TechHub.Core.Configuration
 @using TechHub.Web.Services
+@using Microsoft.Extensions.Options
 @inject TechHubApiClient ApiClient
 @inject ILogger<ContentItemsGrid> Logger
+@inject IOptions<WebAppSettings> AppSettings
 @attribute [StreamRendering]
 
 <section class="collection-content @(isLoading ? "loading" : "")" aria-label="@GetCollectionDisplayName() content">
-    <h2 class="collection-title">@GetCollectionDisplayName()</h2>
+    <h1 class="page-h1" tabindex="-1">@GetPageTitle()</h1>
     
     @if (isLoading && !contentItems.Any())
     {
@@ -162,5 +165,49 @@
         return Collections
             .FirstOrDefault(c => c.Name == CollectionName)?.Title 
             ?? CollectionName;
+    }
+
+    private string GetPageTitle()
+    {
+        var collectionDisplay = GetCollectionDisplayName();
+        var isAllSection = SectionCategory.Equals("All", StringComparison.OrdinalIgnoreCase);
+        var isAllCollection = CollectionName.Equals("all", StringComparison.OrdinalIgnoreCase);
+        
+        // Get proper section display name (e.g., "GitHub Copilot" instead of "github copilot")
+        var sectionDisplayName = SectionHelper.GetSectionDisplayName(SectionName);
+        
+        // Format collection name for proper English (e.g., "Blogs" → "Blog Posts")
+        var formattedCollection = FormatCollectionForTitle(collectionDisplay);
+        
+        if (isAllSection && isAllCollection)
+        {
+            // /all → "Browse All Posts"
+            return "Browse All Posts";
+        }
+        else if (isAllSection && !isAllCollection)
+        {
+            // /all/news → "Browse All News Posts"
+            return $"Browse All {formattedCollection}";
+        }
+        else if (!isAllSection && isAllCollection)
+        {
+            // /github-copilot → "Browse All GitHub Copilot Posts"
+            return $"Browse All {sectionDisplayName} Posts";
+        }
+        else
+        {
+            // /github-copilot/news → "Browse GitHub Copilot News Posts"
+            return $"Browse {sectionDisplayName} {formattedCollection}";
+        }
+    }
+
+    private string FormatCollectionForTitle(string collectionName)
+    {
+        var displayNames = AppSettings.Value.CollectionDisplayNames;
+        var key = collectionName.ToLowerInvariant();
+        
+        return displayNames.TryGetValue(key, out var displayName) 
+            ? displayName 
+            : $"{collectionName} Posts";
     }
 }

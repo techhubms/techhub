@@ -237,7 +237,7 @@ function Invoke-Tests {
         "--no-build",
         "--settings", (Join-Path $workspaceRoot ".runsettings"),
         "--filter", "FullyQualifiedName!~E2E",  # Exclude E2E tests
-        "--blame-hang-timeout", "5m"
+        "--blame-hang-timeout", "1m"
     )
     
     & dotnet @nonE2eTestArgs
@@ -403,7 +403,7 @@ function Invoke-Tests {
         "--no-build",
         "--settings", (Join-Path $workspaceRoot ".runsettings"),
         "--logger", "console;verbosity=detailed",
-        "--blame-hang-timeout", "5m"
+        "--blame-hang-timeout", "1m"
     )
     
     & dotnet @e2eTestArgs
@@ -527,26 +527,26 @@ function Stop-ExistingProcesses {
                 
                 # Get detailed process information for each PID
                 $processIds | ForEach-Object {
-                    $pid = $_
+                    $processId = $_
                     try {
-                        $processInfo = Get-Process -Id $pid -ErrorAction SilentlyContinue
+                        $processInfo = Get-Process -Id $processId -ErrorAction SilentlyContinue
                         if ($processInfo) {
                             if (-not $Silent) {
-                                Write-Info ("  Port {0} - Killing PID {1}: {2} (Path: {3})" -f $port, $pid, $processInfo.ProcessName, $processInfo.Path)
+                                Write-Info ("  Port {0} - Killing PID {1}: {2} (Path: {3})" -f $port, $processId, $processInfo.ProcessName, $processInfo.Path)
                             }
                         } else {
                             if (-not $Silent) {
-                                Write-Info ("  Port {0} - Killing PID {1}: (process already exited)" -f $port, $pid)
+                                Write-Info ("  Port {0} - PID {1}: (process already exited)" -f $port, $processId)
                             }
                         }
                     } catch {
                         if (-not $Silent) {
-                            Write-Info ("  Port {0} - Killing PID {1}: (unable to get process details)" -f $port, $pid)
+                            Write-Info ("  Port {0} - PID {1}: (unable to get process details)" -f $port, $processId)
                         }
                     }
                     
                     # Use SIGKILL for immediate termination
-                    kill -9 $pid 2>$null
+                    kill -9 $processId 2>$null
                 }
                 
                 # Brief wait to ensure ports are released
@@ -652,29 +652,29 @@ function Invoke-FullCleanup {
             # Parse output - lsof returns PIDs separated by newlines
             $processIds = @()
             if ($lsofOutput -and $LASTEXITCODE -eq 0) {
-                # Split by newlines and filter out empty strings
-                $processIds = ($lsofOutput -split "`n" | Where-Object { $_ -match '^\d+$' })
+                # Split by newlines and filter out empty strings - ensure result is array
+                $processIds = @($lsofOutput -split "`n" | Where-Object { $_ -match '^\d+$' })
             }
             
-            if ($processIds.Count -gt 0) {
+            if ($processIds -and $processIds.Count -gt 0) {
                 foreach ($pidString in $processIds) {
-                    $pid = [int]$pidString
+                    $processId = [int]$pidString
                     try {
-                        $processInfo = Get-Process -Id $pid -ErrorAction SilentlyContinue
+                        $processInfo = Get-Process -Id $processId -ErrorAction SilentlyContinue
                         if ($processInfo) {
                             if (-not $Silent) {
-                                Write-Info ("  Port {0} - Killing PID {1}: {2} (Path: {3})" -f $port, $pid, $processInfo.ProcessName, $processInfo.Path)
+                                Write-Info ("  Port {0} - Killing PID {1}: {2} (Path: {3})" -f $port, $processId, $processInfo.ProcessName, $processInfo.Path)
                             }
                             # Use Stop-Process with -Force for reliability
-                            Stop-Process -Id $pid -Force -ErrorAction SilentlyContinue
+                            Stop-Process -Id $processId -Force -ErrorAction SilentlyContinue
                         } else {
                             if (-not $Silent) {
-                                Write-Info ("  Port {0} - PID {1} already exited" -f $port, $pid)
+                                Write-Info ("  Port {0} - PID {1} already exited" -f $port, $processId)
                             }
                         }
                     } catch {
                         if (-not $Silent) {
-                            Write-Warning ("  Port {0} - Failed to kill PID {1}: {2}" -f $port, $pid, $_.Exception.Message)
+                            Write-Warning ("  Port {0} - Failed to kill PID {1}: {2}" -f $port, $processId, $_.Exception.Message)
                         }
                     }
                 }

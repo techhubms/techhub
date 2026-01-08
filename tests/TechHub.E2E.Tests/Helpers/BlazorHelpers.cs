@@ -274,6 +274,62 @@ public static class BlazorHelpers
                 $"Check z-index, overlays, modals, or if element is outside viewport.");
         }
     }
+
+    /// <summary>
+    /// Waits for a selector with standard timeout (3000ms).
+    /// Centralized timeout management - change here to affect all tests.
+    /// </summary>
+    public static Task WaitForSelectorWithTimeoutAsync(
+        this IPage page,
+        string selector,
+        PageWaitForSelectorOptions? options = null)
+    {
+        var opts = options ?? new PageWaitForSelectorOptions();
+        opts.Timeout ??= 3000; // Standard timeout for element waits
+        return page.WaitForSelectorAsync(selector, opts);
+    }
+
+    /// <summary>
+    /// Gets text content with standard timeout (3000ms).
+    /// Centralized timeout management - change here to affect all tests.
+    /// </summary>
+    public static Task<string?> TextContentWithTimeoutAsync(
+        this ILocator locator,
+        LocatorTextContentOptions? options = null)
+    {
+        var opts = options ?? new LocatorTextContentOptions();
+        opts.Timeout ??= 3000; // Standard timeout for text content
+        return locator.TextContentAsync(opts);
+    }
+
+    /// <summary>
+    /// Waits for URL with standard timeout (5000ms).
+    /// URL navigation may take slightly longer than element waits.
+    /// Centralized timeout management - change here to affect all tests.
+    /// </summary>
+    public static Task WaitForURLWithTimeoutAsync(
+        this IPage page,
+        string urlOrPredicate,
+        PageWaitForURLOptions? options = null)
+    {
+        var opts = options ?? new PageWaitForURLOptions();
+        opts.Timeout ??= 5000; // Standard timeout for URL navigation (slightly longer)
+        return page.WaitForURLAsync(urlOrPredicate, opts);
+    }
+
+    /// <summary>
+    /// Waits for URL with standard timeout (5000ms) using regex.
+    /// Centralized timeout management - change here to affect all tests.
+    /// </summary>
+    public static Task WaitForURLWithTimeoutAsync(
+        this IPage page,
+        System.Text.RegularExpressions.Regex urlRegex,
+        PageWaitForURLOptions? options = null)
+    {
+        var opts = options ?? new PageWaitForURLOptions();
+        opts.Timeout ??= 5000; // Standard timeout for URL navigation (slightly longer)
+        return page.WaitForURLAsync(urlRegex, opts);
+    }
 }
 
 /// <summary>

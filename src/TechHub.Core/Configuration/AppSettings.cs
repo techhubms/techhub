@@ -35,6 +35,11 @@ public class ContentSettings
     /// Maximum excerpt length in characters
     /// </summary>
     public int MaxExcerptLength { get; init; } = 1000;
+    
+    /// <summary>
+    /// Display names for collections in page titles (e.g., "blogs" -> "Blog Posts")
+    /// </summary>
+    public Dictionary<string, string> CollectionDisplayNames { get; init; } = new();
 }
 
 /// <summary>
@@ -139,4 +144,17 @@ public class PerformanceSettings
     /// Max concurrent requests
     /// </summary>
     public int MaxConcurrentRequests { get; init; } = 10000;
+}
+
+/// <summary>
+/// Web-specific application settings (simplified for frontend)
+/// </summary>
+public class WebAppSettings
+{
+    /// <summary>
+    /// Display names for collections in page titles (e.g., "blogs" -> "Blog Posts")
+    /// </summary>
+    public Dictionary<string, string> CollectionDisplayNames { get; init; } = new();
+    
+    public required SeoSettings Seo { get; init; }
 }

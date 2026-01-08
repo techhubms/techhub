@@ -1,82 +1,38 @@
 /* ============================================================================
    Content Item Detail Page Layout
    
-   - Content item detail page grid layout
-   - Breadcrumbs navigation
-   - Main content area
+   - Sidebar sections
    - Navigation buttons
-   
-   Note: Sidebar styles are in components/sidebar.css
    ============================================================================ */
 
-/* Content Detail Page Grid */
-.content-detail-page {
-    display: grid;
-    grid-template-columns: 300px 1fr;
-    gap: var(--spacing-6);
-    max-width: 1400px;
-    margin: 0 auto;
-    padding: var(--spacing-6) var(--spacing-4);
-}
-
-/* Breadcrumbs */
-.breadcrumbs {
-    background: var(--color-surface);
-    border-radius: var(--radius-md);
-    padding: var(--spacing-3);
-    box-shadow: var(--shadow-sm);
-}
-
-.breadcrumbs ol {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    gap: var(--spacing-2);
-}
-
-.breadcrumbs li {
-    font-size: var(--font-size-sm);
-    color: var(--color-text-secondary);
-}
-
-.breadcrumbs a {
-    color: var(--color-accent-primary);
-    text-decoration: none;
-    transition: color var(--duration-fast) var(--easing-ease);
-}
-
-.breadcrumbs a:hover {
-    color: var(--color-purple-bright);
-    text-decoration: underline;
-}
-
-.breadcrumbs li[aria-current="page"] {
-    color: var(--color-text-primary);
-    font-weight: var(--font-weight-medium);
-}
-
-/* Content Detail Article Tags - decorative tags in article header */
-.content-detail-tags {
+/* Tags Section - matches homepage Popular Tags exactly */
+.sidebar-section.article-tags .tags-cloud {
     display: flex;
     flex-wrap: wrap;
-    gap: var(--spacing-2);
-    margin-top: var(--spacing-2);
+    gap: var(--spacing-1);
 }
 
-.content-detail-tag {
+.sidebar-section.article-tags .sidebar-tag {
     display: inline-block;
     padding: var(--spacing-1) var(--spacing-2);
-    background: rgba(139, 92, 246, 0.3);
-    border-radius: var(--radius-full);
+    background: var(--color-card-bg);
+    border: 1px solid var(--color-border-default);
+    border-radius: var(--radius-sm);
     font-size: var(--font-size-xs);
+    text-decoration: none;
+    color: var(--color-text-primary);
+    transition: all var(--duration-fast) var(--easing-ease);
+}
+
+.sidebar-section.article-tags .sidebar-tag:hover {
+    background: var(--color-purple-dark);
+    border-color: var(--color-purple-bright);
     color: var(--color-text-on-emphasis);
-    font-weight: var(--font-weight-medium);
+    transform: translateY(-2px);
 }
 
 /* Main Content Area */
-.content-main {
+.page-main-content {
     min-width: 0; /* Prevent grid blowout */
 }
 
@@ -161,31 +117,10 @@
 
 /* Responsive Design */
 @media (max-width: 1024px) {
-    .content-detail-page {
-        grid-template-columns: 1fr;
-        gap: var(--spacing-4);
-        padding: var(--spacing-4) var(--spacing-3);
-    }
-    
-    /* Transform sidebar to horizontal grid on tablets */
-    .sidebar {
-        position: static;
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-        gap: var(--spacing-3);
-    }
-    
-    .breadcrumbs {
-        grid-column: 1 / -1; /* Span all columns */
-    }
+    /* Sidebar already handles responsive in shared CSS */
 }
 
 @media (max-width: 640px) {
-    /* Stack sidebar vertically on mobile */
-    .sidebar {
-        grid-template-columns: 1fr;
-    }
-    
     .content-navigation {
         flex-direction: column;
         gap: var(--spacing-2);

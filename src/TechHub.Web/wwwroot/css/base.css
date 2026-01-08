@@ -46,12 +46,40 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: var(--font-weight-semibold);
 }
 
-h1 { font-size: var(--font-size-h1); }
-h2 { font-size: var(--font-size-h2); margin-top: var(--spacing-6); }
-h3 { font-size: var(--font-size-h3); margin-top: var(--spacing-4); }
-h4 { font-size: var(--font-size-h4); margin-top: var(--spacing-4); }
-h5 { font-size: var(--font-size-h5); margin-top: var(--spacing-3); }
-h6 { font-size: var(--font-size-h6); margin-top: var(--spacing-3); }
+h1 { 
+  font-size: var(--font-size-h1); 
+  margin-bottom: var(--spacing-4);
+}
+
+h2 { 
+  font-size: var(--font-size-h2); 
+  margin-top: var(--spacing-4); 
+  margin-bottom: var(--spacing-3);
+}
+
+h3 { 
+  font-size: var(--font-size-h3); 
+  margin-top: var(--spacing-4); 
+  margin-bottom: var(--spacing-3);
+}
+
+h4 { 
+  font-size: var(--font-size-h4); 
+  margin-top: var(--spacing-4); 
+  margin-bottom: var(--spacing-2);
+}
+
+h5 { 
+  font-size: var(--font-size-h5); 
+  margin-top: var(--spacing-3); 
+  margin-bottom: var(--spacing-2);
+}
+
+h6 { 
+  font-size: var(--font-size-h6); 
+  margin-top: var(--spacing-3); 
+  margin-bottom: var(--spacing-2);
+}
 
 p {
   margin: 0 0 var(--spacing-2) 0;
@@ -83,25 +111,6 @@ a:focus-visible {
 
 /* Remove outline for mouse users, keep for keyboard users */
 :focus:not(:focus-visible) {
-  outline: none;
-}
-
-/* Headings should not receive focus */
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  outline: none;
-}
-
-h1:focus,
-h2:focus,
-h3:focus,
-h4:focus,
-h5:focus,
-h6:focus {
   outline: none;
 }
 

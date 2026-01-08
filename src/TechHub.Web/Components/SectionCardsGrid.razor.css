@@ -9,14 +9,6 @@
   margin-bottom: var(--spacing-6);
 }
 
-.section-grid-title {
-  font-size: var(--font-size-3xl);
-  margin: 0 0 var(--spacing-4) 0;
-  color: var(--color-text-primary);
-  font-weight: var(--font-weight-semibold);
-  text-align: left;
-}
-
 /* Grid Layout */
 .grid {
   display: grid;

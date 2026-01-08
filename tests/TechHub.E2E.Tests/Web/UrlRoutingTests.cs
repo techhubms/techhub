@@ -72,7 +72,7 @@ public class UrlRoutingTests : IAsyncLifetime
         
         // Act - Navigate directly to /github-copilot/news
         await page.GotoAndWaitForBlazorAsync($"{BaseUrl}/github-copilot/news");
-        await page.WaitForSelectorAsync(".content-item-card");
+        await page.WaitForSelectorAsync(".content-item-card", new() { Timeout = 3000 });
         
         // Assert - URL should remain /github-copilot/news
         page.Url.Should().EndWith("/github-copilot/news",
@@ -80,7 +80,7 @@ public class UrlRoutingTests : IAsyncLifetime
         
         // News button should be active
         var activeButton = page.Locator(".collection-nav a.active");
-        var activeText = await activeButton.TextContentAsync();
+        var activeText = await activeButton.TextContentAsync(new() { Timeout = 3000 });
         activeText.Should().Contain("News", "the News collection button should be active");
         
         await page.CloseAsync();
@@ -98,15 +98,15 @@ public class UrlRoutingTests : IAsyncLifetime
         await blogsButton.ClickAsync();
         
         // Assert - URL should update to /github-copilot/blogs
-        await page.WaitForURLAsync("**/github-copilot/blogs");
+        await page.WaitForURLAsync("**/github-copilot/blogs", new() { Timeout = 5000 });
         page.Url.Should().EndWith("/github-copilot/blogs",
             "clicking a collection button should update the URL to /section/collection");
         
         // Wait for page to fully load after navigation
-        await page.WaitForSelectorAsync(".collection-title");
+        await page.WaitForSelectorAsync(".collection-title", new() { Timeout = 3000 });
         
         // Content should reload with only blogs
-        var collectionTitle = await page.Locator(".collection-title").TextContentAsync();
+        var collectionTitle = await page.Locator(".collection-title").TextContentAsync(new() { Timeout = 3000 });
         collectionTitle.Should().Contain("Blogs", "the collection title should reflect the selected collection");
         
         await page.CloseAsync();
@@ -124,7 +124,7 @@ public class UrlRoutingTests : IAsyncLifetime
         await allButton.ClickAsync();
         
         // Assert - URL should update to /github-copilot/all
-        await page.WaitForURLAsync("**/github-copilot/all");
+        await page.WaitForURLAsync("**/github-copilot/all", new() { Timeout = 5000 });
         page.Url.Should().EndWith("/github-copilot/all",
             "clicking the 'All' button should update the URL to /section/all");
         
@@ -140,7 +140,7 @@ public class UrlRoutingTests : IAsyncLifetime
         
         // Verify News button is active initially
         var newsButtonBefore = page.Locator(".collection-nav a.active");
-        var newsTextBefore = await newsButtonBefore.TextContentAsync();
+        var newsTextBefore = await newsButtonBefore.TextContentAsync(new() { Timeout = 3000 });
         newsTextBefore.Should().Contain("News", "News should be active initially");
         
         // Navigate to videos
@@ -150,14 +150,14 @@ public class UrlRoutingTests : IAsyncLifetime
         
         // Verify Videos button is now active
         var videosButtonActive = page.Locator(".collection-nav a.active");
-        var videosText = await videosButtonActive.TextContentAsync();
+        var videosText = await videosButtonActive.TextContentAsync(new() { Timeout = 3000 });
         videosText.Should().Contain("Videos", "Videos should be active after clicking");
         
         // Act - Press browser back button
         await page.GoBackAsync();
         
         // Assert - Should return to /github-copilot/news
-        await page.WaitForURLAsync("**/github-copilot/news");
+        await page.WaitForURLAsync("**/github-copilot/news", new() { Timeout = 5000 });
         page.Url.Should().EndWith("/github-copilot/news",
             "browser back button should navigate to previous collection URL");
         
@@ -166,7 +166,7 @@ public class UrlRoutingTests : IAsyncLifetime
         
         // News button should be active again
         var activeButton = page.Locator(".collection-nav a.active");
-        var activeText = await activeButton.TextContentAsync();
+        var activeText = await activeButton.TextContentAsync(new() { Timeout = 3000 });
         activeText.Should().Contain("News", "the previously active collection should be restored");
         
         await page.CloseAsync();
@@ -182,17 +182,17 @@ public class UrlRoutingTests : IAsyncLifetime
         // Navigate to videos
         var videosButton = page.Locator(".collection-nav a", new() { HasTextString = "Videos" });
         await videosButton.ClickAsync();
-        await page.WaitForURLAsync("**/github-copilot/videos");
+        await page.WaitForURLAsync("**/github-copilot/videos", new() { Timeout = 5000 });
         
         // Go back to news
         await page.GoBackAsync();
-        await page.WaitForURLAsync("**/github-copilot/news");
+        await page.WaitForURLAsync("**/github-copilot/news", new() { Timeout = 5000 });
         
         // Act - Press browser forward button
         await page.GoForwardAsync();
         
         // Assert - Should return to /github-copilot/videos
-        await page.WaitForURLAsync("**/github-copilot/videos");
+        await page.WaitForURLAsync("**/github-copilot/videos", new() { Timeout = 5000 });
         page.Url.Should().EndWith("/github-copilot/videos",
             "browser forward button should navigate to next collection URL");
         
@@ -216,7 +216,7 @@ public class UrlRoutingTests : IAsyncLifetime
         
         // Act - Navigate to /github-copilot/all
         await page.GotoAndWaitForBlazorAsync($"{BaseUrl}/github-copilot/all");
-        await page.WaitForSelectorAsync(".content-item-card");
+        await page.WaitForSelectorAsync(".content-item-card", new() { Timeout = 3000 });
         
         // Assert - Should display all GitHub Copilot items regardless of collection
         var displayedItems = await page.Locator(".content-item-card").CountAsync();
@@ -224,7 +224,7 @@ public class UrlRoutingTests : IAsyncLifetime
             "the 'all' collection should show all content items from the section across all collection types");
         
         // Collection title should indicate "All Collections"
-        var collectionTitle = await page.Locator(".collection-title").TextContentAsync();
+        var collectionTitle = await page.Locator(".collection-title").TextContentAsync(new() { Timeout = 3000 });
         collectionTitle.Should().Contain("All", "the title should indicate showing all collections");
         
         await page.CloseAsync();
@@ -243,7 +243,7 @@ public class UrlRoutingTests : IAsyncLifetime
         
         // Act - Navigate to /all/all
         await page.GotoAndWaitForBlazorAsync($"{BaseUrl}/all/all");
-        await page.WaitForSelectorAsync(".content-item-card");
+        await page.WaitForSelectorAsync(".content-item-card", new() { Timeout = 3000 });
         
         // Assert - Should display ALL content from ALL sections and collections
         var displayedItems = await page.Locator(".content-item-card").CountAsync();
@@ -266,7 +266,7 @@ public class UrlRoutingTests : IAsyncLifetime
         
         // Act - Navigate to /all/news
         await page.GotoAndWaitForBlazorAsync($"{BaseUrl}/all/news");
-        await page.WaitForSelectorAsync(".content-item-card");
+        await page.WaitForSelectorAsync(".content-item-card", new() { Timeout = 3000 });
         
         // Assert - Should display all news items from all sections
         var displayedItems = await page.Locator(".content-item-card").CountAsync();
@@ -319,7 +319,7 @@ public class UrlRoutingTests : IAsyncLifetime
             "collection badges should be shown on 'all' pages to distinguish content types");
         
         // Badge should have proper capitalization
-        var badgeText = await collectionBadge.TextContentAsync();
+        var badgeText = await collectionBadge.TextContentAsync(new() { Timeout = 3000 });
         badgeText.Should().MatchRegex("^[A-Z]",
             "collection badge should start with a capital letter (proper capitalization)");
         
@@ -406,7 +406,7 @@ public class UrlRoutingTests : IAsyncLifetime
             await retryButton.ClickAsync();
             
             // Assert - Should attempt to reload (check for loading state or success)
-            await page.WaitForSelectorAsync(".section-card");
+            await page.WaitForSelectorAsync(".section-card", new() { Timeout = 3000 });
         }
         
         // If no error state, just verify the button would work (test passes either way)
@@ -454,11 +454,11 @@ public class UrlRoutingTests : IAsyncLifetime
             "direct URL navigation should preserve the collection route");
         
         var activeButton = page.Locator(".collection-nav a.active");
-        var activeText = await activeButton.TextContentAsync();
+        var activeText = await activeButton.TextContentAsync(new() { Timeout = 3000 });
         activeText.Should().Contain("News",
             "the correct collection should be active when loading from direct URL");
         
-        var sectionHeading = await page.Locator("h1").TextContentAsync();
+        var sectionHeading = await page.Locator("h1").TextContentAsync(new() { Timeout = 3000 });
         sectionHeading.Should().Contain("Azure",
             "the correct section should be displayed when loading from direct URL");
         
@@ -476,14 +476,14 @@ public class UrlRoutingTests : IAsyncLifetime
         // Act - Open shared URL in new tab/page
         var page2 = await _context!.NewPageWithDefaultsAsync();
         await page2.GotoAndWaitForBlazorAsync(sharedUrl);
-        await page2.WaitForSelectorAsync(".content-item-card");
+        await page2.WaitForSelectorWithTimeoutAsync(".content-item-card");
         
         // Assert - Both pages should show identical state
         page2.Url.Should().Be(sharedUrl,
             "shared URL should load the exact same route");
         
         var activeButton = page2.Locator(".collection-nav a.active");
-        var activeText = await activeButton.TextContentAsync();
+        var activeText = await activeButton.TextContentAsync(new() { Timeout = 3000 });
         activeText.Should().Contain("Videos",
             "shared URL should restore the exact collection state");
         

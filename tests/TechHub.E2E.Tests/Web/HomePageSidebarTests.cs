@@ -1,6 +1,7 @@
 using System.Text.RegularExpressions;
 using Microsoft.Playwright;
 using Xunit;
+using TechHub.E2E.Tests.Helpers;
 
 namespace TechHub.E2E.Tests.Web;
 
@@ -119,7 +120,7 @@ public class HomePageSidebarTests(PlaywrightCollectionFixture fixture) : IAsyncL
         
         if (count > 0)
         {
-            var firstTag = await tagLinks.First.TextContentAsync();
+            var firstTag = await tagLinks.First.TextContentWithTimeoutAsync();
             await tagLinks.First.ClickAsync();
             
             // Assert - Should navigate to filtered view or section with tag parameter
