@@ -161,13 +161,23 @@ app.MapRazorComponents<App>()
     .AddInteractiveServerRenderMode();
 
 // RSS feed proxy endpoints - serve feeds from same domain as website
-app.MapGet("/feed.xml", async (TechHubApiClient apiClient, CancellationToken ct) =>
+app.MapGet("/all/feed.xml", async (TechHubApiClient apiClient, CancellationToken ct) =>
 {
     var xml = await apiClient.GetAllContentRssFeedAsync(ct);
     return Results.Content(xml, "application/rss+xml; charset=utf-8");
 })
 .WithName("GetAllContentRssFeed")
 .WithSummary("RSS feed for all content")
+.ExcludeFromDescription();
+
+// Special handling for /all/roundups/feed.xml before general section route
+app.MapGet("/all/roundups/feed.xml", async (TechHubApiClient apiClient, CancellationToken ct) =>
+{
+    var xml = await apiClient.GetCollectionRssFeedAsync("roundups", ct);
+    return Results.Content(xml, "application/rss+xml; charset=utf-8");
+})
+.WithName("GetRoundupsRssFeed")
+.WithSummary("RSS feed for roundups collection")
 .ExcludeFromDescription();
 
 app.MapGet("/{sectionName}/feed.xml", async (string sectionName, TechHubApiClient apiClient, CancellationToken ct) =>
@@ -177,15 +187,6 @@ app.MapGet("/{sectionName}/feed.xml", async (string sectionName, TechHubApiClien
 })
 .WithName("GetSectionRssFeed")
 .WithSummary("RSS feed for a section")
-.ExcludeFromDescription();
-
-app.MapGet("/collection/{collectionName}/feed.xml", async (string collectionName, TechHubApiClient apiClient, CancellationToken ct) =>
-{
-    var xml = await apiClient.GetCollectionRssFeedAsync(collectionName, ct);
-    return Results.Content(xml, "application/rss+xml; charset=utf-8");
-})
-.WithName("GetCollectionRssFeed")
-.WithSummary("RSS feed for a collection")
 .ExcludeFromDescription();
 
 // Health check endpoint for monitoring and E2E test server readiness

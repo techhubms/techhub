@@ -46,7 +46,7 @@ public class RssTests : IAsyncLifetime
         // Assert - Check for RSS feed discovery link in head
         var rssLink = await page.Locator("link[rel='alternate'][type='application/rss+xml']").First.GetAttributeAsync("href");
         Assert.NotNull(rssLink);
-        Assert.Equal("/feed.xml", rssLink);
+        Assert.Equal("/all/feed.xml", rssLink);
     }
 
     [Fact]
@@ -96,7 +96,7 @@ public class RssTests : IAsyncLifetime
         await Assertions.Expect(footerRssLink).ToBeVisibleAsync();
         
         var href = await footerRssLink.GetAttributeAsync("href");
-        Assert.Equal("/feed.xml", href);
+        Assert.Equal("/all/feed.xml", href);
     }
 
     [Fact]
@@ -189,5 +189,50 @@ public class RssTests : IAsyncLifetime
         Assert.NotNull(firstItem.Element("description"));
         Assert.NotNull(firstItem.Element("pubDate"));
         Assert.NotNull(firstItem.Element("guid"));
+    }
+
+    [Fact]
+    public async Task HomePage_HasRoundupsFeedLink()
+    {
+        // Arrange
+        var page = await _context!.NewPageWithDefaultsAsync();
+
+        // Act
+        await page.GotoAndWaitForBlazorAsync(BaseUrl);
+
+        // Assert - Check for Roundups RSS link in sidebar
+        var roundupsRssLink = page.Locator("a:has-text('RSS Feed - Roundups')");
+        await Assertions.Expect(roundupsRssLink).ToBeVisibleAsync();
+        
+        var href = await roundupsRssLink.GetAttributeAsync("href");
+        Assert.Equal("/all/roundups/feed.xml", href);
+    }
+
+    [Fact]
+    public async Task RssFeed_CollectionFeeds_ReturnValidXml()
+    {
+        // Arrange
+        var page = await _context!.NewPageWithDefaultsAsync();
+
+        // Act - Test roundups collection feed via web proxy
+        var response = await page.APIRequest.GetAsync($"{BaseUrl}/all/roundups/feed.xml");
+
+        // Assert
+        Assert.Equal(200, response.Status);
+        Assert.Contains("application/rss+xml", response.Headers["content-type"]);
+
+        var xmlContent = await response.TextAsync();
+        var doc = XDocument.Parse(xmlContent);
+        
+        // Verify RSS structure
+        var rss = doc.Element("rss");
+        Assert.NotNull(rss);
+        Assert.Equal("2.0", rss.Attribute("version")?.Value);
+
+        var channel = rss.Element("channel");
+        Assert.NotNull(channel);
+        Assert.NotNull(channel.Element("title"));
+        Assert.NotNull(channel.Element("link"));
+        Assert.NotNull(channel.Element("description"));
     }
 }

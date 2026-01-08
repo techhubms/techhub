@@ -341,6 +341,15 @@ All .NET code resides in repository root per constitution requirements:
 - [X] T123 [P] [US3] Add RSS feed link to section page header in src/TechHub.Web/Pages/Section.razor  
 - [X] T124 [P] [US3] Integration test for RSS feed generation in tests/TechHub.Api.Tests/Endpoints/RssEndpointsTests.cs
 - [X] T125 [P] [US3] Playwright test for RSS feed subscription in tests/TechHub.E2E.Tests/Tests/RssFeedTests.cs
+- [X] T125.1 [P] [US3] **NEW** Implement RSS proxy endpoints in Blazor Web to avoid exposing API publicly
+  - [X] Add GetAllContentRssFeedAsync, GetSectionRssFeedAsync, GetCollectionRssFeedAsync methods to TechHubApiClient
+  - [X] Create GET /feed.xml proxy endpoint in src/TechHub.Web/Program.cs
+  - [X] Create GET /{sectionName}/feed.xml proxy endpoint in src/TechHub.Web/Program.cs
+  - [X] Create GET /collection/{collectionName}/feed.xml proxy endpoint in src/TechHub.Web/Program.cs
+  - [X] Update all frontend RSS links to use proxy endpoints (Home.razor sidebar, Section.razor meta tag, MainLayout.razor footer, CollectionNav.razor, Content.razor)
+  - [X] Update component tests for new RSS URLs (CollectionNavTests.cs)
+  - [X] Update E2E tests for new RSS URLs (RssTests.cs)
+  - [X] Document RSS proxy endpoints in docs/api-specification.md
 
 ### User Story 4 - Weekly Roundup Access (P2)
 

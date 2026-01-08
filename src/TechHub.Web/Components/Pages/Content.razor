@@ -11,6 +11,9 @@
 {
     <HeadContent>
         <link rel="canonical" href="@($"https://tech.hub.ms/{SectionName.ToLowerInvariant()}/{Collection.ToLowerInvariant()}/{ItemId.ToLowerInvariant()}")" />
+        <link rel="alternate" type="application/rss+xml" 
+              title="Tech Hub - @(sectionData.Title) - RSS Feed" 
+              href="@($"{sectionData.Url}/feed.xml")" />
     </HeadContent>
 }
 

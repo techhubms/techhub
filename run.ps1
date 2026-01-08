@@ -524,13 +524,31 @@ function Stop-ExistingProcesses {
                     Write-Info "Cleaning up processes on ports..."
                     $stoppedAny = $true
                 }
-                if (-not $Silent) {
-                    Write-Info ("  Port {0} - killing PID(s) {1}" -f $port, ($processIds -join ', '))
+                
+                # Get detailed process information for each PID
+                $processIds | ForEach-Object {
+                    $pid = $_
+                    try {
+                        $processInfo = Get-Process -Id $pid -ErrorAction SilentlyContinue
+                        if ($processInfo) {
+                            if (-not $Silent) {
+                                Write-Info ("  Port {0} - Killing PID {1}: {2} (Path: {3})" -f $port, $pid, $processInfo.ProcessName, $processInfo.Path)
+                            }
+                        } else {
+                            if (-not $Silent) {
+                                Write-Info ("  Port {0} - Killing PID {1}: (process already exited)" -f $port, $pid)
+                            }
+                        }
+                    } catch {
+                        if (-not $Silent) {
+                            Write-Info ("  Port {0} - Killing PID {1}: (unable to get process details)" -f $port, $pid)
+                        }
+                    }
+                    
+                    # Use SIGKILL for immediate termination
+                    kill -9 $pid 2>$null
                 }
-                # Use SIGKILL for immediate termination
-                $processIds | ForEach-Object { 
-                    kill -9 $_ 2>$null
-                }
+                
                 # Brief wait to ensure ports are released
                 Start-Sleep -Milliseconds 200
             }
@@ -560,9 +578,12 @@ function Stop-AllOrphanedProcesses {
     }
     if ($playwrightProcesses) {
         if (-not $Silent) {
-            Write-Info "  Killing orphaned browser processes..."
+            Write-Info "  Killing orphaned browser processes:"
         }
         $playwrightProcesses | ForEach-Object { 
+            if (-not $Silent) {
+                Write-Info ("    - PID {0}: {1} (Path: {2})" -f $_.Id, $_.ProcessName, $_.Path)
+            }
             try { $_.Kill() } catch { }
         }
         $cleanedAny = $true
@@ -575,9 +596,12 @@ function Stop-AllOrphanedProcesses {
     }
     if ($testProcesses) {
         if (-not $Silent) {
-            Write-Info "  Killing orphaned test processes..."
+            Write-Info "  Killing orphaned test processes:"
         }
         $testProcesses | ForEach-Object { 
+            if (-not $Silent) {
+                Write-Info ("    - PID {0}: {1} (Path: {2})" -f $_.Id, $_.ProcessName, $_.Path)
+            }
             try { $_.Kill() } catch { }
         }
         $cleanedAny = $true
@@ -590,9 +614,12 @@ function Stop-AllOrphanedProcesses {
     }
     if ($dotnetProcesses) {
         if (-not $Silent) {
-            Write-Info "  Killing orphaned TechHub processes..."
+            Write-Info "  Killing orphaned TechHub processes:"
         }
         $dotnetProcesses | ForEach-Object { 
+            if (-not $Silent) {
+                Write-Info ("    - PID {0}: {1} (CommandLine: {2})" -f $_.Id, $_.ProcessName, ($_.CommandLine -replace '.*TechHub\.(Api|Web)[^/]*', 'TechHub.$1'))
+            }
             try { $_.Kill() } catch { }
         }
         $cleanedAny = $true
@@ -622,10 +649,26 @@ function Invoke-FullCleanup {
             $portArg = ":" + $port
             $processIds = lsof -ti $portArg 2>$null
             if ($processIds) {
-                if (-not $Silent) {
-                    Write-Info ("  Port {0} - killing PID(s) {1}" -f $port, ($processIds -join ', '))
+                $processIds | ForEach-Object {
+                    $pid = $_
+                    try {
+                        $processInfo = Get-Process -Id $pid -ErrorAction SilentlyContinue
+                        if ($processInfo) {
+                            if (-not $Silent) {
+                                Write-Info ("  Port {0} - Killing PID {1}: {2} (Path: {3})" -f $port, $pid, $processInfo.ProcessName, $processInfo.Path)
+                            }
+                        } else {
+                            if (-not $Silent) {
+                                Write-Info ("  Port {0} - Killing PID {1}: (process already exited)" -f $port, $pid)
+                            }
+                        }
+                    } catch {
+                        if (-not $Silent) {
+                            Write-Info ("  Port {0} - Killing PID {1}: (unable to get process details)" -f $port, $pid)
+                        }
+                    }
+                    kill -9 $pid 2>$null
                 }
-                $processIds | ForEach-Object { kill -9 $_ 2>$null }
                 $portsCleaned = $true
                 Start-Sleep -Milliseconds 100
             }

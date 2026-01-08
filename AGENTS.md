@@ -1161,20 +1161,18 @@ All user interface components and interactions must be accessible to users with 
 
 The site provides RSS feeds for all sections and collections:
 
-**Section RSS Feeds** (all content with that category):
+**Available RSS Feeds**:
 
-- Everything: `/feed.xml` - All content across all sections
-- AI: `/ai/feed.xml` - AI-related content
-- GitHub Copilot: `/github-copilot/feed.xml` - GitHub Copilot content
-- ML: `/ml/feed.xml` - Machine learning content
-- Azure: `/azure/feed.xml` - Azure cloud platform content
-- .NET: `/coding/feed.xml` - .NET and coding content
-- DevOps: `/devops/feed.xml` - DevOps and automation content
-- Security: `/security/feed.xml` - Security content
-
-**Collection RSS Feeds**:
-
-- Roundups: `/roundups/feed.xml` - Weekly content roundups
+- **Everything**: `/all/feed.xml` - All content across all sections
+- **Roundups Only**: `/all/roundups/feed.xml` - Weekly content roundups
+- **Section Feeds** (all content with that category):
+  - AI: `/ai/feed.xml` - AI-related content
+  - GitHub Copilot: `/github-copilot/feed.xml` - GitHub Copilot content
+  - ML: `/ml/feed.xml` - Machine learning content
+  - Azure: `/azure/feed.xml` - Azure cloud platform content
+  - .NET: `/coding/feed.xml` - .NET and coding content
+  - DevOps: `/devops/feed.xml` - DevOps and automation content
+  - Security: `/security/feed.xml` - Security content
 
 **Access**:
 
