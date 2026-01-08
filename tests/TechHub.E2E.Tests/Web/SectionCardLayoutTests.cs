@@ -78,11 +78,11 @@ public class SectionCardLayoutTests(PlaywrightCollectionFixture fixture) : IAsyn
         var grid = Page.Locator(".sections-grid .grid");
         await Assertions.Expect(grid).ToBeVisibleAsync();
         
-        // All section cards should be direct children of the grid
-        var sectionCards = grid.Locator("> .section-card");
+        // All section card containers should be direct children of the grid
+        var sectionCards = grid.Locator("> .section-card-container");
         var count = await sectionCards.CountAsync();
         
-        Assert.True(count > 0, "Expected section cards to be direct children of grid");
+        Assert.True(count > 0, "Expected section card containers to be direct children of grid");
     }
 
     [Fact]

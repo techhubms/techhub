@@ -74,8 +74,8 @@ public class NavigationTests : IAsyncLifetime
         await page.GotoAndWaitForBlazorAsync(BaseUrl);
         
         // Act - Click on the GitHub Copilot section card
-        // Find the GitHub Copilot card specifically (not the first card which is "Everything")
-        var ghCopilotCard = page.Locator(".section-card-link[href*='github-copilot']");
+        // The card link is inside the section-card-container
+        var ghCopilotCard = page.Locator(".section-card-container a.section-card[href*='github-copilot']");
         await ghCopilotCard.WaitForAsync();
         
         var href = await ghCopilotCard.GetAttributeAsync("href");
