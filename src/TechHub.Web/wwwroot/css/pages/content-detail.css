@@ -2,9 +2,11 @@
    Content Detail Page Layout
    
    - Content detail page grid layout
-   - Sidebar with breadcrumbs and metadata
+   - Breadcrumbs navigation
    - Main content area
    - Navigation buttons
+   
+   Note: Sidebar styles are in components/sidebar.css
    ============================================================================ */
 
 /* Content Detail Page Grid */
@@ -15,17 +17,6 @@
     max-width: 1400px;
     margin: 0 auto;
     padding: var(--spacing-6) var(--spacing-4);
-}
-
-/* Content Sidebar */
-.content-sidebar {
-    position: sticky;
-    top: 100px; /* Match collection nav sticky positioning */
-    height: fit-content;
-    align-self: flex-start;
-    display: flex;
-    flex-direction: column;
-    gap: var(--spacing-4);
 }
 
 /* Breadcrumbs */
@@ -50,13 +41,13 @@
     color: var(--color-text-secondary);
 }
 
-.breadcrumbs li a {
+.breadcrumbs a {
     color: var(--color-accent-primary);
     text-decoration: none;
     transition: color var(--duration-fast) var(--easing-ease);
 }
 
-.breadcrumbs li a:hover {
+.breadcrumbs a:hover {
     color: var(--color-purple-bright);
     text-decoration: underline;
 }
@@ -64,59 +55,6 @@
 .breadcrumbs li[aria-current="page"] {
     color: var(--color-text-primary);
     font-weight: var(--font-weight-medium);
-}
-
-/* Sidebar Sections */
-.sidebar-section {
-    background: var(--color-surface);
-    border-radius: var(--radius-md);
-    padding: var(--spacing-3);
-    box-shadow: var(--shadow-sm);
-}
-
-.sidebar-section h3 {
-    color: var(--color-text-primary);
-    font-size: var(--font-size-base);
-    font-weight: var(--font-weight-semibold);
-    margin: 0 0 var(--spacing-2) 0;
-}
-
-.sidebar-section p,
-.sidebar-section time {
-    color: var(--color-text-secondary);
-    font-size: var(--font-size-sm);
-    margin: 0;
-}
-
-.sidebar-section time {
-    display: block;
-}
-
-/* Category and Tag Styles */
-.category-tags,
-.content-tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: var(--spacing-2);
-}
-
-/* Sidebar tags in content detail page - display only */
-.sidebar-category-tag,
-.sidebar-content-tag {
-    display: inline-block;
-    padding: var(--spacing-1) var(--spacing-2);
-    background: var(--color-bg-subtle);
-    border-radius: var(--radius-sm);
-    font-size: var(--font-size-xs);
-    color: var(--color-text-secondary);
-    transition: all var(--duration-fast) var(--easing-ease);
-}
-
-.sidebar-category-tag:hover,
-.sidebar-content-tag:hover {
-    background: var(--color-purple-bright);
-    color: var(--color-text-on-emphasis);
-    transform: translateY(-1px);
 }
 
 /* Content Detail Article Tags - decorative tags in article header */
@@ -229,7 +167,8 @@
         padding: var(--spacing-4) var(--spacing-3);
     }
     
-    .content-sidebar {
+    /* Transform sidebar to horizontal grid on tablets */
+    .sidebar {
         position: static;
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -242,7 +181,8 @@
 }
 
 @media (max-width: 640px) {
-    .content-sidebar {
+    /* Stack sidebar vertically on mobile */
+    .sidebar {
         grid-template-columns: 1fr;
     }
     

@@ -57,7 +57,7 @@ public class UrlRoutingTests : IAsyncLifetime
             "the default collection should be 'All'");
         
         // "All" button should be active
-        var activeButton = page.Locator(".collection-nav button.active");
+        var activeButton = page.Locator(".collection-nav a.active");
         var activeText = await activeButton.TextContentAsync();
         activeText.Should().Contain("All", "the 'All' collection button should be active by default");
         
@@ -79,7 +79,7 @@ public class UrlRoutingTests : IAsyncLifetime
             "URL should match the route /section/collection");
         
         // News button should be active
-        var activeButton = page.Locator(".collection-nav button.active");
+        var activeButton = page.Locator(".collection-nav a.active");
         var activeText = await activeButton.TextContentAsync();
         activeText.Should().Contain("News", "the News collection button should be active");
         
@@ -94,13 +94,16 @@ public class UrlRoutingTests : IAsyncLifetime
         await page.GotoAndWaitForBlazorAsync($"{BaseUrl}/github-copilot");
         
         // Act - Click "Blogs" collection button
-        var blogsButton = page.Locator(".collection-nav button", new() { HasTextString = "Blogs" });
+        var blogsButton = page.Locator(".collection-nav a", new() { HasTextString = "Blogs" });
         await blogsButton.ClickAsync();
         
         // Assert - URL should update to /github-copilot/blogs
         await page.WaitForURLAsync("**/github-copilot/blogs");
         page.Url.Should().EndWith("/github-copilot/blogs",
             "clicking a collection button should update the URL to /section/collection");
+        
+        // Wait for page to fully load after navigation
+        await page.WaitForSelectorAsync(".collection-title");
         
         // Content should reload with only blogs
         var collectionTitle = await page.Locator(".collection-title").TextContentAsync();
@@ -117,7 +120,7 @@ public class UrlRoutingTests : IAsyncLifetime
         await page.GotoAndWaitForBlazorAsync($"{BaseUrl}/github-copilot/news");
         
         // Act - Click "All" button
-        var allButton = page.Locator(".collection-nav button", new() { HasTextString = "All" });
+        var allButton = page.Locator(".collection-nav a", new() { HasTextString = "All" });
         await allButton.ClickAsync();
         
         // Assert - URL should update to /github-copilot/all
@@ -136,17 +139,17 @@ public class UrlRoutingTests : IAsyncLifetime
         await page.GotoAndWaitForBlazorAsync($"{BaseUrl}/github-copilot/news");
         
         // Verify News button is active initially
-        var newsButtonBefore = page.Locator(".collection-nav button.active");
+        var newsButtonBefore = page.Locator(".collection-nav a.active");
         var newsTextBefore = await newsButtonBefore.TextContentAsync();
         newsTextBefore.Should().Contain("News", "News should be active initially");
         
         // Navigate to videos
-        var videosButton = page.Locator(".collection-nav button", new() { HasTextString = "Videos" });
+        var videosButton = page.Locator(".collection-nav a", new() { HasTextString = "Videos" });
         await videosButton.ClickAsync();
         await page.WaitForBlazorUrlContainsAsync("/github-copilot/videos");
         
         // Verify Videos button is now active
-        var videosButtonActive = page.Locator(".collection-nav button.active");
+        var videosButtonActive = page.Locator(".collection-nav a.active");
         var videosText = await videosButtonActive.TextContentAsync();
         videosText.Should().Contain("Videos", "Videos should be active after clicking");
         
@@ -162,7 +165,7 @@ public class UrlRoutingTests : IAsyncLifetime
         await page.WaitForBlazorStateSyncAsync("News");
         
         // News button should be active again
-        var activeButton = page.Locator(".collection-nav button.active");
+        var activeButton = page.Locator(".collection-nav a.active");
         var activeText = await activeButton.TextContentAsync();
         activeText.Should().Contain("News", "the previously active collection should be restored");
         
@@ -177,7 +180,7 @@ public class UrlRoutingTests : IAsyncLifetime
         await page.GotoAndWaitForBlazorAsync($"{BaseUrl}/github-copilot/news");
         
         // Navigate to videos
-        var videosButton = page.Locator(".collection-nav button", new() { HasTextString = "Videos" });
+        var videosButton = page.Locator(".collection-nav a", new() { HasTextString = "Videos" });
         await videosButton.ClickAsync();
         await page.WaitForURLAsync("**/github-copilot/videos");
         
@@ -288,7 +291,7 @@ public class UrlRoutingTests : IAsyncLifetime
         await page.GotoAndWaitForBlazorAsync($"{BaseUrl}/github-copilot");
         
         // Assert - "All" button should exist in the collection nav
-        var allButton = page.Locator(".collection-nav button", new() { HasTextString = "All" });
+        var allButton = page.Locator(".collection-nav a", new() { HasTextString = "All" });
         (await allButton.CountAsync()).Should().Be(1,
             "there should be exactly one 'All' button in the collection sidebar");
         
@@ -358,19 +361,19 @@ public class UrlRoutingTests : IAsyncLifetime
         // Act - Click each collection button and verify navigation
         // NOTE: Blazor Server uses enhanced navigation (SPA-style), so we poll for URL changes
         // instead of waiting for navigation events (see BlazorHelpers.WaitForBlazorUrlContainsAsync)
-        var newsButton = page.Locator(".collection-nav button", new() { HasTextString = "News" });
+        var newsButton = page.Locator(".collection-nav a", new() { HasTextString = "News" });
         await newsButton.ClickAsync();
         await page.WaitForBlazorUrlContainsAsync("/news");
         
-        var blogsButton = page.Locator(".collection-nav button", new() { HasTextString = "Blogs" });
+        var blogsButton = page.Locator(".collection-nav a", new() { HasTextString = "Blogs" });
         await blogsButton.ClickAsync();
         await page.WaitForBlazorUrlContainsAsync("/blogs");
         
-        var videosButton = page.Locator(".collection-nav button", new() { HasTextString = "Videos" });
+        var videosButton = page.Locator(".collection-nav a", new() { HasTextString = "Videos" });
         await videosButton.ClickAsync();
         await page.WaitForBlazorUrlContainsAsync("/videos");
         
-        var communityButton = page.Locator(".collection-nav button", new() { HasTextString = "Community" });
+        var communityButton = page.Locator(".collection-nav a", new() { HasTextString = "Community" });
         await communityButton.ClickAsync();
         await page.WaitForBlazorUrlContainsAsync("/community");
         
@@ -421,13 +424,13 @@ public class UrlRoutingTests : IAsyncLifetime
         await page.GotoAndWaitForBlazorAsync($"{BaseUrl}/github-copilot/news");
         
         // Assert - News button should have "active" class
-        var newsButton = page.Locator(".collection-nav button", new() { HasTextString = "News" });
+        var newsButton = page.Locator(".collection-nav a", new() { HasTextString = "News" });
         var className = await newsButton.GetAttributeAsync("class");
         className.Should().Contain("active",
             "the currently selected collection button should have the 'active' class");
         
         // Other buttons should NOT have "active" class
-        var blogsButton = page.Locator(".collection-nav button", new() { HasTextString = "Blogs" });
+        var blogsButton = page.Locator(".collection-nav a", new() { HasTextString = "Blogs" });
         var blogsClass = await blogsButton.GetAttributeAsync("class");
         blogsClass.Should().NotContain("active",
             "non-selected collection buttons should not have the 'active' class");
@@ -450,7 +453,7 @@ public class UrlRoutingTests : IAsyncLifetime
         page.Url.Should().EndWith("/azure/news",
             "direct URL navigation should preserve the collection route");
         
-        var activeButton = page.Locator(".collection-nav button.active");
+        var activeButton = page.Locator(".collection-nav a.active");
         var activeText = await activeButton.TextContentAsync();
         activeText.Should().Contain("News",
             "the correct collection should be active when loading from direct URL");
@@ -479,7 +482,7 @@ public class UrlRoutingTests : IAsyncLifetime
         page2.Url.Should().Be(sharedUrl,
             "shared URL should load the exact same route");
         
-        var activeButton = page2.Locator(".collection-nav button.active");
+        var activeButton = page2.Locator(".collection-nav a.active");
         var activeText = await activeButton.TextContentAsync();
         activeText.Should().Contain("Videos",
             "shared URL should restore the exact collection state");

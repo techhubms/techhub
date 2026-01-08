@@ -47,14 +47,14 @@ public class HomePageRoundupsTests(PlaywrightCollectionFixture fixture) : IAsync
         await Assertions.Expect(latestRoundupSection).ToBeVisibleAsync();
         
         // Should have one featured roundup link
-        var roundupLink = Page.Locator(".latest-roundup a.roundup-featured-link");
+        var roundupLink = Page.Locator(".latest-roundup a.sidebar-featured-link");
         await Assertions.Expect(roundupLink).ToBeVisibleAsync();
         
         // Link should have title and date
-        var roundupTitle = Page.Locator(".latest-roundup .roundup-title");
+        var roundupTitle = Page.Locator(".latest-roundup .sidebar-featured-title");
         await Assertions.Expect(roundupTitle).ToBeVisibleAsync();
         
-        var roundupDate = Page.Locator(".latest-roundup .roundup-date");
+        var roundupDate = Page.Locator(".latest-roundup .sidebar-featured-date");
         await Assertions.Expect(roundupDate).ToBeVisibleAsync();
     }
 

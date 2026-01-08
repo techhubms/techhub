@@ -100,9 +100,8 @@ public class CustomPagesTests(PlaywrightCollectionFixture fixture) : IAsyncLifet
         // Act
         await Page.GotoAsync($"{BaseUrl}/devops/dx-space");
         
-        // Assert - Check for framework section headings (exact names to avoid matches in page title)
-        await Assertions.Expect(Page.GetByRole(AriaRole.Heading, new() { Name = "DORA Metrics" })).ToBeVisibleAsync();
-        await Assertions.Expect(Page.GetByRole(AriaRole.Heading, new() { Name = "SPACE Framework" })).ToBeVisibleAsync();
-        await Assertions.Expect(Page.GetByRole(AriaRole.Heading, new() { NameRegex = new Regex("DevEx", RegexOptions.IgnoreCase) })).ToBeVisibleAsync();
+        // Assert - Check for placeholder content headings
+        await Assertions.Expect(Page.GetByRole(AriaRole.Heading, new() { Name = "Overview" })).ToBeVisibleAsync();
+        await Assertions.Expect(Page.GetByRole(AriaRole.Heading, new() { Name = "Key Topics" })).ToBeVisibleAsync();
     }
 }

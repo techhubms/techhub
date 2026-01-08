@@ -286,6 +286,31 @@ font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
 - When you need full page reload
 - When SEO requires distinct page loads
 
+### Skeleton Loading States
+
+**Critical UX Principle**: Skeleton loading states provide **immediate visual feedback** that navigation completed successfully and content is being loaded.
+
+**When to Use Skeletons**:
+
+- ✅ **Content pages** (Section.razor, article detail pages) - Content loading can take time; users need immediate feedback
+- ✅ **API-dependent components** - Show skeleton while waiting for potentially slow API responses
+- ✅ **Heavy data pages** - Pages with many items, complex filtering, or large payloads
+
+**When NOT to Use Skeletons**:
+
+- ❌ **Home page** - Lightweight section data loads quickly; no skeleton needed
+- ❌ **Static pages** - Pages without API calls or dynamic data
+- ❌ **Fast-loading components** - If data loads in < 100ms, skeletons create visual flicker
+
+**Why Skeletons Matter for Content Pages**:
+
+1. **Immediate feedback** - Users know navigation completed and page is loading
+2. **Page structure visible** - Shows layout (header, nav, content areas) immediately
+3. **Better perceived performance** - Seeing structure loading feels faster than blank page
+4. **Prevents layout shift** - Skeleton reserves space for content, preventing jumps
+
+**Example**: Section.razor shows skeleton for header/nav while content loads (content can be slow due to API calls fetching many items).
+
 ### Skeleton Layout Architecture
 
 **Pattern**: Three independent async components with stable CSS Grid positioning and skeleton placeholders

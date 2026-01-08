@@ -151,7 +151,7 @@ public static class BlazorHelpers
         {
             try
             {
-                var activeButton = page.Locator(".collection-nav button.active");
+                var activeButton = page.Locator(".collection-nav a.active");
                 var activeText = await activeButton.TextContentAsync(new() { Timeout = 500 });
                 
                 if (activeText?.Contains(expectedActiveButtonText, StringComparison.OrdinalIgnoreCase) == true)

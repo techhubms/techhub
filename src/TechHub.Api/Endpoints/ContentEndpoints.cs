@@ -60,22 +60,34 @@ internal static class ContentEndpoints
         IContentRepository contentRepository,
         CancellationToken cancellationToken)
     {
-        var content = await contentRepository.GetAllAsync(cancellationToken);
-        var results = content.AsEnumerable();
-
-        // Filter by category if specified
-        if (!string.IsNullOrWhiteSpace(category))
+        // Use targeted repository methods for better database performance
+        IReadOnlyList<Core.Models.ContentItem> content;
+        
+        if (!string.IsNullOrWhiteSpace(category) && !string.IsNullOrWhiteSpace(collectionName))
         {
-            results = results.Where(c => c.Categories.Contains(category, StringComparer.OrdinalIgnoreCase));
+            // Both filters: get by collection first (smaller dataset), then filter by category
+            var collectionContent = await contentRepository.GetByCollectionAsync(collectionName, cancellationToken);
+            content = collectionContent
+                .Where(c => c.Categories.Contains(category, StringComparer.OrdinalIgnoreCase))
+                .ToList();
+        }
+        else if (!string.IsNullOrWhiteSpace(category))
+        {
+            // Category only
+            content = await contentRepository.GetByCategoryAsync(category, cancellationToken);
+        }
+        else if (!string.IsNullOrWhiteSpace(collectionName))
+        {
+            // Collection only
+            content = await contentRepository.GetByCollectionAsync(collectionName, cancellationToken);
+        }
+        else
+        {
+            // No filters: get all content
+            content = await contentRepository.GetAllAsync(cancellationToken);
         }
 
-        // Filter by collection if specified
-        if (!string.IsNullOrWhiteSpace(collectionName))
-        {
-            results = results.Where(c => c.CollectionName.Equals(collectionName, StringComparison.OrdinalIgnoreCase));
-        }
-
-        var contentDtos = results.Select(MapToDto);
+        var contentDtos = content.Select(MapToDto);
         return TypedResults.Ok(contentDtos);
     }
 
@@ -98,14 +110,20 @@ internal static class ContentEndpoints
             return TypedResults.NotFound();
         }
 
-        // Get all content and find the specific item
-        var content = await contentRepository.GetAllAsync(cancellationToken);
-        var item = content.FirstOrDefault(c => 
-            c.CollectionName.Equals(collectionName, StringComparison.OrdinalIgnoreCase) &&
-            c.Slug.Equals(slug, StringComparison.OrdinalIgnoreCase) &&
-            c.Categories.Contains(section.Category, StringComparer.OrdinalIgnoreCase));
-
+        // Get the specific content item by collection and slug (database-friendly approach)
+        var item = await contentRepository.GetBySlugAsync(collectionName, slug, cancellationToken);
+        
         if (item == null)
+        {
+            return TypedResults.NotFound();
+        }
+
+        // Validate that the item belongs to the requested section
+        // "All" section accepts all content, specific sections only accept matching categories
+        var isValidForSection = section.Category.Equals("All", StringComparison.OrdinalIgnoreCase) ||
+                                item.Categories.Contains(section.Category, StringComparer.OrdinalIgnoreCase);
+        
+        if (!isValidForSection)
         {
             return TypedResults.NotFound();
         }
@@ -140,6 +158,14 @@ internal static class ContentEndpoints
     /// Supports filtering by: sections (category names), collections, tags, and text search
     /// Example: /api/content/filter?sections=AI,ML&collections=news,blogs&tags=copilot,azure&q=github
     /// </summary>
+    /// <remarks>
+    /// NOTE: This endpoint loads all content for complex filtering. 
+    /// Current implementation is file-based with caching, so this is acceptable.
+    /// When migrating to a database, consider:
+    /// 1. Building dynamic LINQ queries for better performance
+    /// 2. Using a search index (e.g., Azure Cognitive Search, Elasticsearch) for text search
+    /// 3. Implementing pagination for large result sets
+    /// </remarks>
     private static async Task<Ok<IEnumerable<ContentItemDto>>> FilterContent(
         [FromQuery] string? sections,
         [FromQuery] string? collections,
@@ -149,7 +175,7 @@ internal static class ContentEndpoints
         IContentRepository contentRepository,
         CancellationToken cancellationToken)
     {
-        // Start with all content
+        // Start with all content (acceptable for file-based implementation with caching)
         var content = await contentRepository.GetAllAsync(cancellationToken);
         var results = content.AsEnumerable();
 
@@ -213,7 +239,7 @@ internal static class ContentEndpoints
     /// </summary>
     private static ContentItemDto MapToDto(Core.Models.ContentItem item)
     {
-        var primarySectionUrl = TechHub.Core.Helpers.SectionPriorityHelper.GetPrimarySectionUrl(item.Categories);
+        var primarySectionUrl = TechHub.Core.Helpers.SectionPriorityHelper.GetPrimarySectionUrl(item.Categories, item.CollectionName);
         
         return new ContentItemDto
         {
@@ -226,7 +252,7 @@ internal static class ContentEndpoints
             CollectionName = item.CollectionName,
             AltCollection = item.AltCollection,
             Categories = item.Categories,
-            PrimarySection = TechHub.Core.Helpers.SectionPriorityHelper.GetPrimarySectionName(item.Categories),
+            PrimarySection = TechHub.Core.Helpers.SectionPriorityHelper.GetPrimarySectionName(item.Categories, item.CollectionName),
             Tags = item.Tags,
             Excerpt = item.Excerpt,
             ExternalUrl = item.ExternalUrl,

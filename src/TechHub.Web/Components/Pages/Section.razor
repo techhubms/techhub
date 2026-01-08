@@ -2,9 +2,9 @@
 @page "/{sectionName}/{collectionName}"
 @using TechHub.Core.DTOs
 @using TechHub.Web.Services
+@using static TechHub.Web.Services.SectionHelper
 @inject TechHubApiClient ApiClient
 @inject NavigationManager Navigation
-@inject ILogger<Section> Logger
 
 <PageTitle>@(section != null ? section.Title : GetSectionDisplayName(SectionName)) - Tech Hub</PageTitle>
 
@@ -13,7 +13,7 @@
     <HeadContent>
         <link rel="alternate" type="application/rss+xml" 
               title="Tech Hub - @(section.Title) - RSS Feed" 
-              href="@($"/api/rss{section.Url}")" />
+              href="@($"{section.Url}/feed.xml")" />
     </HeadContent>
 }
 
@@ -41,12 +41,10 @@
     {
         var sectionData = section;
         @* Pass section data to children - no redundant API calls *@
-        <SectionHeader Section="@sectionData" />
+        <PageHeader Section="@sectionData" />
         
         <CollectionNav Section="@sectionData"
-                       SelectedCollection="@selectedCollection"
-                       IsLoadingContent="@isLoadingContent"
-                       OnCollectionChange="@HandleCollectionChange" />
+                       SelectedCollection="@selectedCollection" />
         
         <CollectionContent SectionName="@SectionName"
                           CollectionName="@selectedCollection"
@@ -76,23 +74,15 @@
     private string selectedCollection = string.Empty;
     private SectionDto? section;
     private bool isLoadingSection = true;
-    private bool isLoadingContent = false;
 
     protected override async Task OnInitializedAsync()
     {
-        Logger.LogDebug("Section OnInitializedAsync START: SectionName={SectionName}, CollectionName={CollectionName}", 
-            SectionName, CollectionName);
         selectedCollection = CollectionName ?? "all";
         await LoadSection();
-        Logger.LogDebug("Section OnInitializedAsync COMPLETE: section={SectionTitle}, isLoadingSection={IsLoading}", 
-            section?.Title, isLoadingSection);
     }
 
     protected override async Task OnParametersSetAsync()
     {
-        Logger.LogDebug("Section OnParametersSetAsync: SectionName={SectionName}, CollectionName={CollectionName}, selectedCollection={Selected}", 
-            SectionName, CollectionName, selectedCollection);
-        
         // Handle URL changes (browser back/forward, direct navigation)
         if (CollectionName != selectedCollection)
         {
@@ -109,58 +99,19 @@
 
     private async Task LoadSection()
     {
-        Logger.LogDebug("LoadSection START: SectionName={SectionName}", SectionName);
         isLoadingSection = true;
         
         try
         {
             section = await ApiClient.GetSectionAsync(SectionName);
-            Logger.LogDebug("LoadSection API call complete: section={SectionTitle}, category={Category}", 
-                section?.Title, section?.Category);
         }
-        catch (Exception ex)
+        catch
         {
-            Logger.LogError(ex, "LoadSection FAILED for {SectionName}", SectionName);
             section = null;
         }
         finally
         {
             isLoadingSection = false;
-            Logger.LogDebug("LoadSection FINALLY: isLoadingSection={IsLoading}, section={Section}", 
-                isLoadingSection, section?.Title ?? "null");
         }
-    }
-
-    private Task HandleCollectionChange(string collectionName)
-    {
-        selectedCollection = collectionName;
-        isLoadingContent = true;
-        StateHasChanged();
-        
-        // Reset loading state after a brief delay (CollectionContent will manage its own loading)
-        _ = Task.Run(async () =>
-        {
-            await Task.Delay(100);
-            isLoadingContent = false;
-            await InvokeAsync(StateHasChanged);
-        });
-        
-        return Task.CompletedTask;
-    }
-
-    private string GetSectionDisplayName(string sectionUrl)
-    {
-        return sectionUrl switch
-        {
-            "github-copilot" => "GitHub Copilot",
-            "ai" => "AI",
-            "ml" => "ML",
-            "coding" => ".NET",
-            "azure" => "Azure",
-            "devops" => "DevOps",
-            "security" => "Security",
-            "all" => "All",
-            _ => sectionUrl
-        };
     }
 }

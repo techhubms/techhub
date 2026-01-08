@@ -103,7 +103,7 @@ public class NavigationTests : IAsyncLifetime
         await page.GotoAndWaitForBlazorAsync($"{BaseUrl}/github-copilot");
         
         // Act - Click on "News" collection button
-        var newsButton = page.Locator(".collection-nav button", new() { HasTextString = "News" });
+        var newsButton = page.Locator(".collection-nav a", new() { HasTextString = "News" });
         await newsButton.ClickAsync();
         
         // Assert - URL should be /github-copilot/news
@@ -171,14 +171,17 @@ public class NavigationTests : IAsyncLifetime
         await page.GotoAndWaitForBlazorAsync($"{BaseUrl}/github-copilot");
         
         // Act - Click on "Videos" collection
-        var videosButton = page.Locator(".collection-nav button", new() { HasTextString = "Videos" });
+        var videosButton = page.Locator(".collection-nav a", new() { HasTextString = "Videos" });
         await videosButton.ClickAsync();
         
         // Assert - Should navigate and load videos
         await page.WaitForURLAsync("**/github-copilot/videos");
         
+        // Wait for page to fully load after navigation
+        await page.WaitForBlazorStateSyncAsync("Videos");
+        
         // Videos collection should be active
-        var activeButton = page.Locator(".collection-nav button.active");
+        var activeButton = page.Locator(".collection-nav a.active");
         var activeText = await activeButton.TextContentAsync();
         Assert.Contains("Videos", activeText);
         
@@ -256,7 +259,7 @@ public class NavigationTests : IAsyncLifetime
         Assert.Contains("Artificial Intelligence", headingText);
         
         // News collection should be active
-        var activeButton = page.Locator(".collection-nav button.active");
+        var activeButton = page.Locator(".collection-nav a.active");
         var activeText = await activeButton.TextContentAsync();
         Assert.Contains("News", activeText);
         

@@ -13,7 +13,7 @@ The Tech Hub API provides RESTful access to content organized by sections and co
 
 ## Base URL
 
-```
+```http
 http://localhost:5029/api
 ```
 
@@ -555,6 +555,81 @@ We restructured the API to use nested RESTful routes that mirror the domain mode
 
 See `/docs/decisions/restful-api-structure.md` for complete decision documentation.
 
+## RSS Feed Proxy Endpoints (Blazor Web)
+
+The Blazor Web application provides proxy endpoints that serve RSS feeds from the same domain as the website, avoiding cross-origin issues and exposing the API publicly.
+
+**Architecture**: Web proxy endpoints call the API internally via `TechHubApiClient`, then serve RSS XML to end users from the same domain (`tech.hub.ms`).
+
+### GET /feed.xml
+
+Get RSS feed for all content across all sections.
+
+**Response**: `200 OK` with `application/rss+xml; charset=utf-8`
+
+**Example**:
+
+```bash
+curl http://localhost:5184/feed.xml
+```
+
+**Discovery Link**: Available on Home page (`<link rel="alternate" type="application/rss+xml" href="/feed.xml">`)
+
+---
+
+### GET /{sectionName}/feed.xml
+
+Get RSS feed for a specific section.
+
+**Parameters**:
+
+- `sectionName` (path): Section identifier (e.g., `ai`, `github-copilot`, `ml`)
+
+**Response**: `200 OK` or `404 Not Found` with `application/rss+xml; charset=utf-8`
+
+**Examples**:
+
+```bash
+curl http://localhost:5184/ai/feed.xml
+curl http://localhost:5184/github-copilot/feed.xml
+curl http://localhost:5184/azure/feed.xml
+```
+
+**Discovery Link**: Available on Section pages (`<link rel="alternate" type="application/rss+xml" href="/ai/feed.xml">`)
+
+---
+
+### GET /collection/{collectionName}/feed.xml
+
+Get RSS feed for a specific collection.
+
+**Parameters**:
+
+- `collectionName` (path): Collection name (e.g., `roundups`, `news`, `blogs`)
+
+**Response**: `200 OK` or `404 Not Found` with `application/rss+xml; charset=utf-8`
+
+**Example**:
+
+```bash
+curl http://localhost:5184/collection/roundups/feed.xml
+```
+
+**Usage**: Available for content collections (roundups is most common)
+
+---
+
+**Why Proxy Endpoints?**
+
+- **Same Domain**: Feeds served from `tech.hub.ms`, not `api.tech.hub.ms`
+- **Security**: API not exposed publicly - Web app calls API internally
+- **No CORS**: Avoids cross-origin issues for RSS readers
+- **Consistent URLs**: User-facing URLs match site structure
+- **Rate Limiting**: Can implement rate limiting at proxy layer
+- **Monitoring**: Track RSS usage separately from API calls
+
+**Implementation**: See `TechHubApiClient.cs` for HTTP client methods and `Program.cs` for proxy endpoint routing.
+
 ## Future Enhancements
 
 Planned features (not yet implemented):
@@ -564,6 +639,5 @@ Planned features (not yet implemented):
 - **Tag filtering modes**: `?tagMatch=any` for OR logic (currently AND only)
 - **Caching headers**: ETag and Last-Modified for efficient caching
 - **Individual items**: `/api/items/{collection}/{id}` for direct item access
-- **RSS feeds**: `/api/sections/{section}/collections/{collection}/feed`
 - **Rate limiting**: Protect against abuse
 - **Authentication/Authorization**: Secure access control

@@ -6,7 +6,7 @@ const retryButton = document.getElementById("components-reconnect-button");
 retryButton.addEventListener("click", retry);
 
 const reloadButton = document.getElementById("components-reload-button");
-reloadButton.addEventListener("click", () => location.reload());
+reloadButton.addEventListener("click", () => window.location.href = window.location.href);
 
 const resumeButton = document.getElementById("components-resume-button");
 resumeButton.addEventListener("click", resume);

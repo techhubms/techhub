@@ -3,6 +3,7 @@ using TechHub.Api.Extensions;
 using TechHub.Api.Middleware;
 using TechHub.Core.Configuration;
 using TechHub.Core.Interfaces;
+using TechHub.Core.Services;
 using TechHub.Infrastructure.Repositories;
 using TechHub.Infrastructure.Services;
 
@@ -34,6 +35,7 @@ builder.Services.AddSingleton<IMarkdownService, MarkdownService>();
 builder.Services.AddSingleton<ISectionRepository, ConfigurationBasedSectionRepository>();
 builder.Services.AddSingleton<IContentRepository, FileBasedContentRepository>();
 builder.Services.AddSingleton<IRssService, RssService>();
+builder.Services.AddSingleton<ISectionMappingService, SectionMappingService>();
 
 // Add data cache warmer to load all data at startup
 builder.Services.AddHostedService<DataCacheWarmer>();
@@ -58,7 +60,8 @@ var app = builder.Build();
 // Global exception handler (must be first)
 app.UseMiddleware<ExceptionHandlerMiddleware>();
 
-if (app.Environment.IsDevelopment())
+// Enable Swagger in Development and Test environments
+if (app.Environment.IsDevelopment() || app.Environment.IsEnvironment("Test"))
 {
     app.MapOpenApi();
     app.UseSwagger();

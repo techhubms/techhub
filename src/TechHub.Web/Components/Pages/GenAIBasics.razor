@@ -2,122 +2,70 @@
 
 <PageTitle>GenAI Basics - Tech Hub</PageTitle>
 
-<div class="custom-page">
-    <h1>GenAI Basics</h1>
-    
-    <div class="page-intro">
-        <p>
-            Foundational concepts for understanding Generative AI, from history to modern implementations.
-        </p>
-    </div>
+<PageHeader 
+    Title="GenAI Basics" 
+    Description="Foundational concepts for understanding Generative AI"
+    BackgroundImage="/images/section-backgrounds/ai.jpg" />
 
-    <section id="history">
-        <h2>History</h2>
-        <p>Some fun history facts about AI, showing how long AI has been around and how it has evolved over time.</p>
-        <ul>
-            <li><strong>1956:</strong> AI term coined at Dartmouth Conference</li>
-            <li><strong>1966:</strong> ELIZA chatbot at MIT</li>
-            <li><strong>2020:</strong> GPT-3 with 175B parameters</li>
-            <li><strong>2023:</strong> GPT-4 & Claude major quality leaps</li>
-        </ul>
-    </section>
-
-    <section id="models">
-        <h2>Models</h2>
-        <p>
-            A model is the actual AI system that has been trained to perform specific tasks. Think of it as a 
-            specialized brain that has learned patterns from data and can apply that knowledge to new situations.
-        </p>
-        <h3>Current popular models</h3>
-        <ul>
-            <li><strong>GPT series (4, 4o, 4.1, 5):</strong> OpenAI's flagship models</li>
-            <li><strong>Claude (3.5 Sonnet, 4 Sonnet, 4 Opus):</strong> Anthropic's models</li>
-            <li><strong>Gemini (Flash, Pro):</strong> Google's multimodal models</li>
-            <li><strong>Phi-4:</strong> Microsoft's efficient model</li>
-        </ul>
-    </section>
-
-    <section id="tokens">
-        <h2>Tokens & Tokenization</h2>
-        <p>
-            Tokens are the basic units that AI models use to process text. Think of them as the "words" that 
-            the AI actually understands, though they don't always match human words exactly.
-        </p>
-        <p>
-            As a rough guide, 1 token equals about 0.75 English words. So 100 words would be approximately 
-            133 tokens.
-        </p>
-    </section>
-
-    <section>
-        <h2>Additional Topics</h2>
-        <p>This page covers many more topics including:</p>
-        <ul>
-            <li>ML vs AI vs GenAI</li>
-            <li>Vendors and Providers</li>
-            <li>Prompts & Messages</li>
-            <li>Costs and Optimization</li>
-            <li>Problems with Models</li>
-            <li>When not to use AI</li>
-            <li>Societal impacts and risks</li>
-        </ul>
-        <p>
-            <em>Full content migration from Jekyll to Blazor is in progress. This page shows key sections.</em>
-        </p>
-    </section>
+<div class="page-with-sidebar">
+    <aside class="sidebar">
+        <div class="sidebar-section">
+            <h3>On This Page</h3>
+            <ul class="sidebar-list">
+                <li><a href="#history" class="sidebar-item-link"><span class="sidebar-item-title">History</span></a></li>
+                <li><a href="#models" class="sidebar-item-link"><span class="sidebar-item-title">Models</span></a></li>
+                <li><a href="#tokens" class="sidebar-item-link"><span class="sidebar-item-title">Tokens & Tokenization</span></a></li>
+                <li><a href="#additional" class="sidebar-item-link"><span class="sidebar-item-title">Additional Topics</span></a></li>
+            </ul>
+        </div>
+        <div class="sidebar-section">
+            <h3>Related</h3>
+            <ul class="sidebar-list">
+                <li><a href="/ai/genai-applied" class="sidebar-item-link"><span class="sidebar-item-title">GenAI Applied</span></a></li>
+                <li><a href="/ai/genai-advanced" class="sidebar-item-link"><span class="sidebar-item-title">GenAI Advanced</span></a></li>
+            </ul>
+        </div>
+    </aside>
+    <main class="page-main-content">
+        <section id="history">
+            <h2>History</h2>
+            <p>Some fun history facts about AI, showing how long AI has been around and how it has evolved over time.</p>
+            <ul>
+                <li><strong>1956:</strong> AI term coined at Dartmouth Conference</li>
+                <li><strong>1966:</strong> ELIZA chatbot at MIT</li>
+                <li><strong>2020:</strong> GPT-3 with 175B parameters</li>
+                <li><strong>2023:</strong> GPT-4 & Claude major quality leaps</li>
+            </ul>
+        </section>
+        <section id="models">
+            <h2>Models</h2>
+            <p>A model is the actual AI system that has been trained to perform specific tasks. Think of it as a specialized brain that has learned patterns from data and can apply that knowledge to new situations.</p>
+            <h3>Current popular models</h3>
+            <ul>
+                <li><strong>GPT series (4, 4o, 4.1, 5):</strong> OpenAI's flagship models</li>
+                <li><strong>Claude (3.5 Sonnet, 4 Sonnet, 4 Opus):</strong> Anthropic's models</li>
+                <li><strong>Gemini (Flash, Pro):</strong> Google's multimodal models</li>
+                <li><strong>Phi-4:</strong> Microsoft's efficient model</li>
+            </ul>
+        </section>
+        <section id="tokens">
+            <h2>Tokens & Tokenization</h2>
+            <p>Tokens are the basic units that AI models use to process text. Think of them as the "words" that the AI actually understands, though they don't always match human words exactly.</p>
+            <p>As a rough guide, 1 token equals about 0.75 English words. So 100 words would be approximately 133 tokens.</p>
+        </section>
+        <section id="additional">
+            <h2>Additional Topics</h2>
+            <p>This page covers many more topics including:</p>
+            <ul>
+                <li>ML vs AI vs GenAI</li>
+                <li>Vendors and Providers</li>
+                <li>Prompts & Messages</li>
+                <li>Costs and Optimization</li>
+                <li>Problems with Models</li>
+                <li>When not to use AI</li>
+                <li>Societal impacts and risks</li>
+            </ul>
+            <p><em>Full content migration from Jekyll to Blazor is in progress. This page shows key sections.</em></p>
+        </section>
+    </main>
 </div>
-
-<style>
-.custom-page {
-    max-width: 900px;
-    margin: 0 auto;
-    padding: 2rem;
-}
-
-.custom-page h1 {
-    color: var(--color-text-primary);
-    margin-bottom: 1.5rem;
-}
-
-.custom-page h2 {
-    color: var(--color-text-primary);
-    margin-top: 2rem;
-    margin-bottom: 1rem;
-    padding-top: 1rem;
-    border-top: 1px solid var(--color-border, #e0e0e0);
-}
-
-.custom-page h2:first-of-type {
-    border-top: none;
-    padding-top: 0;
-}
-
-.custom-page h3 {
-    color: var(--color-text-primary);
-    margin-top: 1.5rem;
-    margin-bottom: 0.75rem;
-}
-
-.page-intro {
-    background: var(--color-surface);
-    padding: 1.5rem;
-    border-radius: 8px;
-    margin-bottom: 2rem;
-}
-
-.custom-page section {
-    margin-bottom: 2rem;
-}
-
-.custom-page ul {
-    line-height: 1.8;
-}
-
-.custom-page a {
-    color: var(--color-primary);
-}
-
-.custom-page a:hover {
-    text-decoration: underline;
-}
-</style>

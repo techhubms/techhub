@@ -2,23 +2,16 @@
 
 <PageTitle>About - Tech Hub</PageTitle>
 
-<div class="about-page">
-    <h1>About the Tech Hub</h1>
-    
-    <div class="about-intro">
-        <p>
-            Because we know it's hard to stay up-to-date with the fast changing world of IT, 
-            here is a website where you'll find blogs, news, videos and more content about 
-            technology in the Microsoft space. Constantly updated and pre-screened to only 
-            provide useful content.
-        </p>
-    </div>
+<PageHeader 
+    Title="About the Tech Hub" 
+    Description="Meet the team behind your source for Microsoft technology content" />
 
-    <h2>Meet the Team</h2>
+<div class="about-page">
+    <h1>Meet the Team</h1>
     
     <div class="team-members">
         <div class="team-member">
-            <img src="/assets/about/reinier.jpg" alt="Reinier van Maanen" class="team-photo" />
+            <img src="/images/about/reinier.jpg" alt="Reinier van Maanen" class="team-photo" />
             <h3>Reinier van Maanen</h3>
             <p class="team-role">Cloud Solution Architect</p>
             <p class="team-bio">
@@ -27,20 +20,20 @@
                 transform their software development practices and modernize their applications.
             </p>
             <div class="team-links">
-                <a href="https://github.com/rajbos" target="_blank" rel="noopener noreferrer">
+                <a href="https://github.com/rvanmaanen" target="_blank" rel="noopener noreferrer">
                     <span class="icon">📘</span> GitHub
                 </a>
-                <a href="https://www.linkedin.com/in/rajbos/" target="_blank" rel="noopener noreferrer">
+                <a href="https://linkedin.com/in/reiniervanmaanen" target="_blank" rel="noopener noreferrer">
                     <span class="icon">💼</span> LinkedIn
                 </a>
-                <a href="https://devopsjournal.io" target="_blank" rel="noopener noreferrer">
+                <a href="https://r-vm.com/" target="_blank" rel="noopener noreferrer">
                     <span class="icon">✍️</span> Blog
                 </a>
             </div>
         </div>
 
         <div class="team-member">
-            <img src="/assets/about/rob.jpg" alt="Rob Bos" class="team-photo" />
+            <img src="/images/about/rob.jpg" alt="Rob Bos" class="team-photo" />
             <h3>Rob Bos</h3>
             <p class="team-role">Principal DevOps Trainer</p>
             <p class="team-bio">
@@ -49,20 +42,20 @@
                 GitHub tools, automating processes, improving security, and driving value delivery.
             </p>
             <div class="team-links">
-                <a href="https://github.com/devops-rob" target="_blank" rel="noopener noreferrer">
+                <a href="https://github.com/rajbos" target="_blank" rel="noopener noreferrer">
                     <span class="icon">📘</span> GitHub
                 </a>
-                <a href="https://www.linkedin.com/in/bosrob/" target="_blank" rel="noopener noreferrer">
+                <a href="https://linkedin.com/in/bosrob" target="_blank" rel="noopener noreferrer">
                     <span class="icon">💼</span> LinkedIn
                 </a>
-                <a href="https://rajbos.github.io" target="_blank" rel="noopener noreferrer">
+                <a href="https://devopsjournal.io/" target="_blank" rel="noopener noreferrer">
                     <span class="icon">✍️</span> Blog
                 </a>
             </div>
         </div>
 
         <div class="team-member">
-            <img src="/assets/about/fokko.jpg" alt="Fokko Veegens" class="team-photo" />
+            <img src="/images/about/fokko.jpg" alt="Fokko Veegens" class="team-photo" />
             <h3>Fokko Veegens</h3>
             <p class="team-role">DevOps Consultant</p>
             <p class="team-bio">
@@ -77,106 +70,21 @@
                 <a href="https://www.linkedin.com/in/fokkoveegens/" target="_blank" rel="noopener noreferrer">
                     <span class="icon">💼</span> LinkedIn
                 </a>
+                <a href="#" aria-hidden="true" style="visibility: hidden; pointer-events: none;">
+                    <span class="icon">✍️</span> Blog
+                </a>
             </div>
         </div>
     </div>
+
+    <h1>Why did we build this</h1>
+    
+    <div class="about-intro">
+        <p>
+            Because we know it's hard to stay up-to-date with the fast changing world of IT, 
+            here is a website where you'll find blogs, news, videos and more content about 
+            technology in the Microsoft space. Constantly updated and pre-screened to only 
+            provide useful content.
+        </p>
+    </div>
 </div>
-
-<style>
-.about-page {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 2rem;
-}
-
-.about-intro {
-    margin: 2rem 0;
-    font-size: 1.1rem;
-    line-height: 1.6;
-}
-
-.team-members {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-    margin-top: 2rem;
-}
-
-.team-member {
-    background: var(--color-surface);
-    border-radius: 8px;
-    padding: 1.5rem;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    transition: transform 0.2s;
-}
-
-.team-member:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
-}
-
-.team-photo {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    object-fit: cover;
-    margin: 0 auto 1rem;
-    display: block;
-    border: 4px solid var(--color-primary);
-}
-
-.team-member h3 {
-    text-align: center;
-    margin-bottom: 0.5rem;
-    color: var(--color-text-primary);
-}
-
-.team-role {
-    text-align: center;
-    color: var(--color-text-secondary);
-    font-weight: 600;
-    margin-bottom: 1rem;
-}
-
-.team-bio {
-    line-height: 1.6;
-    color: var(--color-text-secondary);
-    margin-bottom: 1.5rem;
-}
-
-.team-links {
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-}
-
-.team-links a {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    padding: 0.5rem;
-    border-radius: 4px;
-    text-decoration: none;
-    color: var(--color-text-primary);
-    transition: background-color 0.2s;
-}
-
-.team-links a:hover {
-    background-color: var(--color-surface-hover);
-}
-
-.team-links .icon {
-    font-size: 1.2rem;
-}
-
-h1 {
-    color: var(--color-text-primary);
-    margin-bottom: 1rem;
-}
-
-h2 {
-    color: var(--color-text-primary);
-    margin-top: 2rem;
-    margin-bottom: 1rem;
-}
-</style>

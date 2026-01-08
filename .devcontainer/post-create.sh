@@ -53,6 +53,8 @@ else
     echo "Warning: playwright.ps1 not found, browsers may not be installed"
 fi
 
+npx playwright install chrome
+
 # ==================== PowerShell Modules ====================
 echo "Installing PowerShell modules..."
 pwsh -Command 'Install-Module HtmlToMarkdown -AcceptLicense -Force'

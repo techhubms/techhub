@@ -1,6 +1,7 @@
 @page "/{sectionName}/{collection}/{itemId}"
 @using TechHub.Core.DTOs
 @using TechHub.Web.Services
+@using static TechHub.Web.Services.SectionHelper
 @inject TechHubApiClient ApiClient
 @inject NavigationManager Navigation
 
@@ -30,22 +31,16 @@ else if (errorMessage != null)
 else if (sectionData != null && item != null)
 {
     @* Section Header (same as section pages) *@
-    <SectionHeader Section="@sectionData" />
-    
-    @* Collection Navigation (same as section pages) *@
-    <CollectionNav Section="@sectionData" 
-                   SelectedCollection="@Collection" 
-                   IsLoadingContent="false"
-                   OnCollectionChange="@HandleCollectionChange" />
+    <PageHeader Section="@sectionData" />
     
     <div class="content-detail-page">
         @* Sidebar with breadcrumbs and metadata *@
-        <aside class="content-sidebar">
+        <aside class="sidebar">
             @* Breadcrumbs *@
             <nav class="breadcrumbs" aria-label="Breadcrumb">
                 <ol>
                     <li><a href="/@(SectionName.ToLowerInvariant())">@GetSectionDisplayName(SectionName)</a></li>
-                    <li><a href="/@(SectionName.ToLowerInvariant())/@(Collection.ToLowerInvariant())">@CapitalizeCollection(Collection)</a></li>
+                    <li><a href="/@(SectionName.ToLowerInvariant())/@(Collection.ToLowerInvariant())">@GetCollectionDisplayName(Collection)</a></li>
                     <li aria-current="page">@item.Title</li>
                 </ol>
             </nav>
@@ -66,7 +61,7 @@ else if (sectionData != null && item != null)
 
             <div class="sidebar-section">
                 <h3>Collection</h3>
-                <p>@CapitalizeCollection(item.CollectionName)</p>
+                <p>@GetCollectionDisplayName(item.CollectionName)</p>
             </div>
 
             @if (item.Categories.Any())
@@ -94,6 +89,43 @@ else if (sectionData != null && item != null)
                     </div>
                 </div>
             }
+            
+            @* Collections Navigation *@
+            <div class="sidebar-section">
+                <h3>Collections</h3>
+                <ul class="sidebar-links">
+                    <li>
+                        <a href="/@(sectionData.Name)/all" 
+                           class="@(Collection == "all" ? "active" : "")">
+                            All
+                        </a>
+                    </li>
+                    @foreach (var collection in sectionData.Collections.Where(c => !c.IsCustom))
+                    {
+                        <li>
+                            <a href="/@(sectionData.Name)/@(collection.Name)" 
+                               class="@(Collection == collection.Name ? "active" : "")">
+                                @collection.Title
+                            </a>
+                        </li>
+                    }
+                </ul>
+            </div>
+            
+            @* Subscribe *@
+            <div class="sidebar-section">
+                <h3>Subscribe</h3>
+                <ul class="sidebar-links">
+                    <li>
+                        <a href="@($"{sectionData.Url}/feed.xml")" target="_blank" rel="noopener noreferrer">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                                <path d="M6.18 15.64a2.18 2.18 0 0 1 2.18 2.18C8.36 19 7.38 20 6.18 20C5 20 4 19 4 17.82a2.18 2.18 0 0 1 2.18-2.18M4 4.44A15.56 15.56 0 0 1 19.56 20h-2.83A12.73 12.73 0 0 0 4 7.27V4.44m0 5.66a9.9 9.9 0 0 1 9.9 9.9h-2.83A7.07 7.07 0 0 0 4 12.93V10.1z"/>
+                            </svg>
+                            RSS Feed
+                        </a>
+                    </li>
+                </ul>
+            </div>
         </aside>
 
         @* Main content area *@
@@ -164,12 +196,6 @@ else if (sectionData != null && item != null)
         }
     }
 
-    private Task HandleCollectionChange(string collectionName)
-    {
-        Navigation.NavigateTo($"/{SectionName.ToLowerInvariant()}/{collectionName.ToLowerInvariant()}");
-        return Task.CompletedTask;
-    }
-
     private void ScrollToTop()
     {
         Navigation.NavigateTo(Navigation.Uri.Split('#')[0], forceLoad: false);
@@ -179,30 +205,6 @@ else if (sectionData != null && item != null)
     {
         var dateTime = DateTimeOffset.FromUnixTimeSeconds(epochSeconds);
         return dateTime.ToString("MMMM d, yyyy");
-    }
-
-    private string CapitalizeCollection(string collection)
-    {
-        if (string.IsNullOrWhiteSpace(collection))
-            return collection;
-        
-        return System.Globalization.CultureInfo.CurrentCulture.TextInfo.ToTitleCase(collection.ToLower());
-    }
-
-    private string GetSectionDisplayName(string sectionUrl)
-    {
-        return sectionUrl?.ToLowerInvariant() switch
-        {
-            "github-copilot" => "GitHub Copilot",
-            "ai" => "AI",
-            "ml" => "ML",
-            "coding" => ".NET",
-            "azure" => "Azure",
-            "devops" => "DevOps",
-            "security" => "Security",
-            "all" => "All",
-            _ => System.Globalization.CultureInfo.CurrentCulture.TextInfo.ToTitleCase(sectionUrl?.ToLowerInvariant() ?? "")
-        };
     }
 }
 

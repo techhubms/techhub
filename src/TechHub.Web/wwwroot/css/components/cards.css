@@ -62,6 +62,7 @@
   transition: color var(--duration-fast) var(--easing-ease);
 }
 
+/* Light up heading when hovering anywhere on section card */
 .section-card:hover h2 {
   color: var(--color-purple-bright);
 }
@@ -77,13 +78,15 @@
   margin-bottom: var(--spacing-2);
 }
 
-.section-description-link:hover .section-description {
-  color: var(--color-text-primary);
-}
-
 .section-description {
   color: var(--color-text-secondary);
   margin: 0;
+  transition: color var(--duration-fast) var(--easing-ease);
+}
+
+/* Light up description when hovering anywhere on section card */
+.section-card:hover .section-description {
+  color: var(--color-text-primary);
 }
 
 .section-collections {
@@ -93,13 +96,24 @@
 }
 
 .collection-badge {
-  background: var(--color-tag-bg);
-  color: var(--color-tag-text);
+  background: rgba(139, 92, 246, 0.3);
+  color: var(--color-text-on-emphasis);
   padding: 0.25rem var(--spacing-2);
   border-radius: var(--radius-full);
   font-size: var(--font-size-xs);
-  border: 1px solid var(--color-tag-border);
+  border: 1px solid transparent;
   font-weight: var(--font-weight-medium);
+}
+
+/* Grey badge for +X more indicator on section cards */
+.collection-badge-more {
+  background: var(--color-bg-emphasis);
+  color: var(--color-text-tertiary);
+  padding: 0.25rem var(--spacing-2);
+  border-radius: var(--radius-full);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-medium);
+  border: 1px solid var(--color-border-default);
 }
 
 .collection-badge-link {
@@ -185,6 +199,7 @@
   transition: color var(--duration-fast) var(--easing-ease);
 }
 
+/* Light up title when hovering anywhere on content card */
 .content-item-card:hover .content-title {
   color: var(--color-purple-bright);
 }
@@ -203,6 +218,13 @@
   line-height: var(--line-height-relaxed);
   margin-bottom: var(--spacing-2);
   flex: 1;
+  transition: color var(--duration-fast) var(--easing-ease);
+}
+
+/* Light up description when hovering anywhere on content card */
+.content-item-card:hover .content-description,
+.content-item-card:hover .content-excerpt {
+  color: var(--color-text-primary);
 }
 
 .content-tags {
@@ -225,9 +247,13 @@
 
 /* Tag overflow indicator - decorative */
 .content-item-card-tag-more {
-  color: var(--color-text-tertiary);
+  background: rgba(139, 92, 246, 0.2);
+  color: var(--color-text-on-emphasis);
+  padding: 0.25rem var(--spacing-2);
+  border-radius: var(--radius-full);
   font-size: var(--font-size-xs);
-  padding: 0.25rem var(--spacing-1);
+  font-weight: var(--font-weight-medium);
+  opacity: 0.8;
 }
 
 .content-footer {

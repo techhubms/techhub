@@ -1,0 +1,50 @@
+@using TechHub.Core.DTOs
+
+@* 
+    PageHeader - Reusable banner component for all pages
+    
+    Usage (Static Pages):
+    <PageHeader Title="Page Title" Description="Page description" BackgroundImage="/images/bg.jpg" />
+    <PageHeader Title="Page Title" Description="Page description" /> (Uses default home.jpg)
+    
+    Usage (Section Pages):
+    <PageHeader Section="@sectionData" />
+*@
+
+<header class="section-header @CssClass" style="@StyleAttribute">
+    <div class="section-header-content">
+        <div class="header-text-overlay">
+            <h1 tabindex="-1">@DisplayTitle</h1>
+            @if (!string.IsNullOrEmpty(DisplayDescription))
+            {
+                <p class="section-description">@DisplayDescription</p>
+            }
+        </div>
+    </div>
+</header>
+
+@code {
+    // For static pages - provide Title, Description, BackgroundImage
+    [Parameter]
+    public string? Title { get; set; }
+    
+    [Parameter]
+    public string? Description { get; set; }
+    
+    [Parameter]
+    public string? BackgroundImage { get; set; }
+    
+    // For section pages - provide Section
+    [Parameter]
+    public SectionDto? Section { get; set; }
+    
+    // Computed properties - prefer Section data if available
+    private string DisplayTitle => Section?.Title ?? Title ?? string.Empty;
+    private string? DisplayDescription => Section?.Description ?? Description;
+    private string? DisplayBackgroundImage => Section?.BackgroundImage ?? BackgroundImage;
+    
+    private string CssClass => string.IsNullOrEmpty(DisplayBackgroundImage) ? "home-banner" : "";
+    
+    private string StyleAttribute => $"background-image: url('{DisplayBackgroundImage ?? "/images/section-backgrounds/home.jpg"}'); background-size: cover; background-position: center center; background-repeat: no-repeat;";
+}
+

@@ -14,6 +14,30 @@ if (!builder.Environment.IsDevelopment())
 builder.Services.AddRazorComponents()
     .AddInteractiveServerComponents();
 
+// Configure CSS bundling and minification for production only
+if (!builder.Environment.IsDevelopment() && !builder.Environment.IsEnvironment("Test"))
+{
+    builder.Services.AddWebOptimizer(pipeline =>
+    {
+        // Bundle all CSS files into a single minified bundle for production
+        pipeline.AddCssBundle("/css/bundle.css",
+            "css/design-tokens.css",
+            "css/base.css",
+            "css/layout.css",
+            "css/components/sidebar.css",
+            "css/components/cards.css",
+            "css/components/buttons.css",
+            "css/components/navigation.css",
+            "css/components/loading.css",
+            "css/components/forms.css",
+            "css/pages/home.css",
+            "css/pages/section.css",
+            "css/pages/content-detail.css",
+            "css/utilities.css"
+        );
+    });
+}
+
 // Section cache for immediate (flicker-free) navigation rendering
 builder.Services.AddSingleton<SectionCache>();
 
@@ -82,6 +106,12 @@ if (!app.Environment.IsDevelopment())
 app.UseStatusCodePagesWithReExecute("/not-found", createScopeForStatusCodePages: true);
 app.UseHttpsRedirection();
 
+// Enable WebOptimizer middleware for CSS bundling/minification in production
+if (!app.Environment.IsDevelopment() && !app.Environment.IsEnvironment("Test"))
+{
+    app.UseWebOptimizer();
+}
+
 // Configure static files with environment-appropriate caching
 app.UseStaticFiles(new StaticFileOptions
 {
@@ -103,10 +133,9 @@ app.UseStaticFiles(new StaticFileOptions
             path.EndsWith(".ttf", StringComparison.OrdinalIgnoreCase) ||
             path.EndsWith(".eot", StringComparison.OrdinalIgnoreCase))
         {
-            // Development: 1 hour, Production: 1 year
-            ctx.Context.Response.Headers.CacheControl = isDevelopment
-                ? "public,max-age=3600"
-                : "public,max-age=31536000,immutable";
+            // Cache images and fonts aggressively (1 year) in both dev and production
+            // Images don't change frequently and should be cached to avoid unnecessary network requests
+            ctx.Context.Response.Headers.CacheControl = "public,max-age=31536000,immutable";
         }
         // CSS and JS files
         else if (path.EndsWith(".css", StringComparison.OrdinalIgnoreCase) ||
@@ -130,5 +159,37 @@ app.UseAntiforgery();
 app.MapStaticAssets();
 app.MapRazorComponents<App>()
     .AddInteractiveServerRenderMode();
+
+// RSS feed proxy endpoints - serve feeds from same domain as website
+app.MapGet("/feed.xml", async (TechHubApiClient apiClient, CancellationToken ct) =>
+{
+    var xml = await apiClient.GetAllContentRssFeedAsync(ct);
+    return Results.Content(xml, "application/rss+xml; charset=utf-8");
+})
+.WithName("GetAllContentRssFeed")
+.WithSummary("RSS feed for all content")
+.ExcludeFromDescription();
+
+app.MapGet("/{sectionName}/feed.xml", async (string sectionName, TechHubApiClient apiClient, CancellationToken ct) =>
+{
+    var xml = await apiClient.GetSectionRssFeedAsync(sectionName, ct);
+    return Results.Content(xml, "application/rss+xml; charset=utf-8");
+})
+.WithName("GetSectionRssFeed")
+.WithSummary("RSS feed for a section")
+.ExcludeFromDescription();
+
+app.MapGet("/collection/{collectionName}/feed.xml", async (string collectionName, TechHubApiClient apiClient, CancellationToken ct) =>
+{
+    var xml = await apiClient.GetCollectionRssFeedAsync(collectionName, ct);
+    return Results.Content(xml, "application/rss+xml; charset=utf-8");
+})
+.WithName("GetCollectionRssFeed")
+.WithSummary("RSS feed for a collection")
+.ExcludeFromDescription();
+
+// Health check endpoint for monitoring and E2E test server readiness
+app.MapGet("/health", () => Results.Ok(new { status = "healthy", timestamp = DateTimeOffset.UtcNow }))
+    .ExcludeFromDescription();
 
 await app.RunAsync();

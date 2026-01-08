@@ -295,4 +295,70 @@ public class TechHubApiClient
             throw;
         }
     }
+
+    /// <summary>
+    /// Get RSS feed for all content
+    /// </summary>
+    public virtual async Task<string> GetAllContentRssFeedAsync(CancellationToken cancellationToken = default)
+    {
+        try
+        {
+            _logger.LogInformation("Fetching RSS feed for all content");
+            var response = await _httpClient.GetAsync("/api/rss/all", cancellationToken);
+            response.EnsureSuccessStatusCode();
+            
+            var xml = await response.Content.ReadAsStringAsync(cancellationToken);
+            _logger.LogInformation("Successfully fetched RSS feed for all content");
+            return xml;
+        }
+        catch (HttpRequestException ex)
+        {
+            _logger.LogError(ex, "Failed to fetch RSS feed for all content");
+            throw;
+        }
+    }
+
+    /// <summary>
+    /// Get RSS feed for a specific section
+    /// </summary>
+    public virtual async Task<string> GetSectionRssFeedAsync(string sectionName, CancellationToken cancellationToken = default)
+    {
+        try
+        {
+            _logger.LogInformation("Fetching RSS feed for section: {SectionName}", sectionName);
+            var response = await _httpClient.GetAsync($"/api/rss/{sectionName}", cancellationToken);
+            response.EnsureSuccessStatusCode();
+            
+            var xml = await response.Content.ReadAsStringAsync(cancellationToken);
+            _logger.LogInformation("Successfully fetched RSS feed for section: {SectionName}", sectionName);
+            return xml;
+        }
+        catch (HttpRequestException ex)
+        {
+            _logger.LogError(ex, "Failed to fetch RSS feed for section {SectionName}", sectionName);
+            throw;
+        }
+    }
+
+    /// <summary>
+    /// Get RSS feed for a specific collection
+    /// </summary>
+    public virtual async Task<string> GetCollectionRssFeedAsync(string collectionName, CancellationToken cancellationToken = default)
+    {
+        try
+        {
+            _logger.LogInformation("Fetching RSS feed for collection: {CollectionName}", collectionName);
+            var response = await _httpClient.GetAsync($"/api/rss/collection/{collectionName}", cancellationToken);
+            response.EnsureSuccessStatusCode();
+            
+            var xml = await response.Content.ReadAsStringAsync(cancellationToken);
+            _logger.LogInformation("Successfully fetched RSS feed for collection: {CollectionName}", collectionName);
+            return xml;
+        }
+        catch (HttpRequestException ex)
+        {
+            _logger.LogError(ex, "Failed to fetch RSS feed for collection {CollectionName}", collectionName);
+            throw;
+        }
+    }
 }

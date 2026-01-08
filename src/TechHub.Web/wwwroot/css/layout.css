@@ -110,7 +110,7 @@
 
 /* Main Content */
 .main-content {
-  min-height: calc(100vh - 200px);
+  flex: 1;
 }
 
 /* Site Footer */

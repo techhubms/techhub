@@ -278,7 +278,7 @@ function Invoke-Tests {
     # Start API process with Test environment (suppresses console logging via appsettings.Test.json)
     $apiStartInfo = New-Object System.Diagnostics.ProcessStartInfo
     $apiStartInfo.FileName = "dotnet"
-    $apiStartInfo.Arguments = "run --project `"$apiProjectPath`" --no-build --no-launch-profile --configuration $configuration"
+    $apiStartInfo.Arguments = "watch --project `"$apiProjectPath`" --no-build --no-launch-profile --configuration $configuration"
     $apiStartInfo.WorkingDirectory = Split-Path $apiProjectPath -Parent
     $apiStartInfo.UseShellExecute = $false
     $apiStartInfo.CreateNoWindow = $false
@@ -306,7 +306,7 @@ function Invoke-Tests {
     # Start Web process with Test environment (suppresses console logging via appsettings.Test.json)
     $webStartInfo = New-Object System.Diagnostics.ProcessStartInfo
     $webStartInfo.FileName = "dotnet"
-    $webStartInfo.Arguments = "run --project `"$webProjectPath`" --no-build --no-launch-profile --configuration $configuration"
+    $webStartInfo.Arguments = "watch --project `"$webProjectPath`" --no-build --no-launch-profile --configuration $configuration"
     $webStartInfo.WorkingDirectory = Split-Path $webProjectPath -Parent
     $webStartInfo.UseShellExecute = $false
     $webStartInfo.CreateNoWindow = $false
@@ -333,7 +333,7 @@ function Invoke-Tests {
     
     # Wait for servers to be ready
     Write-Info "Waiting for servers to start..."
-    $maxAttempts = 5
+    $maxAttempts = 15
     $attempt = 0
     $apiReady = $false
     $webReady = $false
@@ -342,27 +342,31 @@ function Invoke-Tests {
         Start-Sleep -Seconds 1
         $attempt++
         
+        # Check if processes are still alive
+        if ($script:testApiProcess.HasExited) {
+            Write-Error "API process exited unexpectedly (exit code: $($script:testApiProcess.ExitCode))"
+            break
+        }
+        if ($script:testWebProcess.HasExited) {
+            Write-Error "Web process exited unexpectedly (exit code: $($script:testWebProcess.ExitCode))"
+            break
+        }
+        
         if (-not $apiReady) {
-            try {
-                $response = Invoke-WebRequest -Uri "$apiUrl/health" -Method Get -TimeoutSec 2 -ErrorAction SilentlyContinue
-                if ($response.StatusCode -eq 200) {
-                    $apiReady = $true
-                    Write-Info "  API ready ✓"
-                }
-            } catch {
-                # Still waiting
+            # Use curl instead of Invoke-WebRequest to avoid PowerShell interference
+            $curlResult = curl -s -o /dev/null -w "%{http_code}" "$apiUrl/health" 2>$null
+            if ($curlResult -eq "200") {
+                $apiReady = $true
+                Write-Info "  API ready ✓"
             }
         }
         
         if (-not $webReady) {
-            try {
-                $response = Invoke-WebRequest -Uri $webUrl -Method Get -TimeoutSec 2 -ErrorAction SilentlyContinue
-                if ($response.StatusCode -eq 200) {
-                    $webReady = $true
-                    Write-Info "  Web ready ✓"
-                }
-            } catch {
-                # Still waiting
+            # Use curl instead of Invoke-WebRequest to avoid PowerShell interference
+            $curlResult = curl -s -o /dev/null -w "%{http_code}" "$webUrl/health" 2>$null
+            if ($curlResult -eq "200") {
+                $webReady = $true
+                Write-Info "  Web ready ✓"
             }
         }
     }
@@ -725,7 +729,7 @@ function Start-BothProjects {
         # Start API process
         $apiStartInfo = New-Object System.Diagnostics.ProcessStartInfo
         $apiStartInfo.FileName = "dotnet"
-        $apiStartInfo.Arguments = "run --project `"$apiProjectPath`" --no-build --configuration $configuration"
+        $apiStartInfo.Arguments = "watch --project `"$apiProjectPath`" --no-build --configuration $configuration"
         $apiStartInfo.WorkingDirectory = Split-Path $apiProjectPath -Parent
         $apiStartInfo.UseShellExecute = $false
         $apiStartInfo.CreateNoWindow = $false
@@ -742,7 +746,7 @@ function Start-BothProjects {
         # Start Web process
         $webStartInfo = New-Object System.Diagnostics.ProcessStartInfo
         $webStartInfo.FileName = "dotnet"
-        $webStartInfo.Arguments = "run --project `"$webProjectPath`" --no-build --configuration $configuration"
+        $webStartInfo.Arguments = "watch --project `"$webProjectPath`" --no-build --configuration $configuration"
         $webStartInfo.WorkingDirectory = Split-Path $webProjectPath -Parent
         $webStartInfo.UseShellExecute = $false
         $webStartInfo.CreateNoWindow = $false

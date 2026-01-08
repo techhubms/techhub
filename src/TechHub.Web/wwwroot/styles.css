@@ -16,6 +16,7 @@
    ============================================================================ */
 
 /* Design Tokens - Single source of truth for all design values */
+/* Cache-bust: Updated card hover behavior - 2026-01-07 */
 @import 'css/design-tokens.css';
 
 /* Base Styles */
@@ -25,6 +26,7 @@
 @import 'css/layout.css';
 
 /* Components */
+@import 'css/components/sidebar.css';
 @import 'css/components/cards.css';
 @import 'css/components/buttons.css';
 @import 'css/components/navigation.css';

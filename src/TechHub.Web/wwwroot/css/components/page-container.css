@@ -1,0 +1,37 @@
+/* ============================================================================
+   Page Container
+   
+   Standardized container layout for all page types:
+   - Two-column layout (sidebar + content)
+   - Responsive breakpoints
+   - Consistent spacing
+   ============================================================================ */
+
+/* Standard page container with sidebar */
+.page-with-sidebar {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  gap: var(--spacing-5);
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 var(--spacing-3) var(--spacing-6) var(--spacing-3);
+}
+
+/* Main content area */
+.page-main-content {
+  min-width: 0; /* Prevent grid blowout */
+}
+
+/* Responsive - Single column on smaller screens */
+@media (max-width: 1024px) {
+  .page-with-sidebar {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-4);
+  }
+}
+
+@media (max-width: 768px) {
+  .page-with-sidebar {
+    padding: 0 var(--spacing-2) var(--spacing-4) var(--spacing-2);
+  }
+}

@@ -125,7 +125,7 @@ These are the **non-negotiable rules** that apply to ALL development tasks. ALWA
   - **CLI** (lowest priority): Only for complex multi-step operations not supported by tools
 - **Always check for errors after editing files**: Use `get_errors` tool on modified files to check VS Code diagnostics (markdown linting, ESLint, RuboCop, etc.) and fix all issues
 - **Always run tests after modifying code**: CRITICAL - After ANY code changes (C#, JavaScript, PowerShell, templates), run appropriate test suites. Documentation-only changes do not require testing
-- **Always fix linter issues**: Always resolve all linting errors and warnings, EXCEPT intentional bad examples in documentation
+- **Always fix linter issues**: Always resolve all linting errors and warnings, EXCEPT intentional bad examples in documentation. Do NOT do this for temporary markdown files in `.tmp/` unless you intend to keep them later.
 - **Always read domain-specific AGENTS.md files**: Before editing any code in that domain
 - **Always store temp files in `.tmp/`**: ALL temporary/one-off scripts in `.tmp/` (e.g., quick tests, debugging scripts), permanent/reusable automation goes in `scripts/`
 - **Always use PowerShell for scripts**: If script is required, it MUST be `.ps1` file in `.tmp/` directory, then execute it

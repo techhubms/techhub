@@ -46,7 +46,7 @@ public class RssTests : IAsyncLifetime
         // Assert - Check for RSS feed discovery link in head
         var rssLink = await page.Locator("link[rel='alternate'][type='application/rss+xml']").First.GetAttributeAsync("href");
         Assert.NotNull(rssLink);
-        Assert.Equal("/api/rss/all", rssLink);
+        Assert.Equal("/feed.xml", rssLink);
     }
 
     [Fact]
@@ -61,7 +61,7 @@ public class RssTests : IAsyncLifetime
         // Assert - Check for RSS feed discovery link in head
         var rssLink = await page.Locator("link[rel='alternate'][type='application/rss+xml']").First.GetAttributeAsync("href");
         Assert.NotNull(rssLink);
-        Assert.Equal("/api/rss/ai", rssLink);
+        Assert.Equal("/ai/feed.xml", rssLink);
     }
 
     [Fact]
@@ -74,12 +74,12 @@ public class RssTests : IAsyncLifetime
         await page.GotoAsync($"{BaseUrl}/github-copilot");
 
 
-        // Assert - Check for RSS icon link in section header
-        var rssIconLink = page.Locator(".page-heading-with-rss .rss-icon-link");
+        // Assert - Check for RSS link in sidebar (moved from banner)
+        var rssIconLink = page.Locator(".sidebar-section a[href*='/feed.xml']");
         await Assertions.Expect(rssIconLink).ToBeVisibleAsync();
         
         var href = await rssIconLink.GetAttributeAsync("href");
-        Assert.Equal("/api/rss/github-copilot", href);
+        Assert.Equal("/github-copilot/feed.xml", href);
     }
 
     [Fact]
@@ -96,7 +96,7 @@ public class RssTests : IAsyncLifetime
         await Assertions.Expect(footerRssLink).ToBeVisibleAsync();
         
         var href = await footerRssLink.GetAttributeAsync("href");
-        Assert.Equal("/api/rss/all", href);
+        Assert.Equal("/feed.xml", href);
     }
 
     [Fact]
@@ -158,12 +158,12 @@ public class RssTests : IAsyncLifetime
         var page = await _context!.NewPageWithDefaultsAsync();
         await page.GotoAndWaitForBlazorAsync($"{BaseUrl}/azure");
 
-        // Act - Get RSS icon link
-        var rssIconLink = page.Locator(".page-heading-with-rss .rss-icon-link");
+        // Act - Get RSS link from sidebar (moved from banner)
+        var rssIconLink = page.Locator(".sidebar-section a[href*='/feed.xml']");
         var href = await rssIconLink.GetAttributeAsync("href");
         
         // Assert - Verify the link is correct (but don't actually navigate to avoid downloading XML)
-        Assert.Equal("/api/rss/azure", href);
+        Assert.Equal("/azure/feed.xml", href);
     }
 
     [Fact]

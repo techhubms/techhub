@@ -3,14 +3,11 @@
 
 <PageTitle>Error</PageTitle>
 
-<header class="section-header home-banner">
-    <div class="section-header-content">
-        <h1>Error</h1>
-        <p class="section-description">An error occurred while processing your request</p>
-    </div>
-</header>
+<PageHeader 
+    Title="Error" 
+    Description="An error occurred while processing your request" />
 
-<div class="content-page">
+<div class="content-page" style="max-width: 1400px; margin: 0 auto; padding: 0 var(--spacing-3) var(--spacing-6) var(--spacing-3);">
     @if (ShowRequestId)
     {
         <p>
