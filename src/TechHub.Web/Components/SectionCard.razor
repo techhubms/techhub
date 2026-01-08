@@ -15,9 +15,20 @@
                 @* Show first 4 collections/pages (both regular and custom) *@
                 @foreach (var collection in Section.Collections.Take(4))
                 {
-                    <span class="collection-badge @(collection.IsCustom ? "custom-page-badge" : "")">
-                        @collection.Title
-                    </span>
+                    @if (collection.IsCustom)
+                    {
+                        @* Custom pages link directly to their URL *@
+                        <a href="@collection.Url" class="collection-badge custom-page-badge" @onclick:stopPropagation>
+                            @collection.Title
+                        </a>
+                    }
+                    else
+                    {
+                        @* Regular collections link to section/collection page *@
+                        <a href="@($"{Section.Url}/{collection.Name}")" class="collection-badge" @onclick:stopPropagation>
+                            @collection.Title
+                        </a>
+                    }
                 }
                 @if (Section.Collections.Count > 4)
                 {
