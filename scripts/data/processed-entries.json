@@ -23128,5 +23128,11 @@
     "reason": "Succesfully added: Only the 'AI' category was assigned. The content focuses on global generative AI adoption rates, diffusion metrics, regional disparities, and the impact of open-source AI models, with Microsoft telemetry as the analytic foundation. No substantial content about coding, ML engineering, Azure services, DevOps, security, or GitHub Copilot was present. The content is strictly at the AI estimation, diffusion, and policy level—matching AI category rule 5 (high-level AI usage and strategy). Generic exclusion rules did not trigger: the language is English, the content is substantive and analytical, there is no personal or sales slant, and the focus is not business strategy but rather data-driven technology adoption.",
     "collection": "news",
     "canonical_url": "https://blogs.microsoft.com/on-the-issues/2026/01/08/global-ai-adoption-in-2025/"
+  },
+  {
+    "timestamp": "2026-01-08 18:05:04 +00:00",
+    "collection": "blogs",
+    "canonical_url": "https://www.cooknwithcopilot.com/blog/from-tool-to-teammate.html",
+    "reason": "Succesfully added: Included the 'GitHub Copilot' category because the entire article centers on best practices for treating GitHub Copilot as an active teammate during software development, per GitHub Copilot Inclusion rules 1, 4, and 6. The 'AI' category is required whenever 'GitHub Copilot' is assigned (per Copilot rules). Excluded other categories (Coding, DevOps, etc.) because the article focuses on Copilot usage strategy and developer mindset, not on specific code, frameworks, or DevOps processes."
   }
 ]

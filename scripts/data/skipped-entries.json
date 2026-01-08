@@ -11055,5 +11055,23 @@
     "timestamp": "2026-01-08 14:06:22 +00:00",
     "canonical_url": "https://devclass.com/2026/01/08/tailwind-labs-lays-off-75-percent-of-its-engineers-thanks-to-brutal-impact-of-ai/",
     "reason": "No categories found: No Microsoft technologies are discussed or central to the content. The blog post focuses on Tailwind Labs' layoffs due to AI's impact on their business, specifically mentioning the Tailwind CSS framework and related business challenges. While 'AI' is a theme, there is no mention of Microsoft AI products or services, and no Microsoft developer or cloud ecosystem involvement. None of the category inclusion rules for AI, Coding, DevOps, Azure, ML, Security, or GitHub Copilot are met. Therefore, according to the multi-platform content threshold and inclusion rules, no categories apply."
+  },
+  {
+    "timestamp": "2026-01-08 17:07:55 +00:00",
+    "reason": "No categories found: Content excluded due to generic exclusion rule: The event title and description are primarily in Spanish, making the content less than 80% English. According to the Exclusion Rules (Non-English Content), non-English language content must be excluded unless there is an English version present. No categories were assigned.",
+    "canonical_url": "https://www.youtube.com/watch?v=iBf7L5BQra4",
+    "collection": "videos"
+  },
+  {
+    "timestamp": "2026-01-08 17:08:02 +00:00",
+    "reason": "Insufficient content length",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/net-runtime/edm-model-generation-fails/m-p/4484134#M780",
+    "collection": "community"
+  },
+  {
+    "timestamp": "2026-01-08 18:04:29 +00:00",
+    "collection": "news",
+    "canonical_url": "https://news.xbox.com/en-us/2026/01/08/xbox-developer-direct-2026/",
+    "reason": "No categories found: No categories assigned. This content is an announcement for the Xbox Developer_Direct broadcast and focuses entirely on upcoming Xbox video games (Fable, Forza Horizon 6, Beast of Reincarnation), developer presentations, and event scheduling for gamers. It contains no developer-facing technical implementation details, Microsoft technology insights for consultants or engineers, or any focus on development, coding, DevOps, AI, ML, Azure, or Security per the inclusion rules. The content is entertainment and gaming consumer news, which is out of scope for all available categories according to the exclusion rules for non-development Microsoft products and consumer content."
   }
 ]
