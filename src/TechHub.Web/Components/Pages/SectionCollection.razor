@@ -1,11 +1,11 @@
-@page "/{sectionName}"
+@page "/{sectionName}/{collectionName}"
 @using TechHub.Core.DTOs
 @using TechHub.Web.Services
 @using static TechHub.Web.Services.SectionHelper
 @inject TechHubApiClient ApiClient
 @inject NavigationManager Navigation
 
-<PageTitle>@(section != null ? section.Title : GetSectionDisplayName(SectionName)) - Tech Hub</PageTitle>
+<PageTitle>@(section != null ? $"{GetCollectionDisplayName(CollectionName)} - {section.Title}" : $"{GetCollectionDisplayName(CollectionName)}") - Tech Hub</PageTitle>
 
 @if (section != null)
 {
@@ -43,12 +43,13 @@
         <PageHeader Section="@sectionData" />
         
         <SidebarCollectionNav Section="@sectionData"
-                       SelectedCollection="all" />
+                       SelectedCollection="@CollectionName" />
         
         <ContentItemsGrid SectionName="@SectionName"
-                          CollectionName="all"
+                          CollectionName="@CollectionName"
                           SectionCategory="@sectionData.Category"
-                          Collections="@sectionData.Collections" />
+                          Collections="@sectionData.Collections" 
+                          @key="@CollectionName" />
     }
     else
     {
@@ -65,6 +66,9 @@
 @code {
     [Parameter]
     public string SectionName { get; set; } = null!;
+
+    [Parameter]
+    public string CollectionName { get; set; } = null!;
 
     private SectionDto? section;
     private bool isLoadingSection = true;

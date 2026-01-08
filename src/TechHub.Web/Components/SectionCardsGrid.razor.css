@@ -1,0 +1,40 @@
+/* ============================================================================
+   Section Cards Grid Component
+   
+   - Section grid layout
+   - Responsive grid system
+   ============================================================================ */
+
+.sections-grid {
+  margin-bottom: var(--spacing-6);
+}
+
+.section-grid-title {
+  font-size: var(--font-size-3xl);
+  margin: 0 0 var(--spacing-4) 0;
+  color: var(--color-text-primary);
+  font-weight: var(--font-weight-semibold);
+  text-align: left;
+}
+
+/* Grid Layout */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Fixed 2 columns - no auto-calculation */
+  gap: var(--spacing-4);
+}
+
+/* Desktop - 3 columns */
+@media (min-width: 1024px) {
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Responsive Grid */
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-3);
+  }
+}

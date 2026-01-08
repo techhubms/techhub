@@ -113,15 +113,7 @@
         }
         else if (sections != null && sections.Any())
         {
-            <div class="sections-grid">
-                <h2 class="section-grid-title">Browse by Section</h2>
-                <div class="grid">
-                    @foreach (var item in sections)
-                    {
-                        <SectionCard Section="@item" />
-                    }
-                </div>
-            </div>
+            <SectionCardsGrid Sections="@sections" />
         }
         else
         {

@@ -58,11 +58,11 @@ wwwroot/css/
 ├── base.css                  # Reset, typography, links, focus states
 ├── layout.css                # Header, footer, navigation, grid
 ├── components/
-│   ├── sidebar.css          # Sidebar component
-│   ├── cards.css            # Section & content item cards
+│   ├── sidebar.css          # Shared sidebar component (used across multiple pages)
 │   ├── buttons.css          # All button styles
-│   ├── navigation.css       # Collection nav, breadcrumbs
+│   ├── navigation.css       # Breadcrumb navigation only
 │   ├── loading.css          # Skeleton loaders, loading states
+│   ├── page-container.css   # Page layout containers
 │   └── forms.css            # Form validation, Blazor errors
 └── utilities.css             # Utility classes
 ```
@@ -77,12 +77,20 @@ Components/
 │   ├── MainLayout.razor.css       # Main layout styles
 │   └── ReconnectModal.razor.css   # Reconnect modal styles
 ├── Pages/
-│   ├── Home.razor.css             # Home page grid layout
-│   ├── Section.razor.css          # Section page layout
-│   ├── Content.razor.css          # Content detail page layout
+│   ├── Home.razor.css             # Home page (currently minimal)
+│   ├── Section.razor.css          # Section page layout (all content)
+│   ├── SectionCollection.razor.css # Section collection page layout (filtered content)
+│   ├── ContentItem.razor.css      # Content item detail page layout
 │   └── About.razor.css            # About page team grid
-└── Shared/
-    └── PageHeader.razor.css       # Universal section header banner
+├── Shared/
+│   ├── PageHeader.razor.css       # Universal section header banner
+│   └── NavHeader.razor.css        # Site navigation header
+└── Root Components/
+    ├── SectionCard.razor.css          # Section card styling
+    ├── ContentItemCard.razor.css      # Content item card styling
+    ├── SectionCardsGrid.razor.css     # Section cards grid layout
+    ├── ContentItemsGrid.razor.css     # Content items grid layout
+    └── SidebarCollectionNav.razor.css # Sidebar collection navigation
 ```
 
 #### How CSS is Loaded
@@ -880,9 +888,21 @@ src/TechHub.Web/
 **Component Organization**:
 
 - **Layout/**: Application layout (MainLayout, NavMenu)
-- **Pages/**: Routable pages (Home, Section, Content, About, NotFound)
+- **Pages/**: Routable pages
+  - `Home.razor` - Homepage (`/`) - Shows all sections
+  - `Section.razor` - Section page (`/{sectionName}`) - Shows all content in section
+  - `SectionCollection.razor` - Collection page (`/{sectionName}/{collectionName}`) - Shows filtered content
+  - `ContentItem.razor` - Detail page (`/{sectionName}/{collection}/{itemId}`) - Shows single content item
+  - `About.razor` - About page (`/about`)
+  - `NotFound.razor` - 404 page
 - **Shared/**: Reusable UI components (PageHeader, NavHeader)
-- **Root Components/**: Feature-specific components (SectionCard, ContentItemCard, CollectionNav, etc.)
+- **Root Components/**: Feature-specific components
+  - `SectionCard.razor` - Section display card (used on homepage)
+  - `SectionCardsGrid.razor` - Grid of section cards (used on homepage)
+  - `ContentItemCard.razor` - Content item display card (used on section/collection pages)
+  - `ContentItemsGrid.razor` - Grid of content items with filtering (used on section/collection pages)
+  - `ContentItemDetail.razor` - Full content rendering (used on detail page)
+  - `SidebarCollectionNav.razor` - Sidebar collection navigation (used on section/collection pages)
 - **Routes.razor**: Blazor router (required by framework, stays in root)
 - **App.razor**: Application entry point (required by framework, stays in root)
 

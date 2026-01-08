@@ -1,0 +1,17 @@
+@using TechHub.Core.DTOs
+
+@* Grid of Section Cards *@
+<div class="sections-grid">
+    <h2 class="section-grid-title">Browse by Section</h2>
+    <div class="grid">
+        @foreach (var item in Sections)
+        {
+            <SectionCard Section="@item" />
+        }
+    </div>
+</div>
+
+@code {
+    [Parameter, EditorRequired]
+    public IEnumerable<SectionDto> Sections { get; set; } = null!;
+}

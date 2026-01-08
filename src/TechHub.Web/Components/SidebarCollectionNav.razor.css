@@ -1,0 +1,65 @@
+/* ============================================================================
+   Sidebar Collection Navigation Component
+   
+   - Sticky sidebar navigation
+   - Collection links
+   - RSS feed links
+   ============================================================================ */
+
+.collection-nav {
+  flex: 0 0 250px;
+  position: sticky;
+  top: 100px;
+  align-self: flex-start;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-4);
+}
+
+.collection-nav h2 {
+  font-size: var(--font-size-3xl);
+  margin: 0 0 var(--spacing-4) 0;
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text-primary);
+}
+
+.collection-nav h3 {
+  font-size: var(--font-size-2xl);
+  margin: var(--spacing-6) 0 var(--spacing-3) 0;
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text-primary);
+}
+
+.collection-nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.collection-nav li {
+  margin-bottom: var(--spacing-1);
+}
+
+/* Responsive Navigation */
+@media (max-width: 1024px) {
+  .collection-nav {
+    position: static;
+    flex: none;
+    width: 100%;
+  }
+  
+  .collection-nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-1);
+  }
+  
+  .collection-nav li {
+    margin-bottom: 0;
+    flex: 1 1 auto;
+  }
+  
+  .collection-nav button {
+    min-width: 120px;
+  }
+}
