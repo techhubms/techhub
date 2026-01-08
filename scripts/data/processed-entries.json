@@ -23122,5 +23122,11 @@
     "timestamp": "2026-01-08 15:05:53 +00:00",
     "canonical_url": "https://news.microsoft.com/source/emea/features/ai-that-drives-change-wayve-rewrites-self-driving-playbook-with-deep-learning-in-azure/",
     "reason": "Succesfully added: Assigned the AI category as the content is centrally focused on AI technologies, specifically deep learning (AI inclusion rule 1). Also assigned Azure because the article is about leveraging Microsoft Azure’s cloud platform for developing AI-powered self-driving car technology (Azure inclusion rule 1). Did not assign ML: while machine learning (deep learning) is referenced, the content as described focuses mostly on the application of Azure-hosted AI rather than hands-on data science/ML engineering. No generic exclusion rules applied."
+  },
+  {
+    "timestamp": "2026-01-08 16:04:59 +00:00",
+    "reason": "Succesfully added: Only the 'AI' category was assigned. The content focuses on global generative AI adoption rates, diffusion metrics, regional disparities, and the impact of open-source AI models, with Microsoft telemetry as the analytic foundation. No substantial content about coding, ML engineering, Azure services, DevOps, security, or GitHub Copilot was present. The content is strictly at the AI estimation, diffusion, and policy level—matching AI category rule 5 (high-level AI usage and strategy). Generic exclusion rules did not trigger: the language is English, the content is substantive and analytical, there is no personal or sales slant, and the focus is not business strategy but rather data-driven technology adoption.",
+    "collection": "news",
+    "canonical_url": "https://blogs.microsoft.com/on-the-issues/2026/01/08/global-ai-adoption-in-2025/"
   }
 ]
