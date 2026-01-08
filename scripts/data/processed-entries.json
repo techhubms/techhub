@@ -23134,5 +23134,17 @@
     "collection": "blogs",
     "canonical_url": "https://www.cooknwithcopilot.com/blog/from-tool-to-teammate.html",
     "reason": "Succesfully added: Included the 'GitHub Copilot' category because the entire article centers on best practices for treating GitHub Copilot as an active teammate during software development, per GitHub Copilot Inclusion rules 1, 4, and 6. The 'AI' category is required whenever 'GitHub Copilot' is assigned (per Copilot rules). Excluded other categories (Coding, DevOps, etc.) because the article focuses on Copilot usage strategy and developer mindset, not on specific code, frameworks, or DevOps processes."
+  },
+  {
+    "canonical_url": "https://blog.fabric.microsoft.com/en-US/blog/create-embeddings-in-fabric-eventhouse-with-built-in-small-language-models-slms/",
+    "collection": "news",
+    "reason": "Succesfully added: Assigned the AI category because the content describes using machine learning (SLM) models for creating embeddings for semantic search and RAG (AI rule 1, 4, and 5). Assigned Azure because Fabric Eventhouse operates on Azure infrastructure and the solution relies on Azure Data Explorer and Kusto Query Language (Azure rule 1, 4, 5). Assigned ML because embedding generation, semantic search, and custom ML workflows are discussed in technical implementation detail (ML rule 1, 2, 3, 6, 9). Did not add Coding as there is no direct focus on programming patterns or frameworks, and did not assign GitHub Copilot, DevOps, or Security as those areas are not addressed or relevant.",
+    "timestamp": "2026-01-08 19:05:03 +00:00"
+  },
+  {
+    "canonical_url": "https://code.visualstudio.com/updates/v1_108",
+    "collection": "news",
+    "reason": "Succesfully added: Assigned 'GitHub Copilot' and 'AI' categories because the release introduces and heavily discusses Agent Skills, an extensibility mechanism specifically for GitHub Copilot and Copilot chat agents, matching AI and GitHub Copilot category inclusion rules. The Agent Skills and related chat workflows are AI-powered development tools. 'Coding' was added as much of the update targets programming experience—editor, debugging, extensions, snippets, code search, and terminal enhancements, per Coding inclusion rules. 'DevOps' is included as the release covers improvements to Git integration, source control, worktrees, pull requests, and workflow settings directly relevant to team development and developer experience, as per DevOps inclusion rules. No Azure, ML, or Security categories were assigned as these were not discussed in technical depth in this release.",
+    "timestamp": "2026-01-08 19:05:34 +00:00"
   }
 ]
