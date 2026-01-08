@@ -23098,5 +23098,11 @@
     "reason": "Succesfully added: The content qualifies for the Security category because it details a range of proactive and reactive security services offered by Microsoft Incident Response. These include incident response plan development, threat simulations, compromise assessments, identity hardening, and more—all of which are directly related to security, security architecture, and threat defense using Microsoft tools and expertise (Security rules 1, 2, 5, 9). The content is technical and practical, aimed at implementing resilience and security best practices. No other categories apply as there is no focus on coding, ML, AI, DevOps, GitHub Copilot, or Azure development/operation specifics.",
     "canonical_url": "https://www.microsoft.com/en-us/security/blog/2026/01/07/explore-the-latest-microsoft-incident-response-proactive-services-for-enhanced-resilience/",
     "collection": "news"
+  },
+  {
+    "canonical_url": "https://techcommunity.microsoft.com/t5/oracle-on-azure-blog/global-expansion-now-available-in-west-europe-netherlands/ba-p/4479671",
+    "collection": "community",
+    "timestamp": "2026-01-08 01:32:02 +00:00",
+    "reason": "Succesfully added: Assigned 'Azure' category because the content centers around Oracle Database services deployed directly on Azure infrastructure (Azure rule 1, 4, 5, and 6). Assigned 'AI' because of explicit references to integrating Oracle databases with Azure’s AI-ready platform, services like Microsoft Fabric, Copilot Studio, and support for AI-driven analytics (AI rules 1, 4, and 5). Assigned 'Security' because the post emphasizes regulatory compliance, residency, use of Microsoft Entra ID for identity, Azure Monitor, and Microsoft Defender for Cloud (Security rules 1, 4, and 5). Did not assign ML or Coding as the content focuses on platform enablement, migration, and integration rather than custom ML engineering or application-level programming. No generic exclusion rules apply."
   }
 ]

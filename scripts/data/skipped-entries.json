@@ -11025,5 +11025,23 @@
     "timestamp": "2026-01-07 18:03:55 +00:00",
     "canonical_url": "https://news.xbox.com/en-us/2026/01/07/indie-selects-january-2026/",
     "reason": "No categories found: No categories assigned. The content is a news roundup highlighting indie games featured on Xbox, focusing solely on indie game releases, gameplay experiences, and community spotlight. Per generic exclusion rules, coverage of gaming consoles and entertainment software (like Xbox and game reviews/recommendations) does not qualify for any Microsoft technical category such as AI, Azure, Coding, ML, DevOps, Security, or GitHub Copilot. There is no coverage of development, platforms, tooling, or other technical implementation details relevant to Microsoft consultants or developers. The tags and main content confirm a focus on gaming, and no substantive Microsoft technology usage or technical depth is present."
+  },
+  {
+    "collection": "news",
+    "canonical_url": "https://www.microsoft.com/en-us/industry/blog/manufacturing-and-mobility/2026/01/07/ces-2026-powering-the-next-frontier-in-automotive/",
+    "timestamp": "2026-01-07 20:03:43 +00:00",
+    "reason": "No categories found: All generic exclusion rules were checked first. The content consists mainly of an image description, a title, metadata (publish date, author), and cross-links to other blog posts with no substantive technical discussion, code, Microsoft technology detail, or direct explanation of topics related to Microsoft's development, AI, Azure, etc. There is no technical information about Microsoft technologies, product details, or implementation. The content is effectively a placeholder or news headline with redirection rather than an educational or technical post. According to the Quality Standards and exclusion of content with insufficient technical detail, as well as the guideline to exclude 'news' content that does not provide technical depth, no categories are assigned."
+  },
+  {
+    "reason": "No categories found: Content excluded due to generic exclusion rule - this is a press release about Microsoft's upcoming financial earnings announcement and contains no substantive technical content. It is focused on investor relations, company news, and press contacts, without addressing Microsoft technologies, developer tools, platforms, or any technical implementation details. Therefore, no categories are assigned.",
+    "timestamp": "2026-01-07 22:03:28 +00:00",
+    "canonical_url": "https://news.microsoft.com/source/2026/01/07/microsoft-announces-quarterly-earnings-release-date-66/",
+    "collection": "news"
+  },
+  {
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-virtual-desktop/ubuntu-as-session-host/m-p/4483664#M13978",
+    "collection": "community",
+    "timestamp": "2026-01-08 01:31:42 +00:00",
+    "reason": "Insufficient content length"
   }
 ]
