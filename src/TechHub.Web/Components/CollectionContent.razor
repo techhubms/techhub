@@ -39,7 +39,12 @@
     }
     else if (contentItems.Any())
     {
-        <ContentGrid Items="@contentItems" IsLoading="@isLoading" ShowCollectionBadge="@ShowCollectionBadge" />
+        <div class="content-grid">
+            @foreach (var item in contentItems)
+            {
+                <ContentItemCard Item="@item" ShowCollectionBadge="@ShowCollectionBadge" />
+            }
+        </div>
     }
     else
     {
