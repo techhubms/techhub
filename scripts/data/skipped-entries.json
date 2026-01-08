@@ -11073,5 +11073,11 @@
     "collection": "news",
     "canonical_url": "https://news.xbox.com/en-us/2026/01/08/xbox-developer-direct-2026/",
     "reason": "No categories found: No categories assigned. This content is an announcement for the Xbox Developer_Direct broadcast and focuses entirely on upcoming Xbox video games (Fable, Forza Horizon 6, Beast of Reincarnation), developer presentations, and event scheduling for gamers. It contains no developer-facing technical implementation details, Microsoft technology insights for consultants or engineers, or any focus on development, coding, DevOps, AI, ML, Azure, or Security per the inclusion rules. The content is entertainment and gaming consumer news, which is out of scope for all available categories according to the exclusion rules for non-development Microsoft products and consumer content."
+  },
+  {
+    "collection": "videos",
+    "reason": "No categories found: No categories assigned because the content lacks sufficient substantive technical information. The 'content' field is null, meaning there is no actual description of the technical details, features, or implementation from the v1.108 VS Code release. Generic information about streaming a product update, mentioning an upcoming demo, or listing a host does not provide the technical depth required for Coding, DevOps, or any other categories per inclusion rules. Without main content or details about actual new features, developer tools, or programming practices, the item cannot be meaningfully categorized.",
+    "canonical_url": "https://www.youtube.com/watch?v=48qofh6Wp5Y",
+    "timestamp": "2026-01-08 20:03:52 +00:00"
   }
 ]

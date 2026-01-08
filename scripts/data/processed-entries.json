@@ -23146,5 +23146,11 @@
     "collection": "news",
     "reason": "Succesfully added: Assigned 'GitHub Copilot' and 'AI' categories because the release introduces and heavily discusses Agent Skills, an extensibility mechanism specifically for GitHub Copilot and Copilot chat agents, matching AI and GitHub Copilot category inclusion rules. The Agent Skills and related chat workflows are AI-powered development tools. 'Coding' was added as much of the update targets programming experience—editor, debugging, extensions, snippets, code search, and terminal enhancements, per Coding inclusion rules. 'DevOps' is included as the release covers improvements to Git integration, source control, worktrees, pull requests, and workflow settings directly relevant to team development and developer experience, as per DevOps inclusion rules. No Azure, ML, or Security categories were assigned as these were not discussed in technical depth in this release.",
     "timestamp": "2026-01-08 19:05:34 +00:00"
+  },
+  {
+    "timestamp": "2026-01-08 23:03:48 +00:00",
+    "reason": "Succesfully added: Assigned 'AI' category because the entire article is about how AI and LLM-based tools are impacting programming language choices and developer workflows (AI rule 4). Assigned 'Coding' category because the content focuses on programming languages, typed vs untyped paradigms, and coding best practices with TypeScript, C#, Java and others (Coding rules 1 and 4). 'GitHub Copilot' was not assigned because, while Copilot CLI is briefly mentioned at the end, the primary focus is on AI's effect on language safety, not Copilot product-specific features. 'ML', 'DevOps', 'Azure', and 'Security' are not covered explicitly or in technical depth here, so they were not included.",
+    "collection": "news",
+    "canonical_url": "https://github.blog/ai-and-ml/llms/why-ai-is-pushing-developers-toward-typed-languages/"
   }
 ]
