@@ -23104,5 +23104,11 @@
     "collection": "community",
     "timestamp": "2026-01-08 01:32:02 +00:00",
     "reason": "Succesfully added: Assigned 'Azure' category because the content centers around Oracle Database services deployed directly on Azure infrastructure (Azure rule 1, 4, 5, and 6). Assigned 'AI' because of explicit references to integrating Oracle databases with Azure’s AI-ready platform, services like Microsoft Fabric, Copilot Studio, and support for AI-driven analytics (AI rules 1, 4, and 5). Assigned 'Security' because the post emphasizes regulatory compliance, residency, use of Microsoft Entra ID for identity, Azure Monitor, and Microsoft Defender for Cloud (Security rules 1, 4, and 5). Did not assign ML or Coding as the content focuses on platform enablement, migration, and integration rather than custom ML engineering or application-level programming. No generic exclusion rules apply."
+  },
+  {
+    "timestamp": "2026-01-08 08:04:22 +00:00",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/microsoft-developer-community/implementing-a2a-protocol-in-net-a-practical-guide/ba-p/4480232",
+    "collection": "community",
+    "reason": "Succesfully added: AI category was added because the core subject is implementing composable AI multi-agent architectures and protocols (AI rule 4 and 5). Coding category was included as the article focuses on .NET/ASP.NET Core programming, SDK integration, code structure, and best practices for developers (Coding rules 1, 2, 4, 5). No Azure-specific services, ML engineering, DevOps, GitHub Copilot, or security architecture topics are central to this post so those categories were not assigned. The technical tags were chosen to reflect frameworks, protocols, SDKs, architectural concepts, and best practices per categorization instructions."
   }
 ]

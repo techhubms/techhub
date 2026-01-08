@@ -11043,5 +11043,11 @@
     "collection": "community",
     "timestamp": "2026-01-08 01:31:42 +00:00",
     "reason": "Insufficient content length"
+  },
+  {
+    "collection": "videos",
+    "timestamp": "2026-01-08 06:04:35 +00:00",
+    "reason": "No categories found: No categories were assigned because the content is about using Microsoft 365 Copilot (as seen in 'Approve changes in bulk directly in M365 Copilot') and Copilot Studio for catalog enrichment in a retail context. According to the Copilot Product Distinction rules in Chapter 2 and the Non-Development Microsoft Products exclusion, content centered on Microsoft 365 Copilot or business productivity Copilot tools is excluded, as these are not developer tools. Additionally, the main use case is retail product listing management—not coding, development, or technical implementation. Therefore, generic exclusion rules apply and no categories are assigned.",
+    "canonical_url": "https://www.youtube.com/watch?v=eszTnwGVulg"
   }
 ]
