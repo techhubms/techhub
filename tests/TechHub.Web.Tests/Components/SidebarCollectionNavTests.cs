@@ -10,7 +10,7 @@ using Xunit;
 
 namespace TechHub.Web.Tests.Components;
 
-public class CollectionNavTests : TestContext
+public class SidebarCollectionNavTests : TestContext
 {
     // No mocks needed - NavigationManager is provided by bUnit TestContext
 
@@ -37,7 +37,7 @@ public class CollectionNavTests : TestContext
         };
 
         // Act - SSR navigation uses anchor tags instead of buttons and callbacks
-        var cut = RenderComponent<CollectionNav>(parameters => parameters
+        var cut = RenderComponent<SidebarCollectionNav>(parameters => parameters
             .Add(p => p.Section, sectionDto)
             .Add(p => p.SelectedCollection, "all"));
 
@@ -72,7 +72,7 @@ public class CollectionNavTests : TestContext
         };
 
         // Act - SSR uses anchor tags with active class for selected collection
-        var cut = RenderComponent<CollectionNav>(parameters => parameters
+        var cut = RenderComponent<SidebarCollectionNav>(parameters => parameters
             .Add(p => p.Section, sectionDto)
             .Add(p => p.SelectedCollection, "news"));
 
@@ -103,7 +103,7 @@ public class CollectionNavTests : TestContext
         };
 
         // Act - SSR navigation uses href attributes instead of callbacks
-        var cut = RenderComponent<CollectionNav>(parameters => parameters
+        var cut = RenderComponent<SidebarCollectionNav>(parameters => parameters
             .Add(p => p.Section, sectionDto)
             .Add(p => p.SelectedCollection, "all"));
 
@@ -138,7 +138,7 @@ public class CollectionNavTests : TestContext
         };
 
         // Act - Custom pages appear in separate "Pages" section
-        var cut = RenderComponent<CollectionNav>(parameters => parameters
+        var cut = RenderComponent<SidebarCollectionNav>(parameters => parameters
             .Add(p => p.Section, sectionDto)
             .Add(p => p.SelectedCollection, "all"));
 
@@ -171,7 +171,7 @@ public class CollectionNavTests : TestContext
         };
 
         // Act - Component always displays RSS feed in sidebar
-        var cut = RenderComponent<CollectionNav>(parameters => parameters
+        var cut = RenderComponent<SidebarCollectionNav>(parameters => parameters
             .Add(p => p.Section, sectionDto)
             .Add(p => p.SelectedCollection, "all"));
 
