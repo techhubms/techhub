@@ -42,6 +42,9 @@ dotnet new install Aspire.ProjectTemplates
 
 # ==================== Playwright ====================
 echo "Installing Playwright browsers for .NET..."
+# Set Playwright to install browsers in user directory
+export PLAYWRIGHT_BROWSERS_PATH="$HOME/.cache/ms-playwright"
+
 # Build the test project to ensure Playwright.CLI is restored
 cd /workspaces/techhub
 dotnet build tests/TechHub.E2E.Tests/TechHub.E2E.Tests.csproj
@@ -98,6 +101,10 @@ $env:PATH = "$HOME/.aspire/bin:$env:PATH"
 
 # Add .NET global tools
 $env:PATH = "$HOME/.dotnet/tools:$env:PATH"
+
+# ==================== Playwright Configuration ====================
+# Set Playwright to install browsers in user directory
+$env:PLAYWRIGHT_BROWSERS_PATH = "$HOME/.cache/ms-playwright"
 
 # ==================== Opt-Out Settings ====================
 # Disable .NET CLI telemetry

@@ -22,6 +22,8 @@ public class PlaywrightCollectionFixture : IAsyncLifetime
             // Performance optimizations for test environment
             Args = new[]
             {
+                "--no-sandbox",                // Required for Docker/DevContainer environments
+                "--disable-setuid-sandbox",    // Required for Docker/DevContainer environments
                 "--disable-web-security",      // Faster loading (test only!)
                 "--disable-features=IsolateOrigins,site-per-process",
                 "--disable-blink-features=AutomationControlled",
@@ -97,5 +99,10 @@ public class HomePageSidebarCollection : ICollectionFixture<PlaywrightCollection
 
 [CollectionDefinition("Custom Pages Tests")]
 public class CustomPagesCollection : ICollectionFixture<PlaywrightCollectionFixture>
+{
+}
+
+[CollectionDefinition("Section Card Layout Tests")]
+public class SectionCardLayoutCollection : ICollectionFixture<PlaywrightCollectionFixture>
 {
 }

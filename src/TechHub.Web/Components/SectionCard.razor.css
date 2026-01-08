@@ -93,12 +93,13 @@
   position: relative;
   z-index: 10; /* Ensure badges are above the card link */
   transition: all var(--duration-fast) var(--easing-ease);
+  cursor: pointer;
+  font-family: inherit;
 }
 
 .collection-badge:hover {
   background: rgba(139, 92, 246, 0.5);
   border-color: var(--color-purple-medium);
-  transform: scale(1.05);
   text-decoration: none;
 }
 

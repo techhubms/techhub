@@ -17,17 +17,17 @@
                 {
                     @if (collection.IsCustom)
                     {
-                        @* Custom pages link directly to their URL *@
-                        <a href="@collection.Url" class="collection-badge custom-page-badge" @onclick:stopPropagation>
+                        @* Custom pages use button to avoid nested links *@
+                        <button type="button" class="collection-badge custom-page-badge" @onclick="() => NavigateToUrl(collection.Url)" @onclick:stopPropagation>
                             @collection.Title
-                        </a>
+                        </button>
                     }
                     else
                     {
-                        @* Regular collections link to section/collection page *@
-                        <a href="@($"{Section.Url}/{collection.Name}")" class="collection-badge" @onclick:stopPropagation>
+                        @* Regular collections use button to avoid nested links *@
+                        <button type="button" class="collection-badge" @onclick="() => NavigateToUrl(collection.Url)" @onclick:stopPropagation>
                             @collection.Title
-                        </a>
+                        </button>
                     }
                 }
                 @if (Section.Collections.Count > 4)
@@ -42,5 +42,10 @@
 @code {
     [Parameter, EditorRequired]
     public SectionDto Section { get; set; } = null!;
+
+    private void NavigateToUrl(string url)
+    {
+        Navigation.NavigateTo(url);
+    }
 }
 

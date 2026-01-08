@@ -44,6 +44,10 @@
       ]
     }
   },
+  "remoteEnv": {
+    "PLAYWRIGHT_BROWSERS_PATH": "/ms-playwright",
+    "CHROME_DEVEL_SANDBOX": "/usr/local/sbin/chrome-devel-sandbox"
+  },
   "postCreateCommand": "bash .devcontainer/post-create.sh",
   "forwardPorts": [5000, 5001, 15888, 5173],
   "portsAttributes": {

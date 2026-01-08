@@ -1,0 +1,126 @@
+using System.Text.RegularExpressions;
+using Microsoft.Playwright;
+using Xunit;
+
+namespace TechHub.E2E.Tests.Web;
+
+[Collection("Section Card Layout Tests")]
+public class SectionCardLayoutTests(PlaywrightCollectionFixture fixture) : IAsyncLifetime
+{
+    private const string BaseUrl = "http://localhost:5184";
+    private IBrowserContext? _context;
+    private IPage Page => _page ?? throw new InvalidOperationException("Page not initialized");
+    private IPage? _page;
+
+    public async Task InitializeAsync()
+    {
+        _context = await fixture.CreateContextAsync();
+        _page = await _context.NewPageAsync();
+    }
+
+    public async Task DisposeAsync()
+    {
+        if (_page != null)
+            await _page.CloseAsync();
+        
+        if (_context != null)
+            await _context.CloseAsync();
+    }
+
+    [Fact]
+    public async Task HomePage_SectionCard_ShouldRenderAsCompleteCard()
+    {
+        // Arrange
+        await Page.GotoAsync(BaseUrl);
+        
+        // Assert - Each section card should have both header and body within same card
+        var sectionCards = Page.Locator(".section-card");
+        var count = await sectionCards.CountAsync();
+        
+        Assert.True(count > 0, "Expected at least one section card");
+        
+        // Check first card has complete structure
+        var firstCard = sectionCards.First;
+        await Assertions.Expect(firstCard.Locator(".section-card-header")).ToBeVisibleAsync();
+        await Assertions.Expect(firstCard.Locator(".section-body")).ToBeVisibleAsync();
+    }
+
+    [Fact]
+    public async Task HomePage_SectionCard_HeaderAndBody_ShouldBeInSameCard()
+    {
+        // Arrange
+        await Page.GotoAsync(BaseUrl);
+        
+        // Assert - For each section card, verify header and body are siblings
+        var sectionCards = Page.Locator(".section-card");
+        var count = await sectionCards.CountAsync();
+        
+        for (int i = 0; i < count; i++)
+        {
+            var card = sectionCards.Nth(i);
+            
+            // Both header and body should exist within this single card element
+            var header = card.Locator(".section-card-header");
+            var body = card.Locator(".section-body");
+            
+            await Assertions.Expect(header).ToBeVisibleAsync();
+            await Assertions.Expect(body).ToBeVisibleAsync();
+        }
+    }
+
+    [Fact]
+    public async Task HomePage_SectionCard_ShouldHaveCorrectGridLayout()
+    {
+        // Arrange
+        await Page.GotoAsync(BaseUrl);
+        
+        // Assert - Section cards should be in a grid container
+        var grid = Page.Locator(".sections-grid .grid");
+        await Assertions.Expect(grid).ToBeVisibleAsync();
+        
+        // All section cards should be direct children of the grid
+        var sectionCards = grid.Locator("> .section-card");
+        var count = await sectionCards.CountAsync();
+        
+        Assert.True(count > 0, "Expected section cards to be direct children of grid");
+    }
+
+    [Fact]
+    public async Task HomePage_SectionCard_CollectionBadges_ShouldBeClickable()
+    {
+        // Arrange
+        await Page.GotoAsync(BaseUrl);
+        
+        // Act - Find first section card with collection badges
+        var firstCard = Page.Locator(".section-card").First;
+        var badges = firstCard.Locator(".collection-badge");
+        var badgeCount = await badges.CountAsync();
+        
+        // If card has badges, verify they're clickable
+        if (badgeCount > 0)
+        {
+            var firstBadge = badges.First;
+            
+            // Should be visible and enabled
+            await Assertions.Expect(firstBadge).ToBeVisibleAsync();
+            await Assertions.Expect(firstBadge).ToBeEnabledAsync();
+        }
+    }
+
+    [Fact]
+    public async Task HomePage_SectionCard_MainCard_ShouldBeClickable()
+    {
+        // Arrange
+        await Page.GotoAsync(BaseUrl);
+        
+        // Act
+        var firstCard = Page.Locator(".section-card").First;
+        
+        // Assert - Card should be a clickable link
+        await Assertions.Expect(firstCard).ToBeVisibleAsync();
+        
+        // Verify it's an anchor element
+        var tagName = await firstCard.EvaluateAsync<string>("el => el.tagName.toLowerCase()");
+        Assert.Equal("a", tagName);
+    }
+}

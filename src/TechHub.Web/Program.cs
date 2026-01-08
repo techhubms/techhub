@@ -10,6 +10,13 @@ if (!builder.Environment.IsDevelopment())
     builder.WebHost.UseStaticWebAssets();
 }
 
+// Configure routing to be case-insensitive for better UX
+builder.Services.Configure<RouteOptions>(options =>
+{
+    options.LowercaseUrls = true;
+    options.LowercaseQueryStrings = false; // Keep query strings as-is
+});
+
 // Add services to the container.
 builder.Services.AddRazorComponents()
     .AddInteractiveServerComponents();
