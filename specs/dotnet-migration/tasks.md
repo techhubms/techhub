@@ -175,9 +175,9 @@ All .NET code resides in repository root per constitution requirements:
 
 ### Semantic HTML & Accessibility for User Story 1
 
-- [ ] T070 [P] [US1] Implement semantic HTML5 elements (article, section, nav, header, footer, time) in all components
-- [ ] T071 [P] [US1] Add ARIA labels and roles for accessibility in all components
-- [ ] T072 [P] [US1] Implement keyboard navigation support in all components
+- [X] T070 [P] [US1] Implement semantic HTML5 elements (article, section, nav, header, footer, time) in all components
+- [X] T071 [P] [US1] Add ARIA labels and roles for accessibility in all components
+- [X] T072 [P] [US1] Implement keyboard navigation support in all components
 - [ ] T073 [US1] Add Schema.org Article markup in ContentDetail component
 
 ### Responsive Design for User Story 1

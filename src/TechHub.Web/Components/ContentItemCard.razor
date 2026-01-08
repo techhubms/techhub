@@ -11,8 +11,8 @@
 
 @if (isExternal)
 {
-    <a href="@targetUrl" class="content-item-card" target="_blank" rel="noopener noreferrer">
-        <article>
+    <a href="@targetUrl" class="content-item-card" target="_blank" rel="noopener noreferrer" aria-label="@Item.Title - opens in new tab">
+        <div class="card-content">
             <div class="content-header">
                 <h3 class="content-title">@Item.Title</h3>
                 <div class="content-meta">
@@ -52,13 +52,13 @@
                 }
             </div>
         }
-        </article>
+        </div>
     </a>
 }
 else
 {
-    <a href="@targetUrl" class="content-item-card" data-enhance-nav="true">
-        <article>
+    <a href="@targetUrl" class="content-item-card" data-enhance-nav="true" aria-label="@Item.Title">
+        <div class="card-content">
             <div class="content-header">
                 <h3 class="content-title">@Item.Title</h3>
                 <div class="content-meta">
@@ -98,7 +98,7 @@ else
                 }
             </div>
         }
-        </article>
+        </div>
     </a>
 }
 
