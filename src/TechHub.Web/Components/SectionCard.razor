@@ -2,8 +2,8 @@
 @inject NavigationManager Navigation
 
 <div class="section-card-container">
-    <a href="@Section.Url" class="section-card">
-        <div class="section-card-header" style="background-image: url('@Section.BackgroundImage')">
+    <a href="@Section.Url" class="section-card" aria-label="View @Section.Title section">
+        <div class="section-card-header" style="background-image: url('@Section.BackgroundImage')" role="img" aria-label="@Section.Title section background">
             <div class="section-overlay">
                 <h2>@Section.Title</h2>
             </div>
@@ -14,30 +14,30 @@
     </a>
     @if (Section.Collections.Any())
     {
-        <div class="section-collections">
+        <nav class="section-collections" aria-label="@Section.Title collections">
             @* Show first 4 collections/pages (both regular and custom) *@
             @foreach (var collection in Section.Collections.Take(4))
             {
                 @if (collection.IsCustom)
                 {
                     @* Custom pages *@
-                    <a href="@collection.Url" class="collection-badge custom-page-badge">
+                    <a href="@collection.Url" class="collection-badge custom-page-badge" aria-label="View @collection.Title custom page">
                         @collection.Title
                     </a>
                 }
                 else
                 {
                     @* Regular collections *@
-                    <a href="@collection.Url" class="collection-badge">
+                    <a href="@collection.Url" class="collection-badge" aria-label="View @collection.Title collection">
                         @collection.Title
                     </a>
                 }
             }
             @if (Section.Collections.Count > 4)
             {
-                <span class="collection-badge-more">+@(Section.Collections.Count - 4) more</span>
+                <span class="collection-badge-more" aria-label="@(Section.Collections.Count - 4) more collections available">+@(Section.Collections.Count - 4) more</span>
             }
-        </div>
+        </nav>
     }
 </div>
 

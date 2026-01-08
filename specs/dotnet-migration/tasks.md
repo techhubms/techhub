@@ -170,7 +170,7 @@ All .NET code resides in repository root per constitution requirements:
 ### API Client for User Story 1
 
 - [X] T067 [US1] Create typed HttpClient for API in src/TechHub.Web/Services/TechHubApiClient.cs
-- [ ] T068 [US1] Add Polly retry policies to API client in src/TechHub.Web/Services/TechHubApiClient.cs
+- [X] T068 [US1] Add Polly retry policies to API client in src/TechHub.Web/Services/TechHubApiClient.cs
 - [X] T069 [US1] Configure dependency injection for API client in src/TechHub.Web/Program.cs
 
 ### Semantic HTML & Accessibility for User Story 1

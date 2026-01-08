@@ -4,16 +4,16 @@
 @inject ILogger<ContentItemsGrid> Logger
 @attribute [StreamRendering]
 
-<div class="collection-content @(isLoading ? "loading" : "")">
+<section class="collection-content @(isLoading ? "loading" : "")" aria-label="@GetCollectionDisplayName() content">
     <h2 class="collection-title">@GetCollectionDisplayName()</h2>
     
     @if (isLoading && !contentItems.Any())
     {
-        <div class="content-grid">
+        <div class="content-grid" role="feed" aria-busy="true" aria-label="Loading content">
             @* Skeleton cards while loading - mimics actual content card structure *@
             @for (int i = 0; i < 6; i++)
             {
-                <div class="content-item-card skeleton-card">
+                <div class="content-item-card skeleton-card" aria-hidden="true">
                     <div class="content-header">
                         <div class="skeleton skeleton-card-title"></div>
                         <div class="skeleton skeleton-card-meta"></div>
@@ -31,15 +31,15 @@
     }
     else if (errorMessage != null)
     {
-        <div class="error">
+        <div class="error" role="alert">
             <h2>Error Loading Content</h2>
             <p>@errorMessage</p>
-            <button @onclick="LoadContent">Retry</button>
+            <button @onclick="LoadContent" aria-label="Retry loading content">Retry</button>
         </div>
     }
     else if (contentItems.Any())
     {
-        <div class="content-grid">
+        <div class="content-grid" role="feed" aria-busy="false">
             @foreach (var item in contentItems)
             {
                 <ContentItemCard Item="@item" ShowCollectionBadge="@ShowCollectionBadge" />
@@ -48,11 +48,11 @@
     }
     else
     {
-        <div class="no-content">
+        <div class="no-content" role="status">
             <p>No content available for this collection.</p>
         </div>
     }
-</div>
+</section>
 
 @code {
     [Parameter, EditorRequired]

@@ -1,15 +1,15 @@
 @using TechHub.Core.DTOs
 
 @* Grid of Section Cards *@
-<div class="sections-grid">
+<section class="sections-grid" aria-label="Browse sections">
     <h2 class="section-grid-title">Browse by Section</h2>
-    <div class="grid">
+    <div class="grid" role="list">
         @foreach (var item in Sections)
         {
             <SectionCard Section="@item" />
         }
     </div>
-</div>
+</section>
 
 @code {
     [Parameter, EditorRequired]
