@@ -1,7 +1,7 @@
 @using TechHub.Core.DTOs
 @using TechHub.Web.Services
 @inject TechHubApiClient ApiClient
-@inject ILogger<CollectionContent> Logger
+@inject ILogger<ContentItemsGrid> Logger
 @attribute [StreamRendering]
 
 <div class="collection-content @(isLoading ? "loading" : "")">
