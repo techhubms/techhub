@@ -1,0 +1,19 @@
+/* ============================================================================
+   CollectionList Component Styles
+   
+   Component-specific styling for CollectionList.razor
+   ============================================================================ */
+
+/* Content Grid Layout - Component-specific */
+.content-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: var(--spacing-4);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .content-grid {
+    grid-template-columns: 1fr;
+  }
+}

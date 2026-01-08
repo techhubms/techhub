@@ -1,3 +1,76 @@
+/* ============================================================================
+   MainLayout Component Styles
+   
+   Component-specific styling for site footer (part of MainLayout)
+   ============================================================================ */
+
+/* Site Footer */
+.site-footer {
+  background: var(--color-bg-subtle);
+  border-top: 1px solid var(--color-border-default);
+  margin-top: var(--spacing-8);
+  color: var(--color-text-secondary);
+}
+
+.footer-content {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: var(--spacing-2) var(--spacing-3);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--spacing-3);
+  min-height: var(--touch-target-min-size);
+}
+
+.footer-content p {
+  margin: 0;
+  font-size: var(--font-size-sm);
+}
+
+.footer-content p a {
+  color: var(--color-text-secondary);
+  transition: color var(--duration-fast) var(--easing-ease);
+  text-decoration: none;
+}
+
+.footer-content p a:hover {
+  color: var(--color-purple-bright);
+  text-decoration: none;
+}
+
+.footer-nav {
+  display: flex;
+  gap: var(--spacing-3);
+}
+
+.footer-nav a {
+  color: var(--color-text-secondary);
+  font-size: var(--font-size-sm);
+  transition: color var(--duration-fast) var(--easing-ease);
+}
+
+.footer-nav a:hover {
+  color: var(--color-text-primary);
+  text-decoration: none;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .footer-content {
+    flex-direction: column;
+    text-align: center;
+    gap: var(--spacing-3);
+  }
+  
+  .footer-nav {
+    flex-direction: column;
+    gap: var(--spacing-2);
+  }
+}
+
+/* Blazor Error UI - Global utility */
 #blazor-error-ui {
     color-scheme: light only;
     background: lightyellow;
@@ -18,3 +91,4 @@
         right: 0.75rem;
         top: 0.5rem;
     }
+

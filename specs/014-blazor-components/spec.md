@@ -51,7 +51,7 @@ Blazor components provide the UI layer with server-side rendering (SSR) for SEO 
 - RSS subscription link
 - Privacy/legal links
 
-**SectionHeader.razor** - Section-specific header
+**PageHeader.razor** (Shared/) - Reusable banner for section and static pages
 
 - Background image from section configuration
 - Section title and description

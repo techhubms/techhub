@@ -5,7 +5,7 @@
    - Content Item Card (Lists)
    ============================================================================ */
 
-/* Section Card Component */
+/* Section Card Component - Entire card is clickable link */
 .section-card {
   background: var(--color-card-bg);
   border-radius: var(--radius-lg);
@@ -13,25 +13,16 @@
   transition: all var(--duration-normal) var(--easing-ease-out);
   box-shadow: var(--shadow-md);
   overflow: hidden;
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  cursor: pointer;
 }
 
 .section-card:hover {
   transform: translateY(-4px);
   box-shadow: var(--shadow-lg);
   border-color: var(--color-purple-medium);
-}
-
-.section-card-link {
-  text-decoration: none;
-  color: inherit;
-  display: block;
-}
-
-.section-card-link:hover {
-  text-decoration: none;
-}
-
-.section-card-link:hover h2 {
   text-decoration: none;
 }
 
@@ -71,16 +62,9 @@
   padding: var(--spacing-3);
 }
 
-.section-description-link {
-  text-decoration: none;
-  color: inherit;
-  display: block;
-  margin-bottom: var(--spacing-2);
-}
-
 .section-description {
   color: var(--color-text-secondary);
-  margin: 0;
+  margin: 0 0 var(--spacing-2) 0;
   transition: color var(--duration-fast) var(--easing-ease);
 }
 
@@ -103,6 +87,14 @@
   font-size: var(--font-size-xs);
   border: 1px solid transparent;
   font-weight: var(--font-weight-medium);
+  display: inline-block;
+}
+
+/* Custom page badge styling - distinct from regular collection badges */
+.custom-page-badge {
+  background: var(--color-purple-light);
+  border-color: var(--color-purple-medium);
+  font-style: italic;
 }
 
 /* Grey badge for +X more indicator on section cards */
@@ -114,40 +106,7 @@
   font-size: var(--font-size-xs);
   font-weight: var(--font-weight-medium);
   border: 1px solid var(--color-border-default);
-}
-
-.collection-badge-link {
-  text-decoration: none;
   display: inline-block;
-  transition: transform var(--duration-fast) var(--easing-ease);
-}
-
-.collection-badge-link:hover {
-  text-decoration: none;
-  transform: scale(1.05);
-}
-
-.collection-badge-link .collection-badge {
-  transition: all var(--duration-fast) var(--easing-ease);
-}
-
-.collection-badge-link:hover .collection-badge {
-  background: var(--color-purple-medium);
-  color: var(--color-text-on-emphasis);
-  border-color: var(--color-purple-medium);
-}
-
-/* Custom page badge styling - distinct from regular collection badges */
-.custom-page-badge {
-  background: var(--color-purple-light);
-  border-color: var(--color-purple-medium);
-  font-style: italic;
-}
-
-.collection-badge-link:hover .custom-page-badge {
-  background: var(--color-purple-bright);
-  color: var(--color-text-on-emphasis);
-  border-color: var(--color-purple-bright);
 }
 
 .collection-badge-white {
@@ -263,9 +222,4 @@
   font-size: var(--font-size-sm);
   color: var(--color-text-tertiary);
   margin-top: var(--spacing-2);
-}
-
-.video-indicator,
-.external-indicator {
-  color: var(--color-text-tertiary);
 }

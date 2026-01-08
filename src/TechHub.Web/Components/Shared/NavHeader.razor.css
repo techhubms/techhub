@@ -1,0 +1,108 @@
+/* ============================================================================
+   NavHeader Component Styles
+   
+   Component-specific styling for site-wide navigation header
+   ============================================================================ */
+
+/* Site Header */
+.site-header {
+  background: var(--color-bg-subtle);
+  border-bottom: 1px solid var(--color-border-default);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: var(--shadow-md);
+  min-height: 76px;
+}
+
+.header-content {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: var(--spacing-2) var(--spacing-3);
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-4);
+  min-height: 76px;
+}
+
+.site-logo {
+  text-decoration: none;
+  color: var(--color-text-primary);
+  transition: color var(--duration-fast) var(--easing-ease);
+}
+
+.site-logo:hover {
+  color: var(--color-purple-bright);
+  text-decoration: none;
+}
+
+.site-logo .logo-text {
+  font-size: var(--font-size-2xl);
+  font-weight: var(--font-weight-bold);
+  margin: 0;
+}
+
+/* Main Navigation */
+.main-nav {
+  display: flex;
+  gap: var(--spacing-2);
+  flex-wrap: wrap;
+  align-items: center;
+  flex: 1;
+}
+
+.nav-link {
+  padding: var(--spacing-1) var(--spacing-2);
+  padding-bottom: 6px;
+  font-weight: var(--font-weight-medium);
+  font-size: var(--font-size-sm);
+  transition: all var(--duration-fast) var(--easing-ease);
+  min-height: var(--touch-target-min-size);
+  display: inline-flex;
+  align-items: center;
+  color: var(--color-text-primary);
+  text-decoration: none;
+  position: relative;
+  border-bottom: 3px solid transparent;
+  border-radius: 0;
+}
+
+.nav-link:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: var(--radius-md);
+  text-decoration: none;
+}
+
+.nav-link.active {
+  font-weight: var(--font-weight-medium);
+  border-bottom-color: var(--color-purple-bright);
+  color: var(--color-purple-bright);
+  background: transparent;
+  border-radius: 0;
+}
+
+.about-link {
+  margin-left: auto;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .header-content {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: var(--spacing-2);
+    gap: var(--spacing-2);
+  }
+  
+  .main-nav {
+    width: 100%;
+    flex-direction: column;
+    gap: var(--spacing-1);
+  }
+  
+  .nav-link {
+    display: block;
+    width: 100%;
+    text-align: center;
+  }
+}

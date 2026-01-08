@@ -635,7 +635,7 @@ alt-collection: "features"  # Highlights "Features" tab even though URL is not /
 
 ### Page-Specific Components
 
-- `SectionHeader` - Section hero with background image
+- `PageHeader` (Shared/) - Reusable banner for section and static pages
 - `CollectionTabs` - Horizontal tab navigation
 - `FeatureCard` - GitHub Copilot feature with tier badges
 - `TierFilter` - Subscription tier filter buttons

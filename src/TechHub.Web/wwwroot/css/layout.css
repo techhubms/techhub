@@ -1,14 +1,19 @@
 /* ============================================================================
-   Layout Components
+   Global Layout Styles
    
+   Only truly global styles that apply to all pages:
    - Skip Link (Accessibility)
-   - Site Header & Logo
-   - Main Navigation
-   - Main Content
-   - Site Footer
+   - Main Content Wrapper
+   
+   Component-specific styles are in their respective .razor.css files:
+   - NavHeader.razor.css (header, navigation)
+   - MainLayout.razor.css (footer)
+   - PageHeader.razor.css (page banner)
+   - Section.razor.css (section page grid)
+   - CollectionList.razor.css (content grid)
    ============================================================================ */
 
-/* Skip Link (Accessibility) */
+/* Skip Link (Accessibility) - Global utility */
 .skip-link {
   position: absolute;
   top: -100px;
@@ -25,164 +30,25 @@
   top: 0;
 }
 
-/* Site Header */
-.site-header {
-  background: var(--color-bg-subtle);
-  border-bottom: 1px solid var(--color-border-default);
-  position: sticky;
-  top: 0;
-  z-index: 100;
-  box-shadow: var(--shadow-md);
-  min-height: 76px; /* Prevent layout shift during navigation load */
-}
-
-.header-content {
-  max-width: 1400px;
-  margin: 0 auto;
-  padding: var(--spacing-2) var(--spacing-3);
-  display: flex;
-  align-items: center;
-  gap: var(--spacing-4);
-  min-height: 76px; /* Match parent min-height for stability */
-}
-
-.site-logo {
-  text-decoration: none;
-  color: var(--color-text-primary);
-  transition: color var(--duration-fast) var(--easing-ease);
-}
-
-.site-logo:hover {
-  color: var(--color-purple-bright);
-  text-decoration: none;
-}
-
-.site-logo .logo-text {
-  font-size: var(--font-size-2xl);
-  font-weight: var(--font-weight-bold);
-  margin: 0;
-}
-
-/* Main Navigation */
-.main-nav {
-  display: flex;
-  gap: var(--spacing-2);
-  flex-wrap: wrap;
-  align-items: center;
-  flex: 1;
-}
-
-.nav-link {
-  padding: var(--spacing-1) var(--spacing-2);
-  padding-bottom: 6px;
-  font-weight: var(--font-weight-medium);
-  font-size: var(--font-size-sm);
-  transition: all var(--duration-fast) var(--easing-ease);
-  min-height: var(--touch-target-min-size);
-  display: inline-flex;
-  align-items: center;
-  color: var(--color-text-primary);
-  text-decoration: none;
-  position: relative;
-  border-bottom: 3px solid transparent;
-  border-radius: 0;
-}
-
-.nav-link:hover {
-  background: rgba(255, 255, 255, 0.08);
-  border-radius: var(--radius-md);
-  text-decoration: none;
-}
-
-.nav-link.active {
-  /* Use same font-weight to prevent width jump */
-  font-weight: var(--font-weight-medium);
-  border-bottom-color: var(--color-purple-bright);
-  color: var(--color-purple-bright);
-  background: transparent;
-  border-radius: 0;
-}
-
-/* About link - positioned on the right */
-.about-link {
-  margin-left: auto;
-}
-
-/* Main Content */
+/* Main Content Wrapper - Global layout container */
 .main-content {
   flex: 1;
 }
 
-/* Site Footer */
-.site-footer {
-  background: var(--color-bg-subtle);
-  border-top: 1px solid var(--color-border-default);
-  margin-top: var(--spacing-8);
-  color: var(--color-text-secondary);
+/* Section Page Grid - Child positioning (global to cross component boundaries) */
+/* Grid container defined in Section.razor.css, child positioning here for scope piercing */
+.section-page-grid > *:nth-child(1) {
+  grid-area: header;
 }
 
-.footer-content {
-  max-width: 1400px;
-  margin: 0 auto;
-  padding: var(--spacing-2) var(--spacing-3);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: var(--spacing-3);
-  min-height: var(--touch-target-min-size);
+.section-page-grid > *:nth-child(2) {
+  grid-area: nav;
+  padding: 0 0 var(--spacing-4) var(--spacing-3);
 }
 
-.footer-content p {
-  margin: 0;
-  font-size: var(--font-size-sm);
+.section-page-grid > *:nth-child(3) {
+  grid-area: content;
+  padding: 0 var(--spacing-3) var(--spacing-4) 0;
+  min-width: 0;
 }
 
-.footer-nav {
-  display: flex;
-  gap: var(--spacing-3);
-}
-
-.footer-nav a {
-  color: var(--color-text-secondary);
-  font-size: var(--font-size-sm);
-  transition: color var(--duration-fast) var(--easing-ease);
-}
-
-.footer-nav a:hover {
-  color: var(--color-text-primary);
-  text-decoration: none;
-}
-
-/* Responsive Layout */
-@media (max-width: 768px) {
-  .header-content {
-    flex-direction: column;
-    align-items: flex-start;
-    padding: var(--spacing-2);
-    gap: var(--spacing-2);
-  }
-  
-  .main-nav {
-    width: 100%;
-    flex-direction: column;
-    gap: var(--spacing-1);
-  }
-  
-  .nav-link {
-    display: block;
-    width: 100%;
-    text-align: center;
-  }
-  
-  .footer-content {
-    flex-direction: column;
-    text-align: center;
-    gap: var(--spacing-3);
-  }
-  
-  .footer-nav {
-    flex-direction: column;
-    gap: var(--spacing-2);
-  }
-}

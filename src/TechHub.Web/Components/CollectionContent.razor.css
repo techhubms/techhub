@@ -1,0 +1,44 @@
+/* ============================================================================
+   CollectionContent Component Styles
+   
+   Handles the content area of section pages, including the collection title
+   and content grid. First h2 has top margin removed to align with nav sidebar.
+   ============================================================================ */
+
+/* Collection title - Remove top margin to align with nav sidebar */
+.collection-content > .collection-title {
+  margin-top: 0;
+  margin-bottom: var(--spacing-4);
+  font-size: var(--font-size-3xl);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text-primary);
+  text-align: left;
+}
+
+/* Loading state */
+.collection-content.loading {
+  opacity: 0.6;
+}
+
+/* Error state */
+.collection-content .error {
+  padding: var(--spacing-6);
+  text-align: center;
+  color: var(--color-text-secondary);
+}
+
+.collection-content .error h2 {
+  color: var(--color-danger);
+  margin-bottom: var(--spacing-3);
+}
+
+.collection-content .error button {
+  margin-top: var(--spacing-3);
+}
+
+/* No content state */
+.collection-content .no-content {
+  padding: var(--spacing-6);
+  text-align: center;
+  color: var(--color-text-secondary);
+}

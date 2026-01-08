@@ -426,7 +426,7 @@ app.MapGet("/api/sections/{url}", async (string url, ISectionRepository repo) =>
 
 <PageTitle>@Section?.Title | Tech Hub</PageTitle>
 
-<SectionHeader Section="@Section" />
+<PageHeader Section="@Section" />
 
 <nav class="collection-tabs">
     @foreach (var collection in Section?.Collections ?? [])

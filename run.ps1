@@ -646,34 +646,48 @@ function Invoke-FullCleanup {
     $portsCleaned = $false
     foreach ($port in @($ApiPort, $WebPort)) {
         try {
-            $portArg = ":" + $port
-            $processIds = lsof -ti $portArg 2>$null
-            if ($processIds) {
-                $processIds | ForEach-Object {
-                    $pid = $_
+            # Get PIDs using lsof (outputs one PID per line)
+            $lsofOutput = lsof -ti ":$port" 2>&1
+            
+            # Parse output - lsof returns PIDs separated by newlines
+            $processIds = @()
+            if ($lsofOutput -and $LASTEXITCODE -eq 0) {
+                # Split by newlines and filter out empty strings
+                $processIds = ($lsofOutput -split "`n" | Where-Object { $_ -match '^\d+$' })
+            }
+            
+            if ($processIds.Count -gt 0) {
+                foreach ($pidString in $processIds) {
+                    $pid = [int]$pidString
                     try {
                         $processInfo = Get-Process -Id $pid -ErrorAction SilentlyContinue
                         if ($processInfo) {
                             if (-not $Silent) {
                                 Write-Info ("  Port {0} - Killing PID {1}: {2} (Path: {3})" -f $port, $pid, $processInfo.ProcessName, $processInfo.Path)
                             }
+                            # Use Stop-Process with -Force for reliability
+                            Stop-Process -Id $pid -Force -ErrorAction SilentlyContinue
                         } else {
                             if (-not $Silent) {
-                                Write-Info ("  Port {0} - Killing PID {1}: (process already exited)" -f $port, $pid)
+                                Write-Info ("  Port {0} - PID {1} already exited" -f $port, $pid)
                             }
                         }
                     } catch {
                         if (-not $Silent) {
-                            Write-Info ("  Port {0} - Killing PID {1}: (unable to get process details)" -f $port, $pid)
+                            Write-Warning ("  Port {0} - Failed to kill PID {1}: {2}" -f $port, $pid, $_.Exception.Message)
                         }
                     }
-                    kill -9 $pid 2>$null
                 }
                 $portsCleaned = $true
-                Start-Sleep -Milliseconds 100
+                # Wait longer for ports to be released by OS
+                Start-Sleep -Milliseconds 500
             }
         }
-        catch { }
+        catch {
+            if (-not $Silent) {
+                Write-Warning ("  Failed to clean up port {0}: {1}" -f $port, $_.Exception.Message)
+            }
+        }
     }
     if ($portsCleaned) { $cleanedAny = $true }
     

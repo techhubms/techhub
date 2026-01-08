@@ -25,14 +25,12 @@ if (!builder.Environment.IsDevelopment() && !builder.Environment.IsEnvironment("
             "css/base.css",
             "css/layout.css",
             "css/components/sidebar.css",
+            "css/components/page-container.css",
             "css/components/cards.css",
             "css/components/buttons.css",
             "css/components/navigation.css",
             "css/components/loading.css",
             "css/components/forms.css",
-            "css/pages/home.css",
-            "css/pages/section.css",
-            "css/pages/content-detail.css",
             "css/utilities.css"
         );
     });

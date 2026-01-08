@@ -6,21 +6,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <base href="/" />
     <ResourcePreloader />
-    @if (Environment.GetEnvironmentVariable("ASPNETCORE_ENVIRONMENT") == "Development")
+    @if (Environment.GetEnvironmentVariable("ASPNETCORE_ENVIRONMENT") == "Development" || Environment.GetEnvironmentVariable("ASPNETCORE_ENVIRONMENT") == "Test")
     {
         <!-- Development: Individual files for easy debugging and no caching -->
         <link rel="stylesheet" href="css/design-tokens.css" />
         <link rel="stylesheet" href="css/base.css" />
         <link rel="stylesheet" href="css/layout.css" />
         <link rel="stylesheet" href="css/components/sidebar.css" />
+        <link rel="stylesheet" href="css/components/page-container.css" />
         <link rel="stylesheet" href="css/components/cards.css" />
         <link rel="stylesheet" href="css/components/buttons.css" />
         <link rel="stylesheet" href="css/components/navigation.css" />
         <link rel="stylesheet" href="css/components/loading.css" />
         <link rel="stylesheet" href="css/components/forms.css" />
-        <link rel="stylesheet" href="css/pages/home.css" />
-        <link rel="stylesheet" href="css/pages/section.css" />
-        <link rel="stylesheet" href="css/pages/content-detail.css" />
         <link rel="stylesheet" href="css/utilities.css" />
     }
     else
