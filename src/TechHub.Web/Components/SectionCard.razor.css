@@ -1,8 +1,8 @@
 /* ============================================================================
-   Card Components
+   SectionCard Component Styles
    
-   - Section Card (Home Page)
-   - Content Item Card (Lists)
+   Component-specific styling for SectionCard.razor
+   Displays section overview with background image, title, description, and collections
    ============================================================================ */
 
 /* Section Card Component - Entire card is clickable link */
@@ -79,6 +79,7 @@
   gap: var(--spacing-1);
 }
 
+/* Collection badges within section cards */
 .collection-badge {
   background: rgba(139, 92, 246, 0.3);
   color: var(--color-text-on-emphasis);
@@ -123,119 +124,4 @@
   font-weight: var(--font-weight-medium);
   border: 1px solid var(--color-border-default);
   display: inline-block;
-}
-
-.collection-badge-white {
-  background: var(--color-bg-emphasis);
-  color: var(--color-text-secondary);
-  padding: 0.25rem var(--spacing-2);
-  border-radius: var(--radius-full);
-  font-size: var(--font-size-xs);
-  font-weight: var(--font-weight-medium);
-  border: 1px solid var(--color-border-default);
-  cursor: default; /* Prevent pointer cursor */
-  user-select: none; /* Prevent text selection */
-  pointer-events: none; /* Prevent all mouse events */
-}
-
-/* Content Item Card Component */
-.content-item-card {
-  background: var(--color-card-bg);
-  border-radius: var(--radius-lg);
-  padding: var(--spacing-3);
-  box-shadow: var(--shadow-md);
-  transition: all var(--duration-normal) var(--easing-ease-out);
-  border: 1px solid var(--color-border-default);
-  height: 100%;
-  min-height: 265px;
-  display: flex;
-  flex-direction: column;
-  text-decoration: none;
-  color: inherit;
-}
-
-.content-item-card:hover {
-  box-shadow: var(--shadow-lg);
-  border-color: var(--color-purple-medium);
-  transform: translateY(-2px);
-  text-decoration: none;
-}
-
-.content-header {
-  margin-bottom: var(--spacing-2);
-}
-
-.content-title {
-  margin: 0 0 var(--spacing-1) 0;
-  font-size: var(--font-size-xl);
-  font-weight: var(--font-weight-semibold);
-  line-height: var(--line-height-tight);
-  color: var(--color-text-primary);
-  transition: color var(--duration-fast) var(--easing-ease);
-}
-
-/* Light up title when hovering anywhere on content card */
-.content-item-card:hover .content-title {
-  color: var(--color-purple-bright);
-}
-
-.content-meta {
-  display: flex;
-  gap: var(--spacing-3);
-  color: var(--color-text-secondary);
-  font-size: var(--font-size-sm);
-  flex-wrap: wrap;
-}
-
-.content-description,
-.content-excerpt {
-  color: var(--color-text-secondary);
-  line-height: var(--line-height-relaxed);
-  margin-bottom: var(--spacing-2);
-  flex: 1;
-  transition: color var(--duration-fast) var(--easing-ease);
-}
-
-/* Light up description when hovering anywhere on content card */
-.content-item-card:hover .content-description,
-.content-item-card:hover .content-excerpt {
-  color: var(--color-text-primary);
-}
-
-.content-tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: var(--spacing-1);
-  margin-top: auto;
-  padding-top: var(--spacing-2);
-}
-
-/* Content Item Card Tag - decorative, non-clickable tags inside content cards */
-.content-item-card-tag {
-  background: rgba(139, 92, 246, 0.3);
-  color: var(--color-text-on-emphasis);
-  padding: 0.25rem var(--spacing-2);
-  border-radius: var(--radius-full);
-  font-size: var(--font-size-xs);
-  font-weight: var(--font-weight-medium);
-}
-
-/* Tag overflow indicator - decorative */
-.content-item-card-tag-more {
-  background: rgba(139, 92, 246, 0.2);
-  color: var(--color-text-on-emphasis);
-  padding: 0.25rem var(--spacing-2);
-  border-radius: var(--radius-full);
-  font-size: var(--font-size-xs);
-  font-weight: var(--font-weight-medium);
-  opacity: 0.8;
-}
-
-.content-footer {
-  display: flex;
-  gap: var(--spacing-2);
-  align-items: center;
-  font-size: var(--font-size-sm);
-  color: var(--color-text-tertiary);
-  margin-top: var(--spacing-2);
 }

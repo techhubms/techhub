@@ -26,7 +26,6 @@ if (!builder.Environment.IsDevelopment() && !builder.Environment.IsEnvironment("
             "css/layout.css",
             "css/components/sidebar.css",
             "css/components/page-container.css",
-            "css/components/cards.css",
             "css/components/buttons.css",
             "css/components/navigation.css",
             "css/components/loading.css",
