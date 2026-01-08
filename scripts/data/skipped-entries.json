@@ -11049,5 +11049,11 @@
     "timestamp": "2026-01-08 06:04:35 +00:00",
     "reason": "No categories found: No categories were assigned because the content is about using Microsoft 365 Copilot (as seen in 'Approve changes in bulk directly in M365 Copilot') and Copilot Studio for catalog enrichment in a retail context. According to the Copilot Product Distinction rules in Chapter 2 and the Non-Development Microsoft Products exclusion, content centered on Microsoft 365 Copilot or business productivity Copilot tools is excluded, as these are not developer tools. Additionally, the main use case is retail product listing management—not coding, development, or technical implementation. Therefore, generic exclusion rules apply and no categories are assigned.",
     "canonical_url": "https://www.youtube.com/watch?v=eszTnwGVulg"
+  },
+  {
+    "collection": "blogs",
+    "timestamp": "2026-01-08 14:06:22 +00:00",
+    "canonical_url": "https://devclass.com/2026/01/08/tailwind-labs-lays-off-75-percent-of-its-engineers-thanks-to-brutal-impact-of-ai/",
+    "reason": "No categories found: No Microsoft technologies are discussed or central to the content. The blog post focuses on Tailwind Labs' layoffs due to AI's impact on their business, specifically mentioning the Tailwind CSS framework and related business challenges. While 'AI' is a theme, there is no mention of Microsoft AI products or services, and no Microsoft developer or cloud ecosystem involvement. None of the category inclusion rules for AI, Coding, DevOps, Azure, ML, Security, or GitHub Copilot are met. Therefore, according to the multi-platform content threshold and inclusion rules, no categories apply."
   }
 ]

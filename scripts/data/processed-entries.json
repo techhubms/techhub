@@ -23110,5 +23110,17 @@
     "canonical_url": "https://techcommunity.microsoft.com/t5/microsoft-developer-community/implementing-a2a-protocol-in-net-a-practical-guide/ba-p/4480232",
     "collection": "community",
     "reason": "Succesfully added: AI category was added because the core subject is implementing composable AI multi-agent architectures and protocols (AI rule 4 and 5). Coding category was included as the article focuses on .NET/ASP.NET Core programming, SDK integration, code structure, and best practices for developers (Coding rules 1, 2, 4, 5). No Azure-specific services, ML engineering, DevOps, GitHub Copilot, or security architecture topics are central to this post so those categories were not assigned. The technical tags were chosen to reflect frameworks, protocols, SDKs, architectural concepts, and best practices per categorization instructions."
+  },
+  {
+    "collection": "news",
+    "timestamp": "2026-01-08 15:05:36 +00:00",
+    "canonical_url": "https://news.microsoft.com/source/2026/01/08/microsoft-propels-retail-forward-with-agentic-ai-capabilities-that-power-intelligent-automation-for-every-retail-function/",
+    "reason": "Succesfully added: Assigned the AI category because the announcement centers on agentic AI solutions for the retail industry, including features such as Copilot Checkout, Copilot Studio templates, and intelligent agents for catalog enrichment and store operations. These products are all AI-driven, as specified by explicit references to automation, intelligent agents, natural language interfaces, recommendation engines, and the use of Microsoft’s AI platform (AI inclusion rules 1, 3, 4, 5). Other categories such as DevOps, Coding, ML, Azure, Security, and GitHub Copilot do not apply because the article focuses on high-level AI capabilities for retail, with no code, development framework, cloud infrastructure, or ML/data science development details present. There are no generic exclusion triggers—the content is original, in English, technically detailed, not overly negative or promotional, and not about non-development productivity tools (e.g., Microsoft 365 Copilot is mentioned only in a consumer purchasing context, not as a developer tool)."
+  },
+  {
+    "collection": "news",
+    "timestamp": "2026-01-08 15:05:53 +00:00",
+    "canonical_url": "https://news.microsoft.com/source/emea/features/ai-that-drives-change-wayve-rewrites-self-driving-playbook-with-deep-learning-in-azure/",
+    "reason": "Succesfully added: Assigned the AI category as the content is centrally focused on AI technologies, specifically deep learning (AI inclusion rule 1). Also assigned Azure because the article is about leveraging Microsoft Azure’s cloud platform for developing AI-powered self-driving car technology (Azure inclusion rule 1). Did not assign ML: while machine learning (deep learning) is referenced, the content as described focuses mostly on the application of Azure-hosted AI rather than hands-on data science/ML engineering. No generic exclusion rules applied."
   }
 ]
