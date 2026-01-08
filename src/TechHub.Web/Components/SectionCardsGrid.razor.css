@@ -38,3 +38,56 @@
     gap: var(--spacing-3);
   }
 }
+
+/* ============================================================================
+   Section Card Skeleton Loading States
+   ============================================================================ */
+
+.skeleton-card-link {
+  display: block;
+  pointer-events: none;
+}
+
+.skeleton-section-card {
+  background: var(--color-card-bg);
+  border: 1px solid var(--color-card-border);
+  border-radius: var(--radius-lg);
+}
+
+.skeleton-section-card .section-card-header {
+  height: 140px;
+  width: 100%;
+  margin-bottom: 0;
+  flex-shrink: 0;
+  display: flex;
+  align-items: flex-end;
+}
+
+.skeleton-section-card .section-overlay {
+  width: 100%;
+  padding: var(--spacing-3);
+  display: flex;
+  align-items: flex-end;
+}
+
+.skeleton-section-card .section-body {
+  padding: var(--spacing-3);
+}
+
+.skeleton-section-card .skeleton-description {
+  height: 16px;
+  width: 100%;
+  margin-bottom: var(--spacing-2);
+}
+
+.skeleton-section-card .skeleton-collections {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-1);
+}
+
+.skeleton-section-card .skeleton-badge {
+  height: 24px;
+  width: 60px;
+  border-radius: var(--radius-full);
+}

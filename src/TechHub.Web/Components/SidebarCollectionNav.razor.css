@@ -40,6 +40,54 @@
   margin-bottom: var(--spacing-1);
 }
 
+/* Collection Navigation Button/Link Styles */
+.collection-nav button,
+.collection-nav ul li > a {
+  width: 100%;
+  text-align: left;
+  padding: var(--spacing-2) var(--spacing-3);
+  background: var(--color-card-bg);
+  border: 1px solid var(--color-border-default);
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  transition: all var(--duration-fast) var(--easing-ease);
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-text-primary);
+  font-family: var(--font-family-base);
+  min-height: var(--touch-target-min-size);
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.collection-nav button:hover:not(:disabled),
+.collection-nav ul li > a:hover {
+  background: var(--color-bg-emphasis);
+  border-color: var(--color-purple-medium);
+  transform: translateX(4px);
+}
+
+.collection-nav button.active,
+.collection-nav ul li > a.active {
+  background: var(--color-purple-dark);
+  color: var(--color-text-on-emphasis);
+  border-color: var(--color-purple-bright);
+  font-weight: var(--font-weight-semibold);
+}
+
+.collection-nav button.active:hover,
+.collection-nav ul li > a.active:hover {
+  background: var(--color-purple-medium);
+  border-color: var(--color-purple-bright);
+  transform: none;
+}
+
+.collection-nav button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
 /* Responsive Navigation */
 @media (max-width: 1024px) {
   .collection-nav {

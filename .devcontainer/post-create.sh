@@ -49,13 +49,12 @@ export PLAYWRIGHT_BROWSERS_PATH="$HOME/.cache/ms-playwright"
 cd /workspaces/techhub
 dotnet build tests/TechHub.E2E.Tests/TechHub.E2E.Tests.csproj
 
-# Install browsers using the .NET Playwright CLI
-if [ -f "tests/TechHub.E2E.Tests/bin/Debug/net10.0/playwright.ps1" ]; then
-    pwsh tests/TechHub.E2E.Tests/bin/Debug/net10.0/playwright.ps1 install --with-deps chromium
-else
-    echo "Warning: playwright.ps1 not found, browsers may not be installed"
-fi
+# Install browsers using the project-specific playwright.ps1 (ensures correct version match)
+echo "Installing Playwright browsers (chromium with dependencies)..."
+pwsh tests/TechHub.E2E.Tests/bin/Debug/net10.0/playwright.ps1 install --with-deps chromium
 
+# Install Chrome via npx for Playwright MCP tools compatibility
+echo "Installing Chrome for Playwright MCP tools..."
 npx playwright install chrome
 
 # ==================== PowerShell Modules ====================

@@ -1,51 +1,48 @@
 @using TechHub.Core.DTOs
 @inject NavigationManager Navigation
 
-<a href="@Section.Url" class="section-card">
-    <div class="section-card-header" style="background-image: url('@Section.BackgroundImage')">
-        <div class="section-overlay">
-            <h2>@Section.Title</h2>
-        </div>
-    </div>
-    <div class="section-body">
-        <p class="section-description">@Section.Description</p>
-        @if (Section.Collections.Any())
-        {
-            <div class="section-collections">
-                @* Show first 4 collections/pages (both regular and custom) *@
-                @foreach (var collection in Section.Collections.Take(4))
-                {
-                    @if (collection.IsCustom)
-                    {
-                        @* Custom pages use button to avoid nested links *@
-                        <button type="button" class="collection-badge custom-page-badge" @onclick="() => NavigateToUrl(collection.Url)" @onclick:stopPropagation>
-                            @collection.Title
-                        </button>
-                    }
-                    else
-                    {
-                        @* Regular collections use button to avoid nested links *@
-                        <button type="button" class="collection-badge" @onclick="() => NavigateToUrl(collection.Url)" @onclick:stopPropagation>
-                            @collection.Title
-                        </button>
-                    }
-                }
-                @if (Section.Collections.Count > 4)
-                {
-                    <span class="collection-badge-more">+@(Section.Collections.Count - 4) more</span>
-                }
+<div class="section-card-container">
+    <a href="@Section.Url" class="section-card">
+        <div class="section-card-header" style="background-image: url('@Section.BackgroundImage')">
+            <div class="section-overlay">
+                <h2>@Section.Title</h2>
             </div>
-        }
-    </div>
-</a>
+        </div>
+        <div class="section-body">
+            <p class="section-description">@Section.Description</p>
+        </div>
+    </a>
+    @if (Section.Collections.Any())
+    {
+        <div class="section-collections">
+            @* Show first 4 collections/pages (both regular and custom) *@
+            @foreach (var collection in Section.Collections.Take(4))
+            {
+                @if (collection.IsCustom)
+                {
+                    @* Custom pages *@
+                    <a href="@collection.Url" class="collection-badge custom-page-badge">
+                        @collection.Title
+                    </a>
+                }
+                else
+                {
+                    @* Regular collections *@
+                    <a href="@collection.Url" class="collection-badge">
+                        @collection.Title
+                    </a>
+                }
+            }
+            @if (Section.Collections.Count > 4)
+            {
+                <span class="collection-badge-more">+@(Section.Collections.Count - 4) more</span>
+            }
+        </div>
+    }
+</div>
 
 @code {
     [Parameter, EditorRequired]
     public SectionDto Section { get; set; } = null!;
-
-    private void NavigateToUrl(string url)
-    {
-        Navigation.NavigateTo(url);
-    }
 }
 

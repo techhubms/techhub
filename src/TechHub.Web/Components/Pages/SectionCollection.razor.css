@@ -38,3 +38,43 @@
       "content";
   }
 }
+
+/* ============================================================================
+   Section Collection Page Skeleton Loading States
+   ============================================================================ */
+
+.skeleton-header {
+  height: 220px;
+  width: 100%;
+  margin-bottom: 0;
+}
+
+.skeleton-title {
+  height: 36px;
+  width: 60%;
+  margin-bottom: var(--spacing-2);
+}
+
+.skeleton-description {
+  height: 20px;
+  width: 80%;
+}
+
+.skeleton-nav {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.skeleton-nav-item {
+  height: 44px;
+  width: 100%;
+  margin-bottom: var(--spacing-2);
+  border-radius: var(--radius-md);
+}
+
+@media (max-width: 768px) {
+  .skeleton-header {
+    height: 160px;
+  }
+}

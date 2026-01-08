@@ -87,21 +87,21 @@
   font-weight: var(--font-weight-medium);
 }
 
-/* Tag overflow indicator - decorative */
+/* Tag overflow indicator - decorative, grey background like collection badge */
 .content-item-card-tag-more {
-  background: rgba(139, 92, 246, 0.2);
-  color: var(--color-text-on-emphasis);
+  background: var(--color-bg-emphasis);
+  color: var(--color-text-tertiary);
   padding: 0.25rem var(--spacing-2);
   border-radius: var(--radius-full);
   font-size: var(--font-size-xs);
   font-weight: var(--font-weight-medium);
-  opacity: 0.8;
+  border: 1px solid var(--color-border-default);
 }
 
 /* Collection badge - white variant for showing collection name on content cards */
 .collection-badge-white {
   background: var(--color-bg-emphasis);
-  color: var(--color-text-secondary);
+  color: var(--color-text-tertiary);
   padding: 0.25rem var(--spacing-2);
   border-radius: var(--radius-full);
   font-size: var(--font-size-xs);

@@ -5,25 +5,28 @@
    Displays section overview with background image, title, description, and collections
    ============================================================================ */
 
-/* Section Card Component - Entire card is clickable link */
-.section-card {
+/* Section Card Container - Allows collections to be outside the clickable card */
+.section-card-container {
   background: var(--color-card-bg);
   border-radius: var(--radius-lg);
   border: 1px solid var(--color-border-default);
   transition: all var(--duration-normal) var(--easing-ease-out);
   box-shadow: var(--shadow-md);
   overflow: hidden;
+}
+
+.section-card-container:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--color-purple-medium);
+}
+
+/* Section Card - Clickable link area (header + description only) */
+.section-card {
   text-decoration: none;
   color: inherit;
   display: block;
   cursor: pointer;
-}
-
-.section-card:hover {
-  transform: translateY(-4px);
-  box-shadow: var(--shadow-lg);
-  border-color: var(--color-purple-medium);
-  text-decoration: none;
 }
 
 .section-card-header {
@@ -53,8 +56,8 @@
   transition: color var(--duration-fast) var(--easing-ease);
 }
 
-/* Light up heading when hovering anywhere on section card */
-.section-card:hover h2 {
+/* Light up heading when hovering anywhere on container */
+.section-card-container:hover .section-card h2 {
   color: var(--color-purple-bright);
 }
 
@@ -64,12 +67,12 @@
 
 .section-description {
   color: var(--color-text-secondary);
-  margin: 0 0 var(--spacing-2) 0;
+  margin: 0;
   transition: color var(--duration-fast) var(--easing-ease);
 }
 
-/* Light up description when hovering anywhere on section card */
-.section-card:hover .section-description {
+/* Light up description when hovering anywhere on container */
+.section-card-container:hover .section-description {
   color: var(--color-text-primary);
 }
 
@@ -77,9 +80,10 @@
   display: flex;
   flex-wrap: wrap;
   gap: var(--spacing-1);
+  padding: 0 var(--spacing-3) var(--spacing-3) var(--spacing-3);
 }
 
-/* Collection badges within section cards */
+/* Collection badges - Now proper links instead of buttons */
 .collection-badge {
   background: rgba(139, 92, 246, 0.3);
   color: var(--color-text-on-emphasis);
@@ -90,17 +94,15 @@
   font-weight: var(--font-weight-medium);
   display: inline-block;
   text-decoration: none;
-  position: relative;
-  z-index: 10; /* Ensure badges are above the card link */
   transition: all var(--duration-fast) var(--easing-ease);
   cursor: pointer;
-  font-family: inherit;
 }
 
 .collection-badge:hover {
   background: rgba(139, 92, 246, 0.5);
   border-color: var(--color-purple-medium);
   text-decoration: none;
+  transform: translateY(-1px);
 }
 
 /* Custom page badge styling - distinct from regular collection badges */

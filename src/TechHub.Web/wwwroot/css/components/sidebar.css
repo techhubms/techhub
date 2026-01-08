@@ -1,12 +1,15 @@
 /* ============================================================================
-   Shared Sidebar Component Styles
+   Shared Sidebar Styles
    
-   - Sticky sidebar positioning
-   - Sidebar sections (cards)
-   - Content lists and links
-   - Tags and metadata
+   Truly shared sidebar styles used across multiple pages.
+   Component-specific sidebar styles belong in component .razor.css files.
    
-   Used across Home, Content Detail, and Custom Pages
+   - Sidebar container (sticky positioning)
+   - Sidebar sections (headings, lists, links)
+   - Display-only tags (content detail pages)
+   - Featured items (latest roundup, highlighted content)
+   
+   Used across: Home, Section, SectionCollection, ContentItem pages
    ============================================================================ */
 
 /* ============================================================================
@@ -123,28 +126,8 @@
 }
 
 /* ============================================================================
-   Sidebar Tags - Clickable and Display-only
+   Sidebar Tags - Display-only (Content Detail)
    ============================================================================ */
-
-/* Clickable tags (home page popular tags, filters) */
-.sidebar-tag {
-  display: inline-block;
-  padding: var(--spacing-1) var(--spacing-2);
-  background: var(--color-card-bg);
-  border: 1px solid var(--color-border-default);
-  border-radius: var(--radius-sm);
-  font-size: var(--font-size-xs);
-  text-decoration: none;
-  color: var(--color-text-primary);
-  transition: all var(--duration-fast) var(--easing-ease);
-}
-
-.sidebar-tag:hover {
-  background: var(--color-purple-dark);
-  border-color: var(--color-purple-bright);
-  color: var(--color-text-on-emphasis);
-  transform: translateY(-2px);
-}
 
 /* Display-only tags (content detail metadata) */
 .sidebar-category-tag,
@@ -168,8 +151,7 @@
 }
 
 .category-tags,
-.content-tags,
-.tags-cloud {
+.content-tags {
   display: flex;
   flex-wrap: wrap;
   gap: var(--spacing-1);
