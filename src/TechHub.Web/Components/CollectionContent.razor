@@ -10,14 +10,21 @@
     @if (isLoading && !contentItems.Any())
     {
         <div class="content-grid">
-            @* Skeleton cards while loading *@
+            @* Skeleton cards while loading - mimics actual content card structure *@
             @for (int i = 0; i < 6; i++)
             {
                 <div class="content-item-card skeleton-card">
-                    <div class="skeleton skeleton-card-title"></div>
-                    <div class="skeleton skeleton-card-meta"></div>
+                    <div class="content-header">
+                        <div class="skeleton skeleton-card-title"></div>
+                        <div class="skeleton skeleton-card-meta"></div>
+                    </div>
                     <div class="skeleton skeleton-card-description"></div>
-                    <div class="skeleton skeleton-card-tags"></div>
+                    <div class="skeleton skeleton-card-description" style="width: 80%;"></div>
+                    <div class="content-tags">
+                        <div class="skeleton skeleton-card-tag"></div>
+                        <div class="skeleton skeleton-card-tag"></div>
+                        <div class="skeleton skeleton-card-tag"></div>
+                    </div>
                 </div>
             }
         </div>
