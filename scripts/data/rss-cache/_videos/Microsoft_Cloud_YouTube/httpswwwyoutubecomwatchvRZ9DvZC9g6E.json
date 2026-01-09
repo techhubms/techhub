@@ -1,0 +1,17 @@
+{
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCSgzRJMqIiCNtoM6Q7Q9Lqw",
+  "FeedLevelAuthor": "Microsoft Cloud",
+  "OutputDir": "_videos",
+  "Description": "This discussion at Microsoft Ignite with ChrisBurchett from Blue Yonder, focuses on how AI-driven agents are transforming supply chain management by enabling rapid, automated responses to disruptions, optimizing decision-making, and integrating data across multiple supplier levels. Real-world examples and challenges, such as data integration and explainability, are explored, along with customer use cases in retail and manufacturing.\n\n#Microsoft #MicrosoftCloud",
+  "ProcessedDate": "2026-01-09 18:03:12",
+  "Link": "https://www.youtube.com/watch?v=RZ9DvZC9g6E",
+  "Author": "Microsoft Cloud",
+  "FeedName": "Microsoft Cloud YouTube",
+  "EnhancedContent": null,
+  "Title": "The New Industrialists | Blue Yonder using AI-driven agents to transform supply chain management",
+  "Tags": [
+    "#Microsoft",
+    "#MicrosoftCloud"
+  ],
+  "PubDate": "2026-01-09T17:00:46+00:00"
+}

@@ -23170,5 +23170,11 @@
     "reason": "Succesfully added: Assigned the 'Azure' category because this content is an official-style update focused entirely on recent developments, features, and news within the Azure ecosystem (Azure category rule 1). No other categories applied as the content does not provide in-depth technical implementation (which would warrant Coding, DevOps, ML, Security, or AI) and is instead focused on news and high-level overviews of Azure services and associated announcements.",
     "canonical_url": "https://www.youtube.com/watch?v=-yciYjpcG10",
     "collection": "videos"
+  },
+  {
+    "canonical_url": "https://www.youtube.com/watch?v=RZ9DvZC9g6E",
+    "reason": "Succesfully added: Added the AI category because the content focuses on the use of AI-driven agents in supply chain management, addressing automation, optimization, and data integration (AI inclusion rules 1 and 5). Azure and ML categories were not assigned since the description does not specify Azure services or deep data science/ML engineering aspects; instead, it focuses on business process automation with AI. DevOps, Security, and Coding do not apply as there’s no mention of code, developer tools, security, or operational processes. Generic exclusion rules do not apply: the session is not biographical, not a sales pitch, not question-only, and does not focus on non-development Microsoft productivity products. The content is in English and is technical in its discussion of AI agent implementation.",
+    "timestamp": "2026-01-09 18:04:29 +00:00",
+    "collection": "videos"
   }
 ]
