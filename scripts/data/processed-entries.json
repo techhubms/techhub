@@ -23176,5 +23176,11 @@
     "reason": "Succesfully added: Added the AI category because the content focuses on the use of AI-driven agents in supply chain management, addressing automation, optimization, and data integration (AI inclusion rules 1 and 5). Azure and ML categories were not assigned since the description does not specify Azure services or deep data science/ML engineering aspects; instead, it focuses on business process automation with AI. DevOps, Security, and Coding do not apply as there’s no mention of code, developer tools, security, or operational processes. Generic exclusion rules do not apply: the session is not biographical, not a sales pitch, not question-only, and does not focus on non-development Microsoft productivity products. The content is in English and is technical in its discussion of AI agent implementation.",
     "timestamp": "2026-01-09 18:04:29 +00:00",
     "collection": "videos"
+  },
+  {
+    "timestamp": "2026-01-09 19:05:43 +00:00",
+    "collection": "videos",
+    "reason": "Succesfully added: Assigned the Coding category as the content focuses on Orleans, a Microsoft .NET distributed systems framework, which falls under Coding rule 2 (Microsoft development frameworks/tools). There is no clear indication from the provided title, description, tags, or event speakers that substantial DevOps, AI, ML, Azure, or Security topics are covered. The central theme is code development and architectural improvement with Microsoft Orleans.",
+    "canonical_url": "https://www.youtube.com/watch?v=GeRsZAc0lNA"
   }
 ]
