@@ -11091,5 +11091,11 @@
     "reason": "No categories found: Content excluded because the 'content' field is null, which means there is no substantive text to analyze. According to the core processing rules, categorization must be based on actual content, and with a missing body, none of the inclusion rules can be applied. Additionally, the description indicates the video is an unstructured community discussion about hopes, ideas, and wishlists for open source in 2026, without any reference to technical implementations, Microsoft products or services, or developer tooling. There is also no evidence from the title or description that the required Microsoft technology threshold (≥40% or centrality) is met. Therefore, all categories are excluded.",
     "timestamp": "2026-01-09 18:04:09 +00:00",
     "collection": "videos"
+  },
+  {
+    "timestamp": "2026-01-09 20:03:38 +00:00",
+    "reason": "No categories found: No categories assigned. The content is a video conversation about the importance of robotics and automation in manufacturing, focusing on the Wandelbots Nova platform. There are mentions of Microsoft (#Microsoft, #MicrosoftCloud) in tags, but the description does not provide any detail that Microsoft technologies or platforms are central or ≥40% substantive to the discussion. There is no explicit mention of Azure, Power Platform, .NET, Microsoft AI, or any other development/productivity tools being a core part of the technical solution. According to the Multi-Platform Content Threshold rules, Microsoft content must be central or a substantive focus to assign categories, which cannot be established from the given description and metadata.",
+    "collection": "videos",
+    "canonical_url": "https://www.youtube.com/watch?v=pgqVcspA6MA"
   }
 ]

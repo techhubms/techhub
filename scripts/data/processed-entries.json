@@ -23182,5 +23182,11 @@
     "collection": "videos",
     "reason": "Succesfully added: Assigned the Coding category as the content focuses on Orleans, a Microsoft .NET distributed systems framework, which falls under Coding rule 2 (Microsoft development frameworks/tools). There is no clear indication from the provided title, description, tags, or event speakers that substantial DevOps, AI, ML, Azure, or Security topics are covered. The central theme is code development and architectural improvement with Microsoft Orleans.",
     "canonical_url": "https://www.youtube.com/watch?v=GeRsZAc0lNA"
+  },
+  {
+    "collection": "videos",
+    "reason": "Succesfully added: Included the AI category because Agent Skills in VS Code rely on AI-powered features that extend development workflows (AI category, rules 1 and 4). Included Coding because the content focuses on developer experience in Visual Studio Code and creating/extending coding tools (Coding category, rules 4 and 5). Did not assign DevOps, Azure, ML, Security, or GitHub Copilot as these are not substantially featured or named in the content.",
+    "timestamp": "2026-01-09 21:04:16 +00:00",
+    "canonical_url": "https://www.youtube.com/watch?v=JepVi1tBNEE"
   }
 ]
