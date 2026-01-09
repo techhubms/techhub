@@ -167,19 +167,63 @@ builder.Services.AddWebOptimizer(pipeline =>
 
 #### When to Use Global vs Component-Scoped CSS
 
-**Use Global CSS** (`wwwroot/css/`) when:
+**🚨 CRITICAL CSS PLACEMENT RULE**:
 
-- ✅ Reusable design system components (cards, buttons, forms)
-- ✅ Site-wide styles (header, footer, navigation)
-- ✅ Design tokens (colors, typography, spacing)
-- ✅ Multiple components use the same styles
+- **Component-scoped CSS** (`.razor.css` files) for **page-specific** styles
+- **Global CSS** (`wwwroot/css/`) for **reusable** styles across multiple components
 
 **Use Component-Scoped CSS** (`.razor.css`) when:
 
-- ✅ Page-specific layouts (home grid, section layout, about page)
-- ✅ Component-specific styling unique to that component
-- ✅ One-off styles that won't be reused
-- ✅ You want to prevent style conflicts and ensure isolation
+- ✅ **Page-specific layouts** - Unique to one page (Home.razor.css, Section.razor.css, About.razor.css)
+- ✅ **Component-specific styling** - Unique to that component (SectionCard.razor.css, PageHeader.razor.css)
+- ✅ **One-off styles** - Will NOT be reused elsewhere
+- ✅ **Style isolation** - Prevent accidental conflicts with other components
+- ✅ **Component ownership** - Styles that logically belong to the component
+
+**Use Global CSS** (`wwwroot/css/`) when:
+
+- ✅ **Reusable design system components** - Cards, buttons, forms used across multiple pages
+- ✅ **Site-wide styles** - Header, footer, navigation
+- ✅ **Design tokens** - Colors, typography, spacing (design-tokens.css)
+- ✅ **Multiple components use the same styles** - Any style repeated in 2+ components belongs in global CSS
+
+**CSS File Placement Examples**:
+
+**Component-Scoped CSS** (`.razor.css` files):
+
+```text
+Components/
+├── Layout/MainLayout.razor.css        # Main layout-specific styles
+├── Pages/Home.razor.css               # Home page grid layout (unique to homepage)
+├── Pages/Section.razor.css            # Section page layout (unique to section pages)
+├── Pages/About.razor.css              # About page team grid (unique to about page)
+├── Shared/PageHeader.razor.css        # Header banner styles (unique to this component)
+└── SectionCard.razor.css              # Section card styling (unique to this component)
+```
+
+**Global CSS** (wwwroot/css/):
+
+```text
+wwwroot/css/
+├── design-tokens.css                  # Colors, typography, spacing (used everywhere)
+├── base.css                           # Reset, typography, links (used everywhere)
+├── layout.css                         # Site header, footer, nav (used everywhere)
+├── components/
+│   ├── sidebar.css                   # Sidebar component (used on multiple pages)
+│   ├── buttons.css                   # Button styles (used everywhere)
+│   └── cards.css                     # Card styles (used on multiple pages)
+└── utilities.css                      # Utility classes (used everywhere)
+```
+
+**Decision Tree**:
+
+```text
+Is this style specific to ONE component/page?
+├─ YES → Component-scoped CSS (.razor.css file)
+└─ NO → Is it used in 2+ components?
+    ├─ YES → Global CSS (wwwroot/css/)
+    └─ NO → Component-scoped CSS (.razor.css file)
+```
 
 **Benefits of This Approach**:
 

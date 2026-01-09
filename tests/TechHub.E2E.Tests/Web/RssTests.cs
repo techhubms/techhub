@@ -71,7 +71,7 @@ public class RssTests : IAsyncLifetime
         var page = await _context!.NewPageWithDefaultsAsync();
 
         // Act
-        await page.GotoAsync($"{BaseUrl}/github-copilot");
+        await page.GotoRelativeAsync("/github-copilot");
 
 
         // Assert - Check for RSS link in sidebar (moved from banner)

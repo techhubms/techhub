@@ -38,6 +38,10 @@ public class SectionPageKeyboardNavigationTests(PlaywrightCollectionFixture fixt
         
         await Page.GotoAsync($"{BaseUrl}{sectionUrl}");
         
+        // Wait for Blazor to fully hydrate before starting keyboard navigation
+        var skipLink = Page.Locator("a.skip-link");
+        await skipLink.WaitForBlazorInteractivityAsync();
+        
         // 1. First Tab: Skip to main content link (appears when focused)
         await Page.Keyboard.PressAsync("Tab");
         await Assertions.Expect(Page.Locator("a.skip-link")).ToBeFocusedAsync();
@@ -72,10 +76,15 @@ public class SectionPageKeyboardNavigationTests(PlaywrightCollectionFixture fixt
         // Note: H1 has tabindex="-1" so it's NOT in natural tab order
         // First focusable element in main content should be visible
         await Page.Keyboard.PressAsync("Tab");
-        var focusedElement = await Page.EvaluateAsync<string>("document.activeElement.tagName");
-        // Should be on some element in main content (could be a link, button, or other interactive element)
-        // We just verify we're past the sidebar
-        var isSidebarLink = await Page.Locator("nav.collection-nav a").EvaluateAllAsync<bool>("(elements, activeEl) => elements.some(el => el === activeEl)", await Page.EvaluateAsync("document.activeElement"));
+        
+        // Verify we've moved past the sidebar into main content
+        var isSidebarLink = await Page.EvaluateAsync<bool>(@"
+            () => {
+                const activeEl = document.activeElement;
+                const sidebarLinks = Array.from(document.querySelectorAll('nav.collection-nav a'));
+                return sidebarLinks.some(el => el === activeEl);
+            }
+        ");
         Assert.False(isSidebarLink, "Should have moved past sidebar into main content");
         
         // 6. Tab to footer (skip through main content for brevity - main content tested separately)
@@ -93,6 +102,10 @@ public class SectionPageKeyboardNavigationTests(PlaywrightCollectionFixture fixt
         // This is correct accessibility behavior - skip link only appears when tabbing FORWARD
         
         await Page.GotoAsync($"{BaseUrl}{sectionUrl}");
+        
+        // Wait for Blazor to fully hydrate before starting keyboard navigation
+        var footerLink = Page.Locator("footer a").Last;
+        await footerLink.WaitForBlazorInteractivityAsync();
         
         // Shift+Tab should go to last focusable element (footer link)
         await Page.Keyboard.PressAsync("Shift+Tab");
@@ -112,6 +125,10 @@ public class SectionPageKeyboardNavigationTests(PlaywrightCollectionFixture fixt
         // Test: Tab -> Skip link appears -> Enter -> Focus on H1 -> Tab -> Continue through main content
         
         await Page.GotoAsync($"{BaseUrl}{sectionUrl}");
+        
+        // Wait for Blazor to fully hydrate before starting keyboard navigation
+        var skipLink = Page.Locator("a.skip-link");
+        await skipLink.WaitForBlazorInteractivityAsync();
         
         // 1. Tab to skip link
         await Page.Keyboard.PressAsync("Tab");
@@ -142,6 +159,10 @@ public class SectionPageKeyboardNavigationTests(PlaywrightCollectionFixture fixt
         // -> Press Enter -> Navigate to /all -> Tab -> Skip link appears again
         
         await Page.GotoAsync($"{BaseUrl}{homeUrl}");
+        
+        // Wait for Blazor to fully hydrate before starting keyboard navigation
+        var skipLink = Page.Locator("a.skip-link");
+        await skipLink.WaitForBlazorInteractivityAsync();
         
         // 1. Tab to skip link (appears when focused)
         await Page.Keyboard.PressAsync("Tab");

@@ -1,3 +1,4 @@
+using TechHub.E2E.Tests.Helpers;
 using System.Text.RegularExpressions;
 using Microsoft.Playwright;
 using Xunit;
@@ -39,7 +40,7 @@ public class CustomPagesTests(PlaywrightCollectionFixture fixture) : IAsyncLifet
     public async Task CustomPage_ShouldLoad_Successfully(string url, string expectedTitlePart)
     {
         // Act
-        await Page.GotoAsync($"{BaseUrl}{url}");
+        await Page.GotoRelativeAsync(url);
         
         // Assert
         await Assertions.Expect(Page).ToHaveTitleAsync(new Regex(Regex.Escape(expectedTitlePart), RegexOptions.IgnoreCase));
@@ -58,7 +59,7 @@ public class CustomPagesTests(PlaywrightCollectionFixture fixture) : IAsyncLifet
     public async Task CustomPage_ShouldDisplay_Content(string url)
     {
         // Act
-        await Page.GotoAsync($"{BaseUrl}{url}");
+        await Page.GotoRelativeAsync(url);
         
         // Assert - Page should have main heading
         var mainHeading = Page.GetByRole(AriaRole.Heading, new() { Level = 1 });
@@ -74,7 +75,7 @@ public class CustomPagesTests(PlaywrightCollectionFixture fixture) : IAsyncLifet
     public async Task GitHubCopilotHandbook_ShouldDisplay_BookInformation()
     {
         // Act
-        await Page.GotoAsync($"{BaseUrl}/github-copilot/handbook");
+        await Page.GotoRelativeAsync("/github-copilot/handbook");
         
         // Assert - Check for author headings (more specific than just text)
         await Assertions.Expect(Page.GetByRole(AriaRole.Heading, new() { Name = "Rob Bos" })).ToBeVisibleAsync();
@@ -86,7 +87,7 @@ public class CustomPagesTests(PlaywrightCollectionFixture fixture) : IAsyncLifet
     public async Task GenAIBasics_ShouldDisplay_TableOfContents()
     {
         // Act
-        await Page.GotoAsync($"{BaseUrl}/ai/genai-basics");
+        await Page.GotoRelativeAsync("/ai/genai-basics");
         
         // Assert - Should have major section headings (use exact names to avoid strict mode)
         await Assertions.Expect(Page.GetByRole(AriaRole.Heading, new() { Name = "History" })).ToBeVisibleAsync();
@@ -98,7 +99,7 @@ public class CustomPagesTests(PlaywrightCollectionFixture fixture) : IAsyncLifet
     public async Task DXSpace_ShouldDisplay_FrameworkSections()
     {
         // Act
-        await Page.GotoAsync($"{BaseUrl}/devops/dx-space");
+        await Page.GotoRelativeAsync("/devops/dx-space");
         
         // Assert - Check for placeholder content headings
         await Assertions.Expect(Page.GetByRole(AriaRole.Heading, new() { Name = "Overview" })).ToBeVisibleAsync();

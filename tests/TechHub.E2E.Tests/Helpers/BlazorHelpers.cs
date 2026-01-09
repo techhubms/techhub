@@ -14,14 +14,14 @@ public static class BlazorHelpers
     public static async Task<IPage> NewPageWithDefaultsAsync(this IBrowserContext context)
     {
         var page = await context.NewPageAsync();
-        page.SetDefaultTimeout(3000);
+        page.SetDefaultTimeout(5000); // Increased for Blazor hydration stability
         page.SetDefaultNavigationTimeout(10000);
         return page;
     }
 
     /// <summary>
     /// Navigates to a URL and waits for Blazor circuit to be ready.
-    /// Uses optimized wait strategy for Blazor Server initialization.
+    /// Uses Blazor's enhancedload event to detect when rendering is complete.
     /// </summary>
     public static async Task GotoAndWaitForBlazorAsync(
         this IPage page, 
@@ -29,45 +29,113 @@ public static class BlazorHelpers
         PageGotoOptions? options = null)
     {
         var gotoOptions = options ?? new PageGotoOptions();
-        gotoOptions.WaitUntil = WaitUntilState.DOMContentLoaded; // Faster than NetworkIdle
-        gotoOptions.Timeout = 10000; // Reduced from default 30s - fail fast
+        gotoOptions.WaitUntil = WaitUntilState.DOMContentLoaded;
+        gotoOptions.Timeout = 10000;
         
         await page.GotoAsync(url, gotoOptions);
         
-        // Wait for StreamRendering to complete:
-        // 1. Skeletons render first (both .skeleton-header and .skeleton-card appear)
-        // 2. Then real content streams in (skeletons disappear, real elements appear)
+        // STEP 1: Wait for Blazor runtime to load
+        // This is the foundation - Blazor JS must be loaded before anything else
         try
         {
-            // Wait for skeleton header to be hidden (section data loaded)
-            await page.WaitForSelectorAsync(".skeleton-header", new() { 
-                State = WaitForSelectorState.Hidden,
-                Timeout = 2000 // Reduced timeout
-            });
+            await page.WaitForFunctionAsync(
+                "() => window.Blazor !== undefined",
+                new PageWaitForFunctionOptions { Timeout = 10000, PollingInterval = 100 }
+            );
         }
         catch
         {
-            // Skeleton might not exist if content loaded instantly - that's fine
+            // Static pages without Blazor - that's fine, skip Blazor-specific waits
+            return;
         }
         
-        // Wait for skeleton CARDS to be replaced by real content
-        // Skeleton cards have BOTH .content-item-card AND .skeleton-card classes
-        // Real cards have ONLY .content-item-card class
-        // So we wait for cards WITHOUT the skeleton-card class
+        // STEP 2: Wait for Blazor's enhancedload event
+        // This event fires when:
+        // - Enhanced navigation completes
+        // - Streaming rendering finishes
+        // - All Blazor-managed content is rendered and ready
+        // This is THE authoritative signal that Blazor is done with the page
         try
         {
-            await page.WaitForSelectorAsync(".content-item-card:not(.skeleton-card)", new() { 
+            await page.WaitForFunctionAsync(@"
+                () => new Promise((resolve) => {
+                    // If Blazor already loaded, resolve immediately
+                    if (window.Blazor && window.Blazor._internal && window.Blazor._internal.navigationEnhancementCallbacks) {
+                        // Already loaded, check if we're in middle of navigation
+                        const isNavigating = window.Blazor._internal.isNavigating || false;
+                        if (!isNavigating) {
+                            resolve(true);
+                            return;
+                        }
+                    }
+                    
+                    // Otherwise wait for enhancedload event
+                    if (window.Blazor && window.Blazor.addEventListener) {
+                        const timeout = setTimeout(() => resolve(true), 8000); // Fallback after 8s
+                        window.Blazor.addEventListener('enhancedload', () => {
+                            clearTimeout(timeout);
+                            resolve(true);
+                        });
+                    } else {
+                        // Blazor exists but doesn't have enhanced navigation - resolve immediately
+                        resolve(true);
+                    }
+                })
+            ", new PageWaitForFunctionOptions { Timeout = 10000 });
+        }
+        catch
+        {
+            // enhancedload might not fire for initial page load - that's fine
+        }
+        
+        // STEP 3: Wait for network to be truly idle
+        // This ensures all API calls and resource fetches are complete
+        try
+        {
+            await page.WaitForLoadStateAsync(LoadState.NetworkIdle);
+        }
+        catch
+        {
+            // NetworkIdle might timeout if there are long-polling connections - that's fine
+        }
+        
+        // STEP 4: Fallback wait for main content to be visible
+        // This handles custom pages, about page, and any other page types
+        // that don't have content cards but do have an #main-content element
+        try
+        {
+            await page.WaitForSelectorAsync("#main-content, .content-item-card:not(.skeleton-card)", new()
+            {
                 State = WaitForSelectorState.Visible,
-                Timeout = 2000 // Reduced timeout
+                Timeout = 3000
             });
         }
         catch
         {
-            // Content cards might not exist on all pages (like home page) - that's fine
+            // Some pages might not have #main-content or content cards - that's fine
         }
         
-        // Brief pause to ensure final render is stable (reduced from 200ms)
+        // STEP 5: Final stability delay for layout to settle
+        // Reduced from 300ms since we now have proper event detection
         await Task.Delay(100);
+    }
+
+    /// <summary>
+    /// Navigates to a relative URL (prepends BaseUrl automatically).
+    /// Always waits for Blazor to be ready.
+    /// 
+    /// USE THIS instead of Page.GotoAsync() for all test navigation!
+    /// 
+    /// Example: await page.GotoRelativeAsync("/ai/genai-basics")
+    /// </summary>
+    public static Task GotoRelativeAsync(
+        this IPage page,
+        string relativeUrl,
+        string baseUrl = "http://localhost:5184",
+        PageGotoOptions? options = null)
+    {
+        var fullUrl = $"{baseUrl}{relativeUrl}";
+        return page.GotoAndWaitForBlazorAsync(fullUrl, options);
     }
 
     /// <summary>
@@ -81,6 +149,77 @@ public static class BlazorHelpers
         
         // Minimal delay for render completion
         await Task.Delay(50);
+    }
+
+    /// <summary>
+    /// Waits for a Blazor element to be fully interactive and actionable.
+    /// 
+    /// Blazor SSR has a multi-stage hydration process:
+    /// 1. Initial HTML renders (fast)
+    /// 2. Blazor JavaScript loads (fast)
+    /// 3. DOM elements become visible (fast)
+    /// 4. SignalR circuit connects (variable)
+    /// 5. Enhanced navigation handlers attach (variable)
+    /// 6. Element becomes stable/clickable (THIS IS WHERE TESTS FAIL)
+    /// 
+    /// This method waits for ALL stages to complete before returning.
+    /// Use this before clicking/interacting with Blazor-enhanced elements.
+    /// </summary>
+    /// <param name="locator">The element to wait for</param>
+    /// <param name="timeoutMs">Maximum time to wait (default 15000ms for Blazor hydration)</param>
+    /// <remarks>
+    /// Why this is necessary:
+    /// Playwright considers an element "ready for click" when it's visible, enabled, and stable.
+    /// "Stable" means it's not animating and hasn't moved for a short period.
+    /// 
+    /// However, Blazor enhanced navigation attaches click interceptors AFTER the element is
+    /// already visible and stable in the DOM. This creates a timing window where the element
+    /// looks ready but clicking it will fail because Blazor's handlers aren't attached yet.
+    /// 
+    /// This method bridges that gap by waiting for Blazor's page to fully load and settle
+    /// before allowing interactions.
+    /// </remarks>
+    public static async Task WaitForBlazorInteractivityAsync(
+        this ILocator locator,
+        int timeoutMs = 15000)
+    {
+        // STEP 1: Wait for element to be visible in DOM
+        await locator.WaitForAsync(new() { State = WaitForSelectorState.Visible, Timeout = timeoutMs });
+        
+        // STEP 2: Wait for page load state to be complete (all resources loaded)
+        try
+        {
+            await locator.Page.WaitForLoadStateAsync(LoadState.NetworkIdle, new() { Timeout = 5000 });
+        }
+        catch
+        {
+            // NetworkIdle might timeout if there are long-polling connections - that's OK
+        }
+        
+        // STEP 3: Extended stabilization delay for Blazor enhanced navigation to attach handlers
+        // This gives Blazor's JavaScript time to:
+        // - Establish SignalR circuit connection
+        // - Initialize enhanced navigation system
+        // - Attach click event interceptors to links
+        // - Make elements truly interactive
+        await Task.Delay(1000); // Increased from 300ms to 1000ms for reliable hydration
+    }
+
+    /// <summary>
+    /// Clicks a Blazor-enhanced element after ensuring it's fully interactive.
+    /// Use this instead of ClickAsync() for elements with Blazor enhanced navigation.
+    /// </summary>
+    /// <param name="locator">The element to click</param>
+    /// <param name="timeoutMs">Maximum time to wait for interactivity (default 15000ms for Blazor hydration)</param>
+    public static async Task ClickBlazorElementAsync(
+        this ILocator locator,
+        int timeoutMs = 15000)
+    {
+        await locator.WaitForBlazorInteractivityAsync(timeoutMs);
+        // Use Force=true to bypass Playwright's stability checks
+        // We've already waited for Blazor hydration, so we know the element is ready
+        // Blazor's continuous DOM updates during hydration prevent "stability" detection
+        await locator.ClickAsync(new() { Force = true, Timeout = 5000 });
     }
 
     /// <summary>

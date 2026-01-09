@@ -15,12 +15,26 @@ public class PlaywrightCollectionFixture : IAsyncLifetime
 
     public async Task InitializeAsync()
     {
+        // CRITICAL: Clear PLAYWRIGHT_BROWSER_EXECUTABLE_PATH if set to empty string
+        // Empty string causes Playwright to hang in DevContainer - let it auto-detect
+        var execPath = Environment.GetEnvironmentVariable("PLAYWRIGHT_BROWSER_EXECUTABLE_PATH");
+        if (execPath == string.Empty)
+        {
+            Environment.SetEnvironmentVariable("PLAYWRIGHT_BROWSER_EXECUTABLE_PATH", null);
+        }
+
         Playwright = await Microsoft.Playwright.Playwright.CreateAsync();
+        
+        // CRITICAL FIX: Use 'chrome' channel instead of default 'chromium_headless_shell'
+        // The chromium_headless_shell binary hangs when creating pages in DevContainer environments
+        // Using 'chrome' channel launches the full Chrome browser in headless mode which works correctly
         Browser = await Playwright.Chromium.LaunchAsync(new BrowserTypeLaunchOptions
         {
             Headless = true,
-            Timeout = 5000, // 5 second timeout for browser launch
-            // Performance optimizations for test environment
+            Channel = "chrome",  // Use regular Chrome instead of headless_shell  
+            Timeout = 5000, // 5 second timeout for browser launch (works fine in DevContainer)
+            // Performance optimizations for DevContainer environment
+            // See: tests/TechHub.E2E.Tests/PLAYWRIGHT-CONFIG.md for detailed explanation
             Args = new[]
             {
                 "--no-sandbox",                // Required for Docker/DevContainer environments
@@ -29,9 +43,9 @@ public class PlaywrightCollectionFixture : IAsyncLifetime
                 "--disable-features=IsolateOrigins,site-per-process",
                 "--disable-blink-features=AutomationControlled",
                 "--disable-dev-shm-usage",     // Overcome limited resource problems
-                "--disable-gpu",               // Disable GPU hardware acceleration
-                "--no-zygote",                 // Disable zygote process (helps with cleanup)
-                "--single-process",            // Run in single process mode (better cleanup)
+                "--disable-gpu"                // Disable GPU hardware acceleration
+                // NOTE: --single-process REMOVED - causes test host crashes in .NET environments
+                // NOTE: --no-zygote REMOVED - not needed with 'chrome' channel
             }
         });
     }
@@ -58,6 +72,7 @@ public class PlaywrightCollectionFixture : IAsyncLifetime
             ViewportSize = new ViewportSize { Width = 1920, Height = 1080 },
             Locale = "en-US",
             TimezoneId = "Europe/Brussels",
+            IgnoreHTTPSErrors = true, // Ignore HTTPS errors in test environment
         });
     }
 }

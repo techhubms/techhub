@@ -43,7 +43,7 @@ public class UrlRoutingTests : IAsyncLifetime
         var page = await _context!.NewPageWithDefaultsAsync();
         
         // Act - Navigate to section without specifying collection
-        await page.GotoAndWaitForBlazorAsync($"{BaseUrl}/github-copilot");
+        await page.GotoRelativeAsync("/github-copilot");
         
         // Assert - URL is /github-copilot (defaults to "all" without redirect)
         // This is intentional - the section page defaults to "all" collection without URL redirect
@@ -71,7 +71,7 @@ public class UrlRoutingTests : IAsyncLifetime
         var page = await _context!.NewPageWithDefaultsAsync();
         
         // Act - Navigate directly to /github-copilot/news
-        await page.GotoAndWaitForBlazorAsync($"{BaseUrl}/github-copilot/news");
+        await page.GotoRelativeAsync("/github-copilot/news");
         await page.WaitForSelectorAsync(".content-item-card", new() { Timeout = 3000 });
         
         // Assert - URL should remain /github-copilot/news
@@ -91,11 +91,11 @@ public class UrlRoutingTests : IAsyncLifetime
     {
         // Arrange
         var page = await _context!.NewPageWithDefaultsAsync();
-        await page.GotoAndWaitForBlazorAsync($"{BaseUrl}/github-copilot");
+        await page.GotoRelativeAsync("/github-copilot");
         
         // Act - Click "Blogs" collection button
         var blogsButton = page.Locator(".collection-nav a", new() { HasTextString = "Blogs" });
-        await blogsButton.ClickAsync();
+        await blogsButton.ClickBlazorElementAsync();
         
         // Assert - URL should update to /github-copilot/blogs
         await page.WaitForURLAsync("**/github-copilot/blogs", new() { Timeout = 5000 });
@@ -117,11 +117,11 @@ public class UrlRoutingTests : IAsyncLifetime
     {
         // Arrange
         var page = await _context!.NewPageWithDefaultsAsync();
-        await page.GotoAndWaitForBlazorAsync($"{BaseUrl}/github-copilot/news");
+        await page.GotoRelativeAsync("/github-copilot/news");
         
         // Act - Click "All" button
         var allButton = page.Locator(".collection-nav a", new() { HasTextString = "All" });
-        await allButton.ClickAsync();
+        await allButton.ClickBlazorElementAsync();
         
         // Assert - URL should update to /github-copilot/all
         await page.WaitForURLAsync("**/github-copilot/all", new() { Timeout = 5000 });
@@ -136,7 +136,7 @@ public class UrlRoutingTests : IAsyncLifetime
     {
         // Arrange
         var page = await _context!.NewPageWithDefaultsAsync();
-        await page.GotoAndWaitForBlazorAsync($"{BaseUrl}/github-copilot/news");
+        await page.GotoRelativeAsync("/github-copilot/news");
         
         // Verify News button is active initially
         var newsButtonBefore = page.Locator(".collection-nav a.active");
@@ -145,7 +145,7 @@ public class UrlRoutingTests : IAsyncLifetime
         
         // Navigate to videos
         var videosButton = page.Locator(".collection-nav a", new() { HasTextString = "Videos" });
-        await videosButton.ClickAsync();
+        await videosButton.ClickBlazorElementAsync();
         await page.WaitForBlazorUrlContainsAsync("/github-copilot/videos");
         
         // Verify Videos button is now active
@@ -177,11 +177,11 @@ public class UrlRoutingTests : IAsyncLifetime
     {
         // Arrange
         var page = await _context!.NewPageWithDefaultsAsync();
-        await page.GotoAndWaitForBlazorAsync($"{BaseUrl}/github-copilot/news");
+        await page.GotoRelativeAsync("/github-copilot/news");
         
         // Navigate to videos
         var videosButton = page.Locator(".collection-nav a", new() { HasTextString = "Videos" });
-        await videosButton.ClickAsync();
+        await videosButton.ClickBlazorElementAsync();
         await page.WaitForURLAsync("**/github-copilot/videos", new() { Timeout = 5000 });
         
         // Go back to news
@@ -215,7 +215,7 @@ public class UrlRoutingTests : IAsyncLifetime
         var totalItemCount = allItems.Value.GetArrayLength();
         
         // Act - Navigate to /github-copilot/all
-        await page.GotoAndWaitForBlazorAsync($"{BaseUrl}/github-copilot/all");
+        await page.GotoRelativeAsync("/github-copilot/all");
         await page.WaitForSelectorAsync(".content-item-card", new() { Timeout = 3000 });
         
         // Assert - Should display all GitHub Copilot items regardless of collection
@@ -242,7 +242,7 @@ public class UrlRoutingTests : IAsyncLifetime
         var totalItemCount = allItems.Value.GetArrayLength();
         
         // Act - Navigate to /all/all
-        await page.GotoAndWaitForBlazorAsync($"{BaseUrl}/all/all");
+        await page.GotoRelativeAsync("/all/all");
         await page.WaitForSelectorAsync(".content-item-card", new() { Timeout = 3000 });
         
         // Assert - Should display ALL content from ALL sections and collections
@@ -265,7 +265,7 @@ public class UrlRoutingTests : IAsyncLifetime
         var totalNewsCount = allNewsItems.Value.GetArrayLength();
         
         // Act - Navigate to /all/news
-        await page.GotoAndWaitForBlazorAsync($"{BaseUrl}/all/news");
+        await page.GotoRelativeAsync("/all/news");
         await page.WaitForSelectorAsync(".content-item-card", new() { Timeout = 3000 });
         
         // Assert - Should display all news items from all sections
@@ -288,7 +288,7 @@ public class UrlRoutingTests : IAsyncLifetime
         var page = await _context!.NewPageWithDefaultsAsync();
         
         // Act - Navigate to any section
-        await page.GotoAndWaitForBlazorAsync($"{BaseUrl}/github-copilot");
+        await page.GotoRelativeAsync("/github-copilot");
         
         // Assert - "All" button should exist in the collection nav
         var allButton = page.Locator(".collection-nav a", new() { HasTextString = "All" });
@@ -308,7 +308,7 @@ public class UrlRoutingTests : IAsyncLifetime
         var page = await _context!.NewPageWithDefaultsAsync();
         
         // Act - Navigate to /github-copilot/all
-        await page.GotoAndWaitForBlazorAsync($"{BaseUrl}/github-copilot/all");
+        await page.GotoRelativeAsync("/github-copilot/all");
         await page.WaitForSelectorAsync(".content-item-card");
         
         // Assert - Collection badges should be visible on items
@@ -333,7 +333,7 @@ public class UrlRoutingTests : IAsyncLifetime
         var page = await _context!.NewPageWithDefaultsAsync();
         
         // Act - Navigate to /github-copilot/news
-        await page.GotoAndWaitForBlazorAsync($"{BaseUrl}/github-copilot/news");
+        await page.GotoRelativeAsync("/github-copilot/news");
         await page.WaitForSelectorAsync(".content-item-card");
         
         // Assert - Collection badge should NOT be visible (redundant)
@@ -356,25 +356,25 @@ public class UrlRoutingTests : IAsyncLifetime
     {
         // Arrange
         var page = await _context!.NewPageWithDefaultsAsync();
-        await page.GotoAndWaitForBlazorAsync($"{BaseUrl}/github-copilot");
+        await page.GotoRelativeAsync("/github-copilot");
         
         // Act - Click each collection button and verify navigation
         // NOTE: Blazor Server uses enhanced navigation (SPA-style), so we poll for URL changes
         // instead of waiting for navigation events (see BlazorHelpers.WaitForBlazorUrlContainsAsync)
         var newsButton = page.Locator(".collection-nav a", new() { HasTextString = "News" });
-        await newsButton.ClickAsync();
+        await newsButton.ClickBlazorElementAsync();
         await page.WaitForBlazorUrlContainsAsync("/news");
         
         var blogsButton = page.Locator(".collection-nav a", new() { HasTextString = "Blogs" });
-        await blogsButton.ClickAsync();
+        await blogsButton.ClickBlazorElementAsync();
         await page.WaitForBlazorUrlContainsAsync("/blogs");
         
         var videosButton = page.Locator(".collection-nav a", new() { HasTextString = "Videos" });
-        await videosButton.ClickAsync();
+        await videosButton.ClickBlazorElementAsync();
         await page.WaitForBlazorUrlContainsAsync("/videos");
         
         var communityButton = page.Locator(".collection-nav a", new() { HasTextString = "Community" });
-        await communityButton.ClickAsync();
+        await communityButton.ClickBlazorElementAsync();
         await page.WaitForBlazorUrlContainsAsync("/community");
         
         // Assert - All buttons worked
@@ -391,7 +391,7 @@ public class UrlRoutingTests : IAsyncLifetime
         var page = await _context!.NewPageWithDefaultsAsync();
         
         // Simulate an error by navigating with API down (we'll test with valid URL but check button exists)
-        await page.GotoAndWaitForBlazorAsync(BaseUrl);
+        await page.GotoRelativeAsync("/");
         await page.WaitForSelectorAsync(".section-header.home-banner");
         
         // Check if error message with retry button appears (may not in normal conditions)
@@ -421,7 +421,7 @@ public class UrlRoutingTests : IAsyncLifetime
     {
         // Arrange
         var page = await _context!.NewPageWithDefaultsAsync();
-        await page.GotoAndWaitForBlazorAsync($"{BaseUrl}/github-copilot/news");
+        await page.GotoRelativeAsync("/github-copilot/news");
         
         // Assert - News button should have "active" class
         var newsButton = page.Locator(".collection-nav a", new() { HasTextString = "News" });
@@ -447,7 +447,7 @@ public class UrlRoutingTests : IAsyncLifetime
     {
         // Arrange & Act - Open browser directly to a specific collection URL
         var page = await _context!.NewPageWithDefaultsAsync();
-        await page.GotoAndWaitForBlazorAsync($"{BaseUrl}/azure/news");
+        await page.GotoRelativeAsync("/azure/news");
         
         // Assert - Should load Azure News collection
         page.Url.Should().EndWith("/azure/news",
@@ -470,7 +470,7 @@ public class UrlRoutingTests : IAsyncLifetime
     {
         // Arrange
         var page1 = await _context!.NewPageWithDefaultsAsync();
-        await page1.GotoAndWaitForBlazorAsync($"{BaseUrl}/ml/videos");
+        await page1.GotoRelativeAsync("/ml/videos");
         var sharedUrl = page1.Url;
         
         // Act - Open shared URL in new tab/page

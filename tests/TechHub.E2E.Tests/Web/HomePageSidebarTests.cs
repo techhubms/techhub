@@ -31,7 +31,7 @@ public class HomePageSidebarTests(PlaywrightCollectionFixture fixture) : IAsyncL
     public async Task HomePage_ShouldDisplay_Sidebar()
     {
         // Act
-        await Page.GotoAsync(BaseUrl);
+        await Page.GotoRelativeAsync("/");
         
         // Assert
         var sidebar = Page.Locator(".sidebar, .home-sidebar, aside");
@@ -42,7 +42,7 @@ public class HomePageSidebarTests(PlaywrightCollectionFixture fixture) : IAsyncL
     public async Task HomePage_Sidebar_ShouldDisplay_LatestItemsSection()
     {
         // Act
-        await Page.GotoAsync(BaseUrl);
+        await Page.GotoRelativeAsync("/");
         
         // Assert - Use specific heading "Latest Content" to avoid ambiguity with "Latest Roundup"
         await Assertions.Expect(Page.GetByRole(AriaRole.Heading, new() { Name = "Latest Content" })).ToBeVisibleAsync();
@@ -52,7 +52,7 @@ public class HomePageSidebarTests(PlaywrightCollectionFixture fixture) : IAsyncL
     public async Task HomePage_Sidebar_ShouldDisplay_UpTo10LatestItems()
     {
         // Act
-        await Page.GotoAsync(BaseUrl);
+        await Page.GotoRelativeAsync("/");
         
         // Assert - Find latest items section
         var latestSection = Page.Locator(".latest-items, .sidebar-latest");
@@ -66,7 +66,7 @@ public class HomePageSidebarTests(PlaywrightCollectionFixture fixture) : IAsyncL
     public async Task HomePage_Sidebar_ShouldDisplay_PopularTagsSection()
     {
         // Act
-        await Page.GotoAsync(BaseUrl);
+        await Page.GotoRelativeAsync("/");
         
         // Assert
         await Assertions.Expect(Page.GetByRole(AriaRole.Heading, new() { NameRegex = new Regex("Popular Tags", RegexOptions.IgnoreCase) })).ToBeVisibleAsync();
@@ -76,7 +76,7 @@ public class HomePageSidebarTests(PlaywrightCollectionFixture fixture) : IAsyncL
     public async Task HomePage_Sidebar_ShouldDisplay_TagLinks()
     {
         // Act
-        await Page.GotoAsync(BaseUrl);
+        await Page.GotoRelativeAsync("/");
         
         // Assert - Find popular tags section
         var tagsSection = Page.Locator(".popular-tags, .sidebar-tags");
@@ -90,7 +90,7 @@ public class HomePageSidebarTests(PlaywrightCollectionFixture fixture) : IAsyncL
     public async Task HomePage_Sidebar_LatestItemLinks_ShouldNavigateToContent()
     {
         // Arrange
-        await Page.GotoAsync(BaseUrl);
+        await Page.GotoRelativeAsync("/");
         
         // Act - Click first latest item link (if any)
         var latestSection = Page.Locator(".latest-items, .sidebar-latest");
@@ -99,7 +99,7 @@ public class HomePageSidebarTests(PlaywrightCollectionFixture fixture) : IAsyncL
         
         if (count > 0)
         {
-            await itemLinks.First.ClickAsync();
+            await itemLinks.First.ClickBlazorElementAsync();
             
             // Assert - Should navigate to content detail page
             await Page.WaitForLoadStateAsync(LoadState.NetworkIdle);
@@ -111,7 +111,7 @@ public class HomePageSidebarTests(PlaywrightCollectionFixture fixture) : IAsyncL
     public async Task HomePage_Sidebar_TagLinks_ShouldFilterByTag()
     {
         // Arrange
-        await Page.GotoAsync(BaseUrl);
+        await Page.GotoRelativeAsync("/");
         
         // Act - Click first tag link (if any)
         var tagsSection = Page.Locator(".popular-tags, .sidebar-tags");
@@ -121,7 +121,7 @@ public class HomePageSidebarTests(PlaywrightCollectionFixture fixture) : IAsyncL
         if (count > 0)
         {
             var firstTag = await tagLinks.First.TextContentWithTimeoutAsync();
-            await tagLinks.First.ClickAsync();
+            await tagLinks.First.ClickBlazorElementAsync();
             
             // Assert - Should navigate to filtered view or section with tag parameter
             await Page.WaitForLoadStateAsync(LoadState.NetworkIdle);

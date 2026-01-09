@@ -396,6 +396,16 @@ function Invoke-Tests {
     Write-Step "Running E2E tests"
     Write-Host ""
     
+    # Optimize thread count based on environment
+    # Local development: 8 threads (good for modern multi-core CPUs)
+    # CI environment: 4 threads (from xunit.runner.json - safer for limited CI runners)
+    if ($env:CI) {
+        Write-Info "CI environment detected - using default 4 threads from xunit.runner.json"
+    } else {
+        Write-Info "Local environment - using 8 threads for faster execution"
+        $env:XUNIT_MAX_PARALLEL_THREADS = 8
+    }
+    
     $e2eTestArgs = @(
         "test",
         $e2eTestProjectPath,

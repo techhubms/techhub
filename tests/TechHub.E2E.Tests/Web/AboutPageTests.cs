@@ -1,3 +1,4 @@
+using TechHub.E2E.Tests.Helpers;
 using System.Text.RegularExpressions;
 using Microsoft.Playwright;
 using Xunit;
@@ -30,7 +31,7 @@ public class AboutPageTests(PlaywrightCollectionFixture fixture) : IAsyncLifetim
     public async Task AboutPage_ShouldLoad_Successfully()
     {
         // Act
-        await Page.GotoAsync($"{BaseUrl}/about");
+        await Page.GotoRelativeAsync("/about");
         
         // Assert
         await Assertions.Expect(Page).ToHaveTitleAsync(new Regex("About.*Tech Hub", RegexOptions.IgnoreCase));
@@ -40,7 +41,7 @@ public class AboutPageTests(PlaywrightCollectionFixture fixture) : IAsyncLifetim
     public async Task AboutPage_ShouldDisplay_TeamMembers()
     {
         // Act
-        await Page.GotoAsync($"{BaseUrl}/about");
+        await Page.GotoRelativeAsync("/about");
         
         // Assert - Check for team member headings
         await Assertions.Expect(Page.GetByRole(AriaRole.Heading, new() { Name = "Reinier van Maanen" })).ToBeVisibleAsync();
@@ -52,7 +53,7 @@ public class AboutPageTests(PlaywrightCollectionFixture fixture) : IAsyncLifetim
     public async Task AboutPage_ShouldDisplay_TeamMemberPhotos()
     {
         // Act
-        await Page.GotoAsync($"{BaseUrl}/about");
+        await Page.GotoRelativeAsync("/about");
         
         // Assert - Check for team member photos
         var reinierPhoto = Page.GetByAltText(new Regex("Reinier", RegexOptions.IgnoreCase));
@@ -68,7 +69,7 @@ public class AboutPageTests(PlaywrightCollectionFixture fixture) : IAsyncLifetim
     public async Task AboutPage_ShouldDisplay_SocialLinks()
     {
         // Act
-        await Page.GotoAsync($"{BaseUrl}/about");
+        await Page.GotoRelativeAsync("/about");
         
         // Assert - Check for social media links (GitHub, LinkedIn, Blog)
         var githubLinks = Page.GetByRole(AriaRole.Link, new() { NameRegex = new Regex("GitHub", RegexOptions.IgnoreCase) });
@@ -83,7 +84,7 @@ public class AboutPageTests(PlaywrightCollectionFixture fixture) : IAsyncLifetim
     public async Task AboutPage_Navigation_ShouldWorkFromHeader()
     {
         // Arrange
-        await Page.GotoAsync(BaseUrl);
+        await Page.GotoRelativeAsync("/");
         
         // Act
         await Page.GetByRole(AriaRole.Link, new() { NameRegex = new Regex("About", RegexOptions.IgnoreCase) }).ClickAsync();

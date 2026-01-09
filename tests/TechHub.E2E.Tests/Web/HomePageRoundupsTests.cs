@@ -1,3 +1,4 @@
+using TechHub.E2E.Tests.Helpers;
 using System.Text.RegularExpressions;
 using Microsoft.Playwright;
 using Xunit;
@@ -30,7 +31,7 @@ public class HomePageRoundupsTests(PlaywrightCollectionFixture fixture) : IAsync
     public async Task HomePage_ShouldDisplay_RoundupsSection()
     {
         // Act
-        await Page.GotoAsync(BaseUrl);
+        await Page.GotoRelativeAsync("/");
         
         // Assert - Look for "Latest Roundup" heading in new sidebar structure
         await Assertions.Expect(Page.GetByRole(AriaRole.Heading, new() { Name = "Latest Roundup" })).ToBeVisibleAsync();
@@ -40,7 +41,7 @@ public class HomePageRoundupsTests(PlaywrightCollectionFixture fixture) : IAsync
     public async Task HomePage_ShouldDisplay_Last4Roundups()
     {
         // Act
-        await Page.GotoAsync(BaseUrl);
+        await Page.GotoRelativeAsync("/");
         
         // Assert - Should display latest roundup section (use .First to avoid strict mode violation)
         var latestRoundupSection = Page.Locator(".latest-roundup").First;
@@ -62,7 +63,7 @@ public class HomePageRoundupsTests(PlaywrightCollectionFixture fixture) : IAsync
     public async Task HomePage_ShouldDisplay_NewsletterLink()
     {
         // Act
-        await Page.GotoAsync(BaseUrl);
+        await Page.GotoRelativeAsync("/");
         
         // Assert
         var newsletterLink = Page.GetByRole(AriaRole.Link, new() { NameRegex = new Regex("newsletter", RegexOptions.IgnoreCase) });
@@ -77,7 +78,7 @@ public class HomePageRoundupsTests(PlaywrightCollectionFixture fixture) : IAsync
     public async Task HomePage_RoundupLinks_ShouldNavigateToRoundupPage()
     {
         // Arrange
-        await Page.GotoAsync(BaseUrl);
+        await Page.GotoRelativeAsync("/");
         
         // Act - Click first roundup link (if any)
         var roundupLinks = Page.Locator("a").Filter(new() { HasTextRegex = new Regex(@"\d{4}-\d{2}-\d{2}", RegexOptions.IgnoreCase) });

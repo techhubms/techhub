@@ -48,7 +48,7 @@ public class ContentDetailTests : IAsyncLifetime
         
         // Act - Click on first roundup item (roundups have viewing_mode: internal)
         var firstItem = page.Locator(".content-item-card").First;
-        await firstItem.ClickAsync();
+        await firstItem.ClickBlazorElementAsync();
         // URL will contain the primary section from the content's categories (e.g., github-copilot)
         // not necessarily /all/ since content routes to its primary section
         await page.WaitForBlazorUrlContainsAsync("/roundups/");
@@ -72,7 +72,7 @@ public class ContentDetailTests : IAsyncLifetime
         
         // Act - Navigate to a roundup detail page (roundups have viewing_mode: internal)
         var firstItem = page.Locator(".content-item-card").First;
-        await firstItem.ClickAsync();
+        await firstItem.ClickBlazorElementAsync();
         // Wait for navigation to any roundups detail page (primary section may vary)
         await page.WaitForBlazorUrlContainsAsync("/roundups/");
         
@@ -99,7 +99,7 @@ public class ContentDetailTests : IAsyncLifetime
         
         // Act - Navigate to roundup detail page (roundups have viewing_mode: internal)
         var firstItem = page.Locator(".content-item-card").First;
-        await firstItem.ClickAsync();
+        await firstItem.ClickBlazorElementAsync();
         // Wait for navigation to any roundups detail page (primary section may vary)
         await page.WaitForBlazorUrlContainsAsync("/roundups/");
         
@@ -123,7 +123,7 @@ public class ContentDetailTests : IAsyncLifetime
         
         // Act - Navigate to roundup detail page (roundups have viewing_mode: internal)
         var firstItem = page.Locator(".content-item-card").First;
-        await firstItem.ClickAsync();
+        await firstItem.ClickBlazorElementAsync();
         // Wait for navigation to any roundups detail page (primary section may vary)
         await page.WaitForBlazorUrlContainsAsync("/roundups/");
         
@@ -148,7 +148,7 @@ public class ContentDetailTests : IAsyncLifetime
         
         // Navigate to roundup detail page (roundups have viewing_mode: internal)
         var firstItem = page.Locator(".content-item-card").First;
-        await firstItem.ClickAsync();
+        await firstItem.ClickBlazorElementAsync();
         // Wait for navigation to any roundups detail page (primary section may vary)
         await page.WaitForBlazorUrlContainsAsync("/roundups/");
         
@@ -157,7 +157,7 @@ public class ContentDetailTests : IAsyncLifetime
         
         // Act - Click "Back to [Section]" button (the last "Back to" link)
         var backButton = page.Locator("a:has-text('Back to')").Last;
-        await backButton.ClickAsync();
+        await backButton.ClickBlazorElementAsync();
         await page.WaitForBlazorUrlContainsAsync("/");
         
         // Assert - Should navigate back to a section page (not content detail)
@@ -179,7 +179,7 @@ public class ContentDetailTests : IAsyncLifetime
         
         // Navigate to roundup detail page (roundups have viewing_mode: internal)
         var firstItem = page.Locator(".content-item-card").First;
-        await firstItem.ClickAsync();
+        await firstItem.ClickBlazorElementAsync();
         // Wait for navigation to any roundups detail page (primary section may vary)
         await page.WaitForBlazorUrlContainsAsync("/roundups/");
         
@@ -204,7 +204,7 @@ public class ContentDetailTests : IAsyncLifetime
         
         // Navigate to roundup detail page (roundups have viewing_mode: internal)
         var firstItem = page.Locator(".content-item-card").First;
-        await firstItem.ClickAsync();
+        await firstItem.ClickBlazorElementAsync();
         // Wait for navigation to any roundups detail page (primary section may vary)
         await page.WaitForBlazorUrlContainsAsync("/roundups/");
         
@@ -230,7 +230,7 @@ public class ContentDetailTests : IAsyncLifetime
         try
         {
             var firstItem = page.Locator(".content-item-card").First;
-            await firstItem.ClickAsync();
+            await firstItem.ClickBlazorElementAsync();
             // Wait for navigation to any roundups detail page
             await page.WaitForBlazorUrlContainsAsync("/roundups/");
             

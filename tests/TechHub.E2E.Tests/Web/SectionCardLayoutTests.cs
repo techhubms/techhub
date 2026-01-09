@@ -1,3 +1,4 @@
+using TechHub.E2E.Tests.Helpers;
 using System.Text.RegularExpressions;
 using Microsoft.Playwright;
 using Xunit;
@@ -31,7 +32,7 @@ public class SectionCardLayoutTests(PlaywrightCollectionFixture fixture) : IAsyn
     public async Task HomePage_SectionCard_ShouldRenderAsCompleteCard()
     {
         // Arrange
-        await Page.GotoAsync(BaseUrl);
+        await Page.GotoRelativeAsync("/");
         
         // Assert - Each section card should have both header and body within same card
         var sectionCards = Page.Locator(".section-card");
@@ -49,7 +50,7 @@ public class SectionCardLayoutTests(PlaywrightCollectionFixture fixture) : IAsyn
     public async Task HomePage_SectionCard_HeaderAndBody_ShouldBeInSameCard()
     {
         // Arrange
-        await Page.GotoAsync(BaseUrl);
+        await Page.GotoRelativeAsync("/");
         
         // Assert - For each section card, verify header and body are siblings
         var sectionCards = Page.Locator(".section-card");
@@ -72,7 +73,7 @@ public class SectionCardLayoutTests(PlaywrightCollectionFixture fixture) : IAsyn
     public async Task HomePage_SectionCard_ShouldHaveCorrectGridLayout()
     {
         // Arrange
-        await Page.GotoAsync(BaseUrl);
+        await Page.GotoRelativeAsync("/");
         
         // Assert - Section cards should be in a grid container
         var grid = Page.Locator(".sections-grid .grid");
@@ -89,7 +90,7 @@ public class SectionCardLayoutTests(PlaywrightCollectionFixture fixture) : IAsyn
     public async Task HomePage_SectionCard_CollectionBadges_ShouldBeClickable()
     {
         // Arrange
-        await Page.GotoAsync(BaseUrl);
+        await Page.GotoRelativeAsync("/");
         
         // Act - Find first section card with collection badges
         var firstCard = Page.Locator(".section-card").First;
@@ -111,7 +112,7 @@ public class SectionCardLayoutTests(PlaywrightCollectionFixture fixture) : IAsyn
     public async Task HomePage_SectionCard_MainCard_ShouldBeClickable()
     {
         // Arrange
-        await Page.GotoAsync(BaseUrl);
+        await Page.GotoRelativeAsync("/");
         
         // Act
         var firstCard = Page.Locator(".section-card").First;

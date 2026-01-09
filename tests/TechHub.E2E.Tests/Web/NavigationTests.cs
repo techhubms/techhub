@@ -39,7 +39,7 @@ public class NavigationTests : IAsyncLifetime
         var page = await _context!.NewPageWithDefaultsAsync();
         
         // Act
-        await page.GotoAndWaitForBlazorAsync(BaseUrl);
+        await page.GotoRelativeAsync("/");
         
         // Get all section card titles
         var sectionTitles = await page.Locator(".section-card h2").AllTextContentsAsync();
@@ -71,7 +71,7 @@ public class NavigationTests : IAsyncLifetime
     {
         // Arrange
         var page = await _context!.NewPageWithDefaultsAsync();
-        await page.GotoAndWaitForBlazorAsync(BaseUrl);
+        await page.GotoRelativeAsync("/");
         
         // Act - Click on the GitHub Copilot section card
         // The card link is inside the section-card-container
@@ -83,7 +83,8 @@ public class NavigationTests : IAsyncLifetime
         Assert.Contains("github-copilot", href);
         
         // Blazor uses enhanced navigation (SPA-style), so URL changes without page reload
-        await ghCopilotCard.ClickAsync();
+        // Use ClickBlazorElementAsync to wait for Blazor interactivity before clicking
+        await ghCopilotCard.ClickBlazorElementAsync();
         
         // Wait for URL to contain the section name
         await page.WaitForBlazorUrlContainsAsync("/github-copilot");
@@ -100,11 +101,11 @@ public class NavigationTests : IAsyncLifetime
     {
         // Arrange
         var page = await _context!.NewPageWithDefaultsAsync();
-        await page.GotoAndWaitForBlazorAsync($"{BaseUrl}/github-copilot");
+        await page.GotoRelativeAsync("/github-copilot");
         
         // Act - Click on "News" collection button
         var newsButton = page.Locator(".collection-nav a", new() { HasTextString = "News" });
-        await newsButton.ClickAsync();
+        await newsButton.ClickBlazorElementAsync();
         
         // Assert - URL should be /github-copilot/news
         await page.WaitForURLWithTimeoutAsync("**/github-copilot/news");
@@ -121,7 +122,7 @@ public class NavigationTests : IAsyncLifetime
         var page = await _context!.NewPageWithDefaultsAsync();
         
         // Act - Navigate to GitHub Copilot News collection
-        await page.GotoAndWaitForBlazorAsync($"{BaseUrl}/github-copilot/news");
+        await page.GotoRelativeAsync("/github-copilot/news");
         
         // Get first content card
         var firstCard = page.Locator(".content-item-card").First;
@@ -147,7 +148,7 @@ public class NavigationTests : IAsyncLifetime
         var page = await _context!.NewPageWithDefaultsAsync();
         
         // Act - Navigate to "All" section (contains all content, may take longer to load)
-        await page.GotoAndWaitForBlazorAsync($"{BaseUrl}/all");
+        await page.GotoRelativeAsync("/all");
         
         // Get first content card
         var firstCard = page.Locator(".content-item-card").First;
@@ -168,11 +169,11 @@ public class NavigationTests : IAsyncLifetime
     {
         // Arrange
         var page = await _context!.NewPageWithDefaultsAsync();
-        await page.GotoAndWaitForBlazorAsync($"{BaseUrl}/github-copilot");
+        await page.GotoRelativeAsync("/github-copilot");
         
         // Act - Click on "Videos" collection
         var videosButton = page.Locator(".collection-nav a", new() { HasTextString = "Videos" });
-        await videosButton.ClickAsync();
+        await videosButton.ClickBlazorElementAsync();
         
         // Assert - Should navigate and load videos
         await page.WaitForURLWithTimeoutAsync("**/github-copilot/videos");
@@ -195,11 +196,11 @@ public class NavigationTests : IAsyncLifetime
         var page = await _context!.NewPageWithDefaultsAsync();
         
         // Act - Measure header height on homepage
-        await page.GotoAndWaitForBlazorAsync(BaseUrl);
+        await page.GotoRelativeAsync("/");
         var homeHeaderHeight = await page.Locator(".section-header.home-banner").BoundingBoxAsync();
         
         // Navigate to section page
-        await page.GotoAndWaitForBlazorAsync($"{BaseUrl}/github-copilot");
+        await page.GotoRelativeAsync("/github-copilot");
         var sectionHeaderHeight = await page.Locator(".section-header").BoundingBoxAsync();
         
         // Assert - Both should have defined heights (not auto)
@@ -216,7 +217,7 @@ public class NavigationTests : IAsyncLifetime
     {
         // Arrange
         var page = await _context!.NewPageWithDefaultsAsync();
-        await page.GotoAndWaitForBlazorAsync(BaseUrl);
+        await page.GotoRelativeAsync("/");
         
         // Act - Get first section card
         var firstCard = page.Locator(".section-card").First;
@@ -247,7 +248,7 @@ public class NavigationTests : IAsyncLifetime
     {
         // Arrange & Act
         var page = await _context!.NewPageWithDefaultsAsync();
-        await page.GotoAndWaitForBlazorAsync($"{BaseUrl}/ai/news");
+        await page.GotoRelativeAsync("/ai/news");
         
         // Assert
         await page.WaitForSelectorWithTimeoutAsync(".collection-nav");
