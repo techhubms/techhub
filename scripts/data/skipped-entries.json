@@ -11097,5 +11097,11 @@
     "reason": "No categories found: No categories assigned. The content is a video conversation about the importance of robotics and automation in manufacturing, focusing on the Wandelbots Nova platform. There are mentions of Microsoft (#Microsoft, #MicrosoftCloud) in tags, but the description does not provide any detail that Microsoft technologies or platforms are central or ≥40% substantive to the discussion. There is no explicit mention of Azure, Power Platform, .NET, Microsoft AI, or any other development/productivity tools being a core part of the technical solution. According to the Multi-Platform Content Threshold rules, Microsoft content must be central or a substantive focus to assign categories, which cannot be established from the given description and metadata.",
     "collection": "videos",
     "canonical_url": "https://www.youtube.com/watch?v=pgqVcspA6MA"
+  },
+  {
+    "canonical_url": "https://www.youtube.com/watch?v=th3LZHbD6WU",
+    "collection": "videos",
+    "reason": "No categories found: Content excluded because it primarily discusses high-level business priorities, value scaling, business process optimization, and employee empowerment in an industrial context with generative/agentic AI, without evidence of technical implementation details, developer/tool usage, or hands-on AI integration with Microsoft development platforms or services. Based on both the title and description, the content targets executive/business strategy audiences and does not provide technical/development information required by category inclusion rules. No substantive content is available (content is null) to evaluate for potential qualifying technical depth (Generic Exclusion: Business Strategy and Executive Content rule in Chapter 3).",
+    "timestamp": "2026-01-09 22:03:43 +00:00"
   }
 ]
