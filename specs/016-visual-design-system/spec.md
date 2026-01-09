@@ -385,7 +385,6 @@ All color combinations MUST meet WCAG 2.1 Level AA:
 **Tab Order**:
 
 - Tab order MUST follow logical reading order (top to bottom, left to right)
-- Skip links MUST be provided to bypass navigation
 - Keyboard traps MUST be avoided
 
 ### Touch Targets

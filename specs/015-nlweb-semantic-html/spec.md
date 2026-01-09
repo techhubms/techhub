@@ -148,31 +148,30 @@ Users viewing Tech Hub with CSS disabled (browser reading mode, text-only browse
 - **FR-020**: Interactive elements MUST be keyboard accessible with visible focus indicators meeting 3:1 contrast ratio
 - **FR-021**: Form inputs MUST have associated `<label>` elements using `for`/`id` or wrapping pattern
 - **FR-022**: Images MUST have `alt` attributes - descriptive for content images, empty for decorative images
-- **FR-023**: Skip links MUST be provided to jump to main content (hidden visually but accessible to screen readers)
-- **FR-024**: ARIA landmarks MUST match semantic HTML elements (e.g., `<nav>` implies `role="navigation"` - don't duplicate)
+- **FR-023**: ARIA landmarks MUST match semantic HTML elements (e.g., `<nav>` implies `role="navigation"` - don't duplicate)
 
 **Typography and Spacing**:
 
-- **FR-025**: System MUST use system font stack (e.g., `-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif`) for performance and native appearance
-- **FR-026**: System MUST use 8px grid spacing system for margins, padding, and gaps (multiples of 8: 8px, 16px, 24px, 32px, etc.)
-- **FR-027**: Font sizes MUST be defined in rem units for accessibility (user can scale text)
-- **FR-028**: Line height MUST be minimum 1.5 for body text for readability (WCAG 2.1 requirement)
+- **FR-024**: System MUST use system font stack (e.g., `-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif`) for performance and native appearance
+- **FR-025**: System MUST use 8px grid spacing system for margins, padding, and gaps (multiples of 8: 8px, 16px, 24px, 32px, etc.)
+- **FR-026**: Font sizes MUST be defined in rem units for accessibility (user can scale text)
+- **FR-027**: Line height MUST be minimum 1.5 for body text for readability (WCAG 2.1 requirement)
 
 **Color and Contrast**:
 
-- **FR-029**: System MUST use GitHub color palette as base (specific colors from current Jekyll site)
-- **FR-030**: System MUST audit all color combinations to ensure 4.5:1 contrast ratio for normal text (WCAG 2.1 AA)
-- **FR-031**: System MUST ensure 3:1 contrast ratio for large text (18pt+) and UI components
-- **FR-032**: System MUST NOT rely on color alone to convey information (use icons, labels, or patterns in addition)
+- **FR-028**: System MUST use GitHub color palette as base (specific colors from current Jekyll site)
+- **FR-029**: System MUST audit all color combinations to ensure 4.5:1 contrast ratio for normal text (WCAG 2.1 AA)
+- **FR-030**: System MUST ensure 3:1 contrast ratio for large text (18pt+) and UI components
+- **FR-031**: System MUST NOT rely on color alone to convey information (use icons, labels, or patterns in addition)
 
 **Prohibited Patterns**:
 
-- **FR-033**: System MUST NOT use div-itis (excessive nested divs without semantic purpose)
-- **FR-034**: System MUST NOT use `<div class="button">` - use `<button>` element
-- **FR-035**: System MUST NOT use `<span>` or `<div>` for dates - use `<time>` element
-- **FR-036**: System MUST NOT nest interactive elements (e.g., `<button>` inside `<a>` or vice versa)
-- **FR-037**: System MUST NOT use generic class names on semantic elements that duplicate element name (e.g., `<article class="article">` - just use `<article>`)
-- **FR-038**: System MUST NOT include more than 2 wrapper divs total in any component output (preferably 0 or 1)
+- **FR-032**: System MUST NOT use div-itis (excessive nested divs without semantic purpose)
+- **FR-033**: System MUST NOT use `<div class="button">` - use `<button>` element
+- **FR-034**: System MUST NOT use `<span>` or `<div>` for dates - use `<time>` element
+- **FR-035**: System MUST NOT nest interactive elements (e.g., `<button>` inside `<a>` or vice versa)
+- **FR-036**: System MUST NOT use generic class names on semantic elements that duplicate element name (e.g., `<article class="article">` - just use `<article>`)
+- **FR-037**: System MUST NOT include more than 2 wrapper divs total in any component output (preferably 0 or 1)
 
 **Markdown to HTML Conversion**:
 
@@ -361,8 +360,6 @@ Users viewing Tech Hub with CSS disabled (browser reading mode, text-only browse
   <!-- meta tags, title, schema.org JSON-LD -->
 </head>
 <body>
-  <a href="#main" class="skip-link">Skip to main content</a>
-  
   <header class="site-header">
     <nav aria-label="Primary navigation">
       <!-- primary nav -->
@@ -386,7 +383,7 @@ Users viewing Tech Hub with CSS disabled (browser reading mode, text-only browse
 
 **Landmarks**: `<header>`, `<main>`, `<footer>`, `<nav>` create ARIA landmarks
 
-**Accessibility**: Skip link for keyboard users, labeled navigation regions
+**Accessibility**: Labeled navigation regions, keyboard-accessible focus states
 
 ---
 

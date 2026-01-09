@@ -920,7 +920,7 @@ src/TechHub.Web/
 │   ├── css/                # Global CSS (design system)
 │   │   ├── design-tokens.css
 │   │   ├── base.css
-│   │   ├── layout.css (only .skip-link, .main-content)
+│   │   ├── layout.css
 │   │   ├── components/     # Reusable component styles
 │   │   └── utilities.css
 │   └── images/             # Static images
