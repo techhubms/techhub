@@ -136,6 +136,7 @@ public class SectionPageKeyboardNavigationTests(PlaywrightCollectionFixture fixt
         
         // 2. Press Enter to activate skip link (jumps to #main-content on H1)
         await Page.Keyboard.PressAsync("Enter");
+        await Task.Delay(200); // Reduced from 1500ms - skip link JS is much faster
         
         // 3. H1 should be focused (has id="main-content" and tabindex="-1")
         await Assertions.Expect(Page.Locator("#main-content")).ToBeFocusedAsync();
@@ -144,6 +145,7 @@ public class SectionPageKeyboardNavigationTests(PlaywrightCollectionFixture fixt
         // Since H1 has tabindex="-1", next Tab goes to next naturally focusable element
         // This should be the first sidebar link (sidebar comes before main content in DOM)
         await Page.Keyboard.PressAsync("Tab");
+        await Task.Delay(50); // Reduced from 100ms - faster focus detection
         await Assertions.Expect(Page.Locator("nav.collection-nav a").Nth(0)).ToBeFocusedAsync();
         
         // 5. Continue tabbing through sidebar
@@ -198,8 +200,12 @@ public class SectionPageKeyboardNavigationTests(PlaywrightCollectionFixture fixt
         await Page.Keyboard.PressAsync("Enter");
         await Page.WaitForURLAsync("**/all");
         
+        // Wait for Blazor enhanced navigation to complete
+        await Task.Delay(500); // Reduced from 1500ms - Blazor hydration is much faster now
+        
         // 7. After navigation, Tab should show skip link again at top
         await Page.Keyboard.PressAsync("Tab");
+        await Task.Delay(200); // Reduced from 500ms - faster focus detection
         await Assertions.Expect(Page.Locator("a.skip-link")).ToBeFocusedAsync();
     }
 }

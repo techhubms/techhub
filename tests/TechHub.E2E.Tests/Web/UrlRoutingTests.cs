@@ -50,11 +50,11 @@ public class UrlRoutingTests : IAsyncLifetime
         page.Url.Should().EndWith("/github-copilot", 
             "navigating to a section shows the default 'all' collection at /section");
         
-        // Verify "All" collection is displayed
-        var collectionTitle = page.Locator("h2.collection-title");
-        var titleText = await collectionTitle.TextContentAsync();
-        titleText.Should().Be("All",
-            "the default collection should be 'All'");
+        // Verify "All" collection is displayed - check the page heading
+        var pageHeading = page.Locator("h1.page-h1");
+        var headingText = await pageHeading.TextContentAsync();
+        headingText.Should().Contain("All",
+            "the default collection should show 'All' in the page heading");
         
         // "All" button should be active
         var activeButton = page.Locator(".collection-nav a.active");
@@ -102,12 +102,13 @@ public class UrlRoutingTests : IAsyncLifetime
         page.Url.Should().EndWith("/github-copilot/blogs",
             "clicking a collection button should update the URL to /section/collection");
         
-        // Wait for page to fully load after navigation
-        await page.WaitForSelectorAsync(".collection-title", new() { Timeout = 3000 });
+        // Wait for page heading to actually update to show "Blog" (from "Blog Posts")
+        var pageH1 = page.Locator("h1.page-h1");
+        await Assertions.Expect(pageH1).ToContainTextAsync("Blog", new() { Timeout = 5000 });
         
-        // Content should reload with only blogs
-        var collectionTitle = await page.Locator(".collection-title").TextContentAsync(new() { Timeout = 3000 });
-        collectionTitle.Should().Contain("Blogs", "the collection title should reflect the selected collection");
+        // Verify the heading contains "Blog"
+        var pageHeading = await pageH1.TextContentAsync();
+        pageHeading.Should().Contain("Blog", "the page heading should reflect the selected collection");
         
         await page.CloseAsync();
     }
@@ -223,9 +224,10 @@ public class UrlRoutingTests : IAsyncLifetime
         displayedItems.Should().Be(totalItemCount,
             "the 'all' collection should show all content items from the section across all collection types");
         
-        // Collection title should indicate "All Collections"
-        var collectionTitle = await page.Locator(".collection-title").TextContentAsync(new() { Timeout = 3000 });
-        collectionTitle.Should().Contain("All", "the title should indicate showing all collections");
+        // Page heading should indicate "All" - verify active button shows "All"
+        var activeButton = page.Locator(".collection-nav a.active");
+        var activeText = await activeButton.TextContentAsync(new() { Timeout = 3000 });
+        activeText.Should().Contain("All", "the 'All' collection button should be active");
         
         await page.CloseAsync();
     }

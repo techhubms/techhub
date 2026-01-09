@@ -49,12 +49,7 @@ public static class BlazorHelpers
             return;
         }
         
-        // STEP 2: Wait for Blazor's enhancedload event
-        // This event fires when:
-        // - Enhanced navigation completes
-        // - Streaming rendering finishes
-        // - All Blazor-managed content is rendered and ready
-        // This is THE authoritative signal that Blazor is done with the page
+        // STEP 2: Wait for Blazor's enhancedload event OR enhanced navigation to be ready
         try
         {
             await page.WaitForFunctionAsync(@"
@@ -71,7 +66,7 @@ public static class BlazorHelpers
                     
                     // Otherwise wait for enhancedload event
                     if (window.Blazor && window.Blazor.addEventListener) {
-                        const timeout = setTimeout(() => resolve(true), 8000); // Fallback after 8s
+                        const timeout = setTimeout(() => resolve(true), 3000); // Fallback after 3s
                         window.Blazor.addEventListener('enhancedload', () => {
                             clearTimeout(timeout);
                             resolve(true);
@@ -88,20 +83,7 @@ public static class BlazorHelpers
             // enhancedload might not fire for initial page load - that's fine
         }
         
-        // STEP 3: Wait for network to be truly idle
-        // This ensures all API calls and resource fetches are complete
-        try
-        {
-            await page.WaitForLoadStateAsync(LoadState.NetworkIdle);
-        }
-        catch
-        {
-            // NetworkIdle might timeout if there are long-polling connections - that's fine
-        }
-        
-        // STEP 4: Fallback wait for main content to be visible
-        // This handles custom pages, about page, and any other page types
-        // that don't have content cards but do have an #main-content element
+        // STEP 3: Wait for main content to be visible (removed NetworkIdle wait)
         try
         {
             await page.WaitForSelectorAsync("#main-content, .content-item-card:not(.skeleton-card)", new()
@@ -115,9 +97,8 @@ public static class BlazorHelpers
             // Some pages might not have #main-content or content cards - that's fine
         }
         
-        // STEP 5: Final stability delay for layout to settle
-        // Reduced from 300ms since we now have proper event detection
-        await Task.Delay(100);
+        // STEP 4: Final stability delay for layout to settle (reduced)
+        await Task.Delay(50);
     }
 
     /// <summary>
@@ -144,10 +125,7 @@ public static class BlazorHelpers
     /// </summary>
     public static async Task WaitForBlazorCircuitAsync(this IPage page)
     {
-        // Wait for network to be idle (SignalR connection should be established)
-        await page.WaitForLoadStateAsync(LoadState.NetworkIdle);
-        
-        // Minimal delay for render completion
+        // Minimal delay for render completion (removed NetworkIdle wait)
         await Task.Delay(50);
     }
 
@@ -176,7 +154,7 @@ public static class BlazorHelpers
     /// already visible and stable in the DOM. This creates a timing window where the element
     /// looks ready but clicking it will fail because Blazor's handlers aren't attached yet.
     /// 
-    /// This method bridges that gap by waiting for Blazor's page to fully load and settle
+    /// This method bridges that gap by waiting for Blazor's enhanced navigation to be ready
     /// before allowing interactions.
     /// </remarks>
     public static async Task WaitForBlazorInteractivityAsync(
@@ -186,23 +164,30 @@ public static class BlazorHelpers
         // STEP 1: Wait for element to be visible in DOM
         await locator.WaitForAsync(new() { State = WaitForSelectorState.Visible, Timeout = timeoutMs });
         
-        // STEP 2: Wait for page load state to be complete (all resources loaded)
+        // STEP 2: Wait for Blazor enhanced navigation to be ready (removed NetworkIdle wait)
         try
         {
-            await locator.Page.WaitForLoadStateAsync(LoadState.NetworkIdle, new() { Timeout = 5000 });
+            await locator.Page.WaitForFunctionAsync(@"
+                () => {
+                    // Check if Blazor exists
+                    if (!window.Blazor) return false;
+                    
+                    // Check if enhanced navigation is initialized
+                    // When this internal property exists, Blazor has attached all handlers
+                    if (window.Blazor._internal && window.Blazor._internal.navigationEnhancementCallbacks) {
+                        return true;
+                    }
+                    
+                    // For pages without enhanced navigation, check if Blazor is just loaded
+                    return window.Blazor !== undefined;
+                }
+            ", new PageWaitForFunctionOptions { Timeout = 3000, PollingInterval = 50 });
         }
         catch
         {
-            // NetworkIdle might timeout if there are long-polling connections - that's OK
+            // If check fails, fallback to minimal delay (better than 1000ms)
+            await Task.Delay(100);
         }
-        
-        // STEP 3: Extended stabilization delay for Blazor enhanced navigation to attach handlers
-        // This gives Blazor's JavaScript time to:
-        // - Establish SignalR circuit connection
-        // - Initialize enhanced navigation system
-        // - Attach click event interceptors to links
-        // - Make elements truly interactive
-        await Task.Delay(1000); // Increased from 300ms to 1000ms for reliable hydration
     }
 
     /// <summary>

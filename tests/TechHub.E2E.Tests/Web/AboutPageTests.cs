@@ -86,8 +86,9 @@ public class AboutPageTests(PlaywrightCollectionFixture fixture) : IAsyncLifetim
         // Arrange
         await Page.GotoRelativeAsync("/");
         
-        // Act
-        await Page.GetByRole(AriaRole.Link, new() { NameRegex = new Regex("About", RegexOptions.IgnoreCase) }).ClickAsync();
+        // Act - Use ClickBlazorElementAsync for Blazor-enhanced navigation
+        var aboutLink = Page.GetByRole(AriaRole.Link, new() { NameRegex = new Regex("About", RegexOptions.IgnoreCase) });
+        await aboutLink.ClickBlazorElementAsync();
         
         // Assert
         await Assertions.Expect(Page).ToHaveURLAsync(new Regex("/about$", RegexOptions.IgnoreCase));
