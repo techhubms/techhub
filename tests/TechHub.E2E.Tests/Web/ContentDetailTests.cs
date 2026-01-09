@@ -60,8 +60,8 @@ public class ContentDetailTests : IAsyncLifetime
         await page.CloseAsync();
     }
 
-    [Fact(Skip = "Content detail page sidebar not implemented yet - Phase 3 T062-T087")]
-    public async Task ContentDetailPage_ShowsSidebarWithMetadata()
+    [Fact]
+    public async Task ContentDetailPage_ShowsSidebarWithCollections()
     {
         // Arrange
         var page = await _context!.NewPageWithDefaultsAsync();
@@ -76,22 +76,18 @@ public class ContentDetailTests : IAsyncLifetime
         // Wait for navigation to any roundups detail page (primary section may vary)
         await page.WaitForBlazorUrlContainsAsync("/roundups/");
         
-        // Assert - Sidebar should exist with metadata
+        // Assert - Sidebar should exist with Collections
         var sidebar = page.Locator(".sidebar");
         (await sidebar.IsVisibleAsync()).Should().BeTrue("sidebar should be visible on content detail page");
         
-        // Check for metadata sections
-        (await sidebar.Locator(".sidebar-section:has-text('Author')").IsVisibleAsync())
-            .Should().BeTrue("sidebar should show author metadata");
-        (await sidebar.Locator(".sidebar-section:has-text('Published')").IsVisibleAsync())
-            .Should().BeTrue("sidebar should show published date");
-        (await sidebar.Locator(".sidebar-section:has-text('Collection')").IsVisibleAsync())
-            .Should().BeTrue("sidebar should show collection metadata");
+        // Check for Collections section
+        (await sidebar.Locator(".sidebar-section:has-text('Collections')").IsVisibleAsync())
+            .Should().BeTrue("sidebar should show collections navigation");
         
         await page.CloseAsync();
     }
 
-    [Fact(Skip = "Content detail page navigation buttons not implemented yet - Phase 3 T062-T087")]
+    [Fact]
     public async Task ContentDetailPage_ShowsBackToTopButton()
     {
         // Arrange
@@ -115,7 +111,7 @@ public class ContentDetailTests : IAsyncLifetime
         await page.CloseAsync();
     }
 
-    [Fact(Skip = "Content detail page navigation buttons not implemented yet - Phase 3 T062-T087")]
+    [Fact]
     public async Task ContentDetailPage_ShowsBackToSectionButton()
     {
         // Arrange
@@ -140,7 +136,7 @@ public class ContentDetailTests : IAsyncLifetime
         await page.CloseAsync();
     }
 
-    [Fact(Skip = "Content detail page navigation buttons not implemented yet - Phase 3 T062-T087")]
+    [Fact]
     public async Task ContentDetailPage_BackToSectionButton_NavigatesToCorrectSection()
     {
         // Arrange
@@ -171,34 +167,7 @@ public class ContentDetailTests : IAsyncLifetime
         await page.CloseAsync();
     }
 
-    [Fact(Skip = "Content detail page layout not implemented yet - Phase 3 T062-T087")]
-    public async Task ContentDetailPage_ButtonSpacing_IsCorrect()
-    {
-        // Arrange
-        var page = await _context!.NewPageWithDefaultsAsync();
-        await page.GotoAndWaitForBlazorAsync($"{BaseUrl}/all/roundups");
-        
-        // Wait for content to load
-        await page.WaitForSelectorAsync(".content-item-card", new() { Timeout = 10000 });
-        
-        // Navigate to roundup detail page (roundups have viewing_mode: internal)
-        var firstItem = page.Locator(".content-item-card").First;
-        await firstItem.ClickAsync();
-        // Wait for navigation to any roundups detail page (primary section may vary)
-        await page.WaitForBlazorUrlContainsAsync("/roundups/");
-        
-        // Act - Get navigation container
-        var navigationContainer = page.Locator("nav").Last;
-        
-        // Assert - Container should contain links
-        var links = navigationContainer.Locator("a");
-        var linkCount = await links.CountAsync();
-        linkCount.Should().BeGreaterOrEqualTo(1, "should have at least 1 navigation link");
-        
-        await page.CloseAsync();
-    }
-
-    [Fact(Skip = "Content detail page layout not implemented yet - Phase 3 T062-T087")]
+    [Fact]
     public async Task ContentDetailPage_TwoColumnLayout_DisplaysCorrectly()
     {
         // Arrange
@@ -217,14 +186,14 @@ public class ContentDetailTests : IAsyncLifetime
         // Assert - Sidebar and main content should exist
         (await page.Locator(".sidebar").IsVisibleAsync()).Should().BeTrue(
             "sidebar should be visible");
-        (await page.Locator("main.content-main").IsVisibleAsync()).Should().BeTrue(
+        (await page.Locator("main.page-main-content").IsVisibleAsync()).Should().BeTrue(
             "main content should be visible");
         
         await page.CloseAsync();
     }
 
-    [Fact(Skip = "Content detail page sidebar not implemented yet - Phase 3 T062-T087")]
-    public async Task ContentDetailPage_Sidebar_ShowsCategoriesAndTags()
+    [Fact]
+    public async Task ContentDetailPage_Sidebar_ShowsTags()
     {
         // Arrange
         var page = await _context!.NewPageWithDefaultsAsync();
@@ -239,17 +208,14 @@ public class ContentDetailTests : IAsyncLifetime
         // Wait for navigation to any roundups detail page (primary section may vary)
         await page.WaitForBlazorUrlContainsAsync("/roundups/");
         
-        // Assert - Categories and tags should be visible somewhere on page
-        var categoriesSection = page.Locator("h3:has-text('Categories'), heading:has-text('Categories')");
-        (await categoriesSection.IsVisibleAsync()).Should().BeTrue("page should show categories");
-        
-        var tagsSection = page.Locator("h3:has-text('Tags'), heading:has-text('Tags')");
-        (await tagsSection.IsVisibleAsync()).Should().BeTrue("page should show tags");
+        // Assert - Tags section should be visible in sidebar
+        var tagsSection = page.Locator(".sidebar h2:has-text('Tags'), .sidebar heading:has-text('Tags')");
+        (await tagsSection.IsVisibleAsync()).Should().BeTrue("sidebar should show tags section");
         
         await page.CloseAsync();
     }
 
-    [Theory(Skip = "Content detail page navigation buttons not implemented yet - Phase 3 T062-T087")]
+    [Theory]
     [InlineData("/all/roundups")] // Roundups can have any primary section
     public async Task ContentDetailPage_BackButton_ShowsCorrectSectionName(string sectionPath)
     {

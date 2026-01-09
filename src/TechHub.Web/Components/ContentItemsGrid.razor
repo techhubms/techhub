@@ -8,7 +8,7 @@
 @attribute [StreamRendering]
 
 <section class="collection-content @(isLoading ? "loading" : "")" aria-label="@GetCollectionDisplayName() content">
-    <h1 class="page-h1" tabindex="-1">@GetPageTitle()</h1>
+    <h1 id="main-content" class="page-h1" tabindex="-1">@GetPageTitle()</h1>
     
     @if (isLoading && !contentItems.Any())
     {

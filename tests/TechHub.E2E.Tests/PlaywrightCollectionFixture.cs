@@ -111,3 +111,8 @@ public class CustomPagesCollection : ICollectionFixture<PlaywrightCollectionFixt
 public class SectionCardLayoutCollection : ICollectionFixture<PlaywrightCollectionFixture>
 {
 }
+
+[CollectionDefinition("Section Page Keyboard Navigation Tests")]
+public class SectionPageKeyboardNavigationCollection : ICollectionFixture<PlaywrightCollectionFixture>
+{
+}
