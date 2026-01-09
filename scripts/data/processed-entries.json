@@ -23164,5 +23164,11 @@
     "timestamp": "2026-01-09 10:04:37 +00:00",
     "collection": "community",
     "reason": "Succesfully added: Assigned Azure category because the core scenario is distributing large files (containers, datasets) across Azure CycleCloud GPU clusters (Azure rule 1, 4, 5), including links to Azure-specific VM series and storage solutions. Assigned DevOps because the content centers on job orchestration, large-scale file staging automation, and workflow integration for HPC production workloads (DevOps rules 3, 5, 7, 11). Did not assign Coding—primary value is workflow integration and infrastructure/tool usage, not application development or programming. Did not assign AI, ML, or Security as the content does not focus on AI/ML model development or security architecture."
+  },
+  {
+    "timestamp": "2026-01-09 16:04:06 +00:00",
+    "reason": "Succesfully added: Assigned the 'Azure' category because this content is an official-style update focused entirely on recent developments, features, and news within the Azure ecosystem (Azure category rule 1). No other categories applied as the content does not provide in-depth technical implementation (which would warrant Coding, DevOps, ML, Security, or AI) and is instead focused on news and high-level overviews of Azure services and associated announcements.",
+    "canonical_url": "https://www.youtube.com/watch?v=-yciYjpcG10",
+    "collection": "videos"
   }
 ]
