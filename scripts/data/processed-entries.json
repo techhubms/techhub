@@ -23152,5 +23152,17 @@
     "reason": "Succesfully added: Assigned 'AI' category because the entire article is about how AI and LLM-based tools are impacting programming language choices and developer workflows (AI rule 4). Assigned 'Coding' category because the content focuses on programming languages, typed vs untyped paradigms, and coding best practices with TypeScript, C#, Java and others (Coding rules 1 and 4). 'GitHub Copilot' was not assigned because, while Copilot CLI is briefly mentioned at the end, the primary focus is on AI's effect on language safety, not Copilot product-specific features. 'ML', 'DevOps', 'Azure', and 'Security' are not covered explicitly or in technical depth here, so they were not included.",
     "collection": "news",
     "canonical_url": "https://github.blog/ai-and-ml/llms/why-ai-is-pushing-developers-toward-typed-languages/"
+  },
+  {
+    "canonical_url": "https://dellenny.com/how-to-design-a-future-proof-sharepoint-information-architecture/",
+    "timestamp": "2026-01-09 10:03:56 +00:00",
+    "collection": "blogs",
+    "reason": "Succesfully added: Included the 'Coding' category because the entire post is focused on technical aspects of designing SharePoint Information Architecture, leveraging Microsoft 365 features, metadata strategies, governance, and automation tools. As per the Coding rules, SharePoint development and customization, including best practices and technical implementation, qualifies for this category. No other categories apply: The post is not focused on DevOps, Security, Azure, ML, or core AI development. It is not end-user Office 365 training or business productivity content but is targeted at technical practitioners and architects. The scenario fits all Coding inclusion criteria and none of the generic or non-development business/productivity exclusions."
+  },
+  {
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-high-performance-computing/mpi-stage-high-performance-file-distribution-for-hpc-clusters/ba-p/4484366",
+    "timestamp": "2026-01-09 10:04:37 +00:00",
+    "collection": "community",
+    "reason": "Succesfully added: Assigned Azure category because the core scenario is distributing large files (containers, datasets) across Azure CycleCloud GPU clusters (Azure rule 1, 4, 5), including links to Azure-specific VM series and storage solutions. Assigned DevOps because the content centers on job orchestration, large-scale file staging automation, and workflow integration for HPC production workloads (DevOps rules 3, 5, 7, 11). Did not assign Coding—primary value is workflow integration and infrastructure/tool usage, not application development or programming. Did not assign AI, ML, or Security as the content does not focus on AI/ML model development or security architecture."
   }
 ]
