@@ -48,9 +48,9 @@ public class AboutPageTests(PlaywrightCollectionFixture fixture) : IAsyncLifetim
         await Page.GotoRelativeAsync("/about");
 
         // Assert - Check for team member headings
-        await Page.AssertHeadingVisibleAsync("Reinier van Maanen");
-        await Page.AssertHeadingVisibleAsync("Rob Bos");
-        await Page.AssertHeadingVisibleAsync("Fokko Veegens");
+        await Page.AssertElementVisibleByRoleAsync(AriaRole.Heading, "Reinier van Maanen");
+        await Page.AssertElementVisibleByRoleAsync(AriaRole.Heading, "Rob Bos");
+        await Page.AssertElementVisibleByRoleAsync(AriaRole.Heading, "Fokko Veegens");
     }
 
     [Fact]
@@ -59,10 +59,10 @@ public class AboutPageTests(PlaywrightCollectionFixture fixture) : IAsyncLifetim
         // Act
         await Page.GotoRelativeAsync("/about");
 
-        // Assert - Check for team member photos
-        await Page.AssertElementWithAltTextVisibleAsync("Reinier", useRegex: true);
-        await Page.AssertElementWithAltTextVisibleAsync("Rob", useRegex: true);
-        await Page.AssertElementWithAltTextVisibleAsync("Fokko", useRegex: true);
+        // Assert - Check for team member photos (exact alt text matching)
+        await Page.AssertElementVisibleByAltTextAsync("Reinier van Maanen");
+        await Page.AssertElementVisibleByAltTextAsync("Rob Bos");
+        await Page.AssertElementVisibleByAltTextAsync("Fokko Veegens");
     }
 
     [Fact]
@@ -71,9 +71,29 @@ public class AboutPageTests(PlaywrightCollectionFixture fixture) : IAsyncLifetim
         // Act
         await Page.GotoRelativeAsync("/about");
 
-        // Assert - Check for social media links (GitHub, LinkedIn)
-        await Page.AssertLinkVisibleAsync("GitHub", useRegex: true);
-        await Page.AssertLinkVisibleAsync("LinkedIn", useRegex: true);
+        // Assert - Verify each team member has correct social links
+
+        // Reinier van Maanen - should have GitHub, LinkedIn, and Blog
+        var reinierSection = Page.Locator("text=Reinier van Maanen").Locator("..");
+        await Assertions.Expect(reinierSection.GetByRole(AriaRole.Link, new() { Name = "📘 GitHub", Exact = true })).ToBeVisibleAsync();
+        await Assertions.Expect(reinierSection.GetByRole(AriaRole.Link, new() { Name = "💼 LinkedIn", Exact = true })).ToBeVisibleAsync();
+        await Assertions.Expect(reinierSection.GetByRole(AriaRole.Link, new() { Name = "✍️ Blog", Exact = true })).ToBeVisibleAsync();
+
+        // Rob Bos - should have GitHub, LinkedIn, and Blog
+        var robSection = Page.Locator("text=Rob Bos").Locator("..");
+        await Assertions.Expect(robSection.GetByRole(AriaRole.Link, new() { Name = "📘 GitHub", Exact = true })).ToBeVisibleAsync();
+        await Assertions.Expect(robSection.GetByRole(AriaRole.Link, new() { Name = "💼 LinkedIn", Exact = true })).ToBeVisibleAsync();
+        await Assertions.Expect(robSection.GetByRole(AriaRole.Link, new() { Name = "✍️ Blog", Exact = true })).ToBeVisibleAsync();
+
+        // Fokko Veegens - should have GitHub and LinkedIn (Blog link exists but is placeholder)
+        var fokkoSection = Page.Locator("text=Fokko Veegens").Locator("..");
+        await Assertions.Expect(fokkoSection.GetByRole(AriaRole.Link, new() { Name = "📘 GitHub", Exact = true })).ToBeVisibleAsync();
+        await Assertions.Expect(fokkoSection.GetByRole(AriaRole.Link, new() { Name = "💼 LinkedIn", Exact = true })).ToBeVisibleAsync();
+
+        // Verify Fokko's blog link is a placeholder (href="#")
+        var fokkoBlogLink = fokkoSection.GetByRole(AriaRole.Link, new() { Name = "✍️ Blog", Exact = true });
+        var fokkoBlogHref = await fokkoBlogLink.GetAttributeAsync("href");
+        Assert.Contains("#", fokkoBlogHref);
     }
 
     [Fact]
@@ -88,6 +108,6 @@ public class AboutPageTests(PlaywrightCollectionFixture fixture) : IAsyncLifetim
 
         // Assert
         await Assertions.Expect(Page).ToHaveURLAsync(new Regex("/about$", RegexOptions.IgnoreCase));
-        await Page.AssertHeadingVisibleAsync("Reinier van Maanen");
+        await Page.AssertElementVisibleByRoleAsync(AriaRole.Heading, "Reinier van Maanen");
     }
 }

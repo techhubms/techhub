@@ -32,13 +32,7 @@ namespace TechHub.E2E.Tests.Helpers;
 ///    await page.ClickAndNavigateAsync("a", text: "About", expectedUrlSegment: "/about",
 ///        customWait: async p => await Assertions.Expect(p.Locator("main")).ToBeVisibleAsync());
 ///
-/// 5. Verify active collection:
-///    await page.AssertActiveCollectionAsync("News");
-///
-/// 6. Verify element attribute:
-///    await link.AssertAttributeContainsAsync("href", "/github-copilot");
-///
-/// 7. Use Expect assertions instead of TextContentAsync + Should.Contain:
+/// 5. Use Expect assertions instead of TextContentAsync + Should.Contain:
 ///    // DON'T: var text = await element.TextContentAsync(); text.Should().Contain("foo");
 ///    // DO: await Assertions.Expect(element).ToContainTextAsync("foo");
 /// </summary>
@@ -156,7 +150,7 @@ public static class BlazorHelpers
         // Step 4: Wait for state sync (if specified)
         if (!string.IsNullOrEmpty(waitForActiveState))
         {
-            await page.AssertActiveCollectionAsync(waitForActiveState, DefaultAssertionTimeout);
+            await page.AssertElementContainsTextBySelectorAsync(".collection-nav a.active", waitForActiveState, DefaultAssertionTimeout);
         }
 
         // Step 5: Custom wait (if specified)
@@ -164,51 +158,6 @@ public static class BlazorHelpers
         {
             await customWait(page);
         }
-    }
-
-    /// <summary>
-    /// Navigates back and waits for state to sync with the new URL.
-    ///
-    /// PATTERN: Browser back → URL changes → Blazor re-renders with new state
-    ///
-    /// Example:
-    ///   await page.GoBackAndWaitForStateSyncAsync("News");
-    ///   // Back on previous page with News button showing .active class
-    /// </summary>
-    /// <param name="page">The Playwright page</param>
-    /// <param name="expectedActiveCollection">Expected collection button text after navigation</param>
-    /// <param name="expectedUrlSegment">Optional: URL segment to verify</param>
-    public static async Task GoBackAndWaitForStateSyncAsync(
-        this IPage page,
-        string expectedActiveCollection,
-        string? expectedUrlSegment = null)
-    {
-        await page.GoBackAsync();
-
-        if (!string.IsNullOrEmpty(expectedUrlSegment))
-        {
-            await page.WaitForBlazorUrlContainsAsync(expectedUrlSegment);
-        }
-
-        await page.AssertActiveCollectionAsync(expectedActiveCollection);
-    }
-
-    /// <summary>
-    /// Navigates forward and waits for state to sync with the new URL.
-    /// </summary>
-    public static async Task GoForwardAndWaitForStateSyncAsync(
-        this IPage page,
-        string expectedActiveCollection,
-        string? expectedUrlSegment = null)
-    {
-        await page.GoForwardAsync();
-
-        if (!string.IsNullOrEmpty(expectedUrlSegment))
-        {
-            await page.WaitForBlazorUrlContainsAsync(expectedUrlSegment);
-        }
-
-        await page.AssertActiveCollectionAsync(expectedActiveCollection);
     }
 
     // ============================================================================
@@ -309,24 +258,6 @@ public static class BlazorHelpers
         catch (TimeoutException)
         {
             // Static pages without Blazor - that's fine, continue
-        }
-    }
-
-    /// <summary>
-    /// Waits for Blazor circuit to reconnect if disconnected.
-    /// Call this if you see "Attempting to reconnect" UI.
-    /// </summary>
-    public static async Task WaitForBlazorCircuitAsync(this IPage page, int timeoutMs = DefaultNavigationTimeout)
-    {
-        try
-        {
-            // Wait for circuit indicator to disappear
-            await Assertions.Expect(page.Locator("#components-reconnect-modal"))
-                .ToBeHiddenAsync(new() { Timeout = timeoutMs });
-        }
-        catch
-        {
-            // Modal might not exist - that's fine
         }
     }
 
@@ -481,21 +412,6 @@ public static class BlazorHelpers
     }
 
     /// <summary>
-    /// Asserts that the sidebar is visible.
-    /// Common pattern: Check sidebar visibility on pages with sidebars.
-    /// Uses multiple selectors to match different sidebar implementations.
-    /// </summary>
-    /// <param name="page">The Playwright page</param>
-    /// <param name="timeoutMs">Maximum time to wait</param>
-    public static async Task AssertSidebarVisibleAsync(
-        this IPage page,
-        int timeoutMs = DefaultAssertionTimeout)
-    {
-        await page.Locator(".sidebar, aside.sidebar, .home-sidebar, aside")
-            .AssertElementVisibleAsync(timeoutMs);
-    }
-
-    /// <summary>
     /// Gets the href attribute value from a locator.
     /// Common pattern: Extract href from links for validation or navigation.
     /// </summary>
@@ -514,20 +430,24 @@ public static class BlazorHelpers
     // ============================================================================
 
     /// <summary>
-    /// Asserts that a heading with the specified name is visible.
+    /// Asserts that an element with the specified ARIA role and name is visible.
     /// Uses accessible role-based selection for better accessibility testing.
     /// Case-sensitive exact matching.
     ///
     /// Examples:
-    ///   await page.AssertHeadingVisibleAsync("Latest Content");
-    ///   await page.AssertHeadingVisibleAsync("Overview", level: 2);
+    ///   await page.AssertElementVisibleByRoleAsync(AriaRole.Heading, "Latest Content");
+    ///   await page.AssertElementVisibleByRoleAsync(AriaRole.Link, "About");
+    ///   await page.AssertElementVisibleByRoleAsync(AriaRole.Heading, "Overview", level: 2);
+    ///   await page.AssertElementVisibleByRoleAsync(AriaRole.Button, "Submit");
     /// </summary>
     /// <param name="page">The Playwright page</param>
-    /// <param name="name">The exact heading name to find (case-sensitive)</param>
-    /// <param name="level">Optional: Specific heading level (1-6)</param>
+    /// <param name="role">The ARIA role to find</param>
+    /// <param name="name">The exact accessible name (case-sensitive)</param>
+    /// <param name="level">Optional: Heading level (1-6) when role is Heading</param>
     /// <param name="timeoutMs">Maximum time to wait</param>
-    public static async Task AssertHeadingVisibleAsync(
+    public static async Task AssertElementVisibleByRoleAsync(
         this IPage page,
+        AriaRole role,
         string name,
         int? level = null,
         int timeoutMs = DefaultAssertionTimeout)
@@ -543,278 +463,170 @@ public static class BlazorHelpers
             options.Level = level.Value;
         }
 
-        var heading = page.GetByRole(AriaRole.Heading, options);
-        await Assertions.Expect(heading).ToBeVisibleAsync(new() { Timeout = timeoutMs });
-    }
-
-    /// <summary>
-    /// Asserts that a link with the specified name is visible.
-    /// Uses accessible role-based selection for better accessibility testing.
-    /// Supports both exact matching and regex patterns.
-    ///
-    /// Examples:
-    ///   await page.AssertLinkVisibleAsync("About");
-    ///   await page.AssertLinkVisibleAsync("GitHub", useRegex: true);
-    /// </summary>
-    /// <param name="page">The Playwright page</param>
-    /// <param name="name">The exact link text or regex pattern to find</param>
-    /// <param name="useRegex">Whether to use regex pattern matching (default: false for exact match)</param>
-    /// <param name="ignoreCase">Whether to ignore case when using regex (default: true)</param>
-    /// <param name="timeoutMs">Maximum time to wait</param>
-    public static async Task AssertLinkVisibleAsync(
-        this IPage page,
-        string name,
-        bool useRegex = false,
-        bool ignoreCase = true,
-        int timeoutMs = DefaultAssertionTimeout)
-    {
-        var options = new PageGetByRoleOptions();
-
-        if (useRegex)
-        {
-            options.NameRegex = new System.Text.RegularExpressions.Regex(
-                name,
-                ignoreCase ? System.Text.RegularExpressions.RegexOptions.IgnoreCase : System.Text.RegularExpressions.RegexOptions.None);
-        }
-        else
-        {
-            options.Name = name;
-            options.Exact = true;
-        }
-
-        var link = page.GetByRole(AriaRole.Link, options);
-        await Assertions.Expect(link).ToBeVisibleAsync(new() { Timeout = timeoutMs });
+        var element = page.GetByRole(role, options);
+        await Assertions.Expect(element).ToBeVisibleAsync(new() { Timeout = timeoutMs });
     }
 
     /// <summary>
     /// Asserts that an element with the specified alt text is visible.
     /// Uses accessible alt text selection for better accessibility testing.
-    /// Supports both exact matching and regex patterns.
+    /// Case-sensitive exact matching.
     ///
-    /// Examples:
-    ///   await page.AssertElementWithAltTextVisibleAsync("Reinier van Maanen photo");
-    ///   await page.AssertElementWithAltTextVisibleAsync("Reinier", useRegex: true);
+    /// Example:
+    ///   await page.AssertElementVisibleByAltTextAsync("Reinier van Maanen photo");
     /// </summary>
     /// <param name="page">The Playwright page</param>
-    /// <param name="altText">The alt text to find (exact match or regex pattern)</param>
-    /// <param name="useRegex">Whether to use regex pattern matching (default: false for exact match)</param>
-    /// <param name="ignoreCase">Whether to ignore case when using regex (default: true)</param>
+    /// <param name="altText">The exact alt text (case-sensitive)</param>
     /// <param name="timeoutMs">Maximum time to wait</param>
-    public static async Task AssertElementWithAltTextVisibleAsync(
+    public static async Task AssertElementVisibleByAltTextAsync(
         this IPage page,
         string altText,
-        bool useRegex = false,
-        bool ignoreCase = true,
         int timeoutMs = DefaultAssertionTimeout)
     {
-        var element = useRegex
-            ? page.GetByAltText(new System.Text.RegularExpressions.Regex(
-                altText,
-                ignoreCase ? System.Text.RegularExpressions.RegexOptions.IgnoreCase : System.Text.RegularExpressions.RegexOptions.None))
-            : page.GetByAltText(altText, new PageGetByAltTextOptions { Exact = true });
-
+        var element = page.GetByAltText(altText, new PageGetByAltTextOptions { Exact = true });
         await Assertions.Expect(element).ToBeVisibleAsync(new() { Timeout = timeoutMs });
     }
 
-    // ============================================================================
-    // ASSERTION HELPERS - Better error messages with auto-retry
-    // ============================================================================
-
     /// <summary>
-    /// Asserts that the active collection button contains the expected text.
-    /// Common pattern: Verify which collection is currently active.
+    /// Asserts that an element matching the selector is visible.
+    /// Generic helper for any CSS selector.
     ///
-    /// Example:
-    ///   await page.AssertActiveCollectionAsync("Videos");
-    ///   // Verifies that .collection-nav a.active contains "Videos"
+    /// Examples:
+    ///   await page.AssertElementVisibleBySelectorAsync(".sidebar");
+    ///   await page.AssertElementVisibleBySelectorAsync("main article");
+    ///   await page.AssertElementVisibleBySelectorAsync(".content-item-card");
     /// </summary>
     /// <param name="page">The Playwright page</param>
-    /// <param name="expectedCollection">Expected collection name</param>
+    /// <param name="selector">CSS selector</param>
     /// <param name="timeoutMs">Maximum time to wait</param>
-    public static async Task AssertActiveCollectionAsync(
+    public static async Task AssertElementVisibleBySelectorAsync(
         this IPage page,
-        string expectedCollection,
+        string selector,
         int timeoutMs = DefaultAssertionTimeout)
     {
-        var activeButton = page.Locator(".collection-nav a.active");
-        await Assertions.Expect(activeButton).ToContainTextAsync(
-            expectedCollection,
-            new() { Timeout = timeoutMs, IgnoreCase = true });
+        await Assertions.Expect(page.Locator(selector))
+            .ToBeVisibleAsync(new() { Timeout = timeoutMs });
     }
 
     /// <summary>
-    /// Asserts that an element attribute contains the expected value.
-    /// Common pattern: Verify href, class, style attributes.
+    /// Asserts that an element matching the selector contains the expected text.
+    /// Uses Playwright's auto-retrying assertions.
     ///
     /// Example:
-    ///   await link.AssertAttributeContainsAsync("href", "/github-copilot");
+    ///   await page.AssertElementContainsTextBySelectorAsync(".collection-nav a.active", "Videos");
     /// </summary>
-    /// <param name="locator">The element to check</param>
-    /// <param name="attributeName">Name of the attribute (e.g., "href", "class")</param>
-    /// <param name="expectedValue">Expected value or substring</param>
+    /// <param name="page">The Playwright page</param>
+    /// <param name="selector">CSS selector</param>
+    /// <param name="expectedText">Expected text content</param>
     /// <param name="timeoutMs">Maximum time to wait</param>
-    public static async Task AssertAttributeContainsAsync(
-        this ILocator locator,
-        string attributeName,
-        string expectedValue,
-        int timeoutMs = DefaultElementTimeout)
-    {
-        // Get attribute value (Playwright auto-waits for element)
-        var actualValue = await locator.GetAttributeAsync(attributeName, new() { Timeout = timeoutMs });
-
-        if (actualValue == null || !actualValue.Contains(expectedValue))
-        {
-            throw new AssertionException(
-                $"Attribute '{attributeName}' does not contain expected value. " +
-                $"Expected to contain: '{expectedValue}'. " +
-                $"Actual value: '{actualValue ?? "(null)"}'");
-        }
-    }
-
-    /// <summary>
-    /// Asserts that an element attribute equals the expected value.
-    /// </summary>
-    /// <param name="locator">The element to check</param>
-    /// <param name="attributeName">Name of the attribute</param>
-    /// <param name="expectedValue">Expected exact value</param>
-    /// <param name="timeoutMs">Maximum time to wait</param>
-    public static async Task AssertAttributeEqualsAsync(
-        this ILocator locator,
-        string attributeName,
-        string expectedValue,
-        int timeoutMs = DefaultElementTimeout)
-    {
-        var actualValue = await locator.GetAttributeAsync(attributeName, new() { Timeout = timeoutMs });
-
-        if (actualValue != expectedValue)
-        {
-            throw new AssertionException(
-                $"Attribute '{attributeName}' does not match expected value. " +
-                $"Expected: '{expectedValue}'. " +
-                $"Actual: '{actualValue ?? "(null)"}'");
-        }
-    }
-
-    /// <summary>
-    /// Asserts that an element exists and is visible, with a clear error message.
-    /// Uses Playwright's auto-retrying Expect assertion.
-    /// </summary>
-    /// <param name="locator">The Playwright locator for the element</param>
-    /// <param name="elementDescription">Human-readable description for error messages</param>
-    /// <param name="timeoutMs">How long to wait (uses DefaultAssertionTimeout by default)</param>
-    public static async Task AssertElementExistsAndVisibleAsync(
-        this ILocator locator,
-        string elementDescription,
-        int timeoutMs = DefaultAssertionTimeout)
-    {
-        try
-        {
-            await Assertions.Expect(locator).ToBeVisibleAsync(new() { Timeout = timeoutMs });
-        }
-        catch (PlaywrightException ex)
-        {
-            var count = await locator.CountAsync();
-            if (count == 0)
-            {
-                throw new AssertionException(
-                    $"Element not found: {elementDescription}. " +
-                    $"Selector matched 0 elements. " +
-                    $"Original error: {ex.Message}");
-            }
-            else
-            {
-                throw new AssertionException(
-                    $"Element exists but not visible: {elementDescription}. " +
-                    $"Selector matched {count} element(s) but none are visible. " +
-                    $"Original error: {ex.Message}");
-            }
-        }
-    }
-
-    /// <summary>
-    /// Asserts that an element is clickable, with a clear error message.
-    /// Uses Playwright's auto-retrying Expect assertion.
-    /// </summary>
-    /// <param name="locator">The Playwright locator for the element</param>
-    /// <param name="elementDescription">Human-readable description for error messages</param>
-    /// <param name="timeoutMs">How long to wait</param>
-    public static async Task AssertElementClickableAsync(
-        this ILocator locator,
-        string elementDescription,
-        int timeoutMs = DefaultAssertionTimeout)
-    {
-        // First check visibility with auto-retry
-        await locator.AssertElementExistsAndVisibleAsync(elementDescription, timeoutMs);
-
-        // Then check enabled state using Playwright's auto-retrying assertion
-        try
-        {
-            await Assertions.Expect(locator).ToBeEnabledAsync(new() { Timeout = timeoutMs });
-        }
-        catch (PlaywrightException ex)
-        {
-            throw new AssertionException(
-                $"Element not clickable (disabled): {elementDescription}. " +
-                $"Element is visible but disabled. " +
-                $"Original error: {ex.Message}");
-        }
-    }
-
-    /// <summary>
-    /// Asserts element contains expected text using auto-retrying assertion.
-    /// </summary>
-    public static async Task AssertElementContainsTextAsync(
-        this ILocator locator,
+    public static async Task AssertElementContainsTextBySelectorAsync(
+        this IPage page,
+        string selector,
         string expectedText,
-        string elementDescription,
         int timeoutMs = DefaultAssertionTimeout)
     {
-        try
-        {
-            await Assertions.Expect(locator).ToContainTextAsync(expectedText, new() { Timeout = timeoutMs });
-        }
-        catch (PlaywrightException ex)
-        {
-            string? actualText = null;
-            try
-            {
-                actualText = await locator.TextContentAsync(new() { Timeout = 1000 });
-            }
-            catch
-            {
-                // Ignore errors when getting text for error message
-            }
-
-            throw new AssertionException(
-                $"Element text mismatch: {elementDescription}. " +
-                $"Expected to contain: '{expectedText}'. " +
-                $"Actual text: '{actualText ?? "(null)"}'. " +
-                $"Original error: {ex.Message}");
-        }
+        await Assertions.Expect(page.Locator(selector))
+            .ToContainTextAsync(expectedText, new() { Timeout = timeoutMs });
     }
 
     /// <summary>
-    /// Asserts the expected count of elements using auto-retrying assertion.
+    /// Asserts that the element count matches expected value.
+    /// Uses Playwright's auto-retrying count assertion.
+    ///
+    /// Example:
+    ///   await page.AssertElementCountBySelectorAsync(".content-item-card", 10);
     /// </summary>
-    public static async Task AssertElementCountAsync(
-        this ILocator locator,
+    /// <param name="page">The Playwright page</param>
+    /// <param name="selector">CSS selector</param>
+    /// <param name="expectedCount">Expected number of elements</param>
+    /// <param name="timeoutMs">Maximum time to wait</param>
+    public static async Task AssertElementCountBySelectorAsync(
+        this IPage page,
+        string selector,
         int expectedCount,
-        string elementDescription,
         int timeoutMs = DefaultAssertionTimeout)
     {
-        try
+        await Assertions.Expect(page.Locator(selector))
+            .ToHaveCountAsync(expectedCount, new() { Timeout = timeoutMs });
+    }
+
+    /// <summary>
+    /// Gets an element attribute value by selector.
+    ///
+    /// Example:
+    ///   var href = await page.GetElementAttributeBySelectorAsync("a.rss-link", "href");
+    /// </summary>
+    /// <param name="page">The Playwright page</param>
+    /// <param name="selector">CSS selector</param>
+    /// <param name="attributeName">Attribute name (e.g., "href", "class", "style")</param>
+    /// <param name="timeoutMs">Maximum time to wait</param>
+    /// <returns>Attribute value or null</returns>
+    public static async Task<string?> GetElementAttributeBySelectorAsync(
+        this IPage page,
+        string selector,
+        string attributeName,
+        int timeoutMs = DefaultElementTimeout)
+    {
+        return await page.Locator(selector).GetAttributeAsync(attributeName, new() { Timeout = timeoutMs });
+    }
+
+    /// <summary>
+    /// Gets an element's text content by selector.
+    ///
+    /// Example:
+    ///   var heading = await page.GetElementTextBySelectorAsync("h1");
+    /// </summary>
+    /// <param name="page">The Playwright page</param>
+    /// <param name="selector">CSS selector</param>
+    /// <param name="timeoutMs">Maximum time to wait</param>
+    /// <returns>Text content or null</returns>
+    public static async Task<string?> GetElementTextBySelectorAsync(
+        this IPage page,
+        string selector,
+        int timeoutMs = DefaultElementTimeout)
+    {
+        return await page.Locator(selector).TextContentAsync(new() { Timeout = timeoutMs });
+    }
+
+    /// <summary>
+    /// Clicks an element found by selector using Blazor-aware click handling.
+    ///
+    /// Example:
+    ///   await page.ClickElementBySelectorAsync(".collection-nav a");
+    /// </summary>
+    /// <param name="page">The Playwright page</param>
+    /// <param name="selector">CSS selector</param>
+    /// <param name="timeoutMs">Maximum time to wait</param>
+    public static async Task ClickElementBySelectorAsync(
+        this IPage page,
+        string selector,
+        int timeoutMs = DefaultElementTimeout)
+    {
+        await page.Locator(selector).ClickBlazorElementAsync(timeoutMs);
+    }
+
+    /// <summary>
+    /// Clicks an element found by ARIA role using Blazor-aware click handling.
+    ///
+    /// Example:
+    ///   await page.ClickElementByRoleAsync(AriaRole.Link, "About");
+    /// </summary>
+    /// <param name="page">The Playwright page</param>
+    /// <param name="role">ARIA role</param>
+    /// <param name="name">Accessible name (case-sensitive)</param>
+    /// <param name="timeoutMs">Maximum time to wait</param>
+    public static async Task ClickElementByRoleAsync(
+        this IPage page,
+        AriaRole role,
+        string name,
+        int timeoutMs = DefaultElementTimeout)
+    {
+        var options = new PageGetByRoleOptions
         {
-            await Assertions.Expect(locator).ToHaveCountAsync(expectedCount, new() { Timeout = timeoutMs });
-        }
-        catch (PlaywrightException ex)
-        {
-            var actualCount = await locator.CountAsync();
-            throw new AssertionException(
-                $"Element count mismatch: {elementDescription}. " +
-                $"Expected: {expectedCount}. " +
-                $"Actual: {actualCount}. " +
-                $"Original error: {ex.Message}");
-        }
+            Name = name,
+            Exact = true
+        };
+        await page.GetByRole(role, options).ClickBlazorElementAsync(timeoutMs);
     }
 }
 

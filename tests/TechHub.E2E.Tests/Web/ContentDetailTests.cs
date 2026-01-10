@@ -35,7 +35,9 @@ public class ContentDetailTests : IAsyncLifetime
     public async Task DisposeAsync()
     {
         if (_context != null)
+        {
             await _context.DisposeAsync();
+        }
     }
 
     /// <summary>
@@ -80,8 +82,8 @@ public class ContentDetailTests : IAsyncLifetime
         // Arrange & Act
         var page = await NavigateToFirstRoundupDetailAsync();
 
-        // Assert - Sidebar should exist (use helper)
-        await page.AssertSidebarVisibleAsync();
+        // Assert - Sidebar should exist (use generic helper with specific selector)
+        await page.AssertElementVisibleBySelectorAsync(".sidebar");
 
         // Check for Collections heading in sidebar
         await Assertions.Expect(page.Locator(".sidebar h2:has-text('Collections')"))
@@ -148,8 +150,8 @@ public class ContentDetailTests : IAsyncLifetime
         // Arrange & Act
         var page = await NavigateToFirstRoundupDetailAsync();
 
-        // Assert - Sidebar visible (use helper)
-        await page.AssertSidebarVisibleAsync();
+        // Assert - Sidebar visible (use generic helper with specific selector)
+        await page.AssertElementVisibleBySelectorAsync(".sidebar");
 
         // Assert - Main content visible (article or main.page-main-content)
         await Assertions.Expect(page.Locator("main article, main.page-main-content article"))

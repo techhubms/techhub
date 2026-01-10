@@ -150,7 +150,7 @@ public class UrlRoutingTests : IAsyncLifetime
         await page.WaitForBlazorUrlContainsAsync("/github-copilot/videos");
 
         // Wait for Blazor to sync state (update .active class)
-        await page.AssertActiveCollectionAsync("Videos");
+        await page.AssertElementContainsTextBySelectorAsync(".collection-nav a.active", "Videos");
 
         // Verify Videos button is now active
         var videosButtonActive = page.Locator(".collection-nav a.active");
@@ -166,7 +166,7 @@ public class UrlRoutingTests : IAsyncLifetime
             "browser back button should navigate to previous collection URL");
 
         // Wait for Blazor to sync state with URL (OnParametersSetAsync should fire)
-        await page.AssertActiveCollectionAsync("News");
+        await page.AssertElementContainsTextBySelectorAsync(".collection-nav a.active", "News");
 
         // News button should be active again
         var activeButton = page.Locator(".collection-nav a.active");

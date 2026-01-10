@@ -33,8 +33,8 @@ public class HomePageSidebarTests(PlaywrightCollectionFixture fixture) : IAsyncL
         // Act
         await Page.GotoRelativeAsync("/");
 
-        // Assert - Use helper for sidebar visibility
-        await Page.AssertSidebarVisibleAsync();
+        // Assert - Use generic helper with specific selector
+        await Page.AssertElementVisibleBySelectorAsync(".sidebar");
     }
 
     [Fact]

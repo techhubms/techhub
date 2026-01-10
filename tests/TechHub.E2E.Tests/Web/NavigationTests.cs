@@ -179,7 +179,7 @@ public class NavigationTests : IAsyncLifetime
         await page.WaitForURLWithTimeoutAsync("**/github-copilot/videos");
 
         // Wait for page to fully load after navigation
-        await page.AssertActiveCollectionAsync("Videos");
+        await page.AssertElementContainsTextBySelectorAsync(".collection-nav a.active", "Videos");
 
         // Videos collection should be active
         var activeButton = page.Locator(".collection-nav a.active");
