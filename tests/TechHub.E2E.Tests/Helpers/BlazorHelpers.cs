@@ -13,6 +13,34 @@ namespace TechHub.E2E.Tests.Helpers;
 /// KEY INSIGHT: Playwright's auto-waiting handles 90% of timing issues automatically.
 /// The main Blazor-specific challenge is detecting when enhanced navigation completes,
 /// since it doesn't trigger traditional navigation events.
+/// 
+/// USAGE EXAMPLES - Common Test Patterns:
+/// 
+/// 1. Click collection button and verify state:
+///    await page.ClickAndNavigateAsync(".collection-nav a", text: "Videos", 
+///        expectedUrlSegment: "/videos", waitForActiveState: "Videos");
+/// 
+/// 2. Click section card on homepage:
+///    await page.ClickAndNavigateAsync(".section-card-container a.section-card[href*='github-copilot']",
+///        expectedUrlSegment: "/github-copilot", customWait: p => p.WaitForSectionPageReadyAsync());
+/// 
+/// 3. Click content card to detail page:
+///    await page.ClickAndNavigateAsync(".content-item-card", nth: 0,
+///        expectedUrlSegment: "/roundups/", customWait: p => p.WaitForContentDetailPageAsync());
+/// 
+/// 4. Click navigation link:
+///    await page.ClickAndNavigateAsync("a", text: "About", expectedUrlSegment: "/about",
+///        customWait: async p => await Assertions.Expect(p.Locator("main")).ToBeVisibleAsync());
+/// 
+/// 5. Verify active collection:
+///    await page.AssertActiveCollectionAsync("News");
+/// 
+/// 6. Verify element attribute:
+///    await link.AssertAttributeContainsAsync("href", "/github-copilot");
+/// 
+/// 7. Use Expect assertions instead of TextContentAsync + Should.Contain:
+///    // DON'T: var text = await element.TextContentAsync(); text.Should().Contain("foo");
+///    // DO: await Assertions.Expect(element).ToContainTextAsync("foo");
 /// </summary>
 public static class BlazorHelpers
 {
@@ -56,122 +84,86 @@ public static class BlazorHelpers
     // ============================================================================
 
     /// <summary>
-    /// Clicks a sidebar collection button and waits for navigation + state sync.
+    /// Generic click-and-navigate pattern for all Blazor navigation scenarios.
     /// 
-    /// PATTERN: Click collection button → URL changes → .active class updates
+    /// This consolidates the common pattern:
+    /// 1. Find element by selector (with optional text filter or href filter)
+    /// 2. Click the element
+    /// 3. Wait for URL to change (optional)
+    /// 4. Wait for UI state sync (optional - e.g., .active class update)
+    /// 5. Wait for page-specific content (optional - e.g., detail page ready)
     /// 
-    /// Example:
-    ///   await page.ClickCollectionButtonAsync("Videos");
-    ///   // URL is now /section/videos and Videos button has .active class
+    /// Use this instead of writing custom click-wait sequences.
+    /// 
+    /// Example (collection button):
+    ///   await page.ClickAndNavigateAsync(".collection-nav a", text: "Videos", 
+    ///       expectedUrlSegment: "/videos", waitForActiveState: "Videos");
+    /// 
+    /// Example (content card with href filter):
+    ///   await page.ClickAndNavigateAsync(".content-item-card", filterByHref: "/roundups/",
+    ///       customWait: p => p.WaitForContentDetailPageAsync());
     /// </summary>
     /// <param name="page">The Playwright page</param>
-    /// <param name="collectionName">The collection button text (e.g., "Videos", "News", "All")</param>
-    /// <param name="expectedUrlSegment">Optional: URL segment to wait for (defaults to lowercase collectionName)</param>
-    public static async Task ClickCollectionButtonAsync(
+    /// <param name="selector">CSS selector for the element to click</param>
+    /// <param name="text">Optional: Text to filter by (uses HasTextString)</param>
+    /// <param name="filterByHref">Optional: Filter by href attribute containing this value</param>
+    /// <param name="nth">Optional: Select nth matching element (0-based, default: first)</param>
+    /// <param name="expectedUrlSegment">Optional: URL segment to wait for after click</param>
+    /// <param name="waitForActiveState">Optional: Text that should appear in .active button after navigation</param>
+    /// <param name="customWait">Optional: Custom wait function to call after navigation</param>
+    /// <param name="timeoutMs">Maximum time to wait</param>
+    public static async Task ClickAndNavigateAsync(
         this IPage page,
-        string collectionName,
-        string? expectedUrlSegment = null)
+        string selector,
+        string? text = null,
+        string? filterByHref = null,
+        int nth = 0,
+        string? expectedUrlSegment = null,
+        string? waitForActiveState = null,
+        Func<IPage, Task>? customWait = null,
+        int timeoutMs = DefaultNavigationTimeout)
     {
-        var urlSegment = expectedUrlSegment ?? $"/{collectionName.ToLowerInvariant()}";
+        // Step 1: Find the element
+        var locator = page.Locator(selector);
         
-        // Find and click the collection button in sidebar
-        var button = page.Locator(".collection-nav a, .sidebar-links a", new() { HasTextString = collectionName });
-        await button.ClickBlazorElementAsync();
+        // Apply text filter if specified
+        if (!string.IsNullOrEmpty(text))
+        {
+            locator = page.Locator(selector, new() { HasTextString = text });
+        }
         
-        // Wait for URL to contain the expected segment
-        await page.WaitForBlazorUrlContainsAsync(urlSegment);
+        // Apply href filter if specified
+        if (!string.IsNullOrEmpty(filterByHref))
+        {
+            locator = locator.Filter(new() { Has = page.Locator($"[href*='{filterByHref}']") });
+        }
         
-        // Wait for Blazor state sync (.active class update)
-        await page.WaitForBlazorStateSyncAsync(collectionName);
-    }
-
-    /// <summary>
-    /// Clicks on a content card and waits for the detail page to load.
-    /// 
-    /// PATTERN: Click content card → URL changes to detail → main content renders
-    /// 
-    /// Example:
-    ///   await page.ClickContentCardAsync("/roundups/");
-    ///   // Now on content detail page with sidebar and article visible
-    /// </summary>
-    /// <param name="page">The Playwright page</param>
-    /// <param name="expectedUrlSegment">URL segment to wait for (e.g., "/roundups/")</param>
-    /// <param name="cardSelector">Selector for the content card (default: ".content-item-card")</param>
-    /// <param name="cardIndex">Which card to click (0-based, default first)</param>
-    public static async Task ClickContentCardAsync(
-        this IPage page,
-        string expectedUrlSegment,
-        string cardSelector = ".content-item-card",
-        int cardIndex = 0)
-    {
-        // Wait for cards to load
-        await page.WaitForSelectorAsync(cardSelector, new() { Timeout = DefaultNavigationTimeout });
+        // Select nth element if needed
+        if (nth > 0 || (string.IsNullOrEmpty(text) && string.IsNullOrEmpty(filterByHref)))
+        {
+            locator = locator.Nth(nth);
+        }
         
-        // Click the specified card
-        var card = page.Locator(cardSelector).Nth(cardIndex);
-        await card.ClickBlazorElementAsync();
+        // Step 2: Click the element
+        await locator.ClickBlazorElementAsync(timeoutMs);
         
-        // Wait for navigation to detail page
-        await page.WaitForBlazorUrlContainsAsync(expectedUrlSegment);
+        // Step 3: Wait for URL to change (if specified)
+        if (!string.IsNullOrEmpty(expectedUrlSegment))
+        {
+            await page.WaitForBlazorUrlContainsAsync(expectedUrlSegment, timeoutMs);
+        }
         
-        // Wait for detail page content to render
-        await page.WaitForContentDetailPageAsync();
-    }
-
-    /// <summary>
-    /// Clicks a section card on the home page and waits for section page to load.
-    /// 
-    /// PATTERN: Click section card → URL changes to section → section content renders
-    /// 
-    /// Example:
-    ///   await page.ClickSectionCardAsync("github-copilot");
-    ///   // Now on /github-copilot with section content visible
-    /// </summary>
-    /// <param name="page">The Playwright page</param>
-    /// <param name="sectionSlug">The section slug (e.g., "github-copilot", "ai")</param>
-    public static async Task ClickSectionCardAsync(
-        this IPage page,
-        string sectionSlug)
-    {
-        var card = page.Locator($".section-card-container a.section-card[href*='{sectionSlug}']");
-        await card.ClickBlazorElementAsync();
+        // Step 4: Wait for state sync (if specified)
+        if (!string.IsNullOrEmpty(waitForActiveState))
+        {
+            await page.WaitForBlazorStateSyncAsync(waitForActiveState, DefaultAssertionTimeout);
+        }
         
-        // Wait for URL to contain section name
-        await page.WaitForBlazorUrlContainsAsync($"/{sectionSlug}");
-        
-        // Wait for section page content to render (header + collection nav)
-        await page.WaitForSectionPageReadyAsync();
-    }
-
-    /// <summary>
-    /// Clicks a navigation link and waits for the target page to load.
-    /// 
-    /// PATTERN: Click nav link → URL changes → page content renders
-    /// 
-    /// Example:
-    ///   await page.ClickNavLinkAsync("About", "/about");
-    ///   // Now on /about with page content visible
-    /// </summary>
-    /// <param name="page">The Playwright page</param>
-    /// <param name="linkText">The link text to click</param>
-    /// <param name="expectedUrlSegment">URL segment to wait for</param>
-    /// <param name="containerSelector">Optional: container to look for link in</param>
-    public static async Task ClickNavLinkAsync(
-        this IPage page,
-        string linkText,
-        string expectedUrlSegment,
-        string? containerSelector = null)
-    {
-        var locator = containerSelector != null
-            ? page.Locator($"{containerSelector} a", new() { HasTextString = linkText })
-            : page.Locator("a", new() { HasTextString = linkText });
-        
-        await locator.First.ClickBlazorElementAsync();
-        await page.WaitForBlazorUrlContainsAsync(expectedUrlSegment);
-        
-        // Wait for main content to be visible
-        await Assertions.Expect(page.Locator("main, article, .page-main-content"))
-            .ToBeVisibleAsync(new() { Timeout = DefaultNavigationTimeout });
+        // Step 5: Custom wait (if specified)
+        if (customWait != null)
+        {
+            await customWait(page);
+        }
     }
 
     /// <summary>
@@ -582,6 +574,81 @@ public static class BlazorHelpers
     // ============================================================================
     // ASSERTION HELPERS - Better error messages with auto-retry
     // ============================================================================
+
+    /// <summary>
+    /// Asserts that the active collection button contains the expected text.
+    /// Common pattern: Verify which collection is currently active.
+    /// 
+    /// Example:
+    ///   await page.AssertActiveCollectionAsync("Videos");
+    ///   // Verifies that .collection-nav a.active contains "Videos"
+    /// </summary>
+    /// <param name="page">The Playwright page</param>
+    /// <param name="expectedCollection">Expected collection name</param>
+    /// <param name="timeoutMs">Maximum time to wait</param>
+    public static async Task AssertActiveCollectionAsync(
+        this IPage page,
+        string expectedCollection,
+        int timeoutMs = DefaultAssertionTimeout)
+    {
+        var activeButton = page.Locator(".collection-nav a.active");
+        await Assertions.Expect(activeButton).ToContainTextAsync(
+            expectedCollection,
+            new() { Timeout = timeoutMs, IgnoreCase = true });
+    }
+
+    /// <summary>
+    /// Asserts that an element attribute contains the expected value.
+    /// Common pattern: Verify href, class, style attributes.
+    /// 
+    /// Example:
+    ///   await link.AssertAttributeContainsAsync("href", "/github-copilot");
+    /// </summary>
+    /// <param name="locator">The element to check</param>
+    /// <param name="attributeName">Name of the attribute (e.g., "href", "class")</param>
+    /// <param name="expectedValue">Expected value or substring</param>
+    /// <param name="timeoutMs">Maximum time to wait</param>
+    public static async Task AssertAttributeContainsAsync(
+        this ILocator locator,
+        string attributeName,
+        string expectedValue,
+        int timeoutMs = DefaultElementTimeout)
+    {
+        // Get attribute value (Playwright auto-waits for element)
+        var actualValue = await locator.GetAttributeAsync(attributeName, new() { Timeout = timeoutMs });
+        
+        if (actualValue == null || !actualValue.Contains(expectedValue))
+        {
+            throw new AssertionException(
+                $"Attribute '{attributeName}' does not contain expected value. " +
+                $"Expected to contain: '{expectedValue}'. " +
+                $"Actual value: '{actualValue ?? "(null)"}'");
+        }
+    }
+
+    /// <summary>
+    /// Asserts that an element attribute equals the expected value.
+    /// </summary>
+    /// <param name="locator">The element to check</param>
+    /// <param name="attributeName">Name of the attribute</param>
+    /// <param name="expectedValue">Expected exact value</param>
+    /// <param name="timeoutMs">Maximum time to wait</param>
+    public static async Task AssertAttributeEqualsAsync(
+        this ILocator locator,
+        string attributeName,
+        string expectedValue,
+        int timeoutMs = DefaultElementTimeout)
+    {
+        var actualValue = await locator.GetAttributeAsync(attributeName, new() { Timeout = timeoutMs });
+        
+        if (actualValue != expectedValue)
+        {
+            throw new AssertionException(
+                $"Attribute '{attributeName}' does not match expected value. " +
+                $"Expected: '{expectedValue}'. " +
+                $"Actual: '{actualValue ?? "(null)"}'");
+        }
+    }
 
     /// <summary>
     /// Asserts that an element exists and is visible, with a clear error message.

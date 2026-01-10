@@ -113,7 +113,7 @@ For .NET development patterns, component architecture, API design, and all code 
 
 ### 1. Core Rules & Boundaries
 
-These are the **non-negotiable rules** that apply to ALL development tasks. ALWAYS follow these rules without exception.
+**CRITICAL**: These are the **non-negotiable rules** that apply to ALL development tasks. **ALWAYS** follow these rules without exception and not only the always do rules but also the ask first and never do rules.
 
 #### ✅ Always Do
 
@@ -154,8 +154,8 @@ These are the **non-negotiable rules** that apply to ALL development tasks. ALWA
 - **Never write implementation before tests**: TDD is mandatory for code changes
 - **Never skip E2E tests for UI changes**: E2E tests are MANDATORY for frontend, not optional
 - **Never use lower-level tools unnecessarily**: Don't use CLI when MCP or built-in tools are available
-- **Never use `| head` or `| tail` in CLI commands**: They require the user to press control-c before you can continue!
-- **Never filter test output with Select-String, Select-Object, grep, or similar**: User needs to see ALL test results, failures, errors, and context - never hide information with `-Last`, `-First`, or pattern filtering
+- **Never use `| head` or `| tail` or `Select-Object -Last` or similar in CLI commands to limit the amount of lines**: They block critical output and often require the user to press control-c before you can continue!
+- **Never filter test output with Select-String, Select-Object, grep, or similar pattern filtering**: In addition to the previous rule, this blocks critical output of test results, failures, errors, and context
 - **Never paste scripts into terminal**: Always save as `.ps1` file in `.tmp/` and execute
 - **Never use `pwsh -Command` with EOF or other large text demarcations**: Save script to file and execute it
 - **Never use backslashes for escaping in PowerShell**: Always use backticks (`)
