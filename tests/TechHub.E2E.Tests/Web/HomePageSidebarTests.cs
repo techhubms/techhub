@@ -23,7 +23,7 @@ public class HomePageSidebarTests(PlaywrightCollectionFixture fixture) : IAsyncL
     {
         if (_page != null)
             await _page.CloseAsync();
-        
+
         if (_context != null)
             await _context.CloseAsync();
     }
@@ -32,10 +32,9 @@ public class HomePageSidebarTests(PlaywrightCollectionFixture fixture) : IAsyncL
     {
         // Act
         await Page.GotoRelativeAsync("/");
-        
-        // Assert
-        var sidebar = Page.Locator(".sidebar, .home-sidebar, aside");
-        await Assertions.Expect(sidebar).ToBeVisibleAsync();
+
+        // Assert - Use helper for sidebar visibility
+        await Page.AssertSidebarVisibleAsync();
     }
 
     [Fact]
@@ -43,7 +42,7 @@ public class HomePageSidebarTests(PlaywrightCollectionFixture fixture) : IAsyncL
     {
         // Act
         await Page.GotoRelativeAsync("/");
-        
+
         // Assert - Use specific heading "Latest Content" to avoid ambiguity with "Latest Roundup"
         await Assertions.Expect(Page.GetByRole(AriaRole.Heading, new() { Name = "Latest Content" })).ToBeVisibleAsync();
     }
@@ -53,11 +52,11 @@ public class HomePageSidebarTests(PlaywrightCollectionFixture fixture) : IAsyncL
     {
         // Act
         await Page.GotoRelativeAsync("/");
-        
+
         // Assert - Find latest items section
         var latestSection = Page.Locator(".latest-items, .sidebar-latest");
         var itemLinks = latestSection.Locator("a").Filter(new() { HasNotText = "Latest" });
-        
+
         var count = await itemLinks.CountAsync();
         Assert.True(count > 0 && count <= 10, $"Expected 1-10 latest item links, but found {count}");
     }
@@ -67,7 +66,7 @@ public class HomePageSidebarTests(PlaywrightCollectionFixture fixture) : IAsyncL
     {
         // Act
         await Page.GotoRelativeAsync("/");
-        
+
         // Assert
         await Assertions.Expect(Page.GetByRole(AriaRole.Heading, new() { NameRegex = new Regex("Popular Tags", RegexOptions.IgnoreCase) })).ToBeVisibleAsync();
     }
@@ -77,11 +76,11 @@ public class HomePageSidebarTests(PlaywrightCollectionFixture fixture) : IAsyncL
     {
         // Act
         await Page.GotoRelativeAsync("/");
-        
+
         // Assert - Find popular tags section
         var tagsSection = Page.Locator(".popular-tags, .sidebar-tags");
         var tagLinks = tagsSection.Locator("a, .tag");
-        
+
         var count = await tagLinks.CountAsync();
         Assert.True(count > 0, $"Expected at least one tag link, but found {count}");
     }
@@ -91,16 +90,16 @@ public class HomePageSidebarTests(PlaywrightCollectionFixture fixture) : IAsyncL
     {
         // Arrange
         await Page.GotoRelativeAsync("/");
-        
+
         // Act - Click first latest item link (if any)
         var latestSection = Page.Locator(".latest-items, .sidebar-latest");
         var itemLinks = latestSection.Locator("a").Filter(new() { HasNotText = "Latest" });
         var count = await itemLinks.CountAsync();
-        
+
         if (count > 0)
         {
             await itemLinks.First.ClickBlazorElementAsync();
-            
+
             // Assert - Should navigate to content detail page
             await Page.WaitForLoadStateAsync(LoadState.NetworkIdle);
             await Assertions.Expect(Page).Not.ToHaveURLAsync(new Regex("^" + Regex.Escape(BaseUrl) + "/?$"));
@@ -112,22 +111,22 @@ public class HomePageSidebarTests(PlaywrightCollectionFixture fixture) : IAsyncL
     {
         // Arrange
         await Page.GotoRelativeAsync("/");
-        
+
         // Act - Click first tag link (if any)
         var tagsSection = Page.Locator(".popular-tags, .sidebar-tags");
         var tagLinks = tagsSection.Locator("a");
         var count = await tagLinks.CountAsync();
-        
+
         if (count > 0)
         {
             var firstTag = await tagLinks.First.TextContentWithTimeoutAsync();
             await tagLinks.First.ClickBlazorElementAsync();
-            
+
             // Assert - Should navigate to filtered view or section with tag parameter
             await Page.WaitForLoadStateAsync(LoadState.NetworkIdle);
             var currentUrl = Page.Url;
             Assert.True(
-                currentUrl.Contains("tag=", StringComparison.OrdinalIgnoreCase) || 
+                currentUrl.Contains("tag=", StringComparison.OrdinalIgnoreCase) ||
                 currentUrl.Contains("tags=", StringComparison.OrdinalIgnoreCase) ||
                 currentUrl != BaseUrl + "/",
                 $"Expected URL to change or contain tag parameter, but got: {currentUrl}");

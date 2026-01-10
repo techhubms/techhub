@@ -37,13 +37,13 @@ public class NavigationTests : IAsyncLifetime
     {
         // Arrange
         var page = await _context!.NewPageWithDefaultsAsync();
-        
+
         // Act
         await page.GotoRelativeAsync("/");
-        
+
         // Get all section card titles
         var sectionTitles = await page.Locator(".section-card h2").AllTextContentsAsync();
-        
+
         // Assert - Expected order from live site (including "All" section)
         var expectedOrder = new[]
         {
@@ -56,13 +56,13 @@ public class NavigationTests : IAsyncLifetime
             ".NET",
             "Security"
         };
-        
+
         Assert.Equal(expectedOrder.Length, sectionTitles.Count);
         for (int i = 0; i < expectedOrder.Length; i++)
         {
             Assert.Equal(expectedOrder[i], sectionTitles[i]);
         }
-        
+
         await page.CloseAsync();
     }
 
@@ -72,27 +72,27 @@ public class NavigationTests : IAsyncLifetime
         // Arrange
         var page = await _context!.NewPageWithDefaultsAsync();
         await page.GotoRelativeAsync("/");
-        
+
         // Act - Click on the GitHub Copilot section card
         // The card link is inside the section-card-container
         var ghCopilotCard = page.Locator(".section-card-container a.section-card[href*='github-copilot']");
         await ghCopilotCard.WaitForAsync();
-        
-        var href = await ghCopilotCard.GetAttributeAsync("href");
+
+        var href = await ghCopilotCard.GetHrefAsync();
         Assert.NotNull(href);
         Assert.Contains("github-copilot", href);
-        
+
         // Blazor uses enhanced navigation (SPA-style), so URL changes without page reload
         // Use ClickBlazorElementAsync to wait for Blazor interactivity before clicking
         await ghCopilotCard.ClickBlazorElementAsync();
-        
+
         // Wait for URL to contain the section name
         await page.WaitForBlazorUrlContainsAsync("/github-copilot");
-        
+
         // Assert - Should navigate to /github-copilot
         Assert.Contains("/github-copilot", page.Url);
         Assert.DoesNotContain("#", page.Url); // Should not have hash fragment
-        
+
         await page.CloseAsync();
     }
 
@@ -102,16 +102,16 @@ public class NavigationTests : IAsyncLifetime
         // Arrange
         var page = await _context!.NewPageWithDefaultsAsync();
         await page.GotoRelativeAsync("/github-copilot");
-        
+
         // Act - Click on "News" collection button
         var newsButton = page.Locator(".collection-nav a", new() { HasTextString = "News" });
         await newsButton.ClickBlazorElementAsync();
-        
+
         // Assert - URL should be /github-copilot/news
         await page.WaitForURLWithTimeoutAsync("**/github-copilot/news");
         Assert.EndsWith("/github-copilot/news", page.Url);
         Assert.DoesNotContain("#", page.Url); // No hash fragments
-        
+
         await page.CloseAsync();
     }
 
@@ -120,24 +120,24 @@ public class NavigationTests : IAsyncLifetime
     {
         // Arrange
         var page = await _context!.NewPageWithDefaultsAsync();
-        
+
         // Act - Navigate to GitHub Copilot News collection
         await page.GotoRelativeAsync("/github-copilot/news");
-        
+
         // Get first content card
         var firstCard = page.Locator(".content-item-card").First;
-        
+
         // Assert - Collection badge should NOT be visible (or should not say "News")
         var collectionBadges = firstCard.Locator(".collection-badge");
         var badgeCount = await collectionBadges.CountAsync();
-        
+
         // Either no collection badge, or badge doesn't say "News"
         if (badgeCount > 0)
         {
             var badgeText = await collectionBadges.First.TextContentWithTimeoutAsync();
             Assert.NotEqual("News", badgeText); // Should not show the current collection
         }
-        
+
         await page.CloseAsync();
     }
 
@@ -146,21 +146,21 @@ public class NavigationTests : IAsyncLifetime
     {
         // Arrange
         var page = await _context!.NewPageWithDefaultsAsync();
-        
+
         // Act - Navigate to "All" section (contains all content, may take longer to load)
         await page.GotoRelativeAsync("/all");
-        
+
         // Get first content card
         var firstCard = page.Locator(".content-item-card").First;
-        
+
         // Assert - Collection badge should exist and be before tags
         var collectionBadge = firstCard.Locator(".collection-badge-white").First;
         Assert.True(await collectionBadge.IsVisibleAsync());
-        
+
         // Collection badge should have proper capitalization (e.g., "News" not "news")
         var badgeText = await collectionBadge.TextContentWithTimeoutAsync();
         Assert.Matches("^[A-Z]", badgeText!); // Starts with capital letter
-        
+
         await page.CloseAsync();
     }
 
@@ -170,22 +170,22 @@ public class NavigationTests : IAsyncLifetime
         // Arrange
         var page = await _context!.NewPageWithDefaultsAsync();
         await page.GotoRelativeAsync("/github-copilot");
-        
+
         // Act - Click on "Videos" collection
         var videosButton = page.Locator(".collection-nav a", new() { HasTextString = "Videos" });
         await videosButton.ClickBlazorElementAsync();
-        
+
         // Assert - Should navigate and load videos
         await page.WaitForURLWithTimeoutAsync("**/github-copilot/videos");
-        
+
         // Wait for page to fully load after navigation
-        await page.WaitForBlazorStateSyncAsync("Videos");
-        
+        await page.AssertActiveCollectionAsync("Videos");
+
         // Videos collection should be active
         var activeButton = page.Locator(".collection-nav a.active");
         var activeText = await activeButton.TextContentWithTimeoutAsync();
         Assert.Contains("Videos", activeText);
-        
+
         await page.CloseAsync();
     }
 
@@ -194,21 +194,21 @@ public class NavigationTests : IAsyncLifetime
     {
         // Arrange
         var page = await _context!.NewPageWithDefaultsAsync();
-        
+
         // Act - Measure header height on homepage
         await page.GotoRelativeAsync("/");
         var homeHeaderHeight = await page.Locator(".section-header.home-banner").BoundingBoxAsync();
-        
+
         // Navigate to section page
         await page.GotoRelativeAsync("/github-copilot");
         var sectionHeaderHeight = await page.Locator(".section-header").BoundingBoxAsync();
-        
+
         // Assert - Both should have defined heights (not auto)
         Assert.NotNull(homeHeaderHeight);
         Assert.NotNull(sectionHeaderHeight);
         Assert.True(homeHeaderHeight.Height > 0);
         Assert.True(sectionHeaderHeight.Height > 0);
-        
+
         await page.CloseAsync();
     }
 
@@ -218,28 +218,28 @@ public class NavigationTests : IAsyncLifetime
         // Arrange
         var page = await _context!.NewPageWithDefaultsAsync();
         await page.GotoRelativeAsync("/");
-        
+
         // Act - Get first section card
         var firstCard = page.Locator(".section-card").First;
         var headerElement = firstCard.Locator(".section-card-header");
-        
+
         // Assert - Should have background-image style
         var style = await headerElement.GetAttributeAsync("style");
         Assert.NotNull(style);
         Assert.Contains("background-image", style);
-        
+
         // Check that there's no grey bar (overlay should cover full height)
         var overlay = headerElement.Locator(".section-overlay");
         var overlayBox = await overlay.BoundingBoxAsync();
         var headerBox = await headerElement.BoundingBoxAsync();
-        
+
         Assert.NotNull(overlayBox);
         Assert.NotNull(headerBox);
-        
+
         // Overlay should have reasonable height (not zero/collapsed)
         Assert.True(overlayBox.Height > 50, "overlay should have substantial height");
         Assert.True(headerBox.Height > 50, "header should have substantial height");
-        
+
         await page.CloseAsync();
     }
 
@@ -249,21 +249,21 @@ public class NavigationTests : IAsyncLifetime
         // Arrange & Act
         var page = await _context!.NewPageWithDefaultsAsync();
         await page.GotoRelativeAsync("/ai/news");
-        
+
         // Assert
         await page.WaitForSelectorWithTimeoutAsync(".collection-nav");
         await page.WaitForSelectorWithTimeoutAsync(".content-item-card");
-        
+
         // Should show AI section
         var heading = page.Locator("h1");
         var headingText = await heading.TextContentWithTimeoutAsync();
         Assert.Contains("Artificial Intelligence", headingText);
-        
+
         // News collection should be active
         var activeButton = page.Locator(".collection-nav a.active");
         var activeText = await activeButton.TextContentWithTimeoutAsync();
         Assert.Contains("News", activeText);
-        
+
         await page.CloseAsync();
     }
 }

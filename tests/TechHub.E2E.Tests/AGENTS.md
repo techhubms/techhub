@@ -611,6 +611,15 @@ Assert.Equal("/github-copilot/all", page.Url);
 // ✅ BEST - Navigate and wait for Blazor streaming to complete
 await page.GotoAndWaitForBlazorAsync($"{BaseUrl}/github-copilot");
 
+// ✅ BEST - Assert element visibility (generic for any element)
+await page.Locator(".content-item-card").First.AssertElementVisibleAsync();
+
+// ✅ BEST - Assert sidebar is visible (common pattern)
+await page.AssertSidebarVisibleAsync();
+
+// ✅ BEST - Get href from element
+var href = await link.GetHrefAsync();
+
 // ✅ GOOD - Wait for URL to change after SPA navigation
 await page.ClickAsync("button");
 await page.WaitForBlazorUrlContainsAsync("/news");
@@ -626,6 +635,15 @@ await page.WaitForURLWithTimeoutAsync("**/github-copilot/news");
 
 // ❌ BAD - Don't use explicit timeout options (harder to maintain)
 await page.WaitForSelectorAsync(".collection-nav", new() { Timeout = 3000 });
+
+// ❌ BAD - Don't use GetAttributeAsync for href (use GetHrefAsync helper)
+var href = await element.GetAttributeAsync("href");  // Use GetHrefAsync() instead!
+
+// ❌ BAD - Don't manually check for sidebars (use AssertSidebarVisibleAsync)
+await Assertions.Expect(page.Locator(".sidebar")).ToBeVisibleAsync();  // Use helper!
+
+// ❌ BAD - Don't use content-specific helpers (use generic AssertElementVisibleAsync)
+await page.Locator(".content-item-card").First.AssertElementVisibleAsync();  // Generic!
 
 // ⚠️ AVOID - Only use for final stabilization (100ms max)
 await Task.Delay(100);
@@ -647,6 +665,11 @@ await Task.Delay(2000);
 | `WaitForSelectorWithTimeoutAsync()`  | **Wait for element (centralized)**     | **Any element wait**                 | **3s**  |
 | `TextContentWithTimeoutAsync()`      | **Get text content (centralized)**     | **Any text retrieval**               | **3s**  |
 | `WaitForURLWithTimeoutAsync()`       | **Wait for URL change (centralized)**  | **Any URL navigation**               | **5s**  |
+| `AssertElementVisibleAsync()`        | **Assert element is visible**          | **Any visibility check**             | **5s**  |
+| `AssertSidebarVisibleAsync()`        | **Assert sidebar is visible**          | **Pages with sidebars**              | **5s**  |
+| `GetHrefAsync()`                     | **Get href attribute from element**    | **Extract link URLs**                | **3s**  |
+| `AssertActiveCollectionAsync()`      | **Assert active collection button**    | **Verify collection state**          | **5s**  |
+| `AssertAttributeContainsAsync()`     | **Assert attribute contains value**    | **Verify element attributes**        | **3s**  |
 | `AssertElementExistsAndVisible()`    | Fail fast if element missing/hidden    | Before interacting with elements     | 3s      |
 | `AssertElementClickable()`           | Fail fast if element not clickable     | Before ClickAsync() calls            | 3s      |
 
