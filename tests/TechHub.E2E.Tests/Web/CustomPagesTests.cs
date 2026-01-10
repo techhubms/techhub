@@ -9,7 +9,8 @@ public class CustomPagesTests(PlaywrightCollectionFixture fixture) : IAsyncLifet
 {
     private const string BaseUrl = "http://localhost:5184";
     private IBrowserContext? _context;
-    private IPage? _page;`r`n    private IPage Page => _page ?? throw new InvalidOperationException("Page not initialized");
+    private IPage? _page;
+    private IPage Page => _page ?? throw new InvalidOperationException("Page not initialized");
 
     public async Task InitializeAsync()
     {

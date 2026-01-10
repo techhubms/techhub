@@ -15,7 +15,8 @@ namespace TechHub.E2E.Tests.Web;
 public class ContentDetailTests(PlaywrightCollectionFixture fixture) : IAsyncLifetime
 {
     private IBrowserContext? _context;
-    private IPage? _page;`r`n    private IPage Page => _page ?? throw new InvalidOperationException("Page not initialized");
+    private IPage? _page;
+    private IPage Page => _page ?? throw new InvalidOperationException("Page not initialized");
     private const string BaseUrl = BlazorHelpers.BaseUrl;
 
     // Test with a known roundup URL - more reliable than clicking through

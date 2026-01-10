@@ -22,39 +22,43 @@
         "ms-dotnettools.csdevkit",
         "ms-dotnettools.vscode-dotnet-runtime",
         "ms-dotnettools.dotnet-interactive-vscode",
-        
         // Azure & Infrastructure
         "ms-azuretools.vscode-bicep",
         "ms-azuretools.vscode-azurecontainerapps",
         "ms-azuretools.vscode-azure-github-copilot",
-        
         // GitHub & Copilot
         "github.copilot",
         "github.copilot-chat",
         "github.vscode-github-actions",
         "github.vscode-pull-request-github",
-        
         // Testing & Quality
         "ms-playwright.playwright",
         "DavidAnson.vscode-markdownlint",
         "humao.rest-client",
-        
         // PowerShell
         "ms-vscode.powershell"
       ]
     }
   },
-  "remoteEnv": {
-    "PLAYWRIGHT_BROWSERS_PATH": "${containerEnv:HOME}/.cache/ms-playwright",
-    "PLAYWRIGHT_LAUNCH_OPTIONS": "{\"args\":[\"--no-sandbox\",\"--disable-setuid-sandbox\"]}",
-    "PLAYWRIGHT_CHROMIUM_USE_HEADLESS_NEW": "1"
-  },
   "postCreateCommand": "bash .devcontainer/post-create.sh",
-  "forwardPorts": [5000, 5001, 15888, 5173],
+  "forwardPorts": [
+    5000,
+    5001,
+    15888,
+    5173
+  ],
   "portsAttributes": {
-    "5000": { "label": "API HTTP" },
-    "5001": { "label": "API HTTPS" },
-    "5173": { "label": "Blazor Dev Server" },
-    "15888": { "label": "Aspire Dashboard" }
+    "5000": {
+      "label": "API HTTP"
+    },
+    "5001": {
+      "label": "API HTTPS"
+    },
+    "5173": {
+      "label": "Blazor Dev Server"
+    },
+    "15888": {
+      "label": "Aspire Dashboard"
+    }
   }
 }

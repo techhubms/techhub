@@ -12,7 +12,8 @@ namespace TechHub.E2E.Tests.Web;
 public class UrlRoutingTests(PlaywrightCollectionFixture fixture) : IAsyncLifetime
 {
     private IBrowserContext? _context;
-    private IPage? _page;`r`n    private IPage Page => _page ?? throw new InvalidOperationException("Page not initialized");
+    private IPage? _page;
+    private IPage Page => _page ?? throw new InvalidOperationException("Page not initialized");
     private const string BaseUrl = "http://localhost:5184";
     private const string ApiUrl = "http://localhost:5029";
 

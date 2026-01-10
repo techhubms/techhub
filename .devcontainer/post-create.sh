@@ -41,21 +41,10 @@ echo "Installing/updating Aspire project templates..."
 dotnet new install Aspire.ProjectTemplates
 
 # ==================== Playwright ====================
-echo "Installing Playwright browsers for .NET..."
-# Set Playwright to install browsers in user directory
-export PLAYWRIGHT_BROWSERS_PATH="$HOME/.cache/ms-playwright"
 
-# Build the test project to ensure Playwright.CLI is restored
-cd /workspaces/techhub
-dotnet build tests/TechHub.E2E.Tests/TechHub.E2E.Tests.csproj
-
-# Install browsers using the project-specific playwright.ps1 (ensures correct version match)
-echo "Installing Playwright browsers (chromium with dependencies)..."
-pwsh tests/TechHub.E2E.Tests/bin/Debug/net10.0/playwright.ps1 install --with-deps chromium
-
-# Install Chrome via npx for Playwright MCP tools compatibility
-echo "Installing Chrome for Playwright MCP tools..."
-npx playwright install chrome
+# Install Chrome browser for both E2E tests and Playwright MCP tools
+echo "Installing Chrome browser for Playwright..."
+npx playwright install chrome --with-deps
 
 # ==================== PowerShell Modules ====================
 echo "Installing PowerShell modules..."
@@ -80,32 +69,6 @@ else
     echo "spec-kit CLI already installed"
 fi
 
-# ==================== Playwright Global Config ====================
-echo "Creating Playwright global configuration..."
-mkdir -p "$HOME/.playwright"
-cat > "$HOME/.playwright/config.json" << 'PLAYWRIGHTEOF'
-{
-  "launchOptions": {
-    "headless": true,
-    "args": [
-      "--no-sandbox",
-      "--disable-setuid-sandbox",
-      "--disable-web-security",
-      "--disable-features=IsolateOrigins,site-per-process",
-      "--disable-blink-features=AutomationControlled"
-    ]
-  },
-  "contextOptions": {
-    "viewport": {
-      "width": 1920,
-      "height": 1080
-    },
-    "locale": "en-US",
-    "timezoneId": "Europe/Brussels"
-  }
-}
-PLAYWRIGHTEOF
-
 # ==================== PowerShell Profile ====================
 echo "Setting up PowerShell profile..."
 PWSH_PROFILE_DIR="$HOME/.config/powershell"
@@ -126,14 +89,6 @@ $env:PATH = "$HOME/.aspire/bin:$env:PATH"
 
 # Add .NET global tools
 $env:PATH = "$HOME/.dotnet/tools:$env:PATH"
-
-# ==================== Playwright Configuration ====================
-# Set Playwright to install browsers in user directory
-$env:PLAYWRIGHT_BROWSERS_PATH = "$HOME/.cache/ms-playwright"
-
-# Configure Playwright to use --no-sandbox for DevContainer compatibility
-$env:PLAYWRIGHT_LAUNCH_OPTIONS = '{"args":["--no-sandbox","--disable-setuid-sandbox"]}'
-$env:PLAYWRIGHT_CHROMIUM_USE_HEADLESS_NEW = "1"
 
 # ==================== Opt-Out Settings ====================
 # Disable .NET CLI telemetry

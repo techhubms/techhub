@@ -4,166 +4,58 @@ End-to-end tests using Playwright to verify complete user workflows and function
 
 **Implementation being tested**: See [src/TechHub.Web/AGENTS.md](../../src/TechHub.Web/AGENTS.md) for Blazor component patterns and [src/TechHub.Api/AGENTS.md](../../src/TechHub.Api/AGENTS.md) for API endpoint patterns.
 
-## Prerequisites
-
-1. **Playwright browsers must be installed**:
-
-   ```powershell
-   pwsh tests/TechHub.E2E.Tests/bin/Debug/net10.0/playwright.ps1 install
-   ```
-
-2. **Application must be running**: Choose the appropriate mode based on your workflow.
-
-   **For Automated Testing** (verifying changes):
-
-   ```powershell
-   # Run all tests and exit (don't keep servers running)
-   ./run.ps1 -OnlyTests
-   ```
-
-   **For Interactive Debugging** (AI agents AND humans using Playwright MCP):
-
-   ```powershell
-   # Skip tests and just start servers (recommended for Playwright MCP)
-   ./run.ps1 -SkipTests
-   
-   # OR run tests first, then keep servers running
-   ./run.ps1
-   ```
-
-   **IMPORTANT for AI agents**: Use `-SkipTests` + Playwright MCP for interactive debugging!
-   - Faster than writing tests for exploration
-   - More powerful than curl/wget for UI testing
-   - Can investigate bugs, test interactions, verify behavior interactively
-   - Afterwards always write tests that reproduce the debugged issues so they don't happen again
-
 ## Running Tests
 
-### Full Test Suite (Recommended)
+### Recommended Approach
 
-**For Automated Testing** (verifying all changes):
+**Always use `./run.ps1`** - it handles server startup, test execution, and cleanup automatically:
 
 ```powershell
-# From repository root
-./run.ps1 -OnlyTests   # Builds, runs all tests, exits
+# Run all tests, then exit (recommended for verifying changes)
+./run.ps1 -OnlyTests
+
+# Run tests first, then keep servers running for debugging
+./run.ps1
 ```
 
-**For Interactive Debugging** (AI agents AND humans):
+### Interactive Debugging with Playwright MCP
+
+For investigating bugs or exploring UI behavior interactively:
 
 ```powershell
-# From repository root - START SERVERS WITHOUT TESTS
-./run.ps1 -SkipTests   # Fast startup, use Playwright MCP interactively
+# Start servers without running tests
+./run.ps1 -SkipTests
 
-# OR run tests first, then keep servers running
-./run.ps1              # Builds, runs all tests, keeps servers running
+# Then use Playwright MCP tools directly in GitHub Copilot Chat to:
+# - Navigate pages and inspect elements
+# - Take snapshots and screenshots
+# - Test interactions and verify behavior
+# - Reproduce bugs before writing tests
 ```
 
-**AI Agents - Use Interactive Debugging More Often!**
+**When to use Playwright MCP**:
 
-- When investigating bugs: `./run.ps1 -SkipTests` + Playwright MCP
-- When testing UI interactions: `./run.ps1 -SkipTests` + Playwright MCP
-- When verifying changes: `./run.ps1 -OnlyTests` (automated tests)
+- Faster than writing tests for initial exploration
+- More powerful than curl/wget for UI testing
+- Investigate bugs, test interactions, verify behavior interactively
+- Afterwards, write E2E tests that reproduce the debugged issues
 
-### Manual Test Execution (When Servers Already Running)
+### Running Specific Tests
 
-**⚠️ CRITICAL WARNING**: Running `dotnet test` on the E2E project directly **WILL FAIL** unless servers are already running!
-
-- **DO NOT USE**: `dotnet test tests/TechHub.E2E.Tests` without starting servers first
-- **RECOMMENDED**: Always use `./run.ps1 -OnlyTests` which handles everything automatically
-- **ONLY IF** servers are already running (via `./run.ps1 -SkipTests`), then you can run:
+**Only when servers are already running** (via `./run.ps1 -SkipTests`):
 
 ```powershell
-# Run all E2E tests (requires servers at localhost:5029 and localhost:5184)
+# Run all E2E tests
 dotnet test tests/TechHub.E2E.Tests/TechHub.E2E.Tests.csproj
-```
 
-### Run Specific Test File
-
-```powershell
-# URL routing and navigation tests
+# Run specific test file
 dotnet test tests/TechHub.E2E.Tests/TechHub.E2E.Tests.csproj --filter "FullyQualifiedName~Web.UrlRoutingTests"
 
-# Navigation tests
-dotnet test tests/TechHub.E2E.Tests/TechHub.E2E.Tests.csproj --filter "FullyQualifiedName~Web.NavigationTests"
-
-# RSS feed tests
-dotnet test tests/TechHub.E2E.Tests/TechHub.E2E.Tests.csproj --filter "FullyQualifiedName~Web.RssTests"
-
-# API integration tests (non-Playwright)
-dotnet test tests/TechHub.E2E.Tests/TechHub.E2E.Tests.csproj --filter "FullyQualifiedName~Api.ApiEndToEndTests"
-```
-
-### Run Single Test
-
-```powershell
-# Example: Run only the URL routing test
+# Run single test method
 dotnet test tests/TechHub.E2E.Tests/TechHub.E2E.Tests.csproj --filter "FullyQualifiedName~Web.UrlRoutingTests.NavigateToSection_DefaultsToAllCollection"
 ```
 
-## Test Coverage
-
-### URL Routing and Navigation (Web/UrlRoutingTests.cs)
-
-Comprehensive tests for URL-based navigation and "all" collection functionality:
-
-**URL Routing** (7 tests):
-
-- ✅ Navigate to section defaults to /section/all
-- ✅ Navigate to section/collection maintains URL
-- ✅ Click collection button updates URL to /section/collection
-- ✅ Click "All" button updates URL to /section/all
-- ✅ Browser back button navigates to previous collection
-- ✅ Browser forward button navigates to next collection
-
-**"All" Collection Functionality** (6 tests):
-
-- ✅ /section/all shows all content from that section
-- ✅ /all/all shows everything from all sections and collections
-- ✅ /all/collection shows that collection across all sections
-- ✅ "All" button exists in collection sidebar
-- ✅ "All" collection shows collection badges (proper capitalization)
-- ✅ Specific collection hides redundant collection badge
-
-**Interactive Buttons** (3 tests):
-
-- ✅ All collection buttons are clickable and update URL
-- ✅ Retry button reloads content after errors
-- ✅ Active collection button has "active" CSS class
-
-**URL Sharing and Bookmarking** (2 tests):
-
-- ✅ Direct URL loads correct collection state
-- ✅ Copied URL restores exact collection state in new tab
-
-#### Total: 20 comprehensive test cases
-
-### Navigation Improvements (Web/NavigationTests.cs)
-
-Tests for section ordering, styling, and navigation flow:
-
-- ✅ Homepage sections ordered correctly (starts with "Everything")
-- ✅ Section card click navigates to section homepage
-- ✅ Collection navigation updates URL (no hash fragments)
-- ✅ Collection page hides redundant collection badge
-- ✅ "All" page shows collection badge with proper capitalization
-- ✅ Collection sidebar buttons are clickable
-- ✅ Header area has consistent height
-- ✅ Section background images display correctly (no grey bars)
-- ✅ Direct URL to section/collection loads correct content
-
-### RSS Feed Functionality (Web/RssTests.cs)
-
-Tests for RSS feed features:
-
-- ✅ Feed discovery links exist on home and section pages
-- ✅ RSS icon displays correctly in section header
-- ✅ Footer RSS link navigates to feed
-- ✅ RSS feeds are valid XML
-- ✅ RSS feeds contain proper metadata
-- ✅ Section feeds filter content correctly
-- ✅ Collection feeds work properly
-
-#### Total: 9 test cases
+⚠️ **WARNING**: `dotnet test` requires servers at `localhost:5029` (API) and `localhost:5184` (Web). It **WILL FAIL** if servers aren't running. Always prefer `./run.ps1 -OnlyTests`.
 
 ## Test Architecture
 
@@ -171,414 +63,142 @@ Tests for RSS feed features:
 
 ```text
 tests/TechHub.E2E.Tests/
-├── Web/                                 ← Playwright-based E2E tests for frontend
-│   ├── UrlRoutingTests.cs              ← URL routing, "all" collection, buttons (20 tests)
-│   ├── NavigationTests.cs              ← Section ordering, styling, navigation (10 tests)
-│   └── RssTests.cs                     ← RSS feed functionality (9 tests)
+├── Web/                                 ← Playwright-based E2E tests
+│   ├── UrlRoutingTests.cs              ← URL routing, collections, buttons (18 tests)
+│   ├── NavigationTests.cs              ← Section navigation, styling (8 tests)
+│   ├── RssTests.cs                     ← RSS feeds (9 tests)
+│   ├── ContentDetailTests.cs           ← Content pages (8 tests)
+│   ├── AboutPageTests.cs               ← About page (5 tests)
+│   ├── HomePageRoundupsTests.cs        ← Homepage roundups (3 tests)
+│   ├── HomePageSidebarTests.cs         ← Homepage sidebar (3 tests)
+│   ├── CustomPagesTests.cs             ← Custom pages (10 tests)
+│   ├── SectionCardLayoutTests.cs       ← Section cards (3 tests)
+│   └── SectionPageKeyboardNavigationTests.cs ← Keyboard nav (5 tests)
 ├── Api/
-│   └── ApiEndToEndTests.cs             ← Direct API testing (WebApplicationFactory, not Playwright)
+│   └── ApiEndToEndTests.cs             ← Direct API testing (no Playwright)
 ├── Helpers/
-│   ├── BlazorHelpers.cs                ← Extension methods for Blazor-specific wait patterns
+│   ├── BlazorHelpers.cs                ← Blazor-specific wait patterns
 │   └── PlaywrightExtensions.cs         ← Page interaction helpers
-├── PlaywrightCollectionFixture.cs      ← Shared browser instance (ONE per test run)
-├── xunit.runner.json                   ← Parallel execution configuration
-├── TechHub.E2E.Tests.csproj
-└── AGENTS.md (this file)
+├── PlaywrightCollectionFixture.cs      ← Shared browser configuration
+└── xunit.runner.json                   ← Parallel execution settings
 ```
 
-**Folder Organization**:
+**Total**: 72 E2E test cases across all Web test files
 
-- **Web/** - Playwright-based tests for frontend (Blazor components, URL routing, UI interactions)
-- **Api/** - Direct API integration tests using WebApplicationFactory (no Playwright)
-- Test files organized by testing approach, not by feature
+### Shared Page Pattern
 
-**Naming Convention**:
-
-- File names match their test purpose with namespace: `Web.UrlRoutingTests`, `Api.ApiEndToEndTests`
-- All Playwright-based tests in `Web/` folder
-- Non-Playwright integration tests in `Api/` folder
-- Collections defined in `PlaywrightCollectionFixture.cs` match test file purposes
-
-### Performance Architecture 🚀
-
-**KEY INSIGHT**: The E2E tests were dramatically improved by implementing these optimizations:
-
-#### 1. **Shared Browser Instance** (90% speed improvement)
-
-**Problem**: Creating a new Playwright browser for each test class took 2-3 seconds per class.
-
-**Solution**: Use xUnit Collection Fixtures to share ONE browser instance across all test classes:
+**CRITICAL**: All test classes use a consistent shared page pattern:
 
 ```csharp
-// PlaywrightCollectionFixture.cs - Created ONCE per test run
-public class PlaywrightCollectionFixture : IAsyncLifetime
-{
-    public IBrowser? Browser { get; private set; }
-    
-    public async Task InitializeAsync()
-    {
-        Playwright = await Microsoft.Playwright.Playwright.CreateAsync();
-        Browser = await Playwright.Chromium.LaunchAsync(new() { Headless = true });
-    }
-    
-    // Each test class gets isolated browser CONTEXT (not new browser!)
-    public async Task<IBrowserContext> CreateContextAsync()
-    {
-        return await Browser.NewContextAsync(new()
-        {
-            ViewportSize = new ViewportSize { Width = 1920, Height = 1080 },
-            Locale = "en-US",
-            TimezoneId = "Europe/Brussels",
-        });
-    }
-}
-```
-
-**Benefits**:
-
-- **ONE browser launch** for all test classes (instead of N launches)
-- **Isolated contexts** for proper test isolation (separate cookies, storage, etc.)
-- **Parallel execution** still works - contexts are thread-safe
-- **90% faster** test suite startup
-
-#### 2. **Parallel Test Execution** (4x throughput)
-
-**Configuration** in `xunit.runner.json`:
-
-```jsonc
-{
-  "parallelizeAssembly": true,
-  "parallelizeTestCollections": true,
-  "maxParallelThreads": -1  // Use all available CPU cores
-}
-```
-
-**Test Class Setup** - Each class gets its own collection for parallel execution:
-
-```csharp
-// Each collection can run in parallel
-[CollectionDefinition("URL Routing Tests")]
-public class UrlRoutingCollection : ICollectionFixture<PlaywrightCollectionFixture> { }
-
-[CollectionDefinition("Navigation Tests")]
-public class NavigationCollection : ICollectionFixture<PlaywrightCollectionFixture> { }
-
-// Test class declares which collection it belongs to
-[Collection("URL Routing Tests")]
-public class UrlRoutingTests : IAsyncLifetime
+[Collection("My Feature Tests")]
+public class MyFeatureTests : IAsyncLifetime
 {
     private readonly PlaywrightCollectionFixture _fixture;
-    private IBrowserContext? _context;  // Isolated context per test class
-    
+    private IBrowserContext? _context;
+    private IPage? _page;
+    private IPage Page => _page ?? throw new InvalidOperationException("Page not initialized");
+
+    public MyFeatureTests(PlaywrightCollectionFixture fixture)
+    {
+        _fixture = fixture;
+    }
+
     public async Task InitializeAsync()
     {
-        _context = await _fixture.CreateContextAsync();  // Fast! Just a context, not browser
-    }
-}
-```
-
-**Benefits**:
-
-- **Parallel execution** across collections on multi-core machines
-- **Isolated contexts** prevent test interference
-- **Each collection** gets its own browser instance
-- **Fast context creation** (<100ms vs 2-3s for browser)
-
-#### 3. **Smart Wait Strategies** (No Task.Delay!)
-
-**❌ OLD Pattern** (slow and flaky):
-
-```csharp
-await page.GotoAsync(url);
-await Task.Delay(2000);  // Arbitrary wait - might be too short OR too long
-```
-
-**✅ NEW Pattern** (fast and reliable):
-
-```csharp
-// Use intelligent wait strategies from BlazorHelpers.cs
-await page.GotoAndWaitForBlazorAsync(url);  // Waits for actual content, not arbitrary time
-```
-
-**How It Works**:
-
-```csharp
-public static async Task GotoAndWaitForBlazorAsync(this IPage page, string url)
-{
-    // 1. Navigate with optimized settings
-    await page.GotoAsync(url, new() { 
-        WaitUntil = WaitUntilState.DOMContentLoaded,  // Faster than NetworkIdle
-        Timeout = 10000  // Fail fast (reduced from 30s default)
-    });
-    
-    // 2. Wait for Blazor streaming to complete (skeletons → real content)
-    try
-    {
-        await page.WaitForSelectorAsync(".skeleton-header", new() { 
-            State = WaitForSelectorState.Hidden,
-            Timeout = 2000  // Reduced timeout
-        });
-    }
-    catch { /* Skeleton might not exist if content loaded instantly */ }
-    
-    // 3. Wait for real content cards
-    try
-    {
-        await page.WaitForSelectorAsync(".content-item-card:not(.skeleton-card)", new() { 
-            State = WaitForSelectorState.Visible,
-            Timeout = 2000
-        });
-    }
-    catch { /* Content cards might not exist on all pages */ }
-    
-    // 4. Brief stabilization (100ms vs old 1000ms Task.Delay)
-    await Task.Delay(100);
-}
-```
-
-**Benefits**:
-
-- **No arbitrary delays** - waits for actual conditions
-- **Fail fast** - aggressive timeouts catch issues early
-- **Blazor-aware** - understands streaming render lifecycle
-- **Shorter total wait** - returns as soon as content is ready
-
-#### 4. **SPA Navigation Detection** (No double waits!)
-
-**Problem**: Blazor uses client-side routing (like React/Angular/Vue) - URL changes without page reloads.
-
-**❌ OLD Pattern** (doesn't work):
-
-```csharp
-await page.ClickAsync("button");
-await page.WaitForNavigationAsync();  // NEVER fires - no traditional navigation!
-await Task.Delay(1000);  // Arbitrary wait because WaitForNavigationAsync failed
-```
-
-**✅ NEW Pattern** (standard Playwright SPA pattern):
-
-```csharp
-await page.ClickAsync("button");
-await page.WaitForBlazorUrlContainsAsync("/news");  // Polls URL until it matches
-```
-
-**Implementation**:
-
-```csharp
-public static async Task WaitForBlazorUrlContainsAsync(
-    this IPage page,
-    string urlSegment,
-    int timeoutMs = 5000)
-{
-    // Standard Playwright pattern for SPAs - poll JavaScript expression
-    await page.WaitForFunctionAsync(
-        $"() => window.location.pathname.includes('{urlSegment}')",
-        new() { 
-            Timeout = timeoutMs,
-            PollingInterval = 50  // Check every 50ms (fast detection)
-        }
-    );
-}
-```
-
-**Key Insight**: This is NOT a Blazor workaround - it's the **standard Playwright pattern** for ANY modern SPA (React, Angular, Vue, Blazor). Client-side routing doesn't trigger navigation events.
-
-#### 5. **Smart State Synchronization** (Replace 1000ms delays with polling)
-
-**Problem**: After browser back/forward, Blazor needs time to sync component state with URL.
-
-**❌ OLD Pattern**:
-
-```csharp
-await page.GoBackAsync();
-await Task.Delay(1000);  // Hope state is synced by now
-```
-
-**✅ NEW Pattern**:
-
-```csharp
-await page.GoBackAsync();
-await page.WaitForBlazorStateSyncAsync("News");  // Returns as soon as state matches
-```
-
-**Implementation**:
-
-```csharp
-public static async Task WaitForBlazorStateSyncAsync(
-    this IPage page,
-    string expectedActiveButtonText,
-    int timeoutMs = 3000)
-{
-    var startTime = DateTime.UtcNow;
-    while ((DateTime.UtcNow - startTime).TotalMilliseconds < timeoutMs)
-    {
-        try
-        {
-            var activeButton = page.Locator(".collection-nav button.active");
-            var activeText = await activeButton.TextContentAsync(new() { Timeout = 500 });
-            
-            if (activeText?.Contains(expectedActiveButtonText, StringComparison.OrdinalIgnoreCase) == true)
-            {
-                return;  // State is synced! Return immediately
-            }
-        }
-        catch { /* Keep polling */ }
-        
-        await Task.Delay(50);  // Poll every 50ms (vs old 1000ms delay)
-    }
-    
-    throw new TimeoutException($"State did not sync to '{expectedActiveButtonText}' within {timeoutMs}ms");
-}
-```
-
-**Benefits**:
-
-- **Fast return** - exits as soon as condition is met (usually <200ms)
-- **No over-waiting** - old pattern always waited full 1000ms
-- **Clear errors** - timeout message shows what was expected
-- **20x faster polling** - 50ms intervals vs 1000ms delays
-
-#### 6. **Aggressive Timeouts** (Fail fast, not slow)
-
-**Philosophy**: Tests should fail quickly when something is wrong, not hang for 30+ seconds.
-
-**Default Playwright Timeouts**: 30 seconds (too slow for CI/CD)
-
-**Our Optimized Timeouts**:
-
-```csharp
-public static async Task<IPage> NewPageWithDefaultsAsync(this IBrowserContext context)
-{
-    var page = await context.NewPageAsync();
-    page.SetDefaultTimeout(3000);           // 3s for element operations
-    page.SetDefaultNavigationTimeout(10000); // 10s for page loads
-    return page;
-}
-```
-
-**Benefits**:
-
-- **Fail fast** - 3s timeout catches missing elements quickly
-- **CI/CD friendly** - tests complete in minutes, not hours
-- **Clear feedback** - fast failures = faster debugging
-
-### Base Configuration
-
-- **Browser**: Chromium (headless mode, ONE instance shared across all tests)
-- **Web URL**: <http://localhost:5184>
-- **API URL**: <http://localhost:5029>
-- **Test Framework**: xUnit with Collection Fixtures for parallel execution
-- **Assertions**: FluentAssertions for readable, descriptive assertions
-- **Performance**: Parallel execution, smart waits, shared browser instance
-
-### Test Patterns
-
-**CRITICAL**: Each test class now uses the shared browser fixture for maximum performance:
-
-```csharp
-[Collection("URL Routing Tests")]  // Unique collection name for parallel execution
-public class UrlRoutingAndNavigationTests : IAsyncLifetime
-{
-    private readonly PlaywrightCollectionFixture _fixture;  // Shared fixture
-    private IBrowserContext? _context;  // Isolated context per test class
-    
-    public UrlRoutingAndNavigationTests(PlaywrightCollectionFixture fixture)
-    {
-        _fixture = fixture;  // xUnit injects the shared fixture
-    }
-    
-    public async Task InitializeAsync()
-    {
-        // Create isolated context (fast!) - NOT a new browser (slow!)
         _context = await _fixture.CreateContextAsync();
+        _page = await _context.NewPageWithDefaultsAsync();
     }
-    
+
     public async Task DisposeAsync()
     {
-        // Dispose context only - browser stays alive for other tests
+        if (_page != null)
+            await _page.CloseAsync();
         if (_context != null)
             await _context.DisposeAsync();
     }
-    
+
     [Fact]
     public async Task MyTest()
     {
-        // Create page from context (not browser!)
-        var page = await _context!.NewPageWithDefaultsAsync();
-        
-        // Use smart wait helpers
-        await page.GotoAndWaitForBlazorAsync($"{BaseUrl}/github-copilot");
-        
-        // Clean up page after test
-        await page.CloseAsync();
+        // Use Page property - clean, no ! everywhere
+        await Page.GotoRelativeAsync("/github-copilot");
+        await Page.AssertUrlEndsWithAsync("/github-copilot");
     }
 }
 ```
 
+**Benefits**:
+
+- Each test method gets its own fresh page
+- Automatic cleanup even if test fails
+- Clean test code - use `Page` property instead of `_page!` everywhere
+- No manual page cleanup in test methods
+
+### Browser Configuration
+
+All browser launch options are centralized in [PlaywrightCollectionFixture.cs](PlaywrightCollectionFixture.cs):
+
+```csharp
+Browser = await Playwright.Chromium.LaunchAsync(new()
+{
+    Headless = true,
+    Channel = "chrome",              // Use Chrome browser (not chromium-headless-shell)
+    Timeout = 5000,
+    Args =
+    [
+        "--no-sandbox",              // Required for DevContainer
+        "--disable-setuid-sandbox",  // Required for DevContainer
+        "--disable-web-security",    // Allow CORS for local testing
+        "--disable-features=IsolateOrigins,site-per-process",
+        "--disable-blink-features=AutomationControlled",
+        "--disable-dev-shm-usage",   // Prevent shared memory issues
+        "--disable-gpu"              // Not needed in headless
+    ]
+});
+```
+
+**Browser Context Settings**:
+
+```csharp
+return await Browser.NewContextAsync(new()
+{
+    ViewportSize = new ViewportSize { Width = 1920, Height = 1080 },
+    Locale = "en-US",
+    TimezoneId = "Europe/Brussels",
+    IgnoreHTTPSErrors = true
+});
+```
+
+**Why these settings?**
+
+- **Chrome channel**: Reliable headless testing + works with Playwright MCP tools
+- **DevContainer compatibility**: `--no-sandbox` and `--disable-setuid-sandbox` required for containers
+- **Local testing**: `--disable-web-security` allows CORS for localhost
+- **Consistent viewport**: 1920x1080 matches common desktop resolution
+- **Timezone**: Europe/Brussels matches application configuration
+
+### Performance Optimizations
+
+**1. Shared Browser Instance** (90% faster startup):
+
+- ONE browser launch for all test classes
+- Each test gets isolated context (separate cookies, storage)
+- Defined in PlaywrightCollectionFixture.cs, shared via xUnit Collection Fixtures
+
+**2. Parallel Test Execution** (4x throughput):
+
+- Each test class runs in parallel
+- Configured in xunit.runner.json: `maxParallelThreads: 4` (fixed thread count)
+- Each collection gets its own browser context for isolation
+
+**3. Optimized Timeouts** (fail fast):
+
+- Element operations: 5s (vs Playwright default 30s)
+- Page loads: 10s (vs Playwright default 30s)
+- Assertions: 5s (vs Playwright default 30s)
+- Managed centrally via constants in `BlazorHelpers.cs`
+
 ## Writing New Tests
-
-### Critical Performance Rules 🚀
-
-**ALWAYS follow these patterns** for fast, reliable tests:
-
-1. **✅ Use Collection Fixtures** - ONE browser for all tests
-
-   ```csharp
-   [Collection("My Test Collection")]  // Unique name for parallel execution
-   public class MyTests : IAsyncLifetime
-   {
-       private readonly PlaywrightCollectionFixture _fixture;
-       private IBrowserContext? _context;
-       
-       public async Task InitializeAsync()
-       {
-           _context = await _fixture.CreateContextAsync();  // Fast context creation
-       }
-   }
-   ```
-
-2. **✅ Use Smart Wait Helpers** - NO Task.Delay!
-
-   ```csharp
-   // ✅ Good - waits for actual Blazor content
-   await page.GotoAndWaitForBlazorAsync($"{BaseUrl}/github-copilot");
-   
-   // ❌ Bad - arbitrary delay
-   await page.GotoAsync(url);
-   await Task.Delay(2000);
-   ```
-
-3. **✅ Use SPA Navigation Detection** - NOT WaitForNavigationAsync
-
-   ```csharp
-   // ✅ Good - standard Playwright SPA pattern
-   await page.ClickAsync("button");
-   await page.WaitForBlazorUrlContainsAsync("/news");
-   
-   // ❌ Bad - doesn't work with client-side routing
-   await page.ClickAsync("button");
-   await page.WaitForNavigationAsync();  // Never fires!
-   ```
-
-4. **✅ Use State Polling** - NOT arbitrary delays
-
-   ```csharp
-   // ✅ Good - returns as soon as state is synced
-   await page.GoBackAsync();
-   await page.WaitForBlazorStateSyncAsync("News");
-   
-   // ❌ Bad - always waits full duration
-   await page.GoBackAsync();
-   await Task.Delay(1000);
-   ```
-
-5. **✅ Create New Collection Definitions** - For parallel execution
-
-   ```csharp
-   // Add to PlaywrightCollectionFixture.cs
-   [CollectionDefinition("My Feature Tests")]
-   public class MyFeatureCollection : ICollectionFixture<PlaywrightCollectionFixture> { }
-   ```
 
 ### Test Naming Convention
 
@@ -590,128 +210,64 @@ Examples:
 - `ClickCollectionButton_UpdatesURL`
 - `AllCollection_ShowsAllContentFromSection`
 
+### Using BlazorHelpers
+
+**ALWAYS use helper methods** from BlazorHelpers.cs for consistent timeout management:
+
+```csharp
+// Navigation
+await Page.GotoRelativeAsync("/github-copilot");                    // Navigate with Blazor wait
+await Page.WaitForBlazorUrlContainsAsync("/news");                  // Wait for SPA navigation
+
+// High-level navigation pattern (consolidates click + wait + verify)
+await Page.ClickAndNavigateAsync(".collection-nav a", text: "News",
+    expectedUrlSegment: "/news", waitForActiveState: "News");        // Click + navigate + verify
+
+// Assertions
+await Page.AssertUrlEndsWithAsync("/github-copilot");               // Assert URL suffix
+await element.AssertElementVisibleAsync();                           // Assert element visible
+await Page.AssertElementVisibleBySelectorAsync(".sidebar");         // Assert by selector
+await Page.AssertElementContainsTextBySelectorAsync("h1", "Title"); // Assert text content
+
+// Interactions
+await button.ClickBlazorElementAsync();                              // Click with Blazor handling
+var text = await element.TextContentWithTimeoutAsync();              // Get text with timeout
+var href = await link.GetHrefAsync();                                // Get href attribute
+```
+
+**Available Helper Methods**:
+
+| Method | Purpose | Timeout |
+| ------ | ------- | ------- |
+| `NewPageWithDefaultsAsync()` | Create page with optimized timeouts | 5s/10s |
+| `GotoRelativeAsync()` | Navigate to relative URL with Blazor wait | 10s |
+| `ClickAndNavigateAsync()` | High-level click + navigate + verify pattern | 10s |
+| `WaitForBlazorUrlContainsAsync()` | Wait for SPA navigation | 10s |
+| `WaitForBlazorRenderAsync()` | Wait for element to appear | 5s |
+| `ClickBlazorElementAsync()` | Click with Blazor-aware handling | 5s |
+| `AssertElementVisibleAsync()` | Assert element is visible | 5s |
+| `AssertUrlEndsWithAsync()` | Assert URL ends with segment | 10s |
+| `AssertElementVisibleBySelectorAsync()` | Assert element visible by selector | 5s |
+| `AssertElementContainsTextBySelectorAsync()` | Assert text content by selector | 5s |
+| `AssertElementVisibleByRoleAsync()` | Assert element visible by ARIA role | 5s |
+| `TextContentWithTimeoutAsync()` | Get text content with timeout | 5s |
+| `GetHrefAsync()` | Get href attribute from element | 5s |
+| `WaitForSelectorWithTimeoutAsync()` | Wait for selector with timeout | 5s |
+
 ### Assertion Style
 
-Use FluentAssertions for readable, descriptive assertions:
+Use FluentAssertions for readable assertions:
 
 ```csharp
 // ✅ Good - descriptive with reason
-page.Url.Should().EndWith("/github-copilot/all",
+Page.Url.Should().EndWith("/github-copilot/all",
     "navigating to a section without collection should default to /section/all");
 
 // ❌ Bad - no context
-Assert.Equal("/github-copilot/all", page.Url);
+Assert.Equal("/github-copilot/all", Page.Url);
 ```
-
-### Waiting for Elements
-
-**Use smart Blazor-aware wait helpers** from `BlazorHelpers.cs`:
-
-```csharp
-// ✅ BEST - Navigate and wait for Blazor streaming to complete
-await page.GotoAndWaitForBlazorAsync($"{BaseUrl}/github-copilot");
-
-// ✅ BEST - Assert element visibility (generic for any element)
-await page.Locator(".content-item-card").First.AssertElementVisibleAsync();
-
-// ✅ BEST - Assert sidebar is visible (common pattern)
-await page.AssertSidebarVisibleAsync();
-
-// ✅ BEST - Get href from element
-var href = await link.GetHrefAsync();
-
-// ✅ GOOD - Wait for URL to change after SPA navigation
-await page.ClickAsync("button");
-await page.WaitForBlazorUrlContainsAsync("/news");
-
-// ✅ GOOD - Wait for component state to sync after browser navigation
-await page.GoBackAsync();
-await page.WaitForBlazorStateSyncAsync("News");
-
-// ✅ GOOD - Use centralized timeout methods (timeouts managed in one place)
-await page.WaitForSelectorWithTimeoutAsync(".collection-nav");
-var text = await locator.TextContentWithTimeoutAsync();
-await page.WaitForURLWithTimeoutAsync("**/github-copilot/news");
-
-// ❌ BAD - Don't use explicit timeout options (harder to maintain)
-await page.WaitForSelectorAsync(".collection-nav", new() { Timeout = 3000 });
-
-// ❌ BAD - Don't use GetAttributeAsync for href (use GetHrefAsync helper)
-var href = await element.GetAttributeAsync("href");  // Use GetHrefAsync() instead!
-
-// ❌ BAD - Don't manually check for sidebars (use AssertSidebarVisibleAsync)
-await Assertions.Expect(page.Locator(".sidebar")).ToBeVisibleAsync();  // Use helper!
-
-// ❌ BAD - Don't use content-specific helpers (use generic AssertElementVisibleAsync)
-await page.Locator(".content-item-card").First.AssertElementVisibleAsync();  // Generic!
-
-// ⚠️ AVOID - Only use for final stabilization (100ms max)
-await Task.Delay(100);
-
-// ❌ NEVER - Arbitrary delays hide real issues
-await Task.Delay(2000);
-```
-
-**Available Helper Methods** (in `BlazorHelpers.cs`):
-
-| Method                               | Purpose                                | When to Use                          | Timeout |
-| ------------------------------------ | -------------------------------------- | ------------------------------------ | ------- |
-| `NewPageWithDefaultsAsync()`         | Create page with aggressive timeouts   | Every test start                     | 3s/10s  |
-| `GotoAndWaitForBlazorAsync()`        | Navigate + wait for streaming complete | Initial page load                    | 10s     |
-| `WaitForBlazorUrlContainsAsync()`    | Wait for SPA navigation                | After clicks that change URL         | 5s      |
-| `WaitForBlazorStateSyncAsync()`      | Wait for state sync                    | After browser back/forward           | 3s      |
-| `WaitForBlazorCircuitAsync()`        | Wait for SignalR connection            | Rare - after reconnect               | N/A     |
-| `WaitForBlazorRenderAsync()`         | Wait for element to appear             | After state changes                  | Default |
-| `WaitForSelectorWithTimeoutAsync()`  | **Wait for element (centralized)**     | **Any element wait**                 | **3s**  |
-| `TextContentWithTimeoutAsync()`      | **Get text content (centralized)**     | **Any text retrieval**               | **3s**  |
-| `WaitForURLWithTimeoutAsync()`       | **Wait for URL change (centralized)**  | **Any URL navigation**               | **5s**  |
-| `AssertElementVisibleAsync()`        | **Assert element is visible**          | **Any visibility check**             | **5s**  |
-| `AssertSidebarVisibleAsync()`        | **Assert sidebar is visible**          | **Pages with sidebars**              | **5s**  |
-| `GetHrefAsync()`                     | **Get href attribute from element**    | **Extract link URLs**                | **3s**  |
-| `AssertActiveCollectionAsync()`      | **Assert active collection button**    | **Verify collection state**          | **5s**  |
-| `AssertAttributeContainsAsync()`     | **Assert attribute contains value**    | **Verify element attributes**        | **3s**  |
-| `AssertElementExistsAndVisible()`    | Fail fast if element missing/hidden    | Before interacting with elements     | 3s      |
-| `AssertElementClickable()`           | Fail fast if element not clickable     | Before ClickAsync() calls            | 3s      |
-
-**🎯 Centralized Timeout Management** (NEW):
-
-All timeouts are now managed through extension methods in `BlazorHelpers.cs`. This means:
-
-- **Single point of control**: Change timeout values in one place (e.g., from 3s to 5s for slower environments)
-- **Consistent behavior**: All tests use the same timeout values
-- **Fail fast**: Reduced from 30s defaults to 3-5s for quick failure detection
-- **Easy tuning**: Adjust `WaitForSelectorWithTimeoutAsync()`, `TextContentWithTimeoutAsync()`, and `WaitForURLWithTimeoutAsync()` methods to change all tests at once
-
-**Fail-Fast Pattern** (NEW - Use for Better Error Messages):
-
-The new `AssertElementExistsAndVisible()` and `AssertElementClickable()` helpers provide early failure detection:
-
-```csharp
-// ✅ BEST - Fail fast with clear error if button doesn't exist or isn't clickable
-var button = page.Locator("button.submit");
-await button.AssertElementClickable("Submit button");
-await button.ClickAsync();
-
-// ✅ GOOD - Fail fast with clear error if element doesn't exist or isn't visible  
-var sidebar = page.Locator(".content-sidebar");
-await sidebar.AssertElementExistsAndVisible("Content sidebar");
-(await sidebar.IsVisibleAsync()).Should().BeTrue();
-
-// ❌ OLD - Generic timeout error doesn't tell you WHY it failed
-var button = page.Locator("button.submit");
-await button.ClickAsync(); // Timeout: "Element not found" - but WHY? Wrong selector? Element hidden? Disabled?
-```
-
-**Benefits of Fail-Fast Helpers**:
-
-- **Better error messages**: "Element not found: Submit button. Selector 'button.submit' matched 0 elements" vs "Timeout"
-- **Faster debugging**: Immediate failure vs waiting for full timeout
-- **Actionable information**: Tells you if element is missing, hidden, disabled, or covered
-- **Early detection**: Catch issues before they cause cascading failures
 
 ### Complete Test Example
-
-**Full example** showing all performance optimizations:
 
 ```csharp
 using Microsoft.Playwright;
@@ -719,30 +275,26 @@ using Xunit;
 using FluentAssertions;
 using TechHub.E2E.Tests.Helpers;
 
-namespace TechHub.E2E.Tests.Tests;
+namespace TechHub.E2E.Tests.Web;
 
-// Step 1: Use Collection attribute for parallel execution
 [Collection("My Feature Tests")]
-public class MyFeatureTests : IAsyncLifetime
+public class MyFeatureTests(PlaywrightCollectionFixture fixture) : IAsyncLifetime
 {
-    private readonly PlaywrightCollectionFixture _fixture;
     private IBrowserContext? _context;
+    private IPage? _page;
+    private IPage Page => _page ?? throw new InvalidOperationException("Page not initialized");
     private const string BaseUrl = "http://localhost:5184";
 
-    // Step 2: Inject shared fixture
-    public MyFeatureTests(PlaywrightCollectionFixture fixture)
-    {
-        _fixture = fixture;
-    }
-
-    // Step 3: Create isolated context (NOT new browser!)
     public async Task InitializeAsync()
     {
-        _context = await _fixture.CreateContextAsync();
+        _context = await fixture.CreateContextAsync();
+        _page = await _context.NewPageWithDefaultsAsync();
     }
 
     public async Task DisposeAsync()
     {
+        if (_page != null)
+            await _page.CloseAsync();
         if (_context != null)
             await _context.DisposeAsync();
     }
@@ -750,117 +302,26 @@ public class MyFeatureTests : IAsyncLifetime
     [Fact]
     public async Task MyFeature_Action_ExpectedResult()
     {
-        // Step 4: Create page with optimized defaults
-        var page = await _context!.NewPageWithDefaultsAsync();
+        // Navigate
+        await Page.GotoRelativeAsync("/github-copilot");
         
-        // Step 5: Use smart wait helpers
-        await page.GotoAndWaitForBlazorAsync($"{BaseUrl}/github-copilot");
+        // Interact - Using high-level ClickAndNavigateAsync helper
+        await Page.ClickAndNavigateAsync(".collection-nav a", text: "News",
+            expectedUrlSegment: "/github-copilot/news",
+            waitForActiveState: "News");
         
-        // Step 6: Interact with elements (use centralized timeout methods)
-        await page.WaitForSelectorWithTimeoutAsync(".collection-nav");
-        var newsButton = page.Locator(".collection-nav button", new() { HasTextString = "News" });
-        await newsButton.ClickAsync();
-        
-        // Step 7: Wait for SPA navigation (NOT WaitForNavigationAsync!)
-        await page.WaitForURLWithTimeoutAsync("**/github-copilot/news");
-        
-        // Step 8: Use centralized timeout method for text content
-        var heading = page.Locator("h1");
-        var headingText = await heading.TextContentWithTimeoutAsync();
-        
-        // Step 9: Use FluentAssertions for descriptive assertions
-        page.Url.Should().EndWith("/github-copilot/news",
+        // Assert - URL and active state already verified by ClickAndNavigateAsync
+        Page.Url.Should().EndWith("/github-copilot/news",
             "clicking News should navigate to /github-copilot/news");
-        headingText.Should().Contain("GitHub Copilot");
-        
-        // Step 10: Clean up page after test
-        await page.CloseAsync();
     }
 }
-
-// Step 10: Add collection definition to PlaywrightCollectionFixture.cs
-// [CollectionDefinition("My Feature Tests")]
-// public class MyFeatureCollection : ICollectionFixture<PlaywrightCollectionFixture> { }
 ```
 
-**Important**: New test files in `Web/` folder should use namespace `TechHub.E2E.Tests.Web`:
+**Don't forget**: Add collection definition to PlaywrightCollectionFixture.cs:
 
 ```csharp
-using Microsoft.Playwright;
-using Xunit;
-using FluentAssertions;
-using TechHub.E2E.Tests.Helpers;
-
-namespace TechHub.E2E.Tests.Web;  // Note: .Web namespace for files in Web/ folder
-
-[Collection("My Feature Tests")]
-public class MyFeatureTests : IAsyncLifetime
-{
-    // ... test implementation
-}
-```
-
-**Why This Pattern Is Fast**:
-
-- **Shared browser** - ONE Chromium launch for ALL tests
-- **Parallel execution** - Different collections run simultaneously
-- **Smart waits** - Return immediately when conditions are met
-- **Centralized timeouts** - Manage all timeout values in one place (3s element, 5s navigation)
-- **No Task.Delay** - No arbitrary delays masking issues
-- **Aggressive timeouts** - Fail fast when something is wrong (3-5s vs 30s defaults)
-- **Isolated contexts** - Tests don't interfere with each other
-
-## Debugging Tests
-
-### Run Tests in Headed Mode
-
-Modify `LaunchAsync` in test setup:
-
-```csharp
-_browser = await _playwright.Chromium.LaunchAsync(new() { Headless = false });
-```
-
-### Slow Down Execution
-
-```csharp
-_browser = await _playwright.Chromium.LaunchAsync(new() 
-{ 
-    Headless = false,
-    SlowMo = 1000 // 1 second delay between actions
-});
-```
-
-### Screenshot on Failure
-
-```csharp
-try
-{
-    // Test code
-}
-catch
-{
-    await page.ScreenshotAsync(new() { Path = "test-failure.png" });
-    throw;
-}
-```
-
-## Continuous Integration
-
-These tests should run in CI/CD pipeline:
-
-```yaml
-# Example GitHub Actions workflow
-- name: Install Playwright
-  run: pwsh tests/TechHub.E2E.Tests/bin/Debug/net10.0/playwright.ps1 install
-
-- name: Start Application
-  run: ./run.ps1 &
-  
-- name: Wait for Application
-  run: Start-Sleep -Seconds 30
-
-- name: Run E2E Tests
-  run: dotnet test tests/TechHub.E2E.Tests/TechHub.E2E.Tests.csproj
+[CollectionDefinition("My Feature Tests")]
+public class MyFeatureCollection : ICollectionFixture<PlaywrightCollectionFixture> { }
 ```
 
 ## Maintenance
