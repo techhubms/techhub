@@ -23200,5 +23200,11 @@
     "canonical_url": "https://techcommunity.microsoft.com/t5/azure-compute/frequent-platform-initiated-vm-redeployments-v6-in-north-europe/m-p/4484455#M837",
     "collection": "community",
     "reason": "Succesfully added: Assigned the Azure category because the entire post is centered on Azure VM operations, infrastructure behavior, platform notifications, and troubleshooting within Microsoft's cloud service (Azure category rule 1 and 4). The post does not fit any generic exclusion rule: it is not a biographical, job-related, negative, promotional, or non-technical discussion, and is primarily in English. Community content is well over the 200-word minimum for inclusion."
+  },
+  {
+    "timestamp": "2026-01-10 16:03:32 +00:00",
+    "reason": "Succesfully added: Assigned the 'DevOps' category due to extensive discussion on open source project maintenance, automation, workflows, team scaling, and governance (DevOps rules 2-7, 9-11). 'GitHub Copilot' and 'AI' categories assigned because the episode includes a segment on using GitHub Copilot for bug fixes and responsible AI usage in software development (AI rule 2, 5; GitHub Copilot rules 1-4). Added 'Coding' because of discussion about software development practices, automation, and bug fixing (Coding rule 4). Did not assign Azure, ML, or Security as these are not addressed substantively. Generic exclusion rules do not apply, as the podcast content is technical, in English, not biographical, not business/executive focused, and is not a sales pitch.",
+    "collection": "videos",
+    "canonical_url": "https://www.youtube.com/watch?v=mdxYnfPQrzU"
   }
 ]
