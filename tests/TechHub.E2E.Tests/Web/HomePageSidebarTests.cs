@@ -9,8 +9,8 @@ public class HomePageSidebarTests(PlaywrightCollectionFixture fixture) : IAsyncL
 {
     private const string BaseUrl = "http://localhost:5184";
     private IBrowserContext? _context;
-    private IPage Page => _page ?? throw new InvalidOperationException("Page not initialized");
     private IPage? _page;
+    private IPage Page => _page ?? throw new InvalidOperationException("Page not initialized");
 
     public async Task InitializeAsync()
     {
@@ -30,6 +30,7 @@ public class HomePageSidebarTests(PlaywrightCollectionFixture fixture) : IAsyncL
             await _context.DisposeAsync();
         }
     }
+
     [Fact]
     public async Task HomePage_ShouldDisplay_Sidebar()
     {

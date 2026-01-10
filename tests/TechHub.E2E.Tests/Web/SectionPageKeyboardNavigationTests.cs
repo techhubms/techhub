@@ -8,8 +8,7 @@ public class SectionPageKeyboardNavigationTests(PlaywrightCollectionFixture fixt
 {
     private const string BaseUrl = "http://localhost:5184";
     private IBrowserContext? _context;
-    private IPage Page => _page ?? throw new InvalidOperationException("Page not initialized");
-    private IPage? _page;
+    private IPage? _page;`r`n    private IPage Page => _page ?? throw new InvalidOperationException("Page not initialized");
 
     public async Task InitializeAsync()
     {

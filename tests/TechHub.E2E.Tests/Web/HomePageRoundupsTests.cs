@@ -9,8 +9,7 @@ public class HomePageRoundupsTests(PlaywrightCollectionFixture fixture) : IAsync
 {
     private const string BaseUrl = "http://localhost:5184";
     private IBrowserContext? _context;
-    private IPage Page => _page ?? throw new InvalidOperationException("Page not initialized");
-    private IPage? _page;
+    private IPage? _page;`r`n    private IPage Page => _page ?? throw new InvalidOperationException("Page not initialized");
 
     public async Task InitializeAsync()
     {
@@ -87,7 +86,7 @@ public class HomePageRoundupsTests(PlaywrightCollectionFixture fixture) : IAsync
 
         if (count > 0)
         {
-            await roundupLinks.First.ClickAsync();
+            await roundupLinks.First.ClickBlazorElementAsync();
 
             // Assert - Should navigate to roundup detail page
             await Page.WaitForBlazorUrlContainsAsync("/roundups/");

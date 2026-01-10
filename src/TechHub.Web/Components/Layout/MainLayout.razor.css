@@ -1,6 +1,6 @@
 /* ============================================================================
    MainLayout Component Styles
-   
+
    Component-specific styling for site footer (part of MainLayout)
    ============================================================================ */
 
@@ -63,7 +63,7 @@
     text-align: center;
     gap: var(--spacing-3);
   }
-  
+
   .footer-nav {
     flex-direction: column;
     gap: var(--spacing-2);
@@ -94,6 +94,7 @@
     transform: translateY(100%);
     opacity: 0;
   }
+
   to {
     transform: translateY(0);
     opacity: 1;
@@ -213,4 +214,3 @@
     text-align: center;
   }
 }
-

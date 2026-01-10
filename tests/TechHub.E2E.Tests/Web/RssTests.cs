@@ -10,18 +10,25 @@ namespace TechHub.E2E.Tests.Web;
 [Collection("RSS Tests")]
 public class RssTests(PlaywrightCollectionFixture fixture) : IAsyncLifetime
 {
-    private readonly PlaywrightCollectionFixture _fixture = fixture;
     private IBrowserContext? _context;
+    private IPage? _page;
+    private IPage Page => _page ?? throw new InvalidOperationException("Page not initialized");
     private const string BaseUrl = "http://localhost:5184";
     private const string ApiUrl = "http://localhost:5029";
 
     public async Task InitializeAsync()
     {
-        _context = await _fixture.CreateContextAsync();
+        _context = await fixture.CreateContextAsync();
+        _page = await _context.NewPageWithDefaultsAsync();
     }
 
     public async Task DisposeAsync()
     {
+        if (_page != null)
+        {
+            await _page.CloseAsync();
+        }
+
         if (_context != null)
         {
             await _context.DisposeAsync();
@@ -32,14 +39,13 @@ public class RssTests(PlaywrightCollectionFixture fixture) : IAsyncLifetime
     public async Task HomePage_HasRssFeedDiscoveryLink()
     {
         // Arrange
-        var page = await _context!.NewPageWithDefaultsAsync();
 
         // Act
-        await page.GotoAndWaitForBlazorAsync(BaseUrl);
+        await Page.GotoAndWaitForBlazorAsync(BaseUrl);
 
         // Assert - Check for RSS feed discovery link in head (should be exactly 1)
-        var rssLink = page.Locator("link[rel='alternate'][type='application/rss+xml']");
-        await page.AssertElementCountBySelectorAsync("link[rel='alternate'][type='application/rss+xml']", 1);
+        var rssLink = Page.Locator("link[rel='alternate'][type='application/rss+xml']");
+        await Page.AssertElementCountBySelectorAsync("link[rel='alternate'][type='application/rss+xml']", 1);
         await rssLink.AssertHrefEqualsAsync("/all/feed.xml");
     }
 
@@ -47,14 +53,13 @@ public class RssTests(PlaywrightCollectionFixture fixture) : IAsyncLifetime
     public async Task SectionPage_HasRssFeedDiscoveryLink()
     {
         // Arrange
-        var page = await _context!.NewPageWithDefaultsAsync();
 
         // Act
-        await page.GotoAndWaitForBlazorAsync($"{BaseUrl}/ai");
+        await Page.GotoAndWaitForBlazorAsync($"{BaseUrl}/ai");
 
         // Assert - Check for RSS feed discovery link in head (should be exactly 1)
-        var rssLink = page.Locator("link[rel='alternate'][type='application/rss+xml']");
-        await page.AssertElementCountBySelectorAsync("link[rel='alternate'][type='application/rss+xml']", 1);
+        var rssLink = Page.Locator("link[rel='alternate'][type='application/rss+xml']");
+        await Page.AssertElementCountBySelectorAsync("link[rel='alternate'][type='application/rss+xml']", 1);
         await rssLink.AssertHrefEqualsAsync("/ai/feed.xml");
     }
 
@@ -62,13 +67,12 @@ public class RssTests(PlaywrightCollectionFixture fixture) : IAsyncLifetime
     public async Task SectionPage_HasRssIconInHeader()
     {
         // Arrange
-        var page = await _context!.NewPageWithDefaultsAsync();
 
         // Act
-        await page.GotoRelativeAsync("/github-copilot");
+        await Page.GotoRelativeAsync("/github-copilot");
 
         // Assert - Check for RSS link in sidebar (moved from banner)
-        var rssIconLink = page.Locator(".sidebar-section a[href*='/feed.xml']");
+        var rssIconLink = Page.Locator(".sidebar-section a[href*='/feed.xml']");
         await rssIconLink.AssertElementVisibleAsync();
         await rssIconLink.AssertHrefEqualsAsync("/github-copilot/feed.xml");
     }
@@ -77,13 +81,12 @@ public class RssTests(PlaywrightCollectionFixture fixture) : IAsyncLifetime
     public async Task Footer_HasRssSubscribeLink()
     {
         // Arrange
-        var page = await _context!.NewPageWithDefaultsAsync();
 
         // Act
-        await page.GotoAndWaitForBlazorAsync(BaseUrl);
+        await Page.GotoAndWaitForBlazorAsync(BaseUrl);
 
         // Assert - Check footer has RSS link
-        var footerRssLink = page.Locator("footer a:has-text('Subscribe via RSS')");
+        var footerRssLink = Page.Locator("footer a:has-text('Subscribe via RSS')");
         await footerRssLink.AssertElementVisibleAsync();
         await footerRssLink.AssertHrefEqualsAsync("/all/feed.xml");
     }
@@ -92,10 +95,9 @@ public class RssTests(PlaywrightCollectionFixture fixture) : IAsyncLifetime
     public async Task RssFeed_AllContent_ReturnsValidXml()
     {
         // Arrange
-        var page = await _context!.NewPageWithDefaultsAsync();
 
         // Act
-        var response = await page.APIRequest.GetAsync($"{ApiUrl}/api/rss/all");
+        var response = await Page.APIRequest.GetAsync($"{ApiUrl}/api/rss/all");
 
         // Assert
         Assert.Equal(200, response.Status);
@@ -123,10 +125,9 @@ public class RssTests(PlaywrightCollectionFixture fixture) : IAsyncLifetime
     public async Task RssFeed_SectionFeeds_ReturnValidXml(string sectionName)
     {
         // Arrange
-        var page = await _context!.NewPageWithDefaultsAsync();
 
         // Act
-        var response = await page.APIRequest.GetAsync($"{ApiUrl}/api/rss/{sectionName}");
+        var response = await Page.APIRequest.GetAsync($"{ApiUrl}/api/rss/{sectionName}");
 
         // Assert
         Assert.Equal(200, response.Status);
@@ -144,11 +145,10 @@ public class RssTests(PlaywrightCollectionFixture fixture) : IAsyncLifetime
     public async Task RssIcon_Click_NavigatesToFeed()
     {
         // Arrange
-        var page = await _context!.NewPageWithDefaultsAsync();
-        await page.GotoAndWaitForBlazorAsync($"{BaseUrl}/azure");
+        await Page.GotoAndWaitForBlazorAsync($"{BaseUrl}/azure");
 
         // Act - Get RSS link from sidebar (moved from banner)
-        var rssIconLink = page.Locator(".sidebar-section a[href*='/feed.xml']");
+        var rssIconLink = Page.Locator(".sidebar-section a[href*='/feed.xml']");
 
         // Assert - Verify the link is correct (but don't actually navigate to avoid downloading XML)
         await rssIconLink.AssertHrefEqualsAsync("/azure/feed.xml");
@@ -158,10 +158,9 @@ public class RssTests(PlaywrightCollectionFixture fixture) : IAsyncLifetime
     public async Task RssFeed_ContainsRecentContent()
     {
         // Arrange
-        var page = await _context!.NewPageWithDefaultsAsync();
 
         // Act
-        var response = await page.APIRequest.GetAsync($"{ApiUrl}/api/rss/all");
+        var response = await Page.APIRequest.GetAsync($"{ApiUrl}/api/rss/all");
         var xmlContent = await response.TextAsync();
         var doc = XDocument.Parse(xmlContent);
 
@@ -183,13 +182,12 @@ public class RssTests(PlaywrightCollectionFixture fixture) : IAsyncLifetime
     public async Task HomePage_HasRoundupsFeedLink()
     {
         // Arrange
-        var page = await _context!.NewPageWithDefaultsAsync();
 
         // Act
-        await page.GotoAndWaitForBlazorAsync(BaseUrl);
+        await Page.GotoAndWaitForBlazorAsync(BaseUrl);
 
         // Assert - Check for Roundups RSS link in sidebar
-        var roundupsRssLink = page.Locator("a:has-text('RSS Feed - Roundups')");
+        var roundupsRssLink = Page.Locator("a:has-text('RSS Feed - Roundups')");
         await roundupsRssLink.AssertElementVisibleAsync();
         await roundupsRssLink.AssertHrefEqualsAsync("/all/roundups/feed.xml");
     }
@@ -198,10 +196,9 @@ public class RssTests(PlaywrightCollectionFixture fixture) : IAsyncLifetime
     public async Task RssFeed_CollectionFeeds_ReturnValidXml()
     {
         // Arrange
-        var page = await _context!.NewPageWithDefaultsAsync();
 
         // Act - Test roundups collection feed via web proxy
-        var response = await page.APIRequest.GetAsync($"{BaseUrl}/all/roundups/feed.xml");
+        var response = await Page.APIRequest.GetAsync($"{BaseUrl}/all/roundups/feed.xml");
 
         // Assert
         Assert.Equal(200, response.Status);

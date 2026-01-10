@@ -9,8 +9,8 @@ public class AboutPageTests(PlaywrightCollectionFixture fixture) : IAsyncLifetim
 {
     private const string BaseUrl = "http://localhost:5184";
     private IBrowserContext? _context;
-    private IPage Page => _page ?? throw new InvalidOperationException("Page not initialized");
     private IPage? _page;
+    private IPage Page => _page ?? throw new InvalidOperationException("Page not initialized");
 
     public async Task InitializeAsync()
     {
@@ -30,6 +30,7 @@ public class AboutPageTests(PlaywrightCollectionFixture fixture) : IAsyncLifetim
             await _context.CloseAsync();
         }
     }
+
     [Fact]
     public async Task AboutPage_ShouldLoad_Successfully()
     {
@@ -37,7 +38,7 @@ public class AboutPageTests(PlaywrightCollectionFixture fixture) : IAsyncLifetim
         await Page.GotoRelativeAsync("/about");
 
         // Assert - Check page title attribute
-        await Assertions.Expect(Page).ToHaveTitleAsync(new Regex("About.*Tech Hub"));
+        await Assertions.Expect(Page).ToHaveTitleAsync("About - Tech Hub");
     }
 
     [Fact]
