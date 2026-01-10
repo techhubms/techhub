@@ -149,6 +149,9 @@ public class UrlRoutingTests : IAsyncLifetime
         await videosButton.ClickBlazorElementAsync();
         await page.WaitForBlazorUrlContainsAsync("/github-copilot/videos");
         
+        // Wait for Blazor to sync state (update .active class)
+        await page.WaitForBlazorStateSyncAsync("Videos");
+        
         // Verify Videos button is now active
         var videosButtonActive = page.Locator(".collection-nav a.active");
         var videosText = await videosButtonActive.TextContentAsync(new() { Timeout = 3000 });

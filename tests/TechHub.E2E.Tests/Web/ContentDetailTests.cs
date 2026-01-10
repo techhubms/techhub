@@ -6,19 +6,21 @@ using TechHub.E2E.Tests.Helpers;
 namespace TechHub.E2E.Tests.Web;
 
 /// <summary>
-/// E2E tests for content detail page functionality
-/// Tests for PrimarySection URL routing, sidebar display, and navigation buttons
+/// E2E tests for content detail page functionality.
+/// Tests PrimarySection URL routing, sidebar display, and navigation buttons.
 /// 
-/// NOTE: These tests are currently skipped because most content has external links.
-/// They will be enabled once we have internal content (videos, roundups, custom pages).
-/// The tests verify the content detail page works correctly with PrimarySection routing.
+/// PATTERN: These tests navigate directly to content URLs (not click-through) since
+/// roundup detail pages are the main testable internal content pages.
 /// </summary>
 [Collection("Content Detail Tests")]
 public class ContentDetailTests : IAsyncLifetime
 {
     private readonly PlaywrightCollectionFixture _fixture;
     private IBrowserContext? _context;
-    private const string BaseUrl = "http://localhost:5184";
+    private const string BaseUrl = BlazorHelpers.BaseUrl;
+    
+    // Test with a known roundup URL - more reliable than clicking through
+    private const string TestRoundupUrl = "/all/roundups";
 
     public ContentDetailTests(PlaywrightCollectionFixture fixture)
     {
@@ -36,26 +38,41 @@ public class ContentDetailTests : IAsyncLifetime
             await _context.DisposeAsync();
     }
 
+    /// <summary>
+    /// Helper to navigate to a roundup detail page.
+    /// Navigates to roundups list, gets the first card's href, and navigates directly.
+    /// </summary>
+    private async Task<IPage> NavigateToFirstRoundupDetailAsync()
+    {
+        var page = await _context!.NewPageWithDefaultsAsync();
+        await page.GotoAndWaitForBlazorAsync($"{BaseUrl}{TestRoundupUrl}");
+        
+        // Wait for cards to load
+        await Assertions.Expect(page.Locator(".content-item-card").First)
+            .ToBeVisibleAsync(new() { Timeout = BlazorHelpers.DefaultNavigationTimeout });
+        
+        // Get the URL from the first card and navigate directly
+        var firstCardHref = await page.Locator(".content-item-card").First.GetAttributeAsync("href");
+        firstCardHref.Should().NotBeNullOrEmpty("first roundup card should have href");
+        
+        // Navigate directly to the detail page (more reliable than clicking)
+        await page.GotoAndWaitForBlazorAsync($"{BaseUrl}{firstCardHref}");
+        
+        // Wait for detail page to be ready
+        await page.WaitForContentDetailPageAsync("/roundups/");
+        
+        return page;
+    }
+
     [Fact]
     public async Task ContentDetailPage_URL_UsesPrimarySectionFromCategories()
     {
-        // Arrange
-        var page = await _context!.NewPageWithDefaultsAsync();
-        await page.GotoAndWaitForBlazorAsync($"{BaseUrl}/all/roundups");
+        // Arrange & Act - Navigate to a roundup detail page
+        var page = await NavigateToFirstRoundupDetailAsync();
         
-        // Wait for content to load
-        await page.WaitForSelectorAsync(".content-item-card", new() { Timeout = 10000 });
-        
-        // Act - Click on first roundup item (roundups have viewing_mode: internal)
-        var firstItem = page.Locator(".content-item-card").First;
-        await firstItem.ClickBlazorElementAsync();
-        // URL will contain the primary section from the content's categories (e.g., github-copilot)
-        // not necessarily /all/ since content routes to its primary section
-        await page.WaitForBlazorUrlContainsAsync("/roundups/");
-        
-        // Assert - URL should include /roundups/ with primary section prefix
+        // Assert - URL should include /roundups/ with a section prefix
         page.Url.Should().Contain("/roundups/",
-            "content URL should include collection name with primary section prefix");
+            "content URL should include collection name with section prefix");
         
         await page.CloseAsync();
     }
@@ -63,26 +80,16 @@ public class ContentDetailTests : IAsyncLifetime
     [Fact]
     public async Task ContentDetailPage_ShowsSidebarWithCollections()
     {
-        // Arrange
-        var page = await _context!.NewPageWithDefaultsAsync();
-        await page.GotoAndWaitForBlazorAsync($"{BaseUrl}/all/roundups");
+        // Arrange & Act
+        var page = await NavigateToFirstRoundupDetailAsync();
         
-        // Wait for content to load
-        await page.WaitForSelectorAsync(".content-item-card", new() { Timeout = 10000 });
+        // Assert - Sidebar should exist (use auto-retrying Expect)
+        await Assertions.Expect(page.Locator(".sidebar, aside.sidebar"))
+            .ToBeVisibleAsync(new() { Timeout = BlazorHelpers.DefaultAssertionTimeout });
         
-        // Act - Navigate to a roundup detail page (roundups have viewing_mode: internal)
-        var firstItem = page.Locator(".content-item-card").First;
-        await firstItem.ClickBlazorElementAsync();
-        // Wait for navigation to any roundups detail page (primary section may vary)
-        await page.WaitForBlazorUrlContainsAsync("/roundups/");
-        
-        // Assert - Sidebar should exist with Collections
-        var sidebar = page.Locator(".sidebar");
-        (await sidebar.IsVisibleAsync()).Should().BeTrue("sidebar should be visible on content detail page");
-        
-        // Check for Collections section
-        (await sidebar.Locator(".sidebar-section:has-text('Collections')").IsVisibleAsync())
-            .Should().BeTrue("sidebar should show collections navigation");
+        // Check for Collections heading in sidebar
+        await Assertions.Expect(page.Locator(".sidebar h2:has-text('Collections')"))
+            .ToBeVisibleAsync(new() { Timeout = BlazorHelpers.DefaultAssertionTimeout });
         
         await page.CloseAsync();
     }
@@ -90,23 +97,12 @@ public class ContentDetailTests : IAsyncLifetime
     [Fact]
     public async Task ContentDetailPage_ShowsBackToTopButton()
     {
-        // Arrange
-        var page = await _context!.NewPageWithDefaultsAsync();
-        await page.GotoAndWaitForBlazorAsync($"{BaseUrl}/all/roundups");
+        // Arrange & Act
+        var page = await NavigateToFirstRoundupDetailAsync();
         
-        // Wait for content to load
-        await page.WaitForSelectorAsync(".content-item-card", new() { Timeout = 10000 });
-        
-        // Act - Navigate to roundup detail page (roundups have viewing_mode: internal)
-        var firstItem = page.Locator(".content-item-card").First;
-        await firstItem.ClickBlazorElementAsync();
-        // Wait for navigation to any roundups detail page (primary section may vary)
-        await page.WaitForBlazorUrlContainsAsync("/roundups/");
-        
-        // Assert - "Back to Top" button exists
-        var backToTopButton = page.Locator("a:has-text('Back to Top')");
-        (await backToTopButton.IsVisibleAsync()).Should().BeTrue(
-            "content detail page should show 'Back to Top' button");
+        // Assert - "Back to Top" link exists (use auto-retrying Expect)
+        await Assertions.Expect(page.Locator("a:has-text('Back to Top')"))
+            .ToBeVisibleAsync(new() { Timeout = BlazorHelpers.DefaultAssertionTimeout });
         
         await page.CloseAsync();
     }
@@ -114,24 +110,13 @@ public class ContentDetailTests : IAsyncLifetime
     [Fact]
     public async Task ContentDetailPage_ShowsBackToSectionButton()
     {
-        // Arrange
-        var page = await _context!.NewPageWithDefaultsAsync();
-        await page.GotoAndWaitForBlazorAsync($"{BaseUrl}/all/roundups");
+        // Arrange & Act
+        var page = await NavigateToFirstRoundupDetailAsync();
         
-        // Wait for content to load
-        await page.WaitForSelectorAsync(".content-item-card", new() { Timeout = 10000 });
-        
-        // Act - Navigate to roundup detail page (roundups have viewing_mode: internal)
-        var firstItem = page.Locator(".content-item-card").First;
-        await firstItem.ClickBlazorElementAsync();
-        // Wait for navigation to any roundups detail page (primary section may vary)
-        await page.WaitForBlazorUrlContainsAsync("/roundups/");
-        
-        // Assert - "Back to [Section]" button exists (section name depends on primary section)
-        // Roundups typically have github-copilot as primary section
-        var backToSectionButton = page.Locator("a:has-text('Back to')").Last;
-        (await backToSectionButton.IsVisibleAsync()).Should().BeTrue(
-            "content detail page should show 'Back to [Section]' button");
+        // Assert - "Back to [Section]" link exists
+        // The text is "Back to All" or similar depending on section
+        await Assertions.Expect(page.Locator("a[href]:has-text('Back to')").Last)
+            .ToBeVisibleAsync(new() { Timeout = BlazorHelpers.DefaultAssertionTimeout });
         
         await page.CloseAsync();
     }
@@ -139,29 +124,23 @@ public class ContentDetailTests : IAsyncLifetime
     [Fact]
     public async Task ContentDetailPage_BackToSectionButton_NavigatesToCorrectSection()
     {
-        // Arrange
-        var page = await _context!.NewPageWithDefaultsAsync();
-        await page.GotoAndWaitForBlazorAsync($"{BaseUrl}/all/roundups");
+        // Arrange & Act
+        var page = await NavigateToFirstRoundupDetailAsync();
         
-        // Wait for content to load
-        await page.WaitForSelectorAsync(".content-item-card", new() { Timeout = 10000 });
+        // Find and click the "Back to [Section]" button (last Back to link)
+        var backButton = page.Locator("a[href]:has-text('Back to')").Last;
+        await Assertions.Expect(backButton).ToBeVisibleAsync();
         
-        // Navigate to roundup detail page (roundups have viewing_mode: internal)
-        var firstItem = page.Locator(".content-item-card").First;
-        await firstItem.ClickBlazorElementAsync();
-        // Wait for navigation to any roundups detail page (primary section may vary)
-        await page.WaitForBlazorUrlContainsAsync("/roundups/");
-        
-        // Get current URL to determine which section we're in
-        var contentDetailUrl = page.Url;
-        
-        // Act - Click "Back to [Section]" button (the last "Back to" link)
-        var backButton = page.Locator("a:has-text('Back to')").Last;
         await backButton.ClickBlazorElementAsync();
-        await page.WaitForBlazorUrlContainsAsync("/");
         
-        // Assert - Should navigate back to a section page (not content detail)
-        page.Url.Should().NotContain("/roundups/",
+        // Wait for navigation away from detail page
+        await page.WaitForFunctionAsync(
+            "() => !window.location.pathname.includes('/roundups/2')",
+            new PageWaitForFunctionOptions { Timeout = BlazorHelpers.DefaultNavigationTimeout }
+        );
+        
+        // Assert - Should be on a section page, not a content detail page
+        page.Url.Should().NotMatch(@"/roundups/\d{4}-",
             "back button should navigate away from content detail page");
         
         await page.CloseAsync();
@@ -170,24 +149,16 @@ public class ContentDetailTests : IAsyncLifetime
     [Fact]
     public async Task ContentDetailPage_TwoColumnLayout_DisplaysCorrectly()
     {
-        // Arrange
-        var page = await _context!.NewPageWithDefaultsAsync();
-        await page.GotoAndWaitForBlazorAsync($"{BaseUrl}/all/roundups");
+        // Arrange & Act
+        var page = await NavigateToFirstRoundupDetailAsync();
         
-        // Wait for content to load
-        await page.WaitForSelectorAsync(".content-item-card", new() { Timeout = 10000 });
+        // Assert - Sidebar visible (use auto-retrying Expect)
+        await Assertions.Expect(page.Locator(".sidebar, aside.sidebar"))
+            .ToBeVisibleAsync(new() { Timeout = BlazorHelpers.DefaultAssertionTimeout });
         
-        // Navigate to roundup detail page (roundups have viewing_mode: internal)
-        var firstItem = page.Locator(".content-item-card").First;
-        await firstItem.ClickBlazorElementAsync();
-        // Wait for navigation to any roundups detail page (primary section may vary)
-        await page.WaitForBlazorUrlContainsAsync("/roundups/");
-        
-        // Assert - Sidebar and main content should exist
-        (await page.Locator(".sidebar").IsVisibleAsync()).Should().BeTrue(
-            "sidebar should be visible");
-        (await page.Locator("main.page-main-content").IsVisibleAsync()).Should().BeTrue(
-            "main content should be visible");
+        // Assert - Main content visible (article or main.page-main-content)
+        await Assertions.Expect(page.Locator("main article, main.page-main-content article"))
+            .ToBeVisibleAsync(new() { Timeout = BlazorHelpers.DefaultAssertionTimeout });
         
         await page.CloseAsync();
     }
@@ -195,61 +166,48 @@ public class ContentDetailTests : IAsyncLifetime
     [Fact]
     public async Task ContentDetailPage_Sidebar_ShowsTags()
     {
-        // Arrange
-        var page = await _context!.NewPageWithDefaultsAsync();
-        await page.GotoAndWaitForBlazorAsync($"{BaseUrl}/all/roundups");
+        // Arrange & Act
+        var page = await NavigateToFirstRoundupDetailAsync();
         
-        // Wait for content to load
-        await page.WaitForSelectorAsync(".content-item-card", new() { Timeout = 10000 });
-        
-        // Navigate to roundup detail page (roundups have viewing_mode: internal)
-        var firstItem = page.Locator(".content-item-card").First;
-        await firstItem.ClickBlazorElementAsync();
-        // Wait for navigation to any roundups detail page (primary section may vary)
-        await page.WaitForBlazorUrlContainsAsync("/roundups/");
-        
-        // Assert - Tags section should be visible in sidebar
-        var tagsSection = page.Locator(".sidebar h2:has-text('Tags'), .sidebar heading:has-text('Tags')");
-        (await tagsSection.IsVisibleAsync()).Should().BeTrue("sidebar should show tags section");
+        // Assert - Tags heading visible in sidebar (use auto-retrying Expect)
+        await Assertions.Expect(page.Locator(".sidebar h2:has-text('Tags')"))
+            .ToBeVisibleAsync(new() { Timeout = BlazorHelpers.DefaultAssertionTimeout });
         
         await page.CloseAsync();
     }
 
     [Theory]
-    [InlineData("/all/roundups")] // Roundups can have any primary section
+    [InlineData("/all/roundups")]
     public async Task ContentDetailPage_BackButton_ShowsCorrectSectionName(string sectionPath)
     {
         // Arrange
         var page = await _context!.NewPageWithDefaultsAsync();
         await page.GotoAndWaitForBlazorAsync($"{BaseUrl}{sectionPath}");
         
-        // Wait for content to load
-        await page.WaitForSelectorAsync(".content-item-card", new() { Timeout = 10000 });
+        // Wait for cards and get first card's href
+        await Assertions.Expect(page.Locator(".content-item-card").First)
+            .ToBeVisibleAsync(new() { Timeout = BlazorHelpers.DefaultNavigationTimeout });
         
-        // Act - Navigate to first content item (roundups have viewing_mode: internal)
-        try
+        var firstCardHref = await page.Locator(".content-item-card").First.GetAttributeAsync("href");
+        if (string.IsNullOrEmpty(firstCardHref))
         {
-            var firstItem = page.Locator(".content-item-card").First;
-            await firstItem.ClickBlazorElementAsync();
-            // Wait for navigation to any roundups detail page
-            await page.WaitForBlazorUrlContainsAsync("/roundups/");
-            
-            // Assert - Back button should exist with "Back to [Section]" text
-            var backButton = page.Locator("a.nav-button.secondary");
-            (await backButton.IsVisibleAsync()).Should().BeTrue(
-                "back button should be visible");
-            var buttonText = await backButton.InnerTextAsync();
-            buttonText.Should().StartWith("Back to ",
-                "back button should show 'Back to [Section]' format");
-        }
-        catch (Exception ex) when (ex.Message.Contains("Target closed") || ex.Message.Contains("Timeout"))
-        {
-            // If collection is empty or content not found, skip this test case
-            // This is acceptable in test environments
-        }
-        finally
-        {
+            // No content available - skip gracefully
             await page.CloseAsync();
+            return;
         }
+        
+        // Navigate directly to detail page
+        await page.GotoAndWaitForBlazorAsync($"{BaseUrl}{firstCardHref}");
+        await page.WaitForContentDetailPageAsync("/roundups/");
+        
+        // Assert - Back button with "Back to" text should exist
+        var backButton = page.Locator("a[href]:has-text('Back to')").Last;
+        await Assertions.Expect(backButton).ToBeVisibleAsync(new() { Timeout = BlazorHelpers.DefaultAssertionTimeout });
+        
+        var buttonText = await backButton.TextContentAsync();
+        buttonText.Should().StartWith("Back to ",
+            "back button should show 'Back to [Section]' format");
+        
+        await page.CloseAsync();
     }
 }
