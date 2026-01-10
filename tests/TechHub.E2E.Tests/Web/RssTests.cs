@@ -31,7 +31,9 @@ public class RssTests : IAsyncLifetime
     public async Task DisposeAsync()
     {
         if (_context != null)
+        {
             await _context.DisposeAsync();
+        }
     }
 
     [Fact]
@@ -43,10 +45,10 @@ public class RssTests : IAsyncLifetime
         // Act
         await page.GotoAndWaitForBlazorAsync(BaseUrl);
 
-        // Assert - Check for RSS feed discovery link in head
-        var rssLink = await page.Locator("link[rel='alternate'][type='application/rss+xml']").First.GetHrefAsync();
-        Assert.NotNull(rssLink);
-        Assert.Equal("/all/feed.xml", rssLink);
+        // Assert - Check for RSS feed discovery link in head (should be exactly 1)
+        var rssLink = page.Locator("link[rel='alternate'][type='application/rss+xml']");
+        await page.AssertElementCountBySelectorAsync("link[rel='alternate'][type='application/rss+xml']", 1);
+        await rssLink.AssertHrefEqualsAsync("/all/feed.xml");
     }
 
     [Fact]
@@ -58,10 +60,10 @@ public class RssTests : IAsyncLifetime
         // Act
         await page.GotoAndWaitForBlazorAsync($"{BaseUrl}/ai");
 
-        // Assert - Check for RSS feed discovery link in head
-        var rssLink = await page.Locator("link[rel='alternate'][type='application/rss+xml']").First.GetHrefAsync();
-        Assert.NotNull(rssLink);
-        Assert.Equal("/ai/feed.xml", rssLink);
+        // Assert - Check for RSS feed discovery link in head (should be exactly 1)
+        var rssLink = page.Locator("link[rel='alternate'][type='application/rss+xml']");
+        await page.AssertElementCountBySelectorAsync("link[rel='alternate'][type='application/rss+xml']", 1);
+        await rssLink.AssertHrefEqualsAsync("/ai/feed.xml");
     }
 
     [Fact]
@@ -73,13 +75,10 @@ public class RssTests : IAsyncLifetime
         // Act
         await page.GotoRelativeAsync("/github-copilot");
 
-
         // Assert - Check for RSS link in sidebar (moved from banner)
         var rssIconLink = page.Locator(".sidebar-section a[href*='/feed.xml']");
-        await Assertions.Expect(rssIconLink).ToBeVisibleAsync();
-
-        var href = await rssIconLink.GetHrefAsync();
-        Assert.Equal("/github-copilot/feed.xml", href);
+        await rssIconLink.AssertElementVisibleAsync();
+        await rssIconLink.AssertHrefEqualsAsync("/github-copilot/feed.xml");
     }
 
     [Fact]
@@ -93,10 +92,8 @@ public class RssTests : IAsyncLifetime
 
         // Assert - Check footer has RSS link
         var footerRssLink = page.Locator("footer a:has-text('Subscribe via RSS')");
-        await Assertions.Expect(footerRssLink).ToBeVisibleAsync();
-
-        var href = await footerRssLink.GetHrefAsync();
-        Assert.Equal("/all/feed.xml", href);
+        await footerRssLink.AssertElementVisibleAsync();
+        await footerRssLink.AssertHrefEqualsAsync("/all/feed.xml");
     }
 
     [Fact]
@@ -160,10 +157,9 @@ public class RssTests : IAsyncLifetime
 
         // Act - Get RSS link from sidebar (moved from banner)
         var rssIconLink = page.Locator(".sidebar-section a[href*='/feed.xml']");
-        var href = await rssIconLink.GetHrefAsync();
 
         // Assert - Verify the link is correct (but don't actually navigate to avoid downloading XML)
-        Assert.Equal("/azure/feed.xml", href);
+        await rssIconLink.AssertHrefEqualsAsync("/azure/feed.xml");
     }
 
     [Fact]
@@ -202,10 +198,8 @@ public class RssTests : IAsyncLifetime
 
         // Assert - Check for Roundups RSS link in sidebar
         var roundupsRssLink = page.Locator("a:has-text('RSS Feed - Roundups')");
-        await Assertions.Expect(roundupsRssLink).ToBeVisibleAsync();
-
-        var href = await roundupsRssLink.GetHrefAsync();
-        Assert.Equal("/all/roundups/feed.xml", href);
+        await roundupsRssLink.AssertElementVisibleAsync();
+        await roundupsRssLink.AssertHrefEqualsAsync("/all/roundups/feed.xml");
     }
 
     [Fact]

@@ -16,16 +16,20 @@ public class HomePageRoundupsTests(PlaywrightCollectionFixture fixture) : IAsync
     public async Task InitializeAsync()
     {
         _context = await fixture.CreateContextAsync();
-        _page = await _context.NewPageAsync();
+        _page = await _context.NewPageWithDefaultsAsync();
     }
 
     public async Task DisposeAsync()
     {
         if (_page != null)
+        {
             await _page.CloseAsync();
+        }
 
         if (_context != null)
+        {
             await _context.CloseAsync();
+        }
     }
     [Fact]
     public async Task HomePage_ShouldDisplay_RoundupsSection()
@@ -34,7 +38,7 @@ public class HomePageRoundupsTests(PlaywrightCollectionFixture fixture) : IAsync
         await Page.GotoRelativeAsync("/");
 
         // Assert - Look for "Latest Roundup" heading in new sidebar structure
-        await Assertions.Expect(Page.GetByRole(AriaRole.Heading, new() { Name = "Latest Roundup" })).ToBeVisibleAsync();
+        await Page.AssertElementVisibleByRoleAsync(AriaRole.Heading, "Latest Roundup");
     }
 
     [Fact]
@@ -43,20 +47,18 @@ public class HomePageRoundupsTests(PlaywrightCollectionFixture fixture) : IAsync
         // Act
         await Page.GotoRelativeAsync("/");
 
-        // Assert - Should display latest roundup section (use .First to avoid strict mode violation)
-        var latestRoundupSection = Page.Locator(".latest-roundup").First;
-        await Assertions.Expect(latestRoundupSection).ToBeVisibleAsync();
+        // Assert - Should display latest roundup section (should be exactly 1)\n        var latestRoundupSection = Page.Locator(\".latest-roundup\");\n        await Page.AssertElementCountBySelectorAsync(\".latest-roundup\", 1);\n        await latestRoundupSection.AssertElementVisibleAsync();
 
         // Should have one featured roundup link
         var roundupLink = Page.Locator(".latest-roundup a.sidebar-featured-link");
-        await Assertions.Expect(roundupLink).ToBeVisibleAsync();
+        await roundupLink.AssertElementVisibleAsync();
 
         // Link should have title and date
         var roundupTitle = Page.Locator(".latest-roundup .sidebar-featured-title");
-        await Assertions.Expect(roundupTitle).ToBeVisibleAsync();
+        await roundupTitle.AssertElementVisibleAsync();
 
         var roundupDate = Page.Locator(".latest-roundup .sidebar-featured-date");
-        await Assertions.Expect(roundupDate).ToBeVisibleAsync();
+        await roundupDate.AssertElementVisibleAsync();
     }
 
     [Fact]
@@ -65,9 +67,9 @@ public class HomePageRoundupsTests(PlaywrightCollectionFixture fixture) : IAsync
         // Act
         await Page.GotoRelativeAsync("/");
 
-        // Assert
-        var newsletterLink = Page.GetByRole(AriaRole.Link, new() { NameRegex = new Regex("newsletter", RegexOptions.IgnoreCase) });
-        await Assertions.Expect(newsletterLink).ToBeVisibleAsync();
+        // Assert - Look for link containing "newsletter" (case-sensitive is fine for this test)
+        var newsletterLink = Page.Locator("a:has-text('newsletter')");
+        await newsletterLink.AssertElementVisibleAsync();
 
         // Should link to mailchimp
         var href = await newsletterLink.GetHrefAsync();
@@ -80,8 +82,8 @@ public class HomePageRoundupsTests(PlaywrightCollectionFixture fixture) : IAsync
         // Arrange
         await Page.GotoRelativeAsync("/");
 
-        // Act - Click first roundup link (if any)
-        var roundupLinks = Page.Locator("a").Filter(new() { HasTextRegex = new Regex(@"\d{4}-\d{2}-\d{2}", RegexOptions.IgnoreCase) });
+        // Act - Click first roundup link (finds links with date format like "Dec 29, 2025")
+        var roundupLinks = Page.Locator("a").Filter(new() { HasTextRegex = new Regex(@"[A-Z][a-z]{2}\s+\d{1,2},\s+\d{4}", RegexOptions.None) });
         var count = await roundupLinks.CountAsync();
 
         if (count > 0)
@@ -89,8 +91,7 @@ public class HomePageRoundupsTests(PlaywrightCollectionFixture fixture) : IAsync
             await roundupLinks.First.ClickAsync();
 
             // Assert - Should navigate to roundup detail page
-            await Page.WaitForURLAsync(new Regex("/roundups/", RegexOptions.IgnoreCase));
-            await Assertions.Expect(Page).ToHaveURLAsync(new Regex("/roundups/", RegexOptions.IgnoreCase));
+            await Page.WaitForBlazorUrlContainsAsync("/roundups/");
         }
     }
 }

@@ -57,8 +57,8 @@ public class ContentDetailTests : IAsyncLifetime
         // Navigate directly to the detail page (more reliable than clicking)
         await page.GotoAndWaitForBlazorAsync($"{BaseUrl}{firstCardHref}");
 
-        // Wait for detail page to be ready - verify article content is visible
-        await page.Locator("article.content-detail, main article").First.AssertElementVisibleAsync();
+        // Wait for detail page to be ready - verify main article is visible (should be exactly 1)
+        await page.AssertElementVisibleBySelectorAsync("main article");
 
         return page;
     }
@@ -127,7 +127,7 @@ public class ContentDetailTests : IAsyncLifetime
 
         // Find and click the "Back to [Section]" button (last Back to link)
         var backButton = page.Locator("a[href]:has-text('Back to')").Last;
-        await Assertions.Expect(backButton).ToBeVisibleAsync();
+        await backButton.AssertElementVisibleAsync();
 
         await backButton.ClickBlazorElementAsync();
 
@@ -184,20 +184,15 @@ public class ContentDetailTests : IAsyncLifetime
         // Wait for cards and get first card's href
         await page.Locator(".content-item-card").First.AssertElementVisibleAsync();
         var firstCardHref = await page.Locator(".content-item-card").First.GetHrefAsync();
-        if (string.IsNullOrEmpty(firstCardHref))
-        {
-            // No content available - skip gracefully
-            await page.CloseAsync();
-            return;
-        }
+        firstCardHref.Should().NotBeNullOrEmpty("first roundup card should have href");
 
         // Navigate directly to detail page
         await page.GotoAndWaitForBlazorAsync($"{BaseUrl}{firstCardHref}");
-        await page.Locator("article.content-detail, main article").First.AssertElementVisibleAsync();
+        await page.AssertElementVisibleBySelectorAsync("main article");
 
         // Assert - Back button with "Back to" text should exist
         var backButton = page.Locator("a[href]:has-text('Back to')").Last;
-        await Assertions.Expect(backButton).ToBeVisibleAsync(new() { Timeout = BlazorHelpers.DefaultAssertionTimeout });
+        await backButton.AssertElementVisibleAsync(BlazorHelpers.DefaultAssertionTimeout);
 
         var buttonText = await backButton.TextContentAsync();
         buttonText.Should().StartWith("Back to ",

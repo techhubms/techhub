@@ -29,7 +29,9 @@ public class NavigationTests : IAsyncLifetime
     public async Task DisposeAsync()
     {
         if (_context != null)
+        {
             await _context.DisposeAsync();
+        }
     }
 
     [Fact]
@@ -86,12 +88,11 @@ public class NavigationTests : IAsyncLifetime
         // Use ClickBlazorElementAsync to wait for Blazor interactivity before clicking
         await ghCopilotCard.ClickBlazorElementAsync();
 
-        // Wait for URL to contain the section name
+        // Wait for URL to contain the section name (already asserts URL change)
         await page.WaitForBlazorUrlContainsAsync("/github-copilot");
 
-        // Assert - Should navigate to /github-copilot
-        Assert.Contains("/github-copilot", page.Url);
-        Assert.DoesNotContain("#", page.Url); // Should not have hash fragment
+        // Assert - Should not have hash fragment
+        Assert.DoesNotContain("#", page.Url);
 
         await page.CloseAsync();
     }
@@ -107,9 +108,8 @@ public class NavigationTests : IAsyncLifetime
         var newsButton = page.Locator(".collection-nav a", new() { HasTextString = "News" });
         await newsButton.ClickBlazorElementAsync();
 
-        // Assert - URL should be /github-copilot/news
+        // Assert - URL should be /github-copilot/news (WaitForURLWithTimeoutAsync already asserts URL)
         await page.WaitForURLWithTimeoutAsync("**/github-copilot/news");
-        Assert.EndsWith("/github-copilot/news", page.Url);
         Assert.DoesNotContain("#", page.Url); // No hash fragments
 
         await page.CloseAsync();
@@ -181,11 +181,6 @@ public class NavigationTests : IAsyncLifetime
         // Wait for page to fully load after navigation
         await page.AssertElementContainsTextBySelectorAsync(".collection-nav a.active", "Videos");
 
-        // Videos collection should be active
-        var activeButton = page.Locator(".collection-nav a.active");
-        var activeText = await activeButton.TextContentWithTimeoutAsync();
-        Assert.Contains("Videos", activeText);
-
         await page.CloseAsync();
     }
 
@@ -255,14 +250,10 @@ public class NavigationTests : IAsyncLifetime
         await page.WaitForSelectorWithTimeoutAsync(".content-item-card");
 
         // Should show AI section
-        var heading = page.Locator("h1");
-        var headingText = await heading.TextContentWithTimeoutAsync();
-        Assert.Contains("Artificial Intelligence", headingText);
+        await page.AssertElementContainsTextBySelectorAsync("h1", "Artificial Intelligence");
 
         // News collection should be active
-        var activeButton = page.Locator(".collection-nav a.active");
-        var activeText = await activeButton.TextContentWithTimeoutAsync();
-        Assert.Contains("News", activeText);
+        await page.AssertElementContainsTextBySelectorAsync(".collection-nav a.active", "News");
 
         await page.CloseAsync();
     }

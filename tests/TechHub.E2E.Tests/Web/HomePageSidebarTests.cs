@@ -16,16 +16,20 @@ public class HomePageSidebarTests(PlaywrightCollectionFixture fixture) : IAsyncL
     public async Task InitializeAsync()
     {
         _context = await fixture.CreateContextAsync();
-        _page = await _context.NewPageAsync();
+        _page = await _context.NewPageWithDefaultsAsync();
     }
 
     public async Task DisposeAsync()
     {
         if (_page != null)
+        {
             await _page.CloseAsync();
+        }
 
         if (_context != null)
-            await _context.CloseAsync();
+        {
+            await _context.DisposeAsync();
+        }
     }
     [Fact]
     public async Task HomePage_ShouldDisplay_Sidebar()
@@ -44,7 +48,7 @@ public class HomePageSidebarTests(PlaywrightCollectionFixture fixture) : IAsyncL
         await Page.GotoRelativeAsync("/");
 
         // Assert - Use specific heading "Latest Content" to avoid ambiguity with "Latest Roundup"
-        await Assertions.Expect(Page.GetByRole(AriaRole.Heading, new() { Name = "Latest Content" })).ToBeVisibleAsync();
+        await Page.AssertElementVisibleByRoleAsync(AriaRole.Heading, "Latest Content");
     }
 
     [Fact]
@@ -57,7 +61,7 @@ public class HomePageSidebarTests(PlaywrightCollectionFixture fixture) : IAsyncL
         var latestSection = Page.Locator(".latest-items, .sidebar-latest");
         var itemLinks = latestSection.Locator("a").Filter(new() { HasNotText = "Latest" });
 
-        var count = await itemLinks.CountAsync();
+        var count = await latestSection.GetElementCountBySelectorAsync("a");
         Assert.True(count > 0 && count <= 10, $"Expected 1-10 latest item links, but found {count}");
     }
 
@@ -68,7 +72,7 @@ public class HomePageSidebarTests(PlaywrightCollectionFixture fixture) : IAsyncL
         await Page.GotoRelativeAsync("/");
 
         // Assert
-        await Assertions.Expect(Page.GetByRole(AriaRole.Heading, new() { NameRegex = new Regex("Popular Tags", RegexOptions.IgnoreCase) })).ToBeVisibleAsync();
+        await Page.AssertElementVisibleByRoleAsync(AriaRole.Heading, "Popular Tags");
     }
 
     [Fact]
@@ -81,7 +85,7 @@ public class HomePageSidebarTests(PlaywrightCollectionFixture fixture) : IAsyncL
         var tagsSection = Page.Locator(".popular-tags, .sidebar-tags");
         var tagLinks = tagsSection.Locator("a, .tag");
 
-        var count = await tagLinks.CountAsync();
+        var count = await tagsSection.GetElementCountBySelectorAsync("a, .tag");
         Assert.True(count > 0, $"Expected at least one tag link, but found {count}");
     }
 
@@ -94,7 +98,7 @@ public class HomePageSidebarTests(PlaywrightCollectionFixture fixture) : IAsyncL
         // Act - Click first latest item link (if any)
         var latestSection = Page.Locator(".latest-items, .sidebar-latest");
         var itemLinks = latestSection.Locator("a").Filter(new() { HasNotText = "Latest" });
-        var count = await itemLinks.CountAsync();
+        var count = await latestSection.GetElementCountBySelectorAsync("a");
 
         if (count > 0)
         {
@@ -115,7 +119,7 @@ public class HomePageSidebarTests(PlaywrightCollectionFixture fixture) : IAsyncL
         // Act - Click first tag link (if any)
         var tagsSection = Page.Locator(".popular-tags, .sidebar-tags");
         var tagLinks = tagsSection.Locator("a");
-        var count = await tagLinks.CountAsync();
+        var count = await tagsSection.GetElementCountBySelectorAsync("a");
 
         if (count > 0)
         {

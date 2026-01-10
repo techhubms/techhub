@@ -468,6 +468,43 @@ public static class BlazorHelpers
     }
 
     /// <summary>
+    /// Asserts that an element with the specified ARIA role and name is visible within a locator scope.
+    /// Uses accessible role-based selection for better accessibility testing.
+    /// Case-sensitive exact matching.
+    ///
+    /// Examples:
+    ///   var section = page.Locator(".team-member");
+    ///   await section.AssertElementVisibleByRoleAsync(AriaRole.Link, "GitHub");
+    ///   await section.AssertElementVisibleByRoleAsync(AriaRole.Heading, "Team Lead", level: 3);
+    /// </summary>
+    /// <param name="locator">The locator to search within</param>
+    /// <param name="role">The ARIA role to find</param>
+    /// <param name="name">The exact accessible name (case-sensitive)</param>
+    /// <param name="level">Optional: Heading level (1-6) when role is Heading</param>
+    /// <param name="timeoutMs">Maximum time to wait</param>
+    public static async Task AssertElementVisibleByRoleAsync(
+        this ILocator locator,
+        AriaRole role,
+        string name,
+        int? level = null,
+        int timeoutMs = DefaultAssertionTimeout)
+    {
+        var options = new LocatorGetByRoleOptions
+        {
+            Name = name,
+            Exact = true
+        };
+
+        if (level.HasValue)
+        {
+            options.Level = level.Value;
+        }
+
+        var element = locator.GetByRole(role, options);
+        await Assertions.Expect(element).ToBeVisibleAsync(new() { Timeout = timeoutMs });
+    }
+
+    /// <summary>
     /// Asserts that an element with the specified alt text is visible.
     /// Uses accessible alt text selection for better accessibility testing.
     /// Case-sensitive exact matching.
@@ -589,6 +626,64 @@ public static class BlazorHelpers
     }
 
     /// <summary>
+    /// Gets the count of elements matching the selector.
+    /// Use this for conditional logic, not for assertions (use AssertElementCountBySelectorAsync for assertions).
+    ///
+    /// Example:
+    ///   var count = await page.GetElementCountBySelectorAsync(".content-item-card");
+    ///   if (count > 0) { /* do something */ }
+    /// </summary>
+    /// <param name="page">The Playwright page</param>
+    /// <param name="selector">CSS selector</param>
+    /// <returns>Number of matching elements</returns>
+    public static async Task<int> GetElementCountBySelectorAsync(
+        this IPage page,
+        string selector)
+    {
+        return await page.Locator(selector).CountAsync();
+    }
+
+    /// <summary>
+    /// Gets the count of elements matching the selector within a locator scope.
+    /// Use this for conditional logic, not for assertions.
+    ///
+    /// Example:
+    ///   var grid = page.Locator(".section-grid");
+    ///   var count = await grid.GetElementCountBySelectorAsync("> .section-card-container");
+    ///   if (count > 0) { /* do something */ }
+    /// </summary>
+    /// <param name="locator">The locator to search within</param>
+    /// <param name="selector">CSS selector</param>
+    /// <returns>Number of matching elements</returns>
+    public static async Task<int> GetElementCountBySelectorAsync(
+        this ILocator locator,
+        string selector)
+    {
+        return await locator.Locator(selector).CountAsync();
+    }
+
+    /// <summary>
+    /// Asserts that the current URL ends with the specified segment.
+    /// Uses Playwright's auto-retrying Expect assertion.
+    ///
+    /// Example:
+    ///   await page.AssertUrlEndsWithAsync("/github-copilot/news");
+    /// </summary>
+    /// <param name="page">The Playwright page</param>
+    /// <param name="urlSegment">The URL segment to check for at the end</param>
+    /// <param name="timeoutMs">Maximum time to wait</param>
+    public static async Task AssertUrlEndsWithAsync(
+        this IPage page,
+        string urlSegment,
+        int timeoutMs = DefaultNavigationTimeout)
+    {
+        await Assertions.Expect(page).ToHaveURLAsync(
+            new System.Text.RegularExpressions.Regex($".*{System.Text.RegularExpressions.Regex.Escape(urlSegment)}$"),
+            new() { Timeout = timeoutMs }
+        );
+    }
+
+    /// <summary>
     /// Clicks an element found by selector using Blazor-aware click handling.
     ///
     /// Example:
@@ -627,6 +722,25 @@ public static class BlazorHelpers
             Exact = true
         };
         await page.GetByRole(role, options).ClickBlazorElementAsync(timeoutMs);
+    }
+
+    /// <summary>
+    /// Asserts that an element's href attribute equals the expected value.
+    /// Uses Playwright's auto-retrying assertions.
+    ///
+    /// Example:
+    ///   await locator.AssertHrefEqualsAsync("/github-copilot/feed.xml");
+    /// </summary>
+    /// <param name="locator">The element to check</param>
+    /// <param name="expectedHref">Expected href value (case-sensitive exact match)</param>
+    /// <param name="timeoutMs">Maximum time to wait</param>
+    public static async Task AssertHrefEqualsAsync(
+        this ILocator locator,
+        string expectedHref,
+        int timeoutMs = DefaultAssertionTimeout)
+    {
+        await Assertions.Expect(locator)
+            .ToHaveAttributeAsync("href", expectedHref, new() { Timeout = timeoutMs });
     }
 }
 

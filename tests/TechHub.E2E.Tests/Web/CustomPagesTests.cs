@@ -16,14 +16,14 @@ public class CustomPagesTests(PlaywrightCollectionFixture fixture) : IAsyncLifet
     public async Task InitializeAsync()
     {
         _context = await fixture.CreateContextAsync();
-        _page = await _context.NewPageAsync();
+        _page = await _context.NewPageWithDefaultsAsync();
     }
 
     public async Task DisposeAsync()
     {
         if (_page != null)
             await _page.CloseAsync();
-        
+
         if (_context != null)
             await _context.CloseAsync();
     }
@@ -41,9 +41,9 @@ public class CustomPagesTests(PlaywrightCollectionFixture fixture) : IAsyncLifet
     {
         // Act
         await Page.GotoRelativeAsync(url);
-        
-        // Assert
-        await Assertions.Expect(Page).ToHaveTitleAsync(new Regex(Regex.Escape(expectedTitlePart), RegexOptions.IgnoreCase));
+
+        // Assert - Check page title attribute contains expected text
+        await Assertions.Expect(Page).ToHaveTitleAsync(new Regex(expectedTitlePart));
     }
 
     [Theory]
@@ -60,14 +60,14 @@ public class CustomPagesTests(PlaywrightCollectionFixture fixture) : IAsyncLifet
     {
         // Act
         await Page.GotoRelativeAsync(url);
-        
+
         // Assert - Page should have main heading
         var mainHeading = Page.GetByRole(AriaRole.Heading, new() { Level = 1 });
-        await Assertions.Expect(mainHeading).ToBeVisibleAsync();
-        
+        await mainHeading.AssertElementVisibleAsync();
+
         // Should have some content (paragraphs, lists, etc.)
         var paragraphs = Page.Locator("p");
-        var count = await paragraphs.CountAsync();
+        var count = await Page.GetElementCountBySelectorAsync("p");
         Assert.True(count > 0, $"Expected at least one paragraph on {url}, but found {count}");
     }
 
@@ -76,11 +76,14 @@ public class CustomPagesTests(PlaywrightCollectionFixture fixture) : IAsyncLifet
     {
         // Act
         await Page.GotoRelativeAsync("/github-copilot/handbook");
-        
+
         // Assert - Check for author headings (more specific than just text)
-        await Assertions.Expect(Page.GetByRole(AriaRole.Heading, new() { Name = "Rob Bos" })).ToBeVisibleAsync();
-        await Assertions.Expect(Page.GetByRole(AriaRole.Heading, new() { Name = "Randy Pagels" })).ToBeVisibleAsync();
-        await Assertions.Expect(Page.GetByRole(AriaRole.Link, new() { NameRegex = new Regex("Amazon", RegexOptions.IgnoreCase) })).ToBeVisibleAsync();
+        await Page.AssertElementVisibleByRoleAsync(AriaRole.Heading, "Rob Bos");
+        await Page.AssertElementVisibleByRoleAsync(AriaRole.Heading, "Randy Pagels");
+
+        // Check for Amazon link (may be in a sentence, use text contains)
+        var amazonLinkExists = await Page.GetByRole(AriaRole.Link).Filter(new() { HasText = "Amazon" }).CountAsync() > 0;
+        Assert.True(amazonLinkExists, "Expected to find a link containing 'Amazon' text");
     }
 
     [Fact]
@@ -88,11 +91,11 @@ public class CustomPagesTests(PlaywrightCollectionFixture fixture) : IAsyncLifet
     {
         // Act
         await Page.GotoRelativeAsync("/ai/genai-basics");
-        
+
         // Assert - Should have major section headings (use exact names to avoid strict mode)
-        await Assertions.Expect(Page.GetByRole(AriaRole.Heading, new() { Name = "History" })).ToBeVisibleAsync();
-        await Assertions.Expect(Page.GetByRole(AriaRole.Heading, new() { Name = "Models", Exact = true })).ToBeVisibleAsync();
-        await Assertions.Expect(Page.GetByRole(AriaRole.Heading, new() { NameRegex = new Regex("Tokens", RegexOptions.IgnoreCase) })).ToBeVisibleAsync();
+        await Page.AssertElementVisibleByRoleAsync(AriaRole.Heading, "History");
+        await Page.AssertElementVisibleByRoleAsync(AriaRole.Heading, "Models");
+        await Page.AssertElementVisibleByRoleAsync(AriaRole.Heading, "Tokens & Tokenization");
     }
 
     [Fact]
@@ -100,9 +103,9 @@ public class CustomPagesTests(PlaywrightCollectionFixture fixture) : IAsyncLifet
     {
         // Act
         await Page.GotoRelativeAsync("/devops/dx-space");
-        
+
         // Assert - Check for placeholder content headings
-        await Assertions.Expect(Page.GetByRole(AriaRole.Heading, new() { Name = "Overview" })).ToBeVisibleAsync();
-        await Assertions.Expect(Page.GetByRole(AriaRole.Heading, new() { Name = "Key Topics" })).ToBeVisibleAsync();
+        await Page.AssertElementVisibleByRoleAsync(AriaRole.Heading, "Overview");
+        await Page.AssertElementVisibleByRoleAsync(AriaRole.Heading, "Key Topics");
     }
 }

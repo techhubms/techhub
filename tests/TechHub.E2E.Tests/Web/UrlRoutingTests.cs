@@ -30,8 +30,9 @@ public class UrlRoutingTests : IAsyncLifetime
     public async Task DisposeAsync()
     {
         if (_context != null)
+        {
             await _context.DisposeAsync();
-
+        }
     }
 
     #region URL Routing Tests
@@ -47,19 +48,13 @@ public class UrlRoutingTests : IAsyncLifetime
 
         // Assert - URL is /github-copilot (defaults to "all" without redirect)
         // This is intentional - the section page defaults to "all" collection without URL redirect
-        page.Url.Should().EndWith("/github-copilot",
-            "navigating to a section shows the default 'all' collection at /section");
+        await page.AssertUrlEndsWithAsync("/github-copilot");
 
         // Verify "All" collection is displayed - check the page heading
-        var pageHeading = page.Locator("h1.page-h1");
-        var headingText = await pageHeading.TextContentAsync();
-        headingText.Should().Contain("All",
-            "the default collection should show 'All' in the page heading");
+        await page.AssertElementContainsTextBySelectorAsync("h1.page-h1", "All");
 
         // "All" button should be active
-        var activeButton = page.Locator(".collection-nav a.active");
-        var activeText = await activeButton.TextContentAsync();
-        activeText.Should().Contain("All", "the 'All' collection button should be active by default");
+        await page.AssertElementContainsTextBySelectorAsync(".collection-nav a.active", "All");
 
         await page.CloseAsync();
     }
@@ -75,13 +70,10 @@ public class UrlRoutingTests : IAsyncLifetime
         await page.Locator(".content-item-card").First.AssertElementVisibleAsync();
 
         // Assert - URL should remain /github-copilot/news
-        page.Url.Should().EndWith("/github-copilot/news",
-            "URL should match the route /section/collection");
+        await page.AssertUrlEndsWithAsync("/github-copilot/news");
 
         // News button should be active
-        var activeButton = page.Locator(".collection-nav a.active");
-        var activeText = await activeButton.TextContentAsync(new() { Timeout = 3000 });
-        activeText.Should().Contain("News", "the News collection button should be active");
+        await page.AssertElementContainsTextBySelectorAsync(".collection-nav a.active", "News");
 
         await page.CloseAsync();
     }
@@ -97,18 +89,14 @@ public class UrlRoutingTests : IAsyncLifetime
         var blogsButton = page.Locator(".collection-nav a", new() { HasTextString = "Blogs" });
         await blogsButton.ClickBlazorElementAsync();
 
-        // Assert - URL should update to /github-copilot/blogs
+        // Assert - URL should update to /github-copilot/blogs (WaitForURLAsync already validates URL)
         await page.WaitForURLAsync("**/github-copilot/blogs", new() { Timeout = 5000 });
-        page.Url.Should().EndWith("/github-copilot/blogs",
-            "clicking a collection button should update the URL to /section/collection");
 
         // Wait for page heading to actually update to show "Blog" (from "Blog Posts")
         var pageH1 = page.Locator("h1.page-h1");
         await Assertions.Expect(pageH1).ToContainTextAsync("Blog", new() { Timeout = 5000 });
 
-        // Verify the heading contains "Blog"
-        var pageHeading = await pageH1.TextContentAsync();
-        pageHeading.Should().Contain("Blog", "the page heading should reflect the selected collection");
+        // Verify the page heading was already asserted with ToContainTextAsync above
 
         await page.CloseAsync();
     }
@@ -124,10 +112,8 @@ public class UrlRoutingTests : IAsyncLifetime
         var allButton = page.Locator(".collection-nav a", new() { HasTextString = "All" });
         await allButton.ClickBlazorElementAsync();
 
-        // Assert - URL should update to /github-copilot/all
+        // Assert - URL should update to /github-copilot/all (WaitForURLAsync already validates URL)
         await page.WaitForURLAsync("**/github-copilot/all", new() { Timeout = 5000 });
-        page.Url.Should().EndWith("/github-copilot/all",
-            "clicking the 'All' button should update the URL to /section/all");
 
         await page.CloseAsync();
     }
@@ -140,9 +126,7 @@ public class UrlRoutingTests : IAsyncLifetime
         await page.GotoRelativeAsync("/github-copilot/news");
 
         // Verify News button is active initially
-        var newsButtonBefore = page.Locator(".collection-nav a.active");
-        var newsTextBefore = await newsButtonBefore.TextContentAsync(new() { Timeout = 3000 });
-        newsTextBefore.Should().Contain("News", "News should be active initially");
+        await page.AssertElementContainsTextBySelectorAsync(".collection-nav a.active", "News");
 
         // Navigate to videos
         var videosButton = page.Locator(".collection-nav a", new() { HasTextString = "Videos" });
@@ -152,26 +136,14 @@ public class UrlRoutingTests : IAsyncLifetime
         // Wait for Blazor to sync state (update .active class)
         await page.AssertElementContainsTextBySelectorAsync(".collection-nav a.active", "Videos");
 
-        // Verify Videos button is now active
-        var videosButtonActive = page.Locator(".collection-nav a.active");
-        var videosText = await videosButtonActive.TextContentAsync(new() { Timeout = 3000 });
-        videosText.Should().Contain("Videos", "Videos should be active after clicking");
-
         // Act - Press browser back button
         await page.GoBackAsync();
 
-        // Assert - Should return to /github-copilot/news
+        // Assert - Should return to /github-copilot/news (WaitForURLAsync already validates URL)
         await page.WaitForURLAsync("**/github-copilot/news", new() { Timeout = 5000 });
-        page.Url.Should().EndWith("/github-copilot/news",
-            "browser back button should navigate to previous collection URL");
 
         // Wait for Blazor to sync state with URL (OnParametersSetAsync should fire)
         await page.AssertElementContainsTextBySelectorAsync(".collection-nav a.active", "News");
-
-        // News button should be active again
-        var activeButton = page.Locator(".collection-nav a.active");
-        var activeText = await activeButton.TextContentAsync(new() { Timeout = 3000 });
-        activeText.Should().Contain("News", "the previously active collection should be restored");
 
         await page.CloseAsync();
     }
@@ -195,10 +167,8 @@ public class UrlRoutingTests : IAsyncLifetime
         // Act - Press browser forward button
         await page.GoForwardAsync();
 
-        // Assert - Should return to /github-copilot/videos
+        // Assert - Should return to /github-copilot/videos (WaitForURLAsync already validates URL)
         await page.WaitForURLAsync("**/github-copilot/videos", new() { Timeout = 5000 });
-        page.Url.Should().EndWith("/github-copilot/videos",
-            "browser forward button should navigate to next collection URL");
 
         await page.CloseAsync();
     }
@@ -223,14 +193,12 @@ public class UrlRoutingTests : IAsyncLifetime
         await page.Locator(".content-item-card").First.AssertElementVisibleAsync();
 
         // Assert - Should display all GitHub Copilot items regardless of collection
-        var displayedItems = await page.Locator(".content-item-card").CountAsync();
+        var displayedItems = await page.GetElementCountBySelectorAsync(".content-item-card");
         displayedItems.Should().Be(totalItemCount,
             "the 'all' collection should show all content items from the section across all collection types");
 
         // Page heading should indicate "All" - verify active button shows "All"
-        var activeButton = page.Locator(".collection-nav a.active");
-        var activeText = await activeButton.TextContentAsync(new() { Timeout = 3000 });
-        activeText.Should().Contain("All", "the 'All' collection button should be active");
+        await page.AssertElementContainsTextBySelectorAsync(".collection-nav a.active", "All");
 
         await page.CloseAsync();
     }
@@ -251,7 +219,7 @@ public class UrlRoutingTests : IAsyncLifetime
         await page.Locator(".content-item-card").First.AssertElementVisibleAsync();
 
         // Assert - Should display ALL content from ALL sections and collections
-        var displayedItems = await page.Locator(".content-item-card").CountAsync();
+        var displayedItems = await page.GetElementCountBySelectorAsync(".content-item-card");
         displayedItems.Should().Be(totalItemCount,
             "/all/all should show absolutely all content items from all sections and all collections");
 
@@ -274,7 +242,7 @@ public class UrlRoutingTests : IAsyncLifetime
         await page.Locator(".content-item-card").First.AssertElementVisibleAsync();
 
         // Assert - Should display all news items from all sections
-        var displayedItems = await page.Locator(".content-item-card").CountAsync();
+        var displayedItems = await page.GetElementCountBySelectorAsync(".content-item-card");
         displayedItems.Should().Be(totalNewsCount,
             "/all/news should show all news items from all sections");
 
@@ -295,13 +263,12 @@ public class UrlRoutingTests : IAsyncLifetime
         // Act - Navigate to any section
         await page.GotoRelativeAsync("/github-copilot");
 
-        // Assert - "All" button should exist in the collection nav
-        var allButton = page.Locator(".collection-nav a", new() { HasTextString = "All" });
-        (await allButton.CountAsync()).Should().Be(1,
-            "there should be exactly one 'All' button in the collection sidebar");
-
-        (await allButton.IsVisibleAsync()).Should().BeTrue(
-            "the 'All' button should be visible");
+        // Assert - Collections section should have collection links (All + regular collections)
+        // Use more specific selector to only count collection links, not custom pages or RSS feed
+        var collectionsSection = page.Locator(".sidebar-section").Filter(new() { Has = page.GetByRole(AriaRole.Heading, new() { Name = "Collections" }) });
+        var collectionLinks = collectionsSection.Locator("a");
+        await Assertions.Expect(collectionLinks).ToHaveCountAsync(5); // All + News + Blogs + Videos + Community
+        await Assertions.Expect(collectionLinks.First).ToBeVisibleAsync(); // Verify at least one is visible
 
         await page.CloseAsync();
     }
@@ -320,8 +287,7 @@ public class UrlRoutingTests : IAsyncLifetime
         var firstCard = page.Locator(".content-item-card").First;
         var collectionBadge = firstCard.Locator(".collection-badge-white");
 
-        (await collectionBadge.IsVisibleAsync()).Should().BeTrue(
-            "collection badges should be shown on 'all' pages to distinguish content types");
+        await collectionBadge.AssertElementVisibleAsync();
 
         // Badge should have proper capitalization
         var badgeText = await collectionBadge.TextContentAsync(new() { Timeout = 3000 });
@@ -382,10 +348,6 @@ public class UrlRoutingTests : IAsyncLifetime
         await communityButton.ClickBlazorElementAsync();
         await page.WaitForBlazorUrlContainsAsync("/community");
 
-        // Assert - All buttons worked
-        page.Url.Should().EndWith("/github-copilot/community",
-            "all collection buttons should be interactive and update the URL");
-
         await page.CloseAsync();
     }
 
@@ -428,14 +390,13 @@ public class UrlRoutingTests : IAsyncLifetime
         var page = await _context!.NewPageWithDefaultsAsync();
         await page.GotoRelativeAsync("/github-copilot/news");
 
-        // Assert - News button should have "active" class
-        var newsButton = page.Locator(".collection-nav a", new() { HasTextString = "News" });
-        var className = await newsButton.GetAttributeAsync("class");
-        className.Should().Contain("active",
-            "the currently selected collection button should have the 'active' class");
+        // Assert - News button should have "active" class (verified by .active selector)
+        await page.AssertElementVisibleBySelectorAsync(".collection-nav a.active");
+        await page.AssertElementContainsTextBySelectorAsync(".collection-nav a.active", "News");
 
-        // Other buttons should NOT have "active" class
+        // Other buttons should NOT have "active" class - verify Blogs button exists but is not active
         var blogsButton = page.Locator(".collection-nav a", new() { HasTextString = "Blogs" });
+        await blogsButton.AssertElementVisibleAsync();
         var blogsClass = await blogsButton.GetAttributeAsync("class");
         blogsClass.Should().NotContain("active",
             "non-selected collection buttons should not have the 'active' class");
@@ -455,17 +416,10 @@ public class UrlRoutingTests : IAsyncLifetime
         await page.GotoRelativeAsync("/azure/news");
 
         // Assert - Should load Azure News collection
-        page.Url.Should().EndWith("/azure/news",
-            "direct URL navigation should preserve the collection route");
+        await page.AssertUrlEndsWithAsync("/azure/news");
 
-        var activeButton = page.Locator(".collection-nav a.active");
-        var activeText = await activeButton.TextContentAsync(new() { Timeout = 3000 });
-        activeText.Should().Contain("News",
-            "the correct collection should be active when loading from direct URL");
-
-        var sectionHeading = await page.Locator("h1").TextContentAsync(new() { Timeout = 3000 });
-        sectionHeading.Should().Contain("Azure",
-            "the correct section should be displayed when loading from direct URL");
+        await page.AssertElementContainsTextBySelectorAsync(".collection-nav a.active", "News");
+        await page.AssertElementContainsTextBySelectorAsync("h1", "Azure");
 
         await page.CloseAsync();
     }
@@ -487,10 +441,7 @@ public class UrlRoutingTests : IAsyncLifetime
         page2.Url.Should().Be(sharedUrl,
             "shared URL should load the exact same route");
 
-        var activeButton = page2.Locator(".collection-nav a.active");
-        var activeText = await activeButton.TextContentAsync(new() { Timeout = 3000 });
-        activeText.Should().Contain("Videos",
-            "shared URL should restore the exact collection state");
+        await page2.AssertElementContainsTextBySelectorAsync(".collection-nav a.active", "Videos");
 
         await page1.CloseAsync();
         await page2.CloseAsync();
