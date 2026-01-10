@@ -79,11 +79,14 @@
   color: var(--color-text-inverse);
   display: none;
   left: 0;
-  padding: var(--spacing-3) var(--spacing-4);
+  padding: var(--spacing-2) var(--spacing-4);
   position: fixed;
   width: 100%;
   z-index: 10000;
   animation: slideUp 0.3s var(--easing-ease-out);
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--spacing-3);
 }
 
 @keyframes slideUp {
@@ -100,8 +103,9 @@
 #blazor-error-ui .error-content {
   display: flex;
   align-items: center;
-  gap: var(--spacing-3);
+  gap: var(--spacing-2);
   flex: 1;
+  min-width: 0;
 }
 
 #blazor-error-ui .error-icon {
@@ -113,26 +117,32 @@
 
 #blazor-error-ui .error-message {
   display: flex;
-  flex-direction: column;
-  gap: var(--spacing-1);
+  align-items: center;
+  gap: var(--spacing-2);
   flex: 1;
+  min-width: 0;
 }
 
 #blazor-error-ui .error-message strong {
-  font-size: var(--font-size-base);
+  font-size: var(--font-size-sm);
   font-weight: var(--font-weight-semibold);
   color: var(--color-text-inverse);
+  white-space: nowrap;
 }
 
 #blazor-error-ui .error-message span {
   font-size: var(--font-size-sm);
   color: rgba(255, 255, 255, 0.9);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 #blazor-error-ui .error-actions {
   display: flex;
   align-items: center;
   gap: var(--spacing-2);
+  flex-shrink: 0;
 }
 
 #blazor-error-ui .reload-button {
@@ -155,24 +165,26 @@
 }
 
 #blazor-error-ui .dismiss-button {
-  background: transparent;
-  border: none;
+  background: rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.3);
   color: var(--color-text-inverse);
   cursor: pointer;
-  padding: var(--spacing-2);
-  font-size: var(--font-size-lg);
+  padding: var(--spacing-2) var(--spacing-3);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
   line-height: 1;
-  transition: opacity var(--duration-fast) var(--easing-ease);
-  width: 32px;
-  height: 32px;
+  transition: all var(--duration-fast) var(--easing-ease);
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: var(--radius-sm);
+  border-radius: var(--radius-md);
+  white-space: nowrap;
 }
 
 #blazor-error-ui .dismiss-button:hover {
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.3);
+  border-color: rgba(255, 255, 255, 0.5);
+  transform: translateY(-1px);
 }
 
 /* Responsive */
