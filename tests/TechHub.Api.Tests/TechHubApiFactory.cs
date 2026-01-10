@@ -3,7 +3,6 @@ using Microsoft.AspNetCore.Mvc.Testing;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Moq;
-using System.Collections.Concurrent;
 using TechHub.Core.Interfaces;
 using TechHub.Core.Models;
 
@@ -79,11 +78,11 @@ public class TechHubApiFactory : WebApplicationFactory<Program>
                 Url = "/ai",
                 Category = "AI",
                 BackgroundImage = "/assets/section-backgrounds/ai.jpg",
-                Collections = new List<CollectionReference>
-                {
+                Collections =
+                [
                     new() { Title = "News", Name = "news", Url = "/ai/news", Description = "AI News", IsCustom = false },
                     new() { Title = "Blogs", Name = "blogs", Url = "/ai/blogs", Description = "AI Blogs", IsCustom = false }
-                }
+                ]
             },
             new()
             {
@@ -93,11 +92,11 @@ public class TechHubApiFactory : WebApplicationFactory<Program>
                 Url = "/github-copilot",
                 Category = "GitHub Copilot",
                 BackgroundImage = "/assets/section-backgrounds/github-copilot.jpg",
-                Collections = new List<CollectionReference>
-                {
+                Collections =
+                [
                     new() { Title = "News", Name = "news", Url = "/github-copilot/news", Description = "GitHub Copilot News", IsCustom = false },
                     new() { Title = "Videos", Name = "videos", Url = "/github-copilot/videos", Description = "GitHub Copilot Videos", IsCustom = false }
-                }
+                ]
             }
         };
 
@@ -135,8 +134,8 @@ public class TechHubApiFactory : WebApplicationFactory<Program>
                 Author = "John Doe",
                 DateEpoch = 1705276800, CollectionName = "news",
                 AltCollection = null,
-                Categories = new List<string> { "AI" },
-                Tags = new List<string> { "ai", "copilot", "azure" },
+                Categories = ["AI"],
+                Tags = ["ai", "copilot", "azure"],
                 RenderedHtml = "<h1>AI News Article 1</h1><p>AI news content...</p>",
                 Excerpt = "AI news excerpt...",
                 ExternalUrl = "https://example.com/ai-news-1",
@@ -148,8 +147,8 @@ public class TechHubApiFactory : WebApplicationFactory<Program>
                 Author = "Jane Smith",
                 DateEpoch = 1705363200, CollectionName = "blogs",
                 AltCollection = null,
-                Categories = new List<string> { "AI" },
-                Tags = new List<string> { "ai", "machine-learning" },
+                Categories = ["AI"],
+                Tags = ["ai", "machine-learning"],
                 RenderedHtml = "<h1>AI Blog Article 1</h1><p>AI blog content...</p>",
                 Excerpt = "AI blog excerpt...",
                 ExternalUrl = null,
@@ -161,8 +160,8 @@ public class TechHubApiFactory : WebApplicationFactory<Program>
                 Author = "Bob Johnson",
                 DateEpoch = 1705449600, CollectionName = "videos",
                 AltCollection = null,
-                Categories = new List<string> { "GitHub Copilot" },
-                Tags = new List<string> { "copilot", "vscode", "productivity" },
+                Categories = ["GitHub Copilot"],
+                Tags = ["copilot", "vscode", "productivity"],
                 RenderedHtml = "<h1>GitHub Copilot Video 1</h1><p>Copilot video content...</p>",
                 Excerpt = "Copilot video excerpt...",
                 ExternalUrl = null,
@@ -174,8 +173,8 @@ public class TechHubApiFactory : WebApplicationFactory<Program>
                 Author = "Alice Williams",
                 DateEpoch = 1705536000, CollectionName = "news",
                 AltCollection = null,
-                Categories = new List<string> { "GitHub Copilot" },
-                Tags = new List<string> { "copilot", "github" },
+                Categories = ["GitHub Copilot"],
+                Tags = ["copilot", "github"],
                 RenderedHtml = "<h1>GitHub Copilot News 1</h1><p>Copilot news content...</p>",
                 Excerpt = "Copilot news excerpt...",
                 ExternalUrl = "https://example.com/copilot-news-1",
@@ -184,27 +183,27 @@ public class TechHubApiFactory : WebApplicationFactory<Program>
         };
 
         var mockRepo = Mock.Get(MockContentRepository!);
-        
+
         // GetAllAsync
         mockRepo.Setup(r => r.GetAllAsync(It.IsAny<CancellationToken>()))
             .ReturnsAsync(content);
 
         // GetByCollectionAsync
         mockRepo.Setup(r => r.GetByCollectionAsync("news", It.IsAny<CancellationToken>()))
-            .ReturnsAsync(content.Where(c => c.CollectionName == "news").ToList());
+            .ReturnsAsync([.. content.Where(c => c.CollectionName == "news")]);
 
         mockRepo.Setup(r => r.GetByCollectionAsync("blogs", It.IsAny<CancellationToken>()))
-            .ReturnsAsync(content.Where(c => c.CollectionName == "blogs").ToList());
+            .ReturnsAsync([.. content.Where(c => c.CollectionName == "blogs")]);
 
         mockRepo.Setup(r => r.GetByCollectionAsync("videos", It.IsAny<CancellationToken>()))
-            .ReturnsAsync(content.Where(c => c.CollectionName == "videos").ToList());
+            .ReturnsAsync([.. content.Where(c => c.CollectionName == "videos")]);
 
         // GetByCategoryAsync
         mockRepo.Setup(r => r.GetByCategoryAsync("AI", It.IsAny<CancellationToken>()))
-            .ReturnsAsync(content.Where(c => c.Categories.Contains("AI")).ToList());
+            .ReturnsAsync([.. content.Where(c => c.Categories.Contains("AI"))]);
 
         mockRepo.Setup(r => r.GetByCategoryAsync("GitHub Copilot", It.IsAny<CancellationToken>()))
-            .ReturnsAsync(content.Where(c => c.Categories.Contains("GitHub Copilot")).ToList());
+            .ReturnsAsync([.. content.Where(c => c.Categories.Contains("GitHub Copilot"))]);
 
         // GetAllTagsAsync
         var allTags = content.SelectMany(c => c.Tags).Distinct().ToList();
@@ -230,6 +229,7 @@ file class FileLoggerProvider : ILoggerProvider
         {
             Directory.CreateDirectory(directory);
         }
+
         _writer = new StreamWriter(_filePath, append: true) { AutoFlush = true };
     }
 
@@ -245,18 +245,11 @@ file class FileLoggerProvider : ILoggerProvider
 /// <summary>
 /// Simple file logger for test server
 /// </summary>
-file class FileLogger : ILogger
+file class FileLogger(string categoryName, StreamWriter writer, object lockObj) : ILogger
 {
-    private readonly string _categoryName;
-    private readonly StreamWriter _writer;
-    private readonly object _lock;
-
-    public FileLogger(string categoryName, StreamWriter writer, object lockObj)
-    {
-        _categoryName = categoryName;
-        _writer = writer;
-        _lock = lockObj;
-    }
+    private readonly string _categoryName = categoryName;
+    private readonly StreamWriter _writer = writer;
+    private readonly object _lock = lockObj;
 
     public IDisposable? BeginScope<TState>(TState state) where TState : notnull => null;
 
@@ -264,7 +257,10 @@ file class FileLogger : ILogger
 
     public void Log<TState>(LogLevel logLevel, EventId eventId, TState state, Exception? exception, Func<TState, Exception?, string> formatter)
     {
-        if (!IsEnabled(logLevel)) return;
+        if (!IsEnabled(logLevel))
+        {
+            return;
+        }
 
         lock (_lock)
         {

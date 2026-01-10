@@ -73,13 +73,13 @@ builder.Services.AddHttpClient<TechHubApiClient>(client =>
     options.Retry.BackoffType = Polly.DelayBackoffType.Exponential;
     options.Retry.UseJitter = true;
     options.Retry.Delay = TimeSpan.FromSeconds(1);  // Base delay before exponential backoff
-    
+
     // Circuit breaker: open after 50% failures in 30 seconds (min 8 requests)
     options.CircuitBreaker.FailureRatio = 0.5;
     options.CircuitBreaker.SamplingDuration = TimeSpan.FromSeconds(30);
     options.CircuitBreaker.MinimumThroughput = 8;  // Increased to avoid premature triggering
     options.CircuitBreaker.BreakDuration = TimeSpan.FromSeconds(10);
-    
+
     // Total timeout for the entire request (including retries)
     options.TotalRequestTimeout.Timeout = TimeSpan.FromSeconds(60);
 });
@@ -91,7 +91,7 @@ using (var scope = app.Services.CreateScope())
 {
     var apiClient = scope.ServiceProvider.GetRequiredService<TechHubApiClient>();
     var sectionCache = scope.ServiceProvider.GetRequiredService<SectionCache>();
-    
+
     try
     {
         var sections = await apiClient.GetAllSectionsAsync();
@@ -128,7 +128,7 @@ app.UseStaticFiles(new StaticFileOptions
     {
         var path = ctx.File.PhysicalPath ?? ctx.Context.Request.Path.Value ?? string.Empty;
         var isDevelopment = app.Environment.IsDevelopment();
-        
+
         // Images, fonts, and other media
         if (path.EndsWith(".jpg", StringComparison.OrdinalIgnoreCase) ||
             path.EndsWith(".jpeg", StringComparison.OrdinalIgnoreCase) ||

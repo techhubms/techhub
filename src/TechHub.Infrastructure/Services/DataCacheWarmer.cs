@@ -8,26 +8,19 @@ namespace TechHub.Infrastructure.Services;
 /// Background service that eagerly loads all data at application startup.
 /// Runs asynchronously without blocking server startup, ensuring fast initial response.
 /// </summary>
-public class DataCacheWarmer : BackgroundService
+public class DataCacheWarmer(
+    ILogger<DataCacheWarmer> logger,
+    ISectionRepository sectionRepository,
+    IContentRepository contentRepository) : BackgroundService
 {
-    private readonly ILogger<DataCacheWarmer> _logger;
-    private readonly ISectionRepository _sectionRepository;
-    private readonly IContentRepository _contentRepository;
-
-    public DataCacheWarmer(
-        ILogger<DataCacheWarmer> logger,
-        ISectionRepository sectionRepository,
-        IContentRepository contentRepository)
-    {
-        _logger = logger;
-        _sectionRepository = sectionRepository;
-        _contentRepository = contentRepository;
-    }
+    private readonly ILogger<DataCacheWarmer> _logger = logger;
+    private readonly ISectionRepository _sectionRepository = sectionRepository;
+    private readonly IContentRepository _contentRepository = contentRepository;
 
     protected override async Task ExecuteAsync(CancellationToken stoppingToken)
     {
         _logger.LogInformation("Starting data cache warm-up in background...");
-        
+
         var startTime = DateTimeOffset.UtcNow;
 
         try

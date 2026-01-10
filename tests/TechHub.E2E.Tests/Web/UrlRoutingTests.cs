@@ -1,6 +1,5 @@
-using Microsoft.Playwright;
-using Xunit;
 using FluentAssertions;
+using Microsoft.Playwright;
 using TechHub.E2E.Tests.Helpers;
 
 namespace TechHub.E2E.Tests.Web;
@@ -10,17 +9,12 @@ namespace TechHub.E2E.Tests.Web;
 /// These tests document and verify the expected behavior of URL-based navigation
 /// </summary>
 [Collection("URL Routing Tests")]
-public class UrlRoutingTests : IAsyncLifetime
+public class UrlRoutingTests(PlaywrightCollectionFixture fixture) : IAsyncLifetime
 {
-    private readonly PlaywrightCollectionFixture _fixture;
+    private readonly PlaywrightCollectionFixture _fixture = fixture;
     private IBrowserContext? _context;
     private const string BaseUrl = "http://localhost:5184";
     private const string ApiUrl = "http://localhost:5029";
-
-    public UrlRoutingTests(PlaywrightCollectionFixture fixture)
-    {
-        _fixture = fixture;
-    }
 
     public async Task InitializeAsync()
     {

@@ -14,7 +14,7 @@ public class FilterState
     /// <summary>
     /// Selected tags for OR filtering
     /// </summary>
-    public IReadOnlyList<string> SelectedTags { get; init; } = Array.Empty<string>();
+    public IReadOnlyList<string> SelectedTags { get; init; } = [];
 
     /// <summary>
     /// Text search query (searches title, description, and tags)
@@ -47,7 +47,7 @@ public class FilterState
         return new FilterState
         {
             DateRange = queryParams.GetValueOrDefault("dateRange"),
-            SelectedTags = queryParams.GetValueOrDefault("tags")?.Split(',', StringSplitOptions.RemoveEmptyEntries) ?? Array.Empty<string>(),
+            SelectedTags = queryParams.GetValueOrDefault("tags")?.Split(',', StringSplitOptions.RemoveEmptyEntries) ?? [],
             SearchQuery = queryParams.GetValueOrDefault("search"),
             StartDateEpoch = long.TryParse(queryParams.GetValueOrDefault("startDate"), out var start) ? start : null,
             EndDateEpoch = long.TryParse(queryParams.GetValueOrDefault("endDate"), out var end) ? end : null

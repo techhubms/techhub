@@ -23,7 +23,7 @@ public static class SectionExtensions
             Url = section.Url,
             Category = section.Category,
             BackgroundImage = section.BackgroundImage,
-            Collections = section.Collections.Select(c => c.ToDto()).ToList()
+            Collections = [.. section.Collections.Select(c => c.ToDto())]
         };
     }
 
@@ -49,6 +49,6 @@ public static class SectionExtensions
     /// </summary>
     public static IReadOnlyList<SectionDto> ToDtos(this IEnumerable<Section> sections)
     {
-        return sections.Select(s => s.ToDto()).ToList();
+        return [.. sections.Select(s => s.ToDto())];
     }
 }

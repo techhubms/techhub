@@ -257,24 +257,24 @@ public class SectionsEndpointsTests : IClassFixture<TechHubApiFactory>
     {
         // This test verifies the complete HTTP request/response cycle works correctly
         // The same serialization path is used by Swagger UI
-        
+
         // Act: Make HTTP request to get sections
         var response = await _client.GetAsync("/api/sections");
 
         // Assert: Should return success
         response.StatusCode.Should().Be(HttpStatusCode.OK);
-        
+
         // Verify Content-Type is JSON
         response.Content.Headers.ContentType?.MediaType.Should().Be("application/json");
 
         // Verify we can deserialize the response
         var jsonString = await response.Content.ReadAsStringAsync();
         jsonString.Should().NotBeEmpty();
-        
+
         var sections = await response.Content.ReadFromJsonAsync<List<SectionDto>>();
         sections.Should().NotBeNull();
         sections.Should().NotBeEmpty();
-        
+
         // Verify the structure matches what Swagger expects
         foreach (var section in sections!)
         {

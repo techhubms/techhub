@@ -18,8 +18,8 @@ public class SectionTests
             Url = "/ai",
             Category = "AI",
             BackgroundImage = "/assets/section-backgrounds/ai.jpg",
-            Collections = new List<CollectionReference>
-            {
+            Collections =
+            [
                 new CollectionReference
                 {
                     Name = "news",
@@ -28,7 +28,7 @@ public class SectionTests
                     Description = "Latest AI news",
                     IsCustom = false
                 }
-            }
+            ]
         };
     }
 
@@ -57,8 +57,8 @@ public class SectionTests
             Url = "/test",
             Category = "Test",
             BackgroundImage = "/test.jpg",
-            Collections = new List<CollectionReference>
-            {
+            Collections =
+            [
                 new CollectionReference
                 {
                     Name = "news",
@@ -67,7 +67,7 @@ public class SectionTests
                     Description = "Test",
                     IsCustom = false
                 }
-            }
+            ]
         };
 
         // Act
@@ -91,8 +91,8 @@ public class SectionTests
             Url = "/test",
             Category = "Test",
             BackgroundImage = "/test.jpg",
-            Collections = new List<CollectionReference>
-            {
+            Collections =
+            [
                 new CollectionReference
                 {
                     Name = "news",
@@ -101,7 +101,7 @@ public class SectionTests
                     Description = "Test",
                     IsCustom = false
                 }
-            }
+            ]
         };
 
         // Act
@@ -129,8 +129,8 @@ public class SectionTests
             Url = "/test",
             Category = "Test",
             BackgroundImage = "/test.jpg",
-            Collections = new List<CollectionReference>
-            {
+            Collections =
+            [
                 new CollectionReference
                 {
                     Name = "news",
@@ -139,7 +139,7 @@ public class SectionTests
                     Description = "Test",
                     IsCustom = false
                 }
-            }
+            ]
         };
 
         // Act
@@ -167,8 +167,8 @@ public class SectionTests
             Url = "/test",
             Category = "Test",
             BackgroundImage = "/test.jpg",
-            Collections = new List<CollectionReference>
-            {
+            Collections =
+            [
                 new CollectionReference
                 {
                     Name = "news",
@@ -177,7 +177,7 @@ public class SectionTests
                     Description = "Test",
                     IsCustom = false
                 }
-            }
+            ]
         };
 
         // Act
@@ -199,8 +199,8 @@ public class SectionTests
             Url = "/test",
             Category = "Test",
             BackgroundImage = "/test.jpg",
-            Collections = new List<CollectionReference>
-            {
+            Collections =
+            [
                 new CollectionReference
                 {
                     Name = "news",
@@ -209,7 +209,7 @@ public class SectionTests
                     Description = "Test",
                     IsCustom = false
                 }
-            }
+            ]
         };
 
         // Act
@@ -233,8 +233,8 @@ public class SectionTests
             Url = "",
             Category = "Test",
             BackgroundImage = "/test.jpg",
-            Collections = new List<CollectionReference>
-            {
+            Collections =
+            [
                 new CollectionReference
                 {
                     Name = "news",
@@ -243,7 +243,7 @@ public class SectionTests
                     Description = "Test",
                     IsCustom = false
                 }
-            }
+            ]
         };
 
         // Act
@@ -270,8 +270,8 @@ public class SectionTests
             Url = invalidUrl,
             Category = "Test",
             BackgroundImage = "/test.jpg",
-            Collections = new List<CollectionReference>
-            {
+            Collections =
+            [
                 new CollectionReference
                 {
                     Name = "news",
@@ -280,7 +280,7 @@ public class SectionTests
                     Description = "Test",
                     IsCustom = false
                 }
-            }
+            ]
         };
 
         // Act
@@ -307,8 +307,8 @@ public class SectionTests
             Url = validUrl,
             Category = "Test",
             BackgroundImage = "/test.jpg",
-            Collections = new List<CollectionReference>
-            {
+            Collections =
+            [
                 new CollectionReference
                 {
                     Name = "news",
@@ -317,7 +317,7 @@ public class SectionTests
                     Description = "Test",
                     IsCustom = false
                 }
-            }
+            ]
         };
 
         // Act
@@ -339,7 +339,7 @@ public class SectionTests
             Url = "/test",
             Category = "Test",
             BackgroundImage = "/test.jpg",
-            Collections = new List<CollectionReference>()
+            Collections = []
         };
 
         // Act
@@ -363,8 +363,8 @@ public class SectionTests
             Url = "/test",
             Category = "Test",
             BackgroundImage = "/test.jpg",
-            Collections = new List<CollectionReference>
-            {
+            Collections =
+            [
                 new CollectionReference
                 {
                     Name = "news",
@@ -389,7 +389,7 @@ public class SectionTests
                     Description = "AI video content",
                     IsCustom = false
                 }
-            }
+            ]
         };
 
         // Act
@@ -404,7 +404,7 @@ public class SectionTests
     {
         // This test verifies that Section uses init-only setters
         // by creating an instance and verifying properties are set correctly
-        
+
         // Arrange & Act
         var section = new Section
         {
@@ -414,7 +414,7 @@ public class SectionTests
             Url = "/test",
             Category = "Test Category",
             BackgroundImage = "/test-bg.jpg",
-            Collections = new List<CollectionReference>()
+            Collections = []
         };
 
         // Assert
@@ -440,7 +440,7 @@ public class SectionTests
             Url = "/test",
             Category = "Test",
             BackgroundImage = "/test.jpg",
-            Collections = new List<CollectionReference>()
+            Collections = []
         };
 
         section.Should().NotBeNull();

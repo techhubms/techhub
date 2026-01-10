@@ -67,10 +67,10 @@ public class MarkdownService : IMarkdownService
             return string.Empty;
         }
 
-        const string excerptMarker = "<!--excerpt_end-->";
-        
+        const string ExcerptMarker = "<!--excerpt_end-->";
+
         // If excerpt marker found, return content before it
-        var markerIndex = markdown.IndexOf(excerptMarker, StringComparison.OrdinalIgnoreCase);
+        var markerIndex = markdown.IndexOf(ExcerptMarker, StringComparison.OrdinalIgnoreCase);
         if (markerIndex > 0)
         {
             var excerpt = markdown[..markerIndex].Trim();
@@ -80,12 +80,12 @@ public class MarkdownService : IMarkdownService
         // Fallback: First paragraph or 200 characters
         var paragraphs = markdown.Split("\n\n", StringSplitOptions.RemoveEmptyEntries);
         var firstParagraph = paragraphs.FirstOrDefault()?.Trim() ?? string.Empty;
-        
+
         var plainText = StripMarkdownFormatting(firstParagraph);
-        
+
         // Limit to maxLength characters
-        return plainText.Length > maxLength 
-            ? plainText[..maxLength].Trim() + "..." 
+        return plainText.Length > maxLength
+            ? plainText[..maxLength].Trim() + "..."
             : plainText;
     }
 
@@ -104,7 +104,7 @@ public class MarkdownService : IMarkdownService
 
         // Match pattern: [YouTube: VIDEO_ID] or [youtube: VIDEO_ID]
         var pattern = @"\[YouTube:\s*([a-zA-Z0-9_-]+)\]";
-        
+
         return System.Text.RegularExpressions.Regex.Replace(
             html,
             pattern,
@@ -113,11 +113,11 @@ public class MarkdownService : IMarkdownService
                 var videoId = match.Groups[1].Value;
                 return $"""
                     <div class="video-container">
-                        <iframe 
-                            src="https://www.youtube.com/embed/{videoId}" 
-                            title="YouTube video player" 
-                            frameborder="0" 
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                        <iframe
+                            src="https://www.youtube.com/embed/{videoId}"
+                            title="YouTube video player"
+                            frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                             allowfullscreen>
                         </iframe>
                     </div>
@@ -140,23 +140,23 @@ public class MarkdownService : IMarkdownService
 
         // Remove headers (# ## ###)
         markdown = System.Text.RegularExpressions.Regex.Replace(markdown, @"^#+\s*", "", System.Text.RegularExpressions.RegexOptions.Multiline);
-        
+
         // Remove links [text](url) -> text
         markdown = System.Text.RegularExpressions.Regex.Replace(markdown, @"\[([^\]]+)\]\([^\)]+\)", "$1");
-        
+
         // Remove images ![alt](url)
         markdown = System.Text.RegularExpressions.Regex.Replace(markdown, @"!\[[^\]]*\]\([^\)]+\)", "");
-        
+
         // Remove inline code `code`
         markdown = System.Text.RegularExpressions.Regex.Replace(markdown, @"`([^`]+)`", "$1");
-        
+
         // Remove bold/italic **text** __text__ *text* _text_
         markdown = System.Text.RegularExpressions.Regex.Replace(markdown, @"(\*\*|__)(.*?)\1", "$2");
         markdown = System.Text.RegularExpressions.Regex.Replace(markdown, @"(\*|_)(.*?)\1", "$2");
-        
+
         // Remove HTML tags
         markdown = System.Text.RegularExpressions.Regex.Replace(markdown, @"<[^>]+>", "");
-        
+
         return markdown.Trim();
     }
 }

@@ -1,5 +1,4 @@
 using Microsoft.Playwright;
-using Xunit;
 using TechHub.E2E.Tests.Helpers;
 
 namespace TechHub.E2E.Tests.Web;
@@ -9,17 +8,12 @@ namespace TechHub.E2E.Tests.Web;
 /// Tests for user story requirements: section ordering, URL structure, and navigation flow
 /// </summary>
 [Collection("Navigation Tests")]
-public class NavigationTests : IAsyncLifetime
+public class NavigationTests(PlaywrightCollectionFixture fixture) : IAsyncLifetime
 {
-    private readonly PlaywrightCollectionFixture _fixture;
+    private readonly PlaywrightCollectionFixture _fixture = fixture;
     private IBrowserContext? _context;
     private const string BaseUrl = "http://localhost:5184";
     private const string ApiUrl = "http://localhost:5029";
-
-    public NavigationTests(PlaywrightCollectionFixture fixture)
-    {
-        _fixture = fixture;
-    }
 
     public async Task InitializeAsync()
     {

@@ -4,7 +4,6 @@ using Moq;
 using TechHub.Core.Configuration;
 using TechHub.Infrastructure.Repositories;
 using TechHub.Infrastructure.Services;
-using Xunit;
 
 namespace TechHub.Infrastructure.Tests.Repositories;
 
@@ -25,7 +24,7 @@ public class ViewingModeTests : IDisposable
                 CollectionsPath = _testDir,
                 Timezone = "Europe/Brussels",
                 MaxExcerptLength = 1000,
-                Sections = new Dictionary<string, SectionConfig>() // Required but not used in these tests
+                Sections = [] // Required but not used in these tests
             },
             Caching = new CachingSettings(),
             Seo = new SeoSettings
@@ -39,11 +38,11 @@ public class ViewingModeTests : IDisposable
 
         var options = Options.Create(appSettings);
         var markdownService = new MarkdownService();
-        
+
         // Setup: Create mock IHostEnvironment
         var mockEnvironment = new Mock<IHostEnvironment>();
         mockEnvironment.Setup(e => e.ContentRootPath).Returns(_testDir);
-        
+
         _repository = new FileBasedContentRepository(options, markdownService, mockEnvironment.Object);
     }
 
@@ -53,7 +52,7 @@ public class ViewingModeTests : IDisposable
         // Arrange: Create video with viewing_mode: internal
         var videosDir = Path.Combine(_testDir, "_videos");
         Directory.CreateDirectory(videosDir);
-        
+
         var videoContent = """
 ---
 title: "Internal Video"
@@ -65,7 +64,7 @@ viewing_mode: "internal"
 ---
 Test video content
 """;
-        
+
         await File.WriteAllTextAsync(Path.Combine(videosDir, "2024-01-15-test-video.md"), videoContent);
 
         // Act
@@ -85,7 +84,7 @@ Test video content
         // Arrange: Create video with viewing_mode: external
         var videosDir = Path.Combine(_testDir, "_videos");
         Directory.CreateDirectory(videosDir);
-        
+
         var videoContent = """
 ---
 title: "External Video"
@@ -97,7 +96,7 @@ viewing_mode: "external"
 ---
 Test video content
 """;
-        
+
         await File.WriteAllTextAsync(Path.Combine(videosDir, "2024-01-15-external-video.md"), videoContent);
 
         // Act
@@ -117,7 +116,7 @@ Test video content
         // Arrange: Create video without viewing_mode (default behavior)
         var videosDir = Path.Combine(_testDir, "_videos");
         Directory.CreateDirectory(videosDir);
-        
+
         var videoContent = """
 ---
 title: "Default Video"
@@ -128,7 +127,7 @@ canonical_url: "https://youtube.com/watch?v=def456"
 ---
 Test video content
 """;
-        
+
         await File.WriteAllTextAsync(Path.Combine(videosDir, "2024-01-15-default-video.md"), videoContent);
 
         // Act
@@ -148,7 +147,7 @@ Test video content
         {
             Directory.Delete(_testDir, true);
         }
-        
+
         _repository.Dispose();
         GC.SuppressFinalize(this);
     }

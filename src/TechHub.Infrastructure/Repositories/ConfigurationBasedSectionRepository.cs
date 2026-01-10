@@ -16,18 +16,18 @@ public sealed class ConfigurationBasedSectionRepository : ISectionRepository
     public ConfigurationBasedSectionRepository(IOptions<AppSettings> settings)
     {
         ArgumentNullException.ThrowIfNull(settings);
-        
+
         // Define section display order (matches live site - starts with "all")
-        var sectionOrder = new[] 
-        { 
+        var sectionOrder = new[]
+        {
             "all", "github-copilot", "ai", "ml", "devops", "azure", "coding", "security"
         };
-        
+
         // Convert configuration to Section models and apply ordering
         var sectionsDict = settings.Value.Content.Sections
             .Select(kvp => ConvertToSection(kvp.Key, kvp.Value))
             .ToDictionary(s => s.Name);
-        
+
         // Order sections according to defined order, then any remaining alphabetically
         _sections = sectionOrder
             .Where(name => sectionsDict.ContainsKey(name))

@@ -1,9 +1,6 @@
-using System.Linq;
-using System.Threading.Tasks;
 using System.Xml.Linq;
 using Microsoft.Playwright;
 using TechHub.E2E.Tests.Helpers;
-using Xunit;
 
 namespace TechHub.E2E.Tests.Web;
 
@@ -11,17 +8,12 @@ namespace TechHub.E2E.Tests.Web;
 /// E2E tests for RSS feed functionality
 /// </summary>
 [Collection("RSS Tests")]
-public class RssTests : IAsyncLifetime
+public class RssTests(PlaywrightCollectionFixture fixture) : IAsyncLifetime
 {
-    private readonly PlaywrightCollectionFixture _fixture;
+    private readonly PlaywrightCollectionFixture _fixture = fixture;
     private IBrowserContext? _context;
     private const string BaseUrl = "http://localhost:5184";
     private const string ApiUrl = "http://localhost:5029";
-
-    public RssTests(PlaywrightCollectionFixture fixture)
-    {
-        _fixture = fixture;
-    }
 
     public async Task InitializeAsync()
     {

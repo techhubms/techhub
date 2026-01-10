@@ -1,7 +1,5 @@
-using TechHub.E2E.Tests.Helpers;
-using System.Text.RegularExpressions;
 using Microsoft.Playwright;
-using Xunit;
+using TechHub.E2E.Tests.Helpers;
 
 namespace TechHub.E2E.Tests.Web;
 
@@ -84,7 +82,7 @@ public class SectionCardLayoutTests(PlaywrightCollectionFixture fixture) : IAsyn
         await grid.AssertElementVisibleAsync();
 
         // All section card containers should be direct children of the grid
-        var sectionCards = grid.Locator("> .section-card-container");
+        _ = grid.Locator("> .section-card-container");
         var count = await grid.GetElementCountBySelectorAsync("> .section-card-container");
 
         Assert.True(count > 0, "Expected section card containers to be direct children of grid");

@@ -1,23 +1,14 @@
 using System.Net;
-using System.Net.Http;
-using System.Threading.Tasks;
 using System.Xml.Linq;
-using Xunit;
 
 namespace TechHub.Api.Tests.Endpoints;
 
 /// <summary>
 /// Integration tests for RSS feed endpoints (uses real data, no mocks)
 /// </summary>
-public class RssEndpointsTests : IClassFixture<TechHubApiFactory>
+public class RssEndpointsTests(TechHubApiFactory factory) : IClassFixture<TechHubApiFactory>
 {
-    private readonly HttpClient _client;
-
-    public RssEndpointsTests(TechHubApiFactory factory)
-    {
-        // Don't call setup methods - use real repositories
-        _client = factory.CreateClient();
-    }
+    private readonly HttpClient _client = factory.CreateClient();
 
     [Fact]
     public async Task GetAllContentFeed_ReturnsValidRss()
@@ -185,10 +176,10 @@ public class RssEndpointsTests : IClassFixture<TechHubApiFactory>
         var pubDate = firstItem.Element("pubDate")?.Value;
 
         Assert.NotNull(pubDate);
-        
+
         // RFC1123 format can be parsed by DateTime
         var parsed = DateTime.Parse(pubDate);
-        Assert.NotEqual(default(DateTime), parsed);
+        Assert.NotEqual(default, parsed);
     }
 
     [Fact]
@@ -225,7 +216,7 @@ public class RssEndpointsTests : IClassFixture<TechHubApiFactory>
         {
             var title = item.Element("title")?.Value;
             var description = item.Element("description")?.Value;
-            
+
             Assert.NotNull(title);
             Assert.NotNull(description);
         }

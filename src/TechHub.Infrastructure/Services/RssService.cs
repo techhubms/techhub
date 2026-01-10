@@ -118,13 +118,13 @@ public class RssService : IRssService
                 xmlWriter.WriteElementString("title", item.Title);
                 xmlWriter.WriteElementString("description", item.Description);
                 xmlWriter.WriteElementString("link", item.Link);
-                
+
                 // <guid isPermaLink="true">...</guid>
                 xmlWriter.WriteStartElement("guid");
                 xmlWriter.WriteAttributeString("isPermaLink", "true");
                 xmlWriter.WriteString(item.Guid);
                 xmlWriter.WriteEndElement();
-                
+
                 xmlWriter.WriteElementString("pubDate", item.PubDate.ToString("R")); // RFC1123
 
                 if (!string.IsNullOrWhiteSpace(item.Author))

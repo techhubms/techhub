@@ -1,4 +1,3 @@
-using Microsoft.AspNetCore.Http.HttpResults;
 using TechHub.Core.Interfaces;
 
 namespace TechHub.Api.Endpoints;
@@ -62,7 +61,7 @@ internal static class RssEndpoints
             Url = "/",
             Description = "All content from Tech Hub",
             Category = "all",
-            Collections = Array.Empty<Core.Models.CollectionReference>(),
+            Collections = [],
             BackgroundImage = "/assets/images/everything-header.jpg"
         };
 

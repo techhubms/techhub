@@ -1,5 +1,4 @@
 using Microsoft.Playwright;
-using Xunit;
 
 namespace TechHub.E2E.Tests;
 
@@ -24,7 +23,7 @@ public class PlaywrightCollectionFixture : IAsyncLifetime
         }
 
         Playwright = await Microsoft.Playwright.Playwright.CreateAsync();
-        
+
         // CRITICAL FIX: Use 'chrome' channel instead of default 'chromium_headless_shell'
         // The chromium_headless_shell binary hangs when creating pages in DevContainer environments
         // Using 'chrome' channel launches the full Chrome browser in headless mode which works correctly
@@ -35,8 +34,8 @@ public class PlaywrightCollectionFixture : IAsyncLifetime
             Timeout = 5000, // 5 second timeout for browser launch (works fine in DevContainer)
             // Performance optimizations for DevContainer environment
             // See: tests/TechHub.E2E.Tests/PLAYWRIGHT-CONFIG.md for detailed explanation
-            Args = new[]
-            {
+            Args =
+            [
                 "--no-sandbox",                // Required for Docker/DevContainer environments
                 "--disable-setuid-sandbox",    // Required for Docker/DevContainer environments
                 "--disable-web-security",      // Faster loading (test only!)
@@ -46,14 +45,16 @@ public class PlaywrightCollectionFixture : IAsyncLifetime
                 "--disable-gpu"                // Disable GPU hardware acceleration
                 // NOTE: --single-process REMOVED - causes test host crashes in .NET environments
                 // NOTE: --no-zygote REMOVED - not needed with 'chrome' channel
-            }
+            ]
         });
     }
 
     public async Task DisposeAsync()
     {
         if (Browser != null)
+        {
             await Browser.CloseAsync();
+        }
 
         Playwright?.Dispose();
     }
@@ -65,7 +66,9 @@ public class PlaywrightCollectionFixture : IAsyncLifetime
     public async Task<IBrowserContext> CreateContextAsync()
     {
         if (Browser == null)
+        {
             throw new InvalidOperationException("Browser not initialized");
+        }
 
         return await Browser.NewContextAsync(new BrowserNewContextOptions
         {

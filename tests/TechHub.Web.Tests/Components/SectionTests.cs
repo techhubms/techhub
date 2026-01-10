@@ -3,10 +3,8 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Moq;
 using TechHub.Core.DTOs;
-using TechHub.Web.Components;
 using TechHub.Web.Components.Pages;
 using TechHub.Web.Services;
-using Xunit;
 
 namespace TechHub.Web.Tests.Components;
 
@@ -24,7 +22,7 @@ public class SectionTests : TestContext
             new HttpClient { BaseAddress = new Uri("http://localhost") },
             Mock.Of<ILogger<TechHubApiClient>>()
         );
-        
+
         // Setup delayed response to keep components in loading state
         var tcs = new TaskCompletionSource<SectionDto?>();
         mockApiClient
@@ -41,7 +39,7 @@ public class SectionTests : TestContext
         // Assert - Verify skeleton layout structure is present
         var grid = cut.Find(".section-page-grid");
         Assert.NotNull(grid);
-        
+
         // Verify all three skeleton components are present
         var skeletons = cut.FindAll(".skeleton");
         Assert.True(skeletons.Count > 0, "Expected skeleton placeholders to be visible during loading");
@@ -56,7 +54,7 @@ public class SectionTests : TestContext
             new HttpClient { BaseAddress = new Uri("http://localhost") },
             Mock.Of<ILogger<TechHubApiClient>>()
         );
-        
+
         var sectionDto = new SectionDto
         {
             Name = "ai",
@@ -65,8 +63,8 @@ public class SectionTests : TestContext
             Url = "/ai",
             Category = "ai",
             BackgroundImage = "/images/ai-bg.jpg",
-            Collections = new List<CollectionReferenceDto>
-            {
+            Collections =
+            [
                 new CollectionReferenceDto
                 {
                     Title = "News",
@@ -74,16 +72,16 @@ public class SectionTests : TestContext
                     Url = "/ai/news",
                     Description = "Latest AI news"
                 }
-            }
+            ]
         };
 
         mockApiClient
             .Setup(x => x.GetSectionAsync("ai"))
             .ReturnsAsync(sectionDto);
-            
+
         mockApiClient
             .Setup(x => x.GetContentAsync(It.IsAny<string?>(), "all"))
-            .ReturnsAsync(Array.Empty<ContentItemDto>());
+            .ReturnsAsync([]);
 
         Services.AddSingleton(mockApiClient.Object);
         Services.AddSingleton(Mock.Of<Microsoft.JSInterop.IJSRuntime>());

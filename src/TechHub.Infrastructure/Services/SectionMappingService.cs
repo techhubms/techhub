@@ -16,21 +16,21 @@ public class SectionMappingService : ISectionMappingService
     public SectionMappingService(IOptions<AppSettings> options)
     {
         ArgumentNullException.ThrowIfNull(options);
-        
+
         var sections = options.Value.Content.Sections;
-        
+
         // Build URL → Title mapping
         _urlToTitle = sections.ToDictionary(
             kvp => kvp.Key,
             kvp => kvp.Value.Title,
             StringComparer.OrdinalIgnoreCase);
-        
+
         // Build Name/Category → URL mapping
         _nameToUrl = sections.ToDictionary(
             kvp => kvp.Value.Category,
             kvp => kvp.Key,
             StringComparer.OrdinalIgnoreCase);
-        
+
         // Add URL → URL mappings for direct lookups
         foreach (var kvp in sections)
         {
@@ -42,9 +42,9 @@ public class SectionMappingService : ISectionMappingService
     {
         if (string.IsNullOrWhiteSpace(sectionUrl))
             return sectionUrl ?? string.Empty;
-        
-        return _urlToTitle.TryGetValue(sectionUrl, out var title) 
-            ? title 
+
+        return _urlToTitle.TryGetValue(sectionUrl, out var title)
+            ? title
             : System.Globalization.CultureInfo.InvariantCulture.TextInfo.ToTitleCase(sectionUrl.ToLowerInvariant());
     }
 
@@ -52,9 +52,9 @@ public class SectionMappingService : ISectionMappingService
     {
         if (string.IsNullOrWhiteSpace(sectionName))
             return sectionName ?? string.Empty;
-        
-        return _nameToUrl.TryGetValue(sectionName, out var url) 
-            ? url 
+
+        return _nameToUrl.TryGetValue(sectionName, out var url)
+            ? url
             : sectionName.ToLowerInvariant().Replace(" ", "-", StringComparison.Ordinal);
     }
 
@@ -62,7 +62,7 @@ public class SectionMappingService : ISectionMappingService
     {
         if (string.IsNullOrWhiteSpace(collectionName))
             return collectionName ?? string.Empty;
-        
+
         return System.Globalization.CultureInfo.InvariantCulture.TextInfo.ToTitleCase(collectionName.ToLowerInvariant());
     }
 }

@@ -75,7 +75,7 @@ internal static class SectionsEndpoints
         CancellationToken cancellationToken)
     {
         var sections = await sectionRepository.GetAllAsync(cancellationToken);
-        
+
         var sectionDtos = sections.Select(s => new SectionDto
         {
             Name = s.Name,
@@ -84,14 +84,14 @@ internal static class SectionsEndpoints
             Url = s.Url,
             Category = s.Category,
             BackgroundImage = s.BackgroundImage,
-            Collections = s.Collections.Select(c => new CollectionReferenceDto
+            Collections = [.. s.Collections.Select(c => new CollectionReferenceDto
             {
                 Title = c.Title,
                 Name = c.Name,
                 Url = c.Url,
                 Description = c.Description,
                 IsCustom = c.IsCustom
-            }).ToList()
+            })]
         });
 
         return TypedResults.Ok(sectionDtos);
@@ -106,7 +106,7 @@ internal static class SectionsEndpoints
         CancellationToken cancellationToken)
     {
         var section = await sectionRepository.GetByNameAsync(sectionName, cancellationToken);
-        
+
         if (section == null)
         {
             return TypedResults.NotFound();
@@ -120,14 +120,14 @@ internal static class SectionsEndpoints
             Url = section.Url,
             Category = section.Category,
             BackgroundImage = section.BackgroundImage,
-            Collections = section.Collections.Select(c => new CollectionReferenceDto
+            Collections = [.. section.Collections.Select(c => new CollectionReferenceDto
             {
                 Title = c.Title,
                 Name = c.Name,
                 Url = c.Url,
                 Description = c.Description,
                 IsCustom = c.IsCustom
-            }).ToList()
+            })]
         };
 
         return TypedResults.Ok(sectionDto);
@@ -152,7 +152,7 @@ internal static class SectionsEndpoints
         // Get all content with this section's category
         var content = await contentRepository.GetByCategoryAsync(section.Category, cancellationToken);
         var contentDtos = content.Select(MapContentToDto);
-        
+
         return TypedResults.Ok(contentDtos);
     }
 
@@ -165,7 +165,7 @@ internal static class SectionsEndpoints
         CancellationToken cancellationToken)
     {
         var section = await sectionRepository.GetByNameAsync(sectionName, cancellationToken);
-        
+
         if (section == null)
         {
             return TypedResults.NotFound();
@@ -193,15 +193,15 @@ internal static class SectionsEndpoints
         CancellationToken cancellationToken)
     {
         var section = await sectionRepository.GetByNameAsync(sectionName, cancellationToken);
-        
+
         if (section == null)
         {
             return TypedResults.NotFound();
         }
 
-        var collection = section.Collections.FirstOrDefault(c => 
+        var collection = section.Collections.FirstOrDefault(c =>
             c.Name.Equals(collectionName, StringComparison.OrdinalIgnoreCase));
-        
+
         if (collection == null)
         {
             return TypedResults.NotFound();
@@ -237,9 +237,9 @@ internal static class SectionsEndpoints
         }
 
         // Verify collection exists in this section
-        var hasCollection = section.Collections.Any(c => 
+        var hasCollection = section.Collections.Any(c =>
             c.Name.Equals(collectionName, StringComparison.OrdinalIgnoreCase));
-        
+
         if (!hasCollection)
         {
             return TypedResults.NotFound();
@@ -250,7 +250,7 @@ internal static class SectionsEndpoints
         var sectionContent = allContent
             .Where(c => c.Categories.Contains(section.Category, StringComparer.OrdinalIgnoreCase))
             .Select(MapContentToDto);
-        
+
         return TypedResults.Ok(sectionContent);
     }
 
@@ -260,7 +260,7 @@ internal static class SectionsEndpoints
     private static ContentItemDto MapContentToDto(Core.Models.ContentItem item)
     {
         var primarySectionUrl = TechHub.Core.Helpers.SectionPriorityHelper.GetPrimarySectionUrl(item.Categories, item.CollectionName);
-        
+
         return new ContentItemDto
         {
             Slug = item.Slug,

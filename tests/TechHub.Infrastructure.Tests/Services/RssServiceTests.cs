@@ -19,10 +19,10 @@ public class RssServiceTests
         Url = "/ai",
         Category = "ai",
         BackgroundImage = "/images/ai.jpg",
-        Collections = new List<CollectionReference>
-        {
+        Collections =
+        [
             new() { Name = "news", Title = "News", Url = "/ai/news", Description = "Latest AI news", IsCustom = false }
-        }
+        ]
     };
 
     private static List<ContentItem> CreateTestItems() =>
@@ -35,8 +35,8 @@ public class RssServiceTests
             Author = "John Doe",
             DateEpoch = 1705305600, // 2024-01-15
             CollectionName = "news",
-            Categories = new List<string> { "AI" },
-            Tags = new List<string> { "machine-learning", "testing" },
+            Categories = ["AI"],
+            Tags = ["machine-learning", "testing"],
             RenderedHtml = "<p>Test content 1</p>",
             Excerpt = "Test excerpt 1",
             ViewingMode = null,
@@ -52,8 +52,8 @@ public class RssServiceTests
             Author = "Jane Smith",
             DateEpoch = 1704844800, // 2024-01-10
             CollectionName = "news",
-            Categories = new List<string> { "AI" },
-            Tags = new List<string> { "deep-learning" },
+            Categories = ["AI"],
+            Tags = ["deep-learning"],
             RenderedHtml = "<p>Test content 2</p>",
             Excerpt = "Test excerpt 2",
             ViewingMode = "external",
@@ -111,8 +111,8 @@ public class RssServiceTests
                 Author = "Test Author",
                 DateEpoch = 1705305600 + (i * 86400), // Increment by 1 day
                 CollectionName = "news",
-                Categories = new List<string> { "AI" },
-                Tags = new List<string> { "test" },
+                Categories = ["AI"],
+                Tags = ["test"],
                 RenderedHtml = $"<p>Content {i}</p>",
                 Excerpt = $"Excerpt {i}",
                 AltCollection = null,
@@ -237,8 +237,8 @@ public class RssServiceTests
                 Description = "Description only",
                 DateEpoch = 1705305600,
                 CollectionName = "news",
-                Categories = new List<string> { "AI" },
-                Tags = new List<string>(),
+                Categories = ["AI"],
+                Tags = [],
                 RenderedHtml = "<p>Content</p>",
                 Excerpt = "", // Empty excerpt
                 AltCollection = null,
@@ -376,8 +376,8 @@ public class RssServiceTests
                 Description = "Description with \"quotes\" & <tags>",
                 DateEpoch = 1705305600,
                 CollectionName = "news",
-                Categories = new List<string> { "AI" },
-                Tags = new List<string> { "tag&special" },
+                Categories = ["AI"],
+                Tags = ["tag&special"],
                 RenderedHtml = "<p>Content</p>",
                 Excerpt = "Excerpt with 'quotes'",
                 AltCollection = null,

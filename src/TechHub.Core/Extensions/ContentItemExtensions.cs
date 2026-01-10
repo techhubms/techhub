@@ -1,6 +1,6 @@
 using TechHub.Core.DTOs;
-using TechHub.Core.Models;
 using TechHub.Core.Helpers;
+using TechHub.Core.Models;
 
 namespace TechHub.Core.Extensions;
 
@@ -17,7 +17,6 @@ public static class ContentItemExtensions
         ArgumentNullException.ThrowIfNull(item);
 
         // Determine primary section based on categories and collection
-        var primarySectionUrl = SectionPriorityHelper.GetPrimarySectionUrl(item.Categories, item.CollectionName);
         var primarySectionName = SectionPriorityHelper.GetPrimarySectionName(item.Categories, item.CollectionName);
 
         return new ContentItemDto
@@ -49,7 +48,6 @@ public static class ContentItemExtensions
         ArgumentNullException.ThrowIfNull(item);
 
         // Determine primary section based on categories and collection
-        var primarySectionUrl = SectionPriorityHelper.GetPrimarySectionUrl(item.Categories, item.CollectionName);
         var primarySectionName = SectionPriorityHelper.GetPrimarySectionName(item.Categories, item.CollectionName);
 
         return new ContentItemDetailDto
@@ -81,6 +79,6 @@ public static class ContentItemExtensions
         this IEnumerable<ContentItem> items,
         string sectionUrl)
     {
-        return items.Select(item => item.ToDto(sectionUrl)).ToList();
+        return [.. items.Select(item => item.ToDto(sectionUrl))];
     }
 }

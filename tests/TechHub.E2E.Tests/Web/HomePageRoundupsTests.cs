@@ -1,7 +1,6 @@
-using TechHub.E2E.Tests.Helpers;
 using System.Text.RegularExpressions;
 using Microsoft.Playwright;
-using Xunit;
+using TechHub.E2E.Tests.Helpers;
 
 namespace TechHub.E2E.Tests.Web;
 

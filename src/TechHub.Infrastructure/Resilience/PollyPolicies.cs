@@ -1,6 +1,5 @@
 using Polly;
 using Polly.Retry;
-using Polly.Timeout;
 
 namespace TechHub.Infrastructure.Resilience;
 

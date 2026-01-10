@@ -8,7 +8,7 @@ namespace TechHub.Web.Services;
 /// </summary>
 internal class SectionCache
 {
-    public IReadOnlyList<SectionDto> Sections { get; private set; } = Array.Empty<SectionDto>();
+    public IReadOnlyList<SectionDto> Sections { get; private set; } = [];
 
     public void Initialize(IReadOnlyList<SectionDto> sections)
     {

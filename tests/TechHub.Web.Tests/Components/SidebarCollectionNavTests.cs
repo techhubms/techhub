@@ -1,12 +1,7 @@
 using Bunit;
 using FluentAssertions;
-using Microsoft.AspNetCore.Components;
-using Microsoft.AspNetCore.Components.Web;
-using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Logging;
 using TechHub.Core.DTOs;
 using TechHub.Web.Components;
-using Xunit;
 
 namespace TechHub.Web.Tests.Components;
 
@@ -25,14 +20,14 @@ public class SidebarCollectionNavTests : TestContext
             new CollectionReferenceDto { Title = "Blogs", Name = "blogs", Url = "/ai/blogs", Description = "", IsCustom = false }
         };
 
-        var sectionDto = new SectionDto 
-        { 
+        var sectionDto = new SectionDto
+        {
             Name = "ai",
-            Title = "AI", 
-            Description = "AI Description", 
-            Url = "/ai", 
-            Category = "AI", 
-            BackgroundImage = "/images/ai-bg.jpg", 
+            Title = "AI",
+            Description = "AI Description",
+            Url = "/ai",
+            Category = "AI",
+            BackgroundImage = "/images/ai-bg.jpg",
             Collections = collections
         };
 
@@ -44,7 +39,7 @@ public class SidebarCollectionNavTests : TestContext
         // Assert - Component uses <a> tags for SSR navigation
         var links = cut.FindAll("a");
         Assert.Equal(5, links.Count); // "All" + 3 collections + 1 RSS link
-        
+
         Assert.Contains("All", links[0].TextContent);
         Assert.Contains("News", links[1].TextContent);
         Assert.Contains("Videos", links[2].TextContent);
@@ -60,14 +55,14 @@ public class SidebarCollectionNavTests : TestContext
             new CollectionReferenceDto { Title = "News", Name = "news", Url = "/ai/news", Description = "", IsCustom = false }
         };
 
-        var sectionDto = new SectionDto 
-        { 
+        var sectionDto = new SectionDto
+        {
             Name = "ai",
-            Title = "AI", 
-            Description = "AI Description", 
-            Url = "/ai", 
-            Category = "AI", 
-            BackgroundImage = "/images/ai-bg.jpg", 
+            Title = "AI",
+            Description = "AI Description",
+            Url = "/ai",
+            Category = "AI",
+            BackgroundImage = "/images/ai-bg.jpg",
             Collections = collections
         };
 
@@ -91,14 +86,14 @@ public class SidebarCollectionNavTests : TestContext
             new CollectionReferenceDto { Title = "News", Name = "news", Url = "/ai/news", Description = "", IsCustom = false }
         };
 
-        var sectionDto = new SectionDto 
-        { 
+        var sectionDto = new SectionDto
+        {
             Name = "ai",
-            Title = "AI", 
-            Description = "AI Description", 
-            Url = "/ai", 
-            Category = "AI", 
-            BackgroundImage = "/images/ai-bg.jpg", 
+            Title = "AI",
+            Description = "AI Description",
+            Url = "/ai",
+            Category = "AI",
+            BackgroundImage = "/images/ai-bg.jpg",
             Collections = collections
         };
 
@@ -111,7 +106,7 @@ public class SidebarCollectionNavTests : TestContext
         var links = cut.FindAll("a");
         var allLink = links.First(a => a.TextContent.Contains("All"));
         var newsLink = links.First(a => a.TextContent.Contains("News"));
-        
+
         allLink.GetAttribute("href").Should().Be("/ai/all");
         newsLink.GetAttribute("href").Should().Be("/ai/news");
     }
@@ -126,14 +121,14 @@ public class SidebarCollectionNavTests : TestContext
             new CollectionReferenceDto { Title = "AI Handbook", Name = "handbook", Url = "/ai/handbook", Description = "", IsCustom = true }
         };
 
-        var sectionDto = new SectionDto 
-        { 
+        var sectionDto = new SectionDto
+        {
             Name = "ai",
-            Title = "AI", 
-            Description = "AI Description", 
-            Url = "/ai", 
-            Category = "AI", 
-            BackgroundImage = "/images/ai-bg.jpg", 
+            Title = "AI",
+            Description = "AI Description",
+            Url = "/ai",
+            Category = "AI",
+            BackgroundImage = "/images/ai-bg.jpg",
             Collections = collections
         };
 
@@ -159,14 +154,14 @@ public class SidebarCollectionNavTests : TestContext
             new CollectionReferenceDto { Title = "News", Name = "news", Url = "/ai/news", Description = "", IsCustom = false }
         };
 
-        var sectionDto = new SectionDto 
-        { 
+        var sectionDto = new SectionDto
+        {
             Name = "ai",
-            Title = "AI", 
-            Description = "AI Description", 
-            Url = "/ai", 
-            Category = "AI", 
-            BackgroundImage = "/images/ai-bg.jpg", 
+            Title = "AI",
+            Description = "AI Description",
+            Url = "/ai",
+            Category = "AI",
+            BackgroundImage = "/images/ai-bg.jpg",
             Collections = collections
         };
 
@@ -179,7 +174,7 @@ public class SidebarCollectionNavTests : TestContext
         var markup = cut.Markup;
         markup.Should().Contain("Subscribe");
         markup.Should().Contain("RSS Feed");
-        
+
         var rssLink = cut.FindAll("a").FirstOrDefault(a => a.TextContent.Contains("RSS Feed"));
         rssLink.Should().NotBeNull();
         rssLink!.GetAttribute("href").Should().Be("/ai/feed.xml");

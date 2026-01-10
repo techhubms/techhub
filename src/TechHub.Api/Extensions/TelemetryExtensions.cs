@@ -31,16 +31,16 @@ internal static class TelemetryExtensions
                         options.Filter = httpContext =>
                         {
                             var path = httpContext.Request.Path.Value ?? string.Empty;
-                            
+
                             // Don't trace health checks
                             if (path.StartsWith("/health", StringComparison.OrdinalIgnoreCase))
                                 return false;
-                            
+
                             // Don't trace common browser requests that return 404
                             if (path.EndsWith("/favicon.ico", StringComparison.OrdinalIgnoreCase) ||
                                 path.EndsWith(".map", StringComparison.OrdinalIgnoreCase))
                                 return false;
-                            
+
                             return true;
                         };
                     })
@@ -49,7 +49,7 @@ internal static class TelemetryExtensions
 
                 // NOTE: Console exporter intentionally not added to reduce log noise.
                 // Traces are collected and exported to Azure Monitor/App Insights if configured.
-                
+
                 var appInsightsEndpoint = configuration["ApplicationInsights:Endpoint"];
                 if (!string.IsNullOrWhiteSpace(appInsightsEndpoint))
                 {

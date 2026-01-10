@@ -62,14 +62,12 @@ internal static class ContentEndpoints
     {
         // Use targeted repository methods for better database performance
         IReadOnlyList<Core.Models.ContentItem> content;
-        
+
         if (!string.IsNullOrWhiteSpace(category) && !string.IsNullOrWhiteSpace(collectionName))
         {
             // Both filters: get by collection first (smaller dataset), then filter by category
             var collectionContent = await contentRepository.GetByCollectionAsync(collectionName, cancellationToken);
-            content = collectionContent
-                .Where(c => c.Categories.Contains(category, StringComparer.OrdinalIgnoreCase))
-                .ToList();
+            content = [.. collectionContent.Where(c => c.Categories.Contains(category, StringComparer.OrdinalIgnoreCase))];
         }
         else if (!string.IsNullOrWhiteSpace(category))
         {
@@ -112,7 +110,7 @@ internal static class ContentEndpoints
 
         // Get the specific content item by collection and slug (database-friendly approach)
         var item = await contentRepository.GetBySlugAsync(collectionName, slug, cancellationToken);
-        
+
         if (item == null)
         {
             return TypedResults.NotFound();
@@ -122,7 +120,7 @@ internal static class ContentEndpoints
         // "All" section accepts all content, specific sections only accept matching categories
         var isValidForSection = section.Category.Equals("All", StringComparison.OrdinalIgnoreCase) ||
                                 item.Categories.Contains(section.Category, StringComparer.OrdinalIgnoreCase);
-        
+
         if (!isValidForSection)
         {
             return TypedResults.NotFound();
@@ -184,13 +182,13 @@ internal static class ContentEndpoints
         {
             var sectionNames = sections.Split(',', StringSplitOptions.RemoveEmptyEntries | StringSplitOptions.TrimEntries);
             var allSections = await sectionRepository.GetAllAsync(cancellationToken);
-            
+
             // Map section names to categories
             var categories = allSections
                 .Where(s => sectionNames.Contains(s.Name, StringComparer.OrdinalIgnoreCase))
                 .Select(s => s.Category)
                 .ToHashSet(StringComparer.OrdinalIgnoreCase);
-            
+
             results = results.Where(c => c.Categories.Any(cat => categories.Contains(cat)));
         }
 
@@ -205,7 +203,7 @@ internal static class ContentEndpoints
         if (!string.IsNullOrWhiteSpace(tags))
         {
             var tagList = tags.Split(',', StringSplitOptions.RemoveEmptyEntries | StringSplitOptions.TrimEntries);
-            results = results.Where(c => tagList.All(tag => 
+            results = results.Where(c => tagList.All(tag =>
                 c.Tags.Contains(tag, StringComparer.OrdinalIgnoreCase)));
         }
 
@@ -240,7 +238,7 @@ internal static class ContentEndpoints
     private static ContentItemDto MapToDto(Core.Models.ContentItem item)
     {
         var primarySectionUrl = TechHub.Core.Helpers.SectionPriorityHelper.GetPrimarySectionUrl(item.Categories, item.CollectionName);
-        
+
         return new ContentItemDto
         {
             Slug = item.Slug,

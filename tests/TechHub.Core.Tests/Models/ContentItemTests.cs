@@ -19,8 +19,8 @@ public class ContentItemTests
             DateEpoch = 1705305600, // 2024-01-15 00:00:00 UTC
             CollectionName = "news",
             AltCollection = null,
-            Categories = new List<string> { "AI" },
-            Tags = new List<string> { "machine-learning" },
+            Categories = ["AI"],
+            Tags = ["machine-learning"],
             RenderedHtml = "<p>Test content</p>",
             Excerpt = "Test excerpt",
             ExternalUrl = null,
@@ -75,8 +75,8 @@ public class ContentItemTests
             Description = "Test",
             DateEpoch = epoch,
             CollectionName = "news",
-            Categories = new List<string> { "AI" },
-            Tags = new List<string> { "test" },
+            Categories = ["AI"],
+            Tags = ["test"],
             RenderedHtml = "<p>Test</p>",
             Excerpt = "Test"
         };
@@ -117,8 +117,8 @@ public class ContentItemTests
             Description = "Test",
             DateEpoch = 1705305600,
             CollectionName = collectionName,
-            Categories = new List<string> { "AI" },
-            Tags = new List<string> { "test" },
+            Categories = ["AI"],
+            Tags = ["test"],
             RenderedHtml = "<p>Test</p>",
             Excerpt = "Test"
         };
@@ -154,8 +154,8 @@ public class ContentItemTests
             Description = "Test",
             DateEpoch = 1705305600,
             CollectionName = "news",
-            Categories = new List<string> { "AI" },
-            Tags = new List<string> { "test" },
+            Categories = ["AI"],
+            Tags = ["test"],
             RenderedHtml = "<p>Test</p>",
             Excerpt = "Test"
         };
@@ -180,8 +180,8 @@ public class ContentItemTests
             Description = "Test",
             DateEpoch = 1705305600,
             CollectionName = "news",
-            Categories = new List<string> { "AI" },
-            Tags = new List<string> { "test" },
+            Categories = ["AI"],
+            Tags = ["test"],
             RenderedHtml = "<p>Test</p>",
             Excerpt = "Test"
         };
@@ -205,8 +205,8 @@ public class ContentItemTests
             Description = "Test",
             DateEpoch = 1705305600,
             CollectionName = "news",
-            Categories = new List<string> { "AI" },
-            Tags = new List<string> { "test" },
+            Categories = ["AI"],
+            Tags = ["test"],
             RenderedHtml = "<p>Test</p>",
             Excerpt = "Test"
         };
@@ -234,8 +234,8 @@ public class ContentItemTests
             Description = "Test",
             DateEpoch = invalidEpoch,
             CollectionName = "news",
-            Categories = new List<string> { "AI" },
-            Tags = new List<string> { "test" },
+            Categories = ["AI"],
+            Tags = ["test"],
             RenderedHtml = "<p>Test</p>",
             Excerpt = "Test"
         };
@@ -260,8 +260,8 @@ public class ContentItemTests
             Description = "Test",
             DateEpoch = 1705305600,
             CollectionName = "news",
-            Categories = new List<string>(),
-            Tags = new List<string> { "test" },
+            Categories = [],
+            Tags = ["test"],
             RenderedHtml = "<p>Test</p>",
             Excerpt = "Test"
         };
@@ -286,8 +286,8 @@ public class ContentItemTests
             Description = "Test",
             DateEpoch = 1705305600,
             CollectionName = "news",
-            Categories = new List<string> { "AI" },
-            Tags = new List<string> { "test" },
+            Categories = ["AI"],
+            Tags = ["test"],
             RenderedHtml = "",
             Excerpt = "Test"
         };
@@ -313,8 +313,8 @@ public class ContentItemTests
             Description = "Test",
             DateEpoch = 1705305600,
             CollectionName = "news",
-            Categories = new List<string> { "AI" },
-            Tags = new List<string> { "test" },
+            Categories = ["AI"],
+            Tags = ["test"],
             RenderedHtml = "<p>Test</p>",
             Excerpt = longExcerpt
         };
@@ -340,8 +340,8 @@ public class ContentItemTests
             Description = "Test",
             DateEpoch = 1705305600,
             CollectionName = "news",
-            Categories = new List<string> { "AI" },
-            Tags = new List<string> { "test" },
+            Categories = ["AI"],
+            Tags = ["test"],
             RenderedHtml = "<p>Test</p>",
             Excerpt = excerpt
         };
@@ -366,8 +366,8 @@ public class ContentItemTests
             DateEpoch = 1705305600,
             CollectionName = "news",
             AltCollection = null,
-            Categories = new List<string> { "AI" },
-            Tags = new List<string> { "test" },
+            Categories = ["AI"],
+            Tags = ["test"],
             RenderedHtml = "<p>Test</p>",
             Excerpt = "Test",
             ExternalUrl = null,
@@ -387,7 +387,7 @@ public class ContentItemTests
     {
         // This test verifies that ContentItem uses init-only setters
         // by creating an instance and verifying properties are set correctly
-        
+
         // Arrange & Act
         var item = new ContentItem
         {
@@ -397,8 +397,8 @@ public class ContentItemTests
             Author = "Test Author",
             DateEpoch = 1705305600,
             CollectionName = "news",
-            Categories = new List<string> { "AI" },
-            Tags = new List<string> { "test" },
+            Categories = ["AI"],
+            Tags = ["test"],
             RenderedHtml = "<p>Test</p>",
             Excerpt = "Test excerpt"
         };

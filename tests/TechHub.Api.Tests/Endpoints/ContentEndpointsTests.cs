@@ -92,7 +92,7 @@ public class ContentEndpointsTests : IClassFixture<TechHubApiFactory>
         var items = await response.Content.ReadFromJsonAsync<List<ContentItemDto>>();
         items.Should().NotBeNull();
         items!.Should().HaveCount(3); // 2 news + 1 blog
-        items.Should().AllSatisfy(item => 
+        items.Should().AllSatisfy(item =>
             new[] { "news", "blogs" }.Should().Contain(item.CollectionName));
     }
 

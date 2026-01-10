@@ -7,7 +7,6 @@ using TechHub.Core.Configuration;
 using TechHub.Core.DTOs;
 using TechHub.Web.Components;
 using TechHub.Web.Services;
-using Xunit;
 
 namespace TechHub.Web.Tests.Components;
 
@@ -29,7 +28,7 @@ public class ContentItemsGridTests : TestContext
         // Default setup - return empty list
         _mockApiClient
             .Setup(x => x.GetContentAsync(It.IsAny<string>(), It.IsAny<string>()))
-            .ReturnsAsync(Array.Empty<ContentItemDto>());
+            .ReturnsAsync([]);
 
         // Configure WebAppSettings with collection display names
         var appSettings = new WebAppSettings
@@ -62,7 +61,7 @@ public class ContentItemsGridTests : TestContext
             .Add(p => p.SectionName, "github-copilot")
             .Add(p => p.CollectionName, "all")
             .Add(p => p.SectionCategory, "GitHub Copilot")
-            .Add(p => p.Collections, Array.Empty<CollectionReferenceDto>()));
+            .Add(p => p.Collections, []));
 
         // Wait for async rendering
         await Task.Delay(100);
@@ -170,7 +169,7 @@ public class ContentItemsGridTests : TestContext
             .Add(p => p.SectionName, "all")
             .Add(p => p.CollectionName, "all")
             .Add(p => p.SectionCategory, "All")
-            .Add(p => p.Collections, Array.Empty<CollectionReferenceDto>()));
+            .Add(p => p.Collections, []));
 
         // Wait for async rendering
         await Task.Delay(100);

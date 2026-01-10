@@ -1,5 +1,4 @@
 using FluentAssertions;
-using TechHub.Core.DTOs;
 using TechHub.Core.Extensions;
 using TechHub.Core.Models;
 
@@ -20,8 +19,8 @@ public class SectionExtensionsTests
             Url = "/ai",
             Category = "AI",
             BackgroundImage = "/assets/section-backgrounds/ai.jpg",
-            Collections = new List<CollectionReference>
-            {
+            Collections =
+            [
                 new CollectionReference
                 {
                     Name = "news",
@@ -38,7 +37,7 @@ public class SectionExtensionsTests
                     Description = "AI blog posts",
                     IsCustom = false
                 }
-            }
+            ]
         };
     }
 
@@ -90,7 +89,7 @@ public class SectionExtensionsTests
         dto.Collections[0].Url.Should().Be("/ai/news");
         dto.Collections[0].Description.Should().Be("Latest AI news");
         dto.Collections[0].IsCustom.Should().BeFalse();
-        
+
         dto.Collections[1].Name.Should().Be("blogs");
         dto.Collections[1].Title.Should().Be("Blogs");
     }
@@ -167,8 +166,8 @@ public class SectionExtensionsTests
                 Url = "/github-copilot",
                 Category = "GitHub Copilot",
                 BackgroundImage = "/assets/section-backgrounds/github-copilot.jpg",
-                Collections = new List<CollectionReference>
-                {
+                Collections =
+                [
                     new CollectionReference
                     {
                         Name = "news",
@@ -177,7 +176,7 @@ public class SectionExtensionsTests
                         Description = "Latest news",
                         IsCustom = false
                     }
-                }
+                ]
             }
         };
 
@@ -218,7 +217,7 @@ public class SectionExtensionsTests
             Url = "/ai",
             Category = "AI",
             BackgroundImage = "/assets/section-backgrounds/ai.jpg",
-            Collections = new List<CollectionReference>()
+            Collections = []
         };
 
         // Act

@@ -4,11 +4,7 @@ using FluentAssertions;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc.Testing;
 using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.Configuration.Json;
-using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
-using Microsoft.Extensions.Options;
-using TechHub.Core.Configuration;
 using TechHub.Core.DTOs;
 
 namespace TechHub.E2E.Tests.Api;
@@ -17,14 +13,9 @@ namespace TechHub.E2E.Tests.Api;
 /// End-to-end tests for API endpoints using real file system data
 /// These tests validate the entire stack from HTTP request to file reading
 /// </summary>
-public class ApiEndToEndTests : IClassFixture<ApiTestFactory>
+public class ApiEndToEndTests(ApiTestFactory factory) : IClassFixture<ApiTestFactory>
 {
-    private readonly HttpClient _client;
-
-    public ApiEndToEndTests(ApiTestFactory factory)
-    {
-        _client = factory.CreateClient();
-    }
+    private readonly HttpClient _client = factory.CreateClient();
 
     #region Section Endpoints
 
@@ -40,7 +31,7 @@ public class ApiEndToEndTests : IClassFixture<ApiTestFactory>
         var sections = await response.Content.ReadFromJsonAsync<List<SectionDto>>();
         sections.Should().NotBeNull();
         sections!.Should().NotBeEmpty();
-        
+
         // Verify expected sections from sections.json
         sections.Should().Contain(s => s.Name == "ai");
         sections.Should().Contain(s => s.Name == "github-copilot");
@@ -49,7 +40,7 @@ public class ApiEndToEndTests : IClassFixture<ApiTestFactory>
         sections.Should().Contain(s => s.Name == "coding");
         sections.Should().Contain(s => s.Name == "devops");
         sections.Should().Contain(s => s.Name == "security");
-        
+
         // All sections should have collections
         sections.Should().AllSatisfy(s => s.Collections.Should().NotBeEmpty());
     }
@@ -87,7 +78,7 @@ public class ApiEndToEndTests : IClassFixture<ApiTestFactory>
         var content = await response.Content.ReadFromJsonAsync<List<ContentItemDto>>();
         content.Should().NotBeNull();
         content.Should().NotBeEmpty();
-        
+
         // Verify content has expected structure
         content!.Should().AllSatisfy(item =>
         {
@@ -97,7 +88,7 @@ public class ApiEndToEndTests : IClassFixture<ApiTestFactory>
             item.DateEpoch.Should().BeGreaterThan(0);
             item.Url.Should().NotBeNullOrEmpty();
         });
-        
+
         // Content should be sorted by date descending (newest first)
         for (int i = 0; i < content!.Count - 1; i++)
         {
@@ -304,14 +295,14 @@ public class ApiEndToEndTests : IClassFixture<ApiTestFactory>
         var items = await response.Content.ReadFromJsonAsync<List<ContentItemDto>>();
         items.Should().NotBeNull();
         items!.Should().NotBeEmpty();
-        
+
         // Items should contain "copilot" in title, description, or tags
         items.Should().AllSatisfy(item =>
         {
             var containsInTitle = item.Title.Contains("copilot", StringComparison.OrdinalIgnoreCase);
             var containsInDescription = item.Description.Contains("copilot", StringComparison.OrdinalIgnoreCase);
             var containsInTags = item.Tags.Any(tag => tag.Contains("copilot", StringComparison.OrdinalIgnoreCase));
-            
+
             (containsInTitle || containsInDescription || containsInTags).Should().BeTrue();
         });
     }
@@ -333,7 +324,7 @@ public class ApiEndToEndTests : IClassFixture<ApiTestFactory>
         tags.Should().NotBeNull();
         tags!.Should().NotBeEmpty();
         tags.Should().OnlyHaveUniqueItems();
-        
+
         // Tags should be lowercase (normalized)
         tags.Should().AllSatisfy(tag => tag.Should().Be(tag.ToLowerInvariant()));
     }
@@ -355,7 +346,7 @@ public class ApiEndToEndTests : IClassFixture<ApiTestFactory>
 
         // Assert
         response.StatusCode.Should().Be(HttpStatusCode.OK);
-        
+
         // Should respond in less than 100ms from cache
         stopwatch.ElapsedMilliseconds.Should().BeLessThan(100);
     }
@@ -373,7 +364,7 @@ public class ApiEndToEndTests : IClassFixture<ApiTestFactory>
 
         // Assert
         response.StatusCode.Should().Be(HttpStatusCode.OK);
-        
+
         // Should respond in less than 100ms from cache
         stopwatch.ElapsedMilliseconds.Should().BeLessThan(100);
     }
@@ -418,7 +409,7 @@ public class ApiEndToEndTests : IClassFixture<ApiTestFactory>
             // DateEpoch should be a reasonable Unix timestamp
             item.DateEpoch.Should().BeGreaterThan(1000000000); // After 2001
             item.DateEpoch.Should().BeLessThan(2000000000); // Before 2033
-            
+
             // DateIso should be parseable
             DateTimeOffset.TryParse(item.DateIso, out _).Should().BeTrue();
         });
@@ -466,13 +457,13 @@ public class ApiTestFactory : WebApplicationFactory<Program>
     {
         // Set content root to workspace for file-based content loading
         builder.UseContentRoot(_workspaceRoot);
-        
+
         // Configure test-specific settings via in-memory configuration
         builder.ConfigureAppConfiguration((context, config) =>
         {
             // Keep existing configuration sources but add test overrides
             config.AddJsonFile(Path.Combine(_workspaceRoot, "src", "TechHub.Api", "appsettings.json"), optional: false);
-            
+
             // Override only the paths that need adjustment for test environment
             var testOverrides = new Dictionary<string, string?>
             {
@@ -480,10 +471,10 @@ public class ApiTestFactory : WebApplicationFactory<Program>
                 ["AppSettings:Caching:ContentAbsoluteExpirationMinutes"] = "60",
                 ["AppSettings:Caching:ApiResponseAbsoluteExpirationMinutes"] = "60"
             };
-            
+
             config.AddInMemoryCollection(testOverrides);
         });
-        
+
         // Suppress verbose logging during tests
         builder.ConfigureLogging(logging =>
         {

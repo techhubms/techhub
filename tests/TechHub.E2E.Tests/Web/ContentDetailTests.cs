@@ -1,6 +1,5 @@
-using Microsoft.Playwright;
-using Xunit;
 using FluentAssertions;
+using Microsoft.Playwright;
 using TechHub.E2E.Tests.Helpers;
 
 namespace TechHub.E2E.Tests.Web;
@@ -13,19 +12,14 @@ namespace TechHub.E2E.Tests.Web;
 /// roundup detail pages are the main testable internal content pages.
 /// </summary>
 [Collection("Content Detail Tests")]
-public class ContentDetailTests : IAsyncLifetime
+public class ContentDetailTests(PlaywrightCollectionFixture fixture) : IAsyncLifetime
 {
-    private readonly PlaywrightCollectionFixture _fixture;
+    private readonly PlaywrightCollectionFixture _fixture = fixture;
     private IBrowserContext? _context;
     private const string BaseUrl = BlazorHelpers.BaseUrl;
 
     // Test with a known roundup URL - more reliable than clicking through
     private const string TestRoundupUrl = "/all/roundups";
-
-    public ContentDetailTests(PlaywrightCollectionFixture fixture)
-    {
-        _fixture = fixture;
-    }
 
     public async Task InitializeAsync()
     {

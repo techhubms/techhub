@@ -80,7 +80,7 @@ public class FrontMatterParser
             try
             {
                 var parsed = _deserializer.Deserialize<Dictionary<string, object>>(yaml);
-                frontMatter = parsed ?? new Dictionary<string, object>();
+                frontMatter = parsed ?? [];
             }
             catch (YamlDotNet.Core.YamlException)
             {
@@ -122,15 +122,15 @@ public class FrontMatterParser
         ArgumentNullException.ThrowIfNull(frontMatter);
         if (!frontMatter.TryGetValue(key, out var value))
         {
-            return new List<string>();
+            return [];
         }
 
         // Handle various formats: string, List<object>, object[]
         return value switch
         {
-            string str => new List<string> { str },
-            IEnumerable<object> list => list.Select(x => x.ToString() ?? string.Empty).ToList(),
-            _ => new List<string>()
+            string str => [str],
+            IEnumerable<object> list => [.. list.Select(x => x.ToString() ?? string.Empty)],
+            _ => []
         };
     }
 }

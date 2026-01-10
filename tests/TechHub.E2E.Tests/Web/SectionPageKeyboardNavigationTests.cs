@@ -1,5 +1,4 @@
 using Microsoft.Playwright;
-using Xunit;
 using TechHub.E2E.Tests.Helpers;
 
 namespace TechHub.E2E.Tests.Web;
@@ -21,10 +20,14 @@ public class SectionPageKeyboardNavigationTests(PlaywrightCollectionFixture fixt
     public async Task DisposeAsync()
     {
         if (_page != null)
+        {
             await _page.CloseAsync();
+        }
 
         if (_context != null)
+        {
             await _context.CloseAsync();
+        }
     }
 
     [Theory]
@@ -88,6 +91,5 @@ public class SectionPageKeyboardNavigationTests(PlaywrightCollectionFixture fixt
         await Page.Locator("footer a").Nth(0).FocusAsync();
         await Assertions.Expect(Page.Locator("footer a").Nth(0)).ToBeFocusedAsync();
     }
-
 }
 

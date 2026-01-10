@@ -1,5 +1,4 @@
 using FluentAssertions;
-using TechHub.Core.DTOs;
 using TechHub.Core.Extensions;
 using TechHub.Core.Models;
 
@@ -21,8 +20,8 @@ public class ContentItemExtensionsTests
             DateEpoch = 1705305600, // 2024-01-15 00:00:00 UTC
             CollectionName = "news",
             AltCollection = null,
-            Categories = new List<string> { "AI", "Azure" },
-            Tags = new List<string> { "machine-learning", "cloud" },
+            Categories = ["AI", "Azure"],
+            Tags = ["machine-learning", "cloud"],
             RenderedHtml = "<p>Test content</p>",
             Excerpt = "Test excerpt",
             ExternalUrl = "https://example.com",
@@ -50,9 +49,9 @@ public class ContentItemExtensionsTests
         dto.DateIso.Should().Be("2024-01-15");
         dto.CollectionName.Should().Be("news");
         dto.AltCollection.Should().BeNull();
-        dto.Categories.Should().BeEquivalentTo(new[] { "AI", "Azure" });
+        dto.Categories.Should().BeEquivalentTo(["AI", "Azure"]);
         dto.PrimarySection.Should().Be("AI"); // First category in menubar priority order
-        dto.Tags.Should().BeEquivalentTo(new[] { "machine-learning", "cloud" });
+        dto.Tags.Should().BeEquivalentTo(["machine-learning", "cloud"]);
         dto.Excerpt.Should().Be("Test excerpt");
         dto.ExternalUrl.Should().Be("https://example.com");
         dto.VideoId.Should().BeNull();
@@ -85,8 +84,8 @@ public class ContentItemExtensionsTests
             Author = "Test Author",
             DateEpoch = 1705305600,
             CollectionName = "news",
-            Categories = new List<string> { "GitHub Copilot" },
-            Tags = new List<string> { "demo" },
+            Categories = ["GitHub Copilot"],
+            Tags = ["demo"],
             RenderedHtml = "<p>Test</p>",
             Excerpt = "Test excerpt",
             VideoId = "abc123"
@@ -114,8 +113,8 @@ public class ContentItemExtensionsTests
             DateEpoch = 1705305600,
             CollectionName = "news",
             AltCollection = "ghc-features",
-            Categories = new List<string> { "GitHub Copilot" },
-            Tags = new List<string> { "features" },
+            Categories = ["GitHub Copilot"],
+            Tags = ["features"],
             RenderedHtml = "<p>Test</p>",
             Excerpt = "Test excerpt"
         };
@@ -147,9 +146,9 @@ public class ContentItemExtensionsTests
         dto.DateEpoch.Should().Be(1705305600);
         dto.DateIso.Should().Be("2024-01-15");
         dto.CollectionName.Should().Be("news");
-        dto.Categories.Should().BeEquivalentTo(new[] { "AI", "Azure" });
+        dto.Categories.Should().BeEquivalentTo(["AI", "Azure"]);
         dto.PrimarySection.Should().Be("AI");
-        dto.Tags.Should().BeEquivalentTo(new[] { "machine-learning", "cloud" });
+        dto.Tags.Should().BeEquivalentTo(["machine-learning", "cloud"]);
         dto.RenderedHtml.Should().Be("<p>Test content</p>");
         dto.Excerpt.Should().Be("Test excerpt");
         dto.ExternalUrl.Should().Be("https://example.com");
@@ -186,8 +185,8 @@ public class ContentItemExtensionsTests
                 Author = "Test Author",
                 DateEpoch = 1705305600,
                 CollectionName = "news",
-                Categories = new List<string> { "AI" },
-                Tags = new List<string> { "test" },
+                Categories = ["AI"],
+                Tags = ["test"],
                 RenderedHtml = "<p>Test</p>",
                 Excerpt = "Test excerpt"
             }

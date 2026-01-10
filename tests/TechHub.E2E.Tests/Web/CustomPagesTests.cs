@@ -1,7 +1,6 @@
-using TechHub.E2E.Tests.Helpers;
 using System.Text.RegularExpressions;
 using Microsoft.Playwright;
-using Xunit;
+using TechHub.E2E.Tests.Helpers;
 
 namespace TechHub.E2E.Tests.Web;
 
@@ -22,10 +21,14 @@ public class CustomPagesTests(PlaywrightCollectionFixture fixture) : IAsyncLifet
     public async Task DisposeAsync()
     {
         if (_page != null)
+        {
             await _page.CloseAsync();
+        }
 
         if (_context != null)
+        {
             await _context.CloseAsync();
+        }
     }
     [Theory]
     [InlineData("/ai/genai-basics", "GenAI Basics")]
@@ -66,7 +69,7 @@ public class CustomPagesTests(PlaywrightCollectionFixture fixture) : IAsyncLifet
         await mainHeading.AssertElementVisibleAsync();
 
         // Should have some content (paragraphs, lists, etc.)
-        var paragraphs = Page.Locator("p");
+        _ = Page.Locator("p");
         var count = await Page.GetElementCountBySelectorAsync("p");
         Assert.True(count > 0, $"Expected at least one paragraph on {url}, but found {count}");
     }

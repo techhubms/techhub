@@ -33,10 +33,10 @@ public class CollectionReference
     /// <summary>
     /// Valid collection types from _data/sections.json
     /// </summary>
-    private static readonly HashSet<string> ValidCollections = new()
-    {
+    private static readonly HashSet<string> _validCollections =
+    [
         "news", "videos", "community", "blogs", "roundups"
-    };
+    ];
 
     /// <summary>
     /// Validates that the collection reference is properly formatted
@@ -46,9 +46,9 @@ public class CollectionReference
         if (string.IsNullOrWhiteSpace(Name))
             throw new ArgumentException("Collection name cannot be empty", nameof(Name));
 
-        if (!ValidCollections.Contains(Name))
+        if (!_validCollections.Contains(Name))
             throw new ArgumentException(
-                $"Collection name must be one of: {string.Join(", ", ValidCollections)}",
+                $"Collection name must be one of: {string.Join(", ", _validCollections)}",
                 nameof(Name));
 
         if (string.IsNullOrWhiteSpace(Title))

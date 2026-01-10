@@ -1,6 +1,5 @@
 using System.Text.RegularExpressions;
 using Microsoft.Playwright;
-using Xunit;
 using TechHub.E2E.Tests.Helpers;
 
 namespace TechHub.E2E.Tests.Web;
@@ -59,7 +58,7 @@ public class HomePageSidebarTests(PlaywrightCollectionFixture fixture) : IAsyncL
 
         // Assert - Find latest items section
         var latestSection = Page.Locator(".latest-items, .sidebar-latest");
-        var itemLinks = latestSection.Locator("a").Filter(new() { HasNotText = "Latest" });
+        _ = latestSection.Locator("a").Filter(new() { HasNotText = "Latest" });
 
         var count = await latestSection.GetElementCountBySelectorAsync("a");
         Assert.True(count > 0 && count <= 10, $"Expected 1-10 latest item links, but found {count}");
@@ -83,7 +82,7 @@ public class HomePageSidebarTests(PlaywrightCollectionFixture fixture) : IAsyncL
 
         // Assert - Find popular tags section
         var tagsSection = Page.Locator(".popular-tags, .sidebar-tags");
-        var tagLinks = tagsSection.Locator("a, .tag");
+        _ = tagsSection.Locator("a, .tag");
 
         var count = await tagsSection.GetElementCountBySelectorAsync("a, .tag");
         Assert.True(count > 0, $"Expected at least one tag link, but found {count}");
@@ -123,7 +122,7 @@ public class HomePageSidebarTests(PlaywrightCollectionFixture fixture) : IAsyncL
 
         if (count > 0)
         {
-            var firstTag = await tagLinks.First.TextContentWithTimeoutAsync();
+            _ = await tagLinks.First.TextContentWithTimeoutAsync();
             await tagLinks.First.ClickBlazorElementAsync();
 
             // Assert - Should navigate to filtered view or section with tag parameter

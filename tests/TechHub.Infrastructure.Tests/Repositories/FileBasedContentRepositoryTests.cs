@@ -5,7 +5,6 @@ using TechHub.Core.Configuration;
 using TechHub.Core.Interfaces;
 using TechHub.Infrastructure.Repositories;
 using TechHub.Infrastructure.Services;
-using Xunit;
 
 namespace TechHub.Infrastructure.Tests.Repositories;
 
@@ -33,7 +32,7 @@ public class FileBasedContentRepositoryTests : IDisposable
             Content = new ContentSettings
             {
                 CollectionsPath = _collectionsPath,
-                Sections = new Dictionary<string, SectionConfig>(), // Empty for content tests
+                Sections = [], // Empty for content tests
                 Timezone = "Europe/Brussels"
             },
             Caching = new CachingSettings(),
@@ -511,7 +510,7 @@ public class FileBasedContentRepositoryTests : IDisposable
         // Assert: DateEpoch is Unix timestamp (positive integer)
         Assert.Single(content);
         Assert.True(content[0].DateEpoch > 0, "DateEpoch should be positive Unix timestamp");
-        
+
         // Verify it's roughly correct (Jan 2025 = ~1736899200 epoch)
         Assert.True(content[0].DateEpoch > 1_700_000_000, "DateEpoch should be in 2025 range");
     }
@@ -639,7 +638,7 @@ public class FileBasedContentRepositoryTests : IDisposable
         Assert.Equal("Newest Item", content[0].Title);
         Assert.Equal("Middle Item", content[1].Title);
         Assert.Equal("Oldest Item", content[2].Title);
-        
+
         // Verify dates are actually in descending order
         Assert.True(content[0].DateEpoch > content[1].DateEpoch);
         Assert.True(content[1].DateEpoch > content[2].DateEpoch);

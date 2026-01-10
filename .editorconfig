@@ -117,6 +117,7 @@ csharp_prefer_braces = true:warning
 csharp_prefer_simple_using_statement = true:suggestion
 csharp_style_namespace_declarations = file_scoped:warning
 csharp_style_prefer_method_group_conversion = true:suggestion
+csharp_style_prefer_primary_constructors = true:warning
 csharp_style_prefer_top_level_statements = false:warning
 
 # Expression-level preferences
@@ -143,6 +144,35 @@ csharp_style_allow_embedded_statements_on_same_line_experimental = false:warning
 
 # IDE2003: Blank line required between block and subsequent statement
 dotnet_diagnostic.IDE2003.severity = warning
+
+##############################
+# IDE Analyzers - Code Quality
+##############################
+
+# IDE0005: Remove unnecessary using directives
+dotnet_diagnostic.IDE0005.severity = warning
+
+# IDE0058: Expression value is never used
+# Set to 'none' to completely ignore (fluent APIs intentionally discard return values)
+dotnet_diagnostic.IDE0058.severity = none
+
+# IDE0059: Unnecessary value assignment
+dotnet_diagnostic.IDE0059.severity = warning
+
+# IDE0046: Convert to conditional expression (suggestion only)
+dotnet_diagnostic.IDE0046.severity = suggestion
+
+# IDE0053: Use expression body for lambdas (suggestion only)
+dotnet_diagnostic.IDE0053.severity = suggestion
+
+# IDE0200: Remove unnecessary lambda expression (suggestion only)
+dotnet_diagnostic.IDE0200.severity = suggestion
+
+# Collection initialization simplification
+dotnet_diagnostic.IDE0028.severity = warning
+dotnet_diagnostic.IDE0300.severity = warning
+dotnet_diagnostic.IDE0301.severity = warning
+dotnet_diagnostic.IDE0305.severity = warning
 
 ##############################
 # C# Formatting Rules
@@ -223,19 +253,19 @@ dotnet_naming_rule.constant_should_be_pascal_case.style = pascal_case
 
 dotnet_naming_symbols.interface.applicable_kinds = interface
 dotnet_naming_symbols.interface.applicable_accessibilities = public, internal, private, protected, protected_internal, private_protected
-dotnet_naming_symbols.interface.required_modifiers = 
+dotnet_naming_symbols.interface.required_modifiers =
 
 dotnet_naming_symbols.private_or_internal_field.applicable_kinds = field
 dotnet_naming_symbols.private_or_internal_field.applicable_accessibilities = internal, private, private_protected
-dotnet_naming_symbols.private_or_internal_field.required_modifiers = 
+dotnet_naming_symbols.private_or_internal_field.required_modifiers =
 
 dotnet_naming_symbols.types.applicable_kinds = class, struct, interface, enum
 dotnet_naming_symbols.types.applicable_accessibilities = public, internal, private, protected, protected_internal, private_protected
-dotnet_naming_symbols.types.required_modifiers = 
+dotnet_naming_symbols.types.required_modifiers =
 
 dotnet_naming_symbols.non_field_members.applicable_kinds = property, event, method
 dotnet_naming_symbols.non_field_members.applicable_accessibilities = public, internal, private, protected, protected_internal, private_protected
-dotnet_naming_symbols.non_field_members.required_modifiers = 
+dotnet_naming_symbols.non_field_members.required_modifiers =
 
 dotnet_naming_symbols.constant.applicable_kinds = field, local
 dotnet_naming_symbols.constant.applicable_accessibilities = *
@@ -244,18 +274,18 @@ dotnet_naming_symbols.constant.required_modifiers = const
 # Naming styles
 
 dotnet_naming_style.begins_with_i.required_prefix = I
-dotnet_naming_style.begins_with_i.required_suffix = 
-dotnet_naming_style.begins_with_i.word_separator = 
+dotnet_naming_style.begins_with_i.required_suffix =
+dotnet_naming_style.begins_with_i.word_separator =
 dotnet_naming_style.begins_with_i.capitalization = pascal_case
 
-dotnet_naming_style.pascal_case.required_prefix = 
-dotnet_naming_style.pascal_case.required_suffix = 
-dotnet_naming_style.pascal_case.word_separator = 
+dotnet_naming_style.pascal_case.required_prefix =
+dotnet_naming_style.pascal_case.required_suffix =
+dotnet_naming_style.pascal_case.word_separator =
 dotnet_naming_style.pascal_case.capitalization = pascal_case
 
 dotnet_naming_style.begins_with_underscore.required_prefix = _
-dotnet_naming_style.begins_with_underscore.required_suffix = 
-dotnet_naming_style.begins_with_underscore.word_separator = 
+dotnet_naming_style.begins_with_underscore.required_suffix =
+dotnet_naming_style.begins_with_underscore.word_separator =
 dotnet_naming_style.begins_with_underscore.capitalization = camel_case
 
 ##############################

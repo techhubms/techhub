@@ -20,14 +20,14 @@ public sealed class FileBasedContentRepository : IContentRepository, IDisposable
     private readonly SemaphoreSlim _loadLock = new(1, 1);
 
     // Valid collection directories per Jekyll configuration
-    private static readonly string[] ValidCollections = 
-    {
+    private static readonly string[] _validCollections =
+    [
         "_news",
-        "_videos", 
+        "_videos",
         "_community",
         "_blogs",
         "_roundups"
-    };
+    ];
 
     public FileBasedContentRepository(
         IOptions<AppSettings> settings,
@@ -37,9 +37,9 @@ public sealed class FileBasedContentRepository : IContentRepository, IDisposable
         ArgumentNullException.ThrowIfNull(settings);
         ArgumentNullException.ThrowIfNull(markdownService);
         ArgumentNullException.ThrowIfNull(environment);
-        
+
         var configuredPath = settings.Value.Content.CollectionsPath;
-        
+
         // Resolve relative paths to absolute paths based on content root
         // In Development/Test: ContentRootPath = /workspaces/techhub/src/TechHub.Api
         // We need to go up to solution root to find collections/
@@ -53,7 +53,7 @@ public sealed class FileBasedContentRepository : IContentRepository, IDisposable
             var solutionRoot = FindSolutionRoot(environment.ContentRootPath);
             _basePath = Path.Combine(solutionRoot, configuredPath);
         }
-        
+
         // Verify the path exists to prevent silent failures
         if (!Directory.Exists(_basePath))
         {
@@ -62,11 +62,11 @@ public sealed class FileBasedContentRepository : IContentRepository, IDisposable
                 $"ContentRootPath: {environment.ContentRootPath}, " +
                 $"Configured path: {configuredPath}");
         }
-        
+
         _frontMatterParser = new FrontMatterParser();
         _markdownService = markdownService;
     }
-    
+
     /// <summary>
     /// Find solution root by walking up directory tree looking for TechHub.slnx
     /// </summary>
@@ -82,7 +82,7 @@ public sealed class FileBasedContentRepository : IContentRepository, IDisposable
 
             directory = directory.Parent;
         }
-        
+
         // Fallback: assume startPath is already at solution root
         return startPath;
     }
@@ -126,16 +126,14 @@ public sealed class FileBasedContentRepository : IContentRepository, IDisposable
 
             var allItems = new List<ContentItem>();
 
-            foreach (var collection in ValidCollections)
+            foreach (var collection in _validCollections)
             {
                 var items = await LoadCollectionItemsAsync(collection, cancellationToken);
                 allItems.AddRange(items);
             }
 
-            _cachedAllItems = allItems
-                .OrderByDescending(x => x.DateEpoch)
-                .ToList();
-                
+            _cachedAllItems = [.. allItems.OrderByDescending(x => x.DateEpoch)];
+
             return _cachedAllItems;
         }
         finally
@@ -156,15 +154,14 @@ public sealed class FileBasedContentRepository : IContentRepository, IDisposable
         ArgumentNullException.ThrowIfNull(collectionName);
         // Normalize collection name (add _ prefix if missing)
         var normalizedCollection = collectionName.StartsWith('_') ? collectionName : $"_{collectionName}";
-        
+
         // Load all items (from cache if available)
         var allItems = await GetAllAsync(cancellationToken);
-        
+
         // Filter by collection
-        return allItems
+        return [.. allItems
             .Where(item => item.CollectionName.Equals(normalizedCollection.TrimStart('_'), StringComparison.OrdinalIgnoreCase))
-            .OrderByDescending(x => x.DateEpoch)
-            .ToList();
+            .OrderByDescending(x => x.DateEpoch)];
     }
 
     /// <summary>
@@ -177,10 +174,9 @@ public sealed class FileBasedContentRepository : IContentRepository, IDisposable
         CancellationToken cancellationToken = default)
     {
         var allItems = await GetAllAsync(cancellationToken);
-        return allItems
+        return [.. allItems
             .Where(item => item.Categories.Contains(category, StringComparer.OrdinalIgnoreCase))
-            .OrderByDescending(x => x.DateEpoch)
-            .ToList();
+            .OrderByDescending(x => x.DateEpoch)];
     }
 
     /// <summary>
@@ -209,19 +205,18 @@ public sealed class FileBasedContentRepository : IContentRepository, IDisposable
     {
         if (string.IsNullOrWhiteSpace(query))
         {
-            return Array.Empty<ContentItem>();
+            return [];
         }
 
         var allItems = await GetAllAsync(cancellationToken);
         var lowerQuery = query.ToLowerInvariant();
 
-        return allItems
+        return [.. allItems
             .Where(item =>
                 item.Title.Contains(lowerQuery, StringComparison.OrdinalIgnoreCase) ||
                 item.Description.Contains(lowerQuery, StringComparison.OrdinalIgnoreCase) ||
                 item.Tags.Any(tag => tag.Contains(lowerQuery, StringComparison.OrdinalIgnoreCase)))
-            .OrderByDescending(x => x.DateEpoch)
-            .ToList();
+            .OrderByDescending(x => x.DateEpoch)];
     }
 
     /// <summary>
@@ -232,13 +227,12 @@ public sealed class FileBasedContentRepository : IContentRepository, IDisposable
     public async Task<IReadOnlyList<string>> GetAllTagsAsync(CancellationToken cancellationToken = default)
     {
         var allItems = await GetAllAsync(cancellationToken);
-        
-        return allItems
+
+        return [.. allItems
             .SelectMany(item => item.Tags)
             .Select(tag => tag.ToLowerInvariant())
             .Distinct()
-            .OrderBy(tag => tag)
-            .ToList();
+            .OrderBy(tag => tag)];
     }
 
     /// <summary>
@@ -251,12 +245,12 @@ public sealed class FileBasedContentRepository : IContentRepository, IDisposable
     {
         // Normalize collection name (add _ prefix if missing)
         var normalizedCollection = collection.StartsWith('_') ? collection : $"_{collection}";
-        
+
         var collectionPath = Path.Combine(_basePath, normalizedCollection);
-        
+
         if (!Directory.Exists(collectionPath))
         {
-            return new List<ContentItem>();
+            return [];
         }
 
         var items = new List<ContentItem>();
@@ -317,7 +311,7 @@ public sealed class FileBasedContentRepository : IContentRepository, IDisposable
 
             // Generate ID from filename (without extension)
             var fileName = Path.GetFileNameWithoutExtension(filePath);
-            
+
             // Generate excerpt if not provided in frontmatter
             if (string.IsNullOrWhiteSpace(excerpt))
             {

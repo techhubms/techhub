@@ -1,5 +1,3 @@
-using TechHub.Core.DTOs;
-
 namespace TechHub.Web.Services;
 
 /// <summary>
@@ -55,7 +53,7 @@ internal static class SectionHelper
     {
         if (string.IsNullOrWhiteSpace(collectionName))
             return collectionName ?? string.Empty;
-        
+
         return System.Globalization.CultureInfo.InvariantCulture.TextInfo.ToTitleCase(collectionName.ToLowerInvariant());
     }
 }

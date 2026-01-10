@@ -9,7 +9,7 @@ public static class SectionPriorityHelper
     /// <summary>
     /// Section priority order (matches the menubar order)
     /// </summary>
-    private static readonly string[] SectionPriorityOrder =
+    private static readonly string[] _sectionPriorityOrder =
     [
         "GitHub Copilot",
         "AI",
@@ -23,7 +23,7 @@ public static class SectionPriorityHelper
     /// <summary>
     /// Section name mappings to URL paths
     /// </summary>
-    private static readonly Dictionary<string, string> SectionNameToUrl = new()
+    private static readonly Dictionary<string, string> _sectionNameToUrl = new()
     {
         { "GitHub Copilot", "github-copilot" },
         { "AI", "ai" },
@@ -43,20 +43,20 @@ public static class SectionPriorityHelper
     public static string GetPrimarySectionUrl(IReadOnlyList<string> categories, string? collectionName = null)
     {
         ArgumentNullException.ThrowIfNull(categories);
-        
+
         // Special case: Roundups always belong to "all" section
         if (collectionName?.Equals("roundups", StringComparison.OrdinalIgnoreCase) == true)
             return "all";
-        
+
         if (categories.Count == 0)
             return "all";
 
         // Find the first category that matches a section in priority order
-        foreach (var sectionName in SectionPriorityOrder)
+        foreach (var sectionName in _sectionPriorityOrder)
         {
             if (categories.Contains(sectionName, StringComparer.OrdinalIgnoreCase))
             {
-                return SectionNameToUrl[sectionName];
+                return _sectionNameToUrl[sectionName];
             }
         }
 
@@ -73,16 +73,16 @@ public static class SectionPriorityHelper
     public static string GetPrimarySectionName(IReadOnlyList<string> categories, string? collectionName = null)
     {
         ArgumentNullException.ThrowIfNull(categories);
-        
+
         // Special case: Roundups always belong to "All" section
         if (collectionName?.Equals("roundups", StringComparison.OrdinalIgnoreCase) == true)
             return "All";
-        
+
         if (categories.Count == 0)
             return "All";
 
         // Find the first category that matches a section in priority order
-        foreach (var sectionName in SectionPriorityOrder)
+        foreach (var sectionName in _sectionPriorityOrder)
         {
             if (categories.Contains(sectionName, StringComparer.OrdinalIgnoreCase))
             {

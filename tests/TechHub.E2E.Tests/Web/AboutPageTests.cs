@@ -1,8 +1,6 @@
 using System.Text.RegularExpressions;
-using System.Text.RegularExpressions;
-using TechHub.E2E.Tests.Helpers;
 using Microsoft.Playwright;
-using Xunit;
+using TechHub.E2E.Tests.Helpers;
 
 namespace TechHub.E2E.Tests.Web;
 
