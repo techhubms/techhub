@@ -10,13 +10,12 @@
 @if (section != null)
 {
     <HeadContent>
-        <link rel="alternate" type="application/rss+xml" 
-              title="Tech Hub - @(section.Title) - RSS Feed" 
-              href="@($"{section.Url}/feed.xml")" />
+        <link rel="alternate" type="application/rss+xml" title="Tech Hub - @(section.Title) - RSS Feed"
+            href="@($"{section.Url}/feed.xml")" />
     </HeadContent>
 }
 
-<div class="section-page-grid">
+<div class="page-with-sidebar">
     @if (isLoadingSection)
     {
         @* Show skeleton while loading section data *@
@@ -26,13 +25,19 @@
                 <div class="skeleton skeleton-description"></div>
             </div>
         </header>
-        
+
         <nav class="collection-nav">
             <h2>Collections</h2>
             <ul class="skeleton-nav">
-                <li><div class="skeleton skeleton-nav-item"></div></li>
-                <li><div class="skeleton skeleton-nav-item"></div></li>
-                <li><div class="skeleton skeleton-nav-item"></div></li>
+                <li>
+                    <div class="skeleton skeleton-nav-item"></div>
+                </li>
+                <li>
+                    <div class="skeleton skeleton-nav-item"></div>
+                </li>
+                <li>
+                    <div class="skeleton skeleton-nav-item"></div>
+                </li>
             </ul>
         </nav>
     }
@@ -41,14 +46,16 @@
         var sectionData = section;
         @* Pass section data to children - no redundant API calls *@
         <PageHeader Section="@sectionData" />
-        
-        <SidebarCollectionNav Section="@sectionData"
-                       SelectedCollection="all" />
-        
-        <ContentItemsGrid SectionName="@SectionName"
-                          CollectionName="all"
-                          SectionCategory="@sectionData.Category"
-                          Collections="@sectionData.Collections" />
+
+        <aside class="sidebar">
+            <SidebarCollectionNav Section="@sectionData" SelectedCollection="all" />
+            <SidebarRssLinks Links="@(new[] { new SidebarRssLinks.RssLink("RSS Feed", $"{sectionData.Url}/feed.xml") })" />
+        </aside>
+
+        <main class="page-main-content">
+            <ContentItemsGrid SectionName="@SectionName" CollectionName="all" SectionCategory="@sectionData.Category"
+                Collections="@sectionData.Collections" />
+        </main>
     }
     else
     {
@@ -87,7 +94,7 @@
     private async Task LoadSection()
     {
         isLoadingSection = true;
-        
+
         try
         {
             section = await ApiClient.GetSectionAsync(SectionName);

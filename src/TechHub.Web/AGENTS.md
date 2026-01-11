@@ -89,8 +89,7 @@ Components/
     ├── SectionCard.razor.css          # Section card styling
     ├── ContentItemCard.razor.css      # Content item card styling
     ├── SectionCardsGrid.razor.css     # Section cards grid layout
-    ├── ContentItemsGrid.razor.css     # Content items grid layout
-    └── SidebarCollectionNav.razor.css # Sidebar collection navigation
+    └── ContentItemsGrid.razor.css     # Content items grid layout
 ```
 
 #### How CSS is Loaded
@@ -193,12 +192,18 @@ builder.Services.AddWebOptimizer(pipeline =>
 
 ```text
 Components/
-├── Layout/MainLayout.razor.css        # Main layout-specific styles
-├── Pages/Home.razor.css               # Home page grid layout (unique to homepage)
-├── Pages/Section.razor.css            # Section page layout (unique to section pages)
+├── Layout/MainLayout.razor.css        # Main layout-specific styles (error banner)
+├── Pages/Home.razor.css               # Home page-specific styles (popular tags container)
+├── Pages/Section.razor.css            # Section page skeleton loading states
+├── Pages/SectionCollection.razor.css  # Collection page skeleton loading states
+├── Pages/ContentItem.razor.css        # Content detail page (article tags, nav buttons)
 ├── Pages/About.razor.css              # About page team grid (unique to about page)
 ├── Shared/PageHeader.razor.css        # Header banner styles (unique to this component)
-└── SectionCard.razor.css              # Section card styling (unique to this component)
+├── SectionCard.razor.css              # Section card styling (unique to this component)
+└── ContentItemCard.razor.css          # Content item card styling (unique to this component)
+
+Note: Sidebar components (SidebarCollectionNav, SidebarRssLinks, SidebarTags) do NOT have 
+      .razor.css files - they use global styles from sidebar.css
 ```
 
 **Global CSS** (wwwroot/css/):
@@ -209,11 +214,15 @@ wwwroot/css/
 ├── base.css                           # Reset, typography, links (used everywhere)
 ├── layout.css                         # Site header, footer, nav (used everywhere)
 ├── components/
-│   ├── sidebar.css                   # Sidebar component (used on multiple pages)
+│   ├── page-container.css            # Page layout containers (.page-with-sidebar, .page-without-sidebar)
+│   ├── sidebar.css                   # Sidebar component styles (used on multiple pages)
 │   ├── buttons.css                   # Button styles (used everywhere)
-│   └── cards.css                     # Card styles (used on multiple pages)
+│   ├── forms.css                     # Form styles (used on multiple pages)
+│   └── loading.css                   # Skeleton loading states (used on multiple pages)
 └── utilities.css                      # Utility classes (used everywhere)
 ```
+
+**🚨 CRITICAL RULE**: Shared layout classes (`.page-with-sidebar`, `.page-without-sidebar`) MUST be in global CSS (`page-container.css`), NEVER in component-scoped CSS, even if currently used by only one page. These are structural classes that define the fundamental page architecture.
 
 **Decision Tree**:
 
@@ -232,6 +241,204 @@ Is this style specific to ONE component/page?
 - **Performance** - Bundling in production reduces HTTP requests
 - **Developer experience** - Individual files in dev mode for easy debugging
 - **Automatic optimization** - Blazor handles component CSS bundling and scoping
+
+### Sidebar Component Architecture
+
+**🚨 CRITICAL RESPONSIBILITY RULE**: Pages define layout structure with `<aside class="sidebar">`, sidebar components only render their content.
+
+**Pattern**: Composition-based sidebar design where pages control layout and components provide functionality.
+
+#### Page Layout Classes
+
+**Two standardized layouts** (defined in `page-container.css`):
+
+- **`.page-with-sidebar`** - Two-column grid layout (sidebar + main content)
+  - Used by: Section, SectionCollection, Home, ContentItem pages
+  - Grid: `300px 1fr` with responsive breakpoints
+  - Includes `<aside class="sidebar">` and `<main class="page-main-content">`
+
+- **`.page-without-sidebar`** - Single column centered layout
+  - Used by: About, Error, NotFound pages
+  - Max-width: `1400px`, centered with auto margins
+  - Only `<main class="page-main-content">` (no sidebar)
+
+#### Sidebar Layout Responsibility
+
+**Pages** (`Section.razor`, `Home.razor`, `ContentItem.razor`):
+
+- ✅ Use `.page-with-sidebar` container class
+- ✅ Define the `<aside class="sidebar">` container
+- ✅ Determine which sidebar components to render
+- ✅ Control component order and composition
+- ✅ Pass required parameters to components
+
+**Sidebar Components** (`SidebarCollectionNav.razor`, `SidebarRssLinks.razor`, `SidebarTags.razor`):
+
+- ✅ Render their specific content (navigation, RSS links, tag clouds)
+- ✅ Use semantic HTML appropriate to their purpose (`<nav>`, `<div>`, etc.)
+- ✅ Apply shared sidebar styles (`.sidebar-section`, `.sidebar-link-button`, etc.)
+- ❌ DO NOT wrap themselves in `<aside class="sidebar">`
+- ❌ DO NOT define their own container positioning (sticky, grid, etc.)
+- ❌ DO NOT have component-scoped `.razor.css` files (styles are global in sidebar.css)
+
+#### Example: Section Page with Sidebar
+
+**Section.razor** (Page defines layout):
+
+```razor
+<div class="page-with-sidebar">
+    <PageHeader Section="@sectionData" />
+    
+    @* Page defines sidebar container *@
+    <aside class="sidebar">
+        @* Page composes sidebar components *@
+        <SidebarCollectionNav Section="@sectionData" SelectedCollection="all" />
+        <SidebarRssLinks Links="@(new[] { new SidebarRssLinks.RssLink(\"RSS Feed\", $\"{sectionData.Url}/feed.xml\") })\" />
+    </aside>
+    
+    <main class="page-main-content">
+        <ContentItemsGrid ... />
+    </main>
+</div>
+```
+
+**SidebarCollectionNav.razor** (Component renders content only):
+
+```razor
+@* Uses <nav> since this contains site navigation *@
+<nav aria-label="Section collections and pages">
+    <div class="sidebar-section">
+        <h2 class="sidebar-h2">Collections</h2>
+        <ul class="sidebar-list">
+            @* Navigation links *@
+        </ul>
+    </div>
+</nav>
+```
+
+**SidebarRssLinks.razor** (Component renders content only):
+
+```razor
+@* Uses <div> since this is not navigation, just external links *@
+<div class="sidebar-section">
+    <h2 class="sidebar-h2">Subscribe</h2>
+    <ul class="sidebar-list">
+        @* RSS feed links *@
+    </ul>
+</div>
+```
+
+**SidebarTags.razor** (Component renders content only):
+
+```razor
+@* Uses <div> for tag cloud (not navigation) *@
+<div class="sidebar-section">
+    <h2 class="sidebar-h2">@Title</h2>
+    <div class="tags-cloud">
+        @foreach (var tag in displayTags)
+        {
+            <a href="@($"{BaseUrl}?tag={Uri.EscapeDataString(tag)}")"
+               class="sidebar-tag">@tag</a>
+        }
+    </div>
+</div>
+```
+
+**Parameters**:
+
+- `Tags` (required): List of tag strings to display
+- `Title`: Heading text (default: "Tags")
+- `BaseUrl` (required): URL for tag filter links
+- `MaxTags`: Limit number of tags shown (default: null/all)
+- `CssClass`: Additional CSS classes for container
+
+#### Sidebar Component Semantic HTML
+
+**Each component chooses its own semantic wrapper**:
+
+- `<nav>` - For site navigation (collections, pages)
+- `<div>` - For non-navigational content (RSS feeds, metadata)
+- `<aside>` - ONLY used by pages for the outer sidebar container
+
+**Why component-level semantics?**
+
+- ✅ Multiple `<nav>` elements per page are valid and recommended
+- ✅ Screen readers can distinguish between different navigation sections
+- ✅ Components are self-contained and semantically correct
+- ✅ Easy to reuse components without breaking HTML structure
+
+#### Shared Sidebar Styles
+
+**Global CSS** (`wwwroot/css/components/sidebar.css`):
+
+- `.sidebar` - Container with sticky positioning (used by pages)
+- `.sidebar-section` - Section wrapper
+- `.sidebar-h2` - Section headings
+- `.sidebar-list` - List styling
+- `.sidebar-link-button` - Navigation buttons (NO `.sidebar` parent scoping!)
+- `.sidebar-content-button` - Content item buttons
+- `.sidebar-tag-button` - Interactive tag buttons
+- `.sidebar-category-tag` - Display-only category tags
+- `.sidebar-content-tag` - Display-only content tags
+
+**🚨 CRITICAL**: Sidebar button styles are **NOT scoped** to `.sidebar` parent - they work anywhere the class is used. This allows components to use these styles without requiring a `.sidebar` ancestor.
+
+#### Sidebar Components
+
+**SidebarCollectionNav** - Section collections and custom pages navigation
+
+- **Used in**: Section pages, SectionCollection pages, ContentItem pages
+- **Parameters**: `Section` (required), `SelectedCollection` (optional, default "all")
+- **Renders**: Collections list, custom pages list (NO RSS links)
+
+**SidebarRssLinks** - RSS feed and subscription links
+
+- **Used in**: All pages with sidebars (Home, Section, ContentItem)
+- **Parameters**: `Links` (required) - array of RssLink records
+- **Supports**: Multiple feeds, custom icons per link
+- **Example**:
+
+  ```razor
+  <SidebarRssLinks Links="@(new[] {
+      new SidebarRssLinks.RssLink("RSS Feed - All Content", "/all/feed.xml"),
+      new SidebarRssLinks.RssLink("Newsletter", "https://example.com", GetNewsletterIcon())
+  })" />
+  ```
+
+**SidebarTags** - Interactive tag cloud for filtering content
+
+- **Used in**: Home page (popular tags), ContentItem pages (article tags)
+- **Parameters**:
+  - `Tags` (required) - Collection of tag strings
+  - `Title` (optional, default "Tags") - Section heading
+  - `BaseUrl` (required) - Base URL for tag filtering (e.g., "/ai" for section, "/all" for global)
+  - `MaxTags` (optional) - Maximum tags to display
+  - `CssClass` (optional) - Additional CSS class (e.g., "popular-tags", "article-tags")
+- **Examples**:
+
+  ```razor
+  @* Article tags - filter within section *@
+  <SidebarTags Tags="@item.Tags"
+               Title="Tags"
+               BaseUrl="@($"/{sectionName}")"
+               CssClass="article-tags" />
+  
+  @* Popular tags - filter across all content *@
+  <SidebarTags Tags="@popularTags"
+               Title="Popular Tags"
+               BaseUrl="/all"
+               MaxTags="15"
+               CssClass="popular-tags" />
+  ```
+
+#### Benefits of This Architecture
+
+- ✅ **Clear separation of concerns** - Pages control structure, components provide functionality
+- ✅ **Reusable components** - SidebarCollectionNav, SidebarRssLinks, SidebarTags used across multiple pages
+- ✅ **Flexible composition** - Pages can mix and match sidebar components
+- ✅ **Semantic HTML** - Each component uses appropriate semantic tags
+- ✅ **No duplicate code** - Shared styles and components reduce duplication
+- ✅ **Easy to extend** - New sidebar components follow the same pattern
 
 ### Color Palette
 
@@ -490,21 +697,22 @@ font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
 
 <PageTitle>@SectionName - Tech Hub</PageTitle>
 
-<!-- CSS Grid with stable positioning -->
-<div class="section-page-grid">
+<!-- Page container with sidebar layout -->
+<div class="page-with-sidebar">
     @* Header loads independently *@
     <PageHeader Section="@section" />
     
-    @* Navigation loads independently *@
-    <CollectionNav SectionName="@SectionName" 
-                   SelectedCollection="@selectedCollection"
-                   OnCollectionChange="@HandleCollectionChange" />
+    @* Sidebar container *@
+    <aside class="sidebar">
+        <SidebarCollectionNav Section="@section" 
+                             SelectedCollection="@selectedCollection" />
+        <SidebarRssLinks Links="@(new[] { new SidebarRssLinks.RssLink(\"RSS Feed\", $\"{section.Url}/feed.xml\") })\" />
+    </aside>
     
-    @* Content loads independently *@
-    <CollectionContent SectionName="@SectionName"
-                      CollectionName="@selectedCollection"
-                      SectionCategory="@sectionCategory"
-                      @key="@selectedCollection" />
+    @* Main content area *@
+    <main class="page-main-content">
+        <ContentItemsGrid ... />
+    </main>
 </div>
 
 @code {
@@ -532,34 +740,54 @@ font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
 }
 ```
 
-**CSS Grid Layout (Section.razor.css - component-scoped CSS)**:
+**Page Layout CSS (page-container.css - global shared CSS)**:
 
 ```css
-/* Stable three-area grid that never shifts */
-.section-page-grid {
-    display: grid;
-    grid-template-areas:
-        "header"
-        "nav"
-        "content";
-    grid-template-rows: auto auto 1fr;
-    gap: 1.5rem;
-    padding: 1rem;
-    min-height: 100vh; /* Prevents collapse during loading */
+/* Standard page container with sidebar */
+.page-with-sidebar {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  gap: var(--spacing-5);
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 var(--spacing-3) var(--spacing-6) var(--spacing-3);
 }
 
-.section-header { grid-area: header; }
-.collection-nav { grid-area: nav; }
-.collection-content { grid-area: content; }
-
-/* Skeleton shimmer animation */
-@keyframes shimmer {
-    0% { background-position: -1000px 0; }
-    100% { background-position: 1000px 0; }
+/* Main content area */
+.page-main-content {
+  min-width: 0;
+  /* Prevent grid blowout */
 }
 
-.skeleton {
-    background: linear-gradient(
+/* Standard page container without sidebar */
+.page-without-sidebar {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 var(--spacing-3) var(--spacing-6) var(--spacing-3);
+}
+
+/* Responsive - Single column on smaller screens */
+@media (max-width: 1024px) {
+  .page-with-sidebar {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-4);
+  }
+}
+
+@media (max-width: 768px) {
+  .page-with-sidebar {
+    padding: 0 var(--spacing-2) var(--spacing-4) var(--spacing-2);
+  }
+
+  .page-without-sidebar {
+    padding: 0 var(--spacing-2) var(--spacing-4) var(--spacing-2);
+  }
+}
+```
+
+**Component-Scoped Loading States (Section.razor.css)**:
+
+```css
         90deg,
         rgba(255, 255, 255, 0.05) 0%,
         rgba(255, 255, 255, 0.1) 50%,
@@ -662,11 +890,11 @@ public void Section_RendersWithSkeletonLayout()
     var cut = ctx.RenderComponent<Section>(parameters => parameters
         .Add(p => p.SectionName, "ai"));
 
-    // Assert: Verify CSS Grid structure exists immediately
-    cut.MarkupMatches(@"<div class=""section-page-grid"">
-        <section-header diff:ignore></section-header>
-        <collection-nav diff:ignore></collection-nav>
-        <collection-content diff:ignore></collection-content>
+    // Assert: Verify page layout structure exists immediately
+    cut.MarkupMatches(@"<div class=""page-with-sidebar"">
+        <div diff:ignore></div> <!-- PageHeader -->
+        <aside class=""sidebar"" diff:ignore></aside>
+        <main class=""page-main-content"" diff:ignore></main>
     </div>");
 }
 ```

@@ -1,8 +1,10 @@
-.about-page {
-    max-width: 1400px;
-    margin: 0 auto;
-    padding: 0 var(--spacing-3) var(--spacing-6) var(--spacing-3);
-}
+/* ============================================================================
+   About Page Component Styles
+   
+   Component-specific styling for About.razor page
+   Only About-specific styles (team grid layout)
+   Page layout uses global .page-without-sidebar from page-container.css
+   ============================================================================ */
 
 .team-members {
     display: grid;
@@ -89,10 +91,6 @@
 }
 
 @media (max-width: 768px) {
-    .about-page {
-        padding: var(--spacing-4) var(--spacing-2);
-    }
-    
     .team-members {
         grid-template-columns: 1fr;
     }

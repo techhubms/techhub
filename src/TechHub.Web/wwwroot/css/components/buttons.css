@@ -46,23 +46,3 @@
   border-color: var(--color-accent-primary);
   text-decoration: none;
 }
-
-/* Retry Button (Error States) */
-.error button {
-  margin-top: var(--spacing-3);
-  padding: var(--spacing-2) var(--spacing-4);
-  background: var(--color-button-primary-bg);
-  color: var(--color-button-primary-text);
-  border: none;
-  border-radius: var(--radius-md);
-  cursor: pointer;
-  font-size: var(--font-size-base);
-  font-weight: var(--font-weight-semibold);
-  transition: background var(--duration-fast) var(--easing-ease);
-  min-height: var(--touch-target-min-size);
-  font-family: var(--font-family-base);
-}
-
-.error button:hover {
-  background: var(--color-button-primary-hover);
-}

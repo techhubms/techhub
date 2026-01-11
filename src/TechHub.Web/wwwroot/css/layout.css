@@ -16,21 +16,3 @@
 .main-content {
   flex: 1;
 }
-
-/* Section Page Grid - Child positioning (global to cross component boundaries) */
-/* Grid container defined in Section.razor.css, child positioning here for scope piercing */
-.section-page-grid > *:nth-child(1) {
-  grid-area: header;
-}
-
-.section-page-grid > *:nth-child(2) {
-  grid-area: nav;
-  padding: 0 0 var(--spacing-4) var(--spacing-3);
-}
-
-.section-page-grid > *:nth-child(3) {
-  grid-area: content;
-  padding: 0 var(--spacing-3) var(--spacing-4) 0;
-  min-width: 0;
-}
-

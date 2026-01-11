@@ -7,13 +7,10 @@
 <PageTitle>Tech Hub - Microsoft Technology News & Resources</PageTitle>
 
 <HeadContent>
-    <link rel="alternate" type="application/rss+xml" 
-          title="Tech Hub - All Content - RSS Feed" 
-          href="/all/feed.xml" />
+    <link rel="alternate" type="application/rss+xml" title="Tech Hub - All Content - RSS Feed" href="/all/feed.xml" />
 </HeadContent>
 
-<PageHeader 
-    Title="Tech Hub" 
+<PageHeader Title="Tech Hub"
     Description="Your source for Microsoft technology news, tutorials, and community content" />
 
 <div class="page-with-sidebar">
@@ -24,9 +21,9 @@
         {
             <div class="sidebar-section latest-roundup">
                 <h2 class="sidebar-h2">Latest Roundup</h2>
-                <a href="/all/roundups/@(roundups.First().Slug.ToLowerInvariant())" class="sidebar-featured-link">
-                    <span class="sidebar-featured-title">@roundups.First().Title</span>
-                    <span class="sidebar-featured-date">@DateTime.Parse(roundups.First().DateIso).ToString("MMM dd, yyyy")</span>
+                <a href="/all/roundups/@(roundups.First().Slug.ToLowerInvariant())" class="sidebar-highlight-button">
+                    <span class="sidebar-highlight-button-title">@roundups.First().Title</span>
+                    <span class="sidebar-highlight-button-date">@DateTime.Parse(roundups.First().DateIso).ToString("MMM dd, yyyy")</span>
                 </a>
             </div>
         }
@@ -41,13 +38,15 @@
                     {
                         var sectionUrl = GetSectionUrl(item.PrimarySection);
                         <li>
-                            <a href="/@(sectionUrl)/@(item.CollectionName.ToLowerInvariant())/@(item.Slug.ToLowerInvariant())" class="sidebar-item-link">
-                                <span class="sidebar-item-title">@item.Title</span>
-                                <span class="sidebar-item-meta">
+                            <a href="/@(sectionUrl)/@(item.CollectionName.ToLowerInvariant())/@(item.Slug.ToLowerInvariant())"
+                                class="sidebar-content-button">
+                                <span class="sidebar-content-button-title">@item.Title</span>
+                                <span class="sidebar-content-button-meta">
                                     <span class="sidebar-item-section">@item.PrimarySection</span>
-                                    <span class="sidebar-meta-separator">•</span>
-                                    <span class="sidebar-item-collection">@(GetCollectionDisplayName(item.CollectionName))</span>
-                                    <span class="sidebar-meta-separator">•</span>
+                                    <span class="sidebar-content-button-meta-separator">•</span>
+                                    <span
+                                        class="sidebar-item-collection">@(GetCollectionDisplayName(item.CollectionName))</span>
+                                    <span class="sidebar-content-button-meta-separator">•</span>
                                     <span class="sidebar-item-date">@DateTime.Parse(item.DateIso).ToString("MMM dd, yyyy")</span>
                                 </span>
                             </a>
@@ -58,49 +57,10 @@
         }
 
         @* Subscribe Section *@
-        <div class="sidebar-section subscribe-section">
-            <h2 class="sidebar-h2">Subscribe</h2>
-            <ul class="sidebar-links">
-                <li>
-                    <a href="/all/feed.xml" target="_blank" rel="noopener noreferrer">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                            <path d="M6.18 15.64a2.18 2.18 0 0 1 2.18 2.18C8.36 19 7.38 20 6.18 20C5 20 4 19 4 17.82a2.18 2.18 0 0 1 2.18-2.18M4 4.44A15.56 15.56 0 0 1 19.56 20h-2.83A12.73 12.73 0 0 0 4 7.27V4.44m0 5.66a9.9 9.9 0 0 1 9.9 9.9h-2.83A7.07 7.07 0 0 0 4 12.93V10.1z"/>
-                        </svg>
-                        RSS Feed - All Content
-                    </a>
-                </li>
-                <li>
-                    <a href="/all/roundups/feed.xml" target="_blank" rel="noopener noreferrer">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                            <path d="M6.18 15.64a2.18 2.18 0 0 1 2.18 2.18C8.36 19 7.38 20 6.18 20C5 20 4 19 4 17.82a2.18 2.18 0 0 1 2.18-2.18M4 4.44A15.56 15.56 0 0 1 19.56 20h-2.83A12.73 12.73 0 0 0 4 7.27V4.44m0 5.66a9.9 9.9 0 0 1 9.9 9.9h-2.83A7.07 7.07 0 0 0 4 12.93V10.1z"/>
-                        </svg>
-                        RSS Feed - Roundups
-                    </a>
-                </li>
-                <li>
-                    <a href="https://mailchi.mp/1c8d4b5ea99c/tech-hub" target="_blank" rel="noopener noreferrer">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                            <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
-                        </svg>
-                        Newsletter
-                    </a>
-                </li>
-            </ul>
-        </div>
+        <SidebarRssLinks Links="@rssLinks" />
 
         @* Popular Tags *@
-        @if (popularTags != null && popularTags.Any())
-        {
-            <div class="sidebar-section popular-tags">
-                <h2 class="sidebar-h2">Popular Tags</h2>
-                <div class="tags-cloud">
-                    @foreach (var tag in popularTags.Take(15))
-                    {
-                        <a href="/all?tags=@Uri.EscapeDataString(tag)" class="sidebar-tag">@tag</a>
-                    }
-                </div>
-            </div>
-        }
+        <SidebarTags Tags="@popularTags" Title="Popular Tags" BaseUrl="/all" MaxTags="15" CssClass="popular-tags" />
     </aside>
 
     <div class="home-main-content">
@@ -125,37 +85,50 @@
 </div>
 
 @code {
+    [Inject] private required TechHubApiClient ApiClient { get; set; }
+
+    private static readonly SidebarRssLinks.RssLink[] rssLinks = [
+    new("RSS Feed - All Content", "/all/feed.xml"),
+new("RSS Feed - Roundups", "/all/roundups/feed.xml"),
+new("Newsletter", "https://mailchi.mp/1c8d4b5ea99c/tech-hub", GetNewsletterIcon())
+    ];
+
     private IEnumerable<SectionDto>? sections;
     private IEnumerable<ContentItemDto>? roundups;
     private IEnumerable<ContentItemDto>? latestItems;
     private IEnumerable<string>? popularTags;
     private string? errorMessage;
 
-    protected override async Task OnInitializedAsync()
-    {
-        try
-        {
-            // Fetch all content in parallel
-            var sectionsTask = ApiClient.GetAllSectionsAsync();
-            var roundupsTask = ApiClient.GetContentAsync(category: null, collection: "roundups");
-            var latestItemsTask = ApiClient.GetLatestItemsAsync(count: 5);
-            var popularTagsTask = ApiClient.GetPopularTagsAsync(count: 15);
-            
-            await Task.WhenAll(sectionsTask, roundupsTask, latestItemsTask, popularTagsTask);
-            
-            sections = await sectionsTask;
-            
-            // Get roundups and order by date descending to get the latest ones first
-            var allRoundups = await roundupsTask;
-            roundups = allRoundups?.OrderByDescending(r => r.DateEpoch);
-            
-            latestItems = await latestItemsTask;
-            popularTags = await popularTagsTask;
-        }
-        catch (Exception ex)
-        {
-            errorMessage = $"Failed to load content: {ex.Message}";
-        }
-    }
-}
+    private static RenderFragment GetNewsletterIcon() => @<svg width="16" height="16" viewBox="0 0 24 24"
+            fill="currentColor" aria-hidden="true">
+            <path
+                d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
+    </svg>;
 
+protected override async Task OnInitializedAsync()
+{
+try
+{
+// Fetch all content in parallel
+var sectionsTask = ApiClient.GetAllSectionsAsync();
+var roundupsTask = ApiClient.GetContentAsync(category: null, collection: "roundups");
+var latestItemsTask = ApiClient.GetLatestItemsAsync(count: 5);
+var popularTagsTask = ApiClient.GetPopularTagsAsync(count: 15);
+
+await Task.WhenAll(sectionsTask, roundupsTask, latestItemsTask, popularTagsTask);
+
+sections = await sectionsTask;
+
+// Get roundups and order by date descending to get the latest ones first
+var allRoundups = await roundupsTask;
+roundups = allRoundups?.OrderByDescending(r => r.DateEpoch);
+
+latestItems = await latestItemsTask;
+popularTags = await popularTagsTask;
+}
+catch (Exception ex)
+{
+errorMessage = $"Failed to load content: {ex.Message}";
+}
+}
+}
