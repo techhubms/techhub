@@ -11103,5 +11103,17 @@
     "collection": "videos",
     "reason": "No categories found: Content excluded because it primarily discusses high-level business priorities, value scaling, business process optimization, and employee empowerment in an industrial context with generative/agentic AI, without evidence of technical implementation details, developer/tool usage, or hands-on AI integration with Microsoft development platforms or services. Based on both the title and description, the content targets executive/business strategy audiences and does not provide technical/development information required by category inclusion rules. No substantive content is available (content is null) to evaluate for potential qualifying technical depth (Generic Exclusion: Business Strategy and Executive Content rule in Chapter 3).",
     "timestamp": "2026-01-09 22:03:43 +00:00"
+  },
+  {
+    "timestamp": "2026-01-10 22:03:19 +00:00",
+    "collection": "news",
+    "reason": "No categories found: No categories were assigned because the content is a round-up of open source game jam winners on GitHub, focusing on creativity in game design and community contributions. Although GitHub is mentioned and used, there is no substantive technical discussion about development tools, programming practices, DevOps, coding techniques, Microsoft products, AI, ML, or security topics as defined in the inclusion rules. The content is celebratory and community-focused, rather than instructional or technical, and does not contain development process insights or code-level tutorials that would qualify for any existing category.",
+    "canonical_url": "https://github.blog/open-source/gaming/light-waves-rising-tides-and-drifting-ships-game-off-2025-winners/"
+  },
+  {
+    "timestamp": "2026-01-10 22:03:48 +00:00",
+    "collection": "videos",
+    "reason": "No categories found: No categories assigned. The content is an announcement/video highlighting the top 10 entries from GitHub's Game Off 2025 competition, which features open source games. While the content relates to software/game development generally, it does not focus on Microsoft technologies, products, developer tools, or frameworks as required by the inclusion rules. GitHub as a platform is included, but the context here is about game submissions and gaming, not GitHub developer tools, workflows, Copilot, or DevOps. No evidence in the description or tags of any central Microsoft technology (Azure, .NET, Visual Studio, etc.), AI, Coding (in a Microsoft context), DevOps, ML, or Security. As per the Multi-Platform Content Threshold, Microsoft technology must be central or at least 40% of substantive content, which is not indicated here. Therefore, all categories are excluded.",
+    "canonical_url": "https://www.youtube.com/shorts/YzM-kIbhico"
   }
 ]
