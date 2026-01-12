@@ -36,10 +36,39 @@ public class FileBasedCustomPageRepository : ICustomPageRepository
         // Get base path from configuration
         var collectionsPath = settings.Value.Content.CollectionsPath;
 
-        // Convert relative path to absolute and normalize
-        _basePath = Path.IsPathRooted(collectionsPath)
-            ? collectionsPath
-            : Path.GetFullPath(Path.Combine(environment.ContentRootPath, collectionsPath));
+        // Resolve relative paths to absolute paths based on content root
+        // In Development/Test: ContentRootPath = /workspaces/techhub/src/TechHub.Api
+        // We need to go up to solution root to find collections/
+        if (Path.IsPathRooted(collectionsPath))
+        {
+            _basePath = collectionsPath;
+        }
+        else
+        {
+            // Navigate up from API project to solution root, then to collections
+            var solutionRoot = FindSolutionRoot(environment.ContentRootPath);
+            _basePath = Path.Combine(solutionRoot, collectionsPath);
+        }
+    }
+
+    /// <summary>
+    /// Find solution root by walking up directory tree looking for TechHub.slnx
+    /// </summary>
+    private static string FindSolutionRoot(string startPath)
+    {
+        var directory = new DirectoryInfo(startPath);
+        while (directory != null)
+        {
+            if (File.Exists(Path.Combine(directory.FullName, "TechHub.slnx")))
+            {
+                return directory.FullName;
+            }
+
+            directory = directory.Parent;
+        }
+
+        // Fallback: assume startPath is already at solution root
+        return startPath;
     }
 
     public async Task<IReadOnlyList<CustomPage>> GetAllAsync(CancellationToken cancellationToken = default)
