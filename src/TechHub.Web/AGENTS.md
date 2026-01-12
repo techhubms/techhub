@@ -534,6 +534,91 @@ font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
 
 ## Component Patterns
 
+### Razor Variable Naming Conflicts
+
+**🚨 CRITICAL**: Certain variable names conflict with Razor directives and MUST be avoided in component code.
+
+**The Problem**: Razor uses `@section` as a directive for defining named content sections in layouts. Using `section` as a variable name causes compilation errors because the Razor parser treats `@section.Property` as an invalid directive.
+
+**Conflicting Variable Names**:
+
+```razor
+@code {
+    // ❌ NEVER DO THIS - Conflicts with @section directive
+    private SectionDto section;
+    
+    // ERROR: The 'section' directive must appear at the start of the line
+    <PageTitle>@section.Title - Tech Hub</PageTitle>
+}
+```
+
+**Recommended Alternatives** (for consistency across codebase):
+
+| Avoid     | Use Instead      | Context                                                |
+|-----------|------------------|--------------------------------------------------------|
+| `section` | `sectionData`    | SectionDto objects in pages/components                 |
+| `section` | `currentSection` | When emphasizing current vs. other sections            |
+| `code`    | `codeBlock`      | When working with code snippets (conflicts with @code) |
+| `page`    | `pageData`       | When working with page metadata (conflicts with @page) |
+| `layout`  | `layoutData`     | When working with layout data (conflicts with @layout) |
+
+**Correct Pattern**:
+
+```razor
+@page "/{sectionName}"
+@using TechHub.Core.DTOs
+
+@if (sectionData != null)
+{
+    <PageTitle>@sectionData.Title - Tech Hub</PageTitle>
+    
+    <PageHeader Section="@sectionData" />
+    
+    <div class="page-with-sidebar">
+        <aside class="sidebar">
+            <SidebarCollectionNav Section="@sectionData" SelectedCollection="all" />
+        </aside>
+        
+        <main class="page-main-content">
+            <ContentItemsGrid SectionCategory="@sectionData.Category" />
+        </main>
+    </div>
+}
+
+@code {
+    [Parameter]
+    public string SectionName { get; set; } = null!;
+    
+    // ✅ CORRECT - Use 'sectionData' to avoid @section directive conflict
+    private SectionDto? sectionData;
+    
+    protected override async Task OnInitializedAsync()
+    {
+        sectionData = await ApiClient.GetSectionAsync(SectionName);
+    }
+}
+```
+
+**Why This Matters**:
+
+- **Compilation errors** - Code won't build if variable names conflict with directives
+- **Consistency** - Using standard alternatives makes code easier to understand
+- **Searchability** - Consistent naming makes it easier to find related code
+- **Maintenance** - Reduces confusion for developers working across multiple files
+
+**Other Razor Directives to Avoid as Variable Names**:
+
+- `@page` - Defines route templates
+- `@layout` - Specifies layout for page
+- `@code` - Defines component code block
+- `@inject` - Dependency injection
+- `@implements` - Interface implementation
+- `@inherits` - Base class inheritance
+- `@attribute` - Component attributes
+- `@typeparam` - Generic type parameters
+
+**Best Practice**: When working with DTO objects in Blazor components, append `Data` to the variable name (e.g., `sectionData`, `contentData`, `itemData`) to avoid conflicts and improve clarity.
+
 ### Client-Side Navigation Without Re-Renders
 
 **Pattern**: Use JavaScript History API for URL updates without triggering Blazor navigation

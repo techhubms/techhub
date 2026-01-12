@@ -54,8 +54,7 @@
 
                 <nav class="content-navigation">
                     <a href="#top" @onclick="ScrollToTop" @onclick:preventDefault class="nav-button primary">Back to Top</a>
-                    <a href="/@(SectionName.ToLowerInvariant())" class="nav-button secondary">Back to
-                        @GetSectionDisplayName(SectionName)</a>
+                    <a href="/@(SectionName.ToLowerInvariant())" class="nav-button secondary">Back to @GetSectionDisplayName(SectionName)</a>
                 </nav>
             }
         </main>
@@ -123,7 +122,7 @@
         try
         {
             item = await ApiClient.GetContentDetailAsync(SectionName.ToLowerInvariant(), Collection.ToLowerInvariant(),
-                ItemId.ToLowerInvariant());
+            ItemId.ToLowerInvariant());
         }
         catch (Exception ex)
         {

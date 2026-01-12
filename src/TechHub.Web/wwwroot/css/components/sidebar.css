@@ -257,7 +257,8 @@
 }
 
 /* Highlight Button - Featured/highlighted content with accent */
-.sidebar-highlight-button {
+.sidebar-highlight-button,
+.sidebar-featured-link {
   display: flex;
   flex-direction: column;
   gap: var(--spacing-2);
@@ -270,13 +271,15 @@
   transition: all var(--duration-fast) var(--easing-ease);
 }
 
-.sidebar-highlight-button:hover {
+.sidebar-highlight-button:hover,
+.sidebar-featured-link:hover {
   background: var(--color-bg-emphasis);
   border-color: var(--color-purple-medium);
   transform: translateX(4px);
 }
 
-.sidebar-highlight-button-title {
+.sidebar-highlight-button-title,
+.sidebar-featured-title {
   font-weight: var(--font-weight-semibold);
   font-size: var(--font-size-base);
   color: var(--color-text-primary);
@@ -284,7 +287,8 @@
 }
 
 .sidebar-highlight-button-date,
-.sidebar-highlight-button-meta {
+.sidebar-highlight-button-meta,
+.sidebar-featured-date {
   font-size: var(--font-size-sm);
   color: var(--color-text-secondary);
 }

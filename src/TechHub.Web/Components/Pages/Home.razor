@@ -20,9 +20,9 @@
         {
             <div class="sidebar-section latest-roundup">
                 <h2 class="sidebar-h2">Latest Roundup</h2>
-                <a href="/all/roundups/@(roundups.First().Slug.ToLowerInvariant())" class="sidebar-highlight-button">
-                    <span class="sidebar-highlight-button-title">@roundups.First().Title</span>
-                    <span class="sidebar-highlight-button-date">@DateTime.Parse(roundups.First().DateIso).ToString("MMM dd, yyyy")</span>
+                <a href="/all/roundups/@(roundups.First().Slug.ToLowerInvariant())" class="sidebar-featured-link">
+                    <span class="sidebar-featured-title">@roundups.First().Title</span>
+                    <span class="sidebar-featured-date">@DateTime.Parse(roundups.First().DateIso).ToString("MMM dd, yyyy")</span>
                 </a>
             </div>
         }
