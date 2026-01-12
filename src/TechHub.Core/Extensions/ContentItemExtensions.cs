@@ -68,7 +68,8 @@ public static class ContentItemExtensions
             ExternalUrl = item.ExternalUrl,
             VideoId = item.VideoId,
             ViewingMode = item.ViewingMode,
-            Url = item.GetUrlInSection(sectionUrl)
+            Url = item.GetUrlInSection(sectionUrl),
+            SidebarInfo = item.SidebarInfo
         };
     }
 

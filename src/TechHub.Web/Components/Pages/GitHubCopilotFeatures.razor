@@ -1,41 +1,65 @@
 @page "/github-copilot/features"
+@using TechHub.Core.DTOs
+@using TechHub.Web.Services
+@using TechHub.Web.Components.Shared
+@inject TechHubApiClient ApiClient
+@inject NavigationManager Navigation
+@inject ErrorService ErrorService
+@inject ILogger<GitHubCopilotFeatures> Logger
 
-<PageTitle>GitHub Copilot Features - Tech Hub</PageTitle>
+<PageTitle>@(contentItem?.Title ?? "GitHub Copilot Features") - Tech Hub</PageTitle>
 
-<PageHeader Title="GitHub Copilot Features" Description="Explore the powerful features of GitHub Copilot"
-    BackgroundImage="/images/section-backgrounds/github-copilot.jpg" />
+@if (sectionData != null && contentItem != null)
+{
+    <HeadContent>
+        <link rel="canonical" href="@($"https://tech.hub.ms{contentItem.Url}")" />
+    </HeadContent>
 
-<div class="page-with-sidebar">
-    @* Sidebar *@
-    <aside class="sidebar">
-        <div class="sidebar-section">
-            <a href="/github-copilot" class="sidebar-link-button">
-                <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
-                    <path d="M8 0L1 8l7 8V0z" />
-                </svg>
-                Back to GitHub Copilot
-            </a>
-        </div>
-    </aside>
+    <PageHeader Section="@sectionData" />
 
-    @* Main Content *@
-    <main class="page-main-content">
-        <h1 id="main-content" class="page-h1" tabindex="-1">GitHub Copilot Features</h1>
-        <section id="overview">
-            <h2>Overview</h2>
-            <p>
-                This page is currently being migrated from Jekyll to Blazor. Full content will be available soon.
-            </p>
-        </section>
+    <div class="page-with-sidebar">
+        <aside class="sidebar">
+            <SidebarBack BackUrl="/github-copilot" BackText="Back to GitHub Copilot" />
+            <SidebarToc HtmlContent="@contentItem.RenderedHtml" />
+        </aside>
 
-        <section id="key-topics">
-            <h2>Key Topics</h2>
-            <ul>
-                <li>Topic 1: Introduction and fundamentals</li>
-                <li>Topic 2: Practical applications</li>
-                <li>Topic 3: Advanced techniques</li>
-                <li>Topic 4: Best practices</li>
-            </ul>
-        </section>
-    </main>
-</div>
+        <main class="page-main-content">
+            <article class="content-detail">
+                <header class="content-detail-header">
+                    <h1 class="page-h1" tabindex="-1">@contentItem.Title</h1>
+                    @if (!string.IsNullOrWhiteSpace(contentItem.Description))
+                    {
+                        <p class="page-description">@contentItem.Description</p>
+                    }
+                </header>
+
+                <div class="content-detail-body markdown-content">
+                    @((MarkupString)contentItem.RenderedHtml)
+                </div>
+            </article>
+        </main>
+    </div>
+}
+
+@code {
+    private SectionDto? sectionData;
+    private ContentItemDetailDto? contentItem;
+
+    protected override async Task OnInitializedAsync()
+    {
+        try
+        {
+            sectionData = await ApiClient.GetSectionAsync("github-copilot");
+            contentItem = await ApiClient.GetContentDetailAsync("github-copilot", "custom", "github-copilot-features");
+
+            if (sectionData == null || contentItem == null)
+            {
+                Navigation.NavigateTo("/not-found");
+            }
+        }
+        catch (Exception ex)
+        {
+            ErrorService.HandleError(ex, Navigation, Logger);
+        }
+    }
+}

@@ -80,6 +80,12 @@ public class ContentItem
     public string? ViewingMode { get; init; }
 
     /// <summary>
+    /// Dynamic sidebar info as JSON (from 'sidebar-info' frontmatter field)
+    /// Can be deserialized into custom structures as needed per page
+    /// </summary>
+    public System.Text.Json.JsonElement? SidebarInfo { get; init; }
+
+    /// <summary>
     /// Computed property: Date as DateTime (UTC)
     /// </summary>
     public DateTime DateUtc => DateTimeOffset.FromUnixTimeSeconds(DateEpoch).UtcDateTime;

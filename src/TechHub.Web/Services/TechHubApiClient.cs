@@ -43,10 +43,17 @@ public class TechHubApiClient(HttpClient httpClient, ILogger<TechHubApiClient> l
         try
         {
             _logger.LogInformation("Fetching section: {SectionName}", sectionName);
-            var section = await _httpClient.GetFromJsonAsync<SectionDto>(
-                $"/api/sections/{sectionName}",
-                cancellationToken);
-
+            var response = await _httpClient.GetAsync($"/api/sections/{sectionName}", cancellationToken);
+            
+            // Return null for 404 (not found is a valid state)
+            if (response.StatusCode == System.Net.HttpStatusCode.NotFound)
+            {
+                _logger.LogWarning("Section not found: {SectionName}", sectionName);
+                return null;
+            }
+            
+            response.EnsureSuccessStatusCode();
+            var section = await response.Content.ReadFromJsonAsync<SectionDto>(cancellationToken: cancellationToken);
             return section;
         }
         catch (HttpRequestException ex)
@@ -216,10 +223,20 @@ public class TechHubApiClient(HttpClient httpClient, ILogger<TechHubApiClient> l
             _logger.LogInformation("Fetching content detail: {Section}/{Collection}/{ItemId}",
                 sectionName, collection, itemId);
 
-            var item = await _httpClient.GetFromJsonAsync<ContentItemDetailDto>(
+            var response = await _httpClient.GetAsync(
                 $"/api/content/{sectionName}/{collection}/{itemId}",
                 cancellationToken);
-
+            
+            // Return null for 404 (not found is a valid state)
+            if (response.StatusCode == System.Net.HttpStatusCode.NotFound)
+            {
+                _logger.LogWarning("Content not found: {Section}/{Collection}/{ItemId}",
+                    sectionName, collection, itemId);
+                return null;
+            }
+            
+            response.EnsureSuccessStatusCode();
+            var item = await response.Content.ReadFromJsonAsync<ContentItemDetailDto>(cancellationToken: cancellationToken);
             return item;
         }
         catch (HttpRequestException ex)

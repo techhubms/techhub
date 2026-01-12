@@ -65,7 +65,9 @@ public class MarkdownServiceTests
         var html = _service.RenderToHtml(markdown);
 
         // Assert: GFM features properly rendered
-        Assert.Contains("<table>", html);
+        // Note: Bootstrap extension adds class="table" to tables
+        Assert.True(html.Contains("<table>") || html.Contains("<table class=\"table\">"),
+            "Expected table element with or without Bootstrap class");
         Assert.Contains("<th>Header 1</th>", html);
         Assert.Contains("<td>Cell 1</td>", html);
         Assert.Contains("<del>strikethrough</del>", html);

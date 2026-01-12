@@ -1,14 +1,13 @@
-@page "/github-copilot/handbook"
-@using System.Text.Json
+@page "/github-copilot/vscode-updates"
 @using TechHub.Core.DTOs
 @using TechHub.Web.Services
 @using TechHub.Web.Components.Shared
 @inject TechHubApiClient ApiClient
 @inject NavigationManager Navigation
 @inject ErrorService ErrorService
-@inject ILogger<GitHubCopilotHandbook> Logger
+@inject ILogger<GitHubCopilotVSCodeUpdates> Logger
 
-<PageTitle>@(contentItem?.Title ?? "GitHub Copilot Handbook") - Tech Hub</PageTitle>
+<PageTitle>@(contentItem?.Title ?? "VS Code Updates") - Tech Hub</PageTitle>
 
 @if (sectionData != null && contentItem != null)
 {
@@ -21,9 +20,6 @@
     <div class="page-with-sidebar">
         <aside class="sidebar">
             <SidebarBack BackUrl="/github-copilot" BackText="Back to GitHub Copilot" />
-
-            <SidebarPageInfo SidebarInfo="@contentItem.SidebarInfo" />
-
             <SidebarToc HtmlContent="@contentItem.RenderedHtml" />
         </aside>
 
@@ -54,7 +50,7 @@
         try
         {
             sectionData = await ApiClient.GetSectionAsync("github-copilot");
-            contentItem = await ApiClient.GetContentDetailAsync("github-copilot", "custom", "github-copilot-handbook");
+            contentItem = await ApiClient.GetContentDetailAsync("github-copilot", "custom", "vscode-updates");
 
             if (sectionData == null || contentItem == null)
             {

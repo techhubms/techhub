@@ -50,6 +50,9 @@ if (!builder.Environment.IsDevelopment() && !builder.Environment.IsEnvironment("
 // Section cache for immediate (flicker-free) navigation rendering
 builder.Services.AddSingleton<SectionCache>();
 
+// Error handling service for centralized exception management
+builder.Services.AddScoped<ErrorService>();
+
 // Configure SignalR for Blazor Server with increased timeouts for reliability
 builder.Services.AddSignalR(options =>
 {

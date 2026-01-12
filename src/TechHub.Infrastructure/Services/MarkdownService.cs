@@ -13,13 +13,26 @@ public class MarkdownService : IMarkdownService
 
     public MarkdownService()
     {
-        // Configure Markdig pipeline with GitHub Flavored Markdown extensions
+        // Configure Markdig pipeline with comprehensive GitHub Flavored Markdown extensions
         _pipeline = new MarkdownPipelineBuilder()
-            .UseAdvancedExtensions()      // Tables, task lists, footnotes, etc.
+            .UseAdvancedExtensions()      // Tables, task lists, footnotes, definition lists, abbreviations, etc.
             .UseEmojiAndSmiley()          // :emoji: support
             .UseYamlFrontMatter()         // YAML frontmatter parsing
             .UseAutoLinks()               // Auto-convert URLs to links
             .UsePipeTables()              // GitHub-style tables
+            .UseGridTables()              // Grid-style tables
+            .UseListExtras()              // Extra list features
+            .UseCitations()               // Citation support
+            .UseCustomContainers()        // Custom containers/admonitions
+            .UseGenericAttributes()       // CSS classes and IDs on elements
+            .UseAutoIdentifiers()         // Auto-generate heading IDs for linking
+            .UseTaskLists()               // GitHub-style task lists [x]
+            .UseMediaLinks()              // Video and audio embeds
+            .UseSmartyPants()             // Smart quotes, dashes, ellipses
+            .UseBootstrap()               // Bootstrap CSS classes
+            .UseDiagrams()                // Mermaid diagram support
+            .UseMathematics()             // LaTeX math support
+            .UseFigures()                 // Figure and figcaption elements
             .Build();
     }
 

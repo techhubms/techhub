@@ -1,0 +1,492 @@
+/**
+ * Markdown Content Rendering Styles
+ * 
+ * Comprehensive styling for markdown-rendered HTML content including:
+ * - Headings with proper hierarchy
+ * - Code blocks with syntax highlighting
+ * - Blockquotes and callouts
+ * - Tables with responsive design
+ * - Lists (ordered, unordered, task lists)
+ * - Images and figures
+ * - Horizontal rules
+ * - Custom containers/alerts
+ */
+
+/* =================================================================
+   Markdown Content Container
+   ================================================================= */
+
+.markdown-content,
+.content-detail-body {
+    font-size: var(--font-size-base);
+    line-height: 1.7;
+    color: var(--color-text-primary);
+    word-wrap: break-word;
+}
+
+/* =================================================================
+   Headings
+   ================================================================= */
+
+.markdown-content h1,
+.markdown-content h2,
+.markdown-content h3,
+.markdown-content h4,
+.markdown-content h5,
+.markdown-content h6,
+.content-detail-body h1,
+.content-detail-body h2,
+.content-detail-body h3,
+.content-detail-body h4,
+.content-detail-body h5,
+.content-detail-body h6 {
+    margin-top: var(--spacing-4);
+    margin-bottom: var(--spacing-2);
+    font-weight: 600;
+    line-height: 1.25;
+    color: var(--color-text-emphasis);
+}
+
+.markdown-content h1:first-child,
+.content-detail-body h1:first-child {
+    margin-top: 0;
+}
+
+.markdown-content h1,
+.content-detail-body h1 {
+    font-size: var(--font-size-3xl);
+    border-bottom: 1px solid var(--color-border-muted);
+    padding-bottom: var(--spacing-2);
+}
+
+.markdown-content h2,
+.content-detail-body h2 {
+    font-size: var(--font-size-2xl);
+    border-bottom: 1px solid var(--color-border-muted);
+    padding-bottom: var(--spacing-1);
+}
+
+.markdown-content h3,
+.content-detail-body h3 {
+    font-size: var(--font-size-xl);
+}
+
+.markdown-content h4,
+.content-detail-body h4 {
+    font-size: var(--font-size-lg);
+}
+
+.markdown-content h5,
+.content-detail-body h5 {
+    font-size: var(--font-size-base);
+}
+
+.markdown-content h6,
+.content-detail-body h6 {
+    font-size: var(--font-size-sm);
+    color: var(--color-text-muted);
+}
+
+/* =================================================================
+   Paragraphs and Text
+   ================================================================= */
+
+.markdown-content p,
+.content-detail-body p {
+    margin-top: 0;
+    margin-bottom: var(--spacing-2);
+}
+
+.markdown-content strong,
+.content-detail-body strong {
+    font-weight: 600;
+}
+
+.markdown-content em,
+.content-detail-body em {
+    font-style: italic;
+}
+
+/* =================================================================
+   Links
+   ================================================================= */
+
+.markdown-content a,
+.content-detail-body a {
+    color: var(--color-primary);
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.2s ease;
+}
+
+.markdown-content a:hover,
+.content-detail-body a:hover {
+    border-bottom-color: var(--color-primary);
+}
+
+.markdown-content a:focus,
+.content-detail-body a:focus {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 2px;
+    border-radius: var(--radius-sm);
+}
+
+/* =================================================================
+   Code Blocks and Inline Code
+   ================================================================= */
+
+.markdown-content code,
+.content-detail-body code {
+    font-family: var(--font-family-mono);
+    font-size: 0.875em;
+    background: rgba(189, 147, 249, 0.1);
+    border: 1px solid rgba(189, 147, 249, 0.2);
+    border-radius: var(--radius-sm);
+    padding: 0.125rem 0.375rem;
+}
+
+.markdown-content pre,
+.content-detail-body pre {
+    background: #0d1117;
+    border: 1px solid var(--color-border-default);
+    border-radius: var(--radius-md);
+    padding: var(--spacing-3);
+    overflow-x: auto;
+    margin: var(--spacing-3) 0;
+    line-height: 1.5;
+}
+
+.markdown-content pre code,
+.content-detail-body pre code {
+    background: none;
+    border: none;
+    padding: 0;
+    font-size: 0.875rem;
+    color: #c9d1d9;
+}
+
+/* Syntax highlighting adjustments */
+.markdown-content pre code.hljs,
+.content-detail-body pre code.hljs {
+    display: block;
+    padding: 0;
+    background: transparent;
+}
+
+/* =================================================================
+   Blockquotes
+   ================================================================= */
+
+.markdown-content blockquote,
+.content-detail-body blockquote {
+    margin: var(--spacing-3) 0;
+    padding: 0 var(--spacing-2);
+    border-left: 4px solid var(--color-primary);
+    color: var(--color-text-muted);
+    font-style: italic;
+}
+
+.markdown-content blockquote p:last-child,
+.content-detail-body blockquote p:last-child {
+    margin-bottom: 0;
+}
+
+.markdown-content blockquote cite,
+.content-detail-body blockquote cite {
+    display: block;
+    margin-top: var(--spacing-1);
+    font-size: var(--font-size-sm);
+    font-style: normal;
+    color: var(--color-text-muted);
+}
+
+/* =================================================================
+   Lists
+   ================================================================= */
+
+.markdown-content ul,
+.markdown-content ol,
+.content-detail-body ul,
+.content-detail-body ol {
+    margin: var(--spacing-2) 0;
+    padding-left: var(--spacing-4);
+}
+
+.markdown-content li,
+.content-detail-body li {
+    margin-bottom: var(--spacing-1);
+}
+
+.markdown-content li>p,
+.content-detail-body li>p {
+    margin-bottom: var(--spacing-1);
+}
+
+.markdown-content ul ul,
+.markdown-content ul ol,
+.markdown-content ol ul,
+.markdown-content ol ol,
+.content-detail-body ul ul,
+.content-detail-body ul ol,
+.content-detail-body ol ul,
+.content-detail-body ol ol {
+    margin-top: var(--spacing-1);
+    margin-bottom: var(--spacing-1);
+}
+
+/* Task Lists (GitHub-style checkboxes) */
+.markdown-content .task-list-item,
+.content-detail-body .task-list-item {
+    list-style-type: none;
+    margin-left: calc(-1 * var(--spacing-3));
+}
+
+.markdown-content .task-list-item input[type="checkbox"],
+.content-detail-body .task-list-item input[type="checkbox"] {
+    margin-right: var(--spacing-1);
+}
+
+/* =================================================================
+   Tables
+   ================================================================= */
+
+.markdown-content table,
+.content-detail-body table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: var(--spacing-3) 0;
+    overflow-x: auto;
+    display: block;
+}
+
+.markdown-content thead,
+.content-detail-body thead {
+    background: var(--color-bg-subtle);
+}
+
+.markdown-content th,
+.markdown-content td,
+.content-detail-body th,
+.content-detail-body td {
+    padding: var(--spacing-2);
+    border: 1px solid var(--color-border-default);
+    text-align: left;
+}
+
+.markdown-content th,
+.content-detail-body th {
+    font-weight: 600;
+    color: var(--color-text-emphasis);
+}
+
+.markdown-content tr:nth-child(even),
+.content-detail-body tr:nth-child(even) {
+    background: var(--color-bg-subtle);
+}
+
+.markdown-content tr:hover,
+.content-detail-body tr:hover {
+    background: rgba(189, 147, 249, 0.05);
+}
+
+/* =================================================================
+   Horizontal Rules
+   ================================================================= */
+
+.markdown-content hr,
+.content-detail-body hr {
+    height: 0;
+    margin: var(--spacing-4) 0;
+    border: 0;
+    border-top: 1px solid var(--color-border-default);
+}
+
+/* =================================================================
+   Images and Figures
+   ================================================================= */
+
+.markdown-content img,
+.content-detail-body img {
+    max-width: 100%;
+    height: auto;
+    border-radius: var(--radius-md);
+    margin: var(--spacing-2) 0;
+}
+
+.markdown-content figure,
+.content-detail-body figure {
+    margin: var(--spacing-3) 0;
+    text-align: center;
+}
+
+.markdown-content figcaption,
+.content-detail-body figcaption {
+    margin-top: var(--spacing-1);
+    font-size: var(--font-size-sm);
+    color: var(--color-text-muted);
+    font-style: italic;
+}
+
+/* =================================================================
+   Custom Containers / Alerts (Markdig)
+   ================================================================= */
+
+.markdown-content .alert,
+.content-detail-body .alert {
+    padding: var(--spacing-2) var(--spacing-3);
+    margin: var(--spacing-3) 0;
+    border-left: 4px solid;
+    border-radius: var(--radius-md);
+    background: var(--color-bg-subtle);
+}
+
+.markdown-content .alert-note,
+.content-detail-body .alert-note {
+    border-color: #0969da;
+    background: rgba(9, 105, 218, 0.1);
+}
+
+.markdown-content .alert-tip,
+.content-detail-body .alert-tip {
+    border-color: #1a7f37;
+    background: rgba(26, 127, 55, 0.1);
+}
+
+.markdown-content .alert-important,
+.content-detail-body .alert-important {
+    border-color: #8250df;
+    background: rgba(130, 80, 223, 0.1);
+}
+
+.markdown-content .alert-warning,
+.content-detail-body .alert-warning {
+    border-color: #9a6700;
+    background: rgba(154, 103, 0, 0.1);
+}
+
+.markdown-content .alert-caution,
+.content-detail-body .alert-caution {
+    border-color: #cf222e;
+    background: rgba(207, 34, 46, 0.1);
+}
+
+/* =================================================================
+   Abbreviations and Definitions
+   ================================================================= */
+
+.markdown-content abbr,
+.content-detail-body abbr {
+    text-decoration: underline dotted;
+    cursor: help;
+}
+
+.markdown-content dl,
+.content-detail-body dl {
+    margin: var(--spacing-2) 0;
+}
+
+.markdown-content dt,
+.content-detail-body dt {
+    font-weight: 600;
+    margin-top: var(--spacing-2);
+}
+
+.markdown-content dd,
+.content-detail-body dd {
+    margin-left: var(--spacing-4);
+    margin-bottom: var(--spacing-1);
+}
+
+/* =================================================================
+   Footnotes
+   ================================================================= */
+
+.markdown-content .footnotes,
+.content-detail-body .footnotes {
+    margin-top: var(--spacing-5);
+    padding-top: var(--spacing-3);
+    border-top: 1px solid var(--color-border-default);
+    font-size: var(--font-size-sm);
+    color: var(--color-text-muted);
+}
+
+.markdown-content .footnote-ref,
+.content-detail-body .footnote-ref {
+    font-size: 0.75em;
+    vertical-align: super;
+}
+
+/* =================================================================
+   Mermaid Diagrams
+   ================================================================= */
+
+.markdown-content .mermaid,
+.content-detail-body .mermaid {
+    margin: var(--spacing-3) 0;
+    text-align: center;
+    background: var(--color-bg-subtle);
+    padding: var(--spacing-3);
+    border-radius: var(--radius-md);
+    overflow-x: auto;
+}
+
+/* =================================================================
+   Math Blocks
+   ================================================================= */
+
+.markdown-content .math,
+.content-detail-body .math {
+    overflow-x: auto;
+    margin: var(--spacing-2) 0;
+}
+
+/* =================================================================
+   Responsive Adjustments
+   ================================================================= */
+
+@media (max-width: 768px) {
+
+    .markdown-content table,
+    .content-detail-body table {
+        font-size: var(--font-size-sm);
+    }
+
+    .markdown-content pre,
+    .content-detail-body pre {
+        padding: var(--spacing-2);
+    }
+
+    .markdown-content h1,
+    .content-detail-body h1 {
+        font-size: var(--font-size-2xl);
+    }
+
+    .markdown-content h2,
+    .content-detail-body h2 {
+        font-size: var(--font-size-xl);
+    }
+}
+
+/* =================================================================
+   Print Styles
+   ================================================================= */
+
+@media print {
+
+    .markdown-content,
+    .content-detail-body {
+        color: #000;
+    }
+
+    .markdown-content a,
+    .content-detail-body a {
+        color: #000;
+        text-decoration: underline;
+    }
+
+    .markdown-content pre,
+    .content-detail-body pre {
+        border: 1px solid #000;
+        page-break-inside: avoid;
+    }
+}

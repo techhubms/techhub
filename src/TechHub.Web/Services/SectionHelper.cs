@@ -56,4 +56,15 @@ internal static class SectionHelper
 
         return System.Globalization.CultureInfo.InvariantCulture.TextInfo.ToTitleCase(collectionName.ToLowerInvariant());
     }
+
+    /// <summary>
+    /// Converts a string to title case using invariant culture.
+    /// </summary>
+    public static string ToTitleCase(this string text)
+    {
+        if (string.IsNullOrWhiteSpace(text))
+            return text ?? string.Empty;
+
+        return System.Globalization.CultureInfo.InvariantCulture.TextInfo.ToTitleCase(text.ToLowerInvariant());
+    }
 }

@@ -34,12 +34,12 @@ public class CustomPagesTests(PlaywrightCollectionFixture fixture) : IAsyncLifet
     [InlineData("/ai/genai-basics", "GenAI Basics")]
     [InlineData("/ai/genai-applied", "GenAI Applied")]
     [InlineData("/ai/genai-advanced", "GenAI Advanced")]
-    [InlineData("/ai/sdlc", "SDLC")]
-    [InlineData("/github-copilot/features", "Features")]
+    [InlineData("/ai/sdlc", "AI in the SDLC")]
+    [InlineData("/github-copilot/features", "GitHub Copilot Features")]
     [InlineData("/github-copilot/handbook", "GitHub Copilot Handbook")]
     [InlineData("/github-copilot/levels-of-enlightenment", "Levels of Enlightenment")]
-    [InlineData("/github-copilot/vscode-updates", "VSCode Updates")]
-    [InlineData("/devops/dx-space", "DX")]
+    [InlineData("/github-copilot/vscode-updates", "Visual Studio Code Updates")]
+    [InlineData("/devops/dx-space", "Developer Experience Space")]
     public async Task CustomPage_ShouldLoad_Successfully(string url, string expectedTitlePart)
     {
         // Act

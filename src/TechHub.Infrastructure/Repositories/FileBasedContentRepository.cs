@@ -1,3 +1,4 @@
+using System.Text.Json;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Options;
 using TechHub.Core.Configuration;
@@ -26,7 +27,8 @@ public sealed class FileBasedContentRepository : IContentRepository, IDisposable
         "_videos",
         "_community",
         "_blogs",
-        "_roundups"
+        "_roundups",
+        "_custom"
     ];
 
     public FileBasedContentRepository(
@@ -309,7 +311,7 @@ public sealed class FileBasedContentRepository : IContentRepository, IDisposable
             var description = _frontMatterParser.GetValue<string>(frontMatter, "description", string.Empty);
             var excerpt = _frontMatterParser.GetValue<string>(frontMatter, "excerpt", string.Empty);
 
-            // Map legacy 'categories' field to lowercase section names
+            // Map 'categories' (regular content) or 'section' (custom pages) to lowercase section names
             var categories = _frontMatterParser.GetListValue(frontMatter, "categories");
             var sectionNames = categories.Select(c => c.ToLowerInvariant().Replace(" ", "-")).ToList();
 
@@ -318,6 +320,15 @@ public sealed class FileBasedContentRepository : IContentRepository, IDisposable
             var videoId = _frontMatterParser.GetValue<string>(frontMatter, "youtube_video_id", string.Empty);
             var viewingMode = _frontMatterParser.GetValue<string>(frontMatter, "viewing_mode", "external");
             var altCollection = _frontMatterParser.GetValue<string>(frontMatter, "alt_collection", string.Empty);
+
+            // Parse sidebar-info if present (dynamic JSON data for custom sidebars)
+            JsonElement? sidebarInfo = null;
+            if (frontMatter.TryGetValue("sidebar-info", out var sidebarData))
+            {
+                // Convert to JSON for flexible client-side consumption
+                var json = System.Text.Json.JsonSerializer.Serialize(sidebarData);
+                sidebarInfo = System.Text.Json.JsonSerializer.Deserialize<JsonElement>(json);
+            }
 
             // Generate ID from filename (without extension)
             var fileName = Path.GetFileNameWithoutExtension(filePath);
@@ -353,7 +364,8 @@ public sealed class FileBasedContentRepository : IContentRepository, IDisposable
                 Excerpt = excerpt,
                 ExternalUrl = externalUrl,
                 VideoId = videoId,
-                ViewingMode = viewingMode
+                ViewingMode = viewingMode,
+                SidebarInfo = sidebarInfo
             };
 
             return item;

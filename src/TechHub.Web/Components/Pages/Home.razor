@@ -63,14 +63,7 @@
     </aside>
 
     <div class="home-main-content">
-        @if (errorMessage != null)
-        {
-            <div class="error">
-                <h2>Error Loading Content</h2>
-                <p>@errorMessage</p>
-            </div>
-        }
-        else if (sections != null && sections.Any())
+        @if (sections != null && sections.Any())
         {
             <SectionCardsGrid Sections="@sections" />
         }
@@ -85,18 +78,20 @@
 
 @code {
     [Inject] public required TechHubApiClient ApiClient { get; set; }
+    [Inject] public required NavigationManager Navigation { get; set; }
+    [Inject] public required ErrorService ErrorService { get; set; }
+    [Inject] public required ILogger<Home> Logger { get; set; }
 
     private static readonly SidebarRssLinks.RssLink[] rssLinks = [
-    new("RSS Feed - All Content", "/all/feed.xml"),
-new("RSS Feed - Roundups", "/all/roundups/feed.xml"),
-new("Newsletter", "https://mailchi.mp/1c8d4b5ea99c/tech-hub", GetNewsletterIcon())
+        new("RSS Feed - All Content", "/all/feed.xml"),
+        new("RSS Feed - Roundups", "/all/roundups/feed.xml"),
+        new("Newsletter", "https://mailchi.mp/1c8d4b5ea99c/tech-hub", GetNewsletterIcon())
     ];
 
     private IEnumerable<SectionDto>? sections;
     private IEnumerable<ContentItemDto>? roundups;
     private IEnumerable<ContentItemDto>? latestItems;
     private IEnumerable<string>? popularTags;
-    private string? errorMessage;
 
     private static RenderFragment GetNewsletterIcon() => @<svg width="16" height="16" viewBox="0 0 24 24"
             fill="currentColor" aria-hidden="true">
@@ -104,30 +99,30 @@ new("Newsletter", "https://mailchi.mp/1c8d4b5ea99c/tech-hub", GetNewsletterIcon(
                 d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
     </svg>;
 
-protected override async Task OnInitializedAsync()
-{
-try
-{
-// Fetch all content in parallel
-var sectionsTask = ApiClient.GetAllSectionsAsync();
-var roundupsTask = ApiClient.GetContentAsync(section: null, collection: "roundups");
-var latestItemsTask = ApiClient.GetLatestItemsAsync(count: 5);
-var popularTagsTask = ApiClient.GetPopularTagsAsync(count: 15);
+    protected override async Task OnInitializedAsync()
+    {
+        try
+        {
+            // Fetch all content in parallel
+            var sectionsTask = ApiClient.GetAllSectionsAsync();
+            var roundupsTask = ApiClient.GetContentAsync(section: null, collection: "roundups");
+            var latestItemsTask = ApiClient.GetLatestItemsAsync(count: 5);
+            var popularTagsTask = ApiClient.GetPopularTagsAsync(count: 15);
 
-await Task.WhenAll(sectionsTask, roundupsTask, latestItemsTask, popularTagsTask);
+            await Task.WhenAll(sectionsTask, roundupsTask, latestItemsTask, popularTagsTask);
 
-sections = await sectionsTask;
+            sections = await sectionsTask;
 
-// Get roundups and order by date descending to get the latest ones first
-var allRoundups = await roundupsTask;
-roundups = allRoundups?.OrderByDescending(r => r.DateEpoch);
+            // Get roundups and order by date descending to get the latest ones first
+            var allRoundups = await roundupsTask;
+            roundups = allRoundups?.OrderByDescending(r => r.DateEpoch);
 
-latestItems = await latestItemsTask;
-popularTags = await popularTagsTask;
-}
-catch (Exception ex)
-{
-errorMessage = $"Failed to load content: {ex.Message}";
-}
-}
+            latestItems = await latestItemsTask;
+            popularTags = await popularTagsTask;
+        }
+        catch (Exception ex)
+        {
+            ErrorService.HandleError(ex, Navigation, Logger);
+        }
+    }
 }

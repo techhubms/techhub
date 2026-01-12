@@ -38,21 +38,7 @@ else
 
         @* Main content area *@
         <main class="page-main-content" id="top">
-            @if (isLoadingItem)
-            {
-                <div class="loading">
-                    <p>Loading content...</p>
-                </div>
-            }
-            else if (errorMessage != null)
-            {
-                <div class="error">
-                    <h2>Error Loading Content</h2>
-                    <p>@errorMessage</p>
-                    <button @onclick="LoadItem">Retry</button>
-                </div>
-            }
-            else if (item != null)
+            @if (item != null)
             {
                 <ContentItemDetail Item="@item" />
 
@@ -67,6 +53,9 @@ else
 }
 
 @code {
+    [Inject] public required ErrorService ErrorService { get; set; }
+    [Inject] public required ILogger<ContentItem> Logger { get; set; }
+
     [Parameter]
     public string SectionName { get; set; } = null!;
 
@@ -78,8 +67,6 @@ else
 
     private SectionDto? sectionData;
     private ContentItemDetailDto? item;
-    private bool isLoadingItem = true;
-    private string? errorMessage;
 
     protected override async Task OnInitializedAsync()
     {
@@ -112,31 +99,27 @@ else
                 Navigation.NavigateTo("/not-found");
             }
         }
-        catch
+        catch (Exception ex)
         {
-            Navigation.NavigateTo("/not-found");
+            ErrorService.HandleError(ex, Navigation, Logger);
         }
     }
 
     private async Task LoadItem()
     {
-        isLoadingItem = true;
-        errorMessage = null;
-        StateHasChanged();
-
         try
         {
             item = await ApiClient.GetContentDetailAsync(SectionName.ToLowerInvariant(), Collection.ToLowerInvariant(),
             ItemId.ToLowerInvariant());
+            
+            if (item == null)
+            {
+                Navigation.NavigateTo("/not-found");
+            }
         }
         catch (Exception ex)
         {
-            errorMessage = $"Failed to load content: {ex.Message}";
-        }
-        finally
-        {
-            isLoadingItem = false;
-            StateHasChanged();
+            ErrorService.HandleError(ex, Navigation, Logger);
         }
     }
 

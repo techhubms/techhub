@@ -1,67 +1,65 @@
 @page "/ai/genai-basics"
+@using TechHub.Core.DTOs
+@using TechHub.Web.Services
+@using TechHub.Web.Components.Shared
+@inject TechHubApiClient ApiClient
+@inject NavigationManager Navigation
+@inject ErrorService ErrorService
+@inject ILogger<GenAIBasics> Logger
 
-<PageTitle>GenAI Basics - Tech Hub</PageTitle>
+<PageTitle>@(contentItem?.Title ?? "GenAI Basics") - Tech Hub</PageTitle>
 
-<PageHeader Title="GenAI Basics" Description="Foundational concepts for understanding Generative AI"
-    BackgroundImage="/images/section-backgrounds/ai.jpg" />
+@if (sectionData != null && contentItem != null)
+{
+    <HeadContent>
+        <link rel="canonical" href="@($"https://tech.hub.ms{contentItem.Url}")" />
+    </HeadContent>
 
-<div class="page-with-sidebar">
-    <aside class="sidebar">
-        <div class="sidebar-section">
-            <a href="/ai" class="sidebar-link-button">
-                <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
-                    <path d="M8 0L1 8l7 8V0z" />
-                </svg>
-                Back to AI
-            </a>
-        </div>
-    </aside>
-    <main class="page-main-content">
-        <h1 id="main-content" class="page-h1" tabindex="-1">GenAI Basics</h1>
-        <section id="history">
-            <h2>History</h2>
-            <p>Some fun history facts about AI, showing how long AI has been around and how it has evolved over time.
-            </p>
-            <ul>
-                <li><strong>1956:</strong> AI term coined at Dartmouth Conference</li>
-                <li><strong>1966:</strong> ELIZA chatbot at MIT</li>
-                <li><strong>2020:</strong> GPT-3 with 175B parameters</li>
-                <li><strong>2023:</strong> GPT-4 & Claude major quality leaps</li>
-            </ul>
-        </section>
-        <section id="models">
-            <h2>Models</h2>
-            <p>A model is the actual AI system that has been trained to perform specific tasks. Think of it as a
-                specialized brain that has learned patterns from data and can apply that knowledge to new situations.
-            </p>
-            <h3>Current popular models</h3>
-            <ul>
-                <li><strong>GPT series (4, 4o, 4.1, 5):</strong> OpenAI's flagship models</li>
-                <li><strong>Claude (3.5 Sonnet, 4 Sonnet, 4 Opus):</strong> Anthropic's models</li>
-                <li><strong>Gemini (Flash, Pro):</strong> Google's multimodal models</li>
-                <li><strong>Phi-4:</strong> Microsoft's efficient model</li>
-            </ul>
-        </section>
-        <section id="tokens">
-            <h2>Tokens & Tokenization</h2>
-            <p>Tokens are the basic units that AI models use to process text. Think of them as the "words" that the AI
-                actually understands, though they don't always match human words exactly.</p>
-            <p>As a rough guide, 1 token equals about 0.75 English words. So 100 words would be approximately 133
-                tokens.</p>
-        </section>
-        <section id="additional">
-            <h2>Additional Topics</h2>
-            <p>This page covers many more topics including:</p>
-            <ul>
-                <li>ML vs AI vs GenAI</li>
-                <li>Vendors and Providers</li>
-                <li>Prompts & Messages</li>
-                <li>Costs and Optimization</li>
-                <li>Problems with Models</li>
-                <li>When not to use AI</li>
-                <li>Societal impacts and risks</li>
-            </ul>
-            <p><em>Full content migration from Jekyll to Blazor is in progress. This page shows key sections.</em></p>
-        </section>
-    </main>
-</div>
+    <PageHeader Section="@sectionData" />
+
+    <div class="page-with-sidebar">
+        <aside class="sidebar">
+            <SidebarBack BackUrl="/ai" BackText="Back to AI" />
+            <SidebarToc HtmlContent="@contentItem.RenderedHtml" />
+        </aside>
+
+        <main class="page-main-content">
+            <article class="content-detail">
+                <header class="content-detail-header">
+                    <h1 class="page-h1" tabindex="-1">@contentItem.Title</h1>
+                    @if (!string.IsNullOrWhiteSpace(contentItem.Description))
+                    {
+                        <p class="page-description">@contentItem.Description</p>
+                    }
+                </header>
+
+                <div class="content-detail-body markdown-content">
+                    @((MarkupString)contentItem.RenderedHtml)
+                </div>
+            </article>
+        </main>
+    </div>
+}
+
+@code {
+    private SectionDto? sectionData;
+    private ContentItemDetailDto? contentItem;
+
+    protected override async Task OnInitializedAsync()
+    {
+        try
+        {
+            sectionData = await ApiClient.GetSectionAsync("ai");
+            contentItem = await ApiClient.GetContentDetailAsync("ai", "custom", "genai-basics");
+
+            if (sectionData == null || contentItem == null)
+            {
+                Navigation.NavigateTo("/not-found");
+            }
+        }
+        catch (Exception ex)
+        {
+            ErrorService.HandleError(ex, Navigation, Logger);
+        }
+    }
+}

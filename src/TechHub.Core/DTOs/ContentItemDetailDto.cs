@@ -1,3 +1,5 @@
+using System.Text.Json;
+
 namespace TechHub.Core.DTOs;
 
 /// <summary>
@@ -22,4 +24,10 @@ public record ContentItemDetailDto
     public string? VideoId { get; init; }
     public string? ViewingMode { get; init; }
     public required string Url { get; init; }
+
+    /// <summary>
+    /// Dynamic sidebar info as JSON (from 'sidebar-info' frontmatter field)
+    /// Can be deserialized into custom structures as needed per page
+    /// </summary>
+    public JsonElement? SidebarInfo { get; init; }
 }
