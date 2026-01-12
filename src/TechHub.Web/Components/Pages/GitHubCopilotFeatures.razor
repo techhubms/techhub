@@ -7,12 +7,12 @@
 @inject ErrorService ErrorService
 @inject ILogger<GitHubCopilotFeatures> Logger
 
-<PageTitle>@(contentItem?.Title ?? "GitHub Copilot Features") - Tech Hub</PageTitle>
+<PageTitle>@(customPage?.Title ?? "GitHub Copilot Features") - Tech Hub</PageTitle>
 
-@if (sectionData != null && contentItem != null)
+@if (sectionData != null && customPage != null)
 {
     <HeadContent>
-        <link rel="canonical" href="@($"https://tech.hub.ms{contentItem.Url}")" />
+        <link rel="canonical" href="@($"https://tech.hub.ms{customPage.Url}")" />
     </HeadContent>
 
     <PageHeader Section="@sectionData" />
@@ -20,21 +20,21 @@
     <div class="page-with-sidebar">
         <aside class="sidebar">
             <SidebarBack BackUrl="/github-copilot" BackText="Back to GitHub Copilot" />
-            <SidebarToc HtmlContent="@contentItem.RenderedHtml" />
+            <SidebarToc HtmlContent="@customPage.RenderedHtml" />
         </aside>
 
         <main class="page-main-content">
             <article class="content-detail">
                 <header class="content-detail-header">
-                    <h1 class="page-h1" tabindex="-1">@contentItem.Title</h1>
-                    @if (!string.IsNullOrWhiteSpace(contentItem.Description))
+                    <h1 class="page-h1" tabindex="-1">@customPage.Title</h1>
+                    @if (!string.IsNullOrWhiteSpace(customPage.Description))
                     {
-                        <p class="page-description">@contentItem.Description</p>
+                        <p class="page-description">@customPage.Description</p>
                     }
                 </header>
 
                 <div class="content-detail-body markdown-content">
-                    @((MarkupString)contentItem.RenderedHtml)
+                    @((MarkupString)customPage.RenderedHtml)
                 </div>
             </article>
         </main>
@@ -43,16 +43,16 @@
 
 @code {
     private SectionDto? sectionData;
-    private ContentItemDetailDto? contentItem;
+    private CustomPageDetailDto? customPage;
 
     protected override async Task OnInitializedAsync()
     {
         try
         {
             sectionData = await ApiClient.GetSectionAsync("github-copilot");
-            contentItem = await ApiClient.GetContentDetailAsync("github-copilot", "custom", "github-copilot-features");
+            customPage = await ApiClient.GetCustomPageAsync("features");
 
-            if (sectionData == null || contentItem == null)
+            if (sectionData == null || customPage == null)
             {
                 Navigation.NavigateTo("/not-found");
             }

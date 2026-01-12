@@ -1,5 +1,6 @@
 using System.Text.Json;
 using Microsoft.Extensions.Hosting;
+using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using TechHub.Core.Configuration;
 using TechHub.Core.Interfaces;
@@ -16,25 +17,29 @@ public class FileBasedCustomPageRepository : ICustomPageRepository
 {
     private readonly string _basePath;
     private readonly FrontMatterParser _frontMatterParser;
+    private readonly ILogger<FileBasedCustomPageRepository> _logger;
     private IReadOnlyList<CustomPage>? _cachedPages;
     private readonly SemaphoreSlim _loadLock = new(1, 1);
 
     public FileBasedCustomPageRepository(
         IOptions<AppSettings> settings,
-        IHostEnvironment environment)
+        IHostEnvironment environment,
+        ILogger<FileBasedCustomPageRepository> logger)
     {
         ArgumentNullException.ThrowIfNull(settings);
         ArgumentNullException.ThrowIfNull(environment);
+        ArgumentNullException.ThrowIfNull(logger);
 
+        _logger = logger;
         _frontMatterParser = new FrontMatterParser();
 
         // Get base path from configuration
         var collectionsPath = settings.Value.Content.CollectionsPath;
 
-        // Convert relative path to absolute
+        // Convert relative path to absolute and normalize
         _basePath = Path.IsPathRooted(collectionsPath)
             ? collectionsPath
-            : Path.Combine(environment.ContentRootPath, collectionsPath);
+            : Path.GetFullPath(Path.Combine(environment.ContentRootPath, collectionsPath));
     }
 
     public async Task<IReadOnlyList<CustomPage>> GetAllAsync(CancellationToken cancellationToken = default)
@@ -57,14 +62,19 @@ public class FileBasedCustomPageRepository : ICustomPageRepository
 
             var customPagesPath = Path.Combine(_basePath, "_custom");
 
+            _logger.LogInformation("Loading custom pages from: {Path}", customPagesPath);
+
             if (!Directory.Exists(customPagesPath))
             {
+                _logger.LogWarning("Custom pages directory does not exist: {Path}", customPagesPath);
                 _cachedPages = [];
                 return _cachedPages;
             }
 
             var pages = new List<CustomPage>();
             var markdownFiles = Directory.GetFiles(customPagesPath, "*.md", SearchOption.TopDirectoryOnly);
+
+            _logger.LogInformation("Found {Count} markdown files in custom pages directory", markdownFiles.Length);
 
             foreach (var filePath in markdownFiles)
             {
@@ -75,6 +85,8 @@ public class FileBasedCustomPageRepository : ICustomPageRepository
                 }
             }
 
+            _logger.LogInformation("Successfully loaded {Count} custom pages", pages.Count);
+            _logger.LogInformation("Loaded slugs: {Slugs}", string.Join(", ", pages.Select(p => p.Slug)));
             _cachedPages = [.. pages.OrderBy(p => p.Title)];
             return _cachedPages;
         }
@@ -127,9 +139,9 @@ public class FileBasedCustomPageRepository : ICustomPageRepository
                 SidebarInfo = sidebarInfo
             };
         }
-        catch
+        catch (Exception ex)
         {
-            // Skip files that can't be parsed
+            _logger.LogError(ex, "Failed to load custom page from file: {FilePath}", filePath);
             return null;
         }
     }

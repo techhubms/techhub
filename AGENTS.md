@@ -175,6 +175,7 @@ For .NET development patterns, component architecture, API design, and all code 
 - **Never assume UTC**: Always use configured timezone (`Europe/Brussels`)
 - **Never include Windows support**: This project is Linux-only (DevContainer environment)
 - **Never suppress errors for resiliency**: Prevent errors by checking conditions first, don't hide failures with error suppression (e.g., `2>$null`)
+- **Never swallow exceptions without logging**: ALWAYS log exceptions in catch blocks with full context (exception details, relevant parameters, file paths). Silent failures make debugging impossible. Use `_logger.LogError(ex, "Context message", parameters)` for all caught exceptions.
 - **Never rename identifiers without checking ALL occurrences**: When renaming parameters, variables, properties, methods, or classes, use `grep_search` to find and update ALL occurrences in code, documentation, tests, and specifications
 
 #### 🚨 Naming Consistency Rule
