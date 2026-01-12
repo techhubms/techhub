@@ -23272,5 +23272,23 @@
     "collection": "news",
     "reason": "Succesfully added: Assigned the 'Azure' category because OneLake diagnostics immutability directly leverages Azure Blob Storage (Azure category rule 1), with deployment and configuration handled via Azure services; also included 'Security' because this feature is focused on log integrity, compliance, governance, and tamper-proofing for audit and forensic purposes (Security rules 1, 2, 4, and 7). Did not assign 'ML' because the post does not discuss data science or analytics development, but rather operational security and compliance. The 'AI', 'GitHub Copilot', 'DevOps', and 'Coding' categories were not added since the content is not about AI, code development, CI/CD, or software developer practices but about security features and governance for storage and logs.",
     "canonical_url": "https://blog.fabric.microsoft.com/en-US/blog/gain-even-more-trust-and-compliance-with-onelake-diagnostics-immutability-generally-available/"
+  },
+  {
+    "timestamp": "2026-01-12 21:03:51 +00:00",
+    "reason": "Succesfully added: Assigned the 'Azure' category as Microsoft Fabric is a cloud analytics service built on Azure, and Eventstream is an Azure-based real-time event processing platform (Azure rule 1 and 4). 'ML' was included because Eventstream is directly tied to real-time analytics workloads and data engineering for analytics/data science (ML rule 2 and 3), and is a key component in data pipelines for analytics in Microsoft Fabric. Did not assign 'AI' since the content focuses on event processing and analytics pricing, not AI models, APIs, or Copilot development (AI rules not met). No 'DevOps', 'Security', or 'Coding' since the focus is on architecture, billing, and platform usage, not software development, automation, security, or coding practices.",
+    "collection": "news",
+    "canonical_url": "https://blog.fabric.microsoft.com/en-US/blog/understanding-fabric-eventstream-pricing/"
+  },
+  {
+    "timestamp": "2026-01-12 21:04:13 +00:00",
+    "reason": "Succesfully added: Assigned 'DevOps' category because the content covers organizational management and workflow policy controls related to GitHub (DevOps incl. team structures, collaboration, version control—DevOps rule 2, 3, 8). Assigned 'Security' because the feature addresses governance, access control, and security policy for third-party integrations (Security rules 2, 3, 4, and 7). No other categories apply, as the content does not include coding, AI, Azure, or ML implementations.",
+    "collection": "news",
+    "canonical_url": "https://github.blog/changelog/2026-01-12-controlling-who-can-request-apps-for-your-organization-is-now-generally-available"
+  },
+  {
+    "timestamp": "2026-01-12 21:04:57 +00:00",
+    "reason": "Succesfully added: Assigned the 'Azure' category because the content is an in-depth technical announcement and guide related to Azure Virtual Desktop, a core Azure service (Azure inclusion rule 1). The post details cloud infrastructure changes, deployment procedures, and administrative actions specific to Azure, which align strictly with Azure category inclusion rules. No AI, ML, DevOps, Coding, Security, or GitHub Copilot content is present. The content type is community, but it is far above the 200-word threshold and meets all technical depth and quality criteria, so no generic exclusion rules were triggered.",
+    "collection": "community",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-virtual-desktop-blog/now-in-public-preview-azure-virtual-desktop-regional-host-pools/ba-p/4474598"
   }
 ]

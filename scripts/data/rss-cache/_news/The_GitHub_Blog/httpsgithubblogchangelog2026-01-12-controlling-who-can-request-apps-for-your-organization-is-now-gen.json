@@ -1,0 +1,17 @@
+{
+  "ProcessedDate": "2026-01-12 21:02:03",
+  "EnhancedContent": "Organizations now have more granular control over who can request GitHub Apps and OAuth apps. This enhancement helps you implement stricter governance policies while maintaining flexibility for your security posture. This capability is now generally available.\n\n### What’s changed\n\nPreviously, organizations could only disable app access requests from outside collaborators. Now, you can choose from three graduated control options:\n\n- **Members and outside collaborators**: Members and outside collaborators can request apps. This is the existing default behavior.\n- **Members only**: Block outside collaborators from requesting apps while permitting organization members to do so.\n- **Disable app access requests**: Prevent both members and outside collaborators from requesting any apps.\n\n![A radio button menu showing three options within an organization's settings page to choose who can request GitHub or OAuth apps](https://github.com/user-attachments/assets/086f553d-0dec-4f8a-aa6a-e513d6384c66)\n\nTo configure this change, navigate to your organization’s settings, select **Member Privileges**, and choose your preferred option under “App access requests”. This graduated control mechanism ensures all third-party apps go through proper approval channels and security reviews before being considered for installation.\n\nTo learn more, see [“Limiting app requests”](https://docs.github.com/organizations/managing-programmatic-access-to-your-organization/limiting-oauth-app-and-github-app-access-requests). This will be included in GHES 3.21.\n\n### How to give feedback\n\nIf you have any questions or feedback, drop a comment in our [Community discussion](https://github.com/orgs/community/discussions/183833).",
+  "Author": "Allison",
+  "Tags": [
+    "enterprise management tools",
+    "Improvement"
+  ],
+  "FeedUrl": "https://github.blog/changelog/feed/",
+  "FeedName": "The GitHub Blog",
+  "PubDate": "2026-01-12T20:19:15+00:00",
+  "Link": "https://github.blog/changelog/2026-01-12-controlling-who-can-request-apps-for-your-organization-is-now-generally-available",
+  "Title": "Controlling who can request apps for your organization is now generally available",
+  "FeedLevelAuthor": "Archive: 2026 - GitHub Changelog",
+  "Description": "Organizations now have more granular control over who can request GitHub Apps and OAuth apps. This enhancement helps you implement stricter governance policies while maintaining flexibility for your security posture.…\n\nThe post [Controlling who can request apps for your organization is now generally available](https://github.blog/changelog/2026-01-12-controlling-who-can-request-apps-for-your-organization-is-now-generally-available) appeared first on [The GitHub Blog](https://github.blog).",
+  "OutputDir": "_news"
+}
