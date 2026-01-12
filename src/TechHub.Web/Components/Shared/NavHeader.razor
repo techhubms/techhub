@@ -10,9 +10,9 @@
         <a href="/" class="site-logo" aria-label="Tech Hub Home">
             <span class="logo-text">Tech Hub</span>
         </a>
-        
+
         <nav class="main-nav" aria-label="Primary navigation">
-            @foreach (var item in SectionCache.Sections.Take(8))
+            @foreach (var item in SectionCache.Sections)
             {
                 <a href="/@item.Name" class="nav-link @(IsActiveSection(item.Name) ? "active" : "")">
                     @item.Title
@@ -44,7 +44,7 @@
     {
         var uri = new Uri(Navigation.Uri);
         var path = uri.AbsolutePath.Trim('/');
-        
+
         // Get the first segment - that's our section
         var segments = path.Split('/', StringSplitOptions.RemoveEmptyEntries);
         currentSection = segments.Length > 0 ? segments[0] : "";
