@@ -133,7 +133,7 @@ public class TechHubApiFactory : WebApplicationFactory<Program>
                 DateEpoch = 1705276800, CollectionName = "news",
                 AltCollection = null,
                 SectionNames = ["ai"],
-                Tags = ["AI", "News", "GitHub Copilot", "Azure"],
+                Tags = ["ai", "news", "github copilot", "azure"],
                 RenderedHtml = "<h1>AI News Article 1</h1><p>AI news content...</p>",
                 Excerpt = "AI news excerpt...",
                 ExternalUrl = "https://example.com/ai-news-1",
@@ -146,7 +146,7 @@ public class TechHubApiFactory : WebApplicationFactory<Program>
                 DateEpoch = 1705363200, CollectionName = "blogs",
                 AltCollection = null,
                 SectionNames = ["ai"],
-                Tags = ["AI", "Blogs", "Machine Learning"],
+                Tags = ["ai", "blogs", "machine learning"],
                 RenderedHtml = "<h1>AI Blog Article 1</h1><p>AI blog content...</p>",
                 Excerpt = "AI blog excerpt...",
                 ExternalUrl = null,
@@ -159,7 +159,7 @@ public class TechHubApiFactory : WebApplicationFactory<Program>
                 DateEpoch = 1705449600, CollectionName = "videos",
                 AltCollection = null,
                 SectionNames = ["github-copilot"],
-                Tags = ["GitHub Copilot", "Videos", "VS Code", "Productivity"],
+                Tags = ["github copilot", "videos", "vs code", "productivity"],
                 RenderedHtml = "<h1>GitHub Copilot Video 1</h1><p>Copilot video content...</p>",
                 Excerpt = "Copilot video excerpt...",
                 ExternalUrl = null,
@@ -172,7 +172,7 @@ public class TechHubApiFactory : WebApplicationFactory<Program>
                 DateEpoch = 1705536000, CollectionName = "news",
                 AltCollection = null,
                 SectionNames = ["github-copilot"],
-                Tags = ["GitHub Copilot", "News", "GitHub"],
+                Tags = ["github copilot", "news", "github"],
                 RenderedHtml = "<h1>GitHub Copilot News 1</h1><p>Copilot news content...</p>",
                 Excerpt = "Copilot news excerpt...",
                 ExternalUrl = "https://example.com/copilot-news-1",
@@ -203,8 +203,12 @@ public class TechHubApiFactory : WebApplicationFactory<Program>
         mockRepo.Setup(r => r.GetBySectionAsync("github-copilot", It.IsAny<CancellationToken>()))
             .ReturnsAsync([.. content.Where(c => c.SectionNames.Contains("github-copilot"))]);
 
-        // GetAllTagsAsync
-        var allTags = content.SelectMany(c => c.Tags).Distinct().ToList();
+        // GetAllTagsAsync - return normalized lowercase unique tags
+        var allTags = content.SelectMany(c => c.Tags)
+            .Select(t => t.ToLowerInvariant())
+            .Distinct()
+            .OrderBy(t => t)
+            .ToList();
         mockRepo.Setup(r => r.GetAllTagsAsync(It.IsAny<CancellationToken>()))
             .ReturnsAsync(allTags);
     }

@@ -48,7 +48,7 @@ public class ContentEndpointsTests : IClassFixture<TechHubApiFactory>
         var items = await response.Content.ReadFromJsonAsync<List<ContentItemDto>>();
         items.Should().NotBeNull();
         items!.Should().HaveCount(2); // 2 AI items
-        items.Should().AllSatisfy(item => item.SectionNames.Should().Contain("AI"));
+        items.Should().AllSatisfy(item => item.SectionNames.Should().Contain("ai"));
     }
 
     [Fact]
@@ -109,29 +109,29 @@ public class ContentEndpointsTests : IClassFixture<TechHubApiFactory>
         items.Should().NotBeNull();
         items!.Should().HaveCount(1); // Only AI news item
         items![0].CollectionName.Should().Be("news");
-        items[0].SectionNames.Should().Contain("AI");
+        items[0].SectionNames.Should().Contain("ai");
     }
 
     [Fact]
     public async Task FilterContent_BySingleTag_ReturnsItemsWithTag()
     {
         // Act
-        var response = await _client.GetAsync("/api/content/filter?tags=copilot");
+        var response = await _client.GetAsync("/api/content/filter?tags=github copilot");
 
         // Assert
         response.StatusCode.Should().Be(HttpStatusCode.OK);
 
         var items = await response.Content.ReadFromJsonAsync<List<ContentItemDto>>();
         items.Should().NotBeNull();
-        items!.Should().HaveCount(3); // 3 items with copilot tag
-        items.Should().AllSatisfy(item => item.Tags.Should().Contain("copilot"));
+        items!.Should().HaveCount(3); // 3 items with github copilot tag
+        items.Should().AllSatisfy(item => item.Tags.Should().Contain("github copilot"));
     }
 
     [Fact]
     public async Task FilterContent_ByMultipleTags_RequiresAllTags()
     {
-        // Act - Looking for items with BOTH copilot AND azure tags
-        var response = await _client.GetAsync("/api/content/filter?tags=copilot,azure");
+        // Act - Looking for items with BOTH github copilot AND azure tags
+        var response = await _client.GetAsync("/api/content/filter?tags=github copilot,azure");
 
         // Assert
         response.StatusCode.Should().Be(HttpStatusCode.OK);
@@ -139,15 +139,15 @@ public class ContentEndpointsTests : IClassFixture<TechHubApiFactory>
         var items = await response.Content.ReadFromJsonAsync<List<ContentItemDto>>();
         items.Should().NotBeNull();
         items!.Should().HaveCount(1); // Only 1 item has both tags
-        items![0].Tags.Should().Contain("copilot");
+        items![0].Tags.Should().Contain("github copilot");
         items[0].Tags.Should().Contain("azure");
     }
 
     [Fact]
     public async Task FilterContent_ComplexFilter_CombinesAllCriteria()
     {
-        // Act - AI section + news collection + copilot tag
-        var response = await _client.GetAsync("/api/content/filter?sections=ai&collections=news&tags=copilot");
+        // Act - AI section + news collection + github copilot tag
+        var response = await _client.GetAsync("/api/content/filter?sections=ai&collections=news&tags=github copilot");
 
         // Assert
         response.StatusCode.Should().Be(HttpStatusCode.OK);
@@ -157,8 +157,8 @@ public class ContentEndpointsTests : IClassFixture<TechHubApiFactory>
         items!.Should().HaveCount(1);
         items![0].Slug.Should().Be("2024-01-15-ai-news-1");
         items[0].CollectionName.Should().Be("news");
-        items[0].SectionNames.Should().Contain("AI");
-        items[0].Tags.Should().Contain("copilot");
+        items[0].SectionNames.Should().Contain("ai");
+        items[0].Tags.Should().Contain("github copilot");
     }
 
     [Fact]
@@ -180,7 +180,7 @@ public class ContentEndpointsTests : IClassFixture<TechHubApiFactory>
     public async Task FilterContent_TextSearchWithSectionFilter_CombinesFilters()
     {
         // Act
-        var response = await _client.GetAsync("/api/content/filter?sections=github-copilot&q=vscode");
+        var response = await _client.GetAsync("/api/content/filter?sections=github-copilot&q=vs code");
 
         // Assert
         response.StatusCode.Should().Be(HttpStatusCode.OK);
@@ -188,15 +188,15 @@ public class ContentEndpointsTests : IClassFixture<TechHubApiFactory>
         var items = await response.Content.ReadFromJsonAsync<List<ContentItemDto>>();
         items.Should().NotBeNull();
         items!.Should().HaveCount(1);
-        items![0].SectionNames.Should().Contain("GitHub Copilot");
-        items[0].Tags.Should().Contain("vscode");
+        items![0].SectionNames.Should().Contain("github-copilot");
+        items[0].Tags.Should().Contain("vs code");
     }
 
     [Fact]
     public async Task FilterContent_CaseInsensitiveFiltering()
     {
         // Act
-        var response = await _client.GetAsync("/api/content/filter?sections=AI&collections=NEWS&tags=COPILOT");
+        var response = await _client.GetAsync("/api/content/filter?sections=AI&collections=NEWS&tags=GITHUB COPILOT");
 
         // Assert
         response.StatusCode.Should().Be(HttpStatusCode.OK);
@@ -243,9 +243,9 @@ public class ContentEndpointsTests : IClassFixture<TechHubApiFactory>
         var tags = await response.Content.ReadFromJsonAsync<List<string>>();
         tags.Should().NotBeNull();
         tags!.Should().HaveCountGreaterThan(0);
-        tags.Should().Contain("copilot");
+        tags.Should().Contain("github copilot");
         tags.Should().Contain("ai");
-        tags.Should().Contain("vscode");
+        tags.Should().Contain("vs code");
         tags.Should().OnlyHaveUniqueItems();
     }
 
@@ -254,7 +254,7 @@ public class ContentEndpointsTests : IClassFixture<TechHubApiFactory>
     [InlineData("?sections=github-copilot", 2)]
     [InlineData("?collections=news", 2)]
     [InlineData("?collections=videos", 1)]
-    [InlineData("?tags=ai", 2)]
+    [InlineData("?tags=news", 2)]
     [InlineData("?tags=productivity", 1)]
     public async Task FilterContent_VariousCriteria_ReturnsExpectedCounts(string queryString, int expectedCount)
     {

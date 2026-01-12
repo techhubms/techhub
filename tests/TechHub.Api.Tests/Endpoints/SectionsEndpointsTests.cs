@@ -95,7 +95,7 @@ public class SectionsEndpointsTests : IClassFixture<TechHubApiFactory>
         var items = await response.Content.ReadFromJsonAsync<List<ContentItemDto>>();
         items.Should().NotBeNull();
         items!.Should().HaveCount(2); // 2 items with AI section
-        items.Should().AllSatisfy(item => item.SectionNames.Should().Contain("AI"));
+        items.Should().AllSatisfy(item => item.SectionNames.Should().Contain("ai"));
     }
 
     [Fact]
@@ -183,7 +183,7 @@ public class SectionsEndpointsTests : IClassFixture<TechHubApiFactory>
         items.Should().NotBeNull();
         items!.Should().HaveCount(1); // 1 AI news item
         items![0].CollectionName.Should().Be("news");
-        items[0].SectionNames.Should().Contain("AI");
+        items[0].SectionNames.Should().Contain("ai");
     }
 
     [Fact]
@@ -199,7 +199,7 @@ public class SectionsEndpointsTests : IClassFixture<TechHubApiFactory>
         items.Should().NotBeNull();
         items!.Should().HaveCount(1);
         items![0].CollectionName.Should().Be("videos");
-        items[0].SectionNames.Should().Contain("GitHub Copilot");
+        items[0].SectionNames.Should().Contain("github-copilot");
         items[0].VideoId.Should().Be("abc123");
     }
 

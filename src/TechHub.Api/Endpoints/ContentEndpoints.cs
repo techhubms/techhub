@@ -65,9 +65,9 @@ internal static class ContentEndpoints
 
         if (!string.IsNullOrWhiteSpace(sectionName) && !string.IsNullOrWhiteSpace(collectionName))
         {
-            // Both filters: get by collection first (smaller dataset), then filter by section title
-            var collectionContent = await contentRepository.GetByCollectionAsync(collectionName, cancellationToken);
-            content = [.. collectionContent.Where(c => c.SectionNames.Contains(sectionName, StringComparer.OrdinalIgnoreCase))];
+            // Both filters: get by section and filter by collection
+            var sectionContent = await contentRepository.GetBySectionAsync(sectionName, cancellationToken);
+            content = [.. sectionContent.Where(c => c.CollectionName.Equals(collectionName, StringComparison.OrdinalIgnoreCase))];
         }
         else if (!string.IsNullOrWhiteSpace(sectionName))
         {
@@ -170,7 +170,6 @@ internal static class ContentEndpoints
         [FromQuery] string? collections,
         [FromQuery] string? tags,
         [FromQuery] string? q,
-        ISectionRepository sectionRepository,
         IContentRepository contentRepository,
         CancellationToken cancellationToken)
     {
@@ -178,19 +177,12 @@ internal static class ContentEndpoints
         var content = await contentRepository.GetAllAsync(cancellationToken);
         var results = content.AsEnumerable();
 
-        // Filter by sections (section names in content Sections property)
+        // Filter by sections (section names are already lowercase identifiers in SectionNames)
         if (!string.IsNullOrWhiteSpace(sections))
         {
             var sectionNames = sections.Split(',', StringSplitOptions.RemoveEmptyEntries | StringSplitOptions.TrimEntries);
-            var allSections = await sectionRepository.GetAllAsync(cancellationToken);
-
-            // Get section titles (what's stored in content Sections property) from section names (URL slugs)
-            var validSectionTitles = allSections
-                .Where(s => sectionNames.Contains(s.Name, StringComparer.OrdinalIgnoreCase))
-                .Select(s => s.Title)
-                .ToHashSet(StringComparer.OrdinalIgnoreCase);
-
-            results = results.Where(c => c.SectionNames.Any(sectionTitle => validSectionTitles.Contains(sectionTitle)));
+            results = results.Where(c => c.SectionNames.Any(sectionName =>
+                sectionNames.Contains(sectionName, StringComparer.OrdinalIgnoreCase)));
         }
 
         // Filter by collections

@@ -350,13 +350,13 @@ public class FileBasedContentRepositoryTests : IDisposable
 
         await File.WriteAllTextAsync(Path.Combine(newsDir, "dotnet-release.md"), """
             ---
-            title: .NET 10 Release
+            title: DotNet 10 Release
             date: 2025-01-01
             categories: [Coding]
-            tags: [.NET]
-            excerpt: .NET release
+            tags: [dotnet, programming]
+            excerpt: DotNet release
             ---
-            .NET content
+            DotNet content
             """);
 
         // Act: Search with different casing
@@ -406,12 +406,12 @@ public class FileBasedContentRepositoryTests : IDisposable
         // Act: Get all unique tags
         var tags = await _repository.GetAllTagsAsync();
 
-        // Assert: 4 unique tags (AI appears twice but returned once)
+        // Assert: 4 unique tags (AI appears twice but returned once, all lowercase)
         Assert.Equal(4, tags.Count);
-        Assert.Contains("AI", tags);
-        Assert.Contains("Machine Learning", tags);
-        Assert.Contains("Deep Learning", tags);
-        Assert.Contains("Announcement", tags);
+        Assert.Contains("ai", tags);
+        Assert.Contains("machine learning", tags);
+        Assert.Contains("deep learning", tags);
+        Assert.Contains("announcement", tags);
     }
 
     /// <summary>

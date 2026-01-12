@@ -85,8 +85,8 @@ internal static class RssEndpoints
             return Results.NotFound();
         }
 
-        // Get content for this section (filter by section Title which is what's stored in Sections property)
-        var items = await contentRepository.GetBySectionAsync(section.Title);
+        // Get content for this section using the section name (lowercase identifier)
+        var items = await contentRepository.GetBySectionAsync(section.Name);
         var channel = await rssService.GenerateSectionFeedAsync(section, items);
         var xml = rssService.SerializeToXml(channel);
 
