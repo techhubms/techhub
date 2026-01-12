@@ -42,10 +42,12 @@ public class ContentItem
     public string? AltCollection { get; init; }
 
     /// <summary>
-    /// Section names (titles) this content belongs to (e.g., "AI", "GitHub Copilot")
-    /// Mapped from legacy 'categories' frontmatter field
+    /// Section names (lowercase identifiers) this content belongs to (e.g., "ai", "github-copilot", "coding").
+    /// Mapped from legacy 'categories' frontmatter field (converted to lowercase).
+    /// When filtering content by section, match section.Name against this property.
+    /// Values match Section.Name property (lowercase), NOT Section.Title (display name).
     /// </summary>
-    public required IReadOnlyList<string> Sections { get; init; }
+    public required IReadOnlyList<string> SectionNames { get; init; }
 
     /// <summary>
     /// Normalized tags for filtering (lowercase, hyphen-separated)
@@ -88,19 +90,6 @@ public class ContentItem
     public string DateIso => DateUtc.ToString("yyyy-MM-dd", System.Globalization.CultureInfo.InvariantCulture);
 
     /// <summary>
-    /// Get the URL for this content item within a specific section
-    /// All URLs are lowercase for consistency and include leading slash for proper routing
-    /// </summary>
-    public string GetUrlInSection(string sectionUrl)
-    {
-        ArgumentNullException.ThrowIfNull(sectionUrl);
-
-        // Ensure section URL has leading slash for proper routing
-        var normalizedSection = sectionUrl.StartsWith('/') ? sectionUrl : $"/{sectionUrl}";
-        return $"{normalizedSection.ToLowerInvariant()}/{CollectionName.ToLowerInvariant()}/{Slug.ToLowerInvariant()}";
-    }
-
-    /// <summary>
     /// Validates that all required properties are correctly formatted
     /// </summary>
     public void Validate()
@@ -114,13 +103,42 @@ public class ContentItem
         if (DateEpoch <= 0)
             throw new ArgumentException("Date epoch must be a valid Unix timestamp", nameof(DateEpoch));
 
-        if (Sections.Count == 0)
-            throw new ArgumentException("Content must have at least one section", nameof(Sections));
+        if (SectionNames.Count == 0)
+            throw new ArgumentException("Content must have at least one section", nameof(SectionNames));
 
         if (string.IsNullOrWhiteSpace(RenderedHtml))
             throw new ArgumentException("Rendered HTML cannot be empty", nameof(RenderedHtml));
 
         if (Excerpt.Length > 1000)
             throw new ArgumentException("Excerpt should not exceed 1000 characters", nameof(Excerpt));
+    }
+
+    /// <summary>
+    /// Determines the primary section URL based on section names and collection
+    /// </summary>
+    public string GetPrimarySectionUrl()
+    {
+        return TechHub.Core.Helpers.SectionPriorityHelper.GetPrimarySectionUrl(SectionNames, CollectionName);
+    }
+
+    /// <summary>
+    /// Gets the content item URL within a specific section
+    /// </summary>
+    /// <param name="sectionUrl">The section URL path (e.g., "ai", "github-copilot" or "/ai", "/github-copilot")</param>
+    /// <returns>Full URL path for this item in the specified section</returns>
+    public string GetUrlInSection(string sectionUrl)
+    {
+        // Ensure section URL starts with slash
+        var normalizedSectionUrl = sectionUrl.StartsWith('/') ? sectionUrl : $"/{sectionUrl}";
+        return $"{normalizedSectionUrl}/{CollectionName}/{Slug}";
+    }
+
+    /// <summary>
+    /// Gets the content item URL in its primary section
+    /// </summary>
+    public string GetUrl()
+    {
+        var primarySectionUrl = TechHub.Core.Helpers.SectionPriorityHelper.GetPrimarySectionUrl(SectionNames, CollectionName);
+        return GetUrlInSection(primarySectionUrl);
     }
 }

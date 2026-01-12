@@ -1,43 +1,46 @@
 namespace TechHub.Core.Helpers;
 
 /// <summary>
-/// Helper class to determine the primary section for content items based on section names
-/// and the section order in the top menu bar
+/// Helper class to determine the primary section for content items based on lowercase section names
+/// and the section order in the top menu bar.
+/// ContentItem.SectionNames contains lowercase section names (e.g., "ai", "github-copilot"), NOT display titles.
 /// </summary>
 public static class SectionPriorityHelper
 {
     /// <summary>
-    /// Section priority order (matches the menubar order)
+    /// Section priority order (matches the menubar order).
+    /// These are lowercase section NAMES matching Section.Name and ContentItem.SectionNames.
     /// </summary>
     private static readonly string[] _sectionPriorityOrder =
     [
-        "GitHub Copilot",
-        "AI",
-        "ML",
-        "Coding",
-        "Azure",
-        "DevOps",
-        "Security"
+        "github-copilot",
+        "ai",
+        "ml",
+        "coding",
+        "azure",
+        "devops",
+        "security"
     ];
 
     /// <summary>
-    /// Section name mappings to URL paths
+    /// Section name to display title mappings.
+    /// Maps from Section.Name (lowercase) to Section.Title (display name).
     /// </summary>
-    private static readonly Dictionary<string, string> _sectionNameToUrl = new()
+    private static readonly Dictionary<string, string> _sectionNameToTitle = new()
     {
-        { "GitHub Copilot", "github-copilot" },
-        { "AI", "ai" },
-        { "ML", "ml" },
-        { "Coding", "coding" },
-        { "Azure", "azure" },
-        { "DevOps", "devops" },
-        { "Security", "security" }
+        { "github-copilot", "GitHub Copilot" },
+        { "ai", "AI" },
+        { "ml", "ML" },
+        { "coding", "Coding" },
+        { "azure", "Azure" },
+        { "devops", "DevOps" },
+        { "security", "Security" }
     };
 
     /// <summary>
-    /// Determines the primary section URL for a content item based on its section names and collection
+    /// Determines the primary section URL for a content item based on its lowercase section names and collection
     /// </summary>
-    /// <param name="sectionNames">List of section names from the content item (e.g., "AI", "GitHub Copilot")</param>
+    /// <param name="sectionNames">List of lowercase section names from ContentItem.SectionNames (e.g., "ai", "github-copilot")</param>
     /// <param name="collectionName">Optional collection name (e.g., "roundups")</param>
     /// <returns>The URL of the primary section (e.g., "github-copilot", "ai"), or "all" if no match</returns>
     public static string GetPrimarySectionUrl(IReadOnlyList<string> sectionNames, string? collectionName = null)
@@ -56,7 +59,7 @@ public static class SectionPriorityHelper
         {
             if (sectionNames.Contains(sectionName, StringComparer.OrdinalIgnoreCase))
             {
-                return _sectionNameToUrl[sectionName];
+                return sectionName; // Return the section name directly (already lowercase URL)
             }
         }
 
@@ -65,32 +68,32 @@ public static class SectionPriorityHelper
     }
 
     /// <summary>
-    /// Determines the primary section name (display name) for a content item based on its section names and collection
+    /// Determines the primary section name for a content item based on its lowercase section names and collection
     /// </summary>
-    /// <param name="sectionNames">List of section names from the content item (e.g., "AI", "GitHub Copilot")</param>
+    /// <param name="sectionNames">List of lowercase section names from ContentItem.SectionNames (e.g., "ai", "github-copilot")</param>
     /// <param name="collectionName">Optional collection name (e.g., "roundups")</param>
-    /// <returns>The display name of the primary section (e.g., "GitHub Copilot", "AI"), or "All" if no match</returns>
+    /// <returns>The lowercase name of the primary section (e.g., "github-copilot", "ai"), or "all" if no match</returns>
     public static string GetPrimarySectionName(IReadOnlyList<string> sectionNames, string? collectionName = null)
     {
         ArgumentNullException.ThrowIfNull(sectionNames);
 
-        // Special case: Roundups always belong to "All" section
+        // Special case: Roundups always belong to "all" section
         if (collectionName?.Equals("roundups", StringComparison.OrdinalIgnoreCase) == true)
-            return "All";
+            return "all";
 
         if (sectionNames.Count == 0)
-            return "All";
+            return "all";
 
         // Find the first section that matches in priority order
         foreach (var sectionName in _sectionPriorityOrder)
         {
             if (sectionNames.Contains(sectionName, StringComparer.OrdinalIgnoreCase))
             {
-                return sectionName;
+                return sectionName; // Return lowercase name
             }
         }
 
-        // No match found, default to "All"
-        return "All";
+        // No match found, default to "all"
+        return "all";
     }
 }

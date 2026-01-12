@@ -115,7 +115,7 @@ public class FrontMatterParser
     }
 
     /// <summary>
-    /// Get a list value from frontmatter (e.g., tags, categories)
+    /// Get a list value from frontmatter (e.g., tags, sections, etc)
     /// </summary>
     public List<string> GetListValue(Dictionary<string, object> frontMatter, string key)
     {

@@ -17,7 +17,7 @@ public static class ContentItemExtensions
         ArgumentNullException.ThrowIfNull(item);
 
         // Determine primary section based on sections and collection
-        var primarySectionName = SectionPriorityHelper.GetPrimarySectionName(item.Sections, item.CollectionName);
+        var primarySectionName = SectionPriorityHelper.GetPrimarySectionName(item.SectionNames, item.CollectionName);
 
         return new ContentItemDto
         {
@@ -29,7 +29,7 @@ public static class ContentItemExtensions
             DateIso = item.DateIso,
             CollectionName = item.CollectionName,
             AltCollection = item.AltCollection,
-            Sections = item.Sections,
+            SectionNames = item.SectionNames,
             PrimarySection = primarySectionName,
             Tags = item.Tags,
             Excerpt = item.Excerpt,
@@ -48,7 +48,7 @@ public static class ContentItemExtensions
         ArgumentNullException.ThrowIfNull(item);
 
         // Determine primary section based on sections and collection
-        var primarySectionName = SectionPriorityHelper.GetPrimarySectionName(item.Sections, item.CollectionName);
+        var primarySectionName = SectionPriorityHelper.GetPrimarySectionName(item.SectionNames, item.CollectionName);
 
         return new ContentItemDetailDto
         {
@@ -60,7 +60,7 @@ public static class ContentItemExtensions
             DateIso = item.DateIso,
             CollectionName = item.CollectionName,
             AltCollection = item.AltCollection,
-            Sections = item.Sections,
+            SectionNames = item.SectionNames,
             PrimarySection = primarySectionName,
             Tags = item.Tags,
             RenderedHtml = item.RenderedHtml,

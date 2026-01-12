@@ -6,12 +6,16 @@ namespace TechHub.Core.Models;
 public class CollectionReference
 {
     /// <summary>
-    /// Display title for the collection (e.g., "Latest News", "Videos")
+    /// Display title for the collection with proper casing (e.g., "Latest News", "Videos").
+    /// Used for: UI display ONLY.
+    /// NEVER use .ToLower() on this for filtering - use Name instead.
     /// </summary>
     public required string Title { get; init; }
 
     /// <summary>
-    /// URL-friendly name matching directory name (e.g., "news", "blogs", "videos")
+    /// URL-friendly name matching directory name (lowercase, e.g., "news", "blogs", "videos").
+    /// Used for: filtering content (matches ContentItem.CollectionName), URL paths, navigation, routing.
+    /// NEVER use .ToLower() on Title for filtering - use Name directly.
     /// </summary>
     public required string Name { get; init; }
 

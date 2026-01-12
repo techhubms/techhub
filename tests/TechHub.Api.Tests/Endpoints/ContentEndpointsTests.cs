@@ -48,7 +48,7 @@ public class ContentEndpointsTests : IClassFixture<TechHubApiFactory>
         var items = await response.Content.ReadFromJsonAsync<List<ContentItemDto>>();
         items.Should().NotBeNull();
         items!.Should().HaveCount(2); // 2 AI items
-        items.Should().AllSatisfy(item => item.Sections.Should().Contain("AI"));
+        items.Should().AllSatisfy(item => item.SectionNames.Should().Contain("AI"));
     }
 
     [Fact]
@@ -109,7 +109,7 @@ public class ContentEndpointsTests : IClassFixture<TechHubApiFactory>
         items.Should().NotBeNull();
         items!.Should().HaveCount(1); // Only AI news item
         items![0].CollectionName.Should().Be("news");
-        items[0].Sections.Should().Contain("AI");
+        items[0].SectionNames.Should().Contain("AI");
     }
 
     [Fact]
@@ -157,7 +157,7 @@ public class ContentEndpointsTests : IClassFixture<TechHubApiFactory>
         items!.Should().HaveCount(1);
         items![0].Slug.Should().Be("2024-01-15-ai-news-1");
         items[0].CollectionName.Should().Be("news");
-        items[0].Sections.Should().Contain("AI");
+        items[0].SectionNames.Should().Contain("AI");
         items[0].Tags.Should().Contain("copilot");
     }
 
@@ -188,7 +188,7 @@ public class ContentEndpointsTests : IClassFixture<TechHubApiFactory>
         var items = await response.Content.ReadFromJsonAsync<List<ContentItemDto>>();
         items.Should().NotBeNull();
         items!.Should().HaveCount(1);
-        items![0].Sections.Should().Contain("GitHub Copilot");
+        items![0].SectionNames.Should().Contain("GitHub Copilot");
         items[0].Tags.Should().Contain("vscode");
     }
 
@@ -282,7 +282,7 @@ public class ContentEndpointsTests : IClassFixture<TechHubApiFactory>
         item.DateEpoch.Should().BeGreaterThan(0);
         item.DateIso.Should().NotBeNullOrEmpty();
         item.CollectionName.Should().NotBeNullOrEmpty();
-        item.Sections.Should().NotBeEmpty();
+        item.SectionNames.Should().NotBeEmpty();
         item.Tags.Should().NotBeEmpty();
         item.Excerpt.Should().NotBeNullOrEmpty();
         item.Url.Should().NotBeNullOrEmpty();

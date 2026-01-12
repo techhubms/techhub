@@ -6,12 +6,16 @@ namespace TechHub.Core.Models;
 public class Section
 {
     /// <summary>
-    /// URL-friendly name (lowercase with hyphens, e.g., "ai", "github-copilot")
+    /// URL-friendly name (lowercase with hyphens, e.g., "ai", "github-copilot").
+    /// Used for: filtering content (matches ContentItem.SectionNames), URL paths, navigation, routing.
+    /// NEVER use .ToLower() on Title for filtering - use Name directly.
     /// </summary>
     public required string Name { get; init; }
 
     /// <summary>
-    /// Display title (e.g., "AI", "GitHub Copilot")
+    /// Display title with proper casing (e.g., "AI", "GitHub Copilot").
+    /// Used for: UI display ONLY.
+    /// NEVER use this for filtering - use Name instead which matches ContentItem.SectionNames.
     /// </summary>
     public required string Title { get; init; }
 

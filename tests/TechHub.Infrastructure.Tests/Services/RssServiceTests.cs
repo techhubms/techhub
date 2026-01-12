@@ -34,8 +34,8 @@ public class RssServiceTests
             Author = "John Doe",
             DateEpoch = 1705305600, // 2024-01-15
             CollectionName = "news",
-            Sections = ["AI"],
-            Tags = ["machine-learning", "testing"],
+            SectionNames = ["ai"],
+            Tags = ["AI", "News", "Machine Learning", "Testing"],
             RenderedHtml = "<p>Test content 1</p>",
             Excerpt = "Test excerpt 1",
             ViewingMode = null,
@@ -51,8 +51,8 @@ public class RssServiceTests
             Author = "Jane Smith",
             DateEpoch = 1704844800, // 2024-01-10
             CollectionName = "news",
-            Sections = ["AI"],
-            Tags = ["deep-learning"],
+            SectionNames = ["ai"],
+            Tags = ["AI", "News", "Deep Learning"],
             RenderedHtml = "<p>Test content 2</p>",
             Excerpt = "Test excerpt 2",
             ViewingMode = "external",
@@ -110,7 +110,7 @@ public class RssServiceTests
                 Author = "Test Author",
                 DateEpoch = 1705305600 + (i * 86400), // Increment by 1 day
                 CollectionName = "news",
-                Sections = ["AI"],
+                SectionNames = ["AI"],
                 Tags = ["test"],
                 RenderedHtml = $"<p>Content {i}</p>",
                 Excerpt = $"Excerpt {i}",
@@ -236,7 +236,7 @@ public class RssServiceTests
                 Description = "Description only",
                 DateEpoch = 1705305600,
                 CollectionName = "news",
-                Sections = ["AI"],
+                SectionNames = ["AI"],
                 Tags = [],
                 RenderedHtml = "<p>Content</p>",
                 Excerpt = "", // Empty excerpt
@@ -303,7 +303,7 @@ public class RssServiceTests
     }
 
     [Fact]
-    public async Task RssItem_IncludesTagsAsCategories()
+    public async Task RssItem_IncludesSectionNamesAsCategories()
     {
         // Arrange
         var section = CreateTestSection();
@@ -313,9 +313,8 @@ public class RssServiceTests
         var channel = await _rssService.GenerateSectionFeedAsync(section, items);
 
         // Assert
-        channel.Items.First().Sections.Should().Contain("machine-learning");
-        channel.Items.First().Sections.Should().Contain("testing");
-        channel.Items.Last().Sections.Should().Contain("deep-learning");
+        channel.Items.First().SectionNames.Should().Contain("ai");
+        channel.Items.Last().SectionNames.Should().Contain("ai");
     }
 
     [Fact]
@@ -341,7 +340,7 @@ public class RssServiceTests
         xml.Should().Contain("<guid isPermaLink=\"true\">");
         xml.Should().Contain("<pubDate>");
         xml.Should().Contain("<author>John Doe</author>");
-        xml.Should().Contain("<category>machine-learning</category>");
+        xml.Should().Contain("<category>ai</category>");  // Section name, not tag
         xml.Should().Contain("</item>");
         xml.Should().Contain("</channel>");
         xml.Should().Contain("</rss>");
@@ -375,7 +374,7 @@ public class RssServiceTests
                 Description = "Description with \"quotes\" & <tags>",
                 DateEpoch = 1705305600,
                 CollectionName = "news",
-                Sections = ["AI"],
+                SectionNames = ["AI"],
                 Tags = ["tag&special"],
                 RenderedHtml = "<p>Content</p>",
                 Excerpt = "Excerpt with 'quotes'",

@@ -132,7 +132,7 @@ public class RssService : IRssService
                     xmlWriter.WriteElementString("author", item.Author);
                 }
 
-                foreach (var sectionName in item.Sections)
+                foreach (var sectionName in item.SectionNames)
                 {
                     xmlWriter.WriteElementString("category", sectionName);
                 }
@@ -167,7 +167,7 @@ public class RssService : IRssService
             Guid = link,
             PubDate = DateTimeOffset.FromUnixTimeSeconds(item.DateEpoch),
             Author = item.Author,
-            Sections = item.Tags
+            SectionNames = item.SectionNames
         };
     }
 

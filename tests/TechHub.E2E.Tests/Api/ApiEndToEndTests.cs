@@ -192,7 +192,7 @@ public class ApiEndToEndTests(ApiTestFactory factory) : IClassFixture<ApiTestFac
         var items = await response.Content.ReadFromJsonAsync<List<ContentItemDto>>();
         items.Should().NotBeNull();
         items!.Should().NotBeEmpty();
-        items.Should().AllSatisfy(item => item.Sections.Should().Contain("AI"));
+        items.Should().AllSatisfy(item => item.SectionNames.Should().Contain("AI"));
     }
 
     [Fact]
@@ -207,7 +207,7 @@ public class ApiEndToEndTests(ApiTestFactory factory) : IClassFixture<ApiTestFac
         var items = await response.Content.ReadFromJsonAsync<List<ContentItemDto>>();
         items.Should().NotBeNull();
         items!.Should().NotBeEmpty();
-        items.Should().AllSatisfy(item => item.Sections.Should().Contain("GitHub Copilot"));
+        items.Should().AllSatisfy(item => item.SectionNames.Should().Contain("GitHub Copilot"));
     }
 
     [Fact]
@@ -222,7 +222,7 @@ public class ApiEndToEndTests(ApiTestFactory factory) : IClassFixture<ApiTestFac
         var items = await response.Content.ReadFromJsonAsync<List<ContentItemDto>>();
         items.Should().NotBeNull();
         items!.Should().NotBeEmpty();
-        items.Should().AllSatisfy(item => item.Sections.Should().Contain("Azure"));
+        items.Should().AllSatisfy(item => item.SectionNames.Should().Contain("Azure"));
     }
 
     #endregion
@@ -241,7 +241,7 @@ public class ApiEndToEndTests(ApiTestFactory factory) : IClassFixture<ApiTestFac
         var items = await response.Content.ReadFromJsonAsync<List<ContentItemDto>>();
         items.Should().NotBeNull();
         items!.Should().NotBeEmpty();
-        items.Should().AllSatisfy(item => item.Sections.Should().Contain("AI"));
+        items.Should().AllSatisfy(item => item.SectionNames.Should().Contain("AI"));
     }
 
     [Fact]
@@ -259,7 +259,7 @@ public class ApiEndToEndTests(ApiTestFactory factory) : IClassFixture<ApiTestFac
         items.Should().AllSatisfy(item =>
         {
             item.CollectionName.Should().Be("news");
-            item.Sections.Should().Contain("GitHub Copilot");
+            item.SectionNames.Should().Contain("GitHub Copilot");
         });
     }
 
@@ -277,8 +277,8 @@ public class ApiEndToEndTests(ApiTestFactory factory) : IClassFixture<ApiTestFac
         items!.Should().NotBeEmpty();
         items!.Should().AllSatisfy(item =>
         {
-            var hasAI = item.Sections.Contains("AI");
-            var hasAzure = item.Sections.Contains("Azure");
+            var hasAI = item.SectionNames.Contains("AI");
+            var hasAzure = item.SectionNames.Contains("Azure");
             (hasAI || hasAzure).Should().BeTrue("each item should have at least one of the filtered sections");
         });
     }
@@ -390,7 +390,7 @@ public class ApiEndToEndTests(ApiTestFactory factory) : IClassFixture<ApiTestFac
             item.DateEpoch.Should().BeGreaterThan(0);
             item.DateIso.Should().NotBeNullOrEmpty();
             item.CollectionName.Should().NotBeNullOrEmpty();
-            item.Sections.Should().NotBeEmpty();
+            item.SectionNames.Should().NotBeEmpty();
             item.Tags.Should().NotBeEmpty();
             item.Url.Should().NotBeNullOrEmpty();
         });

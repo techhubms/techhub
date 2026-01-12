@@ -28,8 +28,8 @@ public class FrontMatterParserTests
             title: Test Article
             date: 2026-01-01
             tags:
-              - ai
-              - github-copilot
+              - AI
+              - GitHub Copilot
             ---
             # Article Content
             
@@ -222,11 +222,11 @@ public class FrontMatterParserTests
             title: "GitHub Copilot: New Features"
             date: 2026-01-01 10:30:00 +0100
             author: Microsoft
-            categories: github-copilot
+            categories: GitHub Copilot
             tags:
-              - features
-              - updates
-              - ai
+              - Features
+              - Updates
+              - AI
             excerpt: "Latest updates to GitHub Copilot"
             ---
             # New Features
@@ -245,7 +245,7 @@ public class FrontMatterParserTests
         Assert.Equal(6, frontMatter.Count);
         Assert.Equal("GitHub Copilot: New Features", frontMatter["title"]);
         Assert.Equal("Microsoft", frontMatter["author"]); // Preserves original casing from YAML
-        Assert.Equal("github-copilot", frontMatter["categories"]);
+        Assert.Equal("GitHub Copilot", frontMatter["categories"]); // Preserves title case from YAML (mapper converts to lowercase)
         Assert.StartsWith("# New Features", content);
         Assert.Contains("<!--excerpt_end-->", content);
     }

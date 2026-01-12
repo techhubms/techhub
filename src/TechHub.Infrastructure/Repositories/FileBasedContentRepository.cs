@@ -132,7 +132,11 @@ public sealed class FileBasedContentRepository : IContentRepository, IDisposable
                 allItems.AddRange(items);
             }
 
-            _cachedAllItems = [.. allItems.OrderByDescending(x => x.DateEpoch)];
+            // Filter out future-dated content (DateEpoch > current time)
+            var currentEpoch = DateTimeOffset.UtcNow.ToUnixTimeSeconds();
+            _cachedAllItems = [.. allItems
+                .Where(x => x.DateEpoch <= currentEpoch)
+                .OrderByDescending(x => x.DateEpoch)];
 
             return _cachedAllItems;
         }
@@ -166,17 +170,18 @@ public sealed class FileBasedContentRepository : IContentRepository, IDisposable
 
     /// <summary>
     /// Get content items filtered by section name.
-    /// Matches against the Sections property which contains section names like "AI", "GitHub Copilot".
+    /// Matches against the SectionNames property which contains lowercase section names like "ai", "github-copilot".
     /// Filters from cached in-memory data.
     /// Returns items sorted by date (DateEpoch) in descending order (newest first).
     /// </summary>
+    /// <param name="sectionName">Section name (lowercase, e.g., "ai", "github-copilot") - matches section.Name</param>
     public async Task<IReadOnlyList<ContentItem>> GetBySectionAsync(
         string sectionName,
         CancellationToken cancellationToken = default)
     {
         var allItems = await GetAllAsync(cancellationToken);
         return [.. allItems
-            .Where(item => item.Sections.Contains(sectionName, StringComparer.OrdinalIgnoreCase))
+            .Where(item => item.SectionNames.Contains(sectionName, StringComparer.OrdinalIgnoreCase))
             .OrderByDescending(x => x.DateEpoch)];
     }
 
@@ -303,7 +308,11 @@ public sealed class FileBasedContentRepository : IContentRepository, IDisposable
             var author = _frontMatterParser.GetValue<string>(frontMatter, "author", "Microsoft");
             var description = _frontMatterParser.GetValue<string>(frontMatter, "description", string.Empty);
             var excerpt = _frontMatterParser.GetValue<string>(frontMatter, "excerpt", string.Empty);
-            var sections = _frontMatterParser.GetListValue(frontMatter, "categories"); // Map legacy 'categories' field
+
+            // Map legacy 'categories' field to lowercase section names
+            var categories = _frontMatterParser.GetListValue(frontMatter, "categories");
+            var sectionNames = categories.Select(c => c.ToLowerInvariant().Replace(" ", "-")).ToList();
+
             var tags = _frontMatterParser.GetListValue(frontMatter, "tags");
             var externalUrl = _frontMatterParser.GetValue<string>(frontMatter, "canonical_url", string.Empty);
             var videoId = _frontMatterParser.GetValue<string>(frontMatter, "youtube_video_id", string.Empty);
@@ -338,7 +347,7 @@ public sealed class FileBasedContentRepository : IContentRepository, IDisposable
                 DateEpoch = date.ToUnixTimeSeconds(),
                 CollectionName = collection.TrimStart('_'), // Store without _ prefix
                 AltCollection = altCollection,
-                Sections = sections,
+                SectionNames = sectionNames,
                 Tags = tags,
                 RenderedHtml = renderedHtml,
                 Excerpt = excerpt,

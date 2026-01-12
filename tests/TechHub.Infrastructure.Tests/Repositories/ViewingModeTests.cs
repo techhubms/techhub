@@ -22,9 +22,8 @@ public class ViewingModeTests : IDisposable
             Content = new ContentSettings
             {
                 CollectionsPath = _testDir,
-                Timezone = "Europe/Brussels",
-                MaxExcerptLength = 1000,
-                Sections = [] // Required but not used in these tests
+                Sections = [], // Required but not used in these tests
+                Timezone = "Europe/Brussels"
             },
             Caching = new CachingSettings(),
             Seo = new SeoSettings

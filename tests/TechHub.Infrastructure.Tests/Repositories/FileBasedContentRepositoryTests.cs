@@ -86,8 +86,8 @@ public class FileBasedContentRepositoryTests : IDisposable
             title: AI Product Launch
             date: 2025-01-15
             author: Tech Team
-            categories: [ai]
-            tags: [announcement, ai]
+            categories: [AI]
+            tags: [Announcement, AI]
             excerpt: Major AI product announcement
             ---
             
@@ -100,8 +100,8 @@ public class FileBasedContentRepositoryTests : IDisposable
             title: Getting Started Tutorial
             date: 2025-01-10
             author: Educator
-            categories: [github-copilot]
-            tags: [tutorial, beginner]
+            categories: [GitHub Copilot]
+            tags: [GitHub Copilot, Videos, Tutorial, Beginner]
             excerpt: Learn the basics
             videoUrl: https://www.youtube.com/watch?v=ABC123
             ---
@@ -135,8 +135,8 @@ public class FileBasedContentRepositoryTests : IDisposable
             ---
             title: News Item 1
             date: 2025-01-01
-            categories: [ai]
-            tags: [news]
+            categories: [AI]
+            tags: [News]
             excerpt: News excerpt
             ---
             News content
@@ -146,8 +146,8 @@ public class FileBasedContentRepositoryTests : IDisposable
             ---
             title: Blog Post 1
             date: 2025-01-02
-            categories: [ai]
-            tags: [blog]
+            categories: [AI]
+            tags: [Blog]
             excerpt: Blog excerpt
             ---
             Blog content
@@ -176,8 +176,8 @@ public class FileBasedContentRepositoryTests : IDisposable
             ---
             title: AI News
             date: 2025-01-01
-            categories: [ai]
-            tags: [ai]
+            categories: [AI]
+            tags: [AI]
             excerpt: AI news excerpt
             ---
             AI content
@@ -187,8 +187,8 @@ public class FileBasedContentRepositoryTests : IDisposable
             ---
             title: GitHub Copilot News
             date: 2025-01-02
-            categories: [github-copilot]
-            tags: [copilot]
+            categories: [GitHub Copilot]
+            tags: [Copilot]
             excerpt: Copilot news excerpt
             ---
             Copilot content
@@ -200,7 +200,7 @@ public class FileBasedContentRepositoryTests : IDisposable
         // Assert: Only AI section items returned
         Assert.Single(aiContent);
         Assert.Equal("AI News", aiContent[0].Title);
-        Assert.Contains("ai", aiContent[0].Sections);
+        Assert.Contains("ai", aiContent[0].SectionNames);
     }
 
     /// <summary>
@@ -218,8 +218,8 @@ public class FileBasedContentRepositoryTests : IDisposable
             ---
             title: Product Launch
             date: 2025-01-15
-            categories: [ai]
-            tags: [announcement]
+            categories: [AI]
+            tags: [Announcement]
             excerpt: Exciting product launch
             ---
             
@@ -270,8 +270,8 @@ public class FileBasedContentRepositoryTests : IDisposable
             ---
             title: Azure OpenAI Service Update
             date: 2025-01-01
-            categories: [azure]
-            tags: [azure, ai]
+            categories: [Azure]
+            tags: [Azure, AI]
             excerpt: Azure update
             ---
             Azure content
@@ -281,8 +281,8 @@ public class FileBasedContentRepositoryTests : IDisposable
             ---
             title: GitHub Copilot Release
             date: 2025-01-02
-            categories: [github-copilot]
-            tags: [copilot]
+            categories: [GitHub Copilot]
+            tags: [Copilot]
             excerpt: Copilot release
             ---
             Copilot content
@@ -311,8 +311,8 @@ public class FileBasedContentRepositoryTests : IDisposable
             ---
             title: Security Alert
             date: 2025-01-01
-            categories: [security]
-            tags: [security, urgent]
+            categories: [Security]
+            tags: [Security, Urgent]
             excerpt: Security update
             ---
             Security content
@@ -322,8 +322,8 @@ public class FileBasedContentRepositoryTests : IDisposable
             ---
             title: Feature Release
             date: 2025-01-02
-            categories: [ai]
-            tags: [feature, ai]
+            categories: [AI]
+            tags: [Feature, AI]
             excerpt: New feature
             ---
             Feature content
@@ -352,8 +352,8 @@ public class FileBasedContentRepositoryTests : IDisposable
             ---
             title: .NET 10 Release
             date: 2025-01-01
-            categories: [coding]
-            tags: [dotnet]
+            categories: [Coding]
+            tags: [.NET]
             excerpt: .NET release
             ---
             .NET content
@@ -385,8 +385,8 @@ public class FileBasedContentRepositoryTests : IDisposable
             ---
             title: Item 1
             date: 2025-01-01
-            categories: [ai]
-            tags: [ai, machine-learning, announcement]
+            categories: [AI]
+            tags: [AI, Machine Learning, Announcement]
             excerpt: Item 1 excerpt
             ---
             Content 1
@@ -396,8 +396,8 @@ public class FileBasedContentRepositoryTests : IDisposable
             ---
             title: Item 2
             date: 2025-01-02
-            categories: [ai]
-            tags: [ai, deep-learning, announcement]
+            categories: [AI]
+            tags: [AI, Deep Learning, Announcement]
             excerpt: Item 2 excerpt
             ---
             Content 2
@@ -406,12 +406,12 @@ public class FileBasedContentRepositoryTests : IDisposable
         // Act: Get all unique tags
         var tags = await _repository.GetAllTagsAsync();
 
-        // Assert: 4 unique tags (ai appears twice but returned once)
+        // Assert: 4 unique tags (AI appears twice but returned once)
         Assert.Equal(4, tags.Count);
-        Assert.Contains("ai", tags);
-        Assert.Contains("machine-learning", tags);
-        Assert.Contains("deep-learning", tags);
-        Assert.Contains("announcement", tags);
+        Assert.Contains("AI", tags);
+        Assert.Contains("Machine Learning", tags);
+        Assert.Contains("Deep Learning", tags);
+        Assert.Contains("Announcement", tags);
     }
 
     /// <summary>
@@ -429,8 +429,8 @@ public class FileBasedContentRepositoryTests : IDisposable
             ---
             title: Video Tutorial
             date: 2025-01-01
-            categories: [github-copilot]
-            tags: [tutorial]
+            categories: [GitHub Copilot]
+            tags: [Tutorial]
             excerpt: Watch this tutorial
             youtube_video_id: dQw4w9WgXcQ
             ---
@@ -463,8 +463,8 @@ public class FileBasedContentRepositoryTests : IDisposable
             ---
             title: Product Demo
             date: 2025-01-01
-            categories: [ai]
-            tags: [demo]
+            categories: [AI]
+            tags: [Demo]
             excerpt: Watch the demo
             ---
             
@@ -497,8 +497,8 @@ public class FileBasedContentRepositoryTests : IDisposable
             ---
             title: Test Item
             date: 2025-01-15
-            categories: [ai]
-            tags: [test]
+            categories: [AI]
+            tags: [Test]
             excerpt: Test excerpt
             ---
             Test content
@@ -536,8 +536,8 @@ public class FileBasedContentRepositoryTests : IDisposable
             ---
             title: Valid Item
             date: 2025-01-01
-            categories: [ai]
-            tags: [test]
+            categories: [AI]
+            tags: [Test]
             excerpt: Valid excerpt
             ---
             Valid content
@@ -601,8 +601,8 @@ public class FileBasedContentRepositoryTests : IDisposable
             ---
             title: Oldest Item
             date: 2025-01-10
-            categories: [ai]
-            tags: [test]
+            categories: [AI]
+            tags: [Test]
             excerpt: Oldest excerpt
             ---
             Oldest content
@@ -612,8 +612,8 @@ public class FileBasedContentRepositoryTests : IDisposable
             ---
             title: Newest Item
             date: 2025-01-20
-            categories: [ai]
-            tags: [test]
+            categories: [AI]
+            tags: [Test]
             excerpt: Newest excerpt
             ---
             Newest content
@@ -623,8 +623,8 @@ public class FileBasedContentRepositoryTests : IDisposable
             ---
             title: Middle Item
             date: 2025-01-15
-            categories: [ai]
-            tags: [test]
+            categories: [AI]
+            tags: [Test]
             excerpt: Middle excerpt
             ---
             Middle content
@@ -659,8 +659,8 @@ public class FileBasedContentRepositoryTests : IDisposable
             ---
             title: Old News
             date: 2025-01-05
-            categories: [ai]
-            tags: [news]
+            categories: [AI]
+            tags: [News]
             excerpt: Old news
             ---
             Old content
@@ -670,8 +670,8 @@ public class FileBasedContentRepositoryTests : IDisposable
             ---
             title: New News
             date: 2025-01-25
-            categories: [ai]
-            tags: [news]
+            categories: [AI]
+            tags: [News]
             excerpt: New news
             ---
             New content
@@ -704,8 +704,8 @@ public class FileBasedContentRepositoryTests : IDisposable
             ---
             title: AI News
             date: 2025-01-12
-            categories: [ai]
-            tags: [ai]
+            categories: [AI]
+            tags: [AI]
             excerpt: AI news
             ---
             News content
@@ -715,8 +715,8 @@ public class FileBasedContentRepositoryTests : IDisposable
             ---
             title: AI Blog
             date: 2025-01-18
-            categories: [ai]
-            tags: [ai]
+            categories: [AI]
+            tags: [AI]
             excerpt: AI blog
             ---
             Blog content
@@ -747,8 +747,8 @@ public class FileBasedContentRepositoryTests : IDisposable
             ---
             title: Azure Update Old
             date: 2025-01-08
-            categories: [azure]
-            tags: [azure]
+            categories: [Azure]
+            tags: [Azure]
             excerpt: Old update
             ---
             Old content
@@ -758,8 +758,8 @@ public class FileBasedContentRepositoryTests : IDisposable
             ---
             title: Azure Update New
             date: 2025-01-22
-            categories: [azure]
-            tags: [azure]
+            categories: [Azure]
+            tags: [Azure]
             excerpt: New update
             ---
             New content

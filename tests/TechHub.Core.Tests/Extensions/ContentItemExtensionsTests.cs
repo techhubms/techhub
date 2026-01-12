@@ -20,8 +20,8 @@ public class ContentItemExtensionsTests
             DateEpoch = 1705305600, // 2024-01-15 00:00:00 UTC
             CollectionName = "news",
             AltCollection = null,
-            Sections = ["AI", "Azure"],
-            Tags = ["machine-learning", "cloud"],
+            SectionNames = ["ai", "azure"],
+            Tags = ["AI", "Azure", "News", "Machine Learning", "Cloud"],
             RenderedHtml = "<p>Test content</p>",
             Excerpt = "Test excerpt",
             ExternalUrl = "https://example.com",
@@ -49,9 +49,9 @@ public class ContentItemExtensionsTests
         dto.DateIso.Should().Be("2024-01-15");
         dto.CollectionName.Should().Be("news");
         dto.AltCollection.Should().BeNull();
-        dto.Sections.Should().BeEquivalentTo(["AI", "Azure"]);
-        dto.PrimarySection.Should().Be("AI"); // First section in menubar priority order
-        dto.Tags.Should().BeEquivalentTo(["machine-learning", "cloud"]);
+        dto.SectionNames.Should().BeEquivalentTo(["ai", "azure"]);
+        dto.PrimarySection.Should().Be("ai"); // First section in priority order
+        dto.Tags.Should().BeEquivalentTo(["AI", "Azure", "News", "Machine Learning", "Cloud"]);
         dto.Excerpt.Should().Be("Test excerpt");
         dto.ExternalUrl.Should().Be("https://example.com");
         dto.VideoId.Should().BeNull();
@@ -84,8 +84,8 @@ public class ContentItemExtensionsTests
             Author = "Test Author",
             DateEpoch = 1705305600,
             CollectionName = "news",
-            Sections = ["GitHub Copilot"],
-            Tags = ["demo"],
+            SectionNames = ["github-copilot"],
+            Tags = ["GitHub Copilot", "News", "demo"],
             RenderedHtml = "<p>Test</p>",
             Excerpt = "Test excerpt",
             VideoId = "abc123"
@@ -97,7 +97,7 @@ public class ContentItemExtensionsTests
 
         // Assert
         dto.VideoId.Should().Be("abc123");
-        dto.PrimarySection.Should().Be("GitHub Copilot");
+        dto.PrimarySection.Should().Be("github-copilot");
     }
 
     [Fact]
@@ -113,8 +113,8 @@ public class ContentItemExtensionsTests
             DateEpoch = 1705305600,
             CollectionName = "news",
             AltCollection = "ghc-features",
-            Sections = ["GitHub Copilot"],
-            Tags = ["features"],
+            SectionNames = ["github-copilot"],
+            Tags = ["GitHub Copilot", "News", "features"],
             RenderedHtml = "<p>Test</p>",
             Excerpt = "Test excerpt"
         };
@@ -125,7 +125,7 @@ public class ContentItemExtensionsTests
 
         // Assert
         dto.AltCollection.Should().Be("ghc-features");
-        dto.PrimarySection.Should().Be("GitHub Copilot");
+        dto.PrimarySection.Should().Be("github-copilot");
     }
 
     [Fact]
@@ -146,9 +146,9 @@ public class ContentItemExtensionsTests
         dto.DateEpoch.Should().Be(1705305600);
         dto.DateIso.Should().Be("2024-01-15");
         dto.CollectionName.Should().Be("news");
-        dto.Sections.Should().BeEquivalentTo(["AI", "Azure"]);
-        dto.PrimarySection.Should().Be("AI");
-        dto.Tags.Should().BeEquivalentTo(["machine-learning", "cloud"]);
+        dto.SectionNames.Should().BeEquivalentTo(["ai", "azure"]);
+        dto.PrimarySection.Should().Be("ai");
+        dto.Tags.Should().BeEquivalentTo(["AI", "Azure", "News", "Machine Learning", "Cloud"]);
         dto.RenderedHtml.Should().Be("<p>Test content</p>");
         dto.Excerpt.Should().Be("Test excerpt");
         dto.ExternalUrl.Should().Be("https://example.com");
@@ -185,8 +185,8 @@ public class ContentItemExtensionsTests
                 Author = "Test Author",
                 DateEpoch = 1705305600,
                 CollectionName = "news",
-                Sections = ["AI"],
-                Tags = ["test"],
+                SectionNames = ["ai"],
+                Tags = ["AI", "News", "test"],
                 RenderedHtml = "<p>Test</p>",
                 Excerpt = "Test excerpt"
             }
@@ -200,10 +200,10 @@ public class ContentItemExtensionsTests
         dtos.Should().HaveCount(2);
         dtos[0].Slug.Should().Be("2024-01-15-test-article");
         dtos[0].Title.Should().Be("Test Article");
-        dtos[0].PrimarySection.Should().Be("AI");
+        dtos[0].PrimarySection.Should().Be("ai");
         dtos[1].Slug.Should().Be("2024-01-16-test-article-2");
         dtos[1].Title.Should().Be("Test Article 2");
-        dtos[1].PrimarySection.Should().Be("AI");
+        dtos[1].PrimarySection.Should().Be("ai");
     }
 
     [Fact]

@@ -9,13 +9,13 @@ namespace TechHub.Core.Tests.Helpers;
 public class SectionPriorityHelperTests
 {
     [Theory]
-    [InlineData(new[] { "GitHub Copilot" }, "github-copilot")]
-    [InlineData(new[] { "AI" }, "ai")]
-    [InlineData(new[] { "ML" }, "ml")]
-    [InlineData(new[] { "Coding" }, "coding")]
-    [InlineData(new[] { "Azure" }, "azure")]
-    [InlineData(new[] { "DevOps" }, "devops")]
-    [InlineData(new[] { "Security" }, "security")]
+    [InlineData(new[] { "github-copilot" }, "github-copilot")]
+    [InlineData(new[] { "ai" }, "ai")]
+    [InlineData(new[] { "ml" }, "ml")]
+    [InlineData(new[] { "coding" }, "coding")]
+    [InlineData(new[] { "azure" }, "azure")]
+    [InlineData(new[] { "devops" }, "devops")]
+    [InlineData(new[] { "security" }, "security")]
     public void GetPrimarySectionUrl_ReturnsSectionUrl_ForSingleSection(string[] sectionNames, string expectedUrl)
     {
         // Act
@@ -29,7 +29,7 @@ public class SectionPriorityHelperTests
     public void GetPrimarySectionUrl_ReturnsFirstInPriorityOrder_ForMultipleSections()
     {
         // Arrange - AI appears first in menubar order
-        var sectionNames = new[] { "Azure", "AI", "GitHub Copilot" };
+        var sectionNames = new[] { "azure", "ai", "github-copilot" };
 
         // Act
         var result = SectionPriorityHelper.GetPrimarySectionUrl(sectionNames);
@@ -68,7 +68,7 @@ public class SectionPriorityHelperTests
     public void GetPrimarySectionUrl_IsCaseInsensitive()
     {
         // Arrange
-        var sectionNames = new[] { "github copilot", "AZURE" };
+        var sectionNames = new[] { "github-copilot", "azure" };
 
         // Act
         var result = SectionPriorityHelper.GetPrimarySectionUrl(sectionNames);
@@ -78,13 +78,13 @@ public class SectionPriorityHelperTests
     }
 
     [Theory]
-    [InlineData(new[] { "GitHub Copilot" }, "GitHub Copilot")]
-    [InlineData(new[] { "AI" }, "AI")]
-    [InlineData(new[] { "ML" }, "ML")]
-    [InlineData(new[] { "Coding" }, "Coding")]
-    [InlineData(new[] { "Azure" }, "Azure")]
-    [InlineData(new[] { "DevOps" }, "DevOps")]
-    [InlineData(new[] { "Security" }, "Security")]
+    [InlineData(new[] { "github-copilot" }, "github-copilot")]
+    [InlineData(new[] { "ai" }, "ai")]
+    [InlineData(new[] { "ml" }, "ml")]
+    [InlineData(new[] { "coding" }, "coding")]
+    [InlineData(new[] { "azure" }, "azure")]
+    [InlineData(new[] { "devops" }, "devops")]
+    [InlineData(new[] { "security" }, "security")]
     public void GetPrimarySectionName_ReturnsSectionName_ForSingleSection(string[] sectionNames, string expectedName)
     {
         // Act
@@ -98,13 +98,13 @@ public class SectionPriorityHelperTests
     public void GetPrimarySectionName_ReturnsFirstInPriorityOrder_ForMultipleSections()
     {
         // Arrange - GitHub Copilot appears first in menubar order
-        var sectionNames = new[] { "Azure", "AI", "GitHub Copilot" };
+        var sectionNames = new[] { "azure", "ai", "github-copilot" };
 
         // Act
         var result = SectionPriorityHelper.GetPrimarySectionName(sectionNames);
 
         // Assert
-        result.Should().Be("GitHub Copilot");
+        result.Should().Be("github-copilot");
     }
 
     [Fact]
@@ -117,7 +117,7 @@ public class SectionPriorityHelperTests
         var result = SectionPriorityHelper.GetPrimarySectionName(sectionNames);
 
         // Assert
-        result.Should().Be("All");
+        result.Should().Be("all");
     }
 
     [Fact]
@@ -130,7 +130,7 @@ public class SectionPriorityHelperTests
         var result = SectionPriorityHelper.GetPrimarySectionName(sectionNames);
 
         // Assert
-        result.Should().Be("All");
+        result.Should().Be("all");
     }
 
     [Fact]
@@ -140,7 +140,7 @@ public class SectionPriorityHelperTests
         // GitHub Copilot, AI, ML, Coding, Azure, DevOps, Security
 
         // Arrange - Test with all sections in reverse order
-        var sectionNames = new[] { "Security", "DevOps", "Azure", "Coding", "ML", "AI", "GitHub Copilot" };
+        var sectionNames = new[] { "security", "devops", "azure", "coding", "ml", "ai", "github-copilot" };
 
         // Act
         var result = SectionPriorityHelper.GetPrimarySectionUrl(sectionNames);
@@ -166,20 +166,20 @@ public class SectionPriorityHelperTests
     public void GetPrimarySectionName_ReturnsAll_ForRoundupsCollection()
     {
         // Arrange - Roundups content may have various section names
-        var sectionNames = new[] { "AI", "GitHub Copilot", "Azure" };
+        var sectionNames = new[] { "ai", "github-copilot", "azure" };
 
         // Act - Pass "roundups" as collection name
         var result = SectionPriorityHelper.GetPrimarySectionName(sectionNames, "roundups");
 
-        // Assert - Should always return "All" regardless of section names
-        result.Should().Be("All", "roundups always belong to the 'All' section");
+        // Assert - Should always return "all" regardless of section names
+        result.Should().Be("all", "roundups always belong to the 'all' section");
     }
 
     [Fact]
     public void GetPrimarySectionUrl_RespectsSections_ForNonRoundupsCollections()
     {
         // Arrange
-        var sectionNames = new[] { "GitHub Copilot" };
+        var sectionNames = new[] { "github-copilot" };
 
         // Act - Pass a non-roundups collection name
         var result = SectionPriorityHelper.GetPrimarySectionUrl(sectionNames, "news");

@@ -67,7 +67,7 @@ internal static class ContentEndpoints
         {
             // Both filters: get by collection first (smaller dataset), then filter by section title
             var collectionContent = await contentRepository.GetByCollectionAsync(collectionName, cancellationToken);
-            content = [.. collectionContent.Where(c => c.Sections.Contains(sectionName, StringComparer.OrdinalIgnoreCase))];
+            content = [.. collectionContent.Where(c => c.SectionNames.Contains(sectionName, StringComparer.OrdinalIgnoreCase))];
         }
         else if (!string.IsNullOrWhiteSpace(sectionName))
         {
@@ -118,8 +118,9 @@ internal static class ContentEndpoints
 
         // Validate that the item belongs to the requested section
         // "All" section accepts all content, specific sections only accept matching section names
+        // ContentItem.SectionNames contains lowercase section names (e.g., "ai", "github-copilot")
         var isValidForSection = section.Name.Equals("all", StringComparison.OrdinalIgnoreCase) ||
-                                item.Sections.Contains(section.Name, StringComparer.OrdinalIgnoreCase);
+                                item.SectionNames.Contains(section.Name, StringComparer.OrdinalIgnoreCase);
 
         if (!isValidForSection)
         {
@@ -137,8 +138,8 @@ internal static class ContentEndpoints
             DateIso = item.DateIso,
             CollectionName = item.CollectionName,
             AltCollection = item.AltCollection,
-            Sections = item.Sections,
-            PrimarySection = TechHub.Core.Helpers.SectionPriorityHelper.GetPrimarySectionName(item.Sections, item.CollectionName),
+            SectionNames = item.SectionNames,
+            PrimarySection = TechHub.Core.Helpers.SectionPriorityHelper.GetPrimarySectionName(item.SectionNames, item.CollectionName),
             Tags = item.Tags,
             Excerpt = item.Excerpt,
             RenderedHtml = item.RenderedHtml,
@@ -189,7 +190,7 @@ internal static class ContentEndpoints
                 .Select(s => s.Title)
                 .ToHashSet(StringComparer.OrdinalIgnoreCase);
 
-            results = results.Where(c => c.Sections.Any(sectionTitle => validSectionTitles.Contains(sectionTitle)));
+            results = results.Where(c => c.SectionNames.Any(sectionTitle => validSectionTitles.Contains(sectionTitle)));
         }
 
         // Filter by collections
@@ -237,7 +238,7 @@ internal static class ContentEndpoints
     /// </summary>
     private static ContentItemDto MapToDto(Core.Models.ContentItem item)
     {
-        var primarySectionUrl = TechHub.Core.Helpers.SectionPriorityHelper.GetPrimarySectionUrl(item.Sections, item.CollectionName);
+        var primarySectionUrl = TechHub.Core.Helpers.SectionPriorityHelper.GetPrimarySectionUrl(item.SectionNames, item.CollectionName);
 
         return new ContentItemDto
         {
@@ -249,8 +250,8 @@ internal static class ContentEndpoints
             DateIso = item.DateIso,
             CollectionName = item.CollectionName,
             AltCollection = item.AltCollection,
-            Sections = item.Sections,
-            PrimarySection = TechHub.Core.Helpers.SectionPriorityHelper.GetPrimarySectionName(item.Sections, item.CollectionName),
+            SectionNames = item.SectionNames,
+            PrimarySection = TechHub.Core.Helpers.SectionPriorityHelper.GetPrimarySectionName(item.SectionNames, item.CollectionName),
             Tags = item.Tags,
             Excerpt = item.Excerpt,
             ExternalUrl = item.ExternalUrl,
