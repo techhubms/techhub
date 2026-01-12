@@ -371,4 +371,54 @@ public class TechHubApiClient(HttpClient httpClient, ILogger<TechHubApiClient> l
             throw;
         }
     }
+
+    /// <summary>
+    /// Get all custom pages
+    /// </summary>
+    public virtual async Task<IEnumerable<CustomPageDto>?> GetAllCustomPagesAsync(CancellationToken cancellationToken = default)
+    {
+        try
+        {
+            _logger.LogInformation("Fetching all custom pages from API");
+            var pages = await _httpClient.GetFromJsonAsync<IEnumerable<CustomPageDto>>(
+                "/api/custom-pages",
+                cancellationToken);
+
+            _logger.LogInformation("Successfully fetched {Count} custom pages", pages?.Count() ?? 0);
+            return pages;
+        }
+        catch (HttpRequestException ex)
+        {
+            _logger.LogError(ex, "Failed to fetch custom pages from API");
+            throw;
+        }
+    }
+
+    /// <summary>
+    /// Get a specific custom page by slug
+    /// </summary>
+    public virtual async Task<CustomPageDetailDto?> GetCustomPageAsync(string slug, CancellationToken cancellationToken = default)
+    {
+        try
+        {
+            _logger.LogInformation("Fetching custom page: {Slug}", slug);
+            var response = await _httpClient.GetAsync($"/api/custom-pages/{slug}", cancellationToken);
+
+            // Return null for 404 (not found is a valid state)
+            if (response.StatusCode == System.Net.HttpStatusCode.NotFound)
+            {
+                _logger.LogWarning("Custom page not found: {Slug}", slug);
+                return null;
+            }
+
+            response.EnsureSuccessStatusCode();
+            var page = await response.Content.ReadFromJsonAsync<CustomPageDetailDto>(cancellationToken: cancellationToken);
+            return page;
+        }
+        catch (HttpRequestException ex)
+        {
+            _logger.LogError(ex, "Failed to fetch custom page {Slug}", slug);
+            throw;
+        }
+    }
 }

@@ -50,7 +50,7 @@
         try
         {
             sectionData = await ApiClient.GetSectionAsync("ai");
-            customPage = await ApiClient.GetCustomPageAsync("ai-sdlc");
+            customPage = await ApiClient.GetCustomPageAsync("sdlc");
 
             if (sectionData == null || customPage == null)
             {

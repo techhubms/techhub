@@ -20,7 +20,6 @@ public sealed class FileBasedContentRepository : IContentRepository, IDisposable
     private IReadOnlyList<ContentItem>? _cachedAllItems;
     private readonly SemaphoreSlim _loadLock = new(1, 1);
 
-    // Valid collection directories per Jekyll configuration
     private static readonly string[] _validCollections =
     [
         "_news",

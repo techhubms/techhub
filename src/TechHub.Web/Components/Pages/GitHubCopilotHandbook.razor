@@ -54,7 +54,7 @@
         try
         {
             sectionData = await ApiClient.GetSectionAsync("github-copilot");
-            customPage = await ApiClient.GetCustomPageAsync("github-copilot-handbook");
+            customPage = await ApiClient.GetCustomPageAsync("handbook");
 
             if (sectionData == null || customPage == null)
             {

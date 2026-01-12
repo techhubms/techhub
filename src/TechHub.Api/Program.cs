@@ -34,6 +34,7 @@ builder.Services.Configure<AppSettings>(builder.Configuration.GetSection("AppSet
 builder.Services.AddSingleton<IMarkdownService, MarkdownService>();
 builder.Services.AddSingleton<ISectionRepository, ConfigurationBasedSectionRepository>();
 builder.Services.AddSingleton<IContentRepository, FileBasedContentRepository>();
+builder.Services.AddSingleton<ICustomPageRepository, FileBasedCustomPageRepository>();
 builder.Services.AddSingleton<IRssService, RssService>();
 builder.Services.AddSingleton<ISectionMappingService, SectionMappingService>();
 
@@ -78,6 +79,7 @@ app.UseCors();
 // Map API endpoints
 app.MapSectionsEndpoints();
 app.MapContentEndpoints();
+app.MapCustomPagesEndpoints();
 app.MapRssEndpoints();
 
 // Health check endpoint
