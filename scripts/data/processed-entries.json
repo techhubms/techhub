@@ -23260,5 +23260,17 @@
     "timestamp": "2026-01-12 17:07:20 +00:00",
     "canonical_url": "https://github.blog/ai-and-ml/generative-ai/want-better-ai-outputs-try-context-engineering/",
     "reason": "Succesfully added: Assigned 'AI' category as the content focuses on AI-assisted development and techniques to improve large language model outputs in software development (AI inclusion rules 1 and 4). Assigned 'GitHub Copilot' because the article is specifically about leveraging GitHub Copilot's features and providing best practices for its use (GitHub Copilot inclusion rules 1-4). Coding category was not included as the article is about Copilot features and workflow design for developers, not direct programming techniques. No Azure, DevOps, ML, or Security content is present."
+  },
+  {
+    "timestamp": "2026-01-12 19:06:03 +00:00",
+    "collection": "news",
+    "reason": "Succesfully added: I assigned the 'Coding' category because the blog post provides detailed, code-focused guidance on implementing Android widgets with .NET MAUI, covering C#, RemoteViews, AppWidgetProvider, intents, configuration, and code best practices. The content is technical, focused on development, and does not fit AI, DevOps, Azure, ML, or Security categories. There are no references to Azure services, machine learning, DevOps workflows, or security topics. The tags draw from core Microsoft and Android technical terminology, per rules. No generic exclusion rules applied.",
+    "canonical_url": "https://devblogs.microsoft.com/dotnet/how-to-build-android-widgets-with-dotnet-maui/"
+  },
+  {
+    "timestamp": "2026-01-12 19:06:34 +00:00",
+    "collection": "news",
+    "reason": "Succesfully added: Assigned the 'Azure' category because OneLake diagnostics immutability directly leverages Azure Blob Storage (Azure category rule 1), with deployment and configuration handled via Azure services; also included 'Security' because this feature is focused on log integrity, compliance, governance, and tamper-proofing for audit and forensic purposes (Security rules 1, 2, 4, and 7). Did not assign 'ML' because the post does not discuss data science or analytics development, but rather operational security and compliance. The 'AI', 'GitHub Copilot', 'DevOps', and 'Coding' categories were not added since the content is not about AI, code development, CI/CD, or software developer practices but about security features and governance for storage and logs.",
+    "canonical_url": "https://blog.fabric.microsoft.com/en-US/blog/gain-even-more-trust-and-compliance-with-onelake-diagnostics-immutability-generally-available/"
   }
 ]

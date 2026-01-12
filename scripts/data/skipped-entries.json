@@ -11127,5 +11127,23 @@
     "timestamp": "2026-01-12 17:06:56 +00:00",
     "canonical_url": "https://www.microsoft.com/en-us/industry/blog/healthcare/2026/01/11/bridging-the-gap-between-ai-and-medicine-claude-in-microsoft-foundry-advances-capabilities-for-healthcare-and-life-sciences-customers/",
     "reason": "No categories found: No categories assigned. The content is predominantly about AI applications in medicine, specifically highlighting 'Claude in Microsoft Foundry' and the expansion of Microsoft Dragon Copilot for radiology reporting workflows. Both 'Claude' and 'Dragon Copilot' are medical/business productivity solutions rather than developer-focused AI or coding platforms. There is no discussion of development practices, AI engineering, coding integration, or use of Microsoft AI services from a developer perspective. According to the generic exclusion rules and the critical distinction for Copilot products, business productivity or healthcare workflow-focused copilot tools (such as Microsoft Dragon Copilot) are excluded as they do not target coding, AI engineering, or development. Therefore, the content does not qualify for any predefined categories."
+  },
+  {
+    "collection": "news",
+    "timestamp": "2026-01-12 18:03:44 +00:00",
+    "reason": "No categories found: No categories assigned. The content is an announcement about changes to GitHub account management features—the deprecation of converting a personal user account to an organization and the introduction of a new organization migration flow. The content covers account/profile management and repository migration but does not discuss topics that fit the defined categories: there are no details on DevOps (beyond generic migration), coding, AI/ML, Azure, or security implementation. The announcement is procedural and administrative in focus (GitHub account and organization management), which falls outside all inclusion rules.",
+    "canonical_url": "https://github.blog/changelog/2026-01-12-deprecation-of-user-to-organization-account-transformation"
+  },
+  {
+    "collection": "videos",
+    "timestamp": "2026-01-12 18:04:15 +00:00",
+    "reason": "No categories found: All category arrays are left empty due to generic exclusion rules. The content (a video discussion from Microsoft Ignite with Aviva's Bry Dillon) is primarily focused on innovation, business model changes, industry-wide challenges, and high-level strategies such as adaptability and collaboration within the manufacturing and process industries. There are mentions of AI, technology adoption, and general trends, but no detailed discussion of Microsoft technical implementation, development tools, architecture, or engineering practices is described. As per the business strategy and executive content exclusion rule, content that focuses on high-level organizational strategy, industry challenges, and executive guidance without detailed technical implementation is excluded. No technical depth or actionable developer/architecture guidance is evident in the provided description. Additionally, the full detailed content is missing (content is null), so no technical content for category assessment is possible.",
+    "canonical_url": "https://www.youtube.com/watch?v=wGEhMgl1ddA"
+  },
+  {
+    "timestamp": "2026-01-12 19:07:12 +00:00",
+    "collection": "videos",
+    "reason": "No categories found: Excluded all categories due to generic exclusion rule: the provided content lacks any actual technical content, details, or substantive explanation (the 'content' field is null and the description is a high-level business summary). Without the actual video transcript or substantive technical details, there is insufficient basis to evaluate inclusion for any Microsoft development or technical categories. The description is business-focused, describing productivity improvements and automation in general terms without any evidence or detail about Microsoft technologies, development practices, or technical AI implementation. Per the workflow, if information is insufficient to confidently assign categories, all categories must be left empty.",
+    "canonical_url": "https://www.youtube.com/watch?v=RmC7vtllPqI"
   }
 ]
