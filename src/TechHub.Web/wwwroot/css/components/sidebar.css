@@ -12,7 +12,7 @@
    All interactive button styles are scoped to .sidebar to ensure they only apply
    within sidebar contexts, preventing style conflicts with main content.
    
-   Used across: Home, Section, SectionCollection, ContentItem pages
+   Used across: Home, Category, CategoryContentType, ContentItem pages
    ============================================================================ */
 
 /* ============================================================================
@@ -22,7 +22,7 @@
 .sidebar {
   position: sticky;
   top: 100px;
-  /* Match collection nav and content detail sidebar */
+  /* Match content type nav and content detail sidebar */
   height: fit-content;
   align-self: flex-start;
   display: flex;
@@ -83,8 +83,8 @@
   color: var(--color-text-secondary);
 }
 
-.sidebar-item-section,
-.sidebar-item-collection {
+.sidebar-item-category,
+.sidebar-item-contenttype {
   color: var(--color-text-secondary);
 }
 
@@ -247,6 +247,13 @@
   border-color: var(--color-purple-bright);
   color: var(--color-text-on-emphasis);
   transform: translateY(-2px);
+}
+
+/* Tags cloud container - spacing between tags */
+.sidebar-tags-cloud {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-1);
 }
 
 /* Highlight Button - Featured/highlighted content with accent */

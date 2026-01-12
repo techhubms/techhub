@@ -21,7 +21,7 @@
 {
     <div class="sidebar-section @CssClass">
         <h2 class="sidebar-h2">@Title</h2>
-        <div class="tags-cloud">
+        <div class="sidebar-tags-cloud">
             @foreach (var tag in Tags.Take(MaxTags ?? int.MaxValue))
             {
                 <a href="@BaseUrl?tags=@Uri.EscapeDataString(tag)" class="sidebar-tag-button">@tag</a>

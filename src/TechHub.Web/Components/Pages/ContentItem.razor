@@ -12,28 +12,10 @@
     <HeadContent>
         <link rel="canonical"
             href="@($"https://tech.hub.ms/{SectionName.ToLowerInvariant()}/{Collection.ToLowerInvariant()}/{ItemId.ToLowerInvariant()}")" />
-        <link rel="alternate" type="application/rss+xml" title="Tech Hub - @(sectionData.Title) - RSS Feed"
+        <link rel="alternate" type="application/rss+xml" title="Tech Hub - @sectionData.Title - RSS Feed"
             href="@($"{sectionData.Url}/feed.xml")" />
     </HeadContent>
-}
 
-@if (isLoading)
-{
-    <div class="loading">
-        <p>Loading content...</p>
-    </div>
-}
-else if (errorMessage != null)
-{
-    <div class="error">
-        <h2>Error Loading Content</h2>
-        <p>@errorMessage</p>
-        <button @onclick="LoadContent">Retry</button>
-    </div>
-}
-else if (sectionData != null && item != null)
-{
-    @* Category Header (same as section pages) *@
     <PageHeader Section="@sectionData" />
 
     <div class="page-with-sidebar">
@@ -42,20 +24,40 @@ else if (sectionData != null && item != null)
             @* Collections Navigation *@
             <SidebarCollectionNav Section="@sectionData" SelectedCollection="@Collection" />
 
-            @* Tags Section *@
-            <SidebarTags Tags="@item.Tags" Title="Tags" BaseUrl="@($"/{SectionName.ToLowerInvariant()}")"
-                CssClass="article-tags" />
+            @* Tags Section - only show when item is loaded *@
+            @if (item != null)
+            {
+                <SidebarTags Tags="@item.Tags" Title="Tags" BaseUrl="@($"/{SectionName.ToLowerInvariant()}")"
+                    CssClass="article-tags" />
+            }
         </aside>
 
         @* Main content area *@
         <main class="page-main-content" id="top">
-            <ContentItemDetail Item="@item" />
+            @if (isLoadingItem)
+            {
+                <div class="loading">
+                    <p>Loading content...</p>
+                </div>
+            }
+            else if (errorMessage != null)
+            {
+                <div class="error">
+                    <h2>Error Loading Content</h2>
+                    <p>@errorMessage</p>
+                    <button @onclick="LoadItem">Retry</button>
+                </div>
+            }
+            else if (item != null)
+            {
+                <ContentItemDetail Item="@item" />
 
-            <nav class="content-navigation">
-                <a href="#top" @onclick="ScrollToTop" @onclick:preventDefault class="nav-button primary">Back to Top</a>
-                <a href="/@(SectionName.ToLowerInvariant())" class="nav-button secondary">Back to
-                    @GetSectionDisplayName(SectionName)</a>
-            </nav>
+                <nav class="content-navigation">
+                    <a href="#top" @onclick="ScrollToTop" @onclick:preventDefault class="nav-button primary">Back to Top</a>
+                    <a href="/@(SectionName.ToLowerInvariant())" class="nav-button secondary">Back to
+                        @GetSectionDisplayName(SectionName)</a>
+                </nav>
+            }
         </main>
     </div>
 }
@@ -72,39 +74,56 @@ else if (sectionData != null && item != null)
 
     private SectionDto? sectionData;
     private ContentItemDetailDto? item;
-    private bool isLoading = true;
+    private bool isLoadingItem = true;
     private string? errorMessage;
 
     protected override async Task OnInitializedAsync()
     {
-        await LoadContent();
+        // Load section first (SSR)
+        await LoadSection();
+        // Then load item (can be async)
+        await LoadItem();
     }
 
     protected override async Task OnParametersSetAsync()
     {
         if (!string.IsNullOrEmpty(SectionName) && !string.IsNullOrEmpty(Collection) && !string.IsNullOrEmpty(ItemId))
         {
-            await LoadContent();
+            // Reload section if changed
+            if (sectionData != null && sectionData.Name != SectionName)
+            {
+                await LoadSection();
+            }
+            await LoadItem();
         }
     }
 
-    private async Task LoadContent()
+    private async Task LoadSection()
     {
-        isLoading = true;
+        try
+        {
+            sectionData = await ApiClient.GetSectionAsync(SectionName.ToLowerInvariant());
+            if (sectionData == null)
+            {
+                Navigation.NavigateTo("/not-found");
+            }
+        }
+        catch
+        {
+            Navigation.NavigateTo("/not-found");
+        }
+    }
+
+    private async Task LoadItem()
+    {
+        isLoadingItem = true;
         errorMessage = null;
         StateHasChanged();
 
         try
         {
-            // Load section and item in parallel
-            var sectionTask = ApiClient.GetSectionAsync(SectionName.ToLowerInvariant());
-            var itemTask = ApiClient.GetContentDetailAsync(SectionName.ToLowerInvariant(), Collection.ToLowerInvariant(),
-            ItemId.ToLowerInvariant());
-
-            await Task.WhenAll(sectionTask, itemTask);
-
-            sectionData = await sectionTask;
-            item = await itemTask;
+            item = await ApiClient.GetContentDetailAsync(SectionName.ToLowerInvariant(), Collection.ToLowerInvariant(),
+                ItemId.ToLowerInvariant());
         }
         catch (Exception ex)
         {
@@ -112,7 +131,7 @@ else if (sectionData != null && item != null)
         }
         finally
         {
-            isLoading = false;
+            isLoadingItem = false;
             StateHasChanged();
         }
     }

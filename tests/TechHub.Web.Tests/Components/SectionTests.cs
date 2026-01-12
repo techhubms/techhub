@@ -14,7 +14,7 @@ namespace TechHub.Web.Tests.Components;
 public class SectionTests : TestContext
 {
     [Fact]
-    public void Section_RendersWithSkeletonLayout()
+    public async Task Section_RendersWithPageStructure()
     {
         // Arrange
         var mockApiClient = new Mock<TechHubApiClient>(
@@ -23,11 +23,33 @@ public class SectionTests : TestContext
             Mock.Of<ILogger<TechHubApiClient>>()
         );
 
-        // Setup delayed response to keep components in loading state
-        var tcs = new TaskCompletionSource<SectionDto?>();
+        var sectionDto = new SectionDto
+        {
+            Name = "ai",
+            Title = "Artificial Intelligence",
+            Description = "AI and machine learning content",
+            Url = "/ai",
+            Category = "ai",
+            BackgroundImage = "/images/ai-bg.jpg",
+            Collections =
+            [
+                new CollectionReferenceDto
+                {
+                    Title = "News",
+                    Name = "news",
+                    Url = "/ai/news",
+                    Description = "Latest AI news"
+                }
+            ]
+        };
+
         mockApiClient
-            .Setup(x => x.GetSectionAsync(It.IsAny<string>()))
-            .Returns(tcs.Task);
+            .Setup(x => x.GetSectionAsync("ai"))
+            .ReturnsAsync(sectionDto);
+
+        mockApiClient
+            .Setup(x => x.GetContentAsync(It.IsAny<string?>(), "all"))
+            .ReturnsAsync([]);
 
         Services.AddSingleton(mockApiClient.Object);
         Services.AddSingleton(Mock.Of<Microsoft.JSInterop.IJSRuntime>());
@@ -36,13 +58,22 @@ public class SectionTests : TestContext
         var cut = RenderComponent<Section>(parameters => parameters
             .Add(p => p.SectionName, "ai"));
 
-        // Assert - Verify skeleton layout structure is present
-        var grid = cut.Find(".section-page-grid");
-        Assert.NotNull(grid);
+        // Wait for async rendering
+        await Task.Delay(200);
 
-        // Verify all three skeleton components are present
-        var skeletons = cut.FindAll(".skeleton");
-        Assert.True(skeletons.Count > 0, "Expected skeleton placeholders to be visible during loading");
+        // Assert - Verify page structure is rendered with section data
+        var pageStructure = cut.Find(".page-with-sidebar");
+        Assert.NotNull(pageStructure);
+
+        var sidebar = cut.Find(".sidebar");
+        Assert.NotNull(sidebar);
+
+        var mainContent = cut.Find(".page-main-content");
+        Assert.NotNull(mainContent);
+
+        // Verify section header is displayed
+        var markup = cut.Markup;
+        Assert.Contains("Artificial Intelligence", markup);
     }
 
     [Fact]

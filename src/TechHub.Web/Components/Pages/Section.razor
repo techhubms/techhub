@@ -5,48 +5,18 @@
 @inject TechHubApiClient ApiClient
 @inject NavigationManager Navigation
 
-<PageTitle>@(section != null ? section.Title : GetSectionDisplayName(SectionName)) - Tech Hub</PageTitle>
-
-@if (section != null)
+@if (sectionData != null)
 {
+    <PageTitle>@sectionData.Title - Tech Hub</PageTitle>
+
     <HeadContent>
-        <link rel="alternate" type="application/rss+xml" title="Tech Hub - @(section.Title) - RSS Feed"
-            href="@($"{section.Url}/feed.xml")" />
+        <link rel="alternate" type="application/rss+xml" title="Tech Hub - @sectionData.Title - RSS Feed"
+            href="@($"{sectionData.Url}/feed.xml")" />
     </HeadContent>
-}
 
-<div class="page-with-sidebar">
-    @if (isLoadingSection)
-    {
-        @* Show skeleton while loading section data *@
-        <header class="section-header skeleton-header">
-            <div class="section-header-content">
-                <div class="skeleton skeleton-title"></div>
-                <div class="skeleton skeleton-description"></div>
-            </div>
-        </header>
+    <PageHeader Section="@sectionData" />
 
-        <nav class="collection-nav">
-            <h2>Collections</h2>
-            <ul class="skeleton-nav">
-                <li>
-                    <div class="skeleton skeleton-nav-item"></div>
-                </li>
-                <li>
-                    <div class="skeleton skeleton-nav-item"></div>
-                </li>
-                <li>
-                    <div class="skeleton skeleton-nav-item"></div>
-                </li>
-            </ul>
-        </nav>
-    }
-    else if (section != null)
-    {
-        var sectionData = section;
-        @* Pass section data to children - no redundant API calls *@
-        <PageHeader Section="@sectionData" />
-
+    <div class="page-with-sidebar">
         <aside class="sidebar">
             <SidebarCollectionNav Section="@sectionData" SelectedCollection="all" />
             <SidebarRssLinks Links="@(new[] { new SidebarRssLinks.RssLink("RSS Feed", $"{sectionData.Url}/feed.xml") })" />
@@ -56,25 +26,14 @@
             <ContentItemsGrid SectionName="@SectionName" CollectionName="all" SectionCategory="@sectionData.Category"
                 Collections="@sectionData.Collections" />
         </main>
-    }
-    else
-    {
-        @* Error state *@
-        <header class="section-header error-header">
-            <div class="section-header-content">
-                <h1 class="page-h1" tabindex="-1">Section Not Found</h1>
-                <p>Unable to load section "@SectionName"</p>
-            </div>
-        </header>
-    }
-</div>
+    </div>
+}
 
 @code {
     [Parameter]
     public string SectionName { get; set; } = null!;
 
-    private SectionDto? section;
-    private bool isLoadingSection = true;
+    private SectionDto? sectionData;
 
     protected override async Task OnInitializedAsync()
     {
@@ -84,8 +43,7 @@
     protected override async Task OnParametersSetAsync()
     {
         // Reload section if section name changed
-        var currentSectionName = section?.Name;
-        if (currentSectionName != null && currentSectionName != SectionName)
+        if (sectionData != null && sectionData.Name != SectionName)
         {
             await LoadSection();
         }
@@ -93,19 +51,17 @@
 
     private async Task LoadSection()
     {
-        isLoadingSection = true;
-
         try
         {
-            section = await ApiClient.GetSectionAsync(SectionName);
+            sectionData = await ApiClient.GetSectionAsync(SectionName);
+            if (sectionData == null)
+            {
+                Navigation.NavigateTo("/not-found");
+            }
         }
         catch
         {
-            section = null;
-        }
-        finally
-        {
-            isLoadingSection = false;
+            Navigation.NavigateTo("/not-found");
         }
     }
 }

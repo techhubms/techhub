@@ -1,4 +1,3 @@
-using System.Text.RegularExpressions;
 using Microsoft.Playwright;
 using TechHub.E2E.Tests.Helpers;
 

@@ -38,7 +38,7 @@ public class SidebarCollectionNavTests : TestContext
 
         // Assert - Component uses <a> tags for SSR navigation
         var links = cut.FindAll("a");
-        Assert.Equal(5, links.Count); // "All" + 3 collections + 1 RSS link
+        Assert.Equal(4, links.Count); // "All" + 3 collections (RSS moved to SidebarRssLinks)
 
         Assert.Contains("All", links[0].TextContent);
         Assert.Contains("News", links[1].TextContent);
@@ -146,9 +146,9 @@ public class SidebarCollectionNavTests : TestContext
     }
 
     [Fact]
-    public void Component_DisplaysRssFeed()
+    public void Component_DoesNotDisplayRssFeed()
     {
-        // Arrange
+        // Arrange - RSS feed moved to separate SidebarRssLinks component
         var collections = new List<CollectionReferenceDto>
         {
             new CollectionReferenceDto { Title = "News", Name = "news", Url = "/ai/news", Description = "", IsCustom = false }
@@ -165,18 +165,14 @@ public class SidebarCollectionNavTests : TestContext
             Collections = collections
         };
 
-        // Act - Component always displays RSS feed in sidebar
+        // Act - Component focuses on collection navigation only
         var cut = RenderComponent<SidebarCollectionNav>(parameters => parameters
             .Add(p => p.Section, sectionDto)
             .Add(p => p.SelectedCollection, "all"));
 
-        // Assert - Should display Subscribe section with RSS feed link
+        // Assert - RSS feed is handled by SidebarRssLinks component
         var markup = cut.Markup;
-        markup.Should().Contain("Subscribe");
-        markup.Should().Contain("RSS Feed");
-
-        var rssLink = cut.FindAll("a").FirstOrDefault(a => a.TextContent.Contains("RSS Feed"));
-        rssLink.Should().NotBeNull();
-        rssLink!.GetAttribute("href").Should().Be("/ai/feed.xml");
+        markup.Should().NotContain("Subscribe");
+        markup.Should().NotContain("RSS Feed");
     }
 }

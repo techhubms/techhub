@@ -2,7 +2,6 @@
 @using TechHub.Core.DTOs
 @using TechHub.Web.Services
 @using static TechHub.Web.Services.SectionHelper
-@inject TechHubApiClient ApiClient
 
 <PageTitle>Tech Hub - Microsoft Technology News & Resources</PageTitle>
 
@@ -85,7 +84,7 @@
 </div>
 
 @code {
-    [Inject] private required TechHubApiClient ApiClient { get; set; }
+    [Inject] public required TechHubApiClient ApiClient { get; set; }
 
     private static readonly SidebarRssLinks.RssLink[] rssLinks = [
     new("RSS Feed - All Content", "/all/feed.xml"),
