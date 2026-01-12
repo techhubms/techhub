@@ -23212,5 +23212,11 @@
     "collection": "videos",
     "timestamp": "2026-01-12 08:04:41 +00:00",
     "reason": "Succesfully added: The content is a technical episode from the Visual Studio Code team focused on integrating and orchestrating AI agents—including Copilot—directly in the editor. 'AI' is assigned because the discussion centers on Microsoft's applied AI within developer tooling (AI rule 1, 4, 5). 'GitHub Copilot' is included since Copilot is discussed as part of agent features (GitHub Copilot rule 1, 2), and 'AI' is thus included per rules. 'Coding' is assigned due to strong emphasis on development workflow, integrating AI agents into code production, and developer-focused guidance (Coding rule 4, 5). No other categories fit; Azure, DevOps, ML, and Security are not directly addressed."
+  },
+  {
+    "canonical_url": "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/identity-bindings-a-cleaner-model-for-multi-cluster-identity-in/ba-p/4478282",
+    "reason": "Succesfully added: Categories assigned as follows: 'Azure' because the entire content focuses on Azure Kubernetes Service (AKS), Managed Identities, and Azure resources (Azure rule 1, 4, 5). 'Security' included due to the focus on secure access to Azure resources, identity management, authorization, and RBAC (Security rules 1, 2, 3, 9). 'DevOps' because the article describes infrastructure as code steps, RBAC automation, and cluster-wide operational improvements (DevOps rules 5, 6, 9). Not assigning 'AI,' 'GitHub Copilot,' 'Coding,' or 'ML,' as there is no discussion of AI services, code development, machine learning, or Copilot tools. The article meets all quality and length standards, and does not trigger any generic exclusion rules.",
+    "collection": "community",
+    "timestamp": "2026-01-12 11:04:49 +00:00"
   }
 ]
