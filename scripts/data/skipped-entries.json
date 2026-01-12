@@ -11145,5 +11145,11 @@
     "collection": "videos",
     "reason": "No categories found: Excluded all categories due to generic exclusion rule: the provided content lacks any actual technical content, details, or substantive explanation (the 'content' field is null and the description is a high-level business summary). Without the actual video transcript or substantive technical details, there is insufficient basis to evaluate inclusion for any Microsoft development or technical categories. The description is business-focused, describing productivity improvements and automation in general terms without any evidence or detail about Microsoft technologies, development practices, or technical AI implementation. Per the workflow, if information is insufficient to confidently assign categories, all categories must be left empty.",
     "canonical_url": "https://www.youtube.com/watch?v=RmC7vtllPqI"
+  },
+  {
+    "reason": "No categories found: Content excluded due to generic exclusion rules. This is an event announcement for Microsoft Marketplace office hours rather than substantive technical content. It primarily invites users to attend a Q&A/live session, describes participation logistics, and does not provide substantial technical information, implementation details, or development-focused instruction. There is no in-depth discussion of Microsoft technologies, technical best practices, or detailed solutions that meet category inclusion criteria. Event announcements and logistics, even if mentioning AI or cloud, do not qualify for categorization per the business strategy and non-technical event guidance.",
+    "collection": "community",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-events/microsoft-marketplace-office-hours-optimize-cloud-cost-and/ec-p/4485127#M667",
+    "timestamp": "2026-01-12 22:03:44 +00:00"
   }
 ]

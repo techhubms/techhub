@@ -23290,5 +23290,11 @@
     "reason": "Succesfully added: Assigned the 'Azure' category because the content is an in-depth technical announcement and guide related to Azure Virtual Desktop, a core Azure service (Azure inclusion rule 1). The post details cloud infrastructure changes, deployment procedures, and administrative actions specific to Azure, which align strictly with Azure category inclusion rules. No AI, ML, DevOps, Coding, Security, or GitHub Copilot content is present. The content type is community, but it is far above the 200-word threshold and meets all technical depth and quality criteria, so no generic exclusion rules were triggered.",
     "collection": "community",
     "canonical_url": "https://techcommunity.microsoft.com/t5/azure-virtual-desktop-blog/now-in-public-preview-azure-virtual-desktop-regional-host-pools/ba-p/4474598"
+  },
+  {
+    "reason": "Succesfully added: Assigned DevOps category because the content discusses changes to developer tools, specifically GitHub Apps' consent flows, which affect authentication and CI/CD setups (DevOps rules 2, 9, and 11). No other categories apply, as the content does not focus on code, Azure, AI, ML, or Security implementation details. The content passed all generic exclusion rules: it's technical, not biographical, not a sales pitch, not business productivity-focused, and is directly about developer tooling.",
+    "timestamp": "2026-01-12 23:03:24 +00:00",
+    "collection": "news",
+    "canonical_url": "https://github.blog/changelog/2026-01-12-selectively-showing-act-on-your-behalf-warning-for-github-apps-is-in-public-preview"
   }
 ]
