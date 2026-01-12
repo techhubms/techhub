@@ -102,7 +102,7 @@ For detailed information about site structure and terminology, see:
 
 - **Missing Frontmatter**: Check requirements in [Markdown Guidelines](../collections/markdown-guidelines.md)
 - **File Naming**: Use `YYYY-MM-DD-title.md` pattern
-- **Categories/Tags**: Verify against site configuration in root [AGENTS.md](../AGENTS.md) Site Terminology section
+- **Sections/Tags**: Verify against site configuration in root [AGENTS.md](../AGENTS.md) Site Terminology section. Note: frontmatter uses `categories` field with Section Titles ("AI", "GitHub Copilot")
 - **Date Formats**: Use ISO 8601 format: `YYYY-MM-DD HH:MM:SS +00:00`
 
 ### Repair Tools
@@ -182,7 +182,7 @@ RSS feeds are configured in `scripts/data/rss-feeds.json`:
       "name": "Microsoft AI Blog",
       "url": "https://blogs.microsoft.com/ai/feed/",
       "output_dir": "_news",
-      "category": "AI",
+      "section": "AI",
       "enabled": true
     }
   ]
@@ -194,7 +194,7 @@ RSS feeds are configured in `scripts/data/rss-feeds.json`:
 - **name**: Human-readable feed identifier
 - **url**: RSS or Atom feed URL
 - **output_dir**: Target collection directory (`_news`, `_blogs`, etc.)
-- **category**: Primary category ("AI" or "GitHub Copilot")
+- **section**: Section Title for categorization ("AI", "GitHub Copilot", etc.) - will be added to the frontmatter `categories` array
 
 **Optional Fields**:
 

@@ -54,7 +54,7 @@ While following these instructions carefully is important, minor formatting issu
 - `canonical_url`: Use the provided URL, but remove any querystring parameters. Do not change the rest of the URL
 - `tags`: Array of relevant keywords from the article formatted as `["Tag 1", "Tag 2", "Tag 3", "Tag++", "-Tag", "A . Tag", "C#", "Hyphen-Tag"]`. Do not use generic terms like 'news' or 'update'. At least 10 if possible, but only if they really fit. Don't make up things. Tags can contain spaces and will be automatically filtered and formatted. **Never include names, GitHub handles, or anything not directly related to the actual content of the video/article as tags**
 - `tags_normalized`: Array of lowercase, normalized versions of the tags for consistent programmatic processing. Generated automatically by PowerShell scripts. Format as `["tag 1", "tag 2", "tag 3", "tagplusplus", "mintag", "a dot tag", "csharp", "hyphen-tag"]` with all lowercase and standardized formatting. Order should be identical to tags.
-- `categories`: Array of strings formatted as `["AI", "GitHub Copilot"]`. Use the exact section names defined in the application configuration. Note: Field name is 'categories' for historical reasons but contains section titles. If you include 'GitHub Copilot', always include 'AI' as well. If unsure, leave empty
+- `categories`: Array of section display names formatted as `["AI", "GitHub Copilot"]`. Use the exact section titles defined in the application configuration. Note: Field name is 'categories' for historical reasons - it contains section titles (display names like "AI", "GitHub Copilot") which are automatically mapped to section names (lowercase identifiers like "ai", "github-copilot") during content processing. If you include 'GitHub Copilot', always include 'AI' as well. If unsure, leave empty
 - `feed_name`: Use provided feed name. Omit if not provided
 - `feed_url`: Use provided feed url. Omit if not provided
 - `permalink`: Is `/filename.html`. Replace `.md` with `.html` from the filename. The section is the target directory, without an underscore (e.g. `roundups`, `news`, `videos`, etc)
@@ -62,6 +62,11 @@ While following these instructions carefully is important, minor formatting issu
 - `viewing_mode`: Determines how content is displayed on the site:
   - `"internal"`: Self-contained content displayed fully on site (videos, roundups)
   - `"external"`: Content that links to original sources (news, posts, community, etc)
+- `video_id`: YouTube video identifier (e.g., `"dQw4w9WgXcQ"`). Required for video content. Omit for non-video content
+- `alt_collection`: Alternative collection name for subfolder organization (e.g., `"ghc-features"`, `"vscode-updates"`). Used when content is organized in subfolders within a collection directory like `_videos/ghc-features/`. Omit if content is in the root collection folder
+- `plans`: Array of GitHub Copilot subscription tiers this feature supports. Format as `["Free", "Business", "Enterprise"]`. Used only for GitHub Copilot Features page content. Omit for regular content
+- `ghes_support`: Boolean indicating GitHub Enterprise Server support (`true`/`false`). Used only for GitHub Copilot Features page content. Omit for regular content
+- `coming_soon`: Boolean indicating if a feature is not yet released (`true`/`false`). Used for roadmap and preview features. Omit for released content
 
 **Date and Filename Rules:**
 

@@ -77,16 +77,15 @@ public sealed class ConfigurationBasedSectionRepository : ISectionRepository
     {
         return new Section
         {
-            Id = key,
+            Name = key,
             Title = config.Title,
             Description = config.Description,
             Url = config.Url,
-            Category = config.Category,
             BackgroundImage = config.Image,
-            Collections = config.Collections.Select(c => new Collection
+            Collections = config.Collections.Select(c => new CollectionReference
             {
                 Title = c.Title,
-                CollectionName = c.Collection,
+                Name = c.Name,
                 Url = c.Url,
                 Description = c.Description,
                 IsCustom = c.IsCustom
@@ -160,8 +159,8 @@ public sealed class FileBasedContentRepository : IContentRepository
         
         // Filter by section URL (already sorted by GetAllAsync)
         var filtered = allContent
-            .Where(c => c.Categories.Any(cat => 
-                cat.Equals(sectionUrl.TrimStart('/'), StringComparison.OrdinalIgnoreCase)))
+            .Where(c => c.SectionNames.Any(sectionName => 
+                sectionName.Equals(sectionUrl.TrimStart('/'), StringComparison.OrdinalIgnoreCase)))
             .ToList()
             .AsReadOnly();
         
@@ -335,8 +334,8 @@ public class MarkdownService : IMarkdownService
                 Title = metadata.Title,
                 Author = metadata.Author,
                 DateEpoch = dateEpoch,
-                Collection = collectionName,
-                Categories = metadata.Categories.AsReadOnly(),
+                CollectionName = collectionName,
+                SectionNames = metadata.Categories.AsReadOnly(),
                 Tags = NormalizeTags(metadata.Tags).AsReadOnly(),
                 Excerpt = excerpt,
                 RenderedHtml = html,

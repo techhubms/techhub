@@ -1,5 +1,7 @@
 # Filtering System
 
+**⚠️ NOTE**: This document contains implementation details from the Jekyll version and needs major revision to reflect the current .NET/Blazor implementation. Terminology has been updated but code examples may be outdated.
+
 This document explains how the Tech Hub filtering system works to help users discover content.
 
 ## Filtering System Overview
@@ -274,7 +276,7 @@ The text search functionality provides real-time content filtering based on user
 - **Item titles**: Full title text content
 - **Item descriptions**: Meta descriptions and excerpts  
 - **Author and meta information**: Author names, publication dates, and metadata
-- **Tags and categories**: All associated tags and category data
+- **Tags and sections**: All associated tags and section data
 
 **Search Features**:
 
@@ -969,7 +971,7 @@ Tag data is processed dynamically by the `tag_filters.rb` plugin, which provides
 
 - **Filter Buttons**: Pre-rendered with accurate counts from plugin data
 - **Content Items**: Limited dataset with data attributes for JavaScript
-- **Data Attributes**: `data-tags`, `data-epoch`, `data-collection`, `data-categories` for client-side filtering
+- **Data Attributes**: `data-tags`, `data-epoch`, `data-collection`, `data-section-names` for client-side filtering
 - **Graceful Degradation**: Fully functional without JavaScript
 
 **Example Generated HTML**:
@@ -983,7 +985,7 @@ Tag data is processed dynamically by the `tag_filters.rb` plugin, which provides
     data-tags="github copilot,ai,visual studio code"
     data-epoch="1752876000"
     data-collection="news"
-    data-categories="ai,github copilot">
+    data-section-names="ai,github-copilot">
   <!-- Content -->
 </li>
 ```

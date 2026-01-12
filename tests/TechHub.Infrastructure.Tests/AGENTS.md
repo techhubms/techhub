@@ -49,7 +49,7 @@ public class FrontMatterParserTests
         var markdown = @"---
 title: Test Article
 date: 2026-01-07
-categories: [ai, ml]
+categories: [""AI"", ""ML""]
 ---
 
 # Content here

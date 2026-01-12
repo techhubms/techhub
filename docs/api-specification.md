@@ -29,16 +29,15 @@ Represents a thematic grouping of content (e.g., AI, GitHub Copilot, Azure).
 
 ```json
 {
-  "id": "ai",
+  "name": "ai",
   "title": "AI",
   "description": "Your gateway to the AI revolution...",
   "url": "/ai",
-  "category": "AI",
   "backgroundImage": "/assets/section-backgrounds/ai.jpg",
   "collections": [
     {
       "title": "News",
-      "collection": "news",
+      "name": "news",
       "url": "/ai/news",
       "description": "News articles from official product sources.",
       "isCustom": false
@@ -61,8 +60,8 @@ Represents individual content (articles, videos, blogs, etc.) in API responses.
   "dateIso": "2024-01-15",
   "collectionName": "news",
   "altCollection": null,
-  "categories": ["AI", "GitHub Copilot"],
-  "primarySection": "Artificial Intelligence",
+  "sectionNames": ["ai", "github-copilot"],
+  "primarySectionName": "ai",
   "tags": ["copilot", "ai", "productivity"],
   "excerpt": "First paragraph excerpt...",
   "externalUrl": "https://techcommunity.microsoft.com/example-post",
@@ -79,10 +78,10 @@ Represents individual content (articles, videos, blogs, etc.) in API responses.
 - `dateEpoch`, `dateIso`: Publication date in both formats
 - `collectionName`: Collection this item belongs to (`"news"`, `"blogs"`, `"videos"`, `"community"`, `"roundups"`)
 - `altCollection`: Alternative collection for special content (e.g., `"features"` for ghc-features videos) - used for navigation highlighting
-- `categories`: Array of sections this content belongs to (e.g., `["AI", "GitHub Copilot"]`) - used for filtering and PrimarySection calculation
-- `primarySection`: Highest-priority section from categories (used for URL routing, e.g., `"Artificial Intelligence"`)
+- `sectionNames`: Array of lowercase section identifiers this content belongs to (e.g., `["ai", "github-copilot"]`) - mapped from frontmatter `categories` field (which contains Section Titles like "AI", "GitHub Copilot")
+- `primarySectionName`: Highest-priority section name (lowercase identifier) used for URL routing (e.g., `"ai"`). Calculated using section priority: github-copilot > ai > ml > azure > coding > devops > security
 - `tags`: Content tags for filtering
-- `url`: Item detail page URL (format: `/{primarySection}/{collection}/{slug}`)
+- `url`: Item detail page URL (format: `/{primarySectionName}/{collection}/{slug}`)
 - `externalUrl`: Original source URL from frontmatter `canonical_url` field (e.g., `"https://techcommunity.microsoft.com/..."`) - always present regardless of ViewingMode
 - `viewingMode`: Display mode - `"internal"` (show on our site) or `"external"` (link to source)
   - Videos and roundups: `"internal"` (content opens on site)
@@ -91,8 +90,9 @@ Represents individual content (articles, videos, blogs, etc.) in API responses.
 
 **Important Behaviors**:
 
-- **PrimarySection**: Calculated using section priority: GitHub Copilot > AI > ML > Azure > .NET > DevOps > Security > Everything
-- **URL Routing**: URLs always use PrimarySection for consistent navigation (e.g., item with `["AI", "ML"]` categories → `/ai/videos/item`)
+- **Section Mapping**: Frontmatter `categories` field contains Section Titles (e.g., "AI", "GitHub Copilot") which are automatically mapped to Section Names (lowercase identifiers like "ai", "github-copilot") and stored in `sectionNames` property
+- **Primary Section**: Calculated using section priority: github-copilot > ai > ml > azure > coding > devops > security. The highest-priority section name is used for URL routing
+- **URL Routing**: URLs always use `primarySectionName` for consistent navigation (e.g., item with `["ai", "ml"]` sectionNames → `/ai/videos/item`)
 - **ViewingMode**: Determines link behavior
   - `"internal"` - navigates to detail page on site (videos, roundups)
   - `"external"` - opens source URL in new tab (news, blogs, community)
@@ -111,11 +111,10 @@ Get all sections.
 ```json
 [
   {
-    "id": "ai",
+    "name": "ai",
     "title": "AI",
     "description": "...",
     "url": "/ai",
-    "category": "AI",
     "backgroundImage": "/assets/section-backgrounds/ai.jpg",
     "collections": [...]
   }

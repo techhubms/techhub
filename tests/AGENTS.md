@@ -83,6 +83,234 @@ These apply to ALL tests across all layers:
 - Never ignore flaky tests (fix or remove)
 - Never remove tests without removing unused production code
 
+## Unit Testing Patterns
+
+### AAA Pattern (Arrange-Act-Assert)
+
+**ALWAYS structure tests with explicit AAA sections**:
+
+```csharp
+[Fact]
+public void GetUrlInSection_ValidSection_ReturnsCorrectUrl()
+{
+    // Arrange
+    var item = new ContentItem
+    {
+        Id = "2024-01-15-test-article",
+        Title = "Test Article",
+        SectionNames = new[] { "ai", "github-copilot" },
+        Collection = "blogs",
+        DateEpoch = 1705276800
+    };
+    
+    // Act
+    var url = item.GetUrlInSection("github-copilot");
+    
+    // Assert
+    url.Should().Be("/github-copilot/blogs/2024-01-15-test-article");
+}
+```
+
+**Key Rules**:
+
+- Always use comments to mark AAA sections
+- Arrange: Set up test data and dependencies
+- Act: Execute ONE action being tested
+- Assert: Verify ONE expected outcome (or multiple related assertions)
+
+### Test Naming Convention
+
+**Pattern**: `{MethodName}_{Scenario}_{ExpectedOutcome}`
+
+**Examples**:
+
+- `GetByIdAsync_ExistingId_ReturnsContent()`
+- `GetByIdAsync_NonExistentId_ReturnsNull()`
+- `GetBySectionAsync_EmptySection_ReturnsEmptyList()`
+- `ParseFrontMatter_InvalidYaml_ThrowsFormatException()`
+
+### Theory Tests for Parameterization
+
+**Use [Theory] for testing multiple scenarios with same logic**:
+
+```csharp
+[Theory]
+[InlineData("ai", "/ai/blogs/2024-01-15-test")]
+[InlineData("github-copilot", "/github-copilot/blogs/2024-01-15-test")]
+[InlineData("azure", "/azure/blogs/2024-01-15-test")]
+public void GetUrlInSection_DifferentSections_ReturnsCorrectUrl(string sectionName, string expectedUrl)
+{
+    // Arrange
+    var item = new ContentItem
+    {
+        Id = "2024-01-15-test",
+        SectionNames = new[] { "ai", "github-copilot", "azure" },
+        Collection = "blogs"
+    };
+    
+    // Act
+    var url = item.GetUrlInSection(sectionName);
+    
+    // Assert
+    url.Should().Be(expectedUrl);
+}
+```
+
+### Test Fixtures (IClassFixture\<T\>)
+
+**Use fixtures for expensive setup shared across tests**:
+
+```csharp
+// Fixture class - expensive setup
+public class ContentRepositoryFixture : IDisposable
+{
+    public string TestDataPath { get; }
+    public IMemoryCache Cache { get; }
+    
+    public ContentRepositoryFixture()
+    {
+        TestDataPath = Path.Combine(Path.GetTempPath(), Guid.NewGuid().ToString());
+        Directory.CreateDirectory(TestDataPath);
+        
+        // Create test data files
+        File.WriteAllText(
+            Path.Combine(TestDataPath, "test-article.md"),
+            "---\ntitle: Test\n---\nContent");
+        
+        Cache = new MemoryCache(new MemoryCacheOptions());
+    }
+    
+    public void Dispose()
+    {
+        if (Directory.Exists(TestDataPath))
+            Directory.Delete(TestDataPath, recursive: true);
+        
+        Cache.Dispose();
+    }
+}
+
+// Test class using fixture
+public class ContentRepositoryTests : IClassFixture<ContentRepositoryFixture>
+{
+    private readonly ContentRepositoryFixture _fixture;
+    
+    public ContentRepositoryTests(ContentRepositoryFixture fixture)
+    {
+        _fixture = fixture;
+    }
+    
+    [Fact]
+    public async Task GetAllAsync_WithTestData_ReturnsContent()
+    {
+        // Arrange
+        var repo = new FileBasedContentRepository(
+            _fixture.TestDataPath,
+            _fixture.Cache,
+            Mock.Of<ILogger<FileBasedContentRepository>>());
+        
+        // Act
+        var items = await repo.GetAllAsync(CancellationToken.None);
+        
+        // Assert
+        items.Should().HaveCount(1);
+    }
+}
+```
+
+## Integration Testing Patterns
+
+### Test Data File Conventions
+
+**Pattern**: Use `*.test.json` files for test configuration:
+
+```text
+tests/TechHub.Api.Tests/
+├── TestData/
+│   ├── sections.test.json        # Section configuration for tests
+│   ├── sample-content/           # Markdown files with frontmatter
+│   │   ├── 2024-01-15-test-article.md
+│   │   └── 2024-01-20-another-test.md
+│   └── appsettings.test.json     # Test-specific app config
+```
+
+**sections.test.json structure**:
+
+```json
+{
+  "Sections": [
+    {
+      "Name": "ai",
+      "Title": "AI",
+      "Description": "Test section for AI content",
+      "Url": "ai",
+      "BackgroundImage": "/images/ai.jpg",
+      "Collections": ["news", "blogs", "videos"]
+    }
+  ]
+}
+```
+
+### CORS Testing Pattern
+
+**Verify CORS headers are properly configured**:
+
+```csharp
+[Fact]
+public async Task GetSections_FromBrowserOrigin_IncludesCorsHeaders()
+{
+    // Arrange
+    var request = new HttpRequestMessage(HttpMethod.Get, "/api/sections");
+    request.Headers.Add("Origin", "https://tech.hub.ms");
+    
+    // Act
+    var response = await _client.SendAsync(request);
+    
+    // Assert
+    response.Should().BeSuccessful();
+    response.Headers.Should().ContainKey("Access-Control-Allow-Origin");
+    response.Headers.GetValues("Access-Control-Allow-Origin")
+        .Should().Contain("https://tech.hub.ms");
+}
+```
+
+### Response Caching Testing
+
+**Verify cache headers are set correctly**:
+
+```csharp
+[Fact]
+public async Task GetSections_CachedEndpoint_IncludesCacheHeaders()
+{
+    // Arrange
+    // Act
+    var response = await _client.GetAsync("/api/sections");
+    
+    // Assert
+    response.Should().BeSuccessful();
+    response.Headers.CacheControl.Should().NotBeNull();
+    response.Headers.CacheControl!.MaxAge.Should().BeGreaterThan(TimeSpan.Zero);
+}
+```
+
+### Middleware Pipeline Testing
+
+**Test middleware is properly configured**:
+
+```csharp
+[Fact]
+public async Task Api_Request_IncludesSecurityHeaders()
+{
+    // Arrange
+    // Act
+    var response = await _client.GetAsync("/api/sections");
+    
+    // Assert
+    response.Headers.Should().ContainKey("X-Content-Type-Options");
+    response.Headers.GetValues("X-Content-Type-Options")
+        .Should().Contain("nosniff");
+}
+```
+
 ## Directory Structure
 
 ```text

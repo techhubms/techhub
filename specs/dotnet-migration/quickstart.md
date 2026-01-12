@@ -149,7 +149,7 @@ cat > 2026-01-02-example-article.md << 'EOF'
 title: "Example Article"
 author: "Your Name"
 date: 2026-01-02
-categories: [ai]
+categories: ["AI"]
 tags: [azure-openai, gpt-4]
 ---
 
@@ -267,15 +267,15 @@ git push origin feature/011-domain-models
 
 | Technology | Purpose | Documentation |
 |------------|---------|---------------|
-| .NET 10 | Runtime | https://learn.microsoft.com/dotnet |
-| Blazor | Frontend | https://learn.microsoft.com/aspnet/core/blazor |
-| ASP.NET Core | API | https://learn.microsoft.com/aspnet/core |
-| .NET Aspire | Orchestration | https://learn.microsoft.com/dotnet/aspire |
-| xUnit | Testing | https://xunit.net |
-| bUnit | Blazor testing | https://bunit.dev |
-| Playwright | E2E testing | https://playwright.dev/dotnet |
-| Markdig | Markdown | https://github.com/xoofx/markdig |
-| Polly | Resilience | https://www.pollydocs.org |
+| .NET 10 | Runtime | <https://learn.microsoft.com/dotnet> |
+| Blazor | Frontend | <https://learn.microsoft.com/aspnet/core/blazor> |
+| ASP.NET Core | API | <https://learn.microsoft.com/aspnet/core> |
+| .NET Aspire | Orchestration | <https://learn.microsoft.com/dotnet/aspire> |
+| xUnit | Testing | <https://xunit.net> |
+| bUnit | Blazor testing | <https://bunit.dev> |
+| Playwright | E2E testing | <https://playwright.dev/dotnet> |
+| Markdig | Markdown | <https://github.com/xoofx/markdig> |
+| Polly | Resilience | <https://www.pollydocs.org> |
 
 ---
 

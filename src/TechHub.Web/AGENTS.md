@@ -378,7 +378,7 @@ Is this style specific to ONE component/page?
 - `.sidebar-link-button` - Navigation buttons (NO `.sidebar` parent scoping!)
 - `.sidebar-content-button` - Content item buttons
 - `.sidebar-tag-button` - Interactive tag buttons
-- `.sidebar-category-tag` - Display-only category tags
+- `.sidebar-section-tag` - Display-only section tags
 - `.sidebar-content-tag` - Display-only content tags
 
 **🚨 CRITICAL**: Sidebar button styles are **NOT scoped** to `.sidebar` parent - they work anywhere the class is used. This allows components to use these styles without requiring a `.sidebar` ancestor.
@@ -520,7 +520,7 @@ font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
 ┌─────────────────────────────────────────────────┐
 │  Navigation Bar                                  │
 ├─────────────────────────────────────────────────┤
-│  Metadata (date, tags, category)                │
+│  Metadata (date, tags, sections)                │
 │  Quick Navigation (TOC)                          │
 ├─────────────────────────────────────────────────┤
 │  Article title                                   │
@@ -580,7 +580,7 @@ font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
         </aside>
         
         <main class="page-main-content">
-            <ContentItemsGrid SectionCategory="@sectionData.Category" />
+            <ContentItemsGrid SectionName="@sectionData.Name" />
         </main>
     </div>
 }
@@ -808,12 +808,11 @@ font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
     public string? CollectionName { get; set; }
 
     private string selectedCollection = string.Empty;
-    private string? sectionCategory;
 
     protected override async Task OnInitializedAsync()
     {
         selectedCollection = CollectionName ?? "all";
-        await LoadSectionMetadata(); // Loads category info
+        await LoadSectionMetadata();
     }
 
     private async Task HandleCollectionChange(string collectionName)
@@ -953,7 +952,7 @@ font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
 
 - **PageHeader**: `Section` (SectionDto) for section pages, or `Title`/`Description`/`BackgroundImage` for static pages
 - **CollectionNav**: `SectionName` (string), `SelectedCollection` (string), `OnCollectionChange` (EventCallback)
-- **CollectionContent**: `SectionName` (string), `CollectionName` (string), `SectionCategory` (string)
+- **CollectionContent**: `SectionName` (string), `CollectionName` (string)
 
 **Testing Requirements**:
 
@@ -1166,6 +1165,57 @@ else
 }
 ```
 
+### RSS Feed Proxy Endpoints
+
+**Purpose**: The Web frontend serves RSS feeds via proxy endpoints that call the secured API backend.
+
+**Why Proxies?**: The API backend will be secured and not publicly accessible. User-facing RSS feeds are served from the Web frontend domain (`https://tech.hub.ms`).
+
+**Pattern**: Minimal API endpoints in Program.cs that proxy to TechHubApiClient
+
+```csharp
+// RSS Feed Proxies - User-facing URLs
+app.MapGet("/all/feed.xml", async (TechHubApiClient apiClient) =>
+{
+    var content = await apiClient.GetAllContentRssFeedAsync();
+    return Results.Content(content, "application/xml; charset=utf-8");
+})
+.WithName("GetAllContentRssFeed")
+.WithOpenApi();
+
+app.MapGet("/all/roundups/feed.xml", async (TechHubApiClient apiClient) =>
+{
+    var content = await apiClient.GetCollectionRssFeedAsync("roundups");
+    return Results.Content(content, "application/xml; charset=utf-8");
+})
+.WithName("GetRoundupsRssFeed")
+.WithOpenApi();
+
+app.MapGet("/{sectionName}/feed.xml", async (string sectionName, TechHubApiClient apiClient) =>
+{
+    var content = await apiClient.GetSectionRssFeedAsync(sectionName);
+    return Results.Content(content, "application/xml; charset=utf-8");
+})
+.WithName("GetSectionRssFeed")
+.WithOpenApi();
+```
+
+**User-Facing URLs**:
+
+- **Everything feed**: `https://tech.hub.ms/all/feed.xml`
+- **Roundups only**: `https://tech.hub.ms/all/roundups/feed.xml`
+- **Section feeds**: `https://tech.hub.ms/{sectionName}/feed.xml` (e.g., `/ai/feed.xml`, `/github-copilot/feed.xml`)
+
+**Internal API Calls** (not publicly accessible):
+
+- `/api/rss/all` - All content across all sections
+- `/api/rss/collection/roundups` - Roundups collection
+- `/api/rss/{sectionName}` - Section-specific content
+
+**Content Type**: All feeds return `application/xml; charset=utf-8`
+
+**Testing**: See [tests/TechHub.E2E.Tests/AGENTS.md](../../tests/TechHub.E2E.Tests/AGENTS.md) for RSS feed E2E tests
+
 ### Component with Background Image
 
 **Pattern**: Use inline styles for dynamic background images with fallback color
@@ -1372,6 +1422,338 @@ else if (data != null)
         grid-template-columns: 1fr;
         gap: 1rem;
         padding: 1rem;
+    }
+}
+```
+
+### Infinite Scroll Pagination
+
+**Configuration**:
+
+- **Items per batch**: 20 items
+- **Prefetch trigger**: 80% scroll threshold (trigger when user is 80% down the page)
+- **URL parameter preservation**: Maintain filters/search when loading more
+
+**Pattern**:
+
+```razor
+@inject IJSRuntime JS
+
+<div id="content-container">
+    @foreach (var item in visibleItems)
+    {
+        <ContentItemCard Item="@item" Section="@section" />
+    }
+</div>
+
+@if (hasMore)
+{
+    <div id="load-more-trigger" style="height: 1px;"></div>
+}
+
+@code {
+    private List<ContentItemDto> visibleItems = new();
+    private bool hasMore = true;
+    private int currentPage = 1;
+    private const int PageSize = 20;
+    
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (firstRender)
+        {
+            // Set up intersection observer at 80% threshold
+            await JS.InvokeVoidAsync("setupInfiniteScroll", "load-more-trigger", 
+                DotNetObjectReference.Create(this));
+        }
+    }
+    
+    [JSInvokable]
+    public async Task LoadMore()
+    {
+        currentPage++;
+        var nextBatch = await ApiClient.GetContentAsync(
+            section: sectionName,
+            page: currentPage,
+            pageSize: PageSize);
+        
+        if (nextBatch.Count < PageSize)
+            hasMore = false;
+        
+        visibleItems.AddRange(nextBatch);
+        StateHasChanged();
+    }
+}
+```
+
+**JavaScript** (wwwroot/js/infinite-scroll.js):
+
+```javascript
+window.setupInfiniteScroll = (elementId, dotNetRef) => {
+    const trigger = document.getElementById(elementId);
+    const observer = new IntersectionObserver(async (entries) => {
+        if (entries[0].isIntersecting) {
+            await dotNetRef.invokeMethodAsync('LoadMore');
+        }
+    }, { threshold: 0.8 }); // 80% visible
+    
+    observer.observe(trigger);
+};
+```
+
+### Component Catalog Organization
+
+**Layout Components**:
+
+- `MainLayout.razor` - Primary application layout
+- `NavMenu.razor` - Site navigation menu
+- `NavHeader.razor` - Site header with logo and navigation
+- `ReconnectModal.razor` - Blazor reconnection UI
+
+**Page Components** (with `@page` directive):
+
+- `Home.razor` - Homepage (`/`)
+- `Section.razor` - Section index (`/{sectionName}`)
+- `SectionCollection.razor` - Collection page (`/{sectionName}/{collectionName}`)
+- `ContentItem.razor` - Detail page (`/{sectionName}/{collection}/{itemId}`)
+- `About.razor` - About page (`/about`)
+- `NotFound.razor` - 404 page
+
+**Shared Components**:
+
+- `PageHeader.razor` - Universal section header banner
+- `SidebarCollectionNav.razor` - Sidebar collection navigation
+- `SidebarRssLinks.razor` - RSS feed links in sidebar
+
+**Content Components**:
+
+- `SectionCard.razor` - Section display card (homepage)
+- `SectionCardsGrid.razor` - Grid of section cards
+- `ContentItemCard.razor` - Content item display card
+- `ContentItemsGrid.razor` - Grid of content items with filtering
+- `ContentItemDetail.razor` - Full content rendering
+
+**Filter Components**:
+
+- `SearchBox.razor` - Text search input
+- `TagFilter.razor` - Tag selection filter
+- `DateFilter.razor` - Date range filter
+
+### Schema.org Structured Data
+
+**Pattern**: Add JSON-LD structured data to content pages for SEO
+
+```razor
+@page "/{sectionName}/{collection}/{itemId}"
+
+<HeadContent>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "@Item.Title",
+        "description": "@Item.Description",
+        "author": {
+            "@type": "Person",
+            "name": "@Item.Author"
+        },
+        "datePublished": "@GetIsoDate(Item.DateEpoch)",
+        "publisher": {
+            "@type": "Organization",
+            "name": "Microsoft Tech Hub",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https://tech.hub.ms/images/logo.png"
+            }
+        },
+        "keywords": [@string.Join(", ", Item.Tags.Select(t => $"\"{t}\""))]
+    }
+    </script>
+</HeadContent>
+
+@code {
+    private string GetIsoDate(long epochSeconds)
+    {
+        return DateTimeOffset.FromUnixTimeSeconds(epochSeconds)
+            .ToString("yyyy-MM-ddTHH:mm:sszzz");
+    }
+}
+```
+
+### Render Mode Selection
+
+**Criteria for choosing SSR vs WebAssembly**:
+
+**Use SSR (Server-Side Rendering)** when:
+
+- Content is static and doesn't change after initial render
+- SEO is critical (search engines see complete HTML)
+- Initial page load speed is priority
+- No complex client-side interactivity needed
+
+**Use WebAssembly (InteractiveWebAssembly)** when:
+
+- Rich client-side interactivity required (filtering, search, infinite scroll)
+- Reduced server load is important (processing moves to client)
+- Real-time updates or complex UI state management
+- Offline support or PWA features needed
+
+**Hybrid Approach** (Recommended):
+
+- Initial page render with SSR (fast load, SEO-friendly)
+- Enhanced interactivity with WebAssembly for specific components
+- Use `@rendermode InteractiveWebAssembly` on interactive components only
+
+**Example**:
+
+```razor
+@* Page uses SSR by default *@
+@page "/github-copilot"
+
+<PageHeader Section="@section" />
+
+@* Static content rendered server-side *@
+<div class="section-description">
+    @section.Description
+</div>
+
+@* Interactive filtering uses WebAssembly *@
+<ContentItemsGrid Section="@section" @rendermode="InteractiveWebAssembly" />
+```
+
+### Custom Page Patterns
+
+**GitHub Copilot Features Page**:
+
+Features page with subscription tier filtering (Free, Business, Enterprise):
+
+```razor
+@page "/github-copilot/features"
+
+<select @onchange="OnTierChanged">
+    <option value="">All Features</option>
+    <option value="free">Free</option>
+    <option value="business">Business</option>
+    <option value="enterprise">Enterprise</option>
+</select>
+
+@foreach (var feature in filteredFeatures)
+{
+    <div class="feature-card">
+        <h3>@feature.Title</h3>
+        <span class="tier-badge">@feature.Tier</span>
+        @if (feature.GhesSupport)
+        {
+            <span class="ghes-badge">GHES Support</span>
+        }
+        @if (feature.ComingSoon)
+        {
+            <span class="coming-soon">Coming Soon</span>
+        }
+    </div>
+}
+
+@code {
+    private string selectedTier = "";
+    private List<Feature> filteredFeatures => allFeatures
+        .Where(f => string.IsNullOrEmpty(selectedTier) || f.Tier == selectedTier)
+        .ToList();
+        
+    private void OnTierChanged(ChangeEventArgs e)
+    {
+        selectedTier = e.Value?.ToString() ?? "";
+    }
+}
+```
+
+**Levels of Enlightenment Page**:
+
+Progressive learning path visualization:
+
+```razor
+@page "/github-copilot/levels-of-enlightenment"
+
+<div class="levels-container">
+    @foreach (var level in levels)
+    {
+        <div class="level-card level-@level.Number">
+            <h2>Level @level.Number: @level.Title</h2>
+            <p>@level.Description</p>
+            <ul>
+                @foreach (var skill in level.Skills)
+                {
+                    <li>@skill</li>
+                }
+            </ul>
+        </div>
+    }
+</div>
+```
+
+### Mobile Navigation (Hamburger Menu)
+
+**Pattern**: Responsive navigation that shows hamburger menu on mobile (`<768px`)
+
+```razor
+<nav class="site-nav">
+    <button class="hamburger" @onclick="ToggleMenu" aria-label="Toggle menu">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+    
+    <div class="nav-menu @(menuOpen ? "open" : "")">
+        <a href="/">Home</a>
+        <a href="/ai">AI</a>
+        <a href="/github-copilot">GitHub Copilot</a>
+        <a href="/azure">Azure</a>
+        <a href="/about">About</a>
+    </div>
+</nav>
+
+@code {
+    private bool menuOpen = false;
+    
+    private void ToggleMenu()
+    {
+        menuOpen = !menuOpen;
+    }
+}
+```
+
+**CSS**:
+
+```css
+/* Desktop - normal nav */
+.hamburger {
+    display: none;
+}
+
+.nav-menu {
+    display: flex;
+    gap: 1rem;
+}
+
+/* Mobile - hamburger menu */
+@media (max-width: 768px) {
+    .hamburger {
+        display: block;
+        background: none;
+        border: none;
+        cursor: pointer;
+    }
+    
+    .nav-menu {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        right: 0;
+        background: var(--dark-navy);
+    }
+    
+    .nav-menu.open {
+        display: flex;
     }
 }
 ```

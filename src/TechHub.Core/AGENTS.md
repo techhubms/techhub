@@ -102,11 +102,6 @@ public class Section
     public required string Url { get; init; }
     
     /// <summary>
-    /// Category for filtering (e.g., "ai", "devops").
-    /// </summary>
-    public required string Category { get; init; }
-    
-    /// <summary>
     /// Background image path (e.g., "/images/section-backgrounds/ai.jpg").
     /// </summary>
     public required string BackgroundImage { get; init; }
@@ -197,14 +192,15 @@ public class ContentItem
     public required long DateEpoch { get; init; }
     
     /// <summary>
-    /// Collection name (e.g., "_news", "_blogs", "_videos").
+    /// Collection name (e.g., "news", "blogs", "videos").
     /// </summary>
-    public required string Collection { get; init; }
+    public required string CollectionName { get; init; }
     
     /// <summary>
-    /// Categories (section filters, e.g., ["ai", "github-copilot"]).
+    /// Section names (lowercase identifiers) this content belongs to (e.g., ["ai", "github-copilot"]).
+    /// Mapped from frontmatter 'categories' field (which contains Section Titles like "AI", "GitHub Copilot").
     /// </summary>
-    public required IReadOnlyList<string> Categories { get; init; }
+    public required IReadOnlyList<string> SectionNames { get; init; }
     
     /// <summary>
     /// Tags (content-specific keywords, normalized to lowercase).
@@ -273,20 +269,20 @@ The rest of the markdown content...
 
 **Property Mappings**:
 
-| Frontmatter Field               | Domain Property | Type                    | Notes                                                   |
-| ------------------------------- | --------------- | ----------------------- | ------------------------------------------------------- |
-| `title`                         | `Title`         | `string`                | Required                                                |
-| `author`                        | `Author`        | `string?`               | Optional                                                |
-| `date`                          | `DateEpoch`     | `long`                  | Converted to Unix timestamp in Europe/Brussels timezone |
-| `categories`                    | `Categories`    | `IReadOnlyList<string>` | Section filters (e.g., ai, devops)                      |
-| `tags`                          | `Tags`          | `IReadOnlyList<string>` | Normalized to lowercase, hyphen-separated               |
-| `canonical_url`                 | `ExternalUrl`   | `string?`               | Original source URL                                     |
-| `viewing_mode`                  | `ViewingMode`   | `string`                | "internal" or "external" (default: "external")          |
-| `video_id`                      | `VideoId`       | `string?`               | YouTube video identifier                                |
-| `alt_collection`                | `AltCollection` | `string?`               | Subfolder categorization                                |
-| Filename                        | `Slug`          | `string`                | `2025-01-15-article.md` → `2025-01-15-article`          |
-| Before `<!--excerpt_end-->`     | `Excerpt`       | `string`                | Plain text, max 200 words                               |
-| Full markdown                   | `RenderedHtml`  | `string`                | Processed with Markdig                                  |
+| Frontmatter Field           | Domain Property  | Type                    | Notes                                                                                   |
+| --------------------------- | ---------------- | ----------------------- | --------------------------------------------------------------------------------------- |
+| `title`                     | `Title`          | `string`                | Required                                                                                |
+| `author`                    | `Author`         | `string?`               | Optional                                                                                |
+| `date`                      | `DateEpoch`      | `long`                  | Converted to Unix timestamp in Europe/Brussels timezone                                 |
+| `categories`                | `SectionNames`   | `IReadOnlyList<string>` | Frontmatter contains Section Titles ("AI"), mapped to lowercase section names ("ai")    |
+| `tags`                      | `Tags`           | `IReadOnlyList<string>` | Normalized to lowercase, hyphen-separated                                               |
+| `canonical_url`             | `ExternalUrl`    | `string?`               | Original source URL                                                                     |
+| `viewing_mode`              | `ViewingMode`    | `string`                | "internal" or "external" (default: "external")                                          |
+| `video_id`                  | `VideoId`        | `string?`               | YouTube video identifier                                                                |
+| `alt_collection`            | `AltCollection`  | `string?`               | Subfolder categorization                                                                |
+| Filename                    | `Slug`           | `string`                | `2025-01-15-article.md` → `2025-01-15-article`                                          |
+| Before `<!--excerpt_end-->` | `Excerpt`        | `string`                | Plain text, max 200 words                                                               |
+| Full markdown               | `RenderedHtml`   | `string`                | Processed with Markdig                                                                  |
 
 **See [src/TechHub.Infrastructure/AGENTS.md](../TechHub.Infrastructure/AGENTS.md)** for implementation details of frontmatter parsing.
 
@@ -302,13 +298,12 @@ namespace TechHub.Core.DTOs;
 /// </summary>
 public record SectionDto
 {
-    public required string Id { get; init; }
+    public required string Name { get; init; }
     public required string Title { get; init; }
     public required string Description { get; init; }
     public required string Url { get; init; }
-    public required string Category { get; init; }
     public required string BackgroundImage { get; init; }
-    public required IReadOnlyList<CollectionDto> Collections { get; init; }
+    public required IReadOnlyList<CollectionReferenceDto> Collections { get; init; }
 }
 
 /// <summary>
@@ -320,8 +315,8 @@ public record ContentItemDto
     public required string Title { get; init; }
     public string? Author { get; init; }
     public required long DateEpoch { get; init; }
-    public required string Collection { get; init; }
-    public required IReadOnlyList<string> Categories { get; init; }
+    public required string CollectionName { get; init; }
+    public required IReadOnlyList<string> SectionNames { get; init; }
     public required IReadOnlyList<string> Tags { get; init; }
     public required string Excerpt { get; init; }
     public string? ExternalUrl { get; init; }
@@ -392,6 +387,132 @@ public interface IContentRepository
 - This sorting happens at repository layer, before caching
 - Clients should never need to sort content themselves
 
+## URL Generation Methods
+
+**ContentItem methods for URL generation**:
+
+```csharp
+namespace TechHub.Core.Models;
+
+public class ContentItem
+{
+    // ... properties ...
+    
+    /// <summary>
+    /// Generates the URL for this content item within a specific section.
+    /// </summary>
+    /// <param name="sectionName">The section URL (e.g., "github-copilot").</param>
+    /// <returns>Full URL path (e.g., "/github-copilot/blogs/2024-01-15-article").</returns>
+    public string GetUrlInSection(string sectionName)
+    {
+        if (!SectionNames.Contains(sectionName))
+            throw new ArgumentException($"Content not in section '{sectionName}'", nameof(sectionName));
+        
+        return $"/{sectionName}/{Collection}/{Slug}";
+    }
+}
+```
+
+## Unix Epoch Timestamp Usage
+
+**Always use Unix epoch for date storage and manipulation**:
+
+**Storage**:
+
+```csharp
+public required long DateEpoch { get; init; }  // Seconds since Unix epoch
+```
+
+**Conversion from DateTime**:
+
+```csharp
+var date = new DateTime(2026, 1, 7, 10, 30, 0, DateTimeKind.Utc);
+long epochSeconds = new DateTimeOffset(date).ToUnixTimeSeconds();
+```
+
+**Conversion from frontmatter string** (see Infrastructure/AGENTS.md):
+
+```csharp
+// Frontmatter: "date: 2026-01-07" or "date: 2026-01-07 14:30:00 +0100"
+var dateString = "2026-01-07";
+var date = DateTime.Parse(dateString);
+var brusselsTime = TimeZoneInfo.ConvertTimeToUtc(date, 
+    TimeZoneInfo.FindSystemTimeZoneById("Europe/Brussels"));
+long epochSeconds = new DateTimeOffset(brusselsTime).ToUnixTimeSeconds();
+```
+
+**Conversion to DateTime**:
+
+```csharp
+var dateTime = DateTimeOffset.FromUnixTimeSeconds(item.DateEpoch).DateTime;
+```
+
+**Why Unix Epoch?**:
+
+- Timezone-agnostic storage (always UTC internally)
+- Efficient comparison and sorting
+- Compact representation (single long value)
+- Standard format across all platforms
+
+## DTO Conversion Extensions
+
+**Pattern**: Use extension methods for converting domain models to DTOs
+
+```csharp
+namespace TechHub.Core.Extensions;
+
+public static class ContentItemExtensions
+{
+    public static ContentItemDto ToDto(this ContentItem item)
+    {
+        return new ContentItemDto
+        {
+            Slug = item.Slug,
+            Title = item.Title,
+            Author = item.Author,
+            Description = item.Description,
+            Date = item.DateEpoch,
+            SectionNames = item.SectionNames.ToList(),
+            PrimarySectionName = item.SectionNames.FirstOrDefault() ?? "",
+            Collection = item.Collection,
+            Tags = item.Tags.ToList(),
+            Excerpt = item.Excerpt,
+            RenderedHtml = item.RenderedHtml,
+            ExternalUrl = item.ExternalUrl,
+            ViewingMode = item.ViewingMode,
+            VideoId = item.VideoId
+        };
+    }
+    
+    public static IEnumerable<ContentItemDto> ToDtos(this IEnumerable<ContentItem> items)
+    {
+        return items.Select(i => i.ToDto());
+    }
+}
+```
+
+**Usage in repositories**:
+
+```csharp
+public async Task<ContentItemDto?> GetBySlugAsync(string slug, CancellationToken ct)
+{
+    var item = await _repository.GetBySlugAsync(slug, ct);
+    return item?.ToDto();
+}
+```
+
+**Usage in API endpoints**:
+
+```csharp
+public async Task<IResult> GetContent(string slug, IContentRepository repo)
+{
+    var item = await repo.GetBySlugAsync(slug);
+    return item != null 
+        ? Results.Ok(item.ToDto()) 
+        : Results.NotFound();
+}
+```
+
 ## Validation Patterns
 
 **Add validation methods to domain models**:
@@ -415,8 +536,8 @@ public class ContentItem
         if (DateEpoch <= 0)
             throw new ArgumentException("DateEpoch must be positive", nameof(DateEpoch));
         
-        if (Categories.Count == 0)
-            throw new ArgumentException("Must have at least one category", nameof(Categories));
+        if (SectionNames.Count == 0)
+            throw new ArgumentException("Must have at least one section", nameof(SectionNames));
         
         if (ViewingMode is not "internal" and not "external")
             throw new ArgumentException("ViewingMode must be 'internal' or 'external'", nameof(ViewingMode));

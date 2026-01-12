@@ -277,12 +277,11 @@ builder.Services.AddCors(options =>
         "Title": "AI",
         "Description": "Artificial Intelligence and Machine Learning",
         "Url": "/ai",
-        "Category": "ai",
         "Image": "/images/section-backgrounds/ai.jpg",
         "Collections": [
           {
             "Title": "News",
-            "Collection": "_news",
+            "Name": "news",
             "Url": "/ai/news",
             "Description": "Latest AI announcements",
             "IsCustom": false
@@ -347,26 +346,105 @@ private static async Task<IResult> GetFilteredContent(
 
 ### RSS Feed Generation
 
+**RSS Endpoints** (Internal API - Not Publicly Accessible):
+
+The API provides 3 RSS feed endpoints that are called by the Web frontend proxies:
+
 ```csharp
-private static async Task<IResult> GenerateSectionRss(
-    string sectionUrl,
+// All content across all sections
+private static async Task<IResult> GetAllContentRssFeed(
+    IRssService rssService,
+    ISectionRepository sectionRepo,
+    IContentRepository contentRepo,
+    CancellationToken ct)
+{
+    // Get all sections and content
+    var sections = await sectionRepo.GetAllAsync(ct);
+    var allContent = await contentRepo.GetAllAsync(ct);
+    
+    // Generate feed with all content
+    var rssXml = rssService.GenerateFeed(
+        title: "Tech Hub - All Content",
+        description: "Latest content across all Tech Hub sections",
+        sections,
+        allContent);
+    
+    return Results.Content(rssXml, "application/xml; charset=utf-8");
+}
+
+// Section-specific content
+private static async Task<IResult> GetSectionRssFeed(
+    string sectionName,
     ISectionRepository sectionRepo,
     IContentRepository contentRepo,
     IRssService rssService,
     CancellationToken ct)
 {
-    var section = await sectionRepo.GetByUrlAsync(sectionUrl, ct);
+    var section = await sectionRepo.GetByUrlAsync(sectionName, ct);
     if (section is null)
-        return Results.NotFound();
+        return Results.NotFound(new { error = $"Section '{sectionName}' not found" });
     
-    var content = await contentRepo.GetBySectionAsync(sectionUrl, ct);
+    var content = await contentRepo.GetBySectionAsync(sectionName, ct);
     var rssXml = rssService.GenerateFeed(section, content);
     
-    return Results.Content(rssXml, "application/rss+xml");
+    return Results.Content(rssXml, "application/xml; charset=utf-8");
+}
+
+// Collection-specific content (e.g., roundups)
+private static async Task<IResult> GetCollectionRssFeed(
+    string collectionName,
+    IContentRepository contentRepo,
+    IRssService rssService,
+    CancellationToken ct)
+{
+    var content = await contentRepo.GetByCollectionAsync(collectionName, ct);
+    
+    var rssXml = rssService.GenerateFeed(
+        title: $"Tech Hub - {collectionName}",
+        description: $"Latest {collectionName} from Tech Hub",
+        sections: null,
+        content);
+    
+    return Results.Content(rssXml, "application/xml; charset=utf-8");
 }
 ```
 
-## Related Documentation
+**Endpoint Mapping** (in `RssEndpoints.cs`):
+
+```csharp
+public static class RssEndpoints
+{
+    public static void MapRssEndpoints(this WebApplication app)
+    {
+        var group = app.MapGroup("/api/rss")
+            .WithTags("RSS")
+            .WithOpenApi();
+
+        group.MapGet("/all", GetAllContentRssFeed)
+            .WithName("GetAllContentRssFeed")
+            .Produces<string>(200, "application/xml");
+
+        group.MapGet("/{sectionName}", GetSectionRssFeed)
+            .WithName("GetSectionRssFeed")
+            .Produces<string>(200, "application/xml")
+            .ProducesProblem(404);
+
+        group.MapGet("/collection/{collectionName}", GetCollectionRssFeed)
+            .WithName("GetCollectionRssFeed")
+            .Produces<string>(200, "application/xml");
+    }
+    
+    // ... handler methods above ...
+}
+```
+
+**Content Type**: All RSS endpoints return `application/xml; charset=utf-8`
+
+**Security**: These API endpoints will be secured and NOT publicly accessible. User-facing RSS feeds are served via Web frontend proxies (see [src/TechHub.Web/AGENTS.md](../TechHub.Web/AGENTS.md)).
+
+**Frontend Proxies**: See [src/TechHub.Web/AGENTS.md](../TechHub.Web/AGENTS.md) for user-facing RSS feed URLs (`/all/feed.xml`, `/{section}/feed.xml`).
+
+**Documentation**: See [docs/rss-feeds.md](../../docs/rss-feeds.md) for functional RSS feed documentation.
 
 - **[src/AGENTS.md](../AGENTS.md)** - Shared .NET patterns and code quality standards
 - **[src/TechHub.Core/AGENTS.md](../TechHub.Core/AGENTS.md)** - Domain models and DTOs

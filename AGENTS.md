@@ -1123,8 +1123,8 @@ All user interface components and interactions must be accessible to users with 
 
 - **Definition**: Actual content users consume (articles, videos, announcements, blogs)
 - **Terminology Note**: "Item" is the preferred term, but "Article" and "Post" are also used in code/documentation to refer to content (note: "Post" in variables does NOT specifically mean blogs from `_blogs/`)
-- **Structure**: Markdown files with YAML front matter containing metadata (title, date, author, sections, tags) and content body
-- **Categories Field**: In frontmatter, the `categories` field contains section names (e.g., "AI", "GitHub Copilot") that determine which sections this content appears in
+- **Structure**: Markdown files with YAML front matter containing metadata (title, date, author, categories/sections, tags) and content body
+- **Categories Frontmatter Field**: The `categories` field in frontmatter contains section display names (e.g., "AI", "GitHub Copilot") that determine which sections this content appears in. This field is mapped to `ContentItem.SectionNames` property (lowercase identifiers like "ai", "github-copilot") during parsing.
 - **Processing**: Items are processed by the build system and can be listed on collection pages, filtered by date/tags/sections, displayed on section index pages, and included in RSS feeds
 
 ### Content Organization
@@ -1163,25 +1163,15 @@ All user interface components and interactions must be accessible to users with 
 
 ### RSS Feeds
 
-The site provides RSS feeds for all sections and collections:
+The site provides RSS feeds for all sections and collections.
 
-**Available RSS Feeds**:
+**For complete RSS feed documentation**, see [docs/rss-feeds.md](docs/rss-feeds.md).
 
-- **Everything**: `/all/feed.xml` - All content across all sections
-- **Roundups Only**: `/all/roundups/feed.xml` - Weekly content roundups
-- **Section Feeds** (all content with matching section names):
-  - AI: `/ai/feed.xml` - AI-related content
-  - GitHub Copilot: `/github-copilot/feed.xml` - GitHub Copilot content
-  - ML: `/ml/feed.xml` - Machine learning content
-  - Azure: `/azure/feed.xml` - Azure cloud platform content
-  - .NET: `/coding/feed.xml` - .NET and coding content
-  - DevOps: `/devops/feed.xml` - DevOps and automation content
-  - Security: `/security/feed.xml` - Security content
+**Quick Reference**:
 
-**Access**:
-
-- Section pages include RSS link in header area
-- Footer "Subscribe via RSS" links to everything feed
+- **Everything**: `/api/rss/all` - All content across all sections
+- **Section Feeds**: `/api/rss/{sectionName}` - Content for a specific section
+- **Collection Feeds**: `/api/rss/collection/{collectionName}` - Content for a specific collection type
 
 ## .NET Migration Status
 

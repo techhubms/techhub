@@ -303,7 +303,7 @@ The SEO system ensures optimal search engine discoverability through server-side
 
 **`/robots.txt`**:
 
-```
+```text
 User-agent: *
 Allow: /
 
@@ -312,7 +312,7 @@ Sitemap: https://tech.hub.ms/sitemap.xml
 
 ## Dynamic og:image Generation
 
-### Requirements
+### og:image Requirements
 
 - Generate unique og:image for each content item
 - Include article title, category, and logo
@@ -321,19 +321,19 @@ Sitemap: https://tech.hub.ms/sitemap.xml
 
 ### Implementation Approaches
 
-**Option 1: Pre-Generate During Build**
+#### Option 1: Pre-Generate During Build
 
 - Generate images at build time using ImageSharp
 - Store in `/assets/og-images/` directory
 - Reference in meta tags
 
-**Option 2: Dynamic Generation on First Request**
+#### Option 2: Dynamic Generation on First Request
 
 - Generate on-demand when og:image URL requested
 - Cache generated image (CDN, Azure Blob Storage)
 - Return cached image on subsequent requests
 
-**Option 3: External Service**
+#### Option 3: External Service
 
 - Use service like Cloudinary or og-image.vercel.app
 - Pass title, category as URL parameters
@@ -437,6 +437,141 @@ public class UrlRedirectMiddleware
     private string CanonicalUrl => Navigation.ToAbsoluteUri(Navigation.Uri).ToString();
 }
 ```
+
+## Implementation Patterns
+
+### Schema.org JSON-LD in Blazor
+
+**HeadContent with JSON-LD Structured Data**:
+
+```razor
+@* ContentDetail.razor *@
+@inject IContentRepository ContentRepository
+
+<HeadContent>
+    <!-- JSON-LD Article Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "@Item.Title",
+        "description": "@Item.Excerpt",
+        "author": {
+            "@type": "Organization",
+            "name": "Microsoft"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "Tech Hub",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https://tech.hub.ms/assets/logo.png"
+            }
+        },
+        "datePublished": "@Item.Date.ToString("yyyy-MM-ddTHH:mm:sszzz")",
+        "dateModified": "@Item.Date.ToString("yyyy-MM-ddTHH:mm:sszzz")",
+        "image": "https://tech.hub.ms/assets/og-images/@Item.Slug.png",
+        "url": "https://tech.hub.ms/@Item.GetUrlInSection()",
+        "mainEntityOfPage": "https://tech.hub.ms/@Item.GetUrlInSection()",
+        "keywords": [@string.Join(", ", Item.Tags.Select(t => $"\"{t}\""))],
+        "articleSection": "@string.Join(", ", Item.SectionNames)"
+    }
+    </script>
+    
+    <!-- Breadcrumb Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://tech.hub.ms/"
+            },
+            {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "@SectionTitle",
+                "item": "https://tech.hub.ms/@SectionName/"
+            },
+            {
+                "@type": "ListItem",
+                "position": 3,
+                "name": "@Item.Title",
+                "item": "https://tech.hub.ms/@Item.GetUrlInSection()"
+            }
+        ]
+    }
+    </script>
+</HeadContent>
+
+@code {
+    [Parameter, EditorRequired]
+    public ContentItem Item { get; set; } = default!;
+    
+    [Parameter, EditorRequired]
+    public string SectionName { get; set; } = string.Empty;
+    
+    [Parameter, EditorRequired]
+    public string SectionTitle { get; set; } = string.Empty;
+}
+```
+
+**VideoObject Schema for Video Content**:
+
+```razor
+@* Use this pattern when Item.VideoId is present *@
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "@Item.Title",
+    "description": "@Item.Excerpt",
+    "thumbnailUrl": "https://img.youtube.com/vi/@Item.VideoId/maxresdefault.jpg",
+    "uploadDate": "@Item.Date.ToString("yyyy-MM-ddTHH:mm:sszzz")",
+    "contentUrl": "https://www.youtube.com/watch?v=@Item.VideoId",
+    "embedUrl": "https://www.youtube.com/embed/@Item.VideoId",
+    "publisher": {
+        "@type": "Organization",
+        "name": "Tech Hub"
+    }
+}
+</script>
+```
+
+**CollectionPage Schema for Section Pages**:
+
+```razor
+@* SectionIndex.razor *@
+
+<HeadContent>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "CollectionPage",
+        "name": "@Section.DisplayTitle",
+        "description": "@Section.Description",
+        "url": "https://tech.hub.ms/@Section.Name/",
+        "publisher": {
+            "@type": "Organization",
+            "name": "Tech Hub"
+        }
+    }
+    </script>
+</HeadContent>
+```
+
+**Key Implementation Notes**:
+
+- ✅ Use `<HeadContent>` component to inject `<script type="application/ld+json">` into `<head>`
+- ✅ Escape JSON strings properly using Razor syntax (`@Item.Title` auto-escapes)
+- ✅ Use absolute URLs for all `url`, `image`, `item` properties
+- ✅ Format dates as ISO 8601 with timezone (`yyyy-MM-ddTHH:mm:sszzz`)
+- ✅ Include both Article/VideoObject AND BreadcrumbList schemas on content pages
+- ✅ Test structured data with [Google Rich Results Test](https://search.google.com/test/rich-results)
 
 ## Testing Strategy
 

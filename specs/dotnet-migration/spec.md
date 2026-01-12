@@ -60,7 +60,7 @@ As a content consumer, I want to subscribe to RSS feeds for specific sections or
 1. **Given** I visit a section page, **When** I look for RSS options, **Then** I see a clearly labeled RSS feed link in the header or footer
 2. **Given** I click an RSS feed link, **When** my RSS reader processes it, **Then** I see a valid RSS 2.0 feed with the most recent 50 items
 3. **Given** I subscribe to a section feed (e.g., /ai/feed.xml), **When** new content is published in that section, **Then** it appears in my RSS reader within 1 hour
-4. **Given** I am viewing an RSS feed, **When** I inspect the XML, **Then** each item includes title, description, link, author, publication date, and categories
+4. **Given** I am viewing an RSS feed, **When** I inspect the XML, **Then** each item includes title, description, link, author, publication date, and section tags
 5. **Given** content has a YouTube video, **When** I view it in my RSS reader, **Then** the video is embedded or linked appropriately
 
 ---
@@ -158,7 +158,7 @@ As a site administrator, I want to track user behavior, performance metrics, and
 
 ### Edge Cases
 
-- What happens when a content item has no tags or categories? (Display with "Uncategorized" label, still searchable by text)
+- What happens when a content item has no tags or sections? (Display with "Uncategorized" label, still searchable by text)
 - How does the system handle extremely long titles or descriptions? (Truncate with ellipsis, show full text on detail page)
 - What happens when a YouTube video is deleted or unavailable? (Show fallback message with link to original URL)
 - How does filtering work when no results match? (Display "No results found" with option to clear filters)
@@ -197,7 +197,7 @@ As a site administrator, I want to track user behavior, performance metrics, and
 - **FR-014**: System MUST generate RSS 2.0 feeds for each section (e.g., /ai/feed.xml)
 - **FR-015**: System MUST generate a combined RSS feed for all content (/feed.xml)
 - **FR-016**: System MUST include RSS feed links in section page headers
-- **FR-017**: RSS feeds MUST include title, description, link, author, pubDate, and category elements
+- **FR-017**: RSS feeds MUST include title, description, link, author, pubDate, and section tag elements
 - **FR-018**: RSS feeds MUST cache using IMemoryCache with 30-minute absolute expiration
 
 **Performance & UX**
@@ -221,7 +221,7 @@ As a site administrator, I want to track user behavior, performance metrics, and
 **Data Management**
 
 - **FR-031**: System MUST read content from markdown files in collections/ directory
-- **FR-032**: System MUST parse YAML frontmatter for metadata (title, author, date, categories, tags)
+- **FR-032**: System MUST parse YAML frontmatter for metadata (title, author, date, categories field with Section Titles, tags)
 - **FR-033**: System MUST store dates as Unix epoch timestamps internally
 - **FR-034**: System MUST handle Europe/Brussels timezone for all date operations
 - **FR-035**: System MUST implement repository pattern with file-based implementation for MVP (database migration planned when content volume exceeds ~1000 items)
@@ -238,7 +238,7 @@ As a site administrator, I want to track user behavior, performance metrics, and
 - **FR-040**: System MUST use full-width responsive grid layout for content listings (home page, section pages) with 1-3 columns based on viewport width
 - **FR-041**: System MUST constrain article/content detail pages to 800px width (matching Jekyll $content-width) for optimal reading experience
 - **FR-042**: System MUST implement two-column layout on article detail pages: left sidebar (25-30% width) and main content area (70-75% width)
-- **FR-043**: System MUST include in left sidebar (in priority order): quick navigation (table of contents from headings), author information, article metadata (date, tags, category), related articles, social share/back-to-section links
+- **FR-043**: System MUST include in left sidebar (in priority order): quick navigation (table of contents from headings), author information, article metadata (date, tags, sections), related articles, social share/back-to-section links
 - **FR-044**: System MUST support custom sidebar content for special pages (e.g., GenAI Basics, GenAI Advanced) with page-specific navigation and metadata
 - **FR-045**: System MUST maintain visual parity with Jekyll site for top navigation bar (section links + subnavigation dropdowns)
 - **FR-046**: System MUST keep section background images with hover highlight effects on home page section cards
@@ -249,9 +249,9 @@ As a site administrator, I want to track user behavior, performance metrics, and
 
 ### Key Entities *(include if feature involves data)*
 
-- **Section**: Represents a topic area (AI, GitHub Copilot, etc.) with title, description, URL, category, background image, and collection references
+- **Section**: Represents a topic area (AI, GitHub Copilot, etc.) with name (lowercase identifier), title (display name), description, URL, background image, and collection references
 - **Collection**: Represents a content type (News, Blogs, Videos, Community, Roundups) with title, URL, description, and isCustom flag
-- **ContentItem**: Represents individual content with ID, title, description, author, date (epoch), collection, categories, tags, rendered HTML, excerpt, optional externalUrl, optional videoId
+- **ContentItem**: Represents individual content with slug, title, description, author, date (epoch), collectionName, sectionNames (lowercase identifiers mapped from frontmatter categories field), tags, rendered HTML, excerpt, optional externalUrl, optional videoId
 - **FilterState**: Client-side state tracking active filters (search text, date range, selected tags, selected collections) synchronized with URL parameters
 - **RssFeed**: Generated XML document containing channel metadata and collection of items with required RSS 2.0 elements
 
@@ -390,27 +390,31 @@ This master spec is supported by detailed feature specifications in `/specs/`:
 **User Interface**:
 
 - 014-blazor-components - Reusable UI components ✅
-- 015-nlweb-semantic-html - Semantic HTML and accessibility ✅
+- 015-nlweb-semantic-html - Semantic HTML and accessibility 📝
 - 016-visual-design-system - Design tokens and styling ✅
 - 017-page-components - Page-level Blazor components ✅
 
 **Features**:
 
-- 018-content-rendering - Markdown to HTML ✅
-- 019-filtering-system - Client-side filtering ✅
-- 020-infinite-scroll - Progressive loading ✅
+- 018-content-rendering - Markdown to HTML 📝
+- 019-filtering-system - Server-side filtering with client enhancement 📝
+- 020-infinite-scroll - Progressive loading 📝
 - 021-rss-feeds - RSS generation ✅
-- 022-search - Text search ✅
-- 023-seo - SEO optimization ✅
-- 024-google-analytics - GA4 integration ✅
+- 022-search - Text search 📝
+- 023-seo - SEO optimization 📝
+- 024-google-analytics - GA4 integration 📝
 
 **Infrastructure**:
 
-- 025-azure-resources - Container Apps deployment ✅
+- 025-azure-resources - Container Apps deployment 📝
 - 026-ci-cd-pipeline - GitHub Actions automation 📝
+- 027-content-publish-flag - Publishing workflow 📝
+- 028-advanced-ui-features - Mobile nav, custom pages, Schema.org 📝
 - dotnet-migration - This overall migration spec ✅
 
 **Legend**: ✅ Complete | 📝 Placeholder (needs detailed requirements)
+
+**Note**: Specs 001, 004, 005, 009-014, 016-017, 021 have been documented in AGENTS.md files and removed from specs/ directory.
 
 ## Clarifications
 
