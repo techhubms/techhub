@@ -23248,5 +23248,17 @@
     "collection": "community",
     "timestamp": "2026-01-12 15:06:38 +00:00",
     "reason": "Succesfully added: Applied the Azure category because the content centers on Azure App Service (Azure rule 1), Azure Functions, and Logic Apps. Applied the Security category because the main emphasis is on DNS risk mitigation, subdomain takeover prevention, and general application security best practices (Security rules 1, 4, 9). The article covers technical implementation details and CLI usage, qualifying it as developer-focused guidance. Exclusion rules do not apply as the content is technical, not biographical or business-focused, and meets community length requirements."
+  },
+  {
+    "collection": "news",
+    "timestamp": "2026-01-12 17:06:33 +00:00",
+    "canonical_url": "https://devblogs.microsoft.com/dotnet/how-we-synchronize-dotnets-virtual-monorepo/",
+    "reason": "Succesfully added: Assigned DevOps category because the article addresses source control, repository orchestration, build and release pipelines, and complex code flow processes, which align directly with DevOps rule 1, 2, 5, and 6. Assigned Coding because it details technical implementation using git (branching, patching, and synchronization) and custom algorithm development (Coding rule 4 and 5). Azure DevOps is discussed as an infrastructure component, but the focus is not on the Azure cloud or specific Azure services, so Azure category was not assigned. No ML, AI, or Security topics appear; categories related to those were excluded. The reasoning follows the inclusion rules and hierarchy as specified in the workflow."
+  },
+  {
+    "collection": "news",
+    "timestamp": "2026-01-12 17:07:20 +00:00",
+    "canonical_url": "https://github.blog/ai-and-ml/generative-ai/want-better-ai-outputs-try-context-engineering/",
+    "reason": "Succesfully added: Assigned 'AI' category as the content focuses on AI-assisted development and techniques to improve large language model outputs in software development (AI inclusion rules 1 and 4). Assigned 'GitHub Copilot' because the article is specifically about leveraging GitHub Copilot's features and providing best practices for its use (GitHub Copilot inclusion rules 1-4). Coding category was not included as the article is about Copilot features and workflow design for developers, not direct programming techniques. No Azure, DevOps, ML, or Security content is present."
   }
 ]

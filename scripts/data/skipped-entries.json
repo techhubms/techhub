@@ -11121,5 +11121,11 @@
     "canonical_url": "https://www.youtube.com/shorts/m1zs4AwzJDM",
     "reason": "No categories found: All fields except 'title', 'author', and 'type' are empty or null. There is no substantive content or description provided to process. According to the workflow, decisions must be based on the actual provided content, title, and description. The title alone ('PriorityQueue is awesome in .NET') is too vague to unambiguously assign any categories without further detail as required by 'when in doubt, exclude' and 'never fabricate information' rules.",
     "collection": "videos"
+  },
+  {
+    "collection": "news",
+    "timestamp": "2026-01-12 17:06:56 +00:00",
+    "canonical_url": "https://www.microsoft.com/en-us/industry/blog/healthcare/2026/01/11/bridging-the-gap-between-ai-and-medicine-claude-in-microsoft-foundry-advances-capabilities-for-healthcare-and-life-sciences-customers/",
+    "reason": "No categories found: No categories assigned. The content is predominantly about AI applications in medicine, specifically highlighting 'Claude in Microsoft Foundry' and the expansion of Microsoft Dragon Copilot for radiology reporting workflows. Both 'Claude' and 'Dragon Copilot' are medical/business productivity solutions rather than developer-focused AI or coding platforms. There is no discussion of development practices, AI engineering, coding integration, or use of Microsoft AI services from a developer perspective. According to the generic exclusion rules and the critical distinction for Copilot products, business productivity or healthcare workflow-focused copilot tools (such as Microsoft Dragon Copilot) are excluded as they do not target coding, AI engineering, or development. Therefore, the content does not qualify for any predefined categories."
   }
 ]
