@@ -62,14 +62,14 @@ public class ContentDetailTests(PlaywrightCollectionFixture fixture) : IAsyncLif
     }
 
     [Fact]
-    public async Task ContentDetailPage_URL_UsesPrimarySectionFromCategories()
+    public async Task ContentDetailPage_URL_IncludesCollectionName()
     {
         // Arrange & Act - Navigate to a roundup detail page
         await NavigateToFirstRoundupDetailAsync();
 
-        // Assert - URL should include /roundups/ with a section prefix
+        // Assert - URL should include collection name (roundups)
         Page.Url.Should().Contain("/roundups/",
-            "content URL should include collection name with section prefix");
+            "content URL should include collection name");
     }
 
     [Fact]
