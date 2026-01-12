@@ -23230,5 +23230,23 @@
     "canonical_url": "https://techcommunity.microsoft.com/t5/azure-high-performance-computing/scaling-physics-based-digital-twins-neural-concept-on-azure/ba-p/4483403",
     "reason": "Succesfully added: The content centralizes around the application of advanced AI and ML techniques using Microsoft Azure HPC infrastructure for large-scale engineering data in automotive design, qualifying for the AI, Azure, and ML categories per inclusion rules (AI: rules 1, 4, and 5; Azure: rules 1 and 4; ML: rules 1–5, 9, 10). It details massive data engineering, parallelization, and deep learning model development and industrial deployment, matching ML inclusion for data science, custom ML model engineering, and Azure AI platform usage. There is no focus on Coding, DevOps, GitHub Copilot, or Security. No generic exclusion applies; word count and technical depth are well above thresholds.",
     "collection": "community"
+  },
+  {
+    "canonical_url": "https://code.visualstudio.com/updates/v1_109",
+    "collection": "news",
+    "timestamp": "2026-01-12 15:05:35 +00:00",
+    "reason": "Succesfully added: Assigned Coding category because the content is an official release note focusing on new features, bug fixes, APIs, and productivity enhancements for Visual Studio Code, which is a primary Microsoft developer tool (Coding rules 2 and 5). No other categories apply: There is no central Azure, AI, ML, DevOps, GitHub Copilot, or Security content. All key updates are about improvements for developers working in VS Code."
+  },
+  {
+    "canonical_url": "https://www.youtube.com/watch?v=5--yBhgDrXM",
+    "collection": "videos",
+    "timestamp": "2026-01-12 15:06:12 +00:00",
+    "reason": "Succesfully added: I assigned the Security category because the main topic is the impact of quantum computing on encryption, cryptography, and digital security (Security rules 1, 2, and 7). The Azure category is included due to the strong Microsoft and Azure context throughout, including explicit mentions of Microsoft blog resources, SymCrypt, and Azure learning paths (Azure rule 1, 4). I also assigned AI because quantum computing and post-quantum cryptography are grouped with advanced computing impacting AI and ML fields within the Microsoft ecosystem, and because the video discusses the transformative potential of quantum technology (AI rule 1). There is no mention of actual coding, DevOps, or ML engineering, so those categories are not included."
+  },
+  {
+    "canonical_url": "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/secure-unique-default-hostnames-now-ga-for-functions-and-logic/ba-p/4484237",
+    "collection": "community",
+    "timestamp": "2026-01-12 15:06:38 +00:00",
+    "reason": "Succesfully added: Applied the Azure category because the content centers on Azure App Service (Azure rule 1), Azure Functions, and Logic Apps. Applied the Security category because the main emphasis is on DNS risk mitigation, subdomain takeover prevention, and general application security best practices (Security rules 1, 4, 9). The article covers technical implementation details and CLI usage, qualifying it as developer-focused guidance. Exclusion rules do not apply as the content is technical, not biographical or business-focused, and meets community length requirements."
   }
 ]
