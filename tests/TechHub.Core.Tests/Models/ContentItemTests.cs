@@ -19,7 +19,7 @@ public class ContentItemTests
             DateEpoch = 1705305600, // 2024-01-15 00:00:00 UTC
             CollectionName = "news",
             AltCollection = null,
-            Categories = ["AI"],
+            Sections = ["AI"],
             Tags = ["machine-learning"],
             RenderedHtml = "<p>Test content</p>",
             Excerpt = "Test excerpt",
@@ -75,7 +75,7 @@ public class ContentItemTests
             Description = "Test",
             DateEpoch = epoch,
             CollectionName = "news",
-            Categories = ["AI"],
+            Sections = ["AI"],
             Tags = ["test"],
             RenderedHtml = "<p>Test</p>",
             Excerpt = "Test"
@@ -117,7 +117,7 @@ public class ContentItemTests
             Description = "Test",
             DateEpoch = 1705305600,
             CollectionName = collectionName,
-            Categories = ["AI"],
+            Sections = ["AI"],
             Tags = ["test"],
             RenderedHtml = "<p>Test</p>",
             Excerpt = "Test"
@@ -154,7 +154,7 @@ public class ContentItemTests
             Description = "Test",
             DateEpoch = 1705305600,
             CollectionName = "news",
-            Categories = ["AI"],
+            Sections = ["AI"],
             Tags = ["test"],
             RenderedHtml = "<p>Test</p>",
             Excerpt = "Test"
@@ -180,7 +180,7 @@ public class ContentItemTests
             Description = "Test",
             DateEpoch = 1705305600,
             CollectionName = "news",
-            Categories = ["AI"],
+            Sections = ["AI"],
             Tags = ["test"],
             RenderedHtml = "<p>Test</p>",
             Excerpt = "Test"
@@ -205,7 +205,7 @@ public class ContentItemTests
             Description = "Test",
             DateEpoch = 1705305600,
             CollectionName = "news",
-            Categories = ["AI"],
+            Sections = ["AI"],
             Tags = ["test"],
             RenderedHtml = "<p>Test</p>",
             Excerpt = "Test"
@@ -234,7 +234,7 @@ public class ContentItemTests
             Description = "Test",
             DateEpoch = invalidEpoch,
             CollectionName = "news",
-            Categories = ["AI"],
+            Sections = ["AI"],
             Tags = ["test"],
             RenderedHtml = "<p>Test</p>",
             Excerpt = "Test"
@@ -250,7 +250,7 @@ public class ContentItemTests
     }
 
     [Fact]
-    public void Validate_ThrowsWhenCategoriesIsEmpty()
+    public void Validate_ThrowsWhenSectionsIsEmpty()
     {
         // Arrange
         var item = new ContentItem
@@ -260,7 +260,7 @@ public class ContentItemTests
             Description = "Test",
             DateEpoch = 1705305600,
             CollectionName = "news",
-            Categories = [],
+            Sections = [],
             Tags = ["test"],
             RenderedHtml = "<p>Test</p>",
             Excerpt = "Test"
@@ -271,8 +271,8 @@ public class ContentItemTests
 
         // Assert
         act.Should().Throw<ArgumentException>()
-            .WithMessage("*category*")
-            .WithParameterName("Categories");
+            .WithMessage("*section*")
+            .WithParameterName("Sections");
     }
 
     [Fact]
@@ -286,7 +286,7 @@ public class ContentItemTests
             Description = "Test",
             DateEpoch = 1705305600,
             CollectionName = "news",
-            Categories = ["AI"],
+            Sections = ["AI"],
             Tags = ["test"],
             RenderedHtml = "",
             Excerpt = "Test"
@@ -313,7 +313,7 @@ public class ContentItemTests
             Description = "Test",
             DateEpoch = 1705305600,
             CollectionName = "news",
-            Categories = ["AI"],
+            Sections = ["AI"],
             Tags = ["test"],
             RenderedHtml = "<p>Test</p>",
             Excerpt = longExcerpt
@@ -340,7 +340,7 @@ public class ContentItemTests
             Description = "Test",
             DateEpoch = 1705305600,
             CollectionName = "news",
-            Categories = ["AI"],
+            Sections = ["AI"],
             Tags = ["test"],
             RenderedHtml = "<p>Test</p>",
             Excerpt = excerpt
@@ -366,7 +366,7 @@ public class ContentItemTests
             DateEpoch = 1705305600,
             CollectionName = "news",
             AltCollection = null,
-            Categories = ["AI"],
+            Sections = ["AI"],
             Tags = ["test"],
             RenderedHtml = "<p>Test</p>",
             Excerpt = "Test",
@@ -397,7 +397,7 @@ public class ContentItemTests
             Author = "Test Author",
             DateEpoch = 1705305600,
             CollectionName = "news",
-            Categories = ["AI"],
+            Sections = ["AI"],
             Tags = ["test"],
             RenderedHtml = "<p>Test</p>",
             Excerpt = "Test excerpt"

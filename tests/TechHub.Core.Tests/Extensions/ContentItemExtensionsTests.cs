@@ -20,7 +20,7 @@ public class ContentItemExtensionsTests
             DateEpoch = 1705305600, // 2024-01-15 00:00:00 UTC
             CollectionName = "news",
             AltCollection = null,
-            Categories = ["AI", "Azure"],
+            Sections = ["AI", "Azure"],
             Tags = ["machine-learning", "cloud"],
             RenderedHtml = "<p>Test content</p>",
             Excerpt = "Test excerpt",
@@ -49,8 +49,8 @@ public class ContentItemExtensionsTests
         dto.DateIso.Should().Be("2024-01-15");
         dto.CollectionName.Should().Be("news");
         dto.AltCollection.Should().BeNull();
-        dto.Categories.Should().BeEquivalentTo(["AI", "Azure"]);
-        dto.PrimarySection.Should().Be("AI"); // First category in menubar priority order
+        dto.Sections.Should().BeEquivalentTo(["AI", "Azure"]);
+        dto.PrimarySection.Should().Be("AI"); // First section in menubar priority order
         dto.Tags.Should().BeEquivalentTo(["machine-learning", "cloud"]);
         dto.Excerpt.Should().Be("Test excerpt");
         dto.ExternalUrl.Should().Be("https://example.com");
@@ -84,7 +84,7 @@ public class ContentItemExtensionsTests
             Author = "Test Author",
             DateEpoch = 1705305600,
             CollectionName = "news",
-            Categories = ["GitHub Copilot"],
+            Sections = ["GitHub Copilot"],
             Tags = ["demo"],
             RenderedHtml = "<p>Test</p>",
             Excerpt = "Test excerpt",
@@ -113,7 +113,7 @@ public class ContentItemExtensionsTests
             DateEpoch = 1705305600,
             CollectionName = "news",
             AltCollection = "ghc-features",
-            Categories = ["GitHub Copilot"],
+            Sections = ["GitHub Copilot"],
             Tags = ["features"],
             RenderedHtml = "<p>Test</p>",
             Excerpt = "Test excerpt"
@@ -146,7 +146,7 @@ public class ContentItemExtensionsTests
         dto.DateEpoch.Should().Be(1705305600);
         dto.DateIso.Should().Be("2024-01-15");
         dto.CollectionName.Should().Be("news");
-        dto.Categories.Should().BeEquivalentTo(["AI", "Azure"]);
+        dto.Sections.Should().BeEquivalentTo(["AI", "Azure"]);
         dto.PrimarySection.Should().Be("AI");
         dto.Tags.Should().BeEquivalentTo(["machine-learning", "cloud"]);
         dto.RenderedHtml.Should().Be("<p>Test content</p>");
@@ -185,7 +185,7 @@ public class ContentItemExtensionsTests
                 Author = "Test Author",
                 DateEpoch = 1705305600,
                 CollectionName = "news",
-                Categories = ["AI"],
+                Sections = ["AI"],
                 Tags = ["test"],
                 RenderedHtml = "<p>Test</p>",
                 Excerpt = "Test excerpt"

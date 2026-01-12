@@ -42,9 +42,10 @@ public class ContentItem
     public string? AltCollection { get; init; }
 
     /// <summary>
-    /// Categories this content belongs to (for section filtering)
+    /// Section names (titles) this content belongs to (e.g., "AI", "GitHub Copilot")
+    /// Mapped from legacy 'categories' frontmatter field
     /// </summary>
-    public required IReadOnlyList<string> Categories { get; init; }
+    public required IReadOnlyList<string> Sections { get; init; }
 
     /// <summary>
     /// Normalized tags for filtering (lowercase, hyphen-separated)
@@ -113,8 +114,8 @@ public class ContentItem
         if (DateEpoch <= 0)
             throw new ArgumentException("Date epoch must be a valid Unix timestamp", nameof(DateEpoch));
 
-        if (Categories.Count == 0)
-            throw new ArgumentException("Content must have at least one category", nameof(Categories));
+        if (Sections.Count == 0)
+            throw new ArgumentException("Content must have at least one section", nameof(Sections));
 
         if (string.IsNullOrWhiteSpace(RenderedHtml))
             throw new ArgumentException("Rendered HTML cannot be empty", nameof(RenderedHtml));

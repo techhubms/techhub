@@ -21,7 +21,6 @@ public static class SectionExtensions
             Title = section.Title,
             Description = section.Description,
             Url = section.Url,
-            Category = section.Category,
             BackgroundImage = section.BackgroundImage,
             Collections = [.. section.Collections.Select(c => c.ToDto())]
         };

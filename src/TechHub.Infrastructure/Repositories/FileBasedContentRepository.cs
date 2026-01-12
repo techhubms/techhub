@@ -165,17 +165,18 @@ public sealed class FileBasedContentRepository : IContentRepository, IDisposable
     }
 
     /// <summary>
-    /// Get content items filtered by category.
+    /// Get content items filtered by section name.
+    /// Matches against the Sections property which contains section names like "AI", "GitHub Copilot".
     /// Filters from cached in-memory data.
     /// Returns items sorted by date (DateEpoch) in descending order (newest first).
     /// </summary>
-    public async Task<IReadOnlyList<ContentItem>> GetByCategoryAsync(
-        string category,
+    public async Task<IReadOnlyList<ContentItem>> GetBySectionAsync(
+        string sectionName,
         CancellationToken cancellationToken = default)
     {
         var allItems = await GetAllAsync(cancellationToken);
         return [.. allItems
-            .Where(item => item.Categories.Contains(category, StringComparer.OrdinalIgnoreCase))
+            .Where(item => item.Sections.Contains(sectionName, StringComparer.OrdinalIgnoreCase))
             .OrderByDescending(x => x.DateEpoch)];
     }
 
@@ -302,7 +303,7 @@ public sealed class FileBasedContentRepository : IContentRepository, IDisposable
             var author = _frontMatterParser.GetValue<string>(frontMatter, "author", "Microsoft");
             var description = _frontMatterParser.GetValue<string>(frontMatter, "description", string.Empty);
             var excerpt = _frontMatterParser.GetValue<string>(frontMatter, "excerpt", string.Empty);
-            var categories = _frontMatterParser.GetListValue(frontMatter, "categories");
+            var sections = _frontMatterParser.GetListValue(frontMatter, "categories"); // Map legacy 'categories' field
             var tags = _frontMatterParser.GetListValue(frontMatter, "tags");
             var externalUrl = _frontMatterParser.GetValue<string>(frontMatter, "canonical_url", string.Empty);
             var videoId = _frontMatterParser.GetValue<string>(frontMatter, "youtube_video_id", string.Empty);
@@ -337,7 +338,7 @@ public sealed class FileBasedContentRepository : IContentRepository, IDisposable
                 DateEpoch = date.ToUnixTimeSeconds(),
                 CollectionName = collection.TrimStart('_'), // Store without _ prefix
                 AltCollection = altCollection,
-                Categories = categories,
+                Sections = sections,
                 Tags = tags,
                 RenderedHtml = renderedHtml,
                 Excerpt = excerpt,

@@ -82,7 +82,6 @@ internal static class SectionsEndpoints
             Title = s.Title,
             Description = s.Description,
             Url = s.Url,
-            Category = s.Category,
             BackgroundImage = s.BackgroundImage,
             Collections = [.. s.Collections.Select(c => new CollectionReferenceDto
             {
@@ -118,7 +117,6 @@ internal static class SectionsEndpoints
             Title = section.Title,
             Description = section.Description,
             Url = section.Url,
-            Category = section.Category,
             BackgroundImage = section.BackgroundImage,
             Collections = [.. section.Collections.Select(c => new CollectionReferenceDto
             {
@@ -149,8 +147,8 @@ internal static class SectionsEndpoints
             return TypedResults.NotFound();
         }
 
-        // Get all content with this section's category
-        var content = await contentRepository.GetByCategoryAsync(section.Category, cancellationToken);
+        // Get all content for this section (filter by section Title which is what's stored in Sections property)
+        var content = await contentRepository.GetBySectionAsync(section.Title, cancellationToken);
         var contentDtos = content.Select(MapContentToDto);
 
         return TypedResults.Ok(contentDtos);
@@ -245,10 +243,10 @@ internal static class SectionsEndpoints
             return TypedResults.NotFound();
         }
 
-        // Get content filtered by both category and collection
+        // Get content filtered by both section and collection
         var allContent = await contentRepository.GetByCollectionAsync(collectionName, cancellationToken);
         var sectionContent = allContent
-            .Where(c => c.Categories.Contains(section.Category, StringComparer.OrdinalIgnoreCase))
+            .Where(c => c.Sections.Contains(section.Title, StringComparer.OrdinalIgnoreCase))
             .Select(MapContentToDto);
 
         return TypedResults.Ok(sectionContent);
@@ -259,7 +257,7 @@ internal static class SectionsEndpoints
     /// </summary>
     private static ContentItemDto MapContentToDto(Core.Models.ContentItem item)
     {
-        var primarySectionUrl = TechHub.Core.Helpers.SectionPriorityHelper.GetPrimarySectionUrl(item.Categories, item.CollectionName);
+        var primarySectionUrl = TechHub.Core.Helpers.SectionPriorityHelper.GetPrimarySectionUrl(item.Sections, item.CollectionName);
 
         return new ContentItemDto
         {
@@ -271,8 +269,8 @@ internal static class SectionsEndpoints
             DateIso = item.DateIso,
             CollectionName = item.CollectionName,
             AltCollection = item.AltCollection,
-            Categories = item.Categories,
-            PrimarySection = TechHub.Core.Helpers.SectionPriorityHelper.GetPrimarySectionName(item.Categories, item.CollectionName),
+            Sections = item.Sections,
+            PrimarySection = TechHub.Core.Helpers.SectionPriorityHelper.GetPrimarySectionName(item.Sections, item.CollectionName),
             Tags = item.Tags,
             Excerpt = item.Excerpt,
             ExternalUrl = item.ExternalUrl,

@@ -16,49 +16,49 @@ public class SectionPriorityHelperTests
     [InlineData(new[] { "Azure" }, "azure")]
     [InlineData(new[] { "DevOps" }, "devops")]
     [InlineData(new[] { "Security" }, "security")]
-    public void GetPrimarySectionUrl_ReturnsSectionUrl_ForSingleCategory(string[] categories, string expectedUrl)
+    public void GetPrimarySectionUrl_ReturnsSectionUrl_ForSingleSection(string[] sectionNames, string expectedUrl)
     {
         // Act
-        var result = SectionPriorityHelper.GetPrimarySectionUrl(categories);
+        var result = SectionPriorityHelper.GetPrimarySectionUrl(sectionNames);
 
         // Assert
         result.Should().Be(expectedUrl);
     }
 
     [Fact]
-    public void GetPrimarySectionUrl_ReturnsFirstInPriorityOrder_ForMultipleCategories()
+    public void GetPrimarySectionUrl_ReturnsFirstInPriorityOrder_ForMultipleSections()
     {
         // Arrange - AI appears first in menubar order
-        var categories = new[] { "Azure", "AI", "GitHub Copilot" };
+        var sectionNames = new[] { "Azure", "AI", "GitHub Copilot" };
 
         // Act
-        var result = SectionPriorityHelper.GetPrimarySectionUrl(categories);
+        var result = SectionPriorityHelper.GetPrimarySectionUrl(sectionNames);
 
         // Assert
         result.Should().Be("github-copilot"); // GitHub Copilot is first in priority order
     }
 
     [Fact]
-    public void GetPrimarySectionUrl_ReturnsAll_ForEmptyCategories()
+    public void GetPrimarySectionUrl_ReturnsAll_ForEmptySections()
     {
         // Arrange
-        var categories = Array.Empty<string>();
+        var sectionNames = Array.Empty<string>();
 
         // Act
-        var result = SectionPriorityHelper.GetPrimarySectionUrl(categories);
+        var result = SectionPriorityHelper.GetPrimarySectionUrl(sectionNames);
 
         // Assert
         result.Should().Be("all");
     }
 
     [Fact]
-    public void GetPrimarySectionUrl_ReturnsAll_ForNoMatchingCategories()
+    public void GetPrimarySectionUrl_ReturnsAll_ForNoMatchingSections()
     {
         // Arrange
-        var categories = new[] { "Unknown Category", "Another Unknown" };
+        var sectionNames = new[] { "Unknown Section", "Another Unknown" };
 
         // Act
-        var result = SectionPriorityHelper.GetPrimarySectionUrl(categories);
+        var result = SectionPriorityHelper.GetPrimarySectionUrl(sectionNames);
 
         // Assert
         result.Should().Be("all");
@@ -68,10 +68,10 @@ public class SectionPriorityHelperTests
     public void GetPrimarySectionUrl_IsCaseInsensitive()
     {
         // Arrange
-        var categories = new[] { "github copilot", "AZURE" };
+        var sectionNames = new[] { "github copilot", "AZURE" };
 
         // Act
-        var result = SectionPriorityHelper.GetPrimarySectionUrl(categories);
+        var result = SectionPriorityHelper.GetPrimarySectionUrl(sectionNames);
 
         // Assert
         result.Should().Be("github-copilot");
@@ -85,49 +85,49 @@ public class SectionPriorityHelperTests
     [InlineData(new[] { "Azure" }, "Azure")]
     [InlineData(new[] { "DevOps" }, "DevOps")]
     [InlineData(new[] { "Security" }, "Security")]
-    public void GetPrimarySectionName_ReturnsSectionName_ForSingleCategory(string[] categories, string expectedName)
+    public void GetPrimarySectionName_ReturnsSectionName_ForSingleSection(string[] sectionNames, string expectedName)
     {
         // Act
-        var result = SectionPriorityHelper.GetPrimarySectionName(categories);
+        var result = SectionPriorityHelper.GetPrimarySectionName(sectionNames);
 
         // Assert
         result.Should().Be(expectedName);
     }
 
     [Fact]
-    public void GetPrimarySectionName_ReturnsFirstInPriorityOrder_ForMultipleCategories()
+    public void GetPrimarySectionName_ReturnsFirstInPriorityOrder_ForMultipleSections()
     {
         // Arrange - GitHub Copilot appears first in menubar order
-        var categories = new[] { "Azure", "AI", "GitHub Copilot" };
+        var sectionNames = new[] { "Azure", "AI", "GitHub Copilot" };
 
         // Act
-        var result = SectionPriorityHelper.GetPrimarySectionName(categories);
+        var result = SectionPriorityHelper.GetPrimarySectionName(sectionNames);
 
         // Assert
         result.Should().Be("GitHub Copilot");
     }
 
     [Fact]
-    public void GetPrimarySectionName_ReturnsAll_ForEmptyCategories()
+    public void GetPrimarySectionName_ReturnsAll_ForEmptySections()
     {
         // Arrange
-        var categories = Array.Empty<string>();
+        var sectionNames = Array.Empty<string>();
 
         // Act
-        var result = SectionPriorityHelper.GetPrimarySectionName(categories);
+        var result = SectionPriorityHelper.GetPrimarySectionName(sectionNames);
 
         // Assert
         result.Should().Be("All");
     }
 
     [Fact]
-    public void GetPrimarySectionName_ReturnsAll_ForNoMatchingCategories()
+    public void GetPrimarySectionName_ReturnsAll_ForNoMatchingSections()
     {
         // Arrange
-        var categories = new[] { "Unknown Category" };
+        var sectionNames = new[] { "Unknown Section" };
 
         // Act
-        var result = SectionPriorityHelper.GetPrimarySectionName(categories);
+        var result = SectionPriorityHelper.GetPrimarySectionName(sectionNames);
 
         // Assert
         result.Should().Be("All");
@@ -139,11 +139,11 @@ public class SectionPriorityHelperTests
         // This test documents the expected menubar order
         // GitHub Copilot, AI, ML, Coding, Azure, DevOps, Security
 
-        // Arrange - Test with all categories in reverse order
-        var categories = new[] { "Security", "DevOps", "Azure", "Coding", "ML", "AI", "GitHub Copilot" };
+        // Arrange - Test with all sections in reverse order
+        var sectionNames = new[] { "Security", "DevOps", "Azure", "Coding", "ML", "AI", "GitHub Copilot" };
 
         // Act
-        var result = SectionPriorityHelper.GetPrimarySectionUrl(categories);
+        var result = SectionPriorityHelper.GetPrimarySectionUrl(sectionNames);
 
         // Assert - Should pick GitHub Copilot (first in menubar)
         result.Should().Be("github-copilot");
@@ -152,37 +152,37 @@ public class SectionPriorityHelperTests
     [Fact]
     public void GetPrimarySectionUrl_ReturnsAll_ForRoundupsCollection()
     {
-        // Arrange - Roundups content may have various categories
-        var categories = new[] { "AI", "GitHub Copilot", "Azure" };
+        // Arrange - Roundups content may have various section names
+        var sectionNames = new[] { "AI", "GitHub Copilot", "Azure" };
 
         // Act - Pass "roundups" as collection name
-        var result = SectionPriorityHelper.GetPrimarySectionUrl(categories, "roundups");
+        var result = SectionPriorityHelper.GetPrimarySectionUrl(sectionNames, "roundups");
 
-        // Assert - Should always return "all" regardless of categories
+        // Assert - Should always return "all" regardless of section names
         result.Should().Be("all", "roundups always belong to the 'all' section");
     }
 
     [Fact]
     public void GetPrimarySectionName_ReturnsAll_ForRoundupsCollection()
     {
-        // Arrange - Roundups content may have various categories
-        var categories = new[] { "AI", "GitHub Copilot", "Azure" };
+        // Arrange - Roundups content may have various section names
+        var sectionNames = new[] { "AI", "GitHub Copilot", "Azure" };
 
         // Act - Pass "roundups" as collection name
-        var result = SectionPriorityHelper.GetPrimarySectionName(categories, "roundups");
+        var result = SectionPriorityHelper.GetPrimarySectionName(sectionNames, "roundups");
 
-        // Assert - Should always return "All" regardless of categories
+        // Assert - Should always return "All" regardless of section names
         result.Should().Be("All", "roundups always belong to the 'All' section");
     }
 
     [Fact]
-    public void GetPrimarySectionUrl_RespectsCategories_ForNonRoundupsCollections()
+    public void GetPrimarySectionUrl_RespectsSections_ForNonRoundupsCollections()
     {
         // Arrange
-        var categories = new[] { "GitHub Copilot" };
+        var sectionNames = new[] { "GitHub Copilot" };
 
         // Act - Pass a non-roundups collection name
-        var result = SectionPriorityHelper.GetPrimarySectionUrl(categories, "news");
+        var result = SectionPriorityHelper.GetPrimarySectionUrl(sectionNames, "news");
 
         // Assert - Should use normal priority logic
         result.Should().Be("github-copilot", "non-roundups collections should use normal priority logic");

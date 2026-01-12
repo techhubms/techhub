@@ -29,7 +29,6 @@ public class SectionTests : TestContext
             Title = "Artificial Intelligence",
             Description = "AI and machine learning content",
             Url = "/ai",
-            Category = "ai",
             BackgroundImage = "/images/ai-bg.jpg",
             Collections =
             [
@@ -92,7 +91,6 @@ public class SectionTests : TestContext
             Title = "Artificial Intelligence",
             Description = "AI and machine learning content",
             Url = "/ai",
-            Category = "ai",
             BackgroundImage = "/images/ai-bg.jpg",
             Collections =
             [

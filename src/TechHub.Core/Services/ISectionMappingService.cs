@@ -14,9 +14,9 @@ public interface ISectionMappingService
     string GetSectionTitle(string sectionUrl);
 
     /// <summary>
-    /// Gets the section URL from a category/section name.
+    /// Gets the section URL from a section title.
     /// </summary>
-    /// <param name="sectionName">Section name or category (e.g., "GitHub Copilot", "AI")</param>
+    /// <param name="sectionName">Section title (e.g., "GitHub Copilot", "AI")</param>
     /// <returns>Section URL (e.g., "github-copilot", "ai") or normalized input if not found</returns>
     string GetSectionUrl(string sectionName);
 

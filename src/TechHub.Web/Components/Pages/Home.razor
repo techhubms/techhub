@@ -110,7 +110,7 @@ try
 {
 // Fetch all content in parallel
 var sectionsTask = ApiClient.GetAllSectionsAsync();
-var roundupsTask = ApiClient.GetContentAsync(category: null, collection: "roundups");
+var roundupsTask = ApiClient.GetContentAsync(section: null, collection: "roundups");
 var latestItemsTask = ApiClient.GetLatestItemsAsync(count: 5);
 var popularTagsTask = ApiClient.GetPopularTagsAsync(count: 15);
 

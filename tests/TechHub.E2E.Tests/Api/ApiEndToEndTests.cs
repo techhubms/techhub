@@ -58,7 +58,7 @@ public class ApiEndToEndTests(ApiTestFactory factory) : IClassFixture<ApiTestFac
         section.Should().NotBeNull();
         section!.Name.Should().Be("ai");
         section.Title.Should().Be("Artificial Intelligence");
-        section.Category.Should().Be("AI");
+        section.Name.Should().Be("ai");
         section.Collections.Should().NotBeEmpty();
     }
 
@@ -178,13 +178,13 @@ public class ApiEndToEndTests(ApiTestFactory factory) : IClassFixture<ApiTestFac
 
     #endregion
 
-    #region Content Endpoints - Categories
+    #region Content Endpoints - Sections
 
     [Fact]
-    public async Task GetContentByCategory_AI_ReturnsAIItems()
+    public async Task GetContentBySection_AI_ReturnsAIItems()
     {
         // Act
-        var response = await _client.GetAsync("/api/content?category=AI");
+        var response = await _client.GetAsync("/api/content?sectionName=AI");
 
         // Assert
         response.StatusCode.Should().Be(HttpStatusCode.OK);
@@ -192,14 +192,14 @@ public class ApiEndToEndTests(ApiTestFactory factory) : IClassFixture<ApiTestFac
         var items = await response.Content.ReadFromJsonAsync<List<ContentItemDto>>();
         items.Should().NotBeNull();
         items!.Should().NotBeEmpty();
-        items.Should().AllSatisfy(item => item.Categories.Should().Contain("AI"));
+        items.Should().AllSatisfy(item => item.Sections.Should().Contain("AI"));
     }
 
     [Fact]
-    public async Task GetContentByCategory_GitHubCopilot_ReturnsCopilotItems()
+    public async Task GetContentBySection_GitHubCopilot_ReturnsCopilotItems()
     {
         // Act
-        var response = await _client.GetAsync("/api/content?category=GitHub Copilot");
+        var response = await _client.GetAsync("/api/content?sectionName=GitHub Copilot");
 
         // Assert
         response.StatusCode.Should().Be(HttpStatusCode.OK);
@@ -207,14 +207,14 @@ public class ApiEndToEndTests(ApiTestFactory factory) : IClassFixture<ApiTestFac
         var items = await response.Content.ReadFromJsonAsync<List<ContentItemDto>>();
         items.Should().NotBeNull();
         items!.Should().NotBeEmpty();
-        items.Should().AllSatisfy(item => item.Categories.Should().Contain("GitHub Copilot"));
+        items.Should().AllSatisfy(item => item.Sections.Should().Contain("GitHub Copilot"));
     }
 
     [Fact]
-    public async Task GetContentByCategory_Azure_ReturnsAzureItems()
+    public async Task GetContentBySection_Azure_ReturnsAzureItems()
     {
         // Act
-        var response = await _client.GetAsync("/api/content?category=Azure");
+        var response = await _client.GetAsync("/api/content?sectionName=Azure");
 
         // Assert
         response.StatusCode.Should().Be(HttpStatusCode.OK);
@@ -222,7 +222,7 @@ public class ApiEndToEndTests(ApiTestFactory factory) : IClassFixture<ApiTestFac
         var items = await response.Content.ReadFromJsonAsync<List<ContentItemDto>>();
         items.Should().NotBeNull();
         items!.Should().NotBeEmpty();
-        items.Should().AllSatisfy(item => item.Categories.Should().Contain("Azure"));
+        items.Should().AllSatisfy(item => item.Sections.Should().Contain("Azure"));
     }
 
     #endregion
@@ -241,7 +241,7 @@ public class ApiEndToEndTests(ApiTestFactory factory) : IClassFixture<ApiTestFac
         var items = await response.Content.ReadFromJsonAsync<List<ContentItemDto>>();
         items.Should().NotBeNull();
         items!.Should().NotBeEmpty();
-        items.Should().AllSatisfy(item => item.Categories.Should().Contain("AI"));
+        items.Should().AllSatisfy(item => item.Sections.Should().Contain("AI"));
     }
 
     [Fact]
@@ -259,7 +259,7 @@ public class ApiEndToEndTests(ApiTestFactory factory) : IClassFixture<ApiTestFac
         items.Should().AllSatisfy(item =>
         {
             item.CollectionName.Should().Be("news");
-            item.Categories.Should().Contain("GitHub Copilot");
+            item.Sections.Should().Contain("GitHub Copilot");
         });
     }
 
@@ -277,9 +277,9 @@ public class ApiEndToEndTests(ApiTestFactory factory) : IClassFixture<ApiTestFac
         items!.Should().NotBeEmpty();
         items!.Should().AllSatisfy(item =>
         {
-            var hasAI = item.Categories.Contains("AI");
-            var hasAzure = item.Categories.Contains("Azure");
-            (hasAI || hasAzure).Should().BeTrue("each item should have at least one of the filtered categories");
+            var hasAI = item.Sections.Contains("AI");
+            var hasAzure = item.Sections.Contains("Azure");
+            (hasAI || hasAzure).Should().BeTrue("each item should have at least one of the filtered sections");
         });
     }
 
@@ -390,7 +390,7 @@ public class ApiEndToEndTests(ApiTestFactory factory) : IClassFixture<ApiTestFac
             item.DateEpoch.Should().BeGreaterThan(0);
             item.DateIso.Should().NotBeNullOrEmpty();
             item.CollectionName.Should().NotBeNullOrEmpty();
-            item.Categories.Should().NotBeEmpty();
+            item.Sections.Should().NotBeEmpty();
             item.Tags.Should().NotBeEmpty();
             item.Url.Should().NotBeNullOrEmpty();
         });

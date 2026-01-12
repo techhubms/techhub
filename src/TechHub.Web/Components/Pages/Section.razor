@@ -5,7 +5,11 @@
 @inject TechHubApiClient ApiClient
 @inject NavigationManager Navigation
 
-@if (sectionData != null)
+@if (sectionData == null)
+{
+    <p class="error-message">Error: Section data could not be loaded.</p>
+}
+else
 {
     <PageTitle>@sectionData.Title - Tech Hub</PageTitle>
 
@@ -23,7 +27,7 @@
         </aside>
 
         <main class="page-main-content">
-            <ContentItemsGrid SectionName="@SectionName" CollectionName="all" SectionCategory="@sectionData.Category"
+            <ContentItemsGrid SectionName="@SectionName" CollectionName="all" SectionTitle="@sectionData.Title"
                 Collections="@sectionData.Collections" />
         </main>
     </div>

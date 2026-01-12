@@ -50,10 +50,8 @@ public class SectionConfig
     public required string Title { get; init; }
     public required string Description { get; init; }
     public required string Url { get; init; }
-    public required string Section { get; init; }
     public required string Image { get; init; }
-    public required string Category { get; init; }
-    public required List<CollectionConfig> Collections { get; init; }
+    public required Dictionary<string, CollectionConfig> Collections { get; init; }
 }
 
 /// <summary>
@@ -63,7 +61,6 @@ public class CollectionConfig
 {
     public required string Title { get; init; }
     public required string Url { get; init; }
-    public string? Collection { get; init; }
     public required string Description { get; init; }
     public bool Custom { get; init; }
 }

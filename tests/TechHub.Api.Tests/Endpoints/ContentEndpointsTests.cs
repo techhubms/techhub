@@ -48,7 +48,7 @@ public class ContentEndpointsTests : IClassFixture<TechHubApiFactory>
         var items = await response.Content.ReadFromJsonAsync<List<ContentItemDto>>();
         items.Should().NotBeNull();
         items!.Should().HaveCount(2); // 2 AI items
-        items.Should().AllSatisfy(item => item.Categories.Should().Contain("AI"));
+        items.Should().AllSatisfy(item => item.Sections.Should().Contain("AI"));
     }
 
     [Fact]
@@ -109,7 +109,7 @@ public class ContentEndpointsTests : IClassFixture<TechHubApiFactory>
         items.Should().NotBeNull();
         items!.Should().HaveCount(1); // Only AI news item
         items![0].CollectionName.Should().Be("news");
-        items[0].Categories.Should().Contain("AI");
+        items[0].Sections.Should().Contain("AI");
     }
 
     [Fact]
@@ -157,7 +157,7 @@ public class ContentEndpointsTests : IClassFixture<TechHubApiFactory>
         items!.Should().HaveCount(1);
         items![0].Slug.Should().Be("2024-01-15-ai-news-1");
         items[0].CollectionName.Should().Be("news");
-        items[0].Categories.Should().Contain("AI");
+        items[0].Sections.Should().Contain("AI");
         items[0].Tags.Should().Contain("copilot");
     }
 
@@ -188,7 +188,7 @@ public class ContentEndpointsTests : IClassFixture<TechHubApiFactory>
         var items = await response.Content.ReadFromJsonAsync<List<ContentItemDto>>();
         items.Should().NotBeNull();
         items!.Should().HaveCount(1);
-        items![0].Categories.Should().Contain("GitHub Copilot");
+        items![0].Sections.Should().Contain("GitHub Copilot");
         items[0].Tags.Should().Contain("vscode");
     }
 
@@ -227,7 +227,7 @@ public class ContentEndpointsTests : IClassFixture<TechHubApiFactory>
         var response = await _client.GetAsync("/api/content/filter?collections=blogs");
         var items = await response.Content.ReadFromJsonAsync<List<ContentItemDto>>();
 
-        // Assert - URLs should include section context (primary section based on categories) and be lowercase 
+        // Assert - URLs should include section context (primary section based on Sections property) and be lowercase 
         items![0].Url.Should().Be("/ai/blogs/2024-01-16-ai-blog-1");
     }
 
@@ -282,7 +282,7 @@ public class ContentEndpointsTests : IClassFixture<TechHubApiFactory>
         item.DateEpoch.Should().BeGreaterThan(0);
         item.DateIso.Should().NotBeNullOrEmpty();
         item.CollectionName.Should().NotBeNullOrEmpty();
-        item.Categories.Should().NotBeEmpty();
+        item.Sections.Should().NotBeEmpty();
         item.Tags.Should().NotBeEmpty();
         item.Excerpt.Should().NotBeNullOrEmpty();
         item.Url.Should().NotBeNullOrEmpty();

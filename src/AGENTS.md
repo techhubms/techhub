@@ -163,6 +163,14 @@ The Tech Hub .NET project uses comprehensive code quality tooling to maintain co
 - **Parameters/Locals**: `camelCase`
 - **Constants**: `PascalCase`
 
+**Domain Terminology**:
+
+- **`section`**: Refers to the entire Section object/concept (e.g., `var section = new Section()`)
+- **`sectionName`**: Refers to the Name property of a section (the string identifier/slug, e.g., "ai", "github-copilot")
+- **`collection`**: Refers to the entire Collection object/concept
+- **`collectionName`**: Refers to the Name property of a collection (the string identifier, e.g., "news", "videos")
+- **Consistency Rule**: Use suffixed names (`sectionName`, `collectionName`) for string identifiers in API parameters, route parameters, and method parameters
+
 ### Code Analysis Settings
 
 **Analysis Level**: `latest-all` - Enables all available code analyzers

@@ -26,11 +26,6 @@ public class Section
     public required string Url { get; init; }
 
     /// <summary>
-    /// Category for filtering (e.g., "ai", "copilot")
-    /// </summary>
-    public required string Category { get; init; }
-
-    /// <summary>
     /// Path to section header background image
     /// </summary>
     public required string BackgroundImage { get; init; }

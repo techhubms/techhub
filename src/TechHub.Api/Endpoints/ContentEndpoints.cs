@@ -19,11 +19,11 @@ internal static class ContentEndpoints
             .WithTags("Content")
             .WithDescription("Endpoints for advanced content filtering and search");
 
-        // Get content by category and collection
+        // Get content by section and collection
         group.MapGet("", GetContent)
             .WithName("GetContent")
-            .WithSummary("Get content by category and collection")
-            .WithDescription("Get all content items for a specific category and collection. Example: /api/content?category=ai&collectionName=news")
+            .WithSummary("Get content by section and collection")
+            .WithDescription("Get all content items for a specific section and collection. Example: /api/content?sectionName=AI&collectionName=news")
             .Produces<IEnumerable<ContentItemDto>>(StatusCodes.Status200OK);
 
         // Get individual content detail
@@ -52,10 +52,10 @@ internal static class ContentEndpoints
     }
 
     /// <summary>
-    /// GET /api/content?category={category}&collectionName={collectionName} - Get content by category and collection
+    /// GET /api/content?sectionName={sectionName}&collectionName={collectionName} - Get content by section and collection
     /// </summary>
     private static async Task<Ok<IEnumerable<ContentItemDto>>> GetContent(
-        [FromQuery] string? category,
+        [FromQuery] string? sectionName,
         [FromQuery] string? collectionName,
         IContentRepository contentRepository,
         CancellationToken cancellationToken)
@@ -63,16 +63,16 @@ internal static class ContentEndpoints
         // Use targeted repository methods for better database performance
         IReadOnlyList<Core.Models.ContentItem> content;
 
-        if (!string.IsNullOrWhiteSpace(category) && !string.IsNullOrWhiteSpace(collectionName))
+        if (!string.IsNullOrWhiteSpace(sectionName) && !string.IsNullOrWhiteSpace(collectionName))
         {
-            // Both filters: get by collection first (smaller dataset), then filter by category
+            // Both filters: get by collection first (smaller dataset), then filter by section title
             var collectionContent = await contentRepository.GetByCollectionAsync(collectionName, cancellationToken);
-            content = [.. collectionContent.Where(c => c.Categories.Contains(category, StringComparer.OrdinalIgnoreCase))];
+            content = [.. collectionContent.Where(c => c.Sections.Contains(sectionName, StringComparer.OrdinalIgnoreCase))];
         }
-        else if (!string.IsNullOrWhiteSpace(category))
+        else if (!string.IsNullOrWhiteSpace(sectionName))
         {
-            // Category only
-            content = await contentRepository.GetByCategoryAsync(category, cancellationToken);
+            // Section filter only
+            content = await contentRepository.GetBySectionAsync(sectionName, cancellationToken);
         }
         else if (!string.IsNullOrWhiteSpace(collectionName))
         {
@@ -101,7 +101,7 @@ internal static class ContentEndpoints
         IMarkdownService markdownService,
         CancellationToken cancellationToken)
     {
-        // Get the section to find the category
+        // Get the section data
         var section = await sectionRepository.GetByNameAsync(sectionName, cancellationToken);
         if (section == null)
         {
@@ -117,9 +117,9 @@ internal static class ContentEndpoints
         }
 
         // Validate that the item belongs to the requested section
-        // "All" section accepts all content, specific sections only accept matching categories
-        var isValidForSection = section.Category.Equals("All", StringComparison.OrdinalIgnoreCase) ||
-                                item.Categories.Contains(section.Category, StringComparer.OrdinalIgnoreCase);
+        // "All" section accepts all content, specific sections only accept matching section names
+        var isValidForSection = section.Name.Equals("all", StringComparison.OrdinalIgnoreCase) ||
+                                item.Sections.Contains(section.Name, StringComparer.OrdinalIgnoreCase);
 
         if (!isValidForSection)
         {
@@ -137,8 +137,8 @@ internal static class ContentEndpoints
             DateIso = item.DateIso,
             CollectionName = item.CollectionName,
             AltCollection = item.AltCollection,
-            Categories = item.Categories,
-            PrimarySection = TechHub.Core.Helpers.SectionPriorityHelper.GetPrimarySectionName(item.Categories, item.CollectionName),
+            Sections = item.Sections,
+            PrimarySection = TechHub.Core.Helpers.SectionPriorityHelper.GetPrimarySectionName(item.Sections, item.CollectionName),
             Tags = item.Tags,
             Excerpt = item.Excerpt,
             RenderedHtml = item.RenderedHtml,
@@ -153,8 +153,8 @@ internal static class ContentEndpoints
 
     /// <summary>
     /// GET /api/content/filter - Advanced content filtering
-    /// Supports filtering by: sections (category names), collections, tags, and text search
-    /// Example: /api/content/filter?sections=AI,ML&collections=news,blogs&tags=copilot,azure&q=github
+    /// Supports filtering by: sections (section names), collections, tags, and text search
+    /// Example: /api/content/filter?sections=ai,github-copilot&collections=news,blogs&tags=copilot,azure&q=github
     /// </summary>
     /// <remarks>
     /// NOTE: This endpoint loads all content for complex filtering. 
@@ -177,19 +177,19 @@ internal static class ContentEndpoints
         var content = await contentRepository.GetAllAsync(cancellationToken);
         var results = content.AsEnumerable();
 
-        // Filter by sections (category names)
+        // Filter by sections (section names in content Sections property)
         if (!string.IsNullOrWhiteSpace(sections))
         {
             var sectionNames = sections.Split(',', StringSplitOptions.RemoveEmptyEntries | StringSplitOptions.TrimEntries);
             var allSections = await sectionRepository.GetAllAsync(cancellationToken);
 
-            // Map section names to categories
-            var categories = allSections
+            // Get section titles (what's stored in content Sections property) from section names (URL slugs)
+            var validSectionTitles = allSections
                 .Where(s => sectionNames.Contains(s.Name, StringComparer.OrdinalIgnoreCase))
-                .Select(s => s.Category)
+                .Select(s => s.Title)
                 .ToHashSet(StringComparer.OrdinalIgnoreCase);
 
-            results = results.Where(c => c.Categories.Any(cat => categories.Contains(cat)));
+            results = results.Where(c => c.Sections.Any(sectionTitle => validSectionTitles.Contains(sectionTitle)));
         }
 
         // Filter by collections
@@ -237,7 +237,7 @@ internal static class ContentEndpoints
     /// </summary>
     private static ContentItemDto MapToDto(Core.Models.ContentItem item)
     {
-        var primarySectionUrl = TechHub.Core.Helpers.SectionPriorityHelper.GetPrimarySectionUrl(item.Categories, item.CollectionName);
+        var primarySectionUrl = TechHub.Core.Helpers.SectionPriorityHelper.GetPrimarySectionUrl(item.Sections, item.CollectionName);
 
         return new ContentItemDto
         {
@@ -249,8 +249,8 @@ internal static class ContentEndpoints
             DateIso = item.DateIso,
             CollectionName = item.CollectionName,
             AltCollection = item.AltCollection,
-            Categories = item.Categories,
-            PrimarySection = TechHub.Core.Helpers.SectionPriorityHelper.GetPrimarySectionName(item.Categories, item.CollectionName),
+            Sections = item.Sections,
+            PrimarySection = TechHub.Core.Helpers.SectionPriorityHelper.GetPrimarySectionName(item.Sections, item.CollectionName),
             Tags = item.Tags,
             Excerpt = item.Excerpt,
             ExternalUrl = item.ExternalUrl,

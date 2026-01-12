@@ -166,7 +166,7 @@ public class UrlRoutingTests(PlaywrightCollectionFixture fixture) : IAsyncLifeti
         // Arrange
 
         // Get total item count across all GitHub Copilot collections from API
-        var apiResponse = await Page.APIRequest.GetAsync($"{ApiUrl}/api/content?category=GitHub%20Copilot");
+        var apiResponse = await Page.APIRequest.GetAsync($"{ApiUrl}/api/content?sectionName=GitHub%20Copilot");
         var allItems = await apiResponse.JsonAsync();
         var totalItemCount = allItems.Value.GetArrayLength();
 

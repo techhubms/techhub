@@ -16,7 +16,6 @@ public class SectionTests
             Title = "AI",
             Description = "Artificial Intelligence resources",
             Url = "/ai",
-            Category = "AI",
             BackgroundImage = "/assets/section-backgrounds/ai.jpg",
             Collections =
             [
@@ -55,7 +54,6 @@ public class SectionTests
             Title = "Test",
             Description = "Test description",
             Url = "/test",
-            Category = "Test",
             BackgroundImage = "/test.jpg",
             Collections =
             [
@@ -89,7 +87,6 @@ public class SectionTests
             Title = "Test",
             Description = "Test description",
             Url = "/test",
-            Category = "Test",
             BackgroundImage = "/test.jpg",
             Collections =
             [
@@ -127,7 +124,6 @@ public class SectionTests
             Title = "Test",
             Description = "Test description",
             Url = "/test",
-            Category = "Test",
             BackgroundImage = "/test.jpg",
             Collections =
             [
@@ -165,7 +161,6 @@ public class SectionTests
             Title = "Test",
             Description = "Test description",
             Url = "/test",
-            Category = "Test",
             BackgroundImage = "/test.jpg",
             Collections =
             [
@@ -197,7 +192,6 @@ public class SectionTests
             Title = "",
             Description = "Test description",
             Url = "/test",
-            Category = "Test",
             BackgroundImage = "/test.jpg",
             Collections =
             [
@@ -231,7 +225,6 @@ public class SectionTests
             Title = "Test",
             Description = "Test description",
             Url = "",
-            Category = "Test",
             BackgroundImage = "/test.jpg",
             Collections =
             [
@@ -268,7 +261,6 @@ public class SectionTests
             Title = "Test",
             Description = "Test description",
             Url = invalidUrl,
-            Category = "Test",
             BackgroundImage = "/test.jpg",
             Collections =
             [
@@ -305,7 +297,6 @@ public class SectionTests
             Title = "Test",
             Description = "Test description",
             Url = validUrl,
-            Category = "Test",
             BackgroundImage = "/test.jpg",
             Collections =
             [
@@ -337,7 +328,6 @@ public class SectionTests
             Title = "Test",
             Description = "Test description",
             Url = "/test",
-            Category = "Test",
             BackgroundImage = "/test.jpg",
             Collections = []
         };
@@ -361,7 +351,6 @@ public class SectionTests
             Title = "Test",
             Description = "Test description",
             Url = "/test",
-            Category = "Test",
             BackgroundImage = "/test.jpg",
             Collections =
             [
@@ -412,7 +401,6 @@ public class SectionTests
             Title = "Test Title",
             Description = "Test Description",
             Url = "/test",
-            Category = "Test Category",
             BackgroundImage = "/test-bg.jpg",
             Collections = []
         };
@@ -438,7 +426,6 @@ public class SectionTests
             Title = "Test",
             Description = "Test description",
             Url = "/test",
-            Category = "Test",
             BackgroundImage = "/test.jpg",
             Collections = []
         };

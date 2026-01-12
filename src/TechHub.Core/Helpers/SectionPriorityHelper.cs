@@ -1,7 +1,7 @@
 namespace TechHub.Core.Helpers;
 
 /// <summary>
-/// Helper class to determine the primary section for content items based on categories
+/// Helper class to determine the primary section for content items based on section names
 /// and the section order in the top menu bar
 /// </summary>
 public static class SectionPriorityHelper
@@ -35,26 +35,26 @@ public static class SectionPriorityHelper
     };
 
     /// <summary>
-    /// Determines the primary section URL for a content item based on its categories and collection
+    /// Determines the primary section URL for a content item based on its section names and collection
     /// </summary>
-    /// <param name="categories">List of categories from the content item</param>
+    /// <param name="sectionNames">List of section names from the content item (e.g., "AI", "GitHub Copilot")</param>
     /// <param name="collectionName">Optional collection name (e.g., "roundups")</param>
     /// <returns>The URL of the primary section (e.g., "github-copilot", "ai"), or "all" if no match</returns>
-    public static string GetPrimarySectionUrl(IReadOnlyList<string> categories, string? collectionName = null)
+    public static string GetPrimarySectionUrl(IReadOnlyList<string> sectionNames, string? collectionName = null)
     {
-        ArgumentNullException.ThrowIfNull(categories);
+        ArgumentNullException.ThrowIfNull(sectionNames);
 
         // Special case: Roundups always belong to "all" section
         if (collectionName?.Equals("roundups", StringComparison.OrdinalIgnoreCase) == true)
             return "all";
 
-        if (categories.Count == 0)
+        if (sectionNames.Count == 0)
             return "all";
 
-        // Find the first category that matches a section in priority order
+        // Find the first section that matches in priority order
         foreach (var sectionName in _sectionPriorityOrder)
         {
-            if (categories.Contains(sectionName, StringComparer.OrdinalIgnoreCase))
+            if (sectionNames.Contains(sectionName, StringComparer.OrdinalIgnoreCase))
             {
                 return _sectionNameToUrl[sectionName];
             }
@@ -65,26 +65,26 @@ public static class SectionPriorityHelper
     }
 
     /// <summary>
-    /// Determines the primary section name (display name) for a content item based on its categories and collection
+    /// Determines the primary section name (display name) for a content item based on its section names and collection
     /// </summary>
-    /// <param name="categories">List of categories from the content item</param>
+    /// <param name="sectionNames">List of section names from the content item (e.g., "AI", "GitHub Copilot")</param>
     /// <param name="collectionName">Optional collection name (e.g., "roundups")</param>
     /// <returns>The display name of the primary section (e.g., "GitHub Copilot", "AI"), or "All" if no match</returns>
-    public static string GetPrimarySectionName(IReadOnlyList<string> categories, string? collectionName = null)
+    public static string GetPrimarySectionName(IReadOnlyList<string> sectionNames, string? collectionName = null)
     {
-        ArgumentNullException.ThrowIfNull(categories);
+        ArgumentNullException.ThrowIfNull(sectionNames);
 
         // Special case: Roundups always belong to "All" section
         if (collectionName?.Equals("roundups", StringComparison.OrdinalIgnoreCase) == true)
             return "All";
 
-        if (categories.Count == 0)
+        if (sectionNames.Count == 0)
             return "All";
 
-        // Find the first category that matches a section in priority order
+        // Find the first section that matches in priority order
         foreach (var sectionName in _sectionPriorityOrder)
         {
-            if (categories.Contains(sectionName, StringComparer.OrdinalIgnoreCase))
+            if (sectionNames.Contains(sectionName, StringComparer.OrdinalIgnoreCase))
             {
                 return sectionName;
             }

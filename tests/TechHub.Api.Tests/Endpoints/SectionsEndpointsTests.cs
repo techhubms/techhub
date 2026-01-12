@@ -50,7 +50,7 @@ public class SectionsEndpointsTests : IClassFixture<TechHubApiFactory>
         aiSection.Title.Should().Be("AI");
         aiSection.Description.Should().Be("Artificial Intelligence resources");
         aiSection.Url.Should().Be("/ai");
-        aiSection.Category.Should().Be("AI");
+        aiSection.Name.Should().Be("ai");
         aiSection.BackgroundImage.Should().Be("/assets/section-backgrounds/ai.jpg");
         aiSection.Collections.Should().HaveCount(2);
         aiSection.Collections.Should().Contain(c => c.Name == "news");
@@ -94,8 +94,8 @@ public class SectionsEndpointsTests : IClassFixture<TechHubApiFactory>
 
         var items = await response.Content.ReadFromJsonAsync<List<ContentItemDto>>();
         items.Should().NotBeNull();
-        items!.Should().HaveCount(2); // 2 items with AI category
-        items.Should().AllSatisfy(item => item.Categories.Should().Contain("AI"));
+        items!.Should().HaveCount(2); // 2 items with AI section
+        items.Should().AllSatisfy(item => item.Sections.Should().Contain("AI"));
     }
 
     [Fact]
@@ -183,7 +183,7 @@ public class SectionsEndpointsTests : IClassFixture<TechHubApiFactory>
         items.Should().NotBeNull();
         items!.Should().HaveCount(1); // 1 AI news item
         items![0].CollectionName.Should().Be("news");
-        items[0].Categories.Should().Contain("AI");
+        items[0].Sections.Should().Contain("AI");
     }
 
     [Fact]
@@ -199,7 +199,7 @@ public class SectionsEndpointsTests : IClassFixture<TechHubApiFactory>
         items.Should().NotBeNull();
         items!.Should().HaveCount(1);
         items![0].CollectionName.Should().Be("videos");
-        items[0].Categories.Should().Contain("GitHub Copilot");
+        items[0].Sections.Should().Contain("GitHub Copilot");
         items[0].VideoId.Should().Be("abc123");
     }
 
@@ -235,16 +235,16 @@ public class SectionsEndpointsTests : IClassFixture<TechHubApiFactory>
     }
 
     [Theory]
-    [InlineData("ai", "AI")]
-    [InlineData("github-copilot", "GitHub Copilot")]
-    public async Task GetSectionByName_ReturnsCorrectCategory(string sectionName, string expectedCategory)
+    [InlineData("ai", "ai")]
+    [InlineData("github-copilot", "github-copilot")]
+    public async Task GetSectionByName_ReturnsCorrectSection(string sectionName, string expectedSection)
     {
         // Act
         var response = await _client.GetAsync($"/api/sections/{sectionName}");
         var section = await response.Content.ReadFromJsonAsync<SectionDto>();
 
         // Assert
-        section!.Category.Should().Be(expectedCategory);
+        section!.Name.Should().Be(expectedSection);
     }
 
     /// <summary>

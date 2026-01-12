@@ -76,7 +76,6 @@ public class TechHubApiFactory : WebApplicationFactory<Program>
                 Name = "ai", Title = "AI",
                 Description = "Artificial Intelligence resources",
                 Url = "/ai",
-                Category = "AI",
                 BackgroundImage = "/assets/section-backgrounds/ai.jpg",
                 Collections =
                 [
@@ -90,7 +89,6 @@ public class TechHubApiFactory : WebApplicationFactory<Program>
                 Title = "GitHub Copilot",
                 Description = "GitHub Copilot resources",
                 Url = "/github-copilot",
-                Category = "GitHub Copilot",
                 BackgroundImage = "/assets/section-backgrounds/github-copilot.jpg",
                 Collections =
                 [
@@ -134,7 +132,7 @@ public class TechHubApiFactory : WebApplicationFactory<Program>
                 Author = "John Doe",
                 DateEpoch = 1705276800, CollectionName = "news",
                 AltCollection = null,
-                Categories = ["AI"],
+                Sections = ["AI"],
                 Tags = ["ai", "copilot", "azure"],
                 RenderedHtml = "<h1>AI News Article 1</h1><p>AI news content...</p>",
                 Excerpt = "AI news excerpt...",
@@ -147,7 +145,7 @@ public class TechHubApiFactory : WebApplicationFactory<Program>
                 Author = "Jane Smith",
                 DateEpoch = 1705363200, CollectionName = "blogs",
                 AltCollection = null,
-                Categories = ["AI"],
+                Sections = ["AI"],
                 Tags = ["ai", "machine-learning"],
                 RenderedHtml = "<h1>AI Blog Article 1</h1><p>AI blog content...</p>",
                 Excerpt = "AI blog excerpt...",
@@ -160,7 +158,7 @@ public class TechHubApiFactory : WebApplicationFactory<Program>
                 Author = "Bob Johnson",
                 DateEpoch = 1705449600, CollectionName = "videos",
                 AltCollection = null,
-                Categories = ["GitHub Copilot"],
+                Sections = ["GitHub Copilot"],
                 Tags = ["copilot", "vscode", "productivity"],
                 RenderedHtml = "<h1>GitHub Copilot Video 1</h1><p>Copilot video content...</p>",
                 Excerpt = "Copilot video excerpt...",
@@ -173,7 +171,7 @@ public class TechHubApiFactory : WebApplicationFactory<Program>
                 Author = "Alice Williams",
                 DateEpoch = 1705536000, CollectionName = "news",
                 AltCollection = null,
-                Categories = ["GitHub Copilot"],
+                Sections = ["GitHub Copilot"],
                 Tags = ["copilot", "github"],
                 RenderedHtml = "<h1>GitHub Copilot News 1</h1><p>Copilot news content...</p>",
                 Excerpt = "Copilot news excerpt...",
@@ -198,12 +196,12 @@ public class TechHubApiFactory : WebApplicationFactory<Program>
         mockRepo.Setup(r => r.GetByCollectionAsync("videos", It.IsAny<CancellationToken>()))
             .ReturnsAsync([.. content.Where(c => c.CollectionName == "videos")]);
 
-        // GetByCategoryAsync
-        mockRepo.Setup(r => r.GetByCategoryAsync("AI", It.IsAny<CancellationToken>()))
-            .ReturnsAsync([.. content.Where(c => c.Categories.Contains("AI"))]);
+        // GetBySectionAsync
+        mockRepo.Setup(r => r.GetBySectionAsync("AI", It.IsAny<CancellationToken>()))
+            .ReturnsAsync([.. content.Where(c => c.Sections.Contains("AI"))]);
 
-        mockRepo.Setup(r => r.GetByCategoryAsync("GitHub Copilot", It.IsAny<CancellationToken>()))
-            .ReturnsAsync([.. content.Where(c => c.Categories.Contains("GitHub Copilot"))]);
+        mockRepo.Setup(r => r.GetBySectionAsync("GitHub Copilot", It.IsAny<CancellationToken>()))
+            .ReturnsAsync([.. content.Where(c => c.Sections.Contains("GitHub Copilot"))]);
 
         // GetAllTagsAsync
         var allTags = content.SelectMany(c => c.Tags).Distinct().ToList();

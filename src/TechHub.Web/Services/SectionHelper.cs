@@ -28,7 +28,7 @@ internal static class SectionHelper
     }
 
     /// <summary>
-    /// Gets the section URL from a category/section name.
+    /// Gets the section URL from a section title.
     /// </summary>
     public static string GetSectionUrl(string sectionName)
     {

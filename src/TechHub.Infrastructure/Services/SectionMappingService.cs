@@ -19,23 +19,17 @@ public class SectionMappingService : ISectionMappingService
 
         var sections = options.Value.Content.Sections;
 
-        // Build URL → Title mapping
+        // Build URL → Title mapping (using section key as URL identifier)
         _urlToTitle = sections.ToDictionary(
             kvp => kvp.Key,
             kvp => kvp.Value.Title,
             StringComparer.OrdinalIgnoreCase);
 
-        // Build Name/Category → URL mapping
+        // Build Name → URL mapping (section name is the key itself)
         _nameToUrl = sections.ToDictionary(
-            kvp => kvp.Value.Category,
+            kvp => kvp.Key,
             kvp => kvp.Key,
             StringComparer.OrdinalIgnoreCase);
-
-        // Add URL → URL mappings for direct lookups
-        foreach (var kvp in sections)
-        {
-            _nameToUrl[kvp.Key] = kvp.Key;
-        }
     }
 
     public string GetSectionTitle(string sectionUrl)

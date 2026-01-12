@@ -12,7 +12,7 @@
    All interactive button styles are scoped to .sidebar to ensure they only apply
    within sidebar contexts, preventing style conflicts with main content.
    
-   Used across: Home, Category, CategoryContentType, ContentItem pages
+   Used across: Home, Section, SectionContentType, ContentItem pages
    ============================================================================ */
 
 /* ============================================================================
@@ -83,7 +83,7 @@
   color: var(--color-text-secondary);
 }
 
-.sidebar-item-category,
+.sidebar-item-section,
 .sidebar-item-contenttype {
   color: var(--color-text-secondary);
 }
@@ -94,7 +94,7 @@
    ============================================================================ */
 
 /* Display-only tags (content detail metadata) */
-.sidebar-category-tag,
+.sidebar-section-tag,
 .sidebar-content-tag {
   display: inline-block;
   padding: var(--spacing-1) var(--spacing-2);
@@ -106,7 +106,7 @@
   transition: all var(--duration-fast) var(--easing-ease);
 }
 
-.sidebar-category-tag:hover,
+.sidebar-section-tag:hover,
 .sidebar-content-tag:hover {
   background: var(--color-bg-emphasis);
   border-color: var(--color-purple-medium);
@@ -114,7 +114,7 @@
   transform: translateY(-1px);
 }
 
-.category-tags,
+.section-tags,
 .content-tags {
   display: flex;
   flex-wrap: wrap;

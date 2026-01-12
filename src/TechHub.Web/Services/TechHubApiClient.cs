@@ -170,22 +170,22 @@ public class TechHubApiClient(HttpClient httpClient, ILogger<TechHubApiClient> l
     }
 
     /// <summary>
-    /// Get content items by category and collection.
-    /// Pass null for category to get all items in the collection regardless of category.
+    /// Get content items by section and collection.
+    /// Pass null for section to get all items in the collection regardless of section.
     /// </summary>
     public virtual async Task<IEnumerable<ContentItemDto>?> GetContentAsync(
-        string? category,
+        string? section,
         string collection,
         CancellationToken cancellationToken = default)
     {
         try
         {
-            _logger.LogInformation("Fetching content for category: {Category}, collection: {Collection}",
-                category ?? "(all)", collection);
+            _logger.LogInformation("Fetching content for section: {Section}, collection: {Collection}",
+                section ?? "(all)", collection);
 
-            var url = string.IsNullOrWhiteSpace(category)
+            var url = string.IsNullOrWhiteSpace(section)
                 ? $"/api/content?collectionName={Uri.EscapeDataString(collection)}"
-                : $"/api/content?category={Uri.EscapeDataString(category)}&collectionName={Uri.EscapeDataString(collection)}";
+                : $"/api/content?sectionName={Uri.EscapeDataString(section)}&collectionName={Uri.EscapeDataString(collection)}";
 
             var items = await _httpClient.GetFromJsonAsync<IEnumerable<ContentItemDto>>(
                 url,
@@ -196,8 +196,8 @@ public class TechHubApiClient(HttpClient httpClient, ILogger<TechHubApiClient> l
         }
         catch (HttpRequestException ex)
         {
-            _logger.LogError(ex, "Failed to fetch content for category {Category}, collection {Collection}",
-                category ?? "(all)", collection);
+            _logger.LogError(ex, "Failed to fetch content for section {Section}, collection {Collection}",
+                section ?? "(all)", collection);
             throw;
         }
     }

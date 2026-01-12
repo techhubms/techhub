@@ -7,7 +7,11 @@
 
 <PageTitle>@(item?.Title ?? "Loading...") - Tech Hub</PageTitle>
 
-@if (sectionData != null)
+@if (sectionData == null)
+{
+    <p class="error-message">Error: Section data could not be loaded.</p>
+}
+else
 {
     <HeadContent>
         <link rel="canonical"
@@ -54,7 +58,8 @@
 
                 <nav class="content-navigation">
                     <a href="#top" @onclick="ScrollToTop" @onclick:preventDefault class="nav-button primary">Back to Top</a>
-                    <a href="/@(SectionName.ToLowerInvariant())" class="nav-button secondary">Back to @GetSectionDisplayName(SectionName)</a>
+                    <a href="/@(SectionName.ToLowerInvariant())" class="nav-button secondary">Back to
+                        @GetSectionDisplayName(SectionName)</a>
                 </nav>
             }
         </main>

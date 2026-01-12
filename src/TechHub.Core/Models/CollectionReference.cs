@@ -46,9 +46,10 @@ public class CollectionReference
         if (string.IsNullOrWhiteSpace(Name))
             throw new ArgumentException("Collection name cannot be empty", nameof(Name));
 
-        if (!_validCollections.Contains(Name))
+        // Only validate against known collections if this is not a custom collection
+        if (!IsCustom && !_validCollections.Contains(Name))
             throw new ArgumentException(
-                $"Collection name must be one of: {string.Join(", ", _validCollections)}",
+                $"Collection name must be one of: {string.Join(", ", _validCollections)} (or set IsCustom = true)",
                 nameof(Name));
 
         if (string.IsNullOrWhiteSpace(Title))

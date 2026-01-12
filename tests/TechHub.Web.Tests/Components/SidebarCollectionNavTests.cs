@@ -26,7 +26,6 @@ public class SidebarCollectionNavTests : TestContext
             Title = "AI",
             Description = "AI Description",
             Url = "/ai",
-            Category = "AI",
             BackgroundImage = "/images/ai-bg.jpg",
             Collections = collections
         };
@@ -61,7 +60,6 @@ public class SidebarCollectionNavTests : TestContext
             Title = "AI",
             Description = "AI Description",
             Url = "/ai",
-            Category = "AI",
             BackgroundImage = "/images/ai-bg.jpg",
             Collections = collections
         };
@@ -92,7 +90,6 @@ public class SidebarCollectionNavTests : TestContext
             Title = "AI",
             Description = "AI Description",
             Url = "/ai",
-            Category = "AI",
             BackgroundImage = "/images/ai-bg.jpg",
             Collections = collections
         };
@@ -127,7 +124,6 @@ public class SidebarCollectionNavTests : TestContext
             Title = "AI",
             Description = "AI Description",
             Url = "/ai",
-            Category = "AI",
             BackgroundImage = "/images/ai-bg.jpg",
             Collections = collections
         };
@@ -160,7 +156,6 @@ public class SidebarCollectionNavTests : TestContext
             Title = "AI",
             Description = "AI Description",
             Url = "/ai",
-            Category = "AI",
             BackgroundImage = "/images/ai-bg.jpg",
             Collections = collections
         };

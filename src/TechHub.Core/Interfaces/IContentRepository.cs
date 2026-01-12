@@ -21,10 +21,11 @@ public interface IContentRepository
         CancellationToken cancellationToken = default);
 
     /// <summary>
-    /// Get content items filtered by category
+    /// Get content items filtered by section name.
+    /// Matches against the Sections property which contains section names like "AI", "GitHub Copilot".
     /// </summary>
-    Task<IReadOnlyList<ContentItem>> GetByCategoryAsync(
-        string category,
+    Task<IReadOnlyList<ContentItem>> GetBySectionAsync(
+        string sectionName,
         CancellationToken cancellationToken = default);
 
     /// <summary>

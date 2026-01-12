@@ -60,7 +60,7 @@ public class ContentItemsGridTests : TestContext
         var cut = RenderComponent<ContentItemsGrid>(parameters => parameters
             .Add(p => p.SectionName, "github-copilot")
             .Add(p => p.CollectionName, "all")
-            .Add(p => p.SectionCategory, "GitHub Copilot")
+            .Add(p => p.SectionTitle, "GitHub Copilot")
             .Add(p => p.Collections, []));
 
         // Wait for async rendering
@@ -90,7 +90,7 @@ public class ContentItemsGridTests : TestContext
         var cut = RenderComponent<ContentItemsGrid>(parameters => parameters
             .Add(p => p.SectionName, "github-copilot")
             .Add(p => p.CollectionName, "news")
-            .Add(p => p.SectionCategory, "GitHub Copilot")
+            .Add(p => p.SectionTitle, "GitHub Copilot")
             .Add(p => p.Collections, collections));
 
         // Wait for async rendering
@@ -120,7 +120,7 @@ public class ContentItemsGridTests : TestContext
         var cut = RenderComponent<ContentItemsGrid>(parameters => parameters
             .Add(p => p.SectionName, "github-copilot")
             .Add(p => p.CollectionName, "community")
-            .Add(p => p.SectionCategory, "GitHub Copilot")
+            .Add(p => p.SectionTitle, "GitHub Copilot")
             .Add(p => p.Collections, collections));
 
         // Wait for async rendering
@@ -150,7 +150,7 @@ public class ContentItemsGridTests : TestContext
         var cut = RenderComponent<ContentItemsGrid>(parameters => parameters
             .Add(p => p.SectionName, "github-copilot")
             .Add(p => p.CollectionName, "videos")
-            .Add(p => p.SectionCategory, "GitHub Copilot")
+            .Add(p => p.SectionTitle, "GitHub Copilot")
             .Add(p => p.Collections, collections));
 
         // Wait for async rendering
@@ -168,7 +168,7 @@ public class ContentItemsGridTests : TestContext
         var cut = RenderComponent<ContentItemsGrid>(parameters => parameters
             .Add(p => p.SectionName, "all")
             .Add(p => p.CollectionName, "all")
-            .Add(p => p.SectionCategory, "All")
+            .Add(p => p.SectionTitle, "All")
             .Add(p => p.Collections, []));
 
         // Wait for async rendering
@@ -198,7 +198,7 @@ public class ContentItemsGridTests : TestContext
         var cut = RenderComponent<ContentItemsGrid>(parameters => parameters
             .Add(p => p.SectionName, "all")
             .Add(p => p.CollectionName, "news")
-            .Add(p => p.SectionCategory, "All")
+            .Add(p => p.SectionTitle, "All")
             .Add(p => p.Collections, collections));
 
         // Wait for async rendering

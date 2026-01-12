@@ -60,7 +60,6 @@ internal static class RssEndpoints
             Title = "Everything",
             Url = "/",
             Description = "All content from Tech Hub",
-            Category = "all",
             Collections = [],
             BackgroundImage = "/assets/images/everything-header.jpg"
         };
@@ -86,7 +85,8 @@ internal static class RssEndpoints
             return Results.NotFound();
         }
 
-        var items = await contentRepository.GetByCategoryAsync(section.Category);
+        // Get content for this section (filter by section Title which is what's stored in Sections property)
+        var items = await contentRepository.GetBySectionAsync(section.Title);
         var channel = await rssService.GenerateSectionFeedAsync(section, items);
         var xml = rssService.SerializeToXml(channel);
 

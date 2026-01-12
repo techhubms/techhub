@@ -162,13 +162,13 @@ public class FileBasedContentRepositoryTests : IDisposable
     }
 
     /// <summary>
-    /// Test: GetByCategoryAsync filters content by category
-    /// Why: Sections display content filtered by category (ai, github-copilot, etc.)
+    /// Test: GetBySectionAsync filters content by section name
+    /// Why: Sections display content filtered by section name (ai, github-copilot, etc.)
     /// </summary>
     [Fact]
-    public async Task GetByCategoryAsync_SpecificCategory_ReturnsMatchingContent()
+    public async Task GetBySectionAsync_SpecificSection_ReturnsMatchingContent()
     {
-        // Arrange: Create content with different categories
+        // Arrange: Create content with different sections
         var newsDir = Path.Combine(_collectionsPath, "_news");
         Directory.CreateDirectory(newsDir);
 
@@ -194,13 +194,13 @@ public class FileBasedContentRepositoryTests : IDisposable
             Copilot content
             """);
 
-        // Act: Get AI category content
-        var aiContent = await _repository.GetByCategoryAsync("ai");
+        // Act: Get AI section content
+        var aiContent = await _repository.GetBySectionAsync("ai");
 
-        // Assert: Only AI category items returned
+        // Assert: Only AI section items returned
         Assert.Single(aiContent);
         Assert.Equal("AI News", aiContent[0].Title);
-        Assert.Contains("ai", aiContent[0].Categories);
+        Assert.Contains("ai", aiContent[0].Sections);
     }
 
     /// <summary>
@@ -688,13 +688,13 @@ public class FileBasedContentRepositoryTests : IDisposable
     }
 
     /// <summary>
-    /// Test: GetByCategoryAsync returns content sorted by date descending
-    /// Why: Category filtering must preserve date sorting for section pages
+    /// Test: GetBySectionAsync returns content sorted by date descending
+    /// Why: Section filtering must preserve date sorting for section pages
     /// </summary>
     [Fact]
-    public async Task GetByCategoryAsync_MultipleItems_ReturnsSortedByDateDescending()
+    public async Task GetBySectionAsync_MultipleItems_ReturnsSortedByDateDescending()
     {
-        // Arrange: Create AI category content with different dates
+        // Arrange: Create AI section content with different dates
         var newsDir = Path.Combine(_collectionsPath, "_news");
         var blogsDir = Path.Combine(_collectionsPath, "_blogs");
         Directory.CreateDirectory(newsDir);
@@ -722,8 +722,8 @@ public class FileBasedContentRepositoryTests : IDisposable
             Blog content
             """);
 
-        // Act: Get AI category
-        var content = await _repository.GetByCategoryAsync("ai");
+        // Act: Get AI section
+        var content = await _repository.GetBySectionAsync("ai");
 
         // Assert: Newest first (blog before news)
         Assert.Equal(2, content.Count);

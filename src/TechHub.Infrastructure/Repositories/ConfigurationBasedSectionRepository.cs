@@ -67,29 +67,28 @@ public sealed class ConfigurationBasedSectionRepository : ISectionRepository
     /// <summary>
     /// Convert SectionConfig from appsettings.json to Section model
     /// </summary>
-    private static Section ConvertToSection(string sectionId, SectionConfig config)
+    private static Section ConvertToSection(string sectionName, SectionConfig config)
     {
         // Map collection configurations to CollectionReference models
-        // Include both regular collections AND custom pages
+        // The key in the Collections dictionary is the collection name
         var collections = config.Collections
-            .Select(c => new CollectionReference
+            .Select(kvp => new CollectionReference
             {
-                Title = c.Title,
-                Name = c.Collection ?? "", // Empty string for custom pages (no collection field)
-                Url = c.Url,
-                Description = c.Description,
-                IsCustom = string.IsNullOrEmpty(c.Collection) // Custom pages have no collection field
+                Title = kvp.Value.Title,
+                Name = kvp.Key, // Use the dictionary key as the collection name
+                Url = kvp.Value.Url,
+                Description = kvp.Value.Description,
+                IsCustom = kvp.Value.Custom
             })
             .ToList();
 
         return new Section
         {
-            Name = sectionId,
+            Name = sectionName, // Use the section key as the name
             Title = config.Title,
             Description = config.Description,
             Url = config.Url,
             BackgroundImage = config.Image,
-            Category = config.Category,
             Collections = collections
         };
     }

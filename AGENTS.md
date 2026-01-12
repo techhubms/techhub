@@ -157,7 +157,8 @@ For .NET development patterns, component architecture, API design, and all code 
 - **Never use `| head` or `| tail` or `Select-Object -Last` or similar in CLI commands to limit the amount of lines**: They block critical output and often require the user to press control-c before you can continue!
 - **Never filter test output with Select-String, Select-Object, grep, or similar pattern filtering**: In addition to the previous rule, this blocks critical output of test results, failures, errors, and context
 - **Never paste scripts into terminal**: Always save as `.ps1` file in `.tmp/` and execute
-- **Never use `pwsh -Command` with EOF or other large text demarcations**: Save script to file and execute it
+- **Never use `cat` and/or `EOF` constructions to create scripts**: Always save script to file and execute it
+- **Never use `pwsh -Command` with `EOF` or other large text demarcations**: Always save script to file and execute it
 - **Never use backslashes for escaping in PowerShell**: Always use backticks (`)
 - **Never work around missing tools**: Tell user if needed tools are unavailable instead of using alternatives
 - **Never commit secrets or API keys**: Check all files before committing
@@ -1063,7 +1064,7 @@ All user interface components and interactions must be accessible to users with 
 
 **Never Hardcode Values**:
 
-- Always derive sections, collections, categories from configuration files
+- Always derive sections, collections from configuration files
 - Single source of truth for all structural data
 - New features should work by updating configuration, not code
 - All components must stay synchronized automatically through configuration
@@ -1107,8 +1108,8 @@ All user interface components and interactions must be accessible to users with 
 **Sections**: Top-level organizational units that group related content by topic or domain.
 
 - **Purpose**: Provide thematic organization (e.g., AI, GitHub Copilot, Azure)
-- **Configuration**: Defined in `_data/sections.json` as single source of truth
-- **Properties**: Each section includes display title, description, URL path, associated category, background image, and collections
+- **Configuration**: Defined in `appsettings.json` as single source of truth
+- **Properties**: Each section includes display title, description, URL path, background image, and collections
 - **Key Features**: Dynamic and configuration-driven - new sections added without code changes, each has own index page and navigation
 
 **Collections**: Content types that represent different formats within sections.
@@ -1120,10 +1121,11 @@ All user interface components and interactions must be accessible to users with 
 
 **Items**: Individual pieces of content within collections. Also referred to as content or content items.
 
-- **Definition**: Actual content users consume (articles, videos, announcements, Blogs)
+- **Definition**: Actual content users consume (articles, videos, announcements, blogs)
 - **Terminology Note**: "Item" is the preferred term, but "Article" and "Post" are also used in code/documentation to refer to content (note: "Post" in variables does NOT specifically mean blogs from `_blogs/`)
-- **Structure**: Markdown files with YAML front matter containing metadata (title, date, author, categories, tags) and content body
-- **Processing**: Items are processed by the build system and can be listed on collection pages, filtered by date/tags/categories, displayed on section index pages, and included in RSS feeds
+- **Structure**: Markdown files with YAML front matter containing metadata (title, date, author, sections, tags) and content body
+- **Categories Field**: In frontmatter, the `categories` field contains section names (e.g., "AI", "GitHub Copilot") that determine which sections this content appears in
+- **Processing**: Items are processed by the build system and can be listed on collection pages, filtered by date/tags/sections, displayed on section index pages, and included in RSS feeds
 
 ### Content Organization
 
@@ -1167,7 +1169,7 @@ The site provides RSS feeds for all sections and collections:
 
 - **Everything**: `/all/feed.xml` - All content across all sections
 - **Roundups Only**: `/all/roundups/feed.xml` - Weekly content roundups
-- **Section Feeds** (all content with that category):
+- **Section Feeds** (all content with matching section names):
   - AI: `/ai/feed.xml` - AI-related content
   - GitHub Copilot: `/github-copilot/feed.xml` - GitHub Copilot content
   - ML: `/ml/feed.xml` - Machine learning content
