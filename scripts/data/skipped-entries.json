@@ -11115,5 +11115,11 @@
     "collection": "videos",
     "reason": "No categories found: No categories assigned. The content is an announcement/video highlighting the top 10 entries from GitHub's Game Off 2025 competition, which features open source games. While the content relates to software/game development generally, it does not focus on Microsoft technologies, products, developer tools, or frameworks as required by the inclusion rules. GitHub as a platform is included, but the context here is about game submissions and gaming, not GitHub developer tools, workflows, Copilot, or DevOps. No evidence in the description or tags of any central Microsoft technology (Azure, .NET, Visual Studio, etc.), AI, Coding (in a Microsoft context), DevOps, ML, or Security. As per the Multi-Platform Content Threshold, Microsoft technology must be central or at least 40% of substantive content, which is not indicated here. Therefore, all categories are excluded.",
     "canonical_url": "https://www.youtube.com/shorts/YzM-kIbhico"
+  },
+  {
+    "timestamp": "2026-01-12 13:17:50 +00:00",
+    "canonical_url": "https://www.youtube.com/shorts/m1zs4AwzJDM",
+    "reason": "No categories found: All fields except 'title', 'author', and 'type' are empty or null. There is no substantive content or description provided to process. According to the workflow, decisions must be based on the actual provided content, title, and description. The title alone ('PriorityQueue is awesome in .NET') is too vague to unambiguously assign any categories without further detail as required by 'when in doubt, exclude' and 'never fabricate information' rules.",
+    "collection": "videos"
   }
 ]
