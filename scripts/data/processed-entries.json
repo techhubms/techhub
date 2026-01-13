@@ -23356,5 +23356,11 @@
     "canonical_url": "https://techcommunity.microsoft.com/t5/azure-architecture-blog/cross-region-zero-trust-connecting-power-platform-to-azure-paas/ba-p/4484995",
     "timestamp": "2026-01-13 20:05:13 +00:00",
     "reason": "Succesfully added: Assigned 'Azure' category because the content extensively discusses Azure services (VNet, Azure Firewall, Private Endpoint, Key Vault), VNet peering, and Azure policies (Azure inclusion rules 1, 2, 4, 5). Assigned 'Security' category because the entire post focuses on Zero Trust architectures, private connectivity, customer-managed keys, managed identity, network segregation, and strict access controls for Power Platform and Azure PaaS environments (Security inclusion rules 1, 3, 4, 7, 9). Did not assign ML, AI, Coding, DevOps, or GitHub Copilot, as there is no substantive machine learning/artificial intelligence, code development, or DevOps process coverage. This post is a technical how-to and architectural guide - not a business or end-user productivity article. No generic exclusion rules applied: the content is technical, in-depth, and over the word threshold."
+  },
+  {
+    "timestamp": "2026-01-13 22:03:09 +00:00",
+    "reason": "Succesfully added: Assigned the Coding category because the content focuses on .NET and .NET Framework servicing releases, updates, and changelogs, which are core Microsoft programming frameworks (Coding rules 1 and 2). No Azure, AI, ML, DevOps, GitHub Copilot, or Security-specific elements are present. Content is technical and focuses on development-related updates. All generic exclusion rules were checked and none apply.",
+    "canonical_url": "https://devblogs.microsoft.com/dotnet/dotnet-and-dotnet-framework-january-2026-servicing-updates/",
+    "collection": "news"
   }
 ]

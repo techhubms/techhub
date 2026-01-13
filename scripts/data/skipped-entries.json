@@ -11235,5 +11235,11 @@
     "canonical_url": "https://www.youtube.com/shorts/l0JU1z4GaOA",
     "timestamp": "2026-01-13 20:04:41 +00:00",
     "reason": "No categories found: All categories were excluded based on the generic exclusion rules. The description clearly states that the episode focuses on how an actor uses AI tools like ChatGPT to learn languages, prepare for interviews, and promote creative projects, which falls under business productivity and creative, non-technical AI usage. There is no substantive technical content, nor is there any focus on Microsoft developer tools, coding, or technical implementation. The episode centers on career and personal development, which are out of scope. The mention of ChatGPT is in a general productivity/creative context only. Additionally, lack of substantive technical content and reliance on non-developmental AI product usage (ChatGPT for personal productivity, not development) reinforce exclusion according to the prescribed rules."
+  },
+  {
+    "reason": "No categories found: No categories were assigned because, while the article focuses on new Windows 11 PCs and AI-powered device features showcased at CES 2026, it does not provide substantive detail on software development, coding, DevOps, or technical implementation involving Microsoft technologies. The coverage is primarily about hardware and device innovation, form factors, silicon advances (Intel, AMD, Qualcomm), and end-user AI experiences in consumer/business devices (Copilot+ PCs), not developer-oriented AI, coding, Azure, ML, DevOps, or Security. According to the generic exclusion rules and category inclusion logic, there is no qualifying technical implementation content or developer focus required for assignment to 'AI', 'Coding', 'Azure', 'ML', 'DevOps', 'GitHub Copilot', or 'Security' categories. Tag choices reflect the hardware/AI innovation and partner ecosystem, but no category applies.",
+    "collection": "news",
+    "timestamp": "2026-01-13 21:04:00 +00:00",
+    "canonical_url": "https://blogs.windows.com/windowsexperience/2026/01/13/ces-2026-showcasing-new-windows-11-pc-innovations-across-the-ecosystem/"
   }
 ]
