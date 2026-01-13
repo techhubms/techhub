@@ -23362,5 +23362,11 @@
     "reason": "Succesfully added: Assigned the Coding category because the content focuses on .NET and .NET Framework servicing releases, updates, and changelogs, which are core Microsoft programming frameworks (Coding rules 1 and 2). No Azure, AI, ML, DevOps, GitHub Copilot, or Security-specific elements are present. Content is technical and focuses on development-related updates. All generic exclusion rules were checked and none apply.",
     "canonical_url": "https://devblogs.microsoft.com/dotnet/dotnet-and-dotnet-framework-january-2026-servicing-updates/",
     "collection": "news"
+  },
+  {
+    "timestamp": "2026-01-13 23:03:50 +00:00",
+    "collection": "community",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-networking-blog/data-center-quantized-congestion-notification-scaling-congestion/ba-p/4468417",
+    "reason": "Succesfully added: Assigned 'Azure' category because the entire article is about Microsoft Azure’s use of RDMA and DCQCN for storage networking (Azure rule 1 and 4). Did not assign 'DevOps', 'Security', 'AI', 'ML', 'Coding', or 'GitHub Copilot' as the content exclusively focuses on networking architecture and storage infrastructure, not development, security, or data science/AI topics. No generic exclusion rules triggered (community content well above 200 words, technical depth, and Azure focus)."
   }
 ]
