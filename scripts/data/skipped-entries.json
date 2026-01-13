@@ -11169,5 +11169,17 @@
     "timestamp": "2026-01-13 09:06:39 +00:00",
     "reason": "No categories found: No categories are assigned because the content does not focus on Microsoft technologies. The primary subject is Fly.io's Sprites, a VM solution based on AWS Firecracker, which is unrelated to Azure or any Microsoft platform. The article discusses AI agent isolation, persistent VMs, and agentic coding, but all examples and the underlying infrastructure center on Fly.io, AWS, Firecracker, and Anthropic Claude. There are mentions of GitHub and Google Antigravity in the context of general ecosystem vulnerabilities but no substantive Microsoft technical content, features, development frameworks, or services are covered. As Microsoft is not central or even significantly featured, per processing rule 'Microsoft Content Must Be Central' and the applied multi-platform threshold, the categories array remains empty.",
     "collection": "blogs"
+  },
+  {
+    "canonical_url": "https://andrewlock.net/windows-explorer-replacement-filepilot-is-awesome/",
+    "collection": "blogs",
+    "reason": "No categories found: No categories were assigned because the content is primarily a review of a third-party tool (File Pilot) that replaces Windows File Explorer. The article focuses on usability, performance, and features of File Pilot, but does not cover Microsoft developer tools, programming, coding, Azure services, DevOps practices, AI/ML, or security topics as defined in the inclusion rules. It is not a blog about building, extending, or customizing Microsoft technology from a developer or technical architecture perspective, nor does it detail integrations with Microsoft development tools, libraries, or services. The sole mention of VS Code-style command palette is only tangential, and doesn't make Microsoft technologies central to the post. Therefore, it does not fit under any of the inclusion categories despite being relevant to Windows power users.",
+    "timestamp": "2026-01-13 11:04:29 +00:00"
+  },
+  {
+    "reason": "No categories found: This content is excluded due to the generic exclusion rule for non-development Microsoft products. The article focuses on Microsoft 365 Copilot as it relates to SharePoint Search, which is positioned as a business productivity tool rather than a developer or maker tool. The primary theme is how AI-driven features in Microsoft 365 Copilot transform information discovery for end users within SharePoint. There is a detailed description of Copilot capabilities, licensing, technical enablement, best practices, and governance, but none of this is targeted at developers, makers, technical implementation, coding, or developer-centric AI. According to Chapter 3 and the Copilot Product Distinction rule in Chapter 2, business productivity Copilots (Microsoft 365 Copilot, Copilot for Microsoft 365, or Office Copilot) receive no categories, regardless of technical features, unless the content is specifically about development or maker tools (such as Copilot Studio, GitHub Copilot, or developer extensibility). This article does not meet inclusion criteria and should not be assigned any categories.",
+    "timestamp": "2026-01-13 12:03:49 +00:00",
+    "canonical_url": "https://dellenny.com/copilot-sharepoint-search-how-ai-changes-information-discovery/",
+    "collection": "blogs"
   }
 ]
