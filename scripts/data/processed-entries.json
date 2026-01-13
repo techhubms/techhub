@@ -23296,5 +23296,17 @@
     "timestamp": "2026-01-12 23:03:24 +00:00",
     "collection": "news",
     "canonical_url": "https://github.blog/changelog/2026-01-12-selectively-showing-act-on-your-behalf-warning-for-github-apps-is-in-public-preview"
+  },
+  {
+    "timestamp": "2026-01-13 01:32:16 +00:00",
+    "reason": "Succesfully added: Assigned AI category because the session is directly about building AI applications with .NET (AI rule 4 and rule 5). Assigned Coding category because the focus is on hands-on C# coding, .NET tools, and development practices (Coding rules 1, 2, and 4). Did not assign Azure, Security, DevOps, ML, or GitHub Copilot because there is no indication those specific topics are central to this conversation. Tags were chosen to reflect key .NET, AI, coding, and development community aspects described in the session overview.",
+    "collection": "videos",
+    "canonical_url": "https://www.youtube.com/watch?v=MH-_J8gLZn4"
+  },
+  {
+    "timestamp": "2026-01-13 01:32:55 +00:00",
+    "reason": "Succesfully added: Categories assigned as follows: 'Azure' because this is about Azure Kubernetes Service (AKS) networking features and configuration (Azure rule 1, 4). 'DevOps' since it covers cluster automation, deployment, and operational best practices with command-line automation and resource management (DevOps rules 4, 5, 6). 'Coding' applies due to the involvement of Kubernetes resource definition files (YAML), automation with az CLI, and manifest editing (Coding rule 2, 4). 'Security' is included because handling egress IPs relates to network security, compliance, and whitelisting requirements, also referenced directly in the discussion around BYO networks and UDRs (Security rules 1, 4, 7, 9). Not AI or ML as there is no mention of Microsoft AI/ML products, nor GitHub Copilot. No generic exclusions apply: the content is technical, English, hands-on, and focused on implementation.",
+    "collection": "community",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-architecture-blog/static-egress-gateway-in-aks-the-native-way-to-control-multiple/ba-p/4484179"
   }
 ]
