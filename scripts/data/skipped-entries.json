@@ -11151,5 +11151,23 @@
     "collection": "community",
     "canonical_url": "https://techcommunity.microsoft.com/t5/azure-events/microsoft-marketplace-office-hours-optimize-cloud-cost-and/ec-p/4485127#M667",
     "timestamp": "2026-01-12 22:03:44 +00:00"
+  },
+  {
+    "timestamp": "2026-01-13 03:31:32 +00:00",
+    "reason": "No categories found: Content excluded due to generic exclusion rule - the description and title indicate the content is primarily in Spanish (e.g., '¡Acompáñanos en Open Source Friday...', 'descubrir el Programa de Campeon(a|e)s de rOpenSci', 'transmisión'), which is non-English. According to the Non-English Content exclusion rule under Generic Exclusion Rules, content not primarily in English (<80% English in main text) must be excluded. There is no English version present.",
+    "canonical_url": "https://www.youtube.com/watch?v=Q01Wrp1puP0",
+    "collection": "videos"
+  },
+  {
+    "timestamp": "2026-01-13 03:31:45 +00:00",
+    "reason": "No categories found: Content excluded because it does not qualify for any categories based on generic exclusion rules. The content is an event description for Open Source Friday, primarily focused on Nuxt (a non-Microsoft, non-Microsoft-owned frontend framework), open source topics, frontend, and web performance. While there is mention of 'live demos of Copilot and Agent Mode,' there is no indication from the description that Copilot is specifically GitHub Copilot (it may refer to any Copilot feature) or that the demos will have a strong focus on Microsoft technology with at least 40% substantive coverage. Additionally, the lack of detailed content prevents accurate assessment of how much of the event is focused on Microsoft developer technology versus generic open source or frontend content. Therefore, according to the workflow: when in doubt, exclude; and do not assign any categories.",
+    "canonical_url": "https://www.youtube.com/watch?v=UAdUbNEwRjY",
+    "collection": "videos"
+  },
+  {
+    "canonical_url": "https://devclass.com/2026/01/13/fly-io-introduces-sprites-lightweight-persistent-vms-to-isolate-agentic-ai/",
+    "timestamp": "2026-01-13 09:06:39 +00:00",
+    "reason": "No categories found: No categories are assigned because the content does not focus on Microsoft technologies. The primary subject is Fly.io's Sprites, a VM solution based on AWS Firecracker, which is unrelated to Azure or any Microsoft platform. The article discusses AI agent isolation, persistent VMs, and agentic coding, but all examples and the underlying infrastructure center on Fly.io, AWS, Firecracker, and Anthropic Claude. There are mentions of GitHub and Google Antigravity in the context of general ecosystem vulnerabilities but no substantive Microsoft technical content, features, development frameworks, or services are covered. As Microsoft is not central or even significantly featured, per processing rule 'Microsoft Content Must Be Central' and the applied multi-platform threshold, the categories array remains empty.",
+    "collection": "blogs"
   }
 ]
