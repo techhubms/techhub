@@ -11217,5 +11217,11 @@
     "collection": "videos",
     "reason": "No categories found: No categories were assigned because the content is about Drasi, an event-driven data processing system, but there is no direct evidence in the provided title, description, or resources that Drasi is a Microsoft technology or product, nor that it centrally employs Microsoft platforms (Azure, Microsoft cloud services, etc.). The only Microsoft mention is the context that the episode is part of an 'Open at Microsoft' playlist, but per workflow rules, the central technology must be Microsoft or the content must be about implementing with Microsoft platforms. Since Drasi appears to be a general-purpose open-source project not tied exclusively or primarily to Microsoft technologies, it does not meet the 40% Microsoft content threshold or inclusion criteria for any category.",
     "timestamp": "2026-01-13 17:09:22 +00:00"
+  },
+  {
+    "timestamp": "2026-01-13 18:05:12 +00:00",
+    "canonical_url": "https://www.youtube.com/shorts/PAxwyG4ibQ8",
+    "reason": "No categories found: No categories assigned because the content, based on the description and title, focuses on open source community health, interpersonal dynamics, and community sustainability rather than technical implementation, Microsoft technologies, or development tools. Although GitHub is mentioned, the topic centers on social and funding aspects, without coverage of DevOps processes, developer tools, coding practices, or Microsoft Azure integration required by inclusion rules for 'DevOps,' 'GitHub Copilot,' or other relevant categories. There is no technical walkthrough, programming, or platform-specific discussion present. Generic exclusion rules on business/culture content (workplace and business focus) and lack of technical depth apply.",
+    "collection": "videos"
   }
 ]

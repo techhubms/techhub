@@ -23326,5 +23326,17 @@
     "collection": "news",
     "reason": "Succesfully added: I assigned the 'AI' category because the content is centrally about building AI infrastructure, specifically Microsoft's 'Community-First AI Infrastructure' initiative (AI inclusion rule 1 and 4). 'Azure' is included due to the direct relevance of Microsoft’s datacenter infrastructure, which is foundational for Azure cloud and AI services (Azure rule 1 and 4). No other categories qualify: the post does not provide technical coding, DevOps, ML engineering, or security implementation details, so 'Coding', 'DevOps', 'ML', and 'Security' are excluded. The content is technical-news and strategy for practitioners and communities, not executive/business strategy or workplace/culture, so none of the generic exclusions apply.",
     "timestamp": "2026-01-13 17:08:17 +00:00"
+  },
+  {
+    "timestamp": "2026-01-13 18:04:38 +00:00",
+    "canonical_url": "https://www.microsoft.com/en-us/security/blog/2026/01/13/how-microsoft-builds-privacy-and-security-to-work-hand-in-hand/",
+    "reason": "Succesfully added: Assigned the Security category because the article deeply discusses security implementations, best practices (Zero Trust, conditional access, authentication), and Microsoft security products (Microsoft Entra, Defender for Cloud, Customer Lockbox). Azure was assigned for the explicit technical descriptions involving Azure-based technologies (Azure compliance, Azure data localization, Azure virtual machines/hardened jump hosts). Other categories such as AI, Coding, DevOps, or ML were not included since the article focuses on policy, platform governance, and security/privacy tools rather than development, machine learning, or AI engineering. AI is only mentioned in the context of regulation (EU AI Act), not technical implementation. The content meets inclusion quality standards—it's written by a Microsoft Deputy CISO, is not a sales pitch, executive summary, or leadership advice lacking technical depth. The explanation excludes workplace, career, business strategy, and non-English content by considering the article’s technical depth and scope.",
+    "collection": "news"
+  },
+  {
+    "timestamp": "2026-01-13 18:05:33 +00:00",
+    "canonical_url": "https://www.youtube.com/watch?v=ZDaog_MJGS8",
+    "reason": "Succesfully added: Assigned AI category because the video describes Azure AI Language PII Redaction, which is a Microsoft AI service (AI rule 1). Assigned Azure category since the solution is built on Azure services (Azure rule 1). Assigned Security category due to the strong focus on data privacy, compliance, and PII protection (Security rules 1, 2, and 4). Coding and DevOps categories do not apply since the content describes features and use cases rather than providing development or operational implementation details. ML category is not included because the focus is on applying AI-powered PII detection, not on custom model development or data engineering.",
+    "collection": "videos"
   }
 ]
