@@ -1,0 +1,17 @@
+{
+  "PubDate": "2026-01-13T19:29:00+00:00",
+  "Tags": [
+    "copilot",
+    "Retired"
+  ],
+  "FeedName": "The GitHub Blog",
+  "EnhancedContent": "As part of our commitment to a fast, high‑quality Copilot experience, we regularly evaluate and retire older models in favor of newer, more capable ones.\n\nWe will deprecate the following models across all GitHub Copilot experiences (including Copilot Chat, inline edits, ask and agent modes, as well as code completions) on February 17, 2026:\n\n| Model | Deprecation Date | Suggested Alternative | | --- | --- | --- | | Claude Opus 4.1 | 2026-02-17 | Claude Opus 4.5 | | GPT-5 | 2026-02-17 | GPT-5.2 | | GPT-5-Codex | 2026-02-17 | GPT-5.1-Codex |\n\nPlease update your workflows and integrations to use supported models before these dates. Copilot Enterprise administrators may need to enable access to alternative models through their model policies in Copilot settings. As an administrator, you can verify availability by checking your individual Copilot settings and confirming that the policy is enabled for the specific model. Once enabled, you’ll see the model in the Copilot Chat model selector in VS Code and on github.com. No action is required to remove the models once they have been deprecated.\n\nGitHub Enterprise customers with questions or concerns are encouraged to reach out to their account manager for further assistance.",
+  "FeedUrl": "https://github.blog/changelog/feed/",
+  "ProcessedDate": "2026-01-13 20:02:18",
+  "Title": "Upcoming deprecation of select GitHub Copilot models from Claude and OpenAI",
+  "Description": "As part of our commitment to a fast, high‑quality Copilot experience, we regularly evaluate and retire older models in favor of newer, more capable ones. We will deprecate the following…\n\nThe post [Upcoming deprecation of select GitHub Copilot models from Claude and OpenAI](https://github.blog/changelog/2026-01-13-upcoming-deprecation-of-select-github-copilot-models-from-claude-and-openai) appeared first on [The GitHub Blog](https://github.blog).",
+  "FeedLevelAuthor": "Archive: 2026 - GitHub Changelog",
+  "OutputDir": "_news",
+  "Author": "Allison",
+  "Link": "https://github.blog/changelog/2026-01-13-upcoming-deprecation-of-select-github-copilot-models-from-claude-and-openai"
+}

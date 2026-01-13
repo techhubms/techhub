@@ -11229,5 +11229,11 @@
     "canonical_url": "https://devclass.com/2026/01/13/open-source-mysql-repository-has-no-commits-in-more-than-three-months/",
     "timestamp": "2026-01-13 19:05:32 +00:00",
     "collection": "blogs"
+  },
+  {
+    "collection": "videos",
+    "canonical_url": "https://www.youtube.com/shorts/l0JU1z4GaOA",
+    "timestamp": "2026-01-13 20:04:41 +00:00",
+    "reason": "No categories found: All categories were excluded based on the generic exclusion rules. The description clearly states that the episode focuses on how an actor uses AI tools like ChatGPT to learn languages, prepare for interviews, and promote creative projects, which falls under business productivity and creative, non-technical AI usage. There is no substantive technical content, nor is there any focus on Microsoft developer tools, coding, or technical implementation. The episode centers on career and personal development, which are out of scope. The mention of ChatGPT is in a general productivity/creative context only. Additionally, lack of substantive technical content and reliance on non-developmental AI product usage (ChatGPT for personal productivity, not development) reinforce exclusion according to the prescribed rules."
   }
 ]
