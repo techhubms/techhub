@@ -23320,5 +23320,11 @@
     "timestamp": "2026-01-13 14:06:15 +00:00",
     "reason": "Succesfully added: Assigned DevOps category as the news focuses on workflow permissions and GitHub Actions—central DevOps tools (DevOps rule 2, 5, 6). Security category is included because the change reduces broad permissions and addresses supply chain and application security (Security rules 2, 7, 8). No other category applies as the content does not cover AI, ML, Azure, GitHub Copilot, or coding implementation details. Generic exclusions do not apply as this is a technical, security-focused update relevant to practitioners.",
     "collection": "news"
+  },
+  {
+    "canonical_url": "https://blogs.microsoft.com/on-the-issues/2026/01/13/community-first-ai-infrastructure/",
+    "collection": "news",
+    "reason": "Succesfully added: I assigned the 'AI' category because the content is centrally about building AI infrastructure, specifically Microsoft's 'Community-First AI Infrastructure' initiative (AI inclusion rule 1 and 4). 'Azure' is included due to the direct relevance of Microsoft’s datacenter infrastructure, which is foundational for Azure cloud and AI services (Azure rule 1 and 4). No other categories qualify: the post does not provide technical coding, DevOps, ML engineering, or security implementation details, so 'Coding', 'DevOps', 'ML', and 'Security' are excluded. The content is technical-news and strategy for practitioners and communities, not executive/business strategy or workplace/culture, so none of the generic exclusions apply.",
+    "timestamp": "2026-01-13 17:08:17 +00:00"
   }
 ]

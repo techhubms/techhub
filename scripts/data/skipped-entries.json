@@ -11181,5 +11181,41 @@
     "timestamp": "2026-01-13 12:03:49 +00:00",
     "canonical_url": "https://dellenny.com/copilot-sharepoint-search-how-ai-changes-information-discovery/",
     "collection": "blogs"
+  },
+  {
+    "canonical_url": "https://www.youtube.com/shorts/hGaOro3A5HY",
+    "timestamp": "2026-01-13 15:05:47 +00:00",
+    "reason": "No categories found: No categories assigned. The content field is null, so there is no substantive technical content to evaluate. According to the guidelines, categorization decisions must be based on provided content, and fabrication of information is explicitly prohibited. With no actual content to assess, I cannot determine if any inclusion criteria are met. This triggers a generic exclusion: 'When in doubt, exclude' and 'Never fabricate information—base decisions only on provided content.'",
+    "collection": "videos"
+  },
+  {
+    "timestamp": "2026-01-13 16:06:01 +00:00",
+    "canonical_url": "https://blogs.microsoft.com/blog/2026/01/13/announcing-open-to-work-how-to-get-ahead-in-the-age-of-ai/",
+    "reason": "No categories found: All categories are excluded based on generic exclusion rules. The content is an announcement of a book release ('Open to Work: How to Get Ahead in the Age of AI') authored by LinkedIn leadership, focusing on broad workforce trends and changes in the nature of work due to AI. The content is primarily business strategy and executive-level discussion rather than technical implementation or practitioner-focused development content. It discusses career evolution, leadership perspective, and company responsibility in the context of AI, without providing technical details on Microsoft AI, coding, Azure, ML, DevOps, or Security. Furthermore, there is mention of Microsoft 365 Copilot, but only as an executive experience reference, not from a developer or technical standpoint. This triggers the 'Business Strategy and Executive Content' and 'Non-Development Microsoft Products' generic exclusion rules in Chapter 3.",
+    "collection": "news"
+  },
+  {
+    "timestamp": "2026-01-13 16:06:35 +00:00",
+    "canonical_url": "https://www.youtube.com/watch?v=BkRjrey43z0",
+    "reason": "No categories found: No categories assigned. The episode primarily focuses on the social, financial, and policy aftermath of the Log4Shell vulnerability, particularly around open source funding, community health, government reaction, and the creation of the Sovereign Tech Fund. While Log4Shell is a technical issue, the podcast does not address Microsoft technologies, DevOps practices, coding, security implementation, or GitHub technical tooling. The content is about funding models, community resilience, and open source project health. There are no actionable technical details or developer-oriented guidance pertaining to Microsoft technologies, GitHub as a development platform, or relevant security or DevOps practices. Therefore, this content is excluded under the rules for 'Business Strategy and Executive Content,' 'Workplace and Business Focus,' and does not meet any category inclusion criteria.",
+    "collection": "videos"
+  },
+  {
+    "canonical_url": "https://www.linkedin.com/posts/satyanadella_building-community-first-ai-infrastructure-activity-7416834810364551168-VnDs",
+    "collection": "news",
+    "reason": "No categories found: This content is excluded according to the Generic Exclusion Rules. While it mentions Microsoft's AI infrastructure and community initiatives, the actual content is primarily a high-level corporate announcement from Satya Nadella about community partnership, social responsibility, and operational commitments regarding datacenter expansion. There are no technical implementation details, developer best practices, or product-specific usage. This post focuses on business strategy, community relations, and organizational responsibility, which falls under 'Business Strategy and Executive Content' and 'Workplace and Business Focus' exclusions. No actionable technical guidance or Microsoft technology implementation is provided. Therefore, no categories are assigned.",
+    "timestamp": "2026-01-13 17:08:30 +00:00"
+  },
+  {
+    "canonical_url": "https://www.youtube.com/watch?v=0hZEqnYqCRY",
+    "collection": "videos",
+    "reason": "No categories found: No categories have been assigned because the content is focused on how actors and creators—not developers—can use general AI tools such as ChatGPT for language learning, interview preparation, and career development. Although Microsoft AI and AzureAI are mentioned in ancillary resource links and hashtags, the main substance of the video is not about building or implementing Microsoft AI technologies, developer tools, or technical workflows. There is no evidence of code, technical implementation, or Deep exploration of Microsoft services, as required by the AI, Azure, Coding, ML, DevOps, GitHub Copilot, or Security category rules. The subject matter is the use of AI as an end user for personal productivity in entertainment, not technical or development work with Microsoft technologies.",
+    "timestamp": "2026-01-13 17:09:09 +00:00"
+  },
+  {
+    "canonical_url": "https://www.youtube.com/watch?v=gR_2MV8GJ7M",
+    "collection": "videos",
+    "reason": "No categories found: No categories were assigned because the content is about Drasi, an event-driven data processing system, but there is no direct evidence in the provided title, description, or resources that Drasi is a Microsoft technology or product, nor that it centrally employs Microsoft platforms (Azure, Microsoft cloud services, etc.). The only Microsoft mention is the context that the episode is part of an 'Open at Microsoft' playlist, but per workflow rules, the central technology must be Microsoft or the content must be about implementing with Microsoft platforms. Since Drasi appears to be a general-purpose open-source project not tied exclusively or primarily to Microsoft technologies, it does not meet the 40% Microsoft content threshold or inclusion criteria for any category.",
+    "timestamp": "2026-01-13 17:09:22 +00:00"
   }
 ]
