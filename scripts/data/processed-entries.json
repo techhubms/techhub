@@ -23338,5 +23338,11 @@
     "canonical_url": "https://www.youtube.com/watch?v=ZDaog_MJGS8",
     "reason": "Succesfully added: Assigned AI category because the video describes Azure AI Language PII Redaction, which is a Microsoft AI service (AI rule 1). Assigned Azure category since the solution is built on Azure services (Azure rule 1). Assigned Security category due to the strong focus on data privacy, compliance, and PII protection (Security rules 1, 2, and 4). Coding and DevOps categories do not apply since the content describes features and use cases rather than providing development or operational implementation details. ML category is not included because the focus is on applying AI-powered PII detection, not on custom model development or data engineering.",
     "collection": "videos"
+  },
+  {
+    "reason": "Succesfully added: Assigned AI category because the content centers on AI coding tools and their impact on developers (AI rules 1, 4, 5). Assigned GitHub Copilot because the article repeatedly discusses Copilot's role, developer feedback on Copilot, and integrates links to GitHub Copilot (GitHub Copilot rules 1, 2, 3, and 4). Did not assign Coding because no hands-on programming or framework-specific code is presented; instead, the focus is on developer experience and philosophy around integrating Copilot and AI tooling. DevOps, Azure, ML, and Security do not qualify, as the content does not dive into those areas.",
+    "canonical_url": "https://github.blog/ai-and-ml/generative-ai/what-ai-is-actually-good-for-according-to-developers/",
+    "timestamp": "2026-01-13 19:05:12 +00:00",
+    "collection": "news"
   }
 ]

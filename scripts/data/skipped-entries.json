@@ -11223,5 +11223,11 @@
     "canonical_url": "https://www.youtube.com/shorts/PAxwyG4ibQ8",
     "reason": "No categories found: No categories assigned because the content, based on the description and title, focuses on open source community health, interpersonal dynamics, and community sustainability rather than technical implementation, Microsoft technologies, or development tools. Although GitHub is mentioned, the topic centers on social and funding aspects, without coverage of DevOps processes, developer tools, coding practices, or Microsoft Azure integration required by inclusion rules for 'DevOps,' 'GitHub Copilot,' or other relevant categories. There is no technical walkthrough, programming, or platform-specific discussion present. Generic exclusion rules on business/culture content (workplace and business focus) and lack of technical depth apply.",
     "collection": "videos"
+  },
+  {
+    "reason": "No categories found: All categories were excluded because the content does not centrally focus on Microsoft technologies, development practices, or implementation details related to Microsoft products. The article discusses the lack of commits on the open source MySQL repository and the general landscape of open source databases, with mentions of PostgreSQL, MariaDB, Oracle, and SQLite. Microsoft is only referenced in passing: Microsoft retired Azure Database for MariaDB in favor of MySQL, but this is a brief market/strategy mention, not a technical deep-dive or implementation tutorial. There are no specific practices, coding, DevOps, Security, AI, ML, or Azure architectural guidance presented. According to Multi-Platform Content Threshold and Microsoft Content Must Be Central rules, Microsoft technologies are not central nor ≥40% of the article. Therefore, no categories apply.",
+    "canonical_url": "https://devclass.com/2026/01/13/open-source-mysql-repository-has-no-commits-in-more-than-three-months/",
+    "timestamp": "2026-01-13 19:05:32 +00:00",
+    "collection": "blogs"
   }
 ]
