@@ -11265,5 +11265,11 @@
     "canonical_url": "https://techcommunity.microsoft.com/t5/net-runtime/msb4184-the-expression-quot-system-io-path-getdirectoryname-quot/m-p/4485586#M781",
     "reason": "Insufficient content length",
     "timestamp": "2026-01-14 17:08:58 +00:00"
+  },
+  {
+    "collection": "news",
+    "timestamp": "2026-01-14 18:04:23 +00:00",
+    "reason": "No categories found: No categories assigned. The content is an official news post on Microsoft's ongoing partnership with Nintendo and Sony for safer gaming experiences. Although it discusses advanced technology and industry collaboration for online safety, it is fundamentally about player safety and wellbeing, not focused on Microsoft technical implementation, development, coding, security architecture, or DevOps practices. It provides general principles, partnerships, and responsible practices but does not include actionable guidance or technical depth relating to any of the inclusion categories ('AI', 'GitHub Copilot', 'Coding', 'DevOps', 'Azure', 'ML', 'Security'). The content is targeting a broad audience about company/industry commitments and responsible stewardship, which falls under the generic exclusions for business strategy, executive content, non-development Microsoft products, and general business advice rather than technical implementation.",
+    "canonical_url": "https://news.xbox.com/en-us/2026/01/14/online-safety-principles-xbox-nintendo-sony/"
   }
 ]

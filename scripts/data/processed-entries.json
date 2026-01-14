@@ -23416,5 +23416,11 @@
     "canonical_url": "https://www.youtube.com/shorts/3Fh1A3KGk-I",
     "reason": "Succesfully added: Assigned 'DevOps' because the tutorial focuses on version control concepts (DevOps rule 8: Version Control) and introductory Git branching workflows relevant to developer collaboration and operational practices. No other categories (such as Coding) are applicable since there is no focus on a Microsoft-specific programming language, nor is there coverage of Microsoft-specific technologies. The content is clear, introductory technical guidance, not promotional, career-focused, or business/productivity oriented, so no generic exclusions apply.",
     "timestamp": "2026-01-14 17:08:39 +00:00"
+  },
+  {
+    "collection": "news",
+    "timestamp": "2026-01-14 18:04:10 +00:00",
+    "reason": "Succesfully added: Assigned the 'AI' category because the content primarily discusses the impact, responsible development, and transformative applications of AI, with direct involvement from Microsoft researchers (AI inclusion rules 1, 4, and 6). Other categories (e.g., Coding, Azure, ML, Security) are not applicable as the article is high-level and does not contain technical development, cloud architecture, or ML engineering details. The piece references business productivity tools (Microsoft 365 Copilot), but its focus is on AI’s impact on work, not on consumer/business product features, so the Copilot exclusion does not apply here.",
+    "canonical_url": "https://news.microsoft.com/signal/articles/4-ways-ai-is-reshaping-discovery-health-work-and-responsibility/"
   }
 ]
