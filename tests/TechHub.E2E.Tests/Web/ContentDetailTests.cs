@@ -87,17 +87,6 @@ public class ContentDetailTests(PlaywrightCollectionFixture fixture) : IAsyncLif
     }
 
     [Fact]
-    public async Task ContentDetailPage_ShowsBackToTopButton()
-    {
-        // Arrange & Act
-        await NavigateToFirstRoundupDetailAsync();
-
-        // Assert - "Back to Top" link exists (use auto-retrying Expect)
-        await Assertions.Expect(Page.Locator("a:has-text('Back to Top')"))
-            .ToBeVisibleAsync(new() { Timeout = BlazorHelpers.DefaultAssertionTimeout });
-    }
-
-    [Fact]
     public async Task ContentDetailPage_TwoColumnLayout_DisplaysCorrectly()
     {
         // Arrange & Act

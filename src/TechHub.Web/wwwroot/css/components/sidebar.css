@@ -324,8 +324,7 @@
 }
 
 .sidebar-toc-inner {
-  max-height: calc(100vh - 120px);
-  overflow-y: auto;
+  /* No max-height - let it grow naturally */
 }
 
 .sidebar-toc .toc-list {
@@ -341,9 +340,21 @@
   list-style: none;
   padding: 0;
   margin: 0;
-  margin-left: var(--spacing-2);
-  border-left: 1px solid var(--color-border-muted);
-  padding-left: var(--spacing-2);
+  margin-left: var(--spacing-3);
+  overflow: hidden;
+  /* No transition - instant collapse/expand */
+  /* Default collapsed state */
+  max-height: 0;
+}
+
+/* If there's only one h2 heading, auto-expand it by default */
+.sidebar-toc .toc-list:has(.toc-depth-0:only-child) .toc-depth-0>.toc-sublist {
+  max-height: 2000px;
+}
+
+/* Expanded state only when explicitly set by JavaScript */
+.sidebar-toc .toc-item.expanded>.toc-sublist {
+  max-height: 2000px;
 }
 
 .sidebar-toc .toc-item {
@@ -386,4 +397,9 @@
 
 .sidebar-toc .toc-depth-2>.toc-link {
   font-size: var(--font-size-xs);
+}
+
+/* All links fully visible */
+.sidebar-toc .toc-link {
+  opacity: 1;
 }

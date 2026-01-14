@@ -44,7 +44,7 @@
 
             @if (selectedVideoDetail != null && !string.IsNullOrWhiteSpace(selectedVideoDetail.RenderedHtml))
             {
-                <SidebarToc HtmlContent="@selectedVideoDetail.RenderedHtml" Title="On This Page" />
+                <SidebarToc HtmlContent="@selectedVideoDetail.RenderedHtml" Title="Table of Contents" />
             }
         </aside>
 
@@ -134,8 +134,8 @@
         }
 
         selectedVideoDetail = await ApiClient.GetContentDetailAsync(
-                                                                                            "github-copilot",
-                                                                                            "videos",
+                                                                                                    "github-copilot",
+                                                                                                    "videos",
         selectedVideoSlug);
     }
 

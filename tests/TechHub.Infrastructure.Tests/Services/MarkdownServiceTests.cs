@@ -405,26 +405,6 @@ public class MarkdownServiceTests
     }
 
     /// <summary>
-    /// Test: Variables without page. prefix should also work
-    /// Why: Some templates use {{ variable }} instead of {{ page.variable }}
-    /// </summary>
-    [Fact]
-    public void ProcessJekyllVariables_WithoutPagePrefix_ReplacesWithFrontmatter()
-    {
-        // Arrange
-        var content = "Video ID: {{ youtubeid }}";
-        var frontMatter = new Dictionary<string, object>
-        {
-            { "youtubeid", "abc123" }
-        };
-
-        // Act
-        var result = _service.ProcessJekyllVariables(content, frontMatter);
-
-        // Assert
-        Assert.Equal("Video ID: abc123", result);
-    }
-
     /// <summary>
     /// Test: Variable matching should be case-insensitive
     /// Why: Frontmatter keys may have different casing than template variables

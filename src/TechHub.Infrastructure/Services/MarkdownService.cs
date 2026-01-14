@@ -1,5 +1,6 @@
 using Markdig;
 using TechHub.Core.Interfaces;
+using TechHub.Infrastructure.Markdown;
 
 namespace TechHub.Infrastructure.Services;
 
@@ -51,18 +52,50 @@ public class MarkdownService : IMarkdownService
     }
 
     /// <summary>
-    /// Convert markdown to HTML
+    /// Convert markdown to HTML with link rewriting
     /// </summary>
     /// <param name="markdown">Raw markdown content</param>
-    /// <returns>Rendered HTML</returns>
-    public string RenderToHtml(string markdown)
+    /// <param name="currentPagePath">Current page path for fixing hash links</param>
+    /// <param name="sectionName">Section name for internal link rewriting</param>
+    /// <param name="collectionName">Collection name for internal link rewriting</param>
+    /// <returns>Rendered HTML with properly formatted links</returns>
+    public string RenderToHtml(string markdown, string? currentPagePath = null, string? sectionName = null, string? collectionName = null)
     {
         if (string.IsNullOrWhiteSpace(markdown))
         {
             return string.Empty;
         }
 
-        return Markdown.ToHtml(markdown, _pipeline);
+        // If context provided, create a custom pipeline with link rewriter
+        if (!string.IsNullOrEmpty(currentPagePath) || !string.IsNullOrEmpty(sectionName))
+        {
+            var customPipeline = new MarkdownPipelineBuilder()
+                .UseAdvancedExtensions()
+                .UseEmojiAndSmiley()
+                .UseYamlFrontMatter()
+                .UseAutoLinks()
+                .UsePipeTables()
+                .UseGridTables()
+                .UseListExtras()
+                .UseCitations()
+                .UseCustomContainers()
+                .UseGenericAttributes()
+                .UseAutoIdentifiers()
+                .UseTaskLists()
+                .UseMediaLinks()
+                .UseSmartyPants()
+                .UseBootstrap()
+                .UseDiagrams()
+                .UseMathematics()
+                .UseFigures()
+                .Use(new LinkRewriterExtension(currentPagePath, sectionName, collectionName))
+                .Build();
+
+            return Markdig.Markdown.ToHtml(markdown, customPipeline);
+        }
+
+        // Use default pipeline without link rewriting
+        return Markdig.Markdown.ToHtml(markdown, _pipeline);
     }
 
     /// <summary>
@@ -201,8 +234,8 @@ public class MarkdownService : IMarkdownService
         );
 
         // Step 5: Match patterns like {{ page.variable }} or {{ page.variable_name }}
-        // Also supports {{ variable }} without the page. prefix
-        var pattern = @"\{\{\s*(?:page\.)?(\w+)\s*\}\}";
+        // ONLY match page.variable pattern (not standalone {{ variable }})
+        var pattern = @"\{\{\s*page\.(\w+)\s*\}\}";
 
         return System.Text.RegularExpressions.Regex.Replace(
             content,

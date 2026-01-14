@@ -125,13 +125,13 @@ public sealed class FileBasedContentRepository : IContentRepository, IDisposable
             }
 #pragma warning restore CA1508
 
-            var allItems = new List<ContentItem>();
+            // Load all collections in parallel for faster startup
+            var collectionTasks = _validCollections
+                .Select(collection => LoadCollectionItemsAsync(collection, cancellationToken))
+                .ToArray();
 
-            foreach (var collection in _validCollections)
-            {
-                var items = await LoadCollectionItemsAsync(collection, cancellationToken);
-                allItems.AddRange(items);
-            }
+            var collectionResults = await Task.WhenAll(collectionTasks);
+            var allItems = collectionResults.SelectMany(items => items).ToList();
 
             // Filter out future-dated content (DateEpoch > current time)
             var currentEpoch = DateTimeOffset.UtcNow.ToUnixTimeSeconds();
@@ -261,19 +261,17 @@ public sealed class FileBasedContentRepository : IContentRepository, IDisposable
             return [];
         }
 
-        var items = new List<ContentItem>();
         var markdownFiles = Directory.GetFiles(collectionPath, "*.md", SearchOption.AllDirectories);
 
-        foreach (var filePath in markdownFiles)
-        {
-            var item = await LoadContentItemAsync(filePath, normalizedCollection, cancellationToken);
-            if (item != null)
-            {
-                items.Add(item);
-            }
-        }
+        // Load files in parallel for faster processing
+        var itemTasks = markdownFiles
+            .Select(filePath => LoadContentItemAsync(filePath, normalizedCollection, cancellationToken))
+            .ToArray();
 
-        return items;
+        var items = await Task.WhenAll(itemTasks);
+
+        // Filter out nulls (files that failed to parse or are invalid)
+        return items.Where(item => item != null).ToList()!;
     }
 
     /// <summary>
@@ -285,99 +283,118 @@ public sealed class FileBasedContentRepository : IContentRepository, IDisposable
         string collection,
         CancellationToken cancellationToken)
     {
-        try
+        var fileContent = await File.ReadAllTextAsync(filePath, cancellationToken);
+        var (frontMatter, content) = _frontMatterParser.Parse(fileContent);
+
+        // Extract required fields (title, date)
+        var title = _frontMatterParser.GetValue<string>(frontMatter, "title");
+        var dateStr = _frontMatterParser.GetValue<string>(frontMatter, "date");
+
+        if (string.IsNullOrWhiteSpace(title) || string.IsNullOrWhiteSpace(dateStr))
         {
-            var fileContent = await File.ReadAllTextAsync(filePath, cancellationToken);
-            var (frontMatter, content) = _frontMatterParser.Parse(fileContent);
-
-            // Extract required fields (title, date)
-            var title = _frontMatterParser.GetValue<string>(frontMatter, "title");
-            var dateStr = _frontMatterParser.GetValue<string>(frontMatter, "date");
-
-            if (string.IsNullOrWhiteSpace(title) || string.IsNullOrWhiteSpace(dateStr))
-            {
-                // Skip files without required frontmatter
-                return null;
-            }
-
-            // Parse date (supports various formats)
-            if (!DateTimeOffset.TryParse(dateStr, out var date))
-            {
-                return null;
-            }
-
-            // Extract optional fields
-            var author = _frontMatterParser.GetValue<string>(frontMatter, "author", "Microsoft");
-            var description = _frontMatterParser.GetValue<string>(frontMatter, "description", string.Empty);
-            var excerpt = _frontMatterParser.GetValue<string>(frontMatter, "excerpt", string.Empty);
-
-            // Map 'categories' (regular content) or 'section' (custom pages) to lowercase section names
-            var categories = _frontMatterParser.GetListValue(frontMatter, "categories");
-            var sectionNames = categories.Select(c => c.ToLowerInvariant().Replace(" ", "-", StringComparison.Ordinal)).ToList();
-
-            var tags = _frontMatterParser.GetListValue(frontMatter, "tags");
-            var externalUrl = _frontMatterParser.GetValue<string>(frontMatter, "canonical_url", string.Empty);
-            var videoId = _frontMatterParser.GetValue<string>(frontMatter, "youtube_video_id", string.Empty);
-            var viewingMode = _frontMatterParser.GetValue<string>(frontMatter, "viewing_mode", "external");
-            var altCollection = _frontMatterParser.GetValue<string>(frontMatter, "alt-collection", string.Empty);
-
-            // Parse sidebar-info if present (dynamic JSON data for custom sidebars)
-            JsonElement? sidebarInfo = null;
-            if (frontMatter.TryGetValue("sidebar-info", out var sidebarData))
-            {
-                // Convert to JSON for flexible client-side consumption
-                var json = System.Text.Json.JsonSerializer.Serialize(sidebarData);
-                sidebarInfo = System.Text.Json.JsonSerializer.Deserialize<JsonElement>(json);
-            }
-
-            // Generate ID from filename (without extension)
-            var fileName = Path.GetFileNameWithoutExtension(filePath);
-
-            // Generate excerpt if not provided in frontmatter
-            if (string.IsNullOrWhiteSpace(excerpt))
-            {
-                excerpt = _markdownService.ExtractExcerpt(content);
-            }
-
-            // Use description if provided, otherwise use excerpt
-            if (string.IsNullOrWhiteSpace(description))
-            {
-                description = excerpt;
-            }
-
-            // Process Jekyll/Liquid variables, YouTube embeds, and render markdown to HTML
-            var processedMarkdown = _markdownService.ProcessJekyllVariables(content, frontMatter);
-            processedMarkdown = _markdownService.ProcessYouTubeEmbeds(processedMarkdown);
-            var renderedHtml = _markdownService.RenderToHtml(processedMarkdown);
-
-            var item = new ContentItem
-            {
-                Slug = fileName,
-                Title = title,
-                Description = description,
-                Author = author,
-                DateEpoch = date.ToUnixTimeSeconds(),
-                CollectionName = collection.TrimStart('_'), // Store without _ prefix
-                AltCollection = altCollection,
-                SectionNames = sectionNames,
-                Tags = tags,
-                RenderedHtml = renderedHtml,
-                Excerpt = excerpt,
-                ExternalUrl = externalUrl,
-                VideoId = videoId,
-                ViewingMode = viewingMode,
-                SidebarInfo = sidebarInfo
-            };
-
-            return item;
-        }
-#pragma warning disable CA1031 // Do not catch general exception types - intentional to skip malformed files and continue processing
-        catch (Exception)
-#pragma warning restore CA1031
-        {
-            // Skip files that fail to parse
+            // Skip files without required frontmatter
             return null;
         }
+
+        // Parse date (supports various formats)
+        if (!DateTimeOffset.TryParse(dateStr, out var date))
+        {
+            return null;
+        }
+
+        // Extract optional fields
+        var author = _frontMatterParser.GetValue<string>(frontMatter, "author", "Microsoft");
+        var description = _frontMatterParser.GetValue<string>(frontMatter, "description", string.Empty);
+        var excerpt = _frontMatterParser.GetValue<string>(frontMatter, "excerpt", string.Empty);
+
+        // Map 'categories' (regular content) or 'section' (custom pages) to lowercase section names
+        var categories = _frontMatterParser.GetListValue(frontMatter, "categories");
+        var sectionNames = categories.Select(c => c.ToLowerInvariant().Replace(" ", "-", StringComparison.Ordinal)).ToList();
+
+        var tags = _frontMatterParser.GetListValue(frontMatter, "tags");
+        var externalUrl = _frontMatterParser.GetValue<string>(frontMatter, "canonical_url", string.Empty);
+        var videoId = _frontMatterParser.GetValue<string>(frontMatter, "youtube_video_id", string.Empty);
+        var viewingMode = _frontMatterParser.GetValue<string>(frontMatter, "viewing_mode", "external");
+        var altCollection = _frontMatterParser.GetValue<string>(frontMatter, "alt-collection", string.Empty);
+
+        // Parse sidebar-info if present (dynamic JSON data for custom sidebars)
+        JsonElement? sidebarInfo = null;
+        if (frontMatter.TryGetValue("sidebar-info", out var sidebarData))
+        {
+            // Convert to JSON for flexible client-side consumption
+            var json = System.Text.Json.JsonSerializer.Serialize(sidebarData);
+            sidebarInfo = System.Text.Json.JsonSerializer.Deserialize<JsonElement>(json);
+        }
+
+        // Generate ID from filename (without extension)
+        var fileName = Path.GetFileNameWithoutExtension(filePath);
+
+        // Generate excerpt if not provided in frontmatter
+        if (string.IsNullOrWhiteSpace(excerpt))
+        {
+            excerpt = _markdownService.ExtractExcerpt(content);
+        }
+
+        // Use description if provided, otherwise use excerpt
+        if (string.IsNullOrWhiteSpace(description))
+        {
+            description = excerpt;
+        }
+
+        // Process Jekyll/Liquid variables, YouTube embeds, and render markdown to HTML
+        var processedMarkdown = _markdownService.ProcessJekyllVariables(content, frontMatter);
+        processedMarkdown = _markdownService.ProcessYouTubeEmbeds(processedMarkdown);
+
+        // Create temporary ContentItem to get primary section and URL
+        var tempItem = new ContentItem
+        {
+            Slug = fileName,
+            Title = title,
+            Description = description,
+            Author = author,
+            DateEpoch = date.ToUnixTimeSeconds(),
+            CollectionName = collection.TrimStart('_'),
+            AltCollection = altCollection,
+            SectionNames = sectionNames,
+            Tags = tags,
+            RenderedHtml = string.Empty, // Will be set below
+            Excerpt = excerpt,
+            ExternalUrl = externalUrl,
+            VideoId = videoId,
+            ViewingMode = viewingMode,
+            SidebarInfo = sidebarInfo
+        };
+
+        // Get primary section and current page path using existing functionality
+        var primarySection = tempItem.GetPrimarySectionUrl();
+        var currentPagePath = tempItem.GetUrl();
+
+        var renderedHtml = _markdownService.RenderToHtml(
+            processedMarkdown,
+            currentPagePath,
+            primarySection,
+            tempItem.CollectionName);
+
+        var item = new ContentItem
+        {
+            Slug = fileName,
+            Title = title,
+            Description = description,
+            Author = author,
+            DateEpoch = date.ToUnixTimeSeconds(),
+            CollectionName = collection.TrimStart('_'), // Store without _ prefix
+            AltCollection = altCollection,
+            SectionNames = sectionNames,
+            Tags = tags,
+            RenderedHtml = renderedHtml,
+            Excerpt = excerpt,
+            ExternalUrl = externalUrl,
+            VideoId = videoId,
+            ViewingMode = viewingMode,
+            SidebarInfo = sidebarInfo
+        };
+
+        return item;
     }
 
     /// <summary>

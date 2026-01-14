@@ -13,9 +13,14 @@ public interface IMarkdownService
         CancellationToken cancellationToken = default);
 
     /// <summary>
-    /// Render markdown content to HTML
+    /// Render markdown content to HTML with link rewriting
     /// </summary>
-    string RenderToHtml(string markdown);
+    /// <param name="markdown">Raw markdown content</param>
+    /// <param name="currentPagePath">Current page path for fixing hash links (e.g., "/all/roundups/2025-12-29-weekly-ai-and-tech-news-roundup")</param>
+    /// <param name="sectionName">Section name for internal link rewriting</param>
+    /// <param name="collectionName">Collection name for internal link rewriting</param>
+    /// <returns>Rendered HTML with properly formatted links</returns>
+    string RenderToHtml(string markdown, string? currentPagePath = null, string? sectionName = null, string? collectionName = null);
 
     /// <summary>
     /// Extract excerpt from markdown (content before &lt;!--excerpt_end--&gt; marker)

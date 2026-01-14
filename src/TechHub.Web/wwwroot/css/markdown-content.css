@@ -24,6 +24,10 @@
     word-wrap: break-word;
 }
 
+.content-detail-body ul {
+    line-height: 1.5;
+}
+
 /* Add scrollable space so last content can reach the detection line (40% from top)
    Spacer should be approximately the reading position offset, not full viewport */
 .content-detail-body::after {
@@ -130,20 +134,20 @@
 
 .markdown-content a,
 .content-detail-body a {
-    color: var(--color-primary);
+    color: var(--color-purple-bright);
     text-decoration: none;
-    border-bottom: 1px solid transparent;
-    transition: border-color 0.2s ease;
 }
 
 .markdown-content a:hover,
 .content-detail-body a:hover {
-    border-bottom-color: var(--color-primary);
+    text-decoration: underline;
+    text-decoration-color: var(--color-purple-bright);
+    text-underline-offset: 2px;
 }
 
 .markdown-content a:focus,
 .content-detail-body a:focus {
-    outline: 2px solid var(--color-primary);
+    outline: 2px solid var(--color-purple-bright);
     outline-offset: 2px;
     border-radius: var(--radius-sm);
 }

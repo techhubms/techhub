@@ -8,7 +8,7 @@ canonical_url: "https://www.youtube.com/watch?v=2EJR1xhTtBs"
 viewing_mode: "internal"
 feed_name: "Microsoft Developer YouTube"
 feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
-date: 2025-12-16 17:00:10 +00:00
+date: "2025-12-16 17:00:10 +00:00"
 permalink: "/2025-12-16-Developing-Social-Media-Commander-Real-World-NET-App-with-GitHub-Copilot-and-Agent-Instructions.html"
 categories: ["AI", "Azure", "Coding", "DevOps", "GitHub Copilot"]
 tags: [".NET", "Agent Instructions", "AI", "AI Powered Development", "Avalonia", "Azure", "Blue Sky Integration", "CI/CD Automation", "Cloud", "Cloud Computing", "Coding", "Copilot Integration", "Cross Platform App", "Dev", "Developer Workflow", "Development", "DevOps", "GitHub Copilot", "GitHub Spark", "Live Coding", "MCP Server", "Microsoft", "Microsoft Azure", "Microsoft Learn", "OpenAI", "Prompt Engineering", "Tech", "Technology", "Videos", "VS"]

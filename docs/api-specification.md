@@ -474,6 +474,204 @@ curl "http://localhost:5029/api/content/filter?q=blazor"
 curl "http://localhost:5029/api/content/filter?sections=coding&q=blazor"
 ```
 
+---
+
+### Health
+
+#### GET /health
+
+Health check endpoint for monitoring and load balancers.
+
+**Response**: `200 OK` with `text/plain`
+
+```text
+Healthy
+```
+
+**Example**:
+
+```bash
+curl http://localhost:5029/health
+```
+
+**Use Case**: Kubernetes liveness/readiness probes, load balancer health checks
+
+---
+
+### Content Detail
+
+#### GET /api/content/{sectionName}/{collectionName}/{slug}
+
+Get detailed content item by section, collection, and content slug.
+
+**Parameters**:
+
+- `sectionName` (path): Section identifier (e.g., `ai`, `github-copilot`)
+- `collectionName` (path): Collection name (e.g., `news`, `blogs`, `videos`)
+- `slug` (path): Content slug (URL-friendly identifier from filename)
+
+**Response**: `200 OK` or `404 Not Found`
+
+**Response Body**: `ContentItemDetailDto` with full markdown content, metadata, and related items
+
+**Example**:
+
+```bash
+curl "http://localhost:5029/api/content/ai/news/2024-06-introducing-copilot-extensions"
+```
+
+**Use Case**: Single content page, detail view, full article rendering
+
+---
+
+### RSS Feeds (API Direct)
+
+These are the backend RSS feed endpoints. For public-facing RSS feeds, use the Blazor Web proxy endpoints (see "RSS Feed Proxy Endpoints" section below).
+
+#### GET /api/rss/all
+
+Get RSS feed for all content across all sections.
+
+**Response**: `200 OK` with `application/rss+xml; charset=utf-8`
+
+**Example**:
+
+```bash
+curl http://localhost:5029/api/rss/all
+```
+
+---
+
+#### GET /api/rss/{sectionName}
+
+Get RSS feed for a specific section.
+
+**Parameters**:
+
+- `sectionName` (path): Section identifier (e.g., `ai`, `github-copilot`)
+
+**Response**: `200 OK` or `404 Not Found` with `application/rss+xml; charset=utf-8`
+
+**Example**:
+
+```bash
+curl http://localhost:5029/api/rss/ai
+```
+
+---
+
+#### GET /api/rss/collection/{collectionName}
+
+Get RSS feed for a specific collection.
+
+**Parameters**:
+
+- `collectionName` (path): Collection name (e.g., `roundups`, `news`, `blogs`)
+
+**Response**: `200 OK` or `404 Not Found` with `application/rss+xml; charset=utf-8`
+
+**Example**:
+
+```bash
+curl http://localhost:5029/api/rss/collection/roundups
+```
+
+---
+
+### Custom Pages
+
+Endpoints for custom standalone pages with structured data.
+
+#### GET /api/custom-pages/dx-space
+
+Get Developer Experience Space page data.
+
+**Response**: `200 OK` or `404 Not Found`
+
+**Response Body**: `DXSpacePageData` with page content and related items
+
+---
+
+#### GET /api/custom-pages/handbook
+
+Get GitHub Copilot Handbook page data.
+
+**Response**: `200 OK` or `404 Not Found`
+
+**Response Body**: `HandbookPageData` with page content and related items
+
+---
+
+#### GET /api/custom-pages/levels
+
+Get Levels of Enlightenment page data.
+
+**Response**: `200 OK` or `404 Not Found`
+
+**Response Body**: `LevelsPageData` with page content and related items
+
+---
+
+#### GET /api/custom-pages/vscode-updates
+
+Get VS Code Updates page data.
+
+**Response**: `200 OK` or `404 Not Found`
+
+**Response Body**: `VSCodeUpdatesPageData` with page content and related items
+
+---
+
+#### GET /api/custom-pages/features
+
+Get GitHub Copilot Features page data.
+
+**Response**: `200 OK` or `404 Not Found`
+
+**Response Body**: `FeaturesPageData` with page content and related items
+
+---
+
+#### GET /api/custom-pages/genai-basics
+
+Get GenAI Basics page data.
+
+**Response**: `200 OK` or `404 Not Found`
+
+**Response Body**: `GenAIBasicsPageData` with page content and related items
+
+---
+
+#### GET /api/custom-pages/genai-advanced
+
+Get GenAI Advanced page data.
+
+**Response**: `200 OK` or `404 Not Found`
+
+**Response Body**: `GenAIAdvancedPageData` with page content and related items
+
+---
+
+#### GET /api/custom-pages/genai-applied
+
+Get GenAI Applied page data.
+
+**Response**: `200 OK` or `404 Not Found`
+
+**Response Body**: `GenAIAppliedPageData` with page content and related items
+
+---
+
+#### GET /api/custom-pages/sdlc
+
+Get SDLC page data.
+
+**Response**: `200 OK` or `404 Not Found`
+
+**Response Body**: `SDLCPageData` with page content and related items
+
+---
+
 ## Testing
 
 ### Integration Tests
@@ -508,7 +706,7 @@ All 14 endpoints have comprehensive integration test coverage using `WebApplicat
 - **Execution Time**: ~1.4 seconds
 - **Coverage**: All endpoints, all filter combinations, all error scenarios
 
-See [tests/AGENTS.md](/tests/AGENTS.md) and [TechHub.Api.Tests](/tests/TechHub.Api.Tests/) for complete testing documentation.
+See [tests/AGENTS.md](tests/AGENTS.md) and [tests/TechHub.Api.Tests/AGENTS.md](tests/TechHub.Api.Tests/AGENTS.md) for complete testing documentation.
 
 ## Architecture Decision Record
 

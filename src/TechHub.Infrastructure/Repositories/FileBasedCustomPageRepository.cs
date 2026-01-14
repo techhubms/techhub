@@ -134,48 +134,38 @@ public class FileBasedCustomPageRepository : ICustomPageRepository, IDisposable
 
     private async Task<CustomPage?> LoadCustomPageAsync(string filePath, CancellationToken cancellationToken)
     {
-        try
+        var fileContent = await File.ReadAllTextAsync(filePath, cancellationToken);
+        var (frontMatter, content) = _frontMatterParser.Parse(fileContent);
+
+        // Extract required fields
+        var title = _frontMatterParser.GetValue<string>(frontMatter, "title");
+        var permalink = _frontMatterParser.GetValue<string>(frontMatter, "permalink");
+
+        if (string.IsNullOrWhiteSpace(title) || string.IsNullOrWhiteSpace(permalink))
         {
-            var fileContent = await File.ReadAllTextAsync(filePath, cancellationToken);
-            var (frontMatter, content) = _frontMatterParser.Parse(fileContent);
-
-            // Extract required fields
-            var title = _frontMatterParser.GetValue<string>(frontMatter, "title");
-            var permalink = _frontMatterParser.GetValue<string>(frontMatter, "permalink");
-
-            if (string.IsNullOrWhiteSpace(title) || string.IsNullOrWhiteSpace(permalink))
-            {
-                // Skip files without required frontmatter
-                return null;
-            }
-
-            // Extract optional fields
-            var description = _frontMatterParser.GetValue<string>(frontMatter, "description") ?? string.Empty;
-            var categories = _frontMatterParser.GetListValue(frontMatter, "categories");
-            var sidebarInfo = _frontMatterParser.GetValue<JsonElement?>(frontMatter, "sidebar_info");
-
-            // Derive slug from permalink (last segment of the permalink path)
-            // Example: "/github-copilot/levels-of-enlightenment" → "levels-of-enlightenment"
-            var slug = permalink.TrimEnd('/').Split('/').Last();
-
-            return new CustomPage
-            {
-                Slug = slug,
-                Title = title,
-                Description = description,
-                Permalink = permalink,
-                Categories = categories,
-                Content = content,
-                SidebarInfo = sidebarInfo
-            };
-        }
-#pragma warning disable CA1031 // Do not catch general exception types - intentional to gracefully handle any file loading errors
-        catch (Exception ex)
-#pragma warning restore CA1031
-        {
-            _logger.LogError(ex, "Failed to load custom page from file: {FilePath}", filePath);
+            // Skip files without required frontmatter
             return null;
         }
+
+        // Extract optional fields
+        var description = _frontMatterParser.GetValue<string>(frontMatter, "description") ?? string.Empty;
+        var categories = _frontMatterParser.GetListValue(frontMatter, "categories");
+        var sidebarInfo = _frontMatterParser.GetValue<JsonElement?>(frontMatter, "sidebar_info");
+
+        // Derive slug from permalink (last segment of the permalink path)
+        // Example: "/github-copilot/levels-of-enlightenment" → "levels-of-enlightenment"
+        var slug = permalink.TrimEnd('/').Split('/').Last();
+
+        return new CustomPage
+        {
+            Slug = slug,
+            Title = title,
+            Description = description,
+            Permalink = permalink,
+            Categories = categories,
+            Content = content,
+            SidebarInfo = sidebarInfo
+        };
     }
 
     public void Dispose()

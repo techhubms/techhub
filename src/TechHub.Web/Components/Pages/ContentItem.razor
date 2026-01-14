@@ -23,25 +23,20 @@ else
     <Header Section="@sectionData" />
 
     <div class="page-with-sidebar">
-        @* Sidebar with metadata *@
         <aside class="sidebar">
-            @* Tags Section - only show when item is loaded *@
             @if (item != null)
             {
                 <SidebarTags Tags="@item.Tags" Title="Tags" BaseUrl="@($"/{SectionName.ToLowerInvariant()}")"
                     CssClass="article-tags" />
+                <SidebarToc HtmlContent="@item.RenderedHtml" Title="Table of Contents" />
             }
         </aside>
 
         @* Main content area *@
-        <main class="page-main-content" id="top">
+        <main class="page-main-content">
             @if (item != null)
             {
                 <ContentItemDetail Item="@item" />
-
-                <nav class="content-navigation">
-                    <a href="#top" @onclick="ScrollToTop" @onclick:preventDefault class="nav-button primary">Back to Top</a>
-                </nav>
             }
         </main>
     </div>
