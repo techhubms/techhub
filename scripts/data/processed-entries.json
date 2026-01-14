@@ -23422,5 +23422,23 @@
     "timestamp": "2026-01-14 18:04:10 +00:00",
     "reason": "Succesfully added: Assigned the 'AI' category because the content primarily discusses the impact, responsible development, and transformative applications of AI, with direct involvement from Microsoft researchers (AI inclusion rules 1, 4, and 6). Other categories (e.g., Coding, Azure, ML, Security) are not applicable as the article is high-level and does not contain technical development, cloud architecture, or ML engineering details. The piece references business productivity tools (Microsoft 365 Copilot), but its focus is on AI’s impact on work, not on consumer/business product features, so the Copilot exclusion does not apply here.",
     "canonical_url": "https://news.microsoft.com/signal/articles/4-ways-ai-is-reshaping-discovery-health-work-and-responsibility/"
+  },
+  {
+    "reason": "Succesfully added: Assigned 'AI' because the content is centrally about Microsoft's AI governance platform, responsible AI infrastructure, and management of AI across organizations (AI inclusion rules 1, 4, 5, 6). Assigned 'Security' because Microsoft's AI governance platform includes advanced security features (threat detection, compliance, Defender, Entra integration), addresses CISO/security leader concerns, and outlines security priorities specific to AI (Security rules 1, 4, 5, 7, 9, 10). Excluded 'Azure' since while Azure is a related foundation, the content focuses on cross-cloud governance and enterprise strategy, not on specific Azure service development. Excluded 'ML' and 'Coding' because the article emphasizes governance, compliance, and security, not data science or implementation details. 'GitHub Copilot' and 'DevOps' are also not central to the article's subject.",
+    "collection": "news",
+    "timestamp": "2026-01-14 19:05:29 +00:00",
+    "canonical_url": "https://www.microsoft.com/en-us/security/blog/2026/01/14/microsoft-named-a-leader-in-idc-marketscape-for-unified-ai-governance-platforms/"
+  },
+  {
+    "reason": "Succesfully added: Included 'AI' because the update concerns the availability and configuration of an OpenAI-generated model (GPT-5.2-Codex) in a Microsoft ecosystem tool (AI rule 1). Included 'GitHub Copilot' because the content is specifically about new model support in GitHub Copilot (GitHub Copilot inclusion rules 1 and 2). No other categories apply, as there is no original programming content or development tutorial, so 'Coding,' 'DevOps,' 'Azure,' 'ML,' and 'Security' are not relevant in this context.",
+    "collection": "news",
+    "timestamp": "2026-01-14 19:05:50 +00:00",
+    "canonical_url": "https://github.blog/changelog/2026-01-14-gpt-5-2-codex-is-now-generally-available-in-github-copilot"
+  },
+  {
+    "reason": "Succesfully added: Assigned AI category because the framework and workflows use AI for automating and scaling security research (AI category rule 1). Security category was added because the article, tool, and its use cases all center on vulnerability analysis, security research, and automated code auditing (Security rule 1, 2, 5). DevOps category is appropriate because the solution involves codespaces, CLI automation, workflow orchestration, and developer workflows using infrastructure as code principles (DevOps rule 9: developer experience, and rule 6: automation). Coding category was not assigned because although code and developer tools are involved, the article does not focus on application programming or code-level development, but rather framework use and workflow automation. Azure, ML, and GitHub Copilot were not assigned as no substantive Microsoft Azure or Copilot product usage is described. The multiple tags reflect the prominent technologies, methodologies, programming language (Python), and project structure details mentioned throughout the article.",
+    "collection": "news",
+    "timestamp": "2026-01-14 19:06:14 +00:00",
+    "canonical_url": "https://github.blog/security/community-powered-security-with-ai-an-open-source-framework-for-security-research/"
   }
 ]
