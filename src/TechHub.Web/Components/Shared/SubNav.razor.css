@@ -1,0 +1,91 @@
+/* ============================================================================
+   Sub-Navigation - Horizontal navigation below page header
+   ============================================================================ */
+
+.sub-nav {
+    background: var(--color-card-bg);
+    border-bottom: 1px solid var(--color-border-default);
+    position: sticky;
+    top: 76px;
+    /* Below main header when scrolled (76px) */
+    z-index: 10;
+    margin-bottom: var(--spacing-5);
+    padding: var(--spacing-2) 0;
+}
+
+/* Empty SubNav for homepage - collapsed, only border visible */
+.sub-nav-empty {
+    padding: 0;
+    background: transparent;
+    margin-bottom: var(--spacing-5);
+}
+
+.sub-nav-container {
+    max-width: var(--max-width-content);
+    margin: 0 auto;
+    padding: 0 var(--spacing-4);
+    display: flex;
+    justify-content: center;
+    gap: var(--spacing-1);
+    overflow-x: auto;
+    scrollbar-width: thin;
+    scrollbar-color: var(--color-border-default) transparent;
+}
+
+/* Hide scrollbar for Webkit browsers but keep functionality */
+.sub-nav-container::-webkit-scrollbar {
+    height: 4px;
+}
+
+.sub-nav-container::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.sub-nav-container::-webkit-scrollbar-thumb {
+    background: var(--color-border-default);
+    border-radius: var(--radius-sm);
+}
+
+.sub-nav-container::-webkit-scrollbar-thumb:hover {
+    background: var(--color-border-emphasis);
+}
+
+.sub-nav-item {
+    display: inline-flex;
+    align-items: center;
+    padding: calc(var(--spacing-1) + var(--spacing-1) / 2) var(--spacing-3);
+    /* 1.5 spacing units vertical */
+    color: var(--color-text-secondary);
+    text-decoration: none;
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-semibold);
+    white-space: nowrap;
+    border-radius: var(--radius-md);
+    border: 1px solid transparent;
+    transition: all var(--duration-fast) var(--easing-ease);
+}
+
+.sub-nav-item:hover {
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: var(--radius-md);
+    text-decoration: none;
+}
+
+.sub-nav-item.active {
+    color: var(--color-text-on-emphasis);
+    background: var(--color-purple-dark);
+    border-color: var(--color-purple-bright);
+}
+
+/* Mobile responsive */
+@media (max-width: 640px) {
+    .sub-nav-container {
+        padding: 0 var(--spacing-2);
+        gap: var(--spacing-0-5);
+    }
+
+    .sub-nav-item {
+        padding: var(--spacing-2) var(--spacing-3);
+        font-size: var(--font-size-xs);
+    }
+}

@@ -25,9 +25,6 @@ else
     <div class="page-with-sidebar">
         @* Sidebar with metadata *@
         <aside class="sidebar">
-            @* Collections Navigation *@
-            <SidebarCollectionNav Section="@sectionData" SelectedCollection="@Collection" />
-
             @* Tags Section - only show when item is loaded *@
             @if (item != null)
             {
@@ -44,7 +41,8 @@ else
 
                 <nav class="content-navigation">
                     <a href="#top" @onclick="ScrollToTop" @onclick:preventDefault class="nav-button primary">Back to Top</a>
-                    <a href="/@(SectionName.ToLowerInvariant())" class="nav-button secondary">Back to @GetSectionDisplayName(SectionName)</a>
+                    <a href="/@(SectionName.ToLowerInvariant())" class="nav-button secondary">Back to
+                        @GetSectionDisplayName(SectionName)</a>
                 </nav>
             }
         </main>
@@ -110,7 +108,7 @@ else
         {
             item = await ApiClient.GetContentDetailAsync(SectionName.ToLowerInvariant(), Collection.ToLowerInvariant(),
             ItemId.ToLowerInvariant());
-            
+
             if (item == null)
             {
                 Navigation.NavigateTo("/not-found");

@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <base href="/" />
     <ResourcePreloader />
-    @if (Environment.GetEnvironmentVariable("ASPNETCORE_ENVIRONMENT") == "Development" || Environment.GetEnvironmentVariable("ASPNETCORE_ENVIRONMENT") == "Test")
+    @if (Environment.GetEnvironmentVariable("ASPNETCORE_ENVIRONMENT") == "Development" ||
+        Environment.GetEnvironmentVariable("ASPNETCORE_ENVIRONMENT") == "Test")
     {
         <!-- Development: Individual files for easy debugging and no caching -->
         <link rel="stylesheet" href="css/design-tokens.css" />
@@ -27,9 +28,11 @@
     }
     <!-- Scoped Component Styles -->
     <link rel="stylesheet" href="@Assets["TechHub.Web.styles.css"]" />
-    
+
     <!-- Syntax Highlighting -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github-dark.min.css" integrity="sha512-rO+olRTkcf304DQBxSWxln8JXCzTHlKnIdnMUwYvQa9/Jd4cQaNkItIUj6Z4nvW1dqK0SKXLbn9h4KwZTNtAyw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github-dark.min.css"
+        integrity="sha512-rO+olRTkcf304DQBxSWxln8JXCzTHlKnIdnMUwYvQa9/Jd4cQaNkItIUj6Z4nvW1dqK0SKXLbn9h4KwZTNtAyw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <ImportMap />
     <HeadOutlet />
 </head>
@@ -38,35 +41,102 @@
     <Routes />
     <ReconnectModal />
     <script src="@Assets["_framework/blazor.web.js"]"></script>
-    
+
     <!-- Syntax Highlighting -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js" integrity="sha512-D9gUyxqja7hBtkWpPWGt9wfbfaMGVt9gnyCvYa+jojwwPHLCzUm5i8rpk7vD7wNee9bA35eYIjobYPaQuKS1MQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/csharp.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/javascript.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/typescript.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/python.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/bash.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/yaml.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/json.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/sql.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/powershell.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"
+        integrity="sha512-D9gUyxqja7hBtkWpPWGt9wfbfaMGVt9gnyCvYa+jojwwPHLCzUm5i8rpk7vD7wNee9bA35eYIjobYPaQuKS1MQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/csharp.min.js"
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/javascript.min.js"
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/typescript.min.js"
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/python.min.js"
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/bash.min.js"
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/yaml.min.js"
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/json.min.js"
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/sql.min.js"
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/powershell.min.js"
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
     <!-- Mermaid Diagrams -->
     <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
-    
+
+    <!-- Custom Pages Interactivity -->
+    <script src="js/custom-pages.js"></script>
+
+    <!-- TOC Scroll Spy -->
+    <script type="module">
+        import { initTocScrollSpy } from './js/toc-scroll-spy.js';
+
+        // Initialize on page load
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', initTocScrollSpy);
+        } else {
+            initTocScrollSpy();
+        }
+
+        // Re-initialize after Blazor enhanced navigation
+        Blazor.addEventListener('enhancedload', function () {
+            initTocScrollSpy();
+        });
+    </script>
+
     <script>
         // Initialize Highlight.js for syntax highlighting
-        document.addEventListener('DOMContentLoaded', function() {
+        document.addEventListener('DOMContentLoaded', function () {
             hljs.highlightAll();
         });
-        
+
         // Re-highlight after Blazor navigation
-        Blazor.addEventListener('enhancedload', function() {
+        Blazor.addEventListener('enhancedload', function () {
             hljs.highlightAll();
         });
-        
-        // Initialize Mermaid for diagrams
-        mermaid.initialize({ startOnLoad: true, theme: 'dark' });
+
+        // Initialize Mermaid for diagrams with dark theme matching production
+        mermaid.initialize({
+            startOnLoad: true,
+            theme: 'dark',
+            themeVariables: {
+                primaryColor: '#2d2d4a',
+                primaryTextColor: '#e0e0e0',
+                primaryBorderColor: '#64b5f6',
+                lineColor: '#64b5f6',
+                secondaryColor: '#1a1a2e',
+                tertiaryColor: '#16162a',
+                background: '#1a1a2e',
+                mainBkg: '#2d2d4a',
+                secondBkg: '#1a1a2e',
+                labelBackground: '#2d2d4a',
+                labelColor: '#e0e0e0',
+                nodeTextColor: '#e0e0e0',
+                textColor: '#e0e0e0',
+                titleColor: '#e0e0e0',
+                edgeLabelBackground: '#2d2d4a',
+                clusterBkg: '#16162a',
+                clusterBorder: '#64b5f6',
+                defaultLinkColor: '#64b5f6',
+                activationBorderColor: '#64b5f6',
+                activationBkgColor: '#2d2d4a',
+                sequenceNumberColor: '#1a1a2e'
+            },
+            flowchart: {
+                curve: 'basis',
+                padding: 15
+            }
+        });
+
+        // Re-render Mermaid diagrams after Blazor navigation
+        Blazor.addEventListener('enhancedload', function () {
+            // Re-initialize mermaid diagrams on new pages
+            mermaid.init(undefined, '.mermaid');
+        });
     </script>
 </body>
 

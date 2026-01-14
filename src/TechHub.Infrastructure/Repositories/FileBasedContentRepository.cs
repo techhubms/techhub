@@ -318,7 +318,7 @@ public sealed class FileBasedContentRepository : IContentRepository, IDisposable
             var externalUrl = _frontMatterParser.GetValue<string>(frontMatter, "canonical_url", string.Empty);
             var videoId = _frontMatterParser.GetValue<string>(frontMatter, "youtube_video_id", string.Empty);
             var viewingMode = _frontMatterParser.GetValue<string>(frontMatter, "viewing_mode", "external");
-            var altCollection = _frontMatterParser.GetValue<string>(frontMatter, "alt_collection", string.Empty);
+            var altCollection = _frontMatterParser.GetValue<string>(frontMatter, "alt-collection", string.Empty);
 
             // Parse sidebar-info if present (dynamic JSON data for custom sidebars)
             JsonElement? sidebarInfo = null;
@@ -344,8 +344,9 @@ public sealed class FileBasedContentRepository : IContentRepository, IDisposable
                 description = excerpt;
             }
 
-            // Process YouTube embeds and render markdown to HTML
-            var processedMarkdown = _markdownService.ProcessYouTubeEmbeds(content);
+            // Process Jekyll/Liquid variables, YouTube embeds, and render markdown to HTML
+            var processedMarkdown = _markdownService.ProcessJekyllVariables(content, frontMatter);
+            processedMarkdown = _markdownService.ProcessYouTubeEmbeds(processedMarkdown);
             var renderedHtml = _markdownService.RenderToHtml(processedMarkdown);
 
             var item = new ContentItem

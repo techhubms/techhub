@@ -1,0 +1,83 @@
+@* ============================================================================
+   Sub-Navigation Component
+   
+   Horizontal navigation below page header showing collections and custom pages.
+   Used across section pages to provide secondary navigation.
+   
+   Usage:
+     <SubNav Section="@sectionData" />
+   ============================================================================ *@
+
+@using TechHub.Core.DTOs
+@inject NavigationManager Navigation
+
+@if (Section != null)
+{
+    <nav class="sub-nav" aria-label="@Section.Title navigation">
+        <div class="sub-nav-container">
+            <a href="/@Section.Name/all" class="sub-nav-item @(IsActive($"/{Section.Name}/all") ? "active" : "")">
+                All
+            </a>
+
+            @foreach (var collection in RegularCollections)
+            {
+                var url = $"/{Section.Name}/{collection.Name}";
+                <a href="@url" class="sub-nav-item @(IsActive(url) ? "active" : "")">
+                    @collection.Title
+                </a>
+            }
+
+            @foreach (var customPage in CustomPages)
+            {
+                <a href="@customPage.Url" class="sub-nav-item @(IsActive(customPage.Url) ? "active" : "")">
+                    @customPage.Title
+                </a>
+            }
+        </div>
+    </nav>
+}
+else
+{
+    @* Empty SubNav for homepage - just shows border *@
+    <nav class="sub-nav sub-nav-empty" aria-hidden="true"></nav>
+}
+
+@code {
+    [Parameter, EditorRequired]
+    public required SectionDto Section { get; set; }
+
+    private IEnumerable<CollectionReferenceDto> RegularCollections =>
+    Section.Collections?.Where(c => !c.IsCustom) ?? Enumerable.Empty<CollectionReferenceDto>();
+
+    private IEnumerable<CollectionReferenceDto> CustomPages =>
+    Section.Collections?.Where(c => c.IsCustom) ?? Enumerable.Empty<CollectionReferenceDto>();
+
+    private bool IsActive(string url)
+    {
+        // Get current path directly from NavigationManager
+        var currentUri = new Uri(Navigation.Uri);
+        var currentPath = currentUri.AbsolutePath.TrimEnd('/');
+        var targetPath = url.TrimEnd('/');
+
+        // For section root (e.g., /ai), also match /{section}/all
+        if (targetPath.EndsWith("/all", StringComparison.OrdinalIgnoreCase))
+        {
+            var sectionPath = targetPath[..^4]; // Remove "/all"
+                                                // Match /ai/all or just /ai
+            if (currentPath.Equals(targetPath, StringComparison.OrdinalIgnoreCase) ||
+            currentPath.Equals(sectionPath, StringComparison.OrdinalIgnoreCase))
+            {
+                return true;
+            }
+        }
+
+        // For collections and custom pages - exact match or content detail pages under them
+        if (currentPath.Equals(targetPath, StringComparison.OrdinalIgnoreCase) ||
+        currentPath.StartsWith(targetPath + "/", StringComparison.OrdinalIgnoreCase))
+        {
+            return true;
+        }
+
+        return false;
+    }
+}

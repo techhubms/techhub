@@ -7,34 +7,189 @@
 @inject ErrorService ErrorService
 @inject ILogger<GenAIApplied> Logger
 
-<PageTitle>@(customPage?.Title ?? "GenAI Applied") - Tech Hub</PageTitle>
+<PageTitle>@(pageData?.Title ?? "GenAI Applied") - Tech Hub</PageTitle>
 
-@if (sectionData != null && customPage != null)
+@if (sectionData != null && pageData != null)
 {
     <HeadContent>
-        <link rel="canonical" href="@($"https://tech.hub.ms{customPage.Url}")" />
+        <link rel="canonical" href="https://tech.hub.ms/ai/genai-applied" />
     </HeadContent>
 
     <PageHeader Section="@sectionData" />
 
     <div class="page-with-sidebar">
         <aside class="sidebar">
-            <SidebarBack BackUrl="/ai" BackText="Back to AI" />
-            <SidebarToc HtmlContent="@customPage.RenderedHtml" />
+            <nav class="sidebar-toc" aria-label="Table of contents">
+                <h2>On this page</h2>
+                <ul>
+                    @foreach (var item in pageData.TableOfContents)
+                    {
+                        <li><a href="#@item.Id">@item.Title</a></li>
+                    }
+                </ul>
+            </nav>
+            @if (pageData.RelatedPages.Any())
+            {
+                <nav class="sidebar-related" aria-label="Related pages">
+                    <h2>Related Pages</h2>
+                    <ul>
+                        @foreach (var related in pageData.RelatedPages)
+                        {
+                            <li><a href="@related.Url">@related.Title</a></li>
+                        }
+                    </ul>
+                </nav>
+            }
         </aside>
 
         <main class="page-main-content">
             <article class="content-detail">
                 <header class="content-detail-header">
-                    <h1 class="page-h1" tabindex="-1">@customPage.Title</h1>
-                    @if (!string.IsNullOrWhiteSpace(customPage.Description))
+                    <h1 class="page-h1" tabindex="-1">@pageData.Title</h1>
+                    @if (!string.IsNullOrWhiteSpace(pageData.Description))
                     {
-                        <p class="page-description">@customPage.Description</p>
+                        <p class="page-description">@pageData.Description</p>
                     }
                 </header>
 
-                <div class="content-detail-body markdown-content">
-                    @((MarkupString)customPage.RenderedHtml)
+                <div class="custom-page-container">
+                    <div class="custom-page-intro">
+                        <p>@pageData.Intro</p>
+                    </div>
+
+                    @foreach (var contentSection in pageData.Sections)
+                    {
+                        <div id="@contentSection.Id" class="custom-page-section">
+                            <h2>@contentSection.Title</h2>
+                            @if (!string.IsNullOrEmpty(contentSection.Intro))
+                            {
+                                <p>@contentSection.Intro</p>
+                            }
+
+                            @if (contentSection.LearningPath != null)
+                            {
+                                <div class="genai-learning-path">
+                                    <ol>
+                                        @foreach (var step in contentSection.LearningPath)
+                                        {
+                                            <li>@step</li>
+                                        }
+                                    </ol>
+                                </div>
+                            }
+
+                            @if (contentSection.Projects != null)
+                            {
+                                <div class="genai-projects">
+                                    @foreach (var project in contentSection.Projects)
+                                    {
+                                        <div class="genai-project-card">
+                                            <h3>@project.Title</h3>
+                                            <p>@project.Description</p>
+                                            @if (project.Link != null)
+                                            {
+                                                <a href="@project.Link.Url" target="_blank" rel="noopener">@project.Link.Text</a>
+                                            }
+                                        </div>
+                                    }
+                                </div>
+                            }
+
+                            @if (contentSection.Layers != null)
+                            {
+                                <div class="genai-layers">
+                                    @foreach (var layer in contentSection.Layers)
+                                    {
+                                        <div class="genai-layer-card">
+                                            <h3>@layer.Name</h3>
+                                            <p>@layer.Description</p>
+                                        </div>
+                                    }
+                                </div>
+                            }
+
+                            @if (contentSection.Tools != null)
+                            {
+                                <div class="genai-tools">
+                                    @foreach (var tool in contentSection.Tools)
+                                    {
+                                        <div class="genai-tool-card">
+                                            <h3>@tool.Name</h3>
+                                            <ul>
+                                                @foreach (var feature in tool.Features)
+                                                {
+                                                    <li>@feature</li>
+                                                }
+                                            </ul>
+                                        </div>
+                                    }
+                                </div>
+                            }
+
+                            @if (contentSection.Capabilities != null)
+                            {
+                                <div class="genai-capabilities">
+                                    <ul>
+                                        @foreach (var capability in contentSection.Capabilities)
+                                        {
+                                            <li>@capability</li>
+                                        }
+                                    </ul>
+                                </div>
+                            }
+
+                            @if (contentSection.Modes != null)
+                            {
+                                <div class="genai-modes">
+                                    @foreach (var mode in contentSection.Modes)
+                                    {
+                                        <div class="genai-mode-card">
+                                            <h3>@mode.Name</h3>
+                                            <p>@mode.Description</p>
+                                        </div>
+                                    }
+                                </div>
+                            }
+
+                            @if (contentSection.Customization != null)
+                            {
+                                <div class="genai-customization">
+                                    <ul>
+                                        @foreach (var item in contentSection.Customization)
+                                        {
+                                            <li>@item</li>
+                                        }
+                                    </ul>
+                                </div>
+                            }
+
+                            @if (contentSection.Faq != null)
+                            {
+                                <div class="genai-faq">
+                                    @foreach (var faq in contentSection.Faq)
+                                    {
+                                        <div class="genai-faq-item">
+                                            <h3>@faq.Question</h3>
+                                            <p>@faq.Answer</p>
+                                        </div>
+                                    }
+                                </div>
+                            }
+                        </div>
+                    }
+
+                    <nav class="custom-page-navigation">
+                        <div class="nav-prev">
+                            <span class="nav-label">Previous</span>
+                            <a href="@pageData.PreviousPage.Url">
+                                <span class="nav-title">@pageData.PreviousPage.Title</span>
+                                @if (!string.IsNullOrEmpty(pageData.PreviousPage.Description))
+                                {
+                                    <span class="nav-description">@pageData.PreviousPage.Description</span>
+                                }
+                            </a>
+                        </div>
+                    </nav>
                 </div>
             </article>
         </main>
@@ -43,16 +198,16 @@
 
 @code {
     private SectionDto? sectionData;
-    private CustomPageDetailDto? customPage;
+    private GenAIAppliedPageData? pageData;
 
     protected override async Task OnInitializedAsync()
     {
         try
         {
             sectionData = await ApiClient.GetSectionAsync("ai");
-            customPage = await ApiClient.GetCustomPageAsync("genai-applied");
+            pageData = await ApiClient.GetGenAIAppliedDataAsync();
 
-            if (sectionData == null || customPage == null)
+            if (sectionData == null || pageData == null)
             {
                 Navigation.NavigateTo("/not-found");
             }

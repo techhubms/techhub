@@ -24,6 +24,15 @@
     word-wrap: break-word;
 }
 
+/* Add scrollable space so last content can reach the detection line (40% from top)
+   Spacer should be approximately the reading position offset, not full viewport */
+.content-detail-body::after {
+    content: '';
+    display: block;
+    height: 50vh;
+    /* Just enough to scroll last content to reading position */
+}
+
 /* =================================================================
    Headings
    ================================================================= */
@@ -465,6 +474,33 @@
     .content-detail-body h2 {
         font-size: var(--font-size-xl);
     }
+}
+
+/* =================================================================
+   Video Embeds (YouTube)
+   ================================================================= */
+
+.markdown-content .video-container,
+.content-detail-body .video-container {
+    position: relative;
+    width: 100%;
+    max-width: 960px;
+    aspect-ratio: 16 / 9;
+    margin: var(--spacing-6) 0;
+    border-radius: var(--radius-lg);
+    background: var(--color-card-bg);
+    overflow: hidden;
+}
+
+.markdown-content .video-container iframe,
+.content-detail-body .video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: var(--radius-lg);
 }
 
 /* =================================================================

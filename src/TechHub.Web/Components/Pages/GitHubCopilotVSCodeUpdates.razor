@@ -1,4 +1,5 @@
 @page "/github-copilot/vscode-updates"
+@page "/github-copilot/vscode-updates/{VideoSlug}"
 @using TechHub.Core.DTOs
 @using TechHub.Web.Services
 @using TechHub.Web.Components.Shared
@@ -7,59 +8,140 @@
 @inject ErrorService ErrorService
 @inject ILogger<GitHubCopilotVSCodeUpdates> Logger
 
-<PageTitle>@(customPage?.Title ?? "VS Code Updates") - Tech Hub</PageTitle>
+<PageTitle>@(selectedVideoDetail?.Title ?? pageData?.Title ?? "VS Code Updates") - Tech Hub</PageTitle>
 
-@if (sectionData != null && customPage != null)
+@if (sectionData != null && pageData != null)
 {
     <HeadContent>
-        <link rel="canonical" href="@($"https://tech.hub.ms{customPage.Url}")" />
+        <link rel="canonical" href="https://tech.hub.ms/github-copilot/vscode-updates" />
     </HeadContent>
 
     <PageHeader Section="@sectionData" />
 
     <div class="page-with-sidebar">
         <aside class="sidebar">
-            <SidebarBack BackUrl="/github-copilot" BackText="Back to GitHub Copilot" />
-            <SidebarToc HtmlContent="@customPage.RenderedHtml" />
+            @if (videoItems.Any())
+            {
+                <div class="sidebar-section">
+                    <h2 class="sidebar-h2">All Updates</h2>
+                    <ul class="sidebar-list">
+                        @foreach (var video in videoItems)
+                        {
+                            var isActive = video.Slug == selectedVideoSlug;
+                            <li>
+                                <a href="/github-copilot/vscode-updates/@video.Slug"
+                                    class="sidebar-content-button @(isActive ? "active" : "")">
+                                    <span class="sidebar-content-button-title">@video.Title</span>
+                                    <span class="sidebar-content-button-meta">
+                                        <time datetime="@video.DateIso">@FormatDate(video.DateEpoch)</time>
+                                    </span>
+                                </a>
+                            </li>
+                        }
+                    </ul>
+                </div>
+            }
+
+            @if (selectedVideoDetail != null && !string.IsNullOrWhiteSpace(selectedVideoDetail.RenderedHtml))
+            {
+                <SidebarToc HtmlContent="@selectedVideoDetail.RenderedHtml" Title="On This Page" />
+            }
         </aside>
 
         <main class="page-main-content">
-            <article class="content-detail">
-                <header class="content-detail-header">
-                    <h1 class="page-h1" tabindex="-1">@customPage.Title</h1>
-                    @if (!string.IsNullOrWhiteSpace(customPage.Description))
-                    {
-                        <p class="page-description">@customPage.Description</p>
-                    }
-                </header>
-
-                <div class="content-detail-body markdown-content">
-                    @((MarkupString)customPage.RenderedHtml)
-                </div>
-            </article>
+            @if (selectedVideoDetail != null)
+            {
+                <ContentItemDetail Item="@selectedVideoDetail" />
+            }
+            else
+            {
+                <article class="content-detail">
+                    <p class="no-content-message">No updates available yet.</p>
+                </article>
+            }
         </main>
     </div>
 }
 
 @code {
+    [Parameter]
+    public string? VideoSlug { get; set; }
+
     private SectionDto? sectionData;
-    private CustomPageDetailDto? customPage;
+    private VSCodeUpdatesPageData? pageData;
+    private List<ContentItemDto> videoItems = new();
+    private ContentItemDetailDto? selectedVideoDetail;
+    private string selectedVideoSlug = "";
 
     protected override async Task OnInitializedAsync()
+    {
+        await LoadPageData();
+    }
+
+    protected override async Task OnParametersSetAsync()
+    {
+        // When URL parameter changes, reload the selected video
+        if (videoItems.Any())
+        {
+            await LoadSelectedVideo();
+        }
+    }
+
+    private async Task LoadPageData()
     {
         try
         {
             sectionData = await ApiClient.GetSectionAsync("github-copilot");
-            customPage = await ApiClient.GetCustomPageAsync("vscode-updates");
+            pageData = await ApiClient.GetVSCodeUpdatesDataAsync();
 
-            if (sectionData == null || customPage == null)
+            if (sectionData == null || pageData == null)
             {
                 Navigation.NavigateTo("/not-found");
+                return;
+            }
+
+            if (!string.IsNullOrEmpty(pageData.VideoCollection))
+            {
+                var allVideos = await ApiClient.GetContentAsync(null, "videos");
+                videoItems = (allVideos ?? Enumerable.Empty<ContentItemDto>())
+                .Where(v => v.AltCollection == pageData.VideoCollection)
+                .OrderByDescending(v => v.DateEpoch)
+                .ToList();
+
+                await LoadSelectedVideo();
             }
         }
         catch (Exception ex)
         {
             ErrorService.HandleError(ex, Navigation, Logger);
         }
+    }
+
+    private async Task LoadSelectedVideo()
+    {
+        if (!videoItems.Any()) return;
+
+        // Use URL parameter or default to first (latest) video
+        selectedVideoSlug = !string.IsNullOrEmpty(VideoSlug)
+        ? VideoSlug
+        : videoItems.First().Slug;
+
+        // Verify the slug exists in our list
+        var videoExists = videoItems.Any(v => v.Slug == selectedVideoSlug);
+        if (!videoExists)
+        {
+            selectedVideoSlug = videoItems.First().Slug;
+        }
+
+        selectedVideoDetail = await ApiClient.GetContentDetailAsync(
+                                                                                    "github-copilot",
+                                                                                    "videos",
+        selectedVideoSlug);
+    }
+
+    private string FormatDate(long epochSeconds)
+    {
+        var dateTime = DateTimeOffset.FromUnixTimeSeconds(epochSeconds);
+        return dateTime.ToString("MMMM d, yyyy");
     }
 }

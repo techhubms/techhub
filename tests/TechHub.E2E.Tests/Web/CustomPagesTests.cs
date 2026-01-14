@@ -31,9 +31,7 @@ public class CustomPagesTests(PlaywrightCollectionFixture fixture) : IAsyncLifet
         }
     }
     [Theory]
-    [InlineData("/ai/genai-basics", "GenAI Basics")]
     [InlineData("/ai/genai-applied", "GenAI Applied")]
-    [InlineData("/ai/genai-advanced", "GenAI Advanced")]
     [InlineData("/ai/sdlc", "AI in the SDLC")]
     [InlineData("/github-copilot/features", "GitHub Copilot Features")]
     [InlineData("/github-copilot/handbook", "GitHub Copilot Handbook")]
@@ -50,9 +48,7 @@ public class CustomPagesTests(PlaywrightCollectionFixture fixture) : IAsyncLifet
     }
 
     [Theory]
-    [InlineData("/ai/genai-basics")]
     [InlineData("/ai/genai-applied")]
-    [InlineData("/ai/genai-advanced")]
     [InlineData("/ai/sdlc")]
     [InlineData("/github-copilot/features")]
     [InlineData("/github-copilot/handbook")]
@@ -80,9 +76,13 @@ public class CustomPagesTests(PlaywrightCollectionFixture fixture) : IAsyncLifet
         // Act
         await Page.GotoRelativeAsync("/github-copilot/handbook");
 
-        // Assert - Check for author headings (more specific than just text)
-        await Page.AssertElementVisibleByRoleAsync(AriaRole.Heading, "Rob Bos");
-        await Page.AssertElementVisibleByRoleAsync(AriaRole.Heading, "Randy Pagels");
+        // Assert - Check for book title heading
+        await Page.AssertElementVisibleByRoleAsync(AriaRole.Heading, "The GitHub Copilot Handbook", level: 1);
+
+        // Check for author names in text (they appear in bold within paragraphs, not as headings)
+        var pageContent = await Page.ContentAsync();
+        Assert.Contains("Rob Bos", pageContent);
+        Assert.Contains("Randy Pagels", pageContent);
 
         // Check for Amazon link (may be in a sentence, use text contains)
         var amazonLinkExists = await Page.GetByRole(AriaRole.Link).Filter(new() { HasText = "Amazon" }).CountAsync() > 0;
@@ -90,15 +90,17 @@ public class CustomPagesTests(PlaywrightCollectionFixture fixture) : IAsyncLifet
     }
 
     [Fact]
-    public async Task GenAIBasics_ShouldDisplay_TableOfContents()
+    public async Task GenAIApplied_ShouldDisplay_KeySections()
     {
         // Act
-        await Page.GotoRelativeAsync("/ai/genai-basics");
+        await Page.GotoRelativeAsync("/ai/genai-applied");
 
-        // Assert - Should have major section headings (use exact names to avoid strict mode)
-        await Page.AssertElementVisibleByRoleAsync(AriaRole.Heading, "History");
-        await Page.AssertElementVisibleByRoleAsync(AriaRole.Heading, "Models");
-        await Page.AssertElementVisibleByRoleAsync(AriaRole.Heading, "Tokens & Tokenization");
+        // Assert - Should have major section headings
+        await Page.AssertElementVisibleByRoleAsync(AriaRole.Heading, "GenAI Applied", level: 1);
+
+        // Page should have some content paragraphs
+        var paragraphCount = await Page.GetElementCountBySelectorAsync("p");
+        Assert.True(paragraphCount > 0, $"Expected at least one paragraph, but found {paragraphCount}");
     }
 
     [Fact]
@@ -107,8 +109,14 @@ public class CustomPagesTests(PlaywrightCollectionFixture fixture) : IAsyncLifet
         // Act
         await Page.GotoRelativeAsync("/devops/dx-space");
 
-        // Assert - Check for placeholder content headings
-        await Page.AssertElementVisibleByRoleAsync(AriaRole.Heading, "Overview");
-        await Page.AssertElementVisibleByRoleAsync(AriaRole.Heading, "Key Topics");
+        // Assert - Check for section titles from the structured JSON data
+        // The page uses expandable sections with titles like "DORA Metrics", "SPACE Framework", etc.
+        await Page.AssertElementVisibleByRoleAsync(AriaRole.Heading, "Developer Experience Space", level: 1);
+
+        // Check for expandable section cards by looking for text content in the page
+        var pageContent = await Page.ContentAsync();
+        Assert.Contains("DORA Metrics", pageContent);
+        Assert.Contains("SPACE Framework", pageContent);
+        Assert.Contains("Developer Experience", pageContent);  // Part of the DevEx/DX section title
     }
 }

@@ -44,14 +44,14 @@ public class TechHubApiClient(HttpClient httpClient, ILogger<TechHubApiClient> l
         {
             _logger.LogInformation("Fetching section: {SectionName}", sectionName);
             var response = await _httpClient.GetAsync($"/api/sections/{sectionName}", cancellationToken);
-            
+
             // Return null for 404 (not found is a valid state)
             if (response.StatusCode == System.Net.HttpStatusCode.NotFound)
             {
                 _logger.LogWarning("Section not found: {SectionName}", sectionName);
                 return null;
             }
-            
+
             response.EnsureSuccessStatusCode();
             var section = await response.Content.ReadFromJsonAsync<SectionDto>(cancellationToken: cancellationToken);
             return section;
@@ -226,7 +226,7 @@ public class TechHubApiClient(HttpClient httpClient, ILogger<TechHubApiClient> l
             var response = await _httpClient.GetAsync(
                 $"/api/content/{sectionName}/{collection}/{itemId}",
                 cancellationToken);
-            
+
             // Return null for 404 (not found is a valid state)
             if (response.StatusCode == System.Net.HttpStatusCode.NotFound)
             {
@@ -234,7 +234,7 @@ public class TechHubApiClient(HttpClient httpClient, ILogger<TechHubApiClient> l
                     sectionName, collection, itemId);
                 return null;
             }
-            
+
             response.EnsureSuccessStatusCode();
             var item = await response.Content.ReadFromJsonAsync<ContentItemDetailDto>(cancellationToken: cancellationToken);
             return item;
@@ -373,51 +373,245 @@ public class TechHubApiClient(HttpClient httpClient, ILogger<TechHubApiClient> l
     }
 
     /// <summary>
-    /// Get all custom pages
+    /// Get DX Space page data
     /// </summary>
-    public virtual async Task<IEnumerable<CustomPageDto>?> GetAllCustomPagesAsync(CancellationToken cancellationToken = default)
+    public virtual async Task<DXSpacePageData?> GetDXSpaceDataAsync(CancellationToken cancellationToken = default)
     {
         try
         {
-            _logger.LogInformation("Fetching all custom pages from API");
-            var pages = await _httpClient.GetFromJsonAsync<IEnumerable<CustomPageDto>>(
-                "/api/custom-pages",
-                cancellationToken);
+            _logger.LogInformation("Fetching DX Space page data");
+            var response = await _httpClient.GetAsync("/api/custom-pages/dx-space", cancellationToken);
 
-            _logger.LogInformation("Successfully fetched {Count} custom pages", pages?.Count() ?? 0);
-            return pages;
+            // Return null for 404 (not found is a valid state)
+            if (response.StatusCode == System.Net.HttpStatusCode.NotFound)
+            {
+                _logger.LogWarning("DX Space data not found");
+                return null;
+            }
+
+            response.EnsureSuccessStatusCode();
+            var data = await response.Content.ReadFromJsonAsync<DXSpacePageData>(cancellationToken: cancellationToken);
+            return data;
         }
         catch (HttpRequestException ex)
         {
-            _logger.LogError(ex, "Failed to fetch custom pages from API");
+            _logger.LogError(ex, "Failed to fetch DX Space data");
             throw;
         }
     }
 
     /// <summary>
-    /// Get a specific custom page by slug
+    /// Get Handbook page data
     /// </summary>
-    public virtual async Task<CustomPageDetailDto?> GetCustomPageAsync(string slug, CancellationToken cancellationToken = default)
+    public virtual async Task<HandbookPageData?> GetHandbookDataAsync(CancellationToken cancellationToken = default)
     {
         try
         {
-            _logger.LogInformation("Fetching custom page: {Slug}", slug);
-            var response = await _httpClient.GetAsync($"/api/custom-pages/{slug}", cancellationToken);
+            _logger.LogInformation("Fetching Handbook page data");
+            var response = await _httpClient.GetAsync("/api/custom-pages/handbook", cancellationToken);
 
-            // Return null for 404 (not found is a valid state)
             if (response.StatusCode == System.Net.HttpStatusCode.NotFound)
             {
-                _logger.LogWarning("Custom page not found: {Slug}", slug);
+                _logger.LogWarning("Handbook data not found");
                 return null;
             }
 
             response.EnsureSuccessStatusCode();
-            var page = await response.Content.ReadFromJsonAsync<CustomPageDetailDto>(cancellationToken: cancellationToken);
-            return page;
+            var data = await response.Content.ReadFromJsonAsync<HandbookPageData>(cancellationToken: cancellationToken);
+            return data;
         }
         catch (HttpRequestException ex)
         {
-            _logger.LogError(ex, "Failed to fetch custom page {Slug}", slug);
+            _logger.LogError(ex, "Failed to fetch Handbook data");
+            throw;
+        }
+    }
+
+    /// <summary>
+    /// Get Levels of Enlightenment page data
+    /// </summary>
+    public virtual async Task<LevelsPageData?> GetLevelsDataAsync(CancellationToken cancellationToken = default)
+    {
+        try
+        {
+            _logger.LogInformation("Fetching Levels page data");
+            var response = await _httpClient.GetAsync("/api/custom-pages/levels", cancellationToken);
+
+            if (response.StatusCode == System.Net.HttpStatusCode.NotFound)
+            {
+                _logger.LogWarning("Levels data not found");
+                return null;
+            }
+
+            response.EnsureSuccessStatusCode();
+            var data = await response.Content.ReadFromJsonAsync<LevelsPageData>(cancellationToken: cancellationToken);
+            return data;
+        }
+        catch (HttpRequestException ex)
+        {
+            _logger.LogError(ex, "Failed to fetch Levels data");
+            throw;
+        }
+    }
+
+    /// <summary>
+    /// Get VS Code Updates page data
+    /// </summary>
+    public virtual async Task<VSCodeUpdatesPageData?> GetVSCodeUpdatesDataAsync(CancellationToken cancellationToken = default)
+    {
+        try
+        {
+            _logger.LogInformation("Fetching VS Code Updates page data");
+            var response = await _httpClient.GetAsync("/api/custom-pages/vscode-updates", cancellationToken);
+
+            if (response.StatusCode == System.Net.HttpStatusCode.NotFound)
+            {
+                _logger.LogWarning("VS Code Updates data not found");
+                return null;
+            }
+
+            response.EnsureSuccessStatusCode();
+            var data = await response.Content.ReadFromJsonAsync<VSCodeUpdatesPageData>(cancellationToken: cancellationToken);
+            return data;
+        }
+        catch (HttpRequestException ex)
+        {
+            _logger.LogError(ex, "Failed to fetch VS Code Updates data");
+            throw;
+        }
+    }
+
+    /// <summary>
+    /// Get Features page data
+    /// </summary>
+    public virtual async Task<FeaturesPageData?> GetFeaturesDataAsync(CancellationToken cancellationToken = default)
+    {
+        try
+        {
+            _logger.LogInformation("Fetching Features page data");
+            var response = await _httpClient.GetAsync("/api/custom-pages/features", cancellationToken);
+
+            if (response.StatusCode == System.Net.HttpStatusCode.NotFound)
+            {
+                _logger.LogWarning("Features data not found");
+                return null;
+            }
+
+            response.EnsureSuccessStatusCode();
+            var data = await response.Content.ReadFromJsonAsync<FeaturesPageData>(cancellationToken: cancellationToken);
+            return data;
+        }
+        catch (HttpRequestException ex)
+        {
+            _logger.LogError(ex, "Failed to fetch Features data");
+            throw;
+        }
+    }
+
+    /// <summary>
+    /// Get GenAI Basics page data
+    /// </summary>
+    public virtual async Task<GenAIBasicsPageData?> GetGenAIBasicsDataAsync(CancellationToken cancellationToken = default)
+    {
+        try
+        {
+            _logger.LogInformation("Fetching GenAI Basics page data");
+            var response = await _httpClient.GetAsync("/api/custom-pages/genai-basics", cancellationToken);
+
+            if (response.StatusCode == System.Net.HttpStatusCode.NotFound)
+            {
+                _logger.LogWarning("GenAI Basics data not found");
+                return null;
+            }
+
+            response.EnsureSuccessStatusCode();
+            var data = await response.Content.ReadFromJsonAsync<GenAIBasicsPageData>(cancellationToken: cancellationToken);
+            return data;
+        }
+        catch (HttpRequestException ex)
+        {
+            _logger.LogError(ex, "Failed to fetch GenAI Basics data");
+            throw;
+        }
+    }
+
+    /// <summary>
+    /// Get GenAI Advanced page data
+    /// </summary>
+    public virtual async Task<GenAIAdvancedPageData?> GetGenAIAdvancedDataAsync(CancellationToken cancellationToken = default)
+    {
+        try
+        {
+            _logger.LogInformation("Fetching GenAI Advanced page data");
+            var response = await _httpClient.GetAsync("/api/custom-pages/genai-advanced", cancellationToken);
+
+            if (response.StatusCode == System.Net.HttpStatusCode.NotFound)
+            {
+                _logger.LogWarning("GenAI Advanced data not found");
+                return null;
+            }
+
+            response.EnsureSuccessStatusCode();
+            var data = await response.Content.ReadFromJsonAsync<GenAIAdvancedPageData>(cancellationToken: cancellationToken);
+            return data;
+        }
+        catch (HttpRequestException ex)
+        {
+            _logger.LogError(ex, "Failed to fetch GenAI Advanced data");
+            throw;
+        }
+    }
+
+    /// <summary>
+    /// Get GenAI Applied page data
+    /// </summary>
+    public virtual async Task<GenAIAppliedPageData?> GetGenAIAppliedDataAsync(CancellationToken cancellationToken = default)
+    {
+        try
+        {
+            _logger.LogInformation("Fetching GenAI Applied page data");
+            var response = await _httpClient.GetAsync("/api/custom-pages/genai-applied", cancellationToken);
+
+            if (response.StatusCode == System.Net.HttpStatusCode.NotFound)
+            {
+                _logger.LogWarning("GenAI Applied data not found");
+                return null;
+            }
+
+            response.EnsureSuccessStatusCode();
+            var data = await response.Content.ReadFromJsonAsync<GenAIAppliedPageData>(cancellationToken: cancellationToken);
+            return data;
+        }
+        catch (HttpRequestException ex)
+        {
+            _logger.LogError(ex, "Failed to fetch GenAI Applied data");
+            throw;
+        }
+    }
+
+    /// <summary>
+    /// Get SDLC page data
+    /// </summary>
+    public virtual async Task<SDLCPageData?> GetSDLCDataAsync(CancellationToken cancellationToken = default)
+    {
+        try
+        {
+            _logger.LogInformation("Fetching SDLC page data");
+            var response = await _httpClient.GetAsync("/api/custom-pages/sdlc", cancellationToken);
+
+            if (response.StatusCode == System.Net.HttpStatusCode.NotFound)
+            {
+                _logger.LogWarning("SDLC data not found");
+                return null;
+            }
+
+            response.EnsureSuccessStatusCode();
+            var data = await response.Content.ReadFromJsonAsync<SDLCPageData>(cancellationToken: cancellationToken);
+            return data;
+        }
+        catch (HttpRequestException ex)
+        {
+            _logger.LogError(ex, "Failed to fetch SDLC data");
             throw;
         }
     }

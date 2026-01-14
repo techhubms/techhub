@@ -23,6 +23,8 @@
     </div>
 </header>
 
+<SubNav Section="@Section" />
+
 @code {
     // For static pages - provide Title, Description, BackgroundImage
     [Parameter]
@@ -47,4 +49,3 @@
     
     private string StyleAttribute => $"background-image: url('{DisplayBackgroundImage ?? "/images/section-backgrounds/home.jpg"}'); background-size: cover; background-position: center center; background-repeat: no-repeat;";
 }
-

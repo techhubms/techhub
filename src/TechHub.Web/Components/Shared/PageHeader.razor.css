@@ -15,7 +15,6 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: var(--spacing-6);
   width: 100vw;
   margin-left: calc(50% - 50vw);
   margin-right: calc(50% - 50vw);
@@ -86,7 +85,7 @@
   .section-header {
     height: 160px;
   }
-  
+
   .section-header-content .header-title {
     font-size: clamp(1.5rem, 6vw, 2rem);
   }

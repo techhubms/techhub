@@ -7,34 +7,112 @@
 @inject ErrorService ErrorService
 @inject ILogger<GitHubCopilotFeatures> Logger
 
-<PageTitle>@(customPage?.Title ?? "GitHub Copilot Features") - Tech Hub</PageTitle>
+<PageTitle>@(pageData?.Title ?? "GitHub Copilot Features") - Tech Hub</PageTitle>
 
-@if (sectionData != null && customPage != null)
+@if (sectionData != null && pageData != null)
 {
     <HeadContent>
-        <link rel="canonical" href="@($"https://tech.hub.ms{customPage.Url}")" />
+        <link rel="canonical" href="https://tech.hub.ms/github-copilot/features" />
     </HeadContent>
 
     <PageHeader Section="@sectionData" />
 
     <div class="page-with-sidebar">
         <aside class="sidebar">
-            <SidebarBack BackUrl="/github-copilot" BackText="Back to GitHub Copilot" />
-            <SidebarToc HtmlContent="@customPage.RenderedHtml" />
+            <nav class="sidebar-toc" aria-label="Table of contents">
+                <h2>Plans</h2>
+                <ul>
+                    @foreach (var tier in pageData.SubscriptionTiers)
+                    {
+                        <li><a href="#tier-@tier.Id">@tier.Name</a></li>
+                    }
+                </ul>
+                <h2>Feature Videos</h2>
+                <ul>
+                    @foreach (var featureSection in pageData.FeatureSections)
+                    {
+                        <li><a href="#@featureSection.Id">@featureSection.Title</a></li>
+                    }
+                </ul>
+            </nav>
         </aside>
 
         <main class="page-main-content">
             <article class="content-detail">
                 <header class="content-detail-header">
-                    <h1 class="page-h1" tabindex="-1">@customPage.Title</h1>
-                    @if (!string.IsNullOrWhiteSpace(customPage.Description))
+                    <h1 class="page-h1" tabindex="-1">@pageData.Title</h1>
+                    @if (!string.IsNullOrWhiteSpace(pageData.Description))
                     {
-                        <p class="page-description">@customPage.Description</p>
+                        <p class="page-description">@pageData.Description</p>
                     }
                 </header>
 
-                <div class="content-detail-body markdown-content">
-                    @((MarkupString)customPage.RenderedHtml)
+                <div class="custom-page-container">
+                    <div class="custom-page-intro">
+                        <p>@pageData.Intro</p>
+                        <p class="custom-page-note"><strong>Note:</strong> @pageData.Note</p>
+                        <div class="custom-page-links">
+                            <a href="@pageData.Links.Pricing" target="_blank" rel="noopener">View Pricing</a>
+                            <a href="@pageData.Links.PlanDetails" target="_blank" rel="noopener">Plan Details</a>
+                        </div>
+                    </div>
+
+                    <section class="features-tiers">
+                        <h2>Subscription Tiers</h2>
+                        <div class="features-tiers-grid">
+                            @foreach (var tier in pageData.SubscriptionTiers)
+                            {
+                                <div id="tier-@tier.Id" class="features-tier-card">
+                                    <h3>@tier.Name</h3>
+                                    <p class="features-tier-tagline">@tier.Tagline</p>
+                                    @if (tier.Price != null)
+                                    {
+                                        <div class="features-tier-price">
+                                            <span class="price-amount">$@tier.Price.Monthly</span>
+                                            <span class="price-period">@tier.Price.Currency @(tier.Price.PerUser ? "per user " :
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    "")per month</span>
+                                            @if (tier.Price.Yearly.HasValue)
+                                            {
+                                                <span class="price-yearly">or $@tier.Price.Yearly per year</span>
+                                            }
+                                        </div>
+                                    }
+                                    else
+                                    {
+                                        <div class="features-tier-price">
+                                            <span class="price-amount">Free</span>
+                                        </div>
+                                    }
+                                    <ul class="features-tier-features">
+                                        @foreach (var feature in tier.Features)
+                                        {
+                                            <li>@feature</li>
+                                        }
+                                    </ul>
+                                </div>
+                            }
+                        </div>
+                    </section>
+
+                    @foreach (var featureSection in pageData.FeatureSections)
+                    {
+                        var sectionVideos = videoItems.Where(v =>
+                        featureSection.Plans.Any(p => v.Tags?.Contains(p, StringComparer.OrdinalIgnoreCase) == true)).ToList();
+
+                        <div id="@featureSection.Id" class="features-video-section">
+                            <h2>@featureSection.Title</h2>
+                            <p class="features-section-plans">Available in: @string.Join(", ", featureSection.Plans)</p>
+                            @if (sectionVideos.Any())
+                            {
+                                <div class="content-list">
+                                    @foreach (var video in sectionVideos)
+                                    {
+                                        <ContentItemCard Item="@video" ShowSectionName="false" />
+                                    }
+                                </div>
+                            }
+                        </div>
+                    }
                 </div>
             </article>
         </main>
@@ -43,18 +121,29 @@
 
 @code {
     private SectionDto? sectionData;
-    private CustomPageDetailDto? customPage;
+    private FeaturesPageData? pageData;
+    private List<ContentItemDto> videoItems = new();
 
     protected override async Task OnInitializedAsync()
     {
         try
         {
             sectionData = await ApiClient.GetSectionAsync("github-copilot");
-            customPage = await ApiClient.GetCustomPageAsync("features");
+            pageData = await ApiClient.GetFeaturesDataAsync();
 
-            if (sectionData == null || customPage == null)
+            if (sectionData == null || pageData == null)
             {
                 Navigation.NavigateTo("/not-found");
+                return;
+            }
+
+            if (!string.IsNullOrEmpty(pageData.VideoCollection))
+            {
+                var allVideos = await ApiClient.GetContentAsync(null, "videos");
+                videoItems = (allVideos ?? Enumerable.Empty<ContentItemDto>())
+                .Where(v => v.AltCollection == pageData.VideoCollection)
+                .OrderByDescending(v => v.DateEpoch)
+                .ToList();
             }
         }
         catch (Exception ex)

@@ -1,0 +1,192 @@
+{
+    "title": "GenAI Applied",
+    "description": "Practical applications and real-world use cases of Generative AI",
+    "categories": [
+        "AI"
+    ],
+    "tags": [
+        "AI",
+        "Generative AI",
+        "Applications",
+        "Use Cases",
+        "Practical",
+        "Real World"
+    ],
+    "intro": "This page focuses on using GenAI in the real world: spotting where it already shows up, deciding what to build, and integrating it into products and developer workflows.",
+    "relatedPages": [
+        {
+            "title": "GenAI Basics",
+            "url": "/ai/genai-basics"
+        },
+        {
+            "title": "GenAI Advanced",
+            "url": "/ai/genai-advanced"
+        }
+    ],
+    "tableOfContents": [
+        {
+            "id": "what-you-can-build-today",
+            "title": "What You Can Build Today"
+        },
+        {
+            "id": "integrating-ai-into-your-applications",
+            "title": "Integrating AI into Your Applications"
+        },
+        {
+            "id": "building-multi-agent-systems",
+            "title": "Building Multi-Agent Systems"
+        },
+        {
+            "id": "monitoring-and-evaluating-ai-applications",
+            "title": "Monitoring and Evaluating AI Applications"
+        },
+        {
+            "id": "the-ai-native-web",
+            "title": "The AI-Native Web"
+        },
+        {
+            "id": "learning-resources",
+            "title": "Learning Resources"
+        }
+    ],
+    "sections": [
+        {
+            "id": "what-you-can-build-today",
+            "title": "What You Can Build Today",
+            "intro": "The best way to learn AI development is to build something real.",
+            "learningPath": [
+                "Start with a simple chat interface to understand AI interactions",
+                "Try GitHub Copilot or similar tools in your development environment",
+                "Experiment with prompt changes and measure output quality",
+                "Build a small application using Azure OpenAI or GitHub Models",
+                "Join AI communities and forums and learn from examples"
+            ],
+            "projects": [
+                {
+                    "title": "Build an MCP server",
+                    "description": "Connect AI to your own data. Create a Model Context Protocol server that gives Claude or Copilot access to your company's documentation, your personal notes, or a live database.",
+                    "link": {
+                        "text": "MCP quickstart",
+                        "url": "https://modelcontextprotocol.io/quickstart"
+                    }
+                },
+                {
+                    "title": "Create a coding agent",
+                    "description": "Handle routine tasks automatically. Use GitHub Copilot's agent mode or build your own with Microsoft Agent Framework.",
+                    "link": {
+                        "text": "Building AI Agents with Ease",
+                        "url": "https://techcommunity.microsoft.com/blog/educatordeveloperblog/building-ai-agents-with-ease-function-calling-in-vs-code-ai-toolkit/4362419"
+                    }
+                },
+                {
+                    "title": "Deploy a RAG chatbot",
+                    "description": "Build a knowledge base for your team. Connect Azure OpenAI to your internal docs and let people ask questions in natural language.",
+                    "link": {
+                        "text": "Microsoft Foundry quickstart",
+                        "url": "https://learn.microsoft.com/en-us/azure/ai-foundry/quickstarts/get-started-playground"
+                    }
+                },
+                {
+                    "title": "Automate document processing",
+                    "description": "Use vision models to extract data from receipts, contracts, or forms. Classify images. Generate alt text."
+                },
+                {
+                    "title": "Build a multi-agent system",
+                    "description": "Let specialized agents collaborate. One agent retrieves context, another generates code, a third reviews quality.",
+                    "link": {
+                        "text": "Building a multi-agent system with Semantic Kernel",
+                        "url": "https://www.reddit.com/r/dotnet/comments/1ltr8tf/building_a_multiagent_system_with_semantic_kernel/"
+                    }
+                }
+            ]
+        },
+        {
+            "id": "integrating-ai-into-your-applications",
+            "title": "Integrating AI into Your Applications",
+            "intro": "Most practical integrations come down to three layers.",
+            "layers": [
+                {
+                    "name": "Experience",
+                    "description": "How users interact (chat, inline suggestions, forms, copilots)"
+                },
+                {
+                    "name": "Orchestration",
+                    "description": "Prompts, tool use, retrieval, evaluations, and guardrails"
+                },
+                {
+                    "name": "Data and systems",
+                    "description": "Your sources of truth (docs, DBs, APIs) and authorization"
+                }
+            ],
+            "tools": [
+                {
+                    "name": "Visual Studio Code",
+                    "features": [
+                        "GitHub Copilot integration: code suggestions and chat in the editor",
+                        "AI-powered extensions for specific languages and frameworks",
+                        "Context-aware completions based on your repository"
+                    ]
+                },
+                {
+                    "name": "Visual Studio",
+                    "features": [
+                        "AI-assisted IntelliSense, suggestions, and review support",
+                        "Debugging help with explanations and next-step suggestions"
+                    ]
+                },
+                {
+                    "name": "JetBrains Rider",
+                    "features": [
+                        "AI assistant support for code generation and explanation",
+                        "Refactoring suggestions and test generation workflows"
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "github-copilot",
+            "title": "GitHub Copilot",
+            "intro": "GitHub Copilot is an AI pair programmer that provides real-time code suggestions, chat capabilities, and agent-based assistance directly in your development environment.",
+            "capabilities": [
+                "Code completion: Suggests functions, code blocks, and entire implementations",
+                "Chat interface: Conversational help for reasoning about code and debugging",
+                "Multi-language support: Works across dozens of programming languages",
+                "Context awareness: Understands your repository structure and patterns"
+            ],
+            "modes": [
+                {
+                    "name": "Ask mode",
+                    "description": "Best for explanations, exploring options, and quick checks"
+                },
+                {
+                    "name": "Edit mode",
+                    "description": "Best for refining existing code, documentation, and configuration files"
+                },
+                {
+                    "name": "Agent mode",
+                    "description": "Best for multi-step tasks where the AI plans and executes changes autonomously"
+                }
+            ],
+            "customization": [
+                ".github/copilot-instructions.md: Repository-wide instructions",
+                "AGENTS.md: Agent-specific instructions for the coding agent",
+                "Custom agents: Define specialized agents with specific tools and behaviors"
+            ],
+            "faq": [
+                {
+                    "question": "When should I refactor using my IDE versus using Copilot?",
+                    "answer": "Use IDE refactoring tools for standard operations like renaming symbols. Use Copilot for refactors that require understanding intent and cross-file reasoning."
+                },
+                {
+                    "question": "Which mode should I use for a complex feature implementation?",
+                    "answer": "Start with Ask mode to discuss the approach, then use Agent mode for implementation, and Edit mode for refinements."
+                }
+            ]
+        }
+    ],
+    "previousPage": {
+        "title": "Back to Advanced Concepts",
+        "url": "/ai/genai-advanced",
+        "linkText": "← GenAI Advanced"
+    }
+}

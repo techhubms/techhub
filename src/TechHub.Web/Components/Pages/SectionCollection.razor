@@ -22,7 +22,6 @@ else
 
     <div class="page-with-sidebar">
         <aside class="sidebar">
-            <SidebarCollectionNav Section="@sectionData" SelectedCollection="@CollectionName" />
             <SidebarRssLinks Links="@(new[] { new SidebarRssLinks.RssLink("RSS Feed", $"{sectionData.Url}/feed.xml") })" />
         </aside>
 

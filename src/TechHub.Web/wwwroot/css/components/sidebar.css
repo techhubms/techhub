@@ -16,18 +16,18 @@
    ============================================================================ */
 
 /* ============================================================================
-   Sidebar Container - Sticky positioning
+   Sidebar Container - Simple block container for viewport-sticky children
    ============================================================================ */
 
 .sidebar {
-  position: sticky;
-  top: 100px;
-  /* Match content type nav and content detail sidebar */
-  height: fit-content;
-  align-self: flex-start;
-  display: flex;
-  flex-direction: column;
-  gap: var(--spacing-4);
+  /* Plain block container - no flex/grid, just natural height from children
+     align-self: stretch allows sidebar to match main content height for sticky to work */
+  align-self: stretch;
+}
+
+/* Spacing between sidebar sections */
+.sidebar>*+* {
+  margin-top: var(--spacing-4);
 }
 
 /* ============================================================================
@@ -209,6 +209,26 @@
   transform: translateX(4px);
 }
 
+.sidebar-content-button.active {
+  background: var(--color-purple-dark);
+  border-color: var(--color-purple-bright);
+}
+
+.sidebar-content-button.active:hover {
+  background: var(--color-purple-medium);
+  border-color: var(--color-purple-bright);
+  transform: none;
+}
+
+.sidebar-content-button.active .sidebar-content-button-title {
+  color: var(--color-text-on-emphasis);
+  font-weight: var(--font-weight-semibold);
+}
+
+.sidebar-content-button.active .sidebar-content-button-meta {
+  color: var(--color-purple-light);
+}
+
 .sidebar-content-button-title {
   font-weight: var(--font-weight-medium);
   line-height: var(--line-height-snug);
@@ -291,4 +311,79 @@
 .sidebar-featured-date {
   font-size: var(--font-size-sm);
   color: var(--color-text-secondary);
+}
+
+/* ============================================================================
+   Sidebar Table of Contents - Hierarchical navigation with scroll-spy
+   ============================================================================ */
+
+.sidebar-toc {
+  position: sticky;
+  top: 100px;
+  /* Stick below the header (70px) + SubNav (30px) */
+}
+
+.sidebar-toc-inner {
+  max-height: calc(100vh - 120px);
+  overflow-y: auto;
+}
+
+.sidebar-toc .toc-list {
+  list-style: none;
+  padding: var(--spacing-3);
+  margin: 0;
+  background: var(--color-card-bg);
+  border: 1px solid var(--color-border-default);
+  border-radius: var(--radius-md);
+}
+
+.sidebar-toc .toc-sublist {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  margin-left: var(--spacing-2);
+  border-left: 1px solid var(--color-border-muted);
+  padding-left: var(--spacing-2);
+}
+
+.sidebar-toc .toc-item {
+  margin: 0;
+}
+
+.sidebar-toc .toc-link {
+  display: block;
+  padding: var(--spacing-1) var(--spacing-2);
+  color: var(--color-text-secondary);
+  text-decoration: none;
+  font-size: var(--font-size-sm);
+  line-height: var(--line-height-snug);
+  border-radius: var(--radius-sm);
+  border-left: 2px solid transparent;
+  transition: all var(--duration-fast) var(--easing-ease);
+}
+
+.sidebar-toc .toc-link:hover {
+  color: var(--color-text-primary);
+  background: var(--color-bg-emphasis);
+}
+
+/* Active state for current section (scroll-spy) */
+.sidebar-toc .toc-link.active {
+  color: var(--color-purple-bright);
+  background: var(--color-bg-emphasis);
+  border-left-color: var(--color-purple-bright);
+}
+
+/* Depth-based styling for visual hierarchy */
+.sidebar-toc .toc-depth-0>.toc-link {
+  font-weight: var(--font-weight-medium);
+  color: var(--color-text-primary);
+}
+
+.sidebar-toc .toc-depth-1>.toc-link {
+  font-size: var(--font-size-sm);
+}
+
+.sidebar-toc .toc-depth-2>.toc-link {
+  font-size: var(--font-size-xs);
 }

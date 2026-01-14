@@ -3,7 +3,7 @@
 <article class="content-detail">
     <header class="content-detail-header">
         <h1 class="page-h1" tabindex="-1">@Item.Title</h1>
-        
+
         <div class="article-metadata">
             <time datetime="@Item.DateIso">@FormatDate(Item.DateEpoch)</time>
             @if (!string.IsNullOrWhiteSpace(Item.Author))
@@ -13,27 +13,11 @@
             }
         </div>
     </header>
-    
-    @if (!string.IsNullOrWhiteSpace(Item.VideoId))
-    {
-        <div class="content-detail-video">
-            <YouTubeEmbed VideoId="@Item.VideoId" />
-        </div>
-    }
-    
+
     @if (!string.IsNullOrWhiteSpace(Item.RenderedHtml))
     {
         <div class="content-detail-body">
             @((MarkupString)Item.RenderedHtml)
-        </div>
-    }
-    
-    @if (!string.IsNullOrWhiteSpace(Item.ExternalUrl))
-    {
-        <div class="content-detail-external">
-            <a href="@Item.ExternalUrl" target="_blank" rel="noopener noreferrer" class="external-link">
-                Read full article on original site ↗
-            </a>
         </div>
     }
 </article>
@@ -45,7 +29,7 @@
     private string FormatDate(long epochSeconds)
     {
         if (epochSeconds == 0) return string.Empty;
-        
+
         var dateTime = DateTimeOffset.FromUnixTimeSeconds(epochSeconds);
         return dateTime.ToString("MMMM d, yyyy");
     }

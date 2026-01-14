@@ -1,0 +1,213 @@
+@using System.Text.RegularExpressions
+@inject NavigationManager Navigation
+
+@* 
+   Table of Contents Sidebar Component
+   
+   Renders a hierarchical table of contents with proper nesting and indentation.
+   
+   Usage:
+     Auto-extract from HTML content:
+       <SidebarToc HtmlContent="@renderedHtml" />
+     
+     Pass explicit items:
+       <SidebarToc Items="@tocItems" />
+     
+     With custom title:
+       <SidebarToc HtmlContent="@html" Title="On This Page" />
+*@
+
+@if (effectiveItems.Count > 0)
+{
+    <nav class="sidebar-section sidebar-toc" aria-label="@Title" data-toc-scroll-spy
+        data-content-selector=".content-detail-body">
+        <div class="sidebar-toc-inner">
+            <h2 class="sidebar-h2">@Title</h2>
+            <ul class="toc-list">
+                @RenderTocItems(BuildHierarchy(effectiveItems), 0)
+            </ul>
+        </div>
+    </nav>
+}
+
+@code {
+    /// <summary>
+    /// HTML content to extract headings from (auto-extraction mode).
+    /// </summary>
+    [Parameter]
+    public string? HtmlContent { get; set; }
+
+    /// <summary>
+    /// Explicit TOC items to display (manual mode). Takes precedence over HtmlContent.
+    /// </summary>
+    [Parameter]
+    public IReadOnlyList<TocItem>? Items { get; set; }
+
+    /// <summary>
+    /// Title displayed above the TOC.
+    /// </summary>
+    [Parameter]
+    public string Title { get; set; } = "Table of Contents";
+
+    /// <summary>
+    /// Minimum heading level to include (default: 2 for h2).
+    /// </summary>
+    [Parameter]
+    public int MinLevel { get; set; } = 2;
+
+    /// <summary>
+    /// Maximum heading level to include (default: 4 for h4).
+    /// </summary>
+    [Parameter]
+    public int MaxLevel { get; set; } = 4;
+
+    private List<TocItem> effectiveItems = [];
+
+    protected override void OnParametersSet()
+    {
+        // Manual items take precedence
+        if (Items != null && Items.Count > 0)
+        {
+            effectiveItems = Items.ToList();
+        }
+        else if (!string.IsNullOrWhiteSpace(HtmlContent))
+        {
+            effectiveItems = ExtractHeadings(HtmlContent);
+        }
+        else
+        {
+            effectiveItems = [];
+        }
+    }
+
+    private List<TocItem> ExtractHeadings(string html)
+    {
+        var items = new List<TocItem>();
+        if (string.IsNullOrWhiteSpace(html))
+            return items;
+
+        // Match headings with IDs: <h2 id="heading-id">Text</h2>
+        var headingPattern = @"<h([2-6])(?:\s+id=[""']([^""']+)[""'])?[^>]*>(.*?)</h\1>";
+        var matches = Regex.Matches(html, headingPattern, RegexOptions.IgnoreCase | RegexOptions.Singleline);
+
+        foreach (Match match in matches)
+        {
+            var level = int.Parse(match.Groups[1].Value);
+
+            // Filter by level range
+            if (level < MinLevel || level > MaxLevel)
+                continue;
+
+            var id = match.Groups[2].Value;
+            var text = Regex.Replace(match.Groups[3].Value, @"<[^>]+>", ""); // Strip HTML tags
+
+            // Extract ID from markdown {#id} syntax if not in attribute
+            if (string.IsNullOrEmpty(id) && text.Contains("{#"))
+            {
+                var idMatch = Regex.Match(text, @"\{#([^}]+)\}");
+                if (idMatch.Success)
+                {
+                    id = idMatch.Groups[1].Value;
+                    text = text.Replace(idMatch.Value, "").Trim();
+                }
+            }
+
+            // Generate ID from text if still not found
+            if (string.IsNullOrEmpty(id))
+            {
+                id = GenerateId(text);
+            }
+
+            items.Add(new TocItem(level, id, text.Trim()));
+        }
+
+        return items;
+    }
+
+    private static string GenerateId(string text)
+    {
+        return Regex.Replace(text.ToLowerInvariant(), @"[^a-z0-9]+", "-").Trim('-');
+    }
+
+    /// <summary>
+    /// Builds a hierarchical tree structure from flat TOC items.
+    /// </summary>
+    private static List<TocNode> BuildHierarchy(List<TocItem> items)
+    {
+        var roots = new List<TocNode>();
+        var stack = new Stack<TocNode>();
+
+        foreach (var item in items)
+        {
+            var node = new TocNode(item);
+
+            // Pop items from stack that are same level or deeper
+            while (stack.Count > 0 && stack.Peek().Item.Level >= item.Level)
+            {
+                stack.Pop();
+            }
+
+            if (stack.Count == 0)
+            {
+                // Top-level item
+                roots.Add(node);
+            }
+            else
+            {
+                // Child of current parent
+                stack.Peek().Children.Add(node);
+            }
+
+            stack.Push(node);
+        }
+
+        return roots;
+    }
+
+    /// <summary>
+    /// Recursively renders TOC items as nested lists.
+    /// </summary>
+    private RenderFragment RenderTocItems(List<TocNode> nodes, int depth) => builder =>
+    {
+        // Get current page path (without fragment)
+        var currentUri = new Uri(Navigation.Uri);
+        var currentPath = currentUri.GetLeftPart(UriPartial.Path);
+
+        foreach (var node in nodes)
+        {
+            builder.OpenElement(0, "li");
+            builder.AddAttribute(1, "class", $"toc-item toc-depth-{depth}");
+
+            builder.OpenElement(2, "a");
+            builder.AddAttribute(3, "href", $"{currentPath}#{node.Item.Id}");
+            builder.AddAttribute(4, "class", "toc-link");
+            builder.AddAttribute(5, "data-text", node.Item.Text);
+            builder.AddContent(6, node.Item.Text);
+            builder.CloseElement(); // a
+
+            if (node.Children.Count > 0)
+            {
+                builder.OpenElement(7, "ul");
+                builder.AddAttribute(8, "class", "toc-sublist");
+                builder.AddContent(9, RenderTocItems(node.Children, depth + 1));
+                builder.CloseElement(); // ul
+            }
+
+            builder.CloseElement(); // li
+        }
+    };
+
+    /// <summary>
+    /// Represents a table of contents item.
+    /// </summary>
+    public record TocItem(int Level, string Id, string Text);
+
+    /// <summary>
+    /// Internal node for building hierarchy.
+    /// </summary>
+    private class TocNode(TocItem item)
+    {
+        public TocItem Item { get; } = item;
+        public List<TocNode> Children { get; } = [];
+    }
+}

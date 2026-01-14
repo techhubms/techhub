@@ -1294,24 +1294,60 @@ src/TechHub.Web/
 
 **Component Organization**:
 
-- **Layout/**: Application layout (MainLayout, NavMenu)
-- **Pages/**: Routable pages
+- **Layout/**: Application layout components
+  - `MainLayout.razor` - Main application layout wrapper
+- **Pages/**: Routable pages (all have `@page` directive)
   - `Home.razor` - Homepage (`/`) - Shows all sections
   - `Section.razor` - Section page (`/{sectionName}`) - Shows all content in section
   - `SectionCollection.razor` - Collection page (`/{sectionName}/{collectionName}`) - Shows filtered content
   - `ContentItem.razor` - Detail page (`/{sectionName}/{collection}/{itemId}`) - Shows single content item
   - `About.razor` - About page (`/about`)
   - `NotFound.razor` - 404 page
-- **Shared/**: Reusable UI components (PageHeader, NavHeader)
-- **Root Components/**: Feature-specific components
-  - `SectionCard.razor` - Section display card (used on homepage)
-  - `SectionCardsGrid.razor` - Grid of section cards (used on homepage)
-  - `ContentItemCard.razor` - Content item display card (used on section/collection pages)
-  - `ContentItemsGrid.razor` - Grid of content items with filtering (used on section/collection pages)
-  - `ContentItemDetail.razor` - Full content rendering (used on detail page)
-  - `SidebarCollectionNav.razor` - Sidebar collection navigation (used on section/collection pages)
-- **Routes.razor**: Blazor router (required by framework, stays in root)
-- **App.razor**: Application entry point (required by framework, stays in root)
+  - Custom pages - Feature-specific routable pages
+- **Shared/**: Layout-level reusable components (navigation, headers)
+  - `NavHeader.razor` - Global site navigation header
+  - `PageHeader.razor` - Page banner with section background
+  - `SubNav.razor` - Horizontal sub-navigation below page header
+- **Root Components/**: Domain-specific reusable components
+  - **Content Display**:
+    - `SectionCard.razor` - Section display card (homepage)
+    - `SectionCardsGrid.razor` - Grid of section cards (homepage)
+    - `ContentItemCard.razor` - Content item display card (section/collection pages)
+    - `ContentItemsGrid.razor` - Grid of content items with filtering
+    - `ContentItemDetail.razor` - Full content rendering (detail page)
+  - **Sidebar Components**:
+    - `SidebarBackButton.razor` - Back navigation button
+    - `SidebarCollectionNav.razor` - Collection navigation (deprecated - replaced by SubNav)
+    - `SidebarRssLinks.razor` - RSS subscription links
+    - `SidebarTags.razor` - Tag cloud for filtering
+    - `SidebarToc.razor` - Table of contents with scroll-spy
+    - `SidebarPageInfo.razor` - Custom page metadata display
+- **Routes.razor**: Blazor router (framework requirement, stays in root)
+- **App.razor**: Application entry point (framework requirement, stays in root)
+
+**Why This Structure?**
+
+**Shared/** folder is for **cross-cutting layout components** used across ALL pages:
+
+- Navigation (NavHeader) - appears on every page
+- Page headers (PageHeader, SubNav) - layout elements common to all section pages
+- These are "infrastructure" components that define the page structure
+
+**Root Components/** folder is for **domain-specific reusable components**:
+
+- Content display components - specific to content rendering (cards, grids, detail views)
+- Sidebar components - specific to sidebar functionality
+- These are "feature" components that implement specific business logic
+
+**Pages/** folder is ONLY for **routable components** (`@page` directive):
+
+- Each file represents a URL route
+- No non-routable components here
+
+**Layout/** folder is for **wrapper components**:
+
+- MainLayout - wraps all pages
+- Specialized layouts if needed
 
 ## Image Conventions
 

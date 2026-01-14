@@ -7,34 +7,88 @@
 @inject ErrorService ErrorService
 @inject ILogger<GitHubCopilotLevels> Logger
 
-<PageTitle>@(customPage?.Title ?? "GitHub Copilot Levels") - Tech Hub</PageTitle>
+<PageTitle>@(pageData?.Title ?? "GitHub Copilot Levels") - Tech Hub</PageTitle>
 
-@if (sectionData != null && customPage != null)
+@if (sectionData != null && pageData != null)
 {
     <HeadContent>
-        <link rel="canonical" href="@($"https://tech.hub.ms{customPage.Url}")" />
+        <link rel="canonical" href="https://tech.hub.ms/github-copilot/levels-of-enlightenment" />
     </HeadContent>
 
     <PageHeader Section="@sectionData" />
 
     <div class="page-with-sidebar">
         <aside class="sidebar">
-            <SidebarBack BackUrl="/github-copilot" BackText="Back to GitHub Copilot" />
-            <SidebarToc HtmlContent="@customPage.RenderedHtml" />
+            <nav class="sidebar-toc" aria-label="Table of contents">
+                <h2>Levels</h2>
+                <ul>
+                    <li><a href="#overview">Overview</a></li>
+                    @foreach (var level in pageData.Levels)
+                    {
+                        <li><a href="#level-@level.Number">Level @level.Number: @level.Title</a></li>
+                    }
+                    <li><a href="#conclusion">Conclusion</a></li>
+                </ul>
+            </nav>
         </aside>
 
         <main class="page-main-content">
             <article class="content-detail">
                 <header class="content-detail-header">
-                    <h1 class="page-h1" tabindex="-1">@customPage.Title</h1>
-                    @if (!string.IsNullOrWhiteSpace(customPage.Description))
+                    <h1 class="page-h1" tabindex="-1">@pageData.Title</h1>
+                    @if (!string.IsNullOrWhiteSpace(pageData.Description))
                     {
-                        <p class="page-description">@customPage.Description</p>
+                        <p class="page-description">@pageData.Description</p>
                     }
                 </header>
 
-                <div class="content-detail-body markdown-content">
-                    @((MarkupString)customPage.RenderedHtml)
+                <div class="levels-container">
+                    @* Introduction *@
+                    <div class="levels-intro">
+                        <p>@pageData.Intro</p>
+                    </div>
+
+                    @* Overview Section *@
+                    <section id="overview" class="levels-section">
+                        <h2>Overview</h2>
+                        <p>@pageData.Overview.Content</p>
+                        @if (!string.IsNullOrEmpty(pageData.Overview.ImageUrl))
+                        {
+                            <img src="@pageData.Overview.ImageUrl" alt="@pageData.Overview.ImageAlt"
+                                class="levels-overview-image" />
+                        }
+                    </section>
+
+                    @* Each Level *@
+                    @foreach (var level in pageData.Levels)
+                    {
+                        <section id="level-@level.Number" class="levels-section levels-level">
+                            <h2>Level @level.Number: @level.Title</h2>
+                            <p>@level.Description</p>
+                            @if (!string.IsNullOrEmpty(level.YoutubeId))
+                            {
+                                <div class="levels-video">
+                                    <iframe src="https://www.youtube.com/embed/@level.YoutubeId"
+                                        title="Level @level.Number: @level.Title" frameborder="0"
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                        allowfullscreen>
+                                    </iframe>
+                                </div>
+                            }
+                        </section>
+                    }
+
+                    @* Conclusion *@
+                    <section id="conclusion" class="levels-section levels-conclusion">
+                        <h2>Conclusion</h2>
+                        <p>@pageData.Conclusion</p>
+                        @if (!string.IsNullOrEmpty(pageData.PlaylistUrl))
+                        {
+                            <a href="@pageData.PlaylistUrl" class="levels-playlist-link" target="_blank" rel="noopener">
+                                Watch the full playlist on YouTube
+                            </a>
+                        }
+                    </section>
                 </div>
             </article>
         </main>
@@ -43,16 +97,16 @@
 
 @code {
     private SectionDto? sectionData;
-    private CustomPageDetailDto? customPage;
+    private LevelsPageData? pageData;
 
     protected override async Task OnInitializedAsync()
     {
         try
         {
             sectionData = await ApiClient.GetSectionAsync("github-copilot");
-            customPage = await ApiClient.GetCustomPageAsync("levels-of-enlightenment");
+            pageData = await ApiClient.GetLevelsDataAsync();
 
-            if (sectionData == null || customPage == null)
+            if (sectionData == null || pageData == null)
             {
                 Navigation.NavigateTo("/not-found");
             }

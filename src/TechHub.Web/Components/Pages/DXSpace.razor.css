@@ -1,0 +1,611 @@
+/* DX Space Page - Component Scoped Styles */
+
+/* Container */
+.dx-container {
+    max-width: 100%;
+}
+
+/* Intro Section */
+.dx-intro {
+    margin-bottom: 2rem;
+    font-size: 1.1rem;
+    line-height: 1.7;
+}
+
+.dx-intro p {
+    margin-bottom: 1.5rem;
+}
+
+.dx-quote {
+    border-left: 4px solid var(--color-accent, #0078d4);
+    padding: 1rem 1.5rem;
+    margin: 1.5rem 0;
+    background: var(--color-bg-subtle, #f6f8fa);
+    font-style: italic;
+    font-size: 1.1rem;
+}
+
+.dx-quote cite {
+    display: block;
+    margin-top: 0.75rem;
+    font-style: normal;
+    font-weight: 600;
+    color: var(--color-text-muted, #656d76);
+}
+
+/* Section Cards (Expandable) */
+.dx-section-card {
+    border: 1px solid var(--color-border, #d0d7de);
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    overflow: hidden;
+    background: var(--color-bg-default, #fff);
+}
+
+.dx-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 1rem 1.25rem;
+    background: var(--color-bg-subtle, #f6f8fa);
+    border: none;
+    cursor: pointer;
+    font-size: 1.25rem;
+    font-weight: 600;
+    text-align: left;
+    transition: background-color 0.2s ease;
+}
+
+.dx-card-header:hover {
+    background: var(--color-bg-muted, #eaeef2);
+}
+
+.dx-card-header:focus {
+    outline: 2px solid var(--color-accent, #0078d4);
+    outline-offset: -2px;
+}
+
+.dx-card-icon {
+    transition: transform 0.3s ease;
+    font-size: 0.875rem;
+}
+
+.dx-card-icon.expanded {
+    transform: rotate(180deg);
+}
+
+.dx-card-content {
+    display: none;
+    padding: 1.5rem;
+}
+
+.dx-card-content.expanded {
+    display: block;
+}
+
+/* Section Intro */
+.dx-section-intro {
+    margin-bottom: 1.5rem;
+}
+
+.dx-section-intro h3 {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    color: var(--color-text-default, #1f2328);
+}
+
+.dx-section-intro p {
+    margin-bottom: 0.75rem;
+    line-height: 1.6;
+}
+
+/* DORA Metrics Grid */
+.dx-metrics-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.25rem;
+    margin-bottom: 1.5rem;
+}
+
+.dx-metric-card {
+    display: flex;
+    gap: 1rem;
+    padding: 1.25rem;
+    background: var(--color-bg-subtle, #f6f8fa);
+    border-radius: 8px;
+    border: 1px solid var(--color-border-muted, #d0d7de);
+}
+
+.dx-metric-icon {
+    font-size: 2rem;
+    flex-shrink: 0;
+}
+
+.dx-metric-card strong {
+    display: block;
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+    color: var(--color-text-default, #1f2328);
+}
+
+.dx-metric-question {
+    font-style: italic;
+    color: var(--color-text-muted, #656d76);
+    margin-bottom: 1rem;
+}
+
+.dx-metric-detail h4 {
+    font-size: 0.9rem;
+    margin: 1rem 0 0.5rem;
+    color: var(--color-text-default, #1f2328);
+}
+
+.dx-metric-detail p {
+    margin: 0 0 0.5rem;
+    font-size: 0.95rem;
+}
+
+.dx-metric-detail ul {
+    margin: 0;
+    padding-left: 1.25rem;
+    font-size: 0.95rem;
+}
+
+.dx-metric-detail li {
+    margin-bottom: 0.25rem;
+}
+
+/* SPACE Grid */
+.dx-space-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.dx-space-card {
+    display: flex;
+    gap: 1.25rem;
+    padding: 1.25rem;
+    background: var(--color-bg-subtle, #f6f8fa);
+    border-radius: 8px;
+    border: 1px solid var(--color-border-muted, #d0d7de);
+}
+
+.dx-space-letter {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 3rem;
+    height: 3rem;
+    background: var(--color-accent, #0078d4);
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 700;
+    border-radius: 8px;
+    flex-shrink: 0;
+}
+
+.dx-space-content {
+    flex: 1;
+}
+
+.dx-space-content strong {
+    display: block;
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+}
+
+.dx-space-content>p {
+    color: var(--color-text-muted, #656d76);
+    margin-bottom: 1rem;
+}
+
+.dx-space-detail h4 {
+    font-size: 0.9rem;
+    margin: 1rem 0 0.5rem;
+}
+
+.dx-space-detail ul {
+    margin: 0;
+    padding-left: 1.25rem;
+    font-size: 0.95rem;
+}
+
+.dx-space-detail li {
+    margin-bottom: 0.25rem;
+}
+
+/* DevEx Stats Grid */
+.dx-stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.25rem;
+    margin-bottom: 2rem;
+}
+
+.dx-stat-card {
+    text-align: center;
+    padding: 1.5rem;
+    background: linear-gradient(135deg, var(--color-accent, #0078d4), #50a3e0);
+    border-radius: 12px;
+    color: white;
+}
+
+.dx-stat-number {
+    display: block;
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.dx-stat-card p {
+    margin: 0;
+    font-size: 0.95rem;
+    opacity: 0.95;
+}
+
+/* DevEx Dimensions Grid */
+.dx-devex-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.25rem;
+    margin-bottom: 1.5rem;
+}
+
+.dx-devex-card {
+    display: flex;
+    gap: 1rem;
+    padding: 1.25rem;
+    background: var(--color-bg-subtle, #f6f8fa);
+    border-radius: 8px;
+    border: 1px solid var(--color-border-muted, #d0d7de);
+}
+
+.dx-devex-icon {
+    font-size: 2rem;
+    flex-shrink: 0;
+}
+
+.dx-devex-card strong {
+    display: block;
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+}
+
+.dx-devex-card>div>p {
+    color: var(--color-text-muted, #656d76);
+    margin-bottom: 1rem;
+}
+
+.dx-devex-card h4 {
+    font-size: 0.9rem;
+    margin: 1rem 0 0.5rem;
+}
+
+.dx-devex-card ul {
+    margin: 0;
+    padding-left: 1.25rem;
+    font-size: 0.95rem;
+}
+
+.dx-devex-card li {
+    margin-bottom: 0.25rem;
+}
+
+/* Relationships Diagram */
+.dx-relationship-diagram {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.dx-relationship-item {
+    flex: 1;
+    min-width: 250px;
+    max-width: 300px;
+    padding: 1.25rem;
+    background: var(--color-bg-subtle, #f6f8fa);
+    border-radius: 8px;
+    border: 1px solid var(--color-border-muted, #d0d7de);
+}
+
+.dx-relationship-header {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 1rem;
+}
+
+.dx-relationship-icon {
+    font-size: 1.5rem;
+}
+
+.dx-relationship-header strong {
+    font-size: 1.1rem;
+}
+
+.dx-relationship-item p {
+    margin: 0.5rem 0;
+    font-size: 0.9rem;
+}
+
+.dx-relationship-arrow {
+    font-size: 1.5rem;
+    color: var(--color-text-muted, #656d76);
+    padding: 0 0.5rem;
+}
+
+/* Choice Grid */
+.dx-choice-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.25rem;
+    margin-bottom: 1.5rem;
+}
+
+.dx-choice-card {
+    padding: 1.25rem;
+    background: var(--color-bg-subtle, #f6f8fa);
+    border-radius: 8px;
+    border: 1px solid var(--color-border-muted, #d0d7de);
+}
+
+.dx-choice-card h4 {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    color: var(--color-text-default, #1f2328);
+}
+
+.dx-choice-card ul {
+    margin: 0;
+    padding-left: 1.25rem;
+}
+
+.dx-choice-card li {
+    margin-bottom: 0.5rem;
+}
+
+/* Steps List */
+.dx-steps-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.dx-step {
+    display: flex;
+    gap: 1.25rem;
+}
+
+.dx-step-number {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.5rem;
+    height: 2.5rem;
+    background: var(--color-accent, #0078d4);
+    color: white;
+    font-size: 1.25rem;
+    font-weight: 700;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+.dx-step-content {
+    flex: 1;
+}
+
+.dx-step-content strong {
+    display: block;
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+}
+
+.dx-step-content>p {
+    margin-bottom: 1rem;
+    line-height: 1.6;
+}
+
+.dx-step-tips {
+    background: var(--color-bg-subtle, #f6f8fa);
+    padding: 1rem;
+    border-radius: 6px;
+    margin-top: 0.75rem;
+}
+
+.dx-step-tips h4 {
+    margin-top: 0;
+    margin-bottom: 0.75rem;
+    font-size: 0.9rem;
+}
+
+.dx-step-tips ul {
+    margin: 0;
+    padding-left: 1.25rem;
+}
+
+.dx-step-tips li {
+    margin-bottom: 0.25rem;
+    font-size: 0.95rem;
+}
+
+/* Tools Grid */
+.dx-tools-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.25rem;
+    margin-bottom: 2rem;
+}
+
+.dx-tool-card {
+    padding: 1.25rem;
+    background: var(--color-bg-subtle, #f6f8fa);
+    border-radius: 8px;
+    border: 1px solid var(--color-border-muted, #d0d7de);
+}
+
+.dx-tool-card strong {
+    display: block;
+    font-size: 1.05rem;
+    margin-bottom: 0.25rem;
+}
+
+.dx-tool-type {
+    font-size: 0.85rem;
+    color: var(--color-accent, #0078d4);
+    margin-bottom: 0.75rem;
+    font-weight: 500;
+}
+
+.dx-tool-card>p:last-child {
+    margin: 0;
+    font-size: 0.95rem;
+    color: var(--color-text-muted, #656d76);
+}
+
+/* Resources List */
+.dx-resources-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.dx-resource {
+    padding: 1rem 1.25rem;
+    background: var(--color-bg-subtle, #f6f8fa);
+    border-radius: 6px;
+    border-left: 4px solid var(--color-accent, #0078d4);
+}
+
+.dx-resource strong {
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.dx-resource p {
+    margin: 0;
+    font-size: 0.95rem;
+    color: var(--color-text-muted, #656d76);
+}
+
+/* Practices Grid */
+.dx-practices-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.dx-practice-do,
+.dx-practice-dont {
+    padding: 1.25rem;
+    border-radius: 8px;
+}
+
+.dx-practice-do {
+    background: #d4edda;
+    border: 1px solid #c3e6cb;
+}
+
+.dx-practice-dont {
+    background: #f8d7da;
+    border: 1px solid #f5c6cb;
+}
+
+.dx-practice-do h4,
+.dx-practice-dont h4 {
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+
+.dx-practice-do ul,
+.dx-practice-dont ul {
+    margin: 0;
+    padding-left: 1.25rem;
+}
+
+.dx-practice-do li,
+.dx-practice-dont li {
+    margin-bottom: 0.75rem;
+    line-height: 1.5;
+}
+
+/* Insight Box */
+.dx-insight-box {
+    background: linear-gradient(135deg, #fff8e6, #fff3cc);
+    border: 1px solid #ffd966;
+    border-radius: 8px;
+    padding: 1.25rem;
+    margin-top: 1.5rem;
+}
+
+.dx-insight-box h4 {
+    margin-top: 0;
+    margin-bottom: 0.75rem;
+    color: #856404;
+}
+
+.dx-insight-box p {
+    margin: 0;
+    line-height: 1.6;
+    color: #856404;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+
+    .dx-metrics-grid,
+    .dx-devex-grid,
+    .dx-tools-grid,
+    .dx-choice-grid,
+    .dx-practices-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .dx-relationship-diagram {
+        flex-direction: column;
+    }
+
+    .dx-relationship-arrow {
+        transform: rotate(90deg);
+    }
+
+    .dx-relationship-item {
+        max-width: 100%;
+    }
+
+    .dx-space-card,
+    .dx-metric-card,
+    .dx-devex-card {
+        flex-direction: column;
+    }
+
+    .dx-space-letter {
+        width: 2.5rem;
+        height: 2.5rem;
+        font-size: 1.25rem;
+    }
+
+    .dx-stats-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .dx-stat-number {
+        font-size: 2.5rem;
+    }
+
+    .dx-step {
+        flex-direction: column;
+    }
+
+    .dx-step-number {
+        width: 2rem;
+        height: 2rem;
+        font-size: 1rem;
+    }
+}

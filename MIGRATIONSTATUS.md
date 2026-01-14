@@ -6,7 +6,7 @@ This document tracks the progress of migrating Tech Hub from Jekyll to .NET/Blaz
 
 ## What's Working
 
-✅ **RESTful API** with nested routes (14 endpoints, all tested and working):
+✅ **RESTful API** with nested routes (16 endpoints, all tested and working):
 
 **Section Endpoints**:
 
@@ -21,6 +21,11 @@ This document tracks the progress of migrating Tech Hub from Jekyll to .NET/Blaz
 
 - `GET /api/content/filter?sections={s}&collections={c}&tags={t}&q={query}` - Advanced filtering
 - `GET /api/content/tags` - All unique tags (12,524 tags)
+
+**Custom Pages Endpoints**:
+
+- `GET /api/custom-pages` - Get all custom pages (9 pages)
+- `GET /api/custom-pages/{slug}` - Get specific custom page by slug
 
 **Examples**:
 
@@ -43,32 +48,39 @@ Following the migration plan phases defined in [specs/dotnet-migration/](specs/d
 
 - [x] **Phase 1: Foundation** (36/36 tasks) ✅ Complete
   - All projects, domain models, DTOs, interfaces, extensions
-- [x] **Phase 2: Data Access** (8/17 tasks) 🔄 In Progress
+- [x] **Phase 2: Data Access** (10/17 tasks) 🔄 In Progress
   - ✅ FrontMatterParser (11 tests passing)
   - ✅ MarkdownService (19 tests passing)
   - ✅ FileBasedSectionRepository (7 tests passing)
   - ✅ FileBasedContentRepository (15 tests passing)
+  - ✅ FileBasedCustomPageRepository (9 custom pages loaded)
   - ⏳ RssService, Caching, Entity tests (not started)
-- [x] **Phase 3: API Endpoints** (15/70 tasks) 🔄 In Progress
+- [x] **Phase 3: API Endpoints** (20/70 tasks) 🔄 In Progress
   - ✅ All section endpoints (6 endpoints, 8 tests)
   - ✅ Advanced filtering (2 endpoints, 6 tests)
+  - ✅ Custom pages endpoints (2 endpoints, 8 tests)
   - ✅ Blazor home page with section grid
   - ✅ ContentItemCard and SectionCard components
   - ✅ TechHubApiClient with resilience policies
   - ✅ PrimarySection URL routing logic
   - ✅ ViewingMode (internal/external) content handling
+  - ✅ Custom page components (9 pages: AISDLC, DXSpace, GenAI series, GitHub Copilot series)
   - ⏳ Content detail pages (partially implemented)
 
-**Test Results**: 245/245 unit/integration tests passing (100%), 60/69 E2E tests passing (87%)
+**Test Results**: 242/242 unit/integration tests passing (100%), 111/111 E2E tests passing (100%)
 
 **Performance**: Sections ~25ms, Content first load 5-9s (2266 markdown files)
 
 ## What's Working Now
 
-✅ **Frontend** (User Story 1 ~95% Complete):
+✅ **Frontend** (User Story 1 Complete):
 
 - Home page displaying 8 sections in responsive grid (<http://localhost:5184>)
 - Section pages with collection navigation and content display
+- Custom pages with dynamic loading (9 pages)
+  - AI: SDLC, GenAI Basics, GenAI Applied, GenAI Advanced
+  - GitHub Copilot: Features, Handbook, Levels of Enlightenment, VS Code Updates
+  - DevOps: Developer Experience Space
 - SectionCard and ContentItemCard components with Tech Hub styling
 - TechHubApiClient with resilience policies (retry, circuit breaker, timeout)
 - PrimarySection URL routing (e.g., `/github-copilot/videos/item-id`)

@@ -1,5 +1,4 @@
 @page "/github-copilot/handbook"
-@using System.Text.Json
 @using TechHub.Core.DTOs
 @using TechHub.Web.Services
 @using TechHub.Web.Components.Shared
@@ -8,37 +7,129 @@
 @inject ErrorService ErrorService
 @inject ILogger<GitHubCopilotHandbook> Logger
 
-<PageTitle>@(customPage?.Title ?? "GitHub Copilot Handbook") - Tech Hub</PageTitle>
+<PageTitle>@(pageData?.Title ?? "GitHub Copilot Handbook") - Tech Hub</PageTitle>
 
-@if (sectionData != null && customPage != null)
+@if (sectionData != null && pageData != null)
 {
     <HeadContent>
-        <link rel="canonical" href="@($"https://tech.hub.ms{customPage.Url}")" />
+        <link rel="canonical" href="https://tech.hub.ms/github-copilot/handbook" />
     </HeadContent>
 
     <PageHeader Section="@sectionData" />
 
     <div class="page-with-sidebar">
         <aside class="sidebar">
-            <SidebarBack BackUrl="/github-copilot" BackText="Back to GitHub Copilot" />
-
-            <SidebarPageInfo SidebarInfo="@customPage.SidebarInfo" />
-
-            <SidebarToc HtmlContent="@customPage.RenderedHtml" />
+            <nav class="sidebar-toc" aria-label="Table of contents">
+                <h2>On this page</h2>
+                <ul>
+                    <li><a href="#about-book">About the Book</a></li>
+                    <li><a href="#learnings">What You'll Learn</a></li>
+                    <li><a href="#audience">Who Is This Book For</a></li>
+                    <li><a href="#key-features">Key Features</a></li>
+                    <li><a href="#toc">Table of Contents</a></li>
+                    <li><a href="#authors">About the Authors</a></li>
+                </ul>
+            </nav>
         </aside>
 
         <main class="page-main-content">
             <article class="content-detail">
                 <header class="content-detail-header">
-                    <h1 class="page-h1" tabindex="-1">@customPage.Title</h1>
-                    @if (!string.IsNullOrWhiteSpace(customPage.Description))
+                    <h1 class="page-h1" tabindex="-1">@pageData.Title</h1>
+                    @if (!string.IsNullOrWhiteSpace(pageData.Description))
                     {
-                        <p class="page-description">@customPage.Description</p>
+                        <p class="page-description">@pageData.Description</p>
                     }
                 </header>
 
-                <div class="content-detail-body markdown-content">
-                    @((MarkupString)customPage.RenderedHtml)
+                <div class="handbook-container">
+                    @* Book Info Section *@
+                    <div class="handbook-intro">
+                        <div class="handbook-book-info">
+                            <p><strong>Authors:</strong> @string.Join(", ", pageData.Authors)</p>
+                            <p><strong>Publisher:</strong> @pageData.BookDetails.Publisher</p>
+                            <p><strong>Released:</strong> @pageData.BookDetails.Released</p>
+                            <p><strong>Pages:</strong> @pageData.BookDetails.Pages</p>
+                        </div>
+                        <p>@pageData.Intro</p>
+                        @if (pageData.PurchaseLink != null)
+                        {
+                            <a href="@pageData.PurchaseLink.Url" class="handbook-purchase-link" target="_blank" rel="noopener">
+                                @pageData.PurchaseLink.Text
+                            </a>
+                        }
+                    </div>
+
+                    @* About the Book *@
+                    <section id="about-book" class="handbook-section">
+                        <h2>About the Book</h2>
+                        @foreach (var paragraph in pageData.AboutBook)
+                        {
+                            <p>@paragraph</p>
+                        }
+                    </section>
+
+                    @* What You'll Learn *@
+                    <section id="learnings" class="handbook-section">
+                        <h2>What You'll Learn</h2>
+                        <ul class="handbook-learnings">
+                            @foreach (var learning in pageData.Learnings)
+                            {
+                                <li>@learning</li>
+                            }
+                        </ul>
+                    </section>
+
+                    @* Audience *@
+                    <section id="audience" class="handbook-section">
+                        <h2>Who Is This Book For</h2>
+                        <p>@pageData.Audience.Intro</p>
+                        <p>@pageData.Audience.Details</p>
+                    </section>
+
+                    @* Key Features *@
+                    <section id="key-features" class="handbook-section">
+                        <h2>Key Features</h2>
+                        <div class="handbook-features-grid">
+                            @foreach (var feature in pageData.KeyFeatures)
+                            {
+                                <div class="handbook-feature-card">
+                                    <h3>@feature.Title</h3>
+                                    <p>@feature.Description</p>
+                                </div>
+                            }
+                        </div>
+                    </section>
+
+                    @* Table of Contents *@
+                    <section id="toc" class="handbook-section">
+                        <h2>Table of Contents</h2>
+                        <ol class="handbook-toc">
+                            @foreach (var chapter in pageData.TableOfContents)
+                            {
+                                <li>@chapter</li>
+                            }
+                        </ol>
+                    </section>
+
+                    @* Authors *@
+                    <section id="authors" class="handbook-section">
+                        <h2>About the Authors</h2>
+                        <div class="handbook-authors">
+                            @foreach (var author in pageData.AuthorBios)
+                            {
+                                <div class="handbook-author-card">
+                                    <h3>@author.Name</h3>
+                                    <p>@author.Bio</p>
+                                </div>
+                            }
+                        </div>
+                    </section>
+
+                    @* Conclusion *@
+                    <section class="handbook-section handbook-conclusion">
+                        <p>@pageData.Conclusion</p>
+                    </section>
                 </div>
             </article>
         </main>
@@ -47,16 +138,16 @@
 
 @code {
     private SectionDto? sectionData;
-    private CustomPageDetailDto? customPage;
+    private HandbookPageData? pageData;
 
     protected override async Task OnInitializedAsync()
     {
         try
         {
             sectionData = await ApiClient.GetSectionAsync("github-copilot");
-            customPage = await ApiClient.GetCustomPageAsync("handbook");
+            pageData = await ApiClient.GetHandbookDataAsync();
 
-            if (sectionData == null || customPage == null)
+            if (sectionData == null || pageData == null)
             {
                 Navigation.NavigateTo("/not-found");
             }

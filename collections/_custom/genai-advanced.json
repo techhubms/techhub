@@ -1,0 +1,276 @@
+{
+    "title": "GenAI Advanced",
+    "description": "Advanced techniques and strategies for working with Generative AI systems",
+    "categories": [
+        "AI"
+    ],
+    "tags": [
+        "AI",
+        "Generative AI",
+        "Advanced",
+        "Techniques",
+        "Strategies",
+        "Expert"
+    ],
+    "intro": "This page focuses on how GenAI models work internally: understanding embeddings and vectors, exploring advanced techniques like RAG and function calling, and building agentic systems that go beyond simple prompts.",
+    "relatedPages": [
+        {
+            "title": "GenAI Basics",
+            "url": "/ai/genai-basics"
+        },
+        {
+            "title": "GenAI Applied",
+            "url": "/ai/genai-applied"
+        }
+    ],
+    "tableOfContents": [
+        {
+            "id": "vectors-and-embeddings",
+            "title": "Vectors and embeddings: How AI understands meaning"
+        },
+        {
+            "id": "from-embeddings-to-responses",
+            "title": "From embeddings to responses: The inference process"
+        },
+        {
+            "id": "neural-networks-and-transformers",
+            "title": "Neural networks and transformers"
+        },
+        {
+            "id": "attention-mechanism",
+            "title": "Attention mechanism"
+        },
+        {
+            "id": "context-windows-and-model-parameters",
+            "title": "Context windows and model parameters"
+        },
+        {
+            "id": "fine-tuning-a-model",
+            "title": "Fine-tuning a model"
+        },
+        {
+            "id": "function-calling",
+            "title": "Function calling"
+        },
+        {
+            "id": "model-context-protocol-mcp",
+            "title": "Model Context Protocol (MCP)"
+        },
+        {
+            "id": "retrieval-augmented-generation-rag",
+            "title": "Retrieval Augmented Generation (RAG)"
+        },
+        {
+            "id": "agents-and-agentic-ai",
+            "title": "Agents and agentic AI"
+        },
+        {
+            "id": "multi-agent-solutions",
+            "title": "Multi-agent solutions"
+        },
+        {
+            "id": "observability",
+            "title": "Observability: Monitoring and evaluating AI applications"
+        },
+        {
+            "id": "scaling-ai-implementations",
+            "title": "Scaling AI implementations"
+        }
+    ],
+    "sections": [
+        {
+            "id": "vectors-and-embeddings",
+            "title": "Vectors and embeddings: How AI understands meaning",
+            "content": [
+                "Everything an AI processes—words, images, concepts—gets converted into **vectors**, which are simply lists of numbers. Think of a vector as a precise coordinate in multi-dimensional space that captures the essence of what something means.",
+                "**Embeddings** are sophisticated vectors that capture semantic meaning. When an AI learns that \"dog\" and \"puppy\" are related, it places their embeddings close together in this mathematical space."
+            ]
+        },
+        {
+            "id": "from-embeddings-to-responses",
+            "title": "From embeddings to responses: The inference process",
+            "content": [
+                "Inference is what happens when you send a prompt to an AI model and receive a response. The model converts your words into embeddings, processes those mathematical representations through its neural network, and converts the results back into human-readable text.",
+                "During inference, the model doesn't \"think\" the way humans do. Instead, it performs billions of mathematical calculations to predict the most likely next word."
+            ]
+        },
+        {
+            "id": "neural-networks-and-transformers",
+            "title": "Neural networks and transformers",
+            "subsections": [
+                {
+                    "title": "The foundation of learning",
+                    "content": "A neural network mimics how biological brains process information through interconnected nodes. Each connection has a *weight*—a number that determines how much influence one piece of information has on another."
+                },
+                {
+                    "title": "Transformers: A revolutionary architecture",
+                    "content": "Modern language models use transformers, a revolutionary architecture that changed how AI understands language. Unlike earlier approaches that processed text sequentially, transformers can examine entire passages simultaneously."
+                }
+            ]
+        },
+        {
+            "id": "attention-mechanism",
+            "title": "Attention mechanism",
+            "content": [
+                "The breakthrough innovation in transformers is the attention mechanism. When generating each word, the model can \"attend to\" or focus on the most relevant parts of the input.",
+                "For example, when translating \"The cat that was sleeping on the mat was orange,\" the attention mechanism helps the model understand that \"orange\" describes \"cat,\" not \"mat.\""
+            ]
+        },
+        {
+            "id": "context-windows-and-model-parameters",
+            "title": "Context windows and model parameters",
+            "intro": "These core concepts determine what a model can do and how it behaves.",
+            "subsections": [
+                {
+                    "title": "Parameters and model capability",
+                    "content": "The parameters in a model directly impact capability. GPT-3 has 175 billion parameters, while some newer models have over a trillion."
+                },
+                {
+                    "title": "Context windows",
+                    "content": "Context windows determine how much information a model can consider at once. Larger context windows allow models to maintain coherence across longer conversations."
+                },
+                {
+                    "title": "Training data and knowledge cutoff",
+                    "content": "The training data shapes what the model knows. The cut-off date represents the latest information in this training data."
+                }
+            ],
+            "moreInfo": [
+                {
+                    "text": "Microsoft Releases Dion: A New Scalable Optimizer for Training AI Models",
+                    "url": "https://techcommunity.microsoft.com/blog/educator-developer-blog/microsoft-releases-dion-a-new-scalable-optimizer-for-training-ai-models/4500124"
+                }
+            ]
+        },
+        {
+            "id": "fine-tuning-a-model",
+            "title": "Fine-tuning a model",
+            "intro": "Fine-tuning involves adjusting model behavior and output to better match your specific needs.",
+            "techniques": [
+                {
+                    "name": "Grounding",
+                    "description": "Provides the AI with specific, factual information to base its responses on."
+                },
+                {
+                    "name": "Temperature",
+                    "description": "Controls how creative or predictable the AI's responses are.",
+                    "settings": [
+                        {
+                            "range": "0.0-0.3",
+                            "description": "More focused and consistent responses"
+                        },
+                        {
+                            "range": "0.4-0.7",
+                            "description": "Balanced creativity and consistency"
+                        },
+                        {
+                            "range": "0.8-1.0",
+                            "description": "More creative and varied responses"
+                        }
+                    ]
+                },
+                {
+                    "name": "Top P (nucleus sampling)",
+                    "description": "Determines how many alternative words the model considers when generating each token."
+                }
+            ]
+        },
+        {
+            "id": "function-calling",
+            "title": "Function calling",
+            "intro": "Function calling allows AI models to use external tools and services during their responses.",
+            "workflow": [
+                "You define functions with clear descriptions of what they do and what parameters they need",
+                "The AI model analyzes your prompt and determines if any functions would help answer your question",
+                "The model calls the appropriate function with the right parameters",
+                "The function returns results, which the model incorporates into its response"
+            ]
+        },
+        {
+            "id": "model-context-protocol-mcp",
+            "title": "Model Context Protocol (MCP)",
+            "content": [
+                "MCP is an open protocol that standardizes how applications provide context to LLMs. It enables secure, two-way connections between AI systems and data sources.",
+                "MCP allows AI assistants to access files, databases, APIs, and other resources in a standardized way."
+            ]
+        },
+        {
+            "id": "retrieval-augmented-generation-rag",
+            "title": "Retrieval Augmented Generation (RAG)",
+            "intro": "RAG combines the generative capabilities of LLMs with external knowledge retrieval.",
+            "workflow": [
+                "User asks a question",
+                "System retrieves relevant documents from a knowledge base",
+                "Retrieved context is added to the prompt",
+                "LLM generates a response grounded in the retrieved information"
+            ],
+            "benefits": [
+                "Reduces hallucinations by grounding responses in factual data",
+                "Allows access to current information beyond training data",
+                "Enables domain-specific knowledge without fine-tuning"
+            ]
+        },
+        {
+            "id": "agents-and-agentic-ai",
+            "title": "Agents and agentic AI",
+            "intro": "AI agents are systems that can autonomously plan and execute multi-step tasks.",
+            "characteristics": [
+                "Goal-oriented: Work toward specific objectives",
+                "Autonomous: Make decisions without constant human intervention",
+                "Tool-using: Leverage external tools and APIs",
+                "Adaptive: Adjust plans based on results and feedback"
+            ]
+        },
+        {
+            "id": "multi-agent-solutions",
+            "title": "Multi-agent solutions",
+            "intro": "Multiple specialized agents can collaborate to solve complex problems.",
+            "patterns": [
+                {
+                    "name": "Orchestrator pattern",
+                    "description": "One agent coordinates others"
+                },
+                {
+                    "name": "Peer-to-peer",
+                    "description": "Agents communicate directly with each other"
+                },
+                {
+                    "name": "Hierarchical",
+                    "description": "Agents organized in supervisory layers"
+                }
+            ]
+        },
+        {
+            "id": "observability",
+            "title": "Observability: Monitoring and evaluating AI applications",
+            "intro": "Understanding how AI systems perform in production is critical for reliability.",
+            "metrics": [
+                "Latency and throughput",
+                "Token usage and costs",
+                "Response quality scores",
+                "Error rates and failure modes"
+            ]
+        },
+        {
+            "id": "scaling-ai-implementations",
+            "title": "Scaling AI implementations",
+            "intro": "Moving from prototype to production requires careful consideration of scale.",
+            "considerations": [
+                "Rate limiting and quota management",
+                "Caching strategies for repeated queries",
+                "Load balancing across model instances",
+                "Cost optimization at scale"
+            ]
+        }
+    ],
+    "previousPage": {
+        "title": "Back to Basics",
+        "url": "/ai/genai-basics",
+        "linkText": "← GenAI Basics"
+    },
+    "nextPage": {
+        "title": "Ready to Apply Your Knowledge?",
+        "description": "Learn how to put these advanced concepts into practice with real-world applications.",
+        "url": "/ai/genai-applied",
+        "linkText": "Continue to GenAI Applied"
+    }
+}

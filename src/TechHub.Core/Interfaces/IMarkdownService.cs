@@ -26,4 +26,13 @@ public interface IMarkdownService
     /// Process YouTube embeds in HTML content
     /// </summary>
     string ProcessYouTubeEmbeds(string html);
+
+    /// <summary>
+    /// Process Jekyll/Liquid template variables like {{ page.variable }}
+    /// Replaces them with values from frontmatter
+    /// </summary>
+    /// <param name="content">Markdown content with Jekyll variables</param>
+    /// <param name="frontMatter">Frontmatter dictionary with values</param>
+    /// <returns>Content with variables replaced</returns>
+    string ProcessJekyllVariables(string content, Dictionary<string, object> frontMatter);
 }

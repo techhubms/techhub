@@ -1,0 +1,336 @@
+/* AI-SDLC Page Styles - Converted from _sdlc.scss */
+/* Phase-specific collapsible sections with distinct colors */
+
+/* Phase blocks container */
+::deep .sdlc-phases {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+/* Base phase block */
+::deep .sdlc-phase-block {
+    background: rgba(45, 45, 74, 0.5);
+    border: 1px solid rgba(224, 224, 224, 0.2);
+    border-radius: 8px;
+    overflow: hidden;
+    width: 100%;
+}
+
+/* Phase headers */
+::deep .sdlc-phase-header {
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: rgba(45, 45, 74, 0.3);
+    border-bottom: 1px solid rgba(224, 224, 224, 0.1);
+    cursor: pointer;
+    user-select: none;
+    transition: background 0.2s ease;
+    position: relative;
+}
+
+::deep .sdlc-phase-header:hover {
+    background: rgba(45, 45, 74, 0.5);
+}
+
+::deep .sdlc-phase-header h2 {
+    margin: 0;
+    font-size: 18px;
+    font-weight: 600;
+    color: #ffffff;
+    flex: 1;
+}
+
+::deep .sdlc-phase-header h2::after {
+    display: none;
+}
+
+/* Toggle chevron */
+::deep .sdlc-phase-toggle {
+    font-size: 16px;
+    color: #b8b8b8;
+    transition: transform 0.25s ease;
+}
+
+::deep .sdlc-phase-toggle.expanded {
+    transform: rotate(180deg);
+}
+
+/* Phase icon */
+::deep .sdlc-phase-icon {
+    font-size: 20px;
+}
+
+/* Phase content - collapsible */
+::deep .sdlc-phase-content {
+    display: none;
+    overflow: hidden;
+    padding: 0 20px;
+}
+
+::deep .sdlc-phase-content.expanded {
+    display: block;
+    padding: 20px;
+}
+
+/* Phase-specific colors with left border */
+::deep .sdlc-phase-ideation {
+    border-left: 4px solid #f9a825;
+}
+
+::deep .sdlc-phase-ideation .sdlc-phase-header {
+    background: rgba(249, 168, 37, 0.1);
+}
+
+::deep .sdlc-phase-planning {
+    border-left: 4px solid #1976d2;
+}
+
+::deep .sdlc-phase-planning .sdlc-phase-header {
+    background: rgba(25, 118, 210, 0.1);
+}
+
+::deep .sdlc-phase-design {
+    border-left: 4px solid #7b1fa2;
+}
+
+::deep .sdlc-phase-design .sdlc-phase-header {
+    background: rgba(123, 31, 162, 0.1);
+}
+
+::deep .sdlc-phase-implementation {
+    border-left: 4px solid #388e3c;
+}
+
+::deep .sdlc-phase-implementation .sdlc-phase-header {
+    background: rgba(56, 142, 60, 0.1);
+}
+
+::deep .sdlc-phase-testing {
+    border-left: 4px solid #f57c00;
+}
+
+::deep .sdlc-phase-testing .sdlc-phase-header {
+    background: rgba(245, 124, 0, 0.1);
+}
+
+::deep .sdlc-phase-deployment {
+    border-left: 4px solid #c2185b;
+}
+
+::deep .sdlc-phase-deployment .sdlc-phase-header {
+    background: rgba(194, 24, 91, 0.1);
+}
+
+::deep .sdlc-phase-maintenance {
+    border-left: 4px solid #00796b;
+}
+
+::deep .sdlc-phase-maintenance .sdlc-phase-header {
+    background: rgba(0, 121, 107, 0.1);
+}
+
+/* Tool tags */
+::deep .sdlc-tools-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 5px;
+}
+
+::deep .sdlc-tool-tag {
+    background: rgba(30, 144, 255, 0.2);
+    color: #58a6ff;
+    padding: 4px 12px;
+    border-radius: 12px;
+    font-size: 13px;
+    border: 1px solid rgba(30, 144, 255, 0.3);
+    text-decoration: none;
+    transition: all 0.2s ease;
+    cursor: pointer;
+}
+
+::deep .sdlc-tool-tag:hover {
+    background: rgba(30, 144, 255, 0.35);
+    border-color: rgba(88, 166, 255, 0.5);
+    color: #ffffff;
+    transform: translateY(-1px);
+}
+
+/* Info sections */
+::deep .sdlc-info-section {
+    margin-bottom: 24px;
+}
+
+::deep .sdlc-info-section:last-child {
+    margin-bottom: 0;
+}
+
+::deep .sdlc-info-label {
+    font-weight: 700;
+    color: #58a6ff;
+    font-size: 15px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 12px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid rgba(88, 166, 255, 0.2);
+}
+
+::deep .sdlc-info-text {
+    color: #e0e0e0;
+    line-height: 1.7;
+}
+
+::deep .sdlc-info-text h4 {
+    color: #b8b8b8;
+    font-size: 14px;
+    font-weight: 600;
+    margin: 16px 0 8px 0;
+}
+
+::deep .sdlc-info-text h4:first-child {
+    margin-top: 0;
+}
+
+::deep .sdlc-info-text p {
+    margin: 0 0 12px 0;
+}
+
+::deep .sdlc-info-text p:last-child {
+    margin-bottom: 0;
+}
+
+::deep .sdlc-info-text ul {
+    margin: 8px 0;
+    padding-left: 20px;
+}
+
+::deep .sdlc-info-text ul li {
+    margin-bottom: 6px;
+}
+
+/* Handover section within phases */
+::deep .sdlc-handover-section {
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px dashed rgba(224, 224, 224, 0.3);
+}
+
+::deep .sdlc-handover-header {
+    font-weight: 600;
+    color: #58a6ff;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 15px;
+}
+
+/* Benefits grid */
+::deep .sdlc-benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+@media (max-width: 900px) {
+    ::deep .sdlc-benefits-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    ::deep .sdlc-benefits-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+::deep .sdlc-benefit-card {
+    display: flex;
+    gap: 12px;
+    padding: 18px;
+    background: rgba(56, 142, 60, 0.1);
+    border-radius: 6px;
+    border: 1px solid rgba(56, 142, 60, 0.3);
+}
+
+::deep .sdlc-benefit-card>div {
+    flex: 1;
+}
+
+::deep .sdlc-benefit-card strong {
+    display: block;
+    color: #66bb6a;
+    font-size: 16px;
+    margin-bottom: 8px;
+}
+
+/* Collapsible cards */
+::deep .sdlc-section-card {
+    background: rgba(45, 45, 74, 0.5);
+    border: 1px solid rgba(224, 224, 224, 0.2);
+    border-radius: 6px;
+    margin-bottom: 15px;
+    overflow: hidden;
+    transition: all 0.3s ease, box-shadow 0.5s ease;
+    border-left: 4px solid #9e9e9e;
+}
+
+::deep .sdlc-card-header {
+    padding: 15px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    background: rgba(45, 45, 74, 0.3);
+    font-weight: 600;
+    user-select: none;
+    position: relative;
+    font-size: 16px;
+    transition: background 0.2s ease;
+}
+
+::deep .sdlc-card-header:hover {
+    background: rgba(45, 45, 74, 0.5);
+}
+
+::deep .sdlc-card-icon {
+    font-size: 20px;
+    transition: transform 0.25s ease;
+    position: absolute;
+    right: 15px;
+}
+
+::deep .sdlc-card-icon.expanded {
+    transform: rotate(180deg);
+}
+
+::deep .sdlc-card-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.25s ease, padding 0.25s ease;
+    padding: 0 15px;
+}
+
+::deep .sdlc-card-content.expanded {
+    max-height: 1500px;
+    padding: 15px;
+}
+
+/* Intro section */
+::deep .sdlc-intro {
+    margin-bottom: 20px;
+    padding: 15px;
+    background: rgba(45, 45, 74, 0.5);
+    border-radius: 6px;
+    border: 1px solid rgba(224, 224, 224, 0.2);
+}
+
+::deep .sdlc-intro p {
+    margin: 0;
+    line-height: 1.6;
+}

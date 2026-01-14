@@ -292,6 +292,26 @@ public class MarkdownServiceTests
     }
 
     /// <summary>
+    /// Test: Jekyll/Liquid youtube tag format should convert to iframe
+    /// Why: Migrated content uses {% youtube VIDEO_ID %} syntax
+    /// </summary>
+    [Theory]
+    [InlineData("{% youtube abc123 %}")]
+    [InlineData("{%youtube abc123%}")]
+    [InlineData("{% youtube  abc123  %}")]
+    [InlineData("{% YOUTUBE abc123 %}")]
+    public void ProcessYouTubeEmbeds_JekyllTagFormat_ConvertsToIframe(string tag)
+    {
+        // Act: Process Jekyll youtube tag
+        var result = _service.ProcessYouTubeEmbeds(tag);
+
+        // Assert: Converted to iframe embed
+        Assert.Contains("embed/abc123", result);
+        Assert.Contains("video-container", result);
+        Assert.DoesNotContain("{%", result);
+    }
+
+    /// <summary>
     /// Test: Markdown without YouTube tags should remain unchanged
     /// Why: Only process content with video embeds
     /// </summary>
@@ -356,6 +376,212 @@ public class MarkdownServiceTests
         Assert.Contains("embed/tutorial123", html);
         Assert.Contains("<strong>Key points:</strong>", html);
         Assert.Contains("<ul>", html);
+    }
+
+    #endregion
+
+    #region Jekyll Variable Tests
+
+    /// <summary>
+    /// Test: Jekyll page variables should be replaced with frontmatter values
+    /// Why: Content files may contain {{ page.variable }} syntax from Jekyll
+    /// </summary>
+    [Fact]
+    public void ProcessJekyllVariables_PageVariables_ReplacesWithFrontmatter()
+    {
+        // Arrange
+        var content = "Welcome to {{ page.title }}! {{ page.description }}";
+        var frontMatter = new Dictionary<string, object>
+        {
+            { "title", "My Page" },
+            { "description", "This is a test page." }
+        };
+
+        // Act
+        var result = _service.ProcessJekyllVariables(content, frontMatter);
+
+        // Assert
+        Assert.Equal("Welcome to My Page! This is a test page.", result);
+    }
+
+    /// <summary>
+    /// Test: Variables without page. prefix should also work
+    /// Why: Some templates use {{ variable }} instead of {{ page.variable }}
+    /// </summary>
+    [Fact]
+    public void ProcessJekyllVariables_WithoutPagePrefix_ReplacesWithFrontmatter()
+    {
+        // Arrange
+        var content = "Video ID: {{ youtubeid }}";
+        var frontMatter = new Dictionary<string, object>
+        {
+            { "youtubeid", "abc123" }
+        };
+
+        // Act
+        var result = _service.ProcessJekyllVariables(content, frontMatter);
+
+        // Assert
+        Assert.Equal("Video ID: abc123", result);
+    }
+
+    /// <summary>
+    /// Test: Variable matching should be case-insensitive
+    /// Why: Frontmatter keys may have different casing than template variables
+    /// </summary>
+    [Fact]
+    public void ProcessJekyllVariables_CaseInsensitive_ReplacesCorrectly()
+    {
+        // Arrange
+        var content = "{{ page.YouTubeId }}";
+        var frontMatter = new Dictionary<string, object>
+        {
+            { "youtubeid", "xyz789" }
+        };
+
+        // Act
+        var result = _service.ProcessJekyllVariables(content, frontMatter);
+
+        // Assert
+        Assert.Equal("xyz789", result);
+    }
+
+    /// <summary>
+    /// Test: Missing variables should throw exception
+    /// Why: Catch content errors early during development
+    /// </summary>
+    [Fact]
+    public void ProcessJekyllVariables_MissingVariable_ThrowsException()
+    {
+        // Arrange
+        var content = "Title: {{ page.title }}, Missing: {{ page.missing }}";
+        var frontMatter = new Dictionary<string, object>
+        {
+            { "title", "Test" }
+        };
+
+        // Act & Assert
+        var exception = Assert.Throws<InvalidOperationException>(
+            () => _service.ProcessJekyllVariables(content, frontMatter));
+
+        Assert.Contains("missing", exception.Message, StringComparison.OrdinalIgnoreCase);
+        Assert.Contains("not found in frontmatter", exception.Message);
+    }
+
+    /// <summary>
+    /// Test: Variables with extra whitespace should be handled
+    /// Why: Template syntax may have inconsistent spacing
+    /// </summary>
+    [Fact]
+    public void ProcessJekyllVariables_WithWhitespace_ReplacesCorrectly()
+    {
+        // Arrange
+        var content = "{{page.title}} and {{  page.description  }}";
+        var frontMatter = new Dictionary<string, object>
+        {
+            { "title", "Title" },
+            { "description", "Desc" }
+        };
+
+        // Act
+        var result = _service.ProcessJekyllVariables(content, frontMatter);
+
+        // Assert
+        Assert.Equal("Title and Desc", result);
+    }
+
+    /// <summary>
+    /// Test: Null or empty content should be handled gracefully
+    /// Why: Edge case protection
+    /// </summary>
+    [Theory]
+    [InlineData(null)]
+    [InlineData("")]
+    [InlineData("   ")]
+    public void ProcessJekyllVariables_NullOrEmptyContent_ReturnsEmpty(string? content)
+    {
+        // Arrange
+        var frontMatter = new Dictionary<string, object> { { "title", "Test" } };
+
+        // Act
+        var result = _service.ProcessJekyllVariables(content!, frontMatter);
+
+        // Assert
+        Assert.Equal(content ?? string.Empty, result);
+    }
+
+    /// <summary>
+    /// Test: {% raw %} and {% endraw %} tags should be removed
+    /// Why: These Jekyll tags escape GitHub Actions syntax in code samples
+    /// </summary>
+    [Fact]
+    public void ProcessJekyllVariables_RawTags_RemovesThem()
+    {
+        // Arrange
+        var content = "Code: {% raw %}${{ secrets.TOKEN }}{% endraw %}";
+        var frontMatter = new Dictionary<string, object>();
+
+        // Act
+        var result = _service.ProcessJekyllVariables(content, frontMatter);
+
+        // Assert
+        Assert.Equal("Code: ${{ secrets.TOKEN }}", result);
+    }
+
+    /// <summary>
+    /// Test: {{ "/path" | relative_url }} should extract just the path
+    /// Why: Jekyll's relative_url filter is not needed in .NET
+    /// </summary>
+    [Fact]
+    public void ProcessJekyllVariables_RelativeUrlFilter_ExtractsPath()
+    {
+        // Arrange
+        var content = """Link: [Video]({{ "/videos/2025-01-01-Test.html" | relative_url }})""";
+        var frontMatter = new Dictionary<string, object>();
+
+        // Act
+        var result = _service.ProcessJekyllVariables(content, frontMatter);
+
+        // Assert
+        Assert.Equal("""Link: [Video](/videos/2025-01-01-Test.html)""", result);
+    }
+
+    /// <summary>
+    /// Test: Content with no frontmatter should still process raw and relative_url
+    /// Why: Some content files may not have page variables but do have these patterns
+    /// </summary>
+    [Fact]
+    public void ProcessJekyllVariables_NullFrontmatter_ProcessesOtherPatterns()
+    {
+        // Arrange
+        var content = """{% raw %}${{ test }}{% endraw %} and {{ "/path" | relative_url }}""";
+
+        // Act
+        var result = _service.ProcessJekyllVariables(content, null!);
+
+        // Assert
+        Assert.Equal("""${{ test }} and /path""", result);
+    }
+
+    /// <summary>
+    /// Test: page.variable inside Jekyll tags should be expanded
+    /// Why: {% youtube page.youtube_id %} should become {% youtube actual_id %}
+    /// </summary>
+    [Fact]
+    public void ProcessJekyllVariables_PageVariableInJekyllTag_Expands()
+    {
+        // Arrange
+        var content = "{% youtube page.youtube_id %}";
+        var frontMatter = new Dictionary<string, object>
+        {
+            { "youtube_id", "dQw4w9WgXcQ" }
+        };
+
+        // Act
+        var result = _service.ProcessJekyllVariables(content, frontMatter);
+
+        // Assert
+        Assert.Equal("{% youtube dQw4w9WgXcQ %}", result);
     }
 
     #endregion

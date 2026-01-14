@@ -1,0 +1,333 @@
+{
+    "title": "GenAI Basics",
+    "description": "Foundational concepts for understanding Generative AI",
+    "categories": [
+        "AI"
+    ],
+    "tags": [
+        "AI",
+        "Generative AI",
+        "Basics",
+        "Tutorial",
+        "Fundamentals"
+    ],
+    "intro": "This page focuses on foundational GenAI concepts: understanding the history, learning key terminology, and seeing how GenAI fits into the broader AI and machine learning landscape.",
+    "relatedPages": [
+        {
+            "title": "GenAI Advanced",
+            "url": "/ai/genai-advanced"
+        },
+        {
+            "title": "GenAI Applied",
+            "url": "/ai/genai-applied"
+        }
+    ],
+    "tableOfContents": [
+        {
+            "id": "history",
+            "title": "History"
+        },
+        {
+            "id": "ml-vs-ai-vs-genai",
+            "title": "ML vs AI vs GenAI"
+        },
+        {
+            "id": "about-generative-ai",
+            "title": "About Generative AI"
+        },
+        {
+            "id": "vendors",
+            "title": "Vendors"
+        },
+        {
+            "id": "models",
+            "title": "Models"
+        },
+        {
+            "id": "providers",
+            "title": "Providers"
+        },
+        {
+            "id": "prompts--messages",
+            "title": "Prompts & messages"
+        },
+        {
+            "id": "tokens--tokenization",
+            "title": "Tokens & Tokenization"
+        },
+        {
+            "id": "next-token-prediction-how-llms-generate-text",
+            "title": "Next-token prediction: How LLMs generate text"
+        },
+        {
+            "id": "costs",
+            "title": "Costs"
+        },
+        {
+            "id": "problems-with-models",
+            "title": "Problems with models"
+        },
+        {
+            "id": "when-not-to-use-ai",
+            "title": "When not to use AI"
+        },
+        {
+            "id": "societal-impacts-and-risks",
+            "title": "Societal impacts and risks"
+        }
+    ],
+    "sections": [
+        {
+            "id": "history",
+            "title": "History",
+            "intro": "Some fun history facts about AI, showing how long AI has been around and how it has evolved over time.",
+            "subsections": [
+                {
+                    "title": "Foundations (1950s-1990s)",
+                    "timeline": [
+                        {
+                            "year": "1956",
+                            "event": "AI term coined",
+                            "detail": "Dartmouth Conference"
+                        },
+                        {
+                            "year": "1966",
+                            "event": "ELIZA chatbot",
+                            "detail": "MIT"
+                        },
+                        {
+                            "year": "1997",
+                            "event": "Deep Blue beats Kasparov",
+                            "detail": ""
+                        }
+                    ]
+                },
+                {
+                    "title": "Deep Learning Era (2010s)",
+                    "timeline": [
+                        {
+                            "year": "2011",
+                            "event": "IBM Watson wins Jeopardy!",
+                            "detail": ""
+                        },
+                        {
+                            "year": "2012",
+                            "event": "AlexNet",
+                            "detail": "ImageNet breakthrough"
+                        },
+                        {
+                            "year": "2014",
+                            "event": "First GAN introduced",
+                            "detail": ""
+                        },
+                        {
+                            "year": "2018",
+                            "event": "GPT-1",
+                            "detail": "117M parameters"
+                        }
+                    ]
+                },
+                {
+                    "title": "GenAI Revolution (2020s)",
+                    "timeline": [
+                        {
+                            "year": "2020",
+                            "event": "GPT-3",
+                            "detail": "175B parameters"
+                        },
+                        {
+                            "year": "2023",
+                            "event": "GPT-4 & Claude",
+                            "detail": "major quality leaps"
+                        },
+                        {
+                            "year": "2024",
+                            "event": "Multimodal LLMs",
+                            "detail": "text, images, audio"
+                        },
+                        {
+                            "year": "2025",
+                            "event": "Agentic AI",
+                            "detail": "GPT-5 released",
+                            "highlight": true
+                        }
+                    ]
+                }
+            ],
+            "moreInfo": [
+                {
+                    "text": "History of artificial intelligence (Wikipedia)",
+                    "url": "https://en.wikipedia.org/wiki/History_of_artificial_intelligence"
+                }
+            ]
+        },
+        {
+            "id": "ml-vs-ai-vs-genai",
+            "title": "ML vs AI vs GenAI",
+            "intro": "Understanding the relationship between these three concepts is essential for anyone starting their AI journey. While often used interchangeably, they represent distinct but nested domains—each building upon the other.",
+            "subsections": [
+                {
+                    "title": "Machine Learning",
+                    "content": "Machine Learning (ML) is a method of data analysis where computers learn to identify patterns in data without being explicitly programmed for each task. Think of it as teaching a computer to recognize cats in photos by showing it thousands of cat pictures, rather than writing specific code that says \"a cat has pointed ears, whiskers, and four legs.\""
+                },
+                {
+                    "title": "Artificial Intelligence",
+                    "content": "Artificial Intelligence (AI) is a broader field that includes machine learning but also encompasses other approaches to creating intelligent systems. AI aims to create machines that can perform tasks that typically require human intelligence, such as reasoning, learning, planning, and understanding language.",
+                    "list": [
+                        "Rule-based systems: Follow pre-defined logical rules and conditions",
+                        "Expert systems: Capture human expertise in specific domains through knowledge bases",
+                        "Symbolic AI: Uses symbols and logic to represent knowledge and reasoning",
+                        "Evolutionary algorithms: Solve problems by mimicking natural selection",
+                        "Fuzzy logic: Handles uncertainty and partial truths"
+                    ]
+                },
+                {
+                    "title": "Generative AI",
+                    "content": "Generative AI (GenAI) is a specific type of AI that can create new content - text, images, code, music, or other types of data. When you ask ChatGPT to write a story or use DALL-E to create an image, you're using generative AI. GenAI models learn patterns from existing content and use that knowledge to generate new, original content that follows similar patterns."
+                }
+            ]
+        },
+        {
+            "id": "about-generative-ai",
+            "title": "About Generative AI",
+            "intro": "Generative AI encompasses a range of technologies that can create new content—text, images, code, audio, and more. This section explores the foundational concepts, from natural language processing to the different types of models powering today's AI applications.",
+            "subsections": [
+                {
+                    "title": "Natural Language Processing",
+                    "content": "Understanding Generative AI begins with Natural Language Processing (NLP), the foundational branch of AI that enables computers to understand, interpret, and generate human language."
+                },
+                {
+                    "title": "Large Language Models (LLMs)",
+                    "content": "Large Language Models represent the current pinnacle of NLP technology. These AI systems are trained on enormous datasets containing billions of text examples. Popular examples include GPT-4, Claude, and Gemini."
+                },
+                {
+                    "title": "Small Language Models (SLMs)",
+                    "content": "Small Language Models serve the same fundamental purpose as their larger counterparts but prioritize efficiency and accessibility. Examples include Microsoft's Phi models."
+                },
+                {
+                    "title": "Specialized model types",
+                    "list": [
+                        "Diffusion models (DALL-E, Stable Diffusion, Midjourney) generate images from text",
+                        "Speech recognition models (Whisper) convert spoken words to text",
+                        "Music generation models (Suno, Udio) create original compositions",
+                        "Multimodal models (GPT-4o) work with text, images, audio, and video"
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "vendors",
+            "title": "Vendors",
+            "intro": "AI vendors are companies that develop, train, and provide access to AI models. Each vendor brings different strengths, approaches, and business models to the market.",
+            "vendors": [
+                {
+                    "name": "OpenAI",
+                    "description": "Creator of the GPT series and DALL-E, known for ChatGPT and pioneering conversational AI"
+                },
+                {
+                    "name": "Google",
+                    "description": "Develops Gemini models and provides AI services through Google Cloud"
+                },
+                {
+                    "name": "Anthropic",
+                    "description": "Focuses on AI safety and creates the Claude family of models"
+                },
+                {
+                    "name": "Microsoft",
+                    "description": "Partners with OpenAI and develops its own models while integrating AI across its product suite"
+                },
+                {
+                    "name": "Hugging Face",
+                    "description": "Acts as a platform for sharing and hosting AI models, both open-source and commercial"
+                }
+            ],
+            "moreInfo": [
+                {
+                    "text": "Azure OpenAI and Microsoft Foundry models",
+                    "url": "https://learn.microsoft.com/en-us/azure/ai-foundry/foundry-models/concepts/models-sold-directly-by-azure"
+                },
+                {
+                    "text": "Hugging Face model hub",
+                    "url": "https://huggingface.co/models"
+                },
+                {
+                    "text": "OpenAI models documentation",
+                    "url": "https://platform.openai.com/docs/models"
+                }
+            ]
+        },
+        {
+            "id": "models",
+            "title": "Models",
+            "intro": "A model is the actual AI system that has been trained to perform specific tasks. Think of it as a specialized brain that has learned patterns from data and can apply that knowledge to new situations.",
+            "modelCategories": [
+                {
+                    "title": "Current popular models",
+                    "models": [
+                        {
+                            "name": "GPT series (4, 4o, 4.1, 5)",
+                            "description": "OpenAI's flagship models for text generation and reasoning"
+                        },
+                        {
+                            "name": "Claude (3.5 Sonnet, 4 Sonnet, 4 Opus)",
+                            "description": "Anthropic's models focused on helpful, harmless, and honest interactions"
+                        },
+                        {
+                            "name": "Gemini (Flash, Pro)",
+                            "description": "Google's multimodal models"
+                        },
+                        {
+                            "name": "Grok",
+                            "description": "xAI's conversational AI model with real-time information access"
+                        },
+                        {
+                            "name": "Phi-4",
+                            "description": "Microsoft's efficient model designed for smaller devices"
+                        },
+                        {
+                            "name": "Gemma 2/3",
+                            "description": "Google's compact open models"
+                        }
+                    ]
+                },
+                {
+                    "title": "Specialized Models",
+                    "models": [
+                        {
+                            "name": "DALL-E, Stable Diffusion, Midjourney, Flux",
+                            "description": "Image generation (diffusion models)"
+                        },
+                        {
+                            "name": "Whisper",
+                            "description": "Speech-to-text conversion"
+                        },
+                        {
+                            "name": "Suno, Udio",
+                            "description": "Music generation"
+                        }
+                    ]
+                }
+            ],
+            "faq": [
+                {
+                    "question": "What is a GPT and why are not all models GPT?",
+                    "answer": "GPT stands for \"Generative Pre-trained Transformer.\" It's a specific architecture developed by OpenAI. Not all models use this architecture - companies develop different approaches to achieve similar goals."
+                },
+                {
+                    "question": "What does multimodal mean?",
+                    "answer": "Multimodal models can understand and generate multiple types of content - not just text, but also images, audio, and video."
+                },
+                {
+                    "question": "Why not train a model every week to keep it up-to-date?",
+                    "answer": "Training large AI models requires enormous computational resources, costs millions of dollars, and takes weeks or months to complete."
+                }
+            ]
+        }
+    ],
+    "nextPage": {
+        "title": "Ready for Advanced Concepts?",
+        "description": "You've mastered the fundamentals! Dive deeper into advanced GenAI techniques, architectures, and implementation patterns.",
+        "url": "/ai/genai-advanced",
+        "linkText": "Continue to GenAI Advanced"
+    }
+}
