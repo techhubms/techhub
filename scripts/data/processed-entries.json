@@ -23440,5 +23440,11 @@
     "collection": "news",
     "timestamp": "2026-01-14 19:06:14 +00:00",
     "canonical_url": "https://github.blog/security/community-powered-security-with-ai-an-open-source-framework-for-security-research/"
+  },
+  {
+    "collection": "community",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/app-service-easy-mcp-add-ai-agent-capabilities-to-your-existing/ba-p/4484513",
+    "reason": "Succesfully added: Assigned AI category because the content is focused on making REST APIs accessible to AI agents (AI rule 1 and 4), discusses the Model Context Protocol (AI agents' core protocol), and references AI-powered development with tools like GitHub Copilot. Assigned Azure category because the technical steps are presented in the context of Azure App Service, and migration/modernization for Azure-hosted APIs is a key scenario (Azure rule 1 and 4). Did NOT assign Coding, because there is no direct focus on coding patterns, language specifics, or Microsoft framework code samples; did NOT assign DevOps, ML, or Security, as the primary themes do not match those inclusion rules. The content is in English, not biographical, promotional, or business-only in scope, and exceeds length requirements for community content.",
+    "timestamp": "2026-01-14 20:04:25 +00:00"
   }
 ]
