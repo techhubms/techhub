@@ -23446,5 +23446,11 @@
     "canonical_url": "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/app-service-easy-mcp-add-ai-agent-capabilities-to-your-existing/ba-p/4484513",
     "reason": "Succesfully added: Assigned AI category because the content is focused on making REST APIs accessible to AI agents (AI rule 1 and 4), discusses the Model Context Protocol (AI agents' core protocol), and references AI-powered development with tools like GitHub Copilot. Assigned Azure category because the technical steps are presented in the context of Azure App Service, and migration/modernization for Azure-hosted APIs is a key scenario (Azure rule 1 and 4). Did NOT assign Coding, because there is no direct focus on coding patterns, language specifics, or Microsoft framework code samples; did NOT assign DevOps, ML, or Security, as the primary themes do not match those inclusion rules. The content is in English, not biographical, promotional, or business-only in scope, and exceeds length requirements for community content.",
     "timestamp": "2026-01-14 20:04:25 +00:00"
+  },
+  {
+    "timestamp": "2026-01-14 21:03:50 +00:00",
+    "reason": "Succesfully added: Assigned 'GitHub Copilot' category because the content centers on new features, usage, and improvements of GitHub Copilot CLI (see Coding Category rule 1 and GitHub Copilot category inclusion rule 1). Assigned 'AI' because Copilot CLI integrates AI models (GPT-4.1, GPT-5 mini), enhanced agentic workflows, model management, and agent-driven features (AI inclusion rules 1, 2, 4). Did not assign Coding, DevOps, or other categories since the primary focus is on Copilot CLI features rather than general programming or full DevOps workflow implementation. Content does not trigger any generic exclusion rules.",
+    "canonical_url": "https://github.blog/changelog/2026-01-14-github-copilot-cli-enhanced-agents-context-management-and-new-ways-to-install",
+    "collection": "news"
   }
 ]
