@@ -23398,5 +23398,23 @@
     "timestamp": "2026-01-14 16:07:07 +00:00",
     "collection": "videos",
     "reason": "Succesfully added: Assigned AI category because the content discusses running 'AI coding agents' inside Dev Containers—directly referencing AI-powered developer tools (AI rule 4). Assigned DevOps category due to the focus on environment encapsulation, portability, and development workflow automation using containers and Codespaces (DevOps rules 6 and 9). Assigned Coding category as the tutorial centers on developer tools (Visual Studio Code), development practices, and actionable steps for coding setup (Coding rules 2 and 5). Did not assign Azure or ML categories, as the focus is not on Azure-specific services or machine learning engineering. Did not assign GitHub Copilot as it is not explicitly mentioned, but GitHub Codespaces is covered (falls under DevOps). No generic exclusion rules apply."
+  },
+  {
+    "collection": "news",
+    "canonical_url": "https://www.microsoft.com/en-us/security/blog/2026/01/14/inside-redvds-how-a-single-virtual-desktop-provider-fueled-worldwide-cybercriminal-operations/",
+    "reason": "Succesfully added: Assigned 'Security' because the article centers on threat intelligence, attack techniques, cybercrime infrastructure, and Microsoft security product recommendations, all matching Security category rule 1 (Microsoft Security Services) and rules 2–9 about security operations, defense, and incident response. Assigned 'Azure' because of references to Azure Active Directory (Microsoft Entra ID), Microsoft Defender for Office 365, Microsoft Defender XDR, security hardening on Microsoft cloud, and Azure-based practices, meeting Azure category rules 1 and 4–5. Did not assign 'AI' (references to Copilot and ChatGPT are about criminal tool use, not development or integration content). No 'ML', 'DevOps', 'Coding', or 'GitHub Copilot' because there is no focus on coding, DevOps automation, direct Azure development, or AI/ML engineering—the focus is operational security, threat intelligence, and Microsoft cloud defense. All categories and tags are substantiated by the technical, threat, or Microsoft-focused nature of the post.",
+    "timestamp": "2026-01-14 17:07:45 +00:00"
+  },
+  {
+    "collection": "news",
+    "canonical_url": "https://github.blog/changelog/2026-01-13-organization-custom-properties-now-generally-available",
+    "reason": "Succesfully added: I assigned the DevOps category because the content is about enterprise management, tagging organizations, and automatically applying rules/policies—this aligns with DevOps practices like governance, automation, and platform administration (DevOps rules 2, 3, 5, and 6). Coding, Azure, Security, ML, and AI categories do not apply because the feature is platform governance on GitHub, not code, security, or AI/ML-specific functionality. No generic exclusions apply: the content is technical, English, and not business strategy or end-user productivity focused.",
+    "timestamp": "2026-01-14 17:08:06 +00:00"
+  },
+  {
+    "collection": "videos",
+    "canonical_url": "https://www.youtube.com/shorts/3Fh1A3KGk-I",
+    "reason": "Succesfully added: Assigned 'DevOps' because the tutorial focuses on version control concepts (DevOps rule 8: Version Control) and introductory Git branching workflows relevant to developer collaboration and operational practices. No other categories (such as Coding) are applicable since there is no focus on a Microsoft-specific programming language, nor is there coverage of Microsoft-specific technologies. The content is clear, introductory technical guidance, not promotional, career-focused, or business/productivity oriented, so no generic exclusions apply.",
+    "timestamp": "2026-01-14 17:08:39 +00:00"
   }
 ]

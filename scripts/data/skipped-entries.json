@@ -11247,5 +11247,23 @@
     "timestamp": "2026-01-14 15:06:09 +00:00",
     "reason": "Insufficient content length",
     "collection": "community"
+  },
+  {
+    "collection": "videos",
+    "canonical_url": "https://www.youtube.com/shorts/iBrqGkok3eA",
+    "reason": "No categories found: No categories assigned because there is insufficient information in the provided content to apply inclusion rules. The content field is null, so there are no technical details or substantive information available to assess whether Microsoft technologies, products, or services are a central focus, as required by the categorization rules. The description and tags suggest a high-level overview of quantum cryptography and encryption, but without explicit connection to Microsoft products, AI/ML platforms, Azure services, or developer tools, it does not meet the criteria for any category. Per Multi-Platform Content Threshold and Category Inclusion Rules, Microsoft technologies must comprise ≥40% of substantive content or be central. With no content provided, this cannot be determined.",
+    "timestamp": "2026-01-14 17:08:52 +00:00"
+  },
+  {
+    "collection": "community",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-virtual-desktop/seamless-sso-according-to-ms-support/m-p/4485395#M13982",
+    "reason": "Insufficient content length",
+    "timestamp": "2026-01-14 17:08:58 +00:00"
+  },
+  {
+    "collection": "community",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/net-runtime/msb4184-the-expression-quot-system-io-path-getdirectoryname-quot/m-p/4485586#M781",
+    "reason": "Insufficient content length",
+    "timestamp": "2026-01-14 17:08:58 +00:00"
   }
 ]
