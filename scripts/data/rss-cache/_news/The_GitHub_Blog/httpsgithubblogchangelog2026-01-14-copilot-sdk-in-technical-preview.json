@@ -1,0 +1,17 @@
+{
+  "FeedLevelAuthor": "Archive: 2026 - GitHub Changelog",
+  "Tags": [
+    "copilot",
+    "Release"
+  ],
+  "EnhancedContent": "The Copilot SDK is now available in technical preview, providing language-specific SDKs for programmatic access to the GitHub Copilot CLI.\n\n## Available SDKs\n\nThe Copilot SDK is available in four languages:\n\n- **Node.js / TypeScript**: `@github/copilot-cli-sdk`\n- **Python**: `copilot`\n- **Go**: `github.com/github/copilot-cli-sdk-go`\n- **.NET**: `GitHub.Copilot.SDK`\n\n## Key features\n\nAll SDKs provide a consistent API with:\n\n- **Multi-turn conversations**: Maintain session history for context-aware interactions.\n- **Tool execution**: Define custom tools that the model can invoke during conversations.\n- **Full lifecycle control**: Manage client and session lifecycles programmatically.\n\n## Learn More\n\n- [SDK Documentation](https://github.com/github/copilot-sdk)\n- [Node.js SDK](https://github.com/github/copilot-sdk/tree/main/nodejs)\n- [Python SDK](https://github.com/github/copilot-sdk/tree/main/python)\n- [Go SDK](https://github.com/github/copilot-sdk/tree/main/go)\n- [.NET SDK](https://github.com/github/copilot-sdk/tree/main/dotnet)\n\n## Share your feedback\n\nJoin the [GitHub Community](https://github.com/orgs/community/discussions/categories/announcements) to share your feedback.",
+  "PubDate": "2026-01-14T23:00:28+00:00",
+  "OutputDir": "_news",
+  "Description": "The Copilot SDK is now available in technical preview, providing language-specific SDKs for programmatic access to the GitHub Copilot CLI. Available SDKs The Copilot SDK is available in four languages:…\n\nThe post [Copilot SDK in technical preview](https://github.blog/changelog/2026-01-14-copilot-sdk-in-technical-preview) appeared first on [The GitHub Blog](https://github.blog).",
+  "Link": "https://github.blog/changelog/2026-01-14-copilot-sdk-in-technical-preview",
+  "ProcessedDate": "2026-01-14 23:02:06",
+  "Author": "Allison",
+  "FeedName": "The GitHub Blog",
+  "FeedUrl": "https://github.blog/changelog/feed/",
+  "Title": "Copilot SDK in technical preview"
+}
