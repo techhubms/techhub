@@ -134,6 +134,8 @@ public class ContentItem
     /// <returns>Full URL path for this item in the specified section</returns>
     public string GetUrlInSection(string sectionUrl)
     {
+        ArgumentNullException.ThrowIfNull(sectionUrl);
+
         // Ensure section URL starts with slash
         var normalizedSectionUrl = sectionUrl.StartsWith('/') ? sectionUrl : $"/{sectionUrl}";
         return $"{normalizedSectionUrl}/{CollectionName}/{Slug}";

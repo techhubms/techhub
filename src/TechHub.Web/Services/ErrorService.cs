@@ -18,6 +18,10 @@ public class ErrorService
     /// <param name="logger">Logger to log the exception</param>
     public void HandleError(Exception exception, NavigationManager navigation, ILogger logger)
     {
+        ArgumentNullException.ThrowIfNull(exception);
+        ArgumentNullException.ThrowIfNull(navigation);
+        ArgumentNullException.ThrowIfNull(logger);
+
         // Store the exception for the error page to retrieve
         _lastException = exception;
 

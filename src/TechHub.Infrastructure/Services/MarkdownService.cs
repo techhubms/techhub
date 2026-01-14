@@ -118,7 +118,7 @@ public class MarkdownService : IMarkdownService
         }
 
         // Helper to create YouTube embed HTML
-        string CreateYouTubeEmbed(string videoId) => $"""
+        static string CreateYouTubeEmbed(string videoId) => $"""
             <div class="video-container">
                 <iframe
                     src="https://www.youtube.com/embed/{videoId}"

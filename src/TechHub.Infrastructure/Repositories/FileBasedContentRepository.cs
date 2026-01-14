@@ -312,7 +312,7 @@ public sealed class FileBasedContentRepository : IContentRepository, IDisposable
 
             // Map 'categories' (regular content) or 'section' (custom pages) to lowercase section names
             var categories = _frontMatterParser.GetListValue(frontMatter, "categories");
-            var sectionNames = categories.Select(c => c.ToLowerInvariant().Replace(" ", "-")).ToList();
+            var sectionNames = categories.Select(c => c.ToLowerInvariant().Replace(" ", "-", StringComparison.Ordinal)).ToList();
 
             var tags = _frontMatterParser.GetListValue(frontMatter, "tags");
             var externalUrl = _frontMatterParser.GetValue<string>(frontMatter, "canonical_url", string.Empty);

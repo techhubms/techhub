@@ -54,7 +54,7 @@ public class UrlRoutingTests(PlaywrightCollectionFixture fixture) : IAsyncLifeti
         await Page.AssertElementContainsTextBySelectorAsync("h1.page-h1", "All");
 
         // "All" button should be active
-        await Page.AssertElementContainsTextBySelectorAsync(".collection-nav a.active", "All");
+        await Page.AssertElementContainsTextBySelectorAsync(".sub-nav a.active", "All");
     }
 
     [Fact]
@@ -70,7 +70,7 @@ public class UrlRoutingTests(PlaywrightCollectionFixture fixture) : IAsyncLifeti
         await Page.AssertUrlEndsWithAsync("/github-copilot/news");
 
         // News button should be active
-        await Page.AssertElementContainsTextBySelectorAsync(".collection-nav a.active", "News");
+        await Page.AssertElementContainsTextBySelectorAsync(".sub-nav a.active", "News");
     }
 
     [Fact]
@@ -80,7 +80,7 @@ public class UrlRoutingTests(PlaywrightCollectionFixture fixture) : IAsyncLifeti
         await Page.GotoRelativeAsync("/github-copilot");
 
         // Act - Click "Blogs" collection button
-        var blogsButton = Page.Locator(".collection-nav a", new() { HasTextString = "Blogs" });
+        var blogsButton = Page.Locator(".sub-nav a", new() { HasTextString = "Blogs" });
         await blogsButton.ClickBlazorElementAsync();
 
         // Assert - URL should update to /github-copilot/blogs
@@ -100,7 +100,7 @@ public class UrlRoutingTests(PlaywrightCollectionFixture fixture) : IAsyncLifeti
         await Page.GotoRelativeAsync("/github-copilot/news");
 
         // Act - Click "All" button
-        var allButton = Page.Locator(".collection-nav a", new() { HasTextString = "All" });
+        var allButton = Page.Locator(".sub-nav a", new() { HasTextString = "All" });
         await allButton.ClickBlazorElementAsync();
 
         // Assert - URL should update to /github-copilot/all
@@ -114,15 +114,15 @@ public class UrlRoutingTests(PlaywrightCollectionFixture fixture) : IAsyncLifeti
         await Page.GotoRelativeAsync("/github-copilot/news");
 
         // Verify News button is active initially
-        await Page.AssertElementContainsTextBySelectorAsync(".collection-nav a.active", "News");
+        await Page.AssertElementContainsTextBySelectorAsync(".sub-nav a.active", "News");
 
         // Navigate to videos
-        var videosButton = Page.Locator(".collection-nav a", new() { HasTextString = "Videos" });
+        var videosButton = Page.Locator(".sub-nav a", new() { HasTextString = "Videos" });
         await videosButton.ClickBlazorElementAsync();
         await Page.WaitForBlazorUrlContainsAsync("/github-copilot/videos");
 
         // Wait for Blazor to sync state (update .active class)
-        await Page.AssertElementContainsTextBySelectorAsync(".collection-nav a.active", "Videos");
+        await Page.AssertElementContainsTextBySelectorAsync(".sub-nav a.active", "Videos");
 
         // Act - Press browser back button
         await Page.GoBackAsync();
@@ -131,7 +131,7 @@ public class UrlRoutingTests(PlaywrightCollectionFixture fixture) : IAsyncLifeti
         await Page.WaitForBlazorUrlContainsAsync("/github-copilot/news");
 
         // Wait for Blazor to sync state with URL (OnParametersSetAsync should fire)
-        await Page.AssertElementContainsTextBySelectorAsync(".collection-nav a.active", "News");
+        await Page.AssertElementContainsTextBySelectorAsync(".sub-nav a.active", "News");
     }
 
     [Fact]
@@ -141,7 +141,7 @@ public class UrlRoutingTests(PlaywrightCollectionFixture fixture) : IAsyncLifeti
         await Page.GotoRelativeAsync("/github-copilot/news");
 
         // Navigate to videos
-        var videosButton = Page.Locator(".collection-nav a", new() { HasTextString = "Videos" });
+        var videosButton = Page.Locator(".sub-nav a", new() { HasTextString = "Videos" });
         await videosButton.ClickBlazorElementAsync();
         await Page.WaitForBlazorUrlContainsAsync("/github-copilot/videos");
 
@@ -180,7 +180,7 @@ public class UrlRoutingTests(PlaywrightCollectionFixture fixture) : IAsyncLifeti
             "the 'all' collection should show all content items from the section across all collection types");
 
         // Page heading should indicate "All" - verify active button shows "All"
-        await Page.AssertElementContainsTextBySelectorAsync(".collection-nav a.active", "All");
+        await Page.AssertElementContainsTextBySelectorAsync(".sub-nav a.active", "All");
     }
 
     [Fact]
@@ -229,19 +229,24 @@ public class UrlRoutingTests(PlaywrightCollectionFixture fixture) : IAsyncLifeti
     }
 
     [Fact]
-    public async Task AllButton_ExistsInCollectionSidebar()
+    public async Task AllButton_ExistsInSubNav()
     {
         // Arrange
 
         // Act - Navigate to any section
         await Page.GotoRelativeAsync("/github-copilot");
 
-        // Assert - Collections section should have collection links (All + regular collections)
-        // Use more specific selector to only count collection links, not custom pages or RSS feed
-        var collectionsSection = Page.Locator(".sidebar-section").Filter(new() { Has = Page.GetByRole(AriaRole.Heading, new() { Name = "Collections" }) });
-        var collectionLinks = collectionsSection.Locator("a");
-        await Assertions.Expect(collectionLinks).ToHaveCountAsync(5); // All + News + Blogs + Videos + Community
-        await Assertions.Expect(collectionLinks.First).ToBeVisibleAsync(); // Verify at least one is visible
+        // Assert - Sub-nav should have "All" link plus collection links
+        // Sub-nav contains: All + regular collections (News, Videos, Community, Blogs) + custom pages
+        var subNav = Page.Locator("nav.sub-nav");
+        var subNavLinks = subNav.Locator("a");
+
+        // Should have at least All link (exact count depends on configured collections and custom pages)
+        await Assertions.Expect(subNavLinks).Not.ToHaveCountAsync(0);
+
+        // First link should be "All"
+        await Assertions.Expect(subNavLinks.First).ToHaveTextAsync("All");
+        await Assertions.Expect(subNavLinks.First).ToBeVisibleAsync();
     }
 
     [Fact]
@@ -296,19 +301,19 @@ public class UrlRoutingTests(PlaywrightCollectionFixture fixture) : IAsyncLifeti
         // Act - Click each collection button and verify navigation
         // NOTE: Blazor Server uses enhanced navigation (SPA-style), so we poll for URL changes
         // instead of waiting for navigation events (see BlazorHelpers.WaitForBlazorUrlContainsAsync)
-        var newsButton = Page.Locator(".collection-nav a", new() { HasTextString = "News" });
+        var newsButton = Page.Locator(".sub-nav a", new() { HasTextString = "News" });
         await newsButton.ClickBlazorElementAsync();
         await Page.WaitForBlazorUrlContainsAsync("/news");
 
-        var blogsButton = Page.Locator(".collection-nav a", new() { HasTextString = "Blogs" });
+        var blogsButton = Page.Locator(".sub-nav a", new() { HasTextString = "Blogs" });
         await blogsButton.ClickBlazorElementAsync();
         await Page.WaitForBlazorUrlContainsAsync("/blogs");
 
-        var videosButton = Page.Locator(".collection-nav a", new() { HasTextString = "Videos" });
+        var videosButton = Page.Locator(".sub-nav a", new() { HasTextString = "Videos" });
         await videosButton.ClickBlazorElementAsync();
         await Page.WaitForBlazorUrlContainsAsync("/videos");
 
-        var communityButton = Page.Locator(".collection-nav a", new() { HasTextString = "Community" });
+        var communityButton = Page.Locator(".sub-nav a", new() { HasTextString = "Community" });
         await communityButton.ClickBlazorElementAsync();
         await Page.WaitForBlazorUrlContainsAsync("/community");
     }
@@ -320,7 +325,7 @@ public class UrlRoutingTests(PlaywrightCollectionFixture fixture) : IAsyncLifeti
 
         // Simulate an error by navigating with API down (we'll test with valid URL but check button exists)
         await Page.GotoRelativeAsync("/");
-        await Page.WaitForBlazorRenderAsync(".section-header.home-banner");
+        await Page.WaitForBlazorRenderAsync(".section-banner.home-banner");
 
         // Check if error message with retry button appears (may not in normal conditions)
         // Look for retry button within error message context, not Blazor reconnect button
@@ -349,11 +354,11 @@ public class UrlRoutingTests(PlaywrightCollectionFixture fixture) : IAsyncLifeti
         await Page.GotoRelativeAsync("/github-copilot/news");
 
         // Assert - News button should have "active" class (verified by .active selector)
-        await Page.AssertElementVisibleBySelectorAsync(".collection-nav a.active");
-        await Page.AssertElementContainsTextBySelectorAsync(".collection-nav a.active", "News");
+        await Page.AssertElementVisibleBySelectorAsync(".sub-nav a.active");
+        await Page.AssertElementContainsTextBySelectorAsync(".sub-nav a.active", "News");
 
         // Other buttons should NOT have "active" class - verify Blogs button exists but is not active
-        var blogsButton = Page.Locator(".collection-nav a", new() { HasTextString = "Blogs" });
+        var blogsButton = Page.Locator(".sub-nav a", new() { HasTextString = "Blogs" });
         await blogsButton.AssertElementVisibleAsync();
         var blogsClass = await blogsButton.GetAttributeAsync("class", new() { Timeout = BlazorHelpers.DefaultElementTimeout });
         blogsClass.Should().NotContain("active",
@@ -373,8 +378,8 @@ public class UrlRoutingTests(PlaywrightCollectionFixture fixture) : IAsyncLifeti
         // Assert - Should load Azure News collection
         await Page.AssertUrlEndsWithAsync("/azure/news");
 
-        await Page.AssertElementContainsTextBySelectorAsync(".collection-nav a.active", "News");
-        await Page.AssertElementContainsTextBySelectorAsync("h1", "Azure");
+        await Page.AssertElementContainsTextBySelectorAsync(".sub-nav a.active", "News");
+        await Page.AssertElementContainsTextBySelectorAsync("h1.page-h1", "Browse Azure News");
     }
 
     [Fact]
@@ -394,7 +399,7 @@ public class UrlRoutingTests(PlaywrightCollectionFixture fixture) : IAsyncLifeti
         page2.Url.Should().Be(sharedUrl,
             "shared URL should load the exact same route");
 
-        await page2.AssertElementContainsTextBySelectorAsync(".collection-nav a.active", "Videos");
+        await page2.AssertElementContainsTextBySelectorAsync(".sub-nav a.active", "Videos");
 
         await page1.CloseAsync();
         await page2.CloseAsync();

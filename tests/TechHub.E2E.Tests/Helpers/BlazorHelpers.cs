@@ -17,7 +17,7 @@ namespace TechHub.E2E.Tests.Helpers;
 /// USAGE EXAMPLES - Common Test Patterns:
 ///
 /// 1. Click collection button and verify state:
-///    await page.ClickAndNavigateAsync(".collection-nav a", text: "Videos",
+///    await page.ClickAndNavigateAsync(".sub-nav a", text: "Videos",
 ///        expectedUrlSegment: "/videos", waitForActiveState: "Videos");
 ///
 /// 2. Click section card on homepage:
@@ -90,7 +90,7 @@ public static class BlazorHelpers
     /// Use this instead of writing custom click-wait sequences.
     ///
     /// Example (collection button):
-    ///   await page.ClickAndNavigateAsync(".collection-nav a", text: "Videos",
+    ///   await page.ClickAndNavigateAsync(".sub-nav a", text: "Videos",
     ///       expectedUrlSegment: "/videos", waitForActiveState: "Videos");
     ///
     /// Example (content card with href filter):
@@ -150,7 +150,7 @@ public static class BlazorHelpers
         // Step 4: Wait for state sync (if specified)
         if (!string.IsNullOrEmpty(waitForActiveState))
         {
-            await page.AssertElementContainsTextBySelectorAsync(".collection-nav a.active", waitForActiveState, DefaultAssertionTimeout);
+            await page.AssertElementContainsTextBySelectorAsync(".sub-nav a.active", waitForActiveState, DefaultAssertionTimeout);
         }
 
         // Step 5: Custom wait (if specified)
@@ -550,7 +550,7 @@ public static class BlazorHelpers
     /// Uses Playwright's auto-retrying assertions.
     ///
     /// Example:
-    ///   await page.AssertElementContainsTextBySelectorAsync(".collection-nav a.active", "Videos");
+    ///   await page.AssertElementContainsTextBySelectorAsync(".sub-nav a.active", "Videos");
     /// </summary>
     /// <param name="page">The Playwright page</param>
     /// <param name="selector">CSS selector</param>
@@ -687,7 +687,7 @@ public static class BlazorHelpers
     /// Clicks an element found by selector using Blazor-aware click handling.
     ///
     /// Example:
-    ///   await page.ClickElementBySelectorAsync(".collection-nav a");
+    ///   await page.ClickElementBySelectorAsync(".sub-nav a");
     /// </summary>
     /// <param name="page">The Playwright page</param>
     /// <param name="selector">CSS selector</param>

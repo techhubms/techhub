@@ -1,9 +1,8 @@
+using System.Text.Json;
 using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.Extensions.Options;
-using System.Text.Json;
 using TechHub.Core.Configuration;
 using TechHub.Core.DTOs;
-using TechHub.Core.Interfaces;
 
 namespace TechHub.Api.Endpoints;
 

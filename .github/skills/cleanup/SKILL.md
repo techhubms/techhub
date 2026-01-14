@@ -1,6 +1,6 @@
 ---
 name: cleanup
-description: Comprehensive code cleanup and quality assurance skill. Compiles, formats, lints, and synchronizes code with documentation. Use when asked to clean up code, fix build warnings, format files, lint code, synchronize documentation with code, remove unused code, or ensure coding standards compliance.
+description: Comprehensive code cleanup and quality assurance skill. Compiles, formats, lints, and synchronizes code with documentation. Use when asked to clean the entire solution or repository.
 license: MIT
 compatibility: Requires .NET 10+, PowerShell 7+. Works with GitHub Copilot coding agent, CLI, and VS Code.
 metadata:
@@ -14,244 +14,275 @@ allowed-tools: Bash(dotnet:*) Bash(pwsh:*) Read Write
 
 You are a code and documentation cleanup agent for the Tech Hub .NET/Blazor project. This skill helps maintain code quality, consistency, and documentation accuracy across the codebase.
 
-## When to Use This Skill
-
-Activate this skill when the user asks to:
-
-- Clean up code or fix code quality issues
-- Format code files
-- Fix build warnings or errors
-- Lint code (C#, PowerShell, Markdown)
-- Synchronize documentation with code
-- Remove unused variables, imports, or dead code
-- Ensure coding standards compliance
-- Run quality checks before committing
-
 ## Cleanup Process Overview
 
 Execute cleanup tasks in this order for best results:
 
-1. **Build Verification** - Ensure code compiles without errors
+1. **Build & Test Verification** - Ensure code compiles and all tests pass
 2. **Code Formatting** - Apply consistent formatting
-3. **Linting** - Fix analyzer warnings and style issues
-4. **Dead Code Removal** - Remove unused code
-5. **Documentation Sync** - Update docs to match code
-6. **Final Validation** - Verify all checks pass
+3. **Generate Quality Overview** - Analyze warnings/errors and create overview
+4. **Fix or Suppress Issues** - Address issues based on overview recommendations
+5. **Dead Code Removal** - Remove unused code
+6. **Documentation Sync** - Update docs to match code
+7. **Final Validation** - Verify all checks pass
 
 ## Detailed Instructions
 
-### Step 1: Build Verification
+Follow these steps in order. Do not skip steps or proceed if a step fails.
 
-First, ensure the solution builds without errors:
+### Step 1: Build and Test Verification
 
-```bash
-# Build the entire solution
-dotnet build TechHub.slnx --no-incremental
+**Execute**: [`./run.ps1 -Clean -OnlyTests`](../../../../run.ps1)
 
-# If build fails, fix compilation errors before proceeding
-```
+**Purpose**: Ensure the solution compiles without errors and all tests pass before making any changes.
 
-**Handle build failures by**:
+**Requirements**:
 
-- Reading error messages carefully
-- Fixing syntax errors and missing references
-- Resolving type mismatches and null reference issues
-- Checking for missing using statements
+- ✅ Build must succeed with 0 errors
+- ✅ All tests must pass
+
+**If this step fails**:
+
+1. Fix all compilation errors first
+2. Fix all failing tests
+3. Re-run this step until it passes
+4. Do NOT proceed to step 2 until this step succeeds
+
+---
 
 ### Step 2: Code Formatting
 
-Apply consistent formatting using `dotnet format`:
+**Execute**: [`./scripts/format-code.ps1`](./scripts/format-code.ps1)
 
-```bash
-# Format all C# files in the solution
-dotnet format TechHub.slnx
+**Purpose**: Apply consistent code formatting to all C# files using `dotnet format`.
 
-# Format a specific project
-dotnet format src/TechHub.Api/TechHub.Api.csproj
+**What it does**:
 
-# Format with verification (dry-run)
-dotnet format TechHub.slnx --verify-no-changes
-```
+- Formats all C# files according to `.editorconfig` rules
+- Applies formatting from `Directory.Build.props`
+- Ensures consistent style across the codebase
 
-**Formatting Rules** (from Directory.Build.props):
+**Requirements**:
 
-- `EnforceCodeStyleInBuild` is enabled
-- `AnalysisLevel` is set to `latest-all`
-- `AnalysisMode` is set to `All`
+- ✅ Formatting completes successfully
 
-### Step 3: Linting and Analysis
+---
 
-Run analyzers and fix warnings:
+### Step 3: Generate Quality Overview
 
-```bash
-# Build with all analyzers enabled (warnings shown)
-dotnet build TechHub.slnx -warnaserror
+**Execute**: [`./scripts/analyze-code-quality.ps1`](./scripts/analyze-code-quality.ps1)
 
-# Run analyzers on specific project
-dotnet build src/TechHub.Web/TechHub.Web.csproj /p:TreatWarningsAsErrors=true
-```
+**Purpose**: Build the solution and analyze all warnings, errors, and code quality issues.
 
-**For PowerShell scripts**, use the validation script:
+**Output**: Creates a detailed overview file using the [overview template](./templates/overview-template.md).
 
-```bash
-# Run PowerShell linting via Pester tests
-pwsh -File scripts/run-powershell-tests.ps1
-```
+**What it reports**:
 
-**For Markdown files**, check VS Code diagnostics using `get_errors` tool.
+- Compilation errors and warnings categorized by priority
+- Analyzer issues (CA*, IDE*, RZ*, etc.)
+- Recommendations for fix vs suppress decisions
+- File locations with line numbers
 
-### Step 4: Dead Code Removal
+**Requirements**:
 
-Identify and remove unused code:
+- ✅ Overview file is generated successfully
+- 📋 Review the overview before proceeding
 
-**Find unused usings**:
+**Action Required**:
 
-```bash
-dotnet format TechHub.slnx --diagnostics IDE0005
-```
+- Read the generated overview
+- Decide which issues to fix and which to suppress
+- Discuss with user if needed
 
-**Common dead code patterns to look for**:
+---
 
-- Unused private fields and methods
+### Step 4: Fix or Suppress Issues
+
+**Based on the overview from Step 3**, make code changes:
+
+**For High Priority Issues**:
+
+- Fix immediately - these are typically bugs or critical quality issues
+- Use appropriate tools (`replace_string_in_file`, `multi_replace_string_in_file`)
+- Fix compilation errors, null reference issues, disposable patterns, etc.
+
+**For Medium Priority Issues**:
+
+- Fix if straightforward
+- Suppress if false positive or intentional design choice
+
+**For Low Priority Issues**:
+
+- Suppress via `.editorconfig` to reduce noise
+- Add comments explaining why suppression is appropriate
+
+**After making changes**:
+
+- Run [`./run.ps1 -OnlyTests`](../../../../run.ps1) to verify changes
+- Use `get_errors` tool to check for new VS Code diagnostics
+- Fix any new issues introduced by changes
+
+---
+
+### Step 5: Dead Code Removal
+
+**Execute**: [`./scripts/find-dead-code.ps1`](./scripts/find-dead-code.ps1)
+
+**Purpose**: Identify unused code, imports, members, and CSS classes.
+
+**What it finds**:
+
+- Unused using statements (IDE0005)
+- Unused private members (methods, fields, properties)
 - Commented-out code blocks
-- Unreachable code after return/throw
-- Unused parameters (IDE0060)
-- Empty catch blocks without logging
+- Unused CSS classes
 
-**Use `grep_search` to verify before removing**:
+**Review output carefully**:
 
-- Search for usages of suspicious symbols
-- Check if "unused" code is used via reflection or configuration
+- Verify findings before removing code
+- Check for reflection usage or dynamic code
+- Use `grep_search` to confirm code is truly unused
+- Look for false positives (see [Common False Positives](#common-false-positives))
 
-### Step 5: Documentation Synchronization
+**To remove dead code after verification**:
 
-Ensure documentation matches code reality:
+1. Review the findings from the script output
+2. Verify suspicious items manually using `grep_search` or `read_file`
+3. Execute [`./scripts/find-dead-code.ps1 -Fix`](./scripts/find-dead-code.ps1) to automatically remove confirmed dead code
 
-**Check documentation consistency**:
+**After removing**:
 
-1. **API documentation** - Verify `docs/api-specification.md` matches actual endpoints
-2. **Code comments** - Update XML documentation on public APIs
-3. **AGENTS.md files** - Ensure patterns match current implementation
-4. **README.md** - Verify quick start instructions work
+- Run [`./run.ps1 -OnlyTests`](../../../../run.ps1) to verify nothing broke
+- Use `get_errors` to check for new compilation issues
 
-**Run the documentation check script**:
+---
 
-```bash
-pwsh -File scripts/cleanup/verify-documentation.ps1
-```
+### Step 6: Documentation Synchronization
 
-See [references/DOCUMENTATION-CHECKLIST.md](references/DOCUMENTATION-CHECKLIST.md) for the full checklist.
+**Execute**: [`./scripts/verify-documentation.ps1`](./scripts/verify-documentation.ps1)
 
-### Step 6: Final Validation
+**Purpose**: Ensure documentation matches current code implementation.
 
-Run all tests to ensure cleanup didn't break anything:
+**What it checks**:
 
-```bash
-# Run all tests (unit, integration, component)
-dotnet test TechHub.slnx
+- API documentation matches actual endpoints
+- Code comments are accurate
+- AGENTS.md patterns match current code
+- README.md instructions work
 
-# Or use the project's run script
-pwsh -File run.ps1 -OnlyTests
-```
+**Update as needed**:
+
+- Sync outdated documentation
+- Add missing documentation for new features
+- Remove documentation for deleted code
+
+---
+
+### Step 7: Final Validation
+
+**Execute**: [`./run.ps1 -Clean -OnlyTests`](../../../../run.ps1)
+
+**Purpose**: Final verification that all changes are correct and nothing is broken.
+
+**Requirements**:
+
+- ✅ Build succeeds with 0 errors
+- ✅ Warnings are reduced or only intentional suppressions remain
+- ✅ All tests pass
+- ✅ No new VS Code diagnostics introduced
 
 **Validation Checklist**:
 
 - [ ] Solution builds without errors
-- [ ] Solution builds without warnings (or only intentional suppressions)
-- [ ] All tests pass
-- [ ] `dotnet format --verify-no-changes` passes
-- [ ] PowerShell tests pass
-- [ ] No new VS Code diagnostics
+- [ ] Warnings significantly reduced (or properly suppressed)
+- [ ] All tests pass (same or better than Step 1)
+- [ ] Code formatting verified: [`./scripts/format-code.ps1 -Verify`](./scripts/format-code.ps1)
+- [ ] PowerShell tests pass: [`../../scripts/run-powershell-tests.ps1`](../../../../scripts/run-powershell-tests.ps1)
+- [ ] No new VS Code diagnostics (`get_errors` tool)
 
-## Project-Specific Patterns
-
-### C# Naming Conventions
-
-- **Interfaces**: `I` prefix (e.g., `IContentRepository`)
-- **Private fields**: `_camelCase` with underscore prefix
-- **Constants**: `PascalCase`
-- **Local variables**: `camelCase`
-- **Async methods**: `Async` suffix
-
-### File Organization
-
-```text
-src/
-├── TechHub.Api/        # Minimal API endpoints
-├── TechHub.Web/        # Blazor SSR + WASM components
-├── TechHub.Core/       # Domain models and interfaces
-├── TechHub.Infrastructure/  # Repository implementations
-└── TechHub.AppHost/    # .NET Aspire orchestration
-```
-
-### Documentation Locations
-
-| Type | Location |
-| ---- | -------- |
-| Development patterns | `**/AGENTS.md` files |
-| Functional docs | `docs/` directory |
-| Content guidelines | `collections/*.md` |
-| API specification | `docs/api-specification.md` |
+---
 
 ## Output Format
 
-After completing cleanup, report results using this template:
+After completing all steps, provide a summary report:
 
 ```markdown
-## Cleanup Results
+## Cleanup Complete
 
-### Build Status
-- **Compilation**: ✅ Success / ❌ Failed (X errors)
-- **Warnings**: X warnings (Y fixed, Z suppressed)
+**Date**: {Date}  
+**Branch**: {Branch}
 
-### Formatting
-- **Files formatted**: X files
-- **Changes made**: Y changes
+### Results
 
-### Linting
-- **Analyzer issues**: X found, Y fixed
-- **Remaining**: Z (intentional suppressions)
+| Metric | Before | After | Change |
+|--------|--------|-------|--------|
+| Compilation Errors | {N} | 0 | ✅ -{N} |
+| Warnings | {N} | {N} | ✅ -{N} / ⚠️ {N} suppressed |
+| Test Failures | {N} | 0 | ✅ -{N} |
+| Dead Code Items | {N} | 0 | ✅ Removed {N} |
 
-### Dead Code
-- **Unused usings removed**: X
-- **Unused code removed**: Y items
+### Changes Made
 
-### Documentation
-- **Files checked**: X
-- **Updates made**: Y
+- Fixed {N} high priority issues
+- Fixed {N} medium priority issues  
+- Suppressed {N} low priority warnings
+- Removed {N} dead code items
+- Updated {N} documentation files
 
-### Tests
-- **Total**: X tests
-- **Passed**: Y ✅
-- **Failed**: Z ❌
+### Quality Overview
 
-### Summary
-[Brief description of what was cleaned and any remaining issues]
+See detailed analysis: [Code Quality Overview](.tmp/code-quality-overview.md)
+
+### Validation
+
+- ✅ Build succeeds
+- ✅ All tests pass
+- ✅ Formatting verified
+- ✅ Documentation synchronized
 ```
 
-## Edge Cases and Warnings
+---
+
+## Important Rules
 
 ### Do NOT Remove
 
 - Code marked with `// Intentional:` comments
-- Suppressed warnings with documented reasons
-- Test helpers that appear unused but are used dynamically
-- Reflection-based code (check attributes)
+- Suppressed warnings with documented reasons in `.editorconfig`
+- Test helpers that appear unused (used via reflection/xUnit discovery)
+- Reflection-based code (check for attributes)
+- Configuration-driven code paths
 
 ### Ask Before Removing
 
-- Public API members (may be used externally)
-- Configuration-driven code paths
-- Code in `#if DEBUG` blocks
+- Public API members (may be used by external consumers)
+- Code in `#if DEBUG` or `#if RELEASE` blocks
+- Blazor component parameters (used in Razor syntax)
+- Minimal API endpoint handlers (registered at startup)
 
 ### Common False Positives
 
-- xUnit test methods (appear unused but discovered by reflection)
-- Blazor component parameters (used via Razor syntax)
-- Minimal API endpoint handlers (registered at startup)
+- xUnit test methods appear unused but are discovered by reflection
+- Blazor component parameters appear unused but are set via Razor
+- Minimal API handlers appear unused but are registered in `Program.cs`
+- Private fields only used in `Dispose()` methods
+
+---
 
 ## Related Resources
 
-- [references/DOCUMENTATION-CHECKLIST.md](references/DOCUMENTATION-CHECKLIST.md) - Full documentation sync checklist
-- [scripts/verify-documentation.ps1](scripts/verify-documentation.ps1) - Automated documentation verification
-- [scripts/find-dead-code.ps1](scripts/find-dead-code.ps1) - Dead code detection helper
+**Scripts**:
+
+- [format-code.ps1](./scripts/format-code.ps1) - Code formatting
+- [analyze-code-quality.ps1](./scripts/analyze-code-quality.ps1) - Quality analysis and overview generation
+- [find-dead-code.ps1](./scripts/find-dead-code.ps1) - Dead code detection
+- [verify-documentation.ps1](./scripts/verify-documentation.ps1) - Documentation verification
+
+**Templates**:
+
+- [overview-template.md](./templates/overview-template.md) - Standard format for quality overviews
+
+**Project Scripts**:
+
+- [run.ps1](../../../../run.ps1) - Build, test, and run the solution
+- [run-powershell-tests.ps1](../../../../scripts/run-powershell-tests.ps1) - PowerShell script validation

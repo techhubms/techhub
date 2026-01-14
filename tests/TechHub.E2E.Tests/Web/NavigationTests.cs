@@ -99,7 +99,7 @@ public class NavigationTests(PlaywrightCollectionFixture fixture) : IAsyncLifeti
         await Page.GotoRelativeAsync("/github-copilot");
 
         // Act - Click on "News" collection button
-        var newsButton = Page.Locator(".collection-nav a", new() { HasTextString = "News" });
+        var newsButton = Page.Locator(".sub-nav a", new() { HasTextString = "News" });
         await newsButton.ClickBlazorElementAsync();
 
         // Assert - URL should be /github-copilot/news
@@ -151,20 +151,20 @@ public class NavigationTests(PlaywrightCollectionFixture fixture) : IAsyncLifeti
     }
 
     [Fact]
-    public async Task SectionPage_CollectionSidebarIsClickable()
+    public async Task SectionPage_SubNavIsClickable()
     {
         // Arrange
         await Page.GotoRelativeAsync("/github-copilot");
 
-        // Act - Click on "Videos" collection
-        var videosButton = Page.Locator(".collection-nav a", new() { HasTextString = "Videos" });
+        // Act - Click on "Videos" collection in sub-nav
+        var videosButton = Page.Locator(".sub-nav a", new() { HasTextString = "Videos" });
         await videosButton.ClickBlazorElementAsync();
 
         // Assert - Should navigate and load videos
         await Page.WaitForBlazorUrlContainsAsync("/github-copilot/videos");
 
         // Wait for page to fully load after navigation
-        await Page.AssertElementContainsTextBySelectorAsync(".collection-nav a.active", "Videos");
+        await Page.AssertElementContainsTextBySelectorAsync(".sub-nav a.active", "Videos");
     }
 
     [Fact]
@@ -172,13 +172,13 @@ public class NavigationTests(PlaywrightCollectionFixture fixture) : IAsyncLifeti
     {
         // Arrange
 
-        // Act - Measure header height on homepage
+        // Act - Measure banner height on homepage
         await Page.GotoRelativeAsync("/");
-        var homeHeaderHeight = await Page.Locator(".section-header.home-banner").BoundingBoxAsync();
+        var homeHeaderHeight = await Page.Locator(".section-banner.home-banner").BoundingBoxAsync();
 
         // Navigate to section page
         await Page.GotoRelativeAsync("/github-copilot");
-        var sectionHeaderHeight = await Page.Locator(".section-header").BoundingBoxAsync();
+        var sectionHeaderHeight = await Page.Locator(".section-banner").BoundingBoxAsync();
 
         // Assert - Both should have defined heights (not auto)
         Assert.NotNull(homeHeaderHeight);
@@ -222,13 +222,13 @@ public class NavigationTests(PlaywrightCollectionFixture fixture) : IAsyncLifeti
         await Page.GotoRelativeAsync("/ai/news");
 
         // Assert
-        await Page.WaitForSelectorWithTimeoutAsync(".collection-nav");
+        await Page.WaitForSelectorWithTimeoutAsync(".sub-nav");
         await Page.WaitForSelectorWithTimeoutAsync(".content-item-card");
 
-        // Should show AI section
-        await Page.AssertElementContainsTextBySelectorAsync("h1", "Artificial Intelligence");
+        // Should show AI section and News collection
+        await Page.AssertElementContainsTextBySelectorAsync("h1.page-h1", "Browse Artificial Intelligence News");
 
         // News collection should be active
-        await Page.AssertElementContainsTextBySelectorAsync(".collection-nav a.active", "News");
+        await Page.AssertElementContainsTextBySelectorAsync(".sub-nav a.active", "News");
     }
 }

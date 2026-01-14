@@ -13,13 +13,14 @@ namespace TechHub.Infrastructure.Repositories;
 /// File-based repository for custom pages
 /// Loads markdown files from the _custom collection directory
 /// </summary>
-public class FileBasedCustomPageRepository : ICustomPageRepository
+public class FileBasedCustomPageRepository : ICustomPageRepository, IDisposable
 {
     private readonly string _basePath;
     private readonly FrontMatterParser _frontMatterParser;
     private readonly ILogger<FileBasedCustomPageRepository> _logger;
     private IReadOnlyList<CustomPage>? _cachedPages;
     private readonly SemaphoreSlim _loadLock = new(1, 1);
+    private bool _disposed;
 
     public FileBasedCustomPageRepository(
         IOptions<AppSettings> settings,
@@ -172,6 +173,25 @@ public class FileBasedCustomPageRepository : ICustomPageRepository
         {
             _logger.LogError(ex, "Failed to load custom page from file: {FilePath}", filePath);
             return null;
+        }
+    }
+
+    public void Dispose()
+    {
+        Dispose(true);
+        GC.SuppressFinalize(this);
+    }
+
+    protected virtual void Dispose(bool disposing)
+    {
+        if (!_disposed)
+        {
+            if (disposing)
+            {
+                _loadLock.Dispose();
+            }
+
+            _disposed = true;
         }
     }
 }

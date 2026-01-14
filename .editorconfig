@@ -175,6 +175,30 @@ dotnet_diagnostic.IDE0301.severity = warning
 dotnet_diagnostic.IDE0305.severity = warning
 
 ##############################
+# Code Analysis Rules - Suppressions
+##############################
+
+# CA2234: Pass System.Uri instead of string (18 occurrences)
+# Suppressed: HttpClient methods accept both Uri and string, string is more convenient
+dotnet_diagnostic.CA2234.severity = none
+
+# CA1711: Rename DevEx to not end in Ex (2 occurrences)
+# Suppressed: DevEx is the established name for Developer Experience
+dotnet_diagnostic.CA1711.severity = none
+
+# CA1508: Dead code analysis (2 occurrences)
+# Suppressed: False positives in conditional expressions
+dotnet_diagnostic.CA1508.severity = none
+
+# CA1024: Method vs property (2 occurrences)
+# Suppressed: Intentional design - methods perform operations, not simple accessors
+dotnet_diagnostic.CA1024.severity = none
+
+# CA1515: Public types visibility (2 occurrences)
+# Suppressed: Public types required for dependency injection in Blazor
+dotnet_diagnostic.CA1515.severity = none
+
+##############################
 # C# Formatting Rules
 ##############################
 

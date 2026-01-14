@@ -36,7 +36,7 @@ public class CustomPagesTests(PlaywrightCollectionFixture fixture) : IAsyncLifet
     [InlineData("/github-copilot/features", "GitHub Copilot Features")]
     [InlineData("/github-copilot/handbook", "GitHub Copilot Handbook")]
     [InlineData("/github-copilot/levels-of-enlightenment", "Levels of Enlightenment")]
-    [InlineData("/github-copilot/vscode-updates", "Visual Studio Code Updates")]
+    [InlineData("/github-copilot/vscode-updates", "Visual Studio Code and GitHub Copilot - What's new in")] // Dynamic page shows latest video
     [InlineData("/devops/dx-space", "Developer Experience Space")]
     public async Task CustomPage_ShouldLoad_Successfully(string url, string expectedTitlePart)
     {
@@ -60,8 +60,8 @@ public class CustomPagesTests(PlaywrightCollectionFixture fixture) : IAsyncLifet
         // Act
         await Page.GotoRelativeAsync(url);
 
-        // Assert - Page should have main heading
-        var mainHeading = Page.GetByRole(AriaRole.Heading, new() { Level = 1 });
+        // Assert - Page should have main content heading (excluding banner heading)
+        var mainHeading = Page.Locator(".page-h1");
         await mainHeading.AssertElementVisibleAsync();
 
         // Should have some content (paragraphs, lists, etc.)

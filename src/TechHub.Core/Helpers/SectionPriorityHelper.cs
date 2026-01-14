@@ -23,21 +23,6 @@ public static class SectionPriorityHelper
     ];
 
     /// <summary>
-    /// Section name to display title mappings.
-    /// Maps from Section.Name (lowercase) to Section.Title (display name).
-    /// </summary>
-    private static readonly Dictionary<string, string> _sectionNameToTitle = new()
-    {
-        { "github-copilot", "GitHub Copilot" },
-        { "ai", "AI" },
-        { "ml", "ML" },
-        { "coding", "Coding" },
-        { "azure", "Azure" },
-        { "devops", "DevOps" },
-        { "security", "Security" }
-    };
-
-    /// <summary>
     /// Determines the primary section URL for a content item based on its lowercase section names and collection
     /// </summary>
     /// <param name="sectionNames">List of lowercase section names from ContentItem.SectionNames (e.g., "ai", "github-copilot")</param>

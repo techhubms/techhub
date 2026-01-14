@@ -54,6 +54,7 @@ public class SectionTests : TestContext
         Services.AddSingleton(mockApiClient.Object);
         Services.AddSingleton(Mock.Of<Microsoft.JSInterop.IJSRuntime>());
         Services.AddSingleton(Mock.Of<ErrorService>());
+        Services.AddSingleton(Mock.Of<SectionCache>());
 
         // Act - Render Section component
         var cut = RenderComponent<Section>(parameters => parameters
@@ -118,6 +119,7 @@ public class SectionTests : TestContext
         Services.AddSingleton(mockApiClient.Object);
         Services.AddSingleton(Mock.Of<Microsoft.JSInterop.IJSRuntime>());
         Services.AddSingleton(Mock.Of<ErrorService>());
+        Services.AddSingleton(Mock.Of<SectionCache>());
 
         // Act
         var cut = RenderComponent<Section>(parameters => parameters
