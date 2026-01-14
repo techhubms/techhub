@@ -14,7 +14,7 @@
 @if (Section != null)
 {
     <nav class="sub-nav" aria-label="@Section.Title navigation">
-        <div class="sub-nav-container">
+        <div class="sub-nav-wrapper">
             <a href="/@Section.Name/all" class="sub-nav-item @(IsActive($"/{Section.Name}/all") ? "active" : "")">
                 All
             </a>

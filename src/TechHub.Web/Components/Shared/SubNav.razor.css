@@ -8,7 +8,7 @@
     position: sticky;
     top: 76px;
     /* Below main header when scrolled (76px) */
-    z-index: 10;
+    z-index: 90;
     margin-bottom: var(--spacing-5);
     padding: var(--spacing-2) 0;
 }
@@ -20,7 +20,7 @@
     margin-bottom: var(--spacing-5);
 }
 
-.sub-nav-container {
+.sub-nav-wrapper {
     max-width: var(--max-width-content);
     margin: 0 auto;
     padding: 0 var(--spacing-4);
@@ -32,21 +32,27 @@
     scrollbar-color: var(--color-border-default) transparent;
 }
 
+.sub-nav-empty {
+    padding: 0;
+    background: transparent;
+    margin-bottom: var(--spacing-5);
+}
+
 /* Hide scrollbar for Webkit browsers but keep functionality */
-.sub-nav-container::-webkit-scrollbar {
+.sub-nav::-webkit-scrollbar {
     height: 4px;
 }
 
-.sub-nav-container::-webkit-scrollbar-track {
+.sub-nav::-webkit-scrollbar-track {
     background: transparent;
 }
 
-.sub-nav-container::-webkit-scrollbar-thumb {
+.sub-nav::-webkit-scrollbar-thumb {
     background: var(--color-border-default);
     border-radius: var(--radius-sm);
 }
 
-.sub-nav-container::-webkit-scrollbar-thumb:hover {
+.sub-nav::-webkit-scrollbar-thumb:hover {
     background: var(--color-border-emphasis);
 }
 
@@ -55,7 +61,7 @@
     align-items: center;
     padding: calc(var(--spacing-1) + var(--spacing-1) / 2) var(--spacing-3);
     /* 1.5 spacing units vertical */
-    color: var(--color-text-secondary);
+    color: var(--color-text-primary);
     text-decoration: none;
     font-size: var(--font-size-sm);
     font-weight: var(--font-weight-semibold);
@@ -79,8 +85,8 @@
 
 /* Mobile responsive */
 @media (max-width: 640px) {
-    .sub-nav-container {
-        padding: 0 var(--spacing-2);
+    .sub-nav {
+        padding: var(--spacing-2);
         gap: var(--spacing-0-5);
     }
 

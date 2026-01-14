@@ -148,10 +148,5 @@ public class PerformanceSettings
 /// </summary>
 public class WebAppSettings
 {
-    /// <summary>
-    /// Display names for collections in page titles (e.g., "blogs" -> "Blog Posts")
-    /// </summary>
-    public Dictionary<string, string> CollectionDisplayNames { get; init; } = [];
-
     public required SeoSettings Seo { get; init; }
 }

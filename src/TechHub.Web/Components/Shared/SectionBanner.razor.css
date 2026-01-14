@@ -1,0 +1,108 @@
+/* ============================================================================
+   Section Banner - Decorative hero banner for section pages
+   (Restored from original PageHeader.razor.css)
+   ============================================================================ */
+
+/* Universal Section Banner - Same height on all pages */
+.section-banner {
+    height: 220px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-color: var(--color-purple-muted);
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    margin-left: calc(50% - 50vw);
+    margin-right: calc(50% - 50vw);
+    transition: height 0.3s ease;
+}
+
+/* Collapsed state when scrolled */
+.section-banner.collapsed {
+    height: 0;
+    overflow: hidden;
+}
+
+.section-banner::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(107, 79, 184, 0.25) 0%, rgba(26, 26, 46, 0.35) 100%);
+}
+
+.section-banner::after {
+    content: '';
+    position: absolute;
+    bottom: -20px;
+    left: 0;
+    right: 0;
+    height: 20px;
+    background: linear-gradient(to bottom, rgba(13, 17, 23, 0.3), transparent);
+    pointer-events: none;
+}
+
+/* Homepage banner with default background */
+.home-banner {
+    background: linear-gradient(135deg, #6b4fb8 0%, #1a1a2e 100%);
+}
+
+.section-banner-content {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    color: var(--color-text-on-emphasis);
+    padding: var(--spacing-2);
+    max-width: 1000px;
+    width: 100%;
+}
+
+.header-text-overlay {
+    background: rgba(26, 26, 46, 0.2);
+    backdrop-filter: blur(3px);
+    border-radius: var(--radius-md);
+    padding: var(--spacing-1) var(--spacing-4) var(--spacing-4) var(--spacing-4);
+    border: 1px solid rgba(189, 147, 249, 0.12);
+    width: 800px;
+    max-width: 90%;
+    height: 160px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.section-banner-content .banner-title {
+    font-size: clamp(2rem, 4vw, 3rem);
+    margin: 0 0 var(--spacing-2) 0;
+    font-weight: var(--font-weight-bold);
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+    line-height: var(--line-height-heading);
+}
+
+.section-banner-content .banner-description {
+    font-size: var(--font-size-lg);
+    margin: 0;
+    opacity: 0.95;
+    text-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+    color: var(--color-text-on-emphasis);
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .section-banner {
+        height: 160px;
+    }
+
+    .section-banner-content .header-title {
+        font-size: clamp(1.5rem, 6vw, 2rem);
+    }
+}

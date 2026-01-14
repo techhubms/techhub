@@ -9,11 +9,12 @@ namespace TechHub.Core.Extensions;
 public static class SectionExtensions
 {
     /// <summary>
-    /// Convert Section entity to SectionDto
+    /// Convert Section entity to SectionDto with display names
     /// </summary>
-    public static SectionDto ToDto(this Section section)
+    public static SectionDto ToDto(this Section section, Dictionary<string, string> collectionDisplayNames)
     {
         ArgumentNullException.ThrowIfNull(section);
+        ArgumentNullException.ThrowIfNull(collectionDisplayNames);
 
         return new SectionDto
         {
@@ -22,16 +23,22 @@ public static class SectionExtensions
             Description = section.Description,
             Url = section.Url,
             BackgroundImage = section.BackgroundImage,
-            Collections = [.. section.Collections.Select(c => c.ToDto())]
+            Collections = [.. section.Collections.Select(c => c.ToDto(collectionDisplayNames))]
         };
     }
 
     /// <summary>
-    /// Convert CollectionReference entity to CollectionReferenceDto
+    /// Convert CollectionReference entity to CollectionReferenceDto with display name
     /// </summary>
-    public static CollectionReferenceDto ToDto(this CollectionReference collection)
+    public static CollectionReferenceDto ToDto(this CollectionReference collection, Dictionary<string, string> displayNames)
     {
         ArgumentNullException.ThrowIfNull(collection);
+        ArgumentNullException.ThrowIfNull(displayNames);
+
+        // Look up display name from configuration, fallback to Title if not found
+        var displayName = displayNames.TryGetValue(collection.Name.ToLowerInvariant(), out var name)
+            ? name
+            : collection.Title;
 
         return new CollectionReferenceDto
         {
@@ -39,15 +46,17 @@ public static class SectionExtensions
             Title = collection.Title,
             Url = collection.Url,
             Description = collection.Description,
+            DisplayName = displayName,
             IsCustom = collection.IsCustom
         };
     }
 
     /// <summary>
-    /// Convert collection of Section entities to DTOs
+    /// Convert collection of Section entities to DTOs with display names
     /// </summary>
-    public static IReadOnlyList<SectionDto> ToDtos(this IEnumerable<Section> sections)
+    public static IReadOnlyList<SectionDto> ToDtos(this IEnumerable<Section> sections, Dictionary<string, string> collectionDisplayNames)
     {
-        return [.. sections.Select(s => s.ToDto())];
+        ArgumentNullException.ThrowIfNull(collectionDisplayNames);
+        return [.. sections.Select(s => s.ToDto(collectionDisplayNames))];
     }
 }

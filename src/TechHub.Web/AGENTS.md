@@ -562,6 +562,8 @@ font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
 | `page`    | `pageData`       | When working with page metadata (conflicts with @page) |
 | `layout`  | `layoutData`     | When working with layout data (conflicts with @layout) |
 
+**🚨 CRITICAL REMINDER**: Always use `sectionData` (not `section`) throughout your component code, including when passing parameters to other components. Using `@section` will cause undefined variable errors because `section` doesn't exist - only `sectionData` does.
+
 **Correct Pattern**:
 
 ```razor
@@ -572,11 +574,14 @@ font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
 {
     <PageTitle>@sectionData.Title - Tech Hub</PageTitle>
     
-    <PageHeader Section="@sectionData" />
+    @* ✅ CORRECT - Pass sectionData to Header component *@
+    <Header Section="@sectionData" />
     
     <div class="page-with-sidebar">
         <aside class="sidebar">
+            @* ✅ CORRECT - Pass sectionData to sidebar components *@
             <SidebarCollectionNav Section="@sectionData" SelectedCollection="all" />
+        </aside>
         </aside>
         
         <main class="page-main-content">

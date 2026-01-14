@@ -1,6 +1,9 @@
 using Microsoft.AspNetCore.Http.HttpResults;
+using Microsoft.Extensions.Options;
+using TechHub.Core.Configuration;
 using TechHub.Core.DTOs;
 using TechHub.Core.Interfaces;
+using TechHub.Core.Models;
 
 namespace TechHub.Api.Endpoints;
 
@@ -72,9 +75,11 @@ internal static class SectionsEndpoints
     /// </summary>
     private static async Task<Ok<IEnumerable<SectionDto>>> GetAllSections(
         ISectionRepository sectionRepository,
+        IOptions<AppSettings> appSettings,
         CancellationToken cancellationToken)
     {
         var sections = await sectionRepository.GetAllAsync(cancellationToken);
+        var displayNames = appSettings.Value.Content.CollectionDisplayNames;
 
         var sectionDtos = sections.Select(s => new SectionDto
         {
@@ -83,14 +88,7 @@ internal static class SectionsEndpoints
             Description = s.Description,
             Url = s.Url,
             BackgroundImage = s.BackgroundImage,
-            Collections = [.. s.Collections.Select(c => new CollectionReferenceDto
-            {
-                Title = c.Title,
-                Name = c.Name,
-                Url = c.Url,
-                Description = c.Description,
-                IsCustom = c.IsCustom
-            })]
+            Collections = [.. s.Collections.Select(c => MapCollectionToDto(c, displayNames))]
         });
 
         return TypedResults.Ok(sectionDtos);
@@ -102,6 +100,7 @@ internal static class SectionsEndpoints
     private static async Task<Results<Ok<SectionDto>, NotFound>> GetSectionByName(
         string sectionName,
         ISectionRepository sectionRepository,
+        IOptions<AppSettings> appSettings,
         CancellationToken cancellationToken)
     {
         var section = await sectionRepository.GetByNameAsync(sectionName, cancellationToken);
@@ -111,6 +110,7 @@ internal static class SectionsEndpoints
             return TypedResults.NotFound();
         }
 
+        var displayNames = appSettings.Value.Content.CollectionDisplayNames;
         var sectionDto = new SectionDto
         {
             Name = section.Name,
@@ -118,14 +118,7 @@ internal static class SectionsEndpoints
             Description = section.Description,
             Url = section.Url,
             BackgroundImage = section.BackgroundImage,
-            Collections = [.. section.Collections.Select(c => new CollectionReferenceDto
-            {
-                Title = c.Title,
-                Name = c.Name,
-                Url = c.Url,
-                Description = c.Description,
-                IsCustom = c.IsCustom
-            })]
+            Collections = [.. section.Collections.Select(c => MapCollectionToDto(c, displayNames))]
         };
 
         return TypedResults.Ok(sectionDto);
@@ -160,6 +153,7 @@ internal static class SectionsEndpoints
     private static async Task<Results<Ok<IEnumerable<CollectionReferenceDto>>, NotFound>> GetSectionCollections(
         string sectionName,
         ISectionRepository sectionRepository,
+        IOptions<AppSettings> appSettings,
         CancellationToken cancellationToken)
     {
         var section = await sectionRepository.GetByNameAsync(sectionName, cancellationToken);
@@ -169,14 +163,8 @@ internal static class SectionsEndpoints
             return TypedResults.NotFound();
         }
 
-        var collectionDtos = section.Collections.Select(c => new CollectionReferenceDto
-        {
-            Title = c.Title,
-            Name = c.Name,
-            Url = c.Url,
-            Description = c.Description,
-            IsCustom = c.IsCustom
-        });
+        var displayNames = appSettings.Value.Content.CollectionDisplayNames;
+        var collectionDtos = section.Collections.Select(c => MapCollectionToDto(c, displayNames));
 
         return TypedResults.Ok(collectionDtos);
     }
@@ -188,6 +176,7 @@ internal static class SectionsEndpoints
         string sectionName,
         string collectionName,
         ISectionRepository sectionRepository,
+        IOptions<AppSettings> appSettings,
         CancellationToken cancellationToken)
     {
         var section = await sectionRepository.GetByNameAsync(sectionName, cancellationToken);
@@ -205,14 +194,8 @@ internal static class SectionsEndpoints
             return TypedResults.NotFound();
         }
 
-        var collectionDto = new CollectionReferenceDto
-        {
-            Title = collection.Title,
-            Name = collection.Name,
-            Url = collection.Url,
-            Description = collection.Description,
-            IsCustom = collection.IsCustom
-        };
+        var displayNames = appSettings.Value.Content.CollectionDisplayNames;
+        var collectionDto = MapCollectionToDto(collection, displayNames);
 
         return TypedResults.Ok(collectionDto);
     }
@@ -277,6 +260,27 @@ internal static class SectionsEndpoints
             VideoId = item.VideoId,
             ViewingMode = item.ViewingMode,
             Url = $"/{primarySectionUrl.ToLowerInvariant()}/{item.CollectionName.ToLowerInvariant()}/{item.Slug.ToLowerInvariant()}"
+        };
+    }
+
+    /// <summary>
+    /// Helper method to map CollectionReference to DTO with display name from configuration
+    /// </summary>
+    private static CollectionReferenceDto MapCollectionToDto(CollectionReference collection, Dictionary<string, string> displayNames)
+    {
+        // Look up display name from configuration, fallback to Title if not found
+        var displayName = displayNames.TryGetValue(collection.Name.ToLowerInvariant(), out var name)
+            ? name
+            : collection.Title;
+
+        return new CollectionReferenceDto
+        {
+            Name = collection.Name,
+            Title = collection.Title,
+            Url = collection.Url,
+            Description = collection.Description,
+            DisplayName = displayName,
+            IsCustom = collection.IsCustom
         };
     }
 }

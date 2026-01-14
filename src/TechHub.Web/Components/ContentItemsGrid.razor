@@ -164,9 +164,9 @@
             return "All";
         }
 
-        return Collections
-        .FirstOrDefault(c => c.Name == CollectionName)?.Title
-        ?? CollectionName;
+        // Get DisplayName from the collection DTO (single source of truth from API)
+        var collection = Collections.FirstOrDefault(c => c.Name == CollectionName);
+        return collection?.DisplayName ?? collection?.Title ?? CollectionName;
     }
 
     private string GetPageTitle()
@@ -178,9 +178,6 @@
         // Get proper section display name (e.g., "GitHub Copilot" instead of "github copilot")
         var sectionDisplayName = SectionHelper.GetSectionDisplayName(SectionName);
 
-        // Format collection name for proper English (e.g., "Blogs" → "Blog Posts")
-        var formattedCollection = FormatCollectionForTitle(collectionDisplay);
-
         if (isAllSection && isAllCollection)
         {
             // /all → "Browse All Posts"
@@ -188,28 +185,18 @@
         }
         else if (isAllSection && !isAllCollection)
         {
-            // /all/news → "Browse All News Posts"
-            return $"Browse All {formattedCollection}";
+            // /all/news → "Browse All News"
+            return $"Browse All {collectionDisplay}";
         }
         else if (!isAllSection && isAllCollection)
         {
-            // /github-copilot → "Browse All GitHub Copilot Posts"
-            return $"Browse All {sectionDisplayName} Posts";
+            // /github-copilot → "Browse All GitHub Copilot Content"
+            return $"Browse All {sectionDisplayName} Content";
         }
         else
         {
-            // /github-copilot/news → "Browse GitHub Copilot News Posts"
-            return $"Browse {sectionDisplayName} {formattedCollection}";
+            // /github-copilot/news → "Browse GitHub Copilot News"
+            return $"Browse {sectionDisplayName} {collectionDisplay}";
         }
-    }
-
-    private string FormatCollectionForTitle(string collectionName)
-    {
-        var displayNames = AppSettings.Value.CollectionDisplayNames;
-        var key = collectionName.ToLowerInvariant();
-
-        return displayNames.TryGetValue(key, out var displayName)
-        ? displayName
-        : $"{collectionName} Posts";
     }
 }

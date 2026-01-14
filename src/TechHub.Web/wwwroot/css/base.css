@@ -180,6 +180,14 @@ img {
   vertical-align: middle;
 }
 
+/* Active Heading Highlight (TOC Scroll Spy) */
+.toc-active-heading {
+  background: linear-gradient(to right, var(--color-purple-dark), transparent 40%);
+  background-size: 100% 1px;
+  background-position: bottom;
+  background-repeat: no-repeat;
+}
+
 /* Reduced Motion Support (Accessibility) */
 @media (prefers-reduced-motion: reduce) {
 

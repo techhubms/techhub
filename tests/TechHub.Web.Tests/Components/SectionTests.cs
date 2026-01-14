@@ -37,7 +37,8 @@ public class SectionTests : TestContext
                     Title = "News",
                     Name = "news",
                     Url = "/ai/news",
-                    Description = "Latest AI news"
+                    Description = "Latest AI news",
+                    DisplayName = "News"
                 }
             ]
         };
@@ -100,7 +101,8 @@ public class SectionTests : TestContext
                     Title = "News",
                     Name = "news",
                     Url = "/ai/news",
-                    Description = "Latest AI news"
+                    Description = "Latest AI news",
+                    DisplayName = "News"
                 }
             ]
         };

@@ -1,0 +1,42 @@
+@using TechHub.Core.DTOs
+
+@* 
+   Header Component - Complete site header structure
+   
+   Usage:
+     With section (section/collection pages):
+       <Header Section="@sectionData" />
+     
+     With custom banner content (home page):
+       <Header>
+           <SectionBanner Title="..." Description="..." />
+       </Header>
+     
+     Without section/banner (about, error pages):
+       <Header />
+*@
+
+<NavHeader />
+
+@if (Section != null)
+{
+    <SectionBanner Section="@Section" />
+    <SubNav Section="@Section" />
+}
+else if (ChildContent != null)
+{
+    @ChildContent
+    <SubNav />
+}
+else
+{
+    <SubNav />
+}
+
+@code {
+    [Parameter]
+    public SectionDto? Section { get; set; }
+
+    [Parameter]
+    public RenderFragment? ChildContent { get; set; }
+}

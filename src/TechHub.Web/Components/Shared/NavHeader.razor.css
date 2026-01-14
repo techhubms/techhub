@@ -4,25 +4,33 @@
    Component-specific styling for site-wide navigation header
    ============================================================================ */
 
-/* Site Header */
-.site-header {
+/* Main Navigation - Top level, sticky element */
+.main-nav {
   background: var(--color-bg-subtle);
   border-bottom: 1px solid var(--color-border-default);
   position: sticky;
   top: 0;
   z-index: 100;
-  box-shadow: var(--shadow-md);
-  min-height: 76px;
+  width: 100%;
 }
 
-.header-content {
-  max-width: 1400px;
+.main-nav-content {
+  max-width: var(--max-width-content);
   margin: 0 auto;
-  padding: var(--spacing-2) var(--spacing-3);
+  padding: var(--spacing-2) var(--spacing-4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-4);
+  min-height: 76px;
+  flex-wrap: wrap;
+}
+
+/* Navigation links container */
+.nav-links {
   display: flex;
   align-items: center;
   gap: var(--spacing-4);
-  min-height: 76px;
 }
 
 .site-logo {
@@ -40,15 +48,6 @@
   font-size: var(--font-size-2xl);
   font-weight: var(--font-weight-bold);
   margin: 0;
-}
-
-/* Main Navigation */
-.main-nav {
-  display: flex;
-  gap: var(--spacing-2);
-  flex-wrap: wrap;
-  align-items: center;
-  flex: 1;
 }
 
 .nav-link {
@@ -87,22 +86,20 @@
 
 /* Responsive */
 @media (max-width: 768px) {
-  .header-content {
+  .main-nav-content {
     flex-direction: column;
     align-items: flex-start;
     padding: var(--spacing-2);
-    gap: var(--spacing-2);
-  }
-  
-  .main-nav {
-    width: 100%;
-    flex-direction: column;
     gap: var(--spacing-1);
   }
-  
+
   .nav-link {
     display: block;
     width: 100%;
     text-align: center;
+  }
+
+  .about-link {
+    margin-left: 0;
   }
 }

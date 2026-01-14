@@ -5,6 +5,13 @@
  * Uses scrollend event for clean, reliable detection when scrolling stops.
  */
 
+// Configuration: Detection line position as percentage of content viewport (0.0 to 1.0)
+// Lower values = headings activate higher on screen (e.g., 0.30 = 30% from top of content area)
+const DETECTION_LINE_PERCENT = 0.30;
+
+// Sticky header offset in pixels (main nav + subnav)
+const STICKY_HEADER_OFFSET = 106;
+
 export class TocScrollSpy {
     constructor(tocElement, contentElement) {
         this.tocElement = tocElement;
@@ -48,10 +55,11 @@ export class TocScrollSpy {
                 e.preventDefault();
                 const heading = document.getElementById(headingId);
                 if (heading) {
-                    // Scroll heading to detection line (40% of viewport from top - optimal reading position)
-                    const detectionLine = window.innerHeight * 0.40;
+                    // Calculate detection line position
+                    const contentViewportHeight = window.innerHeight - STICKY_HEADER_OFFSET;
+                    const detectionLineFromTop = STICKY_HEADER_OFFSET + (contentViewportHeight * DETECTION_LINE_PERCENT);
                     const headingTop = heading.getBoundingClientRect().top + window.scrollY;
-                    const targetScroll = headingTop - detectionLine;
+                    const targetScroll = headingTop - detectionLineFromTop;
 
                     window.scrollTo({
                         top: targetScroll,
@@ -75,9 +83,11 @@ export class TocScrollSpy {
 
                 // Wait for page to fully render, then scroll
                 setTimeout(() => {
-                    const detectionLine = window.innerHeight * 0.40;
+                    // Calculate detection line position
+                    const contentViewportHeight = window.innerHeight - STICKY_HEADER_OFFSET;
+                    const detectionLineFromTop = STICKY_HEADER_OFFSET + (contentViewportHeight * DETECTION_LINE_PERCENT);
                     const headingTop = heading.getBoundingClientRect().top + window.scrollY;
-                    const targetScroll = headingTop - detectionLine;
+                    const targetScroll = headingTop - detectionLineFromTop;
 
                     window.scrollTo({
                         top: targetScroll,
@@ -89,113 +99,128 @@ export class TocScrollSpy {
             // No hash, detect current position immediately on page load
             this.updateActiveHeading();
         }
+    }
 
-
-        /**
-             * Handle scroll events with requestAnimationFrame throttling
-             * This ensures updates happen at most once per frame (~60fps)
-             */
-        handleScroll() {
-            if (!this.ticking) {
-                window.requestAnimationFrame(() => {
-                    this.updateActiveHeading();
-                    this.ticking = false;
-                });
-                this.ticking = true;
-            }
-        }
-
-        /**
-         * Update which heading should be active based on scroll position
-         */
-        updateActiveHeading() {
-            const detectionLine = window.innerHeight * 0.40; // 40% from top of viewport
-            const scrollTop = window.scrollY || window.pageYOffset;
-            const viewportBottom = scrollTop + window.innerHeight;
-            const documentHeight = document.documentElement.scrollHeight;
-
-            // Special case: If we're near bottom of page (within 50px), activate the last heading
-            if (viewportBottom >= documentHeight - 50) {
-                const lastHeading = this.headings[this.headings.length - 1];
-                if (lastHeading) {
-                    const lastId = lastHeading.getAttribute('id');
-                    this.setActive(lastId);
-                    return;
-                }
-            }
-
-            // Special case: Very top of page (scrollTop < 300px), activate first heading
-            if (scrollTop < 300) {
-                if (this.headings.length > 0) {
-                    const firstId = this.headings[0].getAttribute('id');
-                    this.setActive(firstId);
-                    return;
-                }
-            }
-
-            // Find the heading CLOSEST to our detection line (40% from top)
-            // Pick the heading that's above the line and closest to it
-            let targetId = null;
-            let closestDistance = Infinity;
-            const tolerance = 5; // Allow 5px tolerance for rounding errors
-
-            for (let i = 0; i < this.headings.length; i++) {
-                const heading = this.headings[i];
-                const rect = heading.getBoundingClientRect();
-                const headingTopFromViewport = rect.top;
-
-                // Only consider headings that are at or above the detection line (with tolerance)
-                if (headingTopFromViewport <= detectionLine + tolerance) {
-                    const distance = Math.abs(detectionLine - headingTopFromViewport);
-
-                    // Pick the heading closest to the detection line (smallest distance)
-                    if (distance < closestDistance) {
-                        closestDistance = distance;
-                        targetId = heading.getAttribute('id');
-                    }
-                } else {
-                    // This heading is below the line, so stop
-                    break;
-                }
-            }
-
-            if (targetId) {
-                this.setActive(targetId);
-            }
-        }
-
-        /**
-         * Set a TOC link as active
-         */
-        setActive(headingId) {
-            // Don't update if already active
-            if (this.currentActiveId === headingId) {
-                return;
-            }
-
-            // Remove active from current
-            if (this.currentActiveId !== null) {
-                const currentLink = this.tocLinks.get(this.currentActiveId);
-                if (currentLink) {
-                    currentLink.classList.remove('active');
-                }
-            }
-
-            // Add active to new
-            const newLink = this.tocLinks.get(headingId);
-            if (newLink) {
-                newLink.classList.add('active');
-                this.currentActiveId = headingId;
-            }
-        }
-
-        /**
-         * Clean up event listeners
-         */
-        destroy() {
-            window.removeEventListener('scroll', this.boundHandleScroll);
+    /**
+     * Handle scroll events with requestAnimationFrame throttling
+     * This ensures updates happen at most once per frame (~60fps)
+     */
+    handleScroll() {
+        if (!this.ticking) {
+            window.requestAnimationFrame(() => {
+                this.updateActiveHeading();
+                this.ticking = false;
+            });
+            this.ticking = true;
         }
     }
+
+    /**
+     * Update which heading should be active based on scroll position
+     */
+    updateActiveHeading() {
+        // Calculate detection line position using constants
+        const contentViewportHeight = window.innerHeight - STICKY_HEADER_OFFSET;
+        const detectionLineFromTop = STICKY_HEADER_OFFSET + (contentViewportHeight * DETECTION_LINE_PERCENT);
+
+        const scrollTop = window.scrollY || window.pageYOffset;
+        const viewportBottom = scrollTop + window.innerHeight;
+        const documentHeight = document.documentElement.scrollHeight;
+
+        // Special case: If we're near bottom of page (within 50px), activate the last heading
+        if (viewportBottom >= documentHeight - 50) {
+            const lastHeading = this.headings[this.headings.length - 1];
+            if (lastHeading) {
+                const lastId = lastHeading.getAttribute('id');
+                this.setActive(lastId);
+                return;
+            }
+        }
+
+        // Special case: Very top of page (scrollTop < 300px), activate first heading
+        if (scrollTop < 300) {
+            if (this.headings.length > 0) {
+                const firstId = this.headings[0].getAttribute('id');
+                this.setActive(firstId);
+                return;
+            }
+        }
+
+        // Find the heading CLOSEST to our detection line (40% from top of content area)
+        // Pick the heading that's above the line and closest to it
+        let targetId = null;
+        let closestDistance = Infinity;
+        const tolerance = 5; // Allow 5px tolerance for r
+
+        for (let i = 0; i < this.headings.length; i++) {
+            const heading = this.headings[i];
+            const rect = heading.getBoundingClientRect();
+            const headingTopFromViewport = rect.top;
+
+            // Only consider headings that are at or above the detection line (with tolerance)
+            if (headingTopFromViewport <= detectionLineFromTop + tolerance) {
+                const distance = Math.abs(detectionLineFromTop - headingTopFromViewport);
+
+                // Pick the heading closest to the detection line (smallest distance)
+                if (distance < closestDistance) {
+                    closestDistance = distance;
+                    targetId = heading.getAttribute('id');
+                }
+            } else {
+                // This heading is below the line, so stop
+                break;
+            }
+        }
+
+        if (targetId) {
+            this.setActive(targetId);
+        }
+    }
+
+    /**
+     * Set a TOC link as active
+     */
+    setActive(headingId) {
+        // Don't update if already active
+        if (this.currentActiveId === headingId) {
+            return;
+        }
+
+        // Remove active from current TOC link and heading
+        if (this.currentActiveId !== null) {
+            const currentLink = this.tocLinks.get(this.currentActiveId);
+            if (currentLink) {
+                currentLink.classList.remove('active');
+            }
+
+            // Remove active class from previous heading
+            const currentHeading = document.getElementById(this.currentActiveId);
+            if (currentHeading) {
+                currentHeading.classList.remove('toc-active-heading');
+            }
+        }
+
+        // Add active to new TOC link and heading
+        const newLink = this.tocLinks.get(headingId);
+        if (newLink) {
+            newLink.classList.add('active');
+            this.currentActiveId = headingId;
+
+            // Add active class to current heading
+            const newHeading = document.getElementById(headingId);
+            if (newHeading) {
+                newHeading.classList.add('toc-active-heading');
+            }
+        }
+    }
+
+    /**
+     * Clean up event listeners
+     */
+    destroy() {
+        window.removeEventListener('scroll', this.boundHandleScroll);
+    }
+}
 
 /**
  * Initialize all TOC scroll spies on the page

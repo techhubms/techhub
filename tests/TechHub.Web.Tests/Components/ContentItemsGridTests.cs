@@ -30,17 +30,9 @@ public class ContentItemsGridTests : TestContext
             .Setup(x => x.GetContentAsync(It.IsAny<string>(), It.IsAny<string>()))
             .ReturnsAsync([]);
 
-        // Configure WebAppSettings with collection display names
+        // Configure WebAppSettings - no longer needs CollectionDisplayNames (comes from API)
         var appSettings = new WebAppSettings
         {
-            CollectionDisplayNames = new Dictionary<string, string>
-            {
-                { "blogs", "Blog Posts" },
-                { "videos", "Video Posts" },
-                { "news", "News Posts" },
-                { "community", "Community Posts" },
-                { "roundups", "Roundup Posts" }
-            },
             Seo = new SeoSettings
             {
                 BaseUrl = "https://tech.hub.ms",
@@ -68,7 +60,7 @@ public class ContentItemsGridTests : TestContext
 
         // Assert
         var h1 = cut.Find("h1.page-h1");
-        Assert.Equal("Browse All GitHub Copilot Posts", h1.TextContent);
+        Assert.Equal("Browse All GitHub Copilot Content", h1.TextContent);
     }
 
     [Fact]
@@ -82,7 +74,8 @@ public class ContentItemsGridTests : TestContext
                 Name = "news",
                 Title = "News",
                 Url = "/github-copilot/news",
-                Description = "News items"
+                Description = "News items",
+                DisplayName = "News"
             }
         };
 
@@ -98,7 +91,7 @@ public class ContentItemsGridTests : TestContext
 
         // Assert
         var h1 = cut.Find("h1.page-h1");
-        Assert.Equal("Browse GitHub Copilot News Posts", h1.TextContent);
+        Assert.Equal("Browse GitHub Copilot News", h1.TextContent);
     }
 
     [Fact]
@@ -112,7 +105,8 @@ public class ContentItemsGridTests : TestContext
                 Name = "community",
                 Title = "Community",
                 Url = "/github-copilot/community",
-                Description = "Community items"
+                Description = "Community items",
+                DisplayName = "Community Posts"
             }
         };
 
@@ -142,7 +136,8 @@ public class ContentItemsGridTests : TestContext
                 Name = "videos",
                 Title = "Videos",
                 Url = "/github-copilot/videos",
-                Description = "Videos"
+                Description = "Videos",
+                DisplayName = "Videos"
             }
         };
 
@@ -158,7 +153,7 @@ public class ContentItemsGridTests : TestContext
 
         // Assert
         var h1 = cut.Find("h1.page-h1");
-        Assert.Equal("Browse GitHub Copilot Video Posts", h1.TextContent);
+        Assert.Equal("Browse GitHub Copilot Videos", h1.TextContent);
     }
 
     [Fact]
@@ -190,7 +185,8 @@ public class ContentItemsGridTests : TestContext
                 Name = "news",
                 Title = "News",
                 Url = "/all/news",
-                Description = "All news"
+                Description = "All news",
+                DisplayName = "News"
             }
         };
 
@@ -206,6 +202,6 @@ public class ContentItemsGridTests : TestContext
 
         // Assert
         var h1 = cut.Find("h1.page-h1");
-        Assert.Equal("Browse All News Posts", h1.TextContent);
+        Assert.Equal("Browse All News", h1.TextContent);
     }
 }

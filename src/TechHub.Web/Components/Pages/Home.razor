@@ -9,8 +9,10 @@
     <link rel="alternate" type="application/rss+xml" title="Tech Hub - All Content - RSS Feed" href="/all/feed.xml" />
 </HeadContent>
 
-<PageHeader Title="Tech Hub"
-    Description="Your source for Microsoft technology news, tutorials, and community content" />
+<Header>
+    <SectionBanner Title="Tech Hub"
+        Description="Your source for Microsoft technology news, tutorials, and community content" />
+</Header>
 
 <div class="page-with-sidebar">
     @* Sidebar (Left Column) *@
@@ -83,9 +85,9 @@
     [Inject] public required ILogger<Home> Logger { get; set; }
 
     private static readonly SidebarRssLinks.RssLink[] rssLinks = [
-        new("RSS Feed - All Content", "/all/feed.xml"),
-        new("RSS Feed - Roundups", "/all/roundups/feed.xml"),
-        new("Newsletter", "https://mailchi.mp/1c8d4b5ea99c/tech-hub", GetNewsletterIcon())
+    new("RSS Feed - All Content", "/all/feed.xml"),
+new("RSS Feed - Roundups", "/all/roundups/feed.xml"),
+new("Newsletter", "https://mailchi.mp/1c8d4b5ea99c/tech-hub", GetNewsletterIcon())
     ];
 
     private IEnumerable<SectionDto>? sections;
@@ -99,30 +101,30 @@
                 d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
     </svg>;
 
-    protected override async Task OnInitializedAsync()
-    {
-        try
-        {
-            // Fetch all content in parallel
-            var sectionsTask = ApiClient.GetAllSectionsAsync();
-            var roundupsTask = ApiClient.GetContentAsync(section: null, collection: "roundups");
-            var latestItemsTask = ApiClient.GetLatestItemsAsync(count: 5);
-            var popularTagsTask = ApiClient.GetPopularTagsAsync(count: 15);
+protected override async Task OnInitializedAsync()
+{
+try
+{
+// Fetch all content in parallel
+var sectionsTask = ApiClient.GetAllSectionsAsync();
+var roundupsTask = ApiClient.GetContentAsync(section: null, collection: "roundups");
+var latestItemsTask = ApiClient.GetLatestItemsAsync(count: 5);
+var popularTagsTask = ApiClient.GetPopularTagsAsync(count: 15);
 
-            await Task.WhenAll(sectionsTask, roundupsTask, latestItemsTask, popularTagsTask);
+await Task.WhenAll(sectionsTask, roundupsTask, latestItemsTask, popularTagsTask);
 
-            sections = await sectionsTask;
+sections = await sectionsTask;
 
-            // Get roundups and order by date descending to get the latest ones first
-            var allRoundups = await roundupsTask;
-            roundups = allRoundups?.OrderByDescending(r => r.DateEpoch);
+// Get roundups and order by date descending to get the latest ones first
+var allRoundups = await roundupsTask;
+roundups = allRoundups?.OrderByDescending(r => r.DateEpoch);
 
-            latestItems = await latestItemsTask;
-            popularTags = await popularTagsTask;
-        }
-        catch (Exception ex)
-        {
-            ErrorService.HandleError(ex, Navigation, Logger);
-        }
-    }
+latestItems = await latestItemsTask;
+popularTags = await popularTagsTask;
+}
+catch (Exception ex)
+{
+ErrorService.HandleError(ex, Navigation, Logger);
+}
+}
 }

@@ -9,6 +9,15 @@ namespace TechHub.Core.Tests.Extensions;
 /// </summary>
 public class SectionExtensionsTests
 {
+    private static readonly Dictionary<string, string> TestDisplayNames = new()
+    {
+        { "blogs", "Blogs" },
+        { "videos", "Videos" },
+        { "news", "News" },
+        { "community", "Community Posts" },
+        { "roundups", "Roundups" }
+    };
+
     private static Section CreateTestSection()
     {
         return new Section
@@ -47,7 +56,7 @@ public class SectionExtensionsTests
         var section = CreateTestSection();
 
         // Act
-        var dto = section.ToDto();
+        var dto = section.ToDto(TestDisplayNames);
 
         // Assert
         dto.Name.Should().Be("ai");
@@ -66,7 +75,7 @@ public class SectionExtensionsTests
         Section? section = null;
 
         // Act
-        var act = () => section!.ToDto();
+        var act = () => section!.ToDto(TestDisplayNames);
 
         // Assert
         act.Should().Throw<ArgumentNullException>();
@@ -79,7 +88,7 @@ public class SectionExtensionsTests
         var section = CreateTestSection();
 
         // Act
-        var dto = section.ToDto();
+        var dto = section.ToDto(TestDisplayNames);
 
         // Assert
         dto.Collections.Should().HaveCount(2);
@@ -87,10 +96,12 @@ public class SectionExtensionsTests
         dto.Collections[0].Title.Should().Be("News");
         dto.Collections[0].Url.Should().Be("/ai/news");
         dto.Collections[0].Description.Should().Be("Latest AI news");
+        dto.Collections[0].DisplayName.Should().Be("News");
         dto.Collections[0].IsCustom.Should().BeFalse();
 
         dto.Collections[1].Name.Should().Be("blogs");
         dto.Collections[1].Title.Should().Be("Blogs");
+        dto.Collections[1].DisplayName.Should().Be("Blogs");
     }
 
     [Fact]
@@ -107,14 +118,55 @@ public class SectionExtensionsTests
         };
 
         // Act
-        var dto = collection.ToDto();
+        var dto = collection.ToDto(TestDisplayNames);
 
         // Assert
         dto.Name.Should().Be("videos");
         dto.Title.Should().Be("Videos");
         dto.Url.Should().Be("/github-copilot/videos");
         dto.Description.Should().Be("Video tutorials");
+        dto.DisplayName.Should().Be("Videos");
         dto.IsCustom.Should().BeFalse();
+    }
+
+    [Fact]
+    public void ToDto_CollectionReference_UsesDisplayNameFromConfiguration()
+    {
+        // Arrange
+        var collection = new CollectionReference
+        {
+            Name = "community",
+            Title = "Community",
+            Url = "/ai/community",
+            Description = "Community content",
+            IsCustom = false
+        };
+
+        // Act
+        var dto = collection.ToDto(TestDisplayNames);
+
+        // Assert
+        dto.DisplayName.Should().Be("Community Posts", "configuration maps 'community' to 'Community Posts'");
+    }
+
+    [Fact]
+    public void ToDto_CollectionReference_FallsBackToTitle_WhenDisplayNameNotInConfiguration()
+    {
+        // Arrange
+        var collection = new CollectionReference
+        {
+            Name = "unknown",
+            Title = "Unknown Collection",
+            Url = "/ai/unknown",
+            Description = "Unknown content",
+            IsCustom = false
+        };
+
+        // Act
+        var dto = collection.ToDto(TestDisplayNames);
+
+        // Assert
+        dto.DisplayName.Should().Be("Unknown Collection", "display name should fallback to Title when not found in configuration");
     }
 
     [Fact]
@@ -124,7 +176,7 @@ public class SectionExtensionsTests
         CollectionReference? collection = null;
 
         // Act
-        var act = () => collection!.ToDto();
+        var act = () => collection!.ToDto(TestDisplayNames);
 
         // Assert
         act.Should().Throw<ArgumentNullException>();
@@ -144,10 +196,11 @@ public class SectionExtensionsTests
         };
 
         // Act
-        var dto = collection.ToDto();
+        var dto = collection.ToDto(TestDisplayNames);
 
         // Assert
         dto.IsCustom.Should().BeTrue();
+        dto.DisplayName.Should().Be("Custom Collection", "custom collection should use Title as display name");
     }
 
     [Fact]
@@ -179,7 +232,7 @@ public class SectionExtensionsTests
         };
 
         // Act
-        var dtos = sections.ToDtos();
+        var dtos = sections.ToDtos(TestDisplayNames);
 
         // Assert
         dtos.Should().HaveCount(2);
@@ -196,7 +249,7 @@ public class SectionExtensionsTests
         var sections = Enumerable.Empty<Section>();
 
         // Act
-        var dtos = sections.ToDtos();
+        var dtos = sections.ToDtos(TestDisplayNames);
 
         // Assert
         dtos.Should().BeEmpty();
@@ -218,7 +271,7 @@ public class SectionExtensionsTests
         };
 
         // Act
-        var dto = section.ToDto();
+        var dto = section.ToDto(TestDisplayNames);
 
         // Assert
         dto.Collections.Should().BeEmpty();

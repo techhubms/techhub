@@ -71,29 +71,37 @@
 .markdown-content h2,
 .content-detail-body h2 {
     font-size: var(--font-size-2xl);
-    border-bottom: 1px solid var(--color-border-muted);
+    border-bottom: none;
     padding-bottom: var(--spacing-1);
+    background: linear-gradient(to right, var(--color-purple-dark), transparent);
+    background-size: 100% 1px;
+    background-position: bottom;
+    background-repeat: no-repeat;
 }
 
 .markdown-content h3,
 .content-detail-body h3 {
     font-size: var(--font-size-xl);
+    padding-bottom: var(--spacing-1);
 }
 
 .markdown-content h4,
 .content-detail-body h4 {
     font-size: var(--font-size-lg);
+    padding-bottom: var(--spacing-1);
 }
 
 .markdown-content h5,
 .content-detail-body h5 {
     font-size: var(--font-size-base);
+    padding-bottom: var(--spacing-1);
 }
 
 .markdown-content h6,
 .content-detail-body h6 {
     font-size: var(--font-size-sm);
     color: var(--color-text-muted);
+    padding-bottom: var(--spacing-1);
 }
 
 /* =================================================================

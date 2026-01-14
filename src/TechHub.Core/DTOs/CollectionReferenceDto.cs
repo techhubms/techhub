@@ -9,5 +9,6 @@ public record CollectionReferenceDto
     public required string Title { get; init; }
     public required string Url { get; init; }
     public required string Description { get; init; }
+    public required string DisplayName { get; init; }
     public bool IsCustom { get; init; }
 }

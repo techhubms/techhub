@@ -5,13 +5,13 @@
 @implements IDisposable
 @rendermode InteractiveServer
 
-<header class="site-header">
-    <div class="header-content">
+<nav class="main-nav" aria-label="Primary navigation">
+    <div class="main-nav-content">
         <a href="/" class="site-logo" aria-label="Tech Hub Home">
             <span class="logo-text">Tech Hub</span>
         </a>
 
-        <nav class="main-nav" aria-label="Primary navigation">
+        <div class="nav-links">
             @foreach (var item in SectionCache.Sections)
             {
                 <a href="/@item.Name" class="nav-link @(IsActiveSection(item.Name) ? "active" : "")">
@@ -21,9 +21,9 @@
             <a href="/about" class="nav-link about-link @(IsActivePage("/about") ? "active" : "")">
                 About
             </a>
-        </nav>
+        </div>
     </div>
-</header>
+</nav>
 
 @code {
     private string currentSection = "";

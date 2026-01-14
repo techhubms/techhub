@@ -1,0 +1,44 @@
+@using TechHub.Core.DTOs
+
+@* 
+    SectionBanner - Decorative banner/hero for section pages
+    
+    Usage:
+    <SectionBanner Section="@sectionData" />
+    <SectionBanner Title="Page Title" Description="Description" BackgroundImage="/images/bg.jpg" />
+*@
+
+<div class="section-banner @CssClass" style="@StyleAttribute">
+    <div class="section-banner-content header-text-overlay">
+        <h1 class="banner-title">@DisplayTitle</h1>
+        @if (!string.IsNullOrEmpty(DisplayDescription))
+        {
+            <p class="banner-description">@DisplayDescription</p>
+        }
+    </div>
+</div>
+
+@code {
+    // For static pages - provide Title, Description, BackgroundImage
+    [Parameter]
+    public string? Title { get; set; }
+    
+    [Parameter]
+    public string? Description { get; set; }
+    
+    [Parameter]
+    public string? BackgroundImage { get; set; }
+    
+    // For section pages - provide Section
+    [Parameter]
+    public SectionDto? Section { get; set; }
+    
+    // Computed properties - prefer Section data if available
+    private string DisplayTitle => Section?.Title ?? Title ?? string.Empty;
+    private string? DisplayDescription => Section?.Description ?? Description;
+    private string? DisplayBackgroundImage => Section?.BackgroundImage ?? BackgroundImage;
+    
+    private string CssClass => string.IsNullOrEmpty(DisplayBackgroundImage) ? "home-banner" : "";
+    
+    private string StyleAttribute => $"background-image: url('{DisplayBackgroundImage ?? "/images/section-backgrounds/home.jpg"}'); background-size: cover; background-position: center; background-repeat: no-repeat;";
+}
