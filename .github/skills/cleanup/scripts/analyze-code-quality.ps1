@@ -120,47 +120,95 @@ $branch = git rev-parse --abbrev-ref HEAD 2>$null
 $commitSha = git rev-parse --short HEAD 2>$null
 $date = Get-Date -Format "yyyy-MM-dd HH:mm:ss"
 
+# Build detailed sections for each priority
+function Build-IssueSection {
+    param($GroupedIssues, $Priority)
+    
+    if (-not $GroupedIssues -or $GroupedIssues.Count -eq 0) {
+        return "_No $Priority priority issues found._`n"
+    }
+    
+    $section = ""
+    foreach ($group in $GroupedIssues) {
+        $ruleId = $group.Name
+        $count = $group.Count
+        $firstIssue = $group.Group[0]
+        
+        # Clean message
+        $message = $firstIssue.Message -replace ' \(https://.*\)', ''
+        
+        # Determine recommendation
+        $recommendation = switch ($Priority) {
+            'High' { '**Fix immediately** - Critical issue' }
+            'Medium' { '**Fix or suppress** - Review and decide' }
+            'Low' { '**Suppress recommended** - Style/formatting' }
+        }
+        
+        $section += @"
+
+### $ruleId
+
+**Count**: $count occurrence(s)  
+**Recommendation**: $recommendation
+
+**Description**: $message
+
+**Affected Files**:
+
+"@
+        
+        foreach ($issue in $group.Group | Select-Object -First 10) {
+            $relativePath = $issue.File -replace [regex]::Escape($ScriptRoot), '' -replace '^[\\/]', ''
+            $section += "- [$relativePath]($relativePath#L$($issue.Line))`n"
+        }
+        
+        if ($count -gt 10) {
+            $section += "`n_...and $($count - 10) more occurrence(s)_`n"
+        }
+        
+        $section += "`n---`n"
+    }
+    
+    return $section
+}
+
+$highPriorityDetails = Build-IssueSection -GroupedIssues $groupedIssues.High -Priority 'High'
+$mediumPriorityDetails = Build-IssueSection -GroupedIssues $groupedIssues.Medium -Priority 'Medium'
+$lowPriorityDetails = Build-IssueSection -GroupedIssues $groupedIssues.Low -Priority 'Low'
+
+# Build suppression examples
+$suppressionExamples = ""
+if ($groupedIssues.Low -and $groupedIssues.Low.Count -gt 0) {
+    foreach ($group in $groupedIssues.Low | Select-Object -First 5) {
+        $ruleId = $group.Name
+        $firstIssue = $group.Group[0]
+        $message = $firstIssue.Message -replace ' \(https://.*\)', '' | Select-Object -First 1
+        $suppressionExamples += "dotnet_diagnostic.$ruleId.severity = none  # $($message -split '\.' | Select-Object -First 1)`n"
+    }
+}
+else {
+    $suppressionExamples = "# No suppressions needed"
+}
+
+# Calculate totals
+$totalIssues = $issues.High.Count + $issues.Medium.Count + $issues.Low.Count
+
 # Replace placeholders in template
 $output = $template
 $output = $output -replace '\{DATE\}', $date
 $output = $output -replace '\{BRANCH\}', ($branch ?? 'unknown')
 $output = $output -replace '\{COMMIT_SHA\}', ($commitSha ?? 'unknown')
+$output = $output -replace '\{BUILD_RESULT\}', $(if ($buildSuccess) { '✅ Success' } else { '❌ Failed' })
 $output = $output -replace '\{ERROR_COUNT\}', $errors.Count
 $output = $output -replace '\{WARNING_COUNT\}', $warnings.Count
 $output = $output -replace '\{HIGH_PRIORITY_COUNT\}', $issues.High.Count
 $output = $output -replace '\{MEDIUM_PRIORITY_COUNT\}', $issues.Medium.Count
 $output = $output -replace '\{LOW_PRIORITY_COUNT\}', $issues.Low.Count
-
-# Build detailed sections
-$highPrioritySection = ""
-foreach ($group in $groupedIssues.High) {
-    $ruleId = $group.Name
-    $count = $group.Count
-    $firstIssue = $group.Group[0]
-    
-    $highPrioritySection += @"
-
-#### Category: $ruleId
-
-**Count**: $count  
-**Severity**: Warning  
-**Recommendation**: Fix
-
-**Description**: $($firstIssue.Message -replace ' \(https://.*\)', '')
-
-**Affected Files**:
-
-"@
-    
-    foreach ($issue in $group.Group | Select-Object -First 5) {
-        $relativePath = $issue.File -replace [regex]::Escape($ScriptRoot), '' -replace '^[\\/]', ''
-        $highPrioritySection += "- [$relativePath]($relativePath#L$($issue.Line))`n"
-    }
-    
-    if ($count -gt 5) {
-        $highPrioritySection += "`n_...and $($count - 5) more occurrence(s)_`n"
-    }
-}
+$output = $output -replace '\{TOTAL_ISSUE_COUNT\}', $totalIssues
+$output = $output -replace '\{HIGH_PRIORITY_DETAILS\}', $highPriorityDetails
+$output = $output -replace '\{MEDIUM_PRIORITY_DETAILS\}', $mediumPriorityDetails
+$output = $output -replace '\{LOW_PRIORITY_DETAILS\}', $lowPriorityDetails
+$output = $output -replace '\{SUPPRESSION_EXAMPLES\}', $suppressionExamples
 
 # Save output
 $output | Out-File -FilePath $OutputFile -Encoding utf8

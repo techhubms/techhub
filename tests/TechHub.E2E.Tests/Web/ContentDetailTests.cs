@@ -97,8 +97,6 @@ public class ContentDetailTests(PlaywrightCollectionFixture fixture) : IAsyncLif
             .ToBeVisibleAsync(new() { Timeout = BlazorHelpers.DefaultAssertionTimeout });
     }
 
-
-
     [Fact]
     public async Task ContentDetailPage_TwoColumnLayout_DisplaysCorrectly()
     {
@@ -123,6 +121,5 @@ public class ContentDetailTests(PlaywrightCollectionFixture fixture) : IAsyncLif
         await Assertions.Expect(Page.Locator(".sidebar h2:has-text('Tags')"))
             .ToBeVisibleAsync(new() { Timeout = BlazorHelpers.DefaultAssertionTimeout });
     }
-
 }
 

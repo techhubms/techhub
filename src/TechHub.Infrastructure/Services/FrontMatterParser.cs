@@ -108,7 +108,9 @@ public class FrontMatterParser
         {
             return (T)Convert.ChangeType(value, typeof(T), System.Globalization.CultureInfo.InvariantCulture);
         }
+#pragma warning disable CA1031 // Do not catch general exception types - intentional to return default value for any parse errors
         catch
+#pragma warning restore CA1031
         {
             return defaultValue;
         }

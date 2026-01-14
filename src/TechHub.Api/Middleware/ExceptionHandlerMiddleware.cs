@@ -7,7 +7,9 @@ namespace TechHub.Api.Middleware;
 /// Global exception handler middleware that catches all unhandled exceptions
 /// and returns consistent error responses
 /// </summary>
+#pragma warning disable CA1812 // Internal class is never instantiated - instantiated by ASP.NET Core middleware pipeline
 internal sealed class ExceptionHandlerMiddleware(
+#pragma warning restore CA1812
     RequestDelegate next,
     ILogger<ExceptionHandlerMiddleware> logger,
     IHostEnvironment environment)
@@ -26,7 +28,9 @@ internal sealed class ExceptionHandlerMiddleware(
         {
             await _next(context);
         }
+#pragma warning disable CA1031 // Do not catch general exception types - intentional in exception handler middleware
         catch (Exception ex)
+#pragma warning restore CA1031
         {
             _logger.LogError(ex, "Unhandled exception occurred. Path: {Path}", context.Request.Path);
             await HandleExceptionAsync(context, ex);
@@ -56,7 +60,7 @@ internal sealed class ExceptionHandlerMiddleware(
         await context.Response.WriteAsync(JsonSerializer.Serialize(response, _jsonOptions));
     }
 
-    private record ErrorResponse
+    private sealed record ErrorResponse
     {
         public required int Status { get; init; }
         public required string Message { get; init; }

@@ -24,7 +24,9 @@ Execute cleanup tasks in this order for best results:
 4. **Fix or Suppress Issues** - Address issues based on overview recommendations
 5. **Dead Code Removal** - Remove unused code
 6. **Documentation Sync** - Update docs to match code
-7. **Final Validation** - Verify all checks pass
+7. **Test Review** - Review tests for correctness, completeness, and proper positioning
+8. **Best Practices Review** - Scan for common anti-patterns and code quality issues
+9. **Final Validation** - Verify all checks pass
 
 ## Detailed Instructions
 
@@ -32,7 +34,7 @@ Follow these steps in order. Do not skip steps or proceed if a step fails.
 
 ### Step 1: Build and Test Verification
 
-**Execute**: [`./run.ps1 -Clean -OnlyTests`](../../../../run.ps1)
+**Execute**: [`./run.ps1 -Clean -OnlyTests`](./workspaces/techhub/run.ps1)
 
 **Purpose**: Ensure the solution compiles without errors and all tests pass before making any changes.
 
@@ -52,7 +54,7 @@ Follow these steps in order. Do not skip steps or proceed if a step fails.
 
 ### Step 2: Code Formatting
 
-**Execute**: [`./scripts/format-code.ps1`](./scripts/format-code.ps1)
+**Execute**: [`/.github/skills/cleanup/scripts/format-code.ps1`](./.github/skills/cleanup/scripts/format-code.ps1)
 
 **Purpose**: Apply consistent code formatting to all C# files using `dotnet format`.
 
@@ -70,29 +72,48 @@ Follow these steps in order. Do not skip steps or proceed if a step fails.
 
 ### Step 3: Generate Quality Overview
 
-**Execute**: [`./scripts/analyze-code-quality.ps1`](./scripts/analyze-code-quality.ps1)
+**Execute**: [`/.github/skills/cleanup/scripts/analyze-code-quality.ps1`](./.github/skills/cleanup/scripts/analyze-code-quality.ps1)
 
-**Purpose**: Build the solution and analyze all warnings, errors, and code quality issues.
+**Purpose**: Build the solution and analyze all warnings, errors, and code quality issues from `dotnet build` output.
 
-**Output**: Creates a detailed overview file using the [overview template](./templates/overview-template.md).
+**Output**: Creates a detailed overview file at `.tmp/code-quality-overview.md` using the [overview template](./.github/skills/cleanup/templates/overview-template.md).
 
-**What it reports**:
+**What the template shows**:
 
-- Compilation errors and warnings categorized by priority
-- Analyzer issues (CA*, IDE*, RZ*, etc.)
-- Recommendations for fix vs suppress decisions
-- File locations with line numbers
+- **Build status**: Success/failure, error count, warning count
+- **High priority issues** (🔴): Critical bugs, security issues, Blazor/Razor problems
+  - These MUST be fixed before proceeding
+  - Examples: CA1062 (null checks), RZ2012 (Blazor component issues)
+- **Medium priority issues** (🟡): Code quality and maintainability concerns
+  - Should be fixed or explicitly suppressed with reason
+  - Examples: Most CA\* analyzers
+- **Low priority issues** (🟢): Style, formatting, documentation
+  - Can be safely suppressed to reduce noise
+  - Examples: IDE\* suggestions, CS15\* documentation warnings
+- **Quick response guide**: Template for user to tell you what to do
 
-**Requirements**:
+**When to use this template**:
 
-- ✅ Overview file is generated successfully
-- 📋 Review the overview before proceeding
+- ✅ **Always run after Step 2 (Code Formatting)** - Shows all `dotnet build` warnings
+- ✅ **When code quality issues need review** - Provides clear priority assessment
+- ✅ **Before making fixes** - Gives user visibility to decide fix vs suppress
+- ✅ **After major changes** - Verifies no new issues were introduced
 
 **Action Required**:
 
-- Read the generated overview
-- Decide which issues to fix and which to suppress
-- Discuss with user if needed
+1. **Read the generated overview** (`.tmp/code-quality-overview.md`)
+2. **Present it to the user** - Show summary and ask for decisions
+3. **Wait for user response** - User will tell you which issues to fix/suppress/show
+4. **Do NOT proceed automatically** - User must review and approve actions
+
+**User Response Format**:
+
+The template includes a "Quick Response Guide" section that helps users respond with:
+
+- **"Fix {RULE_ID}"** - You'll fix all occurrences of that rule
+- **"Suppress {RULE_ID}"** - You'll add `.editorconfig` suppression
+- **"Show {RULE_ID}"** - You'll show the code for manual review
+- **"Suppress all low priority"** - You'll suppress all low-priority warnings
 
 ---
 
@@ -118,15 +139,15 @@ Follow these steps in order. Do not skip steps or proceed if a step fails.
 
 **After making changes**:
 
-- Run [`./run.ps1 -OnlyTests`](../../../../run.ps1) to verify changes
+- Run [`./run.ps1 -OnlyTests`](./run.ps1) to verify changes
 - Use `get_errors` tool to check for new VS Code diagnostics
 - Fix any new issues introduced by changes
 
 ---
 
-### Step 5: Dead Code Removal
+### Step 5: Dead Code Detection
 
-**Execute**: [`./scripts/find-dead-code.ps1`](./scripts/find-dead-code.ps1)
+**Execute**: [`/.github/skills/cleanup/scripts/find-dead-code.ps1`](./.github/skills/cleanup/scripts/find-dead-code.ps1)
 
 **Purpose**: Identify unused code, imports, members, and CSS classes.
 
@@ -137,50 +158,368 @@ Follow these steps in order. Do not skip steps or proceed if a step fails.
 - Commented-out code blocks
 - Unused CSS classes
 
-**Review output carefully**:
+**Output**: Console report of all potentially dead code with confidence levels
 
-- Verify findings before removing code
-- Check for reflection usage or dynamic code
-- Use `grep_search` to confirm code is truly unused
-- Look for false positives (see [Common False Positives](#common-false-positives))
+**Action Required**:
 
-**To remove dead code after verification**:
+1. **Review the findings** in console output
+2. **Verify suspicious items** manually using `grep_search` or `read_file`
+3. **Tell me which items to remove**:
+   - "Remove all high confidence items"
+   - "Remove unused usings only"
+   - "Show me [specific item] before removing"
+   - "Skip dead code removal" (if all items are false positives)
+4. **Do NOT proceed automatically** - User must approve removals
 
-1. Review the findings from the script output
-2. Verify suspicious items manually using `grep_search` or `read_file`
-3. Execute [`./scripts/find-dead-code.ps1 -Fix`](./scripts/find-dead-code.ps1) to automatically remove confirmed dead code
+**Common False Positives** to watch for:
 
-**After removing**:
+- xUnit test methods (discovered by reflection)
+- Blazor component parameters (set via Razor)
+- Minimal API handlers (registered in `Program.cs`)
+- Private fields only used in `Dispose()` methods
 
-- Run [`./run.ps1 -OnlyTests`](../../../../run.ps1) to verify nothing broke
+**After user approval**:
+
+- Execute `find-dead-code.ps1 -Fix` (if user confirmed)
+- Run [`./run.ps1 -OnlyTests`](./run.ps1) to verify nothing broke
 - Use `get_errors` to check for new compilation issues
 
 ---
 
-### Step 6: Documentation Synchronization
+### Step 6: Documentation Review
 
-**Execute**: [`./scripts/verify-documentation.ps1`](./scripts/verify-documentation.ps1)
+**Execute**: [`/.github/skills/cleanup/scripts/verify-documentation.ps1`](./.github/skills/cleanup/scripts/verify-documentation.ps1)
 
-**Purpose**: Ensure documentation matches current code implementation.
+**Purpose**: Ensure documentation matches current code and follows [documentation strategy](./workspaces/techhub/docs/AGENTS.md).
 
 **What it checks**:
 
-- API documentation matches actual endpoints
-- Code comments are accurate
-- AGENTS.md patterns match current code
-- README.md instructions work
+1. **File existence**: All required AGENTS.md and functional docs exist
+2. **Broken links**: Markdown links point to existing files
+3. **API coverage**: Endpoints are documented in api-specification.md
+4. **Documentation completeness**: Based on docs/AGENTS.md strategy
+5. **Content placement**: Docs in correct locations per hierarchy
+6. **Staleness**: Documentation reflects current implementation
+7. **Duplication**: Content isn't duplicated across files
+8. **Consistency**: Terminology matches Site Terminology in root AGENTS.md
+
+**Output**: Verification report with file checks, broken links, and API documentation gaps
+
+**Enhanced Documentation Review**:
+
+After running the basic verification script, perform comprehensive review:
+
+1. **Read [/workspaces/techhub/docs/AGENTS.md](./workspaces/techhub/docs/AGENTS.md)** to understand documentation strategy
+2. **Scan implementation** to find undocumented features:
+   - New API endpoints not in api-specification.md
+   - Changed filtering behavior not in filtering-system.md
+   - New content workflows not in content-management.md
+3. **Review existing docs** for:
+   - **Completeness**: Missing sections or outdated information
+   - **Staleness**: References to removed features or old patterns
+   - **Consistency**: Terminology matches root AGENTS.md Site Terminology
+   - **Duplication**: Same content in multiple files (should link instead)
+   - **Placement**: Content in correct file per docs/AGENTS.md hierarchy
+4. **Check AGENTS.md files** against implementation:
+   - Patterns still match current code
+   - Commands still work
+   - Examples are up-to-date
+
+**Action Required**:
+
+1. **Present verification results** to user
+2. **Show any documentation gaps** found during implementation scan
+3. **List inconsistencies** or stale content discovered
+4. **Wait for user decisions**:
+   - "Fix broken links"
+   - "Update API specification for [endpoint]"
+   - "Remove stale references to [feature]"
+   - "Document [new feature]"
+   - "Skip documentation updates" (if all is current)
 
 **Update as needed**:
 
 - Sync outdated documentation
 - Add missing documentation for new features
 - Remove documentation for deleted code
+- Fix broken links
+- Consolidate duplicated content
 
 ---
 
-### Step 7: Final Validation
+### Step 7: Test Review
 
-**Execute**: [`./run.ps1 -Clean -OnlyTests`](../../../../run.ps1)
+**Read First**: [/workspaces/techhub/tests/AGENTS.md](./workspaces/techhub/tests/AGENTS.md)
+
+**Purpose**: Review all tests for correctness, completeness, proper positioning, and adherence to testing standards defined in tests/AGENTS.md.
+
+**What to review**:
+
+1. **Test Correctness**:
+   - ✅ Tests follow AAA pattern (Arrange-Act-Assert) with explicit comments
+   - ✅ Test names follow `{MethodName}_{Scenario}_{ExpectedOutcome}` convention
+   - ✅ **Test names accurately describe what is being tested** (name matches behavior)
+   - ✅ Test names are descriptive enough to understand test purpose without reading code
+   - ✅ Tests use `async Task` not `async void`
+   - ✅ Tests include proper assertions (not missing or trivial)
+   - ✅ Tests dispose resources properly
+   - ✅ No shared mutable state between tests
+   - ❌ No production logic duplicated in tests
+   - ❌ No testing of implementation details (test public API only)
+
+2. **Test Completeness**:
+   - ✅ Happy path scenarios covered
+   - ✅ Edge cases covered (null, empty, boundary values)
+   - ✅ Error cases covered (exceptions, validation failures)
+   - ✅ Regression tests for known bugs
+   - ✅ All public API methods have tests
+   - ✅ Critical business logic thoroughly tested
+
+3. **Test Positioning** (correct layer):
+   - **Unit Tests** (`TechHub.Core.Tests/`, `TechHub.Infrastructure.Tests/`):
+     - Tests domain logic in isolation
+     - Mocks external dependencies (file system, HTTP, external APIs)
+     - No real file I/O or network calls
+   - **Integration Tests** (`TechHub.Api.Tests/`):
+     - Tests API endpoints with WebApplicationFactory
+     - **Uses mocked repositories/services** (not real file system)
+     - Tests request/response contracts
+   - **Component Tests** (`TechHub.Web.Tests/`):
+     - Tests Blazor components with bUnit
+     - Mocks services and dependencies
+     - Tests rendering and component logic
+   - **E2E Tests** (`TechHub.E2E.Tests/`):
+     - Tests complete user workflows
+     - **Uses real dependencies** (actual file system, real data)
+     - Tests both API (HttpClient) and UI (Playwright)
+     - NO mocking - tests real behavior
+   - **PowerShell Tests** (`powershell/`):
+     - Tests automation scripts with Pester
+     - Mocks external commands
+
+4. **Test Type Correctness**:
+   - ❌ Unit tests don't access file system or network
+   - ❌ Integration tests don't use real file system (should mock repositories)
+   - ❌ E2E tests don't use mocks (should use real dependencies)
+   - ✅ Tests are in correct test project for what they test
+   - ✅ Mocking strategy matches test layer (see tests/AGENTS.md)
+
+5. **Common Anti-Patterns to Flag**:
+   - ❌ Duplicating production logic in test files
+   - ❌ Copying production code into tests
+   - ❌ Testing implementation details instead of public API
+   - ❌ Mocking what you're testing (only mock dependencies)
+   - ❌ Sharing mutable state between tests
+   - ❌ Assuming test execution order
+   - ❌ Skipped tests without clear reason
+   - ❌ Flaky tests that pass/fail randomly
+   - ❌ Using `async void` in tests
+   - ❌ **Test names that don't match test behavior** (misleading or inaccurate names)
+   - ❌ **Vague test names** (e.g., `Test1`, `TestMethod`, `ShouldWork`)
+
+6. **TDD Compliance**:
+   - ✅ Bug fixes have regression tests
+   - ✅ New features have tests
+   - ✅ Tests verify behavior, not just code coverage
+   - ✅ Tests are maintained alongside code
+
+**Review Process**:
+
+1. **Read tests/AGENTS.md** to understand testing standards
+2. **Read project-specific test AGENTS.md files**:
+   - `tests/TechHub.Core.Tests/AGENTS.md` - Unit test patterns
+   - `tests/TechHub.Infrastructure.Tests/AGENTS.md` - Infrastructure test patterns
+   - `tests/TechHub.Api.Tests/AGENTS.md` - Integration test patterns (mocked dependencies)
+   - `tests/TechHub.Web.Tests/AGENTS.md` - Component test patterns
+   - `tests/TechHub.E2E.Tests/AGENTS.md` - E2E test patterns (real dependencies)
+   - `tests/powershell/AGENTS.md` - PowerShell test patterns
+3. **Scan test files** in each test project using `file_search` and `grep_search`
+4. **For each test method, verify**:
+   - Read the test code (Arrange, Act, Assert sections)
+   - Check if the test name accurately describes what is being tested
+   - Verify the scenario in the name matches the actual test setup
+   - Verify the expected outcome in the name matches the assertions
+   - Flag any mismatch between name and behavior
+5. **Check for violations** of testing standards
+6. **Identify misplaced tests** (e.g., unit tests in E2E project)
+7. **Find missing test coverage** for critical features
+
+**Action Required**:
+
+1. **Present findings** to user with specific examples:
+   - "Found 5 tests missing AAA comments in `TechHub.Core.Tests/Models/ContentItemTests.cs`"
+   - "Test `GetSections_ReturnsData()` name doesn't match behavior - actually tests filtering, should be `GetSections_WithTagFilter_ReturnsFilteredData()`"
+   - "Test `RepositoryTests.GetAll_ReturnsItems()` duplicates production parsing logic"
+   - "Integration test `ApiTests.GetSections_ReturnsData()` uses real file system - should mock repository"
+   - "Missing edge case tests for null/empty inputs in `MarkdownServiceTests.cs`"
+   - "Vague test name `Test1()` in `ContentItemTests.cs` - should describe scenario and outcome"
+2. **Categorize issues by severity**:
+   - 🔴 **Critical**: Tests that are broken, flaky, or fundamentally wrong
+   - 🟡 **Important**: Tests missing coverage, incorrect positioning, anti-patterns
+   - 🟢 **Minor**: Naming conventions, missing comments, minor style issues
+3. **Wait for user decisions**:
+   - "Fix all critical issues"
+   - "Move integration tests to use mocked repositories"
+   - "Add missing edge case tests for [feature]"
+   - "Fix AAA pattern violations"
+   - "Skip test review" (if all tests are correct)
+
+**Common Issues to Watch For**:
+
+- **Misplaced E2E Tests**: E2E tests MUST use real file system and real dependencies
+  - If test uses mocks → It's NOT E2E, move to integration or unit layer
+- **Integration Tests Using Real Files**: API integration tests should mock repositories
+  - If test reads real markdown files → Should use mocked repository instead
+- **Unit Tests With File I/O**: Unit tests should never touch file system
+  - If test creates/reads files → Should mock file system or move to integration layer
+- **Missing E2E Coverage**: UI changes MUST have E2E tests
+  - Check for URL routing, component interactivity, navigation changes without E2E tests
+
+**After user approval**:
+
+- Fix test issues using `replace_string_in_file` or `multi_replace_string_in_file`
+- Move misplaced tests to correct projects
+- Add missing test coverage
+- Run [`./run.ps1 -OnlyTests`](./run.ps1) to verify all tests still pass
+- Use `get_errors` to check for new issues
+
+---
+
+### Step 8: Best Practices Review
+
+**Purpose**: Review source code for common anti-patterns, performance issues, and coding best practices violations.
+
+**What to review**:
+
+1. **Null Safety Issues**:
+   - ❌ `.Count` or `.Length` on potentially null collections without null check
+   - ❌ Direct property access without null-conditional operator (`?.`)
+   - ❌ Missing null checks on parameters that could be null
+   - ✅ Proper use of null-conditional operators (`?.`, `??`)
+   - ✅ Nullable reference types used correctly
+
+2. **Collection and LINQ Anti-Patterns**:
+   - ❌ `.Count()` on `IEnumerable` that's already a collection (use `.Count` property)
+   - ❌ `.Any()` followed by `.First()` (use `.FirstOrDefault()` instead)
+   - ❌ Multiple enumerations of same `IEnumerable` (materialize with `.ToList()`)
+   - ❌ Unnecessary `.ToList()` when only enumerating once
+   - ❌ Using `foreach` with `.Add()` instead of LINQ operations
+   - ✅ Efficient LINQ usage with proper materialization
+
+3. **Async/Await Patterns**:
+   - ❌ `async void` methods (except event handlers)
+   - ❌ `.Result` or `.Wait()` on async operations (causes deadlocks)
+   - ❌ Missing `ConfigureAwait(false)` in library code
+   - ❌ Async methods not awaited (missing `await`)
+   - ✅ Proper async/await throughout call chain
+   - ✅ Cancellation tokens passed through async operations
+
+4. **Disposal and Resource Management**:
+   - ❌ `IDisposable` objects not disposed (missing `using` statement)
+   - ❌ Streams, HttpClient, database connections not properly disposed
+   - ❌ Event handlers not unsubscribed (memory leaks)
+   - ✅ Proper `using` statements or `using` declarations
+   - ✅ Dispose pattern implemented correctly
+
+5. **String and StringBuilder Issues**:
+   - ❌ String concatenation in loops (use `StringBuilder`)
+   - ❌ `string.Format` when interpolation is clearer (`$"..."`)
+   - ❌ Case-sensitive string comparisons without culture specification
+   - ✅ `StringBuilder` for complex string building
+   - ✅ String interpolation for readability
+   - ✅ `StringComparison.OrdinalIgnoreCase` for comparisons
+
+6. **Exception Handling**:
+   - ❌ Empty catch blocks (swallowing exceptions)
+   - ❌ Catching generic `Exception` without logging
+   - ❌ Using exceptions for control flow
+   - ❌ Not logging caught exceptions with context
+   - ✅ Specific exception types caught
+   - ✅ All exceptions logged with full context
+   - ✅ Proper error handling and recovery
+
+7. **Performance Issues**:
+   - ❌ Synchronous I/O in async methods
+   - ❌ Boxing of value types in hot paths
+   - ❌ Inefficient string operations in loops
+   - ❌ Creating objects unnecessarily in loops
+   - ✅ Async I/O for all file/network operations
+   - ✅ Value types used efficiently
+   - ✅ Object pooling where appropriate
+
+8. **Dependency Injection Issues**:
+   - ❌ Using `new` for services (should be injected)
+   - ❌ Static dependencies (makes testing hard)
+   - ❌ Service locator pattern (anti-pattern)
+   - ❌ Incorrect service lifetimes (Singleton vs Scoped vs Transient)
+   - ✅ Constructor injection for dependencies
+   - ✅ Proper service registration
+
+9. **Magic Values and Configuration**:
+   - ❌ Hard-coded values (URLs, file paths, connection strings)
+   - ❌ Magic numbers without named constants
+   - ❌ Configuration values not in `appsettings.json`
+   - ✅ Configuration-driven design
+   - ✅ Named constants for magic values
+   - ✅ Settings from configuration files
+
+10. **Code Readability and Maintainability**:
+    - ❌ Long methods (>50 lines) that do multiple things
+    - ❌ Deep nesting (>3 levels)
+    - ❌ Unclear variable names (`x`, `temp`, `data`)
+    - ❌ Comments explaining "what" instead of "why"
+    - ✅ Single Responsibility Principle
+    - ✅ Clear, descriptive names
+    - ✅ Comments explain "why" when code shows "what"
+
+**Review Process**:
+
+1. **Use `grep_search` to find common patterns**:
+
+   ```powershell
+   # Find .Count without null check
+   grep_search -query "\.Count(?!\(\))" -isRegexp true -includePattern "src/**/*.cs"
+   
+   # Find .Result or .Wait() (deadlock risks)
+   grep_search -query "\.(Result|Wait\(\))" -isRegexp true -includePattern "src/**/*.cs"
+   
+   # Find async void methods
+   grep_search -query "async void" -isRegexp false -includePattern "src/**/*.cs"
+   
+   # Find empty catch blocks
+   grep_search -query "catch\s*\(\w+\)\s*\{\s*\}" -isRegexp true -includePattern "src/**/*.cs"
+   ```
+
+2. **Read source files** to verify context and check for false positives
+
+3. **Categorize findings** by severity:
+   - 🔴 **Critical**: Bugs, security issues, potential runtime errors (null refs, deadlocks)
+   - 🟡 **Important**: Performance issues, maintainability problems, anti-patterns
+   - 🟢 **Minor**: Style improvements, readability enhancements
+
+4. **Present findings** to user with specific examples and recommendations
+
+**Action Required**:
+
+1. **Show findings** with file locations and code snippets
+2. **Categorize by severity** (Critical, Important, Minor)
+3. **Wait for user decisions**:
+   - "Fix all critical issues"
+   - "Fix [specific pattern]"
+   - "Show me [file/method] for manual review"
+   - "Skip best practices review" (if all code is clean)
+
+**After user approval**:
+
+- Fix issues using `replace_string_in_file` or `multi_replace_string_in_file`
+- Run [`./run.ps1 -OnlyTests`](./run.ps1) to verify changes
+- Use `get_errors` to check for new issues
+
+---
+
+### Step 9: Final Validation
+
+**Execute**: [`/run.ps1 -Clean -OnlyTests`](./run.ps1)
 
 **Purpose**: Final verification that all changes are correct and nothing is broken.
 
@@ -196,8 +535,8 @@ Follow these steps in order. Do not skip steps or proceed if a step fails.
 - [ ] Solution builds without errors
 - [ ] Warnings significantly reduced (or properly suppressed)
 - [ ] All tests pass (same or better than Step 1)
-- [ ] Code formatting verified: [`./scripts/format-code.ps1 -Verify`](./scripts/format-code.ps1)
-- [ ] PowerShell tests pass: [`../../scripts/run-powershell-tests.ps1`](../../../../scripts/run-powershell-tests.ps1)
+- [ ] Code formatting verified: [`/.github/skills/cleanup/scripts/format-code.ps1 -Verify`](./.github/skills/cleanup/scripts/format-code.ps1)
+- [ ] PowerShell tests pass: [`/scripts/run-powershell-tests.ps1`](./scripts/run-powershell-tests.ps1)
 - [ ] No new VS Code diagnostics (`get_errors` tool)
 
 ---
@@ -228,10 +567,6 @@ After completing all steps, provide a summary report:
 - Suppressed {N} low priority warnings
 - Removed {N} dead code items
 - Updated {N} documentation files
-
-### Quality Overview
-
-See detailed analysis: [Code Quality Overview](.tmp/code-quality-overview.md)
 
 ### Validation
 
@@ -273,16 +608,16 @@ See detailed analysis: [Code Quality Overview](.tmp/code-quality-overview.md)
 
 **Scripts**:
 
-- [format-code.ps1](./scripts/format-code.ps1) - Code formatting
-- [analyze-code-quality.ps1](./scripts/analyze-code-quality.ps1) - Quality analysis and overview generation
-- [find-dead-code.ps1](./scripts/find-dead-code.ps1) - Dead code detection
-- [verify-documentation.ps1](./scripts/verify-documentation.ps1) - Documentation verification
+- [format-code.ps1](./.github/skills/cleanup/scripts/format-code.ps1) - Code formatting
+- [analyze-code-quality.ps1](./.github/skills/cleanup/scripts/analyze-code-quality.ps1) - Quality analysis and overview generation
+- [find-dead-code.ps1](./.github/skills/cleanup/scripts/find-dead-code.ps1) - Dead code detection
+- [verify-documentation.ps1](./.github/skills/cleanup/scripts/verify-documentation.ps1) - Documentation verification
 
 **Templates**:
 
-- [overview-template.md](./templates/overview-template.md) - Standard format for quality overviews
+- [overview-template.md](./.github/skills/cleanup/templates/overview-template.md) - Standard format for quality overviews
 
 **Project Scripts**:
 
-- [run.ps1](../../../../run.ps1) - Build, test, and run the solution
-- [run-powershell-tests.ps1](../../../../scripts/run-powershell-tests.ps1) - PowerShell script validation
+- [run.ps1](./run.ps1) - Build, test, and run the solution
+- [run-powershell-tests.ps1](./scripts/run-powershell-tests.ps1) - PowerShell script validation

@@ -52,7 +52,7 @@ internal static class ContentEndpoints
     }
 
     /// <summary>
-    /// GET /api/content?sectionName={sectionName}&collectionName={collectionName} - Get content by section and collection
+    /// GET /api/content?sectionName={sectionName}&amp;collectionName={collectionName} - Get content by section and collection
     /// </summary>
     private static async Task<Ok<IEnumerable<ContentItemDto>>> GetContent(
         [FromQuery] string? sectionName,
@@ -155,7 +155,7 @@ internal static class ContentEndpoints
     /// <summary>
     /// GET /api/content/filter - Advanced content filtering
     /// Supports filtering by: sections (section names), collections, tags, and text search
-    /// Example: /api/content/filter?sections=ai,github-copilot&collections=news,blogs&tags=copilot,azure&q=github
+    /// Example: /api/content/filter?sections=ai,github-copilot&amp;collections=news,blogs&amp;tags=copilot,azure&amp;q=github
     /// </summary>
     /// <remarks>
     /// NOTE: This endpoint loads all content for complex filtering. 

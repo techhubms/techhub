@@ -4,6 +4,14 @@
     <TargetFramework>net10.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
+    
+    <!-- DTO and Configuration-specific suppressions -->
+    <!-- CA1054/CA1055/CA1056: URI parameters/returns/properties - we use strings for URLs for JSON serialization in DTOs -->
+    <NoWarn>$(NoWarn);CA1054;CA1055;CA1056</NoWarn>
+    <!-- CA1812: Internal class never instantiated - DTOs and configs are instantiated by JSON deserializer or IOptions -->
+    <NoWarn>$(NoWarn);CA1812</NoWarn>
+    <!-- CA1852: Seal internal types - DTOs and configs need to be non-sealed for deserialization -->
+    <NoWarn>$(NoWarn);CA1852</NoWarn>
   </PropertyGroup>
 
 </Project>

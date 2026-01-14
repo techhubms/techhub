@@ -95,16 +95,8 @@ using (var scope = app.Services.CreateScope())
     var apiClient = scope.ServiceProvider.GetRequiredService<TechHubApiClient>();
     var sectionCache = scope.ServiceProvider.GetRequiredService<SectionCache>();
 
-    try
-    {
-        var sections = await apiClient.GetAllSectionsAsync();
-        sectionCache.Initialize(sections?.ToList() ?? []);
-    }
-    catch (Exception ex)
-    {
-        // Log error but continue - navigation will show without sections
-        app.Logger.LogError(ex, "Failed to pre-load sections at startup");
-    }
+    var sections = await apiClient.GetAllSectionsAsync();
+    sectionCache.Initialize(sections?.ToList() ?? []);
 }
 
 // Configure the HTTP request pipeline.

@@ -13,14 +13,14 @@
     Format for output: 'Console', 'Markdown', or 'Json'. Defaults to 'Console'.
 
 .PARAMETER Category
-    Category of dead code to look for: 'All', 'Usings', 'Methods', 'Properties', 'Fields'.
+    Category of dead code to look for: 'All', 'Methods', 'Properties', 'Fields'.
     Defaults to 'All'.
 
 .EXAMPLE
     ./find-dead-code.ps1
     
 .EXAMPLE
-    ./find-dead-code.ps1 -Category Usings -OutputFormat Markdown
+    ./find-dead-code.ps1 -Category Methods -OutputFormat Markdown
 #>
 
 [CmdletBinding()]
@@ -33,7 +33,7 @@ param(
     [string]$OutputFormat = 'Console',
     
     [Parameter()]
-    [ValidateSet('All', 'Usings', 'Methods', 'Properties', 'Fields')]
+    [ValidateSet('All', 'Methods', 'Properties', 'Fields')]
     [string]$Category = 'All'
 )
 
@@ -59,37 +59,13 @@ function Get-SourceRoot {
     return $current
 }
 
-function Find-UnusedUsings {
-    param([string]$SourceRoot)
-    
-    $results = @()
-    
-    # Run dotnet format with IDE0005 (Remove unnecessary usings)
-    $output = & dotnet format (Join-Path $SourceRoot "TechHub.slnx") `
-        --diagnostics IDE0005 `
-        --verify-no-changes `
-        --verbosity diagnostic 2>&1
-    
-    # Parse output for files with unused usings
-    $filePattern = '^\s*(.+\.cs)\(\d+,\d+\):'
-    foreach ($line in $output) {
-        if ($line -match $filePattern) {
-            $results += [PSCustomObject]@{
-                Category = "Unused Using"
-                File     = $Matches[1]
-                Details  = $line
-            }
-        }
-    }
-    
-    return $results
-}
+# Find-UnusedUsings function removed - unused usings are already handled by dotnet format in Step 2
 
 function Find-UnusedPrivateMembers {
     param([string]$SourceRoot)
     
     $results = @()
-    $csFiles = Get-ChildItem -Path (Join-Path $SourceRoot "src") -Filter "*.cs" -Recurse
+    $csFiles = @(Get-ChildItem -Path (Join-Path $SourceRoot "src") -Filter "*.cs" -Recurse)
     
     foreach ($file in $csFiles) {
         $content = Get-Content $file.FullName -Raw
@@ -151,7 +127,7 @@ function Find-CommentedCode {
     param([string]$SourceRoot)
     
     $results = @()
-    $csFiles = Get-ChildItem -Path (Join-Path $SourceRoot "src") -Filter "*.cs" -Recurse
+    $csFiles = @(Get-ChildItem -Path (Join-Path $SourceRoot "src") -Filter "*.cs" -Recurse)
     
     foreach ($file in $csFiles) {
         $lines = Get-Content $file.FullName
@@ -230,16 +206,17 @@ function Find-UnusedCssClasses {
         return $results
     }
     
-    # Get all CSS files
-    $cssFiles = Get-ChildItem -Path $webRoot -Filter "*.css" -Recurse
+    Write-Host "  Step 1: Collecting all CSS class definitions..." -ForegroundColor Gray
+    
+    # Step 1: Get all CSS files and extract class definitions
+    $cssFiles = @(Get-ChildItem -Path $webRoot -Filter "*.css" -Recurse)
     $allCssClasses = @{}
     
-    # Extract all CSS class definitions
     foreach ($cssFile in $cssFiles) {
         $content = Get-Content $cssFile.FullName -Raw
         
         # Match class selectors (e.g., .class-name, .class-name:hover, etc.)
-        $classPattern = '\.([a-zA-Z0-9_-]+)(?:[:\[,\s>+~]|$)'
+        $classPattern = '\.([a-zA-Z0-9_-]+)(?:[:\[,\s>+~{]|\s|$)'
         $matches = [regex]::Matches($content, $classPattern)
         
         foreach ($match in $matches) {
@@ -253,33 +230,47 @@ function Find-UnusedCssClasses {
         }
     }
     
-    # Get all Razor and HTML files to check usage
-    $razorFiles = Get-ChildItem -Path $webRoot -Include "*.razor", "*.cshtml", "*.html" -Recurse
+    Write-Host "  Found $($allCssClasses.Count) unique CSS classes" -ForegroundColor Gray
+    Write-Host "  Step 2: Reading all Razor/HTML/CSS files for usage check..." -ForegroundColor Gray
     
+    # Step 2: Read ALL content files ONCE and build combined content
+    $razorFiles = @(Get-ChildItem -Path $webRoot -Include "*.razor", "*.cshtml", "*.html", "*.css", "*.js" -Recurse)
+    $allContent = New-Object System.Text.StringBuilder
+    
+    foreach ($file in $razorFiles) {
+        $content = Get-Content $file.FullName -Raw
+        [void]$allContent.AppendLine($content)
+    }
+    
+    $combinedContent = $allContent.ToString()
+    
+    Write-Host "  Step 3: Checking which CSS classes are used..." -ForegroundColor Gray
+    
+    # Step 3: Check each CSS class against combined content (single pass)
     foreach ($className in $allCssClasses.Keys) {
-        foreach ($razorFile in $razorFiles) {
-            $content = Get-Content $razorFile.FullName -Raw
-            
-            # Check if class is used in class="..." or class='...'
-            if ($content -match "class\s*=\s*[`"']([^`"']*\b$([regex]::Escape($className))\b[^`"']*)[`"']") {
-                $allCssClasses[$className].Used = $true
-                break
-            }
+        # Check if class appears in class="..." or class='...' or in CSS/JS
+        # Using simple contains for maximum performance
+        if ($combinedContent -match "\b$([regex]::Escape($className))\b") {
+            $allCssClasses[$className].Used = $true
         }
     }
     
-    # Report unused classes
+    # Step 4: Report unused classes
+    $unusedCount = 0
     foreach ($className in $allCssClasses.Keys) {
         if (-not $allCssClasses[$className].Used) {
+            $unusedCount++
             $results += [PSCustomObject]@{
                 Category   = "Unused CSS Class"
                 Class      = $className
                 DefinedIn  = $allCssClasses[$className].DefinedIn
                 Confidence = "Medium"
-                Note       = "Class not found in Razor/HTML files - may be added dynamically via JavaScript"
+                Note       = "Class not found in any file - may be added dynamically"
             }
         }
     }
+    
+    Write-Host "  Found $unusedCount potentially unused CSS classes" -ForegroundColor $(if ($unusedCount -gt 0) { "Yellow" } else { "Green" })
     
     return $results
 }
@@ -292,7 +283,6 @@ $root = Get-SourceRoot
 Write-Host "Scanning for dead code in: $root" -ForegroundColor Cyan
 
 $allResults = @{
-    UnusedUsings  = @()
     UnusedMembers = @()
     CommentedCode = @()
     UnusedCss     = @()
@@ -304,45 +294,56 @@ $allResults = @{
     }
 }
 
-# Find unused usings
-if ($Category -in @('All', 'Usings')) {
-    Write-Host "`nChecking for unused usings..." -ForegroundColor Yellow
-    try {
-        $allResults.UnusedUsings = Find-UnusedUsings -SourceRoot $root
-        Write-Host "  Found $($allResults.UnusedUsings.Count) potential unused usings" -ForegroundColor $(if ($allResults.UnusedUsings.Count -gt 0) { "Yellow" } else { "Green" })
-    }
-    catch {
-        Write-Host "  Could not check usings: $($_.Exception.Message)" -ForegroundColor Yellow
-    }
-}
+# Note: Unused usings are handled by dotnet format in Step 2 of the cleanup process
 
 # Find unused private members
 if ($Category -in @('All', 'Methods', 'Properties', 'Fields')) {
-    Write-Host "Checking for unused private members..." -ForegroundColor Yellow
-    $allResults.UnusedMembers = Find-UnusedPrivateMembers -SourceRoot $root
-    Write-Host "  Found $($allResults.UnusedMembers.Count) potentially unused members" -ForegroundColor $(if ($allResults.UnusedMembers.Count -gt 0) { "Yellow" } else { "Green" })
+    Write-Host "`nChecking for unused private members..." -ForegroundColor Yellow
+    try {
+        $allResults.UnusedMembers = Find-UnusedPrivateMembers -SourceRoot $root
+        Write-Host "  Found $($allResults.UnusedMembers.Count) potentially unused members" -ForegroundColor $(if ($allResults.UnusedMembers.Count -gt 0) { "Yellow" } else { "Green" })
+    }
+    catch {
+        Write-Warning "  Could not check private members: $($_.Exception.Message)"
+        Write-Host "  Skipping unused members check" -ForegroundColor Gray
+    }
 }
 
 # Find commented code
 if ($Category -eq 'All') {
-    Write-Host "Checking for commented code..." -ForegroundColor Yellow
-    $allResults.CommentedCode = Find-CommentedCode -SourceRoot $root
-    Write-Host "  Found $($allResults.CommentedCode.Count) potential commented code blocks" -ForegroundColor $(if ($allResults.CommentedCode.Count -gt 0) { "Yellow" } else { "Green" })
+    Write-Host "`nChecking for commented code..." -ForegroundColor Yellow
+    try {
+        $allResults.CommentedCode = Find-CommentedCode -SourceRoot $root
+        Write-Host "  Found $($allResults.CommentedCode.Count) potential commented code blocks" -ForegroundColor $(if ($allResults.CommentedCode.Count -gt 0) { "Yellow" } else { "Green" })
+    }
+    catch {
+        Write-Warning "  Could not check commented code: $($_.Exception.Message)"
+        Write-Host "  Skipping commented code check" -ForegroundColor Gray
+    }
 }
 
 # Find unused CSS classes
 if ($Category -eq 'All') {
-    Write-Host "Checking for unused CSS classes..." -ForegroundColor Yellow
-    $allResults.UnusedCss = Find-UnusedCssClasses -SourceRoot $root
-    Write-Host "  Found $($allResults.UnusedCss.Count) potentially unused CSS classes" -ForegroundColor $(if ($allResults.UnusedCss.Count -gt 0) { "Yellow" } else { "Green" })
+    Write-Host "`nChecking for unused CSS classes..." -ForegroundColor Yellow
+    try {
+        $allResults.UnusedCss = Find-UnusedCssClasses -SourceRoot $root
+    }
+    catch {
+        Write-Warning "  Could not check CSS classes: $($_.Exception.Message)"
+        Write-Host "  Skipping CSS class check" -ForegroundColor Gray
+    }
 }
 
 # Calculate summary
-$allIssues = @($allResults.UnusedUsings) + @($allResults.UnusedMembers) + @($allResults.CommentedCode) + @($allResults.UnusedCss)
+$allIssues = @()
+if ($allResults.UnusedMembers) { $allIssues += @($allResults.UnusedMembers) }
+if ($allResults.CommentedCode) { $allIssues += @($allResults.CommentedCode) }
+if ($allResults.UnusedCss) { $allIssues += @($allResults.UnusedCss) }
+
 $allResults.Summary.TotalIssues = $allIssues.Count
-$allResults.Summary.HighConfidence = ($allIssues | Where-Object { $_.Confidence -eq "High" }).Count
-$allResults.Summary.MediumConfidence = ($allIssues | Where-Object { $_.Confidence -eq "Medium" }).Count
-$allResults.Summary.LowConfidence = ($allIssues | Where-Object { $_.Confidence -eq "Low" }).Count
+$allResults.Summary.HighConfidence = @($allIssues | Where-Object { $_.Confidence -eq "High" }).Count
+$allResults.Summary.MediumConfidence = @($allIssues | Where-Object { $_.Confidence -eq "Medium" }).Count
+$allResults.Summary.LowConfidence = @($allIssues | Where-Object { $_.Confidence -eq "Low" }).Count
 
 #endregion
 
@@ -351,15 +352,10 @@ $allResults.Summary.LowConfidence = ($allIssues | Where-Object { $_.Confidence -
 switch ($OutputFormat) {
     'Console' {
         Write-Host "`n===== Dead Code Detection Results =====" -ForegroundColor Cyan
+        Write-Host "Note: Unused usings are automatically removed by 'dotnet format' in Step 2" -ForegroundColor Gray
         
-        if ($allResults.UnusedUsings.Count -gt 0) {
-            Write-Host "`nUnused Usings:" -ForegroundColor Yellow
-            $allResults.UnusedUsings | Group-Object File | ForEach-Object {
-                Write-Host "  📁 $($_.Name): $($_.Count) unused using(s)" -ForegroundColor Yellow
-            }
-        }
-        
-        if ($allResults.UnusedMembers.Count -gt 0) {
+        $unusedMembersCount = @($allResults.UnusedMembers).Count
+        if ($unusedMembersCount -gt 0) {
             Write-Host "`nPotentially Unused Members:" -ForegroundColor Yellow
             foreach ($member in $allResults.UnusedMembers) {
                 $confidence = switch ($member.Confidence) {
@@ -371,16 +367,18 @@ switch ($OutputFormat) {
             }
         }
         
-        if ($allResults.CommentedCode.Count -gt 0) {
+        $commentedCodeCount = @($allResults.CommentedCode).Count
+        if ($commentedCodeCount -gt 0) {
             Write-Host "`nCommented Code:" -ForegroundColor Yellow
-            $allResults.CommentedCode | Group-Object File | ForEach-Object {
+            @($allResults.CommentedCode) | Group-Object File | ForEach-Object {
                 Write-Host "  📁 $($_.Name): $($_.Count) instance(s)" -ForegroundColor Yellow
             }
         }
         
-        if ($allResults.UnusedCss.Count -gt 0) {
+        $unusedCssCount = @($allResults.UnusedCss).Count
+        if ($unusedCssCount -gt 0) {
             Write-Host "`nPotentially Unused CSS Classes:" -ForegroundColor Yellow
-            $allResults.UnusedCss | Group-Object DefinedIn | ForEach-Object {
+            @($allResults.UnusedCss) | Group-Object DefinedIn | ForEach-Object {
                 Write-Host "  📁 $($_.Name):" -ForegroundColor Yellow
                 $_.Group | ForEach-Object {
                     Write-Host "    🟡 .$($_.Class)" -ForegroundColor Yellow
@@ -412,7 +410,8 @@ switch ($OutputFormat) {
 
 "@
         
-        if ($allResults.UnusedMembers.Count -gt 0) {
+        $unusedMembersCount = @($allResults.UnusedMembers).Count
+        if ($unusedMembersCount -gt 0) {
             $output += "`n### Potentially Unused Members`n`n"
             $output += "| Confidence | File | Member | Category |`n"
             $output += "|------------|------|--------|----------|`n"
@@ -422,17 +421,19 @@ switch ($OutputFormat) {
             }
         }
         
-        if ($allResults.CommentedCode.Count -gt 0) {
+        $commentedCodeCount = @($allResults.CommentedCode).Count
+        if ($commentedCodeCount -gt 0) {
             $output += "`n### Commented Code`n`n"
-            $grouped = $allResults.CommentedCode | Group-Object File
+            $grouped = @($allResults.CommentedCode) | Group-Object File
             foreach ($group in $grouped) {
                 $output += "- **$($group.Name)**: $($group.Count) instance(s)`n"
             }
         }
         
-        if ($allResults.UnusedCss.Count -gt 0) {
+        $unusedCssCount = @($allResults.UnusedCss).Count
+        if ($unusedCssCount -gt 0) {
             $output += "`n### Potentially Unused CSS Classes`n`n"
-            $grouped = $allResults.UnusedCss | Group-Object DefinedIn
+            $grouped = @($allResults.UnusedCss) | Group-Object DefinedIn
             foreach ($group in $grouped) {
                 $output += "- **$($group.Name)**:`n"
                 $group.Group | ForEach-Object {

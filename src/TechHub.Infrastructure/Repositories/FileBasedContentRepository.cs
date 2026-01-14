@@ -176,6 +176,7 @@ public sealed class FileBasedContentRepository : IContentRepository, IDisposable
     /// Returns items sorted by date (DateEpoch) in descending order (newest first).
     /// </summary>
     /// <param name="sectionName">Section name (lowercase, e.g., "ai", "github-copilot") - matches section.Name</param>
+    /// <param name="cancellationToken">Cancellation token</param>
     public async Task<IReadOnlyList<ContentItem>> GetBySectionAsync(
         string sectionName,
         CancellationToken cancellationToken = default)
@@ -370,7 +371,9 @@ public sealed class FileBasedContentRepository : IContentRepository, IDisposable
 
             return item;
         }
+#pragma warning disable CA1031 // Do not catch general exception types - intentional to skip malformed files and continue processing
         catch (Exception)
+#pragma warning restore CA1031
         {
             // Skip files that fail to parse
             return null;

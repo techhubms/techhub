@@ -78,9 +78,10 @@ function Test-MarkdownLinks {
     
     # Find markdown links [text](path)
     $linkPattern = '\[([^\]]+)\]\(([^)]+)\)'
-    $matches = [regex]::Matches($content, $linkPattern)
+    # Note: Calling [regex]::Matches() method is safe, not assigning to $Matches variable
+    $foundLinks = [regex]::Matches($content, $linkPattern)
     
-    foreach ($match in $matches) {
+    foreach ($match in $foundLinks) {
         $linkText = $match.Groups[1].Value
         $linkPath = $match.Groups[2].Value
         
@@ -246,8 +247,10 @@ $allResults.ApiIssues += $apiIssues
 
 # Calculate summary
 $allResults.Summary.TotalChecks = $allResults.FileChecks.Count
-$allResults.Summary.Passed = ($allResults.FileChecks | Where-Object { $_.Status -eq "Pass" }).Count
-$allResults.Summary.Failed = ($allResults.FileChecks | Where-Object { $_.Status -eq "Fail" }).Count
+$passedChecks = @($allResults.FileChecks | Where-Object { $_.Status -eq "Pass" })
+$failedChecks = @($allResults.FileChecks | Where-Object { $_.Status -eq "Fail" })
+$allResults.Summary.Passed = $passedChecks.Count
+$allResults.Summary.Failed = $failedChecks.Count
 $allResults.Summary.Warnings = $allResults.BrokenLinks.Count + $allResults.ApiIssues.Count
 
 #endregion

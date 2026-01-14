@@ -38,9 +38,6 @@ builder.Services.AddSingleton<ICustomPageRepository, FileBasedCustomPageReposito
 builder.Services.AddSingleton<IRssService, RssService>();
 builder.Services.AddSingleton<ISectionMappingService, SectionMappingService>();
 
-// Add data cache warmer to load all data at startup
-builder.Services.AddHostedService<DataCacheWarmer>();
-
 // Add CORS
 builder.Services.AddCors(options =>
 {

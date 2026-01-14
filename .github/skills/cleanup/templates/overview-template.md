@@ -6,140 +6,115 @@
 
 ## Build Status
 
-**Result**: ✅ Success / ❌ Failed  
+**Result**: {BUILD_RESULT}  
 **Errors**: {ERROR_COUNT}  
 **Warnings**: {WARNING_COUNT}
 
 ---
 
-## Issues Found
+## 🔴 High Priority Issues (Fix Immediately)
 
-### High Priority (Fix Immediately)
+**Total**: {HIGH_PRIORITY_COUNT}
 
-**Total**: {HIGH_PRIORITY_COUNT} issues
+These issues should be fixed before proceeding. They typically indicate bugs, security concerns, or critical quality issues.
 
-#### Category: {CATEGORY_NAME} ({RULE_ID})
-
-**Count**: {COUNT}  
-**Severity**: Error / Warning  
-**Recommendation**: Fix / Suppress / Refactor
-
-**Description**: {BRIEF_DESCRIPTION}
-
-**Affected Files**:
-
-- [{FILE_PATH}]({FILE_PATH}#L{LINE}) - {SHORT_DESCRIPTION}
-- [{FILE_PATH}]({FILE_PATH}#L{LINE}) - {SHORT_DESCRIPTION}
-
-**Suggested Action**:
-{DETAILED_EXPLANATION_OF_WHAT_TO_DO}
-
-**Rationale**:
-{WHY_THIS_MATTERS}
+{HIGH_PRIORITY_DETAILS}
 
 ---
 
-### Medium Priority (Should Fix)
+## 🟡 Medium Priority Issues (Should Fix)
 
-**Total**: {MEDIUM_PRIORITY_COUNT} issues
+**Total**: {MEDIUM_PRIORITY_COUNT}
 
-#### Category: {CATEGORY_NAME} ({RULE_ID})
+These issues should be addressed but can be suppressed if they are false positives or intentional design choices.
 
-**Count**: {COUNT}  
-**Severity**: Warning  
-**Recommendation**: Fix / Suppress
-
-**Description**: {BRIEF_DESCRIPTION}
-
-**Affected Files**:
-
-- [{FILE_PATH}]({FILE_PATH}#L{LINE}) - {SHORT_DESCRIPTION}
-
-**Suggested Action**:
-{DETAILED_EXPLANATION}
-
-**Rationale**:
-{WHY_THIS_MATTERS}
+{MEDIUM_PRIORITY_DETAILS}
 
 ---
 
-### Low Priority (Optional)
+## 🟢 Low Priority Issues (Optional)
 
-**Total**: {LOW_PRIORITY_COUNT} issues
+**Total**: {LOW_PRIORITY_COUNT}
 
-#### Category: {CATEGORY_NAME} ({RULE_ID})
+These are stylistic or informational. Suppress via `.editorconfig` to reduce noise or fix if straightforward.
 
-**Count**: {COUNT}  
-**Severity**: Info / Warning  
-**Recommendation**: Suppress / Fix if time permits
-
-**Description**: {BRIEF_DESCRIPTION}
-
-**Affected Files**:
-
-- [{FILE_PATH}]({FILE_PATH}#L{LINE})
-
-**Suggested Action**:
-Suppress via .editorconfig or fix if straightforward
-
-**Rationale**:
-{OPTIONAL_EXPLANATION}
+{LOW_PRIORITY_DETAILS}
 
 ---
 
-## Summary by Category
+## Summary
 
-| Category | Rule ID | Count | Priority | Recommendation |
-|----------|---------|-------|----------|----------------|
-| {CATEGORY} | {RULE_ID} | {COUNT} | High / Medium / Low | Fix / Suppress |
-| {CATEGORY} | {RULE_ID} | {COUNT} | High / Medium / Low | Fix / Suppress |
-| {CATEGORY} | {RULE_ID} | {COUNT} | High / Medium / Low | Fix / Suppress |
+| Priority | Count | Action Required |
+| -------- | ----- | --------------- |
+| 🔴 High | {HIGH_PRIORITY_COUNT} | **Fix immediately** - Do not proceed until resolved |
+| 🟡 Medium | {MEDIUM_PRIORITY_COUNT} | **Fix or suppress** - Review and decide |
+| 🟢 Low | {LOW_PRIORITY_COUNT} | **Suppress or ignore** - Optional improvements |
 
-**Total Issues**: {TOTAL_ISSUE_COUNT}  
-**Recommended to Fix**: {FIX_COUNT}  
-**Recommended to Suppress**: {SUPPRESS_COUNT}
+**Total Issues**: {TOTAL_ISSUE_COUNT}
 
 ---
 
-## Recommendations
+## What To Do Next
 
-### Immediate Actions (High Priority)
+### ✅ If All Issues Are Low Priority
 
-1. {ACTION_DESCRIPTION}
-2. {ACTION_DESCRIPTION}
-
-### Next Steps (Medium Priority)
-
-1. {ACTION_DESCRIPTION}
-2. {ACTION_DESCRIPTION}
-
-### Optional Improvements (Low Priority)
-
-1. {ACTION_DESCRIPTION}
-2. {ACTION_DESCRIPTION}
-
----
-
-## Suppression Strategy
-
-For issues recommended to suppress, add to [.editorconfig](/.editorconfig):
+You can proceed safely. Consider suppressing these warnings in `.editorconfig`:
 
 ```ini
-# {CATEGORY_NAME} - {REASON}
-dotnet_diagnostic.{RULE_ID}.severity = none  # {JUSTIFICATION}
+# Suppress low-priority warnings
+{SUPPRESSION_EXAMPLES}
 ```
+
+### ⚠️ If Medium/High Priority Issues Exist
+
+**Tell me which issues to fix**:
+
+1. Review the issue categories above
+2. For each category, respond with one of:
+   - **"Fix {RULE_ID}"** - I'll fix all occurrences
+   - **"Suppress {RULE_ID}"** - I'll add `.editorconfig` suppression
+   - **"Show {RULE_ID}"** - I'll show you the code for manual review
+
+**Example responses**:
+
+- "Fix CA1062" - I'll add null checks
+- "Suppress IDE1006" - I'll suppress naming style warnings
+- "Show RZ2012" - I'll show you the affected Blazor components
 
 ---
 
-## Next Steps
+## Rule ID Reference
 
-1. Review this overview and decide on fix vs suppress strategy
-2. For high-priority issues: Fix immediately before proceeding
-3. For medium-priority issues: Fix or suppress based on project needs
-4. For low-priority issues: Suppress to reduce noise
+**Common Rule Prefixes**:
 
-**Estimated Time**:
+- **CA####** - Code Analysis (code quality, performance, security)
+- **IDE####** - IDE suggestions (style, formatting, conventions)
+- **RZ####** - Razor/Blazor specific issues
+- **CS####** - C# compiler warnings
 
-- High priority fixes: ~{ESTIMATE} minutes
-- Medium priority fixes: ~{ESTIMATE} minutes
-- Suppressions: ~{ESTIMATE} minutes
+**Priority Mapping**:
+
+- **High**: RZ\*, CA1001, CA1062, CA1304, CA1305, CA1307 (critical bugs/security)
+- **Medium**: Most CA\* rules (code quality, maintainability)
+- **Low**: IDE\*, CS15\* (style, documentation)
+
+---
+
+## Quick Response Guide
+
+**Copy and modify this template for your response**:
+
+```markdown
+### My Decisions
+
+High Priority:
+- Fix {RULE_ID}: {brief reason}
+- Suppress {RULE_ID}: {brief reason}
+
+Medium Priority:
+- Fix {RULE_ID}: {brief reason}
+- Suppress {RULE_ID}: {brief reason}
+
+Low Priority:
+- Suppress all: {brief reason}
+```

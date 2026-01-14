@@ -169,7 +169,9 @@ public class FileBasedCustomPageRepository : ICustomPageRepository, IDisposable
                 SidebarInfo = sidebarInfo
             };
         }
+#pragma warning disable CA1031 // Do not catch general exception types - intentional to gracefully handle any file loading errors
         catch (Exception ex)
+#pragma warning restore CA1031
         {
             _logger.LogError(ex, "Failed to load custom page from file: {FilePath}", filePath);
             return null;
