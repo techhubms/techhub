@@ -23374,5 +23374,29 @@
     "canonical_url": "https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/ai-native-drug-discovery-using-insilico-medicine-s-nach01-model/ba-p/4484497",
     "timestamp": "2026-01-14 14:07:03 +00:00",
     "reason": "Succesfully added: Included the AI category because the article centers on deploying and integrating generative AI models (Nach01) on Microsoft platforms (AI incl. rules 1 and 4). The Azure category is included since Microsoft Discovery is built on Azure, using Azure ML Workspace and Entra ID for orchestration and access (Azure rules 1 and 4). The ML category is appropriate as the content discusses custom property prediction, data science workflows, molecular modeling, and the use of machine learning for structural prediction and compound design (ML rules 1, 2, and 6). No Coding or DevOps categories were added, as there is no direct content about code, programming languages, or deployment methodology. Security is not an explicit focus in the content. Generic exclusion rules do not apply, as this is a technical, development-focused knowledge post, in English, without negative, biographical, or sales content."
+  },
+  {
+    "canonical_url": "https://blogs.microsoft.com/on-the-issues/2026/01/14/microsoft-disrupts-cybercrime/",
+    "timestamp": "2026-01-14 16:05:32 +00:00",
+    "collection": "news",
+    "reason": "Succesfully added: Assigned 'Security' due to the article’s focus on cybercrime, cyberattack prevention, Microsoft’s Digital Crimes Unit, and coordinated global law enforcement actions—all falling under Security Inclusion Rules 1, 4, 5, 9, and 10. Added 'AI' because the article specifically describes how generative AI tools, including face-swapping, video manipulation, and voice-cloning, bolster RedVDS-enabled scams and phishing attacks (AI Inclusion Rule 1 and 4). 'DevOps', 'Azure', 'Coding', 'ML', or 'GitHub Copilot' were not assigned as the content contains no material about DevOps tooling, Azure application hosting, development practices, ML engineering, or GitHub Copilot. The core is security operations and the AI techniques applied in crime, not platform or infrastructure management."
+  },
+  {
+    "canonical_url": "https://devclass.com/2026/01/14/code-signing-windows-apps-may-be-easier-and-more-secure-with-new-azure-artifact-service/",
+    "timestamp": "2026-01-14 16:06:07 +00:00",
+    "collection": "blogs",
+    "reason": "Succesfully added: Assigned Azure category because the article focuses on Azure Artifact Signing and its integration with Microsoft's cloud services (Azure category rule 1). Assigned Security category because the core topic is the security of code signing, the management of certificates, and adherence to industry requirements (Security category rules 1, 2, 9). Assigned DevOps category due to integration with CI/CD workflows (GitHub Actions, Azure DevOps tasks) and the impact on automated signing in deployment pipelines (DevOps category rules 1, 2, 5, 6). No ML, AI, Coding, or GitHub Copilot categories apply, as the content does not cover machine learning, AI APIs, programming language development, or Copilot usage."
+  },
+  {
+    "canonical_url": "https://www.stevejgordon.co.uk/encrypting-properties-with-system-text-json-and-a-typeinforesolver-modifier-part-1",
+    "timestamp": "2026-01-14 16:06:40 +00:00",
+    "collection": "blogs",
+    "reason": "Succesfully added: The content is technical and strongly focused on C#/.NET programming, System.Text.Json customization, and attribute-driven encryption logic, directly qualifying for the Coding category (Coding rules 1–4). It includes detailed code for marking, serializing, and deserializing sensitive fields with preparation for integrating Azure Key Vault, making Azure relevant (Azure rule 2 and forward-looking reference to Key Vault). Security is included because the primary theme is the protection of sensitive data, encryption practices, and compliance scenarios (Security rules 2, 7, 9). No AI, ML, GitHub Copilot, or DevOps domains are covered. Content is in English and does not violate any generic exclusion rules."
+  },
+  {
+    "canonical_url": "https://www.youtube.com/watch?v=w3kI6XlZXZQ",
+    "timestamp": "2026-01-14 16:07:07 +00:00",
+    "collection": "videos",
+    "reason": "Succesfully added: Assigned AI category because the content discusses running 'AI coding agents' inside Dev Containers—directly referencing AI-powered developer tools (AI rule 4). Assigned DevOps category due to the focus on environment encapsulation, portability, and development workflow automation using containers and Codespaces (DevOps rules 6 and 9). Assigned Coding category as the tutorial centers on developer tools (Visual Studio Code), development practices, and actionable steps for coding setup (Coding rules 2 and 5). Did not assign Azure or ML categories, as the focus is not on Azure-specific services or machine learning engineering. Did not assign GitHub Copilot as it is not explicitly mentioned, but GitHub Codespaces is covered (falls under DevOps). No generic exclusion rules apply."
   }
 ]
