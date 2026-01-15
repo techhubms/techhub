@@ -11301,5 +11301,11 @@
     "canonical_url": "https://www.youtube.com/shorts/8dyuHoMSqyU",
     "collection": "videos",
     "timestamp": "2026-01-15 16:08:53 +00:00"
+  },
+  {
+    "canonical_url": "https://www.microsoft.com/en-us/education/blog/2026/01/introducing-microsoft-innovations-and-programs-to-support-ai-powered-teaching-and-learning/",
+    "timestamp": "2026-01-15 17:10:30 +00:00",
+    "reason": "No categories found: No categories assigned due to the 'Non-Development Microsoft Products' and 'Business Strategy and Executive Content' generic exclusion rules. The content is primarily about educational programs, AI-powered learning tools for educators and students, classroom teaching enhancements, and Microsoft 365 Copilot for Education—all focused on end-users or educational leadership, not on development or technical implementation. It does not include technical, developer, coding, DevOps, ML, Security, or Azure implementation details. Instead, it targets educators, education leaders, and students, describing offerings, resources, and strategies rather than hands-on technical content for developers or IT professionals. Thus, all categories are excluded.",
+    "collection": "news"
   }
 ]

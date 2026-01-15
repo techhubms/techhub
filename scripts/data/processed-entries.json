@@ -23488,5 +23488,11 @@
     "canonical_url": "https://blog.fabric.microsoft.com/en-US/blog/how-the-microsoft-sql-team-is-investing-in-sql-tools-and-experiences/",
     "collection": "news",
     "timestamp": "2026-01-15 16:08:04 +00:00"
+  },
+  {
+    "canonical_url": "https://www.youtube.com/watch?v=NOPTkQcEew4",
+    "timestamp": "2026-01-15 17:11:14 +00:00",
+    "reason": "Succesfully added: Assigned AI category as the content discusses AI integration (vector search and indexing) in Microsoft SQL engines (AI rule 1, 4). Added Azure because Azure SQL is the showcased product (Azure rule 1). Included ML because vector search and the mention of DiskANN are closely associated with machine learning and analytics tasks (ML rule 1, 3). Did not assign Coding because content centers primarily on platform features, configuration, and demonstrations rather than code-level development. No DevOps or Security aspect is described. No generic exclusion rules apply as this is technical, English-language, non-promotional developer content on Microsoft platforms.",
+    "collection": "videos"
   }
 ]
