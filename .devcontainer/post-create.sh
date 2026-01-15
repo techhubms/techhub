@@ -37,9 +37,6 @@ else
     echo "Aspire CLI already installed"
 fi
 
-echo "Installing/updating Aspire project templates..."
-dotnet new install Aspire.ProjectTemplates
-
 # ==================== Playwright ====================
 
 # Install Chrome browser for both E2E tests and Playwright MCP tools

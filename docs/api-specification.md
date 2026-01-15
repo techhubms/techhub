@@ -706,7 +706,7 @@ All 14 endpoints have comprehensive integration test coverage using `WebApplicat
 - **Execution Time**: ~1.4 seconds
 - **Coverage**: All endpoints, all filter combinations, all error scenarios
 
-See [tests/AGENTS.md](tests/AGENTS.md) and [tests/TechHub.Api.Tests/AGENTS.md](tests/TechHub.Api.Tests/AGENTS.md) for complete testing documentation.
+See [tests/AGENTS.md](../tests/AGENTS.md) and [tests/TechHub.Api.Tests/AGENTS.md](../tests/TechHub.Api.Tests/AGENTS.md) for complete testing documentation.
 
 ## Architecture Decision Record
 

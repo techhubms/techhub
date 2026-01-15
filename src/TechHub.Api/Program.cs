@@ -1,5 +1,4 @@
 using TechHub.Api.Endpoints;
-using TechHub.Api.Extensions;
 using TechHub.Api.Middleware;
 using TechHub.Core.Configuration;
 using TechHub.Core.Interfaces;
@@ -7,8 +6,12 @@ using TechHub.Core.Logging;
 using TechHub.Core.Services;
 using TechHub.Infrastructure.Repositories;
 using TechHub.Infrastructure.Services;
+using TechHub.ServiceDefaults;
 
 var builder = WebApplication.CreateBuilder(args);
+
+// Add Aspire service defaults (OpenTelemetry, service discovery, resilience, health checks)
+builder.AddServiceDefaults();
 
 // Configure file logging for Development and Test environments
 // Skip during integration tests (AppSettings:SkipFileLogging = true)
@@ -40,8 +43,7 @@ builder.Services.AddSwaggerGen(options =>
     });
 });
 
-// Add OpenTelemetry tracing
-builder.Services.AddTelemetry(builder.Configuration, builder.Environment);
+// Note: OpenTelemetry is configured by AddServiceDefaults()
 
 // Configure AppSettings from appsettings.json
 builder.Services.Configure<AppSettings>(builder.Configuration.GetSection("AppSettings"));
@@ -95,8 +97,7 @@ app.MapContentEndpoints();
 app.MapCustomPagesEndpoints();
 app.MapRssEndpoints();
 
-// Health check endpoint
-app.MapGet("/health", () => Results.Ok(new { status = "healthy", timestamp = DateTimeOffset.UtcNow }))
-    .WithName("HealthCheck");
+// Map Aspire default health check endpoints (/health and /alive)
+app.MapDefaultEndpoints();
 
 app.Run();

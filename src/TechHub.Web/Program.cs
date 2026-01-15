@@ -1,9 +1,13 @@
 using TechHub.Core.Configuration;
 using TechHub.Core.Logging;
+using TechHub.ServiceDefaults;
 using TechHub.Web.Components;
 using TechHub.Web.Services;
 
 var builder = WebApplication.CreateBuilder(args);
+
+// Add Aspire service defaults (OpenTelemetry, service discovery, resilience, health checks)
+builder.AddServiceDefaults();
 
 // Configure file logging for Development and Test environments
 // Skip during integration tests (AppSettings:SkipFileLogging = true)
@@ -78,30 +82,20 @@ builder.Services.AddSignalR(options =>
     options.KeepAliveInterval = TimeSpan.FromSeconds(15);
 });
 
-// Configure HTTP client for API with resilience policies
-var apiBaseUrl = builder.Configuration["ApiBaseUrl"] ?? "http://localhost:5029";
+// Configure HTTP client for API with service discovery
+// When running via Aspire, "https+http://api" resolves via service discovery
+// When running standalone, falls back to ApiBaseUrl config (e.g., http://localhost:5029)
+var apiBaseUrl = builder.Configuration["services:api:https:0"]
+    ?? builder.Configuration["services:api:http:0"]
+    ?? builder.Configuration["ApiBaseUrl"]
+    ?? "http://localhost:5029";
+
 builder.Services.AddHttpClient<TechHubApiClient>(client =>
 {
     client.BaseAddress = new Uri(apiBaseUrl);
     client.Timeout = TimeSpan.FromSeconds(30);
-})
-.AddStandardResilienceHandler(options =>
-{
-    // Retry configuration: 2 attempts with exponential backoff starting at 1 second
-    options.Retry.MaxRetryAttempts = 2;
-    options.Retry.BackoffType = Polly.DelayBackoffType.Exponential;
-    options.Retry.UseJitter = true;
-    options.Retry.Delay = TimeSpan.FromSeconds(1);  // Base delay before exponential backoff
-
-    // Circuit breaker: open after 50% failures in 30 seconds (min 8 requests)
-    options.CircuitBreaker.FailureRatio = 0.5;
-    options.CircuitBreaker.SamplingDuration = TimeSpan.FromSeconds(30);
-    options.CircuitBreaker.MinimumThroughput = 8;  // Increased to avoid premature triggering
-    options.CircuitBreaker.BreakDuration = TimeSpan.FromSeconds(10);
-
-    // Total timeout for the entire request (including retries)
-    options.TotalRequestTimeout.Timeout = TimeSpan.FromSeconds(60);
 });
+// Note: Resilience handler is already configured by AddServiceDefaults()
 
 var app = builder.Build();
 
@@ -209,8 +203,7 @@ app.MapGet("/{sectionName}/feed.xml", async (string sectionName, TechHubApiClien
 .WithSummary("RSS feed for a section")
 .ExcludeFromDescription();
 
-// Health check endpoint for monitoring and E2E test server readiness
-app.MapGet("/health", () => Results.Ok(new { status = "healthy", timestamp = DateTimeOffset.UtcNow }))
-    .ExcludeFromDescription();
+// Map Aspire default health check endpoints (/health and /alive)
+app.MapDefaultEndpoints();
 
 await app.RunAsync();

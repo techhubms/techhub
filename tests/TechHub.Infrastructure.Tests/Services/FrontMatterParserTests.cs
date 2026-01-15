@@ -1,5 +1,5 @@
-using TechHub.Infrastructure.Services;
 using FluentAssertions;
+using TechHub.Infrastructure.Services;
 
 namespace TechHub.Infrastructure.Tests.Services;
 

@@ -1,10 +1,10 @@
+using FluentAssertions;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Options;
 using Moq;
 using TechHub.Core.Configuration;
 using TechHub.Infrastructure.Repositories;
 using TechHub.Infrastructure.Services;
-using FluentAssertions;
 
 namespace TechHub.Infrastructure.Tests.Repositories;
 
@@ -73,9 +73,9 @@ Test video content
 
         // Assert
         video.Should().NotBeNull();
-        video.Title.Should().Be("Internal Video");
-        video.ViewingMode.Should().Be("internal");
-        video.ExternalUrl.Should().Be("https://youtube.com/watch?v=abc123"); // URL is always set, ViewingMode controls usage
+        video!.Title.Should().Be("Internal Video");
+        video!.ViewingMode.Should().Be("internal");
+        video!.ExternalUrl.Should().Be("https://youtube.com/watch?v=abc123"); // URL is always set, ViewingMode controls usage
     }
 
     [Fact]
@@ -105,9 +105,9 @@ Test video content
 
         // Assert
         video.Should().NotBeNull();
-        video.Title.Should().Be("External Video");
-        video.ViewingMode.Should().Be("external");
-        video.ExternalUrl.Should().Be("https://youtube.com/watch?v=xyz789");
+        video!.Title.Should().Be("External Video");
+        video!.ViewingMode.Should().Be("external");
+        video!.ExternalUrl.Should().Be("https://youtube.com/watch?v=xyz789");
     }
 
     [Fact]

@@ -522,7 +522,7 @@ See [Starting & Stopping the Website](#starting--stopping-the-website) for compl
 **File Link Formatting Rules**:
 
 - **NO BACKTICKS**: Never wrap file names, paths, or links in backticks
-- **Required Formats**: `[path/file.ts](path/file.ts)` (file), `[file.ts](file.ts#L10)` (line), `[file.ts](file.ts#L10-L12)` (range)
+- **Required Formats**: File references: `[path/file.ts](path/file.ts)`, line references: `[file.ts:10](file.ts#L10)`, range references: `[file.ts:10-12](file.ts#L10-L12)`
 - **Path Rules**: Use `/` only, encode spaces in target (`My%20File.md`), no `file://` or `vscode://` schemes
 - **Forbidden**: Inline code (`file.ts`), plain text file names, bare line citations ("Line 86")
 
@@ -634,10 +634,11 @@ curl http://localhost:5184/api/sections
 
 **The run.ps1 script handles**:
 
-- Proper startup order (API first, then Web)
-- Health checks before declaring ready
-- Graceful shutdown of both processes
+- Aspire AppHost orchestration (starts both API and Web)
+- Health checks before declaring ready (up to 60 seconds for Aspire startup)
+- Graceful shutdown of all processes
 - Port cleanup on exit
+- Clean console output (warnings/errors only, info logs suppressed)
 
 ### run.ps1 Script Parameters (for AI Agents)
 
@@ -650,11 +651,7 @@ curl http://localhost:5184/api/sections
   - **Humans**: Use this when manually testing or using Playwright MCP tools
   - **Why**: Playwright MCP is faster than writing tests for exploration and debugging
 - `-Clean` - Clean all build artifacts before building
-- `-SkipBuild` - Skip build, use existing binaries
-- `-ApiOnly` - Only run the API project
-- `-WebOnly` - Only run the Web project
-- `-Release` - Build in Release mode
-- `-VerboseOutput` - Show verbose output for debugging
+- `-Build` - Build only, don't run servers
 
 **Examples**:
 
@@ -671,11 +668,8 @@ curl http://localhost:5184/api/sections
 # Clean build and test first
 ./run.ps1 -Clean
 
-# Only API for backend testing
-./run.ps1 -ApiOnly
-
-# Only Web for frontend testing
-./run.ps1 -WebOnly
+# Build only, don't run
+./run.ps1 -Build
 ```
 
 **Script Built-in Features**:
@@ -696,9 +690,8 @@ curl http://localhost:5184/api/sections
 # Build everything with clean slate
 ./run.ps1 -Clean -OnlyTests
 
-# Build and run specific project
-./run.ps1 -ApiOnly    # API only
-./run.ps1 -WebOnly    # Web only
+# Build only
+./run.ps1 -Build
 ```
 
 **Only use low-level dotnet commands when run.ps1 doesn't support the operation**:
@@ -912,7 +905,7 @@ The Tech Hub uses a **multi-tier documentation system** organized by scope and d
 - C# 13 with nullable reference types
 - ASP.NET Core Minimal API (backend)
 - Blazor SSR + WebAssembly (frontend)
-- .NET Aspire (orchestration)
+- .NET Aspire (orchestration, observability, service discovery)
 
 **Frontend Technologies**:
 
@@ -942,6 +935,24 @@ The Tech Hub uses a **multi-tier documentation system** organized by scope and d
 - Git (version control)
 - VS Code DevContainers (consistent development environment)
 - Markdown (documentation)
+
+**.NET Aspire**:
+
+Tech Hub uses Aspire for orchestration and observability:
+
+- **AppHost** (`src/TechHub.AppHost/`) - Orchestrates API + Web services
+- **ServiceDefaults** (`src/TechHub.ServiceDefaults/`) - Shared configuration for OpenTelemetry, health checks, resilience
+- **Service Discovery** - Web finds API via `https+http://api` URL scheme
+- **Aspire Dashboard** - Real-time traces, metrics, and logs visualization
+
+**Running with Aspire**:
+
+```powershell
+# Default - uses Aspire AppHost with built-in dashboard
+./run.ps1
+
+# Dashboard URL: https://localhost:17101 (URL with token shown in startup output)
+```
 
 **Implementation Guidance**:
 

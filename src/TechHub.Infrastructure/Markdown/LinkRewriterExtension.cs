@@ -135,7 +135,7 @@ public class LinkRewriterExtension(string? currentPagePath = null, string? secti
             }
 
             // 2. Internal .html links - rewrite to /section/collection/slug format
-            if (url.EndsWith(".html", StringComparison.Ordinal) && !url.Contains("://", StringComparison.Ordinal))
+            if (url.EndsWith(".html", StringComparison.OrdinalIgnoreCase) && !url.Contains("://", StringComparison.Ordinal))
             {
                 // Extract filename without extension
                 var filename = Path.GetFileNameWithoutExtension(url);

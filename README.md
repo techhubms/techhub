@@ -26,6 +26,101 @@ This directory contains the .NET/Blazor implementation of Tech Hub, migrating fr
 
 **Stop the Application**: Press `Ctrl+C` in the terminal where the script is running.
 
+## .NET Aspire
+
+Tech Hub uses **.NET Aspire** for orchestration, observability, and service discovery. Aspire provides:
+
+- **Service Discovery**: Web frontend automatically discovers the API via `https+http://api`
+- **OpenTelemetry**: Distributed tracing, metrics, and structured logging
+- **Resilience**: Built-in retry policies and circuit breakers for HTTP clients
+- **Health Checks**: `/health` and `/alive` endpoints on all services
+
+### Running with Aspire
+
+#### Via run.ps1 (Recommended)
+
+```powershell
+# Default mode - uses Aspire AppHost to orchestrate API + Web
+./run.ps1
+
+# With Aspire Dashboard for telemetry visualization
+./run.ps1 -Dashboard
+```
+
+#### Direct AppHost
+
+```powershell
+dotnet run --project src/TechHub.AppHost/TechHub.AppHost.csproj
+```
+
+#### VS Code Task
+
+Press `Ctrl+Shift+P` → "Tasks: Run Task" → "run-apphost"
+
+### Aspire Dashboard
+
+The Aspire Dashboard provides real-time visualization of:
+
+- **Traces**: Distributed request tracing across services
+- **Metrics**: Performance counters, request rates, error rates
+- **Logs**: Structured logs from all services
+- **Resources**: Service health and status
+
+To start the dashboard:
+
+```powershell
+# Start with dashboard (runs as Docker container)
+./run.ps1 -Dashboard
+
+# Dashboard URL: http://localhost:18888
+# Note: Copy the login token from the terminal output
+```
+
+Manual dashboard start (if needed separately):
+
+```bash
+docker run --rm -it -d \
+    -p 18888:18888 \
+    -p 4317:18889 \
+    --name aspire-dashboard \
+    mcr.microsoft.com/dotnet/aspire-dashboard:9.5
+```
+
+### Architecture
+
+```text
+┌─────────────────────────────────────────────────────────────┐
+│                    Aspire AppHost                           │
+│  (Orchestrates services, configures service discovery)      │
+└─────────────────────────────────────────────────────────────┘
+                              │
+              ┌───────────────┼───────────────┐
+              ▼               ▼               ▼
+┌─────────────────┐  ┌─────────────────┐  ┌─────────────────┐
+│   TechHub.Api   │  │   TechHub.Web   │  │ Aspire Dashboard│
+│   (Port 5029)   │◄─┤   (Port 5184)   │  │  (Port 18888)   │
+│                 │  │                 │  │                 │
+│ - REST API      │  │ - Blazor SSR    │  │ - Traces        │
+│ - Swagger UI    │  │ - Service       │  │ - Metrics       │
+│ - Health checks │  │   Discovery     │  │ - Logs          │
+└─────────────────┘  └─────────────────┘  └─────────────────┘
+         │                    │                    ▲
+         │                    │                    │
+         └────────────────────┴──── OTLP ─────────┘
+                        (OpenTelemetry)
+```
+
+### ServiceDefaults
+
+The `TechHub.ServiceDefaults` project provides shared Aspire configuration:
+
+```csharp
+// In API and Web Program.cs
+builder.AddServiceDefaults();  // Adds OpenTelemetry, health checks, resilience
+// ...
+app.MapDefaultEndpoints();     // Maps /health and /alive endpoints
+```
+
 ## Migration Status
 
 This project is currently migrating from Jekyll to .NET/Blazor using [spec-kit](https://github.com/github/spec-kit) methodology. We're in **Phase 3** of the migration with 245/245 unit/integration tests and 60/69 E2E tests passing.

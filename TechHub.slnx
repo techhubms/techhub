@@ -5,6 +5,7 @@
     <Project Path="src/TechHub.ContentFixer/TechHub.ContentFixer.csproj" />
     <Project Path="src/TechHub.Core/TechHub.Core.csproj" />
     <Project Path="src/TechHub.Infrastructure/TechHub.Infrastructure.csproj" />
+    <Project Path="src/TechHub.ServiceDefaults/TechHub.ServiceDefaults.csproj" />
     <Project Path="src/TechHub.Web/TechHub.Web.csproj" />
   </Folder>
   <Folder Name="/tests/">

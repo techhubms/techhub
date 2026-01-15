@@ -225,10 +225,10 @@ public class FileBasedContentRepositoryTests : IDisposable
 
         // Assert: Correct item returned with all properties
         item.Should().NotBeNull();
-        item.Title.Should().Be("Product Launch");
-        item.Slug.Should().Be("2025-01-15-product-launch");
-        item.CollectionName.Should().Be("news");
-        item.RenderedHtml.Should().Contain("Full product launch details");
+        item!.Title.Should().Be("Product Launch");
+        item!.Slug.Should().Be("2025-01-15-product-launch");
+        item!.CollectionName.Should().Be("news");
+        item!.RenderedHtml.Should().Contain("Full product launch details");
     }
 
     /// <summary>

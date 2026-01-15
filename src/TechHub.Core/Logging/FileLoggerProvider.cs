@@ -10,7 +10,7 @@ public sealed class FileLoggerProvider : ILoggerProvider
     private readonly string _filePath;
     private readonly StreamWriter _writer;
     private readonly object _lock = new();
-    private static readonly TimeZoneInfo BrusselsTimeZone = TimeZoneInfo.FindSystemTimeZoneById("Europe/Brussels");
+    private static readonly TimeZoneInfo _brusselsTimeZone = TimeZoneInfo.FindSystemTimeZoneById("Europe/Brussels");
 
     public FileLoggerProvider(string filePath)
     {
@@ -55,7 +55,7 @@ public sealed class FileLoggerProvider : ILoggerProvider
             lock (_lock)
             {
                 // Convert UTC to Europe/Brussels timezone (handles CET/CEST automatically)
-                var localTime = TimeZoneInfo.ConvertTimeFromUtc(DateTime.UtcNow, BrusselsTimeZone);
+                var localTime = TimeZoneInfo.ConvertTimeFromUtc(DateTime.UtcNow, _brusselsTimeZone);
                 _writer.WriteLine($"[{localTime:yyyy-MM-dd HH:mm:ss.fff}] [{logLevel}] {_categoryName}: {formatter(state, exception)}");
                 if (exception != null)
                 {

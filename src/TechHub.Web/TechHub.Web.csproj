@@ -14,11 +14,11 @@
 
   <ItemGroup>
     <ProjectReference Include="../TechHub.Core/TechHub.Core.csproj" />
+    <ProjectReference Include="../TechHub.ServiceDefaults/TechHub.ServiceDefaults.csproj" />
   </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="LigerShark.WebOptimizer.Core" Version="3.0.477" />
-    <PackageReference Include="Microsoft.Extensions.Http.Resilience" Version="10.0.0" />
   </ItemGroup>
 
 </Project>

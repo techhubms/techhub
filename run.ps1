@@ -6,7 +6,7 @@
 .DESCRIPTION
     This script provides a convenient way to build, test, and run the Tech Hub .NET application
     from the command line. It supports cleaning, building, testing, and running both the API
-    and Web projects.
+    and Web projects. Uses .NET Aspire for orchestration, service discovery, and observability.
 
 .PARAMETER Clean
     Clean all build artifacts before building.
@@ -33,27 +33,6 @@
     - CI/CD pipelines
     - Final verification before committing changes
 
-.PARAMETER SkipBuild
-    Skip the build step and run the application with existing binaries.
-
-.PARAMETER ApiOnly
-    Only run the API project.
-
-.PARAMETER WebOnly
-    Only run the Web project.
-
-.PARAMETER ApiPort
-    Port for the API server (default: 5029).
-
-.PARAMETER WebPort
-    Port for the Web server (default: 5184).
-
-.PARAMETER Release
-    Build and run in Release configuration instead of Debug.
-
-.PARAMETER VerboseOutput
-    Show verbose output from dotnet commands.
-
 .EXAMPLE
     ./run.ps1
     Default: Builds, runs all tests, then starts both API and Web projects.
@@ -70,6 +49,11 @@
     Use this when you want to verify all changes work correctly.
 
 .EXAMPLE
+    ./run.ps1
+    Default: Builds, runs all tests, then starts both API and Web projects via Aspire AppHost.
+
+
+.EXAMPLE
     ./run.ps1 -Clean -Test
     Cleans, builds, runs all tests, then starts both projects.
 
@@ -77,17 +61,10 @@
     ./run.ps1 -Build
     Only builds the solution without running.
 
-.EXAMPLE
-    ./run.ps1 -ApiOnly -ApiPort 8080
-    Only runs the API on port 8080.
-
-.EXAMPLE
-    ./run.ps1 -SkipBuild
-    Runs both projects with existing binaries.
-
 .NOTES
     Author: Tech Hub Team
     Requires: .NET 10 SDK, PowerShell 7+
+    Optional: Docker (for Aspire Dashboard)
 #>
 
 [CmdletBinding()]
@@ -105,28 +82,7 @@ param(
     [switch]$SkipTests,
 
     [Parameter(Mandatory = $false)]
-    [switch]$OnlyTests,
-
-    [Parameter(Mandatory = $false)]
-    [switch]$SkipBuild,
-
-    [Parameter(Mandatory = $false)]
-    [switch]$ApiOnly,
-
-    [Parameter(Mandatory = $false)]
-    [switch]$WebOnly,
-
-    [Parameter(Mandatory = $false)]
-    [int]$ApiPort = 5029,
-
-    [Parameter(Mandatory = $false)]
-    [int]$WebPort = 5184,
-
-    [Parameter(Mandatory = $false)]
-    [switch]$Release,
-
-    [Parameter(Mandatory = $false)]
-    [switch]$VerboseOutput
+    [switch]$OnlyTests
 )
 
 $ErrorActionPreference = "Stop"
@@ -135,17 +91,20 @@ Set-StrictMode -Version Latest
 # Determine workspace root
 $workspaceRoot = $PSScriptRoot
 
-# Project paths
+# Solution file path
 $solutionPath = Join-Path $workspaceRoot "TechHub.slnx"
-$apiProjectPath = Join-Path $workspaceRoot "src/TechHub.Api/TechHub.Api.csproj"
-$webProjectPath = Join-Path $workspaceRoot "src/TechHub.Web/TechHub.Web.csproj"
+
+# Project paths - for running/watching specific projects
+$appHostProjectPath = Join-Path $workspaceRoot "src/TechHub.AppHost/TechHub.AppHost.csproj"
+
+# Test project path for E2E (only needed separately)
 $e2eTestProjectPath = Join-Path $workspaceRoot "tests/TechHub.E2E.Tests/TechHub.E2E.Tests.csproj"
 
-# Build configuration
-$configuration = if ($Release) { "Release" } else { "Debug" }
+# Build configuration (always Debug for development)
+$configuration = "Debug"
 
-# Verbosity level
-$verbosityLevel = if ($VerboseOutput) { "detailed" } else { "minimal" }
+# Verbosity level (always minimal for clean output)
+$verbosityLevel = "minimal"
 
 # Color output helpers
 function Write-Step {
@@ -185,7 +144,7 @@ function Test-Prerequisites {
         exit 1
     }
     
-    # Check solution file
+    # Check that solution file exists
     if (-not (Test-Path $solutionPath)) {
         Write-Error "Solution file not found: $solutionPath"
         exit 1
@@ -203,6 +162,7 @@ function Invoke-Clean {
         Write-Error "Clean failed with exit code $LASTEXITCODE"
         exit 1
     }
+    
     Write-Success "Clean completed"
 }
 
@@ -215,14 +175,13 @@ function Invoke-Build {
         Write-Error "Build failed with exit code $LASTEXITCODE"
         exit 1
     }
+    
     Write-Success "Build completed"
 }
 
 # Run tests
 function Invoke-Tests {
     param(
-        [int]$ApiPort = 5029,
-        [int]$WebPort = 5184,
         [switch]$OnlyTests
     )
     
@@ -230,146 +189,175 @@ function Invoke-Tests {
     Write-Step "Running unit and integration tests"
     Write-Host ""
     
-    # Set Test environment for integration tests to prevent api-dev.log creation
-    $env:ASPNETCORE_ENVIRONMENT = "Test"
-    
-    $nonE2eTestArgs = @(
+    # Run all tests except E2E using solution-level test with filter
+    # Integration tests use WebApplicationFactory which manages its own environment
+    $testArgs = @(
         "test",
         $solutionPath,
         "--configuration", $configuration,
         "--no-build",
+        "--filter", "FullyQualifiedName!~E2E",
         "--settings", (Join-Path $workspaceRoot ".runsettings"),
-        "--filter", "FullyQualifiedName!~E2E",  # Exclude E2E tests
         "--blame-hang-timeout", "1m"
     )
     
-    & dotnet @nonE2eTestArgs
+    & dotnet @testArgs
     
-    $nonE2eExitCode = $LASTEXITCODE
-    Write-Host ""
-    
-    if ($nonE2eExitCode -ne 0) {
-        Write-Error "Unit/Integration tests failed with exit code $nonE2eExitCode"
+    if ($LASTEXITCODE -ne 0) {
+        Write-Host ""
+        Write-Error "Unit/integration tests failed with exit code $LASTEXITCODE"
         exit 1
     }
     
+    Write-Host ""
     Write-Success "Unit and integration tests passed"
     
-    # PHASE 2: Start servers for E2E tests
-    Write-Step "Starting servers for E2E tests"
+    # PHASE 2: Start AppHost for E2E tests
+    Write-Step "Starting Aspire AppHost for E2E tests"
     
-    $apiUrl = "http://localhost:$ApiPort"
-    $webUrl = "http://localhost:$WebPort"
+    # Start AppHost in background with output capture
+    $script:appHostProcess = $null
+    $script:dashboardUrl = $null
     
-    Write-Info "Server logs will be written to /workspaces/techhub/.tmp/"
-    Write-Info "  API: api-test.log"
-    Write-Info "  Web: web-test.log"
+    $appHostStartInfo = New-Object System.Diagnostics.ProcessStartInfo
+    $appHostStartInfo.FileName = "dotnet"
+    $appHostStartInfo.Arguments = "run --project `"$appHostProjectPath`" --no-build --configuration $configuration"
+    $appHostStartInfo.WorkingDirectory = Split-Path $appHostProjectPath -Parent
+    $appHostStartInfo.UseShellExecute = $false
+    $appHostStartInfo.RedirectStandardOutput = $true
+    $appHostStartInfo.RedirectStandardError = $true
+    $appHostStartInfo.CreateNoWindow = $false
+    # Use Test environment for E2E tests - API/Web will load appsettings.Test.json
+    # This provides cleaner console output (Error only) and proper test log files
+    $appHostStartInfo.EnvironmentVariables["ASPNETCORE_ENVIRONMENT"] = "Test"
+    # Keep Aspire orchestration logs (useful for debugging startup issues)
+    # but suppress noisy Microsoft.AspNetCore.* framework logs
+    $appHostStartInfo.EnvironmentVariables["Logging__Console__LogLevel__Microsoft"] = "Warning"
+    $appHostStartInfo.EnvironmentVariables["Logging__Console__LogLevel__Microsoft.AspNetCore"] = "Warning"
     
-    # Track processes for cleanup
-    $script:testApiProcess = $null
-    $script:testWebProcess = $null
+    $script:appHostProcess = [System.Diagnostics.Process]::Start($appHostStartInfo)
     
-    # Start API process with Test environment
-    # Console output flows naturally to terminal (warnings/errors visible immediately)
-    # FileLoggerProvider handles file logging to /tmp/techhub-logs/api-test.log
-    $apiStartInfo = New-Object System.Diagnostics.ProcessStartInfo
-    $apiStartInfo.FileName = "dotnet"
-    $apiStartInfo.Arguments = "watch --project `"$apiProjectPath`" --no-build --no-launch-profile --configuration $configuration"
-    $apiStartInfo.WorkingDirectory = Split-Path $apiProjectPath -Parent
-    $apiStartInfo.UseShellExecute = $false
-    $apiStartInfo.CreateNoWindow = $false
-    $apiStartInfo.EnvironmentVariables["ASPNETCORE_ENVIRONMENT"] = "Test"
-    $apiStartInfo.EnvironmentVariables["ASPNETCORE_URLS"] = $apiUrl
+    # Capture output in background and extract dashboard URL
+    $outputJob = Start-Job -ScriptBlock {
+        param($process)
+        $dashboardUrl = $null
+        while (-not $process.StandardOutput.EndOfStream) {
+            $line = $process.StandardOutput.ReadLine()
+            Write-Output $line  # Echo to console
+            
+            # Extract dashboard URL
+            if ($line -match "Login to the dashboard at (https://[^\s]+)") {
+                $dashboardUrl = $matches[1]
+            }
+        }
+        return $dashboardUrl
+    } -ArgumentList $script:appHostProcess
     
-    $script:testApiProcess = [System.Diagnostics.Process]::Start($apiStartInfo)
-    Write-Info "  API started (PID: $($script:testApiProcess.Id))"
+    Write-Info "  AppHost started (PID: $($script:appHostProcess.Id))"
     
-    # Wait a moment before starting Web to avoid dotnet watch build race conditions
-    Start-Sleep -Milliseconds 500
-    
-    # Start Web process with Test environment
-    # Console output flows naturally to terminal (warnings/errors visible immediately)
-    # FileLoggerProvider handles file logging to /tmp/techhub-logs/web-test.log
-    $webStartInfo = New-Object System.Diagnostics.ProcessStartInfo
-    $webStartInfo.FileName = "dotnet"
-    $webStartInfo.Arguments = "watch --project `"$webProjectPath`" --no-build --no-launch-profile --configuration $configuration"
-    $webStartInfo.WorkingDirectory = Split-Path $webProjectPath -Parent
-    $webStartInfo.UseShellExecute = $false
-    $webStartInfo.CreateNoWindow = $false
-    $webStartInfo.EnvironmentVariables["ASPNETCORE_ENVIRONMENT"] = "Test"
-    $webStartInfo.EnvironmentVariables["ASPNETCORE_URLS"] = $webUrl
-    
-    $script:testWebProcess = [System.Diagnostics.Process]::Start($webStartInfo)
-    Write-Info "  Web started (PID: $($script:testWebProcess.Id))"
-    
-    # Wait for servers to be ready
-    Write-Info "Waiting for servers to start..."
-    $maxAttempts = 15
+    # Wait for services to be ready (Aspire orchestration is slower than direct dotnet watch)
+    Write-Info "Waiting for services to start (Aspire orchestration can take 30-60 seconds)..."
+    $maxAttempts = 60
     $attempt = 0
     $apiReady = $false
     $webReady = $false
+    $lastApiError = ""
+    $lastWebError = ""
     
     while ($attempt -lt $maxAttempts -and (-not $apiReady -or -not $webReady)) {
         Start-Sleep -Seconds 1
         $attempt++
         
-        # Check if processes are still alive
-        if ($script:testApiProcess.HasExited) {
-            Write-Error "API process exited unexpectedly (exit code: $($script:testApiProcess.ExitCode))"
-            break
+        # Show progress every 10 seconds with diagnostic info
+        if ($attempt % 10 -eq 0) {
+            Write-Info "  Still waiting... ($attempt seconds elapsed)"
+            if (-not $apiReady -and $lastApiError) {
+                Write-Info "    API: $lastApiError"
+            }
+            if (-not $webReady -and $lastWebError) {
+                Write-Info "    Web: $lastWebError"
+            }
         }
-        if ($script:testWebProcess.HasExited) {
-            Write-Error "Web process exited unexpectedly (exit code: $($script:testWebProcess.ExitCode))"
-            break
+        
+        # Check if AppHost is still alive
+        if ($script:appHostProcess.HasExited) {
+            Write-Error "AppHost process exited unexpectedly (exit code: $($script:appHostProcess.ExitCode))"
+            Stop-ExistingProcesses
+            exit 1
         }
         
         if (-not $apiReady) {
-            # Use curl instead of Invoke-WebRequest to avoid PowerShell interference
-            $curlResult = curl -s -o /dev/null -w "%{http_code}" "$apiUrl/health" 2>$null
-            if ($curlResult -eq "200") {
+            # Use HTTPS endpoint (Aspire configures HTTPS by default)
+            # -k ignores self-signed certificate validation for local dev
+            $curlOutput = curl -s -k -m 2 -w "\n%{http_code}" "https://localhost:7153/health" 2>&1
+            $exitCode = $LASTEXITCODE
+            
+            if ($exitCode -eq 0 -and $curlOutput -match "200$") {
                 $apiReady = $true
                 Write-Info "  API ready ✓"
+            }
+            elseif ($exitCode -ne 0) {
+                $lastApiError = "Connection failed (exit code: $exitCode)"
+            }
+            else {
+                $httpCode = ($curlOutput -split "`n")[-1]
+                $lastApiError = "HTTP $httpCode"
             }
         }
         
         if (-not $webReady) {
-            # Use curl instead of Invoke-WebRequest to avoid PowerShell interference
-            $curlResult = curl -s -o /dev/null -w "%{http_code}" "$webUrl/health" 2>$null
-            if ($curlResult -eq "200") {
+            # Use HTTPS endpoint (Aspire configures HTTPS by default)
+            # -k ignores self-signed certificate validation for local dev
+            $curlOutput = curl -s -k -m 2 -w "\n%{http_code}" "https://localhost:7190/health" 2>&1
+            $exitCode = $LASTEXITCODE
+            
+            if ($exitCode -eq 0 -and $curlOutput -match "200$") {
                 $webReady = $true
                 Write-Info "  Web ready ✓"
+            }
+            elseif ($exitCode -ne 0) {
+                $lastWebError = "Connection failed (exit code: $exitCode)"
+            }
+            else {
+                $httpCode = ($curlOutput -split "`n")[-1]
+                $lastWebError = "HTTP $httpCode"
             }
         }
     }
     
     if (-not $apiReady -or -not $webReady) {
-        Write-Error "Servers failed to start within $maxAttempts seconds"
-        Write-Info "Check logs for details:"
-        Write-Info "  API: /workspaces/techhub/.tmp/api-test.log"
-        Write-Info "  Web: /workspaces/techhub/.tmp/web-test.log"
+        Write-Error "Services failed to start within $maxAttempts seconds"
+        if (-not $apiReady) {
+            Write-Info "  API health check failed at https://localhost:7153/health ($lastApiError)"
+        }
+        if (-not $webReady) {
+            Write-Info "  Web health check failed at https://localhost:7190/health ($lastWebError)"
+        }
+        Write-Info "  Check Aspire Dashboard logs at the URL shown above"
+        Write-Info "  Try manually: curl -k https://localhost:7153/health"
         
         # Clean up on startup failure
-        if ($null -ne $script:testApiProcess -and -not $script:testApiProcess.HasExited) {
-            $script:testApiProcess.Kill($true)
-            $script:testApiProcess.Dispose()
+        if ($null -ne $script:appHostProcess -and -not $script:appHostProcess.HasExited) {
+            $script:appHostProcess.Kill($true)
+            $script:appHostProcess.Dispose()
         }
-        if ($null -ne $script:testWebProcess -and -not $script:testWebProcess.HasExited) {
-            $script:testWebProcess.Kill($true)
-            $script:testWebProcess.Dispose()
-        }
-        Stop-ExistingProcesses -Ports @($ApiPort, $WebPort)
+        Stop-ExistingProcesses
         exit 1
     }
     
-    Write-Success "Servers ready"
+    Write-Success "Services ready"
     
-    # PHASE 3: Run E2E tests only
+    # Try to get dashboard URL from captured output
+    if ($null -ne $outputJob) {
+        $script:dashboardUrl = Receive-Job -Job $outputJob -Keep -ErrorAction SilentlyContinue
+        Remove-Job -Job $outputJob -Force -ErrorAction SilentlyContinue
+    }
+    
+    # PHASE 3: Run E2E tests
     Write-Step "Running E2E tests"
     Write-Host ""
     
     # Optimize thread count based on environment
-    # Local development: 8 threads (good for modern multi-core CPUs)
-    # CI environment: 4 threads (from xunit.runner.json - safer for limited CI runners)
     if ($env:CI) {
         Write-Info "CI environment detected - using default 4 threads from xunit.runner.json"
     }
@@ -394,110 +382,89 @@ function Invoke-Tests {
     
     Write-Host ""
     Write-Host "════════════════════════════════════════" -ForegroundColor Cyan
-    
-    Write-Info "Server logs written to /workspaces/techhub/.tmp/"
-    Write-Info "  API: api-test.log"
-    Write-Info "  Web: web-test.log"
     Write-Host ""
     
     if ($e2eExitCode -ne 0) {
-        # E2E tests failed - clean up servers
+        # E2E tests failed - clean up AppHost
         Write-Error "E2E tests failed with exit code $e2eExitCode"
         
-        # Stop servers on failure
-        Write-Info "Stopping test servers..."
+        Write-Info "Stopping AppHost..."
         
-        if ($null -ne $script:testApiProcess -and -not $script:testApiProcess.HasExited) {
-            $script:testApiProcess.Kill($true)
-            $script:testApiProcess.WaitForExit(2000)
-            $script:testApiProcess.Dispose()
+        if ($null -ne $script:appHostProcess -and -not $script:appHostProcess.HasExited) {
+            $script:appHostProcess.Kill($true)
+            $script:appHostProcess.WaitForExit(2000)
+            $script:appHostProcess.Dispose()
         }
         
-        if ($null -ne $script:testWebProcess -and -not $script:testWebProcess.HasExited) {
-            $script:testWebProcess.Kill($true)
-            $script:testWebProcess.WaitForExit(2000)
-            $script:testWebProcess.Dispose()
-        }
-        
-        Stop-ExistingProcesses -Ports @($ApiPort, $WebPort)
+        Stop-ExistingProcesses
         exit 1
     }
     
-    # OnlyTests mode: Stop servers and exit
+    Write-Success "All tests passed!"
+    
+    # OnlyTests mode: Stop AppHost and exit
     if ($OnlyTests) {
-        Write-Success "All tests passed!"
+        Write-Info "Stopping AppHost..."
         
-        # Stop servers
-        Write-Info "Stopping test servers..."
-        
-        if ($null -ne $script:testApiProcess -and -not $script:testApiProcess.HasExited) {
-            $script:testApiProcess.Kill($true)
-            $script:testApiProcess.WaitForExit(2000)
-            $script:testApiProcess.Dispose()
+        if ($null -ne $script:appHostProcess -and -not $script:appHostProcess.HasExited) {
+            $script:appHostProcess.Kill($true)
+            $script:appHostProcess.WaitForExit(2000)
+            $script:appHostProcess.Dispose()
         }
         
-        if ($null -ne $script:testWebProcess -and -not $script:testWebProcess.HasExited) {
-            $script:testWebProcess.Kill($true)
-            $script:testWebProcess.WaitForExit(2000)
-            $script:testWebProcess.Dispose()
-        }
-        
-        Stop-ExistingProcesses -Ports @($ApiPort, $WebPort)
+        Stop-ExistingProcesses
         return
     }
     
-    # All tests passed! Leave servers running for default mode
-    Write-Success "All tests passed! Servers are running:"
+    # Default mode: Keep AppHost running, show URLs
     Write-Host ""
-    Write-Info "  API: $apiUrl (Swagger: $apiUrl/swagger)"
-    Write-Info "  Web: $webUrl"
+    Write-Info "AppHost is running:"
+    Write-Info "  API: https://localhost:7153 (Swagger: https://localhost:7153/swagger)"
+    Write-Info "  Web: https://localhost:7190"
+    if ($script:dashboardUrl) {
+        Write-Info "  Dashboard: $script:dashboardUrl"
+    }
+    else {
+        Write-Info "  Dashboard: Check startup output above for login URL"
+    }
     Write-Host ""
-    Write-Info "Server logs written to /workspaces/techhub/.tmp/"
-    Write-Info "  API: api-test.log"
-    Write-Info "  Web: web-test.log"
-    Write-Host ""
-    Write-Host "Press Ctrl+C to stop servers when done" -ForegroundColor Yellow
+    Write-Host "Press Ctrl+C to stop" -ForegroundColor Yellow
     
     # Wait for user to stop (Ctrl+C)
     try {
         while ($true) {
-            if ($script:testApiProcess.HasExited -or $script:testWebProcess.HasExited) {
-                Write-Error "`nOne or more servers stopped unexpectedly"
+            if ($script:appHostProcess.HasExited) {
+                Write-Error "`nAppHost stopped unexpectedly"
                 break
             }
             Start-Sleep -Milliseconds 500
         }
     }
     finally {
-        # Clean up when user presses Ctrl+C or process exits
-        Write-Info "`nStopping servers..."
+        # Clean up when user presses Ctrl+C
+        Write-Info "`nStopping AppHost..."
         
-        if ($null -ne $script:testApiProcess -and -not $script:testApiProcess.HasExited) {
-            $script:testApiProcess.Kill($true)
-            $script:testApiProcess.WaitForExit(2000)
-            $script:testApiProcess.Dispose()
+        if ($null -ne $script:appHostProcess -and -not $script:appHostProcess.HasExited) {
+            $script:appHostProcess.Kill($true)
+            $script:appHostProcess.WaitForExit(2000)
+            $script:appHostProcess.Dispose()
         }
         
-        if ($null -ne $script:testWebProcess -and -not $script:testWebProcess.HasExited) {
-            $script:testWebProcess.Kill($true)
-            $script:testWebProcess.WaitForExit(2000)
-            $script:testWebProcess.Dispose()
-        }
-        
-        Stop-ExistingProcesses -Ports @($ApiPort, $WebPort)
-        Write-Success "Servers stopped"
+        Stop-ExistingProcesses
+        Write-Success "AppHost stopped"
     }
 }
 
 # Kill existing processes on ports
 function Stop-ExistingProcesses {
     param(
-        [int[]]$Ports,
         [switch]$Silent
     )
     
+    $ports = @(5029, 5184)
+    $ports = @(5029, 5184)
     $stoppedAny = $false
-    foreach ($port in $Ports) {
+    foreach ($port in $ports) {
         try {
             $portArg = ":" + $port
             $processIds = lsof -ti $portArg 2>$null
@@ -615,8 +582,6 @@ function Stop-AllOrphanedProcesses {
 # Comprehensive cleanup function - call at start AND end
 function Invoke-FullCleanup {
     param(
-        [int]$ApiPort = 5029,
-        [int]$WebPort = 5184,
         [switch]$Silent
     )
     
@@ -627,8 +592,9 @@ function Invoke-FullCleanup {
     $cleanedAny = $false
     
     # First: Kill processes by port
+    $ports = @(5029, 5184)
     $portsCleaned = $false
-    foreach ($port in @($ApiPort, $WebPort)) {
+    foreach ($port in $ports) {
         try {
             # Get PIDs using lsof (outputs one PID per line)
             $lsofOutput = lsof -ti ":$port" 2>&1
@@ -697,145 +663,32 @@ function Invoke-FullCleanup {
     }
 }
 
-# Run API project
-function Start-ApiProject {
-    param([int]$Port)
-    
-    Write-Step "Starting API (http://localhost:$Port)"
-    
-    $apiUrl = "http://localhost:$Port"
-    
-    try {
-        # Navigate to API directory and run
-        Push-Location (Join-Path $workspaceRoot "src/TechHub.Api")
-        
-        $env:ASPNETCORE_ENVIRONMENT = "Development"
-        $env:ASPNETCORE_URLS = $apiUrl
-        
-        Write-Info "API running at: $apiUrl"
-        Write-Info "Swagger UI: $apiUrl/swagger"
-        Write-Info "Hot reload enabled - changes will auto-reload"
-        Write-Info "Press Ctrl+C to stop"
-        
-        dotnet watch --project $apiProjectPath --configuration $configuration
-    }
-    finally {
-        Pop-Location
-    }
-}
-
-# Run Web project
-function Start-WebProject {
-    param([int]$Port)
-    
-    Write-Step "Starting Web (http://localhost:$Port)"
-    
-    $webUrl = "http://localhost:$Port"
-    
-    try {
-        # Navigate to Web directory and run
-        Push-Location (Join-Path $workspaceRoot "src/TechHub.Web")
-        
-        $env:ASPNETCORE_ENVIRONMENT = "Development"
-        
-        Write-Info "Web running at: $webUrl"
-        Write-Info "Hot reload enabled - changes will auto-reload"
-        Write-Info "Press Ctrl+C to stop"
-        
-        dotnet watch --project $webProjectPath --configuration $configuration
-    }
-    finally {
-        Pop-Location
-    }
-}
-
-# Run both projects
+# Run both projects using Aspire AppHost
 function Start-BothProjects {
-    param(
-        [int]$ApiPort,
-        [int]$WebPort
-    )
+    Write-Step "Starting Tech Hub via Aspire AppHost"
     
-    Write-Step "Starting both API and Web projects"
-    
-    $apiUrl = "http://localhost:$ApiPort"
-    $webUrl = "http://localhost:$WebPort"
-    
-    Write-Info "API: $apiUrl (Swagger: $apiUrl/swagger)"
-    Write-Info "Web: $webUrl"
-    Write-Info "Press Ctrl+C to stop all"
-    
-    # Track processes for cleanup
-    $script:apiProcess = $null
-    $script:webProcess = $null
+    Write-Host ""
+    Write-Info "Services:"
+    Write-Info "  API: http://localhost:5029 (Swagger: http://localhost:5029/swagger)"
+    Write-Info "  Web: http://localhost:5184"
+    Write-Info "  Dashboard: https://localhost:17101 (URL with token shown below)"
+    Write-Host ""
+    Write-Info "Press Ctrl+C to stop"
     
     try {
-        # Start API process
-        $apiStartInfo = New-Object System.Diagnostics.ProcessStartInfo
-        $apiStartInfo.FileName = "dotnet"
-        $apiStartInfo.Arguments = "watch --project `"$apiProjectPath`" --no-build --configuration $configuration"
-        $apiStartInfo.WorkingDirectory = Split-Path $apiProjectPath -Parent
-        $apiStartInfo.UseShellExecute = $false
-        $apiStartInfo.CreateNoWindow = $false
-        $apiStartInfo.EnvironmentVariables["ASPNETCORE_ENVIRONMENT"] = "Development"
-        $apiStartInfo.EnvironmentVariables["ASPNETCORE_URLS"] = $apiUrl
+        Push-Location (Join-Path $workspaceRoot "src/TechHub.AppHost")
         
-        $script:apiProcess = [System.Diagnostics.Process]::Start($apiStartInfo)
-        Write-Info "API process started (PID: $($script:apiProcess.Id))"
+        $env:ASPNETCORE_ENVIRONMENT = "Development"
         
-        # Wait for API to start
-        Write-Info "Waiting for API to start..."
-        Start-Sleep -Seconds 3
-        
-        # Start Web process
-        $webStartInfo = New-Object System.Diagnostics.ProcessStartInfo
-        $webStartInfo.FileName = "dotnet"
-        $webStartInfo.Arguments = "watch --project `"$webProjectPath`" --no-build --configuration $configuration"
-        $webStartInfo.WorkingDirectory = Split-Path $webProjectPath -Parent
-        $webStartInfo.UseShellExecute = $false
-        $webStartInfo.CreateNoWindow = $false
-        $webStartInfo.EnvironmentVariables["ASPNETCORE_ENVIRONMENT"] = "Development"
-        
-        $script:webProcess = [System.Diagnostics.Process]::Start($webStartInfo)
-        Write-Info "Web process started (PID: $($script:webProcess.Id))"
-        
-        # Wait for Web to start
-        Write-Info "Waiting for Web to start..."
-        Start-Sleep -Seconds 3
-        
-        Write-Success "Both projects started"
-        Write-Info "`nPress Ctrl+C to stop all processes"
-        
-        # Wait for processes to exit
-        while ($true) {
-            if ($script:apiProcess.HasExited -or $script:webProcess.HasExited) {
-                Write-Error "`nOne or more projects stopped unexpectedly"
-                break
-            }
-            Start-Sleep -Milliseconds 500
-        }
+        # Run the AppHost with hot reload which orchestrates both API and Web
+        # AppHost includes a built-in Aspire Dashboard
+        dotnet watch --project $appHostProjectPath --no-build --configuration $configuration
     }
     finally {
-        # Clean up processes
-        Write-Info "`nStopping projects..."
-        
-        # Kill processes immediately
-        if ($null -ne $script:apiProcess -and -not $script:apiProcess.HasExited) {
-            Write-Info "Stopping API (PID: $($script:apiProcess.Id))..."
-            $script:apiProcess.Kill($true)  # Kill entire process tree
-            $script:apiProcess.WaitForExit(2000)  # Wait max 2 seconds
-            $script:apiProcess.Dispose()
-        }
-        
-        if ($null -ne $script:webProcess -and -not $script:webProcess.HasExited) {
-            Write-Info "Stopping Web (PID: $($script:webProcess.Id))..."
-            $script:webProcess.Kill($true)  # Kill entire process tree
-            $script:webProcess.WaitForExit(2000)  # Wait max 2 seconds
-            $script:webProcess.Dispose()
-        }
+        Pop-Location
         
         # Final cleanup - kill any remaining processes on the ports
-        Stop-ExistingProcesses -Ports @($ApiPort, $WebPort)
+        Stop-ExistingProcesses
         
         Write-Success "All projects stopped"
     }
@@ -847,7 +700,7 @@ try {
     Set-Location $workspaceRoot
     
     Write-Host "`n╔════════════════════════════════════════╗" -ForegroundColor Cyan
-    Write-Host "║      Tech Hub Development Runner      ║" -ForegroundColor Cyan
+    Write-Host "║      Tech Hub Development Runner       ║" -ForegroundColor Cyan
     Write-Host "╚════════════════════════════════════════╝`n" -ForegroundColor Cyan
     
     # Validate parameter combinations
@@ -858,11 +711,6 @@ try {
     
     if ($Test -and ($SkipTests -or $OnlyTests)) {
         Write-Error "Cannot use -Test with -SkipTests or -OnlyTests"
-        exit 1
-    }
-    
-    if ($OnlyTests -and ($ApiOnly -or $WebOnly)) {
-        Write-Error "Cannot use -OnlyTests with -ApiOnly or -WebOnly"
         exit 1
     }
     
@@ -877,28 +725,26 @@ try {
     Test-Prerequisites
     
     # ALWAYS clean up orphaned processes at start (ports + browsers + test runners)
-    Invoke-FullCleanup -ApiPort $ApiPort -WebPort $WebPort
+    Invoke-FullCleanup
     
     # Clean build artifacts if requested
     if ($Clean) {
         Invoke-Clean
     }
     
-    # Build if needed
-    if (-not $SkipBuild) {
-        Invoke-Build
-    }
+    # Always build (use -Build to build-only)
+    Invoke-Build
     
     # Test if requested - run tests FIRST before starting servers
     if ($Test) {
-        Invoke-Tests -ApiPort $ApiPort -WebPort $WebPort
+        Invoke-Tests
         # If tests pass, continue to start servers normally (unless Build-only mode)
         Write-Success "`nAll tests passed! Starting servers...`n"
     }
     
     # OnlyTests mode: Run tests then EXIT (don't start servers)
     if ($OnlyTests) {
-        Invoke-Tests -ApiPort $ApiPort -WebPort $WebPort -OnlyTests
+        Invoke-Tests -OnlyTests
         Write-Success "`nAll tests passed!"
         exit 0
     }
@@ -909,16 +755,8 @@ try {
         exit 0
     }
     
-    # Run projects
-    if ($ApiOnly) {
-        Start-ApiProject -Port $ApiPort
-    }
-    elseif ($WebOnly) {
-        Start-WebProject -Port $WebPort
-    }
-    else {
-        Start-BothProjects -ApiPort $ApiPort -WebPort $WebPort
-    }
+    # Run projects via Aspire AppHost
+    Start-BothProjects
 }
 catch {
     Write-Error "`nScript failed: $($_.Exception.Message)"
@@ -926,13 +764,13 @@ catch {
     
     # Clean up on error
     Write-Info "`nCleaning up after error..."
-    Invoke-FullCleanup -ApiPort $ApiPort -WebPort $WebPort -Silent
+    Invoke-FullCleanup -Silent
     
     exit 1
 }
 finally {
     # ALWAYS clean up at the end (ports, browsers, test runners)
-    Invoke-FullCleanup -ApiPort $ApiPort -WebPort $WebPort -Silent
+    Invoke-FullCleanup -Silent
     
     # Always return to workspace root
     Set-Location $workspaceRoot

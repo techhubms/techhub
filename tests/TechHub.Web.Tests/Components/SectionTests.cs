@@ -1,11 +1,11 @@
 using Bunit;
+using FluentAssertions;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Moq;
 using TechHub.Core.DTOs;
 using TechHub.Web.Components.Pages;
 using TechHub.Web.Services;
-using FluentAssertions;
 
 namespace TechHub.Web.Tests.Components;
 

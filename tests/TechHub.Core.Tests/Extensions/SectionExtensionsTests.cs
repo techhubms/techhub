@@ -9,7 +9,7 @@ namespace TechHub.Core.Tests.Extensions;
 /// </summary>
 public class SectionExtensionsTests
 {
-    private static readonly Dictionary<string, string> TestDisplayNames = new()
+    private static readonly Dictionary<string, string> _testDisplayNames = new()
     {
         { "blogs", "Blogs" },
         { "videos", "Videos" },
@@ -56,7 +56,7 @@ public class SectionExtensionsTests
         var section = CreateTestSection();
 
         // Act
-        var dto = section.ToDto(TestDisplayNames);
+        var dto = section.ToDto(_testDisplayNames);
 
         // Assert
         dto.Name.Should().Be("ai");
@@ -75,7 +75,7 @@ public class SectionExtensionsTests
         Section? section = null;
 
         // Act
-        var act = () => section!.ToDto(TestDisplayNames);
+        var act = () => section!.ToDto(_testDisplayNames);
 
         // Assert
         act.Should().Throw<ArgumentNullException>();
@@ -88,7 +88,7 @@ public class SectionExtensionsTests
         var section = CreateTestSection();
 
         // Act
-        var dto = section.ToDto(TestDisplayNames);
+        var dto = section.ToDto(_testDisplayNames);
 
         // Assert
         dto.Collections.Should().HaveCount(2);
@@ -118,7 +118,7 @@ public class SectionExtensionsTests
         };
 
         // Act
-        var dto = collection.ToDto(TestDisplayNames);
+        var dto = collection.ToDto(_testDisplayNames);
 
         // Assert
         dto.Name.Should().Be("videos");
@@ -143,7 +143,7 @@ public class SectionExtensionsTests
         };
 
         // Act
-        var dto = collection.ToDto(TestDisplayNames);
+        var dto = collection.ToDto(_testDisplayNames);
 
         // Assert
         dto.DisplayName.Should().Be("Community Posts", "configuration maps 'community' to 'Community Posts'");
@@ -163,7 +163,7 @@ public class SectionExtensionsTests
         };
 
         // Act
-        var dto = collection.ToDto(TestDisplayNames);
+        var dto = collection.ToDto(_testDisplayNames);
 
         // Assert
         dto.DisplayName.Should().Be("Unknown Collection", "display name should fallback to Title when not found in configuration");
@@ -176,7 +176,7 @@ public class SectionExtensionsTests
         CollectionReference? collection = null;
 
         // Act
-        var act = () => collection!.ToDto(TestDisplayNames);
+        var act = () => collection!.ToDto(_testDisplayNames);
 
         // Assert
         act.Should().Throw<ArgumentNullException>();
@@ -196,7 +196,7 @@ public class SectionExtensionsTests
         };
 
         // Act
-        var dto = collection.ToDto(TestDisplayNames);
+        var dto = collection.ToDto(_testDisplayNames);
 
         // Assert
         dto.IsCustom.Should().BeTrue();
@@ -232,7 +232,7 @@ public class SectionExtensionsTests
         };
 
         // Act
-        var dtos = sections.ToDtos(TestDisplayNames);
+        var dtos = sections.ToDtos(_testDisplayNames);
 
         // Assert
         dtos.Should().HaveCount(2);
@@ -249,7 +249,7 @@ public class SectionExtensionsTests
         var sections = Enumerable.Empty<Section>();
 
         // Act
-        var dtos = sections.ToDtos(TestDisplayNames);
+        var dtos = sections.ToDtos(_testDisplayNames);
 
         // Assert
         dtos.Should().BeEmpty();
@@ -271,7 +271,7 @@ public class SectionExtensionsTests
         };
 
         // Act
-        var dto = section.ToDto(TestDisplayNames);
+        var dto = section.ToDto(_testDisplayNames);
 
         // Assert
         dto.Collections.Should().BeEmpty();

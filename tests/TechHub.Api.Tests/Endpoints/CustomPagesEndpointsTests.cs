@@ -55,4 +55,51 @@ public class CustomPagesEndpointsTests : IClassFixture<WebApplicationFactory<Pro
         data.DevEx.Should().NotBeNull();
         data.BestPractices.Should().NotBeNull();
     }
+
+    [Fact]
+    public async Task GetVSCodeUpdatesData_ReturnsStructuredData()
+    {
+        // Arrange - Act
+        var response = await _client.GetAsync("/api/custom-pages/vscode-updates");
+
+        // Assert
+        response.StatusCode.Should().Be(HttpStatusCode.OK);
+
+        var data = await response.Content.ReadFromJsonAsync<VSCodeUpdatesPageData>();
+        data.Should().NotBeNull();
+        data!.Title.Should().NotBeNullOrWhiteSpace();
+        data.Description.Should().NotBeNullOrWhiteSpace();
+        data.Intro.Should().NotBeNull().And.NotBeEmpty();
+        data.VideoCollection.Should().NotBeNullOrWhiteSpace();
+    }
+
+    [Fact]
+    public async Task GetVSCodeUpdatesData_HasExpectedContent()
+    {
+        // Arrange - Act
+        var response = await _client.GetAsync("/api/custom-pages/vscode-updates");
+
+        // Assert
+        response.StatusCode.Should().Be(HttpStatusCode.OK);
+
+        var data = await response.Content.ReadFromJsonAsync<VSCodeUpdatesPageData>();
+        data.Should().NotBeNull();
+        data!.Title.Should().Contain("Visual Studio Code");
+        data.VideoCollection.Should().Be("vscode-updates");
+    }
+
+    [Fact]
+    public async Task GetVSCodeUpdatesData_RespondsQuickly()
+    {
+        // Arrange
+        var stopwatch = System.Diagnostics.Stopwatch.StartNew();
+
+        // Act
+        var response = await _client.GetAsync("/api/custom-pages/vscode-updates");
+
+        // Assert
+        stopwatch.Stop();
+        response.StatusCode.Should().Be(HttpStatusCode.OK);
+        stopwatch.ElapsedMilliseconds.Should().BeLessThan(1000, "API should respond within 1 second");
+    }
 }

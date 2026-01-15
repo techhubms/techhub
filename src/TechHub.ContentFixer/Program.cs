@@ -21,7 +21,7 @@ namespace TechHub.ContentFixer;
 /// </summary>
 internal sealed class Program
 {
-    private static readonly Dictionary<string, string> SectionMapping = new()
+    private static readonly Dictionary<string, string> _sectionMapping = new()
     {
         ["AI"] = "ai",
         ["Azure"] = "azure",
@@ -39,7 +39,7 @@ internal sealed class Program
         var fileArg = Array.FindIndex(args, a => a == "--file");
         var path = fileArg >= 0 && fileArg + 1 < args.Length
             ? args[fileArg + 1]
-            : args.FirstOrDefault(a => !a.StartsWith("--", StringComparison.Ordinal)) ?? "collections";
+            : args.FirstOrDefault(a => !a.StartsWith("--", StringComparison.OrdinalIgnoreCase)) ?? "collections";
 
         Console.WriteLine("==> Tech Hub Content Fixer");
         Console.WriteLine();
@@ -283,7 +283,7 @@ internal sealed class Program
 
     private static string NormalizeSectionName(string displayName)
     {
-        if (SectionMapping.TryGetValue(displayName, out var normalized))
+        if (_sectionMapping.TryGetValue(displayName, out var normalized))
         {
             return normalized;
         }

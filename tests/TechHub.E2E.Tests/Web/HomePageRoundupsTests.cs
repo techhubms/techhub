@@ -1,7 +1,7 @@
 using System.Text.RegularExpressions;
+using FluentAssertions;
 using Microsoft.Playwright;
 using TechHub.E2E.Tests.Helpers;
-using FluentAssertions;
 
 namespace TechHub.E2E.Tests.Web;
 

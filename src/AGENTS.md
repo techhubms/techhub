@@ -50,6 +50,7 @@ You are a .NET development specialist for the Tech Hub source code. This directo
 - **Maintain 80%+ code coverage** for unit tests
 - **Use context7 MCP tool** for latest .NET/Blazor documentation
 - **Check ALL occurrences before renaming** (use `grep_search` to find all, then update each)
+- **When adding NuGet packages**, always get and use the latest stable version
 
 ### ⚠️ Ask First
 
