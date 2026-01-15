@@ -11319,5 +11319,17 @@
     "timestamp": "2026-01-15 19:08:52 +00:00",
     "reason": "Insufficient content length",
     "collection": "community"
+  },
+  {
+    "collection": "videos",
+    "timestamp": "2026-01-15 21:06:46 +00:00",
+    "reason": "No categories found: No categories have been assigned because the provided content consists only of a very high-level description summarizing an interview about Clawdbot, a cross-platform open source personal AI assistant. There are no technical details, implementation insights, or substantive information about Microsoft technologies or development practices. The description discusses the project's popularity and philosophy, but does not mention Microsoft products, developer tools, or AI/Machine Learning frameworks specific to the Microsoft ecosystem. The generic exclusion rule to 'focus on actual content' applies because content is missing (the 'content' field is null), so there is not enough information to assess inclusion for any category.",
+    "canonical_url": "https://www.youtube.com/watch?v=1iCcUjnAIOM"
+  },
+  {
+    "collection": "community",
+    "timestamp": "2026-01-15 21:07:53 +00:00",
+    "reason": "Insufficient content length",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/finops/error-on-deployment-on-a-che/m-p/4485901#M75"
   }
 ]

@@ -23506,5 +23506,41 @@
     "collection": "community",
     "reason": "Succesfully added: Assigned AI because the solution heavily leverages Azure AI Services (AI rule 1), including Speech, Text Analytics for Health, and OpenAI. Assigned Azure because every part uses Azure cloud resources (Azure rule 1). Assigned ML because Text Analytics for Health and integrated analytics pipelines involve applied machine learning technologies and structured data output for downstream ML/analytics (ML rules 1, 2, and 4). Did not assign DevOps or Coding, as content focuses on architectural service integration and deployment steps rather than developer frameworks, CI/CD workflows, or code samples.",
     "canonical_url": "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/ai-transcription-text-analytics-for-health/ba-p/4486080"
+  },
+  {
+    "collection": "news",
+    "timestamp": "2026-01-15 21:05:25 +00:00",
+    "reason": "Succesfully added: Assigned 'DevOps' because the content is focused on operational platform engineering, incident response, and the management of infrastructure and lifecycle for defense mechanisms (DevOps rules 3, 7, and 9). Assigned 'Security' because the article deals directly with protection rules, rate limiting, incident-driven mitigations, platform defense, and best practices for managing security controls (Security inclusion rules 1, 5, 6, and 9). Did not assign 'Azure' or 'AI' because there is no discussion of Microsoft-specific cloud or AI technologies, and not 'Coding' or 'ML' as there is no code-level or machine learning content. No generic exclusion rules applied since the content is technically detailed, written in English, not biographical, not a sales pitch, not business strategy, and is directly relevant to platform defense engineering.",
+    "canonical_url": "https://github.blog/engineering/infrastructure/when-protections-outlive-their-purpose-a-lesson-on-managing-defense-systems-at-scale/"
+  },
+  {
+    "collection": "news",
+    "timestamp": "2026-01-15 21:05:59 +00:00",
+    "reason": "Succesfully added: Assigned 'GitHub Copilot' and 'AI' categories because the content describes new enterprise-focused features for GitHub Copilot, including integration with multiple LLM providers and API improvements (GitHub Copilot rules 1 and 2, AI rule 2 and 5). The focus is on development workflow enhancements, not business productivity tools, so these categories are appropriate. No exclusions applied, as the content is technical, relevant, in English, and not primarily about business strategy or end-user productivity.",
+    "canonical_url": "https://github.blog/changelog/2026-01-15-github-copilot-bring-your-own-key-byok-enhancements"
+  },
+  {
+    "collection": "news",
+    "timestamp": "2026-01-15 21:06:17 +00:00",
+    "reason": "Succesfully added: Selected the DevOps category because the content focuses on project management features, workflow improvements, and DevOps practices in GitHub Projects (DevOps rule 11: GitHub content that doesn't fit GitHub Copilot category). No other categories were assigned since the feature is about organizational/project tools, not code development, AI, ML, or security. The content is technical, product-focused, and fits DevOps workflow best. Generic exclusions do not apply, as the announcement is educational and technical, without business strategy or biographical focus.",
+    "canonical_url": "https://github.blog/changelog/2026-01-15-hierarchy-view-now-available-in-github-projects"
+  },
+  {
+    "collection": "videos",
+    "timestamp": "2026-01-15 21:07:06 +00:00",
+    "reason": "Succesfully added: Included AI because the series focuses on building AI-powered apps using Azure SQL Database, Copilot, Copilot Studio, and RAG architectures (AI rule 1, 3, 4). Assigned Azure because Azure SQL Database, Azure Foundry, Container Apps, and other Azure services are core to all architectures and discussions (Azure rule 1). Did not include Coding, ML, or GitHub Copilot because the content does not specifically describe programming or ML engineering details, nor does it focus on GitHub Copilot; Copilot and Copilot Studio are included as AI-enabling tools. DevOps and Security are not central in the episode outlines.",
+    "canonical_url": "https://www.youtube.com/watch?v=NY_ESU6GKM0"
+  },
+  {
+    "collection": "community",
+    "timestamp": "2026-01-15 21:07:35 +00:00",
+    "reason": "Succesfully added: Included Azure category because the entire article centers on Azure NetApp Files, an Azure storage solution, and substantial Azure resource management (Azure rule 1, 4). DevOps was assigned as the workflow streamlines provisioning, optimization, and integrated infrastructure management within VS Code, supporting DevOps practices (DevOps rule 1, 3, 5, 6). Coding is included due to the context-aware generation of ready-to-use code snippets for app files in multiple languages (Coding rule 2, 4, 5). AI is included because the extension features AI-powered workflows for configuration, optimization, and ARM template generation (AI rule 1, 3, 4).",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-architecture-blog/what-s-new-with-azure-netapp-files-vs-code-extension/ba-p/4485989"
+  },
+  {
+    "collection": "community",
+    "timestamp": "2026-01-15 21:07:53 +00:00",
+    "reason": "Succesfully added: Assigned AI category because the core issue is about using Azure AI Foundry (AI rule 1) and prompt engineering with Microsoft's AI platform. Assigned Azure category as Azure AI Foundry is a core Azure service (Azure rule 1). Coding is not assigned since the content does not provide direct code implementation or programming techniques, but rather focuses on model and platform behavior differences. ML and DevOps were considered but do not fit as the core focus is not on analytics/data engineering or DevOps processes. Security is not relevant here. The post is in English, meets content length requirements, and involves legitimate troubleshooting in a technical, not biographical or sales-focused, context.",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure/weird-problem-when-comparing-the-answers-from-chat-playground/m-p/4486090#M22407"
   }
 ]

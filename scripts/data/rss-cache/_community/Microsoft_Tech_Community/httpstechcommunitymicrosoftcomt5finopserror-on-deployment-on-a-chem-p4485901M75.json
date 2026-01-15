@@ -1,0 +1,14 @@
+{
+  "Title": "Error on deployment on a CHE",
+  "Description": "I'm experiencing an error during the deployment of any package to a cloud-hosted environment. The error occurs specifically at step 11, 'Global Update script for service model: AOS Service,' and results in a failure to resume the deployment process.\n\nThe issue happens on the DB sync, however if I tried to sync the DB from the visual studio it succeeded without any errors. And If I tried to restore another empty DB for example, the deployment will succeed.\n\nAnd if I tried to restore the DB on another CHE, the same issue happens.\n\nThe issue is that we need this DB, because it is the Master configuration DB, so we cannot delete it.\n\nSo my question is what is the best way to solve this issue and how can we know what is the issue with this DB?\n\nThanks in advance.",
+  "Link": "https://techcommunity.microsoft.com/t5/finops/error-on-deployment-on-a-che/m-p/4485901#M75",
+  "FeedUrl": "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure",
+  "ProcessedDate": "2026-01-15 21:05:00",
+  "FeedName": "Microsoft Tech Community",
+  "Tags": [],
+  "OutputDir": "_community",
+  "EnhancedContent": "I'm experiencing an error during the deployment of any package to a cloud-hosted environment. The error occurs specifically at step 11, 'Global Update script for service model: AOS Service,' and results in a failure to resume the deployment process.\n\nThe issue happens on the DB sync, however if I tried to sync the DB from the visual studio it succeeded without any errors. And If I tried to restore another empty DB for example, the deployment will succeed.\n\nAnd if I tried to restore the DB on another CHE, the same issue happens.\n\nThe issue is that we need this DB, because it is the Master configuration DB, so we cannot delete it.\n\nSo my question is what is the best way to solve this issue and how can we know what is the issue with this DB?\n\nThanks in advance.",
+  "FeedLevelAuthor": "rss.livelink.threads-in-node",
+  "PubDate": "2026-01-15T09:10:20+00:00",
+  "Author": "MinaAdelKondos"
+}

@@ -1,0 +1,17 @@
+{
+  "Title": "GitHub Copilot bring your own key (BYOK) enhancements",
+  "Description": "Bring your own key (BYOK) for GitHub Copilot now supports additional APIs, new configuration options, and more provider integrations. With this update, enterprises can connect models that use the Responses…\n\nThe post [GitHub Copilot bring your own key (BYOK) enhancements](https://github.blog/changelog/2026-01-15-github-copilot-bring-your-own-key-byok-enhancements) appeared first on [The GitHub Blog](https://github.blog).",
+  "Link": "https://github.blog/changelog/2026-01-15-github-copilot-bring-your-own-key-byok-enhancements",
+  "FeedUrl": "https://github.blog/changelog/feed/",
+  "ProcessedDate": "2026-01-15 21:02:45",
+  "FeedName": "The GitHub Blog",
+  "Tags": [
+    "copilot",
+    "Release"
+  ],
+  "OutputDir": "_news",
+  "EnhancedContent": "Bring your own key (BYOK) for GitHub Copilot now supports additional APIs, new configuration options, and more provider integrations.\n\nWith this update, enterprises can connect models that use the Responses API, configure a maximum context window for model interactions, enable streaming, and choose from an expanded list of supported LLM providers.\n\n### What’s new\n\n**New provider options**\n\nYou can now connect API keys from AWS Bedrock, Google AI Studio, and any OpenAI‑compatible provider. These options join Anthropic, Microsoft Foundry, OpenAI, and xAI as supported BYOK choices.\n\n**Support for the Responses API**\n\nBYOK now supports models that use the Responses API. This enables structured outputs and richer multimodal interactions.\n\n**Ability to set a maximum context window**\n\nAdmins can define the maximum context window for BYOK models, helping balance cost, performance, and response quality.\n\n**Streaming responses for faster interaction**\n\nStreaming output from connected models lets Copilot display responses as they are generated, rather than waiting for completion.\n\n### Start using the new BYOK features today\n\nThese new capabilities are available now in public preview for GitHub Enterprise and Business customers. Connect your LLM provider’s API key in your enterprise or organization settings and start using your models in Copilot Chat and supported IDEs. Learn more by visiting [our BYOK documentation](https://docs.github.com/copilot/how-tos/administer-copilot/manage-for-enterprise/use-your-own-api-keys).\n\n### Help us shape the future\n\nWe are just getting started and your feedback will guide what comes next. Join the discussion within the [GitHub Community](https://github.com/orgs/community/discussions/184350) to share feedback and connect with other developers.",
+  "FeedLevelAuthor": "Archive: 2026 - GitHub Changelog",
+  "PubDate": "2026-01-15T20:01:40+00:00",
+  "Author": "Allison"
+}

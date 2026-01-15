@@ -1,0 +1,46 @@
+---
+layout: "post"
+title: "Build Powerful AI Apps for Under $25 with Azure SQL Database"
+description: "This video launches the 'Budget Bytes' series, offering hands-on guidance for building affordable, AI-powered applications using Azure SQL Database. Topics include grounding AI in your own data with Azure Foundry, building full-stack apps with Copilot and Azure SQL, implementing agentic RAG architectures, leveraging Copilot Studio, and understanding the cost structure to keep AI projects budget-friendly."
+author: "Microsoft Developer"
+excerpt_separator: <!--excerpt_end-->
+canonical_url: "https://www.youtube.com/watch?v=NY_ESU6GKM0"
+viewing_mode: "internal"
+feed_name: "Microsoft Developer YouTube"
+feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
+date: 2026-01-15 20:00:20 +00:00
+permalink: "/2026-01-15-Build-Powerful-AI-Apps-for-Under-25-with-Azure-SQL-Database.html"
+categories: ["AI", "Azure"]
+tags: ["Agentic RAG", "AI", "AI Apps", "AI Architecture", "Azure", "Azure Container Apps", "Azure Foundry", "Azure SQL Database", "Budget Bytes", "Cloud Computing", "Copilot Studio", "Cost Optimization", "Data Grounding", "Dev", "Development", "Full Stack Development", "Microsoft", "Microsoft Azure", "Static Web Apps", "Tech", "Technology", "Videos", "Web Apps"]
+tags_normalized: ["agentic rag", "ai", "ai apps", "ai architecture", "azure", "azure container apps", "azure foundry", "azure sql database", "budget bytes", "cloud computing", "copilot studio", "cost optimization", "data grounding", "dev", "development", "full stack development", "microsoft", "microsoft azure", "static web apps", "tech", "technology", "videos", "web apps"]
+---
+
+'Microsoft Developer' introduces the Budget Bytes series, showing practical ways to build real AI-powered apps with Azure SQL Database while keeping costs under $25.<!--excerpt_end-->
+
+{% youtube NY_ESU6GKM0 %}
+
+# Build Powerful AI Apps for Under $25 with Azure SQL Database
+
+Budget Bytes is a new series for developers focused on creating practical, AI-powered applications affordably using Azure SQL Database. This series is aimed at budget-conscious builders who value real-world deployment over experimentation.
+
+## What You'll Learn
+
+- **How to Ground AI in Your Own Data**: Leverage Azure Foundry in combination with Azure SQL Database to ensure AI interacts meaningfully with your real data.
+- **Building Full-Stack AI Apps**: Step-by-step guides on creating apps powered by Copilot and Azure SQL, with architecture walkthroughs that show end-to-end solutions for less than $10.
+- **Agentic RAG Architectures**: Explore Retrieval Augmented Generation (RAG) patterns with Azure SQL, Azure Container Apps, and Static Web Apps for intelligent, scalable solutions.
+- **AI Agent Development with Copilot Studio**: Learn to build and deploy AI agents integrated with your data storage and app logic.
+- **Cost Transparency**: Each episode includes detailed, honest breakdowns of infrastructure costs and usage calculations, so you can clearly see how to stay within a tight budget.
+
+## Upcoming Topics
+
+- Connecting Copilot and Copilot Studio with Azure SQL Database for interactive, data-rich experiences
+- Hands-on demos that show responsible, real-world AI development without needing large investments
+- Fireside chats with product leaders on the economics and strategies for modern, affordable applications
+
+## Who is This For?
+
+Whether you're a student, startup, small business, or experienced developer, this series shows how modern Microsoft cloud technologies can help you build smarter, more cost-effective apps.
+
+**Get started for free:** [https://aka.ms/budgetbytes/freeoffer](https://aka.ms/budgetbytes/freeoffer)
+
+**Subscribe** to follow the full series and never miss a new episode!
